@@ -1,0 +1,16 @@
+{
+  "name": "conexion-biblica-2026",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Entrenador offline de precisión y memoria para Conexión Bíblica 2026.",
+  "scripts": {
+    "build": "python3 build_full_app.py",
+    "test:static": "python3 tests/static_audit.py",
+    "test:browser": "python3 tests/browser_smoke.py && python3 tests/logic_test.py && python3 tests/persistence_test.py",
+    "test": "npm run test:static && npm run test:browser",
+    "dev": "python3 -m http.server 3000 --directory ."
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
