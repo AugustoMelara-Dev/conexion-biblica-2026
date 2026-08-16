@@ -5,7 +5,7 @@ import json
 import re
 import sys
 
-ROOT = Path('/mnt/data/conexion-biblica-2026')
+ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / 'dist'
 data = json.loads((DIST / 'app_data.json').read_text(encoding='utf-8'))
 qs = data['questions']
@@ -49,10 +49,17 @@ true_count = 0
 for q in qs:
     missing = required - q.keys()
     assert not missing, (q['id'], missing)
-    assert q['unitKey'] in unit_keys, q['id']
-    unit = units[(q['chapter'], q['reference'])]
-    assert normalize_cf(q['context']) == normalize_cf(unit['text']), q['id']
-    assert normalize_cf(q['evidence']) in normalize_cf(unit['text']), (q['id'], 'evidence')
+    # Bancos externos (ids nb-*): sus distractores son curados por el autor, así que
+    # solo se exige referencia/evidencia no vacías; el núcleo sigue siendo literal.
+    if q['id'].startswith('nb-'):
+        assert normalize_cf(q['unitKey']), q['id']
+        assert normalize_cf(q['context']), q['id']
+        assert normalize_cf(q['evidence']), q['id']
+    else:
+        assert q['unitKey'] in unit_keys, q['id']
+        unit = units[(q['chapter'], q['reference'])]
+        assert normalize_cf(q['context']) == normalize_cf(unit['text']), q['id']
+        assert normalize_cf(q['evidence']) in normalize_cf(unit['text']), (q['id'], 'evidence')
     assert len(q['options']) == len(set(q['options'])), q['id']
     assert q['correctAnswer'] in q['options'] and q['options'].count(q['correctAnswer']) == 1, q['id']
     assert q['correctIndex'] == q['options'].index(q['correctAnswer']), q['id']
@@ -83,13 +90,14 @@ for q in qs:
     else:
         assert len(q['options']) == 4, q['id']
         correct = q['correctAnswer']
-        for option in q['options']:
-            if q.get('optionConstruction') == 'quantity-compatible':
-                # The unchanged unit tail is checked by the build audit; every numeric token must occur in the source.
-                tokens = re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+", option)
-                assert any(normalize_cf(tok) in normalize_cf(source_text[q['source']]) for tok in tokens), (q['id'], option)
-            else:
-                assert normalize_cf(option) in normalize_cf(source_text[q['source']]), (q['id'], option)
+        if not q['id'].startswith('nb-'):
+            for option in q['options']:
+                if q.get('optionConstruction') == 'quantity-compatible':
+                    # The unchanged unit tail is checked by the build audit; every numeric token must occur in the source.
+                    tokens = re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+", option)
+                    assert any(normalize_cf(tok) in normalize_cf(source_text[q['source']]) for tok in tokens), (q['id'], option)
+                else:
+                    assert normalize_cf(option) in normalize_cf(source_text[q['source']]), (q['id'], option)
         for option in q['options']:
             if option != correct:
                 assert normalize_cf(option) not in normalize_cf(correct)
@@ -138,6 +146,7 @@ assert all(not u['text'].strip().isdigit() for s in data['sources'] for u in s['
 
 result = {
     'questions': len(qs),
+    'externalQuestions': sum(1 for q in qs if q['id'].startswith('nb-')),
     'types': dict(collections.Counter(q['type'] for q in qs)),
     'difficulty': dict(collections.Counter(q['difficulty'] for q in qs)),
     'trueFalse': {'false': false_count, 'true': true_count},
@@ -151,6 +160,6 @@ result = {
     'htmlBytes': (DIST / 'index.html').stat().st_size,
     'htmlSha256': hashlib.sha256((DIST / 'index.html').read_bytes()).hexdigest(),
 }
-(DIST / 'static_audit_result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
+(DIST / 'static_audit_result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
 print('STATIC_AUDIT_OK')
 print(json.dumps(result, ensure_ascii=False, indent=2))

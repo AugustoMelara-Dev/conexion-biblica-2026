@@ -3,7 +3,7 @@ from playwright.sync_api import sync_playwright
 import json
 import re
 
-ROOT = Path('/mnt/data/conexion-biblica-2026')
+ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / 'dist'
 OUT = ROOT / 'test-output'
 raw = (DIST / 'index.html').read_text(encoding='utf-8')

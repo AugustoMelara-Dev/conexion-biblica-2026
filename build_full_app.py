@@ -11,13 +11,13 @@ import re
 import statistics
 from typing import Iterable
 
-ROOT = Path('/mnt/data/conexion-biblica-2026')
+ROOT = Path(__file__).resolve().parent
 SRC = ROOT / 'src'
 DIST = ROOT / 'dist'
 DIST.mkdir(parents=True, exist_ok=True)
 
-BANK_VERSION = '2026.07.27-full-d1-12-pr39-44-v1'
-GENERATED_AT = '2026-07-27'
+BANK_VERSION = '2026.08.16-full-d1-12-pr39-44-v2-nuevos-bancos'
+GENERATED_AT = '2026-08-16'
 
 WORD_RE = re.compile(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+(?:[-’'][A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+)*")
 SPACE_RE = re.compile(r'\s+')
@@ -1161,6 +1161,138 @@ def chapter_profile(chapter: str, units: list[dict], questions: list[dict]) -> d
     }
 
 
+def load_external_banks(sources: list[dict], existing_questions: list[dict]) -> tuple[list[dict], dict]:
+    """Carga los bancos externos de src/bancos_nuevos/*.json (schema 1.0) y los
+    convierte al formato de preguntas de la app de una sola página.
+
+    Se aplican controles de calidad equivalentes al núcleo del banco: enunciados
+    únicos, referencias resueltas cuando es posible, opciones sin solapamientos y
+    posiciones correctas equilibradas. Las opciones externas son distracores
+    curados por el autor, por lo que no se exige que sean literales del texto.
+    """
+    external_dir = SRC / 'bancos_nuevos'
+    if not external_dir.exists():
+        return [], {'files': [], 'total': 0, 'skipped': 0, 'skippedReasons': {}}
+    verse_text: dict[str, str] = {}
+    chapter_units: dict[str, list[dict]] = {}
+    for source in sources:
+        chapter_units[source['chapter']] = source['units']
+        for unit in source['units']:
+            verse_text[unit['reference']] = unit['text']
+
+    difficulty_map = {1: 'fácil', 2: 'fácil', 3: 'media', 4: 'difícil', 5: 'trampa'}
+    files = sorted(external_dir.glob('*.json'))
+    questions: list[dict] = []
+    pending: list[dict] = []
+    seen_ids: set[str] = set()
+    seen_prompts = {norm(q['prompt']).casefold() for q in existing_questions}
+    skipped = 0
+    skipped_reasons: dict[str, int] = {}
+
+    def drop(reason: str) -> None:
+        nonlocal skipped
+        skipped += 1
+        skipped_reasons[reason] = skipped_reasons.get(reason, 0) + 1
+
+    for file in files:
+        bank = json.loads(file.read_text(encoding='utf-8'))
+        stem = re.sub(r'[^a-z0-9]+', '-', file.stem.lower()).strip('-')
+        for raw in bank.get('questions', []):
+            qid = f"nb-{stem}-{str(raw.get('id', '')).lower()}"
+            if qid in seen_ids:
+                drop('id duplicado')
+                continue
+            raw_options = raw.get('options') or []
+            options = [str(o.get('text', '')).strip() for o in raw_options]
+            correct_ids = set(raw.get('correctAnswer') or [])
+            correct_text = next((str(o.get('text', '')).strip() for o in raw_options if o.get('id') in correct_ids), '')
+            prompt = str(raw.get('question') or '').strip()
+            if not prompt:
+                drop('enunciado vacío')
+                continue
+            if norm(prompt).casefold() in seen_prompts:
+                drop('enunciado duplicado')
+                continue
+            if not correct_text or correct_text not in options or len(options) != 4 or len(set(options)) != 4 or options.count(correct_text) != 1:
+                drop('opciones inválidas')
+                continue
+            if any(norm(o).casefold() in norm(correct_text).casefold() or norm(correct_text).casefold() in norm(o).casefold() for o in options if o != correct_text):
+                drop('solapamiento distractor-respuesta')
+                continue
+            seen_ids.add(qid)
+            seen_prompts.add(norm(prompt).casefold())
+            source_info = raw.get('source') or {}
+            reference = str(source_info.get('reference') or '').strip()
+            chapter_num = int(source_info.get('chapter') or 1)
+            chapter = f'Daniel {chapter_num}'
+            unit = None
+            evidence = ''
+            if reference in verse_text:
+                unit = next(u for u in chapter_units.get(chapter, []) if u['reference'] == reference)
+                evidence = verse_text[reference]
+            else:
+                # Rescate: busca la unidad cuyo texto contiene la respuesta.
+                correct_norm = norm(correct_text).casefold()
+                for candidate in chapter_units.get(chapter, []):
+                    if correct_norm in norm(candidate['text']).casefold():
+                        unit = candidate
+                        for sentence in sentence_chunks(candidate['text']):
+                            if correct_norm in norm(sentence).casefold():
+                                evidence = sentence
+                                break
+                        if not evidence:
+                            evidence = candidate['text']
+                        break
+            if not evidence:
+                evidence = correct_text
+            if unit is not None:
+                reference = unit['reference']
+                unit_key = unit['unitKey']
+                context = unit['text']
+            else:
+                reference = reference or chapter
+                unit_key = f"Daniel:{reference}"
+                context = evidence
+            explanation = str(raw.get('explanation') or '').strip()
+            if re.search(r'cu[áa]nt[oa]s?', prompt, re.I):
+                detail = 'cantidad'
+            elif re.search(r'qui[ée]n', prompt, re.I):
+                detail = 'persona'
+            elif re.search(r'a[ñn]o|d[íi]a', prompt, re.I):
+                detail = 'tiempo'
+            else:
+                detail = 'frase exacta'
+            difficulty = difficulty_map.get(int(raw.get('difficulty') or 3), 'media')
+            pending.append({
+                'id': qid, 'source': 'Daniel', 'chapter': chapter, 'reference': reference,
+                'unitKey': unit_key, 'type': 'seleccionar', 'difficulty': difficulty,
+                'prompt': prompt, 'options': list(options), 'correct_text': correct_text,
+                'evidence': evidence, 'context': context, 'explanation': explanation or prompt,
+                'detail': detail, 'family': f'nuevo-{stem}',
+                'confusables': [], 'complexity': 50, 'bankVersion': BANK_VERSION,
+            })
+
+    # Rota las opciones de cada pregunta externa para que la posición final de la
+    # respuesta correcta quede exactamente repartida en todo el banco.
+    core_counts = Counter(q['correctIndex'] for q in existing_questions if q['type'] != 'verdadero_falso')
+    total = sum(core_counts.values()) + len(pending)
+    base, remainder = divmod(total, 4)
+    targets = {i: base + (1 if i < remainder else 0) for i in range(4)}
+    current = {i: core_counts.get(i, 0) for i in range(4)}
+    for item in pending:
+        target = min(range(4), key=lambda i: (current[i] - targets[i], current[i]))
+        shift = (item['options'].index(item['correct_text']) - target) % 4
+        rotated = item['options'][shift:] + item['options'][:shift] if shift else list(item['options'])
+        current[target] += 1
+        correct_text = item.pop('correct_text')
+        item['options'] = rotated
+        item['correctIndex'] = rotated.index(correct_text)
+        item['correctAnswer'] = correct_text
+        item['distractorReasons'] = {o: 'La opción no coincide con el fragmento probatorio.' for o in rotated if o != correct_text}
+        questions.append(item)
+    return questions, {'files': [f.name for f in files], 'total': len(questions), 'skipped': skipped, 'skippedReasons': skipped_reasons}
+
+
 def assemble():
     seed = json.loads((SRC / 'curated_seed.json').read_text(encoding='utf-8'))
     daniel_sources, daniel_warnings, daniel_pages = parse_daniel()
@@ -1173,6 +1305,9 @@ def assemble():
     builder = BankBuilder(sources, seed)
     builder.build()
     valid, excluded, exclusion_reasons = builder.adversarial_audit()
+
+    external, external_report = load_external_banks(sources, valid)
+    valid = valid + external
 
     expected = {s['chapter']: {u['reference'] for u in s['units']} for s in sources}
     coverage_map = defaultdict(set)
@@ -1205,6 +1340,7 @@ def assemble():
         'El archivo aislado de Profetas y Reyes 39 y el prompt duplicado se trataron como copias de material ya incluido; no generaron contenido duplicado.',
         'No se suministró un PDF de contraste; los TXT adjuntos fueron tratados como fuentes canónicas.',
         'Las preguntas automáticas de Daniel 2–12 y Profetas y Reyes 40–44 son literales: sus respuestas, opciones, evidencias y correcciones proceden exclusivamente de los textos suministrados.',
+        f"Bancos nuevos externos: {external_report['total']} preguntas añadidas desde src/bancos_nuevos/ ({len(external_report['files'])} archivos; {external_report['skipped']} omitidas). Motivos de omisión: {json.dumps(external_report['skippedReasons'], ensure_ascii=False)}.",
     ]
     audit = {
         'created': len(valid) + len(excluded),
@@ -1235,9 +1371,9 @@ def assemble():
         },
         'sources': sources, 'questions': valid, 'audit': audit, 'profiles': profiles, 'warnings': warnings,
     }
-    (DIST / 'app_data.json').write_text(json.dumps(app_data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-    (DIST / 'audit.json').write_text(json.dumps(audit, ensure_ascii=False, indent=2), encoding='utf-8')
-    (DIST / 'profiles.json').write_text(json.dumps(profiles, ensure_ascii=False, indent=2), encoding='utf-8')
+    (DIST / 'app_data.json').write_text(json.dumps(app_data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8', newline='\n')
+    (DIST / 'audit.json').write_text(json.dumps(audit, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
+    (DIST / 'profiles.json').write_text(json.dumps(profiles, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
 
     template = (SRC / 'template.html').read_text(encoding='utf-8')
     template = template.replace('__APP_DATA__', json.dumps(app_data, ensure_ascii=False, separators=(',', ':')))
@@ -1268,7 +1404,7 @@ def assemble():
     template = template.replace('DATA.audit.excludedItems.map(x=>', 'DATA.audit.excludedItems.slice(0,100).map(x=>')
 
     index_path = DIST / 'index.html'
-    index_path.write_text(template, encoding='utf-8')
+    index_path.write_text(template, encoding='utf-8', newline='\n')
 
     summary = {
         'created': len(valid) + len(excluded), 'valid': len(valid), 'corrected': len(builder.corrected_items), 'excluded': len(excluded),
@@ -1276,7 +1412,7 @@ def assemble():
         'sources': len(sources), 'units': total_units, 'coverageMissing': units_without,
         'indexBytes': index_path.stat().st_size,
     }
-    (DIST / 'build_summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
+    (DIST / 'build_summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8', newline='\n')
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 
