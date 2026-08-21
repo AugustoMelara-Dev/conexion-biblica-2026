@@ -1,0 +1,5466 @@
+{
+  "mode": "REPLICA_CONEXION",
+  "source": "Daniel 8 — texto suministrado por el usuario",
+  "translationConstraint": "FUENTE_CERRADA",
+  "questionCount": 100,
+  "difficultyDistribution": {
+    "1": 5,
+    "2": 10,
+    "3": 20,
+    "4": 35,
+    "5": 30
+  },
+  "questions": [
+    {
+      "id": "DAN8-001",
+      "type": "single_choice",
+      "difficulty": 1,
+      "question": "¿En qué año del reinado del rey Belsasar tuvo Daniel la visión descrita al inicio del capítulo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En el año primero"
+        },
+        {
+          "id": "B",
+          "text": "En el año segundo"
+        },
+        {
+          "id": "C",
+          "text": "En el año tercero"
+        },
+        {
+          "id": "D",
+          "text": "En el año cuarto"
+        }
+      ],
+      "correctOptionId": "C",
+      "questionClass": [
+        "NUMERIC_PRECISION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:1"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel sitúa la visión en el año tercero del reinado del rey Belsasar.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-002",
+      "type": "single_choice",
+      "difficulty": 1,
+      "question": "¿En qué ciudad se veía Daniel durante la visión?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Susa"
+        },
+        {
+          "id": "B",
+          "text": "Elam"
+        },
+        {
+          "id": "C",
+          "text": "Grecia"
+        },
+        {
+          "id": "D",
+          "text": "Media"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:2"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel dice que en la visión estaba en Susa.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-003",
+      "type": "single_choice",
+      "difficulty": 1,
+      "question": "¿Junto a qué río se veía Daniel en la visión?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ulai"
+        },
+        {
+          "id": "B",
+          "text": "Susa"
+        },
+        {
+          "id": "C",
+          "text": "Elam"
+        },
+        {
+          "id": "D",
+          "text": "La tierra gloriosa"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 8:2"
+      ],
+      "continuity_required": false,
+      "explanation": "El texto lo sitúa junto al río Ulai.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-004",
+      "type": "single_choice",
+      "difficulty": 1,
+      "question": "¿Cuántos cuernos tenía el carnero que Daniel vio delante del río?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uno"
+        },
+        {
+          "id": "B",
+          "text": "Dos"
+        },
+        {
+          "id": "C",
+          "text": "Tres"
+        },
+        {
+          "id": "D",
+          "text": "Cuatro"
+        }
+      ],
+      "correctOptionId": "B",
+      "questionClass": [
+        "NUMERIC_PRECISION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:3"
+      ],
+      "continuity_required": false,
+      "explanation": "El carnero tenía dos cuernos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-005",
+      "type": "single_choice",
+      "difficulty": 1,
+      "question": "¿Qué animal venía del lado del poniente mientras Daniel consideraba lo que veía?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Un carnero"
+        },
+        {
+          "id": "B",
+          "text": "Un macho cabrío"
+        },
+        {
+          "id": "C",
+          "text": "Una bestia"
+        },
+        {
+          "id": "D",
+          "text": "Un hombre"
+        }
+      ],
+      "correctOptionId": "B",
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:5"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel vio venir del poniente a un macho cabrío.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-006",
+      "type": "single_choice",
+      "difficulty": 2,
+      "question": "Según Daniel 8:3, ¿qué relación había entre los dos cuernos del carnero?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Eran iguales y crecieron al mismo tiempo"
+        },
+        {
+          "id": "B",
+          "text": "Uno era más alto que el otro, y el más alto creció después"
+        },
+        {
+          "id": "C",
+          "text": "Uno estaba quebrado y el otro creció después"
+        },
+        {
+          "id": "D",
+          "text": "Los dos eran pequeños y luego se hicieron notables"
+        }
+      ],
+      "correctOptionId": "B",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 8:3"
+      ],
+      "continuity_required": false,
+      "explanation": "Uno era más alto que el otro y el más alto creció después.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-007",
+      "type": "single_choice",
+      "difficulty": 2,
+      "question": "¿Hacia cuáles tres direcciones hería el carnero con los cuernos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Poniente, norte y sur"
+        },
+        {
+          "id": "B",
+          "text": "Poniente, oriente y sur"
+        },
+        {
+          "id": "C",
+          "text": "Norte, oriente y sur"
+        },
+        {
+          "id": "D",
+          "text": "Poniente, norte y oriente"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 8:4"
+      ],
+      "continuity_required": false,
+      "explanation": "El carnero hería al poniente, al norte y al sur.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-008",
+      "type": "single_choice",
+      "difficulty": 2,
+      "question": "¿Qué dos afirmaciones hace Daniel 8:4 acerca de la oposición al carnero?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ninguna bestia podía pararse delante de él y nadie escapaba de su poder"
+        },
+        {
+          "id": "B",
+          "text": "Ningún ejército podía seguirlo y nadie conocía su poder"
+        },
+        {
+          "id": "C",
+          "text": "Ninguna estrella podía caer y nadie lo pisoteaba"
+        },
+        {
+          "id": "D",
+          "text": "Ningún rey podía hablar y nadie atendía sus negocios"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL"
+      ],
+      "supportingReferences": [
+        "Daniel 8:4"
+      ],
+      "continuity_required": false,
+      "explanation": "El texto afirma que ninguna bestia podía parar delante de él y que no había quien escapara de su poder.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-009",
+      "type": "single_choice",
+      "difficulty": 2,
+      "question": "¿Qué hacía el carnero además de engrandecerse?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hacía conforme a su voluntad"
+        },
+        {
+          "id": "B",
+          "text": "Guardaba la visión"
+        },
+        {
+          "id": "C",
+          "text": "Atendía los negocios del rey"
+        },
+        {
+          "id": "D",
+          "text": "Procuraba comprender la visión"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:4",
+        "Daniel 8:15",
+        "Daniel 8:26",
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "En Daniel 8:4 el carnero hacía conforme a su voluntad y se engrandecía.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-010",
+      "type": "single_choice",
+      "difficulty": 2,
+      "question": "¿Cómo se desplazaba el macho cabrío sobre la faz de toda la tierra?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sin tocar tierra"
+        },
+        {
+          "id": "B",
+          "text": "Pisoteando la tierra"
+        },
+        {
+          "id": "C",
+          "text": "Junto al río"
+        },
+        {
+          "id": "D",
+          "text": "Entre las riberas del Ulai"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:5",
+        "Daniel 8:7",
+        "Daniel 8:16"
+      ],
+      "continuity_required": false,
+      "explanation": "El macho cabrío venía sobre la faz de toda la tierra sin tocar tierra.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-011",
+      "type": "single_choice",
+      "difficulty": 2,
+      "question": "¿Dónde tenía el macho cabrío su cuerno notable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Entre sus ojos"
+        },
+        {
+          "id": "B",
+          "text": "Sobre su frente"
+        },
+        {
+          "id": "C",
+          "text": "Delante del río"
+        },
+        {
+          "id": "D",
+          "text": "Hacia los cuatro vientos"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 8:5",
+        "Daniel 8:8"
+      ],
+      "continuity_required": false,
+      "explanation": "El cuerno notable estaba entre sus ojos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-012",
+      "type": "single_choice",
+      "difficulty": 2,
+      "question": "¿Contra quién corrió el macho cabrío con la furia de su fuerza?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Contra el príncipe de los ejércitos"
+        },
+        {
+          "id": "B",
+          "text": "Contra el carnero de dos cuernos"
+        },
+        {
+          "id": "C",
+          "text": "Contra el pueblo de los santos"
+        },
+        {
+          "id": "D",
+          "text": "Contra los fuertes"
+        }
+      ],
+      "correctOptionId": "B",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 8:6",
+        "Daniel 8:11",
+        "Daniel 8:24"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel 8:6 dice que corrió contra el carnero de dos cuernos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-013",
+      "type": "single_choice",
+      "difficulty": 2,
+      "question": "¿Qué hizo el macho cabrío con los dos cuernos del carnero?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los hizo crecer"
+        },
+        {
+          "id": "B",
+          "text": "Los quebró"
+        },
+        {
+          "id": "C",
+          "text": "Los purificó"
+        },
+        {
+          "id": "D",
+          "text": "Los entregó"
+        }
+      ],
+      "correctOptionId": "B",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 8:7"
+      ],
+      "continuity_required": false,
+      "explanation": "Al herir al carnero, el macho cabrío le quebró sus dos cuernos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-014",
+      "type": "single_choice",
+      "difficulty": 2,
+      "question": "¿Qué le faltaba al carnero para hacer frente al macho cabrío?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fuerza"
+        },
+        {
+          "id": "B",
+          "text": "Sagacidad"
+        },
+        {
+          "id": "C",
+          "text": "Un santuario"
+        },
+        {
+          "id": "D",
+          "text": "Un ejército"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:7"
+      ],
+      "continuity_required": false,
+      "explanation": "El carnero no tenía fuerzas para hacerle frente.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-015",
+      "type": "single_choice",
+      "difficulty": 2,
+      "question": "¿Cuántas tardes y mañanas se mencionan antes de que el santuario sea purificado?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dos"
+        },
+        {
+          "id": "B",
+          "text": "Dos mil trescientas"
+        },
+        {
+          "id": "C",
+          "text": "Tres"
+        },
+        {
+          "id": "D",
+          "text": "Cuatro"
+        }
+      ],
+      "correctOptionId": "B",
+      "questionClass": [
+        "NUMERIC_PRECISION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:14"
+      ],
+      "continuity_required": false,
+      "explanation": "La respuesta dada es: dos mil trescientas tardes y mañanas.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-016",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Qué ocurrió con el gran cuerno del macho cabrío cuando éste estaba en su mayor fuerza?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fue quebrado"
+        },
+        {
+          "id": "B",
+          "text": "Creció después"
+        },
+        {
+          "id": "C",
+          "text": "Fue purificado"
+        },
+        {
+          "id": "D",
+          "text": "Se levantó contra el Príncipe de los príncipes"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:8",
+        "Daniel 8:25"
+      ],
+      "continuity_required": false,
+      "explanation": "Cuando el macho cabrío estaba en su mayor fuerza, el gran cuerno fue quebrado.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-017",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Qué salió en lugar del gran cuerno quebrado?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dos cuernos altos"
+        },
+        {
+          "id": "B",
+          "text": "Cuatro cuernos notables"
+        },
+        {
+          "id": "C",
+          "text": "Un cuerno pequeño solamente"
+        },
+        {
+          "id": "D",
+          "text": "Cuatro reyes de Media y Persia"
+        }
+      ],
+      "correctOptionId": "B",
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:8",
+        "Daniel 8:20",
+        "Daniel 8:22"
+      ],
+      "continuity_required": false,
+      "explanation": "En su lugar salieron cuatro cuernos notables.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-018",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Hacia dónde estaban orientados los cuatro cuernos notables que salieron en lugar del gran cuerno?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hacia los cuatro vientos del cielo"
+        },
+        {
+          "id": "B",
+          "text": "Hacia el sur, el oriente y la tierra gloriosa"
+        },
+        {
+          "id": "C",
+          "text": "Hacia el poniente, el norte y el sur"
+        },
+        {
+          "id": "D",
+          "text": "Hacia el ejército y las estrellas"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:4",
+        "Daniel 8:8",
+        "Daniel 8:9",
+        "Daniel 8:10"
+      ],
+      "continuity_required": false,
+      "explanation": "Los cuatro cuernos notables salieron hacia los cuatro vientos del cielo.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-019",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿De dónde salió el cuerno pequeño de Daniel 8:9?",
+      "options": [
+        {
+          "id": "A",
+          "text": "De uno de los cuatro cuernos"
+        },
+        {
+          "id": "B",
+          "text": "Del carnero de dos cuernos"
+        },
+        {
+          "id": "C",
+          "text": "Del ejército del cielo"
+        },
+        {
+          "id": "D",
+          "text": "De Media y de Persia"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "CONTINUITY_CHAIN",
+        "ACTOR_TRACKING"
+      ],
+      "supportingReferences": [
+        "Daniel 8:8-9"
+      ],
+      "continuity_required": true,
+      "explanation": "El texto enlaza los cuatro cuernos del versículo 8 con la frase 'De uno de ellos' del versículo 9.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-020",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Hacia qué tres destinos creció mucho el cuerno pequeño?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sur, oriente y tierra gloriosa"
+        },
+        {
+          "id": "B",
+          "text": "Poniente, norte y sur"
+        },
+        {
+          "id": "C",
+          "text": "Cuatro vientos del cielo"
+        },
+        {
+          "id": "D",
+          "text": "Ejército, estrellas y santuario"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:4",
+        "Daniel 8:8-10"
+      ],
+      "continuity_required": false,
+      "explanation": "El cuerno pequeño creció mucho hacia el sur, el oriente y la tierra gloriosa.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-021",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "Según Daniel 8:10, ¿hasta dónde creció el cuerno?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hasta llegar al ejército del cielo"
+        },
+        {
+          "id": "B",
+          "text": "Hasta las riberas del Ulai"
+        },
+        {
+          "id": "C",
+          "text": "Hasta el rey de Grecia"
+        },
+        {
+          "id": "D",
+          "text": "Hasta el fin del reinado"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:10",
+        "Daniel 8:16",
+        "Daniel 8:21",
+        "Daniel 8:23"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel 8:10 afirma que creció hasta llegar al ejército del cielo.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-022",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Qué dos elementos fueron echados por tierra y pisoteados en Daniel 8:10?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Parte del ejército y de las estrellas"
+        },
+        {
+          "id": "B",
+          "text": "La verdad y el santuario"
+        },
+        {
+          "id": "C",
+          "text": "Los fuertes y el pueblo de los santos"
+        },
+        {
+          "id": "D",
+          "text": "El carnero y sus dos cuernos"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:7",
+        "Daniel 8:10-12",
+        "Daniel 8:24"
+      ],
+      "continuity_required": false,
+      "explanation": "El texto menciona parte del ejército y de las estrellas.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-023",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Frente a quién se engrandeció el cuerno en Daniel 8:11?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Frente al príncipe de los ejércitos"
+        },
+        {
+          "id": "B",
+          "text": "Frente al Príncipe de los príncipes"
+        },
+        {
+          "id": "C",
+          "text": "Frente al rey de Grecia"
+        },
+        {
+          "id": "D",
+          "text": "Frente al rey Belsasar"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:1",
+        "Daniel 8:11",
+        "Daniel 8:21",
+        "Daniel 8:25"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel 8:11 usa la expresión 'príncipe de los ejércitos'.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-024",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Qué dos cosas se describen en Daniel 8:11 como quitada y echada por tierra, respectivamente?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El sacrificio continuo y el lugar de su santuario"
+        },
+        {
+          "id": "B",
+          "text": "La verdad y el ejército"
+        },
+        {
+          "id": "C",
+          "text": "El gran cuerno y las estrellas"
+        },
+        {
+          "id": "D",
+          "text": "La visión y los negocios del rey"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 8:11-12",
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "Fue quitado el sacrificio continuo y fue echado por tierra el lugar de su santuario.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-025",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Por qué fue entregado el ejército junto con el sacrificio continuo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A causa de la prevaricación"
+        },
+        {
+          "id": "B",
+          "text": "A causa de la visión"
+        },
+        {
+          "id": "C",
+          "text": "A causa del temor de Daniel"
+        },
+        {
+          "id": "D",
+          "text": "A causa del reinado de Belsasar"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:1",
+        "Daniel 8:12",
+        "Daniel 8:15",
+        "Daniel 8:17"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel 8:12 atribuye esa entrega a la prevaricación.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-026",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Qué hizo con la verdad según Daniel 8:12?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La echó por tierra"
+        },
+        {
+          "id": "B",
+          "text": "La guardó"
+        },
+        {
+          "id": "C",
+          "text": "La enseñó"
+        },
+        {
+          "id": "D",
+          "text": "La purificó"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 8:12",
+        "Daniel 8:16",
+        "Daniel 8:26"
+      ],
+      "continuity_required": false,
+      "explanation": "El versículo declara que echó por tierra la verdad.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-027",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Quién formuló la pregunta de '¿Hasta cuándo...?' en Daniel 8:13?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel"
+        },
+        {
+          "id": "B",
+          "text": "Gabriel"
+        },
+        {
+          "id": "C",
+          "text": "Otro de los santos"
+        },
+        {
+          "id": "D",
+          "text": "El rey Belsasar"
+        }
+      ],
+      "correctOptionId": "C",
+      "questionClass": [
+        "ACTOR_TRACKING"
+      ],
+      "supportingReferences": [
+        "Daniel 8:13",
+        "Daniel 8:16"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel oyó hablar a un santo, y otro de los santos preguntó al que hablaba.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-028",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Qué debía ocurrir después de las dos mil trescientas tardes y mañanas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El santuario sería purificado"
+        },
+        {
+          "id": "B",
+          "text": "El gran cuerno crecería después"
+        },
+        {
+          "id": "C",
+          "text": "Daniel atendería los negocios del rey"
+        },
+        {
+          "id": "D",
+          "text": "Cuatro reinos se levantarían de esa nación"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "BEFORE_AFTER_SEQUENCE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:3",
+        "Daniel 8:14",
+        "Daniel 8:22",
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "Después de ese período, el santuario sería purificado.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-029",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "Mientras Daniel consideraba la visión, ¿qué procuraba hacer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Comprenderla"
+        },
+        {
+          "id": "B",
+          "text": "Guardarla"
+        },
+        {
+          "id": "C",
+          "text": "Purificarla"
+        },
+        {
+          "id": "D",
+          "text": "Pisotearla"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:15",
+        "Daniel 8:26"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel consideraba la visión y procuraba comprenderla.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-030",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Quién se puso delante de Daniel mientras procuraba comprender la visión?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uno con apariencia de hombre"
+        },
+        {
+          "id": "B",
+          "text": "Un santo que preguntaba"
+        },
+        {
+          "id": "C",
+          "text": "El rey de Grecia"
+        },
+        {
+          "id": "D",
+          "text": "El príncipe de los ejércitos"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:13",
+        "Daniel 8:15",
+        "Daniel 8:21",
+        "Daniel 8:11"
+      ],
+      "continuity_required": false,
+      "explanation": "Se puso delante de él uno con apariencia de hombre.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-031",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Dónde oyó Daniel una voz de hombre que gritó a Gabriel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Entre las riberas del Ulai"
+        },
+        {
+          "id": "B",
+          "text": "Junto al santuario"
+        },
+        {
+          "id": "C",
+          "text": "En la tierra gloriosa"
+        },
+        {
+          "id": "D",
+          "text": "Del lado del poniente"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:5",
+        "Daniel 8:9",
+        "Daniel 8:11",
+        "Daniel 8:16"
+      ],
+      "continuity_required": false,
+      "explanation": "La voz de hombre se oyó entre las riberas del Ulai.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-032",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Qué orden recibió Gabriel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Enseña a éste la visión"
+        },
+        {
+          "id": "B",
+          "text": "Guarda la visión"
+        },
+        {
+          "id": "C",
+          "text": "Purifica el santuario"
+        },
+        {
+          "id": "D",
+          "text": "Atiende los negocios del rey"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 8:14",
+        "Daniel 8:16",
+        "Daniel 8:26-27"
+      ],
+      "continuity_required": false,
+      "explanation": "La voz ordenó: 'Gabriel, enseña a éste la visión.'",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-033",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Cómo reaccionó Daniel cuando Gabriel vino cerca de donde estaba?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se asustó y se postró sobre su rostro"
+        },
+        {
+          "id": "B",
+          "text": "Se engrandeció y prosperó"
+        },
+        {
+          "id": "C",
+          "text": "Se levantó y atendió los negocios del rey"
+        },
+        {
+          "id": "D",
+          "text": "Corrió contra él con la furia de su fuerza"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:6",
+        "Daniel 8:17",
+        "Daniel 8:25",
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel se asustó y se postró sobre su rostro.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-034",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Para qué tiempo dijo Gabriel que era la visión?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Para el tiempo del fin"
+        },
+        {
+          "id": "B",
+          "text": "Para el año tercero"
+        },
+        {
+          "id": "C",
+          "text": "Para muchos días solamente"
+        },
+        {
+          "id": "D",
+          "text": "Para el fin del reinado de estos"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:1",
+        "Daniel 8:17",
+        "Daniel 8:23",
+        "Daniel 8:26"
+      ],
+      "continuity_required": false,
+      "explanation": "Gabriel dijo que la visión es para el tiempo del fin.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-035",
+      "type": "single_choice",
+      "difficulty": 3,
+      "question": "¿Qué hizo Gabriel después de que Daniel cayó dormido en tierra sobre su rostro?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lo tocó y lo hizo estar en pie"
+        },
+        {
+          "id": "B",
+          "text": "Lo derribó y lo pisoteó"
+        },
+        {
+          "id": "C",
+          "text": "Le quebró sus dos cuernos"
+        },
+        {
+          "id": "D",
+          "text": "Le dijo que guardara la visión"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:7",
+        "Daniel 8:18",
+        "Daniel 8:26"
+      ],
+      "continuity_required": false,
+      "explanation": "Gabriel tocó a Daniel y lo hizo estar en pie.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-036",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué anunció Gabriel que enseñaría a Daniel en Daniel 8:19?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lo que ha de venir al fin de la ira"
+        },
+        {
+          "id": "B",
+          "text": "Lo que había ocurrido al inicio del reinado"
+        },
+        {
+          "id": "C",
+          "text": "Lo que sucedería al carnero antes de la visión"
+        },
+        {
+          "id": "D",
+          "text": "Lo que Daniel debía hacer con los negocios del rey"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:19",
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "Gabriel anunció que le enseñaría lo que ha de venir al fin de la ira.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "C",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-037",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué razón añade Daniel 8:19 después de mencionar 'el fin de la ira'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Porque eso es para el tiempo del fin"
+        },
+        {
+          "id": "B",
+          "text": "Porque es para muchos días"
+        },
+        {
+          "id": "C",
+          "text": "Porque el santuario será purificado"
+        },
+        {
+          "id": "D",
+          "text": "Porque los transgresores llegaron al colmo"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:14",
+        "Daniel 8:19",
+        "Daniel 8:23",
+        "Daniel 8:26"
+      ],
+      "continuity_required": false,
+      "explanation": "La frase continúa: 'porque eso es para el tiempo del fin'.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-038",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué representan los dos cuernos del carnero?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los reyes de Media y de Persia"
+        },
+        {
+          "id": "B",
+          "text": "El rey de Grecia y el rey primero"
+        },
+        {
+          "id": "C",
+          "text": "Cuatro reinos de una nación"
+        },
+        {
+          "id": "D",
+          "text": "Los fuertes y el pueblo de los santos"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:20-24"
+      ],
+      "continuity_required": false,
+      "explanation": "Los dos cuernos representan a los reyes de Media y de Persia.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-039",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué combinación interpreta correctamente al macho cabrío y a su cuerno grande?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Macho cabrío: rey de Grecia; cuerno grande: rey primero"
+        },
+        {
+          "id": "B",
+          "text": "Macho cabrío: rey de Persia; cuerno grande: príncipe de los ejércitos"
+        },
+        {
+          "id": "C",
+          "text": "Macho cabrío: rey primero; cuerno grande: rey de Grecia"
+        },
+        {
+          "id": "D",
+          "text": "Macho cabrío: cuatro reinos; cuerno grande: reyes de Media y Persia"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 8:20-22"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel 8:21 identifica al macho cabrío con el rey de Grecia y al cuerno grande con el rey primero.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-040",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué significa que el cuerno fue quebrado y cuatro sucedieron en su lugar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Que cuatro reinos se levantarán de esa nación, aunque no con la fuerza de él"
+        },
+        {
+          "id": "B",
+          "text": "Que cuatro reyes de Media y Persia dominarán con la misma fuerza"
+        },
+        {
+          "id": "C",
+          "text": "Que cuatro ejércitos serán entregados junto con el sacrificio continuo"
+        },
+        {
+          "id": "D",
+          "text": "Que cuatro santos responderán sobre las tardes y mañanas"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "NUMERIC_PRECISION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:22"
+      ],
+      "continuity_required": false,
+      "explanation": "La interpretación dice que cuatro reinos se levantarán de esa nación, pero no con la fuerza de él.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-041",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿En qué momento se levantará el rey descrito en Daniel 8:23?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Al fin del reinado de estos, cuando los transgresores lleguen al colmo"
+        },
+        {
+          "id": "B",
+          "text": "En el año tercero del reinado de Belsasar, antes de toda visión"
+        },
+        {
+          "id": "C",
+          "text": "Cuando el macho cabrío esté todavía sin cuerno notable"
+        },
+        {
+          "id": "D",
+          "text": "Después de que Daniel atienda los negocios del rey"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:1",
+        "Daniel 8:23",
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "El texto lo sitúa al fin del reinado de estos, cuando los transgresores lleguen al colmo.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-042",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Cómo se caracteriza al rey que se levantará en Daniel 8:23?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Altivo de rostro y entendido en enigmas"
+        },
+        {
+          "id": "B",
+          "text": "Grande de fuerza y entendido en visiones"
+        },
+        {
+          "id": "C",
+          "text": "Notable entre sus ojos y alto de cuerno"
+        },
+        {
+          "id": "D",
+          "text": "Espantado por la visión y enfermo algunos días"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:5",
+        "Daniel 8:23",
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "Se lo describe como altivo de rostro y entendido en enigmas.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-043",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué precisión hace Daniel 8:24 sobre el fortalecimiento de su poder?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se fortalecerá, mas no con fuerza propia"
+        },
+        {
+          "id": "B",
+          "text": "Se fortalecerá únicamente con su propia fuerza"
+        },
+        {
+          "id": "C",
+          "text": "No tendrá fuerzas para hacer frente"
+        },
+        {
+          "id": "D",
+          "text": "Su fuerza será igual a la del cuerno quebrado"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:7",
+        "Daniel 8:22",
+        "Daniel 8:24"
+      ],
+      "continuity_required": false,
+      "explanation": "Su poder se fortalecerá, pero no con fuerza propia.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-044",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Cuál de estas secuencias reúne tres acciones atribuidas a ese rey en Daniel 8:24?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Causará grandes ruinas, prosperará y actuará arbitrariamente"
+        },
+        {
+          "id": "B",
+          "text": "Guardará la visión, atenderá los negocios y caerá dormido"
+        },
+        {
+          "id": "C",
+          "text": "Hará conforme a su voluntad, se engrandecerá y herirá al poniente"
+        },
+        {
+          "id": "D",
+          "text": "Quitará el sacrificio, purificará el santuario y enseñará la visión"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:4",
+        "Daniel 8:16",
+        "Daniel 8:24",
+        "Daniel 8:26-27"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel 8:24 reúne esas tres acciones.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-045",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿A quiénes destruirá según Daniel 8:24?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A los fuertes y al pueblo de los santos"
+        },
+        {
+          "id": "B",
+          "text": "Al ejército y a las estrellas"
+        },
+        {
+          "id": "C",
+          "text": "Al carnero y al macho cabrío"
+        },
+        {
+          "id": "D",
+          "text": "A Media y a Persia"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:7",
+        "Daniel 8:10",
+        "Daniel 8:20",
+        "Daniel 8:24"
+      ],
+      "continuity_required": false,
+      "explanation": "El versículo dice que destruirá a los fuertes y al pueblo de los santos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-046",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué hará prosperar mediante su sagacidad?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El engaño en su mano"
+        },
+        {
+          "id": "B",
+          "text": "La verdad en su mano"
+        },
+        {
+          "id": "C",
+          "text": "El sacrificio continuo"
+        },
+        {
+          "id": "D",
+          "text": "Los negocios del rey"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 8:12",
+        "Daniel 8:25",
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "Con su sagacidad hará prosperar el engaño en su mano.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-047",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué dos acciones se le atribuyen en Daniel 8:25 antes de levantarse contra el Príncipe de los príncipes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En su corazón se engrandecerá y, sin aviso, destruirá a muchos"
+        },
+        {
+          "id": "B",
+          "text": "Se postrará sobre su rostro y caerá dormido"
+        },
+        {
+          "id": "C",
+          "text": "Echará por tierra las estrellas y luego será purificado"
+        },
+        {
+          "id": "D",
+          "text": "Guardará la visión y atenderá los negocios del rey"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "BEFORE_AFTER_SEQUENCE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:17-18",
+        "Daniel 8:25-27"
+      ],
+      "continuity_required": false,
+      "explanation": "El texto menciona que se engrandecerá en su corazón y destruirá a muchos sin aviso.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-048",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Cómo terminará el que se levante contra el Príncipe de los príncipes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Será quebrantado, aunque no por mano humana"
+        },
+        {
+          "id": "B",
+          "text": "Será quebrado por el macho cabrío"
+        },
+        {
+          "id": "C",
+          "text": "Será purificado después de dos mil trescientas tardes y mañanas"
+        },
+        {
+          "id": "D",
+          "text": "Será hecho estar en pie por Gabriel"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "EXACT_CONTINUATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:7",
+        "Daniel 8:14",
+        "Daniel 8:18",
+        "Daniel 8:25"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel 8:25 afirma que será quebrantado, aunque no por mano humana.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-049",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué dice Daniel 8:26 acerca de la visión de las tardes y mañanas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Que es verdadera"
+        },
+        {
+          "id": "B",
+          "text": "Que no la entendía"
+        },
+        {
+          "id": "C",
+          "text": "Que era para el año tercero"
+        },
+        {
+          "id": "D",
+          "text": "Que había sido echada por tierra"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:1",
+        "Daniel 8:12",
+        "Daniel 8:26-27"
+      ],
+      "continuity_required": false,
+      "explanation": "La visión de las tardes y mañanas se declara verdadera.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-050",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué instrucción recibió Daniel respecto de la visión y por qué?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Guardarla, porque es para muchos días"
+        },
+        {
+          "id": "B",
+          "text": "Enseñarla, porque es para el tiempo del fin"
+        },
+        {
+          "id": "C",
+          "text": "Purificarla, porque había sido echada por tierra"
+        },
+        {
+          "id": "D",
+          "text": "Olvidarla, porque no la entendía"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:16-17",
+        "Daniel 8:26-27"
+      ],
+      "continuity_required": false,
+      "explanation": "La instrucción es guardar la visión porque es para muchos días.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-051",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué dos efectos inmediatos menciona Daniel 8:27 sobre Daniel después de la visión?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Quedó quebrantado y estuvo enfermo algunos días"
+        },
+        {
+          "id": "B",
+          "text": "Se asustó y se postró sobre su rostro"
+        },
+        {
+          "id": "C",
+          "text": "Cayó dormido y fue hecho estar en pie"
+        },
+        {
+          "id": "D",
+          "text": "Prosperó y actuó arbitrariamente"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:17-18",
+        "Daniel 8:24",
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel quedó quebrantado y estuvo enfermo algunos días.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-052",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué hizo Daniel cuando se levantó después de estar enfermo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Atendió los negocios del rey"
+        },
+        {
+          "id": "B",
+          "text": "Guardó el santuario"
+        },
+        {
+          "id": "C",
+          "text": "Enseñó la visión a Gabriel"
+        },
+        {
+          "id": "D",
+          "text": "Corrió contra el carnero"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:6",
+        "Daniel 8:16",
+        "Daniel 8:26-27"
+      ],
+      "continuity_required": false,
+      "explanation": "Cuando se levantó, atendió los negocios del rey.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-053",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Cómo quedó Daniel respecto de la visión al final del capítulo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Espantado a causa de ella y sin entenderla"
+        },
+        {
+          "id": "B",
+          "text": "Engrandecido a causa de ella y dispuesto a explicarla"
+        },
+        {
+          "id": "C",
+          "text": "Purificado a causa de ella y sin temor"
+        },
+        {
+          "id": "D",
+          "text": "Fortalecido por fuerza propia y entendido en enigmas"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:23-24",
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel estaba espantado a causa de la visión y no la entendía.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-054",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "Según la redacción exacta de Daniel 8:3, ¿qué fue lo que 'creció después'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El más alto de los dos cuernos"
+        },
+        {
+          "id": "B",
+          "text": "El cuerno pequeño"
+        },
+        {
+          "id": "C",
+          "text": "El gran cuerno del macho cabrío"
+        },
+        {
+          "id": "D",
+          "text": "El ejército del cielo"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:3",
+        "Daniel 8:8-10"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel 8:3 dice que el más alto de los dos cuernos creció después.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-055",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "Completa exactamente el orden de Daniel 8:4: el carnero hería 'al poniente, ___'.",
+      "options": [
+        {
+          "id": "A",
+          "text": "al norte y al sur"
+        },
+        {
+          "id": "B",
+          "text": "al sur y al norte"
+        },
+        {
+          "id": "C",
+          "text": "al oriente y al sur"
+        },
+        {
+          "id": "D",
+          "text": "al norte y al oriente"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 8:4"
+      ],
+      "continuity_required": false,
+      "explanation": "La continuación exacta es 'al norte y al sur'.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-056",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Cuál de estos datos pertenece específicamente a Daniel 8:5 y no a los versículos 8–10?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El macho cabrío venía del poniente sin tocar tierra"
+        },
+        {
+          "id": "B",
+          "text": "Salieron cuatro cuernos hacia los cuatro vientos del cielo"
+        },
+        {
+          "id": "C",
+          "text": "Un cuerno pequeño creció hacia el sur y el oriente"
+        },
+        {
+          "id": "D",
+          "text": "Parte del ejército y de las estrellas fue echada por tierra"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:5",
+        "Daniel 8:8-10"
+      ],
+      "continuity_required": false,
+      "explanation": "El dato del versículo 5 es la llegada del macho cabrío desde el poniente sin tocar tierra.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-057",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué par de detalles corresponde exactamente al enfrentamiento de Daniel 8:7?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le quebró sus dos cuernos y el carnero no tenía fuerzas para hacerle frente"
+        },
+        {
+          "id": "B",
+          "text": "Le quebró su gran cuerno y salieron cuatro cuernos notables"
+        },
+        {
+          "id": "C",
+          "text": "Echó por tierra la verdad y prosperó"
+        },
+        {
+          "id": "D",
+          "text": "Destruyó a los fuertes y al pueblo de los santos"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:7-8",
+        "Daniel 8:12",
+        "Daniel 8:24"
+      ],
+      "continuity_required": false,
+      "explanation": "En 8:7 el macho cabrío quebró los dos cuernos del carnero, que no tenía fuerzas para hacerle frente.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-058",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Cuál es la secuencia correcta de Daniel 8:8?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El macho cabrío crece mucho → llega a su mayor fuerza → el gran cuerno es quebrado → salen cuatro cuernos"
+        },
+        {
+          "id": "B",
+          "text": "El gran cuerno es quebrado → aparece el macho cabrío → el carnero crece → salen dos cuernos"
+        },
+        {
+          "id": "C",
+          "text": "Salen cuatro cuernos → el macho cabrío llega del oriente → el gran cuerno crece después"
+        },
+        {
+          "id": "D",
+          "text": "El macho cabrío es pisoteado → el cuerno pequeño es purificado → salen cuatro reinos"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "NUMERIC_PRECISION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:8"
+      ],
+      "continuity_required": false,
+      "explanation": "Ese es el orden presentado en el versículo 8.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-059",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué crecimiento corresponde a Daniel 8:9 y cuál a Daniel 8:10?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:9: hacia el sur, el oriente y la tierra gloriosa; 8:10: hasta el ejército del cielo"
+        },
+        {
+          "id": "B",
+          "text": "8:9: hasta el ejército del cielo; 8:10: hacia el sur, el oriente y la tierra gloriosa"
+        },
+        {
+          "id": "C",
+          "text": "8:9: hacia los cuatro vientos; 8:10: al poniente, norte y sur"
+        },
+        {
+          "id": "D",
+          "text": "8:9: hasta el santuario; 8:10: hasta las riberas del Ulai"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:4",
+        "Daniel 8:8-10",
+        "Daniel 8:16"
+      ],
+      "continuity_required": false,
+      "explanation": "El versículo 9 enumera sur, oriente y tierra gloriosa; el 10 continúa hasta el ejército del cielo.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-060",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué fue echado por tierra en Daniel 8:10 y qué fue echado por tierra en Daniel 8:12?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:10: parte del ejército y de las estrellas; 8:12: la verdad"
+        },
+        {
+          "id": "B",
+          "text": "8:10: la verdad; 8:12: parte del ejército y de las estrellas"
+        },
+        {
+          "id": "C",
+          "text": "8:10: el lugar del santuario; 8:12: el gran cuerno"
+        },
+        {
+          "id": "D",
+          "text": "8:10: el carnero; 8:12: el príncipe de los ejércitos"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:10-12"
+      ],
+      "continuity_required": false,
+      "explanation": "8:10 menciona parte del ejército y de las estrellas; 8:12, la verdad.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-061",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "Según la redacción exacta, ¿qué título aparece en Daniel 8:11 y cuál en Daniel 8:25?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:11: príncipe de los ejércitos; 8:25: Príncipe de los príncipes"
+        },
+        {
+          "id": "B",
+          "text": "8:11: Príncipe de los príncipes; 8:25: príncipe de los ejércitos"
+        },
+        {
+          "id": "C",
+          "text": "8:11: rey primero; 8:25: rey de Grecia"
+        },
+        {
+          "id": "D",
+          "text": "8:11: hijo de hombre; 8:25: rey Belsasar"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:11",
+        "Daniel 8:25"
+      ],
+      "continuity_required": false,
+      "explanation": "El capítulo usa dos expresiones distintas: 'príncipe de los ejércitos' en 8:11 y 'Príncipe de los príncipes' en 8:25.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-062",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "En Daniel 8:11, ¿qué fue 'quitado' y qué fue 'echado por tierra'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El sacrificio continuo fue quitado; el lugar de su santuario fue echado por tierra"
+        },
+        {
+          "id": "B",
+          "text": "El lugar de su santuario fue quitado; el sacrificio continuo fue echado por tierra"
+        },
+        {
+          "id": "C",
+          "text": "La verdad fue quitada; el ejército fue echado por tierra"
+        },
+        {
+          "id": "D",
+          "text": "El gran cuerno fue quitado; el carnero fue echado por tierra"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 8:7-8",
+        "Daniel 8:11-12"
+      ],
+      "continuity_required": false,
+      "explanation": "La asignación exacta es sacrificio continuo = quitado; lugar del santuario = echado por tierra.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-063",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué dos elementos aparecen juntos como entregados en Daniel 8:12?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El ejército y el sacrificio continuo"
+        },
+        {
+          "id": "B",
+          "text": "El santuario y la verdad"
+        },
+        {
+          "id": "C",
+          "text": "Las estrellas y el gran cuerno"
+        },
+        {
+          "id": "D",
+          "text": "Media y Persia"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:10-12",
+        "Daniel 8:20"
+      ],
+      "continuity_required": false,
+      "explanation": "A causa de la prevaricación fue entregado el ejército junto con el sacrificio continuo.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-064",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Quién preguntó a quién en Daniel 8:13?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Otro de los santos preguntó a aquel santo que hablaba"
+        },
+        {
+          "id": "B",
+          "text": "El santo que hablaba preguntó a Daniel"
+        },
+        {
+          "id": "C",
+          "text": "Daniel preguntó a Gabriel"
+        },
+        {
+          "id": "D",
+          "text": "Gabriel preguntó a la voz de hombre"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 8:13",
+        "Daniel 8:16"
+      ],
+      "continuity_required": false,
+      "explanation": "El texto dice que otro de los santos preguntó a aquel que hablaba.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-065",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Cuál conjunto reproduce los tres elementos sometidos a la pregunta '¿Hasta cuándo...?' de Daniel 8:13?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El sacrificio continuo, la prevaricación asoladora y la entrega del santuario y el ejército para ser pisoteados"
+        },
+        {
+          "id": "B",
+          "text": "El carnero, el macho cabrío y los cuatro vientos del cielo"
+        },
+        {
+          "id": "C",
+          "text": "Media, Persia y Grecia"
+        },
+        {
+          "id": "D",
+          "text": "La verdad, los fuertes y los negocios del rey"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "EXACT_CONTINUATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:13",
+        "Daniel 8:20-21",
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "La pregunta agrupa sacrificio continuo, prevaricación asoladora y entrega del santuario y del ejército para ser pisoteados.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-066",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "Completa exactamente Daniel 8:14: 'Hasta dos mil trescientas tardes y mañanas; luego...'",
+      "options": [
+        {
+          "id": "A",
+          "text": "el santuario será purificado"
+        },
+        {
+          "id": "B",
+          "text": "la visión será guardada"
+        },
+        {
+          "id": "C",
+          "text": "el carnero será quebrantado"
+        },
+        {
+          "id": "D",
+          "text": "el rey atenderá sus negocios"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:14",
+        "Daniel 8:26-27"
+      ],
+      "continuity_required": false,
+      "explanation": "La continuación exacta es 'el santuario será purificado'.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-067",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué expresión corresponde al ser que se puso delante de Daniel en 8:15, no a la voz que oyó en 8:16?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uno con apariencia de hombre"
+        },
+        {
+          "id": "B",
+          "text": "Una voz de hombre"
+        },
+        {
+          "id": "C",
+          "text": "Otro de los santos"
+        },
+        {
+          "id": "D",
+          "text": "El rey primero"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:13",
+        "Daniel 8:15-16",
+        "Daniel 8:21"
+      ],
+      "continuity_required": false,
+      "explanation": "8:15 habla de uno con apariencia de hombre; 8:16, de una voz de hombre.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-068",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Cuál emparejamiento localiza correctamente las expresiones de Daniel 8:15-16?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:15: apariencia de hombre; 8:16: voz de hombre"
+        },
+        {
+          "id": "B",
+          "text": "8:15: voz de hombre; 8:16: apariencia de hombre"
+        },
+        {
+          "id": "C",
+          "text": "8:15: hijo de hombre; 8:16: rey de Grecia"
+        },
+        {
+          "id": "D",
+          "text": "8:15: santo; 8:16: Príncipe de los príncipes"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:15-17",
+        "Daniel 8:21",
+        "Daniel 8:25"
+      ],
+      "continuity_required": false,
+      "explanation": "La apariencia de hombre aparece en 8:15 y la voz de hombre en 8:16.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-069",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Cuál es el orden correcto de los hechos en Daniel 8:17-18?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gabriel se acerca → Daniel se asusta y se postra → Gabriel habla → Daniel cae dormido → Gabriel lo toca y lo pone en pie"
+        },
+        {
+          "id": "B",
+          "text": "Daniel cae dormido → Gabriel se acerca → Daniel atiende los negocios → Gabriel lo toca"
+        },
+        {
+          "id": "C",
+          "text": "Gabriel lo toca → Daniel se postra → la voz ordena a Gabriel → Daniel cae enfermo"
+        },
+        {
+          "id": "D",
+          "text": "Daniel se levanta → Gabriel se asusta → Daniel lo toca → ambos caen dormidos"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "ACTOR_TRACKING"
+      ],
+      "supportingReferences": [
+        "Daniel 8:17-18"
+      ],
+      "continuity_required": false,
+      "explanation": "Esa es la secuencia narrada en los versículos 17 y 18.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-070",
+      "type": "single_choice",
+      "difficulty": 4,
+      "question": "¿Qué dos expresiones temporales aparecen unidas en Daniel 8:19?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El fin de la ira y el tiempo del fin"
+        },
+        {
+          "id": "B",
+          "text": "El año tercero y muchos días"
+        },
+        {
+          "id": "C",
+          "text": "Dos mil trescientas tardes y el fin del reinado"
+        },
+        {
+          "id": "D",
+          "text": "La mayor fuerza y los cuatro vientos"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:1",
+        "Daniel 8:8",
+        "Daniel 8:14",
+        "Daniel 8:19",
+        "Daniel 8:23",
+        "Daniel 8:26"
+      ],
+      "continuity_required": false,
+      "explanation": "Gabriel habla de lo que vendrá al fin de la ira y añade que eso es para el tiempo del fin.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-071",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál de estas correspondencias NO coincide con las interpretaciones explícitas de Daniel 8:20-22?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carnero de dos cuernos → reyes de Media y Persia"
+        },
+        {
+          "id": "B",
+          "text": "Macho cabrío → rey de Grecia"
+        },
+        {
+          "id": "C",
+          "text": "Cuerno grande entre los ojos → rey primero"
+        },
+        {
+          "id": "D",
+          "text": "Cuatro cuernos sucesores → cuatro reyes de Media y Persia"
+        }
+      ],
+      "correctOptionId": "D",
+      "questionClass": [
+        "NEGATIVE_PRECISION",
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL"
+      ],
+      "supportingReferences": [
+        "Daniel 8:20-22"
+      ],
+      "continuity_required": false,
+      "explanation": "Los cuatro cuernos significan cuatro reinos que se levantarán de esa nación, no cuatro reyes de Media y Persia.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-072",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "Según la redacción exacta, ¿cómo cambia la descripción del cuerno del macho cabrío entre Daniel 8:5 y 8:21?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:5 lo llama 'cuerno notable'; 8:21 lo llama 'cuerno grande'"
+        },
+        {
+          "id": "B",
+          "text": "8:5 lo llama 'cuerno grande'; 8:21 lo llama 'cuerno notable'"
+        },
+        {
+          "id": "C",
+          "text": "Ambos versículos lo llaman únicamente 'cuerno pequeño'"
+        },
+        {
+          "id": "D",
+          "text": "8:5 lo llama 'cuerno alto'; 8:21, 'cuerno primero'"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:5",
+        "Daniel 8:21"
+      ],
+      "continuity_required": false,
+      "explanation": "La visión usa 'cuerno notable' en 8:5 y la interpretación usa 'cuerno grande' en 8:21.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-073",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Qué combinación conserva los dos datos de Daniel 8:22 sin mezclar información de otros versículos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cuatro reinos se levantarán de esa nación, aunque no con la fuerza de él"
+        },
+        {
+          "id": "B",
+          "text": "Cuatro cuernos crecerán hacia el sur y el oriente, con la misma fuerza de él"
+        },
+        {
+          "id": "C",
+          "text": "Dos reinos se levantarán de Media y Persia, aunque no con fuerza propia"
+        },
+        {
+          "id": "D",
+          "text": "Cuatro reinos serán entregados con el sacrificio continuo y prosperarán"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 8:8-9",
+        "Daniel 8:12",
+        "Daniel 8:20",
+        "Daniel 8:22",
+        "Daniel 8:24"
+      ],
+      "continuity_required": false,
+      "explanation": "8:22 especifica cuatro reinos de esa nación y añade que no tendrán la fuerza de él.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-074",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "Completa exactamente el inicio de Daniel 8:23: 'Al fin del reinado de estos, cuando...'",
+      "options": [
+        {
+          "id": "A",
+          "text": "los transgresores lleguen al colmo"
+        },
+        {
+          "id": "B",
+          "text": "el macho cabrío esté en su mayor fuerza"
+        },
+        {
+          "id": "C",
+          "text": "el santuario sea purificado"
+        },
+        {
+          "id": "D",
+          "text": "Daniel atienda los negocios del rey"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:8",
+        "Daniel 8:14",
+        "Daniel 8:23",
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "La continuación exacta es 'los transgresores lleguen al colmo'.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-075",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál de estas afirmaciones es verdadera en el capítulo, pero NO pertenece a la descripción de Daniel 8:24?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En su corazón se engrandecerá"
+        },
+        {
+          "id": "B",
+          "text": "Causará grandes ruinas"
+        },
+        {
+          "id": "C",
+          "text": "Prosperará"
+        },
+        {
+          "id": "D",
+          "text": "Destruirá a los fuertes y al pueblo de los santos"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "NEGATIVE_PRECISION",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:24-25"
+      ],
+      "continuity_required": false,
+      "explanation": "'En su corazón se engrandecerá' pertenece a 8:25; las otras tres expresiones corresponden a 8:24.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-076",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál de estas afirmaciones es verdadera en el capítulo, pero NO forma parte de Daniel 8:25?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Actuará arbitrariamente"
+        },
+        {
+          "id": "B",
+          "text": "Hará prosperar el engaño en su mano"
+        },
+        {
+          "id": "C",
+          "text": "Sin aviso, destruirá a muchos"
+        },
+        {
+          "id": "D",
+          "text": "Se levantará contra el Príncipe de los príncipes"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "NEGATIVE_PRECISION",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:24-25"
+      ],
+      "continuity_required": false,
+      "explanation": "'Actuará arbitrariamente' está en 8:24; las demás opciones son de 8:25.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-077",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Qué emparejamiento distingue correctamente a quiénes destruye el rey en Daniel 8:24 y 8:25?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:24: los fuertes y el pueblo de los santos; 8:25: a muchos, sin aviso"
+        },
+        {
+          "id": "B",
+          "text": "8:24: a muchos, sin aviso; 8:25: los fuertes y el pueblo de los santos"
+        },
+        {
+          "id": "C",
+          "text": "8:24: el ejército y las estrellas; 8:25: Media y Persia"
+        },
+        {
+          "id": "D",
+          "text": "8:24: el carnero; 8:25: el macho cabrío"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:7",
+        "Daniel 8:10",
+        "Daniel 8:20",
+        "Daniel 8:24-25"
+      ],
+      "continuity_required": false,
+      "explanation": "8:24 nombra a los fuertes y al pueblo de los santos; 8:25 habla de destruir a muchos sin aviso.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-078",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "Según la redacción exacta de Daniel 8:25, ¿dónde hará prosperar el engaño?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En su mano"
+        },
+        {
+          "id": "B",
+          "text": "En su corazón"
+        },
+        {
+          "id": "C",
+          "text": "En la tierra gloriosa"
+        },
+        {
+          "id": "D",
+          "text": "En el santuario"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:9",
+        "Daniel 8:11",
+        "Daniel 8:25"
+      ],
+      "continuity_required": false,
+      "explanation": "El texto dice 'hará prosperar el engaño en su mano'; el corazón aparece en la cláusula siguiente.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-079",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál opción mantiene correctamente separados dos finales distintos del capítulo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El carnero no tuvo quien lo librara del poder del macho cabrío; el rey de 8:25 será quebrantado no por mano humana"
+        },
+        {
+          "id": "B",
+          "text": "El carnero fue quebrantado no por mano humana; el rey de 8:25 no tuvo quien lo librara del macho cabrío"
+        },
+        {
+          "id": "C",
+          "text": "Ambos fueron purificados después de dos mil trescientas tardes y mañanas"
+        },
+        {
+          "id": "D",
+          "text": "Ambos fueron hechos estar en pie por Gabriel"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 8:7",
+        "Daniel 8:14",
+        "Daniel 8:18",
+        "Daniel 8:25"
+      ],
+      "continuity_required": false,
+      "explanation": "8:7 niega un libertador para el carnero; 8:25 dice que el rey será quebrantado no por mano humana.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-080",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Qué combinación diferencia correctamente Daniel 8:14 de Daniel 8:26?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:14 fija dos mil trescientas tardes y mañanas; 8:26 declara verdadera la visión de las tardes y mañanas y ordena guardarla"
+        },
+        {
+          "id": "B",
+          "text": "8:14 declara verdadera la visión; 8:26 purifica el santuario después de dos mil trescientas tardes y mañanas"
+        },
+        {
+          "id": "C",
+          "text": "8:14 ordena guardar la visión; 8:26 pregunta hasta cuándo será pisoteado el santuario"
+        },
+        {
+          "id": "D",
+          "text": "8:14 identifica al rey de Grecia; 8:26 identifica a Media y Persia"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:13-14",
+        "Daniel 8:20-21",
+        "Daniel 8:26"
+      ],
+      "continuity_required": false,
+      "explanation": "8:14 contiene el período y la purificación; 8:26 afirma la veracidad de esa visión y ordena guardarla.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-081",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál secuencia respeta el orden de Daniel 8:27?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel queda quebrantado → está enfermo algunos días → se levanta → atiende los negocios del rey → permanece espantado y sin entender la visión"
+        },
+        {
+          "id": "B",
+          "text": "Daniel atiende los negocios → cae enfermo → recibe la orden de Gabriel → entiende la visión"
+        },
+        {
+          "id": "C",
+          "text": "Daniel se levanta → queda quebrantado → purifica el santuario → atiende los negocios"
+        },
+        {
+          "id": "D",
+          "text": "Daniel no entiende la visión → corre contra el carnero → se postra → queda enfermo"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "PAIRED_DETAIL"
+      ],
+      "supportingReferences": [
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "Ese es el orden explícito del cierre del capítulo.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-082",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "Al terminar Daniel 8, ¿quién es el sujeto de 'no la entendía' y qué es 'la'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel; la visión"
+        },
+        {
+          "id": "B",
+          "text": "Gabriel; la voz"
+        },
+        {
+          "id": "C",
+          "text": "El rey; la prevaricación"
+        },
+        {
+          "id": "D",
+          "text": "El macho cabrío; la verdad"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 8:27"
+      ],
+      "continuity_required": false,
+      "explanation": "El sujeto explícito del versículo es Daniel y el antecedente de 'la' es la visión.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-083",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Qué dos menciones del Ulai están correctamente localizadas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:2: Daniel se ve junto al río Ulai; 8:16: oye una voz de hombre entre las riberas del Ulai"
+        },
+        {
+          "id": "B",
+          "text": "8:2: la voz grita entre las riberas; 8:16: el carnero aparece junto al río"
+        },
+        {
+          "id": "C",
+          "text": "8:2: el macho cabrío llega sin tocar el Ulai; 8:16: el santuario es echado al Ulai"
+        },
+        {
+          "id": "D",
+          "text": "8:2: Media y Persia están junto al Ulai; 8:16: Grecia está entre sus riberas"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:2",
+        "Daniel 8:3",
+        "Daniel 8:16",
+        "Daniel 8:20-21"
+      ],
+      "continuity_required": false,
+      "explanation": "El Ulai ubica a Daniel en 8:2 y a la voz de hombre en 8:16.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-084",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál opción distingue correctamente dos desarrollos de cuernos separados en el capítulo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En 8:3, el más alto de los dos cuernos crece después; en 8:8, cuatro cuernos salen en lugar del gran cuerno quebrado"
+        },
+        {
+          "id": "B",
+          "text": "En 8:3, cuatro cuernos salen de un cuerno quebrado; en 8:8, el más alto de dos crece después"
+        },
+        {
+          "id": "C",
+          "text": "En 8:3, un cuerno pequeño crece al sur; en 8:8, el carnero tiene dos cuernos"
+        },
+        {
+          "id": "D",
+          "text": "En 8:3 y 8:8 ocurre exactamente el mismo reemplazo de un cuerno por cuatro"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "CROSS_BLOCK_CONFUSION",
+        "MINIMAL_PAIR_LITERAL",
+        "PAIRED_DETAIL"
+      ],
+      "supportingReferences": [
+        "Daniel 8:3",
+        "Daniel 8:8-9"
+      ],
+      "continuity_required": false,
+      "explanation": "8:3 trata la desigualdad y crecimiento posterior de uno de dos cuernos; 8:8 trata el reemplazo del gran cuerno por cuatro.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-085",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál frase pertenece al poder del carnero en Daniel 8:4 y no al dominio del macho cabrío en Daniel 8:7?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No había quien escapara de su poder"
+        },
+        {
+          "id": "B",
+          "text": "No hubo quien librara de su poder al carnero"
+        },
+        {
+          "id": "C",
+          "text": "Lo derribó a tierra"
+        },
+        {
+          "id": "D",
+          "text": "Lo pisoteó"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:4",
+        "Daniel 8:7"
+      ],
+      "continuity_required": false,
+      "explanation": "8:4 dice que no había quien escapara del poder del carnero; las otras expresiones pertenecen al ataque del macho cabrío en 8:7.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-086",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál combinación distingue correctamente el desplazamiento del macho cabrío en Daniel 8:5 y 8:6?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:5: viene del poniente sobre toda la tierra sin tocar tierra; 8:6: llega hasta el carnero y corre contra él con la furia de su fuerza"
+        },
+        {
+          "id": "B",
+          "text": "8:5: corre contra el carnero; 8:6: viene del oriente sin tocar tierra"
+        },
+        {
+          "id": "C",
+          "text": "8:5: se postra sobre su rostro; 8:6: lo toca y lo pone en pie"
+        },
+        {
+          "id": "D",
+          "text": "8:5: crece hacia el sur y el oriente; 8:6: llega al ejército del cielo"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "BEFORE_AFTER_SEQUENCE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:5-6",
+        "Daniel 8:9-10",
+        "Daniel 8:17-18"
+      ],
+      "continuity_required": false,
+      "explanation": "El versículo 5 describe su llegada desde el poniente sin tocar tierra; el 6, su carrera contra el carnero.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-087",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Qué cuernos son quebrados en Daniel 8:7 y qué cuerno es quebrado en Daniel 8:8?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:7: los dos cuernos del carnero; 8:8: el gran cuerno del macho cabrío"
+        },
+        {
+          "id": "B",
+          "text": "8:7: el gran cuerno del macho cabrío; 8:8: los dos cuernos del carnero"
+        },
+        {
+          "id": "C",
+          "text": "8:7: los cuatro cuernos notables; 8:8: el cuerno pequeño"
+        },
+        {
+          "id": "D",
+          "text": "8:7: un cuerno de Media; 8:8: un cuerno de Persia"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 8:7-8",
+        "Daniel 8:20"
+      ],
+      "continuity_required": false,
+      "explanation": "El ataque de 8:7 rompe los dos cuernos del carnero; en 8:8 se quiebra el gran cuerno del macho cabrío.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-088",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál opción conecta correctamente la visión de Daniel 8:8 con su interpretación en 8:22?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cuatro cuernos salen en lugar del gran cuerno; significan cuatro reinos que se levantarán de esa nación sin la fuerza de él"
+        },
+        {
+          "id": "B",
+          "text": "Dos cuernos salen hacia los cuatro vientos; significan Grecia y el rey primero"
+        },
+        {
+          "id": "C",
+          "text": "Un cuerno pequeño sale del carnero; significa a Media y Persia con la fuerza de él"
+        },
+        {
+          "id": "D",
+          "text": "Cuatro estrellas son pisoteadas; significan cuatro santos que preguntan"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION",
+        "NUMERIC_PRECISION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:8",
+        "Daniel 8:20-22"
+      ],
+      "continuity_required": false,
+      "explanation": "8:8 presenta cuatro cuernos sucesores; 8:22 los interpreta como cuatro reinos de esa nación, no con la fuerza de él.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-089",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál par usa correctamente el verbo de crecimiento en dos contextos distintos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:9: el cuerno pequeño 'creció mucho'; 8:24: el poder del rey 'se fortalecerá, mas no con fuerza propia'"
+        },
+        {
+          "id": "B",
+          "text": "8:9: el poder se fortalecerá sin fuerza propia; 8:24: el cuerno pequeño creció hacia la tierra gloriosa"
+        },
+        {
+          "id": "C",
+          "text": "8:9: el carnero se engrandeció; 8:24: el gran cuerno fue quebrado"
+        },
+        {
+          "id": "D",
+          "text": "8:9: la visión fue guardada; 8:24: el santuario fue purificado"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL"
+      ],
+      "supportingReferences": [
+        "Daniel 8:8-9",
+        "Daniel 8:14",
+        "Daniel 8:24",
+        "Daniel 8:26"
+      ],
+      "continuity_required": false,
+      "explanation": "8:9 describe crecimiento espacial del cuerno pequeño; 8:24 habla del fortalecimiento del poder, no con fuerza propia.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-090",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál combinación mantiene separados Daniel 8:10 y Daniel 8:24?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:10: parte del ejército y de las estrellas es echada por tierra y pisoteada; 8:24: el rey destruye a los fuertes y al pueblo de los santos"
+        },
+        {
+          "id": "B",
+          "text": "8:10: destruye a los fuertes y santos; 8:24: echa estrellas por tierra"
+        },
+        {
+          "id": "C",
+          "text": "8:10: quita el sacrificio continuo; 8:24: derriba al carnero"
+        },
+        {
+          "id": "D",
+          "text": "8:10: guarda la visión; 8:24: purifica el santuario"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:7",
+        "Daniel 8:10-11",
+        "Daniel 8:24",
+        "Daniel 8:26"
+      ],
+      "continuity_required": false,
+      "explanation": "8:10 trata del ejército y las estrellas; 8:24 de los fuertes y el pueblo de los santos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-091",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál afirmación distingue correctamente los dos tratamientos del sacrificio continuo en Daniel 8:11-12?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En 8:11 es quitado; en 8:12 es entregado junto con el ejército a causa de la prevaricación"
+        },
+        {
+          "id": "B",
+          "text": "En 8:11 es entregado con el ejército; en 8:12 es quitado por Gabriel"
+        },
+        {
+          "id": "C",
+          "text": "En 8:11 es purificado; en 8:12 es guardado para muchos días"
+        },
+        {
+          "id": "D",
+          "text": "En 8:11 es quebrantado; en 8:12 se levanta contra el Príncipe de los príncipes"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:11-12",
+        "Daniel 8:25-26"
+      ],
+      "continuity_required": false,
+      "explanation": "8:11 dice que fue quitado; 8:12 que fue entregado con el ejército por la prevaricación.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-092",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "El verbo 'prosperar' aparece en más de un contexto. ¿Cuál localización es correcta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:12: 'hizo cuanto quiso, y prosperó'; 8:24: 'prosperará'; 8:25: hará prosperar el engaño en su mano"
+        },
+        {
+          "id": "B",
+          "text": "8:12: hará prosperar el engaño; 8:24: prosperó atendiendo negocios; 8:25: el santuario prosperará"
+        },
+        {
+          "id": "C",
+          "text": "8:12: el carnero prosperará; 8:24: Gabriel prosperará; 8:25: Daniel prosperará"
+        },
+        {
+          "id": "D",
+          "text": "8:12, 8:24 y 8:25 usan exactamente la misma frase completa"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "CROSS_BLOCK_CONFUSION",
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:12",
+        "Daniel 8:24-25"
+      ],
+      "continuity_required": false,
+      "explanation": "Cada versículo usa 'prosperar' en una construcción distinta, y la opción A preserva las tres.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-093",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "En Daniel 8:13-14, ¿quién responde con 'Hasta dos mil trescientas tardes y mañanas...'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aquel santo que estaba hablando y al que el otro santo había preguntado"
+        },
+        {
+          "id": "B",
+          "text": "Daniel, que acababa de formular la pregunta"
+        },
+        {
+          "id": "C",
+          "text": "Gabriel, nombrado explícitamente en el versículo 14"
+        },
+        {
+          "id": "D",
+          "text": "El rey Belsasar, desde Susa"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "CONTINUITY_CHAIN"
+      ],
+      "supportingReferences": [
+        "Daniel 8:13-14"
+      ],
+      "continuity_required": true,
+      "explanation": "El antecedente inmediato de 'él dijo' es aquel que hablaba, a quien otro de los santos hizo la pregunta.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-094",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál opción distingue correctamente las dos referencias a 'hombre' en Daniel 8:15-16?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En 8:15 hay uno con apariencia de hombre delante de Daniel; en 8:16 se oye una voz de hombre entre las riberas del Ulai"
+        },
+        {
+          "id": "B",
+          "text": "En 8:15 se oye una voz de hombre; en 8:16 aparece un hombre delante del carnero"
+        },
+        {
+          "id": "C",
+          "text": "En ambos versículos Gabriel es llamado literalmente 'hombre' por nombre"
+        },
+        {
+          "id": "D",
+          "text": "En 8:15 Daniel recibe el título 'hijo de hombre'; en 8:16 Belsasar habla desde el Ulai"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:15-17"
+      ],
+      "continuity_required": false,
+      "explanation": "8:15 describe una apariencia de hombre; 8:16 una voz de hombre. El título 'hijo de hombre' aparece en 8:17.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-095",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál cadena de participantes es correcta en Daniel 8:16-17?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Una voz de hombre ordena a Gabriel que enseñe la visión; Gabriel se acerca a Daniel y le habla"
+        },
+        {
+          "id": "B",
+          "text": "Daniel ordena a Gabriel que enseñe la visión; la voz se postra ante Daniel"
+        },
+        {
+          "id": "C",
+          "text": "Gabriel ordena a la voz que enseñe la visión; Belsasar se acerca a Daniel"
+        },
+        {
+          "id": "D",
+          "text": "Un santo ordena al macho cabrío que enseñe la visión; Gabriel se aleja"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "CONTINUITY_CHAIN",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 8:16-17"
+      ],
+      "continuity_required": true,
+      "explanation": "La voz da la orden a Gabriel; luego Gabriel viene cerca de Daniel y le explica el propósito temporal de la visión.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-096",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cómo se distribuye la expresión 'tiempo del fin' entre Daniel 8:17 y 8:19?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:17: la visión es para el tiempo del fin; 8:19: lo que ha de venir al fin de la ira es para el tiempo del fin"
+        },
+        {
+          "id": "B",
+          "text": "8:17: Daniel no entiende el tiempo del fin; 8:19: el carnero es el tiempo del fin"
+        },
+        {
+          "id": "C",
+          "text": "8:17: la visión es para muchos días; 8:19: el santuario será purificado en el tiempo del fin"
+        },
+        {
+          "id": "D",
+          "text": "8:17: Belsasar reina en el tiempo del fin; 8:19: Grecia se levanta en el tiempo del fin"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 8:17",
+        "Daniel 8:19",
+        "Daniel 8:26"
+      ],
+      "continuity_required": false,
+      "explanation": "La misma expresión aparece en 8:17 y 8:19, pero con construcciones distintas.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-097",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál secuencia de interpretación aparece en el mismo orden que Daniel 8:20-22?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carnero y sus dos cuernos → Media y Persia; macho cabrío → Grecia; cuerno grande → rey primero; cuatro sucesores → cuatro reinos"
+        },
+        {
+          "id": "B",
+          "text": "Grecia → carnero; Media y Persia → macho cabrío; cuatro reinos → cuerno grande; rey primero → dos cuernos"
+        },
+        {
+          "id": "C",
+          "text": "Cuatro reinos → Media y Persia; rey primero → carnero; Grecia → cuatro cuernos; santos → cuerno grande"
+        },
+        {
+          "id": "D",
+          "text": "Carnero → Príncipe de los príncipes; macho cabrío → pueblo de los santos; cuatro cuernos → tardes y mañanas"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:20-22"
+      ],
+      "continuity_required": false,
+      "explanation": "Ese es el orden exacto de las identificaciones interpretativas de los versículos 20–22.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-098",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál secuencia resume sin intercambiar detalles el desarrollo del rey de Daniel 8:23-25?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se levanta cuando los transgresores llegan al colmo → su poder se fortalece no con fuerza propia → destruye a fuertes y santos → hace prosperar el engaño → se levanta contra el Príncipe de los príncipes → es quebrantado no por mano humana"
+        },
+        {
+          "id": "B",
+          "text": "Se levanta en el año tercero → su poder depende de fuerza propia → purifica el santuario → guarda la visión → atiende negocios"
+        },
+        {
+          "id": "C",
+          "text": "Sale de Media y Persia → corre contra Grecia → pierde dos cuernos → es puesto en pie por Gabriel"
+        },
+        {
+          "id": "D",
+          "text": "Se levanta después de que Daniel enferma → destruye únicamente estrellas → es quebrantado por mano humana"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION",
+        "ACTOR_TRACKING"
+      ],
+      "supportingReferences": [
+        "Daniel 8:23-25"
+      ],
+      "continuity_required": false,
+      "explanation": "La opción A conserva la progresión y los detalles propios de 8:23-25.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-099",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál emparejamiento enlaza correctamente la instrucción final con la reacción posterior de Daniel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "8:26: guardar la visión porque es para muchos días; 8:27: Daniel queda quebrantado, enferma, luego atiende los negocios del rey y sigue sin entenderla"
+        },
+        {
+          "id": "B",
+          "text": "8:26: explicar la visión porque es inmediata; 8:27: Daniel la comprende por completo"
+        },
+        {
+          "id": "C",
+          "text": "8:26: purificar el santuario; 8:27: Daniel quiebra el gran cuerno"
+        },
+        {
+          "id": "D",
+          "text": "8:26: destruir a los fuertes; 8:27: Daniel se engrandece y prospera"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "BEFORE_AFTER_SEQUENCE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 8:26-27"
+      ],
+      "continuity_required": false,
+      "explanation": "La instrucción de 8:26 es guardar la visión; 8:27 narra el quebranto, enfermedad, retorno a los negocios y falta de comprensión.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "DAN8-100",
+      "type": "single_choice",
+      "difficulty": 5,
+      "question": "¿Cuál de estas secuencias conserva el orden global de los bloques narrativos de Daniel 8?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel se ve en Susa junto al Ulai → aparece el carnero → llega el macho cabrío → un santo pregunta '¿Hasta cuándo?' → se ordena a Gabriel enseñar la visión → se interpretan el carnero y el macho cabrío → Daniel queda enfermo y luego atiende los negocios del rey"
+        },
+        {
+          "id": "B",
+          "text": "Macho cabrío → Susa → carnero → Daniel enferma → santo pregunta → Gabriel recibe la orden → interpretación"
+        },
+        {
+          "id": "C",
+          "text": "Santo pregunta → carnero → Gabriel interpreta → macho cabrío → Susa → Daniel atiende negocios"
+        },
+        {
+          "id": "D",
+          "text": "Susa → interpretación de Grecia → dos mil trescientas tardes → aparición del carnero → Belsasar atiende los negocios"
+        }
+      ],
+      "correctOptionId": "A",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "CROSS_BLOCK_CONFUSION",
+        "CONTINUITY_CHAIN"
+      ],
+      "supportingReferences": [
+        "Daniel 8:2-27"
+      ],
+      "continuity_required": false,
+      "explanation": "La opción A respeta la progresión del capítulo desde la localización inicial hasta la reacción final de Daniel.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    }
+  ]
+}

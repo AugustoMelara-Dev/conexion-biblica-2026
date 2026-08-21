@@ -1,0 +1,5627 @@
+{
+  "bankId": "CONEXION_BIBLICA_2026_DANIEL_01_REPLICA_V2",
+  "title": "Conexión Bíblica 2026 — Daniel 1 — Banco nivel campeonato",
+  "mode": "REPLICA_CONEXION",
+  "source": {
+    "label": "Daniel 1 — texto suministrado por el usuario",
+    "closedSource": true,
+    "externalSourcesUsed": false
+  },
+  "schemaVersion": "2.0",
+  "questionCount": 100,
+  "difficultyDistribution": {
+    "1": {
+      "count": 5,
+      "percent": 5
+    },
+    "2": {
+      "count": 10,
+      "percent": 10
+    },
+    "3": {
+      "count": 20,
+      "percent": 20
+    },
+    "4": {
+      "count": 35,
+      "percent": 35
+    },
+    "5": {
+      "count": 30,
+      "percent": 30
+    }
+  },
+  "correctOptionDistribution": {
+    "A": 25,
+    "B": 25,
+    "C": 25,
+    "D": 25
+  },
+  "classCoverage": {
+    "ACTOR_TRACKING": 10,
+    "BEFORE_AFTER_SEQUENCE": 14,
+    "CONTINUITY_CHAIN": 9,
+    "CROSS_BLOCK_CONFUSION": 17,
+    "EXACT_CONTINUATION": 8,
+    "EXACT_ROLE_AND_OBJECT": 22,
+    "MINIMAL_PAIR_LITERAL": 21,
+    "NEGATIVE_PRECISION": 5,
+    "NUMERIC_PRECISION": 9,
+    "PAIRED_DETAIL": 36,
+    "TRUE_ELSEWHERE_WRONG_HERE": 32,
+    "VERSE_LOCALIZATION": 36
+  },
+  "audit": {
+    "singleChoiceOnly": true,
+    "optionsPerQuestion": 4,
+    "exactlyOneCorrectPerQuestion": true,
+    "ambiguousOptionsAllowed": false,
+    "allQuestionsVerified": true
+  },
+  "questions": [
+    {
+      "id": "DAN1-001",
+      "type": "single_choice",
+      "difficulty": 1,
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:1",
+      "supportingReferences": [
+        "Daniel 1:1"
+      ],
+      "continuityRequired": false,
+      "question": "Según Daniel 1:1, ¿quién vino a Jerusalén y la sitió?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nabucodonosor, rey de Babilonia"
+        },
+        {
+          "id": "B",
+          "text": "Aspenaz"
+        },
+        {
+          "id": "C",
+          "text": "Joacim, rey de Judá"
+        },
+        {
+          "id": "D",
+          "text": "Ciro"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 1:1 atribuye la llegada a Jerusalén y el sitio a Nabucodonosor, rey de Babilonia.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "UNSUPPORTED"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-002",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:1",
+      "supportingReferences": [
+        "Daniel 1:1"
+      ],
+      "continuityRequired": false,
+      "question": "¿En qué año del reinado de Joacim sitúa el texto la llegada de Nabucodonosor a Jerusalén?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En el tercer año"
+        },
+        {
+          "id": "B",
+          "text": "En el año primero"
+        },
+        {
+          "id": "C",
+          "text": "Al cabo de diez días"
+        },
+        {
+          "id": "D",
+          "text": "Durante tres años"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 1:1 dice «En el tercer año del reinado de Joacim...».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-003",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:1",
+      "supportingReferences": [
+        "Daniel 1:1"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué combinación corresponde a Daniel 1:1?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió."
+        },
+        {
+          "id": "B",
+          "text": "Ciro vino a Jerusalén en el tercer año de Joacim."
+        },
+        {
+          "id": "C",
+          "text": "Aspenaz vino a Jerusalén y la sitió."
+        },
+        {
+          "id": "D",
+          "text": "Joacim era rey de Babilonia y Nabucodonosor rey de Judá."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 1:1 dice que Nabucodonosor, rey de Babilonia, vino a Jerusalén y la sitió.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-004",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:2",
+      "supportingReferences": [
+        "Daniel 1:2"
+      ],
+      "continuityRequired": false,
+      "question": "Según la redacción exacta de Daniel 1:2, ¿qué entregó el Señor junto con Joacim en manos de Nabucodonosor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La porción diaria de la comida del rey"
+        },
+        {
+          "id": "B",
+          "text": "Todos los utensilios de la casa de Dios"
+        },
+        {
+          "id": "C",
+          "text": "Los magos y astrólogos de todo el reino"
+        },
+        {
+          "id": "D",
+          "text": "Parte de los utensilios de la casa de Dios"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "El texto especifica «parte de los utensilios de la casa de Dios».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-005",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:2",
+      "supportingReferences": [
+        "Daniel 1:2"
+      ],
+      "continuityRequired": false,
+      "question": "Después de traer los utensilios a tierra de Sinar, ¿qué dos ubicaciones menciona Daniel 1:2 en ese orden?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El palacio del rey y la casa de Dios"
+        },
+        {
+          "id": "B",
+          "text": "La casa de Dios y el palacio del rey"
+        },
+        {
+          "id": "C",
+          "text": "La casa de su dios y la casa del tesoro de su dios"
+        },
+        {
+          "id": "D",
+          "text": "La casa del tesoro de su dios y Jerusalén"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Primero se menciona la casa de su dios y luego la casa del tesoro de su dios.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-006",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "CONTINUITY_CHAIN",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:2",
+      "supportingReferences": [
+        "Daniel 1:1-2"
+      ],
+      "continuityRequired": true,
+      "question": "En Daniel 1:2, ¿quién es el sujeto que «los trajo a tierra de Sinar»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El Señor"
+        },
+        {
+          "id": "B",
+          "text": "Aspenaz"
+        },
+        {
+          "id": "C",
+          "text": "Nabucodonosor"
+        },
+        {
+          "id": "D",
+          "text": "Joacim"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "El sujeto narrativo continúa desde Daniel 1:1: Nabucodonosor es quien trae los utensilios a tierra de Sinar.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "continuity_required"
+    },
+    {
+      "id": "DAN1-007",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "reference": "Daniel 1:3",
+      "supportingReferences": [
+        "Daniel 1:3"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué cargo tenía Aspenaz según Daniel 1:3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Encargado de Daniel, Ananías, Misael y Azarías"
+        },
+        {
+          "id": "B",
+          "text": "Rey de Judá"
+        },
+        {
+          "id": "C",
+          "text": "Rey de Babilonia"
+        },
+        {
+          "id": "D",
+          "text": "Jefe de sus eunucos"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Daniel 1:3 identifica a Aspenaz como «jefe de sus eunucos».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-008",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:3",
+      "supportingReferences": [
+        "Daniel 1:3"
+      ],
+      "continuityRequired": false,
+      "question": "¿De qué grupo debía traer Aspenaz muchachos, según Daniel 1:3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "De los hijos de Israel, del linaje real de los príncipes"
+        },
+        {
+          "id": "B",
+          "text": "De los hijos de Judá, únicamente"
+        },
+        {
+          "id": "C",
+          "text": "De los muchachos que comían la porción del rey"
+        },
+        {
+          "id": "D",
+          "text": "De los magos y astrólogos del reino"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La orden menciona a los hijos de Israel y el linaje real de los príncipes.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-009",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "NEGATIVE_PRECISION",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "reference": "Daniel 1:4",
+      "supportingReferences": [
+        "Daniel 1:4",
+        "Daniel 1:15"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál de estas expresiones NO aparece en Daniel 1:4 como requisito de los muchachos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "De buen parecer"
+        },
+        {
+          "id": "B",
+          "text": "Más robustos que los otros muchachos"
+        },
+        {
+          "id": "C",
+          "text": "De buen entendimiento"
+        },
+        {
+          "id": "D",
+          "text": "Sabios en ciencia"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "«Más robusto» pertenece al resultado de la prueba en Daniel 1:15, no a los requisitos de Daniel 1:4.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-010",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "reference": "Daniel 1:4",
+      "supportingReferences": [
+        "Daniel 1:4"
+      ],
+      "continuityRequired": false,
+      "question": "Según Daniel 1:4, ¿qué debía enseñar Aspenaz a los muchachos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Las letras y la lengua de los caldeos"
+        },
+        {
+          "id": "B",
+          "text": "La comida y la bebida del rey"
+        },
+        {
+          "id": "C",
+          "text": "La sabiduría y la inteligencia del rey"
+        },
+        {
+          "id": "D",
+          "text": "Toda visión y sueños"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La instrucción indicada es «las letras y la lengua de los caldeos».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-011",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "NEGATIVE_PRECISION",
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "reference": "Daniel 1:4",
+      "supportingReferences": [
+        "Daniel 1:4",
+        "Daniel 1:17"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál NO forma parte de la descripción de capacidades intelectuales de Daniel 1:4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sabios en ciencia"
+        },
+        {
+          "id": "B",
+          "text": "Entendimiento en toda visión y sueños"
+        },
+        {
+          "id": "C",
+          "text": "Instruidos en toda sabiduría"
+        },
+        {
+          "id": "D",
+          "text": "De buen entendimiento"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "El entendimiento en toda visión y sueños se atribuye específicamente a Daniel en 1:17.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-012",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:5",
+      "supportingReferences": [
+        "Daniel 1:5"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué les señaló el rey como porción diaria?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La comida de los magos y astrólogos"
+        },
+        {
+          "id": "B",
+          "text": "Solo vino"
+        },
+        {
+          "id": "C",
+          "text": "Legumbres y agua"
+        },
+        {
+          "id": "D",
+          "text": "La comida del rey y el vino que él bebía"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Daniel 1:5 menciona la comida del rey y el vino que él bebía.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-013",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "NUMERIC_PRECISION"
+      ],
+      "reference": "Daniel 1:5",
+      "supportingReferences": [
+        "Daniel 1:5"
+      ],
+      "continuityRequired": false,
+      "question": "¿Durante cuánto tiempo ordenó el rey que educaran a los muchachos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hasta el año primero de Ciro"
+        },
+        {
+          "id": "B",
+          "text": "Un año"
+        },
+        {
+          "id": "C",
+          "text": "Tres años"
+        },
+        {
+          "id": "D",
+          "text": "Diez días"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "El rey ordenó que fueran educados durante tres años.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-014",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "BEFORE_AFTER_SEQUENCE"
+      ],
+      "reference": "Daniel 1:5",
+      "supportingReferences": [
+        "Daniel 1:5"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué debía ocurrir al final del período de educación indicado por el rey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Debían ser llevados a tierra de Sinar."
+        },
+        {
+          "id": "B",
+          "text": "Debían ser comparados con los magos y astrólogos."
+        },
+        {
+          "id": "C",
+          "text": "Debían presentarse delante del rey."
+        },
+        {
+          "id": "D",
+          "text": "Debían recibir nombres nuevos."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Daniel 1:5 dice que al fin de los tres años se presentarían delante del rey.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-015",
+      "type": "single_choice",
+      "difficulty": 1,
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:6",
+      "supportingReferences": [
+        "Daniel 1:6"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál grupo de cuatro nombres aparece en Daniel 1:6?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Joacim, Nabucodonosor, Aspenaz y Melsar"
+        },
+        {
+          "id": "B",
+          "text": "Daniel, Aspenaz, Melsar y Ciro"
+        },
+        {
+          "id": "C",
+          "text": "Beltsasar, Sadrac, Mesac y Abed-nego"
+        },
+        {
+          "id": "D",
+          "text": "Daniel, Ananías, Misael y Azarías"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Daniel 1:6 enumera a Daniel, Ananías, Misael y Azarías.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-016",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:6",
+      "supportingReferences": [
+        "Daniel 1:3",
+        "Daniel 1:6"
+      ],
+      "continuityRequired": false,
+      "question": "Según Daniel 1:6, ¿de quiénes eran Daniel, Ananías, Misael y Azarías?",
+      "options": [
+        {
+          "id": "A",
+          "text": "De los eunucos"
+        },
+        {
+          "id": "B",
+          "text": "De los caldeos"
+        },
+        {
+          "id": "C",
+          "text": "De los hijos de Israel, sin mayor precisión en ese versículo"
+        },
+        {
+          "id": "D",
+          "text": "De los hijos de Judá"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Daniel 1:6 precisa que los cuatro eran «de los hijos de Judá».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "B",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-017",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "reference": "Daniel 1:7",
+      "supportingReferences": [
+        "Daniel 1:7"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué nombre puso el jefe de los eunucos a Daniel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sadrac"
+        },
+        {
+          "id": "B",
+          "text": "Abed-nego"
+        },
+        {
+          "id": "C",
+          "text": "Mesac"
+        },
+        {
+          "id": "D",
+          "text": "Beltsasar"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "El jefe de los eunucos llamó Beltsasar a Daniel.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-018",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:7",
+      "supportingReferences": [
+        "Daniel 1:7"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál correspondencia de nombres es correcta según Daniel 1:7?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Misael—Sadrac"
+        },
+        {
+          "id": "B",
+          "text": "Ananías—Mesac"
+        },
+        {
+          "id": "C",
+          "text": "Azarías—Abed-nego"
+        },
+        {
+          "id": "D",
+          "text": "Daniel—Sadrac"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Azarías recibió el nombre Abed-nego.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-019",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "reference": "Daniel 1:7",
+      "supportingReferences": [
+        "Daniel 1:6-7"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál opción conserva correctamente DOS correspondencias del cambio de nombres?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel—Beltsasar y Ananías—Sadrac"
+        },
+        {
+          "id": "B",
+          "text": "Daniel—Mesac y Misael—Beltsasar"
+        },
+        {
+          "id": "C",
+          "text": "Ananías—Abed-nego y Azarías—Sadrac"
+        },
+        {
+          "id": "D",
+          "text": "Misael—Sadrac y Azarías—Mesac"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel fue llamado Beltsasar y Ananías fue llamado Sadrac.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-020",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "reference": "Daniel 1:8",
+      "supportingReferences": [
+        "Daniel 1:8"
+      ],
+      "continuityRequired": false,
+      "question": "¿Ante quién pidió Daniel que no se le obligara a contaminarse?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ante el jefe de los eunucos"
+        },
+        {
+          "id": "B",
+          "text": "Ante Nabucodonosor"
+        },
+        {
+          "id": "C",
+          "text": "Ante Melsar"
+        },
+        {
+          "id": "D",
+          "text": "Ante Ciro"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 1:8 dice que Daniel pidió al jefe de los eunucos que no se le obligara a contaminarse.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "UNSUPPORTED"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-021",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:8",
+      "supportingReferences": [
+        "Daniel 1:8"
+      ],
+      "continuityRequired": false,
+      "question": "¿Con qué DOS cosas propuso Daniel en su corazón no contaminarse?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Con legumbres y agua"
+        },
+        {
+          "id": "B",
+          "text": "Con la sabiduría y la inteligencia del rey"
+        },
+        {
+          "id": "C",
+          "text": "Con las letras y la lengua de los caldeos"
+        },
+        {
+          "id": "D",
+          "text": "Con la porción de la comida del rey y con el vino que él bebía"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Daniel 1:8 menciona exactamente la porción de la comida del rey y el vino que él bebía.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-022",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "reference": "Daniel 1:8",
+      "supportingReferences": [
+        "Daniel 1:8"
+      ],
+      "continuityRequired": false,
+      "question": "Completa exactamente: «Daniel propuso en su corazón no contaminarse con la porción de la comida del rey...»",
+      "options": [
+        {
+          "id": "A",
+          "text": "ni con la comida de los caldeos"
+        },
+        {
+          "id": "B",
+          "text": "ni con el vino que él bebía"
+        },
+        {
+          "id": "C",
+          "text": "ni con el vino de Melsar"
+        },
+        {
+          "id": "D",
+          "text": "ni con el agua que bebían"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "La continuación exacta es «ni con el vino que él bebía».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-023",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "reference": "Daniel 1:9",
+      "supportingReferences": [
+        "Daniel 1:9"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué puso Dios a Daniel con el jefe de los eunucos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Entendimiento en toda visión y sueños"
+        },
+        {
+          "id": "B",
+          "text": "Mejor y más robusto rostro"
+        },
+        {
+          "id": "C",
+          "text": "Gracia y buena voluntad"
+        },
+        {
+          "id": "D",
+          "text": "Conocimiento e inteligencia"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Daniel 1:9 dice que Dios puso a Daniel en gracia y buena voluntad con el jefe de los eunucos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-024",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:9",
+      "supportingReferences": [
+        "Daniel 1:9",
+        "Daniel 1:17"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál don pertenece específicamente a Daniel 1:9 y no a Daniel 1:17?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Diez veces más sabiduría que los magos"
+        },
+        {
+          "id": "B",
+          "text": "Gracia y buena voluntad con el jefe de los eunucos"
+        },
+        {
+          "id": "C",
+          "text": "Entendimiento en toda visión y sueños"
+        },
+        {
+          "id": "D",
+          "text": "Conocimiento e inteligencia en todas las letras y ciencias"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "La gracia y buena voluntad con el jefe de los eunucos pertenece a 1:9.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-025",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "reference": "Daniel 1:10",
+      "supportingReferences": [
+        "Daniel 1:10"
+      ],
+      "continuityRequired": false,
+      "question": "¿A quién dijo temer el jefe de los eunucos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A los magos y astrólogos"
+        },
+        {
+          "id": "B",
+          "text": "A su señor el rey"
+        },
+        {
+          "id": "C",
+          "text": "A Daniel"
+        },
+        {
+          "id": "D",
+          "text": "A Melsar"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "El jefe de los eunucos dice: «Temo a mi señor el rey».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-026",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:10",
+      "supportingReferences": [
+        "Daniel 1:10"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué había asignado el rey y qué temía que ocurriera el jefe de los eunucos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Había asignado legumbres y agua; temía que Daniel lo reemplazara."
+        },
+        {
+          "id": "B",
+          "text": "Había asignado nombres nuevos; temía que los rostros fueran más robustos."
+        },
+        {
+          "id": "C",
+          "text": "Había asignado tres años de servicio; temía a los magos."
+        },
+        {
+          "id": "D",
+          "text": "Había asignado vuestra comida y bebida; temía que el rey lo condenara a muerte."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "El versículo vincula la comida y bebida asignadas por el rey con el temor de ser condenado a muerte.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-027",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:10",
+      "supportingReferences": [
+        "Daniel 1:10"
+      ],
+      "continuityRequired": false,
+      "question": "Según la redacción exacta, ¿cómo temía el jefe de los eunucos que el rey viera los rostros de Daniel y sus compañeros?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Más pálidos que los de los muchachos que son semejantes a vosotros"
+        },
+        {
+          "id": "B",
+          "text": "De buen parecer"
+        },
+        {
+          "id": "C",
+          "text": "Diez veces mejores que los magos"
+        },
+        {
+          "id": "D",
+          "text": "Más robustos que los otros muchachos"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La expresión exacta es «más pálidos que los de los muchachos que son semejantes a vosotros».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-028",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "reference": "Daniel 1:10",
+      "supportingReferences": [
+        "Daniel 1:10",
+        "Daniel 1:15",
+        "Daniel 1:20"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál comparación pertenece a Daniel 1:10?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mejor y más robusto que el de los otros muchachos"
+        },
+        {
+          "id": "B",
+          "text": "Diez veces mejores que todos los magos y astrólogos"
+        },
+        {
+          "id": "C",
+          "text": "Más pálidos que los de los muchachos que son semejantes a vosotros"
+        },
+        {
+          "id": "D",
+          "text": "No se hallaron otros como ellos"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "La comparación propia de 1:10 es la de rostros «más pálidos» que los de los muchachos semejantes a ellos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-029",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "CONTINUITY_CHAIN"
+      ],
+      "reference": "Daniel 1:11",
+      "supportingReferences": [
+        "Daniel 1:11"
+      ],
+      "continuityRequired": false,
+      "question": "¿Quién había puesto a Melsar sobre Daniel, Ananías, Misael y Azarías?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel"
+        },
+        {
+          "id": "B",
+          "text": "El jefe de los eunucos"
+        },
+        {
+          "id": "C",
+          "text": "El rey Nabucodonosor"
+        },
+        {
+          "id": "D",
+          "text": "Ciro"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 1:11 dice que el jefe de los eunucos había puesto a Melsar sobre los cuatro.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-030",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "PAIRED_DETAIL",
+        "ACTOR_TRACKING"
+      ],
+      "reference": "Daniel 1:11",
+      "supportingReferences": [
+        "Daniel 1:11"
+      ],
+      "continuityRequired": false,
+      "question": "¿A quién habló Daniel en Daniel 1:11 y sobre quiénes había sido puesto ese personaje?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A Aspenaz; sobre todos los magos y astrólogos"
+        },
+        {
+          "id": "B",
+          "text": "A Ciro; sobre los caldeos"
+        },
+        {
+          "id": "C",
+          "text": "A Nabucodonosor; sobre los hijos de Israel"
+        },
+        {
+          "id": "D",
+          "text": "A Melsar; sobre Daniel, Ananías, Misael y Azarías"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Daniel habló a Melsar, puesto sobre los cuatro jóvenes.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-031",
+      "type": "single_choice",
+      "difficulty": 1,
+      "questionClass": [
+        "NUMERIC_PRECISION"
+      ],
+      "reference": "Daniel 1:12",
+      "supportingReferences": [
+        "Daniel 1:12"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuántos días pidió Daniel que durara la prueba?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Veinte"
+        },
+        {
+          "id": "B",
+          "text": "Tres"
+        },
+        {
+          "id": "C",
+          "text": "Treinta"
+        },
+        {
+          "id": "D",
+          "text": "Diez"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Daniel pidió una prueba de diez días.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "B",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "C",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-032",
+      "type": "single_choice",
+      "difficulty": 1,
+      "questionClass": [
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:12",
+      "supportingReferences": [
+        "Daniel 1:12"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué pidió Daniel que les dieran durante la prueba?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Legumbres para comer y agua para beber"
+        },
+        {
+          "id": "B",
+          "text": "Comida del rey y vino"
+        },
+        {
+          "id": "C",
+          "text": "Pan y agua"
+        },
+        {
+          "id": "D",
+          "text": "Solo legumbres"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La dieta solicitada fue legumbres para comer y agua para beber.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-033",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "reference": "Daniel 1:12",
+      "supportingReferences": [
+        "Daniel 1:12"
+      ],
+      "continuityRequired": false,
+      "question": "Completa exactamente la petición: «que nos den legumbres para comer...»",
+      "options": [
+        {
+          "id": "A",
+          "text": "y comida del rey"
+        },
+        {
+          "id": "B",
+          "text": "y vino para beber"
+        },
+        {
+          "id": "C",
+          "text": "y agua para beber"
+        },
+        {
+          "id": "D",
+          "text": "durante tres años"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "La frase exacta termina «y agua para beber».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-034",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "PAIRED_DETAIL",
+        "CONTINUITY_CHAIN"
+      ],
+      "reference": "Daniel 1:13",
+      "supportingReferences": [
+        "Daniel 1:12-13"
+      ],
+      "continuityRequired": true,
+      "question": "Después de la prueba propuesta, ¿qué pidió Daniel que Melsar comparara?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sus nombres con los nombres caldeos"
+        },
+        {
+          "id": "B",
+          "text": "Su linaje con el linaje real"
+        },
+        {
+          "id": "C",
+          "text": "Su sabiduría con la de los magos y astrólogos"
+        },
+        {
+          "id": "D",
+          "text": "Sus rostros con los rostros de los muchachos que comían de la porción del rey"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Daniel pidió comparar sus rostros con los de quienes comían de la porción del rey.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "continuity_required"
+    },
+    {
+      "id": "DAN1-035",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:13",
+      "supportingReferences": [
+        "Daniel 1:13"
+      ],
+      "continuityRequired": false,
+      "question": "Completa exactamente: «y haz después con tus siervos...»",
+      "options": [
+        {
+          "id": "A",
+          "text": "durante tres años"
+        },
+        {
+          "id": "B",
+          "text": "según veas"
+        },
+        {
+          "id": "C",
+          "text": "delante del rey"
+        },
+        {
+          "id": "D",
+          "text": "diez veces mejores"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "La continuación exacta de Daniel 1:13 es «según veas».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-036",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "CONTINUITY_CHAIN"
+      ],
+      "reference": "Daniel 1:14",
+      "supportingReferences": [
+        "Daniel 1:11-14"
+      ],
+      "continuityRequired": true,
+      "question": "En Daniel 1:14, ¿quién es el sujeto de «Consintió, pues, con ellos en esto»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ciro"
+        },
+        {
+          "id": "B",
+          "text": "El jefe de los eunucos"
+        },
+        {
+          "id": "C",
+          "text": "Nabucodonosor"
+        },
+        {
+          "id": "D",
+          "text": "Melsar"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "El interlocutor inmediato de Daniel en 1:11-13 es Melsar; él consiente y los prueba.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "continuity_required"
+    },
+    {
+      "id": "DAN1-037",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:14",
+      "supportingReferences": [
+        "Daniel 1:14"
+      ],
+      "continuityRequired": false,
+      "question": "¿Durante cuánto tiempo los probó Melsar después de consentir?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hasta el primer año de Ciro"
+        },
+        {
+          "id": "B",
+          "text": "Una porción diaria"
+        },
+        {
+          "id": "C",
+          "text": "Diez días"
+        },
+        {
+          "id": "D",
+          "text": "Tres años"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Daniel 1:14 repite que la prueba duró diez días.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-038",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:15",
+      "supportingReferences": [
+        "Daniel 1:10",
+        "Daniel 1:15",
+        "Daniel 1:20"
+      ],
+      "continuityRequired": false,
+      "question": "Al cabo de los diez días, ¿cómo describe Daniel 1:15 el rostro de ellos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mejor y más robusto que el de los otros muchachos"
+        },
+        {
+          "id": "B",
+          "text": "Más pálido que el de los muchachos semejantes a ellos"
+        },
+        {
+          "id": "C",
+          "text": "De buen parecer e idóneo para el palacio"
+        },
+        {
+          "id": "D",
+          "text": "Diez veces mejor que los magos y astrólogos"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El resultado de la prueba fue un rostro «mejor y más robusto» que el de los otros muchachos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-039",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "reference": "Daniel 1:15",
+      "supportingReferences": [
+        "Daniel 1:10",
+        "Daniel 1:15"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué contraste invierte exactamente el temor expresado en Daniel 1:10 al llegar Daniel 1:15?",
+      "options": [
+        {
+          "id": "A",
+          "text": "De «más pálidos» a «mejor y más robusto»"
+        },
+        {
+          "id": "B",
+          "text": "De «buen parecer» a «sin tacha»"
+        },
+        {
+          "id": "C",
+          "text": "De «gracia» a «conocimiento»"
+        },
+        {
+          "id": "D",
+          "text": "De «diez veces mejores» a «más pálidos»"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El temor de rostros más pálidos contrasta con el resultado: mejor y más robusto.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-040",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "reference": "Daniel 1:16",
+      "supportingReferences": [
+        "Daniel 1:16"
+      ],
+      "continuityRequired": false,
+      "question": "Según Daniel 1:16, ¿qué les daba Melsar en lugar de la porción de comida y el vino?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Legumbres"
+        },
+        {
+          "id": "B",
+          "text": "Agua"
+        },
+        {
+          "id": "C",
+          "text": "Las letras de los caldeos"
+        },
+        {
+          "id": "D",
+          "text": "La comida del rey"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 1:16 dice que Melsar «les daba legumbres».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-041",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:16",
+      "supportingReferences": [
+        "Daniel 1:12",
+        "Daniel 1:16"
+      ],
+      "continuityRequired": false,
+      "question": "Según Daniel 1:16, ¿qué hacía Melsar con la porción de comida y con el vino asignados a los cuatro?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los presentaba delante de Nabucodonosor."
+        },
+        {
+          "id": "B",
+          "text": "Se llevaba la porción de la comida de ellos y el vino que habían de beber, y les daba legumbres."
+        },
+        {
+          "id": "C",
+          "text": "Los guardaba en la casa del tesoro de su dios."
+        },
+        {
+          "id": "D",
+          "text": "Los comparaba con los rostros de los otros muchachos."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 1:16 dice que Melsar se llevaba la porción de comida y el vino, y les daba legumbres.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-042",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:16",
+      "supportingReferences": [
+        "Daniel 1:14-17"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué ocurre inmediatamente después del resultado favorable de los diez días?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El rey habla con ellos."
+        },
+        {
+          "id": "B",
+          "text": "Melsar se lleva su porción de comida y vino y les da legumbres."
+        },
+        {
+          "id": "C",
+          "text": "Dios les da conocimiento e inteligencia."
+        },
+        {
+          "id": "D",
+          "text": "Daniel continúa hasta el primer año de Ciro."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Después del resultado de 1:15, Daniel 1:16 dice que Melsar se llevaba la porción de comida y el vino, y les daba legumbres.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-043",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:17",
+      "supportingReferences": [
+        "Daniel 1:17"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué dio Dios a los cuatro muchachos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Conocimiento e inteligencia en todas las letras y ciencias"
+        },
+        {
+          "id": "B",
+          "text": "Diez veces más fuerza física"
+        },
+        {
+          "id": "C",
+          "text": "Gracia y buena voluntad con el jefe de los eunucos"
+        },
+        {
+          "id": "D",
+          "text": "Entendimiento solamente en sueños"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A los cuatro Dios les dio conocimiento e inteligencia en todas las letras y ciencias.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-044",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "reference": "Daniel 1:17",
+      "supportingReferences": [
+        "Daniel 1:17"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué capacidad particular atribuye Daniel 1:17 a Daniel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La facultad de asignar la comida"
+        },
+        {
+          "id": "B",
+          "text": "La función de jefe de los eunucos"
+        },
+        {
+          "id": "C",
+          "text": "Entendimiento en toda visión y sueños"
+        },
+        {
+          "id": "D",
+          "text": "El cargo de rey de Judá"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "El versículo distingue a Daniel con entendimiento en toda visión y sueños.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-045",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "reference": "Daniel 1:17",
+      "supportingReferences": [
+        "Daniel 1:9",
+        "Daniel 1:17",
+        "Daniel 1:20"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál opción distribuye correctamente lo que recibió el grupo y lo que recibió Daniel en particular?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los cuatro: gracia con el jefe de los eunucos; Daniel: diez veces más sabiduría."
+        },
+        {
+          "id": "B",
+          "text": "Los cuatro: nombres nuevos; Daniel: conocimiento de los magos."
+        },
+        {
+          "id": "C",
+          "text": "Los cuatro: conocimiento e inteligencia en letras y ciencias; Daniel: entendimiento en toda visión y sueños."
+        },
+        {
+          "id": "D",
+          "text": "Los cuatro: entendimiento en sueños; Daniel: legumbres y agua."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Daniel 1:17 distingue el don común a los cuatro del entendimiento particular de Daniel.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-046",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:17",
+      "supportingReferences": [
+        "Daniel 1:17"
+      ],
+      "continuityRequired": false,
+      "question": "Según la redacción exacta, Dios dio a los cuatro conocimiento e inteligencia ¿en qué ámbito?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En todas las letras y ciencias"
+        },
+        {
+          "id": "B",
+          "text": "En todo asunto de sabiduría e inteligencia"
+        },
+        {
+          "id": "C",
+          "text": "En la lengua de los caldeos únicamente"
+        },
+        {
+          "id": "D",
+          "text": "En toda visión y sueños"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La frase de 1:17 es «en todas las letras y ciencias».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-047",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:18",
+      "supportingReferences": [
+        "Daniel 1:5",
+        "Daniel 1:18"
+      ],
+      "continuityRequired": false,
+      "question": "Cuando terminaron los días al fin de los cuales el rey había dicho que los llevaran, ¿quién los llevó delante de Nabucodonosor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Joacim"
+        },
+        {
+          "id": "B",
+          "text": "El jefe de los eunucos"
+        },
+        {
+          "id": "C",
+          "text": "Melsar"
+        },
+        {
+          "id": "D",
+          "text": "Ciro"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 1:18 atribuye al jefe de los eunucos la acción de llevarlos ante Nabucodonosor.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "UNSUPPORTED"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-048",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "CONTINUITY_CHAIN",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:18",
+      "supportingReferences": [
+        "Daniel 1:5",
+        "Daniel 1:18"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué relación correcta existe entre Daniel 1:5 y Daniel 1:18?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En 1:5 se describe a Ciro; en 1:18 comienza su primer año."
+        },
+        {
+          "id": "B",
+          "text": "En 1:5 el rey ordena tres años de educación y presentación; en 1:18 se cumple el momento de llevarlos ante Nabucodonosor."
+        },
+        {
+          "id": "C",
+          "text": "En 1:5 Daniel recibe entendimiento en sueños; en 1:18 el rey lo renombra."
+        },
+        {
+          "id": "D",
+          "text": "En 1:5 Melsar propone diez días; en 1:18 Melsar los examina."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "El final previsto en 1:5 encuentra su cumplimiento narrativo en 1:18.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-049",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:19",
+      "supportingReferences": [
+        "Daniel 1:19"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué hizo el rey con los jóvenes en Daniel 1:19 antes de señalar el resultado?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los probó durante diez días."
+        },
+        {
+          "id": "B",
+          "text": "Les enseñó la lengua de los caldeos."
+        },
+        {
+          "id": "C",
+          "text": "Les puso nombres nuevos."
+        },
+        {
+          "id": "D",
+          "text": "Habló con ellos."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Daniel 1:19 comienza indicando que el rey habló con ellos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-050",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:19",
+      "supportingReferences": [
+        "Daniel 1:15",
+        "Daniel 1:19",
+        "Daniel 1:20"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál resultado pertenece específicamente a Daniel 1:19?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel siguió hasta el año primero de Ciro."
+        },
+        {
+          "id": "B",
+          "text": "No se hallaron entre todos ellos otros como Daniel, Ananías, Misael y Azarías."
+        },
+        {
+          "id": "C",
+          "text": "Fueron hallados diez veces mejores que todos los magos y astrólogos."
+        },
+        {
+          "id": "D",
+          "text": "Su rostro pareció mejor y más robusto."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "El resultado propio de 1:19 es que no se hallaron entre todos ellos otros como los cuatro.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-051",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:19",
+      "supportingReferences": [
+        "Daniel 1:19"
+      ],
+      "continuityRequired": false,
+      "question": "Después de que no se hallaron otros como los cuatro, ¿qué declara el mismo versículo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Que regresaron a Jerusalén."
+        },
+        {
+          "id": "B",
+          "text": "Que permanecieron al servicio del rey."
+        },
+        {
+          "id": "C",
+          "text": "Que fueron puestos sobre los magos."
+        },
+        {
+          "id": "D",
+          "text": "Que volvieron a comer de la porción del rey."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 1:19 concluye: «así, pues, permanecieron al servicio del rey».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-052",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:20",
+      "supportingReferences": [
+        "Daniel 1:20"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuántas veces mejores los halló el rey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Veinte veces"
+        },
+        {
+          "id": "B",
+          "text": "Una vez"
+        },
+        {
+          "id": "C",
+          "text": "Diez veces"
+        },
+        {
+          "id": "D",
+          "text": "Tres veces"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Daniel 1:20 dice que los halló diez veces mejores.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "B",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-053",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:20",
+      "supportingReferences": [
+        "Daniel 1:20"
+      ],
+      "continuityRequired": false,
+      "question": "¿Con quiénes compara Daniel 1:20 a los cuatro jóvenes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Con Aspenaz y Melsar"
+        },
+        {
+          "id": "B",
+          "text": "Con todos los magos y astrólogos que había en todo su reino"
+        },
+        {
+          "id": "C",
+          "text": "Con los otros muchachos que comían la porción del rey"
+        },
+        {
+          "id": "D",
+          "text": "Con Joacim y Ciro"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "La comparación es con todos los magos y astrólogos que había en todo su reino.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-054",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:20",
+      "supportingReferences": [
+        "Daniel 1:4",
+        "Daniel 1:17",
+        "Daniel 1:20"
+      ],
+      "continuityRequired": false,
+      "question": "Según la redacción exacta de Daniel 1:20, ¿en qué clase de asuntos los consultó el rey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En toda visión y sueños"
+        },
+        {
+          "id": "B",
+          "text": "En todo asunto de sabiduría e inteligencia"
+        },
+        {
+          "id": "C",
+          "text": "En todas las letras y ciencias"
+        },
+        {
+          "id": "D",
+          "text": "En las letras y la lengua de los caldeos"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 1:20 usa la expresión «todo asunto de sabiduría e inteligencia».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-055",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:20",
+      "supportingReferences": [
+        "Daniel 1:20"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál opción conserva correctamente tanto la magnitud como el grupo de comparación de Daniel 1:20?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Más robustos que todos los magos y astrólogos"
+        },
+        {
+          "id": "B",
+          "text": "Diez días mejores que los demás muchachos"
+        },
+        {
+          "id": "C",
+          "text": "Diez veces mejores que todos los magos y astrólogos del reino"
+        },
+        {
+          "id": "D",
+          "text": "Tres años mejores que los caldeos"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "La magnitud es diez veces y el grupo comparado son todos los magos y astrólogos del reino.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-056",
+      "type": "single_choice",
+      "difficulty": 1,
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:21",
+      "supportingReferences": [
+        "Daniel 1:21"
+      ],
+      "continuityRequired": false,
+      "question": "¿Hasta qué momento dice el capítulo que continuó Daniel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hasta que Melsar se llevó la comida"
+        },
+        {
+          "id": "B",
+          "text": "Hasta el tercer año de Joacim"
+        },
+        {
+          "id": "C",
+          "text": "Hasta el fin de los diez días"
+        },
+        {
+          "id": "D",
+          "text": "Hasta el año primero del rey Ciro"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "El capítulo concluye diciendo que Daniel continuó hasta el año primero del rey Ciro.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-057",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:21",
+      "supportingReferences": [
+        "Daniel 1:1",
+        "Daniel 1:21"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué número ordinal está asociado a Ciro en Daniel 1:21?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tercero"
+        },
+        {
+          "id": "B",
+          "text": "Cuarto"
+        },
+        {
+          "id": "C",
+          "text": "Primero"
+        },
+        {
+          "id": "D",
+          "text": "Décimo"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Ciro aparece asociado al «año primero».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-058",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:21",
+      "supportingReferences": [
+        "Daniel 1:1",
+        "Daniel 1:5",
+        "Daniel 1:12",
+        "Daniel 1:20",
+        "Daniel 1:21"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál referencia temporal corresponde al cierre del capítulo y no a una etapa anterior?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Durante diez días"
+        },
+        {
+          "id": "B",
+          "text": "El tercer año del reinado de Joacim"
+        },
+        {
+          "id": "C",
+          "text": "Durante tres años"
+        },
+        {
+          "id": "D",
+          "text": "El año primero del rey Ciro"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "La referencia temporal final del capítulo es el año primero del rey Ciro.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-059",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "reference": "Daniel 1:1-21",
+      "supportingReferences": [
+        "Daniel 1:1",
+        "Daniel 1:5",
+        "Daniel 1:12",
+        "Daniel 1:21"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál secuencia respeta el orden en que aparecen estas referencias temporales en el capítulo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tres años → tercer año de Joacim → diez días → primer año de Ciro"
+        },
+        {
+          "id": "B",
+          "text": "Tercer año de Joacim → tres años → diez días → primer año de Ciro"
+        },
+        {
+          "id": "C",
+          "text": "Diez días → tres años → tercer año de Joacim → primer año de Ciro"
+        },
+        {
+          "id": "D",
+          "text": "Primer año de Ciro → tercer año de Joacim → tres años → diez días"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "El capítulo menciona primero el tercer año de Joacim, luego tres años de educación, después diez días de prueba y finalmente el primer año de Ciro.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-060",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "NEGATIVE_PRECISION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:1-21",
+      "supportingReferences": [
+        "Daniel 1:1-21"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál de estos números o períodos NO aparece en el texto suministrado de Daniel 1?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Diez veces"
+        },
+        {
+          "id": "B",
+          "text": "Siete días"
+        },
+        {
+          "id": "C",
+          "text": "Tres años"
+        },
+        {
+          "id": "D",
+          "text": "Diez días"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Tres años, diez días y diez veces sí aparecen; siete días no aparece en el texto suministrado.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-061",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "reference": "Daniel 1:7",
+      "supportingReferences": [
+        "Daniel 1:7"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué nombre recibió Ananías?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Abed-nego"
+        },
+        {
+          "id": "B",
+          "text": "Beltsasar"
+        },
+        {
+          "id": "C",
+          "text": "Mesac"
+        },
+        {
+          "id": "D",
+          "text": "Sadrac"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Ananías recibió el nombre Sadrac.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-062",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "reference": "Daniel 1:7",
+      "supportingReferences": [
+        "Daniel 1:7"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué nombre recibió Misael?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Abed-nego"
+        },
+        {
+          "id": "B",
+          "text": "Sadrac"
+        },
+        {
+          "id": "C",
+          "text": "Mesac"
+        },
+        {
+          "id": "D",
+          "text": "Beltsasar"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Misael recibió el nombre Mesac.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-063",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:4",
+      "supportingReferences": [
+        "Daniel 1:4"
+      ],
+      "continuityRequired": false,
+      "question": "¿Para estar dónde debían ser idóneos los muchachos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En Jerusalén"
+        },
+        {
+          "id": "B",
+          "text": "En el palacio del rey"
+        },
+        {
+          "id": "C",
+          "text": "En la casa del tesoro"
+        },
+        {
+          "id": "D",
+          "text": "En tierra de Sinar"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 1:4 exige que fueran idóneos para estar en el palacio del rey.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-064",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "reference": "Daniel 1:5",
+      "supportingReferences": [
+        "Daniel 1:5"
+      ],
+      "continuityRequired": false,
+      "question": "¿Quién señaló la porción diaria de comida y vino?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel"
+        },
+        {
+          "id": "B",
+          "text": "El rey"
+        },
+        {
+          "id": "C",
+          "text": "El jefe de los eunucos"
+        },
+        {
+          "id": "D",
+          "text": "Melsar"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 1:5 dice que el rey les señaló la porción diaria.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-065",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "reference": "Daniel 1:2",
+      "supportingReferences": [
+        "Daniel 1:2"
+      ],
+      "continuityRequired": false,
+      "question": "Completa exactamente: «los trajo a tierra de Sinar, a la casa de su dios...»",
+      "options": [
+        {
+          "id": "A",
+          "text": "y colocó los utensilios en la casa del tesoro de su dios"
+        },
+        {
+          "id": "B",
+          "text": "y los presentó delante del rey"
+        },
+        {
+          "id": "C",
+          "text": "y permanecieron al servicio del rey"
+        },
+        {
+          "id": "D",
+          "text": "y les enseñó las letras de los caldeos"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La continuación exacta ubica los utensilios en la casa del tesoro de su dios.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-066",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "reference": "Daniel 1:4",
+      "supportingReferences": [
+        "Daniel 1:4"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué expresión aparece junto a «instruidos en toda sabiduría» en la descripción de los muchachos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mejor y más robusto"
+        },
+        {
+          "id": "B",
+          "text": "Sabios en ciencia"
+        },
+        {
+          "id": "C",
+          "text": "En gracia y buena voluntad"
+        },
+        {
+          "id": "D",
+          "text": "Diez veces mejores"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 1:4 incluye «sabios en ciencia» entre las cualidades requeridas.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-067",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:10",
+      "supportingReferences": [
+        "Daniel 1:10"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cómo describe el jefe de los eunucos a los otros jóvenes usados como referencia para comparar los rostros?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los hijos de Judá"
+        },
+        {
+          "id": "B",
+          "text": "Los muchachos que son semejantes a vosotros"
+        },
+        {
+          "id": "C",
+          "text": "Los hijos de Israel del linaje real"
+        },
+        {
+          "id": "D",
+          "text": "Los magos y astrólogos de todo el reino"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "La expresión de 1:10 es «los muchachos que son semejantes a vosotros».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-068",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "reference": "Daniel 1:11",
+      "supportingReferences": [
+        "Daniel 1:11"
+      ],
+      "continuityRequired": false,
+      "question": "¿Sobre quiénes había sido puesto Melsar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sobre Daniel, Ananías, Misael y Azarías"
+        },
+        {
+          "id": "B",
+          "text": "Sobre todos los hijos de Israel"
+        },
+        {
+          "id": "C",
+          "text": "Sobre Daniel solamente"
+        },
+        {
+          "id": "D",
+          "text": "Sobre los magos y astrólogos"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Melsar había sido puesto sobre los cuatro: Daniel, Ananías, Misael y Azarías.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-069",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:13",
+      "supportingReferences": [
+        "Daniel 1:13"
+      ],
+      "continuityRequired": false,
+      "question": "Después de comparar los rostros, ¿qué instrucción dio Daniel a Melsar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Llévalos delante de Nabucodonosor."
+        },
+        {
+          "id": "B",
+          "text": "Haz después con tus siervos según veas."
+        },
+        {
+          "id": "C",
+          "text": "Ponles nombres nuevos."
+        },
+        {
+          "id": "D",
+          "text": "Enséñales la lengua de los caldeos."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel termina la propuesta diciendo: «haz después con tus siervos según veas».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-070",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:15",
+      "supportingReferences": [
+        "Daniel 1:15"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué comían los «otros muchachos» con quienes se comparó el rostro de los cuatro?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La comida de los magos"
+        },
+        {
+          "id": "B",
+          "text": "Solo agua"
+        },
+        {
+          "id": "C",
+          "text": "Legumbres"
+        },
+        {
+          "id": "D",
+          "text": "De la porción de la comida del rey"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Daniel 1:15 identifica a los otros muchachos como quienes comían de la porción de la comida del rey.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-071",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "EXACT_CONTINUATION"
+      ],
+      "reference": "Daniel 1:19",
+      "supportingReferences": [
+        "Daniel 1:19"
+      ],
+      "continuityRequired": false,
+      "question": "Completa: «así, pues, permanecieron...»",
+      "options": [
+        {
+          "id": "A",
+          "text": "en tierra de Sinar"
+        },
+        {
+          "id": "B",
+          "text": "en la casa del tesoro"
+        },
+        {
+          "id": "C",
+          "text": "durante diez días"
+        },
+        {
+          "id": "D",
+          "text": "al servicio del rey"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Daniel 1:19 concluye «permanecieron al servicio del rey».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-072",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:20",
+      "supportingReferences": [
+        "Daniel 1:20"
+      ],
+      "continuityRequired": false,
+      "question": "Según la redacción exacta, los magos y astrólogos comparados con los cuatro estaban ¿dónde?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En Jerusalén"
+        },
+        {
+          "id": "B",
+          "text": "En todo su reino"
+        },
+        {
+          "id": "C",
+          "text": "En la casa del tesoro"
+        },
+        {
+          "id": "D",
+          "text": "En el palacio del rey únicamente"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 1:20 dice «que había en todo su reino».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-073",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE"
+      ],
+      "reference": "Daniel 1:18-20",
+      "supportingReferences": [
+        "Daniel 1:18-20"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál acción ocurre primero en la escena final de evaluación?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El rey los halla diez veces mejores."
+        },
+        {
+          "id": "B",
+          "text": "Permanecen al servicio del rey."
+        },
+        {
+          "id": "C",
+          "text": "El rey habla con ellos."
+        },
+        {
+          "id": "D",
+          "text": "El jefe de los eunucos los lleva delante de Nabucodonosor."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "En 1:18 el jefe de los eunucos los lleva ante Nabucodonosor; después, en 1:19, el rey habla con ellos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-074",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:1",
+      "supportingReferences": [
+        "Daniel 1:1"
+      ],
+      "continuityRequired": false,
+      "question": "Según la redacción exacta de Daniel 1:1, ¿qué título territorial corresponde a cada rey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Joacim, rey de Israel; Nabucodonosor, rey de Sinar"
+        },
+        {
+          "id": "B",
+          "text": "Joacim, rey de Babilonia; Nabucodonosor, rey de Judá"
+        },
+        {
+          "id": "C",
+          "text": "Joacim, rey de Judá; Ciro, rey de Babilonia"
+        },
+        {
+          "id": "D",
+          "text": "Joacim, rey de Judá; Nabucodonosor, rey de Babilonia"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Daniel 1:1 identifica a Joacim como rey de Judá y a Nabucodonosor como rey de Babilonia.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-075",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "ACTOR_TRACKING",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:2",
+      "supportingReferences": [
+        "Daniel 1:2"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál secuencia de actor y acción respeta Daniel 1:2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Melsar entrega los utensilios; Daniel los lleva a la casa de su dios."
+        },
+        {
+          "id": "B",
+          "text": "Joacim trae los utensilios a Sinar; Aspenaz los coloca en el tesoro."
+        },
+        {
+          "id": "C",
+          "text": "El Señor entrega a Joacim y parte de los utensilios; Nabucodonosor trae los utensilios a Sinar y los coloca en la casa del tesoro."
+        },
+        {
+          "id": "D",
+          "text": "Nabucodonosor entrega a Joacim; el Señor coloca los utensilios en la casa del tesoro."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "El versículo distingue la entrega realizada por el Señor de las acciones posteriores de Nabucodonosor.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-076",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:3-4",
+      "supportingReferences": [
+        "Daniel 1:3-4"
+      ],
+      "continuityRequired": false,
+      "question": "¿Quién recibió la orden y qué debía hacer con los muchachos además de traerlos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Aspenaz; enseñarles las letras y la lengua de los caldeos."
+        },
+        {
+          "id": "B",
+          "text": "Melsar; darles legumbres y agua."
+        },
+        {
+          "id": "C",
+          "text": "Ciro; ponerles nombres nuevos."
+        },
+        {
+          "id": "D",
+          "text": "Daniel; llevarlos delante de Nabucodonosor."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El rey habla a Aspenaz y la instrucción incluye enseñar las letras y la lengua de los caldeos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-077",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:4",
+      "supportingReferences": [
+        "Daniel 1:4",
+        "Daniel 1:15"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál par pertenece íntegramente a los requisitos previos de Daniel 1:4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Legumbres para comer + agua para beber"
+        },
+        {
+          "id": "B",
+          "text": "Mejor y más robusto + diez veces mejores"
+        },
+        {
+          "id": "C",
+          "text": "De buen parecer + de buen entendimiento"
+        },
+        {
+          "id": "D",
+          "text": "En gracia y buena voluntad + entendimiento en sueños"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Ambas expresiones del primer par forman parte de la descripción requerida en 1:4.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-078",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "NUMERIC_PRECISION"
+      ],
+      "reference": "Daniel 1:5",
+      "supportingReferences": [
+        "Daniel 1:5"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál combinación reúne correctamente la frecuencia de la porción y la duración de la educación?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Porción diaria + tres años"
+        },
+        {
+          "id": "B",
+          "text": "Porción diaria + diez años"
+        },
+        {
+          "id": "C",
+          "text": "Porción de diez días + tres años"
+        },
+        {
+          "id": "D",
+          "text": "Porción anual + diez días"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La porción era diaria y la educación debía durar tres años.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-079",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "NEGATIVE_PRECISION",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "reference": "Daniel 1:7",
+      "supportingReferences": [
+        "Daniel 1:7"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál correspondencia NO coincide con Daniel 1:7?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ananías—Sadrac"
+        },
+        {
+          "id": "B",
+          "text": "Daniel—Beltsasar"
+        },
+        {
+          "id": "C",
+          "text": "Azarías—Sadrac"
+        },
+        {
+          "id": "D",
+          "text": "Misael—Mesac"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Azarías fue llamado Abed-nego, no Sadrac.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-080",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:8",
+      "supportingReferences": [
+        "Daniel 1:8"
+      ],
+      "continuityRequired": false,
+      "question": "¿Qué hizo Daniel primero y qué hizo a continuación en el mismo versículo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pidió al jefe de los eunucos y luego propuso en su corazón no contaminarse."
+        },
+        {
+          "id": "B",
+          "text": "Pidió legumbres y luego rechazó el agua."
+        },
+        {
+          "id": "C",
+          "text": "Propuso en su corazón no contaminarse y luego pidió al jefe de los eunucos no ser obligado a contaminarse."
+        },
+        {
+          "id": "D",
+          "text": "Fue llevado ante el rey y luego recibió un nombre nuevo."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "El versículo presenta primero la decisión interior de Daniel y después su petición al jefe de los eunucos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-081",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "reference": "Daniel 1:9",
+      "supportingReferences": [
+        "Daniel 1:9"
+      ],
+      "continuityRequired": false,
+      "question": "Completa exactamente: «Puso Dios a Daniel en gracia...»",
+      "options": [
+        {
+          "id": "A",
+          "text": "y en buena voluntad con el jefe de los eunucos"
+        },
+        {
+          "id": "B",
+          "text": "y en robustez delante del rey"
+        },
+        {
+          "id": "C",
+          "text": "y en sabiduría con Melsar"
+        },
+        {
+          "id": "D",
+          "text": "y en conocimiento de toda visión"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La continuación exacta es «y en buena voluntad con el jefe de los eunucos».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-082",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "reference": "Daniel 1:10",
+      "supportingReferences": [
+        "Daniel 1:10"
+      ],
+      "continuityRequired": false,
+      "question": "Completa exactamente la consecuencia temida: «haréis que el rey...»",
+      "options": [
+        {
+          "id": "A",
+          "text": "me condene a muerte"
+        },
+        {
+          "id": "B",
+          "text": "me quite la porción diaria"
+        },
+        {
+          "id": "C",
+          "text": "os halle diez veces mejores"
+        },
+        {
+          "id": "D",
+          "text": "os lleve a tierra de Sinar"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El jefe de los eunucos temía que el rey lo condenara a muerte.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-083",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "NUMERIC_PRECISION"
+      ],
+      "reference": "Daniel 1:12",
+      "supportingReferences": [
+        "Daniel 1:12"
+      ],
+      "continuityRequired": false,
+      "question": "Según la redacción exacta, Daniel pidió a Melsar: «Te ruego que hagas la prueba con...»",
+      "options": [
+        {
+          "id": "A",
+          "text": "tus siervos durante tres años"
+        },
+        {
+          "id": "B",
+          "text": "los muchachos durante tres años"
+        },
+        {
+          "id": "C",
+          "text": "tus siervos durante diez días"
+        },
+        {
+          "id": "D",
+          "text": "los magos durante diez días"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "La petición exacta es «con tus siervos durante diez días».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-084",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:13",
+      "supportingReferences": [
+        "Daniel 1:10",
+        "Daniel 1:13"
+      ],
+      "continuityRequired": false,
+      "question": "¿Con qué grupo pidió Daniel comparar «nuestros rostros»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Con los muchachos que comen de la porción de la comida del rey"
+        },
+        {
+          "id": "B",
+          "text": "Con los príncipes del linaje real"
+        },
+        {
+          "id": "C",
+          "text": "Con todos los magos y astrólogos del reino"
+        },
+        {
+          "id": "D",
+          "text": "Con los hijos de Judá que permanecieron al servicio del rey"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel pidió la comparación con los muchachos que comían de la porción del rey.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-085",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE"
+      ],
+      "reference": "Daniel 1:14",
+      "supportingReferences": [
+        "Daniel 1:14"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál opción reproduce la secuencia de Daniel 1:14?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los probó durante diez días y después pidió permiso al rey."
+        },
+        {
+          "id": "B",
+          "text": "Los llevó delante del rey y luego consintió con ellos."
+        },
+        {
+          "id": "C",
+          "text": "Consintió con ellos en esto y los probó durante diez días."
+        },
+        {
+          "id": "D",
+          "text": "Les dio conocimiento y después los probó."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "El versículo dice que consintió y luego los probó durante diez días.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-086",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:16",
+      "supportingReferences": [
+        "Daniel 1:12",
+        "Daniel 1:16"
+      ],
+      "continuityRequired": false,
+      "question": "Según Daniel 1:16, ¿qué les daba Melsar después de llevarse la porción de comida y el vino?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Legumbres"
+        },
+        {
+          "id": "B",
+          "text": "Vino"
+        },
+        {
+          "id": "C",
+          "text": "La porción de la comida del rey"
+        },
+        {
+          "id": "D",
+          "text": "Agua"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 1:16 especifica que Melsar les daba legumbres.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-087",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:17",
+      "supportingReferences": [
+        "Daniel 1:17"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál distribución reproduce exactamente los dos ámbitos de Daniel 1:17?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los cuatro: toda visión y sueños; Daniel: todas las letras y ciencias"
+        },
+        {
+          "id": "B",
+          "text": "Los cuatro: sabiduría e inteligencia del reino; Daniel: gracia y buena voluntad"
+        },
+        {
+          "id": "C",
+          "text": "Los cuatro: lengua de los caldeos; Daniel: diez veces mejor"
+        },
+        {
+          "id": "D",
+          "text": "Los cuatro: todas las letras y ciencias; Daniel: toda visión y sueños"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "El versículo asigna letras y ciencias a los cuatro, y visión y sueños específicamente a Daniel.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-088",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "reference": "Daniel 1:20",
+      "supportingReferences": [
+        "Daniel 1:20"
+      ],
+      "continuityRequired": false,
+      "question": "Completa exactamente: «los halló diez veces mejores que...»",
+      "options": [
+        {
+          "id": "A",
+          "text": "los muchachos que son semejantes a vosotros"
+        },
+        {
+          "id": "B",
+          "text": "todos los magos y astrólogos que había en todo su reino"
+        },
+        {
+          "id": "C",
+          "text": "los hijos de Judá que comían legumbres"
+        },
+        {
+          "id": "D",
+          "text": "los príncipes que estaban en Jerusalén"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "La continuación exacta compara a los cuatro con todos los magos y astrólogos del reino.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-089",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "CONTINUITY_CHAIN",
+        "PAIRED_DETAIL",
+        "BEFORE_AFTER_SEQUENCE"
+      ],
+      "reference": "Daniel 1:1-2",
+      "supportingReferences": [
+        "Daniel 1:1-2"
+      ],
+      "continuityRequired": true,
+      "question": "¿Cuál cadena conserva correctamente actores y acciones en Daniel 1:1-2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nabucodonosor entrega a Joacim en manos del Señor; el Señor coloca los utensilios en el palacio del rey."
+        },
+        {
+          "id": "B",
+          "text": "El Señor sitia Jerusalén; Joacim entrega a Nabucodonosor; Aspenaz lleva los utensilios a Sinar."
+        },
+        {
+          "id": "C",
+          "text": "Joacim sitia Jerusalén; Nabucodonosor entrega los utensilios a Aspenaz; Melsar los coloca en la casa del tesoro."
+        },
+        {
+          "id": "D",
+          "text": "Nabucodonosor sitia Jerusalén; el Señor entrega a Joacim y parte de los utensilios en sus manos; Nabucodonosor lleva los utensilios a Sinar y los coloca en la casa del tesoro de su dios."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "La secuencia textual distingue el sitio de Nabucodonosor, la entrega realizada por el Señor y el traslado de los utensilios por Nabucodonosor.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "continuity_required"
+    },
+    {
+      "id": "DAN1-090",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "CROSS_BLOCK_CONFUSION",
+        "EXACT_ROLE_AND_OBJECT",
+        "CONTINUITY_CHAIN"
+      ],
+      "reference": "Daniel 1:3-16",
+      "supportingReferences": [
+        "Daniel 1:3",
+        "Daniel 1:8-16"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál opción distingue correctamente a Aspenaz/el jefe de los eunucos de Melsar en el episodio de la alimentación?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Melsar cambia los nombres de los cuatro y Aspenaz les da legumbres después de la prueba."
+        },
+        {
+          "id": "B",
+          "text": "Aspenaz propone la prueba de diez días a Daniel y Melsar teme ser condenado a muerte por el rey."
+        },
+        {
+          "id": "C",
+          "text": "Melsar es llamado jefe de los eunucos en 1:3 y pone a Aspenaz sobre los cuatro."
+        },
+        {
+          "id": "D",
+          "text": "El jefe de los eunucos recibe primero la petición de Daniel y había puesto a Melsar sobre los cuatro; Melsar acepta la prueba y después se lleva la comida y el vino, dándoles legumbres."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "El texto separa los papeles: Daniel solicita primero al jefe de los eunucos; Melsar, puesto sobre los cuatro, ejecuta la prueba y el cambio de alimentación.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-091",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "CONTINUITY_CHAIN",
+        "ACTOR_TRACKING",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:8-16",
+      "supportingReferences": [
+        "Daniel 1:8-16"
+      ],
+      "continuityRequired": true,
+      "question": "¿Cuál secuencia resume sin alterar el orden de Daniel 1:8-16?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dios les da conocimiento en letras → Daniel decide no contaminarse → Melsar los lleva ante el rey → el jefe de los eunucos les da vino."
+        },
+        {
+          "id": "B",
+          "text": "Daniel habla a Melsar → Dios lo pone en gracia → decide no contaminarse → el rey los consulta → Melsar propone tres años → los rostros quedan pálidos."
+        },
+        {
+          "id": "C",
+          "text": "Daniel decide no contaminarse → Dios lo pone en gracia → el jefe de los eunucos expresa su temor → Daniel habla a Melsar → propone diez días → pide comparar rostros → Melsar consiente y prueba → los rostros resultan mejores y más robustos → Melsar les da legumbres."
+        },
+        {
+          "id": "D",
+          "text": "El jefe de los eunucos les da legumbres → Daniel pide la prueba → Dios lo pone en gracia → Melsar teme al rey → terminan tres años."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "La primera opción conserva el orden narrativo de la decisión de Daniel hasta la alimentación establecida por Melsar.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "continuity_required"
+    },
+    {
+      "id": "DAN1-092",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION",
+        "VERSE_LOCALIZATION",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:3,6",
+      "supportingReferences": [
+        "Daniel 1:3",
+        "Daniel 1:6"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál opción localiza correctamente las dos designaciones de procedencia?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel 1:3: hijos de Israel, del linaje real de los príncipes; Daniel 1:6: Daniel, Ananías, Misael y Azarías, de los hijos de Judá."
+        },
+        {
+          "id": "B",
+          "text": "Daniel 1:3: caldeos; Daniel 1:6: hijos de Israel del linaje real."
+        },
+        {
+          "id": "C",
+          "text": "Daniel 1:3: hijos de Judá; Daniel 1:6: magos y astrólogos de Babilonia."
+        },
+        {
+          "id": "D",
+          "text": "Daniel 1:3: los cuatro hijos de Judá por nombre; Daniel 1:6: linaje real de los príncipes."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El versículo 3 usa la designación amplia de hijos de Israel y linaje real; el versículo 6 identifica a los cuatro como hijos de Judá.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-093",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:1-21",
+      "supportingReferences": [
+        "Daniel 1:1",
+        "Daniel 1:5",
+        "Daniel 1:12",
+        "Daniel 1:14-15",
+        "Daniel 1:20-21"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál asignación de números a sus contextos es completamente correcta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tercer año—educación; tres años—Joacim; diez días—servicio del rey; diez veces—prueba; año primero—Nabucodonosor."
+        },
+        {
+          "id": "B",
+          "text": "Tercer año—reinado de Joacim; tres años—educación; diez días—prueba; diez veces—comparación con magos y astrólogos; año primero—Ciro."
+        },
+        {
+          "id": "C",
+          "text": "Tercer año—Ciro; tres años—prueba; diez días—educación; diez veces—rostros robustos; año primero—Joacim."
+        },
+        {
+          "id": "D",
+          "text": "Tercer año—sitio de Ciro; tres años—Melsar; diez días—magos; diez veces—comida; año primero—Aspenaz."
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "La primera opción conserva las cinco asociaciones numéricas tal como aparecen en el capítulo.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-094",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:4",
+      "supportingReferences": [
+        "Daniel 1:4"
+      ],
+      "continuityRequired": false,
+      "question": "Según la redacción exacta de Daniel 1:4, ¿cuál serie mantiene sin sustituciones cuatro rasgos consecutivos de los muchachos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "De buen parecer; instruidos en toda inteligencia; sabios en sueños; de buen entendimiento."
+        },
+        {
+          "id": "B",
+          "text": "De buen parecer; en gracia y buena voluntad; sabios en ciencia; idóneos para la prueba de diez días."
+        },
+        {
+          "id": "C",
+          "text": "De buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento."
+        },
+        {
+          "id": "D",
+          "text": "Más robustos; instruidos en toda sabiduría; sabios en ciencia; diez veces mejores."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "La primera serie reproduce literalmente cuatro rasgos consecutivos del versículo.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-095",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "NEGATIVE_PRECISION",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION",
+        "VERSE_LOCALIZATION"
+      ],
+      "reference": "Daniel 1:9,15,19-21",
+      "supportingReferences": [
+        "Daniel 1:9",
+        "Daniel 1:15",
+        "Daniel 1:19-21"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál emparejamiento referencia→dato es INCORRECTO?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel 1:15 → rostro mejor y más robusto"
+        },
+        {
+          "id": "B",
+          "text": "Daniel 1:21 → año primero del rey Ciro"
+        },
+        {
+          "id": "C",
+          "text": "Daniel 1:19 → diez veces mejores que todos los magos y astrólogos"
+        },
+        {
+          "id": "D",
+          "text": "Daniel 1:9 → gracia y buena voluntad con el jefe de los eunucos"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "La comparación «diez veces mejores» pertenece a Daniel 1:20, no a 1:19.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-096",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "PAIRED_DETAIL",
+        "EXACT_ROLE_AND_OBJECT",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "reference": "Daniel 1:9,17",
+      "supportingReferences": [
+        "Daniel 1:9",
+        "Daniel 1:17"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál opción distribuye correctamente las acciones de Dios en Daniel 1:9 y 1:17?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1:9: cambia los nombres; 1:17: asigna la comida y el vino."
+        },
+        {
+          "id": "B",
+          "text": "1:9: hace los rostros robustos; 1:17: los halla diez veces mejores."
+        },
+        {
+          "id": "C",
+          "text": "1:9: pone a Daniel en gracia y buena voluntad con el jefe de los eunucos; 1:17: da a los cuatro conocimiento e inteligencia en letras y ciencias, y a Daniel entendimiento en toda visión y sueños."
+        },
+        {
+          "id": "D",
+          "text": "1:9: da a los cuatro conocimiento en letras; 1:17: pone a Melsar en gracia con Daniel."
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "La primera opción conserva las dos intervenciones divinas y sus destinatarios exactos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-097",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:18-20",
+      "supportingReferences": [
+        "Daniel 1:18-20"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál secuencia conserva el desarrollo de la evaluación final en Daniel 1:18-20?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No se hallan otros como ellos → el jefe de los eunucos los lleva → el rey les da legumbres → los halla diez veces mejores."
+        },
+        {
+          "id": "B",
+          "text": "El rey habla con ellos → son llevados ante Nabucodonosor → el jefe de los eunucos teme morir → Daniel continúa hasta Ciro."
+        },
+        {
+          "id": "C",
+          "text": "El rey los consulta → Melsar los lleva → reciben nombres nuevos → son probados diez días → permanecen al servicio."
+        },
+        {
+          "id": "D",
+          "text": "El jefe de los eunucos los lleva ante Nabucodonosor → el rey habla con ellos → no se hallan otros como los cuatro → permanecen al servicio del rey → el rey los consulta → los halla diez veces mejores que magos y astrólogos."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "La primera opción respeta el orden de los versículos 18, 19 y 20.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-098",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "CONTINUITY_CHAIN",
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "reference": "Daniel 1:5,8,13,15-16",
+      "supportingReferences": [
+        "Daniel 1:5",
+        "Daniel 1:8",
+        "Daniel 1:13",
+        "Daniel 1:15-16"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál recorrido de «la porción de la comida del rey» coincide con el texto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El rey la asigna por diez días → Daniel la acepta → Melsar la compara con las letras de los caldeos → Ciro la retira."
+        },
+        {
+          "id": "B",
+          "text": "Melsar la asigna → Daniel la pide → los magos la comen → el jefe de los eunucos la coloca en la casa del tesoro."
+        },
+        {
+          "id": "C",
+          "text": "Aspenaz la asigna durante tres años → Daniel la sustituye por vino → los otros muchachos la rechazan → Nabucodonosor se la lleva."
+        },
+        {
+          "id": "D",
+          "text": "El rey la asigna diariamente → Daniel decide no contaminarse con ella → sirve de referencia en la comparación de rostros → otros muchachos siguen comiéndola → Melsar se la lleva de los cuatro."
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "La primera opción sigue todas las apariciones relevantes de la porción sin cambiar actor ni función.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-099",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "EXACT_ROLE_AND_OBJECT",
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:3-20",
+      "supportingReferences": [
+        "Daniel 1:3-5",
+        "Daniel 1:8-16",
+        "Daniel 1:18-20"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál reparto de funciones entre el rey, el jefe de los eunucos y Melsar es correcto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El rey asigna comida y educación y después consulta a los jóvenes; el jefe de los eunucos recibe la petición inicial de Daniel y finalmente los lleva ante Nabucodonosor; Melsar ejecuta la prueba y sustituye la alimentación."
+        },
+        {
+          "id": "B",
+          "text": "El jefe de los eunucos asigna la comida y el vino; Melsar lleva los utensilios a Sinar; el rey pide legumbres."
+        },
+        {
+          "id": "C",
+          "text": "El rey pone a Melsar sobre los cuatro; Melsar cambia sus nombres; el jefe de los eunucos los halla diez veces mejores."
+        },
+        {
+          "id": "D",
+          "text": "Melsar asigna los tres años y consulta a los jóvenes; el rey ejecuta la prueba; el jefe de los eunucos recibe el nombre Beltsasar."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La primera opción conserva las funciones que el texto asigna a cada uno de los tres actores.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    },
+    {
+      "id": "DAN1-100",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION",
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION",
+        "PAIRED_DETAIL"
+      ],
+      "reference": "Daniel 1:10,15,19-20",
+      "supportingReferences": [
+        "Daniel 1:10",
+        "Daniel 1:15",
+        "Daniel 1:19-20"
+      ],
+      "continuityRequired": false,
+      "question": "¿Cuál mapa de comparaciones está completamente localizado en el versículo correcto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1:10—posible rostro más pálido; 1:15—rostro mejor y más robusto; 1:19—no se hallaron otros como los cuatro; 1:20—diez veces mejores que magos y astrólogos."
+        },
+        {
+          "id": "B",
+          "text": "1:10—mejor y más robusto; 1:15—diez veces mejores; 1:19—en gracia y buena voluntad; 1:20—sin tacha alguna."
+        },
+        {
+          "id": "C",
+          "text": "1:10—diez veces mejores; 1:15—no se hallaron otros como ellos; 1:19—más pálidos; 1:20—mejor y más robusto."
+        },
+        {
+          "id": "D",
+          "text": "1:10—de buen parecer; 1:15—sabios en ciencia; 1:19—diez días; 1:20—tres años."
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La primera opción coloca cada comparación en su ubicación exacta: temor, resultado físico, singularidad ante el rey y comparación intelectual.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true,
+      "continuityStatus": "self_contained"
+    }
+  ]
+}

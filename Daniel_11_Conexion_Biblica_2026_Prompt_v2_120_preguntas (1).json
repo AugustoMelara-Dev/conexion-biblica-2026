@@ -1,0 +1,6621 @@
+{
+  "schemaVersion": "prompt-v2-compatible",
+  "mode": "REPLICA_CONEXION",
+  "source": {
+    "book": "Daniel",
+    "chapter": 11,
+    "version": "RVR95 según el texto suministrado por el usuario",
+    "closedSource": true,
+    "externalSourcesUsed": false
+  },
+  "questionCount": 120,
+  "difficultyDistribution": {
+    "1": {
+      "count": 6,
+      "percentage": 5
+    },
+    "2": {
+      "count": 12,
+      "percentage": 10
+    },
+    "3": {
+      "count": 24,
+      "percentage": 20
+    },
+    "4": {
+      "count": 42,
+      "percentage": 35
+    },
+    "5": {
+      "count": 36,
+      "percentage": 30
+    }
+  },
+  "auditSummary": {
+    "allVersesCovered": true,
+    "coveredVerses": "Daniel 11:1-45",
+    "exactlyFourOptionsPerQuestion": true,
+    "exactlyOneTargetPerQuestion": true,
+    "ambiguousOptions": 0,
+    "verifiedQuestions": 120
+  },
+  "questions": [
+    {
+      "id": "D11-001",
+      "type": "single_choice",
+      "difficulty": 2,
+      "reference": "Daniel 11:1",
+      "question": "Según la redacción exacta, ¿para qué estuvo el hablante en el primer año de Darío, el medo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Para animarlo y fortalecerlo"
+        },
+        {
+          "id": "B",
+          "text": "Para destruir y matar a muchos"
+        },
+        {
+          "id": "C",
+          "text": "Para que se cumpliera la visión"
+        },
+        {
+          "id": "D",
+          "text": "Para depurarlo, limpiarlo y emblanquecerlo"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El versículo dice: «estuve para animarlo y fortalecerlo».",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "PAIRED_DETAIL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:1"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-002",
+      "type": "single_choice",
+      "difficulty": 2,
+      "reference": "Daniel 11:2",
+      "question": "¿Cuántos reyes dice el texto que aún habrá en Persia antes de mencionar al cuarto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dos"
+        },
+        {
+          "id": "B",
+          "text": "Tres"
+        },
+        {
+          "id": "C",
+          "text": "Cuatro"
+        },
+        {
+          "id": "D",
+          "text": "Muchos"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 11:2 afirma: «Aún habrá tres reyes en Persia, y el cuarto...».",
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:2"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-003",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:2",
+      "question": "¿Qué combinación pertenece exactamente al cuarto rey de Persia descrito en el versículo 2?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se hará de grandes riquezas y levantará a todos contra el reino de Grecia"
+        },
+        {
+          "id": "B",
+          "text": "Tendrá un gran ejército y muchas riquezas, y vendrá rápidamente"
+        },
+        {
+          "id": "C",
+          "text": "Se apoderará de tesoros de oro y plata y de las cosas preciosas de Egipto"
+        },
+        {
+          "id": "D",
+          "text": "Repartirá botín, despojos y riquezas entre sus soldados"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Solo la opción A reúne los dos datos asignados al cuarto rey en Daniel 11:2.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:2"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-004",
+      "type": "single_choice",
+      "difficulty": 1,
+      "reference": "Daniel 11:3",
+      "question": "¿Cómo describe el texto al rey que se levantará luego?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Como un rey valiente"
+        },
+        {
+          "id": "B",
+          "text": "Como un hombre despreciable"
+        },
+        {
+          "id": "C",
+          "text": "Como un príncipe del pacto"
+        },
+        {
+          "id": "D",
+          "text": "Como un cobrador de tributos"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:3 lo llama «un rey valiente».",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:3"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-005",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:4",
+      "question": "Cuando el reino del rey valiente sea quebrantado, ¿hacia dónde será repartido?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hacia las tierras del sur"
+        },
+        {
+          "id": "B",
+          "text": "Hacia los cuatro vientos del cielo"
+        },
+        {
+          "id": "C",
+          "text": "Entre sus descendientes"
+        },
+        {
+          "id": "D",
+          "text": "Entre los que reconozcan al dios ajeno"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "El versículo 4 dice que será «repartido hacia los cuatro vientos del cielo».",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:3-4"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-006",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:4",
+      "question": "¿Cuál opción reproduce correctamente DOS limitaciones que el versículo 4 impone al reparto del reino?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No será para sus descendientes ni según el dominio con que él dominó"
+        },
+        {
+          "id": "B",
+          "text": "No será para sus soldados ni según las riquezas que había reunido"
+        },
+        {
+          "id": "C",
+          "text": "No será para sus hijos ni según el poder de todo su reino"
+        },
+        {
+          "id": "D",
+          "text": "No será para sus príncipes ni según la honra del reino"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:4 contiene exactamente ambas negaciones de la opción A.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:4"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-007",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:5",
+      "question": "¿Quién será más fuerte que el rey del sur según el versículo 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Uno de sus hijos"
+        },
+        {
+          "id": "B",
+          "text": "Uno de sus príncipes"
+        },
+        {
+          "id": "C",
+          "text": "Uno de los sabios del pueblo"
+        },
+        {
+          "id": "D",
+          "text": "El príncipe del pacto"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "El texto dice: «uno de sus príncipes será más fuerte que él».",
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:5"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-008",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:5",
+      "question": "¿Qué dice el texto acerca de ese príncipe que será más fuerte que el rey del sur?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se hará poderoso y su dominio será grande"
+        },
+        {
+          "id": "B",
+          "text": "Se engrandecerá sobre todo dios y prosperará hasta que sea consumada la ira"
+        },
+        {
+          "id": "C",
+          "text": "Se hará fuerte con sus riquezas y levantará a todos contra Grecia"
+        },
+        {
+          "id": "D",
+          "text": "Se elevará su corazón y derribará a muchos millares"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La descripción del príncipe en Daniel 11:5 es «se hará poderoso y su dominio será grande».",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:5"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-009",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:6",
+      "question": "Al cabo de unos años, ¿qué harán los dos reyes antes de que la hija del rey del sur vaya al rey del norte?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Harán alianza"
+        },
+        {
+          "id": "B",
+          "text": "Se mentirán el uno al otro"
+        },
+        {
+          "id": "C",
+          "text": "Harán convenios con aquel"
+        },
+        {
+          "id": "D",
+          "text": "Se entenderán con los que abandonen el santo pacto"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:6 coloca primero la alianza y después la venida de la hija del rey del sur.",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:6"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-010",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:6",
+      "question": "¿Cuál combinación corresponde por completo a la hija del rey del sur en Daniel 11:6?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vendrá para hacer la paz; no podrá retener la fuerza de su brazo; será entregada a la muerte"
+        },
+        {
+          "id": "B",
+          "text": "Vendrá con un ejército; entrará en la fortaleza; hará con ellos a su arbitrio"
+        },
+        {
+          "id": "C",
+          "text": "Será dada por mujer para destruirlo; permanecerá y tendrá éxito"
+        },
+        {
+          "id": "D",
+          "text": "Vendrá sin aviso; tomará el reino con halagos; saldrá vencedora con poca gente"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Los tres elementos de A pertenecen al versículo 6; las otras opciones trasladan acciones de otros actores.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:6"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-011",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:7",
+      "question": "¿Qué hará el renuevo de sus raíces después de levantarse sobre su trono?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vendrá con un ejército contra el rey del norte y entrará en la fortaleza"
+        },
+        {
+          "id": "B",
+          "text": "Levantará baluartes y tomará la ciudad fuerte"
+        },
+        {
+          "id": "C",
+          "text": "Entrará por las tierras, las invadirá y pasará"
+        },
+        {
+          "id": "D",
+          "text": "Volverá su rostro a las fortalezas de su tierra"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:7 asigna al renuevo las dos acciones de la opción A.",
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:6-7"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-012",
+      "type": "single_choice",
+      "difficulty": 2,
+      "reference": "Daniel 11:8",
+      "question": "¿A qué lugar llevará cautivos los dioses, las imágenes fundidas y los objetos preciosos de plata y oro?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A Persia"
+        },
+        {
+          "id": "B",
+          "text": "A Grecia"
+        },
+        {
+          "id": "C",
+          "text": "A Egipto"
+        },
+        {
+          "id": "D",
+          "text": "A la tierra gloriosa"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "El destino expresamente indicado es Egipto.",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:8"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-013",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:8",
+      "question": "¿Cuál enumeración pertenece al botín llevado cautivo a Egipto en el versículo 8?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dioses, imágenes fundidas y objetos preciosos de plata y de oro"
+        },
+        {
+          "id": "B",
+          "text": "Botín, despojos y riquezas"
+        },
+        {
+          "id": "C",
+          "text": "Tesoros de oro y plata y todas las cosas preciosas de Egipto"
+        },
+        {
+          "id": "D",
+          "text": "Oro, plata, piedras preciosas y cosas de gran precio"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Solo A reproduce la enumeración de Daniel 11:8; las demás son listas verdaderas de otros versículos.",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:8"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-014",
+      "type": "single_choice",
+      "difficulty": 2,
+      "reference": "Daniel 11:9",
+      "question": "Según Daniel 11:9, ¿qué hará el rey del sur después de entrar en el reino?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Volverá a su tierra"
+        },
+        {
+          "id": "B",
+          "text": "Tomará muchas costas"
+        },
+        {
+          "id": "C",
+          "text": "Plantará las tiendas de su palacio"
+        },
+        {
+          "id": "D",
+          "text": "Levantará baluartes"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El versículo 9 termina diciendo que «volverá a su tierra».",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:9"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-015",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:10",
+      "question": "¿Qué harán inicialmente los hijos de aquel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se airarán y reunirán multitud de grandes ejércitos"
+        },
+        {
+          "id": "B",
+          "text": "Se esforzarán y actuarán"
+        },
+        {
+          "id": "C",
+          "text": "Tramarán hacer mal y se mentirán"
+        },
+        {
+          "id": "D",
+          "text": "Se juntarán con lisonjas"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:10 abre con esas dos acciones de «los hijos de aquél».",
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:9-10"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-016",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:10",
+      "question": "Después de que uno venga apresuradamente, ¿cuál es la secuencia exacta de acciones que sigue en el versículo 10?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Inundará, pasará adelante, luego volverá y llevará la guerra hasta su fortaleza"
+        },
+        {
+          "id": "B",
+          "text": "Entrará, invadirá, pasará y extenderá su mano contra las tierras"
+        },
+        {
+          "id": "C",
+          "text": "Levantará baluartes, tomará la ciudad fuerte y permanecerá en la tierra gloriosa"
+        },
+        {
+          "id": "D",
+          "text": "Se contristará, retrocederá, se enojará y se entenderá con los que abandonen el pacto"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A conserva el orden propio de Daniel 11:10.",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "EXACT_CONTINUATION",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:10"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-017",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:11",
+      "question": "¿Qué provoca que el rey del sur salga y pelee contra el rey del norte?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se enfurecerá"
+        },
+        {
+          "id": "B",
+          "text": "Se contristará"
+        },
+        {
+          "id": "C",
+          "text": "Se ensoberbecerá"
+        },
+        {
+          "id": "D",
+          "text": "Se airarán sus hijos"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:11 dice: «se enfurecerá el rey del sur, y saldrá y peleará...».",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "ACTOR_TRACKING"
+      ],
+      "supportingReferences": [
+        "Daniel 11:11"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-018",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:11-12",
+      "question": "Siguiendo la continuidad entre los versículos 11 y 12, ¿qué combinación ocurre con la multitud puesta en campaña por el rey del norte?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Es entregada en manos del rey del sur; al llevársela, se eleva el corazón de este"
+        },
+        {
+          "id": "B",
+          "text": "Es destruida por los que comen de sus manjares; luego muchos se juntan con lisonjas"
+        },
+        {
+          "id": "C",
+          "text": "Es mayor que la primera; después entra por las tierras y las invade"
+        },
+        {
+          "id": "D",
+          "text": "Es barrida como por inundación de aguas; después se reparte entre los soldados"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El final del versículo 11 entrega la multitud en manos del rey del sur, y el versículo 12 continúa con «Al llevarse él la multitud».",
+      "questionClass": [
+        "CONTINUITY_CHAIN",
+        "ACTOR_TRACKING",
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:11-12"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-019",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:12",
+      "question": "¿Qué hará después de que se eleve su corazón al llevarse la multitud?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Derribará a muchos millares, pero no prevalecerá"
+        },
+        {
+          "id": "B",
+          "text": "Destruirá y matará a muchos, y llegará a su fin"
+        },
+        {
+          "id": "C",
+          "text": "Instruirá a muchos, pero caerán durante algunos días"
+        },
+        {
+          "id": "D",
+          "text": "Tomará muchas costas, pero un príncipe hará cesar su afrenta"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La consecuencia textual es «derribará a muchos millares; pero no prevalecerá».",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:12"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-020",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:13",
+      "question": "¿Cómo será la nueva multitud que pondrá en campaña el rey del norte respecto de la primera?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Menor que la primera"
+        },
+        {
+          "id": "B",
+          "text": "Igual que la primera"
+        },
+        {
+          "id": "C",
+          "text": "Mayor que la primera"
+        },
+        {
+          "id": "D",
+          "text": "El texto no compara su tamaño"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Daniel 11:13 la califica como «mayor que la primera».",
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:13"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-021",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:14",
+      "question": "¿Contra quién dice el texto que se levantarán muchos «en aquellos tiempos»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Contra el rey del norte"
+        },
+        {
+          "id": "B",
+          "text": "Contra el rey del sur"
+        },
+        {
+          "id": "C",
+          "text": "Contra el príncipe del pacto"
+        },
+        {
+          "id": "D",
+          "text": "Contra los sabios del pueblo"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 11:14 dice que «se levantarán muchos contra el rey del sur».",
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "ACTOR_TRACKING"
+      ],
+      "supportingReferences": [
+        "Daniel 11:14"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-022",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:14",
+      "question": "¿Qué se dice de los hombres turbulentos de «tu pueblo»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se levantarán para que se cumpla la visión, pero caerán"
+        },
+        {
+          "id": "B",
+          "text": "Instruirán a muchos, pero caerán a espada y fuego"
+        },
+        {
+          "id": "C",
+          "text": "Se esforzarán y actuarán porque conocen a su Dios"
+        },
+        {
+          "id": "D",
+          "text": "Serán ayudados con un pequeño socorro y muchos se juntarán a ellos"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Ambos elementos de A están unidos a los hombres turbulentos en Daniel 11:14.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:14"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-023",
+      "type": "single_choice",
+      "difficulty": 2,
+      "reference": "Daniel 11:15",
+      "question": "¿Qué levantará el rey del norte antes de tomar la ciudad fuerte?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tiendas"
+        },
+        {
+          "id": "B",
+          "text": "Baluartes"
+        },
+        {
+          "id": "C",
+          "text": "Ejércitos"
+        },
+        {
+          "id": "D",
+          "text": "Fortalezas"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "El orden es: «levantará baluartes y tomará la ciudad fuerte».",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:15"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-024",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:15",
+      "question": "¿Cuál opción distingue correctamente a las dos fuerzas del sur mencionadas en el versículo 15?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Las fuerzas del sur no podrán sostenerse, ni sus tropas escogidas, porque no habrá fuerzas para resistir"
+        },
+        {
+          "id": "B",
+          "text": "Las tropas del sur serán barridas y sus soldados repartirán el botín porque habrá poca gente"
+        },
+        {
+          "id": "C",
+          "text": "El ejército del sur será destruido y sus tropas escogidas escaparán hacia Egipto"
+        },
+        {
+          "id": "D",
+          "text": "Las fuerzas del sur se empeñarán en la guerra y sus tropas escogidas tomarán la ciudad fuerte"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A conserva las dos expresiones y la razón dada en el texto.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:15"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-025",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:16",
+      "question": "¿Dónde permanecerá «el que vendrá contra él»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En las fortalezas de su tierra"
+        },
+        {
+          "id": "B",
+          "text": "En la tierra gloriosa"
+        },
+        {
+          "id": "C",
+          "text": "En la provincia en paz y abundancia"
+        },
+        {
+          "id": "D",
+          "text": "Entre los mares y el monte glorioso y santo"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 11:16 dice que permanecerá «en la tierra gloriosa».",
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:15-16"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-026",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:17",
+      "question": "¿Qué hará después de afirmar su rostro para venir con el poder de todo su reino?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hará convenios con aquel y le dará una hija por mujer"
+        },
+        {
+          "id": "B",
+          "text": "Volverá su rostro a las costas y tomará muchas"
+        },
+        {
+          "id": "C",
+          "text": "Formará designios contra las fortalezas y repartirá riquezas"
+        },
+        {
+          "id": "D",
+          "text": "Se entenderá con los que abandonen el santo pacto"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El versículo 17 coloca los convenios y la entrega de una hija inmediatamente después de afirmar su rostro.",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CONTINUITY_CHAIN"
+      ],
+      "supportingReferences": [
+        "Daniel 11:16-17"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-027",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:17",
+      "question": "¿Cuál combinación reproduce el propósito y el resultado de dar una hija por mujer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Para destruirlo; pero no permanecerá ni tendrá éxito"
+        },
+        {
+          "id": "B",
+          "text": "Para hacer la paz; y ella retendrá la fuerza de su brazo"
+        },
+        {
+          "id": "C",
+          "text": "Para cumplir la visión; y predominará sobre la fortaleza"
+        },
+        {
+          "id": "D",
+          "text": "Para honrarlo; y lo hará gobernar sobre muchos"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:17 une el propósito «para destruirlo» con el fracaso: «no permanecerá ni tendrá éxito».",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:17"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-028",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:18",
+      "question": "Después de volver su rostro a las costas y tomar muchas, ¿quién interviene?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Un príncipe"
+        },
+        {
+          "id": "B",
+          "text": "Un cobrador de tributos"
+        },
+        {
+          "id": "C",
+          "text": "Uno de sus príncipes"
+        },
+        {
+          "id": "D",
+          "text": "El príncipe del pacto"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El texto dice: «pero un príncipe le hará cesar en su afrenta».",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "EXACT_ROLE_AND_OBJECT",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:18"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-029",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:18-19",
+      "question": "¿Cuál secuencia conserva correctamente la transición de las costas a las fortalezas de su tierra?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tomará muchas costas; un príncipe hará cesar su afrenta; luego volverá su rostro a las fortalezas de su tierra; tropezará y caerá"
+        },
+        {
+          "id": "B",
+          "text": "Tomará la ciudad fuerte; permanecerá en la tierra gloriosa; luego plantará sus tiendas entre los mares; llegará a su fin"
+        },
+        {
+          "id": "C",
+          "text": "Entrará en la fortaleza; llevará cautivos objetos a Egipto; luego volverá al sur; la última venida no será como la primera"
+        },
+        {
+          "id": "D",
+          "text": "Invadirá las tierras; muchas provincias caerán; luego extenderá su mano contra Egipto; no escapará"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A mantiene la cadena de Daniel 11:18-19 sin mezclar bloques.",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:18-19"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-030",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:19",
+      "question": "¿Qué sucede al volver su rostro a las fortalezas de su tierra?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tropezará y caerá, y no será hallado"
+        },
+        {
+          "id": "B",
+          "text": "Será muerto, aunque no con ira ni en batalla"
+        },
+        {
+          "id": "C",
+          "text": "Llegará a su fin y no tendrá quien lo ayude"
+        },
+        {
+          "id": "D",
+          "text": "Caerá a espada y a fuego, en cautividad y despojo"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Solo A pertenece a Daniel 11:19.",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:19"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-031",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:20",
+      "question": "¿Qué hará pasar por la gloria del reino el que se levante «en su lugar»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Un príncipe"
+        },
+        {
+          "id": "B",
+          "text": "Un cobrador de tributos"
+        },
+        {
+          "id": "C",
+          "text": "Un gran ejército"
+        },
+        {
+          "id": "D",
+          "text": "Un dios ajeno"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 11:20 menciona «un cobrador de tributos».",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:20"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-032",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:20",
+      "question": "¿Cuál combinación describe correctamente el fin del personaje de Daniel 11:20?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En pocos días será muerto, aunque no con ira ni en batalla"
+        },
+        {
+          "id": "B",
+          "text": "Tropezará y caerá, y no será hallado"
+        },
+        {
+          "id": "C",
+          "text": "Llegará a su fin y no tendrá quien lo ayude"
+        },
+        {
+          "id": "D",
+          "text": "Durante algunos días caerá a espada y a fuego"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A conserva tanto el plazo como la doble negación del versículo 20.",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "PAIRED_DETAIL",
+        "NUMERIC_PRECISION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:20"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-033",
+      "type": "single_choice",
+      "difficulty": 1,
+      "reference": "Daniel 11:21",
+      "question": "¿Cómo llama el texto al que ocupará el lugar del anterior?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Un rey valiente"
+        },
+        {
+          "id": "B",
+          "text": "Un hombre despreciable"
+        },
+        {
+          "id": "C",
+          "text": "Un sabio del pueblo"
+        },
+        {
+          "id": "D",
+          "text": "Un príncipe"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 11:21 lo denomina «un hombre despreciable».",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:20-21"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-034",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:21",
+      "question": "¿Cómo tomará el reino el hombre despreciable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Con un gran ejército y muchas riquezas"
+        },
+        {
+          "id": "B",
+          "text": "Sin aviso y con halagos"
+        },
+        {
+          "id": "C",
+          "text": "Con baluartes y tropas escogidas"
+        },
+        {
+          "id": "D",
+          "text": "Con carros, gente de a caballo y muchas naves"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "La secuencia textual es «Vendrá sin aviso y tomará el reino con halagos».",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-035",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:22",
+      "question": "¿Qué será destruido junto con las fuerzas enemigas barridas delante de él?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El príncipe del pacto"
+        },
+        {
+          "id": "B",
+          "text": "El rey del sur"
+        },
+        {
+          "id": "C",
+          "text": "El cobrador de tributos"
+        },
+        {
+          "id": "D",
+          "text": "El dios de las fortalezas"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El versículo 22 añade «junto con el príncipe del pacto».",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "ACTOR_TRACKING"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-22"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-036",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:22-23",
+      "question": "¿Cuál secuencia corresponde al mismo actor desde el barrido de las fuerzas enemigas hasta su victoria con poca gente?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Las fuerzas enemigas son barridas y destruidas; después del pacto él engaña, sube y sale vencedor con poca gente"
+        },
+        {
+          "id": "B",
+          "text": "Las fuerzas del sur no se sostienen; después hace alianza y la hija del sur viene para hacer la paz"
+        },
+        {
+          "id": "C",
+          "text": "Su ejército es destruido; después los sabios instruyen a muchos y reciben pequeño socorro"
+        },
+        {
+          "id": "D",
+          "text": "Las provincias caen; después se apodera de tesoros de Egipto y planta sus tiendas"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Los versículos 22-23 mantienen la continuidad del actor introducido en el 21.",
+      "questionClass": [
+        "CONTINUITY_CHAIN",
+        "ACTOR_TRACKING",
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-23"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-037",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:23",
+      "question": "¿Con cuánta gente dice el texto que saldrá vencedor después del pacto y el engaño?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Con poca gente"
+        },
+        {
+          "id": "B",
+          "text": "Con una gran multitud"
+        },
+        {
+          "id": "C",
+          "text": "Con tropas escogidas"
+        },
+        {
+          "id": "D",
+          "text": "Con muchos millares"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:23 especifica «con poca gente».",
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:23"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-038",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:24",
+      "question": "¿En qué condición estará la provincia cuando él entre?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En guerra y escasez"
+        },
+        {
+          "id": "B",
+          "text": "En paz y en abundancia"
+        },
+        {
+          "id": "C",
+          "text": "En cautividad y despojo"
+        },
+        {
+          "id": "D",
+          "text": "En ira y batalla"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "El versículo comienza: «Estando la provincia en paz y en abundancia...».",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:24"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-039",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:24",
+      "question": "¿Qué repartirá entre sus soldados y qué hará contra las fortalezas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Botín, despojos y riquezas; formará sus designios"
+        },
+        {
+          "id": "B",
+          "text": "Oro, plata y piedras preciosas; levantará baluartes"
+        },
+        {
+          "id": "C",
+          "text": "Tesoros de Egipto; extenderá su mano"
+        },
+        {
+          "id": "D",
+          "text": "Dioses e imágenes fundidas; entrará en la fortaleza"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A une las dos acciones específicas de Daniel 11:24.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 11:24"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-040",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:25",
+      "question": "¿Contra quién despertará sus fuerzas y su ardor con un gran ejército?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Contra el rey del norte"
+        },
+        {
+          "id": "B",
+          "text": "Contra el rey del sur"
+        },
+        {
+          "id": "C",
+          "text": "Contra los violadores del pacto"
+        },
+        {
+          "id": "D",
+          "text": "Contra los hombres turbulentos"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "El objetivo indicado en Daniel 11:25 es «el rey del sur».",
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-25"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-041",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:25",
+      "question": "¿Cuál combinación contrasta correctamente los dos ejércitos del versículo 25 y el resultado?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El atacante despierta sus fuerzas con un gran ejército; el rey del sur se empeña con un ejército grande y muy fuerte, pero no prevalece porque le harán traición"
+        },
+        {
+          "id": "B",
+          "text": "El atacante reúne multitud de grandes ejércitos; el rey del sur pone tropas escogidas y prevalece porque no habrá fuerzas para resistir"
+        },
+        {
+          "id": "C",
+          "text": "El atacante viene con gran ejército y muchas riquezas; el rey del sur sale con poca gente y vence mediante halagos"
+        },
+        {
+          "id": "D",
+          "text": "El atacante llega con carros y muchas naves; el rey del sur levanta baluartes y toma la ciudad fuerte"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A conserva tamaño, intensidad y causa del fracaso del rey del sur.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "NUMERIC_PRECISION",
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:25"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-042",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:26",
+      "question": "¿Quiénes contribuirán a quebrantarlo según el versículo 26?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los que coman de sus manjares"
+        },
+        {
+          "id": "B",
+          "text": "Los que abandonen el santo pacto"
+        },
+        {
+          "id": "C",
+          "text": "Los que lo reconozcan"
+        },
+        {
+          "id": "D",
+          "text": "Los hombres turbulentos de tu pueblo"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El texto dice: «Aun los que coman de sus manjares lo quebrantarán».",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:26"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-043",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:27",
+      "question": "¿Qué harán los dos reyes sentados a una misma mesa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se mentirán el uno al otro"
+        },
+        {
+          "id": "B",
+          "text": "Harán alianza para hacer la paz"
+        },
+        {
+          "id": "C",
+          "text": "Repartirán riquezas entre sus soldados"
+        },
+        {
+          "id": "D",
+          "text": "Se entenderán con los que abandonen el pacto"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:27 vincula la misma mesa con mentirse mutuamente.",
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "PAIRED_DETAIL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:27"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-044",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:27",
+      "question": "¿Cuál opción reúne correctamente la intención interna de los dos reyes, su conducta en la mesa y la razón de que no sirva de nada?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tramarán hacer mal; se mentirán el uno al otro; el plazo aún no habrá llegado"
+        },
+        {
+          "id": "B",
+          "text": "Harán convenios; se halagarán; la ira ya habrá sido consumada"
+        },
+        {
+          "id": "C",
+          "text": "Formarán designios; se repartirán tierras; el tiempo determinado habrá concluido"
+        },
+        {
+          "id": "D",
+          "text": "Se enojarán contra el pacto; se entenderán entre sí; el sacrificio continuo será quitado"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Los tres elementos de A aparecen unidos en Daniel 11:27.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:27"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-045",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:28",
+      "question": "¿Contra qué pondrá su corazón al volver a su tierra con gran riqueza?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Contra el pacto santo"
+        },
+        {
+          "id": "B",
+          "text": "Contra el reino de Grecia"
+        },
+        {
+          "id": "C",
+          "text": "Contra el rey del norte"
+        },
+        {
+          "id": "D",
+          "text": "Contra el dios de las fortalezas"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:28 dice «pondrá su corazón contra el pacto santo».",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-28"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-046",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:28-30",
+      "question": "¿Cuál secuencia conserva correctamente las dos vueltas al sur y el episodio intermedio?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vuelve a su tierra con gran riqueza y actúa contra el pacto santo; al tiempo señalado vuelve al sur; esa última venida no será como la primera; naves de Quitim vendrán contra él"
+        },
+        {
+          "id": "B",
+          "text": "Vuelve a su tierra con gran riqueza; inmediatamente toma muchas costas; después un príncipe lo derrota; finalmente naves de Quitim lo ayudan"
+        },
+        {
+          "id": "C",
+          "text": "Vuelve al sur con poca gente; reparte riquezas; luego la hija del rey del sur hace la paz; después naves de Quitim toman la ciudad fuerte"
+        },
+        {
+          "id": "D",
+          "text": "Vuelve al sur con carros y naves; Egipto no escapa; después planta sus tiendas entre los mares y el monte santo"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A sigue el orden textual de Daniel 11:28-30.",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "CONTINUITY_CHAIN",
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-30"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-047",
+      "type": "single_choice",
+      "difficulty": 1,
+      "reference": "Daniel 11:29",
+      "question": "Al tiempo señalado, ¿hacia dónde volverá?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Al norte"
+        },
+        {
+          "id": "B",
+          "text": "A su tierra"
+        },
+        {
+          "id": "C",
+          "text": "Al sur"
+        },
+        {
+          "id": "D",
+          "text": "A las costas"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Daniel 11:29 dice: «Al tiempo señalado volverá al sur».",
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-29"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-048",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:30",
+      "question": "¿Qué vendrá contra él y provocará que se contriste y retroceda?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Carros y gente de a caballo"
+        },
+        {
+          "id": "B",
+          "text": "Naves de Quitim"
+        },
+        {
+          "id": "C",
+          "text": "Una multitud mayor que la primera"
+        },
+        {
+          "id": "D",
+          "text": "Hombres turbulentos de tu pueblo"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Las «naves de Quitim» son el elemento que aparece antes de «se contristará y retrocederá».",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-30"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-049",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:30",
+      "question": "Después de retroceder, ¿qué doble relación tendrá con el pacto santo según el versículo 30?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se enojará contra el pacto santo y se entenderá con los que lo abandonen"
+        },
+        {
+          "id": "B",
+          "text": "Pondrá su corazón contra el pacto santo y lo quitará junto con la fortaleza"
+        },
+        {
+          "id": "C",
+          "text": "Profanará el pacto santo y seducirá al pueblo que conoce a Dios"
+        },
+        {
+          "id": "D",
+          "text": "Honrará el pacto santo y dará tierras a quienes lo reconozcan"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El versículo 30 une el enojo contra el pacto santo con el entendimiento con quienes lo abandonan.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "ACTOR_TRACKING",
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-30"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "UNSUPPORTED"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-050",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:31",
+      "question": "¿Qué quitarán las tropas que se levanten?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El sacrificio continuo"
+        },
+        {
+          "id": "B",
+          "text": "La honra del reino"
+        },
+        {
+          "id": "C",
+          "text": "Los manjares"
+        },
+        {
+          "id": "D",
+          "text": "Los tesoros de Egipto"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:31 dice que «quitarán el sacrificio continuo».",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-31"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-051",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:31",
+      "question": "¿Cuál es el orden exacto de las tres acciones de las tropas en el versículo 31?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Profanarán el santuario y la fortaleza; quitarán el sacrificio continuo; pondrán la abominación desoladora"
+        },
+        {
+          "id": "B",
+          "text": "Quitarán el sacrificio continuo; levantarán baluartes; profanarán la tierra gloriosa"
+        },
+        {
+          "id": "C",
+          "text": "Pondrán la abominación desoladora; repartirán tierras; honrarán al dios de las fortalezas"
+        },
+        {
+          "id": "D",
+          "text": "Profanarán el pacto santo; tomarán la ciudad fuerte; pondrán tiendas entre los mares"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A conserva tanto las acciones como su orden en el versículo 31.",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "EXACT_CONTINUATION",
+        "PAIRED_DETAIL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:31"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-052",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:32",
+      "question": "¿A quién seducirá con lisonjas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A los sabios del pueblo"
+        },
+        {
+          "id": "B",
+          "text": "A los violadores del pacto"
+        },
+        {
+          "id": "C",
+          "text": "A los hijos de Amón"
+        },
+        {
+          "id": "D",
+          "text": "A los que coman de sus manjares"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "La expresión exacta es «Con lisonjas seducirá a los violadores del pacto».",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-32"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-053",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:32",
+      "question": "¿Qué contraste establece el versículo 32?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los violadores del pacto serán seducidos con lisonjas, pero el pueblo que conoce a su Dios se esforzará y actuará"
+        },
+        {
+          "id": "B",
+          "text": "Los sabios caerán a espada, pero los hombres turbulentos tomarán la ciudad fuerte"
+        },
+        {
+          "id": "C",
+          "text": "Los hijos se airarán, pero el rey del sur se entenderá con quienes abandonen el pacto"
+        },
+        {
+          "id": "D",
+          "text": "Los que comen de sus manjares lo quebrantarán, pero sus tropas escogidas resistirán"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A reproduce los dos grupos y las acciones contrastadas en Daniel 11:32.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:32"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-054",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:33",
+      "question": "¿Qué harán los sabios del pueblo antes de que se describa su caída?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Instruirán a muchos"
+        },
+        {
+          "id": "B",
+          "text": "Se juntarán con lisonjas"
+        },
+        {
+          "id": "C",
+          "text": "Repartirán tierras como recompensa"
+        },
+        {
+          "id": "D",
+          "text": "Harán convenios con el rey del sur"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:33 comienza: «Los sabios del pueblo instruirán a muchos».",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "ACTOR_TRACKING",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:33"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-055",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:33-34",
+      "question": "¿Cuál combinación distingue correctamente la caída de los sabios y lo que ocurre «en su caída»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Durante algunos días caerán a espada y fuego, en cautividad y despojo; en su caída serán ayudados con un pequeño socorro"
+        },
+        {
+          "id": "B",
+          "text": "Caerán hasta el tiempo determinado; en su caída recibirán oro, plata y piedras preciosas"
+        },
+        {
+          "id": "C",
+          "text": "Caerán porque les harán traición; en su caída sus tropas escogidas tomarán la ciudad fuerte"
+        },
+        {
+          "id": "D",
+          "text": "Caerán y no serán hallados; en su caída un príncipe hará cesar su afrenta"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A enlaza correctamente la caída descrita en 11:33 con el pequeño socorro de 11:34.",
+      "questionClass": [
+        "CONTINUITY_CHAIN",
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:33-34"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-056",
+      "type": "single_choice",
+      "difficulty": 2,
+      "reference": "Daniel 11:34",
+      "question": "¿Con qué serán ayudados «en su caída»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Con una gran multitud"
+        },
+        {
+          "id": "B",
+          "text": "Con un pequeño socorro"
+        },
+        {
+          "id": "C",
+          "text": "Con muchas riquezas"
+        },
+        {
+          "id": "D",
+          "text": "Con tropas escogidas"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 11:34 especifica «un pequeño socorro».",
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:33-34"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-057",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:35",
+      "question": "¿Cuál de estas acciones NO aparece entre los propósitos asociados a la caída de algunos sabios?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ser depurados"
+        },
+        {
+          "id": "B",
+          "text": "Ser limpiados"
+        },
+        {
+          "id": "C",
+          "text": "Ser emblanquecidos"
+        },
+        {
+          "id": "D",
+          "text": "Ser engrandecidos"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "El versículo enumera depurados, limpiados y emblanquecidos; no «engrandecidos».",
+      "questionClass": [
+        "NEGATIVE_PRECISION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:35"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-058",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:35",
+      "question": "¿Cuál formulación conserva correctamente tanto el proceso como su límite temporal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Algunos sabios caerán para ser depurados, limpiados y emblanquecidos, hasta el tiempo determinado, porque aun para esto hay plazo"
+        },
+        {
+          "id": "B",
+          "text": "Los sabios caerán para ser destruidos, cautivados y despojados, hasta que la ira sea consumada porque el plazo ya llegó"
+        },
+        {
+          "id": "C",
+          "text": "Los sabios serán ayudados para ser honrados, enriquecidos y hechos gobernar, hasta que termine la primera venida"
+        },
+        {
+          "id": "D",
+          "text": "Los sabios caerán para ser fortalecidos, animados y engrandecidos, hasta que el rey vuelva a su tierra"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A reproduce la triple finalidad y el límite temporal de Daniel 11:35.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "EXACT_CONTINUATION",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:35"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-059",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:36",
+      "question": "¿Contra quién hablará maravillas el rey que se ensoberbece y se engrandece?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Contra el Dios de los dioses"
+        },
+        {
+          "id": "B",
+          "text": "Contra el rey del sur"
+        },
+        {
+          "id": "C",
+          "text": "Contra el príncipe del pacto"
+        },
+        {
+          "id": "D",
+          "text": "Contra el dios de las fortalezas"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:36 dice «contra el Dios de los dioses hablará maravillas».",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:36"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-060",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:36",
+      "question": "¿Cuál combinación pertenece íntegramente a Daniel 11:36?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hará su voluntad; se ensoberbecerá y se engrandecerá sobre todo dios; prosperará hasta que sea consumada la ira"
+        },
+        {
+          "id": "B",
+          "text": "No hará caso del Dios de sus padres; no respetará a dios alguno; honrará al dios de las fortalezas"
+        },
+        {
+          "id": "C",
+          "text": "Con un dios ajeno tomará fortalezas; colmará de honores a quienes lo reconozcan; repartirá tierras"
+        },
+        {
+          "id": "D",
+          "text": "Contenderá con el rey del sur; entrará por las tierras; muchas provincias caerán"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Solo A reúne afirmaciones del versículo 36 sin trasladar datos de 37-40.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:36"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-061",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:37",
+      "question": "¿De cuáles tres cosas dice el versículo 37 que no hará caso o no respetará?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Del Dios de sus padres, del amor de las mujeres y de dios alguno"
+        },
+        {
+          "id": "B",
+          "text": "Del pacto santo, del príncipe del pacto y del sacrificio continuo"
+        },
+        {
+          "id": "C",
+          "text": "Del rey del sur, de sus tropas escogidas y de sus manjares"
+        },
+        {
+          "id": "D",
+          "text": "De los dioses, de sus imágenes fundidas y de sus objetos preciosos"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A reúne exactamente los tres referentes negados en Daniel 11:37.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:37"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-062",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:37-38",
+      "question": "¿Qué contraste exacto se establece entre lo que el rey no respetará y lo que sí honrará?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No respetará a dios alguno; pero honrará en su lugar al dios de las fortalezas"
+        },
+        {
+          "id": "B",
+          "text": "No respetará al Dios de sus padres; pero honrará al príncipe del pacto"
+        },
+        {
+          "id": "C",
+          "text": "No respetará el amor de las mujeres; pero honrará al rey del sur"
+        },
+        {
+          "id": "D",
+          "text": "No respetará al dios de las fortalezas; pero honrará a los violadores del pacto"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El final de 11:37 y el inicio de 11:38 forman ese contraste.",
+      "questionClass": [
+        "CONTINUITY_CHAIN",
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:36-38"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-063",
+      "type": "single_choice",
+      "difficulty": 2,
+      "reference": "Daniel 11:38",
+      "question": "¿Qué dios honrará en su lugar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El dios de las fortalezas"
+        },
+        {
+          "id": "B",
+          "text": "El Dios de los dioses"
+        },
+        {
+          "id": "C",
+          "text": "El Dios de sus padres"
+        },
+        {
+          "id": "D",
+          "text": "Un dios ajeno"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La expresión exacta es «al dios de las fortalezas».",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:38"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-064",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:38",
+      "question": "¿Con qué cuatro clases de bienes honrará al dios de las fortalezas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oro, plata, piedras preciosas y cosas de gran precio"
+        },
+        {
+          "id": "B",
+          "text": "Dioses, imágenes fundidas, plata y oro"
+        },
+        {
+          "id": "C",
+          "text": "Botín, despojos, riquezas y tierras"
+        },
+        {
+          "id": "D",
+          "text": "Tesoros, oro, plata y cosas preciosas de Egipto"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A reproduce la lista de Daniel 11:38.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:38"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-065",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:39",
+      "question": "¿Qué hará con los que reconozcan al dios ajeno?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los colmará de honores, los hará gobernar sobre muchos y repartirá tierras como recompensa"
+        },
+        {
+          "id": "B",
+          "text": "Los seducirá con lisonjas, los quebrantará y destruirá su ejército"
+        },
+        {
+          "id": "C",
+          "text": "Los instruirá, los ayudará con pequeño socorro y los emblanquecerá"
+        },
+        {
+          "id": "D",
+          "text": "Los llevará cautivos a Egipto y se mantendrá alejado de ellos durante años"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Las tres acciones de A son las asignadas en Daniel 11:39 a quienes lo reconozcan.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:39"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-066",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:39",
+      "question": "Según la redacción suministrada, ¿cuál combinación corresponde exactamente al uso del dios ajeno y a la recompensa de sus reconocedores?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Con un dios ajeno se hará de las fortalezas más inexpugnables; a quienes lo reconozcan los hará gobernar sobre muchos y repartirá tierras como recompensa"
+        },
+        {
+          "id": "B",
+          "text": "Con el dios de sus padres levantará baluartes; a quienes lo reconozcan les repartirá botín y despojos"
+        },
+        {
+          "id": "C",
+          "text": "Con el dios de las fortalezas tomará la ciudad fuerte; a quienes lo abandonen les dará oro y plata"
+        },
+        {
+          "id": "D",
+          "text": "Con un dios que sus padres conocieron entrará en la tierra gloriosa; a sus soldados les repartirá las provincias"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A conserva tanto la expresión sobre las fortalezas como las recompensas del versículo 39.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL",
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:39"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-067",
+      "type": "single_choice",
+      "difficulty": 1,
+      "reference": "Daniel 11:40",
+      "question": "Al cabo del tiempo, ¿qué rey contenderá con él?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El rey del norte"
+        },
+        {
+          "id": "B",
+          "text": "El rey del sur"
+        },
+        {
+          "id": "C",
+          "text": "El cuarto rey de Persia"
+        },
+        {
+          "id": "D",
+          "text": "El rey valiente"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 11:40 inicia: «el rey del sur contenderá con él».",
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:36-40"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-068",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:40",
+      "question": "¿Con qué se levantará el rey del norte contra él «como una tempestad»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Con carros, gente de a caballo y muchas naves"
+        },
+        {
+          "id": "B",
+          "text": "Con una multitud de grandes ejércitos y tropas escogidas"
+        },
+        {
+          "id": "C",
+          "text": "Con poca gente, halagos y un cobrador de tributos"
+        },
+        {
+          "id": "D",
+          "text": "Con oro, plata, piedras preciosas y cosas de gran precio"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La enumeración exacta de Daniel 11:40 es «carros y gente de a caballo y muchas naves».",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "EXACT_CONTINUATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:36-40"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-069",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:40-41",
+      "question": "¿Cuál secuencia sigue inmediatamente a la comparación «como una tempestad»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Entrará por las tierras, las invadirá y pasará; entrará en la tierra gloriosa y muchas provincias caerán"
+        },
+        {
+          "id": "B",
+          "text": "Entrará en la fortaleza, predominará; llevará imágenes a Egipto y volverá a su tierra"
+        },
+        {
+          "id": "C",
+          "text": "Entrará en paz y abundancia, repartirá riquezas; después se sentará a una mesa con el rey del sur"
+        },
+        {
+          "id": "D",
+          "text": "Entrará sin aviso, tomará el reino con halagos; después las fuerzas enemigas serán barridas"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A enlaza el final de 11:40 con el comienzo de 11:41.",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "CONTINUITY_CHAIN",
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:40-41"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-070",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:41",
+      "question": "¿Cuál de estos grupos aparece entre los que escaparán de sus manos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La mayoría de los hijos de Amón"
+        },
+        {
+          "id": "B",
+          "text": "Los hombres turbulentos de tu pueblo"
+        },
+        {
+          "id": "C",
+          "text": "Los violadores del pacto"
+        },
+        {
+          "id": "D",
+          "text": "Los sabios del pueblo"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:41 menciona «la mayoría de los hijos de Amón» entre los que escaparán.",
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:41"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-071",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:41",
+      "question": "¿Cuál opción distingue exactamente entre lo que caerá y lo que escapará en la tierra gloriosa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Muchas provincias caerán; escaparán Edom, Moab y la mayoría de los hijos de Amón"
+        },
+        {
+          "id": "B",
+          "text": "Muchas tierras caerán; escaparán Egipto, Libia y Etiopía"
+        },
+        {
+          "id": "C",
+          "text": "La ciudad fuerte caerá; escaparán las tropas escogidas y los sabios"
+        },
+        {
+          "id": "D",
+          "text": "Las fortalezas caerán; escaparán Persia, Grecia y Quitim"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A conserva los dos lados del contraste de Daniel 11:41.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:41"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-072",
+      "type": "single_choice",
+      "difficulty": 2,
+      "reference": "Daniel 11:42",
+      "question": "¿Qué país dice expresamente el texto que no escapará?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Etiopía"
+        },
+        {
+          "id": "B",
+          "text": "Libia"
+        },
+        {
+          "id": "C",
+          "text": "Egipto"
+        },
+        {
+          "id": "D",
+          "text": "Edom"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "Daniel 11:42 declara: «no escapará el país de Egipto».",
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:42"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-073",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:42-43",
+      "question": "Después de extender su mano contra las tierras y de que Egipto no escape, ¿qué ocurre respecto de Egipto y quiénes lo seguirán?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se apoderará de sus tesoros de oro, plata y cosas preciosas; los de Libia y Etiopía lo seguirán"
+        },
+        {
+          "id": "B",
+          "text": "Llevará sus dioses e imágenes a Egipto; Edom y Moab lo seguirán"
+        },
+        {
+          "id": "C",
+          "text": "Repartirá sus tierras como recompensa; los hijos de Amón lo seguirán"
+        },
+        {
+          "id": "D",
+          "text": "Quitará su sacrificio continuo; los violadores del pacto lo seguirán"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:43 sigue a la caída de Egipto con los tesoros y con Libia y Etiopía.",
+      "questionClass": [
+        "CONTINUITY_CHAIN",
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:40-43"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-074",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:43",
+      "question": "¿De qué se apoderará en Egipto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "De los tesoros de oro y plata y de todas las cosas preciosas"
+        },
+        {
+          "id": "B",
+          "text": "De dioses, imágenes fundidas y objetos preciosos llevados desde Egipto"
+        },
+        {
+          "id": "C",
+          "text": "De botín, despojos y riquezas que repartirá entre sus soldados"
+        },
+        {
+          "id": "D",
+          "text": "De piedras preciosas y cosas de gran precio para honrar al dios de las fortalezas"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La lista del versículo 43 es «tesoros de oro y plata, y de todas las cosas preciosas de Egipto».",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "supportingReferences": [
+        "Daniel 11:43"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-075",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:43",
+      "question": "¿Cuál opción relaciona correctamente los bienes con el lugar y los pueblos con su acción?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los tesoros de oro, plata y cosas preciosas son de Egipto; los de Libia y Etiopía lo seguirán"
+        },
+        {
+          "id": "B",
+          "text": "Los objetos de plata y oro son de Persia; los de Edom y Moab lo seguirán"
+        },
+        {
+          "id": "C",
+          "text": "El botín y los despojos son de la tierra gloriosa; los hijos de Amón lo seguirán"
+        },
+        {
+          "id": "D",
+          "text": "Las piedras preciosas son de Quitim; los sabios del pueblo lo seguirán"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A conserva las dos relaciones explícitas de Daniel 11:43.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:43"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-076",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:44",
+      "question": "¿De qué dos direcciones procederán las noticias que lo atemorizarán?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Del sur y del occidente"
+        },
+        {
+          "id": "B",
+          "text": "Del oriente y del norte"
+        },
+        {
+          "id": "C",
+          "text": "Del norte y del sur"
+        },
+        {
+          "id": "D",
+          "text": "Del oriente y del occidente"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "El texto dice «noticias del oriente y del norte».",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:40-44"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-077",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:44",
+      "question": "¿Qué hará después de que las noticias del oriente y del norte lo atemoricen?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Saldrá con gran ira para destruir y matar a muchos"
+        },
+        {
+          "id": "B",
+          "text": "Retrocederá y se entenderá con los que abandonen el pacto"
+        },
+        {
+          "id": "C",
+          "text": "Volverá a su tierra con gran riqueza"
+        },
+        {
+          "id": "D",
+          "text": "Tropezará, caerá y no será hallado"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La reacción específica de Daniel 11:44 es salir «con gran ira para destruir y matar a muchos».",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "PAIRED_DETAIL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:40-44"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-078",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:44-45",
+      "question": "¿Cuál secuencia final corresponde exactamente a los versículos 44-45?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Las noticias del oriente y del norte lo atemorizan; sale con gran ira; planta las tiendas de su palacio entre los mares y el monte glorioso y santo; llega a su fin sin quien lo ayude"
+        },
+        {
+          "id": "B",
+          "text": "Las naves de Quitim lo atemorizan; retrocede; planta baluartes en la ciudad fuerte; cae y no es hallado"
+        },
+        {
+          "id": "C",
+          "text": "El rey del sur lo atemoriza; reúne una gran multitud; planta sus tiendas en Egipto; muere sin ira ni batalla"
+        },
+        {
+          "id": "D",
+          "text": "Los sabios lo atemorizan; quita el sacrificio continuo; planta tiendas en la fortaleza; es ayudado con pequeño socorro"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A mantiene toda la cadena de cierre del capítulo.",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "CONTINUITY_CHAIN",
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:40-45"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-079",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:45",
+      "question": "¿Cuál de las siguientes afirmaciones NO corresponde a Daniel 11:45?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Plantará las tiendas de su palacio entre los mares y el monte glorioso y santo"
+        },
+        {
+          "id": "B",
+          "text": "Llegará a su fin"
+        },
+        {
+          "id": "C",
+          "text": "No tendrá quien lo ayude"
+        },
+        {
+          "id": "D",
+          "text": "Tropezará y caerá, y no será hallado"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "Las tres primeras afirmaciones pertenecen a Daniel 11:45; «tropezará y caerá, y no será hallado» pertenece al versículo 19.",
+      "questionClass": [
+        "NEGATIVE_PRECISION",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:19",
+        "Daniel 11:45"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-080",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:45",
+      "question": "¿Cuál combinación reproduce exactamente la ubicación y el desenlace final?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Plantará las tiendas de su palacio entre los mares y el monte glorioso y santo; llegará a su fin y no tendrá quien lo ayude"
+        },
+        {
+          "id": "B",
+          "text": "Permanecerá en la tierra gloriosa; tropezará y caerá y no será hallado"
+        },
+        {
+          "id": "C",
+          "text": "Extenderá su mano contra Egipto; será muerto en pocos días, aunque no con ira ni en batalla"
+        },
+        {
+          "id": "D",
+          "text": "Volverá a las fortalezas de su tierra; muchos caerán a espada, fuego, cautividad y despojo"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Solo A une los dos datos específicos del versículo 45.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:45"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-081",
+      "type": "single_choice",
+      "difficulty": 1,
+      "reference": "Daniel 11:1",
+      "question": "¿En qué momento dice el hablante que estuvo para animarlo y fortalecerlo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En el primer año de Darío, el medo"
+        },
+        {
+          "id": "B",
+          "text": "Al cabo de unos años"
+        },
+        {
+          "id": "C",
+          "text": "Al tiempo señalado"
+        },
+        {
+          "id": "D",
+          "text": "Al cabo del tiempo"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El marco temporal de Daniel 11:1 es «en el primer año de Darío, el medo».",
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:1"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-082",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:2",
+      "question": "Según la redacción exacta, ¿cómo se compararán las riquezas del cuarto rey con las de los demás?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Más que todos ellos"
+        },
+        {
+          "id": "B",
+          "text": "Mayor que la primera"
+        },
+        {
+          "id": "C",
+          "text": "Muchas riquezas"
+        },
+        {
+          "id": "D",
+          "text": "Todas las cosas preciosas de Egipto"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La comparación literal de Daniel 11:2 es «más que todos ellos».",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:2"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-083",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:3",
+      "question": "¿Qué dos acciones se atribuyen al rey valiente después de levantarse?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dominará con gran poder y hará su voluntad"
+        },
+        {
+          "id": "B",
+          "text": "Tomará el reino con halagos y saldrá vencedor con poca gente"
+        },
+        {
+          "id": "C",
+          "text": "Levantará baluartes y tomará la ciudad fuerte"
+        },
+        {
+          "id": "D",
+          "text": "Se apoderará de tesoros y repartirá tierras"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Las dos acciones de Daniel 11:3 son dominar con gran poder y hacer su voluntad.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:3"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-084",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:4",
+      "question": "Después de afirmar que el reino será repartido y no será para sus descendientes, ¿cómo concluye el versículo sobre el destino de ese reino?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Quedará deshecho y será para otros aparte de ellos"
+        },
+        {
+          "id": "B",
+          "text": "Será consumido bajo su poder y permanecerá en la tierra gloriosa"
+        },
+        {
+          "id": "C",
+          "text": "Será tomado con halagos y repartido entre sus soldados"
+        },
+        {
+          "id": "D",
+          "text": "Será gobernado por muchos y repartido como recompensa"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El cierre de Daniel 11:4 es «su reino quedará deshecho y será para otros aparte de ellos».",
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:4"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-085",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:6",
+      "question": "Además de la hija del rey del sur, ¿qué conjunto completo menciona el texto entre quienes también serán entregados?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los que la habían traído, su hijo y los que estaban de parte de ella en aquel tiempo"
+        },
+        {
+          "id": "B",
+          "text": "Sus príncipes, sus tropas escogidas y los que comían de sus manjares"
+        },
+        {
+          "id": "C",
+          "text": "Sus soldados, sus padres y los violadores del pacto"
+        },
+        {
+          "id": "D",
+          "text": "Los sabios del pueblo, los hombres turbulentos y los hijos de Amón"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:6 enumera exactamente esos tres grupos o personas después de la entrega de ella.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "EXACT_CONTINUATION",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:6"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-086",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:7",
+      "question": "¿Qué hará el renuevo una vez que entre en la fortaleza?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hará con ellos a su arbitrio y predominará"
+        },
+        {
+          "id": "B",
+          "text": "Formará sus designios y repartirá riquezas"
+        },
+        {
+          "id": "C",
+          "text": "Profanará el santuario y quitará el sacrificio continuo"
+        },
+        {
+          "id": "D",
+          "text": "Se mentirá con el otro rey y el plazo no habrá llegado"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Después de entrar en la fortaleza, el texto dice que hará con ellos a su arbitrio y predominará.",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:7"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-087",
+      "type": "single_choice",
+      "difficulty": 2,
+      "reference": "Daniel 11:8",
+      "question": "¿Durante cuánto tiempo se mantendrá alejado del rey del norte?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Durante pocos días"
+        },
+        {
+          "id": "B",
+          "text": "Durante algunos días"
+        },
+        {
+          "id": "C",
+          "text": "Durante años"
+        },
+        {
+          "id": "D",
+          "text": "Hasta el tiempo determinado"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "La expresión exacta es «durante años».",
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:7-8"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-088",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:10",
+      "question": "¿Hasta dónde llevará la guerra después de volver?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hasta la ciudad fuerte"
+        },
+        {
+          "id": "B",
+          "text": "Hasta su fortaleza"
+        },
+        {
+          "id": "C",
+          "text": "Hasta la tierra gloriosa"
+        },
+        {
+          "id": "D",
+          "text": "Hasta Egipto"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 11:10 concluye: «llevará la guerra hasta su fortaleza».",
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:10"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-089",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:11-13",
+      "question": "¿Cuál distinción entre las dos multitudes del rey del norte es correcta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En el versículo 11 pone en campaña una gran multitud; en el 13 vuelve a poner en campaña una multitud mayor que la primera"
+        },
+        {
+          "id": "B",
+          "text": "En el versículo 11 reúne multitud de grandes ejércitos; en el 13 sale vencedor con poca gente"
+        },
+        {
+          "id": "C",
+          "text": "En el versículo 11 presenta tropas escogidas; en el 13 reúne carros y muchas naves"
+        },
+        {
+          "id": "D",
+          "text": "En el versículo 11 su multitud es mayor que la primera; en el 13 toda ella es entregada en manos del rey del sur"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El calificativo «gran multitud» pertenece al 11; «mayor que la primera» pertenece al 13.",
+      "questionClass": [
+        "CROSS_BLOCK_CONFUSION",
+        "NUMERIC_PRECISION",
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:11",
+        "Daniel 11:13"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-090",
+      "type": "single_choice",
+      "difficulty": 2,
+      "reference": "Daniel 11:12",
+      "question": "A pesar de derribar a muchos millares, ¿qué dice el texto que no hará?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No permanecerá"
+        },
+        {
+          "id": "B",
+          "text": "No tendrá éxito"
+        },
+        {
+          "id": "C",
+          "text": "No prevalecerá"
+        },
+        {
+          "id": "D",
+          "text": "No será hallado"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "El cierre del versículo 12 es «pero no prevalecerá».",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:11-12"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-091",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:13",
+      "question": "Al cabo de algunos años, ¿con qué dos recursos se dice que vendrá rápidamente el rey del norte?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Con un gran ejército y muchas riquezas"
+        },
+        {
+          "id": "B",
+          "text": "Con carros y gente de a caballo"
+        },
+        {
+          "id": "C",
+          "text": "Con poca gente y halagos"
+        },
+        {
+          "id": "D",
+          "text": "Con oro y plata de Egipto"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:13 especifica «con un gran ejército y muchas riquezas».",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:13"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-092",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:14",
+      "question": "¿Cuál opción conserva simultáneamente el propósito y el desenlace de los hombres turbulentos de «tu pueblo»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se levantarán para que se cumpla la visión, pero caerán"
+        },
+        {
+          "id": "B",
+          "text": "Se levantarán para tomar la ciudad fuerte y permanecerán en la tierra gloriosa"
+        },
+        {
+          "id": "C",
+          "text": "Se levantarán para quitar el sacrificio continuo y saldrán vencedores con poca gente"
+        },
+        {
+          "id": "D",
+          "text": "Se levantarán para destruir el pacto santo y serán colmados de honores"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El propósito textual es el cumplimiento de la visión y su desenlace es que caerán.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:14"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-093",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:15",
+      "question": "Completa según la redacción del texto: «las fuerzas del sur no podrán sostenerse, ni ________, porque no habrá fuerzas para resistir».",
+      "options": [
+        {
+          "id": "A",
+          "text": "sus tropas escogidas"
+        },
+        {
+          "id": "B",
+          "text": "sus grandes ejércitos"
+        },
+        {
+          "id": "C",
+          "text": "sus soldados"
+        },
+        {
+          "id": "D",
+          "text": "sus hijos"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La continuación exacta es «sus tropas escogidas».",
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:15"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-094",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:16",
+      "question": "¿Cuál combinación pertenece íntegramente al personaje descrito en Daniel 11:16?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hará su propia voluntad; no habrá quien se le pueda enfrentar; permanecerá en la tierra gloriosa, que será consumida bajo su poder"
+        },
+        {
+          "id": "B",
+          "text": "Hará su voluntad; hablará maravillas contra el Dios de los dioses; prosperará hasta que sea consumada la ira"
+        },
+        {
+          "id": "C",
+          "text": "Entrará sin aviso; tomará el reino con halagos; las fuerzas enemigas serán barridas delante de él"
+        },
+        {
+          "id": "D",
+          "text": "Volverá al sur; naves de Quitim vendrán contra él; se entenderá con quienes abandonen el pacto"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Los cuatro elementos de A pertenecen al versículo 16.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION",
+        "ACTOR_TRACKING"
+      ],
+      "supportingReferences": [
+        "Daniel 11:15-16"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-095",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:17",
+      "question": "¿Con qué alcance de poder afirmará su rostro para venir?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Con el poder de todo su reino"
+        },
+        {
+          "id": "B",
+          "text": "Con gran poder y hará su voluntad"
+        },
+        {
+          "id": "C",
+          "text": "Con un ejército grande y muy fuerte"
+        },
+        {
+          "id": "D",
+          "text": "Con carros, gente de a caballo y muchas naves"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La expresión es «con el poder de todo su reino».",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:16-17"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-096",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:18",
+      "question": "¿Qué doble acción realizará el príncipe que aparece después de la toma de muchas costas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Le hará cesar en su afrenta y hará volver sobre él su oprobio"
+        },
+        {
+          "id": "B",
+          "text": "Le quitará el sacrificio continuo y pondrá la abominación desoladora"
+        },
+        {
+          "id": "C",
+          "text": "Lo quebrantará y destruirá su ejército"
+        },
+        {
+          "id": "D",
+          "text": "Lo hará gobernar sobre muchos y le repartirá tierras"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Ambas acciones de A son las que el versículo atribuye al príncipe.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:18"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-097",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:20",
+      "question": "Según la redacción exacta, ¿de qué dos maneras NO ocurrirá la muerte del personaje del versículo 20?",
+      "options": [
+        {
+          "id": "A",
+          "text": "No con espada ni fuego"
+        },
+        {
+          "id": "B",
+          "text": "No con ira ni en batalla"
+        },
+        {
+          "id": "C",
+          "text": "No en cautividad ni despojo"
+        },
+        {
+          "id": "D",
+          "text": "No con halagos ni traición"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "Daniel 11:20 dice «aunque no con ira ni en batalla».",
+      "questionClass": [
+        "NEGATIVE_PRECISION",
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:20"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-098",
+      "type": "single_choice",
+      "difficulty": 2,
+      "reference": "Daniel 11:21",
+      "question": "¿Qué no le darán al hombre despreciable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La honra del reino"
+        },
+        {
+          "id": "B",
+          "text": "Un pequeño socorro"
+        },
+        {
+          "id": "C",
+          "text": "Tierras como recompensa"
+        },
+        {
+          "id": "D",
+          "text": "El poder de todo el reino"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El texto dice «al cual no darán la honra del reino».",
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-099",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:22",
+      "question": "Según la redacción exacta, ¿cómo serán barridas las fuerzas enemigas y qué grado de destrucción se afirma?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Como por inundación de aguas; serán del todo destruidas"
+        },
+        {
+          "id": "B",
+          "text": "Como una tempestad; muchas provincias caerán"
+        },
+        {
+          "id": "C",
+          "text": "Apresuradamente; muchos millares serán derribados"
+        },
+        {
+          "id": "D",
+          "text": "Con gran ira; serán depuradas y emblanquecidas"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:22 usa «como por inundación de aguas» y «serán del todo destruidas».",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-22"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-100",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:23",
+      "question": "¿Cuál es la secuencia exacta después del pacto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Engañará, subirá y saldrá vencedor con poca gente"
+        },
+        {
+          "id": "B",
+          "text": "Se contristará, retrocederá y saldrá con gran ira"
+        },
+        {
+          "id": "C",
+          "text": "Se ensoberbecerá, se engrandecerá y honrará al dios de las fortalezas"
+        },
+        {
+          "id": "D",
+          "text": "Invadirá, pasará y tomará muchas costas"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La cadena verbal del versículo 23 es exactamente la de A.",
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "BEFORE_AFTER_SEQUENCE",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-23"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-101",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:24",
+      "question": "¿Qué comparación hace el texto entre lo que él hará y lo que hicieron sus antepasados?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hará lo que no hicieron sus padres ni los padres de sus padres"
+        },
+        {
+          "id": "B",
+          "text": "Hará según el dominio con que dominaron sus padres"
+        },
+        {
+          "id": "C",
+          "text": "Honrará al dios que sus padres conocieron"
+        },
+        {
+          "id": "D",
+          "text": "No hará caso del Dios de sus padres ni de sus riquezas"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:24 formula una doble comparación negativa con «sus padres» y «los padres de sus padres».",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-24"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-102",
+      "type": "single_choice",
+      "difficulty": 1,
+      "reference": "Daniel 11:24",
+      "question": "¿Cuánto dice el texto que durará lo descrito al final del versículo 24?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Un tiempo"
+        },
+        {
+          "id": "B",
+          "text": "Algunos días"
+        },
+        {
+          "id": "C",
+          "text": "Pocos días"
+        },
+        {
+          "id": "D",
+          "text": "Años"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El versículo concluye: «Esto durará un tiempo».",
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:24"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-103",
+      "type": "single_choice",
+      "difficulty": 2,
+      "reference": "Daniel 11:25",
+      "question": "¿Por qué no prevalecerá el rey del sur?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Porque el plazo aún no habrá llegado"
+        },
+        {
+          "id": "B",
+          "text": "Porque le harán traición"
+        },
+        {
+          "id": "C",
+          "text": "Porque no habrá quien lo ayude"
+        },
+        {
+          "id": "D",
+          "text": "Porque sus tropas se juntarán con lisonjas"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "La razón explícita es «porque le harán traición».",
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:25"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-104",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:26",
+      "question": "¿Qué dos consecuencias se mencionan después de que los que comen de sus manjares lo quebranten?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Su ejército será destruido y muchos caerán muertos"
+        },
+        {
+          "id": "B",
+          "text": "Su reino será quebrantado y repartido a los cuatro vientos"
+        },
+        {
+          "id": "C",
+          "text": "Sus tropas profanarán el santuario y quitarán el sacrificio"
+        },
+        {
+          "id": "D",
+          "text": "Sus fuerzas serán barridas y el príncipe del pacto será destruido"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:26 termina con la destrucción del ejército y la muerte de muchos.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:26"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-105",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:27,35",
+      "question": "¿Cuál distinción temporal es correcta entre Daniel 11:27 y Daniel 11:35?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En 11:27 el plazo aún no habrá llegado; en 11:35 se afirma que aun para esto hay plazo"
+        },
+        {
+          "id": "B",
+          "text": "En 11:27 el tiempo determinado ya llegó; en 11:35 el plazo aún no habrá llegado"
+        },
+        {
+          "id": "C",
+          "text": "En ambos versículos se afirma literalmente que el plazo ya terminó"
+        },
+        {
+          "id": "D",
+          "text": "En 11:27 se habla de pocos días; en 11:35 de muchos años"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A distingue correctamente las dos expresiones temporales del texto.",
+      "questionClass": [
+        "CROSS_BLOCK_CONFUSION",
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:27",
+        "Daniel 11:35"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-106",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:28",
+      "question": "¿Qué expresión se repite al principio y al final del versículo 28?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Volverá a su tierra"
+        },
+        {
+          "id": "B",
+          "text": "Hará su voluntad"
+        },
+        {
+          "id": "C",
+          "text": "Pacto santo"
+        },
+        {
+          "id": "D",
+          "text": "Gran riqueza"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "«Volverá a su tierra» aparece antes y después de la acción contra el pacto santo.",
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "VERSE_LOCALIZATION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:28"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-107",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:29",
+      "question": "¿Cómo compara el texto la última venida al sur con la primera?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Será mayor que la primera"
+        },
+        {
+          "id": "B",
+          "text": "No será como la primera"
+        },
+        {
+          "id": "C",
+          "text": "Será igual que la primera"
+        },
+        {
+          "id": "D",
+          "text": "Será más rápida que la primera"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "La frase exacta es «la última venida no será como la primera».",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-29"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-108",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:30",
+      "question": "¿Cuál es el orden correcto desde la llegada de las naves de Quitim hasta su entendimiento con los que abandonan el pacto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se contristará y retrocederá; se enojará contra el pacto santo y hará según su voluntad; volverá y se entenderá con los que abandonen el santo pacto"
+        },
+        {
+          "id": "B",
+          "text": "Se enojará contra el pacto; se contristará; tomará la ciudad fuerte; luego volverá a su tierra"
+        },
+        {
+          "id": "C",
+          "text": "Retrocederá; quitará el sacrificio continuo; seducirá a los violadores; luego será ayudado con pequeño socorro"
+        },
+        {
+          "id": "D",
+          "text": "Se contristará; repartirá riquezas; honrará al dios de las fortalezas; luego entrará en Egipto"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "A conserva todas las acciones y su orden dentro de Daniel 11:30.",
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "PAIRED_DETAIL",
+        "CONTINUITY_CHAIN",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-30"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-109",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:31",
+      "question": "¿Qué dos cosas profanarán las tropas antes de quitar el sacrificio continuo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El santuario y la fortaleza"
+        },
+        {
+          "id": "B",
+          "text": "La tierra gloriosa y Egipto"
+        },
+        {
+          "id": "C",
+          "text": "El pacto santo y la ciudad fuerte"
+        },
+        {
+          "id": "D",
+          "text": "Los mares y el monte glorioso y santo"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La expresión exacta es «profanarán el santuario y la fortaleza».",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:21-31"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-110",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:33",
+      "question": "¿Cuál lista conserva exactamente las cuatro formas de caída mencionadas para los sabios durante algunos días?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Espada, fuego, cautividad y despojo"
+        },
+        {
+          "id": "B",
+          "text": "Ira, batalla, cautividad y traición"
+        },
+        {
+          "id": "C",
+          "text": "Oro, plata, piedras preciosas y despojo"
+        },
+        {
+          "id": "D",
+          "text": "Carros, gente de a caballo, naves y espada"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:33 enumera «a espada y a fuego, en cautividad y despojo».",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:33"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-111",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:34",
+      "question": "¿Qué ocurre además del pequeño socorro?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Muchos se juntarán a ellos con lisonjas"
+        },
+        {
+          "id": "B",
+          "text": "Los violadores del pacto serán seducidos con lisonjas"
+        },
+        {
+          "id": "C",
+          "text": "El hombre despreciable tomará el reino con halagos"
+        },
+        {
+          "id": "D",
+          "text": "Los dos reyes se mentirán sentados a una mesa"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:34 añade que «muchos se juntarán a ellos con lisonjas».",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:33-34"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-112",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:35",
+      "question": "¿Quiénes dice específicamente Daniel 11:35 que «también» caerán?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Algunos de los sabios"
+        },
+        {
+          "id": "B",
+          "text": "Hombres turbulentos de tu pueblo"
+        },
+        {
+          "id": "C",
+          "text": "Muchas provincias"
+        },
+        {
+          "id": "D",
+          "text": "Muchos"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:35 dice «También algunos de los sabios caerán»; los otros distractores también aparecen asociados con «caer» en otros versículos.",
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:33-35"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-113",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:36",
+      "question": "¿Qué dos razones temporales o determinativas se dan para el límite de su prosperidad?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hasta que sea consumada la ira, porque lo determinado se cumplirá"
+        },
+        {
+          "id": "B",
+          "text": "Hasta el tiempo señalado, porque la última venida será como la primera"
+        },
+        {
+          "id": "C",
+          "text": "Durante años, porque no habrá fuerzas para resistir"
+        },
+        {
+          "id": "D",
+          "text": "Durante algunos días, porque el plazo ya habrá llegado"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El versículo enlaza la consumación de la ira con el cumplimiento de lo determinado.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:36"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-114",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:37",
+      "question": "¿Qué razón da el texto al final del versículo 37 para su falta de consideración hacia esos dioses o afectos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Porque sobre todo se engrandecerá"
+        },
+        {
+          "id": "B",
+          "text": "Porque el plazo aún no habrá llegado"
+        },
+        {
+          "id": "C",
+          "text": "Porque le harán traición"
+        },
+        {
+          "id": "D",
+          "text": "Porque no habrá fuerzas para resistir"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "El cierre exacto es «porque sobre todo se engrandecerá».",
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:37"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-115",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:38",
+      "question": "¿Cómo caracteriza el texto al dios de las fortalezas respecto de los padres del rey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Como un dios que sus padres no conocieron"
+        },
+        {
+          "id": "B",
+          "text": "Como el Dios de sus padres"
+        },
+        {
+          "id": "C",
+          "text": "Como un dios que sus padres honraron con tierras"
+        },
+        {
+          "id": "D",
+          "text": "Como el dios que sus padres llevaron cautivo a Egipto"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:38 lo llama «un dios que sus padres no conocieron».",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:38"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-116",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:39",
+      "question": "Según la redacción exacta, ¿qué tipo de fortalezas se hará con un dios ajeno?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Las fortalezas más inexpugnables"
+        },
+        {
+          "id": "B",
+          "text": "Las fortalezas de su tierra"
+        },
+        {
+          "id": "C",
+          "text": "La fortaleza y el santuario"
+        },
+        {
+          "id": "D",
+          "text": "La ciudad fuerte y sus baluartes"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La frase suministrada es «las fortalezas más inexpugnables».",
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:39"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-117",
+      "type": "single_choice",
+      "difficulty": 4,
+      "reference": "Daniel 11:40",
+      "question": "Después de levantarse como una tempestad, ¿qué triple movimiento realizará por las tierras?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Entrará, las invadirá y pasará"
+        },
+        {
+          "id": "B",
+          "text": "Entrará, predominará y volverá"
+        },
+        {
+          "id": "C",
+          "text": "Se contristará, retrocederá y volverá"
+        },
+        {
+          "id": "D",
+          "text": "Levantará, tomará y permanecerá"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:40 dice «entrará por las tierras, las invadirá y pasará».",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "EXACT_CONTINUATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:40"
+      ],
+      "continuity_required": false,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-118",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:41",
+      "question": "¿Cuál enumeración reproduce exactamente los tres grupos o territorios que escaparán de sus manos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Edom, Moab y la mayoría de los hijos de Amón"
+        },
+        {
+          "id": "B",
+          "text": "Egipto, Libia y Etiopía"
+        },
+        {
+          "id": "C",
+          "text": "Persia, Grecia y Quitim"
+        },
+        {
+          "id": "D",
+          "text": "Los sabios, los violadores del pacto y los hombres turbulentos"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "La lista exacta de quienes escapan está en A.",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "supportingReferences": [
+        "Daniel 11:40-41"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-119",
+      "type": "single_choice",
+      "difficulty": 3,
+      "reference": "Daniel 11:43",
+      "question": "¿Qué relación establece el texto con Libia y Etiopía después de mencionar los tesoros de Egipto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los de Libia y Etiopía lo seguirán"
+        },
+        {
+          "id": "B",
+          "text": "Libia y Etiopía escaparán de sus manos"
+        },
+        {
+          "id": "C",
+          "text": "Los de Libia y Etiopía serán llevados cautivos a Egipto"
+        },
+        {
+          "id": "D",
+          "text": "Libia y Etiopía levantarán baluartes contra él"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "Daniel 11:43 concluye: «Los de Libia y de Etiopía lo seguirán».",
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "supportingReferences": [
+        "Daniel 11:40-43"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D11-120",
+      "type": "single_choice",
+      "difficulty": 5,
+      "reference": "Daniel 11:45",
+      "question": "¿Qué afirmación final sigue inmediatamente a «llegará a su fin»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Y no será hallado"
+        },
+        {
+          "id": "B",
+          "text": "Y no tendrá quien lo ayude"
+        },
+        {
+          "id": "C",
+          "text": "Y muchos caerán muertos"
+        },
+        {
+          "id": "D",
+          "text": "Y volverá a su tierra"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "El capítulo termina: «pero llegará a su fin, y no tendrá quien lo ayude».",
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "supportingReferences": [
+        "Daniel 11:40-45"
+      ],
+      "continuity_required": true,
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    }
+  ]
+}

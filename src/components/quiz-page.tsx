@@ -1,0 +1,204 @@
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
+import { Check, Clock3, Flag, Heart, Info, LockKeyhole, Maximize2, Star, TimerOff, X } from "lucide-react"
+import { useApp } from "@/app/app-state"
+import { evaluateAnswer } from "@/domain/evaluation"
+import { scheduleTrainingRetry } from "@/domain/session-selector"
+import { type ActiveRound, type AnswerValue, type EvaluationResult, type Question, type Session, type SessionAnswer, type SessionConfig } from "@/domain/types"
+import { formatElapsedMs, modeLabel } from "@/lib/format"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Progress } from "@/components/ui/progress"
+import { Separator } from "@/components/ui/separator"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { QuestionRenderer } from "@/components/question-renderer"
+
+export function QuizPage({ questions, config, resume, onStateChange, onFinish, onExit }: {
+  questions: Question[]
+  config: SessionConfig
+  resume?: ActiveRound
+  onStateChange?: (round: ActiveRound) => void
+  onFinish: (session: Session) => void
+  onExit: () => void
+}) {
+  const { progress, recordAnswer, recordReport } = useApp()
+  const [queue, setQueue] = useState<Question[]>(questions)
+  const [index, setIndex] = useState(resume?.currentIndex ?? 0)
+  const [value, setValue] = useState<AnswerValue>(() => initialAnswer(questions[resume?.currentIndex ?? 0]))
+  const [submitted, setSubmitted] = useState(false)
+  const [feedback, setFeedback] = useState<EvaluationResult | null>(null)
+  const [answers, setAnswers] = useState<SessionAnswer[]>(resume?.answers ?? [])
+  const [startedAt] = useState(() => resume?.startedAt ?? Date.now())
+  const [questionStartedAt, setQuestionStartedAt] = useState(Date.now)
+  const [remaining, setRemaining] = useState(config.perQuestionSeconds)
+  const [totalRemaining, setTotalRemaining] = useState(config.totalSeconds)
+  const [favorite, setFavorite] = useState(false)
+  const [difficult, setDifficult] = useState(false)
+  const [reportReason, setReportReason] = useState("")
+  const [reportOpen, setReportOpen] = useState(false)
+  const question = queue[index]
+  const progressRef = useRef(progress)
+  const queueRef = useRef(queue)
+  const stateChangeRef = useRef(onStateChange)
+  const selectionSummaryRef = useRef(resume?.selectionSummary)
+  const isSilent = config.mode === "final" || config.mode === "speed" || config.mode === "championship"
+  const showFeedback = config.mode === "training" && submitted && feedback
+  const displayedQuestion = useMemo(() => shuffleQuestionOptions(question, config.shuffleOptions), [config.shuffleOptions, question])
+
+  useEffect(() => {
+    progressRef.current = progress
+  }, [progress])
+
+  useEffect(() => {
+    queueRef.current = queue
+  }, [queue])
+
+  useEffect(() => {
+    stateChangeRef.current = onStateChange
+  }, [onStateChange])
+
+  useEffect(() => {
+    stateChangeRef.current?.({
+      id: "active", startedAt, updatedAt: Date.now(), currentIndex: index,
+      questionKeys: queue.map((item) => `${item.bankId ?? "local"}:${item.id}`),
+      answers, config, selectionSummary: selectionSummaryRef.current,
+    })
+  }, [answers, config, index, queue, startedAt])
+
+  useEffect(() => {
+    const itemProgress = progressRef.current.get(`${question.bankId ?? "local"}:${question.id}`)
+    setValue(initialAnswer(displayedQuestion))
+    setSubmitted(false)
+    setFeedback(null)
+    setQuestionStartedAt(Date.now())
+    setRemaining(config.perQuestionSeconds)
+    setFavorite(Boolean(itemProgress?.favorite))
+    setDifficult(Boolean(itemProgress?.markedDifficult))
+    setReportReason("")
+  }, [config.perQuestionSeconds, displayedQuestion, question.bankId, question.id])
+
+  const finish = useCallback((nextAnswers: SessionAnswer[]) => {
+    const session: Session = {
+      id: typeof crypto !== "undefined" && "randomUUID" in crypto ? crypto.randomUUID() : `session-${Date.now()}`,
+      startedAt,
+      completedAt: Date.now(),
+      mode: config.mode,
+      config,
+      questionKeys: queueRef.current.map((item) => `${item.bankId ?? "local"}:${item.id}`),
+      answers: nextAnswers,
+      score: nextAnswers.filter((item) => item.result.isCorrect).length,
+      durationMs: Date.now() - startedAt,
+    }
+    onFinish(session)
+  }, [config, onFinish, startedAt])
+
+  const advance = useCallback((lastAnswer?: SessionAnswer) => {
+    const nextAnswers = lastAnswer ? [...answers, lastAnswer] : answers
+    if (index >= queueRef.current.length - 1) finish(nextAnswers)
+    else setIndex((current) => current + 1)
+  }, [answers, finish, index])
+
+  const submit = useCallback(async (forcedReason?: "timeout" | "unanswered", finishRoundOnSubmit = false) => {
+    if (submitted || !question) return
+    const responseTimeMs = Date.now() - questionStartedAt
+    const result = evaluateAnswer(question, value, forcedReason, responseTimeMs)
+    const sessionAnswer: SessionAnswer = { questionKey: `${question.bankId ?? "local"}:${question.id}`, answer: value, result, responseTimeMs, favorite, markedDifficult: difficult }
+    setAnswers((current) => [...current, sessionAnswer])
+    setFeedback(result)
+    setSubmitted(true)
+    const nextProgress = await recordAnswer(question, result, value, { favorite, markedDifficult: difficult })
+    if (!result.isCorrect && config.mode === "training") {
+      const retryGap = Math.min(8 + Math.max(0, nextProgress.timesIncorrect - 1) * 4, 20)
+      setQueue((current) => scheduleTrainingRetry(current, question, index, retryGap))
+    }
+    if (finishRoundOnSubmit) {
+      window.setTimeout(() => finish([...answers, sessionAnswer]), isSilent ? 250 : 900)
+    } else if (forcedReason) {
+      window.setTimeout(() => advance(sessionAnswer), isSilent ? 250 : 900)
+    }
+  }, [advance, answers, config.mode, difficult, favorite, finish, index, isSilent, question, questionStartedAt, recordAnswer, submitted, value])
+
+  useEffect(() => {
+    const seconds = config.perQuestionSeconds
+    if (submitted || seconds === null) return undefined
+    const interval = window.setInterval(() => {
+      const next = Math.max(0, seconds * 1000 - (Date.now() - questionStartedAt))
+      setRemaining(Math.ceil(next / 1000))
+      if (next <= 0) {
+        window.clearInterval(interval)
+        void submit("timeout")
+      }
+    }, 100)
+    return () => window.clearInterval(interval)
+  }, [config.perQuestionSeconds, questionStartedAt, submit, submitted])
+
+  useEffect(() => {
+    if (config.totalSeconds === null) return undefined
+    const interval = window.setInterval(() => {
+      const next = Math.max(0, config.totalSeconds! * 1000 - (Date.now() - startedAt))
+      setTotalRemaining(Math.ceil(next / 1000))
+      if (next <= 0) {
+        window.clearInterval(interval)
+        if (!submitted) void submit("timeout", true)
+        else window.setTimeout(() => finish(answers), 250)
+      }
+    }, 250)
+    return () => window.clearInterval(interval)
+  }, [answers, config.totalSeconds, finish, startedAt, submit, submitted])
+
+  useEffect(() => {
+    const handleKey = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null
+      if (target?.matches("input,textarea,select,[contenteditable='true']")) return
+      if (event.key.toLowerCase() === "f") { setFavorite((current) => !current); return }
+      if (event.key === "Enter") { if (submitted) advance(); else void submit(); return }
+      if (submitted || question.type === "multi_select" || question.type === "ordering" || question.type === "matching") return
+      const number = Number(event.key)
+      const letterIndex = number >= 1 && number <= 4 ? number - 1 : "abcd".indexOf(event.key.toLowerCase())
+      const option = displayedQuestion.options[letterIndex]
+      if (option) setValue(option.id)
+    }
+    window.addEventListener("keydown", handleKey)
+    return () => window.removeEventListener("keydown", handleKey)
+  })
+
+  if (!question) return <Card><CardContent className="p-8 text-center">No hay preguntas para esta configuración.</CardContent></Card>
+  const correctText = question.answerMode === "canonical_text" ? question.correctAnswerText : question.type === "matching" ? "Consulta los pares indicados en la referencia." : question.options.filter((option) => question.correctAnswer.includes(option.id)).map((option) => option.text).join(", ")
+  const liveCorrect = answers.filter((answer) => answer.result.isCorrect).length
+  const liveIncorrect = answers.filter((answer) => !answer.result.isCorrect).length
+  const liveAverage = answers.length ? answers.reduce((sum, answer) => sum + answer.responseTimeMs, 0) / answers.length : 0
+  return (
+    <div className="mx-auto flex max-w-4xl flex-col gap-5">
+      <div className="flex flex-wrap items-center justify-between gap-3"><Button variant="ghost" onClick={onExit}><X data-icon="inline-start" />Salir</Button><div className="flex flex-wrap items-center justify-end gap-2"><Badge variant="secondary">{modeLabel(config.mode)}</Badge>{config.totalSeconds !== null ? <Badge variant={totalRemaining && totalRemaining < 30 ? "destructive" : "outline"}><Clock3 data-icon="inline-start" />{totalRemaining}s total</Badge> : null}<Button aria-label="Pantalla completa" size="icon" variant="outline" onClick={() => { if (document.fullscreenElement) void document.exitFullscreen(); else void document.documentElement.requestFullscreen?.() }}><Maximize2 data-icon="inline-start" /></Button></div></div>
+      <div className="flex flex-col gap-2"><div className="flex items-center justify-between gap-3 text-xs font-medium text-muted-foreground"><span>Pregunta {index + 1} de {queue.length}</span><span>{Math.round(((index + (submitted ? 1 : 0)) / queue.length) * 100)}%</span></div><Progress value={((index + (submitted ? 1 : 0)) / queue.length) * 100} /></div>
+      {config.mode === "speed" ? <div className="grid grid-cols-3 gap-2 rounded-xl border bg-card p-3 text-center text-sm"><div><p className="text-xs text-muted-foreground">Correctas</p><p className="mt-1 font-semibold text-emerald-600 dark:text-emerald-400">{liveCorrect}</p></div><div><p className="text-xs text-muted-foreground">Incorrectas</p><p className="mt-1 font-semibold text-destructive">{liveIncorrect}</p></div><div><p className="text-xs text-muted-foreground">Promedio</p><p className="mt-1 font-semibold">{formatElapsedMs(liveAverage)}</p></div></div> : null}
+      <Card className="shadow-none"><CardHeader className="gap-5"><div className="flex flex-wrap items-center justify-between gap-3"><div className="flex flex-wrap gap-2"><Badge variant="outline">{question.bankProfileId === "master-v2" ? "V2" : "V1"}</Badge><Badge variant="outline">{question.source.work}</Badge><Badge variant="outline">Cap. {question.source.chapter}</Badge><Badge variant="outline">Dificultad {question.originalDifficulty ?? question.difficulty}</Badge></div>{config.perQuestionSeconds !== null ? <div className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-semibold ${remaining && remaining <= 3 ? "border-destructive text-destructive" : "text-primary"}`}><TimerOff className="size-4" aria-hidden="true" />{remaining}s</div> : <span className="flex items-center gap-2 text-xs text-muted-foreground"><LockKeyhole className="size-4" />Sin pistas</span>}</div><CardTitle className="text-xl leading-8 sm:text-2xl">{question.question}</CardTitle><CardDescription className="flex items-center gap-2"><Info className="size-4" />{question.answerMode === "canonical_text" ? "Escribe la respuesta canónica y confirma." : question.type === "multi_select" ? "Selecciona todas las correctas y confirma." : question.type === "ordering" ? "Ordena con los botones accesibles." : question.type === "matching" ? "Relaciona cada elemento con su correspondencia." : "Elige una respuesta y confirma."}</CardDescription></CardHeader><CardContent className="flex flex-col gap-5"><QuestionRenderer question={displayedQuestion} value={value} onChange={setValue} disabled={submitted} />
+        {showFeedback ? <Alert variant={feedback.isCorrect ? "default" : "destructive"}><AlertTitle className="flex items-center gap-2">{feedback.isCorrect ? <Check /> : <X />}{feedback.isCorrect ? "Respuesta correcta" : feedback.reason === "timeout" ? "Tiempo agotado" : "Respuesta incorrecta"}</AlertTitle><AlertDescription className="flex flex-col gap-2"><span>Respuesta correcta: <strong>{correctText}</strong></span>{question.explanation ? <span>{question.explanation}</span> : null}<span>Fuente: <strong>{question.source.reference}</strong></span></AlertDescription></Alert> : null}
+        {submitted && !showFeedback ? <div className="rounded-lg border bg-muted/35 px-4 py-3 text-sm text-muted-foreground">Respuesta registrada. La solución se revelará al finalizar la ronda.</div> : null}
+        {reportOpen ? <div className="flex flex-col gap-3 rounded-xl border border-destructive/30 bg-destructive/5 p-4"><p className="text-sm font-medium">¿Qué quieres auditar?</p><Input value={reportReason} onChange={(event) => setReportReason(event.target.value)} placeholder="Motivo opcional" aria-label="Motivo del reporte" /><div className="flex flex-wrap gap-2"><Button size="sm" variant="destructive" onClick={async () => { await recordReport(question, value, feedback, reportReason || "Sin motivo indicado"); setReportOpen(false) }}>Guardar reporte</Button><Button size="sm" variant="ghost" onClick={() => setReportOpen(false)}>Cancelar</Button></div></div> : null}
+        <Separator /><div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"><div className="flex flex-wrap gap-2"><Button aria-pressed={favorite} size="sm" variant={favorite ? "secondary" : "outline"} onClick={() => setFavorite((current) => !current)}><Heart data-icon="inline-start" className={favorite ? "fill-current" : undefined} />Favorita</Button><Button aria-pressed={difficult} size="sm" variant={difficult ? "secondary" : "outline"} onClick={() => setDifficult((current) => !current)}><Star data-icon="inline-start" className={difficult ? "fill-current" : undefined} />Marcar difícil</Button><Button size="sm" variant="ghost" onClick={() => setReportOpen((current) => !current)}><Flag data-icon="inline-start" />Reportar</Button><Dialog><DialogTrigger asChild><Button size="sm" variant="ghost"><Info data-icon="inline-start" />Referencia</Button></DialogTrigger><DialogContent><DialogHeader><DialogTitle>Volver al texto / referencia</DialogTitle><DialogDescription>Busca manualmente esta cita en tu Biblia RVR95.</DialogDescription></DialogHeader><div className="rounded-xl bg-muted/40 p-4 text-sm font-medium">{question.source.reference}</div></DialogContent></Dialog></div><Button className="sm:min-w-36" disabled={!submitted && isEmptyAnswer(value)} onClick={() => { if (submitted) advance(); else void submit() }}>{submitted ? index === queue.length - 1 ? "Ver resultados" : "Siguiente" : "Confirmar respuesta"}</Button></div></CardContent></Card>
+      <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground"><span><kbd className="rounded border bg-muted px-1.5 py-0.5 font-mono">A–D</kbd> elegir</span><span><kbd className="rounded border bg-muted px-1.5 py-0.5 font-mono">Enter</kbd> confirmar</span><span><kbd className="rounded border bg-muted px-1.5 py-0.5 font-mono">F</kbd> favorita</span></div>
+    </div>
+  )
+}
+
+function initialAnswer(question: Question | undefined): AnswerValue {
+  if (!question) return undefined
+  if (question.type === "ordering") return question.options.map((option) => option.id)
+  if (question.type === "matching") return {}
+  if (question.type === "multi_select") return []
+  return undefined
+}
+
+function isEmptyAnswer(value: AnswerValue) {
+  return value === undefined || value === null || (typeof value === "string" && !value.trim()) || (Array.isArray(value) && value.length === 0) || (typeof value === "object" && !Array.isArray(value) && Object.keys(value).length === 0)
+}
+
+function shuffleQuestionOptions(question: Question, shuffle: boolean) {
+  if (!shuffle || question.options.length < 2) return question
+  const options = [...question.options]
+  const offset = question.id.split("").reduce((sum, character) => sum + character.charCodeAt(0), 0) % options.length
+  return { ...question, options: options.map((_, index) => options[(index + offset) % options.length]) }
+}

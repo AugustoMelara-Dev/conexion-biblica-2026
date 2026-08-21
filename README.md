@@ -1,68 +1,67 @@
 # Conexión Bíblica 2026
 
-Aplicación web de estudio adaptativo, precisión textual y memoria para **Daniel 1–12** y **Profetas y Reyes 39–44**.
+Aplicación local y offline para entrenar con bancos JSON de Conexión Bíblica.
 
-## Estado del banco
-
-- Preguntas creadas: **2082**
-- Preguntas válidas: **2033**
-- Preguntas corregidas durante la auditoría: **28**
-- Preguntas excluidas: **49**
-- Cobertura: **514 de 514 unidades**
-- Tipos permitidos: seleccionar una respuesta, verdadero/falso y completar frase con opciones
-- Funcionamiento: un solo `index.html`, sin backend, sin solicitudes de red y con persistencia local
-
-## Uso
-
-Abre `index.html` directamente en Chrome, Edge o Android. El progreso se guarda en `localStorage`; también puede exportarse e importarse como JSON.
-
-## Desarrollo
+## Ejecutar
 
 ```bash
-python3 build_full_app.py
-python3 tests/static_audit.py
-python3 tests/browser_smoke.py
-python3 tests/logic_test.py
-python3 tests/persistence_test.py
+npm install
+npm run dev
 ```
 
-También puedes ejecutar `npm test`. Las pruebas de navegador requieren Chromium y Playwright para Python.
-
-## Publicación en Vercel
-
-El repositorio ya incluye `vercel.json` y `.vercelignore`. Vercel debe publicar únicamente el `index.html` de la raíz, sin comando de compilación ni backend.
+Para probar la compilación de producción:
 
 ```bash
-vercel --prod
+npm run build
+npm run preview
 ```
 
-La aplicación mantiene su diseño y su banco integrados dentro del HTML. Los iconos SVG de estilo Lucide están incluidos localmente para no depender de CDN ni romper el uso offline.
+La aplicación guarda bancos, progreso, sesiones y reportes en IndexedDB. No usa APIs externas, telemetría, analytics ni servicios cloud.
 
-## Metas por capítulo
+## V1, V2 y Mixto
 
-| Capítulo | Preguntas | Complejidad | Meta de ronda | Evidencia exigida |
-|---|---:|---:|---:|---|
-| Daniel 1 | 84 | 80/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Daniel 2 | 194 | 83/100 | 98% | Tres rondas en días distintos y una comprobación retrasada |
-| Daniel 3 | 120 | 86/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Daniel 4 | 147 | 84/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Daniel 5 | 120 | 82/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Daniel 6 | 112 | 93/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Daniel 7 | 108 | 84/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Daniel 8 | 105 | 83/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Daniel 9 | 106 | 85/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Daniel 10 | 80 | 82/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Daniel 11 | 172 | 77/100 | 98% | Tres rondas en días distintos y una comprobación retrasada |
-| Daniel 12 | 50 | 81/100 | 100% | Tres rondas en días distintos y una comprobación retrasada |
-| Profetas y Reyes 39 | 144 | 73/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Profetas y Reyes 40 | 101 | 91/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Profetas y Reyes 41 | 92 | 93/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Profetas y Reyes 42 | 76 | 92/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Profetas y Reyes 43 | 128 | 93/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
-| Profetas y Reyes 44 | 94 | 95/100 | 99% | Tres rondas en días distintos y una comprobación retrasada |
+- **V1 — Clásica** carga los bancos declarados en `public/banks/manifest.json` y mantiene sus IDs y progreso existentes.
+- **V2 — Banco Maestro** carga `Banco_Maestro_CB2026.json` como asset local canónico de solo lectura. Su adaptador valida 3,558 IDs únicos: 2,211 de Daniel, 1,347 de Profetas y Reyes, 888 históricas y 2,670 generadas.
+- **Mixto** crea un pool virtual con V1 y V2. No copia preguntas ni crea progreso duplicado.
 
-## Fuentes y alcance
+La identidad persistente es `bankId:questionId`. El adaptador V2 conserva dificultad original, banda derivada, respuesta canónica, `FULL_FACT_IDS` y toda la metadata del objeto fuente. Para actualizar V2, reemplaza únicamente el JSON raíz por una revisión válida y vuelve a compilar; el arranque reconcilia los mismos IDs sin borrar progreso.
 
-Las preguntas evaluables se construyen exclusivamente desde los TXT incluidos en `src/`. Los números de página y encabezados duplicados de extracción se excluyen del banco. La numeración técnica de párrafos de Profetas y Reyes 40–44 existe solo para navegación y cobertura estable.
+## Selector de sesiones
 
-No se declara una licencia sobre los textos fuente incluidos.
+El generador ofrece cuatro estrategias:
+
+- **Cobertura sin repetir**: guarda una cola por combinación de filtros y no repite hasta agotar el pool. Un pool de 120 con tandas de 50 produce 50, 50 y 20.
+- **Aleatoria equilibrada**: Fisher–Yates con selección por bancos, fuentes y capítulos.
+- **Bloques secuenciales**: permite elegir explícitamente el bloque 1, 2, etc.
+- **Adaptativa**: prioriza falladas, lentas, difíciles y dominio bajo.
+
+Los ciclos y la ronda activa se guardan en IndexedDB. Recargar restaura los mismos IDs, cursor y respuestas ya registradas.
+
+## Persistencia y respaldos
+
+IndexedDB v2 añade `coverageCycles` y `activeRound` mediante upgrade transaccional. El progreso V1 existente no se elimina. Los respaldos actuales usan `backupVersion: "2.0"`; los respaldos 1.0 siguen siendo aceptados y se migran en memoria antes de restaurar.
+
+V2 se entrega como asset de Vite y queda en caché después de cargarse. El service worker `conexion-biblica-shell-v4` conserva el shell y los assets locales para uso offline.
+
+## Verificación
+
+```bash
+npm run test
+npm run lint
+npm run typecheck
+npm run build
+```
+
+## Despliegue en Vercel
+
+El sitio publicado es https://conexion-biblica-2026.vercel.app (proyecto `conexion-biblica-2026`). No está conectado a GitHub, así que se despliega manualmente con la CLI:
+
+```bash
+npx vercel login                                       # solo la primera vez
+npx vercel link --project conexion-biblica-2026 --yes  # vincula al proyecto existente (una vez)
+npm run deploy                                         # construye y publica en producción
+```
+
+Si `vercel link` no encuentra el proyecto por nombre, omítelo y ejecuta `npx vercel --prod`, eligiendo el proyecto existente `conexion-biblica-2026` cuando lo pregunte.
+
+Después de desplegar, recarga con Ctrl+Shift+R. Si el navegador sigue mostrando bancos viejos, limpia los datos del sitio (DevTools → Application → Clear site data) para forzar el service worker `conexion-biblica-shell-v3`.

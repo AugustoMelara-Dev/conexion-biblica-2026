@@ -1,0 +1,5640 @@
+{
+  "schemaVersion": "2.0",
+  "mode": "REPLICA_CONEXION",
+  "sourcePolicy": "FUENTE_CERRADA",
+  "source": {
+    "book": "Daniel",
+    "chapter": 5,
+    "label": "Daniel 5 — texto suministrado por el usuario",
+    "externalSourcesUsed": false,
+    "normalizationNote": "El numeral aislado «8» que aparece entre 5:17 y 5:19 en el texto suministrado se normalizó como 5:18 únicamente por la secuencia interna 17→19."
+  },
+  "questionCount": 100,
+  "difficultyDistribution": {
+    "1": 5,
+    "2": 10,
+    "3": 20,
+    "4": 35,
+    "5": 30
+  },
+  "correctOptionDistribution": {
+    "A": 25,
+    "B": 25,
+    "C": 25,
+    "D": 25
+  },
+  "questionClassCounts": {
+    "ACTOR_TRACKING": 11,
+    "BEFORE_AFTER_SEQUENCE": 17,
+    "CONTINUITY_CHAIN": 2,
+    "CROSS_BLOCK_CONFUSION": 21,
+    "EXACT_CONTINUATION": 5,
+    "EXACT_ROLE_AND_OBJECT": 11,
+    "MINIMAL_PAIR_LITERAL": 23,
+    "NEGATIVE_PRECISION": 5,
+    "NUMERIC_PRECISION": 9,
+    "PAIRED_DETAIL": 40,
+    "TRUE_ELSEWHERE_WRONG_HERE": 41,
+    "VERSE_LOCALIZATION": 34
+  },
+  "questions": [
+    {
+      "id": "D5-001",
+      "type": "single_choice",
+      "difficulty": 1,
+      "questionClass": [
+        "NUMERIC_PRECISION"
+      ],
+      "question": "Según Daniel 5:1, ¿a cuántos de sus príncipes hizo Belsasar un gran banquete?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A sesenta y dos"
+        },
+        {
+          "id": "B",
+          "text": "A mil"
+        },
+        {
+          "id": "C",
+          "text": "A tres"
+        },
+        {
+          "id": "D",
+          "text": "A todos los sabios del rey"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "A mil",
+      "reference": "Daniel 5:1",
+      "supportingReferences": [
+        "Daniel 5:1"
+      ],
+      "continuity_required": false,
+      "explanation": "El versículo 1 dice que el banquete fue para mil de sus príncipes.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-002",
+      "type": "single_choice",
+      "difficulty": 1,
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:4, ¿qué hicieron después de beber vino?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Proclamaron a Daniel tercer señor"
+        },
+        {
+          "id": "B",
+          "text": "Introdujeron a todos los sabios del rey"
+        },
+        {
+          "id": "C",
+          "text": "Llamaron a Daniel"
+        },
+        {
+          "id": "D",
+          "text": "Alabaron a los dioses de oro y plata, de bronce, de hierro, de madera y de piedra"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Alabaron a los dioses de oro y plata, de bronce, de hierro, de madera y de piedra",
+      "reference": "Daniel 5:4",
+      "supportingReferences": [
+        "Daniel 5:4"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel 5:4 dice que bebieron vino y alabaron a esos dioses.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-003",
+      "type": "single_choice",
+      "difficulty": 1,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "question": "Según Daniel 5:5, ¿qué veía el rey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A Daniel vestido de púrpura"
+        },
+        {
+          "id": "B",
+          "text": "La mano que escribía"
+        },
+        {
+          "id": "C",
+          "text": "A Darío tomando el reino"
+        },
+        {
+          "id": "D",
+          "text": "La escritura ya interpretada"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "La mano que escribía",
+      "reference": "Daniel 5:5",
+      "supportingReferences": [
+        "Daniel 5:5"
+      ],
+      "continuity_required": false,
+      "explanation": "El texto afirma que el rey veía la mano que escribía.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-004",
+      "type": "single_choice",
+      "difficulty": 1,
+      "questionClass": [
+        "NUMERIC_PRECISION"
+      ],
+      "question": "Según Daniel 5:31, ¿qué edad tenía Darío de Media cuando tomó el reino?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sesenta y dos años"
+        },
+        {
+          "id": "B",
+          "text": "Setenta años"
+        },
+        {
+          "id": "C",
+          "text": "Mil años"
+        },
+        {
+          "id": "D",
+          "text": "Tres años"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Sesenta y dos años",
+      "reference": "Daniel 5:31",
+      "supportingReferences": [
+        "Daniel 5:31"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel 5:31 especifica sesenta y dos años.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-005",
+      "type": "single_choice",
+      "difficulty": 1,
+      "questionClass": [
+        "EXACT_CONTINUATION"
+      ],
+      "question": "Completa exactamente Daniel 5:25: «Mene, Mene, Tekel, ...»",
+      "options": [
+        {
+          "id": "A",
+          "text": "Balanza"
+        },
+        {
+          "id": "B",
+          "text": "Peres"
+        },
+        {
+          "id": "C",
+          "text": "Mene"
+        },
+        {
+          "id": "D",
+          "text": "Uparsin"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Uparsin",
+      "reference": "Daniel 5:25",
+      "supportingReferences": [
+        "Daniel 5:25"
+      ],
+      "continuity_required": false,
+      "explanation": "La escritura trazada termina con «Uparsin».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-006",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:2, ¿de qué materiales eran los vasos que Belsasar mandó traer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "De bronce y de hierro"
+        },
+        {
+          "id": "B",
+          "text": "Solo de oro"
+        },
+        {
+          "id": "C",
+          "text": "De oro y de plata"
+        },
+        {
+          "id": "D",
+          "text": "De madera y de piedra"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "De oro y de plata",
+      "reference": "Daniel 5:2",
+      "supportingReferences": [
+        "Daniel 5:2"
+      ],
+      "continuity_required": false,
+      "explanation": "El mandato de 5:2 menciona vasos de oro y de plata.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-007",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "Según la redacción exacta de Daniel 5:3, ¿qué vasos dice el texto que trajeron?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los vasos de bronce y hierro"
+        },
+        {
+          "id": "B",
+          "text": "Los vasos de oro y de plata"
+        },
+        {
+          "id": "C",
+          "text": "Los vasos de plata"
+        },
+        {
+          "id": "D",
+          "text": "Los vasos de oro"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Los vasos de oro",
+      "reference": "Daniel 5:3",
+      "supportingReferences": [
+        "Daniel 5:3"
+      ],
+      "continuity_required": false,
+      "explanation": "5:3 dice específicamente «los vasos de oro»; «oro y plata» pertenece al mandato de 5:2.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-008",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "question": "Según Daniel 5:7, ¿qué debía llevar en el cuello quien leyera la escritura y diera su interpretación?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Púrpura"
+        },
+        {
+          "id": "B",
+          "text": "Una balanza"
+        },
+        {
+          "id": "C",
+          "text": "Los vasos de oro"
+        },
+        {
+          "id": "D",
+          "text": "Un collar de oro"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Un collar de oro",
+      "reference": "Daniel 5:7",
+      "supportingReferences": [
+        "Daniel 5:7"
+      ],
+      "continuity_required": false,
+      "explanation": "El premio incluía llevar un collar de oro en el cuello.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-009",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "NEGATIVE_PRECISION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "Según Daniel 5:7, ¿cuál de estos grupos NO fue mencionado en la orden de hacer venir intérpretes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Astrólogos"
+        },
+        {
+          "id": "B",
+          "text": "Magos"
+        },
+        {
+          "id": "C",
+          "text": "Caldeos"
+        },
+        {
+          "id": "D",
+          "text": "Adivinos"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Astrólogos",
+      "reference": "Daniel 5:7",
+      "supportingReferences": [
+        "Daniel 5:7"
+      ],
+      "continuity_required": false,
+      "explanation": "En 5:7 se mencionan magos, caldeos y adivinos; «astrólogos» aparece en otros versículos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-010",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:8, ¿qué dos cosas no pudieron hacer todos los sabios del rey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Interpretar sueños ni descifrar enigmas"
+        },
+        {
+          "id": "B",
+          "text": "Resolver dudas ni dificultades"
+        },
+        {
+          "id": "C",
+          "text": "Leer la escritura ni dar al rey su interpretación"
+        },
+        {
+          "id": "D",
+          "text": "Vestir a Daniel ni proclamarlo tercer señor"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Leer la escritura ni dar al rey su interpretación",
+      "reference": "Daniel 5:8",
+      "supportingReferences": [
+        "Daniel 5:8"
+      ],
+      "continuity_required": false,
+      "explanation": "5:8 limita el fracaso a leer la escritura y dar su interpretación.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-011",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "PAIRED_DETAIL"
+      ],
+      "question": "Según Daniel 5:9, ¿qué ocurrió con Belsasar y con sus príncipes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Belsasar gritó en alta voz; sus príncipes bebieron vino"
+        },
+        {
+          "id": "B",
+          "text": "Belsasar fue muerto; sus príncipes temblaban y temían"
+        },
+        {
+          "id": "C",
+          "text": "Belsasar se turbó sobremanera y palideció; sus príncipes estaban perplejos"
+        },
+        {
+          "id": "D",
+          "text": "Belsasar se humilló; sus príncipes llamaron a Daniel"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Belsasar se turbó sobremanera y palideció; sus príncipes estaban perplejos",
+      "reference": "Daniel 5:9",
+      "supportingReferences": [
+        "Daniel 5:9"
+      ],
+      "continuity_required": false,
+      "explanation": "El versículo une la turbación y palidez de Belsasar con la perplejidad de sus príncipes.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-012",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "ACTOR_TRACKING"
+      ],
+      "question": "Según Daniel 5:10, ¿quién entró a la sala del banquete por las palabras del rey y de sus príncipes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nabucodonosor"
+        },
+        {
+          "id": "B",
+          "text": "La reina"
+        },
+        {
+          "id": "C",
+          "text": "Darío de Media"
+        },
+        {
+          "id": "D",
+          "text": "Daniel"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "La reina",
+      "reference": "Daniel 5:10",
+      "supportingReferences": [
+        "Daniel 5:10"
+      ],
+      "continuity_required": false,
+      "explanation": "La reina entró a la sala del banquete.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-013",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "EXACT_CONTINUATION"
+      ],
+      "question": "Completa exactamente la exhortación de Daniel 5:10: «No te turben tus pensamientos ni...»",
+      "options": [
+        {
+          "id": "A",
+          "text": "se turben tus príncipes"
+        },
+        {
+          "id": "B",
+          "text": "tus rodillas den la una contra la otra"
+        },
+        {
+          "id": "C",
+          "text": "palidezca tu rostro"
+        },
+        {
+          "id": "D",
+          "text": "se debiliten tus caderas"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "palidezca tu rostro",
+      "reference": "Daniel 5:10",
+      "supportingReferences": [
+        "Daniel 5:10"
+      ],
+      "continuity_required": false,
+      "explanation": "La reina dice: «No te turben tus pensamientos ni palidezca tu rostro».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-014",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "question": "Según Daniel 5:12, ¿qué nombre había puesto el rey a Daniel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nabucodonosor"
+        },
+        {
+          "id": "B",
+          "text": "Beltsasar"
+        },
+        {
+          "id": "C",
+          "text": "Belsasar"
+        },
+        {
+          "id": "D",
+          "text": "Darío"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Beltsasar",
+      "reference": "Daniel 5:12",
+      "supportingReferences": [
+        "Daniel 5:12"
+      ],
+      "continuity_required": false,
+      "explanation": "5:12 identifica a Daniel «al cual el rey puso por nombre Beltsasar».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-015",
+      "type": "single_choice",
+      "difficulty": 2,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE"
+      ],
+      "question": "Según Daniel 5:30-31, ¿qué sucede inmediatamente después de la muerte de Belsasar en la secuencia del texto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Darío de Media tomó el reino"
+        },
+        {
+          "id": "B",
+          "text": "Daniel fue traído ante el rey"
+        },
+        {
+          "id": "C",
+          "text": "La reina entró a la sala del banquete"
+        },
+        {
+          "id": "D",
+          "text": "Aparecieron los dedos de una mano"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Darío de Media tomó el reino",
+      "reference": "Daniel 5:30-31",
+      "supportingReferences": [
+        "Daniel 5:30",
+        "Daniel 5:31"
+      ],
+      "continuity_required": false,
+      "explanation": "La muerte de Belsasar en 5:30 es seguida por la toma del reino por Darío en 5:31.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-016",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "NUMERIC_PRECISION"
+      ],
+      "question": "Según Daniel 5:1, ¿qué hizo Belsasar y en presencia de quién bebía vino?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hizo un gran banquete a mil de sus príncipes y bebía en presencia de los mil"
+        },
+        {
+          "id": "B",
+          "text": "Proclamó a mil príncipes y bebía ante los sabios"
+        },
+        {
+          "id": "C",
+          "text": "Mandó traer mil vasos y bebía en presencia de la reina"
+        },
+        {
+          "id": "D",
+          "text": "Hizo un banquete a sesenta y dos príncipes y bebía con Daniel"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Hizo un gran banquete a mil de sus príncipes y bebía en presencia de los mil",
+      "reference": "Daniel 5:1",
+      "supportingReferences": [
+        "Daniel 5:1"
+      ],
+      "continuity_required": false,
+      "explanation": "Los dos detalles del versículo son el banquete a mil príncipes y beber en presencia de los mil.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-017",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "Según Daniel 5:2, ¿de dónde había traído Nabucodonosor los vasos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Del palacio real"
+        },
+        {
+          "id": "B",
+          "text": "Del reino de los medos y persas"
+        },
+        {
+          "id": "C",
+          "text": "De la sala del banquete"
+        },
+        {
+          "id": "D",
+          "text": "Del templo de Jerusalén"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Del templo de Jerusalén",
+      "reference": "Daniel 5:2",
+      "supportingReferences": [
+        "Daniel 5:2"
+      ],
+      "continuity_required": false,
+      "explanation": "5:2 sitúa el origen de los vasos en el templo de Jerusalén.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-018",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:2, ¿quiénes debían beber de los vasos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El rey y sus grandes, sus mujeres y sus concubinas"
+        },
+        {
+          "id": "B",
+          "text": "Los magos, caldeos y adivinos"
+        },
+        {
+          "id": "C",
+          "text": "El rey y sus príncipes, sus mujeres y sus concubinas"
+        },
+        {
+          "id": "D",
+          "text": "Todos los pueblos, naciones y lenguas"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "El rey y sus grandes, sus mujeres y sus concubinas",
+      "reference": "Daniel 5:2",
+      "supportingReferences": [
+        "Daniel 5:2"
+      ],
+      "continuity_required": false,
+      "explanation": "5:2 usa «sus grandes»; «sus príncipes» aparece en 5:3.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-019",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "Según la redacción exacta de Daniel 5:3, ¿quiénes bebieron de los vasos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El rey, la reina y Daniel"
+        },
+        {
+          "id": "B",
+          "text": "El rey y sus príncipes, sus mujeres y sus concubinas"
+        },
+        {
+          "id": "C",
+          "text": "El rey y sus sabios, sus mujeres y sus concubinas"
+        },
+        {
+          "id": "D",
+          "text": "El rey y sus grandes, sus mujeres y sus concubinas"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "El rey y sus príncipes, sus mujeres y sus concubinas",
+      "reference": "Daniel 5:3",
+      "supportingReferences": [
+        "Daniel 5:3"
+      ],
+      "continuity_required": false,
+      "explanation": "5:3 usa «sus príncipes»; 5:2 había usado «sus grandes».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-020",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "NEGATIVE_PRECISION"
+      ],
+      "question": "Según Daniel 5:4, ¿cuál de estos materiales NO aparece en la lista de los dioses alabados?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Piedra"
+        },
+        {
+          "id": "B",
+          "text": "Bronce"
+        },
+        {
+          "id": "C",
+          "text": "Hierro"
+        },
+        {
+          "id": "D",
+          "text": "Púrpura"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Púrpura",
+      "reference": "Daniel 5:4",
+      "supportingReferences": [
+        "Daniel 5:4"
+      ],
+      "continuity_required": false,
+      "explanation": "Púrpura aparece como vestidura prometida, no como material de los dioses de 5:4.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-021",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "PAIRED_DETAIL"
+      ],
+      "question": "Según Daniel 5:5, ¿dónde escribían los dedos y delante de qué lo hacían?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sobre los vasos de oro, delante de los príncipes"
+        },
+        {
+          "id": "B",
+          "text": "En la sala del banquete, delante de Daniel"
+        },
+        {
+          "id": "C",
+          "text": "Sobre lo encalado de la pared del palacio real, delante del candelabro"
+        },
+        {
+          "id": "D",
+          "text": "Sobre una balanza, delante de la reina"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Sobre lo encalado de la pared del palacio real, delante del candelabro",
+      "reference": "Daniel 5:5",
+      "supportingReferences": [
+        "Daniel 5:5"
+      ],
+      "continuity_required": false,
+      "explanation": "5:5 ubica la escritura sobre lo encalado de la pared del palacio real y delante del candelabro.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-022",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:6, ¿qué ocurrió con las caderas y las rodillas del rey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se debilitaron sus caderas y sus rodillas daban la una contra la otra"
+        },
+        {
+          "id": "B",
+          "text": "Sus caderas se empaparon de rocío y sus rodillas se debilitaron"
+        },
+        {
+          "id": "C",
+          "text": "Sus caderas se endurecieron y sus rodillas fueron humilladas"
+        },
+        {
+          "id": "D",
+          "text": "Sus caderas temblaban y sus rodillas palidecieron"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Se debilitaron sus caderas y sus rodillas daban la una contra la otra",
+      "reference": "Daniel 5:6",
+      "supportingReferences": [
+        "Daniel 5:6"
+      ],
+      "continuity_required": false,
+      "explanation": "El versículo da ambos efectos físicos en esa secuencia.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-023",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:7, ¿a quién dirigió el rey la promesa de recompensa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A sus mujeres y concubinas"
+        },
+        {
+          "id": "B",
+          "text": "A todos los pueblos, naciones y lenguas"
+        },
+        {
+          "id": "C",
+          "text": "A los sabios de Babilonia"
+        },
+        {
+          "id": "D",
+          "text": "A Darío de Media"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "A los sabios de Babilonia",
+      "reference": "Daniel 5:7",
+      "supportingReferences": [
+        "Daniel 5:7"
+      ],
+      "continuity_required": false,
+      "explanation": "Después de ordenar que vinieran magos, caldeos y adivinos, el rey habló a los sabios de Babilonia.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-024",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "PAIRED_DETAIL"
+      ],
+      "question": "Según Daniel 5:7, ¿qué dos condiciones debía cumplir cualquiera para recibir la recompensa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Leer la escritura y matar al rey"
+        },
+        {
+          "id": "B",
+          "text": "Resolver dudas y dificultades"
+        },
+        {
+          "id": "C",
+          "text": "Interpretar sueños y descifrar enigmas"
+        },
+        {
+          "id": "D",
+          "text": "Leer la escritura y dar su interpretación"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Leer la escritura y dar su interpretación",
+      "reference": "Daniel 5:7",
+      "supportingReferences": [
+        "Daniel 5:7"
+      ],
+      "continuity_required": false,
+      "explanation": "Las condiciones fueron leer la escritura y dar su interpretación.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-025",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "PAIRED_DETAIL"
+      ],
+      "question": "Según Daniel 5:7, ¿qué rango y qué objeto de oro se prometieron?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ser el tercer señor en el reino y llevar un collar de oro"
+        },
+        {
+          "id": "B",
+          "text": "Ser rey de los caldeos y llevar una balanza de oro"
+        },
+        {
+          "id": "C",
+          "text": "Ser príncipe de Media y llevar una corona de oro"
+        },
+        {
+          "id": "D",
+          "text": "Ser jefe de los magos y llevar vasos de oro"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Ser el tercer señor en el reino y llevar un collar de oro",
+      "reference": "Daniel 5:7",
+      "supportingReferences": [
+        "Daniel 5:7"
+      ],
+      "continuity_required": false,
+      "explanation": "El premio combina el rango de tercer señor con un collar de oro.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "UNSUPPORTED"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-026",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "¿Qué ocurre en la secuencia inmediatamente después de que todos los sabios del rey no pudieron leer la escritura ni dar su interpretación?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Belsasar se turbó sobremanera y palideció, y sus príncipes estaban perplejos"
+        },
+        {
+          "id": "B",
+          "text": "Daniel fue vestido de púrpura"
+        },
+        {
+          "id": "C",
+          "text": "Darío tomó el reino"
+        },
+        {
+          "id": "D",
+          "text": "La reina fue constituida jefa sobre los magos"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Belsasar se turbó sobremanera y palideció, y sus príncipes estaban perplejos",
+      "reference": "Daniel 5:8-9",
+      "supportingReferences": [
+        "Daniel 5:8",
+        "Daniel 5:9"
+      ],
+      "continuity_required": false,
+      "explanation": "El fracaso de los sabios en 5:8 es seguido por la reacción de Belsasar y sus príncipes en 5:9.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-027",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "question": "Según la redacción exacta de Daniel 5:11, ¿qué tres cualidades se hallaron en el hombre mencionado por la reina en los días del padre del rey?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Espíritu, ciencia y entendimiento"
+        },
+        {
+          "id": "B",
+          "text": "Luz, entendimiento y mayor sabiduría"
+        },
+        {
+          "id": "C",
+          "text": "Reino, grandeza y gloria"
+        },
+        {
+          "id": "D",
+          "text": "Luz, inteligencia y sabiduría"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Luz, inteligencia y sabiduría",
+      "reference": "Daniel 5:11",
+      "supportingReferences": [
+        "Daniel 5:11"
+      ],
+      "continuity_required": false,
+      "explanation": "5:11 usa «luz, inteligencia y sabiduría»; expresiones parecidas aparecen en 5:12 y 5:14.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-028",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "Según Daniel 5:11, ¿sobre cuáles cuatro grupos constituyó Nabucodonosor jefe al hombre descrito por la reina?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Medos, persas, caldeos y judíos"
+        },
+        {
+          "id": "B",
+          "text": "Grandes, mujeres, concubinas y sabios"
+        },
+        {
+          "id": "C",
+          "text": "Magos, astrólogos, caldeos y adivinos"
+        },
+        {
+          "id": "D",
+          "text": "Pueblos, naciones, lenguas y príncipes"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Magos, astrólogos, caldeos y adivinos",
+      "reference": "Daniel 5:11",
+      "supportingReferences": [
+        "Daniel 5:11"
+      ],
+      "continuity_required": false,
+      "explanation": "La reina enumera magos, astrólogos, caldeos y adivinos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-029",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:12, ¿qué podía hacer Daniel con enigmas y dudas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Leer enigmas y dar vida a las dudas"
+        },
+        {
+          "id": "B",
+          "text": "Interpretar enigmas y humillar dudas"
+        },
+        {
+          "id": "C",
+          "text": "Romper enigmas y pesar dudas"
+        },
+        {
+          "id": "D",
+          "text": "Descifrar enigmas y resolver dudas"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Descifrar enigmas y resolver dudas",
+      "reference": "Daniel 5:12",
+      "supportingReferences": [
+        "Daniel 5:12"
+      ],
+      "continuity_required": false,
+      "explanation": "5:12 atribuye a Daniel capacidad para «descifrar enigmas y resolver dudas».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-030",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:13, ¿cómo identifica Belsasar a Daniel al preguntarle quién es?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Como aquel Daniel de los hijos de la cautividad de Judá"
+        },
+        {
+          "id": "B",
+          "text": "Como jefe sobre todos los magos de Media"
+        },
+        {
+          "id": "C",
+          "text": "Como uno de los mil príncipes"
+        },
+        {
+          "id": "D",
+          "text": "Como rey de los caldeos"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Como aquel Daniel de los hijos de la cautividad de Judá",
+      "reference": "Daniel 5:13",
+      "supportingReferences": [
+        "Daniel 5:13"
+      ],
+      "continuity_required": false,
+      "explanation": "El rey pregunta si es «aquel Daniel de los hijos de la cautividad de Judá».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-031",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:13, ¿de dónde dice Belsasar que su padre trajo a Daniel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "De Babilonia"
+        },
+        {
+          "id": "B",
+          "text": "De Media"
+        },
+        {
+          "id": "C",
+          "text": "Del templo de Jerusalén"
+        },
+        {
+          "id": "D",
+          "text": "De Judea"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "De Judea",
+      "reference": "Daniel 5:13",
+      "supportingReferences": [
+        "Daniel 5:13"
+      ],
+      "continuity_required": false,
+      "explanation": "5:13 dice «que mi padre trajo de Judea».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-032",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "Según la redacción exacta de Daniel 5:14, ¿qué combinación dice Belsasar que se halló en Daniel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reino, grandeza, gloria y majestad"
+        },
+        {
+          "id": "B",
+          "text": "Luz, entendimiento y mayor sabiduría"
+        },
+        {
+          "id": "C",
+          "text": "Más espíritu, ciencia y entendimiento"
+        },
+        {
+          "id": "D",
+          "text": "Luz, inteligencia y sabiduría"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Luz, entendimiento y mayor sabiduría",
+      "reference": "Daniel 5:14",
+      "supportingReferences": [
+        "Daniel 5:14"
+      ],
+      "continuity_required": false,
+      "explanation": "5:14 usa «luz, entendimiento y mayor sabiduría»; las otras fórmulas pertenecen a otros versículos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-033",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "Según Daniel 5:15, ¿qué dos grupos dice Belsasar que habían sido traídos ante él?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sabios y astrólogos"
+        },
+        {
+          "id": "B",
+          "text": "Caldeos y adivinos"
+        },
+        {
+          "id": "C",
+          "text": "Magos y caldeos"
+        },
+        {
+          "id": "D",
+          "text": "Medos y persas"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Sabios y astrólogos",
+      "reference": "Daniel 5:15",
+      "supportingReferences": [
+        "Daniel 5:15"
+      ],
+      "continuity_required": false,
+      "explanation": "5:15 nombra específicamente «sabios y astrólogos».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-034",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:16, ¿qué dos capacidades dice Belsasar haber oído que Daniel posee?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Matar y dar vida"
+        },
+        {
+          "id": "B",
+          "text": "Leer y escribir sobre la pared"
+        },
+        {
+          "id": "C",
+          "text": "Interpretar sueños y descifrar enigmas"
+        },
+        {
+          "id": "D",
+          "text": "Interpretar y resolver dificultades"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Interpretar y resolver dificultades",
+      "reference": "Daniel 5:16",
+      "supportingReferences": [
+        "Daniel 5:16"
+      ],
+      "continuity_required": false,
+      "explanation": "El rey dice: «he oído de ti que puedes interpretar y resolver dificultades».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-035",
+      "type": "single_choice",
+      "difficulty": 3,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "BEFORE_AFTER_SEQUENCE"
+      ],
+      "question": "Según Daniel 5:17, ¿qué hace Daniel con los dones y recompensas antes de prometer leer la escritura?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dice que los dones sean para el rey y que dé sus recompensas a otros"
+        },
+        {
+          "id": "B",
+          "text": "Manda vestir al rey de púrpura"
+        },
+        {
+          "id": "C",
+          "text": "Acepta los dones y pide además el collar de oro"
+        },
+        {
+          "id": "D",
+          "text": "Entrega los dones a Darío de Media"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Dice que los dones sean para el rey y que dé sus recompensas a otros",
+      "reference": "Daniel 5:17",
+      "supportingReferences": [
+        "Daniel 5:17"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel rechaza los dones y recompensas antes de afirmar que leerá e interpretará la escritura.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-036",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según la redacción exacta de Daniel 5:18, ¿qué cuatro cosas dio el Altísimo Dios a Nabucodonosor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "El reino, la grandeza, la gloria y la majestad"
+        },
+        {
+          "id": "B",
+          "text": "El reino, la sabiduría, la gloria y la majestad"
+        },
+        {
+          "id": "C",
+          "text": "El poder, la grandeza, la gloria y el honor"
+        },
+        {
+          "id": "D",
+          "text": "La luz, la inteligencia, la sabiduría y la majestad"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "El reino, la grandeza, la gloria y la majestad",
+      "reference": "Daniel 5:18",
+      "supportingReferences": [
+        "Daniel 5:18"
+      ],
+      "continuity_required": false,
+      "explanation": "La enumeración exacta es «el reino, la grandeza, la gloria y la majestad».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-037",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "Según Daniel 5:19, ¿qué reacción tenían todos los pueblos, naciones y lenguas delante de Nabucodonosor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Se humillaban y alababan delante de él"
+        },
+        {
+          "id": "B",
+          "text": "Estaban perplejos y palidecían delante de él"
+        },
+        {
+          "id": "C",
+          "text": "Temblaban y temían delante de él"
+        },
+        {
+          "id": "D",
+          "text": "Leían e interpretaban delante de él"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Temblaban y temían delante de él",
+      "reference": "Daniel 5:19",
+      "supportingReferences": [
+        "Daniel 5:19"
+      ],
+      "continuity_required": false,
+      "explanation": "5:19 dice que temblaban y temían delante de él.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-038",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "ACTOR_TRACKING"
+      ],
+      "question": "Según Daniel 5:19, ¿qué par de acciones opuestas se atribuye a Nabucodonosor respecto de la vida?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A quien le placía, mataba, y a quien le placía, daba vida"
+        },
+        {
+          "id": "B",
+          "text": "A quien le placía, humillaba, y a quien le placía, daba vida"
+        },
+        {
+          "id": "C",
+          "text": "A quien le placía, pesaba, y a quien le placía, daba vida"
+        },
+        {
+          "id": "D",
+          "text": "A quien le placía, engrandecía, y a quien le placía, mataba"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "A quien le placía, mataba, y a quien le placía, daba vida",
+      "reference": "Daniel 5:19",
+      "supportingReferences": [
+        "Daniel 5:19"
+      ],
+      "continuity_required": false,
+      "explanation": "El primer par contrapuesto de 5:19 es matar/dar vida.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-039",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "question": "Según Daniel 5:19, ¿qué par de acciones opuestas se atribuye a Nabucodonosor respecto de la posición de las personas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Exaltaba a todos y humillaba a ninguno"
+        },
+        {
+          "id": "B",
+          "text": "Engrandecía a quien le placía, y a quien le placía, humillaba"
+        },
+        {
+          "id": "C",
+          "text": "Engrandecía a quien le placía, y a quien le placía, mataba"
+        },
+        {
+          "id": "D",
+          "text": "Daba vida a quien le placía, y a quien le placía, humillaba"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Engrandecía a quien le placía, y a quien le placía, humillaba",
+      "reference": "Daniel 5:19",
+      "supportingReferences": [
+        "Daniel 5:19"
+      ],
+      "continuity_required": false,
+      "explanation": "El segundo par de 5:19 es engrandecer/humillar.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-040",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "PAIRED_DETAIL"
+      ],
+      "question": "Según Daniel 5:20, ¿qué ocurrió antes de que Nabucodonosor fuera depuesto del trono y despojado de su gloria?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fue vestido de púrpura y recibió un collar de oro"
+        },
+        {
+          "id": "B",
+          "text": "Su corazón se ensoberbeció y su espíritu se endureció en su orgullo"
+        },
+        {
+          "id": "C",
+          "text": "Su mente se hizo semejante a la de las bestias y comió hierba"
+        },
+        {
+          "id": "D",
+          "text": "Reconoció el dominio del Altísimo"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Su corazón se ensoberbeció y su espíritu se endureció en su orgullo",
+      "reference": "Daniel 5:20",
+      "supportingReferences": [
+        "Daniel 5:20"
+      ],
+      "continuity_required": false,
+      "explanation": "El versículo presenta primero el ensoberbecimiento del corazón y el endurecimiento del espíritu, luego la deposición.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-041",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:20, ¿qué dos pérdidas sufrió Nabucodonosor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Perdió el reino y fue dado a los medos y persas"
+        },
+        {
+          "id": "B",
+          "text": "Fue depuesto del trono de su reino y despojado de su gloria"
+        },
+        {
+          "id": "C",
+          "text": "Fue echado de entre los hombres y despojado de su vida"
+        },
+        {
+          "id": "D",
+          "text": "Fue despojado del collar y de la púrpura"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Fue depuesto del trono de su reino y despojado de su gloria",
+      "reference": "Daniel 5:20",
+      "supportingReferences": [
+        "Daniel 5:20"
+      ],
+      "continuity_required": false,
+      "explanation": "5:20 especifica la deposición del trono y el despojo de la gloria.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-042",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL"
+      ],
+      "question": "Según Daniel 5:21, ¿qué ocurrió con la mente y la habitación de Nabucodonosor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Su mente se turbó y el palacio real fue su habitación"
+        },
+        {
+          "id": "B",
+          "text": "Su mente se hizo semejante a la de los dioses y Jerusalén fue su habitación"
+        },
+        {
+          "id": "C",
+          "text": "Su mente se endureció y la sala del banquete fue su habitación"
+        },
+        {
+          "id": "D",
+          "text": "Su mente se hizo semejante a la de las bestias y con los asnos monteses fue su habitación"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Su mente se hizo semejante a la de las bestias y con los asnos monteses fue su habitación",
+      "reference": "Daniel 5:21",
+      "supportingReferences": [
+        "Daniel 5:21"
+      ],
+      "continuity_required": false,
+      "explanation": "5:21 combina mente semejante a la de las bestias y habitación con los asnos monteses.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-043",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "question": "Según Daniel 5:21, ¿qué comió Nabucodonosor y con qué se empapó su cuerpo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hierba, como al asno; con el rocío de la tierra"
+        },
+        {
+          "id": "B",
+          "text": "Hierba, como al buey; con el rocío del cielo"
+        },
+        {
+          "id": "C",
+          "text": "Vino; con el rocío del cielo"
+        },
+        {
+          "id": "D",
+          "text": "Pan, como al hombre; con vino"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Hierba, como al buey; con el rocío del cielo",
+      "reference": "Daniel 5:21",
+      "supportingReferences": [
+        "Daniel 5:21"
+      ],
+      "continuity_required": false,
+      "explanation": "El texto dice que le hicieron comer hierba, como al buey, y que su cuerpo se empapó del rocío del cielo.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-044",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Completa exactamente la idea final de Daniel 5:21: el Altísimo Dios «tiene dominio sobre el reino de los hombres, y...»",
+      "options": [
+        {
+          "id": "A",
+          "text": "da vida a quien le place"
+        },
+        {
+          "id": "B",
+          "text": "engrandece a quien le place"
+        },
+        {
+          "id": "C",
+          "text": "pone sobre él al que le place"
+        },
+        {
+          "id": "D",
+          "text": "humilla a quien le place"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "pone sobre él al que le place",
+      "reference": "Daniel 5:21",
+      "supportingReferences": [
+        "Daniel 5:21"
+      ],
+      "continuity_required": false,
+      "explanation": "La continuación exacta es «pone sobre él al que le place».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-045",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:22, ¿qué reprocha Daniel directamente a Belsasar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Que no pudo leer la escritura"
+        },
+        {
+          "id": "B",
+          "text": "Que no ha humillado su corazón sabiendo todo esto"
+        },
+        {
+          "id": "C",
+          "text": "Que fue depuesto del trono de su reino"
+        },
+        {
+          "id": "D",
+          "text": "Que su mente se hizo semejante a la de las bestias"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Que no ha humillado su corazón sabiendo todo esto",
+      "reference": "Daniel 5:22",
+      "supportingReferences": [
+        "Daniel 5:22"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel contrasta el conocimiento de Belsasar con su falta de humillación.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-046",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "ACTOR_TRACKING"
+      ],
+      "question": "Según Daniel 5:23, ¿contra quién se ensoberbeció Belsasar y qué hizo traer ante sí?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Contra el Señor del cielo; los vasos de su Casa"
+        },
+        {
+          "id": "B",
+          "text": "Contra Darío de Media; los vasos de los persas"
+        },
+        {
+          "id": "C",
+          "text": "Contra el Altísimo Dios; una balanza"
+        },
+        {
+          "id": "D",
+          "text": "Contra Daniel; los magos y astrólogos"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Contra el Señor del cielo; los vasos de su Casa",
+      "reference": "Daniel 5:23",
+      "supportingReferences": [
+        "Daniel 5:23"
+      ],
+      "continuity_required": false,
+      "explanation": "5:23 une el ensoberbecimiento contra el Señor del cielo con hacer traer los vasos de su Casa.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-047",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "Según la redacción exacta de Daniel 5:23, ¿en qué orden aparecen los dos primeros materiales de los dioses a los que Belsasar dio alabanza?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oro y plata"
+        },
+        {
+          "id": "B",
+          "text": "Plata y oro"
+        },
+        {
+          "id": "C",
+          "text": "Madera y piedra"
+        },
+        {
+          "id": "D",
+          "text": "Bronce y hierro"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Plata y oro",
+      "reference": "Daniel 5:23",
+      "supportingReferences": [
+        "Daniel 5:23"
+      ],
+      "continuity_required": false,
+      "explanation": "5:23 dice «dioses de plata y oro»; 5:4 había dicho «dioses de oro y plata».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-048",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "NEGATIVE_PRECISION"
+      ],
+      "question": "Según Daniel 5:23, ¿qué tres capacidades niega el texto a los dioses alabados?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ni leen ni interpretan ni escriben"
+        },
+        {
+          "id": "B",
+          "text": "Ni tiemblan ni temen ni palidecen"
+        },
+        {
+          "id": "C",
+          "text": "Ni ven ni oyen ni saben"
+        },
+        {
+          "id": "D",
+          "text": "Ni matan ni dan vida ni humillan"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Ni ven ni oyen ni saben",
+      "reference": "Daniel 5:23",
+      "supportingReferences": [
+        "Daniel 5:23"
+      ],
+      "continuity_required": false,
+      "explanation": "La frase exacta es «que ni ven ni oyen ni saben».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-049",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "PAIRED_DETAIL"
+      ],
+      "question": "Según Daniel 5:23, ¿cómo describe Daniel la relación de Dios con la vida y los caminos de Belsasar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En su mano está la balanza y de él son todos los medos"
+        },
+        {
+          "id": "B",
+          "text": "En su mano está la escritura y de él son todos tus vasos"
+        },
+        {
+          "id": "C",
+          "text": "En su mano está tu reino y de él son todos tus príncipes"
+        },
+        {
+          "id": "D",
+          "text": "En su mano está tu vida y de él son todos tus caminos"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "En su mano está tu vida y de él son todos tus caminos",
+      "reference": "Daniel 5:23",
+      "supportingReferences": [
+        "Daniel 5:23"
+      ],
+      "continuity_required": false,
+      "explanation": "Daniel dice que la vida de Belsasar está en la mano de Dios y que de él son todos sus caminos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-050",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "ACTOR_TRACKING"
+      ],
+      "question": "Según Daniel 5:24, ¿por qué fue enviada la mano que trazó la escritura?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Porque los sabios ya habían interpretado correctamente la escritura"
+        },
+        {
+          "id": "B",
+          "text": "Por lo expuesto inmediatamente antes sobre el ensoberbecimiento de Belsasar y su falta de honra a Dios"
+        },
+        {
+          "id": "C",
+          "text": "Porque Daniel aceptó las recompensas del rey"
+        },
+        {
+          "id": "D",
+          "text": "Porque Darío había tomado el reino"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Por lo expuesto inmediatamente antes sobre el ensoberbecimiento de Belsasar y su falta de honra a Dios",
+      "reference": "Daniel 5:23-24",
+      "supportingReferences": [
+        "Daniel 5:23",
+        "Daniel 5:24"
+      ],
+      "continuity_required": true,
+      "explanation": "5:24 inicia con «Por eso», enlazando la mano con la acusación de 5:23.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-051",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "EXACT_ROLE_AND_OBJECT",
+        "ACTOR_TRACKING"
+      ],
+      "question": "Según Daniel 5:24, ¿desde dónde fue enviada la mano que trazó la escritura?",
+      "options": [
+        {
+          "id": "A",
+          "text": "De Media"
+        },
+        {
+          "id": "B",
+          "text": "De la sala del banquete"
+        },
+        {
+          "id": "C",
+          "text": "De su presencia"
+        },
+        {
+          "id": "D",
+          "text": "Del palacio real"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "De su presencia",
+      "reference": "Daniel 5:24",
+      "supportingReferences": [
+        "Daniel 5:23",
+        "Daniel 5:24"
+      ],
+      "continuity_required": true,
+      "explanation": "El texto dice «de su presencia envió él la mano».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-052",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "EXACT_CONTINUATION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "question": "Según la redacción exacta de Daniel 5:25, ¿cuál es la escritura completa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mene, Mene, Peres, Uparsin"
+        },
+        {
+          "id": "B",
+          "text": "Mene, Mene, Tekel, Uparsin"
+        },
+        {
+          "id": "C",
+          "text": "Mene, Tekel, Mene, Uparsin"
+        },
+        {
+          "id": "D",
+          "text": "Mene, Mene, Tekel, Peres"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Mene, Mene, Tekel, Uparsin",
+      "reference": "Daniel 5:25",
+      "supportingReferences": [
+        "Daniel 5:25"
+      ],
+      "continuity_required": false,
+      "explanation": "La secuencia exacta repite Mene dos veces y sigue con Tekel, Uparsin.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-053",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "PAIRED_DETAIL"
+      ],
+      "question": "Según Daniel 5:26, ¿qué significa «Mene»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Contó Dios tu reino y le ha puesto fin"
+        },
+        {
+          "id": "B",
+          "text": "Dios ha engrandecido tu reino y le ha dado vida"
+        },
+        {
+          "id": "C",
+          "text": "Tu reino ha sido roto y dado a los medos y persas"
+        },
+        {
+          "id": "D",
+          "text": "Pesado has sido en balanza y hallado falto"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Contó Dios tu reino y le ha puesto fin",
+      "reference": "Daniel 5:26",
+      "supportingReferences": [
+        "Daniel 5:26"
+      ],
+      "continuity_required": false,
+      "explanation": "5:26 asigna a Mene la cuenta del reino y su fin.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-054",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "question": "Según Daniel 5:27, ¿qué significa «Tekel»?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pesado has sido en balanza y hallado falto"
+        },
+        {
+          "id": "B",
+          "text": "Contado has sido en balanza y hallado falto"
+        },
+        {
+          "id": "C",
+          "text": "Tu reino ha sido roto y dado a los persas"
+        },
+        {
+          "id": "D",
+          "text": "Pesado ha sido tu reino y puesto fin"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Pesado has sido en balanza y hallado falto",
+      "reference": "Daniel 5:27",
+      "supportingReferences": [
+        "Daniel 5:27"
+      ],
+      "continuity_required": false,
+      "explanation": "Tekel se interpreta como ser pesado en balanza y hallado falto.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-055",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "Según Daniel 5:28, ¿a quiénes fue dado el reino roto de Belsasar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A los magos y astrólogos"
+        },
+        {
+          "id": "B",
+          "text": "A los caldeos y adivinos"
+        },
+        {
+          "id": "C",
+          "text": "A los medos y a los persas"
+        },
+        {
+          "id": "D",
+          "text": "A los pueblos, naciones y lenguas"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "A los medos y a los persas",
+      "reference": "Daniel 5:28",
+      "supportingReferences": [
+        "Daniel 5:28"
+      ],
+      "continuity_required": false,
+      "explanation": "5:28 dice que el reino fue dado a los medos y a los persas.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-056",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según la redacción exacta de Daniel 5:28, ¿qué verbo usa el texto respecto del reino antes de decir que fue dado a medos y persas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Depuesto"
+        },
+        {
+          "id": "B",
+          "text": "Roto"
+        },
+        {
+          "id": "C",
+          "text": "Contado"
+        },
+        {
+          "id": "D",
+          "text": "Pesado"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Roto",
+      "reference": "Daniel 5:28",
+      "supportingReferences": [
+        "Daniel 5:28"
+      ],
+      "continuity_required": false,
+      "explanation": "La interpretación de «Peres» dice: «Tu reino ha sido roto».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-057",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "question": "Después de que Daniel terminó la interpretación, ¿qué ordenó Belsasar respecto de Daniel según Daniel 5:29?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hacerlo rey de los medos y persas"
+        },
+        {
+          "id": "B",
+          "text": "Vestirlo de púrpura, poner en su cuello un collar de oro y proclamar que era el tercer señor del reino"
+        },
+        {
+          "id": "C",
+          "text": "Constituirlo jefe sobre magos, astrólogos, caldeos y adivinos"
+        },
+        {
+          "id": "D",
+          "text": "Darle los vasos de oro y plata del templo"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Vestirlo de púrpura, poner en su cuello un collar de oro y proclamar que era el tercer señor del reino",
+      "reference": "Daniel 5:29",
+      "supportingReferences": [
+        "Daniel 5:29"
+      ],
+      "continuity_required": false,
+      "explanation": "Belsasar ejecutó las tres recompensas que había prometido.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-058",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:29, ¿qué título fue proclamado para Daniel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rey de los caldeos"
+        },
+        {
+          "id": "B",
+          "text": "Tercer señor del reino"
+        },
+        {
+          "id": "C",
+          "text": "Príncipe de Media"
+        },
+        {
+          "id": "D",
+          "text": "Jefe sobre todos los magos, astrólogos, caldeos y adivinos"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Tercer señor del reino",
+      "reference": "Daniel 5:29",
+      "supportingReferences": [
+        "Daniel 5:29"
+      ],
+      "continuity_required": false,
+      "explanation": "El texto manda proclamar que Daniel era el tercer señor del reino.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-059",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "BEFORE_AFTER_SEQUENCE"
+      ],
+      "question": "¿Qué combinación de tiempo y acontecimiento corresponde exactamente a Daniel 5:30?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En aquella misma hora murió Belsasar, rey de los caldeos"
+        },
+        {
+          "id": "B",
+          "text": "La misma noche tomó Darío el reino a los sesenta y dos años"
+        },
+        {
+          "id": "C",
+          "text": "En aquella misma hora apareció Darío de Media"
+        },
+        {
+          "id": "D",
+          "text": "La misma noche fue muerto Belsasar, rey de los caldeos"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "La misma noche fue muerto Belsasar, rey de los caldeos",
+      "reference": "Daniel 5:30",
+      "supportingReferences": [
+        "Daniel 5:30"
+      ],
+      "continuity_required": false,
+      "explanation": "5:30 usa «La misma noche» para la muerte de Belsasar.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-060",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "question": "¿Qué expresión temporal pertenece a la aparición de la mano en Daniel 5:5 y no a la muerte de Belsasar en 5:30?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ahora"
+        },
+        {
+          "id": "B",
+          "text": "En los días de tu padre"
+        },
+        {
+          "id": "C",
+          "text": "La misma noche"
+        },
+        {
+          "id": "D",
+          "text": "En aquella misma hora"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "En aquella misma hora",
+      "reference": "Daniel 5:5",
+      "supportingReferences": [
+        "Daniel 5:5",
+        "Daniel 5:30"
+      ],
+      "continuity_required": false,
+      "explanation": "La mano aparece «En aquella misma hora»; la muerte ocurre «La misma noche».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-061",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "¿Cuál de estas afirmaciones corresponde específicamente a Daniel 5:6 y no a 5:9?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Belsasar se turbó sobremanera y palideció"
+        },
+        {
+          "id": "B",
+          "text": "La reina entró a la sala del banquete"
+        },
+        {
+          "id": "C",
+          "text": "Sus príncipes estaban perplejos"
+        },
+        {
+          "id": "D",
+          "text": "Se debilitaron sus caderas y sus rodillas daban la una contra la otra"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Se debilitaron sus caderas y sus rodillas daban la una contra la otra",
+      "reference": "Daniel 5:6",
+      "supportingReferences": [
+        "Daniel 5:6",
+        "Daniel 5:9",
+        "Daniel 5:10"
+      ],
+      "continuity_required": false,
+      "explanation": "Los efectos sobre caderas y rodillas pertenecen a 5:6; los otros datos son posteriores.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-062",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "¿Cuál de estas afirmaciones pertenece específicamente a Daniel 5:8?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sabios y astrólogos fueron traídos ante Belsasar, pero no pudieron interpretarle el asunto"
+        },
+        {
+          "id": "B",
+          "text": "La reina recomendó llamar a Daniel porque él daría la interpretación"
+        },
+        {
+          "id": "C",
+          "text": "Todos los sabios del rey fueron introducidos, pero no pudieron leer la escritura ni dar su interpretación"
+        },
+        {
+          "id": "D",
+          "text": "Daniel dijo que leería la escritura y daría la interpretación"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Todos los sabios del rey fueron introducidos, pero no pudieron leer la escritura ni dar su interpretación",
+      "reference": "Daniel 5:8",
+      "supportingReferences": [
+        "Daniel 5:8"
+      ],
+      "continuity_required": false,
+      "explanation": "Las cuatro afirmaciones reflejan hechos del capítulo, pero solo la primera corresponde a 5:8.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-063",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "question": "¿Cuál fórmula pertenece específicamente a Daniel 5:11 y no a 5:14?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Luz, entendimiento y mayor sabiduría"
+        },
+        {
+          "id": "B",
+          "text": "Luz, inteligencia y sabiduría"
+        },
+        {
+          "id": "C",
+          "text": "Interpretar y resolver dificultades"
+        },
+        {
+          "id": "D",
+          "text": "Más espíritu, ciencia y entendimiento"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Luz, inteligencia y sabiduría",
+      "reference": "Daniel 5:11",
+      "supportingReferences": [
+        "Daniel 5:11",
+        "Daniel 5:12",
+        "Daniel 5:14",
+        "Daniel 5:16"
+      ],
+      "continuity_required": false,
+      "explanation": "La fórmula de 5:11 es «luz, inteligencia y sabiduría».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-064",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "question": "¿Cuál fórmula pertenece específicamente a Daniel 5:12?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reino, grandeza, gloria y majestad"
+        },
+        {
+          "id": "B",
+          "text": "Luz, entendimiento y mayor sabiduría"
+        },
+        {
+          "id": "C",
+          "text": "Luz, inteligencia y sabiduría"
+        },
+        {
+          "id": "D",
+          "text": "Más espíritu, ciencia y entendimiento"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Más espíritu, ciencia y entendimiento",
+      "reference": "Daniel 5:12",
+      "supportingReferences": [
+        "Daniel 5:11",
+        "Daniel 5:12",
+        "Daniel 5:14",
+        "Daniel 5:18"
+      ],
+      "continuity_required": false,
+      "explanation": "5:12 dice que en Daniel «se halló más espíritu, ciencia y entendimiento».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-065",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "¿Cuál de estas acciones corresponde específicamente a Daniel 5:17?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel rechaza los dones y promete leer e interpretar la escritura"
+        },
+        {
+          "id": "B",
+          "text": "La reina manda llamar a Daniel"
+        },
+        {
+          "id": "C",
+          "text": "Belsasar manda vestir a Daniel de púrpura"
+        },
+        {
+          "id": "D",
+          "text": "Belsasar promete vestir de púrpura al intérprete"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Daniel rechaza los dones y promete leer e interpretar la escritura",
+      "reference": "Daniel 5:17",
+      "supportingReferences": [
+        "Daniel 5:7",
+        "Daniel 5:12",
+        "Daniel 5:17",
+        "Daniel 5:29"
+      ],
+      "continuity_required": false,
+      "explanation": "5:17 contiene la respuesta de Daniel sobre los dones y su promesa de interpretar.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-066",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "question": "En la secuencia de Daniel 5:20-21, ¿qué ocurre después de que Nabucodonosor es depuesto del trono y despojado de su gloria?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Belsasar no humilla su corazón"
+        },
+        {
+          "id": "B",
+          "text": "La mano traza la escritura"
+        },
+        {
+          "id": "C",
+          "text": "Es echado de entre los hijos de los hombres y su mente se hace semejante a la de las bestias"
+        },
+        {
+          "id": "D",
+          "text": "Su corazón se ensoberbece y su espíritu se endurece"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Es echado de entre los hijos de los hombres y su mente se hace semejante a la de las bestias",
+      "reference": "Daniel 5:20-21",
+      "supportingReferences": [
+        "Daniel 5:20",
+        "Daniel 5:21"
+      ],
+      "continuity_required": false,
+      "explanation": "La deposición de 5:20 es seguida en 5:21 por su expulsión y cambio de mente.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-067",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según la secuencia interna de Daniel 5:21, ¿qué sucede al final del periodo descrito con Nabucodonosor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reconoce que el Altísimo Dios tiene dominio sobre el reino de los hombres"
+        },
+        {
+          "id": "B",
+          "text": "Toma el reino a los sesenta y dos años"
+        },
+        {
+          "id": "C",
+          "text": "Se turba sobremanera y palidece"
+        },
+        {
+          "id": "D",
+          "text": "Es vestido de púrpura y recibe un collar"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Reconoce que el Altísimo Dios tiene dominio sobre el reino de los hombres",
+      "reference": "Daniel 5:21",
+      "supportingReferences": [
+        "Daniel 5:21"
+      ],
+      "continuity_required": false,
+      "explanation": "El periodo dura «hasta que reconoció» el dominio del Altísimo.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-068",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "NEGATIVE_PRECISION",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "question": "Según Daniel 5:23, ¿cuál de estos grupos NO aparece entre quienes bebieron vino de los vasos en la acusación de Daniel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tus mujeres"
+        },
+        {
+          "id": "B",
+          "text": "Tus concubinas"
+        },
+        {
+          "id": "C",
+          "text": "Los príncipes"
+        },
+        {
+          "id": "D",
+          "text": "Tus grandes"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Los príncipes",
+      "reference": "Daniel 5:23",
+      "supportingReferences": [
+        "Daniel 5:23"
+      ],
+      "continuity_required": false,
+      "explanation": "5:23 dice «tú y tus grandes, tus mujeres y tus concubinas»; «príncipes» aparece en 5:3.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-069",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "¿Cuál orden de materiales corresponde exactamente a Daniel 5:4?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oro, plata, bronce, hierro, piedra y madera"
+        },
+        {
+          "id": "B",
+          "text": "Oro, plata, bronce, hierro, madera y piedra"
+        },
+        {
+          "id": "C",
+          "text": "Oro, plata, hierro, bronce, madera y piedra"
+        },
+        {
+          "id": "D",
+          "text": "Plata, oro, bronce, hierro, madera y piedra"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Oro, plata, bronce, hierro, madera y piedra",
+      "reference": "Daniel 5:4",
+      "supportingReferences": [
+        "Daniel 5:4",
+        "Daniel 5:23"
+      ],
+      "continuity_required": false,
+      "explanation": "5:4 comienza «oro y plata»; 5:23 invierte los dos primeros: «plata y oro».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-070",
+      "type": "single_choice",
+      "difficulty": 4,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "NUMERIC_PRECISION",
+        "BEFORE_AFTER_SEQUENCE"
+      ],
+      "question": "¿Qué combinación corresponde exactamente al cierre de Daniel 5?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Belsasar muere en aquella misma hora; Darío toma el reino a los mil años"
+        },
+        {
+          "id": "B",
+          "text": "Nabucodonosor muere la misma noche; Daniel toma el reino como tercer señor"
+        },
+        {
+          "id": "C",
+          "text": "Belsasar muere la misma noche; Darío de Media toma el reino a los sesenta y dos años"
+        },
+        {
+          "id": "D",
+          "text": "Daniel muere la misma noche; Belsasar toma el reino a los sesenta y dos años"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Belsasar muere la misma noche; Darío de Media toma el reino a los sesenta y dos años",
+      "reference": "Daniel 5:30-31",
+      "supportingReferences": [
+        "Daniel 5:30",
+        "Daniel 5:31"
+      ],
+      "continuity_required": false,
+      "explanation": "Los dos últimos versículos combinan la muerte de Belsasar con la toma del reino por Darío, de sesenta y dos años.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-071",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "question": "¿Cuál opción distingue correctamente lo mandado en Daniel 5:2 de lo ejecutado en Daniel 5:3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En 5:2 se mandan traer vasos de oro y de plata; en 5:3 se dice que trajeron los vasos de oro"
+        },
+        {
+          "id": "B",
+          "text": "En 5:2 se mandan traer vasos de oro y plata; en 5:3 se dice que trajeron vasos de madera y piedra"
+        },
+        {
+          "id": "C",
+          "text": "En 5:2 se mandan traer vasos de oro; en 5:3 se dice que trajeron vasos de oro y de plata"
+        },
+        {
+          "id": "D",
+          "text": "En 5:2 se mandan traer vasos de bronce y hierro; en 5:3 se traen vasos de plata"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "En 5:2 se mandan traer vasos de oro y de plata; en 5:3 se dice que trajeron los vasos de oro",
+      "reference": "Daniel 5:2-3",
+      "supportingReferences": [
+        "Daniel 5:2",
+        "Daniel 5:3"
+      ],
+      "continuity_required": false,
+      "explanation": "La dificultad está en no trasladar automáticamente la pareja «oro y plata» de 5:2 a la redacción de 5:3.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-072",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "¿Cuál opción localiza correctamente el vocabulario de los participantes en Daniel 5:2 y 5:3?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5:2: «el rey y sus príncipes»; 5:3: «el rey y sus grandes»"
+        },
+        {
+          "id": "B",
+          "text": "5:2: «el rey y sus grandes»; 5:3: «el rey y sus príncipes»"
+        },
+        {
+          "id": "C",
+          "text": "5:2: «el rey y sus magos»; 5:3: «el rey y sus caldeos»"
+        },
+        {
+          "id": "D",
+          "text": "5:2: «el rey y sus sabios»; 5:3: «el rey y sus astrólogos»"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "5:2: «el rey y sus grandes»; 5:3: «el rey y sus príncipes»",
+      "reference": "Daniel 5:2-3",
+      "supportingReferences": [
+        "Daniel 5:2",
+        "Daniel 5:3"
+      ],
+      "continuity_required": false,
+      "explanation": "El cambio mínimo es «grandes» en 5:2 frente a «príncipes» en 5:3.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-073",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL"
+      ],
+      "question": "¿Cuál secuencia de Daniel 5:5-7 es correcta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La reina entra; la mano escribe; luego los sabios interpretan el asunto"
+        },
+        {
+          "id": "B",
+          "text": "Los sabios son introducidos; el rey palidece; después aparece la mano"
+        },
+        {
+          "id": "C",
+          "text": "El rey grita por los sabios; luego aparece la mano; después la reina entra al banquete"
+        },
+        {
+          "id": "D",
+          "text": "Aparece la mano y escribe; el rey palidece y se turba físicamente; luego grita que hagan venir magos, caldeos y adivinos"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Aparece la mano y escribe; el rey palidece y se turba físicamente; luego grita que hagan venir magos, caldeos y adivinos",
+      "reference": "Daniel 5:5-7",
+      "supportingReferences": [
+        "Daniel 5:5",
+        "Daniel 5:6",
+        "Daniel 5:7"
+      ],
+      "continuity_required": false,
+      "explanation": "La secuencia textual es aparición/escritura, reacción del rey y llamado de intérpretes.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-074",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "question": "¿Cuál opción asigna correctamente los grupos mencionados en Daniel 5:7, 5:11 y 5:15?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5:7: magos, astrólogos, caldeos y adivinos; 5:11: sabios y astrólogos; 5:15: magos, caldeos y adivinos"
+        },
+        {
+          "id": "B",
+          "text": "5:7: sabios y astrólogos; 5:11: magos, caldeos y adivinos; 5:15: medos y persas"
+        },
+        {
+          "id": "C",
+          "text": "5:7: medos y persas; 5:11: pueblos, naciones y lenguas; 5:15: magos y adivinos"
+        },
+        {
+          "id": "D",
+          "text": "5:7: magos, caldeos y adivinos; 5:11: magos, astrólogos, caldeos y adivinos; 5:15: sabios y astrólogos"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "5:7: magos, caldeos y adivinos; 5:11: magos, astrólogos, caldeos y adivinos; 5:15: sabios y astrólogos",
+      "reference": "Daniel 5:7,11,15",
+      "supportingReferences": [
+        "Daniel 5:7",
+        "Daniel 5:11",
+        "Daniel 5:15"
+      ],
+      "continuity_required": false,
+      "explanation": "Cada versículo usa una agrupación distinta; la opción correcta conserva cada lista en su lugar.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-075",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "¿Cuál opción empareja correctamente las tres fórmulas descriptivas de Daniel en 5:11, 5:12 y 5:14?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5:11 «reino, grandeza y gloria»; 5:12 «luz, ciencia y majestad»; 5:14 «espíritu, reino y entendimiento»"
+        },
+        {
+          "id": "B",
+          "text": "5:11 «luz, entendimiento y mayor sabiduría»; 5:12 «luz, inteligencia y sabiduría»; 5:14 «más espíritu, ciencia y entendimiento»"
+        },
+        {
+          "id": "C",
+          "text": "5:11 «luz, inteligencia y sabiduría»; 5:12 «más espíritu, ciencia y entendimiento»; 5:14 «luz, entendimiento y mayor sabiduría»"
+        },
+        {
+          "id": "D",
+          "text": "5:11 «más espíritu, ciencia y entendimiento»; 5:12 «luz, entendimiento y mayor sabiduría»; 5:14 «luz, inteligencia y sabiduría»"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "5:11 «luz, inteligencia y sabiduría»; 5:12 «más espíritu, ciencia y entendimiento»; 5:14 «luz, entendimiento y mayor sabiduría»",
+      "reference": "Daniel 5:11-14",
+      "supportingReferences": [
+        "Daniel 5:11",
+        "Daniel 5:12",
+        "Daniel 5:14"
+      ],
+      "continuity_required": false,
+      "explanation": "Las tres expresiones son parecidas, pero no intercambiables.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-076",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "¿Qué diferencia exacta existe entre las capacidades atribuidas a Daniel en 5:12 y las que Belsasar dice haber oído en 5:16?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5:12 habla de matar y dar vida; 5:16 de engrandecer y humillar"
+        },
+        {
+          "id": "B",
+          "text": "5:12 dice interpretar y resolver dificultades; 5:16 incluye interpretar sueños, descifrar enigmas y resolver dudas"
+        },
+        {
+          "id": "C",
+          "text": "Ambos versículos dicen exactamente «leer la escritura y dar su interpretación»"
+        },
+        {
+          "id": "D",
+          "text": "5:12 incluye interpretar sueños, descifrar enigmas y resolver dudas; 5:16 dice interpretar y resolver dificultades"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "5:12 incluye interpretar sueños, descifrar enigmas y resolver dudas; 5:16 dice interpretar y resolver dificultades",
+      "reference": "Daniel 5:12,16",
+      "supportingReferences": [
+        "Daniel 5:12",
+        "Daniel 5:16"
+      ],
+      "continuity_required": false,
+      "explanation": "La opción correcta mantiene separados los dos catálogos de capacidades.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-077",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "¿Cuál opción atribuye correctamente cada acción al personaje correspondiente?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La reina interpreta «Mene»; Daniel manda poner el collar; Darío ofrece la púrpura"
+        },
+        {
+          "id": "B",
+          "text": "Daniel recomienda llamarse a sí mismo; la reina ofrece la púrpura; Belsasar rechaza los dones"
+        },
+        {
+          "id": "C",
+          "text": "La reina recomienda llamar a Daniel; Belsasar lo interroga y le ofrece recompensa; Daniel rechaza los dones y promete interpretar"
+        },
+        {
+          "id": "D",
+          "text": "Belsasar recomienda llamar a Daniel; Daniel ofrece la recompensa; la reina interpreta la escritura"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "La reina recomienda llamar a Daniel; Belsasar lo interroga y le ofrece recompensa; Daniel rechaza los dones y promete interpretar",
+      "reference": "Daniel 5:12-17",
+      "supportingReferences": [
+        "Daniel 5:12",
+        "Daniel 5:13",
+        "Daniel 5:16",
+        "Daniel 5:17"
+      ],
+      "continuity_required": false,
+      "explanation": "La secuencia de actores es reina → Belsasar → Daniel.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-078",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "BEFORE_AFTER_SEQUENCE",
+        "MINIMAL_PAIR_LITERAL"
+      ],
+      "question": "Según Daniel 5:19, ¿cuál es el orden exacto de los dos pares de autoridad atribuidos a Nabucodonosor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daba vida / mataba; humillaba / engrandecía"
+        },
+        {
+          "id": "B",
+          "text": "Humillaba / daba vida; mataba / engrandecía"
+        },
+        {
+          "id": "C",
+          "text": "Mataba / daba vida; engrandecía / humillaba"
+        },
+        {
+          "id": "D",
+          "text": "Engrandecía / mataba; daba vida / humillaba"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Mataba / daba vida; engrandecía / humillaba",
+      "reference": "Daniel 5:19",
+      "supportingReferences": [
+        "Daniel 5:19"
+      ],
+      "continuity_required": false,
+      "explanation": "El texto presenta primero vida y muerte, luego engrandecimiento y humillación.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-079",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "question": "¿Cuál cadena conserva el orden de Daniel 5:20-21?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mente semejante a bestias → corazón ensoberbecido → reconocimiento → depuesto → comió hierba"
+        },
+        {
+          "id": "B",
+          "text": "Corazón ensoberbecido y espíritu endurecido → depuesto y despojado → echado de entre los hombres → mente semejante a bestias → reconocimiento del dominio del Altísimo"
+        },
+        {
+          "id": "C",
+          "text": "Reconocimiento del Altísimo → corazón ensoberbecido → depuesto → mente semejante a bestias → despojado de gloria"
+        },
+        {
+          "id": "D",
+          "text": "Depuesto → reconocimiento → corazón ensoberbecido → echado de entre los hombres → despojado de gloria"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Corazón ensoberbecido y espíritu endurecido → depuesto y despojado → echado de entre los hombres → mente semejante a bestias → reconocimiento del dominio del Altísimo",
+      "reference": "Daniel 5:20-21",
+      "supportingReferences": [
+        "Daniel 5:20",
+        "Daniel 5:21"
+      ],
+      "continuity_required": false,
+      "explanation": "La opción correcta respeta la secuencia narrativa de 5:20-21.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-080",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "PAIRED_DETAIL",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "Según Daniel 5:21, ¿cuál combinación reproduce correctamente el animal de comparación, el tipo de asnos y el origen del rocío?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hierba como a la bestia; asnos del palacio; rocío del cielo"
+        },
+        {
+          "id": "B",
+          "text": "Hierba como al asno; bueyes monteses; rocío de la tierra"
+        },
+        {
+          "id": "C",
+          "text": "Hierba como al buey; asnos monteses; rocío de la tierra"
+        },
+        {
+          "id": "D",
+          "text": "Hierba como al buey; asnos monteses; rocío del cielo"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Hierba como al buey; asnos monteses; rocío del cielo",
+      "reference": "Daniel 5:21",
+      "supportingReferences": [
+        "Daniel 5:21"
+      ],
+      "continuity_required": false,
+      "explanation": "Los tres detalles exactos son buey, asnos monteses y rocío del cielo.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-081",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "CONTINUITY_CHAIN",
+        "PAIRED_DETAIL"
+      ],
+      "question": "En Daniel 5:22-23, ¿quién es el sujeto reprendido y cuáles son las dos fallas principales que Daniel le atribuye?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Darío: no honró al Dios de sus caminos y mandó traer los vasos"
+        },
+        {
+          "id": "B",
+          "text": "Nabucodonosor: no humilló su corazón y no pudo leer la escritura"
+        },
+        {
+          "id": "C",
+          "text": "Belsasar: no humilló su corazón sabiendo todo esto y se ensoberbeció contra el Señor del cielo"
+        },
+        {
+          "id": "D",
+          "text": "Daniel: se ensoberbeció contra el Señor del cielo y alabó a los dioses"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Belsasar: no humilló su corazón sabiendo todo esto y se ensoberbeció contra el Señor del cielo",
+      "reference": "Daniel 5:22-23",
+      "supportingReferences": [
+        "Daniel 5:22",
+        "Daniel 5:23"
+      ],
+      "continuity_required": true,
+      "explanation": "La reprensión se dirige explícitamente a Belsasar y enlaza su falta de humillación con su ensoberbecimiento.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-082",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "MINIMAL_PAIR_LITERAL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "question": "¿Cuál opción conserva exactamente el cambio de orden entre Daniel 5:4 y 5:23 al enumerar los dos primeros materiales de los dioses?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5:4 «plata y oro»; 5:23 «oro y plata»"
+        },
+        {
+          "id": "B",
+          "text": "Ambos dicen «plata y oro»"
+        },
+        {
+          "id": "C",
+          "text": "Ambos dicen «oro y plata»"
+        },
+        {
+          "id": "D",
+          "text": "5:4 «oro y plata»; 5:23 «plata y oro»"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "5:4 «oro y plata»; 5:23 «plata y oro»",
+      "reference": "Daniel 5:4,23",
+      "supportingReferences": [
+        "Daniel 5:4",
+        "Daniel 5:23"
+      ],
+      "continuity_required": false,
+      "explanation": "El texto invierte el orden de los dos primeros materiales entre ambos versículos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_EXACT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-083",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "EXACT_ROLE_AND_OBJECT"
+      ],
+      "question": "Según Daniel 5:23, ¿cuál combinación mantiene juntos el objeto profanado, quienes bebieron y el Dios no honrado?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los vasos de oro; Belsasar y sus príncipes; el dios de oro y plata que ve y oye"
+        },
+        {
+          "id": "B",
+          "text": "La escritura; los sabios y astrólogos; el Altísimo que fue pesado en balanza"
+        },
+        {
+          "id": "C",
+          "text": "Los vasos de su Casa; Belsasar, sus grandes, sus mujeres y sus concubinas; el Dios en cuya mano está su vida y de quien son todos sus caminos"
+        },
+        {
+          "id": "D",
+          "text": "El collar de oro; Daniel y la reina; el Dios que fue dado a los medos y persas"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Los vasos de su Casa; Belsasar, sus grandes, sus mujeres y sus concubinas; el Dios en cuya mano está su vida y de quien son todos sus caminos",
+      "reference": "Daniel 5:23",
+      "supportingReferences": [
+        "Daniel 5:23"
+      ],
+      "continuity_required": false,
+      "explanation": "La opción correcta reúne los tres elementos de la acusación de 5:23 sin mezclar otros bloques.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-084",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "ACTOR_TRACKING",
+        "CONTINUITY_CHAIN",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "En Daniel 5:24, la frase «de su presencia envió él la mano» exige continuidad. ¿A quién remiten «su» y «él» dentro del pasaje suministrado?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A Darío de Media"
+        },
+        {
+          "id": "B",
+          "text": "Al Dios mencionado al final de 5:23"
+        },
+        {
+          "id": "C",
+          "text": "A Belsasar"
+        },
+        {
+          "id": "D",
+          "text": "A Daniel"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "Al Dios mencionado al final de 5:23",
+      "reference": "Daniel 5:23-24",
+      "supportingReferences": [
+        "Daniel 5:23",
+        "Daniel 5:24"
+      ],
+      "continuity_required": true,
+      "explanation": "El antecedente inmediato relevante es el Dios no honrado en 5:23; 5:24 continúa con «Por eso, de su presencia envió él la mano».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-085",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "VERSE_LOCALIZATION",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "¿Cuál opción distingue correctamente la palabra escrita en 5:25 de la palabra usada para introducir la tercera interpretación en 5:28?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En 5:25 aparece «Peres»; en 5:28 aparece «Uparsin»"
+        },
+        {
+          "id": "B",
+          "text": "En 5:25 aparece «Uparsin»; en 5:28 aparece «Peres»"
+        },
+        {
+          "id": "C",
+          "text": "En ambos aparece «Uparsin»"
+        },
+        {
+          "id": "D",
+          "text": "En ambos aparece «Tekel»"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "En 5:25 aparece «Uparsin»; en 5:28 aparece «Peres»",
+      "reference": "Daniel 5:25,28",
+      "supportingReferences": [
+        "Daniel 5:25",
+        "Daniel 5:28"
+      ],
+      "continuity_required": false,
+      "explanation": "La escritura termina en «Uparsin», pero la tercera interpretación se introduce con «Peres».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-086",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "¿Cuál opción asigna correctamente las tres interpretaciones de Daniel 5:26-28?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mene: contado y puesto fin; Tekel: pesado y hallado falto; Peres: reino roto y dado a medos y persas"
+        },
+        {
+          "id": "B",
+          "text": "Mene: pesado y hallado falto; Tekel: reino roto; Peres: contado y puesto fin"
+        },
+        {
+          "id": "C",
+          "text": "Mene: reino roto; Tekel: contado y puesto fin; Peres: pesado y hallado falto"
+        },
+        {
+          "id": "D",
+          "text": "Mene: engrandecido; Tekel: dado vida; Peres: humillado"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Mene: contado y puesto fin; Tekel: pesado y hallado falto; Peres: reino roto y dado a medos y persas",
+      "reference": "Daniel 5:26-28",
+      "supportingReferences": [
+        "Daniel 5:26",
+        "Daniel 5:27",
+        "Daniel 5:28"
+      ],
+      "continuity_required": false,
+      "explanation": "Cada término tiene una interpretación propia y no intercambiable.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-087",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "¿Cuál secuencia final de Daniel 5:29-31 es correcta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Daniel rechaza los dones → Darío muere → Belsasar toma el reino"
+        },
+        {
+          "id": "B",
+          "text": "Belsasar muere → Daniel interpreta la escritura → Darío es vestido de púrpura"
+        },
+        {
+          "id": "C",
+          "text": "Darío toma el reino → Daniel es proclamado tercer señor → Belsasar muere"
+        },
+        {
+          "id": "D",
+          "text": "Belsasar recompensa y proclama a Daniel → Belsasar muere la misma noche → Darío de Media toma el reino a los sesenta y dos años"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Belsasar recompensa y proclama a Daniel → Belsasar muere la misma noche → Darío de Media toma el reino a los sesenta y dos años",
+      "reference": "Daniel 5:29-31",
+      "supportingReferences": [
+        "Daniel 5:29",
+        "Daniel 5:30",
+        "Daniel 5:31"
+      ],
+      "continuity_required": false,
+      "explanation": "La opción A conserva el orden de los tres versículos finales.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-088",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "question": "¿Cuál opción distingue correctamente la recompensa prometida en 5:7, repetida a Daniel en 5:16 y ejecutada en 5:29?",
+      "options": [
+        {
+          "id": "A",
+          "text": "En 5:7 y 5:16 se promete púrpura, collar de oro y ser tercer señor; en 5:29 Belsasar manda vestirlo, ponerle el collar y proclamarlo tercer señor"
+        },
+        {
+          "id": "B",
+          "text": "En 5:7 se promete ser jefe de magos; en 5:16 un reino; en 5:29 se entrega Media"
+        },
+        {
+          "id": "C",
+          "text": "En 5:7 y 5:16 Daniel rechaza las recompensas; en 5:29 Darío las acepta"
+        },
+        {
+          "id": "D",
+          "text": "En 5:7 se promete el collar; en 5:16 solo púrpura; en 5:29 solo el título"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "En 5:7 y 5:16 se promete púrpura, collar de oro y ser tercer señor; en 5:29 Belsasar manda vestirlo, ponerle el collar y proclamarlo tercer señor",
+      "reference": "Daniel 5:7,16,29",
+      "supportingReferences": [
+        "Daniel 5:7",
+        "Daniel 5:16",
+        "Daniel 5:29"
+      ],
+      "continuity_required": false,
+      "explanation": "Los tres componentes de la recompensa se conservan desde la promesa hasta su ejecución.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-089",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "CROSS_BLOCK_CONFUSION",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION"
+      ],
+      "question": "¿Cuál de estas afirmaciones corresponde específicamente a Daniel 5:15 y no a 5:8?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Todos los sabios del rey fueron introducidos, pero no pudieron leer la escritura ni dar al rey su interpretación"
+        },
+        {
+          "id": "B",
+          "text": "Daniel dijo que leería la escritura al rey y le daría la interpretación"
+        },
+        {
+          "id": "C",
+          "text": "Sabios y astrólogos fueron traídos ante Belsasar para leer la escritura y darle su interpretación, pero no pudieron interpretarle el asunto"
+        },
+        {
+          "id": "D",
+          "text": "La reina dijo que Daniel interpretaba sueños, descifraba enigmas y resolvía dudas"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Sabios y astrólogos fueron traídos ante Belsasar para leer la escritura y darle su interpretación, pero no pudieron interpretarle el asunto",
+      "reference": "Daniel 5:15",
+      "supportingReferences": [
+        "Daniel 5:8",
+        "Daniel 5:12",
+        "Daniel 5:15",
+        "Daniel 5:17"
+      ],
+      "continuity_required": false,
+      "explanation": "5:15 reformula el fracaso desde la voz de Belsasar y menciona «sabios y astrólogos».",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-090",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "PAIRED_DETAIL"
+      ],
+      "question": "¿Qué opción conserva correctamente las dos formulaciones de la reacción de Belsasar en 5:6 y 5:9?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ambos versículos dicen exactamente «sus pensamientos lo turbaron y sus príncipes estaban perplejos»"
+        },
+        {
+          "id": "B",
+          "text": "5:6 dice que no palideció; 5:9 dice que sus rodillas daban la una contra la otra"
+        },
+        {
+          "id": "C",
+          "text": "5:6: «palideció y sus pensamientos lo turbaron»; 5:9: «se turbó sobremanera y palideció»"
+        },
+        {
+          "id": "D",
+          "text": "5:6: «se turbó sobremanera y palideció»; 5:9: «palideció y sus pensamientos lo turbaron»"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "5:6: «palideció y sus pensamientos lo turbaron»; 5:9: «se turbó sobremanera y palideció»",
+      "reference": "Daniel 5:6,9",
+      "supportingReferences": [
+        "Daniel 5:6",
+        "Daniel 5:9"
+      ],
+      "continuity_required": false,
+      "explanation": "Los dos versículos describen turbación y palidez con redacciones y detalles distintos.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-091",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "ACTOR_TRACKING",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "question": "¿Cuál cadena de actores corresponde al orden de aparición de acciones entre Daniel 5:10 y 5:17?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La reina entra y habla → recomienda llamar a Daniel → traen a Daniel → Belsasar lo interroga y le ofrece recompensa → Daniel responde"
+        },
+        {
+          "id": "B",
+          "text": "Daniel entra y habla → Belsasar llama a la reina → Darío ofrece recompensa → la reina responde"
+        },
+        {
+          "id": "C",
+          "text": "La reina llama a Darío → Daniel toma el reino → Belsasar interpreta → los sabios responden"
+        },
+        {
+          "id": "D",
+          "text": "Belsasar entra → la reina interpreta → Daniel manda traer sabios → Nabucodonosor responde"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "La reina entra y habla → recomienda llamar a Daniel → traen a Daniel → Belsasar lo interroga y le ofrece recompensa → Daniel responde",
+      "reference": "Daniel 5:10-17",
+      "supportingReferences": [
+        "Daniel 5:10",
+        "Daniel 5:12",
+        "Daniel 5:13",
+        "Daniel 5:16",
+        "Daniel 5:17"
+      ],
+      "continuity_required": false,
+      "explanation": "La secuencia conserva quién actúa en cada etapa y evita mezclar actores.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-092",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "NUMERIC_PRECISION",
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL"
+      ],
+      "question": "¿Cuál opción asigna correctamente los tres números explícitos más distintivos del capítulo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mil: edad de Darío; tercero: número de vasos; sesenta y dos: número de príncipes"
+        },
+        {
+          "id": "B",
+          "text": "Mil: mujeres; tercero: Daniel entre los magos; sesenta y dos: años de Belsasar"
+        },
+        {
+          "id": "C",
+          "text": "Mil: príncipes del banquete; tercero: señor en el reino; sesenta y dos: edad de Darío"
+        },
+        {
+          "id": "D",
+          "text": "Mil: sabios introducidos; tercero: rey de los caldeos; sesenta y dos: número de dioses"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Mil: príncipes del banquete; tercero: señor en el reino; sesenta y dos: edad de Darío",
+      "reference": "Daniel 5:1,7,31",
+      "supportingReferences": [
+        "Daniel 5:1",
+        "Daniel 5:7",
+        "Daniel 5:31"
+      ],
+      "continuity_required": false,
+      "explanation": "Los números corresponden al banquete, al rango prometido y a la edad de Darío.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-093",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION",
+        "PAIRED_DETAIL"
+      ],
+      "question": "¿Cuál opción localiza correctamente Jerusalén, Judea y Media dentro del capítulo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Jerusalén: templo de donde procedían los vasos; Judea: lugar del que el padre del rey trajo a Daniel; Media: procedencia identificadora de Darío"
+        },
+        {
+          "id": "B",
+          "text": "Jerusalén: lugar de la balanza; Judea: origen de los dioses; Media: casa de Dios"
+        },
+        {
+          "id": "C",
+          "text": "Jerusalén: reino dado a Daniel; Judea: lugar de los asnos monteses; Media: palacio real"
+        },
+        {
+          "id": "D",
+          "text": "Jerusalén: lugar del que vino Darío; Judea: sala del banquete; Media: templo de los vasos"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Jerusalén: templo de donde procedían los vasos; Judea: lugar del que el padre del rey trajo a Daniel; Media: procedencia identificadora de Darío",
+      "reference": "Daniel 5:2-3,13,31",
+      "supportingReferences": [
+        "Daniel 5:2",
+        "Daniel 5:3",
+        "Daniel 5:13",
+        "Daniel 5:31"
+      ],
+      "continuity_required": false,
+      "explanation": "Cada lugar cumple una función textual diferente y la opción A las conserva.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-094",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "MINIMAL_PAIR_LITERAL",
+        "CROSS_BLOCK_CONFUSION",
+        "EXACT_CONTINUATION"
+      ],
+      "question": "¿Cuál opción distingue correctamente los verbos usados para la escritura en 5:5, 5:24 y 5:25?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Los tres versículos usan únicamente el verbo «leer»"
+        },
+        {
+          "id": "B",
+          "text": "5:5 la mano «escribía»; 5:24 la mano «trazó» la escritura; 5:25 «la escritura que trazó es»"
+        },
+        {
+          "id": "C",
+          "text": "5:5 la mano «trazó»; 5:24 la mano «escribía»; 5:25 la escritura «leyó»"
+        },
+        {
+          "id": "D",
+          "text": "5:5 la mano «interpretaba»; 5:24 la mano «leyó»; 5:25 la escritura «pesó»"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "5:5 la mano «escribía»; 5:24 la mano «trazó» la escritura; 5:25 «la escritura que trazó es»",
+      "reference": "Daniel 5:5,24-25",
+      "supportingReferences": [
+        "Daniel 5:5",
+        "Daniel 5:24",
+        "Daniel 5:25"
+      ],
+      "continuity_required": false,
+      "explanation": "El texto alterna «escribía» en la escena inicial y «trazó» al retomarla.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-095",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "VERSE_LOCALIZATION",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "question": "¿Cuál emparejamiento referencia-dato es completamente correcto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5:31 — Belsasar manda vestir a Daniel de púrpura"
+        },
+        {
+          "id": "B",
+          "text": "5:10 — la reina entra a la sala del banquete por las palabras del rey y de sus príncipes"
+        },
+        {
+          "id": "C",
+          "text": "5:17 — Darío toma el reino a los sesenta y dos años"
+        },
+        {
+          "id": "D",
+          "text": "5:8 — Daniel rechaza los dones y las recompensas"
+        }
+      ],
+      "correctOptionId": "B",
+      "answer": "5:10 — la reina entra a la sala del banquete por las palabras del rey y de sus príncipes",
+      "reference": "Daniel 5:10",
+      "supportingReferences": [
+        "Daniel 5:8",
+        "Daniel 5:10",
+        "Daniel 5:17",
+        "Daniel 5:29",
+        "Daniel 5:31"
+      ],
+      "continuity_required": false,
+      "explanation": "Los distractores son hechos verdaderos del capítulo colocados bajo referencias incorrectas.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "C",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-096",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "NEGATIVE_PRECISION",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "question": "Tomando únicamente Daniel 5:18-21, ¿cuál de estos datos NO pertenece al bloque sobre Nabucodonosor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fue proclamado tercer señor del reino"
+        },
+        {
+          "id": "B",
+          "text": "Su cuerpo se empapó del rocío del cielo"
+        },
+        {
+          "id": "C",
+          "text": "Fue depuesto del trono de su reino y despojado de su gloria"
+        },
+        {
+          "id": "D",
+          "text": "Todos los pueblos, naciones y lenguas temblaban y temían delante de él"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Fue proclamado tercer señor del reino",
+      "reference": "Daniel 5:18-21",
+      "supportingReferences": [
+        "Daniel 5:18",
+        "Daniel 5:19",
+        "Daniel 5:20",
+        "Daniel 5:21",
+        "Daniel 5:29"
+      ],
+      "continuity_required": false,
+      "explanation": "Ser proclamado tercer señor corresponde a Daniel en 5:29, no al bloque de Nabucodonosor.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-097",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "PAIRED_DETAIL",
+        "CROSS_BLOCK_CONFUSION"
+      ],
+      "question": "¿Cuál opción empareja correctamente una frase de la reina con una frase posterior de Daniel?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Reina: «No te turben tus pensamientos ni palidezca tu rostro»; Daniel: «Tus dones sean para ti; da tus recompensas a otros»"
+        },
+        {
+          "id": "B",
+          "text": "Reina: «Contó Dios tu reino»; Daniel: «Rey, vive para siempre»"
+        },
+        {
+          "id": "C",
+          "text": "Reina: «Tu reino ha sido roto»; Daniel: «No te turben tus pensamientos»"
+        },
+        {
+          "id": "D",
+          "text": "Reina: «Pesado has sido en balanza»; Daniel: «Llámese, pues, ahora a Daniel»"
+        }
+      ],
+      "correctOptionId": "A",
+      "answer": "Reina: «No te turben tus pensamientos ni palidezca tu rostro»; Daniel: «Tus dones sean para ti; da tus recompensas a otros»",
+      "reference": "Daniel 5:10,17",
+      "supportingReferences": [
+        "Daniel 5:10",
+        "Daniel 5:17"
+      ],
+      "continuity_required": false,
+      "explanation": "La opción A asigna cada cita al hablante correcto.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TARGET_EXACT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "FALSE_FROM_TEXT"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-098",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "BEFORE_AFTER_SEQUENCE",
+        "TRUE_ELSEWHERE_WRONG_HERE",
+        "PAIRED_DETAIL"
+      ],
+      "question": "¿Qué ocurrió inmediatamente antes y después de Daniel 5:25, donde se reproduce la escritura?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Antes: Darío toma el reino; después: la reina entra al banquete"
+        },
+        {
+          "id": "B",
+          "text": "Antes: Daniel es vestido de púrpura; después: los sabios son introducidos"
+        },
+        {
+          "id": "C",
+          "text": "Antes: se dice que la mano fue enviada y trazó la escritura; después: comienza la interpretación con «Mene»"
+        },
+        {
+          "id": "D",
+          "text": "Antes: Belsasar muere; después: Nabucodonosor es depuesto"
+        }
+      ],
+      "correctOptionId": "C",
+      "answer": "Antes: se dice que la mano fue enviada y trazó la escritura; después: comienza la interpretación con «Mene»",
+      "reference": "Daniel 5:24-26",
+      "supportingReferences": [
+        "Daniel 5:24",
+        "Daniel 5:25",
+        "Daniel 5:26"
+      ],
+      "continuity_required": false,
+      "explanation": "5:24 introduce el origen de la escritura, 5:25 la reproduce y 5:26 inicia su interpretación.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "B",
+          "classification": "TRUE_ELSEWHERE"
+        },
+        {
+          "optionId": "C",
+          "classification": "TARGET_SEMANTIC"
+        },
+        {
+          "optionId": "D",
+          "classification": "TRUE_ELSEWHERE"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-099",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "PAIRED_DETAIL",
+        "MINIMAL_PAIR_LITERAL",
+        "NUMERIC_PRECISION"
+      ],
+      "question": "¿Cuál opción reproduce correctamente dos detalles de la recompensa y uno del cierre del capítulo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Púrpura; corona de oro; Daniel tenía sesenta y dos años"
+        },
+        {
+          "id": "B",
+          "text": "Púrpura; vasos de plata; Darío tenía mil años"
+        },
+        {
+          "id": "C",
+          "text": "Collar de oro; balanza de oro; Belsasar tenía sesenta y dos años"
+        },
+        {
+          "id": "D",
+          "text": "Púrpura; collar de oro; Darío tenía sesenta y dos años"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Púrpura; collar de oro; Darío tenía sesenta y dos años",
+      "reference": "Daniel 5:7,16,29,31",
+      "supportingReferences": [
+        "Daniel 5:7",
+        "Daniel 5:16",
+        "Daniel 5:29",
+        "Daniel 5:31"
+      ],
+      "continuity_required": false,
+      "explanation": "Púrpura y collar de oro forman parte de la recompensa; sesenta y dos años corresponde a Darío.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "D5-100",
+      "type": "single_choice",
+      "difficulty": 5,
+      "questionClass": [
+        "CROSS_BLOCK_CONFUSION",
+        "BEFORE_AFTER_SEQUENCE",
+        "PAIRED_DETAIL",
+        "TRUE_ELSEWHERE_WRONG_HERE"
+      ],
+      "question": "¿Cuál resumen mantiene correctamente la secuencia textual desde el fracaso de los sabios hasta el cambio de reino, sin mezclar hechos de otros momentos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La reina interpreta la escritura → Daniel manda traer los vasos → Belsasar toma Media → los sabios proclaman a Darío tercer señor"
+        },
+        {
+          "id": "B",
+          "text": "Darío toma el reino → Belsasar ofrece recompensa → aparece la mano → Nabucodonosor es vestido de púrpura → Daniel muere"
+        },
+        {
+          "id": "C",
+          "text": "Los sabios interpretan → Daniel llama a la reina → Belsasar rechaza la recompensa → Darío interpreta «Mene» → Nabucodonosor toma el reino"
+        },
+        {
+          "id": "D",
+          "text": "Los sabios no pueden leer ni interpretar → la reina recomienda a Daniel → Daniel es traído y rechaza los dones → expone la historia de Nabucodonosor y reprende a Belsasar → interpreta la escritura → Belsasar recompensa a Daniel → Belsasar muere → Darío toma el reino"
+        }
+      ],
+      "correctOptionId": "D",
+      "answer": "Los sabios no pueden leer ni interpretar → la reina recomienda a Daniel → Daniel es traído y rechaza los dones → expone la historia de Nabucodonosor y reprende a Belsasar → interpreta la escritura → Belsasar recompensa a Daniel → Belsasar muere → Darío toma el reino",
+      "reference": "Daniel 5:8-31",
+      "supportingReferences": [
+        "Daniel 5:8",
+        "Daniel 5:10",
+        "Daniel 5:12",
+        "Daniel 5:13",
+        "Daniel 5:17",
+        "Daniel 5:18-23",
+        "Daniel 5:25-29",
+        "Daniel 5:30",
+        "Daniel 5:31"
+      ],
+      "continuity_required": false,
+      "explanation": "La opción A conserva la progresión narrativa del texto suministrado y la asignación correcta de actores.",
+      "distractorAudit": [
+        {
+          "optionId": "A",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "B",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "C",
+          "classification": "FALSE_FROM_TEXT"
+        },
+        {
+          "optionId": "D",
+          "classification": "TARGET_SEMANTIC"
+        }
+      ],
+      "verified": true
+    }
+  ]
+}

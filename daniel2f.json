@@ -1,0 +1,2024 @@
+{
+"metadata": {
+"source": "Daniel 2, texto suministrado por el usuario",
+"mode": "REPLICA_CONEXION",
+"questionType": "single_choice",
+"totalQuestions": 80,
+"optionsPerQuestion": 4,
+"difficultyDistribution": {
+"1": 4,
+"2": 8,
+"3": 16,
+"4": 28,
+"5": 24
+},
+"closedSource": true,
+"externalKnowledgeUsed": false
+},
+"questions": [
+{
+"id": "DAN2-001",
+"type": "single_choice",
+"reference": "Daniel 2:1",
+"question": "¿En qué año del reinado de Nabucodonosor tuvo éste sueños que turbaron su espíritu?",
+"options": [
+{"id": "A", "text": "En el primer año"},
+{"id": "B", "text": "En el segundo año"},
+{"id": "C", "text": "En el tercer año"},
+{"id": "D", "text": "En el cuarto año"}
+],
+"correctOptionId": "B",
+"explanation": "Daniel 2:1 sitúa el acontecimiento en el segundo año del reinado de Nabucodonosor.",
+"difficulty": 1,
+"questionClass": ["NUMERIC_PRECISION", "VERSE_LOCALIZATION"],
+"supportingReferences": ["Daniel 2:1"],
+"continuity_required": false,
+"distractorAudit": [
+{"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+{"optionId": "B", "classification": "TARGET_EXACT"},
+{"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+{"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+],
+"verified": true
+},
+{
+"id": "DAN2-002",
+"type": "single_choice",
+"reference": "Daniel 2:2",
+"question": "¿Cuál de los siguientes grupos NO aparece entre los que el rey hizo llamar en Daniel 2:2?",
+"options": [
+{"id": "A", "text": "Magos"},
+{"id": "B", "text": "Astrólogos"},
+{"id": "C", "text": "Encantadores"},
+{"id": "D", "text": "Adivinos"}
+],
+"correctOptionId": "D",
+"explanation": "Daniel 2:2 enumera magos, astrólogos, encantadores y caldeos. Los adivinos aparecen posteriormente en Daniel 2:27.",
+"difficulty": 1,
+"questionClass": ["NEGATIVE_PRECISION", "TRUE_ELSEWHERE_WRONG_HERE"],
+"supportingReferences": ["Daniel 2:2", "Daniel 2:27"],
+"continuity_required": false,
+"distractorAudit": [
+{"optionId": "A", "classification": "TARGET_SEMANTIC"},
+{"optionId": "B", "classification": "TARGET_SEMANTIC"},
+{"optionId": "C", "classification": "TARGET_SEMANTIC"},
+{"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+],
+"verified": true
+},
+{
+"id": "DAN2-003",
+"type": "single_choice",
+"reference": "Daniel 2:4",
+"question": "¿En qué lengua hablaron los caldeos al rey?",
+"options": [
+{"id": "A", "text": "En lengua aramea"},
+{"id": "B", "text": "En lengua de Judá"},
+{"id": "C", "text": "En la lengua de los sabios"},
+{"id": "D", "text": "En la lengua de Babilonia"}
+],
+"correctOptionId": "A",
+"explanation": "Daniel 2:4 afirma expresamente que los caldeos hablaron al rey en lengua aramea.",
+"difficulty": 1,
+"questionClass": ["VERSE_LOCALIZATION"],
+"supportingReferences": ["Daniel 2:4"],
+"continuity_required": false,
+"distractorAudit": [
+{"optionId": "A", "classification": "TARGET_EXACT"},
+{"optionId": "B", "classification": "UNSUPPORTED"},
+{"optionId": "C", "classification": "UNSUPPORTED"},
+{"optionId": "D", "classification": "UNSUPPORTED"}
+],
+"verified": true
+},
+{
+"id": "DAN2-004",
+"type": "single_choice",
+"reference": "Daniel 2:12",
+"question": "¿Qué mandó hacer el rey con todos los sabios de Babilonia?",
+"options": [
+{"id": "A", "text": "Que fueran llevados ante él"},
+{"id": "B", "text": "Que fueran puestos sobre la provincia"},
+{"id": "C", "text": "Que los mataran"},
+{"id": "D", "text": "Que le dieran la interpretación"}
+],
+"correctOptionId": "C",
+"explanation": "Daniel 2:12 dice que el rey mandó que mataran a todos los sabios de Babilonia.",
+"difficulty": 1,
+"questionClass": ["EXACT_ROLE_AND_OBJECT"],
+"supportingReferences": ["Daniel 2:12"],
+"continuity_required": false,
+"distractorAudit": [
+{"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+{"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+{"optionId": "C", "classification": "TARGET_EXACT"},
+{"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+],
+"verified": true
+},
+
+{
+  "id": "DAN2-005",
+  "type": "single_choice",
+  "reference": "Daniel 2:5",
+  "question": "¿Qué dos consecuencias anunció el rey si los caldeos no le decían el sueño y su interpretación?",
+  "options": [
+    {"id": "A", "text": "Serían hechos pedazos y sus casas convertidas en estercoleros"},
+    {"id": "B", "text": "Serían llevados a la muerte y sus bienes entregados al rey"},
+    {"id": "C", "text": "Serían hechos pedazos y expulsados de Babilonia"},
+    {"id": "D", "text": "Sus casas serían convertidas en estercoleros y perderían sus honores"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:5 une exactamente ambas amenazas: ser hechos pedazos y que sus casas fueran convertidas en estercoleros.",
+  "difficulty": 2,
+  "questionClass": ["PAIRED_DETAIL", "MINIMAL_PAIR_LITERAL"],
+  "supportingReferences": ["Daniel 2:5"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-006",
+  "type": "single_choice",
+  "reference": "Daniel 2:6",
+  "question": "Según la enumeración exacta de Daniel 2:6, ¿qué recibirían del rey si declaraban el sueño y su interpretación?",
+  "options": [
+    {"id": "A", "text": "Reino, poder y majestad"},
+    {"id": "B", "text": "Dones, favores y gran honra"},
+    {"id": "C", "text": "Muchos honores y grandes dones"},
+    {"id": "D", "text": "Sabiduría, fuerza y ciencia"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "La recompensa prometida en Daniel 2:6 es: dones, favores y gran honra.",
+  "difficulty": 2,
+  "questionClass": ["TRUE_ELSEWHERE_WRONG_HERE", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:6", "Daniel 2:48"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-007",
+  "type": "single_choice",
+  "reference": "Daniel 2:7",
+  "question": "¿Qué hicieron los caldeos por segunda vez?",
+  "options": [
+    {"id": "A", "text": "Pidieron que el rey contara el sueño a sus siervos y prometieron dar la interpretación"},
+    {"id": "B", "text": "Pidieron tiempo para consultar a los dioses"},
+    {"id": "C", "text": "Declararon que no había hombre sobre la tierra que pudiera responder"},
+    {"id": "D", "text": "Prepararon una respuesta mentirosa y perversa"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:7 registra la segunda petición: que el rey contara el sueño, tras lo cual ellos darían la interpretación.",
+  "difficulty": 2,
+  "questionClass": ["BEFORE_AFTER_SEQUENCE", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:7", "Daniel 2:9-10"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "UNSUPPORTED"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-008",
+  "type": "single_choice",
+  "reference": "Daniel 2:10",
+  "question": "¿Qué tres clases de gobernantes mencionaron los caldeos al afirmar que nadie había preguntado cosa semejante?",
+  "options": [
+    {"id": "A", "text": "Rey, gobernador y capitán"},
+    {"id": "B", "text": "Rey, príncipe y señor"},
+    {"id": "C", "text": "Rey, príncipe y jefe supremo"},
+    {"id": "D", "text": "Rey, señor y sabio"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:10 dice: «ningún rey, príncipe ni señor».",
+  "difficulty": 2,
+  "questionClass": ["EXACT_CONTINUATION", "MINIMAL_PAIR_LITERAL"],
+  "supportingReferences": ["Daniel 2:10"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-009",
+  "type": "single_choice",
+  "reference": "Daniel 2:11",
+  "question": "¿Quiénes, según los caldeos, podían declarar al rey el asunto difícil?",
+  "options": [
+    {"id": "A", "text": "Los sabios cuya morada estaba en Babilonia"},
+    {"id": "B", "text": "Los dioses cuya morada no está entre los hombres"},
+    {"id": "C", "text": "El Dios del cielo que revela los misterios"},
+    {"id": "D", "text": "Los entendidos a quienes Dios da ciencia"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:11 atribuye esa posibilidad, en boca de los caldeos, a «los dioses cuya morada no está entre los hombres».",
+  "difficulty": 2,
+  "questionClass": ["TRUE_ELSEWHERE_WRONG_HERE", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:11", "Daniel 2:21-22", "Daniel 2:28"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-010",
+  "type": "single_choice",
+  "reference": "Daniel 2:14",
+  "question": "¿A quién habló Daniel sabia y prudentemente?",
+  "options": [
+    {"id": "A", "text": "A Nabucodonosor, rey de Babilonia"},
+    {"id": "B", "text": "A Arioc, capitán de la guardia del rey"},
+    {"id": "C", "text": "A Ananías, Misael y Azarías"},
+    {"id": "D", "text": "A todos los sabios de Babilonia"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:14 identifica a Arioc como capitán de la guardia del rey.",
+  "difficulty": 2,
+  "questionClass": ["ACTOR_TRACKING", "EXACT_ROLE_AND_OBJECT"],
+  "supportingReferences": ["Daniel 2:14"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-011",
+  "type": "single_choice",
+  "reference": "Daniel 2:16",
+  "question": "¿Qué pidió Daniel al rey y qué afirmó que haría?",
+  "options": [
+    {"id": "A", "text": "Pidió misericordia y afirmó que revelaría el sueño"},
+    {"id": "B", "text": "Pidió tiempo y afirmó que daría al rey la interpretación"},
+    {"id": "C", "text": "Pidió dones y afirmó que daría la interpretación"},
+    {"id": "D", "text": "Pidió que no matara a los sabios y afirmó que revelaría el misterio"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel pidió que el rey le concediera tiempo y afirmó que daría al rey la interpretación.",
+  "difficulty": 2,
+  "questionClass": ["PAIRED_DETAIL", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:16", "Daniel 2:24"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-012",
+  "type": "single_choice",
+  "reference": "Daniel 2:19",
+  "question": "¿Cómo y cuándo le fue revelado el secreto a Daniel?",
+  "options": [
+    {"id": "A", "text": "En sueño durante el día"},
+    {"id": "B", "text": "En visión de noche"},
+    {"id": "C", "text": "Por medio de Arioc"},
+    {"id": "D", "text": "En las visiones que tuvo en su cama el rey"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:19 dice que el secreto le fue revelado a Daniel «en visión de noche».",
+  "difficulty": 2,
+  "questionClass": ["MINIMAL_PAIR_LITERAL", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:19", "Daniel 2:28"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+
+{
+  "id": "DAN2-013",
+  "type": "single_choice",
+  "reference": "Daniel 2:17",
+  "question": "¿A cuáles tres compañeros hizo Daniel saber lo que sucedía?",
+  "options": [
+    {"id": "A", "text": "Sadrac, Mesac y Abed-nego"},
+    {"id": "B", "text": "Ananías, Misael y Azarías"},
+    {"id": "C", "text": "Arioc, Ananías y Misael"},
+    {"id": "D", "text": "Beltsasar, Sadrac y Mesac"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "En Daniel 2:17 aparecen sus nombres Ananías, Misael y Azarías; en 2:49 se usan Sadrac, Mesac y Abed-nego.",
+  "difficulty": 3,
+  "questionClass": ["TRUE_ELSEWHERE_WRONG_HERE", "CROSS_BLOCK_CONFUSION"],
+  "supportingReferences": ["Daniel 2:17", "Daniel 2:49"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-014",
+  "type": "single_choice",
+  "reference": "Daniel 2:18",
+  "question": "¿Con qué propósito debían pedir misericordias del Dios del cielo sobre el misterio?",
+  "options": [
+    {"id": "A", "text": "Para que Daniel recibiera dones, favores y gran honra"},
+    {"id": "B", "text": "Para que Daniel y sus compañeros no perecieran con los otros sabios de Babilonia"},
+    {"id": "C", "text": "Para que Arioc no tuviera que matar a los sabios"},
+    {"id": "D", "text": "Para que el rey entendiera los pensamientos de su corazón"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:18 expresa directamente que el propósito era evitar que Daniel y sus compañeros perecieran con los demás sabios.",
+  "difficulty": 3,
+  "questionClass": ["TRUE_ELSEWHERE_WRONG_HERE", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:18", "Daniel 2:30"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-015",
+  "type": "single_choice",
+  "reference": "Daniel 2:20",
+  "question": "Completa exactamente: «Sea bendito el nombre de Dios de siglos en siglos, porque suyos son...»",
+  "options": [
+    {"id": "A", "text": "el reino y la majestad"},
+    {"id": "B", "text": "el poder y la sabiduría"},
+    {"id": "C", "text": "la sabiduría y la ciencia"},
+    {"id": "D", "text": "el poder y la fuerza"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "La continuación exacta de Daniel 2:20 es «el poder y la sabiduría».",
+  "difficulty": 3,
+  "questionClass": ["EXACT_CONTINUATION", "MINIMAL_PAIR_LITERAL"],
+  "supportingReferences": ["Daniel 2:20", "Daniel 2:21", "Daniel 2:37"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-016",
+  "type": "single_choice",
+  "reference": "Daniel 2:21",
+  "question": "¿Cuál combinación pertenece íntegramente a Daniel 2:21?",
+  "options": [
+    {"id": "A", "text": "Muda los tiempos y las edades; quita reyes y pone reyes"},
+    {"id": "B", "text": "Revela lo profundo y lo escondido; con él mora la luz"},
+    {"id": "C", "text": "Da reino, poder, fuerza y majestad"},
+    {"id": "D", "text": "Desmenuza y consume a todos los reinos"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Ambas expresiones de A están en Daniel 2:21; las demás pertenecen a otros versículos.",
+  "difficulty": 3,
+  "questionClass": ["TRUE_ELSEWHERE_WRONG_HERE", "PAIRED_DETAIL"],
+  "supportingReferences": ["Daniel 2:21", "Daniel 2:22", "Daniel 2:37", "Daniel 2:44"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-017",
+  "type": "single_choice",
+  "reference": "Daniel 2:22",
+  "question": "¿Qué afirma Daniel inmediatamente después de decir que Dios conoce lo que está en tinieblas?",
+  "options": [
+    {"id": "A", "text": "Y con él mora la luz"},
+    {"id": "B", "text": "Y suyos son el poder y la sabiduría"},
+    {"id": "C", "text": "Y da la ciencia a los entendidos"},
+    {"id": "D", "text": "Y revela los misterios"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:22 continúa: «con él mora la luz».",
+  "difficulty": 3,
+  "questionClass": ["EXACT_CONTINUATION", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:22", "Daniel 2:20-21", "Daniel 2:28"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-018",
+  "type": "single_choice",
+  "reference": "Daniel 2:23",
+  "question": "¿Qué dos cosas afirma Daniel que Dios le había dado antes de mencionar que le reveló lo pedido?",
+  "options": [
+    {"id": "A", "text": "Reino y poder"},
+    {"id": "B", "text": "Sabiduría y fuerza"},
+    {"id": "C", "text": "Sabiduría y ciencia"},
+    {"id": "D", "text": "Fuerza y majestad"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel agradece porque Dios le había dado «sabiduría y fuerza».",
+  "difficulty": 3,
+  "questionClass": ["MINIMAL_PAIR_LITERAL", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:23", "Daniel 2:21", "Daniel 2:37"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-019",
+  "type": "single_choice",
+  "reference": "Daniel 2:24",
+  "question": "¿Qué orden dio Daniel a Arioc antes de pedir ser llevado ante el rey?",
+  "options": [
+    {"id": "A", "text": "No mates a los sabios de Babilonia"},
+    {"id": "B", "text": "Busca también a mis compañeros"},
+    {"id": "C", "text": "Lleva a los sabios a la muerte"},
+    {"id": "D", "text": "Concede tiempo a los sabios de Babilonia"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:24 comienza su petición a Arioc con «No mates a los sabios de Babilonia».",
+  "difficulty": 3,
+  "questionClass": ["BEFORE_AFTER_SEQUENCE", "EXACT_ROLE_AND_OBJECT"],
+  "supportingReferences": ["Daniel 2:24"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-020",
+  "type": "single_choice",
+  "reference": "Daniel 2:25",
+  "question": "¿Cómo presentó Arioc a Daniel ante el rey?",
+  "options": [
+    {"id": "A", "text": "Como jefe supremo de los sabios de Babilonia"},
+    {"id": "B", "text": "Como un hombre de los deportados de Judá"},
+    {"id": "C", "text": "Como Daniel, al cual llamaban Beltsasar"},
+    {"id": "D", "text": "Como uno de los compañeros de Sadrac, Mesac y Abed-nego"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Arioc dijo: «He hallado un hombre de los deportados de Judá».",
+  "difficulty": 3,
+  "questionClass": ["ACTOR_TRACKING", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:25", "Daniel 2:26", "Daniel 2:48-49"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-021",
+  "type": "single_choice",
+  "reference": "Daniel 2:26",
+  "question": "¿Qué nombre menciona el texto que se usaba para Daniel cuando el rey le habló?",
+  "options": [
+    {"id": "A", "text": "Sadrac"},
+    {"id": "B", "text": "Azarías"},
+    {"id": "C", "text": "Beltsasar"},
+    {"id": "D", "text": "Arioc"}
+  ],
+  "correctOptionId": "C",
+  "explanation": "Daniel 2:26 identifica a Daniel como aquel «al cual llamaban Beltsasar».",
+  "difficulty": 3,
+  "questionClass": ["VERSE_LOCALIZATION", "CROSS_BLOCK_CONFUSION"],
+  "supportingReferences": ["Daniel 2:26"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "TARGET_EXACT"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-022",
+  "type": "single_choice",
+  "reference": "Daniel 2:27",
+  "question": "¿Cuál es la lista exacta de grupos que Daniel dijo que no podían revelar el misterio al rey?",
+  "options": [
+    {"id": "A", "text": "Sabios, astrólogos, magos y adivinos"},
+    {"id": "B", "text": "Magos, astrólogos, encantadores y caldeos"},
+    {"id": "C", "text": "Sabios, magos, encantadores y caldeos"},
+    {"id": "D", "text": "Astrólogos, adivinos, caldeos y encantadores"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:27 enumera «sabios, astrólogos, magos y adivinos». La opción B corresponde a la lista de Daniel 2:2.",
+  "difficulty": 3,
+  "questionClass": ["TRUE_ELSEWHERE_WRONG_HERE", "MINIMAL_PAIR_LITERAL"],
+  "supportingReferences": ["Daniel 2:2", "Daniel 2:27"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-023",
+  "type": "single_choice",
+  "reference": "Daniel 2:28",
+  "question": "¿Qué había hecho saber Dios al rey Nabucodonosor?",
+  "options": [
+    {"id": "A", "text": "Lo que había sucedido en los días pasados"},
+    {"id": "B", "text": "Lo que había de acontecer en los últimos días"},
+    {"id": "C", "text": "Lo que sucedería durante el segundo año"},
+    {"id": "D", "text": "Lo que los sabios habían preparado para decirle"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:28 especifica «lo que ha de acontecer en los últimos días».",
+  "difficulty": 3,
+  "questionClass": ["MINIMAL_PAIR_LITERAL", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:28"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-024",
+  "type": "single_choice",
+  "reference": "Daniel 2:29",
+  "question": "¿Qué pensamientos le vinieron al rey estando en su cama?",
+  "options": [
+    {"id": "A", "text": "Cómo podría salvar a los sabios de Babilonia"},
+    {"id": "B", "text": "Qué había de suceder en lo por venir"},
+    {"id": "C", "text": "Cuál era la causa del edicto apresurado"},
+    {"id": "D", "text": "Cómo interpretar la gran imagen"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:29 relaciona sus pensamientos con saber «lo que había de suceder en lo por venir».",
+  "difficulty": 3,
+  "questionClass": ["VERSE_LOCALIZATION", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:29"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-025",
+  "type": "single_choice",
+  "reference": "Daniel 2:30",
+  "question": "¿Por qué, según Daniel, le había sido revelado el misterio?",
+  "options": [
+    {"id": "A", "text": "Porque tenía más sabiduría que los demás vivientes"},
+    {"id": "B", "text": "Para que se conociera la interpretación y el rey entendiera los pensamientos de su corazón"},
+    {"id": "C", "text": "Para que llegara a ser gobernador de Babilonia"},
+    {"id": "D", "text": "Porque era jefe supremo de los sabios"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel niega expresamente que fuera por poseer más sabiduría y da los dos propósitos recogidos en la opción B.",
+  "difficulty": 3,
+  "questionClass": ["PAIRED_DETAIL", "NEGATIVE_PRECISION"],
+  "supportingReferences": ["Daniel 2:30", "Daniel 2:48"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-026",
+  "type": "single_choice",
+  "reference": "Daniel 2:31",
+  "question": "¿Cuál descripción corresponde íntegramente a la imagen que veía el rey?",
+  "options": [
+    {"id": "A", "text": "Era muy grande, su gloria muy sublime y su aspecto terrible"},
+    {"id": "B", "text": "Era muy fuerte, su gloria eterna y su aspecto sublime"},
+    {"id": "C", "text": "Era un gran monte que llenaba toda la tierra"},
+    {"id": "D", "text": "Era de oro fino y permanecía para siempre"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:31 usa esos tres rasgos respecto de la imagen.",
+  "difficulty": 3,
+  "questionClass": ["PAIRED_DETAIL", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:31", "Daniel 2:35", "Daniel 2:44"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-027",
+  "type": "single_choice",
+  "reference": "Daniel 2:32",
+  "question": "¿Cuál asociación entre partes de la imagen y materiales es correcta?",
+  "options": [
+    {"id": "A", "text": "Cabeza de oro fino; pecho y brazos de plata; vientre y muslos de bronce"},
+    {"id": "B", "text": "Cabeza de oro; pecho de bronce; brazos de plata; muslos de hierro"},
+    {"id": "C", "text": "Cabeza de plata; pecho y brazos de oro; vientre y muslos de bronce"},
+    {"id": "D", "text": "Cabeza de oro fino; pecho y brazos de plata; vientre y muslos de hierro"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:32 establece exactamente la secuencia oro fino, plata y bronce.",
+  "difficulty": 3,
+  "questionClass": ["PAIRED_DETAIL", "MINIMAL_PAIR_LITERAL"],
+  "supportingReferences": ["Daniel 2:32"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-028",
+  "type": "single_choice",
+  "reference": "Daniel 2:33",
+  "question": "¿De qué eran las piernas y de qué eran los pies?",
+  "options": [
+    {"id": "A", "text": "Piernas de bronce; pies de hierro y barro"},
+    {"id": "B", "text": "Piernas de hierro; pies en parte de hierro y en parte de barro cocido"},
+    {"id": "C", "text": "Piernas de plata; pies de hierro y barro cocido"},
+    {"id": "D", "text": "Piernas de hierro; pies en parte de bronce y en parte de barro"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:33 asigna hierro a las piernas y hierro con barro cocido a los pies.",
+  "difficulty": 3,
+  "questionClass": ["PAIRED_DETAIL", "MINIMAL_PAIR_LITERAL"],
+  "supportingReferences": ["Daniel 2:33"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+
+{
+  "id": "DAN2-029",
+  "type": "single_choice",
+  "reference": "Daniel 2:34",
+  "question": "¿Cuál secuencia describe exactamente lo ocurrido con la piedra en Daniel 2:34?",
+  "options": [
+    {"id": "A", "text": "Fue cortada por una mano, hirió la cabeza y la desmenuzó"},
+    {"id": "B", "text": "Se desprendió sin que la cortara mano alguna, hirió los pies y los desmenuzó"},
+    {"id": "C", "text": "Se desprendió del monte, llenó la tierra y después hirió la imagen"},
+    {"id": "D", "text": "Hirió las piernas de hierro y luego se hizo un gran monte"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "En 2:34 la piedra se desprende sin intervención de mano, hiere los pies de hierro y barro cocido y los desmenuza.",
+  "difficulty": 4,
+  "questionClass": ["BEFORE_AFTER_SEQUENCE", "PAIRED_DETAIL", "MINIMAL_PAIR_LITERAL"],
+  "supportingReferences": ["Daniel 2:34", "Daniel 2:35", "Daniel 2:45"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-030",
+  "type": "single_choice",
+  "reference": "Daniel 2:35",
+  "question": "Según la redacción exacta de Daniel 2:35, ¿en qué orden se enumeran los materiales que fueron desmenuzados?",
+  "options": [
+    {"id": "A", "text": "Hierro, barro cocido, bronce, plata y oro"},
+    {"id": "B", "text": "Hierro, bronce, barro, plata y oro"},
+    {"id": "C", "text": "Oro, plata, bronce, hierro y barro cocido"},
+    {"id": "D", "text": "Barro cocido, hierro, bronce, plata y oro"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:35 enumera: hierro, barro cocido, bronce, plata y oro. Daniel 2:45 altera el orden de bronce y barro.",
+  "difficulty": 4,
+  "questionClass": ["EXACT_CONTINUATION", "TRUE_ELSEWHERE_WRONG_HERE", "MINIMAL_PAIR_LITERAL"],
+  "supportingReferences": ["Daniel 2:35", "Daniel 2:45"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-031",
+  "type": "single_choice",
+  "reference": "Daniel 2:35",
+  "question": "¿A qué fueron comparados los materiales desmenuzados?",
+  "options": [
+    {"id": "A", "text": "Al barro de alfarero"},
+    {"id": "B", "text": "Al tamo de las eras del verano"},
+    {"id": "C", "text": "A las bestias del campo"},
+    {"id": "D", "text": "A un gran monte"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:35 dice que fueron «como tamo de las eras del verano».",
+  "difficulty": 4,
+  "questionClass": ["VERSE_LOCALIZATION", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:35", "Daniel 2:41", "Daniel 2:38"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-032",
+  "type": "single_choice",
+  "reference": "Daniel 2:35",
+  "question": "¿Qué ocurrió con la piedra después de herir a la imagen?",
+  "options": [
+    {"id": "A", "text": "Fue llevada por el viento sin dejar rastro"},
+    {"id": "B", "text": "Se hizo un gran monte que llenó toda la tierra"},
+    {"id": "C", "text": "Se mezcló con hierro y barro"},
+    {"id": "D", "text": "Fue dejada a otro pueblo"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "La piedra que hirió a la imagen se convirtió en un gran monte que llenó toda la tierra.",
+  "difficulty": 4,
+  "questionClass": ["BEFORE_AFTER_SEQUENCE", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:35", "Daniel 2:43-44"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-033",
+  "type": "single_choice",
+  "reference": "Daniel 2:36",
+  "question": "Completa exactamente: «Éste es el sueño. También la interpretación de él...»",
+  "options": [
+    {"id": "A", "text": "te mostraré en tu cama"},
+    {"id": "B", "text": "diremos en presencia del rey"},
+    {"id": "C", "text": "daremos a tus siervos"},
+    {"id": "D", "text": "ha mostrado el gran Dios"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "La frase exacta termina: «diremos en presencia del rey».",
+  "difficulty": 4,
+  "questionClass": ["EXACT_CONTINUATION", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:36"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-034",
+  "type": "single_choice",
+  "reference": "Daniel 2:37",
+  "question": "¿Qué cuatro cosas dice Daniel que el Dios del cielo había dado al rey?",
+  "options": [
+    {"id": "A", "text": "Reino, poder, fuerza y majestad"},
+    {"id": "B", "text": "Poder, sabiduría, fuerza y ciencia"},
+    {"id": "C", "text": "Dones, favores, honra y reino"},
+    {"id": "D", "text": "Reino, dominio, honra y sabiduría"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:37 enumera reino, poder, fuerza y majestad.",
+  "difficulty": 4,
+  "questionClass": ["EXACT_CONTINUATION", "CROSS_BLOCK_CONFUSION"],
+  "supportingReferences": ["Daniel 2:37", "Daniel 2:6", "Daniel 2:20-23"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-035",
+  "type": "single_choice",
+  "reference": "Daniel 2:38",
+  "question": "¿Cuáles tres grupos de seres menciona Daniel al hablar de lo entregado en manos del rey?",
+  "options": [
+    {"id": "A", "text": "Hijos de hombres, bestias del campo y aves del cielo"},
+    {"id": "B", "text": "Hombres, sabios de Babilonia y aves del cielo"},
+    {"id": "C", "text": "Hijos de hombres, animales del mar y aves del cielo"},
+    {"id": "D", "text": "Reyes, príncipes y señores"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:38 enumera hijos de hombres, bestias del campo y aves del cielo.",
+  "difficulty": 4,
+  "questionClass": ["EXACT_CONTINUATION", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:38", "Daniel 2:10"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-036",
+  "type": "single_choice",
+  "reference": "Daniel 2:38",
+  "question": "¿Qué parte de la imagen identifica Daniel directamente con Nabucodonosor?",
+  "options": [
+    {"id": "A", "text": "El pecho de plata"},
+    {"id": "B", "text": "La cabeza de oro"},
+    {"id": "C", "text": "Las piernas de hierro"},
+    {"id": "D", "text": "Los pies de hierro y barro"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel declara al rey: «Tú eres aquella cabeza de oro».",
+  "difficulty": 4,
+  "questionClass": ["EXACT_ROLE_AND_OBJECT", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:38"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-037",
+  "type": "single_choice",
+  "reference": "Daniel 2:39",
+  "question": "¿Cuál combinación corresponde a los dos reinos mencionados después del de Nabucodonosor en Daniel 2:39?",
+  "options": [
+    {"id": "A", "text": "Otro reino inferior al suyo; luego un tercer reino de bronce que dominaría sobre toda la tierra"},
+    {"id": "B", "text": "Otro reino fuerte como hierro; luego un tercer reino dividido"},
+    {"id": "C", "text": "Un segundo reino de plata que permanecería para siempre; luego uno de bronce"},
+    {"id": "D", "text": "Otro reino inferior; luego un cuarto reino de bronce"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:39 menciona primero otro reino inferior y luego el tercer reino, de bronce, que dominaría sobre toda la tierra.",
+  "difficulty": 4,
+  "questionClass": ["PAIRED_DETAIL", "NUMERIC_PRECISION"],
+  "supportingReferences": ["Daniel 2:39", "Daniel 2:40"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-038",
+  "type": "single_choice",
+  "reference": "Daniel 2:40",
+  "question": "¿Por qué compara Daniel el cuarto reino con el hierro?",
+  "options": [
+    {"id": "A", "text": "Porque el hierro se mezcla con el barro mediante alianzas"},
+    {"id": "B", "text": "Porque el hierro desmenuza y rompe todas las cosas"},
+    {"id": "C", "text": "Porque el hierro es en parte fuerte y en parte frágil"},
+    {"id": "D", "text": "Porque el hierro permanecerá para siempre"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:40 vincula la fuerza del cuarto reino con la capacidad del hierro de desmenuzar y romper.",
+  "difficulty": 4,
+  "questionClass": ["VERSE_LOCALIZATION", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:40", "Daniel 2:42-44"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-039",
+  "type": "single_choice",
+  "reference": "Daniel 2:41",
+  "question": "¿Qué interpretación se da específicamente al hecho de que los pies y dedos fueran en parte de barro cocido de alfarero y en parte de hierro?",
+  "options": [
+    {"id": "A", "text": "Que sería un reino dividido"},
+    {"id": "B", "text": "Que sería un reino inferior"},
+    {"id": "C", "text": "Que dominaría sobre toda la tierra"},
+    {"id": "D", "text": "Que no sería jamás destruido"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:41 interpreta los materiales mezclados de pies y dedos como un reino dividido.",
+  "difficulty": 4,
+  "questionClass": ["VERSE_LOCALIZATION", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:39", "Daniel 2:41", "Daniel 2:44"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-040",
+  "type": "single_choice",
+  "reference": "Daniel 2:41",
+  "question": "Aunque sería un reino dividido, ¿qué afirma específicamente Daniel 2:41 que habría en él?",
+  "options": [
+    {"id": "A", "text": "Algo de la fuerza del hierro"},
+    {"id": "B", "text": "Algo de la fragilidad del barro"},
+    {"id": "C", "text": "El dominio sobre toda la tierra"},
+    {"id": "D", "text": "La majestad del primer reino"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "El versículo dice: «habrá en él algo de la fuerza del hierro».",
+  "difficulty": 4,
+  "questionClass": ["MINIMAL_PAIR_LITERAL", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:41-42"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "UNSUPPORTED"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-041",
+  "type": "single_choice",
+  "reference": "Daniel 2:42",
+  "question": "¿Qué correspondencia establece el texto entre los dedos y el reino?",
+  "options": [
+    {"id": "A", "text": "Como los dedos son de hierro y plata, el reino será fuerte e inferior"},
+    {"id": "B", "text": "Como los dedos son en parte de hierro y en parte de barro cocido, el reino será en parte fuerte y en parte frágil"},
+    {"id": "C", "text": "Como los dedos son de barro, el reino será totalmente frágil"},
+    {"id": "D", "text": "Como los dedos son de hierro, el reino lo quebrantará todo"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:42 vincula directamente la composición mixta de los dedos con un reino parcialmente fuerte y parcialmente frágil.",
+  "difficulty": 4,
+  "questionClass": ["PAIRED_DETAIL", "MINIMAL_PAIR_LITERAL"],
+  "supportingReferences": ["Daniel 2:42"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-042",
+  "type": "single_choice",
+  "reference": "Daniel 2:43",
+  "question": "¿Por qué medio dice el texto que «se mezclarán»?",
+  "options": [
+    {"id": "A", "text": "Por medio de pactos eternos"},
+    {"id": "B", "text": "Por medio de alianzas humanas"},
+    {"id": "C", "text": "Por medio de la fuerza del hierro"},
+    {"id": "D", "text": "Por medio de otro pueblo"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:43 usa exactamente la expresión «por medio de alianzas humanas».",
+  "difficulty": 4,
+  "questionClass": ["MINIMAL_PAIR_LITERAL", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:43"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "UNSUPPORTED"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-043",
+  "type": "single_choice",
+  "reference": "Daniel 2:44",
+  "question": "¿Cuándo dice Daniel que el Dios del cielo levantará el reino que no será jamás destruido?",
+  "options": [
+    {"id": "A", "text": "En el segundo año del reinado de Nabucodonosor"},
+    {"id": "B", "text": "En los últimos días"},
+    {"id": "C", "text": "En los días de estos reyes"},
+    {"id": "D", "text": "Después de todos estos reyes"}
+  ],
+  "correctOptionId": "C",
+  "explanation": "Daniel 2:44 comienza: «En los días de estos reyes».",
+  "difficulty": 4,
+  "questionClass": ["TRUE_ELSEWHERE_WRONG_HERE", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:1", "Daniel 2:28", "Daniel 2:44"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "TARGET_EXACT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-044",
+  "type": "single_choice",
+  "reference": "Daniel 2:44",
+  "question": "¿Cuál conjunto contiene únicamente afirmaciones hechas en Daniel 2:44 acerca del reino que Dios levantará?",
+  "options": [
+    {"id": "A", "text": "No será jamás destruido; no será dejado a otro pueblo; permanecerá para siempre"},
+    {"id": "B", "text": "Será inferior; dominará toda la tierra; permanecerá para siempre"},
+    {"id": "C", "text": "Será dividido; en parte fuerte y en parte frágil; no se unirá"},
+    {"id": "D", "text": "Será fuerte como hierro; desmenuzará todo; será dejado a otro pueblo"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Las tres características de A se encuentran en Daniel 2:44.",
+  "difficulty": 4,
+  "questionClass": ["PAIRED_DETAIL", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:39-44"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-045",
+  "type": "single_choice",
+  "reference": "Daniel 2:45",
+  "question": "Según la redacción exacta de Daniel 2:45, ¿qué materiales desmenuzó la piedra y en qué orden aparecen?",
+  "options": [
+    {"id": "A", "text": "Hierro, barro, bronce, plata y oro"},
+    {"id": "B", "text": "Hierro, bronce, barro, plata y oro"},
+    {"id": "C", "text": "Oro, plata, bronce, hierro y barro"},
+    {"id": "D", "text": "Hierro, bronce, plata, barro y oro"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "En Daniel 2:45 el orden es hierro, bronce, barro, plata y oro; no es idéntico al orden de 2:35.",
+  "difficulty": 4,
+  "questionClass": ["TRUE_ELSEWHERE_WRONG_HERE", "EXACT_CONTINUATION", "CROSS_BLOCK_CONFUSION"],
+  "supportingReferences": ["Daniel 2:35", "Daniel 2:45"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-046",
+  "type": "single_choice",
+  "reference": "Daniel 2:45",
+  "question": "¿Cómo concluye Daniel su afirmación acerca del sueño y su interpretación?",
+  "options": [
+    {"id": "A", "text": "El sueño es difícil, pero segura su interpretación"},
+    {"id": "B", "text": "El sueño es verdadero, y fiel su interpretación"},
+    {"id": "C", "text": "El sueño se ha ido, pero la interpretación permanece"},
+    {"id": "D", "text": "El sueño es verdadero, y eterna su interpretación"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:45 termina con «el sueño es verdadero, y fiel su interpretación».",
+  "difficulty": 4,
+  "questionClass": ["EXACT_CONTINUATION", "MINIMAL_PAIR_LITERAL"],
+  "supportingReferences": ["Daniel 2:45"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-047",
+  "type": "single_choice",
+  "reference": "Daniel 2:46",
+  "question": "¿Cuál secuencia corresponde a la reacción de Nabucodonosor inmediatamente después de escuchar la interpretación?",
+  "options": [
+    {"id": "A", "text": "Se postró sobre su rostro, se humilló ante Daniel y mandó ofrecerle presentes e incienso"},
+    {"id": "B", "text": "Engrandeció a Daniel, lo hizo gobernador y se postró ante él"},
+    {"id": "C", "text": "Se humilló ante Daniel, lo llamó Beltsasar y le dio gran honra"},
+    {"id": "D", "text": "Se postró, pidió misericordias y mandó salvar a los sabios"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Las tres acciones de A aparecen en ese orden en Daniel 2:46.",
+  "difficulty": 4,
+  "questionClass": ["BEFORE_AFTER_SEQUENCE", "PAIRED_DETAIL", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:46-48"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-048",
+  "type": "single_choice",
+  "reference": "Daniel 2:47",
+  "question": "¿Qué tres títulos o descripciones atribuye el rey al Dios de Daniel?",
+  "options": [
+    {"id": "A", "text": "Dios del cielo, Dios de los padres y Dios de los sabios"},
+    {"id": "B", "text": "Dios de dioses, Señor de los reyes y el que revela los misterios"},
+    {"id": "C", "text": "Rey de reyes, Señor de dioses y Dios de Babilonia"},
+    {"id": "D", "text": "Dios de dioses, Rey de reyes y jefe de los sabios"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:47 contiene exactamente esas tres expresiones.",
+  "difficulty": 4,
+  "questionClass": ["EXACT_CONTINUATION", "CROSS_BLOCK_CONFUSION"],
+  "supportingReferences": ["Daniel 2:37", "Daniel 2:47-48"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-049",
+  "type": "single_choice",
+  "reference": "Daniel 2:48",
+  "question": "¿Cuál opción reúne correctamente lo que el rey hizo con Daniel en Daniel 2:48?",
+  "options": [
+    {"id": "A", "text": "Lo engrandeció, le dio muchos honores y grandes dones, lo hizo gobernador de toda la provincia de Babilonia y jefe supremo de todos sus sabios"},
+    {"id": "B", "text": "Le dio dones, favores y gran honra, y lo puso sobre los negocios de la provincia"},
+    {"id": "C", "text": "Lo hizo capitán de la guardia y gobernador de Babilonia"},
+    {"id": "D", "text": "Lo hizo rey de reyes y jefe supremo de los sabios"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Todos los elementos de A pertenecen a Daniel 2:48.",
+  "difficulty": 4,
+  "questionClass": ["PAIRED_DETAIL", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:6", "Daniel 2:48-49"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-050",
+  "type": "single_choice",
+  "reference": "Daniel 2:49",
+  "question": "¿A quiénes obtuvo Daniel que el rey pusiera sobre los negocios de la provincia de Babilonia?",
+  "options": [
+    {"id": "A", "text": "Ananías, Misael y Azarías"},
+    {"id": "B", "text": "Sadrac, Mesac y Abed-nego"},
+    {"id": "C", "text": "Arioc, Sadrac y Mesac"},
+    {"id": "D", "text": "Magos, astrólogos y caldeos"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:49 usa los nombres Sadrac, Mesac y Abed-nego.",
+  "difficulty": 4,
+  "questionClass": ["TRUE_ELSEWHERE_WRONG_HERE", "ACTOR_TRACKING"],
+  "supportingReferences": ["Daniel 2:17", "Daniel 2:49"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-051",
+  "type": "single_choice",
+  "reference": "Daniel 2:49",
+  "question": "Mientras Sadrac, Mesac y Abed-nego fueron puestos sobre los negocios de la provincia, ¿dónde estaba Daniel?",
+  "options": [
+    {"id": "A", "text": "En su casa"},
+    {"id": "B", "text": "Entre los deportados de Judá"},
+    {"id": "C", "text": "En la corte del rey"},
+    {"id": "D", "text": "Con los otros sabios de Babilonia"}
+  ],
+  "correctOptionId": "C",
+  "explanation": "El versículo concluye: «y Daniel estaba en la corte del rey».",
+  "difficulty": 4,
+  "questionClass": ["PAIRED_DETAIL", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:17", "Daniel 2:25", "Daniel 2:49"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "TARGET_EXACT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-052",
+  "type": "single_choice",
+  "reference": "Daniel 2:5-6",
+  "question": "¿Cuál opción empareja correctamente la amenaza y la recompensa anunciadas por el rey?",
+  "options": [
+    {"id": "A", "text": "Amenaza: muerte de todos los sabios; recompensa: gobernador de Babilonia"},
+    {"id": "B", "text": "Amenaza: ser hechos pedazos y casas convertidas en estercoleros; recompensa: dones, favores y gran honra"},
+    {"id": "C", "text": "Amenaza: casas destruidas; recompensa: muchos honores y grandes dones"},
+    {"id": "D", "text": "Amenaza: una respuesta mentirosa; recompensa: reino, poder, fuerza y majestad"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "La amenaza está en 2:5 y la recompensa inmediatamente contrapuesta en 2:6.",
+  "difficulty": 4,
+  "questionClass": ["PAIRED_DETAIL", "CROSS_BLOCK_CONFUSION", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:5-6", "Daniel 2:48"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-053",
+  "type": "single_choice",
+  "reference": "Daniel 2:8-9",
+  "question": "¿Qué dos acusaciones consecutivas hizo el rey contra los caldeos?",
+  "options": [
+    {"id": "A", "text": "Que ponían dilaciones y preparaban una respuesta mentirosa y perversa"},
+    {"id": "B", "text": "Que habían olvidado el asunto y no tenían sabiduría"},
+    {"id": "C", "text": "Que pedían misericordias y querían que pasara el tiempo"},
+    {"id": "D", "text": "Que no había hombre en la tierra capaz de responder y que el asunto era difícil"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "En 2:8 el rey acusa a los caldeos de poner dilaciones, y en 2:9 de preparar una respuesta mentirosa y perversa.",
+  "difficulty": 4,
+  "questionClass": ["CONTINUITY_CHAIN", "PAIRED_DETAIL", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:8-10"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-054",
+  "type": "single_choice",
+  "reference": "Daniel 2:12-13",
+  "question": "¿Cuál fue la secuencia correcta después del gran enojo del rey?",
+  "options": [
+    {"id": "A", "text": "Se publicó el edicto; luego el rey mandó matar a los sabios"},
+    {"id": "B", "text": "El rey mandó matar a todos los sabios; se publicó el edicto; buscaron también a Daniel y sus compañeros"},
+    {"id": "C", "text": "Buscaron a Daniel; luego se publicó el edicto; después el rey se enojó"},
+    {"id": "D", "text": "Arioc buscó a Daniel; Daniel pidió tiempo; después se publicó el edicto"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "La orden de 2:12 precede a la publicación del edicto y a la búsqueda de Daniel y sus compañeros en 2:13.",
+  "difficulty": 4,
+  "questionClass": ["BEFORE_AFTER_SEQUENCE", "CONTINUITY_CHAIN"],
+  "supportingReferences": ["Daniel 2:12-13"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-055",
+  "type": "single_choice",
+  "reference": "Daniel 2:14-16",
+  "question": "¿Cuál secuencia corresponde al encuentro de Daniel con Arioc y la acción posterior de Daniel?",
+  "options": [
+    {"id": "A", "text": "Daniel habló a Arioc; Arioc le explicó lo ocurrido; Daniel entró y pidió tiempo al rey"},
+    {"id": "B", "text": "Arioc llevó a Daniel ante el rey; Daniel preguntó la causa del edicto; el rey le explicó"},
+    {"id": "C", "text": "Daniel pidió tiempo a Arioc; Arioc pidió misericordias; Daniel volvió a su casa"},
+    {"id": "D", "text": "Daniel habló al rey; luego el rey hizo saber a Arioc lo ocurrido"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "La continuidad de 2:14-16 es: diálogo con Arioc, explicación de Arioc y petición de tiempo al rey.",
+  "difficulty": 4,
+  "questionClass": ["ACTOR_TRACKING", "CONTINUITY_CHAIN", "BEFORE_AFTER_SEQUENCE"],
+  "supportingReferences": ["Daniel 2:14-16"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-056",
+  "type": "single_choice",
+  "reference": "Daniel 2:17-19",
+  "question": "¿Cuál secuencia resume correctamente lo sucedido desde que Daniel regresó a su casa hasta la revelación?",
+  "options": [
+    {"id": "A", "text": "Informó a sus compañeros; debían pedir misericordias sobre el misterio; el secreto le fue revelado en visión de noche"},
+    {"id": "B", "text": "Informó a Arioc; pidió dones al rey; el secreto le fue revelado en su cama"},
+    {"id": "C", "text": "Informó a sus compañeros; interpretó inmediatamente la imagen; luego bendijo a Arioc"},
+    {"id": "D", "text": "Pidió misericordias solo; fue llevado prontamente al rey; allí recibió la revelación"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Los tres pasos aparecen consecutivamente en Daniel 2:17-19.",
+  "difficulty": 4,
+  "questionClass": ["BEFORE_AFTER_SEQUENCE", "CONTINUITY_CHAIN", "PAIRED_DETAIL"],
+  "supportingReferences": ["Daniel 2:17-19"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+
+{
+  "id": "DAN2-057",
+  "type": "single_choice",
+  "reference": "Daniel 2:20-23",
+  "question": "¿Cuál opción localiza correctamente cuatro afirmaciones de la alabanza de Daniel?",
+  "options": [
+    {"id": "A", "text": "2:20 poder y sabiduría; 2:21 quita y pone reyes; 2:22 con él mora la luz; 2:23 sabiduría y fuerza"},
+    {"id": "B", "text": "2:20 sabiduría y fuerza; 2:21 con él mora la luz; 2:22 quita y pone reyes; 2:23 poder y sabiduría"},
+    {"id": "C", "text": "2:20 reino y majestad; 2:21 revela los misterios; 2:22 da fuerza a los sabios; 2:23 dones y favores"},
+    {"id": "D", "text": "2:20 poder y fuerza; 2:21 da reino y majestad; 2:22 muda los tiempos; 2:23 con él mora la luz"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Cada frase de A corresponde exactamente al versículo indicado.",
+  "difficulty": 5,
+  "questionClass": ["VERSE_LOCALIZATION", "TRUE_ELSEWHERE_WRONG_HERE", "CROSS_BLOCK_CONFUSION"],
+  "supportingReferences": ["Daniel 2:20-23"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-058",
+  "type": "single_choice",
+  "reference": "Daniel 2:24-25",
+  "question": "¿Cuál opción distingue correctamente lo que Daniel dijo a Arioc de lo que Arioc dijo al rey?",
+  "options": [
+    {"id": "A", "text": "Daniel: «He hallado un hombre de los deportados de Judá»; Arioc: «No mates a los sabios»"},
+    {"id": "B", "text": "Daniel: «No mates a los sabios de Babilonia»; Arioc: «He hallado un hombre de los deportados de Judá»"},
+    {"id": "C", "text": "Daniel: «Llévame a la presencia del rey»; Arioc: «Yo le daré la interpretación»"},
+    {"id": "D", "text": "Daniel: «El asunto lo olvidé»; Arioc: «El misterio es difícil»"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "La primera frase pertenece a Daniel en 2:24 y la segunda a Arioc en 2:25.",
+  "difficulty": 5,
+  "questionClass": ["ACTOR_TRACKING", "PAIRED_DETAIL", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:24-25"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-059",
+  "type": "single_choice",
+  "reference": "Daniel 2:26-30",
+  "question": "¿Cuál pareja corresponde correctamente a la pregunta del rey y a la aclaración posterior de Daniel?",
+  "options": [
+    {"id": "A", "text": "Rey: si Daniel podía conocer el sueño y su interpretación; Daniel: el misterio le fue revelado porque era más sabio que los demás"},
+    {"id": "B", "text": "Rey: si Daniel podía hacerle conocer el sueño que vio y su interpretación; Daniel: no le fue revelado porque tuviera más sabiduría que los demás vivientes"},
+    {"id": "C", "text": "Rey: si Daniel podía interpretar solamente el sueño; Daniel: los sabios sí podían revelar el misterio"},
+    {"id": "D", "text": "Rey: si Daniel era de los deportados de Judá; Daniel: Dios le había dado reino y majestad"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "La pregunta aparece en 2:26 y la negación de una sabiduría superior como causa de la revelación en 2:30.",
+  "difficulty": 5,
+  "questionClass": ["PAIRED_DETAIL", "CROSS_BLOCK_CONFUSION", "MINIMAL_PAIR_LITERAL"],
+  "supportingReferences": ["Daniel 2:26-30"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-060",
+  "type": "single_choice",
+  "reference": "Daniel 2:28-30",
+  "question": "¿Cuál opción conserva correctamente la progresión de ideas de Daniel 2:28-30?",
+  "options": [
+    {"id": "A", "text": "Dios revela misterios → mostró lo que acontecería → al rey le vinieron pensamientos sobre lo por venir → el misterio fue revelado para que conociera la interpretación y entendiera los pensamientos de su corazón"},
+    {"id": "B", "text": "Daniel revela misterios → el rey interpreta lo futuro → Dios pide tiempo → los sabios conocen los pensamientos del rey"},
+    {"id": "C", "text": "Dios entrega el dominio al rey → el rey ve la imagen → Daniel recibe grandes dones → se revela el misterio"},
+    {"id": "D", "text": "El rey revela el sueño → Daniel consulta a los sabios → Dios muestra únicamente la interpretación"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "A sigue la secuencia textual de 2:28, 2:29 y 2:30 sin desplazar los sujetos.",
+  "difficulty": 5,
+  "questionClass": ["CONTINUITY_CHAIN", "BEFORE_AFTER_SEQUENCE", "ACTOR_TRACKING"],
+  "supportingReferences": ["Daniel 2:28-30"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-061",
+  "type": "single_choice",
+  "reference": "Daniel 2:31-35",
+  "question": "¿Cuál secuencia mantiene correctamente el orden narrativo del sueño?",
+  "options": [
+    {"id": "A", "text": "Gran imagen → descripción de sus materiales → piedra se desprende → hiere los pies → materiales son desmenuzados → piedra se hace gran monte"},
+    {"id": "B", "text": "Gran imagen → piedra se hace monte → se describen los materiales → el viento lleva la piedra"},
+    {"id": "C", "text": "Materiales desmenuzados → piedra se desprende → imagen aparece → piedra hiere la cabeza"},
+    {"id": "D", "text": "Gran imagen → piedra hiere las piernas → reino dividido → piedra llena la tierra"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "A sigue exactamente la progresión de Daniel 2:31-35.",
+  "difficulty": 5,
+  "questionClass": ["BEFORE_AFTER_SEQUENCE", "CONTINUITY_CHAIN", "PAIRED_DETAIL"],
+  "supportingReferences": ["Daniel 2:31-35"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-062",
+  "type": "single_choice",
+  "reference": "Daniel 2:32-33",
+  "question": "¿Cuál opción reproduce sin intercambiar ninguna parte de la imagen con su material?",
+  "options": [
+    {"id": "A", "text": "Cabeza-oro fino; pecho y brazos-plata; vientre y muslos-bronce; piernas-hierro; pies-hierro y barro cocido"},
+    {"id": "B", "text": "Cabeza-oro fino; pecho y brazos-bronce; vientre y muslos-plata; piernas-hierro; pies-hierro y barro"},
+    {"id": "C", "text": "Cabeza-oro fino; pecho y brazos-plata; vientre y muslos-bronce; piernas-hierro y barro; pies-hierro"},
+    {"id": "D", "text": "Cabeza-oro; pecho y brazos-plata; vientre y muslos-hierro; piernas-bronce; pies-barro cocido"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "A conserva las cinco asociaciones de Daniel 2:32-33.",
+  "difficulty": 5,
+  "questionClass": ["PAIRED_DETAIL", "MINIMAL_PAIR_LITERAL", "CROSS_BLOCK_CONFUSION"],
+  "supportingReferences": ["Daniel 2:32-33"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-063",
+  "type": "single_choice",
+  "reference": "Daniel 2:34-35",
+  "question": "¿Qué ocurrió inmediatamente antes de que el texto dijera que también fueron desmenuzados el hierro, el barro cocido, el bronce, la plata y el oro?",
+  "options": [
+    {"id": "A", "text": "La piedra se hizo un gran monte"},
+    {"id": "B", "text": "La piedra hirió los pies de hierro y barro cocido y los desmenuzó"},
+    {"id": "C", "text": "El viento se llevó los materiales"},
+    {"id": "D", "text": "La piedra se desprendió del monte"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "El final de 2:34 precede inmediatamente al «Entonces» de 2:35.",
+  "difficulty": 5,
+  "questionClass": ["BEFORE_AFTER_SEQUENCE", "EXACT_ROLE_AND_OBJECT", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:34-35", "Daniel 2:45"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-064",
+  "type": "single_choice",
+  "reference": "Daniel 2:35",
+  "question": "Dos versículos enumeran los mismos cinco materiales en órdenes ligeramente distintos. ¿Cuál orden pertenece específicamente a Daniel 2:35?",
+  "options": [
+    {"id": "A", "text": "Hierro, bronce, barro, plata y oro"},
+    {"id": "B", "text": "Hierro, barro cocido, bronce, plata y oro"},
+    {"id": "C", "text": "Hierro, bronce, plata, barro y oro"},
+    {"id": "D", "text": "Barro cocido, hierro, bronce, oro y plata"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "B es el orden de 2:35. La opción A reproduce el orden de 2:45, salvo la forma «barro».",
+  "difficulty": 5,
+  "questionClass": ["TRUE_ELSEWHERE_WRONG_HERE", "VERSE_LOCALIZATION", "MINIMAL_PAIR_LITERAL"],
+  "supportingReferences": ["Daniel 2:35", "Daniel 2:45"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-065",
+  "type": "single_choice",
+  "reference": "Daniel 2:34; Daniel 2:45",
+  "question": "¿Cuál afirmación distingue correctamente la redacción de Daniel 2:34 de Daniel 2:45 respecto del origen de la piedra?",
+  "options": [
+    {"id": "A", "text": "2:34 dice expresamente «del monte»; 2:45 no menciona el monte"},
+    {"id": "B", "text": "2:34 dice que se desprendió sin que la cortara mano alguna; 2:45 añade expresamente que se desprendió «del monte»"},
+    {"id": "C", "text": "Ambos versículos dicen literalmente «del monte se desprendió una piedra»"},
+    {"id": "D", "text": "2:34 afirma que una mano la cortó; 2:45 niega que fuera cortada"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "Daniel 2:34 menciona la piedra desprendida sin mano; Daniel 2:45 formula expresamente «del monte se desprendió una piedra».",
+  "difficulty": 5,
+  "questionClass": ["VERSE_LOCALIZATION", "MINIMAL_PAIR_LITERAL", "TRUE_ELSEWHERE_WRONG_HERE"],
+  "supportingReferences": ["Daniel 2:34", "Daniel 2:45"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "B", "classification": "TARGET_EXACT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-066",
+  "type": "single_choice",
+  "reference": "Daniel 2:37-38",
+  "question": "¿Cuál opción combina correctamente lo que Dios dio al rey en 2:37 con lo que le entregó en 2:38?",
+  "options": [
+    {"id": "A", "text": "2:37: reino, poder, fuerza y majestad; 2:38: hijos de hombres, bestias del campo y aves del cielo bajo su dominio"},
+    {"id": "B", "text": "2:37: sabiduría y fuerza; 2:38: dones, favores y gran honra"},
+    {"id": "C", "text": "2:37: reino dividido; 2:38: todos los reinos futuros"},
+    {"id": "D", "text": "2:37: dominio eterno; 2:38: un tercer reino de bronce"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "A mantiene los datos en sus referencias correctas, sin mezclar la alabanza de Daniel ni la recompensa posterior.",
+  "difficulty": 5,
+  "questionClass": ["PAIRED_DETAIL", "TRUE_ELSEWHERE_WRONG_HERE", "CROSS_BLOCK_CONFUSION"],
+  "supportingReferences": ["Daniel 2:23", "Daniel 2:37-38", "Daniel 2:48"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-067",
+  "type": "single_choice",
+  "reference": "Daniel 2:39-40",
+  "question": "¿Cuál secuencia de características pertenece correctamente al segundo reino mencionado, al tercero y al cuarto?",
+  "options": [
+    {"id": "A", "text": "Segundo: inferior; tercero: de bronce y dominará toda la tierra; cuarto: fuerte como hierro"},
+    {"id": "B", "text": "Segundo: de bronce; tercero: inferior; cuarto: dividido"},
+    {"id": "C", "text": "Segundo: fuerte como hierro; tercero: de bronce; cuarto: permanecerá para siempre"},
+    {"id": "D", "text": "Segundo: inferior; tercero: de hierro; cuarto: de bronce"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:39-40 presenta exactamente esa progresión.",
+  "difficulty": 5,
+  "questionClass": ["NUMERIC_PRECISION", "PAIRED_DETAIL", "CROSS_BLOCK_CONFUSION"],
+  "supportingReferences": ["Daniel 2:39-40"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-068",
+  "type": "single_choice",
+  "reference": "Daniel 2:41-43",
+  "question": "¿Cuál opción localiza correctamente las tres ideas sucesivas acerca del reino de hierro y barro?",
+  "options": [
+    {"id": "A", "text": "2:41 dividido y con algo de fuerza del hierro; 2:42 en parte fuerte y en parte frágil; 2:43 mezclado mediante alianzas humanas pero sin unión"},
+    {"id": "B", "text": "2:41 en parte fuerte y frágil; 2:42 alianzas humanas; 2:43 reino dividido"},
+    {"id": "C", "text": "2:41 no será destruido; 2:42 dominará la tierra; 2:43 será inferior"},
+    {"id": "D", "text": "2:41 alianzas humanas; 2:42 algo de fuerza del hierro; 2:43 dedos de hierro y barro"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "A conserva la localización precisa de los detalles de 2:41, 2:42 y 2:43.",
+  "difficulty": 5,
+  "questionClass": ["VERSE_LOCALIZATION", "TRUE_ELSEWHERE_WRONG_HERE", "CONTINUITY_CHAIN"],
+  "supportingReferences": ["Daniel 2:41-43"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-069",
+  "type": "single_choice",
+  "reference": "Daniel 2:44-45",
+  "question": "¿Cuál opción distingue correctamente el reino de Daniel 2:44 de la piedra descrita nuevamente en Daniel 2:45?",
+  "options": [
+    {"id": "A", "text": "2:44: reino que no será jamás destruido y permanecerá para siempre; 2:45: piedra desprendida del monte sin mano que desmenuzó los materiales"},
+    {"id": "B", "text": "2:44: piedra desprendida del monte; 2:45: reino no dejado a otro pueblo"},
+    {"id": "C", "text": "2:44: tercer reino de bronce; 2:45: cuarto reino de hierro"},
+    {"id": "D", "text": "2:44: reino dividido; 2:45: alianzas humanas"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "A conserva los datos propios de cada versículo sin intercambiar la descripción del reino y la recapitulación de la piedra.",
+  "difficulty": 5,
+  "questionClass": ["CROSS_BLOCK_CONFUSION", "PAIRED_DETAIL", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:44-45"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-070",
+  "type": "single_choice",
+  "reference": "Daniel 2:46-48",
+  "question": "¿Cuál secuencia ocurrió después de que Daniel terminara la interpretación?",
+  "options": [
+    {"id": "A", "text": "El rey se postró y se humilló → reconoció al Dios de Daniel → engrandeció a Daniel y le dio cargos"},
+    {"id": "B", "text": "El rey engrandeció a Daniel → Daniel interpretó el sueño → el rey se postró"},
+    {"id": "C", "text": "Daniel pidió cargos para sus compañeros → el rey se humilló → reconoció a Dios"},
+    {"id": "D", "text": "El rey reconoció a Dios → Daniel recibió la visión → Daniel fue llevado por Arioc"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "La progresión corresponde a 2:46, 2:47 y 2:48.",
+  "difficulty": 5,
+  "questionClass": ["BEFORE_AFTER_SEQUENCE", "CONTINUITY_CHAIN", "ACTOR_TRACKING"],
+  "supportingReferences": ["Daniel 2:46-48"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-071",
+  "type": "single_choice",
+  "reference": "Daniel 2:25-26",
+  "question": "¿Cuál combinación identifica correctamente cómo Arioc describe a Daniel y cómo el narrador lo identifica cuando el rey le habla?",
+  "options": [
+    {"id": "A", "text": "Arioc: «un hombre de los deportados de Judá»; narrador: Daniel, «al cual llamaban Beltsasar»"},
+    {"id": "B", "text": "Arioc: «Beltsasar»; narrador: «un hombre de los deportados de Judá»"},
+    {"id": "C", "text": "Arioc: «jefe supremo»; narrador: «capitán del rey»"},
+    {"id": "D", "text": "Arioc: «uno de los sabios»; narrador: «Sadrac»"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "La descripción de Arioc aparece en 2:25 y el nombre Beltsasar en 2:26.",
+  "difficulty": 5,
+  "questionClass": ["ACTOR_TRACKING", "PAIRED_DETAIL", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:25-26"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-072",
+  "type": "single_choice",
+  "reference": "Daniel 2:2; Daniel 2:27",
+  "question": "Las listas de especialistas de Daniel 2:2 y 2:27 son parecidas pero no idénticas. ¿Cuál opción reproduce ambas correctamente?",
+  "options": [
+    {"id": "A", "text": "2:2: magos, astrólogos, encantadores y caldeos; 2:27: sabios, astrólogos, magos y adivinos"},
+    {"id": "B", "text": "2:2: sabios, astrólogos, magos y adivinos; 2:27: magos, astrólogos, encantadores y caldeos"},
+    {"id": "C", "text": "2:2 y 2:27: magos, astrólogos, encantadores y caldeos"},
+    {"id": "D", "text": "2:2: magos, sabios, adivinos y caldeos; 2:27: astrólogos, encantadores, magos y sabios"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "A es la única opción que conserva ambas enumeraciones exactamente en sus lugares.",
+  "difficulty": 5,
+  "questionClass": ["TRUE_ELSEWHERE_WRONG_HERE", "CROSS_BLOCK_CONFUSION", "MINIMAL_PAIR_LITERAL"],
+  "supportingReferences": ["Daniel 2:2", "Daniel 2:27"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-073",
+  "type": "single_choice",
+  "reference": "Daniel 2:10; Daniel 2:27",
+  "question": "¿Cuál afirmación diferencia correctamente las enumeraciones profesionales de Daniel 2:10 y Daniel 2:27?",
+  "options": [
+    {"id": "A", "text": "2:10 menciona mago, astrólogo y caldeo; 2:27 menciona sabios, astrólogos, magos y adivinos"},
+    {"id": "B", "text": "2:10 menciona sabios, astrólogos, magos y adivinos; 2:27 menciona mago, astrólogo y caldeo"},
+    {"id": "C", "text": "Ambos mencionan exactamente magos, astrólogos y caldeos"},
+    {"id": "D", "text": "2:10 menciona encantadores y adivinos; 2:27 menciona príncipes y señores"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:10 termina su comparación con mago, astrólogo y caldeo; 2:27 usa una lista de cuatro grupos diferente.",
+  "difficulty": 5,
+  "questionClass": ["VERSE_LOCALIZATION", "TRUE_ELSEWHERE_WRONG_HERE", "CROSS_BLOCK_CONFUSION"],
+  "supportingReferences": ["Daniel 2:10", "Daniel 2:27"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-074",
+  "type": "single_choice",
+  "reference": "Daniel 2:11; Daniel 2:28",
+  "question": "¿Cuál contraste reproduce correctamente lo que dicen los caldeos en 2:11 y lo que dice Daniel en 2:28?",
+  "options": [
+    {"id": "A", "text": "Caldeos: solo los dioses cuya morada no está entre los hombres podrían declarar el asunto; Daniel: hay un Dios en los cielos que revela los misterios"},
+    {"id": "B", "text": "Caldeos: hay un Dios en los cielos; Daniel: los dioses no moran entre los hombres"},
+    {"id": "C", "text": "Caldeos: los sabios revelan lo profundo; Daniel: ningún dios puede revelar misterios"},
+    {"id": "D", "text": "Caldeos: el rey debía revelar el misterio; Daniel: Arioc revelaría el sueño"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "A mantiene el contenido y los hablantes de ambos pasajes.",
+  "difficulty": 5,
+  "questionClass": ["ACTOR_TRACKING", "TRUE_ELSEWHERE_WRONG_HERE", "PAIRED_DETAIL"],
+  "supportingReferences": ["Daniel 2:11", "Daniel 2:28"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-075",
+  "type": "single_choice",
+  "reference": "Daniel 2:17-18; Daniel 2:23",
+  "question": "Cuando Daniel dice en 2:23 «me has revelado lo que te pedimos» y «nos has dado a conocer el asunto del rey», ¿qué pasaje previo suministra el antecedente textual necesario para ese plural?",
+  "options": [
+    {"id": "A", "text": "La petición de los caldeos al rey en 2:7"},
+    {"id": "B", "text": "Daniel informa a Ananías, Misael y Azarías y ellos debían pedir misericordias sobre el misterio en 2:17-18"},
+    {"id": "C", "text": "Arioc lleva a Daniel ante el rey en 2:25"},
+    {"id": "D", "text": "El rey entrega dominio sobre las bestias en 2:38"}
+  ],
+  "correctOptionId": "B",
+  "explanation": "El plural de 2:23 se sostiene por la acción conjunta establecida en 2:17-18.",
+  "difficulty": 5,
+  "questionClass": ["ACTOR_TRACKING", "CONTINUITY_CHAIN", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:17-18", "Daniel 2:23"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "B", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TRUE_ELSEWHERE"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-076",
+  "type": "single_choice",
+  "reference": "Daniel 2:24; Daniel 2:48",
+  "question": "¿Cuál opción muestra correctamente dos situaciones muy distintas relacionadas con «los sabios de Babilonia»?",
+  "options": [
+    {"id": "A", "text": "2:24 Daniel pide que no los maten; 2:48 Daniel es hecho jefe supremo de todos ellos"},
+    {"id": "B", "text": "2:24 Daniel es hecho jefe de ellos; 2:48 Daniel pide que no los maten"},
+    {"id": "C", "text": "2:24 Arioc los hace gobernadores; 2:48 Daniel manda matarlos"},
+    {"id": "D", "text": "2:24 el rey los honra; 2:48 los busca para matarlos"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Daniel 2:24 contiene la petición de preservar sus vidas y 2:48 el nombramiento de Daniel como jefe supremo sobre ellos.",
+  "difficulty": 5,
+  "questionClass": ["CROSS_BLOCK_CONFUSION", "TRUE_ELSEWHERE_WRONG_HERE", "PAIRED_DETAIL"],
+  "supportingReferences": ["Daniel 2:24", "Daniel 2:48"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-077",
+  "type": "single_choice",
+  "reference": "Daniel 2:31; Daniel 2:46",
+  "question": "¿Cuál opción localiza correctamente dos detalles que podrían confundirse por su lenguaje visual?",
+  "options": [
+    {"id": "A", "text": "2:31 la imagen tenía aspecto terrible; 2:46 Nabucodonosor se postró sobre su rostro"},
+    {"id": "B", "text": "2:31 Nabucodonosor se postró sobre su rostro; 2:46 la imagen tenía aspecto terrible"},
+    {"id": "C", "text": "2:31 Daniel se humilló; 2:46 la piedra llenó toda la tierra"},
+    {"id": "D", "text": "2:31 la imagen se postró; 2:46 Daniel tuvo una visión de noche"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "El aspecto terrible corresponde a la imagen en 2:31; la postración sobre el rostro corresponde al rey en 2:46.",
+  "difficulty": 5,
+  "questionClass": ["CROSS_BLOCK_CONFUSION", "VERSE_LOCALIZATION", "ACTOR_TRACKING"],
+  "supportingReferences": ["Daniel 2:31", "Daniel 2:46"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-078",
+  "type": "single_choice",
+  "reference": "Daniel 2:1; Daniel 2:7; Daniel 2:39-40",
+  "question": "¿Cuál opción asigna correctamente cada número ordinal a su contexto?",
+  "options": [
+    {"id": "A", "text": "Segundo año: reinado de Nabucodonosor; segunda vez: respuesta de los caldeos; tercer reino: bronce; cuarto reino: fuerte como hierro"},
+    {"id": "B", "text": "Segundo año: reino de bronce; segunda vez: Daniel pide tiempo; tercer reino: hierro; cuarto reino: barro"},
+    {"id": "C", "text": "Segundo año: visión de Daniel; segunda vez: el rey se postra; tercer reino: plata; cuarto reino: bronce"},
+    {"id": "D", "text": "Segundo año: reinado de Nabucodonosor; segunda vez: respuesta del rey; tercer reino: hierro; cuarto reino: bronce"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "Los cuatro ordinales están correctamente localizados únicamente en A.",
+  "difficulty": 5,
+  "questionClass": ["NUMERIC_PRECISION", "CROSS_BLOCK_CONFUSION", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:1", "Daniel 2:7", "Daniel 2:39-40"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_EXACT"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-079",
+  "type": "single_choice",
+  "reference": "Daniel 2",
+  "question": "¿Cuál de las siguientes afirmaciones NO está correctamente localizada en el versículo indicado?",
+  "options": [
+    {"id": "A", "text": "Daniel 2:9 — el rey acusa a los caldeos de preparar una respuesta mentirosa y perversa"},
+    {"id": "B", "text": "Daniel 2:22 — Dios revela lo profundo y lo escondido"},
+    {"id": "C", "text": "Daniel 2:35 — la piedra se desprendió del monte sin que la cortara mano alguna"},
+    {"id": "D", "text": "Daniel 2:43 — se mezclarán por medio de alianzas humanas"}
+  ],
+  "correctOptionId": "C",
+  "explanation": "La mención explícita «del monte» aparece en 2:45, no en 2:35. Las demás afirmaciones sí están correctamente localizadas.",
+  "difficulty": 5,
+  "questionClass": ["NEGATIVE_PRECISION", "TRUE_ELSEWHERE_WRONG_HERE", "VERSE_LOCALIZATION"],
+  "supportingReferences": ["Daniel 2:9", "Daniel 2:22", "Daniel 2:35", "Daniel 2:43", "Daniel 2:45"],
+  "continuity_required": false,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "C", "classification": "TRUE_ELSEWHERE"},
+    {"optionId": "D", "classification": "TARGET_SEMANTIC"}
+  ],
+  "verified": true
+},
+{
+  "id": "DAN2-080",
+  "type": "single_choice",
+  "reference": "Daniel 2:44-49",
+  "question": "¿Cuál secuencia final conserva correctamente tanto los actores como el orden de los acontecimientos?",
+  "options": [
+    {"id": "A", "text": "Daniel anuncia el reino que Dios levantará → declara verdadero el sueño y fiel la interpretación → Nabucodonosor se postra y se humilla → reconoce al Dios de Daniel → engrandece a Daniel → Daniel solicita puestos para Sadrac, Mesac y Abed-nego"},
+    {"id": "B", "text": "Nabucodonosor se postra → Daniel anuncia el reino eterno → Arioc reconoce a Dios → Daniel es engrandecido → Sadrac interpreta el sueño"},
+    {"id": "C", "text": "Daniel solicita puestos para sus compañeros → el rey reconoce a Dios → Daniel explica la piedra → el rey se postra"},
+    {"id": "D", "text": "Daniel es hecho gobernador → explica el cuarto reino → el rey se humilla → Arioc pone a Sadrac, Mesac y Abed-nego sobre la provincia"}
+  ],
+  "correctOptionId": "A",
+  "explanation": "La opción A mantiene la progresión de Daniel 2:44-49 y atribuye cada acción al actor textual correcto.",
+  "difficulty": 5,
+  "questionClass": ["BEFORE_AFTER_SEQUENCE", "ACTOR_TRACKING", "CONTINUITY_CHAIN", "CROSS_BLOCK_CONFUSION"],
+  "supportingReferences": ["Daniel 2:44-49"],
+  "continuity_required": true,
+  "distractorAudit": [
+    {"optionId": "A", "classification": "TARGET_SEMANTIC"},
+    {"optionId": "B", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "C", "classification": "FALSE_FROM_TEXT"},
+    {"optionId": "D", "classification": "FALSE_FROM_TEXT"}
+  ],
+  "verified": true
+}
+]
+}

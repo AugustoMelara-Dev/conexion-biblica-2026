@@ -1,8 +1,15 @@
-__pycache__/
-*.py[cod]
-.venv/
+.vercel
+.env*
 node_modules/
-.vercel/
-test-output/
-.DS_Store
+dist/
+coverage/
+playwright-report/
+test-results/
+
+# Copias históricas y artefactos locales; la aplicación vigente vive en la raíz.
+deploy-flat-*/
+vite-app/
+
 *.log
+.DS_Store
+Thumbs.db
