@@ -32,6 +32,13 @@ export const BANK_DEFINITIONS: Record<BankProfileId, BankDefinition> = {
     readOnly: true,
     version: "CB2026-PREP-V3",
   },
+  "curated-v4": {
+    id: "curated-v4",
+    label: "V4 — Banco Curado",
+    description: "Cobertura amplia revisada",
+    readOnly: true,
+    version: "CB2026-CURATED-V4",
+  },
 }
 
 export function getQuestionKey(question: Pick<Question, "bankId" | "id">) {
@@ -39,7 +46,7 @@ export function getQuestionKey(question: Pick<Question, "bankId" | "id">) {
 }
 
 export function questionBelongsToSelection(question: Question, selection: BankSelection) {
-  if (selection === "mixed") return true
+  if (selection === "mixed") return question.bankProfileId !== "master-v2"
   if (selection === "prep-v3") return question.bankProfileId === "prep-v3"
   return (question.bankProfileId ?? "legacy-v1") === selection
 }

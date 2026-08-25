@@ -17,7 +17,7 @@ export type QuestionType = (typeof SUPPORTED_QUESTION_TYPES)[number]
 export type SourceWork = "Daniel" | "Profetas y Reyes"
 
 export type QuestionOption = { id: string; text: string }
-export type BankProfileId = "legacy-v1" | "master-v2" | "prep-v3"
+export type BankProfileId = "legacy-v1" | "master-v2" | "prep-v3" | "curated-v4"
 export type BankSelection = BankProfileId | "mixed"
 export type DifficultyBand = "BASIC" | "MEDIUM" | "HARD" | "EXPERT" | "UNRATED"
 export type AnswerMode = "option_id" | "canonical_text"
