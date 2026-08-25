@@ -1,4 +1,4 @@
-const CACHE_NAME = "conexion-biblica-shell-v4"
+const CACHE_NAME = "conexion-biblica-shell-v5"
 const SHELL = ["/", "/index.html", "/manifest.webmanifest", "/banks/manifest.json"]
 
 self.addEventListener("install", (event) => {
@@ -26,6 +26,21 @@ self.addEventListener("fetch", (event) => {
         }
         return response
       }).catch(() => caches.match(event.request).then((cached) => cached ?? caches.match("/index.html"))),
+    )
+    return
+  }
+  if (requestUrl.pathname.startsWith("/banks/")) {
+    event.respondWith(
+      fetch(event.request).then(async (response) => {
+        if (!response.ok) return (await caches.match(event.request)) ?? response
+        const copy = response.clone()
+        void caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy))
+        return response
+      }).catch(async (loadError) => {
+        const cached = await caches.match(event.request)
+        if (cached) return cached
+        throw loadError
+      }),
     )
     return
   }
