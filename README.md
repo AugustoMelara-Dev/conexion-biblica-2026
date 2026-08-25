@@ -18,12 +18,27 @@ npm run preview
 
 La aplicación guarda bancos, progreso, sesiones y reportes en IndexedDB. No requiere login, no usa APIs externas, telemetría, analytics ni servicios cloud.
 
-## V1, V2, V3 y Mixto
+## V1, V2, V3, V4 y Mixto
 
 - **V1 — Clásica** carga los bancos declarados en `public/banks/manifest.json` y mantiene sus IDs y progreso existentes.
 - **V2 — Banco Maestro** carga `Banco_Maestro_CB2026.json` como asset local canónico de solo lectura. Su adaptador valida 3,558 IDs únicos: 2,211 de Daniel, 1,347 de Profetas y Reyes, 888 históricas y 2,670 generadas.
 - **V3 — Preparación 4 días** contiene un banco curado de 500 preguntas por familias: 28 por cada capítulo de Daniel 1–12, 27 por cada capítulo de Profetas y Reyes 39–44 y 2 integradoras. Incluye explicación, referencia, trampa y pista de memoria.
-- **Mixto** crea un pool virtual con V1, V2 y V3. No copia preguntas ni crea progreso duplicado.
+- **V4 — Banco Curado** ofrece cobertura amplia a partir del Banco Maestro, con preguntas aprobadas o reparadas y trazabilidad de cada decisión de curación.
+- **Mixto curado** crea un pool virtual con V1, V3 y V4; V2 queda excluido por diseño. No copia preguntas ni crea progreso duplicado.
+
+### Perfiles de banco
+
+- **V4 — Banco Curado:** cobertura amplia recomendada.
+- **V3 — Preparación intensiva de cuatro días.**
+- **V2 — Fuente técnica auditable:** no participa en Mixto curado.
+- **Mixto curado:** combina V1, V3 y V4 sin iniciar preguntas V2.
+
+Regenerar y auditar V4:
+
+```bash
+npm run build:v4
+npm run audit:v4
+```
 
 La identidad persistente es `bankId:questionId`. El adaptador V2 conserva dificultad original, banda derivada, respuesta canónica, `FULL_FACT_IDS` y toda la metadata del objeto fuente. Para actualizar V2, reemplaza únicamente el JSON raíz por una revisión válida y vuelve a compilar; el arranque reconcilia los mismos IDs sin borrar progreso.
 
@@ -70,6 +85,7 @@ npm run test
 npm run lint
 npm run typecheck
 npm run build
+npm run test:e2e
 ```
 
 ## Despliegue en Vercel
