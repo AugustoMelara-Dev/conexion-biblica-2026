@@ -3,7 +3,7 @@ import { mkdtemp, readdir, readFile as readTempFile, rename as renameFile, rm, u
 import { join } from "node:path"
 import { tmpdir } from "node:os"
 import { describe, expect, it } from "vitest"
-import { buildCuratedV4, writePayloadsAtomically } from "../build-curated-v4.mjs"
+import { auditCuratedV4, buildCuratedV4, writePayloadsAtomically } from "../build-curated-v4.mjs"
 
 const master = JSON.parse(await readFile("Banco_Maestro_CB2026.json", "utf8"))
 const result = buildCuratedV4(master)
@@ -11,9 +11,9 @@ const result = buildCuratedV4(master)
 describe("integración del Banco Curado V4", () => {
   it("clasifica cada pregunta maestra exactamente una vez", () => {
     expect(result.audit.summary.total).toBe(3558)
-    expect(result.audit.summary.approved).toBe(2002)
-    expect(result.audit.summary.repaired).toBe(1511)
-    expect(result.audit.summary.rejected).toBe(45)
+    expect(result.audit.summary.approved).toBe(1803)
+    expect(result.audit.summary.repaired).toBe(1417)
+    expect(result.audit.summary.rejected).toBe(338)
     expect(result.audit.countsByIssue.VISIBLE_TEXT_QUOTES).toBe(22)
     expect(result.audit.summary.approved + result.audit.summary.repaired + result.audit.summary.rejected).toBe(3558)
     expect(result.audit.summary.blockers).toBe(0)
@@ -27,10 +27,69 @@ describe("integración del Banco Curado V4", () => {
     expect(result.banks.daniel.bank.profileId).toBe("curated-v4")
     expect(result.banks.prophets.bank.profileId).toBe("curated-v4")
     const questions = [...result.banks.daniel.questions, ...result.banks.prophets.questions]
-    expect(questions).toHaveLength(3513)
+    expect(questions).toHaveLength(3220)
     expect(new Set(questions.map((q) => q.id)).size).toBe(questions.length)
     expect(questions.every((q) => ["APPROVED", "REPAIRED"].includes(q.metadata.curationStatus))).toBe(true)
     expect(questions.every((q) => q.metadata.masterQuestionId && q.source.reference && Number.isInteger(q.source.chapter))).toBe(true)
+  })
+
+  it("aplica el ruling a prompts exactos y conserva una decisión por entrada", () => {
+    const questions = [...result.banks.daniel.questions, ...result.banks.prophets.questions]
+    const normalizePrompt = (value) => String(value ?? "").normalize("NFKC").replace(/\s+/gu, " ").trim()
+    const prompts = questions.map((question) => normalizePrompt(question.question))
+
+    expect(new Set(prompts).size).toBe(prompts.length)
+    expect(result.audit.decisions).toHaveLength(3558)
+    expect(result.audit.decisions.some((decision) => decision.issues.includes("DUPLICATE_PROMPT_NON_CANONICAL"))).toBe(true)
+    expect(result.audit.decisions.some((decision) => decision.issues.includes("DUPLICATE_PROMPT_CONFLICT"))).toBe(true)
+  })
+
+  it("rechaza todo un grupo cuando los prompts exactos tienen respuestas distintas", () => {
+    const conflictQuestions = master.questions.filter((question) => question.pregunta === "¿Cómo se puso el rey?").slice(0, 2)
+    const conflictResult = buildCuratedV4({ questions: structuredClone(conflictQuestions) })
+
+    expect(conflictResult.audit.summary.rejected).toBe(2)
+    expect(conflictResult.audit.decisions.every((decision) => decision.status === "REJECTED")).toBe(true)
+    expect(conflictResult.audit.decisions.every((decision) => decision.issues.includes("DUPLICATE_PROMPT_CONFLICT"))).toBe(true)
+  })
+
+  it("conserva opciones y modo de respuesta original y curado", () => {
+    const repaired = result.audit.decisions.find((decision) => decision.status === "REPAIRED")
+
+    expect(repaired).toMatchObject({
+      originalOptions: expect.any(Object),
+      curatedOptions: expect.any(Array),
+      originalAnswerMode: expect.any(String),
+      curatedAnswerMode: expect.any(String),
+      curatedAnswerText: expect.any(String),
+    })
+  })
+
+  it("conserva la explicación original de una pregunta APPROVED", () => {
+    const raw = master.questions.find((question) => question.QUESTION_ID === "GEN-000001")
+    const decision = result.audit.decisions.find((item) => item.masterQuestionId === raw?.QUESTION_ID)
+
+    expect(decision?.status).toBe("APPROVED")
+    expect(decision?.curatedExplanation).toBe(raw?.explicacion)
+  })
+
+  it("audita duplicados exactos introducidos en un banco", () => {
+    const banks = structuredClone(result.banks)
+    banks.daniel.questions[1] = { ...banks.daniel.questions[1], question: banks.daniel.questions[0].question }
+
+    const audit = auditCuratedV4(banks, master, result.banks)
+
+    expect(audit.summary.blockers).toBeGreaterThan(0)
+    expect(audit.findings.some((finding) => finding.code === "DUPLICATE_EXACT_PROMPT")).toBe(true)
+  })
+
+  it("audita que el resumen de curación de cada banco coincida con sus decisiones", () => {
+    const banks = structuredClone(result.banks)
+    banks.daniel.bank.curationSummary.approved += 1
+
+    const audit = auditCuratedV4(banks, master, result.banks)
+
+    expect(audit.findings.some((finding) => finding.code === "CURATION_SUMMARY_MISMATCH")).toBe(true)
   })
 
   it("no deja lenguaje técnico ni correcciones pendientes", () => {

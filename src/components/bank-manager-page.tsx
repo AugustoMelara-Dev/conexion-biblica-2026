@@ -29,6 +29,11 @@ type CurationSummary = {
   rejected: number
 }
 
+type CurationMetadata = {
+  generatedAt: string | null
+  masterFingerprint: string | null
+}
+
 function isRecord(value: unknown): value is Record<string, unknown> {
   return Boolean(value) && typeof value === "object" && !Array.isArray(value)
 }
@@ -44,6 +49,17 @@ function getCurationSummary(raw: Record<string, unknown> | undefined): CurationS
   )
     return null
   return { approved, repaired, rejected }
+}
+
+function getCurationMetadata(raw: Record<string, unknown> | undefined): CurationMetadata | null {
+  if (!raw || !isRecord(raw.bank)) return null
+  const generatedAt = typeof raw.bank.generatedAt === "string" && Number.isFinite(Date.parse(raw.bank.generatedAt))
+    ? raw.bank.generatedAt
+    : null
+  const masterFingerprint = typeof raw.bank.masterFingerprint === "string" && raw.bank.masterFingerprint.length > 0
+    ? raw.bank.masterFingerprint
+    : null
+  return generatedAt || masterFingerprint ? { generatedAt, masterFingerprint } : null
 }
 
 export function BankManagerPage() {
@@ -322,6 +338,10 @@ export function BankManagerPage() {
               bank.bankProfileId === "curated-v4"
                 ? getCurationSummary(bank.raw)
                 : null
+            const curationMetadata =
+              bank.bankProfileId === "curated-v4"
+                ? getCurationMetadata(bank.raw)
+                : null
             const isTechnicalBank =
               bank.bankId === "master-v2" || bank.bankProfileId === "master-v2"
             const readOnly =
@@ -357,6 +377,12 @@ export function BankManagerPage() {
                       <span>{curationSummary.approved} aprobadas</span>
                       <span>{curationSummary.repaired} reparadas</span>
                       <span>{curationSummary.rejected} rechazadas</span>
+                    </div>
+                  ) : null}
+                  {curationMetadata ? (
+                    <div aria-label="Metadatos de generación V4" className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">
+                      {curationMetadata.generatedAt ? <span>Generado {formatDate(Date.parse(curationMetadata.generatedAt))}</span> : null}
+                      {curationMetadata.masterFingerprint ? <span title={curationMetadata.masterFingerprint}>Maestro SHA-256 {curationMetadata.masterFingerprint.slice(0, 12)}…</span> : null}
                     </div>
                   ) : null}
                   {isTechnicalBank ? (

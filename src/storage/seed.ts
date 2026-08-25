@@ -14,6 +14,10 @@ function hashString(value: string) {
   return (hash >>> 0).toString(16)
 }
 
+export function getBankIdForSourceFileName(sourceFileName: string) {
+  return `bank-${slug(sourceFileName)}`
+}
+
 function resolveBankProfileId(value: unknown): BankProfileId {
   switch (value) {
     case "legacy-v1":
@@ -26,6 +30,27 @@ function resolveBankProfileId(value: unknown): BankProfileId {
   }
 }
 
+export function getRawBankProfileId(raw: Record<string, unknown>): BankProfileId {
+  const metadata = raw.bank && typeof raw.bank === "object" && !Array.isArray(raw.bank)
+    ? raw.bank as Record<string, unknown>
+    : {}
+  return resolveBankProfileId(metadata.profileId)
+}
+
+export function isIntegratedBankProfile(value: unknown): value is "master-v2" | "prep-v3" | "curated-v4" {
+  return value === "master-v2" || value === "prep-v3" || value === "curated-v4"
+}
+
+export function isGenericBankImportAllowed(
+  incomingProfileId: unknown,
+  replaceBankId?: string,
+  replaceBankProfileId?: unknown,
+) {
+  return !isIntegratedBankProfile(incomingProfileId)
+    && replaceBankId !== "master-v2"
+    && !isIntegratedBankProfile(replaceBankProfileId)
+}
+
 export function createBankFromRaw(raw: Record<string, unknown>, sourceFileName: string, importedAt = Date.now()): Bank {
   const validation = validateBank(raw, sourceFileName)
   if (!validation.valid) throw new Error(validation.errors.map((error) => `${error.path}: ${error.message}`).join("\n"))
@@ -34,8 +59,8 @@ export function createBankFromRaw(raw: Record<string, unknown>, sourceFileName: 
   const firstSource = rawQuestions[0].source as Record<string, unknown>
   const sourceWork = String(metadata.sourceWork ?? firstSource.work) as SourceWork
   const sourceVersion = String(metadata.sourceVersion ?? firstSource.version)
-  const bankId = `bank-${slug(sourceFileName)}`
-  const bankProfileId = resolveBankProfileId(metadata.profileId)
+  const bankId = getBankIdForSourceFileName(sourceFileName)
+  const bankProfileId = getRawBankProfileId(raw)
   const questions = rawQuestions.map((question) => ({
     ...question,
     bankId,

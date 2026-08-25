@@ -14,12 +14,13 @@ import {
   validateBackupPayload,
 } from "@/domain/backup"
 import { adaptMasterBank } from "@/domain/master-bank"
-import { questionBelongsToSelection } from "@/domain/banks"
+import { filterReportsForSelection, filterSessionsForSelection, questionBelongsToSelection } from "@/domain/banks"
 import { validateBank } from "@/domain/validation"
 import type {
   ActiveRound,
   AnswerValue,
   Bank,
+  BankProfileId,
   BackupPayload,
   BankSelection,
   CoverageCycle,
@@ -32,7 +33,7 @@ import type {
 } from "@/domain/types"
 import { buildStatistics, type Statistics } from "@/lib/statistics"
 import { openAppDb, createRepositories } from "@/storage/db"
-import { createBankFromRaw, getBankQuestionKey, shouldReplaceBundledBank } from "@/storage/seed"
+import { createBankFromRaw, getBankIdForSourceFileName, getBankQuestionKey, getRawBankProfileId, isGenericBankImportAllowed, isIntegratedBankProfile, shouldReplaceBundledBank } from "@/storage/seed"
 
 type RepositorySet = ReturnType<typeof createRepositories>
 type NavKey =
@@ -104,9 +105,10 @@ const defaultPreferences: Preferences = {
   theme: "system",
   lastMode: "training",
   reducedMotion: false,
-  lastBankSelection: "curated-v4",
+  lastBankSelection: "prep-v3",
 }
 const AppContext = createContext<AppContextValue | undefined>(undefined)
+const PREFERENCES_STORAGE_KEY = "conexion-biblica-preferences"
 
 function isBankSelection(value: unknown): value is BankSelection {
   return value === "legacy-v1" || value === "master-v2" || value === "prep-v3" || value === "curated-v4" || value === "mixed"
@@ -122,9 +124,9 @@ function normalizePreferences(value: Partial<Preferences>): Preferences {
   }
 }
 
-function getPreferences(): Preferences {
+export function getPreferences(): Preferences {
   try {
-    const raw = localStorage.getItem("conexion-biblica-preferences")
+    const raw = localStorage.getItem(PREFERENCES_STORAGE_KEY)
     if (!raw) return defaultPreferences
     const parsed = JSON.parse(raw) as unknown
     if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return defaultPreferences
@@ -132,6 +134,35 @@ function getPreferences(): Preferences {
   } catch {
     return defaultPreferences
   }
+}
+
+export function resolveAvailableBankSelection(selection: BankSelection, availableProfiles: Iterable<BankProfileId>): BankSelection {
+  const available = new Set(availableProfiles)
+  if (selection === "mixed") {
+    if ((["legacy-v1", "prep-v3", "curated-v4"] as const).some((profile) => available.has(profile))) return selection
+  } else if (available.has(selection)) {
+    return selection
+  }
+  for (const fallback of ["legacy-v1", "prep-v3", "master-v2"] as const) {
+    if (available.has(fallback)) return fallback
+  }
+  return selection
+}
+
+export function resolveInitialBankSelection({
+  storedSelection,
+  hasStoredPreferences,
+  hadExistingBanks,
+  availableProfiles,
+}: {
+  storedSelection: BankSelection
+  hasStoredPreferences: boolean
+  hadExistingBanks: boolean
+  availableProfiles: Iterable<BankProfileId>
+}): BankSelection {
+  const available = new Set(availableProfiles)
+  if (!hasStoredPreferences && !hadExistingBanks && available.has("curated-v4")) return "curated-v4"
+  return resolveAvailableBankSelection(storedSelection, available)
 }
 
 async function readBundledBank(fileName: string) {
@@ -194,6 +225,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
       const nextRepositories = createRepositories(db)
       setRepositories(nextRepositories)
       let existingBanks = await nextRepositories.banks.list()
+      const hadStoredPreferences = typeof localStorage !== "undefined" && localStorage.getItem(PREFERENCES_STORAGE_KEY) !== null
+      const hadExistingBanks = existingBanks.length > 0
       if (seed) {
         try {
           const manifestResponse = await fetch("/banks/manifest.json")
@@ -258,6 +291,19 @@ export function AppProvider({ children }: { children: ReactNode }) {
         nextRepositories.coverage.list(),
         nextRepositories.activeRound.get(),
       ])
+      const availableProfiles = new Set<BankProfileId>(nextQuestions.map((question) => question.bankProfileId ?? "legacy-v1"))
+      const storedSelection = getPreferences().lastBankSelection
+      const desiredSelection = resolveInitialBankSelection({
+        storedSelection,
+        hasStoredPreferences: hadStoredPreferences,
+        hadExistingBanks,
+        availableProfiles,
+      })
+      if (desiredSelection !== storedSelection) {
+        const updatedPreferences = { ...getPreferences(), lastBankSelection: desiredSelection }
+        setPreferencesState(updatedPreferences)
+        localStorage.setItem(PREFERENCES_STORAGE_KEY, JSON.stringify(updatedPreferences))
+      }
       setBanks(existingBanks)
       setQuestions(nextQuestions)
       setProgress(new Map(nextProgress.map((item) => [item.questionKey, item])))
@@ -291,6 +337,25 @@ export function AppProvider({ children }: { children: ReactNode }) {
       for (const file of files) {
         try {
           const raw = JSON.parse(await file.text()) as Record<string, unknown>
+          const rawProfileId = getRawBankProfileId(raw)
+          const incomingBankId = getBankIdForSourceFileName(file.name)
+          const replacementId = replaceBankId && files.length === 1 ? replaceBankId : incomingBankId
+          const replacementProfileId = banks.find((bank) => bank.bankId === replacementId)?.bankProfileId
+          if (!isGenericBankImportAllowed(rawProfileId, replacementId, replacementProfileId)) {
+            outcomes.push({
+              sourceName: file.name,
+              valid: false,
+              questionCount: Array.isArray(raw.questions) ? raw.questions.length : 0,
+              errors: [{
+                code: "INTEGRATED_PROFILE_IMPORT_BLOCKED",
+                path: isIntegratedBankProfile(rawProfileId) ? "$.bank.profileId" : "$.replaceBankId",
+                message: isIntegratedBankProfile(rawProfileId)
+                  ? "Los perfiles integrados V2, V3 y V4 sólo pueden cargarse desde el paquete de la aplicación."
+                  : "No se puede sobrescribir un banco integrado.",
+              }],
+            })
+            continue
+          }
           const validation = validateBank(raw, file.name)
           if (!validation.valid) {
             outcomes.push({
@@ -342,7 +407,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       await refresh()
       return outcomes
     },
-    [refresh, repositories]
+    [banks, refresh, repositories]
   )
 
   const removeBank = useCallback(
@@ -560,10 +625,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const setPreferences = useCallback((next: Partial<Preferences>) => {
     setPreferencesState((current) => {
       const updated = { ...current, ...next }
-      localStorage.setItem(
-        "conexion-biblica-preferences",
-        JSON.stringify(updated)
-      )
+      localStorage.setItem(PREFERENCES_STORAGE_KEY, JSON.stringify(updated))
       return updated
     })
   }, [])
@@ -600,32 +662,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }),
     [questions]
   )
-  const scopedQuestionKeys = useMemo(
-    () =>
-      new Set(
-        scopedQuestions.map(
-          (question) => `${question.bankId ?? "local"}:${question.id}`
-        )
-      ),
-    [scopedQuestions]
-  )
   const scopedSessions = useMemo(
-    () =>
-      bankSelection === "mixed"
-        ? sessions
-        : sessions.filter((session) =>
-            session.questionKeys.some((key) => scopedQuestionKeys.has(key))
-          ),
-    [bankSelection, scopedQuestionKeys, sessions]
+    () => filterSessionsForSelection(sessions, questions, bankSelection),
+    [bankSelection, questions, sessions]
   )
   const scopedReports = useMemo(
-    () =>
-      bankSelection === "mixed"
-        ? reports
-        : reports.filter((report) =>
-            scopedQuestionKeys.has(report.questionKey)
-          ),
-    [bankSelection, reports, scopedQuestionKeys]
+    () => filterReportsForSelection(reports, questions, bankSelection),
+    [bankSelection, questions, reports]
   )
   const statistics = useMemo(
     () => buildStatistics(scopedQuestions, progress),

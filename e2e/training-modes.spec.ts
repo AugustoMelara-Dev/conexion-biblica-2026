@@ -132,9 +132,15 @@ test("V4 es recomendado en una instalación nueva", async ({ page }) => {
   await expect(page.getByRole("radio", { name: /V4 — Banco Curado/ })).toBeChecked()
   await page.getByRole("button", { name: "Banco de preguntas", exact: true }).click()
   await expect(page.getByRole("heading", { name: "Banco de preguntas" })).toBeVisible()
-  await expect(page.getByText(/aprobadas/).first()).toBeVisible()
-  await expect(page.getByText(/reparadas/).first()).toBeVisible()
-  await expect(page.getByText(/rechazadas/).first()).toBeVisible()
+  const summaries = page.getByLabel("Resumen de curación V4")
+  await expect(summaries).toHaveCount(2)
+  for (let index = 0; index < 2; index += 1) {
+    const summary = summaries.nth(index)
+    await expect(summary).toBeVisible()
+    await expect(summary.getByText(/aprobadas/)).toBeVisible()
+    await expect(summary.getByText(/reparadas/)).toBeVisible()
+    await expect(summary.getByText(/rechazadas/)).toBeVisible()
+  }
 })
 
 test("Mixto curado nunca inicia una pregunta V2", async ({ page }) => {
@@ -143,4 +149,15 @@ test("Mixto curado nunca inicia una pregunta V2", async ({ page }) => {
     await expectCuratedMixedProfile(page)
     await answerAndAdvance(page, index === 24)
   }
+})
+
+test("Revisar preguntas conserva la etiqueta V4 de un reporte", async ({ page }) => {
+  await startLearnRound(page)
+  await page.getByRole("button", { name: "Reportar" }).click()
+  await page.getByRole("textbox", { name: "Motivo del reporte" }).fill("Verificación E2E")
+  await page.getByRole("button", { name: "Guardar reporte" }).click()
+  await page.getByRole("button", { name: "Salir" }).click()
+  await page.getByRole("button", { name: /Revisar preguntas/ }).click()
+  await expect(page.getByRole("heading", { name: "Revisar preguntas" })).toBeVisible()
+  await expect(page.getByText("V4", { exact: true })).toBeVisible()
 })

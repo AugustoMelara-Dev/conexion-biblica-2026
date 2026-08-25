@@ -51,10 +51,11 @@ export function repairPrompt(prompt) {
   return repairVisibleText(naturalizePrompt(prompt))
 }
 
-export function repairExplanation(raw) {
+export function repairExplanation(raw, decision) {
   const source = asText(raw?.fuente).trim()
   const factSupport = asText(raw?.fact_support).trim()
   const explanation = asText(raw?.explicacion).replace(/\s+/gu, " ").trim()
+  if (decision?.status === "APPROVED" && asText(raw?.explicacion)) return asText(raw.explicacion)
   if (/pregunta histórica|fase\s*[1-4]|cobertura auditada/iu.test(explanation)) return `La respuesta se confirma en ${source}.`
   if (factSupport) return `Dato verificado en ${source}: ${trimFactSupport(factSupport)}.`
   return explanation || `La respuesta se confirma en ${source}.`
@@ -68,7 +69,8 @@ export function curateMasterQuestion(raw, decision) {
   const question = repairPrompt(raw.pregunta)
   const canonicalText = answer.mode === "canonical_text" ? repairVisibleText(answer.text) : null
   const options = visibleOptions(raw, answer, canonicalText)
-  const explanation = repairVisibleText(repairExplanation(raw))
+  const explanationSource = repairExplanation(raw, decision)
+  const explanation = decision.status === "APPROVED" ? explanationSource : repairVisibleText(explanationSource)
   const memoryCue = repairVisibleText(`Ancla ${raw.fuente}: ${String(raw.fact_support || canonicalText || answer.text).replace(/[.。]+$/gu, "")}.`)
   if (question == null || options == null || explanation == null || memoryCue == null || (answer.mode === "canonical_text" && canonicalText == null)) return null
   return {

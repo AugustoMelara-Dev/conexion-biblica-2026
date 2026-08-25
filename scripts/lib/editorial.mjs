@@ -99,5 +99,5 @@ export function naturalizePrompt(prompt) {
   const artificial = /^¿Qué dato completa correctamente (?:esta segunda formulación de alto riesgo|según el hecho)\?\s*/iu.exec(value)
   if (!artificial) return balanceOrphanOuterQuotes(value)
   const clause = unwrapArtificialClause(value.slice(artificial[0].length).trim())
-  return `Completa la afirmación: ${clause}${/[.!?…]$/u.test(clause) ? "" : "."}`
+  return `Completa la afirmación: ${clause}${/[.!?…;]$/u.test(clause) ? "" : "."}`
 }

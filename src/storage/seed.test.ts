@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs"
 import { join } from "node:path"
 import { describe, expect, it } from "vitest"
-import { createBankFromRaw, shouldReplaceBundledBank } from "@/storage/seed"
+import { createBankFromRaw, getBankIdForSourceFileName, getRawBankProfileId, isGenericBankImportAllowed, isIntegratedBankProfile, shouldReplaceBundledBank } from "@/storage/seed"
 
 const v4Fixture = JSON.parse(
   readFileSync(join(process.cwd(), "public", "banks", "v4_daniel.json"), "utf8"),
@@ -46,5 +46,17 @@ describe("normalización de bancos importados", () => {
     expect(shouldReplaceBundledBank(undefined, { fingerprint: "new" })).toBe(true)
     expect(shouldReplaceBundledBank({ fingerprint: "old" }, { fingerprint: "new" })).toBe(true)
     expect(shouldReplaceBundledBank({ fingerprint: "same" }, { fingerprint: "same" })).toBe(false)
+  })
+
+  it("identifica perfiles integrados para bloquear importaciones genéricas", () => {
+    expect(getRawBankProfileId(v4Fixture)).toBe("curated-v4")
+    expect(isIntegratedBankProfile("master-v2")).toBe(true)
+    expect(isIntegratedBankProfile("prep-v3")).toBe(true)
+    expect(isIntegratedBankProfile("curated-v4")).toBe(true)
+    expect(isIntegratedBankProfile("legacy-v1")).toBe(false)
+    expect(isGenericBankImportAllowed("legacy-v1")).toBe(true)
+    expect(isGenericBankImportAllowed("curated-v4")).toBe(false)
+    expect(isGenericBankImportAllowed("legacy-v1", "bank-v4", "curated-v4")).toBe(false)
+    expect(getBankIdForSourceFileName("v4_daniel.json")).toBe("bank-v4-daniel-json")
   })
 })

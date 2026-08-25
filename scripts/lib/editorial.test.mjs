@@ -33,6 +33,12 @@ describe("edición de variantes V3", () => {
     expect(naturalizePrompt(original)).toBe("Completa la afirmación: «Daniel llamó»;")
   })
 
+  it("no duplica el punto cuando el enunciado artificial termina en punto y coma", () => {
+    const original = "¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel llamó;"
+
+    expect(naturalizePrompt(original)).toBe("Completa la afirmación: Daniel llamó;")
+  })
+
   it("preserva una cita anidada cuando su dos puntos no es un encabezado exterior", () => {
     const original = "¿Qué opción completa correctamente la afirmación? «Dijo en su corazón: «__________»»."
 

@@ -104,6 +104,14 @@ describe("adaptador de preguntas curadas V4", () => {
     expect(repairExplanation(raw)).toBe("Dato verificado en Daniel 1:8, RVR95: Daniel propuso no contaminarse.")
   })
 
+  it("conserva la explicación original cuando la decisión es APPROVED", () => {
+    const raw = { ...base, explicacion: "Daniel tomó una decisión firme." }
+    const decision = classifyMasterQuestion(raw)
+
+    expect(decision.status).toBe("APPROVED")
+    expect(curateMasterQuestion(raw, decision)?.explanation).toBe(raw.explicacion)
+  })
+
   it("repara una comilla visible huérfana sin inventar palabras", () => {
     expect(repairVisibleText("dijo a Daniel: «Anda, Daniel")).toBe("dijo a Daniel: Anda, Daniel")
     expect(repairVisibleText("dios», en singular")).toBe("dios, en singular")

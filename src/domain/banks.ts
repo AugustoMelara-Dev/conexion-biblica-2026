@@ -1,4 +1,4 @@
-import type { BankProfileId, BankSelection, DifficultyBand, Question } from "@/domain/types"
+import type { BankProfileId, BankSelection, DifficultyBand, Question, QuestionReport, Session } from "@/domain/types"
 
 export type BankDefinition = {
   id: BankProfileId
@@ -53,6 +53,29 @@ export function questionBelongsToSelection(question: Question, selection: BankSe
 
 export function filterQuestionsForSelection(questions: Question[], selection: BankSelection) {
   return questions.filter((question) => questionBelongsToSelection(question, selection))
+}
+
+function questionKeysForSelection(questions: Question[], selection: BankSelection) {
+  return new Set(filterQuestionsForSelection(questions, selection).map(getQuestionKey))
+}
+
+export function filterSessionsForSelection(sessions: Session[], questions: Question[], selection: BankSelection) {
+  const allowedKeys = questionKeysForSelection(questions, selection)
+  return sessions.flatMap((session) => {
+    const questionKeys = session.questionKeys.filter((key) => allowedKeys.has(key))
+    if (questionKeys.length === 0) return []
+    if (questionKeys.length === session.questionKeys.length) return [session]
+    return [{
+      ...session,
+      questionKeys,
+      answers: session.answers.filter((answer) => allowedKeys.has(answer.questionKey)),
+    }]
+  })
+}
+
+export function filterReportsForSelection(reports: QuestionReport[], questions: Question[], selection: BankSelection) {
+  const allowedKeys = questionKeysForSelection(questions, selection)
+  return reports.filter((report) => allowedKeys.has(report.questionKey))
 }
 
 export function normalizedDifficulty(question: Question): DifficultyBand {

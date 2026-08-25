@@ -1,14 +1,15 @@
 # Auditoría del Banco Curado V4
 
-Generado: 2026-08-25T06:56:30.800Z
+Generado: 2026-08-25T17:29:37.514Z
 Huella SHA-256 del Banco Maestro: `b08ea1efb154a7f9a520e1cc4433cbd18b81e16f37e44cf474dfa3808323a078`
 
 ## Resumen
 
 - Total analizado: 3558
-- APPROVED: 2002
-- REPAIRED: 1511
-- REJECTED: 45
+- Decisiones auditables: 3558
+- APPROVED: 1803
+- REPAIRED: 1417
+- REJECTED: 338
 - Bloqueadores: 0
 
 ## Conteo por código
@@ -16,6 +17,8 @@ Huella SHA-256 del Banco Maestro: `b08ea1efb154a7f9a520e1cc4433cbd18b81e16f37e44
 | Código | Preguntas |
 | --- | ---: |
 | ARTIFICIAL_PROMPT | 657 |
+| DUPLICATE_PROMPT_CONFLICT | 208 |
+| DUPLICATE_PROMPT_NON_CANONICAL | 85 |
 | EDITORIAL_PREFIX | 44 |
 | PROCESS_EXPLANATION | 843 |
 | SHORT_ANSWER_TYPE | 667 |
@@ -350,12 +353,40 @@ Huella SHA-256 del Banco Maestro: `b08ea1efb154a7f9a520e1cc4433cbd18b81e16f37e44
 - Pregunta original: ¿Dónde estaba Daniel?
 - Respuesta original: En la corte del rey.
 
+### HIST-1163 · PROCESS_EXPLANATION, SHORT_ANSWER_TYPE, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 3:19, RVR95
+- Capítulo: 3
+- Pregunta original: ¿Cómo se puso el rey?
+- Respuesta original: Se llenó de ira y cambió el aspecto de su rostro contra Sadrac, Mesac y Abed-nego.
+
 ### HIST-1167 · UNRESOLVED_ANSWER
 
 - Fuente: Daniel 3:21, RVR95
 - Capítulo: 3
 - Pregunta original: ¿Cómo fueron echados al horno?
 - Respuesta original: Atados con sus mantos, calzados, turbantes y vestidos.
+
+### HIST-1180 · PROCESS_EXPLANATION, SHORT_ANSWER_TYPE, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 3:29, RVR95
+- Capítulo: 3
+- Pregunta original: ¿Qué decreto dio el rey?
+- Respuesta original: Que todo pueblo, nación o lengua que dijera blasfemia contra el Dios de Sadrac, Mesac y Abed-nego fuera descuartizado.
+
+### HIST-1188 · PROCESS_EXPLANATION, SHORT_ANSWER_TYPE, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 4:3, RVR95
+- Capítulo: 4
+- Pregunta original: ¿Cómo es su reino?
+- Respuesta original: Reino sempiterno.
+
+### HIST-1197 · PROCESS_EXPLANATION, SHORT_ANSWER_TYPE, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 4:7, RVR95
+- Capítulo: 4
+- Pregunta original: ¿Qué no pudieron hacer?
+- Respuesta original: Dar la interpretación del sueño.
 
 ### HIST-1240 · UNRESOLVED_ANSWER
 
@@ -364,12 +395,26 @@ Huella SHA-256 del Banco Maestro: `b08ea1efb154a7f9a520e1cc4433cbd18b81e16f37e44
 - Pregunta original: ¿Qué es la interpretación del sueño?
 - Respuesta original: La sentencia del Altísimo que ha venido sobre el rey.
 
+### HIST-1245 · PROCESS_EXPLANATION, SHORT_ANSWER_TYPE, DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 4:25, RVR95
+- Capítulo: 4
+- Pregunta original: ¿Por cuánto tiempo?
+- Respuesta original: Siete tiempos.
+
 ### HIST-1248 · UNRESOLVED_ANSWER
 
 - Fuente: Daniel 4:27, RVR95
 - Capítulo: 4
 - Pregunta original: ¿Qué aconsejó Daniel al rey?
 - Respuesta original: Redimir sus pecados con justicia y sus iniquidades haciendo misericordias con los oprimidos.
+
+### HIST-1257 · PROCESS_EXPLANATION, SHORT_ANSWER_TYPE, DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 4:32, RVR95
+- Capítulo: 4
+- Pregunta original: ¿Por cuánto tiempo?
+- Respuesta original: Siete tiempos.
 
 ### HIST-1265 · UNRESOLVED_ANSWER
 
@@ -385,12 +430,2021 @@ Huella SHA-256 del Banco Maestro: `b08ea1efb154a7f9a520e1cc4433cbd18b81e16f37e44
 - Pregunta original: ¿Quiénes lo buscaron?
 - Respuesta original: Sus gobernadores y sus consejeros.
 
+### HIST-1277 · PROCESS_EXPLANATION, SHORT_ANSWER_TYPE, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 5:2, RVR95
+- Capítulo: 5
+- Pregunta original: ¿Quiénes bebieron en ellos?
+- Respuesta original: El rey, sus grandes, sus mujeres y sus concubinas.
+
+### HIST-1279 · PROCESS_EXPLANATION, SHORT_ANSWER_TYPE, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 5:3, RVR95
+- Capítulo: 5
+- Pregunta original: ¿Quiénes bebieron en ellos?
+- Respuesta original: El rey, sus príncipes, sus mujeres y sus concubinas.
+
+### HIST-1285 · PROCESS_EXPLANATION, SHORT_ANSWER_TYPE, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 5:6, RVR95
+- Capítulo: 5
+- Pregunta original: ¿Cómo se puso el rey?
+- Respuesta original: Palideció.
+
 ### HIST-1288 · UNRESOLVED_ANSWER
 
 - Fuente: Daniel 5:7, RVR95
 - Capítulo: 5
 - Pregunta original: ¿A quiénes mandó llamar el rey?
 - Respuesta original: Magos, caldeos y adivinos.
+
+### HIST-1305 · PROCESS_EXPLANATION, SHORT_ANSWER_TYPE, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 5:15, RVR95
+- Capítulo: 5
+- Pregunta original: ¿Qué no pudieron hacer?
+- Respuesta original: Leer la escritura ni dar su interpretación.
+
+### HIST-1386 · PROCESS_EXPLANATION, SHORT_ANSWER_TYPE, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 6:26, RVR95
+- Capítulo: 6
+- Pregunta original: ¿Qué decreto dio el rey?
+- Respuesta original: Que en todo el dominio de su reino todos temieran y temblaran ante la presencia del Dios de Daniel.
+
+### HIST-1388 · PROCESS_EXPLANATION, SHORT_ANSWER_TYPE, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 6:26, RVR95
+- Capítulo: 6
+- Pregunta original: ¿Cómo es su reino?
+- Respuesta original: No será jamás destruido.
+
+### GEN-000015 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:6
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «También sería __________».
+- Respuesta original: A) entregado su hijo
+
+### GEN-000021 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:8
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Llevaría objetos preciosos de __________».
+- Respuesta original: A) plata
+
+### GEN-000022 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:8
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Llevaría objetos preciosos de __________».
+- Respuesta original: B) oro
+
+### GEN-000051 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:20
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «No moriría __________».
+- Respuesta original: C) con ira
+
+### GEN-000052 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:20
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «No moriría __________».
+- Respuesta original: D) en batalla
+
+### GEN-000056 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:22
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Las fuerzas enemigas serían __________».
+- Respuesta original: B) barridas delante de él
+
+### GEN-000057 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:22
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «También sería __________».
+- Respuesta original: D) destruido el príncipe del pacto
+
+### GEN-000082 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:31
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Sus tropas __________».
+- Respuesta original: B) profanarían el santuario
+
+### GEN-000083 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:31
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Sus tropas __________».
+- Respuesta original: B) profanarían la fortaleza
+
+### GEN-000096 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:35
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Su caída serviría __________».
+- Respuesta original: D) para ser depurados
+
+### GEN-000098 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:35
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Su caída serviría __________».
+- Respuesta original: C) para ser emblanquecidos
+
+### GEN-000104 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:37
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «No haría __________».
+- Respuesta original: A) caso del Dios de sus padres
+
+### GEN-000105 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:37
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «No haría __________».
+- Respuesta original: B) caso del amor de las mujeres
+
+### GEN-000116 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:40
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Vendría con __________».
+- Respuesta original: C) gente de a caballo
+
+### GEN-000117 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:40
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Vendría con __________».
+- Respuesta original: D) muchas naves
+
+### GEN-000120 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:41
+- Capítulo: 11
+- Pregunta original: Completa correctamente la afirmación: «Entraría en __________».
+- Respuesta original: la tierra gloriosa
+
+### GEN-000121 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:41
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «__________ escaparía de sus manos».
+- Respuesta original: C) Edom
+
+### GEN-000122 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:41
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «__________ escaparía de sus manos».
+- Respuesta original: C) Moab
+
+### GEN-000132 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:44
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Saldría para __________».
+- Respuesta original: A) destruir a muchos
+
+### GEN-000133 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:44
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Saldría para __________».
+- Respuesta original: D) matar a muchos
+
+### GEN-000153 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR43 P008 \| Documento B p.48
+- Capítulo: 43
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Prometió __________».
+- Respuesta original: B) púrpura
+
+### GEN-000155 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR43 P008 \| Documento B p.48
+- Capítulo: 43
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Prometió __________».
+- Respuesta original: B) ser tercer gobernante
+
+### GEN-000208 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:6
+- Capítulo: 10
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Su rostro __________».
+- Respuesta original: C) parecía un relámpago
+
+### GEN-000222 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:11
+- Capítulo: 10
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Se le ordenó __________».
+- Respuesta original: A) ponerse en pie
+
+### GEN-000246 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:19
+- Capítulo: 10
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Se le ordenó __________».
+- Respuesta original: B) esforzarse
+
+### GEN-000247 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:19
+- Capítulo: 10
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Se le ordenó __________».
+- Respuesta original: C) cobrar aliento
+
+### GEN-000302 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:6
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Los profetas hablaron __________».
+- Respuesta original: C) a los reyes
+
+### GEN-000303 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:6
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Los profetas hablaron __________».
+- Respuesta original: C) a los príncipes
+
+### GEN-000304 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:6
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Los profetas hablaron __________».
+- Respuesta original: B) a los padres
+
+### GEN-000306 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:7
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La justicia __________».
+- Respuesta original: D) pertenece al Señor
+
+### GEN-000314 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:8
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La confusión incluía __________».
+- Respuesta original: B) a los reyes
+
+### GEN-000315 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:8
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La confusión incluía __________».
+- Respuesta original: A) a los príncipes
+
+### GEN-000316 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:8
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La confusión incluía __________».
+- Respuesta original: B) a los padres
+
+### GEN-000317 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:9
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «De Jehová es __________».
+- Respuesta original: B) tener misericordia
+
+### GEN-000318 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:9
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «De Jehová es __________».
+- Respuesta original: C) perdonar
+
+### GEN-000323 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:11
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Sobre el pueblo __________».
+- Respuesta original: D) cayó la maldición
+
+### GEN-000324 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:11
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Sobre el pueblo __________».
+- Respuesta original: C) cayó el juramento
+
+### GEN-000366 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:24
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Uno de los propósitos es __________».
+- Respuesta original: D) terminar la prevaricación
+
+### GEN-000367 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:24
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Uno de los propósitos es __________».
+- Respuesta original: D) poner fin al pecado
+
+### GEN-000368 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:24
+- Capítulo: 9
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Uno de los propósitos es __________».
+- Respuesta original: B) expiar la iniquidad
+
+### GEN-000425 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:4
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La primera bestia __________».
+- Respuesta original: A) tenía alas de águila
+
+### GEN-000437 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:7
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La cuarta bestia __________».
+- Respuesta original: B) pisoteaba las sobras con sus pies
+
+### GEN-000438 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:7
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La cuarta bestia era __________».
+- Respuesta original: A) muy diferente de todas las bestias anteriores
+
+### GEN-000451 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:11
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El cuerpo de la bestia fue __________».
+- Respuesta original: B) destrozado
+
+### GEN-000452 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:11
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El cuerpo de la bestia fue __________».
+- Respuesta original: D) entregado para quemarlo en el fuego
+
+### GEN-000453 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:12
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «A las otras bestias se les había __________».
+- Respuesta original: D) quitado su dominio
+
+### GEN-000454 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:12
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «A las otras bestias se les había __________».
+- Respuesta original: A) prolongado la vida
+
+### GEN-000464 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:19
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «En la descripción ampliada, la cuarta bestia __________».
+- Respuesta original: B) pisoteaba las sobras con sus pies
+
+### GEN-000487 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:25
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Pensará en __________».
+- Respuesta original: C) cambiar los tiempos
+
+### GEN-000488 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:25
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Pensará en __________».
+- Respuesta original: C) cambiar la Ley
+
+### GEN-000511 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR40 P005 \| Documento B p.33
+- Capítulo: 40
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Volvieron a prometer que __________».
+- Respuesta original: A) mostrarían la interpretación
+
+### GEN-000540 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR40 P019 \| Documento B p.35
+- Capítulo: 40
+- Pregunta original: Completa correctamente la afirmación: «El cuarto reino __________».
+- Respuesta original: desmenuzaría y quebrantaría
+
+### GEN-000542 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR40 P020 \| Documento B p.35
+- Capítulo: 40
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Sería __________».
+- Respuesta original: C) en parte fuerte
+
+### GEN-000543 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR40 P020 \| Documento B p.35
+- Capítulo: 40
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Sería __________».
+- Respuesta original: A) en parte frágil
+
+### GEN-000548 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR40 P022 \| Documento B p.35
+- Capítulo: 40
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Lo llamó __________».
+- Respuesta original: C) Señor de los reyes
+
+### GEN-000562 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 12:2
+- Capítulo: 12
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Otros serán __________».
+- Respuesta original: C) despertados para vergüenza
+
+### GEN-000563 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 12:2
+- Capítulo: 12
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Otros serán __________».
+- Respuesta original: D) despertados para confusión perpetua
+
+### GEN-000578 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 12:7
+- Capítulo: 12
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El varón vestido de __________ estaba sobre las aguas del río».
+- Respuesta original: A) lino
+
+### GEN-000586 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 12:9
+- Capítulo: 12
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Las palabras __________».
+- Respuesta original: C) están cerradas
+
+### GEN-000587 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 12:9
+- Capítulo: 12
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Las palabras __________».
+- Respuesta original: D) están selladas
+
+### GEN-000593 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 12:10
+- Capítulo: 12
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Los entendidos __________».
+- Respuesta original: D) comprenderán
+
+### GEN-000642 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:4
+- Capítulo: 8
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El carnero hería hacia el __________».
+- Respuesta original: A) poniente
+
+### GEN-000643 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:4
+- Capítulo: 8
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El carnero hería hacia el __________».
+- Respuesta original: B) norte
+
+### GEN-000644 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:4
+- Capítulo: 8
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El carnero hería hacia el __________».
+- Respuesta original: C) sur
+
+### GEN-000646 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:5
+- Capítulo: 8
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El macho cabrío avanzaba __________».
+- Respuesta original: D) sin tocar tierra
+
+### GEN-000665 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:17
+- Capítulo: 8
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «__________ se postró sobre su rostro».
+- Respuesta original: B) Daniel
+
+### GEN-000726 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 5:7
+- Capítulo: 5
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El intérprete sería __________».
+- Respuesta original: D) vestido de púrpura
+
+### GEN-000727 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 5:7
+- Capítulo: 5
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El intérprete sería __________».
+- Respuesta original: C) el tercer señor en el reino
+
+### GEN-000778 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 2:5
+- Capítulo: 2
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El rey afirmó __________».
+- Respuesta original: C) que había olvidado el asunto
+
+### GEN-000785 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 2:7
+- Capítulo: 2
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Los sabios __________».
+- Respuesta original: B) Respondieron por segunda vez
+
+### GEN-000787 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 2:8
+- Capítulo: 2
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El rey afirmó __________».
+- Respuesta original: B) que los sabios estaban poniendo dilaciones
+
+### GEN-000830 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:7
+- Capítulo: 11
+- Pregunta original: Completa correctamente la afirmación: «Entraría en __________».
+- Respuesta original: la fortaleza
+
+### GEN-000831 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 11:9
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Después volvería __________».
+- Respuesta original: B) a su tierra
+
+### GEN-000836 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:13
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Vendría con __________».
+- Respuesta original: D) un gran ejército
+
+### GEN-000837 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:13
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Vendría con __________».
+- Respuesta original: B) muchas riquezas
+
+### GEN-000841 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:15
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «No habría __________».
+- Respuesta original: D) fuerzas para resistir
+
+### GEN-000843 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:16
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «No habría __________».
+- Respuesta original: A) quien pudiera enfrentarlo
+
+### GEN-000845 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:17
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Ese plan __________».
+- Respuesta original: C) no permanecería
+
+### GEN-000846 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:17
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Ese plan __________».
+- Respuesta original: D) no tendría éxito
+
+### GEN-000851 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:19
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «__________».
+- Respuesta original: C) Caería
+
+### GEN-000852 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:19
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «No sería __________».
+- Respuesta original: A) hallado
+
+### GEN-000854 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:20
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Sería __________».
+- Respuesta original: D) muerto
+
+### GEN-000857 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:22
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Las fuerzas enemigas serían __________».
+- Respuesta original: C) totalmente destruidas
+
+### GEN-000881 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:38
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Lo honraría con __________».
+- Respuesta original: B) oro
+
+### GEN-000882 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:38
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Lo honraría con __________».
+- Respuesta original: C) plata
+
+### GEN-000923 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:11
+- Capítulo: 10
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Se le ordenó __________».
+- Respuesta original: C) estar atento a las palabras que se le dirían
+
+### GEN-001005 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:7
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La cuarta bestia era __________».
+- Respuesta original: D) en gran manera fuerte
+
+### GEN-001036 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 12:3
+- Capítulo: 12
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Los entendidos __________».
+- Respuesta original: A) resplandecerán
+
+### GEN-001053 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR41 P019 \| Documento B p.40
+- Capítulo: 41
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Su rostro __________».
+- Respuesta original: C) palideció
+
+### GEN-001214 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR44 P016 \| Documento B p.57
+- Capítulo: 44
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Lo llamó __________».
+- Respuesta original: C) siervo del Dios viviente
+
+### GEN-001284 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:7
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La cuarta bestia era __________».
+- Respuesta original: B) espantosa
+
+### GEN-001285 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:7
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La cuarta bestia __________».
+- Respuesta original: B) devoraba
+
+### GEN-001286 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:7
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La cuarta bestia __________».
+- Respuesta original: B) desmenuzaba
+
+### GEN-001291 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:19
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «En la descripción ampliada, la cuarta bestia __________».
+- Respuesta original: D) desmenuzaba
+
+### GEN-001315 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR40 P021 \| Documento B p.35
+- Capítulo: 40
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «No sería __________».
+- Respuesta original: A) dejado a otro pueblo
+
+### GEN-001394 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 2:7
+- Capítulo: 2
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Volvieron a prometer que __________».
+- Respuesta original: B) darían la interpretación
+
+### GEN-001413 · VISIBLE_TEXT_QUOTES, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:1
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El hablante __________».
+- Respuesta original: C) estuvo para animarlo
+
+### GEN-001414 · VISIBLE_TEXT_QUOTES, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:1
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El hablante __________».
+- Respuesta original: B) estuvo para fortalecerlo
+
+### GEN-001418 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:7
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «__________».
+- Respuesta original: B) Predominaría
+
+### GEN-001421 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:19
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «__________».
+- Respuesta original: B) Tropezaría
+
+### GEN-001422 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:23
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «__________».
+- Respuesta original: A) Subiría
+
+### GEN-001423 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:28
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Haría __________».
+- Respuesta original: D) su voluntad
+
+### GEN-001424 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:30
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Haría __________».
+- Respuesta original: B) según su voluntad
+
+### GEN-001425 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:30
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «__________».
+- Respuesta original: B) Volvería
+
+### GEN-001426 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:40
+- Capítulo: 11
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «__________».
+- Respuesta original: A) Pasaría
+
+### GEN-001571 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:4
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La primera bestia __________».
+- Respuesta original: A) fue levantada del suelo
+
+### GEN-001572 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:5
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «A la segunda bestia se le dijo __________».
+- Respuesta original: A) que se levantara
+
+### GEN-001573 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:5
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «A la segunda bestia se le dijo __________».
+- Respuesta original: B) que devorara mucha carne
+
+### GEN-001575 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:7
+- Capítulo: 7
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La cuarta bestia era __________».
+- Respuesta original: C) terrible
+
+### GEN-001618 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR40 P033 \| Documento B p.37
+- Capítulo: 40
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La justicia __________».
+- Respuesta original: C) engrandece la nación
+
+### GEN-001654 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR41 P017 \| Documento B p.40
+- Capítulo: 41
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La orden del rey era __________».
+- Respuesta original: A) apremiante y el horno estaba muy encendido
+
+### GEN-001671 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:4
+- Capítulo: 8
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El carnero __________».
+- Respuesta original: C) Hacía conforme a su voluntad
+
+### GEN-001672 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:4
+- Capítulo: 8
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El carnero __________».
+- Respuesta original: C) se engrandecía
+
+### GEN-001673 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:5
+- Capítulo: 8
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El macho cabrío avanzaba __________».
+- Respuesta original: D) sobre la faz de toda la tierra
+
+### GEN-001676 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:12
+- Capítulo: 8
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «__________».
+- Respuesta original: D) Prosperó
+
+### GEN-001681 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:24
+- Capítulo: 8
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «__________».
+- Respuesta original: A) Prosperaría
+
+### GEN-001736 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 2:2
+- Capítulo: 2
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Los sabios __________».
+- Respuesta original: D) se presentaron delante del rey
+
+### GEN-001823 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 3:22
+- Capítulo: 3
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «La orden del rey era __________».
+- Respuesta original: C) apremiante
+
+### GEN-001825 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 2:2
+- Capítulo: 2
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «Los sabios __________».
+- Respuesta original: A) llamados vinieron
+
+### GEN-001828 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 2:12
+- Capítulo: 2
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «El rey reaccionó con ira __________».
+- Respuesta original: B) y gran enojo
+
+### GEN-001836 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 2:46
+- Capítulo: 2
+- Pregunta original: ¿Qué opción completa correctamente la afirmación? «__________ se postró sobre su rostro».
+- Respuesta original: B) Nabucodonosor
+
+### GEN-001859 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 11:6
+- Capítulo: 11
+- Pregunta original: Verdadero o falso: Al cabo de unos años los dos reinos harían alianza.
+- Respuesta original: Verdadero
+
+### GEN-001869 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 11:8
+- Capítulo: 11
+- Pregunta original: Verdadero o falso: Llevaría cautivos a Egipto los dioses de ellos.
+- Respuesta original: Verdadero
+
+### GEN-001871 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:8
+- Capítulo: 11
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Llevaría objetos __________».
+- Respuesta original: D) preciosos de plata
+
+### GEN-001872 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:8
+- Capítulo: 11
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Llevaría objetos __________».
+- Respuesta original: A) preciosos de oro
+
+### GEN-001877 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:11
+- Capítulo: 11
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El rey del __________».
+- Respuesta original: D) sur se enfurecería
+
+### GEN-001888 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:15
+- Capítulo: 11
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El rey __________».
+- Respuesta original: C) del norte vendría
+
+### GEN-001889 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 11:15
+- Capítulo: 11
+- Pregunta original: Verdadero o falso: Tomaría la ciudad fuerte.
+- Respuesta original: Verdadero
+
+### GEN-001899 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 11:20
+- Capítulo: 11
+- Pregunta original: Verdadero o falso: Ese sucesor haría pasar un cobrador de tributos.
+- Respuesta original: Verdadero
+
+### GEN-001901 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:20
+- Capítulo: 11
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «No moriría __________».
+- Respuesta original: B) con ira
+
+### GEN-001902 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:20
+- Capítulo: 11
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «No moriría __________».
+- Respuesta original: B) en batalla
+
+### GEN-001909 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 11:23
+- Capítulo: 11
+- Pregunta original: Verdadero o falso: Vencería con poca gente.
+- Respuesta original: Verdadero
+
+### GEN-001918 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:25
+- Capítulo: 11
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El rey del __________».
+- Respuesta original: A) sur no prevalecería
+
+### GEN-001919 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 11:25
+- Capítulo: 11
+- Pregunta original: Verdadero o falso: No prevalecería porque le harían traición.
+- Respuesta original: Verdadero
+
+### GEN-001929 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 11:30
+- Capítulo: 11
+- Pregunta original: Verdadero o falso: Vendrían contra él naves de Quitim.
+- Respuesta original: Verdadero
+
+### GEN-001932 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:31
+- Capítulo: 11
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Sus tropas profanarían __________».
+- Respuesta original: C) el santuario
+
+### GEN-001933 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:31
+- Capítulo: 11
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Sus tropas profanarían __________».
+- Respuesta original: D) la fortaleza
+
+### GEN-001939 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 11:33
+- Capítulo: 11
+- Pregunta original: Verdadero o falso: Caerían a espada.
+- Respuesta original: Verdadero
+
+### GEN-001946 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:35
+- Capítulo: 11
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Su caída __________».
+- Respuesta original: A) serviría para ser depurados
+
+### GEN-001948 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 11:35
+- Capítulo: 11
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Su caída __________».
+- Respuesta original: A) serviría para ser emblanquecidos
+
+### GEN-001949 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 11:35
+- Capítulo: 11
+- Pregunta original: Verdadero o falso: Esto sería hasta el tiempo determinado.
+- Respuesta original: Verdadero
+
+### GEN-001959 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 11:39
+- Capítulo: 11
+- Pregunta original: Verdadero o falso: Con un dios ajeno actuaría contra las fortalezas más inexpugnables.
+- Respuesta original: Verdadero
+
+### GEN-001969 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 11:40
+- Capítulo: 11
+- Pregunta original: Verdadero o falso: Las invadiría.
+- Respuesta original: Verdadero
+
+### GEN-001979 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 11:43
+- Capítulo: 11
+- Pregunta original: Verdadero o falso: Los de Etiopía lo seguirían.
+- Respuesta original: Verdadero
+
+### GEN-001989 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR43 P002 \| Documento B p.47
+- Capítulo: 43
+- Pregunta original: Verdadero o falso: Ciro era general de los ejércitos combinados de medos y persas.
+- Respuesta original: Verdadero
+
+### GEN-001999 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR43 P006 \| Documento B p.48
+- Capítulo: 43
+- Pregunta original: Verdadero o falso: Hilaridad y chistes blasfemos fueron reemplazados por rostros pálidos y gritos de miedo.
+- Respuesta original: Verdadero
+
+### GEN-002003 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR43 P008 \| Documento B p.48
+- Capítulo: 43
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Prometió __________».
+- Respuesta original: A) púrpura
+
+### GEN-002004 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR43 P008 \| Documento B p.48
+- Capítulo: 43
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Prometió __________».
+- Respuesta original: A) collar de oro
+
+### GEN-002009 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR43 P008 \| Documento B p.48
+- Capítulo: 43
+- Pregunta original: Verdadero o falso: Daniel había recibido el nombre Beltsasar.
+- Respuesta original: Verdadero
+
+### GEN-002016 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR43 P015 \| Documento B p.49
+- Capítulo: 43
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel fue __________».
+- Respuesta original: C) vestido de púrpura
+
+### GEN-002019 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR43 P016 \| Documento B p.50
+- Capítulo: 43
+- Pregunta original: Verdadero o falso: Más de un siglo antes la Inspiración había predicho esa noche de placer.
+- Respuesta original: Verdadero
+
+### GEN-002029 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR43 P023 \| Documento B p.51
+- Capítulo: 43
+- Pregunta original: Verdadero o falso: Predijo ocupación por bestias y criaturas en casas/palacios.
+- Respuesta original: Verdadero
+
+### GEN-002039 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR43 P034 \| Documento B p.52
+- Capítulo: 43
+- Pregunta original: Verdadero o falso: Ezequiel vio una representación de ese control durante su destierro en tierra de caldeos.
+- Respuesta original: Verdadero
+
+### GEN-002044 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:1
+- Capítulo: 10
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel es __________».
+- Respuesta original: D) llamado Beltsasar
+
+### GEN-002048 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:3
+- Capítulo: 10
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel no __________».
+- Respuesta original: A) comió manjar delicado
+
+### GEN-002049 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 10:3
+- Capítulo: 10
+- Pregunta original: Verdadero o falso: No entró carne en la boca de Daniel.
+- Respuesta original: Verdadero
+
+### GEN-002059 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 10:6
+- Capítulo: 10
+- Pregunta original: Verdadero o falso: Sus ojos eran como antorchas de fuego.
+- Respuesta original: Verdadero
+
+### GEN-002067 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:9
+- Capítulo: 10
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel cayó __________».
+- Respuesta original: D) en un profundo sueño
+
+### GEN-002068 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:9
+- Capítulo: 10
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel cayó __________».
+- Respuesta original: B) sobre su rostro
+
+### GEN-002069 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 10:10
+- Capítulo: 10
+- Pregunta original: Verdadero o falso: La mano hizo que Daniel quedara sobre sus rodillas.
+- Respuesta original: Verdadero
+
+### GEN-002071 · ARTIFICIAL_PROMPT, UNBALANCED_QUOTES, VISIBLE_TEXT_QUOTES, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:11
+- Capítulo: 10
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel es __________»».
+- Respuesta original: B) llamado «varón muy amado
+
+### GEN-002072 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:11
+- Capítulo: 10
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Se le __________».
+- Respuesta original: D) ordenó ponerse en pie
+
+### GEN-002079 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 10:13
+- Capítulo: 10
+- Pregunta original: Verdadero o falso: Miguel vino a ayudar al mensajero.
+- Respuesta original: Verdadero
+
+### GEN-002089 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 10:16
+- Capítulo: 10
+- Pregunta original: Verdadero o falso: Daniel dijo que con la visión le habían sobrevenido dolores.
+- Respuesta original: Verdadero
+
+### GEN-002091 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:17
+- Capítulo: 10
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel afirmó __________».
+- Respuesta original: B) que al instante le faltaron las fuerzas
+
+### GEN-002092 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:17
+- Capítulo: 10
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel afirmó __________».
+- Respuesta original: A) que no le quedó aliento
+
+### GEN-002096 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:19
+- Capítulo: 10
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Se le __________».
+- Respuesta original: C) ordenó esforzarse
+
+### GEN-002097 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 10:19
+- Capítulo: 10
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Se le __________».
+- Respuesta original: A) ordenó cobrar aliento
+
+### GEN-002099 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 10:20
+- Capítulo: 10
+- Pregunta original: Verdadero o falso: El mensajero debía volver para pelear contra el príncipe de Persia.
+- Respuesta original: Verdadero
+
+### GEN-002106 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR44 P001 \| Documento B p.55
+- Capítulo: 44
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel era __________».
+- Respuesta original: A) uno de los tres presidentes
+
+### GEN-002109 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR44 P002 \| Documento B p.55
+- Capítulo: 44
+- Pregunta original: Verdadero o falso: No se halló vicio ni falta en él.
+- Respuesta original: Verdadero
+
+### GEN-002119 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR44 P015 \| Documento B p.56
+- Capítulo: 44
+- Pregunta original: Verdadero o falso: Por el valor de un hombre que eligió justicia sobre conveniencia, Satanás sería derrotado.
+- Respuesta original: Verdadero
+
+### GEN-002129 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR44 P026 \| Documento B p.58
+- Capítulo: 44
+- Pregunta original: Verdadero o falso: Sus enemigos admitieron que no hallaban falta porque era fiel.
+- Respuesta original: Verdadero
+
+### GEN-002135 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:1
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Darío era __________».
+- Respuesta original: C) hijo de Asuero
+
+### GEN-002136 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:1
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Darío era __________».
+- Respuesta original: C) de la nación de los medos
+
+### GEN-002139 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 9:2
+- Capítulo: 9
+- Pregunta original: Verdadero o falso: El período indicado era de setenta años.
+- Respuesta original: Verdadero
+
+### GEN-002145 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:5
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel confesó: «__________»».
+- Respuesta original: A) hemos pecado
+
+### GEN-002146 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:5
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel confesó: «__________»».
+- Respuesta original: B) hemos cometido iniquidad
+
+### GEN-002147 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:5
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel confesó: «__________»».
+- Respuesta original: D) hemos actuado impíamente
+
+### GEN-002148 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:5
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel confesó: «__________»».
+- Respuesta original: B) hemos sido rebeldes
+
+### GEN-002149 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 9:5
+- Capítulo: 9
+- Pregunta original: Verdadero o falso: Daniel confesó que se habían apartado de los mandamientos de Dios.
+- Respuesta original: Verdadero
+
+### GEN-002152 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:6
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Los profetas __________».
+- Respuesta original: C) hablaron a los reyes
+
+### GEN-002153 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:6
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Los profetas __________».
+- Respuesta original: D) hablaron a los príncipes
+
+### GEN-002154 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:6
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Los profetas __________».
+- Respuesta original: A) hablaron a los padres
+
+### GEN-002159 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 9:7
+- Capítulo: 9
+- Pregunta original: Verdadero o falso: La confusión de rostro alcanzaba a los habitantes de Jerusalén.
+- Respuesta original: Verdadero
+
+### GEN-002161 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:7
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel menciona a __________».
+- Respuesta original: A) los de cerca
+
+### GEN-002162 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:7
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel menciona a __________».
+- Respuesta original: D) los de lejos
+
+### GEN-002164 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:8
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «La confusión __________».
+- Respuesta original: B) incluía a los reyes
+
+### GEN-002165 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:8
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «La confusión __________».
+- Respuesta original: C) incluía a los príncipes
+
+### GEN-002166 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:8
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «La confusión __________».
+- Respuesta original: A) incluía a los padres
+
+### GEN-002167 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:9
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «De Jehová __________».
+- Respuesta original: C) es tener misericordia
+
+### GEN-002168 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:9
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «De Jehová __________».
+- Respuesta original: C) es perdonar
+
+### GEN-002169 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 9:10
+- Capítulo: 9
+- Pregunta original: Verdadero o falso: El pueblo no obedeció a la voz de Jehová.
+- Respuesta original: Verdadero
+
+### GEN-002173 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:11
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Sobre el __________».
+- Respuesta original: A) pueblo cayó la maldición
+
+### GEN-002174 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:11
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Sobre el __________».
+- Respuesta original: A) pueblo cayó el juramento
+
+### GEN-002179 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 9:13
+- Capítulo: 9
+- Pregunta original: Verdadero o falso: Todo ese mal vino conforme estaba escrito en la ley de Moisés.
+- Respuesta original: Verdadero
+
+### GEN-002187 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:15
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel vuelve a confesar: «__________»».
+- Respuesta original: B) hemos pecado
+
+### GEN-002188 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:15
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel vuelve a confesar: «__________»».
+- Respuesta original: D) hemos actuado impíamente
+
+### GEN-002189 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 9:16
+- Capítulo: 9
+- Pregunta original: Verdadero o falso: Daniel pide que la ira de Dios se aparte de Jerusalén.
+- Respuesta original: Verdadero
+
+### GEN-002199 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 9:18
+- Capítulo: 9
+- Pregunta original: Verdadero o falso: Los ruegos se apoyaban en las muchas misericordias de Dios.
+- Respuesta original: Verdadero
+
+### GEN-002207 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:22
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Gabriel dijo __________».
+- Respuesta original: B) haber salido para dar a Daniel sabiduría
+
+### GEN-002208 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:22
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Gabriel dijo __________».
+- Respuesta original: C) haber salido para dar a Daniel entendimiento
+
+### GEN-002209 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 9:23
+- Capítulo: 9
+- Pregunta original: Verdadero o falso: La orden fue dada al principio de los ruegos de Daniel.
+- Respuesta original: Verdadero
+
+### GEN-002211 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:23
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel debía __________».
+- Respuesta original: B) entender la orden
+
+### GEN-002212 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:23
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel debía __________».
+- Respuesta original: B) entender la visión
+
+### GEN-002216 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:24
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Uno de los propósitos __________».
+- Respuesta original: C) es terminar la prevaricación
+
+### GEN-002218 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 9:24
+- Capítulo: 9
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Uno de los propósitos __________».
+- Respuesta original: C) es expiar la iniquidad
+
+### GEN-002219 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 9:24
+- Capítulo: 9
+- Pregunta original: Verdadero o falso: Uno de los propósitos es traer la justicia perdurable.
+- Respuesta original: Verdadero
+
+### GEN-002229 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 9:26
+- Capítulo: 9
+- Pregunta original: Verdadero o falso: El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario.
+- Respuesta original: Verdadero
+
+### GEN-002239 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR42 P002 \| Documento B p.43
+- Capítulo: 42
+- Pregunta original: Verdadero o falso: Reconoció nuevamente que el reino de Dios es sempiterno.
+- Respuesta original: Verdadero
+
+### GEN-002249 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR42 P007 \| Documento B p.44
+- Capítulo: 42
+- Pregunta original: Verdadero o falso: Daniel era estimado por integridad, constancia y sabiduría sin rival.
+- Respuesta original: Verdadero
+
+### GEN-002259 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR42 P018 \| Documento B p.45
+- Capítulo: 42
+- Pregunta original: Verdadero o falso: La voz celestial llegó mientras la pregunta jactanciosa aún estaba en sus labios.
+- Respuesta original: Verdadero
+
+### GEN-002269 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR42 P021 \| Documento B p.46
+- Capítulo: 42
+- Pregunta original: Verdadero o falso: Volvieron la majestad de su reino, dignidad y grandeza.
+- Respuesta original: Verdadero
+
+### GEN-002279 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 7:5
+- Capítulo: 7
+- Pregunta original: Verdadero o falso: La segunda bestia era semejante a un oso.
+- Respuesta original: Verdadero
+
+### GEN-002289 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 7:8
+- Capítulo: 7
+- Pregunta original: Verdadero o falso: Delante del cuerno pequeño fueron arrancados tres de los primeros cuernos.
+- Respuesta original: Verdadero
+
+### GEN-002299 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 7:10
+- Capítulo: 7
+- Pregunta original: Verdadero o falso: El Juez se sentó.
+- Respuesta original: Verdadero
+
+### GEN-002303 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:12
+- Capítulo: 7
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «A las otras bestias se les __________».
+- Respuesta original: A) había quitado su dominio
+
+### GEN-002304 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:12
+- Capítulo: 7
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «A las otras bestias se les __________».
+- Respuesta original: B) había prolongado la vida
+
+### GEN-002309 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 7:18
+- Capítulo: 7
+- Pregunta original: Verdadero o falso: Los santos del Altísimo recibirán el reino.
+- Respuesta original: Verdadero
+
+### GEN-002319 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 7:20
+- Capítulo: 7
+- Pregunta original: Verdadero o falso: El otro cuerno parecía más grande que sus compañeros.
+- Respuesta original: Verdadero
+
+### GEN-002329 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 7:23
+- Capítulo: 7
+- Pregunta original: Verdadero o falso: El cuarto reino despedazará toda la tierra.
+- Respuesta original: Verdadero
+
+### GEN-002337 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:25
+- Capítulo: 7
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Pensará en cambiar __________».
+- Respuesta original: B) los tiempos
+
+### GEN-002338 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 7:25
+- Capítulo: 7
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Pensará en cambiar __________».
+- Respuesta original: A) la Ley
+
+### GEN-002339 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 7:25
+- Capítulo: 7
+- Pregunta original: Verdadero o falso: Los santos serán entregados en sus manos.
+- Respuesta original: Verdadero
+
+### GEN-002349 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 7:27
+- Capítulo: 7
+- Pregunta original: Verdadero o falso: Todos los dominios lo servirán.
+- Respuesta original: Verdadero
+
+### GEN-002359 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR40 P004 \| Documento B p.33
+- Capítulo: 40
+- Pregunta original: Verdadero o falso: La recompensa citada incluía dones, mercedes y grande honra.
+- Respuesta original: Verdadero
+
+### GEN-002369 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR40 P010 \| Documento B p.34
+- Capítulo: 40
+- Pregunta original: Verdadero o falso: Daniel afirmó que la sabiduría y la fortaleza pertenecen a Dios.
+- Respuesta original: Verdadero
+
+### GEN-002375 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR40 P014 \| Documento B p.35
+- Capítulo: 40
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El rey __________».
+- Respuesta original: C) vio una gran imagen
+
+### GEN-002379 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR40 P014 \| Documento B p.35
+- Capítulo: 40
+- Pregunta original: Verdadero o falso: Piernas eran de hierro.
+- Respuesta original: Verdadero
+
+### GEN-002389 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR40 P018 \| Documento B p.35
+- Capítulo: 40
+- Pregunta original: Verdadero o falso: El tercer reino es descrito como de metal.
+- Respuesta original: Verdadero
+
+### GEN-002392 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR40 P020 \| Documento B p.35
+- Capítulo: 40
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Sería en __________».
+- Respuesta original: A) parte fuerte
+
+### GEN-002393 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR40 P020 \| Documento B p.35
+- Capítulo: 40
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Sería en __________».
+- Respuesta original: A) parte frágil
+
+### GEN-002399 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR40 P022 \| Documento B p.35
+- Capítulo: 40
+- Pregunta original: Verdadero o falso: Lo llamó descubridor de los misterios.
+- Respuesta original: Verdadero
+
+### GEN-002401 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: PR40 P023 \| Documento B p.36
+- Capítulo: 40
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel fue __________».
+- Respuesta original: B) gobernador de toda la provincia de Babilonia
+
+### GEN-002409 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 12:1
+- Capítulo: 12
+- Pregunta original: Verdadero o falso: Serán libertados todos los que se hallen inscritos en el libro.
+- Respuesta original: Verdadero
+
+### GEN-002412 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 12:2
+- Capítulo: 12
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Otros serán despertados __________».
+- Respuesta original: C) para vergüenza
+
+### GEN-002413 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 12:2
+- Capítulo: 12
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Otros serán despertados __________».
+- Respuesta original: C) para confusión perpetua
+
+### GEN-002418 · ARTIFICIAL_PROMPT, VISIBLE_TEXT_QUOTES, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 12:4
+- Capítulo: 12
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel debía __________».
+- Respuesta original: C) cerrar las palabras
+
+### GEN-002419 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 12:4
+- Capítulo: 12
+- Pregunta original: Verdadero o falso: Daniel debía sellar el libro.
+- Respuesta original: Verdadero
+
+### GEN-002428 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 12:7
+- Capítulo: 12
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El varón vestido de lino estaba __________».
+- Respuesta original: B) sobre las aguas del río
+
+### GEN-002436 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 12:9
+- Capítulo: 12
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Las palabras __________».
+- Respuesta original: C) están cerradas
+
+### GEN-002437 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 12:9
+- Capítulo: 12
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Las palabras __________».
+- Respuesta original: A) están selladas
+
+### GEN-002439 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 12:10
+- Capítulo: 12
+- Pregunta original: Verdadero o falso: Muchos serán limpios.
+- Respuesta original: Verdadero
+
+### GEN-002449 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR41 P003 \| Documento B p.38
+- Capítulo: 41
+- Pregunta original: Verdadero o falso: La cabeza de oro había sido interpretada como símbolo del reino de Nabucodonosor.
+- Respuesta original: Verdadero
+
+### GEN-002459 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR41 P013 \| Documento B p.40
+- Capítulo: 41
+- Pregunta original: Verdadero o falso: Comprendían que postrarse ante la imagen era acto de culto.
+- Respuesta original: Verdadero
+
+### GEN-002469 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR41 P019 \| Documento B p.40
+- Capítulo: 41
+- Pregunta original: Verdadero o falso: Los cuatro se paseaban en el fuego sin daño.
+- Respuesta original: Verdadero
+
+### GEN-002479 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR41 P024 \| Documento B p.41
+- Capítulo: 41
+- Pregunta original: Verdadero o falso: Quien blasfemara contra su Dios sería descuartizado.
+- Respuesta original: Verdadero
+
+### GEN-002488 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:3
+- Capítulo: 8
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel vio __________».
+- Respuesta original: A) un carnero delante del río
+
+### GEN-002492 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:4
+- Capítulo: 8
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El carnero hería hacia __________».
+- Respuesta original: A) el poniente
+
+### GEN-002493 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:4
+- Capítulo: 8
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El carnero hería hacia __________».
+- Respuesta original: C) el norte
+
+### GEN-002494 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:4
+- Capítulo: 8
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El carnero hería hacia __________».
+- Respuesta original: A) el sur
+
+### GEN-002495 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:5
+- Capítulo: 8
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel vio __________».
+- Respuesta original: A) venir un macho cabrío
+
+### GEN-002496 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:5
+- Capítulo: 8
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El macho cabrío __________».
+- Respuesta original: B) avanzaba sin tocar tierra
+
+### GEN-002497 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:6
+- Capítulo: 8
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El macho cabrío __________».
+- Respuesta original: A) Vino hasta el carnero de dos cuernos
+
+### GEN-002499 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 8:7
+- Capítulo: 8
+- Pregunta original: Verdadero o falso: El macho cabrío se levantó contra el carnero y lo hirió.
+- Respuesta original: Verdadero
+
+### GEN-002509 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 8:12
+- Capítulo: 8
+- Pregunta original: Verdadero o falso: Echó por tierra la verdad.
+- Respuesta original: Verdadero
+
+### GEN-002519 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 8:19
+- Capítulo: 8
+- Pregunta original: Verdadero o falso: Gabriel afirmó que aquello era para el tiempo del fin.
+- Respuesta original: Verdadero
+
+### GEN-002529 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 8:25
+- Capítulo: 8
+- Pregunta original: Verdadero o falso: Sin aviso destruiría a muchos.
+- Respuesta original: Verdadero
+
+### GEN-002535 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 8:27
+- Capítulo: 8
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel no __________».
+- Respuesta original: A) entendía la visión
+
+### GEN-002539 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR39 P007 \| Documento B p.28
+- Capítulo: 39
+- Pregunta original: Verdadero o falso: Temían el efecto enervador del lujo y la disipación sobre el desarrollo físico, mental y espiritual.
+- Respuesta original: Verdadero
+
+### GEN-002549 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: PR39 P027 \| Documento B p.31
+- Capítulo: 39
+- Pregunta original: Verdadero o falso: Las capacidades no usadas se toman en cuenta tanto como las usadas.
+- Respuesta original: Verdadero
+
+### GEN-002559 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 4:20
+- Capítulo: 4
+- Pregunta original: Verdadero o falso: Daniel recuerda que la copa del árbol llegaba hasta el cielo y que se veía desde los confines de la tierra.
+- Respuesta original: Verdadero
+
+### GEN-002569 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 4:32
+- Capítulo: 4
+- Pregunta original: Verdadero o falso: La voz anunció que su habitación sería con las bestias del campo.
+- Respuesta original: Verdadero
+
+### GEN-002579 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 5:11
+- Capítulo: 5
+- Pregunta original: Verdadero o falso: La reina llama a Nabucodonosor «tu padre» al hablar con Belsasar.
+- Respuesta original: Verdadero
+
+### GEN-002585 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 5:17
+- Capítulo: 5
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel afirmó __________».
+- Respuesta original: D) que leería la escritura al rey
+
+### GEN-002586 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 5:17
+- Capítulo: 5
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel afirmó __________».
+- Respuesta original: C) que daría la interpretación al rey
+
+### GEN-002589 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 5:20
+- Capítulo: 5
+- Pregunta original: Verdadero o falso: Nabucodonosor fue depuesto del trono de su reino.
+- Respuesta original: Verdadero
+
+### GEN-002599 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 5:23
+- Capítulo: 5
+- Pregunta original: Verdadero o falso: Belsasar nunca honró al Dios en cuya mano está su vida.
+- Respuesta original: Verdadero
+
+### GEN-002609 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 3:12
+- Capítulo: 3
+- Pregunta original: Verdadero o falso: Los caldeos dijeron que Sadrac, Mesac y Abed-nego no adoraban los dioses del rey.
+- Respuesta original: Verdadero
+
+### GEN-002619 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 3:26
+- Capítulo: 3
+- Pregunta original: Verdadero o falso: Nabucodonosor llamó a Sadrac, Mesac y Abed-nego «siervos del Dios Altísimo».
+- Respuesta original: Verdadero
+
+### GEN-002629 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 2:5
+- Capítulo: 2
+- Pregunta original: Verdadero o falso: El rey exigió que le dijeran tanto el sueño como su interpretación.
+- Respuesta original: Verdadero
+
+### GEN-002639 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 2:11
+- Capítulo: 2
+- Pregunta original: Verdadero o falso: Dijeron que nadie podía declararlo al rey salvo los dioses.
+- Respuesta original: Verdadero
+
+### GEN-002645 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 2:24
+- Capítulo: 2
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel afirmó __________».
+- Respuesta original: D) que daría al rey la interpretación
+
+### GEN-002647 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 2:26
+- Capítulo: 2
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel era __________».
+- Respuesta original: D) llamado Beltsasar
+
+### GEN-002649 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 2:39
+- Capítulo: 2
+- Pregunta original: Verdadero o falso: El segundo reino sería inferior al de Nabucodonosor.
+- Respuesta original: Verdadero
+
+### GEN-002650 · DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 2:40
+- Capítulo: 2
+- Pregunta original: Completa correctamente la afirmación: «El cuarto reino __________».
+- Respuesta original: desmenuzaría y quebrantaría todo
+
+### GEN-002656 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 2:45
+- Capítulo: 2
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel declaró __________».
+- Respuesta original: B) que el sueño era verdadero
+
+### GEN-002657 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 2:45
+- Capítulo: 2
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel declaró __________».
+- Respuesta original: A) que la interpretación era fiel
+
+### GEN-002659 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 1:12
+- Capítulo: 1
+- Pregunta original: Verdadero o falso: Daniel pidió que les dieran agua para beber.
+- Respuesta original: Verdadero
+
+### GEN-002663 · ARTIFICIAL_PROMPT, DUPLICATE_PROMPT_CONFLICT
+
+- Fuente: Daniel 6:3
+- Capítulo: 6
+- Pregunta original: ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel era __________».
+- Respuesta original: D) superior a los sátrapas y gobernadores
+
+### GEN-002669 · DUPLICATE_PROMPT_NON_CANONICAL
+
+- Fuente: Daniel 6:20
+- Capítulo: 6
+- Pregunta original: Verdadero o falso: Darío describió al Dios de Daniel como aquel a quien Daniel servía continuamente.
+- Respuesta original: Verdadero
 
 ## Muestra de reparaciones (máximo 20 por código)
 
@@ -415,9 +2469,9 @@ Huella SHA-256 del Banco Maestro: `b08ea1efb154a7f9a520e1cc4433cbd18b81e16f37e44
 | GEN-001866 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «También serían entregados quienes estaban de parte de __________». | Completa la afirmación: También serían entregados quienes estaban de parte de __________. |
 | GEN-001867 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Un renuevo de las raíces de ella se __________». | Completa la afirmación: Un renuevo de las raíces de ella se __________. |
 | GEN-001868 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Ese renuevo vendría con un ejército contra el __________». | Completa la afirmación: Ese renuevo vendría con un ejército contra el __________. |
-| GEN-001871 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Llevaría objetos __________». | Completa la afirmación: Llevaría objetos __________. |
-| GEN-001872 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Llevaría objetos __________». | Completa la afirmación: Llevaría objetos __________. |
 | GEN-001873 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Durante años se mantendría alejado del __________». | Completa la afirmación: Durante años se mantendría alejado del __________. |
+| GEN-001874 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El rey del sur entraría __________». | Completa la afirmación: El rey del sur entraría __________. |
+| GEN-001875 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Uno vendría __________». | Completa la afirmación: Uno vendría __________. |
 
 ### EDITORIAL_PREFIX
 
@@ -498,7 +2552,6 @@ Huella SHA-256 del Banco Maestro: `b08ea1efb154a7f9a520e1cc4433cbd18b81e16f37e44
 
 | ID | Original | Curada |
 | --- | --- | --- |
-| GEN-002071 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel es __________»». | Completa la afirmación: Daniel es __________. |
 | GEN-002103 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Miguel es __________»». | Completa la afirmación: Miguel es __________. |
 | GEN-002210 | Completa correctamente la afirmación: «Daniel es __________»». | Completa correctamente la afirmación: «Daniel es __________». |
 | GEN-002578 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El texto identifica simplemente al personaje __________»». | Completa la afirmación: El texto identifica simplemente al personaje __________. |
@@ -515,14 +2568,10 @@ Huella SHA-256 del Banco Maestro: `b08ea1efb154a7f9a520e1cc4433cbd18b81e16f37e44
 | GEN-000592 | ¿Qué opción completa correctamente la afirmación? «Ninguno de __________». | ¿Qué opción completa correctamente la afirmación? «Ninguno de __________». |
 | GEN-000721 | ¿Qué opción completa correctamente la afirmación? «El castigo duraría hasta que reconociera que el Altísimo domina el reino de los hombres y lo da __________». | ¿Qué opción completa correctamente la afirmación? «El castigo duraría hasta que reconociera que el Altísimo domina el reino de los hombres y lo da __________». |
 | GEN-001043 | ¿Qué opción completa correctamente la afirmación? «Con el tiempo __________». | ¿Qué opción completa correctamente la afirmación? «Con el tiempo __________». |
-| GEN-001413 | ¿Qué opción completa correctamente la afirmación? «El hablante __________». | ¿Qué opción completa correctamente la afirmación? «El hablante __________». |
-| GEN-001414 | ¿Qué opción completa correctamente la afirmación? «El hablante __________». | ¿Qué opción completa correctamente la afirmación? «El hablante __________». |
 | GEN-001546 | ¿Qué opción completa correctamente la afirmación? «Esto ocurrió __________». | ¿Qué opción completa correctamente la afirmación? «Esto ocurrió __________». |
 | GEN-001817 | ¿Qué opción completa correctamente la afirmación? «La mano enviada __________». | ¿Qué opción completa correctamente la afirmación? «La mano enviada __________». |
-| GEN-002071 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel es __________»». | Completa la afirmación: Daniel es __________. |
 | GEN-002103 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Miguel es __________»». | Completa la afirmación: Miguel es __________. |
 | GEN-002210 | Completa correctamente la afirmación: «Daniel es __________»». | Completa correctamente la afirmación: «Daniel es __________». |
-| GEN-002418 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel debía __________». | Completa la afirmación: Daniel debía __________. |
 | GEN-002435 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel preguntó: «Señor mío, ¿cuál será __________»». | Completa la afirmación: Daniel preguntó: «Señor mío, ¿cuál será __________». |
 | GEN-002514 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «La voz llamó __________». | Completa la afirmación: La voz llamó __________. |
 | GEN-002564 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Nabucodonosor sería __________». | Completa la afirmación: Nabucodonosor sería __________. |
@@ -530,3 +2579,5 @@ Huella SHA-256 del Banco Maestro: `b08ea1efb154a7f9a520e1cc4433cbd18b81e16f37e44
 | GEN-002574 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «La orden era que bebieran de los vasos el rey, sus grandes, sus __________». | Completa la afirmación: La orden era que bebieran de los vasos el rey, sus grandes, sus __________. |
 | GEN-002578 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El texto identifica simplemente al personaje __________»». | Completa la afirmación: El texto identifica simplemente al personaje __________. |
 | GEN-002610 | Completa correctamente la afirmación: «Nabucodonosor preguntó si ellos no honraban «a mi __________». | Completa correctamente la afirmación: Nabucodonosor preguntó si ellos no honraban «a mi __________». |
+| GEN-002613 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Los tres introdujeron su fidelidad aun sin liberación con la __________»». | Completa la afirmación: Los tres introdujeron su fidelidad aun sin liberación con la __________. |
+| GEN-002668 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Darío llamó __________»». | Completa la afirmación: Darío llamó __________. |

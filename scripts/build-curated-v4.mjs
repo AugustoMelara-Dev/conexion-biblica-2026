@@ -4,6 +4,7 @@ import { dirname, resolve } from "node:path"
 import { fileURLToPath } from "node:url"
 import { classifyMasterQuestion, curationFamily, CurationStatus } from "./lib/master-curation.mjs"
 import { curateMasterQuestion } from "./lib/curated-question.mjs"
+import { applyDuplicatePolicy, duplicatePromptKey } from "./lib/duplicate-policy.mjs"
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..")
 const TECHNICAL_LANGUAGE = /segunda formulación|fase\s*[1-4]|cobertura auditada|requiere corrección|respuesta discutible/i
@@ -45,6 +46,11 @@ function addIssueCounts(decisions) {
 }
 
 function decisionRecord(raw, decision, curated) {
+  const originalOptions = Object.fromEntries(["A", "B", "C", "D"].map((id) => [id, raw?.[id] ?? null]))
+  const curatedOptions = curated?.options?.map((option) => ({ ...option })) ?? null
+  const curatedAnswerText = curated
+    ? curated.correctAnswerText ?? curated.correctAnswer.map((answerId) => curated.options.find((option) => option.id === answerId)?.text ?? answerId).join(" | ")
+    : null
   return {
     masterQuestionId: raw.QUESTION_ID ?? null,
     status: decision.status,
@@ -54,7 +60,13 @@ function decisionRecord(raw, decision, curated) {
     originalExplanation: raw.explicacion ?? null,
     curatedExplanation: curated?.explanation ?? null,
     originalAnswer: raw.respuesta_correcta ?? null,
-    curatedAnswer: curated?.correctAnswerText ?? curated?.correctAnswer ?? null,
+    curatedAnswer: curatedAnswerText,
+    originalOptions,
+    curatedOptions,
+    originalAnswerMode: decision.answer?.mode ?? null,
+    originalResolvedAnswer: decision.answer?.text ?? null,
+    curatedAnswerMode: curated ? curated.answerMode ?? "option_id" : null,
+    curatedAnswerText,
     material: raw.material ?? null,
     chapter: Number.isFinite(Number(raw.capitulo)) ? Number(raw.capitulo) : null,
     reference: raw.fuente ?? null,
@@ -70,7 +82,7 @@ function curationSummary(rawQuestions, decisions) {
   return { total, approved, repaired, rejected, included: approved + repaired }
 }
 
-function createBank(sourceWork, sourceVersion, chapter, description, rawQuestions, decisions, questions) {
+function createBank(sourceWork, sourceVersion, chapter, description, rawQuestions, decisions, questions, { generatedAt, masterFingerprint } = {}) {
   return {
     schemaVersion: "1.0",
     bank: {
@@ -81,6 +93,8 @@ function createBank(sourceWork, sourceVersion, chapter, description, rawQuestion
       chapter,
       description,
       curationSummary: curationSummary(rawQuestions, decisions),
+      generatedAt,
+      masterFingerprint,
     },
     questions,
   }
@@ -156,6 +170,21 @@ function validateCuratedQuestion(question, raw, expectedWork, findings, seenIds,
   if (!question.verified) issue(findings, question, "NOT_VERIFIED", "La salida V4 no está marcada como verificada.")
 }
 
+function auditExactPromptDuplicates(banks, findings) {
+  const groups = new Map()
+  for (const question of Object.values(banks).flatMap((bank) => bank?.questions ?? [])) {
+    const key = duplicatePromptKey(question.question)
+    if (!key) continue
+    const group = groups.get(key) ?? []
+    group.push(question)
+    groups.set(key, group)
+  }
+  for (const group of groups.values()) {
+    if (group.length < 2) continue
+    issue(findings, group[0], "DUPLICATE_EXACT_PROMPT", `El prompt exacto se repite ${group.length} veces en V4: ${group.map((question) => question.id).join(", ")}.`)
+  }
+}
+
 function sourceMatchesMaterial(raw) {
   const chapter = Number(raw.capitulo)
   const source = asText(raw.fuente)
@@ -167,7 +196,7 @@ function sourceMatchesMaterial(raw) {
 function visibleQuoteRepairRequired(raw, decision) {
   const optionTexts = [raw.A, raw.B, raw.C, raw.D]
   const canonicalText = decision.answer?.mode === "canonical_text" ? decision.answer.text : null
-  return [...optionTexts, canonicalText, raw.fact_support].some((text) => quoteDifference(text) !== 0)
+  return [...optionTexts, canonicalText, raw.fact_support, raw.explicacion].some((text) => quoteDifference(text) !== 0)
 }
 
 function classifyForBuild(raw) {
@@ -195,7 +224,7 @@ function classifyForBuild(raw) {
 }
 
 function expectedQuestions(master) {
-  return master.questions.map((raw) => {
+  const entries = master.questions.map((raw) => {
     const initialDecision = classifyForBuild(raw)
     const curated = curateMasterQuestion(raw, initialDecision)
     if (initialDecision.status !== CurationStatus.REJECTED && !curated) {
@@ -211,6 +240,7 @@ function expectedQuestions(master) {
     }
     return { raw, decision: initialDecision, curated }
   })
+  return applyDuplicatePolicy(entries)
 }
 
 /**
@@ -238,6 +268,13 @@ export function auditCuratedV4(banks, master, expectedBanks = null) {
     if (bank.schemaVersion !== "1.0") issue(findings, null, "SCHEMA_VERSION_MISMATCH", `El banco ${bankKey} no usa schemaVersion 1.0.`)
     if (bank.bank?.profileId !== "curated-v4") issue(findings, null, "PROFILE_MISMATCH", `El banco ${bankKey} no declara profileId curated-v4.`)
     if (bank.bank?.sourceWork !== expectedWork || bank.bank?.sourceVersion !== expectedVersion) issue(findings, null, "BANK_SOURCE_MISMATCH", `La metadata de ${bankKey} no coincide con la fuente.`)
+    const expectedEntries = expected.filter(({ raw }) => raw.material === (expectedWork === "Daniel" ? "DANIEL" : "PR"))
+    const expectedSummary = curationSummary(expectedEntries.map(({ raw }) => raw), expectedEntries.map(({ decision }) => decision))
+    const actualSummary = bank.bank?.curationSummary
+    const summaryMatches = actualSummary
+      && ["total", "approved", "repaired", "rejected", "included"].every((field) => actualSummary[field] === expectedSummary[field])
+    if (!summaryMatches) issue(findings, null, "CURATION_SUMMARY_MISMATCH", `El resumen de curación de ${bankKey} no coincide con las decisiones del maestro.`)
+    else if (bank.questions?.length !== actualSummary.included) issue(findings, null, "CURATION_SUMMARY_MISMATCH", `El conteo incluido de ${bankKey} no coincide con sus preguntas.`)
     for (const question of bank.questions ?? []) {
       const masterQuestion = master.questions.find((raw) => raw.QUESTION_ID === question.metadata?.masterQuestionId)
       if (!masterQuestion) {
@@ -254,6 +291,8 @@ export function auditCuratedV4(banks, master, expectedBanks = null) {
       else if (JSON.stringify(question) !== JSON.stringify(expectedQuestion)) issue(findings, question, "BANK_CONTENT_MISMATCH", "El contenido V4 no coincide con la adaptación reproducible del maestro.")
     }
   }
+
+  auditExactPromptDuplicates({ daniel: banks?.daniel, prophets: banks?.prophets }, findings)
 
   for (const expectedId of expectedIncludedIds) if (!actualById.has(expectedId)) issue(findings, null, "MISSING_QUESTION", `Falta en V4 la pregunta esperada ${expectedId}.`)
   if (expectedBanks) {
@@ -294,8 +333,8 @@ export function buildCuratedV4(master, { generatedAt = new Date().toISOString(),
   if (counts.approved + counts.repaired + counts.rejected !== counts.total) throw new Error("La suma de estados de curación no coincide con el total maestro.")
 
   const banks = {
-    daniel: createBank("Daniel", "RVR95", "1-12", "Banco V4 curado por clasificación y reparación trazable", danielEntries.map(({ raw }) => raw), danielEntries.map(({ decision }) => decision), daniel),
-    prophets: createBank("Profetas y Reyes", "Material PDF", "39-44", "Banco V4 curado por clasificación y reparación trazable", prophetsEntries.map(({ raw }) => raw), prophetsEntries.map(({ decision }) => decision), prophets),
+    daniel: createBank("Daniel", "RVR95", "1-12", "Banco V4 curado por clasificación y reparación trazable", danielEntries.map(({ raw }) => raw), danielEntries.map(({ decision }) => decision), daniel, { generatedAt, masterFingerprint }),
+    prophets: createBank("Profetas y Reyes", "Material PDF", "39-44", "Banco V4 curado por clasificación y reparación trazable", prophetsEntries.map(({ raw }) => raw), prophetsEntries.map(({ decision }) => decision), prophets, { generatedAt, masterFingerprint }),
   }
   const audit = {
     generatedAt,
@@ -330,6 +369,7 @@ export function renderAuditMarkdown(audit) {
     "## Resumen",
     "",
     `- Total analizado: ${audit.summary.total}`,
+    `- Decisiones auditables: ${audit.decisions.length}`,
     `- APPROVED: ${audit.summary.approved}`,
     `- REPAIRED: ${audit.summary.repaired}`,
     `- REJECTED: ${audit.summary.rejected}`,
