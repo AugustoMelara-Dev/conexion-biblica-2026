@@ -84,6 +84,19 @@ describe("adaptador de preguntas curadas V4", () => {
     expect(repairPrompt(prompt)).toBe("Completa correctamente la afirmación: Nabucodonosor preguntó si ellos no honraban «a mi __________».")
   })
 
+  it("repara la variante técnica según el hecho", () => {
+    const raw = {
+      ...base,
+      pregunta: "¿Qué dato completa correctamente según el hecho? «Daniel __________».",
+    }
+    const decision = classifyMasterQuestion(raw)
+
+    expect(decision).toMatchObject({ status: "REPAIRED", issues: ["ARTIFICIAL_PROMPT"] })
+    expect(curateMasterQuestion(raw, decision)).toMatchObject({
+      question: "Completa la afirmación: Daniel __________.",
+    })
+  })
+
   it("usa el soporte factual para explicar sin inventar contenido", () => {
     const raw = { ...base, fact_support: "Daniel propuso no contaminarse." }
 
