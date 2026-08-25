@@ -225,7 +225,7 @@ describe("selección equilibrada", () => {
     expect(scheduleTrainingRetry(retryQueue, failed, 0, 8)).toBe(retryQueue)
   })
 
-  it("respeta las cuotas de dificultad del campeonato cuando hay disponibilidad", () => {
+  it("respeta las cuotas de dificultad del simulacro cuando hay disponibilidad", () => {
     const questions = Array.from({ length: 40 }, (_, index) => choiceQuestion({
       id: `D03-${String(index + 1).padStart(4, "0")}`,
       difficulty: ((index % 5) + 1) as Question["difficulty"],
@@ -233,7 +233,7 @@ describe("selección equilibrada", () => {
       source: { ...source, chapter: (index % 5) + 1 },
     }))
     const selected = selectSessionQuestions(questions, new Map(), {
-      mode: "championship",
+      mode: "simulation",
       count: 20,
       sourceWorks: ["Daniel"],
       chapters: [],

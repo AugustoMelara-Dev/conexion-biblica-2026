@@ -1,4 +1,4 @@
-import type { EvaluationResult, QuestionProgress } from "@/domain/types"
+import type { AttemptContext, EvaluationResult, QuestionProgress } from "@/domain/types"
 
 export function createEmptyProgress(questionKey: string): QuestionProgress {
   return {
@@ -24,6 +24,7 @@ export function applyProgress(
   previous: QuestionProgress | undefined,
   result: EvaluationResult,
   now: number,
+  context: AttemptContext = "practice",
 ): QuestionProgress {
   const current = previous ? structuredClone(previous) : createEmptyProgress("")
   current.timesSeen += 1
@@ -53,6 +54,7 @@ export function applyProgress(
       wasAnswered: result.wasAnswered,
       responseTimeMs: result.responseTimeMs,
       reason: result.reason,
+      context,
     },
   ].slice(-30)
   return current

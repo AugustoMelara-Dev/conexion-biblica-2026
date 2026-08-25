@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
-import { buildStatistics } from "@/lib/statistics"
-import type { Question, QuestionProgress } from "@/domain/types"
+import { buildSimulationStatistics, buildStatistics } from "@/lib/statistics"
+import type { Question, QuestionProgress, Session } from "@/domain/types"
 
 const question = (id: string, chapter: number): Question => ({
   id,
@@ -34,6 +34,20 @@ const progress = (questionKey: string, correct: number, incorrect: number, avera
 })
 
 describe("estadísticas agregadas", () => {
+  it("los errores de práctica no reducen el resultado de simulacro", () => {
+    const answer = (isCorrect: boolean) => ({ questionKey: "bank:q1", answer: "A", result: { isCorrect, wasAnswered: true, responseTimeMs: 1000, reason: isCorrect ? "correct" as const : "incorrect" as const }, responseTimeMs: 1000 })
+    const session = (id: string, context: "practice" | "simulation", answers: ReturnType<typeof answer>[]): Session => ({
+      id, context, startedAt: 1, completedAt: 2, mode: context === "simulation" ? "simulation" : "learn",
+      config: { mode: context === "simulation" ? "simulation" : "learn", count: 1, sourceWorks: ["Daniel"], chapters: [], difficulties: [], types: [], statuses: ["all"], shuffleQuestions: true, shuffleOptions: true, perQuestionSeconds: null, totalSeconds: null },
+      questionKeys: ["bank:q1"], answers, score: answers.filter((item) => item.result.isCorrect).length, durationMs: 1000,
+    })
+    const result = buildSimulationStatistics([
+      session("practice", "practice", [answer(false), answer(false), answer(false)]),
+      session("simulation", "simulation", [answer(true)]),
+    ])
+    expect(result).toMatchObject({ sessions: 1, answers: 1, correct: 1, accuracy: 100 })
+  })
+
   it("calcula métricas generales y ordena capítulos de peor a mejor", () => {
     const stats = buildStatistics(
       [question("q1", 1), question("q2", 2)],
@@ -61,6 +75,20 @@ describe("estadísticas agregadas", () => {
     expect(stats.general.total).toBe(1)
     expect(stats.general.accuracy).toBe(100)
     expect(stats.general.unseen).toBe(0)
+  })
+
+  it("mantiene separado el progreso V4 aunque comparta el id de pregunta con V2", () => {
+    const v2Question = { ...question("shared-id", 1), bankId: "master-v2", bankProfileId: "master-v2" as const }
+    const v4Question = { ...question("shared-id", 1), bankId: "curated-v4", bankProfileId: "curated-v4" as const }
+    const stats = buildStatistics(
+      [v2Question, v4Question],
+      new Map([
+        ["master-v2:shared-id", progress("master-v2:shared-id", 1, 0, 1_000)],
+        ["curated-v4:shared-id", progress("curated-v4:shared-id", 0, 1, 2_000)],
+      ]),
+    )
+
+    expect(stats.general).toMatchObject({ total: 2, correct: 1, incorrect: 1, accuracy: 50 })
   })
 
   it("agrupa V2 por bandas nativas en vez de niveles numéricos derivados", () => {

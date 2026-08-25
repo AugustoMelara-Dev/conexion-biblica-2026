@@ -2,6 +2,7 @@ import { isMastered, isQuestionNew } from "@/domain/mastery"
 import type { Question, QuestionProgress, SessionConfig } from "@/domain/types"
 import { selectSequentialBlock } from "@/domain/session-selection"
 import { questionsShareFacts } from "@/domain/banks"
+import { buildFamilyMastery } from "@/domain/family-mastery"
 
 function createRng(seed: number) {
   let value = seed >>> 0
@@ -9,6 +10,43 @@ function createRng(seed: number) {
     value = (value * 1664525 + 1013904223) >>> 0
     return value / 4294967296
   }
+}
+
+export function selectNextFamilyVariant(
+  family: Question[],
+  seenQuestionKeys: ReadonlySet<string>,
+  seed: number,
+) {
+  if (family.length === 0) return undefined
+  const unseen = family.filter((question) => !seenQuestionKeys.has(`${question.bankId ?? "local"}:${question.id}`))
+  const pool = unseen.length > 0 ? unseen : family
+  return pool[Math.floor(createRng(seed)() * pool.length)]
+}
+
+function normalizedQuestionText(value: string) {
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, " ").trim().toLocaleLowerCase("es")
+}
+
+function dedupeSessionCandidates(questions: Question[]) {
+  const result: Question[] = []
+  const contentIndexes = new Map<string, number>()
+  questions.forEach((question) => {
+    const optionText = question.options.map((option) => normalizedQuestionText(option.text)).join("|")
+    const contentKey = `${normalizedQuestionText(question.question)}::${optionText}`
+    const existingIndex = contentIndexes.get(contentKey)
+    if (existingIndex === undefined) {
+      contentIndexes.set(contentKey, result.length)
+      result.push(question)
+      return
+    }
+    const existing = result[existingIndex]
+    if ((existing.bankId ?? "local") === (question.bankId ?? "local")) {
+      result.push(question)
+    } else if (question.bankProfileId === "prep-v3") {
+      result[existingIndex] = question
+    }
+  })
+  return result
 }
 
 function statusMatches(question: Question, progress: QuestionProgress | undefined, statuses: SessionConfig["statuses"]) {
@@ -27,7 +65,7 @@ function baseScore(question: Question, progress: QuestionProgress | undefined, m
   const failed = progress?.timesIncorrect ?? 0
   const slow = Math.min(50, Math.round((progress?.averageResponseTimeMs ?? 0) / 500))
   const unseen = isQuestionNew(progress) ? 32 : 0
-  if (mode === "championship") {
+  if (mode === "championship" || mode === "simulation") {
     const difficultyWeight = question.difficultyBand === "UNRATED" ? 0 : ({ 5: 100, 4: 82, 3: 60, 2: 25, 1: 10 } as const)[question.difficulty]
     const tagWeight = question.tags.some((tag) => ["numero", "nombre", "detalle", "precision", "secuencia", "declaracion", "tiempo", "lugar", "high"].includes(tag.toLowerCase())) ? 25 : 0
     return difficultyWeight + tagWeight + failed * 12 + slow + unseen + recentBonus
@@ -45,10 +83,12 @@ export function selectSessionQuestions(
 ): Question[] {
   const rng = createRng(seed)
   const candidates = filterEligibleQuestions(questions, progress, config)
-  const unique = [...new Map(candidates.map((question) => [`${question.bankId ?? "local"}:${question.id}`, question])).values()]
+  const uniqueById = [...new Map(candidates.map((question) => [`${question.bankId ?? "local"}:${question.id}`, question])).values()]
+  const unique = dedupeSessionCandidates(uniqueById)
   const target = config.count === "all" ? unique.length : Math.min(config.count, unique.length)
   if (!config.shuffleQuestions) return selectSequentialBlock(unique, target, config.sequentialBlock ?? 0).questions
   const progressFor = (question: Question) => progress.get(`${question.bankId ?? "local"}:${question.id}`) ?? progress.get(question.id)
+  const familyMastery = config.mode === "smart-review" ? buildFamilyMastery(unique, progress) : null
   const seenAt = unique.map((question) => progressFor(question)?.lastSeenAt).filter((timestamp): timestamp is number => typeof timestamp === "number")
   const oldestSeenAt = seenAt.length ? Math.min(...seenAt) : 0
   const newestSeenAt = seenAt.length ? Math.max(...seenAt) : 0
@@ -60,12 +100,12 @@ export function selectSessionQuestions(
   }
   const pool = unique.map((question) => ({
     question,
-    score: baseScore(question, progressFor(question), config.mode, recentBonusFor(question)) + rng() * 20,
+    score: baseScore(question, progressFor(question), config.mode, recentBonusFor(question)) + (familyMastery?.get(question.factKey)?.priority ?? 0) + rng() * 20,
   }))
   const result: Question[] = []
   let lastQuestion: Question | undefined
   let lastChapter = -1
-  const championshipQuotas = config.mode === "championship" ? [
+  const championshipQuotas = config.mode === "championship" || config.mode === "simulation" ? [
     { matches: (question: Question) => question.difficulty === 5, remaining: Math.round(target * 0.4) },
     { matches: (question: Question) => question.difficulty === 4, remaining: Math.round(target * 0.35) },
     { matches: (question: Question) => question.difficulty === 3, remaining: Math.round(target * 0.2) },

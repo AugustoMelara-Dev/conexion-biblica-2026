@@ -1,6 +1,6 @@
 import { getMedian } from "@/domain/evaluation"
 import { isMastered } from "@/domain/mastery"
-import type { Question, QuestionProgress, QuestionType, SourceWork } from "@/domain/types"
+import type { Question, QuestionProgress, QuestionType, Session, SourceWork } from "@/domain/types"
 import { normalizedDifficulty } from "@/domain/banks"
 
 export type AggregateMetric = {
@@ -43,6 +43,37 @@ export type Statistics = {
   weakTypes: AggregateMetric[]
   mostFailed: Question[]
   slowest: Question[]
+}
+
+export type SimulationStatistics = {
+  sessions: number
+  answers: number
+  correct: number
+  incorrect: number
+  unanswered: number
+  accuracy: number
+  bestAccuracy: number
+  averageResponseTimeMs: number
+}
+
+export function buildSimulationStatistics(sessions: Session[]): SimulationStatistics {
+  const simulations = sessions.filter((session) => session.context === "simulation")
+  const answers = simulations.flatMap((session) => session.answers)
+  const correct = answers.filter((answer) => answer.result.isCorrect).length
+  const incorrect = answers.filter((answer) => answer.result.wasAnswered && !answer.result.isCorrect).length
+  const unanswered = answers.filter((answer) => !answer.result.wasAnswered).length
+  const times = answers.filter((answer) => answer.result.wasAnswered).map((answer) => answer.responseTimeMs)
+  const accuracies = simulations.map((session) => session.answers.length ? Math.round((session.answers.filter((answer) => answer.result.isCorrect).length / session.answers.length) * 100) : 0)
+  return {
+    sessions: simulations.length,
+    answers: answers.length,
+    correct,
+    incorrect,
+    unanswered,
+    accuracy: roundPercent(correct, answers.length),
+    bestAccuracy: accuracies.length ? Math.max(...accuracies) : 0,
+    averageResponseTimeMs: times.length ? Math.round(times.reduce((sum, time) => sum + time, 0) / times.length) : 0,
+  }
 }
 
 function roundPercent(correct: number, total: number) {

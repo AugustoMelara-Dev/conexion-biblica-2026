@@ -18,6 +18,13 @@ createRoot(document.getElementById("root")!).render(
 
 if (import.meta.env.PROD && "serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    void navigator.serviceWorker.register("/sw.js")
+    const hadController = Boolean(navigator.serviceWorker.controller)
+    let reloading = false
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      if (!hadController || reloading) return
+      reloading = true
+      window.location.reload()
+    })
+    void navigator.serviceWorker.register("/sw.js", { updateViaCache: "none" })
   })
 }

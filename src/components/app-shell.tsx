@@ -81,9 +81,11 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
           value={bankSelection}
           onChange={(event) => setBankSelection(event.target.value as typeof bankSelection)}
         >
+          <option value="curated-v4">V4 — cobertura amplia</option>
+          <option value="prep-v3">V3 — Preparación intensiva de 4 días</option>
           <option value="legacy-v1">V1 — Clásica</option>
-          <option value="master-v2">V2 — Banco Maestro</option>
-          <option value="mixed">Global / Combinado</option>
+          <option value="mixed">Mixto curado</option>
+          <option value="master-v2">V2 — Fuente técnica</option>
         </select>
       </label>
       <Separator className="my-5" />

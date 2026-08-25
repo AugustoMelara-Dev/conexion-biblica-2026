@@ -1,4 +1,4 @@
-import type { ActiveRound, BackupPayload, CoverageCycle, Preferences, ValidationError } from "@/domain/types"
+import type { ActiveRound, BackupPayload, BankSelection, CoverageCycle, Preferences, ValidationError } from "@/domain/types"
 import type { Bank, QuestionProgress, QuestionReport, Session } from "@/domain/types"
 
 export function createBackupPayload(
@@ -52,11 +52,24 @@ function namespaceLegacyKey(value: unknown) {
   return key.includes(":") ? key : `legacy-v1:${key}`
 }
 
+function isBankSelection(value: unknown): value is BankSelection {
+  return value === "legacy-v1" || value === "master-v2" || value === "prep-v3" || value === "curated-v4" || value === "mixed"
+}
+
+function normalizePreferences(preferences: Preferences): Preferences {
+  return {
+    ...preferences,
+    lastBankSelection: isBankSelection(preferences.lastBankSelection)
+      ? preferences.lastBankSelection
+      : "curated-v4",
+  }
+}
+
 export function migrateBackupPayload(input: unknown): BackupPayload {
   const validation = validateBackupPayload(input)
   if (!validation.valid) throw new Error(validation.errors.map((error) => `${error.path}: ${error.message}`).join("\n"))
   const payload = structuredClone(input) as Record<string, unknown>
-  if (payload.backupVersion === "2.0") return payload as unknown as BackupPayload
+  if (payload.backupVersion === "2.0") return normalizeContexts(payload as unknown as BackupPayload)
 
   const progress = (payload.progress as QuestionProgress[]).map((item) => ({ ...item, questionKey: namespaceLegacyKey(item.questionKey) }))
   const sessions = (payload.sessions as Session[]).map((session) => ({
@@ -66,7 +79,7 @@ export function migrateBackupPayload(input: unknown): BackupPayload {
     config: { ...session.config, bankSelection: session.config.bankSelection ?? "legacy-v1", strategy: session.config.strategy ?? "adaptive" },
   }))
   const reports = (payload.reports as QuestionReport[]).map((report) => ({ ...report, questionKey: namespaceLegacyKey(report.questionKey) }))
-  return {
+  return normalizeContexts({
     backupVersion: "2.0",
     exportedAt: payload.exportedAt as number,
     banks: payload.banks as Bank[],
@@ -76,5 +89,17 @@ export function migrateBackupPayload(input: unknown): BackupPayload {
     preferences: payload.preferences as Preferences,
     coverageCycles: [],
     activeRound: null,
+  })
+}
+
+function normalizeContexts(payload: BackupPayload): BackupPayload {
+  return {
+    ...payload,
+    preferences: normalizePreferences(payload.preferences),
+    progress: payload.progress.map((item) => ({
+      ...item,
+      history: (item.history ?? []).map((attempt) => ({ ...attempt, context: attempt.context ?? "practice" })),
+    })),
+    sessions: payload.sessions.map((session) => ({ ...session, context: session.context ?? "practice" })),
   }
 }

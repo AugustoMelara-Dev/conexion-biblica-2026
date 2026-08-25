@@ -1,4 +1,4 @@
-import type { BankProfileId, BankSelection, DifficultyBand, Question } from "@/domain/types"
+import type { BankProfileId, BankSelection, DifficultyBand, Question, QuestionReport, Session } from "@/domain/types"
 
 export type BankDefinition = {
   id: BankProfileId
@@ -25,6 +25,20 @@ export const BANK_DEFINITIONS: Record<BankProfileId, BankDefinition> = {
     version: "CB2026-FASE4-CIERRE",
     expectedQuestionCount: 3558,
   },
+  "prep-v3": {
+    id: "prep-v3",
+    label: "V3 — Preparación 4 días",
+    description: "500 preguntas por familias",
+    readOnly: true,
+    version: "CB2026-PREP-V3",
+  },
+  "curated-v4": {
+    id: "curated-v4",
+    label: "V4 — Banco Curado",
+    description: "Cobertura amplia revisada",
+    readOnly: true,
+    version: "CB2026-CURATED-V4",
+  },
 }
 
 export function getQuestionKey(question: Pick<Question, "bankId" | "id">) {
@@ -32,8 +46,36 @@ export function getQuestionKey(question: Pick<Question, "bankId" | "id">) {
 }
 
 export function questionBelongsToSelection(question: Question, selection: BankSelection) {
-  if (selection === "mixed") return true
+  if (selection === "mixed") return question.bankProfileId !== "master-v2"
+  if (selection === "prep-v3") return question.bankProfileId === "prep-v3"
   return (question.bankProfileId ?? "legacy-v1") === selection
+}
+
+export function filterQuestionsForSelection(questions: Question[], selection: BankSelection) {
+  return questions.filter((question) => questionBelongsToSelection(question, selection))
+}
+
+function questionKeysForSelection(questions: Question[], selection: BankSelection) {
+  return new Set(filterQuestionsForSelection(questions, selection).map(getQuestionKey))
+}
+
+export function filterSessionsForSelection(sessions: Session[], questions: Question[], selection: BankSelection) {
+  const allowedKeys = questionKeysForSelection(questions, selection)
+  return sessions.flatMap((session) => {
+    const questionKeys = session.questionKeys.filter((key) => allowedKeys.has(key))
+    if (questionKeys.length === 0) return []
+    if (questionKeys.length === session.questionKeys.length) return [session]
+    return [{
+      ...session,
+      questionKeys,
+      answers: session.answers.filter((answer) => allowedKeys.has(answer.questionKey)),
+    }]
+  })
+}
+
+export function filterReportsForSelection(reports: QuestionReport[], questions: Question[], selection: BankSelection) {
+  const allowedKeys = questionKeysForSelection(questions, selection)
+  return reports.filter((report) => allowedKeys.has(report.questionKey))
 }
 
 export function normalizedDifficulty(question: Question): DifficultyBand {

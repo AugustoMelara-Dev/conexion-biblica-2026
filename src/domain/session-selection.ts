@@ -198,14 +198,20 @@ export function selectCoverageCycle(input: {
   }
 }
 
+export function getSequentialBlockCount(poolSize: number, count: number | "all") {
+  if (poolSize <= 0) return 0
+  if (count === "all") return 1
+  return Math.ceil(poolSize / Math.max(1, count))
+}
+
 export function selectSequentialBlock(pool: Question[], count: number, blockIndex: number) {
   const unique = [...new Map(pool.map((question) => [getQuestionKey(question), question])).values()]
   const safeCount = Math.max(1, count)
-  const blockCount = Math.ceil(unique.length / safeCount)
-  const index = Math.max(0, Math.min(blockIndex, Math.max(0, blockCount - 1)))
+  const blockCount = getSequentialBlockCount(unique.length, safeCount)
+  const validIndex = Number.isInteger(blockIndex) && blockIndex >= 0 && blockIndex < blockCount
   return {
-    questions: unique.slice(index * safeCount, (index + 1) * safeCount),
-    blockIndex: index,
+    questions: validIndex ? unique.slice(blockIndex * safeCount, (blockIndex + 1) * safeCount) : [],
+    blockIndex,
     blockCount,
   }
 }
