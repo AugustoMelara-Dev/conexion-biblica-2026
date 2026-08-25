@@ -77,6 +77,20 @@ describe("estadísticas agregadas", () => {
     expect(stats.general.unseen).toBe(0)
   })
 
+  it("mantiene separado el progreso V4 aunque comparta el id de pregunta con V2", () => {
+    const v2Question = { ...question("shared-id", 1), bankId: "master-v2", bankProfileId: "master-v2" as const }
+    const v4Question = { ...question("shared-id", 1), bankId: "curated-v4", bankProfileId: "curated-v4" as const }
+    const stats = buildStatistics(
+      [v2Question, v4Question],
+      new Map([
+        ["master-v2:shared-id", progress("master-v2:shared-id", 1, 0, 1_000)],
+        ["curated-v4:shared-id", progress("curated-v4:shared-id", 0, 1, 2_000)],
+      ]),
+    )
+
+    expect(stats.general).toMatchObject({ total: 2, correct: 1, incorrect: 1, accuracy: 50 })
+  })
+
   it("agrupa V2 por bandas nativas en vez de niveles numéricos derivados", () => {
     const medium = { ...question("v2-medium", 1), bankId: "master-v2", bankProfileId: "master-v2" as const, difficultyBand: "MEDIUM" as const, originalDifficulty: "MEDIUM" }
     const unrated = { ...question("v2-historical", 2), bankId: "master-v2", bankProfileId: "master-v2" as const, difficultyBand: "UNRATED" as const, originalDifficulty: "HISTORICAL_UNRATED" }

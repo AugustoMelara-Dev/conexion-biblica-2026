@@ -1,4 +1,4 @@
-import type { ActiveRound, BackupPayload, CoverageCycle, Preferences, ValidationError } from "@/domain/types"
+import type { ActiveRound, BackupPayload, BankSelection, CoverageCycle, Preferences, ValidationError } from "@/domain/types"
 import type { Bank, QuestionProgress, QuestionReport, Session } from "@/domain/types"
 
 export function createBackupPayload(
@@ -52,6 +52,19 @@ function namespaceLegacyKey(value: unknown) {
   return key.includes(":") ? key : `legacy-v1:${key}`
 }
 
+function isBankSelection(value: unknown): value is BankSelection {
+  return value === "legacy-v1" || value === "master-v2" || value === "prep-v3" || value === "curated-v4" || value === "mixed"
+}
+
+function normalizePreferences(preferences: Preferences): Preferences {
+  return {
+    ...preferences,
+    lastBankSelection: isBankSelection(preferences.lastBankSelection)
+      ? preferences.lastBankSelection
+      : "curated-v4",
+  }
+}
+
 export function migrateBackupPayload(input: unknown): BackupPayload {
   const validation = validateBackupPayload(input)
   if (!validation.valid) throw new Error(validation.errors.map((error) => `${error.path}: ${error.message}`).join("\n"))
@@ -82,6 +95,7 @@ export function migrateBackupPayload(input: unknown): BackupPayload {
 function normalizeContexts(payload: BackupPayload): BackupPayload {
   return {
     ...payload,
+    preferences: normalizePreferences(payload.preferences),
     progress: payload.progress.map((item) => ({
       ...item,
       history: (item.history ?? []).map((attempt) => ({ ...attempt, context: attempt.context ?? "practice" })),

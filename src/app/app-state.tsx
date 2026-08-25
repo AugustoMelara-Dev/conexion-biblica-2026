@@ -61,7 +61,7 @@ type AppContextValue = {
   preferences: Preferences
   bankSelection: BankSelection
   setBankSelection: (selection: BankSelection) => void
-  bankCounts: { legacy: number; master: number; prep: number }
+  bankCounts: { legacy: number; master: number; prep: number; curated: number }
   coverageCycles: Map<string, CoverageCycle>
   activeRound: ActiveRound | null
   statistics: Statistics
@@ -104,15 +104,31 @@ const defaultPreferences: Preferences = {
   theme: "system",
   lastMode: "training",
   reducedMotion: false,
-  lastBankSelection: "prep-v3",
+  lastBankSelection: "curated-v4",
 }
 const AppContext = createContext<AppContextValue | undefined>(undefined)
+
+function isBankSelection(value: unknown): value is BankSelection {
+  return value === "legacy-v1" || value === "master-v2" || value === "prep-v3" || value === "curated-v4" || value === "mixed"
+}
+
+function normalizePreferences(value: Partial<Preferences>): Preferences {
+  return {
+    ...defaultPreferences,
+    ...value,
+    lastBankSelection: isBankSelection(value.lastBankSelection)
+      ? value.lastBankSelection
+      : defaultPreferences.lastBankSelection,
+  }
+}
 
 function getPreferences(): Preferences {
   try {
     const raw = localStorage.getItem("conexion-biblica-preferences")
     if (!raw) return defaultPreferences
-    return { ...defaultPreferences, ...JSON.parse(raw) } as Preferences
+    const parsed = JSON.parse(raw) as unknown
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return defaultPreferences
+    return normalizePreferences(parsed as Partial<Preferences>)
   } catch {
     return defaultPreferences
   }
@@ -577,6 +593,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
       ).length,
       prep: questions.filter(
         (question) => question.bankProfileId === "prep-v3"
+      ).length,
+      curated: questions.filter(
+        (question) => question.bankProfileId === "curated-v4"
       ).length,
     }),
     [questions]
