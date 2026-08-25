@@ -130,4 +130,35 @@ describe("integración del Banco Curado V4", () => {
       await rm(directory, { recursive: true, force: true })
     }
   })
+
+  it("expone un commit válido si unlink y rm fallan permanentemente", async () => {
+    const directory = await mkdtemp(join(tmpdir(), "curated-v4-permanent-cleanup-"))
+    const first = join(directory, "first.json")
+    const second = join(directory, "second.json")
+    try {
+      await writeFile(first, "old-first", "utf8")
+      await writeFile(second, "old-second", "utf8")
+      const permanentFailure = async () => {
+        const error = new Error("simulated permanent cleanup failure")
+        error.code = "EPERM"
+        throw error
+      }
+      const failure = await writePayloadsAtomically([
+        { target: first, value: "new-first" },
+        { target: second, value: "new-second" },
+      ], { fsOps: { unlink: permanentFailure, rm: permanentFailure } }).catch((error) => error)
+
+      expect(failure).toMatchObject({ name: "AtomicCommitCleanupError", committed: true })
+      expect(failure.remainingBackups).toHaveLength(2)
+      expect(failure.cleanupErrors).toHaveLength(2)
+      expect(failure.cleanupErrors.every(({ code }) => code === "EPERM")).toBe(true)
+      expect(await readTempFile(first, "utf8")).toBe("new-first")
+      expect(await readTempFile(second, "utf8")).toBe("new-second")
+      const files = await readdir(directory)
+      expect(files.filter((file) => file.includes(".bak-")).length).toBe(2)
+      expect(files.some((file) => file.endsWith(".tmp"))).toBe(false)
+    } finally {
+      await rm(directory, { recursive: true, force: true })
+    }
+  })
 })

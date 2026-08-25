@@ -408,6 +408,18 @@ async function cleanup(paths, operations = {}) {
   return errors
 }
 
+export class AtomicCommitCleanupError extends Error {
+  constructor({ targets, remainingBackups, cleanupErrors }) {
+    super(`Los payloads nuevos quedaron instalados, pero la limpieza permanente de respaldos falló; se conservan ${remainingBackups.length} copias de recuperación.`)
+    this.name = "AtomicCommitCleanupError"
+    this.committed = true
+    this.targets = [...targets]
+    this.remainingBackups = [...remainingBackups]
+    this.cleanupErrors = cleanupErrors.map(({ path, error }) => ({ path, code: error?.code ?? null, message: error?.message ?? String(error) }))
+    this.cause = cleanupErrors[0]?.error
+  }
+}
+
 /**
  * Stage every payload before moving an existing destination. If any rename
  * fails, newly installed files are removed and all moved originals are put
@@ -481,7 +493,13 @@ export async function writePayloadsAtomically(payloads, { fsOps = {} } = {}) {
     if (backupCleanupErrors.length) {
       const remainingBackups = []
       for (const backup of backupPaths) if (await pathExists(backup)) remainingBackups.push(backup)
-      if (remainingBackups.length) throw new Error(`Los payloads se instalaron, pero no se pudieron retirar ${remainingBackups.length} respaldos temporales.`)
+      if (remainingBackups.length) {
+        throw new AtomicCommitCleanupError({
+          targets: prepared.map(({ target }) => target),
+          remainingBackups,
+          cleanupErrors: backupCleanupErrors,
+        })
+      }
     }
   } catch (error) {
     await cleanup(tempPaths, operations)
