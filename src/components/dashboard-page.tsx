@@ -10,6 +10,15 @@ import { QuickStartButton, ImportShortcut } from "@/components/app-shell"
 import { formatElapsedMs } from "@/lib/format"
 import { StatCard } from "@/components/stat-card"
 import { BankSelector } from "@/components/bank-selector"
+import type { BankSelection } from "@/domain/types"
+
+const activeBankLabels: Record<BankSelection, string> = {
+  "curated-v4": "V4 — cobertura amplia",
+  "prep-v3": "V3 — Preparación intensiva de 4 días",
+  "legacy-v1": "V1 — Clásica",
+  mixed: "Mixto curado",
+  "master-v2": "V2 — Fuente técnica",
+}
 
 export function DashboardPage() {
   const { statistics, banks, questions, sessions, progress, setNav, bankSelection, setBankSelection, bankCounts } = useApp()
@@ -19,6 +28,7 @@ export function DashboardPage() {
   const coverage = questions.length ? Math.round((general.seen / questions.length) * 100) : 0
   const hasProgress = general.total > 0
   const currentStreak = progress.size ? Math.max(...[...progress.values()].map((item) => item.currentCorrectStreak), 0) : 0
+  const activeBankLabel = activeBankLabels[bankSelection]
   return (
     <div className="flex flex-col gap-8">
       <section className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
@@ -31,8 +41,8 @@ export function DashboardPage() {
       </section>
 
       <section aria-labelledby="bank-selection-title" className="flex flex-col gap-3">
-        <div><h2 id="bank-selection-title" className="text-lg font-semibold">Elige tu versión</h2><p className="mt-1 text-sm text-muted-foreground">Cada pregunta conserva el progreso de su banco de origen.</p></div>
-        <BankSelector value={bankSelection} onChange={setBankSelection} legacyCount={bankCounts.legacy} masterCount={bankCounts.master} prepCount={bankCounts.prep} />
+        <div className="flex flex-wrap items-end justify-between gap-3"><div><h2 id="bank-selection-title" className="text-lg font-semibold">Elige tu versión</h2><p className="mt-1 text-sm text-muted-foreground">Cada pregunta conserva el progreso de su banco de origen.</p></div><Badge variant="outline">Perfil activo: {activeBankLabel}</Badge></div>
+        <BankSelector value={bankSelection} onChange={setBankSelection} legacyCount={bankCounts.legacy} masterCount={bankCounts.master} prepCount={bankCounts.prep} curatedCount={bankCounts.curated} />
       </section>
 
       <section aria-label="Métricas generales" className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">

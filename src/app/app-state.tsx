@@ -348,7 +348,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const removeBank = useCallback(
     async (bankId: string) => {
       if (!repositories) return
-      if (bankId === "master-v2" || banks.some((bank) => bank.bankId === bankId && bank.bankProfileId === "prep-v3")) return
+      if (bankId === "master-v2" || banks.some((bank) => bank.bankId === bankId && (bank.bankProfileId === "prep-v3" || bank.bankProfileId === "curated-v4"))) return
       await repositories.banks.remove(bankId)
       await refresh()
     },
