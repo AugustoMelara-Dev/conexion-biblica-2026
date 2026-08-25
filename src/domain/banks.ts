@@ -25,6 +25,13 @@ export const BANK_DEFINITIONS: Record<BankProfileId, BankDefinition> = {
     version: "CB2026-FASE4-CIERRE",
     expectedQuestionCount: 3558,
   },
+  "prep-v3": {
+    id: "prep-v3",
+    label: "V3 — Preparación 4 días",
+    description: "500 preguntas por familias",
+    readOnly: true,
+    version: "CB2026-PREP-V3",
+  },
 }
 
 export function getQuestionKey(question: Pick<Question, "bankId" | "id">) {
@@ -33,7 +40,12 @@ export function getQuestionKey(question: Pick<Question, "bankId" | "id">) {
 
 export function questionBelongsToSelection(question: Question, selection: BankSelection) {
   if (selection === "mixed") return true
+  if (selection === "prep-v3") return question.bankProfileId === "prep-v3"
   return (question.bankProfileId ?? "legacy-v1") === selection
+}
+
+export function filterQuestionsForSelection(questions: Question[], selection: BankSelection) {
+  return questions.filter((question) => questionBelongsToSelection(question, selection))
 }
 
 export function normalizedDifficulty(question: Question): DifficultyBand {

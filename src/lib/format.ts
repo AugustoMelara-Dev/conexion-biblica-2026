@@ -13,6 +13,9 @@ export function sourceLabel(source: SourceWork) {
 
 export function modeLabel(mode: SessionMode) {
   const labels: Record<SessionMode, string> = {
+    learn: "Aprender",
+    "smart-review": "Repaso inteligente",
+    simulation: "Simulacro",
     final: "Modo final",
     training: "Entrenamiento",
     errors: "Modo errores",

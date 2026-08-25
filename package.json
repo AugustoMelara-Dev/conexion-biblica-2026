@@ -11,6 +11,9 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
+    "audit:semantic": "node scripts/audit-prep-semantics.mjs",
+    "pilot:simulation": "node scripts/pilot-simulation.mjs",
+    "test:e2e": "playwright test",
     "preview": "vite preview",
     "deploy": "vercel --prod --yes"
   },

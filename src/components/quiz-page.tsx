@@ -1,8 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
-import { Check, Clock3, Flag, Heart, Info, LockKeyhole, Maximize2, Star, TimerOff, X } from "lucide-react"
+import { Check, Clock3, Flag, Heart, Info, Lightbulb, LockKeyhole, Maximize2, Star, TimerOff, X } from "lucide-react"
 import { useApp } from "@/app/app-state"
 import { evaluateAnswer } from "@/domain/evaluation"
 import { scheduleTrainingRetry } from "@/domain/session-selector"
+import { sessionContextForMode, showsImmediateFeedback } from "@/domain/session-context"
+import { resumeQuestionIndex } from "@/domain/session-resume"
+import { calculateSessionScore } from "@/domain/simulation-calibration"
 import { type ActiveRound, type AnswerValue, type EvaluationResult, type Question, type Session, type SessionAnswer, type SessionConfig } from "@/domain/types"
 import { formatElapsedMs, modeLabel } from "@/lib/format"
 import { Badge } from "@/components/ui/badge"
@@ -24,9 +27,10 @@ export function QuizPage({ questions, config, resume, onStateChange, onFinish, o
   onExit: () => void
 }) {
   const { progress, recordAnswer, recordReport } = useApp()
+  const initialIndex = resumeQuestionIndex(resume?.currentIndex ?? 0, resume?.answers.length ?? 0, questions.length)
   const [queue, setQueue] = useState<Question[]>(questions)
-  const [index, setIndex] = useState(resume?.currentIndex ?? 0)
-  const [value, setValue] = useState<AnswerValue>(() => initialAnswer(questions[resume?.currentIndex ?? 0]))
+  const [index, setIndex] = useState(initialIndex)
+  const [value, setValue] = useState<AnswerValue>(() => initialAnswer(questions[initialIndex]))
   const [submitted, setSubmitted] = useState(false)
   const [feedback, setFeedback] = useState<EvaluationResult | null>(null)
   const [answers, setAnswers] = useState<SessionAnswer[]>(resume?.answers ?? [])
@@ -43,8 +47,8 @@ export function QuizPage({ questions, config, resume, onStateChange, onFinish, o
   const queueRef = useRef(queue)
   const stateChangeRef = useRef(onStateChange)
   const selectionSummaryRef = useRef(resume?.selectionSummary)
-  const isSilent = config.mode === "final" || config.mode === "speed" || config.mode === "championship"
-  const showFeedback = config.mode === "training" && submitted && feedback
+  const isSilent = !showsImmediateFeedback(config.mode)
+  const showFeedback = showsImmediateFeedback(config.mode) && submitted && feedback
   const displayedQuestion = useMemo(() => shuffleQuestionOptions(question, config.shuffleOptions), [config.shuffleOptions, question])
 
   useEffect(() => {
@@ -85,10 +89,11 @@ export function QuizPage({ questions, config, resume, onStateChange, onFinish, o
       startedAt,
       completedAt: Date.now(),
       mode: config.mode,
+      context: sessionContextForMode(config.mode),
       config,
       questionKeys: queueRef.current.map((item) => `${item.bankId ?? "local"}:${item.id}`),
       answers: nextAnswers,
-      score: nextAnswers.filter((item) => item.result.isCorrect).length,
+      score: calculateSessionScore(config.mode, nextAnswers),
       durationMs: Date.now() - startedAt,
     }
     onFinish(session)
@@ -108,8 +113,8 @@ export function QuizPage({ questions, config, resume, onStateChange, onFinish, o
     setAnswers((current) => [...current, sessionAnswer])
     setFeedback(result)
     setSubmitted(true)
-    const nextProgress = await recordAnswer(question, result, value, { favorite, markedDifficult: difficult })
-    if (!result.isCorrect && config.mode === "training") {
+    const nextProgress = await recordAnswer(question, result, value, { favorite, markedDifficult: difficult, context: sessionContextForMode(config.mode) })
+    if (!result.isCorrect && (config.mode === "training" || config.mode === "learn")) {
       const retryGap = Math.min(8 + Math.max(0, nextProgress.timesIncorrect - 1) * 4, 20)
       setQueue((current) => scheduleTrainingRetry(current, question, index, retryGap))
     }
@@ -174,12 +179,26 @@ export function QuizPage({ questions, config, resume, onStateChange, onFinish, o
       <div className="flex flex-wrap items-center justify-between gap-3"><Button variant="ghost" onClick={onExit}><X data-icon="inline-start" />Salir</Button><div className="flex flex-wrap items-center justify-end gap-2"><Badge variant="secondary">{modeLabel(config.mode)}</Badge>{config.totalSeconds !== null ? <Badge variant={totalRemaining && totalRemaining < 30 ? "destructive" : "outline"}><Clock3 data-icon="inline-start" />{totalRemaining}s total</Badge> : null}<Button aria-label="Pantalla completa" size="icon" variant="outline" onClick={() => { if (document.fullscreenElement) void document.exitFullscreen(); else void document.documentElement.requestFullscreen?.() }}><Maximize2 data-icon="inline-start" /></Button></div></div>
       <div className="flex flex-col gap-2"><div className="flex items-center justify-between gap-3 text-xs font-medium text-muted-foreground"><span>Pregunta {index + 1} de {queue.length}</span><span>{Math.round(((index + (submitted ? 1 : 0)) / queue.length) * 100)}%</span></div><Progress value={((index + (submitted ? 1 : 0)) / queue.length) * 100} /></div>
       {config.mode === "speed" ? <div className="grid grid-cols-3 gap-2 rounded-xl border bg-card p-3 text-center text-sm"><div><p className="text-xs text-muted-foreground">Correctas</p><p className="mt-1 font-semibold text-emerald-600 dark:text-emerald-400">{liveCorrect}</p></div><div><p className="text-xs text-muted-foreground">Incorrectas</p><p className="mt-1 font-semibold text-destructive">{liveIncorrect}</p></div><div><p className="text-xs text-muted-foreground">Promedio</p><p className="mt-1 font-semibold">{formatElapsedMs(liveAverage)}</p></div></div> : null}
-      <Card className="shadow-none"><CardHeader className="gap-5"><div className="flex flex-wrap items-center justify-between gap-3"><div className="flex flex-wrap gap-2"><Badge variant="outline">{question.bankProfileId === "master-v2" ? "V2" : "V1"}</Badge><Badge variant="outline">{question.source.work}</Badge><Badge variant="outline">Cap. {question.source.chapter}</Badge><Badge variant="outline">Dificultad {question.originalDifficulty ?? question.difficulty}</Badge></div>{config.perQuestionSeconds !== null ? <div className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-semibold ${remaining && remaining <= 3 ? "border-destructive text-destructive" : "text-primary"}`}><TimerOff className="size-4" aria-hidden="true" />{remaining}s</div> : <span className="flex items-center gap-2 text-xs text-muted-foreground"><LockKeyhole className="size-4" />Sin pistas</span>}</div><CardTitle className="text-xl leading-8 sm:text-2xl">{question.question}</CardTitle><CardDescription className="flex items-center gap-2"><Info className="size-4" />{question.answerMode === "canonical_text" ? "Escribe la respuesta canónica y confirma." : question.type === "multi_select" ? "Selecciona todas las correctas y confirma." : question.type === "ordering" ? "Ordena con los botones accesibles." : question.type === "matching" ? "Relaciona cada elemento con su correspondencia." : "Elige una respuesta y confirma."}</CardDescription></CardHeader><CardContent className="flex flex-col gap-5"><QuestionRenderer question={displayedQuestion} value={value} onChange={setValue} disabled={submitted} />
+      <Card className="shadow-none"><CardHeader className="gap-5"><div className="flex flex-wrap items-center justify-between gap-3"><div className="flex flex-wrap gap-2"><Badge variant="outline">{question.bankProfileId === "prep-v3" ? "V3" : question.bankProfileId === "master-v2" ? "V2" : "V1"}</Badge><Badge variant="outline">{question.source.work}</Badge><Badge variant="outline">Cap. {question.source.chapter}</Badge><Badge variant="outline">Dificultad {question.originalDifficulty ?? question.difficulty}</Badge></div>{config.perQuestionSeconds !== null ? <div className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-semibold ${remaining && remaining <= 3 ? "border-destructive text-destructive" : "text-primary"}`}><TimerOff className="size-4" aria-hidden="true" />{remaining}s</div> : <span className="flex items-center gap-2 text-xs text-muted-foreground"><LockKeyhole className="size-4" />Sin pistas</span>}</div><CardTitle className="text-xl leading-8 sm:text-2xl">{question.question}</CardTitle><CardDescription className="flex items-center gap-2"><Info className="size-4" />{question.answerMode === "canonical_text" ? "Escribe la respuesta canónica y confirma." : question.type === "multi_select" ? "Selecciona todas las correctas y confirma." : question.type === "ordering" ? "Ordena con los botones accesibles." : question.type === "matching" ? "Relaciona cada elemento con su correspondencia." : "Elige una respuesta y confirma."}</CardDescription></CardHeader><CardContent className="flex flex-col gap-5"><QuestionRenderer question={displayedQuestion} value={value} onChange={setValue} disabled={submitted} />
         {showFeedback ? <Alert variant={feedback.isCorrect ? "default" : "destructive"}><AlertTitle className="flex items-center gap-2">{feedback.isCorrect ? <Check /> : <X />}{feedback.isCorrect ? "Respuesta correcta" : feedback.reason === "timeout" ? "Tiempo agotado" : "Respuesta incorrecta"}</AlertTitle><AlertDescription className="flex flex-col gap-2"><span>Respuesta correcta: <strong>{correctText}</strong></span>{question.explanation ? <span>{question.explanation}</span> : null}<span>Fuente: <strong>{question.source.reference}</strong></span></AlertDescription></Alert> : null}
+        {showFeedback ? <MemoryCue cue={question.memoryCue} /> : null}
         {submitted && !showFeedback ? <div className="rounded-lg border bg-muted/35 px-4 py-3 text-sm text-muted-foreground">Respuesta registrada. La solución se revelará al finalizar la ronda.</div> : null}
         {reportOpen ? <div className="flex flex-col gap-3 rounded-xl border border-destructive/30 bg-destructive/5 p-4"><p className="text-sm font-medium">¿Qué quieres auditar?</p><Input value={reportReason} onChange={(event) => setReportReason(event.target.value)} placeholder="Motivo opcional" aria-label="Motivo del reporte" /><div className="flex flex-wrap gap-2"><Button size="sm" variant="destructive" onClick={async () => { await recordReport(question, value, feedback, reportReason || "Sin motivo indicado"); setReportOpen(false) }}>Guardar reporte</Button><Button size="sm" variant="ghost" onClick={() => setReportOpen(false)}>Cancelar</Button></div></div> : null}
         <Separator /><div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"><div className="flex flex-wrap gap-2"><Button aria-pressed={favorite} size="sm" variant={favorite ? "secondary" : "outline"} onClick={() => setFavorite((current) => !current)}><Heart data-icon="inline-start" className={favorite ? "fill-current" : undefined} />Favorita</Button><Button aria-pressed={difficult} size="sm" variant={difficult ? "secondary" : "outline"} onClick={() => setDifficult((current) => !current)}><Star data-icon="inline-start" className={difficult ? "fill-current" : undefined} />Marcar difícil</Button><Button size="sm" variant="ghost" onClick={() => setReportOpen((current) => !current)}><Flag data-icon="inline-start" />Reportar</Button><Dialog><DialogTrigger asChild><Button size="sm" variant="ghost"><Info data-icon="inline-start" />Referencia</Button></DialogTrigger><DialogContent><DialogHeader><DialogTitle>Volver al texto / referencia</DialogTitle><DialogDescription>Busca manualmente esta cita en tu Biblia RVR95.</DialogDescription></DialogHeader><div className="rounded-xl bg-muted/40 p-4 text-sm font-medium">{question.source.reference}</div></DialogContent></Dialog></div><Button className="sm:min-w-36" disabled={!submitted && isEmptyAnswer(value)} onClick={() => { if (submitted) advance(); else void submit() }}>{submitted ? index === queue.length - 1 ? "Ver resultados" : "Siguiente" : "Confirmar respuesta"}</Button></div></CardContent></Card>
       <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground"><span><kbd className="rounded border bg-muted px-1.5 py-0.5 font-mono">A–D</kbd> elegir</span><span><kbd className="rounded border bg-muted px-1.5 py-0.5 font-mono">Enter</kbd> confirmar</span><span><kbd className="rounded border bg-muted px-1.5 py-0.5 font-mono">F</kbd> favorita</span></div>
+    </div>
+  )
+}
+
+export function MemoryCue({ cue }: { cue?: string }) {
+  if (!cue) return null
+  return (
+    <div role="note" className="flex items-start gap-3 rounded-xl border border-primary/20 bg-primary/[0.04] px-4 py-3">
+      <Lightbulb className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
+      <div>
+        <p className="text-sm font-semibold text-primary">Pista para recordar</p>
+        <p className="mt-1 text-sm leading-5 text-foreground/80">{cue}</p>
+      </div>
     </div>
   )
 }

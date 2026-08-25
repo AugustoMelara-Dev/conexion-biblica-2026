@@ -321,7 +321,7 @@ export function BankManagerPage() {
                   </div>
                   <Separator className="my-4" />
                   <div className="flex flex-wrap gap-2">
-                    {bank.bankId === "master-v2" ? (
+                    {bank.bankId === "master-v2" || bank.bankProfileId === "prep-v3" ? (
                       <Badge variant="secondary">
                         Integrado · solo lectura
                       </Badge>

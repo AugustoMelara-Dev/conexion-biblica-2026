@@ -1,18 +1,20 @@
-import { Check, Layers3, LibraryBig, Sparkles } from "lucide-react"
+import { BookOpenCheck, Check, Layers3, LibraryBig, Sparkles } from "lucide-react"
 import type { BankSelection } from "@/domain/types"
 
-export function BankSelector({ value, onChange, legacyCount, masterCount }: {
+export function BankSelector({ value, onChange, legacyCount, masterCount, prepCount }: {
   value: BankSelection
   onChange: (selection: BankSelection) => void
   legacyCount: number
   masterCount: number
+  prepCount: number
 }) {
   const options: { id: BankSelection; label: string; description: string; count: number; icon: typeof LibraryBig; recommended?: boolean }[] = [
     { id: "legacy-v1", label: "V1 — Clásica", description: "Mi banco original", count: legacyCount, icon: LibraryBig },
-    { id: "master-v2", label: "V2 — Banco Maestro", description: "Banco canónico 2026", count: masterCount, icon: Sparkles, recommended: true },
-    { id: "mixed", label: "Mixto — V1 + V2", description: "Combina ambos bancos", count: legacyCount + masterCount, icon: Layers3 },
+    { id: "master-v2", label: "V2 — Banco Maestro", description: "Banco canónico 2026", count: masterCount, icon: Sparkles },
+    { id: "prep-v3", label: "V3 — Preparación 4 días", description: "Plan guiado + preguntas nuevas", count: prepCount, icon: BookOpenCheck, recommended: true },
+    { id: "mixed", label: "Mixto — V1 + V2 + V3", description: "Combina todos los bancos", count: legacyCount + masterCount + prepCount, icon: Layers3 },
   ]
-  return <div role="radiogroup" aria-label="Versión del banco" className="grid gap-3 lg:grid-cols-3">
+  return <div role="radiogroup" aria-label="Versión del banco" className="grid gap-3 lg:grid-cols-4">
     {options.map(({ id, label, description, count, icon: Icon, recommended }) => {
       const checked = value === id
       return <label key={id} className={`relative flex cursor-pointer gap-4 rounded-xl border p-4 transition-colors focus-within:ring-2 focus-within:ring-ring ${checked ? "border-primary bg-primary/5" : "bg-card hover:bg-muted/40"}`}>

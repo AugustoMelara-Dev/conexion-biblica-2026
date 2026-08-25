@@ -1,5 +1,5 @@
 import { validateBank } from "@/domain/validation"
-import type { Bank, Question, QuestionType, SourceWork } from "@/domain/types"
+import type { Bank, BankProfileId, Question, QuestionType, SourceWork } from "@/domain/types"
 
 function slug(value: string) {
   return value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")
@@ -23,10 +23,11 @@ export function createBankFromRaw(raw: Record<string, unknown>, sourceFileName: 
   const sourceWork = String(metadata.sourceWork ?? firstSource.work) as SourceWork
   const sourceVersion = String(metadata.sourceVersion ?? firstSource.version)
   const bankId = `bank-${slug(sourceFileName)}`
+  const bankProfileId: BankProfileId = metadata.profileId === "prep-v3" ? "prep-v3" : "legacy-v1"
   const questions = rawQuestions.map((question) => ({
     ...question,
     bankId,
-    bankProfileId: "legacy-v1",
+    bankProfileId,
     type: question.type as QuestionType,
     difficulty: question.difficulty as Question["difficulty"],
     source: question.source,
@@ -36,8 +37,12 @@ export function createBankFromRaw(raw: Record<string, unknown>, sourceFileName: 
   })) as unknown as Question[]
   return {
     bankId,
-    bankProfileId: "legacy-v1",
-    name: sourceWork === "Daniel" ? `Daniel ${metadata.chapter ?? firstSource.chapter}` : `Profetas y Reyes ${metadata.chapter ?? firstSource.chapter}`,
+    bankProfileId,
+    name: bankProfileId === "prep-v3"
+      ? `V3 — Preparación ${sourceWork}`
+      : sourceWork === "Daniel"
+        ? `Daniel ${metadata.chapter ?? firstSource.chapter}`
+        : `Profetas y Reyes ${metadata.chapter ?? firstSource.chapter}`,
     sourceWork,
     sourceVersion,
     schemaVersion: "1.0",
@@ -51,4 +56,11 @@ export function createBankFromRaw(raw: Record<string, unknown>, sourceFileName: 
 
 export function getBankQuestionKey(bankId: string, questionId: string) {
   return `${bankId}:${questionId}`
+}
+
+export function shouldReplaceBundledBank(
+  existing: { fingerprint: string } | undefined,
+  incoming: { fingerprint: string },
+) {
+  return !existing || existing.fingerprint !== incoming.fingerprint
 }

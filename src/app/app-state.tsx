@@ -32,7 +32,7 @@ import type {
 } from "@/domain/types"
 import { buildStatistics, type Statistics } from "@/lib/statistics"
 import { openAppDb, createRepositories } from "@/storage/db"
-import { createBankFromRaw, getBankQuestionKey } from "@/storage/seed"
+import { createBankFromRaw, getBankQuestionKey, shouldReplaceBundledBank } from "@/storage/seed"
 
 type RepositorySet = ReturnType<typeof createRepositories>
 type NavKey =
@@ -61,7 +61,7 @@ type AppContextValue = {
   preferences: Preferences
   bankSelection: BankSelection
   setBankSelection: (selection: BankSelection) => void
-  bankCounts: { legacy: number; master: number }
+  bankCounts: { legacy: number; master: number; prep: number }
   coverageCycles: Map<string, CoverageCycle>
   activeRound: ActiveRound | null
   statistics: Statistics
@@ -75,7 +75,7 @@ type AppContextValue = {
     question: Question,
     result: EvaluationResult,
     answer: AnswerValue,
-    flags?: { favorite?: boolean; markedDifficult?: boolean }
+    flags?: { favorite?: boolean; markedDifficult?: boolean; context?: "practice" | "simulation" }
   ) => Promise<QuestionProgress>
   recordReport: (
     question: Question,
@@ -104,7 +104,7 @@ const defaultPreferences: Preferences = {
   theme: "system",
   lastMode: "training",
   reducedMotion: false,
-  lastBankSelection: "legacy-v1",
+  lastBankSelection: "prep-v3",
 }
 const AppContext = createContext<AppContextValue | undefined>(undefined)
 
@@ -184,21 +184,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
           const manifest = manifestResponse.ok
             ? ((await manifestResponse.json()) as { files?: string[] })
             : { files: [] }
-          const existingIds = new Set(existingBanks.map((bank) => bank.bankId))
           for (const fileName of manifest.files ?? []) {
             try {
-              const bankId = `bank-${fileName
-                .toLowerCase()
-                .replace(/[^a-z0-9]+/g, "-")
-                .replace(/^-|-$/g, "")}`
-              if (existingIds.has(bankId)) continue
               const raw = await readBundledBank(fileName)
               const validation = validateBank(raw, fileName)
               if (validation.valid) {
-                await nextRepositories.banks.save(
-                  createBankFromRaw(raw, fileName)
-                )
-                existingIds.add(bankId)
+                const incoming = createBankFromRaw(raw, fileName)
+                const existing = existingBanks.find((bank) => bank.bankId === incoming.bankId)
+                if (shouldReplaceBundledBank(existing, incoming)) await nextRepositories.banks.save(incoming)
               }
             } catch {
               continue
@@ -339,11 +332,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const removeBank = useCallback(
     async (bankId: string) => {
       if (!repositories) return
-      if (bankId === "master-v2") return
+      if (bankId === "master-v2" || banks.some((bank) => bank.bankId === bankId && bank.bankProfileId === "prep-v3")) return
       await repositories.banks.remove(bankId)
       await refresh()
     },
-    [refresh, repositories]
+    [banks, refresh, repositories]
   )
 
   const recordAnswer = useCallback(
@@ -351,13 +344,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
       question: Question,
       result: EvaluationResult,
       _answer: AnswerValue,
-      flags: { favorite?: boolean; markedDifficult?: boolean } = {}
+      flags: { favorite?: boolean; markedDifficult?: boolean; context?: "practice" | "simulation" } = {}
     ) => {
       if (!repositories)
         throw new Error("El almacenamiento local aún no está listo")
       const key = getBankQuestionKey(question.bankId ?? "local", question.id)
       const previous = progress.get(key)
-      const next = applyProgress(previous, result, Date.now())
+      const next = applyProgress(previous, result, Date.now(), flags.context ?? "practice")
       next.questionKey = key
       if (flags.favorite !== undefined) next.favorite = flags.favorite
       if (flags.markedDifficult !== undefined)
@@ -581,6 +574,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
       ).length,
       master: questions.filter(
         (question) => question.bankProfileId === "master-v2"
+      ).length,
+      prep: questions.filter(
+        (question) => question.bankProfileId === "prep-v3"
       ).length,
     }),
     [questions]

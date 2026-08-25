@@ -56,7 +56,7 @@ export function migrateBackupPayload(input: unknown): BackupPayload {
   const validation = validateBackupPayload(input)
   if (!validation.valid) throw new Error(validation.errors.map((error) => `${error.path}: ${error.message}`).join("\n"))
   const payload = structuredClone(input) as Record<string, unknown>
-  if (payload.backupVersion === "2.0") return payload as unknown as BackupPayload
+  if (payload.backupVersion === "2.0") return normalizeContexts(payload as unknown as BackupPayload)
 
   const progress = (payload.progress as QuestionProgress[]).map((item) => ({ ...item, questionKey: namespaceLegacyKey(item.questionKey) }))
   const sessions = (payload.sessions as Session[]).map((session) => ({
@@ -66,7 +66,7 @@ export function migrateBackupPayload(input: unknown): BackupPayload {
     config: { ...session.config, bankSelection: session.config.bankSelection ?? "legacy-v1", strategy: session.config.strategy ?? "adaptive" },
   }))
   const reports = (payload.reports as QuestionReport[]).map((report) => ({ ...report, questionKey: namespaceLegacyKey(report.questionKey) }))
-  return {
+  return normalizeContexts({
     backupVersion: "2.0",
     exportedAt: payload.exportedAt as number,
     banks: payload.banks as Bank[],
@@ -76,5 +76,16 @@ export function migrateBackupPayload(input: unknown): BackupPayload {
     preferences: payload.preferences as Preferences,
     coverageCycles: [],
     activeRound: null,
+  })
+}
+
+function normalizeContexts(payload: BackupPayload): BackupPayload {
+  return {
+    ...payload,
+    progress: payload.progress.map((item) => ({
+      ...item,
+      history: (item.history ?? []).map((attempt) => ({ ...attempt, context: attempt.context ?? "practice" })),
+    })),
+    sessions: payload.sessions.map((session) => ({ ...session, context: session.context ?? "practice" })),
   }
 }

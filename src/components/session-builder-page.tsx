@@ -1,19 +1,18 @@
 import { useEffect, useMemo, useState, type ComponentType } from "react"
 import {
   ArrowRight,
-  Award,
   BookOpen,
   Brain,
   Check,
   CircleHelp,
-  Gauge,
-  Layers3,
-  LockKeyhole,
   Shuffle,
-  Sparkles,
   TimerReset,
 } from "lucide-react"
 import { useApp } from "@/app/app-state"
+import { filterEligibleQuestions } from "@/domain/session-selector"
+import { getSequentialBlockCount } from "@/domain/session-selection"
+import { SIMULATION_PRESET } from "@/domain/simulation-calibration"
+import { chaptersForStudyDay, getStudyDay, type StudyDay } from "@/domain/study-plan"
 import {
   SUPPORTED_QUESTION_TYPES,
   type DifficultyBand,
@@ -56,58 +55,22 @@ const modes: {
   icon: ComponentType<{ className?: string }>
 }[] = [
   {
-    mode: "training",
-    label: "Entrenamiento",
-    description: "Feedback inmediato y referencia.",
+    mode: "learn",
+    label: "Aprender",
+    description: "Feedback, explicación, referencia y pista. No afecta tu simulacro.",
     icon: BookOpen,
   },
   {
-    mode: "final",
-    label: "Modo final",
-    description: "Simulación sin ayuda.",
-    icon: LockKeyhole,
-  },
-  {
-    mode: "errors",
-    label: "Modo errores",
-    description: "Fallas, vencidas y difíciles.",
-    icon: RotateIcon,
-  },
-  {
-    mode: "difficult",
-    label: "Modo difíciles",
-    description: "Dificultad 4 y 5.",
+    mode: "smart-review",
+    label: "Repaso inteligente",
+    description: "Prioriza familias débiles y cambia la redacción.",
     icon: Brain,
   },
   {
-    mode: "speed",
-    label: "Velocidad",
-    description: "Ronda rápida con 10 segundos.",
-    icon: Gauge,
-  },
-  {
-    mode: "new",
-    label: "Preguntas nuevas",
-    description: "Nunca respondidas.",
-    icon: Sparkles,
-  },
-  {
-    mode: "mixed",
-    label: "Mezcla total",
-    description: "Todos los bancos seleccionados.",
-    icon: Shuffle,
-  },
-  {
-    mode: "chapter",
-    label: "Por capítulo",
-    description: "Enfoca una selección.",
-    icon: Layers3,
-  },
-  {
-    mode: "championship",
-    label: "Campeonato",
-    description: "Prioridad de dificultad.",
-    icon: Award,
+    mode: "simulation",
+    label: "Simulacro",
+    description: "Tiempo y puntuación competitiva, separados de la práctica.",
+    icon: TimerReset,
   },
 ]
 
@@ -123,7 +86,7 @@ const allChapters = [
 ]
 
 const initialConfig: SessionConfig = {
-  mode: "training",
+  mode: "learn",
   count: 10,
   sourceWorks: ["Daniel", "Profetas y Reyes"],
   chapters: [],
@@ -143,7 +106,7 @@ export function SessionBuilderPage({
 }: {
   onStart: (config: SessionConfig, resetCycle?: boolean) => void
 }) {
-  const { questions, bankSelection, coverageCycles } = useApp()
+  const { questions, progress, bankSelection, coverageCycles } = useApp()
   const [config, setConfig] = useState<SessionConfig>(() => ({
     ...initialConfig,
     bankSelection,
@@ -179,32 +142,11 @@ export function SessionBuilderPage({
             ]),
     }))
   }, [bankSelection])
-  const estimated = questions.filter((question) => {
-    if (
-      config.sourceWorks.length &&
-      !config.sourceWorks.includes(question.source.work)
-    )
-      return false
-    if (
-      config.chapters.length &&
-      !config.chapters.includes(question.source.chapter)
-    )
-      return false
-    if (
-      config.difficulties.length &&
-      !config.difficulties.includes(question.difficulty)
-    )
-      return false
-    if (
-      config.difficultyBands?.length &&
-      question.difficultyBand &&
-      !config.difficultyBands.includes(question.difficultyBand)
-    )
-      return false
-    if (config.types.length && !config.types.includes(question.type))
-      return false
-    return true
-  }).length
+  const eligibleQuestions = useMemo(
+    () => filterEligibleQuestions(questions, progress, config),
+    [config, progress, questions],
+  )
+  const estimated = eligibleQuestions.length
 
   const update = (partial: Partial<SessionConfig>) =>
     setConfig((current) => ({ ...current, ...partial }))
@@ -247,11 +189,36 @@ export function SessionBuilderPage({
       : undefined
   const sequentialBlockCount = Math.max(
     1,
-    Math.ceil(
-      estimated /
-        Math.max(1, typeof config.count === "number" ? config.count : estimated)
-    )
+    getSequentialBlockCount(
+      eligibleQuestions.length,
+      config.count,
+    ),
   )
+  const selectedSequentialBlock = Math.min(
+    Math.max(0, config.sequentialBlock ?? 0),
+    sequentialBlockCount - 1,
+  )
+  useEffect(() => {
+    if (config.strategy !== "sequential-blocks") return
+    if (selectedSequentialBlock === (config.sequentialBlock ?? 0)) return
+    setConfig((current) => ({ ...current, sequentialBlock: selectedSequentialBlock }))
+  }, [config.sequentialBlock, config.strategy, selectedSequentialBlock])
+  const startStudyDay = (day: StudyDay) => {
+    const plan = getStudyDay(day)
+    onStart(
+      {
+        ...initialConfig,
+        mode: "learn",
+        count: 50,
+        sourceWorks: plan.chapters.map((group) => group.work),
+        chapters: chaptersForStudyDay(day),
+        bankSelection: "prep-v3",
+        strategy: "coverage-cycle",
+        difficultyBands: ["BASIC", "MEDIUM", "HARD", "EXPERT", "UNRATED"],
+      },
+      false,
+    )
+  }
   return (
     <div className="flex flex-col gap-7">
       <section>
@@ -267,6 +234,8 @@ export function SessionBuilderPage({
         </p>
       </section>
 
+      <StudyDayQuickStart onSelect={startStudyDay} />
+
       <section className="grid grid-cols-2 gap-3 xl:grid-cols-3">
         {modes.map(({ mode, label, description, icon: Icon }) => (
           <button
@@ -275,14 +244,16 @@ export function SessionBuilderPage({
             className={`min-w-0 rounded-xl border p-3 text-left transition-colors sm:p-4 ${config.mode === mode ? "border-primary bg-primary/5" : "bg-card hover:bg-muted/40"}`}
             onClick={() => {
               update({ mode })
-              if (mode === "speed" || mode === "championship")
-                update({ count: 50, perQuestionSeconds: 10 })
-              if (mode === "difficult")
-                update(
-                  bankSelection === "legacy-v1"
-                    ? { difficulties: [4, 5] }
-                    : { difficultyBands: ["HARD", "EXPERT"] }
-                )
+              if (mode === "simulation")
+                {
+                  update({ ...SIMULATION_PRESET })
+                  setTotalEnabled(true)
+                }
+              if (mode === "learn" || mode === "smart-review")
+                {
+                  update({ perQuestionSeconds: null, totalSeconds: null, strategy: mode === "smart-review" ? "adaptive" : "coverage-cycle" })
+                  setTotalEnabled(false)
+                }
             }}
           >
             <div className="flex items-start justify-between gap-2">
@@ -607,26 +578,11 @@ export function SessionBuilderPage({
                   </Select>
                 </label>
                 {config.strategy === "sequential-blocks" ? (
-                  <label className="flex flex-col gap-2 text-sm font-medium">
-                    Bloque (1 de {sequentialBlockCount})
-                    <Input
-                      type="number"
-                      min={1}
-                      max={sequentialBlockCount}
-                      value={(config.sequentialBlock ?? 0) + 1}
-                      onChange={(event) =>
-                        update({
-                          sequentialBlock: Math.max(
-                            0,
-                            Math.min(
-                              sequentialBlockCount - 1,
-                              Number(event.target.value) - 1
-                            )
-                          ),
-                        })
-                      }
-                    />
-                  </label>
+                  <SequentialBlockPicker
+                    blockCount={sequentialBlockCount}
+                    value={selectedSequentialBlock}
+                    onChange={(sequentialBlock) => update({ sequentialBlock })}
+                  />
                 ) : null}
                 <TimerField
                   label="Tiempo por pregunta"
@@ -735,6 +691,77 @@ export function SessionBuilderPage({
   )
 }
 
+export function SequentialBlockPicker({
+  blockCount,
+  value,
+  onChange,
+}: {
+  blockCount: number
+  value: number
+  onChange: (blockIndex: number) => void
+}) {
+  const safeBlockCount = Math.max(1, blockCount)
+  return (
+    <label className="flex flex-col gap-2 text-sm font-medium">
+      Bloque de preguntas
+      <select
+        aria-label="Bloque de preguntas"
+        className="h-10 rounded-md border bg-background px-3 text-sm font-medium text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        value={String(Math.min(Math.max(0, value), safeBlockCount - 1) + 1)}
+        onChange={(event) => onChange(Number(event.target.value) - 1)}
+      >
+        {Array.from({ length: safeBlockCount }, (_, index) => (
+          <option key={index} value={index + 1}>
+            Bloque {index + 1} de {safeBlockCount}
+          </option>
+        ))}
+      </select>
+      <span className="text-xs font-normal text-muted-foreground">
+        Se muestran {safeBlockCount} bloques según las preguntas elegibles.
+      </span>
+    </label>
+  )
+}
+
+export function StudyDayQuickStart({
+  onSelect,
+}: {
+  onSelect: (day: StudyDay) => void
+}) {
+  const days: StudyDay[] = [1, 2, 3, 4]
+  return (
+    <Card className="border-primary/20 bg-primary/[0.03] shadow-none">
+      <CardHeader>
+        <CardTitle>Ruta rápida de 4 días</CardTitle>
+        <CardDescription>
+          Cada día mezcla Daniel con Profetas y Reyes para ayudarte a recordar por recuperación activa.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+        {days.map((day) => {
+          const plan = getStudyDay(day)
+          return (
+            <Button
+              key={day}
+              type="button"
+              variant="outline"
+              className="h-auto items-start justify-start whitespace-normal p-3 text-left"
+              onClick={() => onSelect(day)}
+            >
+              <span>
+                <span className="block font-semibold">Día {day}: {plan.title}</span>
+                <span className="mt-1 block text-xs font-normal text-muted-foreground">
+                  {plan.method}
+                </span>
+              </span>
+            </Button>
+          )
+        })}
+      </CardContent>
+    </Card>
+  )
+}
+
 function SourceToggle({
   label,
   count,
@@ -790,6 +817,7 @@ function TimerField({
                 <SelectItem value="5">5 segundos</SelectItem>
                 <SelectItem value="8">8 segundos</SelectItem>
                 <SelectItem value="10">10 segundos</SelectItem>
+                <SelectItem value="12">12 segundos</SelectItem>
                 <SelectItem value="15">15 segundos</SelectItem>
                 <SelectItem value="20">20 segundos</SelectItem>
               </>
@@ -798,13 +826,5 @@ function TimerField({
         </SelectContent>
       </Select>
     </label>
-  )
-}
-
-function RotateIcon({ className }: { className?: string }) {
-  return (
-    <span className={className} aria-hidden="true">
-      ↺
-    </span>
   )
 }

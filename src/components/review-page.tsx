@@ -72,7 +72,7 @@ export function ReviewPage() {
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <Badge variant="outline">{report.question.bankProfileId === "master-v2" ? "V2" : "V1"}</Badge>
+                  <Badge variant="outline">{report.question.bankProfileId === "prep-v3" ? "V3" : report.question.bankProfileId === "master-v2" ? "V2" : "V1"}</Badge>
                   <Badge variant="destructive">Pendiente</Badge>
                 </div>
               </CardHeader>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { AlertCircle, Database, LoaderCircle } from "lucide-react"
 import { useApp } from "@/app/app-state"
+import { filterQuestionsForSelection } from "@/domain/banks"
 import {
   filterEligibleQuestions,
   selectSessionQuestions,
@@ -48,7 +49,7 @@ export function App() {
     masterBankError,
     nav,
     setNav,
-    questions,
+    allQuestions,
     progress,
     saveSession,
     coverageCycles,
@@ -63,9 +64,9 @@ export function App() {
   const [lastRound, setLastRound] = useState<RoundView | null>(null)
 
   useEffect(() => {
-    if (activeRound || !storedActiveRound || questions.length === 0) return
+    if (activeRound || !storedActiveRound || allQuestions.length === 0) return
     const questionMap = new Map(
-      questions.map((question) => [
+      allQuestions.map((question) => [
         `${question.bankId ?? "local"}:${question.id}`,
         question,
       ])
@@ -80,7 +81,7 @@ export function App() {
       persisted: storedActiveRound,
     })
     setNav("practice")
-  }, [activeRound, questions, setNav, storedActiveRound])
+  }, [activeRound, allQuestions, setNav, storedActiveRound])
 
   const startRound = async (
     config: SessionConfig,
@@ -94,8 +95,12 @@ export function App() {
         config.strategy ??
         (config.shuffleQuestions ? "coverage-cycle" : "sequential-blocks"),
     }
+    const roundQuestions = filterQuestionsForSelection(
+      allQuestions,
+      nextConfig.bankSelection ?? bankSelection,
+    )
     const eligible =
-      subset ?? filterEligibleQuestions(questions, progress, nextConfig)
+      subset ?? filterEligibleQuestions(roundQuestions, progress, nextConfig)
     const target =
       nextConfig.count === "all"
         ? eligible.length
@@ -132,7 +137,7 @@ export function App() {
       ).questions
     else
       selected = selectSessionQuestions(
-        questions,
+        roundQuestions,
         progress,
         nextConfig,
         timestamp()
@@ -185,13 +190,13 @@ export function App() {
           .filter((answer) => !answer.result.isCorrect)
           .map((answer) => answer.questionKey)
       )
-      const errorQuestions = questions.filter((question) =>
+      const errorQuestions = allQuestions.filter((question) =>
         errorKeys.has(`${question.bankId ?? "local"}:${question.id}`)
       )
       return (
         <ResultsPage
           session={result}
-          questions={questions}
+          questions={allQuestions}
           onErrors={() => {
             setResult(null)
             void startRound(

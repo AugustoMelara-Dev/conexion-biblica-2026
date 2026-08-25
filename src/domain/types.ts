@@ -17,7 +17,7 @@ export type QuestionType = (typeof SUPPORTED_QUESTION_TYPES)[number]
 export type SourceWork = "Daniel" | "Profetas y Reyes"
 
 export type QuestionOption = { id: string; text: string }
-export type BankProfileId = "legacy-v1" | "master-v2"
+export type BankProfileId = "legacy-v1" | "master-v2" | "prep-v3"
 export type BankSelection = BankProfileId | "mixed"
 export type DifficultyBand = "BASIC" | "MEDIUM" | "HARD" | "EXPERT" | "UNRATED"
 export type AnswerMode = "option_id" | "canonical_text"
@@ -52,6 +52,8 @@ export type Question = {
   metadata?: Record<string, unknown>
   explanation?: string
   trapReason?: string
+  memoryCue?: string
+  integrative?: boolean
   verified?: boolean
   leftItems?: MatchItem[]
   rightItems?: MatchItem[]
@@ -73,12 +75,14 @@ export type Bank = {
 }
 
 export type AttemptReason = "correct" | "incorrect" | "timeout" | "unanswered"
+export type AttemptContext = "practice" | "simulation"
 export type AttemptRecord = {
   timestamp: number
   isCorrect: boolean
   wasAnswered: boolean
   responseTimeMs: number
   reason: AttemptReason
+  context?: AttemptContext
 }
 
 export type QuestionProgress = {
@@ -109,6 +113,9 @@ export type EvaluationResult = {
 }
 
 export type SessionMode =
+  | "learn"
+  | "smart-review"
+  | "simulation"
   | "final"
   | "training"
   | "errors"
@@ -176,6 +183,7 @@ export type Session = {
   startedAt: number
   completedAt: number
   mode: SessionMode
+  context?: AttemptContext
   config: SessionConfig
   questionKeys: string[]
   answers: SessionAnswer[]

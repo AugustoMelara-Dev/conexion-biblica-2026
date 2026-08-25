@@ -32,7 +32,7 @@ export function DashboardPage() {
 
       <section aria-labelledby="bank-selection-title" className="flex flex-col gap-3">
         <div><h2 id="bank-selection-title" className="text-lg font-semibold">Elige tu versión</h2><p className="mt-1 text-sm text-muted-foreground">Cada pregunta conserva el progreso de su banco de origen.</p></div>
-        <BankSelector value={bankSelection} onChange={setBankSelection} legacyCount={bankCounts.legacy} masterCount={bankCounts.master} />
+        <BankSelector value={bankSelection} onChange={setBankSelection} legacyCount={bankCounts.legacy} masterCount={bankCounts.master} prepCount={bankCounts.prep} />
       </section>
 
       <section aria-label="Métricas generales" className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { createBankFromRaw } from "@/storage/seed"
+import { createBankFromRaw, shouldReplaceBundledBank } from "@/storage/seed"
 
 describe("normalización de bancos importados", () => {
   it("conserva el raw y asigna una clave estable a cada pregunta", () => {
@@ -24,5 +24,11 @@ describe("normalización de bancos importados", () => {
     expect(bank.questions[0].bankId).toBe(bank.bankId)
     expect(bank.questions[0].id).toBe("D03-0001")
     expect(bank.raw).toEqual(raw)
+  })
+
+  it("reemplaza un banco empaquetado sólo cuando cambia su huella", () => {
+    expect(shouldReplaceBundledBank(undefined, { fingerprint: "new" })).toBe(true)
+    expect(shouldReplaceBundledBank({ fingerprint: "old" }, { fingerprint: "new" })).toBe(true)
+    expect(shouldReplaceBundledBank({ fingerprint: "same" }, { fingerprint: "same" })).toBe(false)
   })
 })

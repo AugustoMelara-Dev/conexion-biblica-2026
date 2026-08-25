@@ -73,14 +73,14 @@ export function ResultsPage({
           Buen trabajo bajo presión.
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Tu resultado quedó guardado localmente.
+          {session.context === "simulation" ? "Este resultado cuenta sólo para tus simulacros." : "Esta práctica mejora tu dominio sin alterar tus simulacros."}
         </p>
       </section>
       <Card className="shadow-none">
         <CardContent className="grid gap-5 p-5 sm:grid-cols-2 lg:grid-cols-4">
           <ResultMetric
             label="Puntuación"
-            value={`${correct} / ${session.answers.length}`}
+            value={session.context === "simulation" ? `${session.score} / 100` : `${correct} / ${session.answers.length}`}
           />
           <ResultMetric label="Precisión" value={`${accuracy}%`} />
           <ResultMetric

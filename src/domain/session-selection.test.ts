@@ -120,6 +120,25 @@ describe("otras estrategias", () => {
     expect(second.blockCount).toBe(2)
   })
 
+  it("selecciona el bloque 2 y no lo confunde con el último", () => {
+    const pool = createQuestions(155)
+    const result = selectSequentialBlock(pool, 50, 1)
+
+    expect(result.blockCount).toBe(4)
+    expect(result.questions.map((question) => question.id)).toEqual(
+      pool.slice(50, 100).map((question) => question.id),
+    )
+  })
+
+  it("no salta al último cuando el índice está fuera de rango", () => {
+    const pool = createQuestions(100)
+    const result = selectSequentialBlock(pool, 50, 8)
+
+    expect(result.questions).toEqual([])
+    expect(result.blockIndex).toBe(8)
+    expect(result.blockCount).toBe(2)
+  })
+
   it("poolKey cambia con filtros y es estable ante el orden de arrays", () => {
     const base: SessionConfig = {
       mode: "training", count: 50, sourceWorks: ["Daniel", "Profetas y Reyes"], chapters: [3, 1],

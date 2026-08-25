@@ -83,6 +83,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
         >
           <option value="legacy-v1">V1 — Clásica</option>
           <option value="master-v2">V2 — Banco Maestro</option>
+          <option value="prep-v3">V3 — Preparación 4 días</option>
           <option value="mixed">Global / Combinado</option>
         </select>
       </label>
