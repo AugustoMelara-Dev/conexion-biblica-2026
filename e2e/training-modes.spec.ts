@@ -66,6 +66,15 @@ async function answerAndAdvance(page: Page, isLast = false) {
   if (!isLast) await page.getByRole("button", { name: "Siguiente" }).click()
 }
 
+async function expectCuratedMixedProfile(page: Page) {
+  const profileBadge = page.locator("[data-bank-profile]")
+  await expect(profileBadge).toHaveCount(1)
+  await expect(profileBadge).toBeVisible()
+  const profile = await profileBadge.getAttribute("data-bank-profile")
+  expect(["legacy-v1", "prep-v3", "curated-v4"]).toContain(profile)
+  expect(profile).not.toBe("master-v2")
+}
+
 test("V4 — Aprender muestra feedback, fuente y pista sin presión", async ({ page }) => {
   await startLearnRound(page)
   await expect(page.getByText("V4", { exact: true })).toBeVisible()
@@ -131,7 +140,7 @@ test("V4 es recomendado en una instalación nueva", async ({ page }) => {
 test("Mixto curado nunca inicia una pregunta V2", async ({ page }) => {
   await startLearnRound(page, 25, "mixed")
   for (let index = 0; index < 25; index += 1) {
-    await expect(page.getByText("V2", { exact: true })).toBeHidden()
+    await expectCuratedMixedProfile(page)
     await answerAndAdvance(page, index === 24)
   }
 })
