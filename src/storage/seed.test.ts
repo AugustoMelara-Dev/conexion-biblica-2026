@@ -1,5 +1,11 @@
+import { readFileSync } from "node:fs"
+import { join } from "node:path"
 import { describe, expect, it } from "vitest"
-import { createBankFromRaw, shouldReplaceBundledBank } from "@/storage/seed"
+import { createBankFromRaw, getBankIdForSourceFileName, getRawBankProfileId, isGenericBankImportAllowed, isIntegratedBankProfile, shouldReplaceBundledBank } from "@/storage/seed"
+
+const v4Fixture = JSON.parse(
+  readFileSync(join(process.cwd(), "public", "banks", "v4_daniel.json"), "utf8"),
+) as Record<string, unknown>
 
 describe("normalización de bancos importados", () => {
   it("conserva el raw y asigna una clave estable a cada pregunta", () => {
@@ -26,9 +32,31 @@ describe("normalización de bancos importados", () => {
     expect(bank.raw).toEqual(raw)
   })
 
+  it("reconoce un banco V4 integrado", () => {
+    const bank = createBankFromRaw(v4Fixture, "v4_daniel.json", 1)
+
+    expect(bank).toMatchObject({
+      bankProfileId: "curated-v4",
+      name: "V4 — Banco Curado Daniel",
+    })
+    expect(bank.questions[0].bankProfileId).toBe("curated-v4")
+  })
+
   it("reemplaza un banco empaquetado sólo cuando cambia su huella", () => {
     expect(shouldReplaceBundledBank(undefined, { fingerprint: "new" })).toBe(true)
     expect(shouldReplaceBundledBank({ fingerprint: "old" }, { fingerprint: "new" })).toBe(true)
     expect(shouldReplaceBundledBank({ fingerprint: "same" }, { fingerprint: "same" })).toBe(false)
+  })
+
+  it("identifica perfiles integrados para bloquear importaciones genéricas", () => {
+    expect(getRawBankProfileId(v4Fixture)).toBe("curated-v4")
+    expect(isIntegratedBankProfile("master-v2")).toBe(true)
+    expect(isIntegratedBankProfile("prep-v3")).toBe(true)
+    expect(isIntegratedBankProfile("curated-v4")).toBe(true)
+    expect(isIntegratedBankProfile("legacy-v1")).toBe(false)
+    expect(isGenericBankImportAllowed("legacy-v1")).toBe(true)
+    expect(isGenericBankImportAllowed("curated-v4")).toBe(false)
+    expect(isGenericBankImportAllowed("legacy-v1", "bank-v4", "curated-v4")).toBe(false)
+    expect(getBankIdForSourceFileName("v4_daniel.json")).toBe("bank-v4-daniel-json")
   })
 })

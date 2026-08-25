@@ -12,6 +12,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "audit:semantic": "node scripts/audit-prep-semantics.mjs",
+    "build:v4": "node scripts/build-curated-v4.mjs",
+    "audit:v4": "node scripts/audit-curated-v4.mjs",
     "pilot:simulation": "node scripts/pilot-simulation.mjs",
     "test:e2e": "playwright test",
     "preview": "vite preview",

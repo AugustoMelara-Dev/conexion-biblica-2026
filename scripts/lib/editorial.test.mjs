@@ -20,4 +20,28 @@ describe("edición de variantes V3", () => {
   it("no modifica preguntas que ya tienen una redacción natural", () => {
     expect(naturalizePrompt("¿Quién interpretó el sueño del rey?")).toBe("¿Quién interpretó el sueño del rey?")
   })
+
+  it("no elimina una apertura de comillas que pertenece a un desequilibrio interno", () => {
+    const original = "¿Qué dijo el rey «cuando el sueño terminó; y no explicó?"
+
+    expect(naturalizePrompt(original)).toBe(original)
+  })
+
+  it("corrige un cierre exterior huérfano antes de un punto y coma", () => {
+    const original = "Completa la afirmación: «Daniel llamó»»;"
+
+    expect(naturalizePrompt(original)).toBe("Completa la afirmación: «Daniel llamó»;")
+  })
+
+  it("no duplica el punto cuando el enunciado artificial termina en punto y coma", () => {
+    const original = "¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel llamó;"
+
+    expect(naturalizePrompt(original)).toBe("Completa la afirmación: Daniel llamó;")
+  })
+
+  it("preserva una cita anidada cuando su dos puntos no es un encabezado exterior", () => {
+    const original = "¿Qué opción completa correctamente la afirmación? «Dijo en su corazón: «__________»»."
+
+    expect(naturalizePrompt(original)).toBe(original)
+  })
 })

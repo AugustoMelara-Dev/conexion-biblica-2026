@@ -15,6 +15,7 @@ import { SIMULATION_PRESET } from "@/domain/simulation-calibration"
 import { chaptersForStudyDay, getStudyDay, type StudyDay } from "@/domain/study-plan"
 import {
   SUPPORTED_QUESTION_TYPES,
+  type BankSelection,
   type DifficultyBand,
   type QuestionStatus,
   type QuestionType,
@@ -101,6 +102,14 @@ const initialConfig: SessionConfig = {
   strategy: "coverage-cycle",
 }
 
+const activeBankLabels: Record<BankSelection, string> = {
+  "curated-v4": "V4 — cobertura amplia",
+  "prep-v3": "V3 — Preparación intensiva de 4 días",
+  "legacy-v1": "V1 — Clásica",
+  mixed: "Mixto curado",
+  "master-v2": "V2 — Fuente técnica",
+}
+
 export function SessionBuilderPage({
   onStart,
 }: {
@@ -117,6 +126,7 @@ export function SessionBuilderPage({
   }))
   const [customCount, setCustomCount] = useState(30)
   const [totalEnabled, setTotalEnabled] = useState(false)
+  const activeBankLabel = activeBankLabels[bankSelection]
   const availableChapters = useMemo(
     () =>
       new Set(
@@ -232,6 +242,7 @@ export function SessionBuilderPage({
           Ajusta el foco y la presión. El selector distribuye capítulos, fuentes
           y factKeys para evitar una secuencia predecible.
         </p>
+        <Badge className="mt-3" variant="outline">Perfil activo: {activeBankLabel}</Badge>
       </section>
 
       <StudyDayQuickStart onSelect={startStudyDay} />

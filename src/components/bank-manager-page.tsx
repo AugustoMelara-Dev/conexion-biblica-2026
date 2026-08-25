@@ -23,6 +23,45 @@ import {
 } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 
+type CurationSummary = {
+  approved: number
+  repaired: number
+  rejected: number
+}
+
+type CurationMetadata = {
+  generatedAt: string | null
+  masterFingerprint: string | null
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return Boolean(value) && typeof value === "object" && !Array.isArray(value)
+}
+
+function getCurationSummary(raw: Record<string, unknown> | undefined): CurationSummary | null {
+  if (!raw || !isRecord(raw.bank) || !isRecord(raw.bank.curationSummary)) return null
+  const summary = raw.bank.curationSummary
+  const { approved, repaired, rejected } = summary
+  if (
+    typeof approved !== "number" ||
+    typeof repaired !== "number" ||
+    typeof rejected !== "number"
+  )
+    return null
+  return { approved, repaired, rejected }
+}
+
+function getCurationMetadata(raw: Record<string, unknown> | undefined): CurationMetadata | null {
+  if (!raw || !isRecord(raw.bank)) return null
+  const generatedAt = typeof raw.bank.generatedAt === "string" && Number.isFinite(Date.parse(raw.bank.generatedAt))
+    ? raw.bank.generatedAt
+    : null
+  const masterFingerprint = typeof raw.bank.masterFingerprint === "string" && raw.bank.masterFingerprint.length > 0
+    ? raw.bank.masterFingerprint
+    : null
+  return generatedAt || masterFingerprint ? { generatedAt, masterFingerprint } : null
+}
+
 export function BankManagerPage() {
   const {
     banks,
@@ -295,6 +334,20 @@ export function BankManagerPage() {
             const count = allQuestions.filter(
               (question) => question.bankId === bank.bankId
             ).length
+            const curationSummary =
+              bank.bankProfileId === "curated-v4"
+                ? getCurationSummary(bank.raw)
+                : null
+            const curationMetadata =
+              bank.bankProfileId === "curated-v4"
+                ? getCurationMetadata(bank.raw)
+                : null
+            const isTechnicalBank =
+              bank.bankId === "master-v2" || bank.bankProfileId === "master-v2"
+            const readOnly =
+              isTechnicalBank ||
+              bank.bankProfileId === "prep-v3" ||
+              bank.bankProfileId === "curated-v4"
             return (
               <Card key={bank.bankId} className="shadow-none">
                 <CardHeader className="flex flex-row items-start justify-between gap-3 space-y-0">
@@ -319,9 +372,27 @@ export function BankManagerPage() {
                     <span>{bank.sourceVersion}</span>
                     <span>Importado {formatDate(bank.importedAt)}</span>
                   </div>
+                  {curationSummary ? (
+                    <div aria-label="Resumen de curación V4" className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs font-medium text-muted-foreground">
+                      <span>{curationSummary.approved} aprobadas</span>
+                      <span>{curationSummary.repaired} reparadas</span>
+                      <span>{curationSummary.rejected} rechazadas</span>
+                    </div>
+                  ) : null}
+                  {curationMetadata ? (
+                    <div aria-label="Metadatos de generación V4" className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">
+                      {curationMetadata.generatedAt ? <span>Generado {formatDate(Date.parse(curationMetadata.generatedAt))}</span> : null}
+                      {curationMetadata.masterFingerprint ? <span title={curationMetadata.masterFingerprint}>Maestro SHA-256 {curationMetadata.masterFingerprint.slice(0, 12)}…</span> : null}
+                    </div>
+                  ) : null}
+                  {isTechnicalBank ? (
+                    <p className="mt-4 text-xs font-medium text-amber-700 dark:text-amber-300">
+                      Fuente técnica conservada sin modificaciones
+                    </p>
+                  ) : null}
                   <Separator className="my-4" />
                   <div className="flex flex-wrap gap-2">
-                    {bank.bankId === "master-v2" || bank.bankProfileId === "prep-v3" ? (
+                    {readOnly ? (
                       <Badge variant="secondary">
                         Integrado · solo lectura
                       </Badge>

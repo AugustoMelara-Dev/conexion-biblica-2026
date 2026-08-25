@@ -4,6 +4,18 @@ import type { Bank, Preferences } from "@/domain/types"
 
 const preferences: Preferences = { theme: "dark", lastMode: "training", reducedMotion: false, lastBankSelection: "legacy-v1" }
 
+function oldBackup(nextPreferences: Partial<Preferences> = {}) {
+  return {
+    backupVersion: "1.0" as const,
+    exportedAt: 7,
+    banks: [],
+    progress: [],
+    sessions: [],
+    reports: [],
+    preferences: { ...preferences, ...nextPreferences },
+  }
+}
+
 describe("respaldos locales", () => {
   it("crea un sobre versionado y valida su estructura antes de restaurar", () => {
     const payload = createBackupPayload({ banks: [], progress: [], sessions: [], reports: [], preferences }, 123)
@@ -89,6 +101,31 @@ describe("respaldos locales", () => {
     expect(migrated.preferences.lastBankSelection).toBe("prep-v3")
     expect(migrated.banks[0].bankProfileId).toBe("prep-v3")
     expect(migrated.activeRound?.config.bankSelection).toBe("prep-v3")
+  })
+
+  it("acepta y conserva curated-v4", () => {
+    const payload = createBackupPayload({
+      banks: [],
+      progress: [],
+      sessions: [],
+      reports: [],
+      preferences: { ...preferences, lastBankSelection: "curated-v4" },
+    })
+
+    expect(validateBackupPayload(payload).valid).toBe(true)
+    expect(migrateBackupPayload(payload).preferences.lastBankSelection).toBe("curated-v4")
+  })
+
+  it("mantiene una selección antigua válida", () => {
+    const payload = oldBackup({ lastBankSelection: "prep-v3" })
+
+    expect(migrateBackupPayload(payload).preferences.lastBankSelection).toBe("prep-v3")
+  })
+
+  it("reemplaza una selección desconocida durante la migración", () => {
+    const payload = oldBackup({ lastBankSelection: "unknown-bank" as Preferences["lastBankSelection"] })
+
+    expect(migrateBackupPayload(payload).preferences.lastBankSelection).toBe("curated-v4")
   })
 
   it("trata intentos y sesiones antiguas sin contexto como práctica", () => {
