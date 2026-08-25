@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest"
 import { classifyMasterQuestion } from "./master-curation.mjs"
 import { curateMasterQuestion, repairExplanation, repairPrompt } from "./curated-question.mjs"
+import { repairVisibleText } from "./editorial.mjs"
 
 const base = {
   QUESTION_ID: "GEN-1", origen: "GENERATED", material: "DANIEL", capitulo: "1",
@@ -101,5 +102,26 @@ describe("adaptador de preguntas curadas V4", () => {
     const raw = { ...base, fact_support: "Daniel propuso no contaminarse." }
 
     expect(repairExplanation(raw)).toBe("Dato verificado en Daniel 1:8, RVR95: Daniel propuso no contaminarse.")
+  })
+
+  it("repara una comilla visible huérfana sin inventar palabras", () => {
+    expect(repairVisibleText("dijo a Daniel: «Anda, Daniel")).toBe("dijo a Daniel: Anda, Daniel")
+    expect(repairVisibleText("dios», en singular")).toBe("dios, en singular")
+    expect(repairVisibleText("una «cita» válida")).toBe("una «cita» válida")
+  })
+
+  it("rechaza un texto con más de una comilla huérfana", () => {
+    expect(repairVisibleText("«una «cita")).toBeNull()
+  })
+
+  it("balancea comillas en opciones y respuesta canónica", () => {
+    const optionRaw = { ...base, A: "A) una opción «rota", respuesta_correcta: "A) una opción «rota" }
+    const option = curateMasterQuestion(optionRaw, classifyMasterQuestion(optionRaw))
+    expect(option?.options).toContainEqual({ id: "A", text: "una opción rota" })
+
+    const canonicalRaw = { ...base, tipo: "COMPLETAR", A: "", B: "", C: "", D: "", respuesta_correcta: "dios», en singular" }
+    const canonical = curateMasterQuestion(canonicalRaw, classifyMasterQuestion(canonicalRaw))
+    expect(canonical).toMatchObject({ answerMode: "canonical_text", correctAnswerText: "dios, en singular" })
+    expect(canonical?.options).toContainEqual({ id: "ANSWER", text: "dios, en singular" })
   })
 })

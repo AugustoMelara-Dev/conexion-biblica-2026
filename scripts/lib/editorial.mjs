@@ -2,6 +2,28 @@ function quoteCount(value, quote) {
   return (value.match(new RegExp(quote, "g")) ?? []).length
 }
 
+/**
+ * Remove exactly one unmatched Spanish quote when its repair is mechanical.
+ * Adding a quote could change a source fragment, so inputs with more than one
+ * unmatched mark are left for the curation policy to reject.
+ */
+export function repairVisibleText(value) {
+  const normalized = String(value ?? "").replace(/\s+/gu, " ").trim()
+  const openings = []
+  const unmatchedClosings = []
+  for (let index = 0; index < normalized.length; index += 1) {
+    if (normalized[index] === "«") openings.push(index)
+    if (normalized[index] === "»") {
+      if (openings.length) openings.pop()
+      else unmatchedClosings.push(index)
+    }
+  }
+  if (openings.length === 0 && unmatchedClosings.length === 0) return normalized
+  if (openings.length + unmatchedClosings.length !== 1) return null
+  const removeAt = openings[0] ?? unmatchedClosings[0]
+  return `${normalized.slice(0, removeAt)}${normalized.slice(removeAt + 1)}`.replace(/\s+/gu, " ").trim()
+}
+
 function splitTrailingPunctuation(value) {
   const match = /([.!?…;]+)$/u.exec(value)
   if (!match) return { body: value, punctuation: "" }

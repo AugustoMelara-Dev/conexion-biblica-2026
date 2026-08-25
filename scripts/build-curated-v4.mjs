@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto"
-import { access, mkdir, readFile, rename, unlink, writeFile } from "node:fs/promises"
+import { access, mkdir, readFile, rename, rm as rmFile, unlink, writeFile } from "node:fs/promises"
 import { dirname, resolve } from "node:path"
 import { fileURLToPath } from "node:url"
 import { classifyMasterQuestion, curationFamily, CurationStatus } from "./lib/master-curation.mjs"
@@ -100,6 +100,15 @@ function optionText(question, optionId) {
   return question.options?.find((option) => option.id === optionId)?.text ?? ""
 }
 
+function quoteDifference(value) {
+  return (asText(value).match(/«/gu) ?? []).length - (asText(value).match(/»/gu) ?? []).length
+}
+
+function correctAnswerText(question) {
+  if (question.correctAnswerText != null) return question.correctAnswerText
+  return (question.correctAnswer ?? []).map((answerId) => optionText(question, answerId)).join(" | ")
+}
+
 function validateCuratedQuestion(question, raw, expectedWork, findings, seenIds, seenMasterIds) {
   if (!question || typeof question !== "object") {
     issue(findings, question, "MISSING_CURATED_QUESTION", "La decisión aprobada o reparada no produjo una pregunta.")
@@ -126,9 +135,15 @@ function validateCuratedQuestion(question, raw, expectedWork, findings, seenIds,
   if (!question.question || !question.explanation) issue(findings, question, "MISSING_VISIBLE_TEXT", "La pregunta V4 carece de enunciado o explicación.")
   if (TECHNICAL_LANGUAGE.test(`${question.question} ${question.explanation} ${question.correctAnswerText ?? ""}`)) issue(findings, question, "TECHNICAL_LANGUAGE", "La salida V4 conserva lenguaje de generación, auditoría o corrección pendiente.")
 
-  const openings = (asText(question.question).match(/«/gu) ?? []).length
-  const closings = (asText(question.question).match(/»/gu) ?? []).length
-  if (openings !== closings) issue(findings, question, "UNBALANCED_QUOTES", "El enunciado V4 tiene comillas desbalanceadas.")
+  const visibleTexts = [
+    ["enunciado", question.question],
+    ["explicación", question.explanation],
+    ["memoryCue", question.memoryCue],
+    ["respuesta canónica", question.correctAnswerText],
+    ...(question.options ?? []).map((option) => [`opción ${option.id}`, option.text]),
+  ]
+  for (const [label, text] of visibleTexts) if (quoteDifference(text) !== 0) issue(findings, question, "UNBALANCED_VISIBLE_TEXT", `El texto visible (${label}) tiene comillas desbalanceadas.`)
+  if (quoteDifference(`${question.question} ${correctAnswerText(question)}`) !== 0) issue(findings, question, "UNBALANCED_QUESTION_ANSWER", "La composición pregunta-respuesta tiene comillas desbalanceadas.")
 
   const optionIds = new Set()
   for (const option of question.options ?? []) {
@@ -149,26 +164,52 @@ function sourceMatchesMaterial(raw) {
   return false
 }
 
+function visibleQuoteRepairRequired(raw, decision) {
+  const optionTexts = [raw.A, raw.B, raw.C, raw.D]
+  const canonicalText = decision.answer?.mode === "canonical_text" ? decision.answer.text : null
+  return [...optionTexts, canonicalText, raw.fact_support].some((text) => quoteDifference(text) !== 0)
+}
+
 function classifyForBuild(raw) {
   const decision = classifyMasterQuestion(raw)
   const additionalIssues = []
+  const repairIssues = visibleQuoteRepairRequired(raw, decision) ? ["VISIBLE_TEXT_QUOTES"] : []
   const required = ["QUESTION_ID", "material", "capitulo", "pregunta", "respuesta_correcta", "fuente"]
   if (required.some((field) => raw?.[field] == null || (typeof raw[field] === "string" && !raw[field].trim()))) additionalIssues.push("MISSING_REQUIRED_FIELD")
   if (!curationFamily(raw).factKey) additionalIssues.push("MISSING_FACT_FAMILY")
   if (raw.material !== "DANIEL" && raw.material !== "PR") additionalIssues.push("SOURCE_MATERIAL_MISMATCH")
   else if (!sourceMatchesMaterial(raw)) additionalIssues.push("SOURCE_CHAPTER_MISMATCH")
-  if (!additionalIssues.length) return decision
+  if (!additionalIssues.length && !repairIssues.length) return decision
+  if (!additionalIssues.length) {
+    return {
+      ...decision,
+      status: decision.status === CurationStatus.APPROVED ? CurationStatus.REPAIRED : decision.status,
+      issues: [...new Set([...decision.issues, ...repairIssues])],
+    }
+  }
   return {
     status: CurationStatus.REJECTED,
-    issues: [...new Set([...decision.issues, ...additionalIssues])],
+    issues: [...new Set([...decision.issues, ...repairIssues, ...additionalIssues])],
     answer: decision.answer,
   }
 }
 
 function expectedQuestions(master) {
   return master.questions.map((raw) => {
-    const decision = classifyForBuild(raw)
-    return { raw, decision, curated: curateMasterQuestion(raw, decision) }
+    const initialDecision = classifyForBuild(raw)
+    const curated = curateMasterQuestion(raw, initialDecision)
+    if (initialDecision.status !== CurationStatus.REJECTED && !curated) {
+      return {
+        raw,
+        decision: {
+          status: CurationStatus.REJECTED,
+          issues: [...new Set([...initialDecision.issues, "UNSAFE_VISIBLE_TEXT"])],
+          answer: initialDecision.answer,
+        },
+        curated: null,
+      }
+    }
+    return { raw, decision: initialDecision, curated }
   })
 }
 
@@ -344,19 +385,22 @@ async function pathExists(path) {
   }
 }
 
-async function removeIfExists(path) {
+async function removeIfExists(path, unlinkOperation = unlink, rmOperation = rmFile) {
   try {
-    await unlink(path)
+    await unlinkOperation(path)
   } catch (error) {
-    if (error?.code !== "ENOENT") throw error
+    if (error?.code === "ENOENT") return
+    await rmOperation(path, { force: true })
   }
 }
 
-async function cleanup(paths) {
+async function cleanup(paths, operations = {}) {
+  const unlinkOperation = operations.unlink ?? unlink
+  const rmOperation = operations.rm ?? rmFile
   const errors = []
   for (const path of paths) {
     try {
-      await removeIfExists(path)
+      await removeIfExists(path, unlinkOperation, rmOperation)
     } catch (error) {
       errors.push({ path, error })
     }
@@ -369,7 +413,7 @@ async function cleanup(paths) {
  * fails, newly installed files are removed and all moved originals are put
  * back. Temp and backup paths are generated only for the supplied targets.
  */
-export async function writePayloadsAtomically(payloads) {
+export async function writePayloadsAtomically(payloads, { fsOps = {} } = {}) {
   if (!Array.isArray(payloads) || payloads.length === 0) throw new Error("Se requiere al menos un payload para escritura atómica.")
   const targets = new Set()
   const nonce = `${process.pid}-${Date.now()}`
@@ -382,21 +426,28 @@ export async function writePayloadsAtomically(payloads) {
   })
   const tempPaths = prepared.map(({ temp }) => temp)
   const backupPaths = prepared.map(({ backup }) => backup)
+  const operations = {
+    mkdir: fsOps.mkdir ?? mkdir,
+    writeFile: fsOps.writeFile ?? writeFile,
+    rename: fsOps.rename ?? rename,
+    unlink: fsOps.unlink ?? unlink,
+    rm: fsOps.rm ?? rmFile,
+  }
 
   try {
     for (const { target, content, temp } of prepared) {
-      await mkdir(dirname(target), { recursive: true })
-      await writeFile(temp, content, "utf8")
+      await operations.mkdir(dirname(target), { recursive: true })
+      await operations.writeFile(temp, content, "utf8")
     }
     try {
       for (const item of prepared) {
         if (await pathExists(item.target)) {
-          await rename(item.target, item.backup)
+          await operations.rename(item.target, item.backup)
           item.backedUp = true
         }
       }
       for (const item of prepared) {
-        await rename(item.temp, item.target)
+        await operations.rename(item.temp, item.target)
         item.installed = true
       }
     } catch (error) {
@@ -404,7 +455,7 @@ export async function writePayloadsAtomically(payloads) {
       for (const item of [...prepared].reverse()) {
         if (item.installed) {
           try {
-            await removeIfExists(item.target)
+            await removeIfExists(item.target, operations.unlink, operations.rm)
           } catch (rollbackError) {
             rollbackErrors.push(rollbackError)
           }
@@ -413,23 +464,27 @@ export async function writePayloadsAtomically(payloads) {
       for (const item of [...prepared].reverse()) {
         if (item.backedUp && await pathExists(item.backup)) {
           try {
-            await rename(item.backup, item.target)
+            await operations.rename(item.backup, item.target)
             item.backedUp = false
           } catch (rollbackError) {
             rollbackErrors.push(rollbackError)
           }
         }
       }
-      const cleanupErrors = await cleanup(tempPaths)
+      const cleanupErrors = await cleanup(tempPaths, operations)
       if (rollbackErrors.length || cleanupErrors.length) {
         throw new Error(`Fallo de escritura atómica y rollback incompleto: ${error.message}; incidencias=${rollbackErrors.length + cleanupErrors.length}`)
       }
       throw error
     }
-    const backupCleanupErrors = await cleanup(backupPaths)
-    if (backupCleanupErrors.length) throw new Error(`Los payloads se instalaron, pero no se pudieron retirar ${backupCleanupErrors.length} respaldos temporales.`)
+    const backupCleanupErrors = await cleanup(backupPaths, operations)
+    if (backupCleanupErrors.length) {
+      const remainingBackups = []
+      for (const backup of backupPaths) if (await pathExists(backup)) remainingBackups.push(backup)
+      if (remainingBackups.length) throw new Error(`Los payloads se instalaron, pero no se pudieron retirar ${remainingBackups.length} respaldos temporales.`)
+    }
   } catch (error) {
-    await cleanup(tempPaths)
+    await cleanup(tempPaths, operations)
     throw error
   }
 }

@@ -1,5 +1,5 @@
 import { curationFamily } from "./master-curation.mjs"
-import { naturalizePrompt } from "./editorial.mjs"
+import { naturalizePrompt, repairVisibleText } from "./editorial.mjs"
 
 const OPTION_IDS = ["A", "B", "C", "D"]
 
@@ -26,14 +26,21 @@ function normalizedDifficulty(value) {
   return 3
 }
 
-function visibleOptions(raw, answer) {
-  if (answer?.mode === "canonical_text") return [{ id: "ANSWER", text: answer.text }]
+function visibleOptions(raw, answer, canonicalText) {
+  if (answer?.mode === "canonical_text") return canonicalText == null ? null : [{ id: "ANSWER", text: canonicalText }]
   if (answer?.optionId === "TRUE" || answer?.optionId === "FALSE") {
     return [{ id: "TRUE", text: "Verdadero" }, { id: "FALSE", text: "Falso" }]
   }
-  return OPTION_IDS
+  const options = OPTION_IDS
     .map((id) => ({ id, text: stripOptionPrefix(raw?.[id]) }))
     .filter((option) => option.text.length > 0)
+  const repaired = []
+  for (const option of options) {
+    const text = repairVisibleText(option.text)
+    if (text == null) return null
+    repaired.push({ ...option, text })
+  }
+  return repaired
 }
 
 function trimFactSupport(value) {
@@ -41,7 +48,7 @@ function trimFactSupport(value) {
 }
 
 export function repairPrompt(prompt) {
-  return naturalizePrompt(prompt).replace(/\s+/gu, " ").trim()
+  return repairVisibleText(naturalizePrompt(prompt))
 }
 
 export function repairExplanation(raw) {
@@ -58,6 +65,12 @@ export function curateMasterQuestion(raw, decision) {
   const { factKey, factKeys } = curationFamily(raw)
   const answer = decision.answer
   const work = raw.material === "DANIEL" ? "Daniel" : "Profetas y Reyes"
+  const question = repairPrompt(raw.pregunta)
+  const canonicalText = answer.mode === "canonical_text" ? repairVisibleText(answer.text) : null
+  const options = visibleOptions(raw, answer, canonicalText)
+  const explanation = repairVisibleText(repairExplanation(raw))
+  const memoryCue = repairVisibleText(`Ancla ${raw.fuente}: ${String(raw.fact_support || canonicalText || answer.text).replace(/[.。]+$/gu, "")}.`)
+  if (question == null || options == null || explanation == null || memoryCue == null || (answer.mode === "canonical_text" && canonicalText == null)) return null
   return {
     id: `V4-${raw.QUESTION_ID}`,
     type: normalizedType(raw, answer),
@@ -66,12 +79,12 @@ export function curateMasterQuestion(raw, decision) {
     tags: ["v4", raw.habilidad, raw.riesgo_objetivo].filter(Boolean),
     factKey,
     factKeys,
-    question: repairPrompt(raw.pregunta),
-    options: visibleOptions(raw, answer),
+    question,
+    options,
     correctAnswer: answer.mode === "option_id" ? [answer.optionId] : ["ANSWER"],
-    ...(answer.mode === "canonical_text" ? { answerMode: "canonical_text", correctAnswerText: answer.text } : {}),
-    explanation: repairExplanation(raw),
-    memoryCue: `Ancla ${raw.fuente}: ${String(raw.fact_support || answer.text).replace(/[.。]+$/gu, "")}.`,
+    ...(answer.mode === "canonical_text" ? { answerMode: "canonical_text", correctAnswerText: canonicalText } : {}),
+    explanation,
+    memoryCue,
     verified: true,
     metadata: {
       masterQuestionId: raw.QUESTION_ID,

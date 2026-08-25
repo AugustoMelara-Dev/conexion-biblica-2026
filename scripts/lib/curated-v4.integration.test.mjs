@@ -1,5 +1,5 @@
 import { readFile } from "node:fs/promises"
-import { mkdtemp, readdir, readFile as readTempFile, rm, writeFile } from "node:fs/promises"
+import { mkdtemp, readdir, readFile as readTempFile, rename as renameFile, rm, unlink as unlinkFile, writeFile } from "node:fs/promises"
 import { join } from "node:path"
 import { tmpdir } from "node:os"
 import { describe, expect, it } from "vitest"
@@ -11,9 +11,10 @@ const result = buildCuratedV4(master)
 describe("integración del Banco Curado V4", () => {
   it("clasifica cada pregunta maestra exactamente una vez", () => {
     expect(result.audit.summary.total).toBe(3558)
-    expect(result.audit.summary.approved).toBe(2011)
-    expect(result.audit.summary.repaired).toBe(1502)
+    expect(result.audit.summary.approved).toBe(2002)
+    expect(result.audit.summary.repaired).toBe(1511)
     expect(result.audit.summary.rejected).toBe(45)
+    expect(result.audit.countsByIssue.VISIBLE_TEXT_QUOTES).toBe(22)
     expect(result.audit.summary.approved + result.audit.summary.repaired + result.audit.summary.rejected).toBe(3558)
     expect(result.audit.summary.blockers).toBe(0)
     expect(result.banks.daniel.questions.every((q) => q.source.work === "Daniel")).toBe(true)
@@ -47,7 +48,17 @@ describe("integración del Banco Curado V4", () => {
       expect(question.source.chapter).toBe(Number(source.capitulo))
       expect(question.correctAnswer.length).toBeGreaterThan(0)
       expect(question.options.some((option) => question.correctAnswer.includes(option.id))).toBe(true)
-      expect((question.question.match(/«/g) ?? []).length).toBe((question.question.match(/»/g) ?? []).length)
+    }
+  })
+
+  it("balancea todos los textos visibles y la composición pregunta-respuesta", () => {
+    const questions = [...result.banks.daniel.questions, ...result.banks.prophets.questions]
+    const quoteDifference = (text) => (String(text ?? "").match(/«/g) ?? []).length - (String(text ?? "").match(/»/g) ?? []).length
+    for (const question of questions) {
+      const answerText = question.correctAnswerText ?? question.correctAnswer.map((id) => question.options.find((option) => option.id === id)?.text ?? "").join(" | ")
+      const visibleTexts = [question.question, question.explanation, question.memoryCue, question.correctAnswerText, ...question.options.map((option) => option.text)]
+      expect(visibleTexts.every((text) => quoteDifference(text) === 0), question.id).toBe(true)
+      expect(quoteDifference(`${question.question} ${answerText}`), question.id).toBe(0)
     }
   })
 
@@ -60,6 +71,61 @@ describe("integración del Banco Curado V4", () => {
       await writePayloadsAtomically([{ target, value: { version: 2 } }])
       expect(JSON.parse(await readTempFile(target, "utf8"))).toEqual({ version: 2 })
       expect(await readdir(directory)).toEqual(["bank.json"])
+    } finally {
+      await rm(directory, { recursive: true, force: true })
+    }
+  })
+
+  it("revierte todos los destinos si falla un rename de instalación", async () => {
+    const directory = await mkdtemp(join(tmpdir(), "curated-v4-rollback-"))
+    const first = join(directory, "first.json")
+    const second = join(directory, "second.json")
+    try {
+      await writeFile(first, "old-first", "utf8")
+      await writeFile(second, "old-second", "utf8")
+      let renameCalls = 0
+      const failingRename = async (source, target) => {
+        renameCalls += 1
+        if (renameCalls === 4) throw new Error("simulated rename failure")
+        return renameFile(source, target)
+      }
+      await expect(writePayloadsAtomically([
+        { target: first, value: "new-first" },
+        { target: second, value: "new-second" },
+      ], { fsOps: { rename: failingRename } })).rejects.toThrow("simulated rename failure")
+      expect(await readTempFile(first, "utf8")).toBe("old-first")
+      expect(await readTempFile(second, "utf8")).toBe("old-second")
+      expect(await readdir(directory)).toEqual(["first.json", "second.json"])
+    } finally {
+      await rm(directory, { recursive: true, force: true })
+    }
+  })
+
+  it("tolera un fallo transitorio de unlink y no deja respaldos", async () => {
+    const directory = await mkdtemp(join(tmpdir(), "curated-v4-cleanup-"))
+    const first = join(directory, "first.json")
+    const second = join(directory, "second.json")
+    try {
+      await writeFile(first, "old-first", "utf8")
+      await writeFile(second, "old-second", "utf8")
+      let unlinkCalls = 0
+      const flakyUnlink = async (path) => {
+        unlinkCalls += 1
+        if (unlinkCalls === 1) {
+          const error = new Error("simulated unlink failure")
+          error.code = "EPERM"
+          throw error
+        }
+        return unlinkFile(path)
+      }
+      await writePayloadsAtomically([
+        { target: first, value: "new-first" },
+        { target: second, value: "new-second" },
+      ], { fsOps: { unlink: flakyUnlink } })
+      expect(unlinkCalls).toBeGreaterThan(0)
+      expect(await readTempFile(first, "utf8")).toBe("new-first")
+      expect(await readTempFile(second, "utf8")).toBe("new-second")
+      expect(await readdir(directory)).toEqual(["first.json", "second.json"])
     } finally {
       await rm(directory, { recursive: true, force: true })
     }

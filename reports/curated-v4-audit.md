@@ -1,13 +1,13 @@
 # Auditoría del Banco Curado V4
 
-Generado: 2026-08-25T06:23:51.240Z
+Generado: 2026-08-25T06:44:21.254Z
 Huella SHA-256 del Banco Maestro: `b08ea1efb154a7f9a520e1cc4433cbd18b81e16f37e44cf474dfa3808323a078`
 
 ## Resumen
 
 - Total analizado: 3558
-- APPROVED: 2011
-- REPAIRED: 1502
+- APPROVED: 2002
+- REPAIRED: 1511
 - REJECTED: 45
 - Bloqueadores: 0
 
@@ -22,6 +22,7 @@ Huella SHA-256 del Banco Maestro: `b08ea1efb154a7f9a520e1cc4433cbd18b81e16f37e44
 | UNBALANCED_QUOTES | 7 |
 | UNRESOLVED_ANSWER | 45 |
 | UNRESOLVED_CORRECTION | 1 |
+| VISIBLE_TEXT_QUOTES | 22 |
 
 ## Distribución por fuente
 
@@ -504,3 +505,28 @@ Huella SHA-256 del Banco Maestro: `b08ea1efb154a7f9a520e1cc4433cbd18b81e16f37e44
 | GEN-002610 | Completa correctamente la afirmación: «Nabucodonosor preguntó si ellos no honraban «a mi __________». | Completa correctamente la afirmación: Nabucodonosor preguntó si ellos no honraban «a mi __________». |
 | GEN-002613 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Los tres introdujeron su fidelidad aun sin liberación con la __________»». | Completa la afirmación: Los tres introdujeron su fidelidad aun sin liberación con la __________. |
 | GEN-002668 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Darío llamó __________»». | Completa la afirmación: Darío llamó __________. |
+
+### VISIBLE_TEXT_QUOTES
+
+| ID | Original | Curada |
+| --- | --- | --- |
+| GEN-000181 | ¿Qué opción completa correctamente la afirmación? «La sentencia citada es «__________»». | ¿Qué opción completa correctamente la afirmación? «La sentencia citada es «__________»». |
+| GEN-000588 | ¿Qué opción completa correctamente la afirmación? «Permanecerán cerradas y selladas __________». | ¿Qué opción completa correctamente la afirmación? «Permanecerán cerradas y selladas __________». |
+| GEN-000592 | ¿Qué opción completa correctamente la afirmación? «Ninguno de __________». | ¿Qué opción completa correctamente la afirmación? «Ninguno de __________». |
+| GEN-000721 | ¿Qué opción completa correctamente la afirmación? «El castigo duraría hasta que reconociera que el Altísimo domina el reino de los hombres y lo da __________». | ¿Qué opción completa correctamente la afirmación? «El castigo duraría hasta que reconociera que el Altísimo domina el reino de los hombres y lo da __________». |
+| GEN-001043 | ¿Qué opción completa correctamente la afirmación? «Con el tiempo __________». | ¿Qué opción completa correctamente la afirmación? «Con el tiempo __________». |
+| GEN-001413 | ¿Qué opción completa correctamente la afirmación? «El hablante __________». | ¿Qué opción completa correctamente la afirmación? «El hablante __________». |
+| GEN-001414 | ¿Qué opción completa correctamente la afirmación? «El hablante __________». | ¿Qué opción completa correctamente la afirmación? «El hablante __________». |
+| GEN-001546 | ¿Qué opción completa correctamente la afirmación? «Esto ocurrió __________». | ¿Qué opción completa correctamente la afirmación? «Esto ocurrió __________». |
+| GEN-001817 | ¿Qué opción completa correctamente la afirmación? «La mano enviada __________». | ¿Qué opción completa correctamente la afirmación? «La mano enviada __________». |
+| GEN-002071 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel es __________»». | Completa la afirmación: Daniel es __________. |
+| GEN-002103 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Miguel es __________»». | Completa la afirmación: Miguel es __________. |
+| GEN-002210 | Completa correctamente la afirmación: «Daniel es __________»». | Completa correctamente la afirmación: «Daniel es __________». |
+| GEN-002418 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel debía __________». | Completa la afirmación: Daniel debía __________. |
+| GEN-002435 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Daniel preguntó: «Señor mío, ¿cuál será __________»». | Completa la afirmación: Daniel preguntó: «Señor mío, ¿cuál será __________». |
+| GEN-002514 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «La voz llamó __________». | Completa la afirmación: La voz llamó __________. |
+| GEN-002564 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «Nabucodonosor sería __________». | Completa la afirmación: Nabucodonosor sería __________. |
+| GEN-002571 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El castigo duraría hasta que reconociera que el Altísimo domina el reino de los hombres y lo __________». | Completa la afirmación: El castigo duraría hasta que reconociera que el Altísimo domina el reino de los hombres y lo __________. |
+| GEN-002574 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «La orden era que bebieran de los vasos el rey, sus grandes, sus __________». | Completa la afirmación: La orden era que bebieran de los vasos el rey, sus grandes, sus __________. |
+| GEN-002578 | ¿Qué dato completa correctamente esta segunda formulación de alto riesgo? «El texto identifica simplemente al personaje __________»». | Completa la afirmación: El texto identifica simplemente al personaje __________. |
+| GEN-002610 | Completa correctamente la afirmación: «Nabucodonosor preguntó si ellos no honraban «a mi __________». | Completa correctamente la afirmación: Nabucodonosor preguntó si ellos no honraban «a mi __________». |
