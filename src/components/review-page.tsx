@@ -17,14 +17,19 @@ export function ReviewPage() {
   const [copied, setCopied] = useState<string | null>(null)
   const [copyError, setCopyError] = useState<string | null>(null)
   const copiedTimer = useRef<number | null>(null)
-  useEffect(
-    () => () => {
+  const mounted = useRef(false)
+  const copySequence = useRef(0)
+  useEffect(() => {
+    mounted.current = true
+    return () => {
+      mounted.current = false
+      copySequence.current += 1
       if (copiedTimer.current !== null) {
         window.clearTimeout(copiedTimer.current)
+        copiedTimer.current = null
       }
-    },
-    []
-  )
+    }
+  }, [])
   const reasons = useMemo(
     () => [...new Set(reports.map((report) => report.reason))],
     [reports]
@@ -59,21 +64,49 @@ export function ReviewPage() {
         right.reportedAt - left.reportedAt
     )
   const copyJson = async (id: string, question: unknown) => {
-    if (
-      await copyToClipboard(JSON.stringify(question, null, 2), setCopyError)
-    ) {
-      if (copiedTimer.current !== null) {
-        window.clearTimeout(copiedTimer.current)
-      }
+    await copyText(JSON.stringify(question, null, 2), (token) => {
       setCopied(id)
       copiedTimer.current = window.setTimeout(() => {
+        if (!mounted.current || copySequence.current !== token) return
         setCopied(null)
         copiedTimer.current = null
       }, 1800)
-    }
+    })
   }
   const copyReference = async (reference: string) => {
-    await copyToClipboard(reference, setCopyError)
+    await copyText(reference)
+  }
+  const copyText = async (
+    value: string,
+    onSuccess?: (token: number) => void
+  ) => {
+    const token = copySequence.current + 1
+    copySequence.current = token
+    if (copiedTimer.current !== null) {
+      window.clearTimeout(copiedTimer.current)
+      copiedTimer.current = null
+    }
+    if (!mounted.current) return
+    setCopied(null)
+    setCopyError(null)
+
+    let error: string | null = null
+    if (!navigator.clipboard?.writeText) {
+      error = "No se pudo copiar: el portapapeles no está disponible."
+    } else {
+      try {
+        await navigator.clipboard.writeText(value)
+      } catch {
+        error = "No se pudo copiar. Intenta de nuevo."
+      }
+    }
+
+    if (!mounted.current || copySequence.current !== token) return
+    if (error) {
+      setCopyError(error)
+      return
+    }
+    onSuccess?.(token)
   }
 
   return (
@@ -382,24 +415,6 @@ function reportTaxonomy(report: QuestionReport, progress?: QuestionProgress) {
     failed: (progress?.timesIncorrect ?? 0) > 0,
     favorite: Boolean(progress?.favorite),
     reported: true,
-  }
-}
-
-async function copyToClipboard(
-  value: string,
-  setError: (message: string | null) => void
-) {
-  setError(null)
-  if (!navigator.clipboard?.writeText) {
-    setError("No se pudo copiar: el portapapeles no está disponible.")
-    return false
-  }
-  try {
-    await navigator.clipboard.writeText(value)
-    return true
-  } catch {
-    setError("No se pudo copiar. Intenta de nuevo.")
-    return false
   }
 }
 

@@ -68,3 +68,20 @@ La primera inspección de escritorio detectó que la lista de seis pestañas man
 - `./node_modules/.bin/tsc.cmd -p tsconfig.app.json --noEmit` — aprobado.
 - `npm.cmd run build` — aprobado; únicamente conserva la advertencia no bloqueante de Vite por bundle mayor de 500 kB.
 - ESLint focal y `git diff --check` — aprobados.
+
+---
+
+## Fix round 3 — Estado: **DONE**
+
+### Corrección de carreras de portapapeles
+
+- Cada copia recibe un token de secuencia. Tras resolver o rechazar `writeText`, sólo la solicitud vigente y un componente aún montado puede actualizar `Copiado`, el error o programar su timer.
+- El cleanup marca el componente como desmontado, invalida la secuencia y cancela el timer. El callback del timer verifica además su token antes de modificar estado.
+- Las pruebas usan promesas diferidas para verificar: desmontaje con copias aún pendientes, segunda copia resuelta antes que la primera y rechazo tardío tras una segunda copia exitosa. Observan DOM y timers sin depender de advertencias internas de React.
+
+### Evidencia
+
+- RED: las tres nuevas pruebas fallaron previamente por timers creados tras unmount o por resultados tardíos que añadían un timer/error obsoleto.
+- GREEN: `npm.cmd test -- src/components/insight-pages.test.tsx src/lib/statistics.test.ts src/domain/family-mastery.test.ts --reporter=dot` — **3 archivos, 20 pruebas aprobadas**.
+- `./node_modules/.bin/tsc.cmd -p tsconfig.app.json --noEmit`, build, ESLint focal y `git diff --check` — aprobados.
+- Build conserva únicamente la advertencia no bloqueante de Vite por bundle mayor de 500 kB.

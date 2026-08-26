@@ -545,7 +545,129 @@ describe("vistas de progreso y revisión", () => {
       vi.useRealTimers()
     }
   })
+
+  it("no actualiza ni agenda copia si el componente se desmonta con solicitudes pendientes", async () => {
+    vi.useFakeTimers()
+    const first = deferred<void>()
+    const second = deferred<void>()
+    const clipboard = Object.getOwnPropertyDescriptor(navigator, "clipboard")
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: {
+        writeText: vi
+          .fn()
+          .mockReturnValueOnce(first.promise)
+          .mockReturnValueOnce(second.promise),
+      },
+    })
+    try {
+      const { unmount } = renderReview({
+        reports: [report(question, "Ambigua", 1)],
+      })
+      act(() => fireEvent.click(screen.getByText(question.question)))
+      const copy = screen.getByRole("button", { name: "Copiar JSON" })
+      fireEvent.click(copy)
+      fireEvent.click(copy)
+      unmount()
+      const timerCount = vi.getTimerCount()
+      await act(async () => {
+        first.resolve()
+        second.reject(new Error("denied"))
+        await Promise.allSettled([first.promise, second.promise])
+      })
+      expect(vi.getTimerCount()).toBe(timerCount)
+    } finally {
+      if (clipboard) Object.defineProperty(navigator, "clipboard", clipboard)
+      else Reflect.deleteProperty(navigator, "clipboard")
+      vi.useRealTimers()
+    }
+  })
+
+  it("conserva la segunda copia cuando la primera resuelve tarde", async () => {
+    vi.useFakeTimers()
+    const first = deferred<void>()
+    const second = deferred<void>()
+    const clipboard = Object.getOwnPropertyDescriptor(navigator, "clipboard")
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: {
+        writeText: vi
+          .fn()
+          .mockReturnValueOnce(first.promise)
+          .mockReturnValueOnce(second.promise),
+      },
+    })
+    try {
+      renderReview({ reports: [report(question, "Ambigua", 1)] })
+      act(() => fireEvent.click(screen.getByText(question.question)))
+      const copy = screen.getByRole("button", { name: "Copiar JSON" })
+      fireEvent.click(copy)
+      fireEvent.click(copy)
+      const timerCount = vi.getTimerCount()
+      await act(async () => {
+        second.resolve()
+        await second.promise
+      })
+      expect(screen.getByRole("button", { name: "Copiado" })).toBeVisible()
+      expect(vi.getTimerCount()).toBe(timerCount + 1)
+      await act(async () => {
+        first.resolve()
+        await first.promise
+      })
+      expect(screen.getByRole("button", { name: "Copiado" })).toBeVisible()
+      expect(vi.getTimerCount()).toBe(timerCount + 1)
+    } finally {
+      if (clipboard) Object.defineProperty(navigator, "clipboard", clipboard)
+      else Reflect.deleteProperty(navigator, "clipboard")
+      vi.useRealTimers()
+    }
+  })
+
+  it("ignora el rechazo tardío de una copia anterior", async () => {
+    const first = deferred<void>()
+    const second = deferred<void>()
+    const clipboard = Object.getOwnPropertyDescriptor(navigator, "clipboard")
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: {
+        writeText: vi
+          .fn()
+          .mockReturnValueOnce(first.promise)
+          .mockReturnValueOnce(second.promise),
+      },
+    })
+    try {
+      renderReview({ reports: [report(question, "Ambigua", 1)] })
+      act(() => fireEvent.click(screen.getByText(question.question)))
+      const copy = screen.getByRole("button", { name: "Copiar JSON" })
+      fireEvent.click(copy)
+      fireEvent.click(copy)
+      await act(async () => {
+        second.resolve()
+        await second.promise
+      })
+      await act(async () => {
+        first.reject(new Error("late denied"))
+        await first.promise.catch(() => undefined)
+      })
+      expect(screen.getByRole("button", { name: "Copiado" })).toBeVisible()
+      expect(screen.queryByRole("status")).not.toBeInTheDocument()
+    } finally {
+      if (clipboard) Object.defineProperty(navigator, "clipboard", clipboard)
+      else Reflect.deleteProperty(navigator, "clipboard")
+    }
+  })
 })
+
+function deferred<T>() {
+  let resolve!: (value: T | PromiseLike<T>) => void
+  let reject!: (reason?: unknown) => void
+  const promise = new Promise<T>((nextResolve, nextReject) => {
+    resolve = nextResolve
+    reject = nextReject
+  })
+  return { promise, resolve, reject }
+}
 
 function session(
   id: string,
