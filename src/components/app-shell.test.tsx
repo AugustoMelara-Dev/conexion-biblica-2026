@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react"
+import { cleanup, render, screen, within } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import {
   afterEach,
@@ -54,7 +54,10 @@ describe("AppShell", () => {
     localStorage.clear()
     setNav.mockClear()
   })
-  afterEach(() => localStorage.clear())
+  afterEach(() => {
+    cleanup()
+    localStorage.clear()
+  })
 
   it("ofrece un enlace para saltar al contenido", () => {
     renderWithApp(
@@ -139,7 +142,9 @@ describe("AppShell", () => {
     expect(
       screen.getByRole("link", { name: "Saltar al contenido" })
     ).toHaveAttribute("href", "#main-content")
-    expect(screen.getByRole("main")).toHaveAttribute("id", "main-content")
+    expect(
+      screen.getByRole("main", { name: "Ronda de estudio" })
+    ).toHaveAttribute("id", "main-content")
     expect(
       screen.queryByRole("navigation", { name: "Navegación principal" })
     ).not.toBeInTheDocument()

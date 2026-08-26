@@ -28,7 +28,12 @@ export function FocusShell({ children, onExit }: FocusShellProps) {
       >
         Saltar al contenido
       </a>
-      <main id="main-content" className="min-h-screen" tabIndex={-1}>
+      <main
+        id="main-content"
+        aria-label="Ronda de estudio"
+        className="min-h-screen"
+        tabIndex={-1}
+      >
         {children}
       </main>
     </div>
