@@ -14,7 +14,7 @@ type MetricStripProps = {
 
 export function MetricStrip({ items }: MetricStripProps) {
   return (
-    <ul className="grid gap-px overflow-hidden rounded-xl border border-border/70 bg-border/70 sm:grid-cols-2 lg:grid-cols-4">
+    <ul className="grid gap-px overflow-hidden rounded-xl border border-border/70 bg-border/70 sm:grid-cols-2 lg:grid-cols-3">
       {items.map(({ label, value, detail, icon: Icon }) => (
         <li key={label} className="min-w-0 bg-card p-5">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">

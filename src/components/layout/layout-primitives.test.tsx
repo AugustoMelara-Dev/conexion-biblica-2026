@@ -34,4 +34,10 @@ describe("primitivas de layout", () => {
     expect(screen.getByRole("list")).toBeVisible()
     expect(screen.getAllByRole("listitem")).toHaveLength(2)
   })
+
+  it("limita la cuadrícula de métricas a tres columnas en escritorio", () => {
+    render(<MetricStrip items={[{ label: "Precisión", value: "82%" }]} />)
+
+    expect(screen.getByRole("list")).toHaveClass("lg:grid-cols-3")
+  })
 })
