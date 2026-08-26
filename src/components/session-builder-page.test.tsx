@@ -9,6 +9,7 @@ import {
   SessionBuilderPage,
   StudyDayQuickStart,
 } from "@/components/session-builder-page"
+import { getQuestionKey } from "@/domain/banks"
 import { buildPoolKey } from "@/domain/session-selection"
 import type {
   CoverageCycle,
@@ -19,6 +20,9 @@ import type {
 import { buildStatistics } from "@/lib/statistics"
 
 vi.mock("@/app/app-state", () => ({ useApp: vi.fn() }))
+
+type AppContext = ReturnType<typeof useApp>
+type StartRound = (config: SessionConfig, resetCycle?: boolean) => void
 
 const question: Question = {
   id: "session-builder-question",
@@ -68,22 +72,24 @@ const defaultSessionConfig: SessionConfig = {
   strategy: "coverage-cycle",
 }
 
-const emptyProgress: QuestionProgress = {
-  questionKey: "legacy-v1:session-builder-question",
-  timesSeen: 0,
-  timesCorrect: 0,
-  timesIncorrect: 0,
-  timesUnanswered: 0,
-  currentCorrectStreak: 0,
-  averageResponseTimeMs: 0,
-  bestResponseTimeMs: null,
-  lastResponseTimeMs: null,
-  lastSeenAt: null,
-  masteryScore: 0,
-  favorite: false,
-  markedDifficult: false,
-  reported: false,
-  history: [],
+function getQuestionProgress(input: Question): QuestionProgress {
+  return {
+    questionKey: getQuestionKey(input),
+    timesSeen: 0,
+    timesCorrect: 0,
+    timesIncorrect: 0,
+    timesUnanswered: 0,
+    currentCorrectStreak: 0,
+    averageResponseTimeMs: 0,
+    bestResponseTimeMs: null,
+    lastResponseTimeMs: null,
+    lastSeenAt: null,
+    masteryScore: 0,
+    favorite: false,
+    markedDifficult: false,
+    reported: false,
+    history: [],
+  }
 }
 
 function createAppContext({
@@ -91,8 +97,8 @@ function createAppContext({
   setBankSelection,
 }: {
   coverageCycles: Map<string, CoverageCycle>
-  setBankSelection: ReturnType<typeof vi.fn>
-}): ReturnType<typeof useApp> {
+  setBankSelection: AppContext["setBankSelection"]
+}): AppContext {
   const progress = new Map<string, QuestionProgress>()
 
   return {
@@ -100,7 +106,7 @@ function createAppContext({
     error: null,
     masterBankError: null,
     nav: "practice",
-    setNav: vi.fn(),
+    setNav: vi.fn<AppContext["setNav"]>(),
     banks: [],
     questions: [question],
     allQuestions: [question],
@@ -122,7 +128,8 @@ function createAppContext({
     refresh: async () => undefined,
     importBankFiles: async () => [],
     removeBank: async () => undefined,
-    recordAnswer: async () => emptyProgress,
+    recordAnswer: async (answeredQuestion) =>
+      getQuestionProgress(answeredQuestion),
     recordReport: async () => undefined,
     saveSession: async () => undefined,
     saveCoverageCycle: async () => undefined,
@@ -147,19 +154,19 @@ function createAppContext({
       activeRound: null,
     }),
     importBackup: async () => ({ valid: true, errors: [] }),
-    setPreferences: vi.fn(),
+    setPreferences: vi.fn<AppContext["setPreferences"]>(),
     repositories: null,
   }
 }
 
 function renderSessionBuilder({
-  onStart = vi.fn(),
+  onStart = vi.fn<StartRound>(),
   coverageCycles = new Map<string, CoverageCycle>(),
 }: {
-  onStart?: ReturnType<typeof vi.fn>
+  onStart?: StartRound
   coverageCycles?: Map<string, CoverageCycle>
 } = {}) {
-  const setBankSelection = vi.fn()
+  const setBankSelection = vi.fn<AppContext["setBankSelection"]>()
   vi.mocked(useApp).mockReturnValue(
     createAppContext({ coverageCycles, setBankSelection })
   )
@@ -170,6 +177,38 @@ function renderSessionBuilder({
     setBankSelection,
   }
 }
+
+describe("fixture de contexto", () => {
+  it("crea progreso aislado y derivado de cada pregunta respondida", async () => {
+    const context = createAppContext({
+      coverageCycles: new Map(),
+      setBankSelection: vi.fn<AppContext["setBankSelection"]>(),
+    })
+    const secondQuestion: Question = {
+      ...question,
+      id: "second-session-builder-question",
+      factKey: "DAN-1-2",
+    }
+    const result = {
+      isCorrect: true,
+      wasAnswered: true,
+      responseTimeMs: 1000,
+      reason: "correct" as const,
+    }
+
+    const firstProgress = await context.recordAnswer(question, result, "A")
+    const secondProgress = await context.recordAnswer(
+      secondQuestion,
+      result,
+      "A"
+    )
+
+    expect(firstProgress).not.toBe(secondProgress)
+    expect(firstProgress.history).not.toBe(secondProgress.history)
+    expect(firstProgress.questionKey).toBe(getQuestionKey(question))
+    expect(secondProgress.questionKey).toBe(getQuestionKey(secondQuestion))
+  })
+})
 
 describe("controles de preparación V3", () => {
   it("conserva el bloque 2 como índice interno 1", async () => {
@@ -264,7 +303,7 @@ describe("configuración progresiva de práctica", () => {
 
   it("conserva filtros avanzados al cerrar y reabrir el disclosure", async () => {
     const user = userEvent.setup()
-    const onStart = vi.fn()
+    const onStart = vi.fn<StartRound>()
     renderSessionBuilder({ onStart })
 
     const disclosure = screen.getByRole("button", {
@@ -284,7 +323,7 @@ describe("configuración progresiva de práctica", () => {
 
   it("inicia un simulacro con su preset completo", async () => {
     const user = userEvent.setup()
-    const onStart = vi.fn()
+    const onStart = vi.fn<StartRound>()
     renderSessionBuilder({ onStart })
 
     await user.click(screen.getByRole("button", { name: /Simulacro/ }))
@@ -304,7 +343,7 @@ describe("configuración progresiva de práctica", () => {
 
   it("incluye el banco elegido en el payload de inicio", async () => {
     const user = userEvent.setup()
-    const onStart = vi.fn()
+    const onStart = vi.fn<StartRound>()
     const { setBankSelection } = renderSessionBuilder({ onStart })
 
     await user.selectOptions(
@@ -325,7 +364,7 @@ describe("configuración progresiva de práctica", () => {
 
   it("preserva el payload completo y reinicia el ciclo agotado", async () => {
     const user = userEvent.setup()
-    const onStart = vi.fn()
+    const onStart = vi.fn<StartRound>()
     const exhaustedCycle: CoverageCycle = {
       poolKey: buildPoolKey(defaultSessionConfig),
       cycleId: "exhausted-cycle",

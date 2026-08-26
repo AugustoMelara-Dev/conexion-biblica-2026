@@ -50,3 +50,11 @@
 - Se reemplazó la conversión insegura de una fixture parcial por `createAppContext`, que devuelve un `ReturnType<typeof useApp>` completo y tipado.
 - La fixture conserva los valores observables de SessionBuilder (preguntas, progreso, banco, ciclos y callback) y completa el resto de contratos de contexto con valores inertes de prueba.
 - Validación: `tsc -p tsconfig.app.json --noEmit`, 20 pruebas focales/dominio, ESLint focal y `npm.cmd run build` aprobados. El build conserva únicamente el aviso existente de tamaño de chunk superior a 500 kB.
+
+## Fix round 3
+
+**Estado:** DONE
+
+- `getQuestionProgress` ahora crea un `QuestionProgress` nuevo en cada llamada, con `history` independiente y `questionKey` derivado mediante `getQuestionKey(question)`.
+- Los setters de la fixture (`setBankSelection`, `setNav`, `setPreferences`) y el callback `onStart` usan las firmas exactas del contexto o del componente mediante `vi.fn<T>()`; no quedan `ReturnType<typeof vi.fn>` ni casts permisivos.
+- Se añadió una prueba de aislamiento para dos respuestas a preguntas distintas. Validación: 21 pruebas focales/dominio, `tsc -p tsconfig.app.json --noEmit`, ESLint focal y build aprobados. El build conserva sólo el aviso conocido de chunk superior a 500 kB.
