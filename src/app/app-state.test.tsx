@@ -14,8 +14,8 @@ describe("preferencias y fallback de perfiles", () => {
   beforeEach(() => localStorage.clear())
   afterEach(() => localStorage.clear())
 
-  it("mantiene el default histórico para una instalación existente sin preferencia", () => {
-    expect(getPreferences().lastBankSelection).toBe("prep-v3")
+  it("activa V5 Consolidación Final cuando no existe preferencia", () => {
+    expect(getPreferences().lastBankSelection).toBe("consolidation-v5")
   })
 
   it("conserva una preferencia V4 guardada", () => {

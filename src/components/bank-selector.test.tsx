@@ -22,7 +22,7 @@ describe("selector de versión", () => {
     )
 
     expect(screen.getByRole("radiogroup", { name: "Versión del banco" })).toBeInTheDocument()
-    expect(screen.getAllByRole("radio")).toHaveLength(5)
+    expect(screen.getAllByRole("radio")).toHaveLength(6)
     expect(screen.getByRole("region", { name: "Detalle del banco seleccionado" })).toHaveTextContent("3,220 preguntas")
 
     await userEvent.click(screen.getByRole("radio", { name: /V3 — Preparación/ }))

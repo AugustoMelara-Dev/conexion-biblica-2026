@@ -357,7 +357,7 @@ export function App() {
           }
         />
       )
-    return <DashboardPage />
+    return <DashboardPage onStartMission={(config) => void startRound(config)} />
   }
 
   if (activeRound) {

@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import {
-  Check,
   Clock3,
   Flag,
   Heart,
@@ -47,6 +46,7 @@ import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { QuestionRenderer } from "@/components/question-renderer"
+import { AnswerLearningFeedback } from "@/components/answer-learning-feedback"
 
 export function QuizPage({
   questions,
@@ -443,6 +443,18 @@ export function QuizPage({
         favorite,
         markedDifficult: difficult,
         context: sessionContextForMode(config.mode),
+        afterFeedback: answers.some((answer) => {
+          const earlier = queue.find((item) => `${item.bankId ?? "local"}:${item.id}` === answer.questionKey)
+          return earlier?.factId === question.factId
+        }),
+        sessionId: `round:${resume?.startedAt ?? questionStartedAt}`,
+        exposureKind: config.trainingPresetId?.includes("blind")
+          ? "blind"
+          : config.trainingPresetId?.includes("night") || config.trainingPresetId?.includes("deferred")
+            ? "deferred"
+            : config.mode === "simulation"
+              ? "cold"
+              : "practice",
       })
       if (!isCurrentTransition(transitionGeneration, submittedQuestionKey))
         return
@@ -478,6 +490,7 @@ export function QuizPage({
       advance,
       answers,
       config.mode,
+      config.trainingPresetId,
       difficult,
       favorite,
       finish,
@@ -485,7 +498,9 @@ export function QuizPage({
       isSilent,
       question,
       questionStartedAt,
+      queue,
       recordAnswer,
+      resume?.startedAt,
       scheduleDeferredTransition,
       isCurrentTransition,
       submitted,
@@ -662,15 +677,6 @@ export function QuizPage({
         </CardContent>
       </Card>
     )
-  const correctText =
-    question.answerMode === "canonical_text"
-      ? question.correctAnswerText
-      : question.type === "matching"
-        ? "Consulta los pares indicados en la referencia."
-        : question.options
-            .filter((option) => question.correctAnswer.includes(option.id))
-            .map((option) => option.text)
-            .join(", ")
   const liveCorrect = answers.filter((answer) => answer.result.isCorrect).length
   const liveIncorrect = answers.filter(
     (answer) => !answer.result.isCorrect
@@ -768,6 +774,8 @@ export function QuizPage({
                   ? "V4"
                   : question.bankProfileId === "massive-v5"
                     ? "V5"
+                  : question.bankProfileId === "consolidation-v5"
+                    ? "V5 GOLD"
                   : "V1"}
           </Badge>
           <span>{question.source.reference}</span>
@@ -846,46 +854,13 @@ export function QuizPage({
         </div>
         <div className="mt-5 space-y-4">
           {showFeedback ? (
-            <Alert variant={feedback.isCorrect ? "default" : "destructive"}>
-              <AlertTitle className="flex items-center gap-2">
-                {feedback.isCorrect ? <Check /> : <X />}
-                {feedback.isCorrect
-                  ? "Respuesta correcta"
-                  : feedback.reason === "timeout"
-                    ? "Tiempo agotado"
-                    : "Respuesta incorrecta"}
-              </AlertTitle>
-              <AlertDescription className="flex flex-col gap-2">
-                <span>
-                  Respuesta correcta: <strong>{correctText}</strong>
-                </span>
-                {question.explanation ? (
-                  <span>{question.explanation}</span>
-                ) : null}
-                {question.sourceQuote ? (
-                  <span className="rounded-lg border bg-background/70 p-3 text-sm">
-                    <strong className="block text-foreground">Cita de respaldo</strong>
-                    <span className="mt-1 block">{question.sourceQuote}</span>
-                  </span>
-                ) : null}
-                {question.whyDistractorsFail &&
-                Object.keys(question.whyDistractorsFail).length > 0 ? (
-                  <span className="grid gap-1 rounded-lg border bg-background/70 p-3 text-sm">
-                    <strong className="text-foreground">Por qué no aplican las otras opciones</strong>
-                    {Object.entries(question.whyDistractorsFail).map(
-                      ([option, reason]) => (
-                        <span key={option}>
-                          <strong>{option}:</strong> {reason}
-                        </span>
-                      )
-                    )}
-                  </span>
-                ) : null}
-                <span>
-                  Fuente: <strong>{question.source.reference}</strong>
-                </span>
-              </AlertDescription>
-            </Alert>
+            <AnswerLearningFeedback
+              question={question}
+              selectedAnswer={value}
+              isCorrect={feedback.isCorrect}
+              onUnderstood={() => undefined}
+              onConfused={() => setDifficult(true)}
+            />
           ) : null}
           {showFeedback ? <MemoryCue cue={question.memoryCue} /> : null}
           {submitted && !showFeedback ? (

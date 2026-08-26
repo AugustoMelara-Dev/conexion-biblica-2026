@@ -10,6 +10,8 @@ export function createBackupPayload(
     preferences: Preferences
     coverageCycles?: CoverageCycle[]
     activeRound?: ActiveRound | null
+    factMastery?: BackupPayload["factMastery"]
+    legacyEvents?: BackupPayload["legacyEvents"]
   },
   exportedAt = Date.now(),
 ): BackupPayload {
@@ -23,6 +25,8 @@ export function createBackupPayload(
     preferences: structuredClone(data.preferences),
     coverageCycles: structuredClone(data.coverageCycles ?? []),
     activeRound: structuredClone(data.activeRound ?? null),
+    factMastery: structuredClone(data.factMastery ?? []),
+    legacyEvents: structuredClone(data.legacyEvents ?? []),
   }
 }
 
@@ -53,7 +57,7 @@ function namespaceLegacyKey(value: unknown) {
 }
 
 function isBankSelection(value: unknown): value is BankSelection {
-  return value === "legacy-v1" || value === "master-v2" || value === "prep-v3" || value === "curated-v4" || value === "mixed"
+  return value === "legacy-v1" || value === "master-v2" || value === "prep-v3" || value === "curated-v4" || value === "massive-v5" || value === "consolidation-v5" || value === "mixed"
 }
 
 function normalizePreferences(preferences: Preferences): Preferences {

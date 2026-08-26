@@ -16,6 +16,8 @@
     "audit:v4": "node scripts/audit-curated-v4.mjs",
     "pilot:simulation": "node scripts/pilot-simulation.mjs",
     "test:e2e": "playwright test",
+    "audit:gold": "python scripts/audit-gold-bank.py",
+    "test:gold": "python -m unittest scripts/test_gold_quality.py",
     "preview": "vite preview",
     "deploy": "vercel --prod --yes"
   },

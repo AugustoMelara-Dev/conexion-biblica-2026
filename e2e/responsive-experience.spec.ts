@@ -3,7 +3,7 @@ import { expect, test, type Page } from "@playwright/test"
 async function waitForHome(page: Page) {
   await page.goto("/")
   await expect(
-    page.getByRole("heading", { level: 1, name: "Entrena con intención." })
+    page.getByRole("heading", { level: 1, name: "PLAN FINAL — GANAR EL 29" })
   ).toBeVisible({ timeout: 30_000 })
 }
 
@@ -15,7 +15,7 @@ async function expectNoHorizontalOverflow(page: Page) {
   expect(sizes.scroll).toBe(sizes.client)
 }
 
-test("escritorio a 1024 px muestra cinco radios verticales y detalle legible", async ({
+test("escritorio a 1024 px muestra seis perfiles verticales y detalle legible", async ({
   page,
 }, testInfo) => {
   test.skip(
@@ -24,14 +24,15 @@ test("escritorio a 1024 px muestra cinco radios verticales y detalle legible", a
   )
   await page.setViewportSize({ width: 1024, height: 900 })
   await waitForHome(page)
+  await page.getByText("Perfiles históricos y configuración manual", { exact: true }).click()
 
   const selector = page.getByRole("radiogroup", {
     name: "Versión del banco",
   })
   await expect(selector).toBeVisible()
   const radios = selector.getByRole("radio")
-  await expect(radios).toHaveCount(5)
-  for (let index = 0; index < 5; index += 1) {
+  await expect(radios).toHaveCount(6)
+  for (let index = 0; index < 6; index += 1) {
     await expect(radios.nth(index)).toBeVisible()
   }
 
@@ -63,7 +64,7 @@ test("escritorio a 1024 px muestra cinco radios verticales y detalle legible", a
   })
   await expect(detail).toBeVisible()
   await expect(
-    detail.getByRole("heading", { name: "V4 — Banco Curado" })
+    detail.getByRole("heading", { name: "V5 — Consolidación Final" })
   ).toBeVisible()
   await expectNoHorizontalOverflow(page)
 })

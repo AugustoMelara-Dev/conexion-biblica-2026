@@ -8,6 +8,8 @@ import {
   type ReactNode,
 } from "react"
 import { applyProgress } from "@/domain/mastery"
+import { applyFactEvidence, emptyFactMastery, type EvidenceKind, type FactMastery } from "@/domain/fact-mastery"
+import { scheduleNextRetrieval } from "@/domain/compressed-scheduler"
 import {
   createBackupPayload,
   migrateBackupPayload,
@@ -52,6 +54,12 @@ import {
   readMassiveManifest,
   type MassiveBankManifest,
 } from "@/storage/massive-bank"
+import {
+  loadConsolidationQuestionPool,
+  readConsolidationManifest,
+  type ConsolidationManifest,
+} from "@/storage/consolidation-bank"
+import { mapLegacyProgressToFacts } from "@/storage/history-migration"
 
 type RepositorySet = ReturnType<typeof createRepositories>
 type NavKey =
@@ -79,11 +87,13 @@ type AppContextValue = {
   sessions: Session[]
   reports: QuestionReport[]
   exposures: QuestionExposure[]
+  factMastery?: FactMastery[]
   massiveManifest: MassiveBankManifest | null
+  consolidationManifest?: ConsolidationManifest | null
   preferences: Preferences
   bankSelection: BankSelection
   setBankSelection: (selection: BankSelection) => void
-  bankCounts: { legacy: number; master: number; prep: number; curated: number }
+  bankCounts: { legacy: number; master: number; prep: number; curated: number; consolidation?: number }
   coverageCycles: Map<string, CoverageCycle>
   activeRound: ActiveRound | null
   statistics: Statistics
@@ -102,6 +112,10 @@ type AppContextValue = {
       favorite?: boolean
       markedDifficult?: boolean
       context?: "practice" | "simulation"
+      afterFeedback?: boolean
+      hintUsed?: boolean
+      sessionId?: string
+      exposureKind?: EvidenceKind
     }
   ) => Promise<QuestionProgress>
   recordReport: (
@@ -129,7 +143,7 @@ const defaultPreferences: Preferences = {
   theme: "system",
   lastMode: "training",
   reducedMotion: false,
-  lastBankSelection: "prep-v3",
+  lastBankSelection: "consolidation-v5",
 }
 const AppContext = createContext<AppContextValue | undefined>(undefined)
 const PREFERENCES_STORAGE_KEY = "conexion-biblica-preferences"
@@ -161,6 +175,7 @@ function isBankSelection(value: unknown): value is BankSelection {
     value === "prep-v3" ||
     value === "curated-v4" ||
     value === "massive-v5" ||
+    value === "consolidation-v5" ||
     value === "mixed"
   )
 }
@@ -221,6 +236,7 @@ export function resolveInitialBankSelection({
   availableProfiles: Iterable<BankProfileId>
 }): BankSelection {
   const available = new Set(availableProfiles)
+  if (available.has("consolidation-v5")) return "consolidation-v5"
   if (!hasStoredPreferences && !hadExistingBanks && available.has("curated-v4"))
     return "curated-v4"
   return resolveAvailableBankSelection(storedSelection, available)
@@ -264,6 +280,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [massiveBankError, setMassiveBankError] = useState<string | null>(null)
   const [massiveManifest, setMassiveManifest] =
     useState<MassiveBankManifest | null>(null)
+  const [consolidationManifest, setConsolidationManifest] =
+    useState<ConsolidationManifest | null>(null)
   const [nav, setNav] = useState<NavKey>("dashboard")
   const [banks, setBanks] = useState<Bank[]>([])
   const [questions, setQuestions] = useState<Question[]>([])
@@ -273,6 +291,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [sessions, setSessions] = useState<Session[]>([])
   const [reports, setReports] = useState<QuestionReport[]>([])
   const [exposures, setExposures] = useState<QuestionExposure[]>([])
+  const [factMastery, setFactMastery] = useState<FactMastery[]>([])
   const [coverageCycles, setCoverageCycles] = useState<
     Map<string, CoverageCycle>
   >(new Map())
@@ -287,6 +306,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setMasterBankError(null)
     setMassiveBankError(null)
     try {
+      let loadedConsolidationManifest: ConsolidationManifest | null = null
       const db = await openAppDb()
       const nextRepositories = createRepositories(db)
       setRepositories(nextRepositories)
@@ -357,6 +377,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
             : "El banco masivo no pudo cargarse"
         )
       }
+      try {
+        loadedConsolidationManifest = await readConsolidationManifest()
+        setConsolidationManifest(loadedConsolidationManifest)
+      } catch (consolidationError) {
+        setConsolidationManifest(null)
+        setMassiveBankError(
+          consolidationError instanceof Error
+            ? consolidationError.message
+            : "El banco GOLD no pudo cargarse"
+        )
+      }
       const [
         nextQuestions,
         nextProgress,
@@ -365,6 +396,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         nextCycles,
         nextActiveRound,
         nextExposures,
+        nextFactMastery,
       ] = await Promise.all([
         nextRepositories.questions.list(),
         nextRepositories.progress.list(),
@@ -373,10 +405,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
         nextRepositories.coverage.list(),
         nextRepositories.activeRound.get(),
         nextRepositories.exposures.list(),
+        nextRepositories.factMastery.list(),
       ])
       const availableProfiles = new Set<BankProfileId>(
         nextQuestions.map((question) => question.bankProfileId ?? "legacy-v1")
       )
+      if (loadedConsolidationManifest)
+        availableProfiles.add("consolidation-v5")
       const storedSelection = getPreferences().lastBankSelection
       const desiredSelection = resolveInitialBankSelection({
         storedSelection,
@@ -401,10 +436,23 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setSessions(nextSessions)
       setReports(nextReports)
       setExposures(nextExposures)
+      setFactMastery(nextFactMastery)
       setCoverageCycles(
         new Map(nextCycles.map((cycle) => [cycle.poolKey, cycle]))
       )
       setActiveRound(nextActiveRound ?? null)
+      const existingMigration = await nextRepositories.settings.get<string | null>("v5-history-backup", null)
+      if (!existingMigration && (nextProgress.length || nextSessions.length || nextReports.length)) {
+        const backupId = `pre-v5-${Date.now()}`
+        await nextRepositories.migrationBackups.put({
+          id: backupId,
+          createdAt: Date.now(),
+          progress: nextProgress,
+          sessions: nextSessions,
+          reports: nextReports,
+        })
+        await nextRepositories.settings.put("v5-history-backup", backupId)
+      }
     } catch (loadError) {
       setError(
         loadError instanceof Error
@@ -424,9 +472,74 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const loadMassiveQuestions = useCallback(
     async (config: import("@/domain/types").SessionConfig) => {
-      if (!repositories || !massiveManifest)
-        throw new Error("El banco masivo todavía no está disponible")
+      if (!repositories)
+        throw new Error("El almacenamiento todavía no está disponible")
       const desiredCount = config.count === "all" ? 200 : config.count
+      if (config.bankSelection === "consolidation-v5") {
+        if (!consolidationManifest)
+          throw new Error("El banco GOLD todavía no está disponible")
+        const works = new Set(config.sourceWorks)
+        const manifestChapters = consolidationManifest.shards
+          .filter((shard) =>
+            shard.chapter.startsWith("DAN")
+              ? works.has("Daniel")
+              : works.has("Profetas y Reyes")
+          )
+          .map((shard) => Number(shard.chapter.match(/\d+/)?.[0]))
+        const chapters = config.chapters.length
+          ? manifestChapters.filter((chapter) => config.chapters.includes(chapter))
+          : manifestChapters
+        const blindPool = config.trainingPresetId === "28-blind-a"
+          ? "A" as const
+          : config.trainingPresetId === "28-blind-b"
+            ? "B" as const
+            : config.trainingPresetId === "blind-simulation"
+              ? "A" as const
+            : undefined
+        const gold = await loadConsolidationQuestionPool({
+          manifest: consolidationManifest,
+          chapters,
+          count: desiredCount,
+          blindPool,
+          difficultyBands: config.difficultyBands,
+          types: config.types,
+          seed: Date.now(),
+        })
+        await repositories.questions.putMany(gold)
+        const [storedQuestions, storedProgress] = await Promise.all([
+          repositories.questions.list(),
+          repositories.progress.list(),
+        ])
+        const legacyQuestions = storedQuestions.filter((question) => question.bankProfileId !== "consolidation-v5")
+        const migration = mapLegacyProgressToFacts(legacyQuestions, storedProgress, gold)
+        for (const item of migration.mapped) {
+          const existing = await repositories.factMastery.get(item.factId)
+          if (existing) continue
+          const prior = emptyFactMastery(item.factId)
+          await repositories.factMastery.put({
+            ...prior,
+            state: item.progress.timesIncorrect > 0 ? "due" : item.progress.timesCorrect > 0 ? "exposed" : "unseen",
+            attempts: item.progress.timesSeen,
+            failures: item.progress.timesIncorrect,
+            firstSeenAt: item.progress.history.at(0)?.timestamp ?? item.progress.lastSeenAt,
+            lastSeenAt: item.progress.lastSeenAt,
+          })
+        }
+        await repositories.legacyEvents.putMany(migration.legacy)
+        await repositories.settings.put("v5-history-migration-summary", {
+          mapped: migration.mapped.length,
+          preservedLegacy: migration.legacy.length,
+          updatedAt: Date.now(),
+        })
+        setQuestions((current) => {
+          const byKey = new Map(current.map((question) => [`${question.bankId ?? "local"}:${question.id}`, question]))
+          for (const question of gold) byKey.set(`${question.bankId}:${question.id}`, question)
+          return [...byKey.values()]
+        })
+        return gold
+      }
+      if (!massiveManifest)
+        throw new Error("El banco masivo todavía no está disponible")
       const allowedBanks = new Set<"DANIEL1-12" | "PR39-44">(
         config.sourceWorks.map((work) =>
           work === "Daniel" ? "DANIEL1-12" : "PR39-44"
@@ -465,7 +578,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       })
       return questions
     },
-    [massiveManifest, repositories]
+    [consolidationManifest, massiveManifest, repositories]
   )
 
   const importBankFiles = useCallback(
@@ -591,6 +704,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
         favorite?: boolean
         markedDifficult?: boolean
         context?: "practice" | "simulation"
+        afterFeedback?: boolean
+        hintUsed?: boolean
+        sessionId?: string
+        exposureKind?: EvidenceKind
       } = {}
     ) => {
       if (!repositories)
@@ -633,6 +750,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
             : question.trapType === "true_elsewhere"
               ? "context-confusion"
               : result.reason,
+          exposureKind: flags.exposureKind ?? (flags.context === "simulation" ? "cold" : "practice"),
         })
         setExposures((current) => [
           exposure,
@@ -640,10 +758,35 @@ export function AppProvider({ children }: { children: ReactNode }) {
             (item) => item.exposureKey !== exposure.exposureKey
           ),
         ])
+        const existingMastery = await repositories.factMastery.get(question.factId)
+        const median = exposure.averageResponseTimeMs || 5_000
+        const evidence = applyFactEvidence(existingMastery ?? emptyFactMastery(question.factId), {
+          factId: question.factId,
+          variantId: question.variantId,
+          semanticSkill: question.semanticSkill ?? question.type,
+          sessionId: flags.sessionId ?? `round:${activeRound?.startedAt ?? "legacy"}`,
+          occurredAt: Date.now(),
+          isCorrect: result.isCorrect,
+          firstAttempt: !flags.afterFeedback,
+          hintUsed: Boolean(flags.hintUsed),
+          afterFeedback: Boolean(flags.afterFeedback),
+          responseTimeMs: result.responseTimeMs,
+          personalMedianMs: median,
+          difficulty: question.difficulty,
+          exposureKind: flags.exposureKind ?? (flags.context === "simulation" ? "cold" : "practice"),
+        })
+        const schedule = scheduleNextRetrieval({
+          outcome: !result.isCorrect ? "incorrect" : flags.afterFeedback ? "repaired" : result.responseTimeMs > median * 1.4 ? "slow_correct" : "fast_correct",
+          now: Date.now(),
+          tier: [43, 44, 7, 8, 9, 11].includes(question.source.chapter) ? "A" : [40, 42, 10, 12].includes(question.source.chapter) ? "B" : "C",
+        })
+        const scheduled = { ...evidence, nextDueAt: schedule.dueAt }
+        await repositories.factMastery.put(scheduled)
+        setFactMastery((current) => [scheduled, ...current.filter((item) => item.factId !== scheduled.factId)])
       }
       return next
     },
-    [repositories]
+    [activeRound?.startedAt, repositories]
   )
 
   const recordReport = useCallback(
@@ -723,6 +866,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         (question) => question.bankId === bank.bankId
       ),
     }))
+    const legacyEvents = repositories ? await repositories.legacyEvents.list() : []
     return createBackupPayload({
       banks: completeBanks,
       progress: [...progress.values()],
@@ -731,15 +875,19 @@ export function AppProvider({ children }: { children: ReactNode }) {
       preferences,
       coverageCycles: [...coverageCycles.values()],
       activeRound,
+      factMastery,
+      legacyEvents,
     })
   }, [
     activeRound,
     banks,
     coverageCycles,
+    factMastery,
     preferences,
     progress,
     questions,
     reports,
+    repositories,
     sessions,
   ])
 
@@ -787,6 +935,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
           await repositories.coverage.put(cycle)
         if (payload.activeRound)
           await repositories.activeRound.put(payload.activeRound)
+        for (const item of payload.factMastery ?? [])
+          await repositories.factMastery.put(item)
+        await repositories.legacyEvents.putMany(payload.legacyEvents ?? [])
         setPreferencesState(payload.preferences)
         localStorage.setItem(
           "conexion-biblica-preferences",
@@ -849,6 +1000,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
       curated: questions.filter(
         (question) => question.bankProfileId === "curated-v4"
       ).length,
+      consolidation: questions.filter(
+        (question) => question.bankProfileId === "consolidation-v5"
+      ).length,
     }),
     [questions]
   )
@@ -879,7 +1033,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
       sessions: scopedSessions,
       reports: scopedReports,
       exposures,
+      factMastery,
       massiveManifest,
+      consolidationManifest,
       preferences,
       bankSelection,
       setBankSelection,
@@ -921,10 +1077,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
       masterBankError,
       massiveBankError,
       massiveManifest,
+      consolidationManifest,
       nav,
       preferences,
       progress,
       exposures,
+      factMastery,
       questions,
       recordAnswer,
       recordReport,

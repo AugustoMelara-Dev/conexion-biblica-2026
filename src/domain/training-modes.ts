@@ -68,7 +68,7 @@ export const MASSIVE_TRAINING_MODES: MassiveTrainingMode[] = [
   { id: "cold-mode", label: "Modo frío", description: "Sin pistas ni retroalimentación hasta terminar.", group: "competencia", count: 100, sourceWorks: ALL_WORKS, chapters: [], types: [], difficultyBands: ["HARD", "EXPERT"], statuses: ["all"], includeBlind: false, perQuestionSeconds: 12 },
   { id: "speed-mode", label: "Modo velocidad", description: "Decisiones rápidas con cinco segundos.", group: "competencia", count: 50, sourceWorks: ALL_WORKS, chapters: [], types: [], difficultyBands: ["MEDIUM", "HARD", "EXPERT"], statuses: ["all"], includeBlind: false, perQuestionSeconds: 5 },
   { id: "spaced-review", label: "Repaso espaciado", description: "Prioriza hechos vencidos y mezcla variantes.", group: "adaptativo", count: 50, sourceWorks: ALL_WORKS, chapters: [], types: [], difficultyBands: ALL_DIFFICULTIES, statuses: ["all"], includeBlind: false, perQuestionSeconds: null },
-  { id: "blind-simulation", label: "Simulación ciega", description: "Reserva inédita para medir conocimiento real.", group: "competencia", count: 100, sourceWorks: ALL_WORKS, chapters: [], types: [], difficultyBands: ["HARD", "EXPERT"], statuses: ["new"], includeBlind: true, perQuestionSeconds: 12 },
+  { id: "blind-simulation", label: "Simulación ciega", description: "Reserva inédita para medir conocimiento real.", group: "competencia", count: 100, sourceWorks: ALL_WORKS, chapters: [], types: [], difficultyBands: ALL_DIFFICULTIES, statuses: ["new"], includeBlind: true, perQuestionSeconds: 12 },
 ]
 
 export function getMassiveTrainingMode(id: MassiveTrainingModeId) {
