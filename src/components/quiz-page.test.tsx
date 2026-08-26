@@ -4,6 +4,7 @@ import {
   fireEvent,
   render,
   screen,
+  waitFor,
   within,
 } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
@@ -21,6 +22,7 @@ import { ResultsPage } from "@/components/results-page"
 import { FocusShell } from "@/components/layout/focus-shell"
 import { QuestionRenderer } from "@/components/question-renderer"
 import type { Question, Session, SessionConfig } from "@/domain/types"
+import { createRepositories, deleteAppDb, openAppDb } from "@/storage/db"
 
 const appState = vi.hoisted(() => ({
   recordAnswer: vi.fn(),
@@ -597,7 +599,7 @@ describe("atajos de la ronda", () => {
     fireEvent.click(results)
     fireEvent.click(results)
 
-    expect(onFinish).toHaveBeenCalledTimes(1)
+    await waitFor(() => expect(onFinish).toHaveBeenCalledTimes(1))
   })
 
   it("cancela el avance diferido de un timeout cuando se avanza manualmente", async () => {
@@ -739,6 +741,7 @@ describe("atajos de la ronda", () => {
 
     await act(async () => vi.advanceTimersByTime(1_100))
     fireEvent.keyDown(window, { key: "Escape" })
+    await act(async () => Promise.resolve())
     expect(onExit).toHaveBeenCalledTimes(1)
 
     await act(async () => pending.resolve({ timesIncorrect: 0 }))
@@ -950,6 +953,152 @@ describe("recuperación de transiciones persistidas", () => {
     expect(
       screen.queryByRole("button", { name: "Reintentar guardado" })
     ).not.toBeInTheDocument()
+  })
+
+  it("drena el autosave iniciado, descarta el snapshot en cola y luego sale sin resucitar la ronda", async () => {
+    await deleteAppDb()
+    const repositories = createRepositories(await openAppDb())
+    const firstWrite = deferred<void>()
+    const firstCommitted = deferred<void>()
+    let first = true
+    const onStateChange = vi.fn(async (round) => {
+      if (first) {
+        first = false
+        await firstWrite.promise
+      }
+      await repositories.activeRound.put(round)
+      if (round.answers.length === 0) firstCommitted.resolve()
+    })
+    const onExit = vi.fn(async () => repositories.activeRound.clear())
+    const user = userEvent.setup()
+    try {
+      render(
+        <QuizPage
+          questions={[twoChoiceQuestion]}
+          config={studyConfig}
+          onStateChange={onStateChange}
+          onFinish={vi.fn().mockResolvedValue(undefined)}
+          onExit={onExit}
+        />
+      )
+      await waitFor(() => expect(onStateChange).toHaveBeenCalledTimes(1))
+      await user.click(screen.getByRole("radio", { name: /Primera/ }))
+      await user.click(
+        screen.getByRole("button", { name: "Confirmar respuesta" })
+      )
+      await user.click(screen.getByRole("button", { name: "Salir" }))
+
+      expect(screen.getByRole("button", { name: "Salir" })).toBeDisabled()
+      await act(async () => firstWrite.resolve())
+      await firstCommitted.promise
+      await waitFor(() => expect(onExit).toHaveBeenCalledTimes(1))
+
+      expect(onStateChange).toHaveBeenCalledTimes(1)
+      expect(await repositories.activeRound.get()).toBeUndefined()
+    } finally {
+      await deleteAppDb()
+    }
+  })
+
+  it("drena el autosave iniciado antes de terminar y no rehidrata después del clear", async () => {
+    await deleteAppDb()
+    const repositories = createRepositories(await openAppDb())
+    const firstWrite = deferred<void>()
+    const firstCommitted = deferred<void>()
+    let first = true
+    const onStateChange = vi.fn(async (round) => {
+      if (first) {
+        first = false
+        await firstWrite.promise
+      }
+      await repositories.activeRound.put(round)
+      if (round.answers.length === 0) firstCommitted.resolve()
+    })
+    const onFinish = vi.fn(async (session: Session) => {
+      await repositories.sessions.add(session)
+      await repositories.activeRound.clear()
+    })
+    const user = userEvent.setup()
+    try {
+      render(
+        <QuizPage
+          questions={[twoChoiceQuestion]}
+          config={studyConfig}
+          onStateChange={onStateChange}
+          onFinish={onFinish}
+          onExit={vi.fn().mockResolvedValue(undefined)}
+        />
+      )
+      await waitFor(() => expect(onStateChange).toHaveBeenCalledTimes(1))
+      await user.click(screen.getByRole("radio", { name: /Primera/ }))
+      await user.click(
+        screen.getByRole("button", { name: "Confirmar respuesta" })
+      )
+      await user.click(screen.getByRole("button", { name: "Ver resultados" }))
+
+      expect(onFinish).not.toHaveBeenCalled()
+      await act(async () => firstWrite.resolve())
+      await firstCommitted.promise
+      await waitFor(() => expect(onFinish).toHaveBeenCalledTimes(1))
+
+      expect(onStateChange).toHaveBeenCalledTimes(1)
+      expect(await repositories.activeRound.get()).toBeUndefined()
+      expect(await repositories.sessions.list()).toHaveLength(1)
+    } finally {
+      await deleteAppDb()
+    }
+  })
+
+  it("absorbe el rechazo del write drenado y todavía permite finish", async () => {
+    const write = deferred<void>()
+    const onStateChange = vi.fn(() => write.promise)
+    const onFinish = vi.fn().mockResolvedValue(undefined)
+    const user = userEvent.setup()
+    render(
+      <QuizPage
+        questions={[twoChoiceQuestion]}
+        config={studyConfig}
+        onStateChange={onStateChange}
+        onFinish={onFinish}
+        onExit={vi.fn().mockResolvedValue(undefined)}
+      />
+    )
+    await waitFor(() => expect(onStateChange).toHaveBeenCalledTimes(1))
+    await user.click(screen.getByRole("radio", { name: /Primera/ }))
+    await user.click(
+      screen.getByRole("button", { name: "Confirmar respuesta" })
+    )
+    await user.click(screen.getByRole("button", { name: "Ver resultados" }))
+
+    expect(onFinish).not.toHaveBeenCalled()
+    await act(async () => write.reject(new Error("write denied")))
+    await waitFor(() => expect(onFinish).toHaveBeenCalledTimes(1))
+  })
+
+  it("ignora Escape mientras finish está pendiente", async () => {
+    const finishPending = deferred<void>()
+    const onFinish = vi.fn(() => finishPending.promise)
+    const onExit = vi.fn().mockResolvedValue(undefined)
+    const user = userEvent.setup()
+    render(
+      <QuizPage
+        questions={[twoChoiceQuestion]}
+        config={studyConfig}
+        onFinish={onFinish}
+        onExit={onExit}
+      />
+    )
+    await user.click(screen.getByRole("radio", { name: /Primera/ }))
+    await user.click(
+      screen.getByRole("button", { name: "Confirmar respuesta" })
+    )
+    await user.click(screen.getByRole("button", { name: "Ver resultados" }))
+    await waitFor(() => expect(onFinish).toHaveBeenCalledTimes(1))
+
+    await user.keyboard("{Escape}")
+
+    expect(onExit).not.toHaveBeenCalled()
+    await act(async () => finishPending.resolve())
   })
 })
 

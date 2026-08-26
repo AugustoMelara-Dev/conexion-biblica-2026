@@ -6,7 +6,12 @@ import { App } from "@/App"
 import { useApp } from "@/app/app-state"
 import { ThemeProvider } from "@/components/theme-provider"
 import { buildStatistics } from "@/lib/statistics"
-import type { ActiveRound, Question, QuestionProgress } from "@/domain/types"
+import type {
+  ActiveRound,
+  Question,
+  QuestionProgress,
+  SessionAnswer,
+} from "@/domain/types"
 
 vi.mock("@/app/app-state", () => ({ useApp: vi.fn() }))
 
@@ -154,6 +159,100 @@ function renderApp(overrides: Partial<AppContext> = {}) {
       <App />
     </ThemeProvider>
   )
+}
+
+function createBankQuestion(
+  index: number,
+  difficulty: Question["difficulty"] = 4
+) {
+  return {
+    ...roundQuestion,
+    id: `review-${index}`,
+    difficulty,
+    factKey: `APP-REVIEW-${index}`,
+    question: `Pregunta de revisión ${index}`,
+    options: [
+      { id: "A", text: "Sí" },
+      { id: "B", text: "No" },
+    ],
+  } satisfies Question
+}
+
+function keyOf(question: Question) {
+  return `${question.bankId ?? "local"}:${question.id}`
+}
+
+function storedReviewRound(questions: Question[]): ActiveRound {
+  return {
+    id: "active",
+    startedAt: 1,
+    updatedAt: 1,
+    currentIndex: questions.length - 1,
+    questionKeys: questions.map(keyOf),
+    answers: [],
+    config: {
+      mode: "smart-review",
+      count: 20,
+      sourceWorks: ["Daniel"],
+      chapters: [],
+      difficulties: [],
+      types: [],
+      statuses: ["all"],
+      shuffleQuestions: false,
+      shuffleOptions: false,
+      perQuestionSeconds: null,
+      totalSeconds: null,
+      bankSelection: "curated-v4",
+      strategy: "adaptive",
+    },
+    selectionSummary: { strategy: "adaptive" },
+  }
+}
+
+function storedAnswer(question: Question, isCorrect: boolean): SessionAnswer {
+  return {
+    questionKey: keyOf(question),
+    answer: isCorrect ? "A" : "B",
+    result: {
+      isCorrect,
+      wasAnswered: true,
+      responseTimeMs: 20,
+      reason: isCorrect ? "correct" : "incorrect",
+    },
+    responseTimeMs: 20,
+  }
+}
+
+async function finishRehydratedReviewRound(
+  bank: Question[],
+  subset: Question[],
+  stored = storedReviewRound(subset),
+  answerName: RegExp = /Sí/
+) {
+  const user = userEvent.setup()
+  const saveActiveRound = vi.fn().mockResolvedValue(undefined)
+  const saveSession = vi.fn().mockResolvedValue(undefined)
+  const clearActiveRound = vi.fn().mockResolvedValue(undefined)
+  renderApp(
+    activeRoundOverrides({
+      questions: bank,
+      allQuestions: bank,
+      activeRound: stored,
+      saveActiveRound,
+      saveSession,
+      clearActiveRound,
+    })
+  )
+  await screen.findByRole("heading", { name: subset.at(-1)!.question })
+  await user.click(screen.getByRole("radio", { name: answerName }))
+  await user.click(screen.getByRole("button", { name: "Confirmar respuesta" }))
+  await user.click(screen.getByRole("button", { name: "Ver resultados" }))
+  await screen.findByRole("heading", {
+    name: answerName.source.includes("Sí")
+      ? "Ronda completada."
+      : "Tu siguiente paso está claro.",
+  })
+  return { user, saveActiveRound, saveSession, clearActiveRound }
 }
 
 afterEach(cleanup)
@@ -319,5 +418,104 @@ describe("estados transversales de App", () => {
     expect(
       screen.queryByRole("button", { name: "Reintentar guardado" })
     ).not.toBeInTheDocument()
+  })
+
+  it("rehidrata, termina y repite exactamente las 2138 preguntas de la cola", async () => {
+    const bank = Array.from({ length: 3_220 }, (_, index) =>
+      createBankQuestion(index)
+    )
+    const subset = bank.slice(0, 2_138)
+    const { user, saveActiveRound, saveSession } =
+      await finishRehydratedReviewRound(bank, subset)
+    const callsBeforeRepeat = saveActiveRound.mock.calls.length
+
+    await user.click(screen.getByRole("button", { name: "Repetir esta tanda" }))
+
+    await waitFor(() =>
+      expect(saveActiveRound.mock.calls.length).toBeGreaterThan(
+        callsBeforeRepeat
+      )
+    )
+    const repeated = saveActiveRound.mock.calls
+      .slice(callsBeforeRepeat)
+      .map(([round]) => round as ActiveRound)
+      .find((round) => round.currentIndex === 0)
+    expect(repeated?.questionKeys).toEqual(subset.map(keyOf))
+    expect(saveSession).toHaveBeenCalledTimes(1)
+    expect(
+      await screen.findByRole("heading", { name: subset[0].question })
+    ).toBeVisible()
+  })
+
+  it("ordena aleatoriamente solo las 2138 preguntas del resultado y cambia solo strategy", async () => {
+    const bank = Array.from({ length: 3_220 }, (_, index) =>
+      createBankQuestion(index)
+    )
+    const subset = bank.slice(0, 2_138)
+    const stored = storedReviewRound(subset)
+    const { user, saveActiveRound } = await finishRehydratedReviewRound(
+      bank,
+      subset,
+      stored
+    )
+    const callsBeforeRandom = saveActiveRound.mock.calls.length
+    const random = vi.spyOn(Math, "random").mockReturnValue(0)
+    try {
+      await user.click(
+        screen.getByRole("button", { name: "Otra tanda aleatoria" })
+      )
+
+      await waitFor(() =>
+        expect(saveActiveRound.mock.calls.length).toBeGreaterThan(
+          callsBeforeRandom
+        )
+      )
+      const randomized = saveActiveRound.mock.calls
+        .slice(callsBeforeRandom)
+        .map(([round]) => round as ActiveRound)
+        .find((round) => round.currentIndex === 0)!
+      expect(randomized.questionKeys).toHaveLength(2_138)
+      expect(new Set(randomized.questionKeys)).toEqual(
+        new Set(subset.map(keyOf))
+      )
+      expect(randomized.questionKeys).not.toEqual(subset.map(keyOf))
+      expect(randomized.config).toEqual({
+        ...stored.config,
+        strategy: "random-balanced",
+      })
+    } finally {
+      random.mockRestore()
+    }
+  })
+
+  it("repasa errores en el orden exacto de questionKeys del resultado", async () => {
+    const bank = Array.from({ length: 5 }, (_, index) =>
+      createBankQuestion(index, 2)
+    )
+    const subset = [bank[4], bank[0], bank[2]]
+    const stored = {
+      ...storedReviewRound(subset),
+      answers: [storedAnswer(subset[0], false), storedAnswer(subset[1], true)],
+    }
+    const { user, saveActiveRound } = await finishRehydratedReviewRound(
+      bank,
+      subset,
+      stored,
+      /No/
+    )
+    const callsBeforeErrors = saveActiveRound.mock.calls.length
+
+    await user.click(screen.getByRole("button", { name: "Repasar errores" }))
+
+    await waitFor(() =>
+      expect(saveActiveRound.mock.calls.length).toBeGreaterThan(
+        callsBeforeErrors
+      )
+    )
+    const errorsRound = saveActiveRound.mock.calls
+      .slice(callsBeforeErrors)
+      .map(([round]) => round as ActiveRound)
+      .find((round) => round.currentIndex === 0)
+    expect(errorsRound?.questionKeys).toEqual([keyOf(bank[4]), keyOf(bank[2])])
   })
 })

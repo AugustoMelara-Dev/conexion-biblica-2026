@@ -268,6 +268,30 @@ export function createRepositories(db: IDBDatabase) {
         tx.objectStore("reports").put(report)
         await transactionDone(tx)
       },
+      async addWithProgress(
+        report: QuestionReport,
+        updater: (current: QuestionProgress | undefined) => QuestionProgress
+      ) {
+        const tx = db.transaction(["reports", "progress"], "readwrite")
+        const done = transactionDone(tx)
+        const reportsStore = tx.objectStore("reports")
+        const progressStore = tx.objectStore("progress")
+        let next: QuestionProgress | undefined
+        reportsStore.put(report)
+        const request = progressStore.get(report.questionKey)
+        request.onsuccess = () => {
+          try {
+            next = updater(request.result as QuestionProgress | undefined)
+            progressStore.put(next)
+          } catch {
+            tx.abort()
+          }
+        }
+        request.onerror = () => tx.abort()
+        await done
+        if (!next) throw new Error("No se pudo guardar el reporte")
+        return next
+      },
       async list(): Promise<QuestionReport[]> {
         const tx = db.transaction("reports", "readonly")
         const rows = await requestResult(tx.objectStore("reports").getAll())

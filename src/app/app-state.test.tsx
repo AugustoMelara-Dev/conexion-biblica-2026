@@ -1,5 +1,5 @@
 import { act, render, waitFor } from "@testing-library/react"
-import { afterEach, beforeEach, describe, expect, it } from "vitest"
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
 import {
   AppProvider,
   getPreferences,
@@ -125,5 +125,73 @@ describe("persistencia concurrente de progreso", () => {
       timesUnanswered: 0,
       reported: true,
     })
+  })
+
+  it("aborta report y flag juntos si falla el segundo write y el retry crea un solo reporte", async () => {
+    let context: ReturnType<typeof useApp> | undefined
+    function Probe() {
+      const value = useApp()
+      if (!value.loading && value.repositories) context = value
+      return null
+    }
+    render(
+      <AppProvider>
+        <Probe />
+      </AppProvider>
+    )
+    await waitFor(() => expect(context).toBeDefined())
+    const question: Question = {
+      id: "atomic-report",
+      bankId: "curated-v4",
+      bankProfileId: "curated-v4",
+      type: "single_choice",
+      difficulty: 3,
+      source: {
+        work: "Daniel",
+        version: "RVR95",
+        chapter: 1,
+        reference: "Daniel 1:1",
+      },
+      tags: [],
+      factKey: "ATOMIC-REPORT-1",
+      question: "¿Se confirma todo o nada?",
+      options: [{ id: "A", text: "Sí" }],
+      correctAnswer: ["A"],
+    }
+    const originalPut = IDBObjectStore.prototype.put
+    let failProgressWrite = true
+    const put = vi
+      .spyOn(IDBObjectStore.prototype, "put")
+      .mockImplementation(function (this: IDBObjectStore, value, key) {
+        if (this.name === "progress" && failProgressWrite) {
+          failProgressWrite = false
+          throw new DOMException("forced second write failure", "DataError")
+        }
+        return Reflect.apply(
+          originalPut,
+          this,
+          key === undefined ? [value] : [value, key]
+        ) as IDBRequest<IDBValidKey>
+      })
+    try {
+      await expect(
+        context!.recordReport(question, "A", null, "Ambigua")
+      ).rejects.toBeDefined()
+      expect(await context!.repositories!.reports.list()).toEqual([])
+      expect(
+        await context!.repositories!.progress.get("curated-v4:atomic-report")
+      ).toBeUndefined()
+
+      await act(async () => {
+        await context!.recordReport(question, "A", null, "Ambigua")
+      })
+
+      expect(await context!.repositories!.reports.list()).toHaveLength(1)
+      expect(
+        await context!.repositories!.progress.get("curated-v4:atomic-report")
+      ).toMatchObject({ reported: true, timesSeen: 0 })
+    } finally {
+      put.mockRestore()
+    }
   })
 })

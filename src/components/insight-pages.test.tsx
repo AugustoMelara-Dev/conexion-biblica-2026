@@ -278,6 +278,39 @@ describe("vistas de progreso y revisión", () => {
     ).toEqual(["union-failed", "union-reported"])
   })
 
+  it("bloquea el doble inicio de la cola, anuncia el rechazo y permite reintentar", async () => {
+    const pending = deferred<void>()
+    const onPracticeQueue = vi
+      .fn()
+      .mockReturnValueOnce(pending.promise)
+      .mockResolvedValueOnce(undefined)
+    renderReview(
+      {
+        questions: [{ ...question, difficulty: 4 }],
+        reports: [],
+      },
+      onPracticeQueue
+    )
+    const start = screen.getByRole("button", { name: "Practicar esta cola" })
+
+    fireEvent.click(start)
+    fireEvent.click(start)
+
+    expect(onPracticeQueue).toHaveBeenCalledTimes(1)
+    expect(start).toBeDisabled()
+    await act(async () => pending.reject(new Error("storage denied")))
+    expect(screen.getByRole("alert")).toHaveTextContent(
+      "No se pudo iniciar la cola"
+    )
+    expect(start).toBeEnabled()
+
+    await userEvent.click(start)
+    expect(onPracticeQueue).toHaveBeenCalledTimes(2)
+    expect(onPracticeQueue).toHaveBeenLastCalledWith([
+      { ...question, difficulty: 4 },
+    ])
+  })
+
   it("mide cobertura única y conserva tendencia y favoritas", () => {
     const repeated = { ...question, id: "repeated", factKey: "repeated" }
     const progress = new Map([

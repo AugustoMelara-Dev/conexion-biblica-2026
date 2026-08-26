@@ -27,9 +27,12 @@ export function ReviewPage({
   const [family, setFamily] = useState("all")
   const [copied, setCopied] = useState<string | null>(null)
   const [copyError, setCopyError] = useState<string | null>(null)
+  const [practicePending, setPracticePending] = useState(false)
+  const [practiceError, setPracticeError] = useState<string | null>(null)
   const copiedTimer = useRef<number | null>(null)
   const mounted = useRef(false)
   const copySequence = useRef(0)
+  const practicePendingRef = useRef(false)
   useEffect(() => {
     mounted.current = true
     return () => {
@@ -126,6 +129,23 @@ export function ReviewPage({
   const copyReference = async (reference: string) => {
     await copyText(reference)
   }
+  const practiceQueue = async () => {
+    if (practicePendingRef.current) return
+    practicePendingRef.current = true
+    setPracticePending(true)
+    setPracticeError(null)
+    try {
+      await onPracticeQueue(queue.map((item) => item.question))
+    } catch {
+      if (mounted.current)
+        setPracticeError(
+          "No se pudo iniciar la cola. Revisa el almacenamiento e inténtalo de nuevo."
+        )
+    } finally {
+      practicePendingRef.current = false
+      if (mounted.current) setPracticePending(false)
+    }
+  }
   const copyText = async (
     value: string,
     onSuccess?: (token: number) => void
@@ -169,15 +189,22 @@ export function ReviewPage({
           queue.length > 0 ? (
             <Button
               className="min-h-11"
-              onClick={() =>
-                void onPracticeQueue(queue.map((item) => item.question))
-              }
+              disabled={practicePending}
+              onClick={practiceQueue}
             >
-              Practicar esta cola
+              {practicePending ? "Iniciando cola…" : "Practicar esta cola"}
             </Button>
           ) : undefined
         }
       />
+      {practiceError ? (
+        <p
+          role="alert"
+          className="rounded-lg border border-destructive/30 bg-destructive/5 px-4 py-3 text-sm text-destructive"
+        >
+          {practiceError}
+        </p>
+      ) : null}
       <section aria-label="Cola de revisión">
         <SectionHeader
           title="Cola recomendada"

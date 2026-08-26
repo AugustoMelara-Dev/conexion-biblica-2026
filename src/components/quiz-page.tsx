@@ -106,8 +106,12 @@ export function QuizPage({
   const isReportingRef = useRef(false)
   const reportSequenceRef = useRef(0)
   const latestRoundRef = useRef<ActiveRound | null>(null)
-  const autosaveInFlightRef = useRef(false)
+  const autosaveInFlightRef = useRef<Promise<void> | null>(null)
   const autosaveQueuedRef = useRef(false)
+  const autosaveStoppedRef = useRef(false)
+  const stopAutosaveAndDrainRef = useRef<() => Promise<void>>(
+    async () => undefined
+  )
   const currentQuestionKeyRef = useRef<string | null>(null)
   const question = queue[index]
   const progressRef = useRef(progress)
@@ -160,12 +164,13 @@ export function QuizPage({
   )
 
   const exitSafely = useCallback(async () => {
-    if (isExitingRef.current) return
+    if (isExitingRef.current || hasFinishedRef.current) return
     isExitingRef.current = true
     invalidateTransition()
     setTransitionError(null)
     setTransitionPending("exit")
     try {
+      await stopAutosaveAndDrainRef.current()
       await onExit()
     } catch {
       if (!isMountedRef.current) return
@@ -182,6 +187,9 @@ export function QuizPage({
     return () => {
       isMountedRef.current = false
       reportSequenceRef.current += 1
+      autosaveStoppedRef.current = true
+      autosaveQueuedRef.current = false
+      latestRoundRef.current = null
       invalidateTransition()
     }
   }, [invalidateTransition])
@@ -198,37 +206,61 @@ export function QuizPage({
     stateChangeRef.current = onStateChange
   }, [onStateChange])
 
-  const persistLatestRound = useCallback(async () => {
+  const persistLatestRound = useCallback(() => {
+    if (autosaveInFlightRef.current) return autosaveInFlightRef.current
     if (
-      autosaveInFlightRef.current ||
+      autosaveStoppedRef.current ||
       !stateChangeRef.current ||
       !latestRoundRef.current
     )
-      return
-    autosaveInFlightRef.current = true
-    try {
-      while (isMountedRef.current && latestRoundRef.current) {
+      return Promise.resolve()
+    const persistence = (async () => {
+      while (
+        isMountedRef.current &&
+        !autosaveStoppedRef.current &&
+        latestRoundRef.current
+      ) {
         const round: ActiveRound = latestRoundRef.current
+        const stateChange = stateChangeRef.current
+        if (!stateChange) return
         autosaveQueuedRef.current = false
         try {
-          await stateChangeRef.current(round)
+          await stateChange(round)
         } catch {
-          if (isMountedRef.current)
+          if (isMountedRef.current && !autosaveStoppedRef.current)
             setAutosaveError(
               "No se pudo guardar el avance. La ronda sigue abierta y puedes reintentar."
             )
           return
         }
+        if (autosaveStoppedRef.current) return
         if (isMountedRef.current) setAutosaveError(null)
         if (!autosaveQueuedRef.current || latestRoundRef.current === round)
           return
       }
-    } finally {
-      autosaveInFlightRef.current = false
-    }
+    })()
+    autosaveInFlightRef.current = persistence
+    void persistence.then(() => {
+      if (autosaveInFlightRef.current === persistence)
+        autosaveInFlightRef.current = null
+    })
+    return persistence
+  }, [])
+
+  const stopAutosaveAndDrain = useCallback(async () => {
+    autosaveStoppedRef.current = true
+    autosaveQueuedRef.current = false
+    latestRoundRef.current = null
+    if (isMountedRef.current) setAutosaveError(null)
+    await autosaveInFlightRef.current
   }, [])
 
   useEffect(() => {
+    stopAutosaveAndDrainRef.current = stopAutosaveAndDrain
+  }, [stopAutosaveAndDrain])
+
+  useEffect(() => {
+    if (autosaveStoppedRef.current) return
     latestRoundRef.current = {
       id: "active",
       startedAt,
@@ -311,6 +343,7 @@ export function QuizPage({
         } satisfies Session)
       finishSessionRef.current = session
       try {
+        await stopAutosaveAndDrain()
         await onFinish(session)
       } catch {
         if (!isMountedRef.current) return
@@ -322,7 +355,7 @@ export function QuizPage({
         )
       }
     },
-    [config, invalidateTransition, onFinish, startedAt]
+    [config, invalidateTransition, onFinish, startedAt, stopAutosaveAndDrain]
   )
 
   const advance = useCallback(

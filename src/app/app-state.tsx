@@ -560,11 +560,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
         response: result,
         reason,
       }
-      await repositories.reports.add(report)
-      const next = await repositories.progress.update(key, (existing) => ({
-        ...(existing ?? emptyQuestionProgress(key)),
-        reported: true,
-      }))
+      const next = await repositories.reports.addWithProgress(
+        report,
+        (existing) => ({
+          ...(existing ?? emptyQuestionProgress(key)),
+          reported: true,
+        })
+      )
       setProgress((current) => new Map(current).set(key, next))
       setReports((current) => [report, ...current])
     },

@@ -65,6 +65,18 @@ function reviewQueueConfig(
   }
 }
 
+function questionsForSession(session: Session, questions: Question[]) {
+  const byKey = new Map(
+    questions.map((question) => [
+      `${question.bankId ?? "local"}:${question.id}`,
+      question,
+    ])
+  )
+  return session.questionKeys
+    .map((key) => byKey.get(key))
+    .filter((question): question is Question => Boolean(question))
+}
+
 export function App() {
   const {
     loading,
@@ -84,7 +96,6 @@ export function App() {
   } = useApp()
   const [activeRound, setActiveRound] = useState<RoundView | null>(null)
   const [result, setResult] = useState<Session | null>(null)
-  const [lastRound, setLastRound] = useState<RoundView | null>(null)
 
   useEffect(() => {
     if (activeRound || !storedActiveRound || allQuestions.length === 0) return
@@ -130,7 +141,11 @@ export function App() {
         : Math.min(nextConfig.count, eligible.length)
     let selected: Question[]
     let selectionSummary: SelectionSummary = { strategy: nextConfig.strategy! }
-    if (subset) selected = subset.slice(0, target || subset.length)
+    if (subset)
+      selected =
+        nextConfig.strategy === "random-balanced"
+          ? selectBalancedRandom(subset, subset.length)
+          : subset.slice()
     else if (nextConfig.strategy === "coverage-cycle") {
       const poolKey = buildPoolKey(nextConfig)
       const selection = selectCoverageCycle({
@@ -186,7 +201,6 @@ export function App() {
       config: nextConfig,
       persisted,
     }
-    setLastRound(round)
     setActiveRound(round)
     setResult(null)
     setNav("practice")
@@ -211,12 +225,13 @@ export function App() {
 
   const renderPage = () => {
     if (result && nav === "dashboard") {
+      const resultQuestions = questionsForSession(result, allQuestions)
       const errorKeys = new Set(
         result.answers
           .filter((answer) => !answer.result.isCorrect)
           .map((answer) => answer.questionKey)
       )
-      const errorQuestions = allQuestions.filter((question) =>
+      const errorQuestions = resultQuestions.filter((question) =>
         errorKeys.has(`${question.bankId ?? "local"}:${question.id}`)
       )
       return (
@@ -224,7 +239,6 @@ export function App() {
           session={result}
           questions={allQuestions}
           onErrors={() => {
-            setResult(null)
             void startRound(
               {
                 ...result.config,
@@ -237,21 +251,16 @@ export function App() {
             )
           }}
           onRepeat={() => {
-            setResult(null)
-            if (lastRound)
-              void startRound(lastRound.config, lastRound.questions)
+            void startRound(result.config, resultQuestions)
           }}
           onNext={() => {
-            setResult(null)
             void startRound({ ...result.config, strategy: "coverage-cycle" })
           }}
           onRandom={() => {
-            setResult(null)
-            void startRound({
-              ...result.config,
-              strategy: "random-balanced",
-              shuffleQuestions: true,
-            })
+            void startRound(
+              { ...result.config, strategy: "random-balanced" },
+              resultQuestions
+            )
           }}
           onNew={() => {
             setResult(null)
