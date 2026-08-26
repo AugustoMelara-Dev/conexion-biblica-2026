@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { AlertCircle, Database, LoaderCircle } from "lucide-react"
+import { AlertCircle } from "lucide-react"
 import { useApp } from "@/app/app-state"
 import { filterQuestionsForSelection } from "@/domain/banks"
 import {
@@ -20,9 +20,9 @@ import type {
   SessionConfig,
 } from "@/domain/types"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Skeleton } from "@/components/ui/skeleton"
 import { AppShell } from "@/components/app-shell"
+import { FocusShell } from "@/components/layout/focus-shell"
 import { BankManagerPage } from "@/components/bank-manager-page"
 import { DashboardPage } from "@/components/dashboard-page"
 import { HistoryPage } from "@/components/history-page"
@@ -40,6 +40,55 @@ type RoundView = {
 
 function timestamp() {
   return Date.now()
+}
+
+function reviewQueueConfig(
+  questions: Question[],
+  bankSelection: SessionConfig["bankSelection"]
+): SessionConfig {
+  return {
+    mode: "smart-review",
+    count: "all",
+    sourceWorks: [
+      ...new Set(questions.map((question) => question.source.work)),
+    ],
+    chapters: [],
+    difficulties: [],
+    types: [],
+    statuses: ["all"],
+    shuffleQuestions: false,
+    shuffleOptions: true,
+    perQuestionSeconds: null,
+    totalSeconds: null,
+    bankSelection,
+    strategy: "adaptive",
+  }
+}
+
+function questionsForSession(session: Session, questions: Question[]) {
+  const byKey = new Map(
+    questions.map((question) => [
+      `${question.bankId ?? "local"}:${question.id}`,
+      question,
+    ])
+  )
+  return session.questionKeys
+    .map((key) => byKey.get(key))
+    .filter((question): question is Question => Boolean(question))
+}
+
+function shuffleExactSubset(
+  questions: Question[],
+  rng: () => number = Math.random
+) {
+  const shuffled = questions.slice()
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(rng() * (index + 1))
+    const current = shuffled[index]
+    shuffled[index] = shuffled[swapIndex]
+    shuffled[swapIndex] = current
+  }
+  return shuffled
 }
 
 export function App() {
@@ -61,7 +110,6 @@ export function App() {
   } = useApp()
   const [activeRound, setActiveRound] = useState<RoundView | null>(null)
   const [result, setResult] = useState<Session | null>(null)
-  const [lastRound, setLastRound] = useState<RoundView | null>(null)
 
   useEffect(() => {
     if (activeRound || !storedActiveRound || allQuestions.length === 0) return
@@ -97,7 +145,7 @@ export function App() {
     }
     const roundQuestions = filterQuestionsForSelection(
       allQuestions,
-      nextConfig.bankSelection ?? bankSelection,
+      nextConfig.bankSelection ?? bankSelection
     )
     const eligible =
       subset ?? filterEligibleQuestions(roundQuestions, progress, nextConfig)
@@ -107,7 +155,11 @@ export function App() {
         : Math.min(nextConfig.count, eligible.length)
     let selected: Question[]
     let selectionSummary: SelectionSummary = { strategy: nextConfig.strategy! }
-    if (subset) selected = subset.slice(0, target || subset.length)
+    if (subset)
+      selected =
+        nextConfig.strategy === "random-balanced"
+          ? shuffleExactSubset(subset)
+          : subset.slice()
     else if (nextConfig.strategy === "coverage-cycle") {
       const poolKey = buildPoolKey(nextConfig)
       const selection = selectCoverageCycle({
@@ -163,43 +215,45 @@ export function App() {
       config: nextConfig,
       persisted,
     }
-    setLastRound(round)
     setActiveRound(round)
     setResult(null)
     setNav("practice")
   }
 
-  const finishRound = (session: Session) => {
+  const finishRound = async (session: Session) => {
     const completed = {
       ...session,
       selectionSummary: activeRound?.persisted.selectionSummary,
     }
-    void (async () => {
-      await saveSession(completed)
-      await clearActiveRound()
-      setResult(completed)
-      setActiveRound(null)
-      setNav("dashboard")
-    })()
+    await saveSession(completed)
+    await clearActiveRound()
+    setResult(completed)
+    setActiveRound(null)
+    setNav("dashboard")
+  }
+
+  const exitRound = async () => {
+    await clearActiveRound()
+    setActiveRound(null)
   }
 
   const renderPage = () => {
     if (result && nav === "dashboard") {
+      const resultQuestions = questionsForSession(result, allQuestions)
       const errorKeys = new Set(
         result.answers
           .filter((answer) => !answer.result.isCorrect)
           .map((answer) => answer.questionKey)
       )
-      const errorQuestions = allQuestions.filter((question) =>
+      const errorQuestions = resultQuestions.filter((question) =>
         errorKeys.has(`${question.bankId ?? "local"}:${question.id}`)
       )
       return (
         <ResultsPage
           session={result}
           questions={allQuestions}
-          onErrors={() => {
-            setResult(null)
-            void startRound(
+          onErrors={() =>
+            startRound(
               {
                 ...result.config,
                 mode: "errors",
@@ -209,24 +263,17 @@ export function App() {
               },
               errorQuestions
             )
-          }}
-          onRepeat={() => {
-            setResult(null)
-            if (lastRound)
-              void startRound(lastRound.config, lastRound.questions)
-          }}
-          onNext={() => {
-            setResult(null)
-            void startRound({ ...result.config, strategy: "coverage-cycle" })
-          }}
-          onRandom={() => {
-            setResult(null)
-            void startRound({
-              ...result.config,
-              strategy: "random-balanced",
-              shuffleQuestions: true,
-            })
-          }}
+          }
+          onRepeat={() => startRound(result.config, resultQuestions)}
+          onNext={() =>
+            startRound({ ...result.config, strategy: "coverage-cycle" })
+          }
+          onRandom={() =>
+            startRound(
+              { ...result.config, strategy: "random-balanced" },
+              resultQuestions
+            )
+          }
           onNew={() => {
             setResult(null)
             setNav("practice")
@@ -240,16 +287,14 @@ export function App() {
           questions={activeRound.questions}
           config={activeRound.config}
           resume={activeRound.persisted}
-          onStateChange={(persisted) => {
+          onStateChange={async (persisted) => {
             setActiveRound((current) =>
               current ? { ...current, persisted } : current
             )
-            void saveActiveRound(persisted)
+            await saveActiveRound(persisted)
           }}
           onFinish={finishRound}
-      onExit={() => {
-        void clearActiveRound().then(() => setActiveRound(null))
-      }}
+          onExit={exitRound}
         />
       )
     if (nav === "banks") return <BankManagerPage />
@@ -263,8 +308,19 @@ export function App() {
       )
     if (nav === "stats") return <StatisticsPage />
     if (nav === "history") return <HistoryPage />
-    if (nav === "review") return <ReviewPage />
+    if (nav === "review")
+      return (
+        <ReviewPage
+          onPracticeQueue={(queue) =>
+            startRound(reviewQueueConfig(queue, bankSelection), queue)
+          }
+        />
+      )
     return <DashboardPage />
+  }
+
+  if (activeRound) {
+    return <FocusShell>{renderPage()}</FocusShell>
   }
 
   return (
@@ -294,23 +350,33 @@ export function App() {
 
 function LoadingState() {
   return (
-    <Card className="shadow-none">
-      <CardContent className="flex min-h-72 flex-col items-center justify-center gap-4">
-        <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-secondary text-primary">
-          <LoaderCircle className="animate-spin" />
+    <section
+      aria-busy="true"
+      aria-label="Preparando tus bancos"
+      className="min-w-0 space-y-8"
+      role="status"
+    >
+      <h1 className="sr-only">Preparando tus bancos</h1>
+      <span className="sr-only">
+        Cargando preguntas y progreso desde este dispositivo.
+      </span>
+      <div aria-hidden="true" className="space-y-5">
+        <Skeleton
+          data-testid="dashboard-skeleton"
+          className="h-32 rounded-2xl"
+        />
+        <div className="grid min-w-0 gap-4 sm:grid-cols-2">
+          <Skeleton
+            data-testid="dashboard-skeleton"
+            className="h-44 rounded-2xl"
+          />
+          <Skeleton
+            data-testid="dashboard-skeleton"
+            className="h-44 rounded-2xl"
+          />
         </div>
-        <div className="text-center">
-          <p className="font-medium">Preparando tus bancos</p>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Cargando preguntas y progreso desde este dispositivo.
-          </p>
-        </div>
-        <Button variant="outline" disabled>
-          <Database data-icon="inline-start" />
-          IndexedDB
-        </Button>
-      </CardContent>
-    </Card>
+      </div>
+    </section>
   )
 }
 

@@ -1,4 +1,12 @@
-import type { ActiveRound, Bank, CoverageCycle, Question, QuestionProgress, QuestionReport, Session } from "@/domain/types"
+import type {
+  ActiveRound,
+  Bank,
+  CoverageCycle,
+  Question,
+  QuestionProgress,
+  QuestionReport,
+  Session,
+} from "@/domain/types"
 
 export const DB_NAME = "conexion-biblica-2026"
 export const DB_VERSION = 2
@@ -11,15 +19,18 @@ let activeDb: IDBDatabase | null = null
 function requestResult<T>(request: IDBRequest<T>): Promise<T> {
   return new Promise((resolve, reject) => {
     request.onsuccess = () => resolve(request.result)
-    request.onerror = () => reject(request.error ?? new Error("IndexedDB request failed"))
+    request.onerror = () =>
+      reject(request.error ?? new Error("IndexedDB request failed"))
   })
 }
 
 function transactionDone(transaction: IDBTransaction) {
   return new Promise<void>((resolve, reject) => {
     transaction.oncomplete = () => resolve()
-    transaction.onerror = () => reject(transaction.error ?? new Error("IndexedDB transaction failed"))
-    transaction.onabort = () => reject(transaction.error ?? new Error("IndexedDB transaction aborted"))
+    transaction.onerror = () =>
+      reject(transaction.error ?? new Error("IndexedDB transaction failed"))
+    transaction.onabort = () =>
+      reject(transaction.error ?? new Error("IndexedDB transaction aborted"))
   })
 }
 
@@ -29,18 +40,29 @@ export function openAppDb(): Promise<IDBDatabase> {
     const request = indexedDB.open(DB_NAME, DB_VERSION)
     request.onupgradeneeded = (event) => {
       const db = request.result
-      if (!db.objectStoreNames.contains("banks")) db.createObjectStore("banks", { keyPath: "bankId" })
+      if (!db.objectStoreNames.contains("banks"))
+        db.createObjectStore("banks", { keyPath: "bankId" })
       if (!db.objectStoreNames.contains("questions")) {
-        const questions = db.createObjectStore("questions", { keyPath: "questionKey" })
+        const questions = db.createObjectStore("questions", {
+          keyPath: "questionKey",
+        })
         questions.createIndex("bankId", "bankId", { unique: false })
-        questions.createIndex("sourceChapter", ["source", "chapter"], { unique: false })
+        questions.createIndex("sourceChapter", ["source", "chapter"], {
+          unique: false,
+        })
       }
-      if (!db.objectStoreNames.contains("progress")) db.createObjectStore("progress", { keyPath: "questionKey" })
-      if (!db.objectStoreNames.contains("sessions")) db.createObjectStore("sessions", { keyPath: "id" })
-      if (!db.objectStoreNames.contains("reports")) db.createObjectStore("reports", { keyPath: "id" })
-      if (!db.objectStoreNames.contains("settings")) db.createObjectStore("settings", { keyPath: "key" })
-      if (!db.objectStoreNames.contains("coverageCycles")) db.createObjectStore("coverageCycles", { keyPath: "poolKey" })
-      if (!db.objectStoreNames.contains("activeRound")) db.createObjectStore("activeRound", { keyPath: "id" })
+      if (!db.objectStoreNames.contains("progress"))
+        db.createObjectStore("progress", { keyPath: "questionKey" })
+      if (!db.objectStoreNames.contains("sessions"))
+        db.createObjectStore("sessions", { keyPath: "id" })
+      if (!db.objectStoreNames.contains("reports"))
+        db.createObjectStore("reports", { keyPath: "id" })
+      if (!db.objectStoreNames.contains("settings"))
+        db.createObjectStore("settings", { keyPath: "key" })
+      if (!db.objectStoreNames.contains("coverageCycles"))
+        db.createObjectStore("coverageCycles", { keyPath: "poolKey" })
+      if (!db.objectStoreNames.contains("activeRound"))
+        db.createObjectStore("activeRound", { keyPath: "id" })
       if (event.oldVersion < 2 && db.objectStoreNames.contains("progress")) {
         const store = request.transaction!.objectStore("progress")
         const cursorRequest = store.openCursor()
@@ -48,7 +70,10 @@ export function openAppDb(): Promise<IDBDatabase> {
           const cursor = cursorRequest.result
           if (!cursor) return
           const item = cursor.value as QuestionProgress
-          if (typeof item.questionKey === "string" && !item.questionKey.includes(":")) {
+          if (
+            typeof item.questionKey === "string" &&
+            !item.questionKey.includes(":")
+          ) {
             cursor.delete()
             store.put({ ...item, questionKey: `legacy-v1:${item.questionKey}` })
           }
@@ -61,7 +86,8 @@ export function openAppDb(): Promise<IDBDatabase> {
       activeDb.onversionchange = () => activeDb?.close()
       resolve(activeDb)
     }
-    request.onerror = () => reject(request.error ?? new Error("Unable to open IndexedDB"))
+    request.onerror = () =>
+      reject(request.error ?? new Error("Unable to open IndexedDB"))
   })
 }
 
@@ -71,7 +97,8 @@ export async function deleteAppDb() {
   await new Promise<void>((resolve, reject) => {
     const request = indexedDB.deleteDatabase(DB_NAME)
     request.onsuccess = () => resolve()
-    request.onerror = () => reject(request.error ?? new Error("Unable to delete IndexedDB"))
+    request.onerror = () =>
+      reject(request.error ?? new Error("Unable to delete IndexedDB"))
     request.onblocked = () => resolve()
   })
 }
@@ -81,14 +108,30 @@ function questionKey(question: Question) {
 }
 
 function withoutKey(question: StoredQuestion): Question {
-  const value = Object.fromEntries(Object.entries(question).filter(([key]) => key !== "questionKey")) as Question
-  return { ...value, bankProfileId: value.bankProfileId ?? (value.bankId === "master-v2" ? "master-v2" : "legacy-v1") }
+  const value = Object.fromEntries(
+    Object.entries(question).filter(([key]) => key !== "questionKey")
+  ) as Question
+  return {
+    ...value,
+    bankProfileId:
+      value.bankProfileId ??
+      (value.bankId === "master-v2" ? "master-v2" : "legacy-v1"),
+  }
 }
 
 export function createRepositories(db: IDBDatabase) {
   return {
     async resetAll() {
-      const stores = ["banks", "questions", "progress", "sessions", "reports", "settings", "coverageCycles", "activeRound"]
+      const stores = [
+        "banks",
+        "questions",
+        "progress",
+        "sessions",
+        "reports",
+        "settings",
+        "coverageCycles",
+        "activeRound",
+      ]
       const tx = db.transaction(stores, "readwrite")
       stores.forEach((store) => tx.objectStore(store).clear())
       await transactionDone(tx)
@@ -108,7 +151,11 @@ export function createRepositories(db: IDBDatabase) {
             cursor.continue()
           } else {
             bank.questions.forEach((question) => {
-              const record = { ...question, bankId: bank.bankId, questionKey: questionKey({ ...question, bankId: bank.bankId }) }
+              const record = {
+                ...question,
+                bankId: bank.bankId,
+                questionKey: questionKey({ ...question, bankId: bank.bankId }),
+              }
               questionsStore.put(record)
             })
           }
@@ -130,7 +177,10 @@ export function createRepositories(db: IDBDatabase) {
       async remove(bankId: string) {
         const tx = db.transaction(["banks", "questions"], "readwrite")
         tx.objectStore("banks").delete(bankId)
-        const cursorRequest = tx.objectStore("questions").index("bankId").openCursor(IDBKeyRange.only(bankId))
+        const cursorRequest = tx
+          .objectStore("questions")
+          .index("bankId")
+          .openCursor(IDBKeyRange.only(bankId))
         cursorRequest.onsuccess = () => {
           const cursor = cursorRequest.result
           if (cursor) {
@@ -167,6 +217,23 @@ export function createRepositories(db: IDBDatabase) {
         tx.objectStore("progress").put(progress)
         await transactionDone(tx)
       },
+      async update(
+        key: string,
+        updater: (current: QuestionProgress | undefined) => QuestionProgress
+      ) {
+        const tx = db.transaction("progress", "readwrite")
+        const store = tx.objectStore("progress")
+        let next: QuestionProgress | undefined
+        const request = store.get(key)
+        request.onsuccess = () => {
+          next = updater(request.result as QuestionProgress | undefined)
+          store.put(next)
+        }
+        request.onerror = () => tx.abort()
+        await transactionDone(tx)
+        if (!next) throw new Error("No se pudo actualizar el progreso")
+        return next
+      },
       async list(): Promise<QuestionProgress[]> {
         const tx = db.transaction("progress", "readonly")
         const rows = await requestResult(tx.objectStore("progress").getAll())
@@ -184,7 +251,9 @@ export function createRepositories(db: IDBDatabase) {
         const tx = db.transaction("sessions", "readonly")
         const rows = await requestResult(tx.objectStore("sessions").getAll())
         await transactionDone(tx)
-        return (rows as Session[]).sort((left, right) => right.startedAt - left.startedAt)
+        return (rows as Session[]).sort(
+          (left, right) => right.startedAt - left.startedAt
+        )
       },
       async get(id: string): Promise<Session | undefined> {
         const tx = db.transaction("sessions", "readonly")
@@ -199,17 +268,45 @@ export function createRepositories(db: IDBDatabase) {
         tx.objectStore("reports").put(report)
         await transactionDone(tx)
       },
+      async addWithProgress(
+        report: QuestionReport,
+        updater: (current: QuestionProgress | undefined) => QuestionProgress
+      ) {
+        const tx = db.transaction(["reports", "progress"], "readwrite")
+        const done = transactionDone(tx)
+        const reportsStore = tx.objectStore("reports")
+        const progressStore = tx.objectStore("progress")
+        let next: QuestionProgress | undefined
+        reportsStore.put(report)
+        const request = progressStore.get(report.questionKey)
+        request.onsuccess = () => {
+          try {
+            next = updater(request.result as QuestionProgress | undefined)
+            progressStore.put(next)
+          } catch {
+            tx.abort()
+          }
+        }
+        request.onerror = () => tx.abort()
+        await done
+        if (!next) throw new Error("No se pudo guardar el reporte")
+        return next
+      },
       async list(): Promise<QuestionReport[]> {
         const tx = db.transaction("reports", "readonly")
         const rows = await requestResult(tx.objectStore("reports").getAll())
         await transactionDone(tx)
-        return (rows as QuestionReport[]).sort((left, right) => right.reportedAt - left.reportedAt)
+        return (rows as QuestionReport[]).sort(
+          (left, right) => right.reportedAt - left.reportedAt
+        )
       },
     },
     coverage: {
       async get(poolKey: string): Promise<CoverageCycle | undefined> {
         const tx = db.transaction("coverageCycles", "readonly")
-        const row = await requestResult(tx.objectStore("coverageCycles").get(poolKey))
+        const row = await requestResult(
+          tx.objectStore("coverageCycles").get(poolKey)
+        )
         await transactionDone(tx)
         return row as CoverageCycle | undefined
       },
@@ -220,7 +317,9 @@ export function createRepositories(db: IDBDatabase) {
       },
       async list(): Promise<CoverageCycle[]> {
         const tx = db.transaction("coverageCycles", "readonly")
-        const rows = await requestResult(tx.objectStore("coverageCycles").getAll())
+        const rows = await requestResult(
+          tx.objectStore("coverageCycles").getAll()
+        )
         await transactionDone(tx)
         return rows as CoverageCycle[]
       },
@@ -233,7 +332,9 @@ export function createRepositories(db: IDBDatabase) {
     activeRound: {
       async get(): Promise<ActiveRound | undefined> {
         const tx = db.transaction("activeRound", "readonly")
-        const row = await requestResult(tx.objectStore("activeRound").get("active"))
+        const row = await requestResult(
+          tx.objectStore("activeRound").get("active")
+        )
         await transactionDone(tx)
         return row as ActiveRound | undefined
       },
@@ -253,7 +354,7 @@ export function createRepositories(db: IDBDatabase) {
         const tx = db.transaction("settings", "readonly")
         const row = await requestResult(tx.objectStore("settings").get(key))
         await transactionDone(tx)
-        return row ? (row as StoredSetting).value as T : fallback
+        return row ? ((row as StoredSetting).value as T) : fallback
       },
       async put(key: string, value: unknown) {
         const tx = db.transaction("settings", "readwrite")

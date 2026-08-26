@@ -1,3 +1,4 @@
+import { useRef, useState } from "react"
 import {
   ArrowRight,
   Check,
@@ -17,10 +18,11 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
+import { MetricStrip } from "@/components/layout/metric-strip"
 import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator"
+import { Switch } from "@/components/ui/switch"
 
 export function ResultsPage({
   session,
@@ -33,12 +35,16 @@ export function ResultsPage({
 }: {
   session: Session
   questions: Question[]
-  onErrors: () => void
-  onRepeat: () => void
-  onNext: () => void
-  onRandom: () => void
-  onNew: () => void
+  onErrors: () => void | Promise<void>
+  onRepeat: () => void | Promise<void>
+  onNext: () => void | Promise<void>
+  onRandom: () => void | Promise<void>
+  onNew: () => void | Promise<void>
 }) {
+  const [onlyIncorrect, setOnlyIncorrect] = useState(false)
+  const [actionPending, setActionPending] = useState(false)
+  const [actionError, setActionError] = useState<string | null>(null)
+  const actionPendingRef = useRef(false)
   const answeredTimes = session.answers
     .filter((item) => item.result.wasAnswered)
     .map((item) => item.responseTimeMs)
@@ -49,61 +55,106 @@ export function ResultsPage({
   const unanswered = session.answers.filter(
     (item) => !item.result.wasAnswered
   ).length
+  const hasErrors = session.answers.some((item) => !item.result.isCorrect)
   const accuracy = session.answers.length
     ? Math.round((correct / session.answers.length) * 100)
     : 0
   const fastest = answeredTimes.length ? Math.min(...answeredTimes) : 0
   const slowest = answeredTimes.length ? Math.max(...answeredTimes) : 0
+  const average = answeredTimes.length
+    ? Math.round(
+        answeredTimes.reduce((sum, value) => sum + value, 0) /
+          answeredTimes.length
+      )
+    : 0
   const questionMap = new Map(
     questions.map((question) => [
       `${question.bankId ?? "local"}:${question.id}`,
       question,
     ])
   )
+  const displayedAnswers = onlyIncorrect
+    ? session.answers.filter((answer) => !answer.result.isCorrect)
+    : session.answers
+  const recommendation = hasErrors
+    ? `Repasa las ${incorrect + unanswered} preguntas que necesitan refuerzo antes de repetir la tanda.`
+    : "Consolidaste esta tanda sin errores. Repite la práctica más adelante para afianzarla."
+  const runAction = async (action: () => void | Promise<void>) => {
+    if (actionPendingRef.current) return
+    actionPendingRef.current = true
+    setActionPending(true)
+    setActionError(null)
+    try {
+      await action()
+    } catch {
+      setActionError(
+        "No se pudo iniciar la práctica. Revisa el almacenamiento e inténtalo de nuevo."
+      )
+    } finally {
+      actionPendingRef.current = false
+      setActionPending(false)
+    }
+  }
+
   return (
-    <div className="mx-auto flex max-w-5xl flex-col gap-7">
+    <div className="mx-auto flex max-w-3xl flex-col gap-7 px-4 pb-8 sm:px-6">
       <section className="text-center">
         <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
-          <Trophy />
+          <Trophy aria-hidden="true" />
         </div>
         <p className="mt-4 text-sm font-medium text-muted-foreground">
           {modeLabel(session.mode)} · ronda terminada
         </p>
         <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-          Buen trabajo bajo presión.
+          {hasErrors ? "Tu siguiente paso está claro." : "Ronda completada."}
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          {session.context === "simulation" ? "Este resultado cuenta sólo para tus simulacros." : "Esta práctica mejora tu dominio sin alterar tus simulacros."}
+          {session.context === "simulation"
+            ? "Este resultado cuenta sólo para tus simulacros."
+            : "Esta práctica mejora tu dominio sin alterar tus simulacros."}
         </p>
       </section>
+
       <Card className="shadow-none">
-        <CardContent className="grid gap-5 p-5 sm:grid-cols-2 lg:grid-cols-4">
-          <ResultMetric
-            label="Puntuación"
-            value={session.context === "simulation" ? `${session.score} / 100` : `${correct} / ${session.answers.length}`}
-          />
-          <ResultMetric label="Precisión" value={`${accuracy}%`} />
-          <ResultMetric
-            label="Tiempo promedio"
-            value={formatElapsedMs(
-              answeredTimes.length
-                ? Math.round(
-                    answeredTimes.reduce((sum, value) => sum + value, 0) /
-                      answeredTimes.length
-                  )
-                : 0
-            )}
-          />
-          <ResultMetric
-            label="Mediana"
-            value={formatElapsedMs(getMedian(answeredTimes))}
-          />
-        </CardContent>
+        <CardHeader>
+          <h2 className="text-xl font-semibold tracking-tight">Resultado</h2>
+          <p className="text-3xl font-semibold tracking-tight">
+            {session.context === "simulation"
+              ? `${session.score} / 100`
+              : `${correct} / ${session.answers.length}`}
+          </p>
+        </CardHeader>
       </Card>
+
+      <MetricStrip
+        items={[
+          { label: "Correctas", value: correct },
+          { label: "Incorrectas", value: incorrect },
+          { label: "Sin responder", value: unanswered },
+          { label: "Precisión", value: `${accuracy}%` },
+          {
+            label: "Tiempo promedio",
+            value: formatElapsedMs(average),
+            icon: Clock3,
+          },
+        ]}
+      />
+
+      <Card className="border-primary/20 bg-primary/[0.035] shadow-none">
+        <CardHeader>
+          <h2 className="text-xl font-semibold tracking-tight">
+            Recomendación
+          </h2>
+          <CardDescription>{recommendation}</CardDescription>
+        </CardHeader>
+      </Card>
+
       {session.selectionSummary?.strategy === "coverage-cycle" ? (
         <Card className="shadow-none">
           <CardHeader>
-            <CardTitle>Ciclo de cobertura</CardTitle>
+            <h2 className="text-xl font-semibold tracking-tight">
+              Ciclo de cobertura
+            </h2>
             <CardDescription>
               {session.selectionSummary.seen} / {session.selectionSummary.total}{" "}
               recorridas · {session.selectionSummary.remaining} pendientes
@@ -111,6 +162,7 @@ export function ResultsPage({
           </CardHeader>
           <CardContent>
             <Progress
+              aria-label="Progreso del ciclo de cobertura"
               value={
                 session.selectionSummary.total
                   ? ((session.selectionSummary.seen ?? 0) /
@@ -122,67 +174,57 @@ export function ResultsPage({
           </CardContent>
         </Card>
       ) : null}
-      <div className="grid gap-4 sm:grid-cols-3">
-        <Card className="shadow-none">
-          <CardContent className="flex items-center gap-3 p-4">
-            <Check className="text-chart-2" />
-            <div>
-              <p className="text-xs tracking-[0.12em] text-muted-foreground uppercase">
-                Correctas
-              </p>
-              <p className="mt-1 text-2xl font-semibold">{correct}</p>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="shadow-none">
-          <CardContent className="flex items-center gap-3 p-4">
-            <X className="text-destructive" />
-            <div>
-              <p className="text-xs tracking-[0.12em] text-muted-foreground uppercase">
-                Incorrectas
-              </p>
-              <p className="mt-1 text-2xl font-semibold">{incorrect}</p>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="shadow-none">
-          <CardContent className="flex items-center gap-3 p-4">
-            <Clock3 className="text-primary" />
-            <div>
-              <p className="text-xs tracking-[0.12em] text-muted-foreground uppercase">
-                Sin responder
-              </p>
-              <p className="mt-1 text-2xl font-semibold">{unanswered}</p>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+
       <Card className="shadow-none">
         <CardHeader>
-          <CardTitle>Ritmo de la ronda</CardTitle>
+          <h2 className="text-xl font-semibold tracking-tight">
+            Ritmo de la ronda
+          </h2>
           <CardDescription>
             Más rápida {formatElapsedMs(fastest)} · más lenta{" "}
-            {formatElapsedMs(slowest)} · duración total{" "}
+            {formatElapsedMs(slowest)} · mediana{" "}
+            {formatElapsedMs(getMedian(answeredTimes))} · duración total{" "}
             {formatElapsedMs(session.durationMs)}
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Progress value={accuracy} />
+          <Progress aria-label="Precisión de la ronda" value={accuracy} />
         </CardContent>
       </Card>
+
       <Card className="shadow-none">
-        <CardHeader>
-          <CardTitle>Lista completa</CardTitle>
-          <CardDescription>
-            Revisa qué ocurrió en cada pregunta.
-          </CardDescription>
+        <CardHeader className="gap-4">
+          <div>
+            <h2 className="text-xl font-semibold tracking-tight">
+              {onlyIncorrect ? "Respuestas incorrectas" : "Lista completa"}
+            </h2>
+            <CardDescription>
+              Revisa qué ocurrió en cada pregunta.
+            </CardDescription>
+          </div>
+          <label
+            className={`flex min-h-11 items-center justify-between gap-3 rounded-lg border px-3 py-2 text-sm font-medium ${hasErrors ? "cursor-pointer" : "cursor-not-allowed"}`}
+          >
+            Solo incorrectas
+            <Switch
+              checked={onlyIncorrect}
+              onCheckedChange={setOnlyIncorrect}
+              aria-label="Solo incorrectas"
+              disabled={!hasErrors}
+            />
+          </label>
+          {!hasErrors ? (
+            <p className="text-sm text-muted-foreground">
+              No hay respuestas incorrectas para filtrar.
+            </p>
+          ) : null}
         </CardHeader>
         <CardContent className="p-0">
-          <div className="flex flex-col">
-            {session.answers.map((answer, index) => {
+          <ol aria-label="Respuestas de la ronda" className="flex flex-col">
+            {displayedAnswers.map((answer, index) => {
               const question = questionMap.get(answer.questionKey)
               return (
-                <div
+                <li
                   key={`${answer.questionKey}-${index}`}
                   className="flex items-start gap-3 border-t px-5 py-4 first:border-t-0"
                 >
@@ -190,9 +232,9 @@ export function ResultsPage({
                     className={`mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full ${answer.result.isCorrect ? "bg-chart-2/15 text-chart-2" : "bg-destructive/10 text-destructive"}`}
                   >
                     {answer.result.isCorrect ? (
-                      <Check className="size-4" />
+                      <Check className="size-4" aria-hidden="true" />
                     ) : (
-                      <X className="size-4" />
+                      <X className="size-4" aria-hidden="true" />
                     )}
                   </div>
                   <div className="min-w-0 flex-1">
@@ -218,52 +260,71 @@ export function ResultsPage({
                         ? "Vencida"
                         : "Incorrecta"}
                   </Badge>
-                </div>
+                </li>
               )
             })}
-          </div>
+          </ol>
         </CardContent>
       </Card>
+
       <Separator />
+      {actionPending ? (
+        <p role="status" className="text-sm text-muted-foreground">
+          Iniciando práctica…
+        </p>
+      ) : null}
+      {actionError ? (
+        <p
+          role="alert"
+          className="rounded-lg border border-destructive/30 bg-destructive/5 px-4 py-3 text-sm text-destructive"
+        >
+          {actionError}
+        </p>
+      ) : null}
       <div className="flex flex-col gap-3">
         <Button
-          variant="outline"
-          onClick={onErrors}
-          disabled={correct === session.answers.length}
+          variant={hasErrors ? "default" : "outline"}
+          onClick={() => void runAction(onErrors)}
+          disabled={!hasErrors || actionPending}
         >
           <RotateCcw data-icon="inline-start" />
           Repasar errores
         </Button>
         <div className="flex flex-wrap gap-2">
-          <Button variant="outline" onClick={onRepeat}>
+          <Button
+            variant="outline"
+            onClick={() => void runAction(onRepeat)}
+            disabled={actionPending}
+          >
             Repetir esta tanda
           </Button>
           {session.selectionSummary?.strategy === "coverage-cycle" &&
           (session.selectionSummary.remaining ?? 0) > 0 ? (
-            <Button onClick={onNext}>
+            <Button
+              variant="outline"
+              onClick={() => void runAction(onNext)}
+              disabled={actionPending}
+            >
               Siguiente tanda sin repetir <ArrowRight data-icon="inline-end" />
             </Button>
           ) : null}
-          <Button variant="outline" onClick={onRandom}>
+          <Button
+            variant="outline"
+            onClick={() => void runAction(onRandom)}
+            disabled={actionPending}
+          >
             Otra tanda aleatoria
           </Button>
-          <Button variant="outline" onClick={onNew}>
+          <Button
+            variant="outline"
+            onClick={() => void runAction(onNew)}
+            disabled={actionPending}
+          >
             <Settings2 data-icon="inline-start" />
             Nueva configuración
           </Button>
         </div>
       </div>
-    </div>
-  )
-}
-
-function ResultMetric({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-xl border bg-muted/25 p-4">
-      <p className="text-xs font-semibold tracking-[0.12em] text-muted-foreground uppercase">
-        {label}
-      </p>
-      <p className="mt-2 text-2xl font-semibold tracking-tight">{value}</p>
     </div>
   )
 }
