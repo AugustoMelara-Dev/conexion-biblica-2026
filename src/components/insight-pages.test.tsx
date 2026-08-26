@@ -127,9 +127,15 @@ function renderStatistics(overrides: Parameters<typeof createContext>[0] = {}) {
   return render(<StatisticsPage />)
 }
 
-function renderReview(overrides: Parameters<typeof createContext>[0] = {}) {
+function renderReview(
+  overrides: Parameters<typeof createContext>[0] = {},
+  onPracticeQueue = vi.fn().mockResolvedValue(undefined)
+) {
   vi.mocked(useApp).mockReturnValue(createContext(overrides))
-  return render(<ReviewPage />)
+  return {
+    ...render(<ReviewPage onPracticeQueue={onPracticeQueue} />),
+    onPracticeQueue,
+  }
 }
 
 describe("vistas de progreso y revisión", () => {
@@ -162,6 +168,114 @@ describe("vistas de progreso y revisión", () => {
     expect(
       screen.getByRole("button", { name: "Empezar una ronda" })
     ).toBeVisible()
+  })
+
+  it("forma la cola sin reportes con preguntas difíciles, falladas y favoritas", () => {
+    const difficult = {
+      ...question,
+      id: "difficult-without-report",
+      difficulty: 4 as const,
+      question: "Difícil sin reporte",
+    }
+    const failed = {
+      ...question,
+      id: "failed-without-report",
+      question: "Fallada sin reporte",
+    }
+    const favorite = {
+      ...question,
+      id: "favorite-without-report",
+      question: "Favorita sin reporte",
+    }
+    renderReview({
+      reports: [],
+      questions: [difficult, failed, favorite],
+      progress: new Map([
+        [
+          "curated-v4:failed-without-report",
+          {
+            ...blankProgress,
+            questionKey: "curated-v4:failed-without-report",
+            timesIncorrect: 1,
+          },
+        ],
+        [
+          "curated-v4:favorite-without-report",
+          {
+            ...blankProgress,
+            questionKey: "curated-v4:favorite-without-report",
+            favorite: true,
+          },
+        ],
+      ]),
+    })
+
+    const rows = within(
+      screen.getByRole("list", { name: "Preguntas pendientes de revisión" })
+    ).getAllByRole("listitem")
+    expect(rows).toHaveLength(3)
+    expect(rows[0]).toHaveTextContent("Difícil sin reporte")
+    expect(rows[1]).toHaveTextContent("Fallada sin reporte")
+    expect(rows[2]).toHaveTextContent("Favorita sin reporte")
+    expect(
+      screen.queryByRole("heading", { name: "No hay preguntas pendientes" })
+    ).not.toBeInTheDocument()
+  })
+
+  it("deduplica por questionKey, conserva filtros y entrega la cola enfocada al CTA", async () => {
+    const user = userEvent.setup()
+    const failed = {
+      ...question,
+      id: "union-failed",
+      question: "Unión fallada",
+      factKey: "union-family",
+    }
+    const reported = {
+      ...question,
+      id: "union-reported",
+      question: "Unión reportada",
+      factKey: "reported-family",
+    }
+    const onPracticeQueue = vi.fn().mockResolvedValue(undefined)
+    renderReview(
+      {
+        questions: [failed, reported],
+        reports: [
+          report(failed, "Ambigua", 2),
+          { ...report(failed, "Incorrecta", 3), id: "second-union-report" },
+          report(reported, "Incorrecta", 1),
+        ],
+        progress: new Map([
+          [
+            "curated-v4:union-failed",
+            {
+              ...blankProgress,
+              questionKey: "curated-v4:union-failed",
+              timesIncorrect: 1,
+            },
+          ],
+        ]),
+      },
+      onPracticeQueue
+    )
+
+    expect(
+      within(
+        screen.getByRole("list", { name: "Preguntas pendientes de revisión" })
+      ).getAllByRole("listitem")
+    ).toHaveLength(2)
+    await user.selectOptions(screen.getByLabelText("Motivo"), "Ambigua")
+    expect(screen.getByText("Unión fallada")).toBeVisible()
+    expect(screen.queryByText("Unión reportada")).not.toBeInTheDocument()
+    await user.selectOptions(screen.getByLabelText("Motivo"), "all")
+    await user.click(
+      screen.getByRole("button", { name: "Practicar esta cola" })
+    )
+
+    expect(onPracticeQueue).toHaveBeenCalledTimes(1)
+    expect(
+      onPracticeQueue.mock.calls[0][0].map((item: Question) => item.id)
+    ).toEqual(["union-failed", "union-reported"])
   })
 
   it("mide cobertura única y conserva tendencia y favoritas", () => {
@@ -239,10 +353,7 @@ describe("vistas de progreso y revisión", () => {
       ],
     ])
     render(
-      <FamilyMasteryPanel
-        questions={[pending, mastered]}
-        progress={progress}
-      />
+      <FamilyMasteryPanel questions={[pending, mastered]} progress={progress} />
     )
 
     const all = screen.getByRole("button", { name: /Todas/ })
@@ -253,12 +364,16 @@ describe("vistas de progreso y revisión", () => {
     await user.click(pendingButton)
     expect(pendingButton).toHaveAttribute("aria-pressed", "true")
     expect(all).toHaveAttribute("aria-pressed", "false")
-    expect(screen.getByText("Familia pendiente", { selector: "p" })).toBeVisible()
+    expect(
+      screen.getByText("Familia pendiente", { selector: "p" })
+    ).toBeVisible()
     expect(
       screen.queryByText("Familia dominada", { selector: "p" })
     ).not.toBeInTheDocument()
     await user.click(masteredButton)
-    expect(screen.getByText("Familia dominada", { selector: "p" })).toBeVisible()
+    expect(
+      screen.getByText("Familia dominada", { selector: "p" })
+    ).toBeVisible()
     expect(
       screen.queryByText("Familia pendiente", { selector: "p" })
     ).not.toBeInTheDocument()
@@ -285,6 +400,10 @@ describe("vistas de progreso y revisión", () => {
     await user.click(document.querySelector("summary")!)
     expect(document.querySelector("details")).toHaveAttribute("open")
     expect(screen.getByText(/Sin responder/)).toBeVisible()
+    const answers = screen.getByRole("list", {
+      name: "Respuestas de Aprender",
+    })
+    expect(within(answers).getAllByRole("listitem")).toHaveLength(1)
   })
 
   it("prioriza y distingue la taxonomía de revisión, filtros, detalle V4 y CTA", async () => {
@@ -352,7 +471,8 @@ describe("vistas de progreso y revisión", () => {
       progress,
     })
     vi.mocked(useApp).mockReturnValue(context)
-    render(<ReviewPage />)
+    const onPracticeQueue = vi.fn().mockResolvedValue(undefined)
+    render(<ReviewPage onPracticeQueue={onPracticeQueue} />)
 
     const queue = screen.getByRole("list", {
       name: "Preguntas pendientes de revisión",
@@ -415,8 +535,15 @@ describe("vistas de progreso y revisión", () => {
     expect(
       screen.queryByText("Solo reportada", { selector: "p" })
     ).not.toBeInTheDocument()
-    await user.click(screen.getByRole("button", { name: "Empezar una ronda" }))
-    expect(context.setNav).toHaveBeenCalledWith("practice")
+    await user.click(
+      screen.getByRole("button", { name: "Practicar esta cola" })
+    )
+    expect(onPracticeQueue).toHaveBeenCalledWith([
+      high,
+      failed,
+      favorite,
+      reported,
+    ])
   })
 
   it("expone dificultad manual, limita badges y conserva empates de revisión", async () => {
@@ -536,9 +663,7 @@ describe("vistas de progreso y revisión", () => {
       act(() => vi.advanceTimersByTime(800))
       expect(screen.getByRole("button", { name: "Copiado" })).toBeVisible()
       act(() => vi.advanceTimersByTime(1_000))
-      expect(
-        screen.getByRole("button", { name: "Copiar JSON" })
-      ).toBeVisible()
+      expect(screen.getByRole("button", { name: "Copiar JSON" })).toBeVisible()
     } finally {
       if (clipboard) Object.defineProperty(navigator, "clipboard", clipboard)
       else Reflect.deleteProperty(navigator, "clipboard")

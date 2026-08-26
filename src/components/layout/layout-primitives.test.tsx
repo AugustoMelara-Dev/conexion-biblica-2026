@@ -19,6 +19,9 @@ describe("primitivas de layout", () => {
       screen.getByRole("heading", { level: 1, name: "Practicar" })
     ).toBeVisible()
     expect(screen.getByRole("button", { name: "Comenzar" })).toBeVisible()
+    expect(
+      screen.getByRole("button", { name: "Comenzar" }).parentElement
+    ).toHaveClass("w-full", "[&>*]:w-full", "lg:w-auto", "lg:[&>*]:w-auto")
   })
 
   it("expone las métricas como una lista accesible", () => {

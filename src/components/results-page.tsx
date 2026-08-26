@@ -201,11 +201,11 @@ export function ResultsPage({
           ) : null}
         </CardHeader>
         <CardContent className="p-0">
-          <div className="flex flex-col">
+          <ol aria-label="Respuestas de la ronda" className="flex flex-col">
             {displayedAnswers.map((answer, index) => {
               const question = questionMap.get(answer.questionKey)
               return (
-                <div
+                <li
                   key={`${answer.questionKey}-${index}`}
                   className="flex items-start gap-3 border-t px-5 py-4 first:border-t-0"
                 >
@@ -241,10 +241,10 @@ export function ResultsPage({
                         ? "Vencida"
                         : "Incorrecta"}
                   </Badge>
-                </div>
+                </li>
               )
             })}
-          </div>
+          </ol>
         </CardContent>
       </Card>
 

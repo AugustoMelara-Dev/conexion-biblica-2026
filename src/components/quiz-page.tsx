@@ -59,9 +59,9 @@ export function QuizPage({
   questions: Question[]
   config: SessionConfig
   resume?: ActiveRound
-  onStateChange?: (round: ActiveRound) => void
-  onFinish: (session: Session) => void
-  onExit: () => void
+  onStateChange?: (round: ActiveRound) => Promise<void>
+  onFinish: (session: Session) => Promise<void>
+  onExit: () => Promise<void>
 }) {
   const { progress, recordAnswer, recordReport } = useApp()
   const initialIndex = resumeQuestionIndex(
@@ -85,6 +85,14 @@ export function QuizPage({
   const [difficult, setDifficult] = useState(false)
   const [reportReason, setReportReason] = useState("")
   const [reportOpen, setReportOpen] = useState(false)
+  const [reportPending, setReportPending] = useState(false)
+  const [reportError, setReportError] = useState<string | null>(null)
+  const [referenceOpen, setReferenceOpen] = useState(false)
+  const [transitionPending, setTransitionPending] = useState<
+    "finish" | "exit" | null
+  >(null)
+  const [transitionError, setTransitionError] = useState<string | null>(null)
+  const [autosaveError, setAutosaveError] = useState<string | null>(null)
   const questionHeadingRef = useRef<HTMLHeadingElement>(null)
   const focusedQuestionKeyRef = useRef<string | null>(null)
   const isSubmittingRef = useRef(false)
@@ -94,6 +102,12 @@ export function QuizPage({
   const transitionGenerationRef = useRef(0)
   const isMountedRef = useRef(false)
   const isExitingRef = useRef(false)
+  const finishSessionRef = useRef<Session | null>(null)
+  const isReportingRef = useRef(false)
+  const reportSequenceRef = useRef(0)
+  const latestRoundRef = useRef<ActiveRound | null>(null)
+  const autosaveInFlightRef = useRef(false)
+  const autosaveQueuedRef = useRef(false)
   const currentQuestionKeyRef = useRef<string | null>(null)
   const question = queue[index]
   const progressRef = useRef(progress)
@@ -145,17 +159,29 @@ export function QuizPage({
     [clearDeferredTransition, isCurrentTransition]
   )
 
-  const exitSafely = useCallback(() => {
+  const exitSafely = useCallback(async () => {
     if (isExitingRef.current) return
     isExitingRef.current = true
     invalidateTransition()
-    onExit()
+    setTransitionError(null)
+    setTransitionPending("exit")
+    try {
+      await onExit()
+    } catch {
+      if (!isMountedRef.current) return
+      isExitingRef.current = false
+      setTransitionPending(null)
+      setTransitionError(
+        "No se pudo salir de la ronda. Tu avance sigue disponible; inténtalo de nuevo."
+      )
+    }
   }, [invalidateTransition, onExit])
 
   useEffect(() => {
     isMountedRef.current = true
     return () => {
       isMountedRef.current = false
+      reportSequenceRef.current += 1
       invalidateTransition()
     }
   }, [invalidateTransition])
@@ -172,8 +198,38 @@ export function QuizPage({
     stateChangeRef.current = onStateChange
   }, [onStateChange])
 
+  const persistLatestRound = useCallback(async () => {
+    if (
+      autosaveInFlightRef.current ||
+      !stateChangeRef.current ||
+      !latestRoundRef.current
+    )
+      return
+    autosaveInFlightRef.current = true
+    try {
+      while (isMountedRef.current && latestRoundRef.current) {
+        const round: ActiveRound = latestRoundRef.current
+        autosaveQueuedRef.current = false
+        try {
+          await stateChangeRef.current(round)
+        } catch {
+          if (isMountedRef.current)
+            setAutosaveError(
+              "No se pudo guardar el avance. La ronda sigue abierta y puedes reintentar."
+            )
+          return
+        }
+        if (isMountedRef.current) setAutosaveError(null)
+        if (!autosaveQueuedRef.current || latestRoundRef.current === round)
+          return
+      }
+    } finally {
+      autosaveInFlightRef.current = false
+    }
+  }, [])
+
   useEffect(() => {
-    stateChangeRef.current?.({
+    latestRoundRef.current = {
       id: "active",
       startedAt,
       updatedAt: Date.now(),
@@ -182,16 +238,16 @@ export function QuizPage({
       answers,
       config,
       selectionSummary: selectionSummaryRef.current,
-    })
-  }, [answers, config, index, queue, startedAt])
+    }
+    autosaveQueuedRef.current = true
+    void persistLatestRound()
+  }, [answers, config, index, persistLatestRound, queue, startedAt])
 
   useEffect(() => {
     const questionKey = `${question.bankId ?? "local"}:${question.id}`
     currentQuestionKeyRef.current = questionKey
     invalidateTransition()
-    const itemProgress = progressRef.current.get(
-      questionKey
-    )
+    const itemProgress = progressRef.current.get(questionKey)
     setValue(initialAnswer(displayedQuestion))
     setSubmitted(false)
     setFeedback(null)
@@ -199,7 +255,12 @@ export function QuizPage({
     setRemaining(config.perQuestionSeconds)
     setFavorite(Boolean(itemProgress?.favorite))
     setDifficult(Boolean(itemProgress?.markedDifficult))
+    reportSequenceRef.current += 1
+    isReportingRef.current = false
     setReportReason("")
+    setReportOpen(false)
+    setReportPending(false)
+    setReportError(null)
     isSubmittingRef.current = false
     isAdvancingRef.current = false
     if (
@@ -218,29 +279,48 @@ export function QuizPage({
   ])
 
   const finish = useCallback(
-    (nextAnswers: SessionAnswer[]) => {
-      if (hasFinishedRef.current || isExitingRef.current || !isMountedRef.current)
+    async (nextAnswers: SessionAnswer[]) => {
+      if (
+        hasFinishedRef.current ||
+        isExitingRef.current ||
+        !isMountedRef.current
+      )
         return
       hasFinishedRef.current = true
       invalidateTransition()
-      const session: Session = {
-        id:
-          typeof crypto !== "undefined" && "randomUUID" in crypto
-            ? crypto.randomUUID()
-            : `session-${Date.now()}`,
-        startedAt,
-        completedAt: Date.now(),
-        mode: config.mode,
-        context: sessionContextForMode(config.mode),
-        config,
-        questionKeys: queueRef.current.map(
-          (item) => `${item.bankId ?? "local"}:${item.id}`
-        ),
-        answers: nextAnswers,
-        score: calculateSessionScore(config.mode, nextAnswers),
-        durationMs: Date.now() - startedAt,
+      setTransitionError(null)
+      setTransitionPending("finish")
+      const session =
+        finishSessionRef.current ??
+        ({
+          id:
+            typeof crypto !== "undefined" && "randomUUID" in crypto
+              ? crypto.randomUUID()
+              : `session-${Date.now()}`,
+          startedAt,
+          completedAt: Date.now(),
+          mode: config.mode,
+          context: sessionContextForMode(config.mode),
+          config,
+          questionKeys: queueRef.current.map(
+            (item) => `${item.bankId ?? "local"}:${item.id}`
+          ),
+          answers: nextAnswers,
+          score: calculateSessionScore(config.mode, nextAnswers),
+          durationMs: Date.now() - startedAt,
+        } satisfies Session)
+      finishSessionRef.current = session
+      try {
+        await onFinish(session)
+      } catch {
+        if (!isMountedRef.current) return
+        hasFinishedRef.current = false
+        isAdvancingRef.current = false
+        setTransitionPending(null)
+        setTransitionError(
+          "No se pudieron guardar los resultados. La ronda sigue disponible; inténtalo de nuevo."
+        )
       }
-      onFinish(session)
     },
     [config, invalidateTransition, onFinish, startedAt]
   )
@@ -251,7 +331,7 @@ export function QuizPage({
       isAdvancingRef.current = true
       invalidateTransition()
       const nextAnswers = lastAnswer ? [...answers, lastAnswer] : answers
-      if (index >= queueRef.current.length - 1) finish(nextAnswers)
+      if (index >= queueRef.current.length - 1) void finish(nextAnswers)
       else setIndex((current) => current + 1)
     },
     [answers, finish, index, invalidateTransition]
@@ -338,6 +418,54 @@ export function QuizPage({
     ]
   )
 
+  const saveReport = useCallback(async () => {
+    if (!question || isReportingRef.current) return
+    const capturedQuestion = question
+    const capturedQuestionKey = `${question.bankId ?? "local"}:${question.id}`
+    const capturedValue = value
+    const capturedFeedback = feedback
+    const capturedReason = reportReason || "Sin motivo indicado"
+    const request = reportSequenceRef.current + 1
+    reportSequenceRef.current = request
+    isReportingRef.current = true
+    setReportPending(true)
+    setReportError(null)
+    try {
+      await recordReport(
+        capturedQuestion,
+        capturedValue,
+        capturedFeedback,
+        capturedReason
+      )
+      if (
+        !isMountedRef.current ||
+        reportSequenceRef.current !== request ||
+        currentQuestionKeyRef.current !== capturedQuestionKey
+      )
+        return
+      setReportOpen(false)
+      setReportReason("")
+    } catch {
+      if (
+        isMountedRef.current &&
+        reportSequenceRef.current === request &&
+        currentQuestionKeyRef.current === capturedQuestionKey
+      )
+        setReportError(
+          "No se pudo guardar el reporte. Revisa el almacenamiento e inténtalo de nuevo."
+        )
+    } finally {
+      if (
+        isMountedRef.current &&
+        reportSequenceRef.current === request &&
+        currentQuestionKeyRef.current === capturedQuestionKey
+      ) {
+        isReportingRef.current = false
+        setReportPending(false)
+      }
+    }
+  }, [feedback, question, recordReport, reportReason, value])
+
   useEffect(() => {
     const seconds = config.perQuestionSeconds
     if (submitted || seconds === null) return undefined
@@ -370,19 +498,28 @@ export function QuizPage({
       }
     }, 250)
     return () => window.clearInterval(interval)
-  }, [answers, config.totalSeconds, finish, scheduleDeferredTransition, startedAt, submit, submitted])
+  }, [
+    answers,
+    config.totalSeconds,
+    finish,
+    scheduleDeferredTransition,
+    startedAt,
+    submit,
+    submitted,
+  ])
 
   useEffect(() => clearDeferredTransition, [clearDeferredTransition])
 
   useEffect(() => {
     const handleExitKey = (event: KeyboardEvent) => {
-      if (event.key !== "Escape" || event.defaultPrevented) return
+      if (event.key !== "Escape" || event.defaultPrevented || referenceOpen)
+        return
       event.preventDefault()
-      exitSafely()
+      void exitSafely()
     }
-    window.addEventListener("keydown", handleExitKey, true)
-    return () => window.removeEventListener("keydown", handleExitKey, true)
-  }, [exitSafely])
+    window.addEventListener("keydown", handleExitKey)
+    return () => window.removeEventListener("keydown", handleExitKey)
+  }, [exitSafely, referenceOpen])
 
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
@@ -462,7 +599,11 @@ export function QuizPage({
   return (
     <article className="mx-auto flex min-h-screen w-full max-w-3xl flex-col px-4 py-5 pb-28 sm:px-6 sm:py-6">
       <header className="grid grid-cols-[auto_1fr_auto] items-center gap-3">
-        <Button variant="ghost" onClick={exitSafely}>
+        <Button
+          variant="ghost"
+          disabled={transitionPending !== null}
+          onClick={() => void exitSafely()}
+        >
           <X data-icon="inline-start" />
           Salir
         </Button>
@@ -496,6 +637,28 @@ export function QuizPage({
         aria-labelledby="question-title"
         className="my-auto py-8 sm:py-12"
       >
+        {transitionError ? (
+          <Alert variant="destructive" className="mb-5">
+            <AlertTitle>Persistencia de la ronda</AlertTitle>
+            <AlertDescription>{transitionError}</AlertDescription>
+          </Alert>
+        ) : null}
+        {autosaveError ? (
+          <Alert variant="destructive" className="mb-5">
+            <AlertTitle>Guardado local</AlertTitle>
+            <AlertDescription>
+              <span>{autosaveError}</span>
+              <Button
+                size="sm"
+                variant="outline"
+                className="mt-2 min-h-11"
+                onClick={() => void persistLatestRound()}
+              >
+                Reintentar guardado
+              </Button>
+            </AlertDescription>
+          </Alert>
+        ) : null}
         <div className="mb-5 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
           <Badge variant="secondary">{modeLabel(config.mode)}</Badge>
           <Badge
@@ -620,26 +783,33 @@ export function QuizPage({
                 onChange={(event) => setReportReason(event.target.value)}
                 placeholder="Motivo opcional"
                 aria-label="Motivo del reporte"
+                disabled={reportPending}
               />
+              {reportPending ? (
+                <p role="status" aria-live="polite" className="text-sm">
+                  Guardando reporte…
+                </p>
+              ) : null}
+              {reportError ? (
+                <p role="alert" className="text-sm text-destructive">
+                  {reportError}
+                </p>
+              ) : null}
               <div className="flex flex-wrap gap-2">
                 <Button
                   size="sm"
                   variant="destructive"
-                  onClick={async () => {
-                    await recordReport(
-                      question,
-                      value,
-                      feedback,
-                      reportReason || "Sin motivo indicado"
-                    )
-                    setReportOpen(false)
-                  }}
+                  className="min-h-11"
+                  disabled={reportPending}
+                  onClick={() => void saveReport()}
                 >
                   Guardar reporte
                 </Button>
                 <Button
                   size="sm"
                   variant="ghost"
+                  className="min-h-11"
+                  disabled={reportPending}
                   onClick={() => setReportOpen(false)}
                 >
                   Cancelar
@@ -685,7 +855,7 @@ export function QuizPage({
             <Flag data-icon="inline-start" />
             Reportar
           </Button>
-          <Dialog>
+          <Dialog open={referenceOpen} onOpenChange={setReferenceOpen}>
             <DialogTrigger asChild>
               <Button size="sm" variant="ghost" className="min-h-11">
                 <Info data-icon="inline-start" />
@@ -711,7 +881,9 @@ export function QuizPage({
         <div className="mx-auto max-w-3xl sm:flex sm:justify-end">
           <Button
             className="min-h-11 w-full sm:w-auto sm:min-w-40"
-            disabled={!submitted && isEmptyAnswer(value)}
+            disabled={
+              transitionPending !== null || (!submitted && isEmptyAnswer(value))
+            }
             onClick={() => {
               if (submitted) advance()
               else void submit()

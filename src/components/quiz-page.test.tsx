@@ -1,4 +1,11 @@
-import { act, cleanup, fireEvent, render, screen } from "@testing-library/react"
+import {
+  act,
+  cleanup,
+  fireEvent,
+  render,
+  screen,
+  within,
+} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import {
   afterEach,
@@ -21,11 +28,13 @@ const appState = vi.hoisted(() => ({
 }))
 
 function deferred<T>() {
-  let resolve!: (value: T) => void
-  const promise = new Promise<T>((resolvePromise) => {
+  let resolve!: (value: T | PromiseLike<T>) => void
+  let reject!: (reason?: unknown) => void
+  const promise = new Promise<T>((resolvePromise, rejectPromise) => {
     resolve = resolvePromise
+    reject = rejectPromise
   })
-  return { promise, resolve }
+  return { promise, resolve, reject }
 }
 
 vi.mock("@/app/app-state", () => ({
@@ -52,6 +61,7 @@ beforeEach(() => {
   appState.recordAnswer.mockReset()
   appState.recordAnswer.mockResolvedValue({ timesIncorrect: 0 })
   appState.recordReport.mockReset()
+  appState.recordReport.mockResolvedValue(undefined)
 })
 
 describe("pista de memoria", () => {
@@ -279,7 +289,9 @@ describe("ronda enfocada", () => {
     )
 
     expect(screen.queryByText("Respuesta correcta")).not.toBeInTheDocument()
-    expect(screen.queryByText("Tu selección fue incorrecta.")).not.toBeInTheDocument()
+    expect(
+      screen.queryByText("Tu selección fue incorrecta.")
+    ).not.toBeInTheDocument()
 
     rerender(
       <QuestionRenderer
@@ -432,6 +444,35 @@ describe("interacciones de QuestionRenderer", () => {
 })
 
 describe("atajos de la ronda", () => {
+  it("cierra Referencia con Escape antes de salir de la ronda", async () => {
+    const user = userEvent.setup()
+    const onExit = vi.fn().mockResolvedValue(undefined)
+    render(
+      <FocusShell>
+        <QuizPage
+          questions={[twoChoiceQuestion]}
+          config={studyConfig}
+          onFinish={vi.fn().mockResolvedValue(undefined)}
+          onExit={onExit}
+        />
+      </FocusShell>
+    )
+
+    await user.click(screen.getByRole("button", { name: "Referencia" }))
+    expect(
+      screen.getByRole("dialog", { name: "Volver al texto / referencia" })
+    ).toBeVisible()
+    await user.keyboard("{Escape}")
+
+    expect(
+      screen.queryByRole("dialog", { name: "Volver al texto / referencia" })
+    ).not.toBeInTheDocument()
+    expect(onExit).not.toHaveBeenCalled()
+
+    await user.keyboard("{Escape}")
+    expect(onExit).toHaveBeenCalledTimes(1)
+  })
+
   it("no confirma al presionar Enter en una opción, botón auxiliar o select", async () => {
     const user = userEvent.setup()
     const matchingQuestion: Question = {
@@ -564,7 +605,14 @@ describe("atajos de la ronda", () => {
     const timedConfig = { ...studyConfig, perQuestionSeconds: 1 }
     render(
       <QuizPage
-        questions={[twoChoiceQuestion, { ...twoChoiceQuestion, id: "timer-second", question: "Pregunta del temporizador" }]}
+        questions={[
+          twoChoiceQuestion,
+          {
+            ...twoChoiceQuestion,
+            id: "timer-second",
+            question: "Pregunta del temporizador",
+          },
+        ]}
         config={timedConfig}
         onFinish={vi.fn()}
         onExit={vi.fn()}
@@ -576,10 +624,14 @@ describe("atajos de la ronda", () => {
       await Promise.resolve()
     })
     fireEvent.click(screen.getByRole("button", { name: "Siguiente" }))
-    expect(screen.getByRole("heading", { name: "Pregunta del temporizador" })).toBeVisible()
+    expect(
+      screen.getByRole("heading", { name: "Pregunta del temporizador" })
+    ).toBeVisible()
 
     await act(async () => vi.advanceTimersByTime(1_000))
-    expect(screen.getByRole("heading", { name: "Pregunta del temporizador" })).toBeVisible()
+    expect(
+      screen.getByRole("heading", { name: "Pregunta del temporizador" })
+    ).toBeVisible()
   })
 
   it("cancela la finalización diferida al desmontarse", async () => {
@@ -616,7 +668,15 @@ describe("atajos de la ronda", () => {
     }
     render(
       <QuizPage
-        questions={[twoChoiceQuestion, secondQuestion, { ...secondQuestion, id: "deferred-third", question: "Tercera pregunta diferida" }]}
+        questions={[
+          twoChoiceQuestion,
+          secondQuestion,
+          {
+            ...secondQuestion,
+            id: "deferred-third",
+            question: "Tercera pregunta diferida",
+          },
+        ]}
         config={{ ...studyConfig, mode: "simulation", perQuestionSeconds: 1 }}
         onFinish={onFinish}
         onExit={vi.fn()}
@@ -686,6 +746,210 @@ describe("atajos de la ronda", () => {
 
     expect(onExit).toHaveBeenCalledTimes(1)
     expect(onFinish).not.toHaveBeenCalled()
+  })
+})
+
+describe("persistencia acotada de reportes", () => {
+  it("bloquea el doble envío y anuncia el reporte pendiente", async () => {
+    const pending = deferred<void>()
+    appState.recordReport.mockReturnValueOnce(pending.promise)
+    render(
+      <QuizPage
+        questions={[twoChoiceQuestion]}
+        config={studyConfig}
+        onFinish={vi.fn().mockResolvedValue(undefined)}
+        onExit={vi.fn().mockResolvedValue(undefined)}
+      />
+    )
+    fireEvent.click(screen.getByRole("button", { name: "Reportar" }))
+    const save = screen.getByRole("button", { name: "Guardar reporte" })
+
+    fireEvent.click(save)
+    fireEvent.click(save)
+
+    expect(appState.recordReport).toHaveBeenCalledTimes(1)
+    expect(save).toBeDisabled()
+    expect(save).toHaveClass("min-h-11")
+    expect(screen.getByRole("status")).toHaveTextContent("Guardando reporte")
+
+    await act(async () => pending.resolve())
+    expect(
+      screen.queryByRole("button", { name: "Guardar reporte" })
+    ).not.toBeInTheDocument()
+  })
+
+  it("no deja que un reporte pendiente cierre el formulario de otra pregunta", async () => {
+    const pending = deferred<void>()
+    appState.recordReport
+      .mockReturnValueOnce(pending.promise)
+      .mockResolvedValueOnce(undefined)
+    render(
+      <QuizPage
+        questions={[
+          twoChoiceQuestion,
+          {
+            ...twoChoiceQuestion,
+            id: "report-second",
+            question: "Segunda pregunta para reporte",
+          },
+        ]}
+        config={studyConfig}
+        onFinish={vi.fn().mockResolvedValue(undefined)}
+        onExit={vi.fn().mockResolvedValue(undefined)}
+      />
+    )
+
+    fireEvent.click(screen.getByRole("button", { name: "Reportar" }))
+    fireEvent.change(screen.getByLabelText("Motivo del reporte"), {
+      target: { value: "Primera pregunta" },
+    })
+    fireEvent.click(screen.getByRole("button", { name: "Guardar reporte" }))
+    fireEvent.click(screen.getByRole("radio", { name: /Primera/ }))
+    fireEvent.click(screen.getByRole("button", { name: "Confirmar respuesta" }))
+    await act(async () => undefined)
+    fireEvent.click(screen.getByRole("button", { name: "Siguiente" }))
+    expect(
+      screen.getByRole("heading", { name: "Segunda pregunta para reporte" })
+    ).toBeVisible()
+    expect(
+      screen.queryByRole("button", { name: "Guardar reporte" })
+    ).not.toBeInTheDocument()
+    fireEvent.click(screen.getByRole("button", { name: "Reportar" }))
+    expect(
+      screen.getByRole("button", { name: "Guardar reporte" })
+    ).toBeVisible()
+
+    await act(async () => pending.resolve())
+
+    expect(
+      screen.getByRole("button", { name: "Guardar reporte" })
+    ).toBeVisible()
+    expect(appState.recordReport).toHaveBeenNthCalledWith(
+      1,
+      twoChoiceQuestion,
+      undefined,
+      null,
+      "Primera pregunta"
+    )
+  })
+
+  it("muestra el rechazo y permite reintentar el mismo reporte", async () => {
+    const user = userEvent.setup()
+    appState.recordReport
+      .mockRejectedValueOnce(new Error("storage denied"))
+      .mockResolvedValueOnce(undefined)
+    render(
+      <QuizPage
+        questions={[twoChoiceQuestion]}
+        config={studyConfig}
+        onFinish={vi.fn().mockResolvedValue(undefined)}
+        onExit={vi.fn().mockResolvedValue(undefined)}
+      />
+    )
+
+    await user.click(screen.getByRole("button", { name: "Reportar" }))
+    await user.click(screen.getByRole("button", { name: "Guardar reporte" }))
+
+    expect(screen.getByRole("alert")).toHaveTextContent(
+      "No se pudo guardar el reporte"
+    )
+    const retry = screen.getByRole("button", { name: "Guardar reporte" })
+    expect(retry).toBeEnabled()
+    await user.click(retry)
+
+    expect(appState.recordReport).toHaveBeenCalledTimes(2)
+    expect(
+      screen.queryByRole("button", { name: "Guardar reporte" })
+    ).not.toBeInTheDocument()
+  })
+})
+
+describe("recuperación de transiciones persistidas", () => {
+  it("restablece finish después de un rechazo y permite reintentar", async () => {
+    const user = userEvent.setup()
+    const onFinish = vi
+      .fn()
+      .mockRejectedValueOnce(new Error("session denied"))
+      .mockResolvedValueOnce(undefined)
+    render(
+      <QuizPage
+        questions={[twoChoiceQuestion]}
+        config={studyConfig}
+        onFinish={onFinish}
+        onExit={vi.fn().mockResolvedValue(undefined)}
+      />
+    )
+    await user.click(screen.getByRole("radio", { name: /Primera/ }))
+    await user.click(
+      screen.getByRole("button", { name: "Confirmar respuesta" })
+    )
+    await user.click(screen.getByRole("button", { name: "Ver resultados" }))
+
+    expect(
+      screen
+        .getByText(/No se pudieron guardar los resultados/)
+        .closest('[role="alert"]')
+    ).toBeInTheDocument()
+    await user.click(screen.getByRole("button", { name: "Ver resultados" }))
+    expect(onFinish).toHaveBeenCalledTimes(2)
+  })
+
+  it("restablece exit después de un rechazo y evita dobles mientras está pendiente", async () => {
+    const user = userEvent.setup()
+    const pending = deferred<void>()
+    const onExit = vi
+      .fn()
+      .mockRejectedValueOnce(new Error("clear denied"))
+      .mockReturnValueOnce(pending.promise)
+    render(
+      <QuizPage
+        questions={[twoChoiceQuestion]}
+        config={studyConfig}
+        onFinish={vi.fn().mockResolvedValue(undefined)}
+        onExit={onExit}
+      />
+    )
+
+    await user.click(screen.getByRole("button", { name: "Salir" }))
+    expect(screen.getByRole("alert")).toHaveTextContent(
+      "No se pudo salir de la ronda"
+    )
+    const retry = screen.getByRole("button", { name: "Salir" })
+    await user.click(retry)
+    fireEvent.click(retry)
+    expect(onExit).toHaveBeenCalledTimes(2)
+    expect(retry).toBeDisabled()
+    await act(async () => pending.resolve())
+  })
+
+  it("comunica un autosave fallido y permite reintentar sin bloquear la ronda", async () => {
+    const user = userEvent.setup()
+    const onStateChange = vi
+      .fn()
+      .mockRejectedValueOnce(new Error("autosave denied"))
+      .mockResolvedValueOnce(undefined)
+    render(
+      <QuizPage
+        questions={[twoChoiceQuestion]}
+        config={studyConfig}
+        onStateChange={onStateChange}
+        onFinish={vi.fn().mockResolvedValue(undefined)}
+        onExit={vi.fn().mockResolvedValue(undefined)}
+      />
+    )
+
+    expect(await screen.findByRole("alert")).toHaveTextContent(
+      "No se pudo guardar el avance"
+    )
+    expect(screen.getByRole("button", { name: "Salir" })).toBeEnabled()
+    await user.click(
+      screen.getByRole("button", { name: "Reintentar guardado" })
+    )
+
+    expect(onStateChange).toHaveBeenCalledTimes(2)
+    expect(
+      screen.queryByRole("button", { name: "Reintentar guardado" })
+    ).not.toBeInTheDocument()
   })
 })
 
@@ -798,6 +1062,9 @@ describe("acciones de resultados", () => {
     expect(
       screen.queryByText(twoChoiceQuestion.question)
     ).not.toBeInTheDocument()
+    const answers = screen.getByRole("list", { name: "Respuestas de la ronda" })
+    expect(answers).toHaveRole("list")
+    expect(within(answers).getAllByRole("listitem")).toHaveLength(1)
   })
 
   it("deshabilita el filtro de incorrectas cuando la ronda fue perfecta", () => {

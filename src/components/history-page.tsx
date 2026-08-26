@@ -230,12 +230,12 @@ function SessionRow({
               value={formatElapsedMs(session.durationMs)}
             />
           </div>
-          <div
+          <ol
             className="mt-5 divide-y rounded-lg border bg-background"
             aria-label={`Respuestas de ${modeLabel(session.mode)}`}
           >
             {session.answers.map((answer, index) => (
-              <div
+              <li
                 key={`${answer.questionKey}-${index}`}
                 className="flex items-start gap-3 px-3 py-3"
               >
@@ -261,9 +261,9 @@ function SessionRow({
                           : "Incorrecta"}
                   </p>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </details>
     </article>

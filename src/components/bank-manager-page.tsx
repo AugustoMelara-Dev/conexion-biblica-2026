@@ -169,7 +169,7 @@ export function BankManagerPage() {
         title="Banco de preguntas"
         description="Administra fuentes y respaldos sin mezclar el progreso de cada banco."
         action={
-          <Button onClick={() => selectFiles()}>
+          <Button variant="outline" onClick={() => selectFiles()}>
             Importar banco <UploadCloud data-icon="inline-end" />
           </Button>
         }

@@ -42,6 +42,29 @@ function timestamp() {
   return Date.now()
 }
 
+function reviewQueueConfig(
+  questions: Question[],
+  bankSelection: SessionConfig["bankSelection"]
+): SessionConfig {
+  return {
+    mode: "smart-review",
+    count: "all",
+    sourceWorks: [
+      ...new Set(questions.map((question) => question.source.work)),
+    ],
+    chapters: [],
+    difficulties: [],
+    types: [],
+    statuses: ["all"],
+    shuffleQuestions: false,
+    shuffleOptions: true,
+    perQuestionSeconds: null,
+    totalSeconds: null,
+    bankSelection,
+    strategy: "adaptive",
+  }
+}
+
 export function App() {
   const {
     loading,
@@ -169,22 +192,21 @@ export function App() {
     setNav("practice")
   }
 
-  const finishRound = (session: Session) => {
+  const finishRound = async (session: Session) => {
     const completed = {
       ...session,
       selectionSummary: activeRound?.persisted.selectionSummary,
     }
-    void (async () => {
-      await saveSession(completed)
-      await clearActiveRound()
-      setResult(completed)
-      setActiveRound(null)
-      setNav("dashboard")
-    })()
+    await saveSession(completed)
+    await clearActiveRound()
+    setResult(completed)
+    setActiveRound(null)
+    setNav("dashboard")
   }
 
-  const exitRound = () => {
-    void clearActiveRound().then(() => setActiveRound(null))
+  const exitRound = async () => {
+    await clearActiveRound()
+    setActiveRound(null)
   }
 
   const renderPage = () => {
@@ -244,11 +266,11 @@ export function App() {
           questions={activeRound.questions}
           config={activeRound.config}
           resume={activeRound.persisted}
-          onStateChange={(persisted) => {
+          onStateChange={async (persisted) => {
             setActiveRound((current) =>
               current ? { ...current, persisted } : current
             )
-            void saveActiveRound(persisted)
+            await saveActiveRound(persisted)
           }}
           onFinish={finishRound}
           onExit={exitRound}
@@ -265,12 +287,19 @@ export function App() {
       )
     if (nav === "stats") return <StatisticsPage />
     if (nav === "history") return <HistoryPage />
-    if (nav === "review") return <ReviewPage />
+    if (nav === "review")
+      return (
+        <ReviewPage
+          onPracticeQueue={(queue) =>
+            startRound(reviewQueueConfig(queue, bankSelection), queue)
+          }
+        />
+      )
     return <DashboardPage />
   }
 
   if (activeRound) {
-    return <FocusShell onExit={exitRound}>{renderPage()}</FocusShell>
+    return <FocusShell>{renderPage()}</FocusShell>
   }
 
   return (

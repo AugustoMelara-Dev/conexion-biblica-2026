@@ -29,7 +29,9 @@ export function PageHeader({
         ) : null}
       </div>
       {action ? (
-        <div className="flex sm:justify-start lg:justify-end">{action}</div>
+        <div className="flex w-full lg:w-auto lg:justify-end [&>*]:w-full lg:[&>*]:w-auto">
+          {action}
+        </div>
       ) : null}
     </header>
   )

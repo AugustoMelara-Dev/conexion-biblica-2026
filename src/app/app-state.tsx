@@ -14,7 +14,11 @@ import {
   validateBackupPayload,
 } from "@/domain/backup"
 import { adaptMasterBank } from "@/domain/master-bank"
-import { filterReportsForSelection, filterSessionsForSelection, questionBelongsToSelection } from "@/domain/banks"
+import {
+  filterReportsForSelection,
+  filterSessionsForSelection,
+  questionBelongsToSelection,
+} from "@/domain/banks"
 import { validateBank } from "@/domain/validation"
 import type {
   ActiveRound,
@@ -33,7 +37,15 @@ import type {
 } from "@/domain/types"
 import { buildStatistics, type Statistics } from "@/lib/statistics"
 import { openAppDb, createRepositories } from "@/storage/db"
-import { createBankFromRaw, getBankIdForSourceFileName, getBankQuestionKey, getRawBankProfileId, isGenericBankImportAllowed, isIntegratedBankProfile, shouldReplaceBundledBank } from "@/storage/seed"
+import {
+  createBankFromRaw,
+  getBankIdForSourceFileName,
+  getBankQuestionKey,
+  getRawBankProfileId,
+  isGenericBankImportAllowed,
+  isIntegratedBankProfile,
+  shouldReplaceBundledBank,
+} from "@/storage/seed"
 
 type RepositorySet = ReturnType<typeof createRepositories>
 type NavKey =
@@ -76,7 +88,11 @@ type AppContextValue = {
     question: Question,
     result: EvaluationResult,
     answer: AnswerValue,
-    flags?: { favorite?: boolean; markedDifficult?: boolean; context?: "practice" | "simulation" }
+    flags?: {
+      favorite?: boolean
+      markedDifficult?: boolean
+      context?: "practice" | "simulation"
+    }
   ) => Promise<QuestionProgress>
   recordReport: (
     question: Question,
@@ -91,9 +107,7 @@ type AppContextValue = {
   exportBanks: () => Promise<Bank[]>
   exportProgress: () => Promise<QuestionProgress[]>
   exportBackup: () => Promise<BackupPayload>
-  importBackup: (
-    file: File
-  ) => Promise<{
+  importBackup: (file: File) => Promise<{
     valid: boolean
     errors: { code: string; path: string; message: string }[]
   }>
@@ -110,8 +124,34 @@ const defaultPreferences: Preferences = {
 const AppContext = createContext<AppContextValue | undefined>(undefined)
 const PREFERENCES_STORAGE_KEY = "conexion-biblica-preferences"
 
+function emptyQuestionProgress(questionKey: string): QuestionProgress {
+  return {
+    questionKey,
+    timesSeen: 0,
+    timesCorrect: 0,
+    timesIncorrect: 0,
+    timesUnanswered: 0,
+    currentCorrectStreak: 0,
+    averageResponseTimeMs: 0,
+    bestResponseTimeMs: null,
+    lastResponseTimeMs: null,
+    lastSeenAt: null,
+    masteryScore: 0,
+    favorite: false,
+    markedDifficult: false,
+    reported: false,
+    history: [],
+  }
+}
+
 function isBankSelection(value: unknown): value is BankSelection {
-  return value === "legacy-v1" || value === "master-v2" || value === "prep-v3" || value === "curated-v4" || value === "mixed"
+  return (
+    value === "legacy-v1" ||
+    value === "master-v2" ||
+    value === "prep-v3" ||
+    value === "curated-v4" ||
+    value === "mixed"
+  )
 }
 
 function normalizePreferences(value: Partial<Preferences>): Preferences {
@@ -129,17 +169,26 @@ export function getPreferences(): Preferences {
     const raw = localStorage.getItem(PREFERENCES_STORAGE_KEY)
     if (!raw) return defaultPreferences
     const parsed = JSON.parse(raw) as unknown
-    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return defaultPreferences
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed))
+      return defaultPreferences
     return normalizePreferences(parsed as Partial<Preferences>)
   } catch {
     return defaultPreferences
   }
 }
 
-export function resolveAvailableBankSelection(selection: BankSelection, availableProfiles: Iterable<BankProfileId>): BankSelection {
+export function resolveAvailableBankSelection(
+  selection: BankSelection,
+  availableProfiles: Iterable<BankProfileId>
+): BankSelection {
   const available = new Set(availableProfiles)
   if (selection === "mixed") {
-    if ((["legacy-v1", "prep-v3", "curated-v4"] as const).some((profile) => available.has(profile))) return selection
+    if (
+      (["legacy-v1", "prep-v3", "curated-v4"] as const).some((profile) =>
+        available.has(profile)
+      )
+    )
+      return selection
   } else if (available.has(selection)) {
     return selection
   }
@@ -161,7 +210,8 @@ export function resolveInitialBankSelection({
   availableProfiles: Iterable<BankProfileId>
 }): BankSelection {
   const available = new Set(availableProfiles)
-  if (!hasStoredPreferences && !hadExistingBanks && available.has("curated-v4")) return "curated-v4"
+  if (!hasStoredPreferences && !hadExistingBanks && available.has("curated-v4"))
+    return "curated-v4"
   return resolveAvailableBankSelection(storedSelection, available)
 }
 
@@ -225,7 +275,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
       const nextRepositories = createRepositories(db)
       setRepositories(nextRepositories)
       let existingBanks = await nextRepositories.banks.list()
-      const hadStoredPreferences = typeof localStorage !== "undefined" && localStorage.getItem(PREFERENCES_STORAGE_KEY) !== null
+      const hadStoredPreferences =
+        typeof localStorage !== "undefined" &&
+        localStorage.getItem(PREFERENCES_STORAGE_KEY) !== null
       const hadExistingBanks = existingBanks.length > 0
       if (seed) {
         try {
@@ -239,8 +291,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
               const validation = validateBank(raw, fileName)
               if (validation.valid) {
                 const incoming = createBankFromRaw(raw, fileName)
-                const existing = existingBanks.find((bank) => bank.bankId === incoming.bankId)
-                if (shouldReplaceBundledBank(existing, incoming)) await nextRepositories.banks.save(incoming)
+                const existing = existingBanks.find(
+                  (bank) => bank.bankId === incoming.bankId
+                )
+                if (shouldReplaceBundledBank(existing, incoming))
+                  await nextRepositories.banks.save(incoming)
               }
             } catch {
               continue
@@ -291,7 +346,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
         nextRepositories.coverage.list(),
         nextRepositories.activeRound.get(),
       ])
-      const availableProfiles = new Set<BankProfileId>(nextQuestions.map((question) => question.bankProfileId ?? "legacy-v1"))
+      const availableProfiles = new Set<BankProfileId>(
+        nextQuestions.map((question) => question.bankProfileId ?? "legacy-v1")
+      )
       const storedSelection = getPreferences().lastBankSelection
       const desiredSelection = resolveInitialBankSelection({
         storedSelection,
@@ -300,9 +357,15 @@ export function AppProvider({ children }: { children: ReactNode }) {
         availableProfiles,
       })
       if (desiredSelection !== storedSelection) {
-        const updatedPreferences = { ...getPreferences(), lastBankSelection: desiredSelection }
+        const updatedPreferences = {
+          ...getPreferences(),
+          lastBankSelection: desiredSelection,
+        }
         setPreferencesState(updatedPreferences)
-        localStorage.setItem(PREFERENCES_STORAGE_KEY, JSON.stringify(updatedPreferences))
+        localStorage.setItem(
+          PREFERENCES_STORAGE_KEY,
+          JSON.stringify(updatedPreferences)
+        )
       }
       setBanks(existingBanks)
       setQuestions(nextQuestions)
@@ -339,20 +402,35 @@ export function AppProvider({ children }: { children: ReactNode }) {
           const raw = JSON.parse(await file.text()) as Record<string, unknown>
           const rawProfileId = getRawBankProfileId(raw)
           const incomingBankId = getBankIdForSourceFileName(file.name)
-          const replacementId = replaceBankId && files.length === 1 ? replaceBankId : incomingBankId
-          const replacementProfileId = banks.find((bank) => bank.bankId === replacementId)?.bankProfileId
-          if (!isGenericBankImportAllowed(rawProfileId, replacementId, replacementProfileId)) {
+          const replacementId =
+            replaceBankId && files.length === 1 ? replaceBankId : incomingBankId
+          const replacementProfileId = banks.find(
+            (bank) => bank.bankId === replacementId
+          )?.bankProfileId
+          if (
+            !isGenericBankImportAllowed(
+              rawProfileId,
+              replacementId,
+              replacementProfileId
+            )
+          ) {
             outcomes.push({
               sourceName: file.name,
               valid: false,
-              questionCount: Array.isArray(raw.questions) ? raw.questions.length : 0,
-              errors: [{
-                code: "INTEGRATED_PROFILE_IMPORT_BLOCKED",
-                path: isIntegratedBankProfile(rawProfileId) ? "$.bank.profileId" : "$.replaceBankId",
-                message: isIntegratedBankProfile(rawProfileId)
-                  ? "Los perfiles integrados V2, V3 y V4 sólo pueden cargarse desde el paquete de la aplicación."
-                  : "No se puede sobrescribir un banco integrado.",
-              }],
+              questionCount: Array.isArray(raw.questions)
+                ? raw.questions.length
+                : 0,
+              errors: [
+                {
+                  code: "INTEGRATED_PROFILE_IMPORT_BLOCKED",
+                  path: isIntegratedBankProfile(rawProfileId)
+                    ? "$.bank.profileId"
+                    : "$.replaceBankId",
+                  message: isIntegratedBankProfile(rawProfileId)
+                    ? "Los perfiles integrados V2, V3 y V4 sólo pueden cargarse desde el paquete de la aplicación."
+                    : "No se puede sobrescribir un banco integrado.",
+                },
+              ],
             })
             continue
           }
@@ -413,7 +491,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const removeBank = useCallback(
     async (bankId: string) => {
       if (!repositories) return
-      if (bankId === "master-v2" || banks.some((bank) => bank.bankId === bankId && (bank.bankProfileId === "prep-v3" || bank.bankProfileId === "curated-v4"))) return
+      if (
+        bankId === "master-v2" ||
+        banks.some(
+          (bank) =>
+            bank.bankId === bankId &&
+            (bank.bankProfileId === "prep-v3" ||
+              bank.bankProfileId === "curated-v4")
+        )
+      )
+        return
       await repositories.banks.remove(bankId)
       await refresh()
     },
@@ -425,22 +512,32 @@ export function AppProvider({ children }: { children: ReactNode }) {
       question: Question,
       result: EvaluationResult,
       _answer: AnswerValue,
-      flags: { favorite?: boolean; markedDifficult?: boolean; context?: "practice" | "simulation" } = {}
+      flags: {
+        favorite?: boolean
+        markedDifficult?: boolean
+        context?: "practice" | "simulation"
+      } = {}
     ) => {
       if (!repositories)
         throw new Error("El almacenamiento local aún no está listo")
       const key = getBankQuestionKey(question.bankId ?? "local", question.id)
-      const previous = progress.get(key)
-      const next = applyProgress(previous, result, Date.now(), flags.context ?? "practice")
-      next.questionKey = key
-      if (flags.favorite !== undefined) next.favorite = flags.favorite
-      if (flags.markedDifficult !== undefined)
-        next.markedDifficult = flags.markedDifficult
-      await repositories.progress.put(next)
+      const next = await repositories.progress.update(key, (previous) => {
+        const updated = applyProgress(
+          previous,
+          result,
+          Date.now(),
+          flags.context ?? "practice"
+        )
+        updated.questionKey = key
+        if (flags.favorite !== undefined) updated.favorite = flags.favorite
+        if (flags.markedDifficult !== undefined)
+          updated.markedDifficult = flags.markedDifficult
+        return updated
+      })
       setProgress((current) => new Map(current).set(key, next))
       return next
     },
-    [progress, repositories]
+    [repositories]
   )
 
   const recordReport = useCallback(
@@ -464,28 +561,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
         reason,
       }
       await repositories.reports.add(report)
-      const existing = progress.get(key)
-      const next = existing
-        ? { ...existing, reported: true }
-        : {
-            ...applyProgress(
-              undefined,
-              result ?? {
-                isCorrect: false,
-                wasAnswered: false,
-                responseTimeMs: 0,
-                reason: "unanswered",
-              },
-              Date.now()
-            ),
-            questionKey: key,
-            reported: true,
-          }
-      await repositories.progress.put(next)
+      const next = await repositories.progress.update(key, (existing) => ({
+        ...(existing ?? emptyQuestionProgress(key)),
+        reported: true,
+      }))
       setProgress((current) => new Map(current).set(key, next))
       setReports((current) => [report, ...current])
     },
-    [progress, repositories]
+    [repositories]
   )
 
   const saveSession = useCallback(
@@ -653,9 +736,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
       master: questions.filter(
         (question) => question.bankProfileId === "master-v2"
       ).length,
-      prep: questions.filter(
-        (question) => question.bankProfileId === "prep-v3"
-      ).length,
+      prep: questions.filter((question) => question.bankProfileId === "prep-v3")
+        .length,
       curated: questions.filter(
         (question) => question.bankProfileId === "curated-v4"
       ).length,

@@ -6,11 +6,22 @@ import { PageHeader } from "@/components/layout/page-header"
 import { SectionHeader } from "@/components/layout/section-header"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import type { QuestionProgress, QuestionReport } from "@/domain/types"
+import type { Question, QuestionProgress, QuestionReport } from "@/domain/types"
 import { formatDate } from "@/lib/format"
 
-export function ReviewPage() {
-  const { reports, progress, setNav } = useApp()
+type ReviewItem = {
+  questionKey: string
+  question: Question
+  progress?: QuestionProgress
+  reports: QuestionReport[]
+}
+
+export function ReviewPage({
+  onPracticeQueue,
+}: {
+  onPracticeQueue: (questions: Question[]) => Promise<void>
+}) {
+  const { reports, progress, questions, setNav } = useApp()
   const [reason, setReason] = useState("all")
   const [chapter, setChapter] = useState("all")
   const [family, setFamily] = useState("all")
@@ -30,39 +41,78 @@ export function ReviewPage() {
       }
     }
   }, [])
+  const queue = useMemo(() => {
+    const items = new Map<string, ReviewItem>()
+    for (const question of questions) {
+      const key = questionKey(question)
+      items.set(key, {
+        questionKey: key,
+        question,
+        progress: progress.get(key) ?? progress.get(question.id),
+        reports: [],
+      })
+    }
+    for (const report of reports) {
+      const key = report.questionKey || questionKey(report.question)
+      const item = items.get(key) ?? {
+        questionKey: key,
+        question: report.question,
+        progress: progress.get(key) ?? progress.get(report.question.id),
+        reports: [],
+      }
+      item.reports.push(report)
+      item.reports.sort((left, right) => right.reportedAt - left.reportedAt)
+      items.set(key, item)
+    }
+    return [...items.values()]
+      .filter((item) => {
+        const taxonomy = reviewTaxonomy(item)
+        return (
+          taxonomy.reported ||
+          taxonomy.difficult ||
+          taxonomy.failed ||
+          taxonomy.favorite
+        )
+      })
+      .sort(
+        (left, right) =>
+          reviewPriority(right) - reviewPriority(left) ||
+          (right.reports[0]?.reportedAt ?? 0) -
+            (left.reports[0]?.reportedAt ?? 0)
+      )
+  }, [progress, questions, reports])
   const reasons = useMemo(
-    () => [...new Set(reports.map((report) => report.reason))],
-    [reports]
+    () => [
+      ...new Set(
+        queue.flatMap((item) => item.reports.map((report) => report.reason))
+      ),
+    ],
+    [queue]
   )
   const chapters = useMemo(
     () => [
       ...new Set(
-        reports.map(
-          (report) =>
-            `${report.question.source.work}:${report.question.source.chapter}`
+        queue.map(
+          (item) =>
+            `${item.question.source.work}:${item.question.source.chapter}`
         )
       ),
     ],
-    [reports]
+    [queue]
   )
   const families = useMemo(
-    () => [...new Set(reports.map(reportFamily))],
-    [reports]
+    () => [...new Set(queue.map((item) => questionFamily(item.question)))],
+    [queue]
   )
-  const visibleReports = reports
-    .filter(
-      (report) =>
-        (reason === "all" || report.reason === reason) &&
-        (chapter === "all" ||
-          `${report.question.source.work}:${report.question.source.chapter}` ===
-            chapter) &&
-        (family === "all" || reportFamily(report) === family)
-    )
-    .sort(
-      (left, right) =>
-        reportPriority(right, progress) - reportPriority(left, progress) ||
-        right.reportedAt - left.reportedAt
-    )
+  const visibleItems = queue.filter(
+    (item) =>
+      (reason === "all" ||
+        item.reports.some((report) => report.reason === reason)) &&
+      (chapter === "all" ||
+        `${item.question.source.work}:${item.question.source.chapter}` ===
+          chapter) &&
+      (family === "all" || questionFamily(item.question) === family)
+  )
   const copyJson = async (id: string, question: unknown) => {
     await copyText(JSON.stringify(question, null, 2), (token) => {
       setCopied(id)
@@ -116,9 +166,14 @@ export function ReviewPage() {
         title="Revisión"
         description="Empieza por la cola recomendada; abre el contexto completo sólo cuando lo necesites."
         action={
-          reports.length > 0 ? (
-            <Button className="min-h-11" onClick={() => setNav("practice")}>
-              Empezar una ronda
+          queue.length > 0 ? (
+            <Button
+              className="min-h-11"
+              onClick={() =>
+                void onPracticeQueue(queue.map((item) => item.question))
+              }
+            >
+              Practicar esta cola
             </Button>
           ) : undefined
         }
@@ -127,12 +182,12 @@ export function ReviewPage() {
         <SectionHeader
           title="Cola recomendada"
           description={
-            reports.length > 0
-              ? `${reports.length} reportes pendientes de revisar.`
-              : "Los reportes de tus rondas aparecerán aquí."
+            queue.length > 0
+              ? `${queue.length} preguntas pendientes de revisar.`
+              : "Las preguntas difíciles, falladas, favoritas o reportadas aparecerán aquí."
           }
         />
-        {reports.length > 0 ? (
+        {queue.length > 0 ? (
           <div className="mt-5 grid gap-3 sm:grid-cols-3">
             <ReviewFilter
               id="review-reason"
@@ -175,12 +230,12 @@ export function ReviewPage() {
             </ReviewFilter>
           </div>
         ) : null}
-        {reports.length === 0 ? (
+        {queue.length === 0 ? (
           <div className="mt-5">
             <EmptyState
               icon={SearchCheck}
               title="No hay preguntas pendientes"
-              description="Durante una ronda puedes reportar una pregunta ambigua o incorrecta para traerla a esta cola."
+              description="Marca una pregunta como difícil o favorita, falla una respuesta o repórtala para traerla a esta cola."
               action={
                 <Button className="min-h-11" onClick={() => setNav("practice")}>
                   Empezar una ronda
@@ -188,11 +243,11 @@ export function ReviewPage() {
               }
             />
           </div>
-        ) : visibleReports.length === 0 ? (
+        ) : visibleItems.length === 0 ? (
           <div className="mt-5">
             <EmptyState
               icon={SearchCheck}
-              title="No hay reportes con estos filtros"
+              title="No hay preguntas con estos filtros"
               description="Prueba otro motivo, capítulo o familia para recuperar la cola."
             />
           </div>
@@ -202,20 +257,16 @@ export function ReviewPage() {
             aria-label="Preguntas pendientes de revisión"
             className="mt-5 divide-y rounded-xl border border-border/70"
           >
-            {visibleReports.map((report) => (
+            {visibleItems.map((item) => (
               <ReviewRow
-                key={report.id}
-                report={report}
-                progress={
-                  progress.get(report.questionKey) ??
-                  progress.get(
-                    `${report.question.bankId ?? "local"}:${report.question.id}`
-                  )
+                key={item.questionKey}
+                item={item}
+                copied={copied === item.questionKey}
+                onCopyJson={() =>
+                  void copyJson(item.questionKey, item.question)
                 }
-                copied={copied === report.id}
-                onCopyJson={() => void copyJson(report.id, report.question)}
                 onCopyReference={() =>
-                  void copyReference(report.question.source.reference)
+                  void copyReference(item.question.source.reference)
                 }
               />
             ))}
@@ -270,52 +321,67 @@ function ReviewFilter({
 }
 
 function ReviewRow({
-  report,
-  progress,
+  item,
   copied,
   onCopyJson,
   onCopyReference,
 }: {
-  report: QuestionReport
-  progress?: QuestionProgress
+  item: ReviewItem
   copied: boolean
   onCopyJson: () => void
   onCopyReference: () => void
 }) {
-  const taxonomy = reportTaxonomy(report, progress)
+  const taxonomy = reviewTaxonomy(item)
+  const latestReport = item.reports[0]
   const visibleStatus = taxonomy.difficult
     ? "Difícil"
     : taxonomy.failed
       ? "Fallada"
       : taxonomy.favorite
         ? "Favorita"
-        : null
+        : taxonomy.reported
+          ? "Reportada"
+          : null
   const explanation = [
-    report.question.explanation,
-    report.question.trapReason,
-    report.question.memoryCue,
+    item.question.explanation,
+    item.question.trapReason,
+    item.question.memoryCue,
+  ].filter(Boolean)
+  const status = [
+    taxonomy.difficult ? "Difícil" : null,
+    taxonomy.failed ? "Fallada" : null,
+    taxonomy.favorite ? "Favorita" : null,
+    taxonomy.reported ? "Reportada" : null,
   ].filter(Boolean)
   return (
     <article role="listitem">
       <details className="group">
         <summary
-          aria-label={`Abrir detalle de ${report.question.question}`}
+          aria-label={`Abrir detalle de ${item.question.question}`}
           className="grid min-h-11 cursor-pointer list-none gap-3 px-4 py-4 outline-none marker:hidden focus-visible:ring-[3px] focus-visible:ring-ring/50 sm:grid-cols-[minmax(0,1fr)_auto_auto] sm:items-center [&::-webkit-details-marker]:hidden"
         >
           <div className="min-w-0">
-            <p className="font-medium text-balance">
-              {report.question.question}
-            </p>
+            <p className="font-medium text-balance">{item.question.question}</p>
             <p className="mt-1 text-xs text-muted-foreground">
-              {report.question.source.reference} · {reportFamily(report)} ·{" "}
-              {profileLabel(report.question.bankProfileId)} · reportada{" "}
-              {formatDate(report.reportedAt)}
+              {item.question.source.reference} · {questionFamily(item.question)}{" "}
+              · {profileLabel(item.question.bankProfileId)}
+              {latestReport
+                ? ` · reportada ${formatDate(latestReport.reportedAt)}`
+                : ""}
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="destructive">Reportada</Badge>
             {visibleStatus ? (
-              <Badge variant="secondary">{visibleStatus}</Badge>
+              <Badge
+                variant={
+                  visibleStatus === "Reportada" ? "destructive" : "secondary"
+                }
+              >
+                {visibleStatus}
+              </Badge>
+            ) : null}
+            {taxonomy.reported && visibleStatus !== "Reportada" ? (
+              <Badge variant="destructive">Reportada</Badge>
             ) : null}
           </div>
           <ChevronDown
@@ -326,10 +392,19 @@ function ReviewRow({
         <div className="border-t bg-muted/20 px-4 py-5">
           <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto]">
             <div className="min-w-0">
-              <p className="text-sm font-medium">Motivo reportado</p>
-              <p className="mt-1 text-sm leading-6 text-muted-foreground">
-                {report.reason}
-              </p>
+              {item.reports.length > 0 ? (
+                <div>
+                  <p className="text-sm font-medium">Motivo reportado</p>
+                  {item.reports.map((report) => (
+                    <p
+                      key={report.id}
+                      className="mt-1 text-sm leading-6 text-muted-foreground"
+                    >
+                      {report.reason} · {formatDate(report.reportedAt)}
+                    </p>
+                  ))}
+                </div>
+              ) : null}
               {explanation.length > 0 ? (
                 <div className="mt-4 rounded-lg border bg-background p-4">
                   <p className="text-sm font-medium">Explicación completa</p>
@@ -347,23 +422,25 @@ function ReviewRow({
                   Esta pregunta no incluye explicación adicional.
                 </p>
               )}
-              <p className="mt-4 text-xs text-muted-foreground">
-                Estado:{" "}
-                <strong className="text-foreground">
-                  {taxonomy.difficult ? "Difícil" : "Sin dificultad marcada"}
-                  {taxonomy.failed ? " · Fallada" : ""}
-                  {taxonomy.favorite ? " · Favorita" : ""} · Reportada
-                </strong>
-              </p>
-              <p className="mt-2 text-xs text-muted-foreground">
-                Respuesta registrada:{" "}
-                <strong className="text-foreground">
-                  {formatAnswer(report.answer)}
-                </strong>
-                {report.response
-                  ? ` · ${report.response.isCorrect ? "correcta" : report.response.reason === "unanswered" ? "sin responder" : report.response.reason === "timeout" ? "vencida" : "incorrecta"}`
-                  : ""}
-              </p>
+              {status.length > 1 || !taxonomy.reported ? (
+                <p className="mt-4 text-xs text-muted-foreground">
+                  Estado:{" "}
+                  <strong className="text-foreground">
+                    {status.join(" · ")}
+                  </strong>
+                </p>
+              ) : null}
+              {latestReport ? (
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Respuesta registrada:{" "}
+                  <strong className="text-foreground">
+                    {formatAnswer(latestReport.answer)}
+                  </strong>
+                  {latestReport.response
+                    ? ` · ${latestReport.response.isCorrect ? "correcta" : latestReport.response.reason === "unanswered" ? "sin responder" : latestReport.response.reason === "timeout" ? "vencida" : "incorrecta"}`
+                    : ""}
+                </p>
+              ) : null}
             </div>
             <div className="flex flex-wrap gap-2 lg:justify-end">
               <Button
@@ -392,14 +469,8 @@ function ReviewRow({
   )
 }
 
-function reportPriority(
-  report: QuestionReport,
-  progress: ReadonlyMap<string, QuestionProgress>
-) {
-  const questionProgress =
-    progress.get(report.questionKey) ??
-    progress.get(`${report.question.bankId ?? "local"}:${report.question.id}`)
-  const taxonomy = reportTaxonomy(report, questionProgress)
+function reviewPriority(item: ReviewItem) {
+  const taxonomy = reviewTaxonomy(item)
   return (
     (taxonomy.difficult ? 1_000 : 0) +
     (taxonomy.failed ? 100 : 0) +
@@ -408,18 +479,22 @@ function reportPriority(
   )
 }
 
-function reportTaxonomy(report: QuestionReport, progress?: QuestionProgress) {
+function reviewTaxonomy(item: ReviewItem) {
   return {
     difficult:
-      report.question.difficulty >= 4 || Boolean(progress?.markedDifficult),
-    failed: (progress?.timesIncorrect ?? 0) > 0,
-    favorite: Boolean(progress?.favorite),
-    reported: true,
+      item.question.difficulty >= 4 || Boolean(item.progress?.markedDifficult),
+    failed: (item.progress?.timesIncorrect ?? 0) > 0,
+    favorite: Boolean(item.progress?.favorite),
+    reported: item.reports.length > 0 || Boolean(item.progress?.reported),
   }
 }
 
-function reportFamily(report: QuestionReport) {
-  return report.question.factKeys?.[0] ?? report.question.factKey
+function questionKey(question: Question) {
+  return `${question.bankId ?? "local"}:${question.id}`
+}
+
+function questionFamily(question: Question) {
+  return question.factKeys?.[0] ?? question.factKey
 }
 
 function chapterLabel(value: string) {
@@ -427,7 +502,7 @@ function chapterLabel(value: string) {
   return `${work === "Daniel" ? "Daniel" : "PR"} ${chapter}`
 }
 
-function profileLabel(profile: QuestionReport["question"]["bankProfileId"]) {
+function profileLabel(profile: Question["bankProfileId"]) {
   return profile === "curated-v4"
     ? "V4"
     : profile === "prep-v3"

@@ -135,7 +135,9 @@ describe("gestor de bancos", () => {
 
     expect(screen.getByText("V4 — Banco Curado Daniel")).toBeVisible()
     expect(screen.queryByText("Daniel 2")).not.toBeInTheDocument()
-    expect(screen.getByRole("button", { name: "Importar banco" })).toBeVisible()
+    expect(
+      screen.getByRole("button", { name: "Importar banco" })
+    ).toHaveAttribute("data-variant", "outline")
   })
 
   it("muestra cada banco como una fila con fuente y cantidad", () => {
