@@ -109,9 +109,12 @@ export function FamilyMasteryPanel({
           </article>
         ))}
         {visible.length === 0 ? (
-          <p className="px-4 py-10 text-center text-sm text-muted-foreground">
+          <div
+            role="listitem"
+            className="px-4 py-10 text-center text-sm text-muted-foreground"
+          >
             No hay familias en este estado.
-          </p>
+          </div>
         ) : null}
       </div>
     </section>
@@ -133,6 +136,7 @@ function FilterButton({
       size="sm"
       className="min-h-11"
       variant={active ? "default" : "outline"}
+      aria-pressed={active}
       onClick={onClick}
     >
       {children}

@@ -1,5 +1,6 @@
 import {
   CalendarClock,
+  ChevronDown,
   Clock3,
   ListChecks,
   Percent,
@@ -179,8 +180,11 @@ function SessionRow({
   const bank = session.config.bankSelection ?? "legacy-v1"
   return (
     <article role="listitem">
-      <details>
-        <summary className="grid min-h-11 cursor-pointer list-none gap-x-4 gap-y-2 px-4 py-4 outline-none marker:hidden focus-visible:ring-[3px] focus-visible:ring-ring/50 sm:grid-cols-[minmax(0,1fr)_auto_auto_auto_auto] sm:items-center [&::-webkit-details-marker]:hidden">
+      <details className="group">
+        <summary
+          aria-label={`Abrir detalle de ${modeLabel(session.mode)} del ${formatDate(session.startedAt)}`}
+          className="grid min-h-11 cursor-pointer list-none gap-x-4 gap-y-2 px-4 py-4 outline-none marker:hidden focus-visible:ring-[3px] focus-visible:ring-ring/50 sm:grid-cols-[minmax(0,1fr)_auto_auto_auto_auto_auto] sm:items-center [&::-webkit-details-marker]:hidden"
+        >
           <div className="min-w-0">
             <p className="font-medium">{modeLabel(session.mode)}</p>
             <p className="mt-1 text-xs text-muted-foreground">
@@ -203,6 +207,10 @@ function SessionRow({
           <Badge variant={metrics.accuracy >= 80 ? "default" : "secondary"}>
             {session.answers.length} preguntas
           </Badge>
+          <ChevronDown
+            aria-hidden="true"
+            className="size-4 text-muted-foreground transition-transform group-open:rotate-180 motion-reduce:transition-none"
+          />
         </summary>
         <div className="border-t bg-muted/20 px-4 py-5">
           <div className="grid gap-3 sm:grid-cols-3">

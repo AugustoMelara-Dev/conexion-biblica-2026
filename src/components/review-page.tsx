@@ -1,4 +1,4 @@
-import { ClipboardCheck, Copy, SearchCheck } from "lucide-react"
+import { ChevronDown, ClipboardCheck, Copy, SearchCheck } from "lucide-react"
 import { useMemo, useState } from "react"
 import { useApp } from "@/app/app-state"
 import { EmptyState } from "@/components/layout/empty-state"
@@ -15,6 +15,7 @@ export function ReviewPage() {
   const [chapter, setChapter] = useState("all")
   const [family, setFamily] = useState("all")
   const [copied, setCopied] = useState<string | null>(null)
+  const [copyError, setCopyError] = useState<string | null>(null)
   const reasons = useMemo(
     () => [...new Set(reports.map((report) => report.reason))],
     [reports]
@@ -49,12 +50,15 @@ export function ReviewPage() {
         right.reportedAt - left.reportedAt
     )
   const copyJson = async (id: string, question: unknown) => {
-    await navigator.clipboard?.writeText(JSON.stringify(question, null, 2))
-    setCopied(id)
-    window.setTimeout(() => setCopied(null), 1800)
+    if (
+      await copyToClipboard(JSON.stringify(question, null, 2), setCopyError)
+    ) {
+      setCopied(id)
+      window.setTimeout(() => setCopied(null), 1800)
+    }
   }
   const copyReference = async (reference: string) => {
-    await navigator.clipboard?.writeText(reference)
+    await copyToClipboard(reference, setCopyError)
   }
 
   return (
@@ -170,6 +174,15 @@ export function ReviewPage() {
           </div>
         )}
       </section>
+      {copyError ? (
+        <p
+          role="status"
+          aria-live="polite"
+          className="text-sm text-destructive"
+        >
+          {copyError}
+        </p>
+      ) : null}
       <p className="flex items-center gap-2 text-xs text-muted-foreground">
         <ClipboardCheck className="size-4" aria-hidden="true" />
         Los reportes se exportan dentro del respaldo completo.
@@ -221,8 +234,14 @@ function ReviewRow({
   onCopyJson: () => void
   onCopyReference: () => void
 }) {
-  const difficult =
-    progress?.markedDifficult || (progress?.timesIncorrect ?? 0) > 0
+  const taxonomy = reportTaxonomy(report, progress)
+  const visibleStatus = taxonomy.difficult
+    ? "Difícil"
+    : taxonomy.failed
+      ? "Fallada"
+      : taxonomy.favorite
+        ? "Favorita"
+        : null
   const explanation = [
     report.question.explanation,
     report.question.trapReason,
@@ -230,8 +249,11 @@ function ReviewRow({
   ].filter(Boolean)
   return (
     <article role="listitem">
-      <details>
-        <summary className="grid min-h-11 cursor-pointer list-none gap-3 px-4 py-4 outline-none marker:hidden focus-visible:ring-[3px] focus-visible:ring-ring/50 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center [&::-webkit-details-marker]:hidden">
+      <details className="group">
+        <summary
+          aria-label={`Abrir detalle de ${report.question.question}`}
+          className="grid min-h-11 cursor-pointer list-none gap-3 px-4 py-4 outline-none marker:hidden focus-visible:ring-[3px] focus-visible:ring-ring/50 sm:grid-cols-[minmax(0,1fr)_auto_auto] sm:items-center [&::-webkit-details-marker]:hidden"
+        >
           <div className="min-w-0">
             <p className="font-medium text-balance">
               {report.question.question}
@@ -244,8 +266,14 @@ function ReviewRow({
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="destructive">Reportada</Badge>
-            {difficult ? <Badge variant="secondary">Difícil</Badge> : null}
+            {visibleStatus ? (
+              <Badge variant="secondary">{visibleStatus}</Badge>
+            ) : null}
           </div>
+          <ChevronDown
+            aria-hidden="true"
+            className="size-4 text-muted-foreground transition-transform group-open:rotate-180 motion-reduce:transition-none"
+          />
         </summary>
         <div className="border-t bg-muted/20 px-4 py-5">
           <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto]">
@@ -272,6 +300,14 @@ function ReviewRow({
                 </p>
               )}
               <p className="mt-4 text-xs text-muted-foreground">
+                Estado:{" "}
+                <strong className="text-foreground">
+                  {taxonomy.difficult ? "Difícil" : "Sin dificultad marcada"}
+                  {taxonomy.failed ? " · Fallada" : ""}
+                  {taxonomy.favorite ? " · Favorita" : ""} · Reportada
+                </strong>
+              </p>
+              <p className="mt-2 text-xs text-muted-foreground">
                 Respuesta registrada:{" "}
                 <strong className="text-foreground">
                   {formatAnswer(report.answer)}
@@ -315,11 +351,41 @@ function reportPriority(
   const questionProgress =
     progress.get(report.questionKey) ??
     progress.get(`${report.question.bankId ?? "local"}:${report.question.id}`)
+  const taxonomy = reportTaxonomy(report, questionProgress)
   return (
-    (questionProgress?.markedDifficult ? 1000 : 0) +
-    (questionProgress?.timesIncorrect ?? 0) * 10 +
-    (questionProgress?.favorite ? 1 : 0)
+    (taxonomy.difficult ? 1_000 : 0) +
+    (taxonomy.failed ? 100 : 0) +
+    (taxonomy.reported ? 10 : 0) +
+    (taxonomy.favorite ? 1 : 0)
   )
+}
+
+function reportTaxonomy(report: QuestionReport, progress?: QuestionProgress) {
+  return {
+    difficult:
+      report.question.difficulty >= 4 || Boolean(progress?.markedDifficult),
+    failed: (progress?.timesIncorrect ?? 0) > 0,
+    favorite: Boolean(progress?.favorite),
+    reported: true,
+  }
+}
+
+async function copyToClipboard(
+  value: string,
+  setError: (message: string | null) => void
+) {
+  setError(null)
+  if (!navigator.clipboard?.writeText) {
+    setError("No se pudo copiar: el portapapeles no está disponible.")
+    return false
+  }
+  try {
+    await navigator.clipboard.writeText(value)
+    return true
+  } catch {
+    setError("No se pudo copiar. Intenta de nuevo.")
+    return false
+  }
 }
 
 function reportFamily(report: QuestionReport) {

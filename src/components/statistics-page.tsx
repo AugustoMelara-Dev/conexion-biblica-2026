@@ -1,4 +1,4 @@
-import { Clock3, Target, Trophy } from "lucide-react"
+import { Clock3, Heart, Target, TrendingUp, Trophy } from "lucide-react"
 import { useApp } from "@/app/app-state"
 import { FamilyMasteryPanel } from "@/components/family-mastery-panel"
 import { MetricStrip } from "@/components/layout/metric-strip"
@@ -23,7 +23,17 @@ export function StatisticsPage() {
   const { statistics, sessions, questions, progress } = useApp()
   const { general } = statistics
   const simulation = buildSimulationStatistics(sessions)
+  const uniqueSeen = Math.max(0, questions.length - general.unseen)
+  const trend = sessionTrend(sessions)
   const summaryMetrics = [
+    {
+      label: "Tendencia",
+      value: trend ? `${trend.delta > 0 ? "+" : ""}${trend.delta} pp` : "—",
+      detail: trend
+        ? `Última ronda ${trend.latest}% vs anterior ${trend.previous}%`
+        : "Completa dos rondas para compararlas",
+      icon: TrendingUp,
+    },
     {
       label: "Precisión de práctica",
       value: `${general.accuracy}%`,
@@ -38,9 +48,15 @@ export function StatisticsPage() {
     },
     {
       label: "Cobertura",
-      value: `${general.seen} vistas`,
+      value: `${uniqueSeen}/${questions.length}`,
       detail: `${general.unseen} sin ver · ${general.mastered} dominadas`,
       icon: Trophy,
+    },
+    {
+      label: "Favoritas",
+      value: general.favorite,
+      detail: "Marcadas para volver a ellas",
+      icon: Heart,
     },
   ]
 
@@ -187,7 +203,7 @@ function MetricTable({
         aria-label={title}
         className="mt-5 divide-y rounded-xl border border-border/70"
       >
-        <div role="rowgroup" className="hidden bg-muted/40 sm:block">
+        <div role="rowgroup" className="sr-only bg-muted/40 sm:not-sr-only">
           <div
             role="row"
             className="grid grid-cols-[minmax(10rem,1.6fr)_repeat(5,minmax(0,0.7fr))] gap-3 px-4 py-3 text-xs font-medium text-muted-foreground"
@@ -242,14 +258,39 @@ function MetricTable({
             </div>
           ))}
           {rows.length === 0 ? (
-            <p className="px-4 py-10 text-center text-sm text-muted-foreground">
-              Sin datos todavía.
-            </p>
+            <div
+              role="row"
+              className="px-4 py-10 text-center text-sm text-muted-foreground"
+            >
+              <span role="cell">Sin datos todavía.</span>
+            </div>
           ) : null}
         </div>
       </div>
     </section>
   )
+}
+
+function sessionTrend(sessions: ReturnType<typeof useApp>["sessions"]) {
+  const recent = [...sessions]
+    .sort((left, right) => right.completedAt - left.completedAt)
+    .slice(0, 2)
+  if (recent.length < 2) return null
+  const latest = sessionAccuracy(recent[0])
+  const previous = sessionAccuracy(recent[1])
+  return { latest, previous, delta: latest - previous }
+}
+
+function sessionAccuracy(
+  session: ReturnType<typeof useApp>["sessions"][number]
+) {
+  return session.answers.length === 0
+    ? 0
+    : Math.round(
+        (session.answers.filter((answer) => answer.result.isCorrect).length /
+          session.answers.length) *
+          100
+      )
 }
 
 function MetricCell({

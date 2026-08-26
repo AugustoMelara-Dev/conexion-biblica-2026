@@ -27,3 +27,25 @@ Estado: **DONE**
 ## Incidencia encontrada y corregida
 
 La primera inspección de escritorio detectó que la lista de seis pestañas mantenía la altura de una sola fila y superponía el contenido de Familias. Se corrigió con la variante de altura horizontal del componente Tabs y controles de 44 px; la segunda inspección confirmó que no se superponen.
+
+---
+
+## Fix round 1 — Estado: **DONE**
+
+### Correcciones
+
+- La cobertura ahora cuenta preguntas únicas (`total - sin ver`) y no acumulaciones de `timesSeen`; la tira vuelve a mostrar Favoritas y suma Tendencia como diferencia real de precisión entre las dos últimas sesiones completadas.
+- La cola de revisión separa dificultad intrínseca o marcada, fallos, favoritas y reportes. Su prioridad estable pondera explícitamente esos cuatro factores; mantiene sólo Reportada y un segundo estado visible por fila, dejando la taxonomía completa en el detalle.
+- Los filtros de familia anuncian el estado con `aria-pressed`. Los encabezados de métricas permanecen accesibles en móvil mediante `sr-only`, y los estados vacíos respetan los hijos válidos de `list` y `rowgroup`.
+- Historial y revisión conservan `details` nativo, incorporan un indicador visual de expansión que respeta movimiento reducido y una etiqueta accesible para el resumen.
+- La copia maneja portapapeles ausente o rechazado sin promesa no controlada ni confirmación falsa; comunica el error con una región de estado accesible.
+
+### TDD y evidencia
+
+- RED: las nuevas expectativas de cobertura única (`1/1` con una pregunta vista diez veces), tendencia, Favoritas, `aria-pressed` y taxonomía de revisión fallaron antes de las correcciones.
+- GREEN: `npm.cmd test -- src/components/insight-pages.test.tsx src/lib/statistics.test.ts src/domain/family-mastery.test.ts --reporter=dot` — **3 archivos, 14 pruebas aprobadas**. Cubre las seis vistas, `WeaknessSummary`, filtros de familia, historial filtrado/no respondido/detalle y cola poblada (orden, filtros, V4, detalle, copia y CTA).
+- `npm.cmd run typecheck` — aprobado.
+- `npm.cmd run build` — aprobado; permanece sólo la advertencia no bloqueante de Vite por bundle JavaScript mayor a 500 kB.
+- `npm.cmd exec eslint -- src/components/statistics-page.tsx src/components/family-mastery-panel.tsx src/components/history-page.tsx src/components/review-page.tsx src/components/insight-pages.test.tsx` — aprobado.
+- `git diff --check` — aprobado.
+- QA local: resumen de Progreso cargó en escritorio y a 390 px, con las seis pestañas presentes, navegación móvil visible y sin errores de navegador. La interacción de pestañas queda además cubierta por prueba conductual.
