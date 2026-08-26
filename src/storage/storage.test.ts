@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from "vitest"
-import { openAppDb, createRepositories, deleteAppDb, DB_NAME } from "@/storage/db"
+import { openAppDb, createRepositories, deleteAppDb, DB_NAME, DB_VERSION } from "@/storage/db"
 import type { ActiveRound, Bank, CoverageCycle, Question, Session } from "@/domain/types"
 
 const question: Question = {
@@ -33,6 +33,70 @@ beforeEach(async () => {
 })
 
 describe("repositorios IndexedDB", () => {
+  it("crea índices masivos y consulta un subconjunto sin cargar toda la tienda", async () => {
+    expect(DB_VERSION).toBeGreaterThanOrEqual(3)
+    const db = await openAppDb()
+    const repositories = createRepositories(db)
+    const massiveQuestions: Question[] = Array.from({ length: 6 }, (_, index) => ({
+      ...question,
+      id: `D07-${index + 1}`,
+      bankId: "massive-v5",
+      bankProfileId: "massive-v5",
+      factKey: `DAN7-V01-F${index + 1}`,
+      factId: `DAN7-V01-F${index + 1}`,
+      variantId: `variant-${index + 1}`,
+      templateId: "mc-contextual-v1",
+      blindFinalPool: index === 5,
+      source: { ...question.source, chapter: 7, reference: `Daniel 7:${index + 1}` },
+      difficultyBand: index < 3 ? "HARD" : "EXPERT",
+    }))
+    await repositories.questions.putMany(massiveQuestions)
+    const selected = await repositories.questions.listForSession({
+      bankId: "massive-v5",
+      chapters: [7],
+      difficultyBands: ["EXPERT"],
+      includeBlind: false,
+      limit: 2,
+    })
+    expect(selected).toHaveLength(2)
+    expect(selected.every((item) => item.difficultyBand === "EXPERT" && !item.blindFinalPool)).toBe(true)
+    const tx = db.transaction("questions", "readonly")
+    const indexes = Array.from(tx.objectStore("questions").indexNames)
+    expect(indexes).toEqual(expect.arrayContaining(["factId", "difficultyBand", "type", "blindFinalPool"]))
+  })
+
+  it("acumula exposición por hecho y variante", async () => {
+    const db = await openAppDb()
+    const repositories = createRepositories(db)
+    await repositories.exposures.record({
+      factId: "DAN7-V01-F01",
+      variantId: "variant-1",
+      questionKey: "massive-v5:D07-1",
+      timestamp: 100,
+      isCorrect: false,
+      responseTimeMs: 8000,
+      selectedAnswer: "B",
+      errorType: "context-confusion",
+    })
+    await repositories.exposures.record({
+      factId: "DAN7-V01-F01",
+      variantId: "variant-1",
+      questionKey: "massive-v5:D07-1",
+      timestamp: 200,
+      isCorrect: true,
+      responseTimeMs: 3000,
+      selectedAnswer: "A",
+      errorType: null,
+    })
+    expect(await repositories.exposures.get("DAN7-V01-F01", "variant-1")).toMatchObject({
+      exposures: 2,
+      correct: 1,
+      incorrect: 1,
+      lastSeenAt: 200,
+      lastSelectedAnswer: "A",
+    })
+  })
+
   it("guarda y consulta bancos y preguntas sin mezclar el progreso", async () => {
     const db = await openAppDb()
     const repositories = createRepositories(db)

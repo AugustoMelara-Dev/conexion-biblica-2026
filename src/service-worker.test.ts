@@ -84,6 +84,12 @@ function loadServiceWorker(options: {
 }
 
 describe("actualización del contenido offline", () => {
+  it("precachea el manifiesto masivo sin descargar los 14,000 registros de golpe", () => {
+    const source = readFileSync(join(process.cwd(), "public", "sw.js"), "utf8")
+    expect(source).toContain('"/banks/massive-v5/manifest.json"')
+    expect(source).not.toContain('"/banks/massive-v5/questions/DAN1.json"')
+  })
+
   it("consulta la red antes del caché para el manifiesto de bancos", async () => {
     const worker = loadServiceWorker({
       cached: new MockResponse("manifest-viejo"),

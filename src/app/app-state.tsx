@@ -14,7 +14,11 @@ import {
   validateBackupPayload,
 } from "@/domain/backup"
 import { adaptMasterBank } from "@/domain/master-bank"
-import { filterReportsForSelection, filterSessionsForSelection, questionBelongsToSelection } from "@/domain/banks"
+import {
+  filterReportsForSelection,
+  filterSessionsForSelection,
+  questionBelongsToSelection,
+} from "@/domain/banks"
 import { validateBank } from "@/domain/validation"
 import type {
   ActiveRound,
@@ -27,13 +31,27 @@ import type {
   EvaluationResult,
   Preferences,
   Question,
+  QuestionExposure,
   QuestionProgress,
   QuestionReport,
   Session,
 } from "@/domain/types"
 import { buildStatistics, type Statistics } from "@/lib/statistics"
 import { openAppDb, createRepositories } from "@/storage/db"
-import { createBankFromRaw, getBankIdForSourceFileName, getBankQuestionKey, getRawBankProfileId, isGenericBankImportAllowed, isIntegratedBankProfile, shouldReplaceBundledBank } from "@/storage/seed"
+import {
+  createBankFromRaw,
+  getBankIdForSourceFileName,
+  getBankQuestionKey,
+  getRawBankProfileId,
+  isGenericBankImportAllowed,
+  isIntegratedBankProfile,
+  shouldReplaceBundledBank,
+} from "@/storage/seed"
+import {
+  loadMassiveQuestionPool,
+  readMassiveManifest,
+  type MassiveBankManifest,
+} from "@/storage/massive-bank"
 
 type RepositorySet = ReturnType<typeof createRepositories>
 type NavKey =
@@ -51,6 +69,7 @@ type AppContextValue = {
   loading: boolean
   error: string | null
   masterBankError: string | null
+  massiveBankError: string | null
   nav: NavKey
   setNav: (nav: NavKey) => void
   banks: Bank[]
@@ -59,6 +78,8 @@ type AppContextValue = {
   progress: Map<string, QuestionProgress>
   sessions: Session[]
   reports: QuestionReport[]
+  exposures: QuestionExposure[]
+  massiveManifest: MassiveBankManifest | null
   preferences: Preferences
   bankSelection: BankSelection
   setBankSelection: (selection: BankSelection) => void
@@ -67,6 +88,7 @@ type AppContextValue = {
   activeRound: ActiveRound | null
   statistics: Statistics
   refresh: () => Promise<void>
+  loadMassiveQuestions: (config: import("@/domain/types").SessionConfig) => Promise<Question[]>
   importBankFiles: (
     files: File[],
     replaceBankId?: string
@@ -76,7 +98,11 @@ type AppContextValue = {
     question: Question,
     result: EvaluationResult,
     answer: AnswerValue,
-    flags?: { favorite?: boolean; markedDifficult?: boolean; context?: "practice" | "simulation" }
+    flags?: {
+      favorite?: boolean
+      markedDifficult?: boolean
+      context?: "practice" | "simulation"
+    }
   ) => Promise<QuestionProgress>
   recordReport: (
     question: Question,
@@ -91,9 +117,7 @@ type AppContextValue = {
   exportBanks: () => Promise<Bank[]>
   exportProgress: () => Promise<QuestionProgress[]>
   exportBackup: () => Promise<BackupPayload>
-  importBackup: (
-    file: File
-  ) => Promise<{
+  importBackup: (file: File) => Promise<{
     valid: boolean
     errors: { code: string; path: string; message: string }[]
   }>
@@ -110,8 +134,35 @@ const defaultPreferences: Preferences = {
 const AppContext = createContext<AppContextValue | undefined>(undefined)
 const PREFERENCES_STORAGE_KEY = "conexion-biblica-preferences"
 
+function emptyQuestionProgress(questionKey: string): QuestionProgress {
+  return {
+    questionKey,
+    timesSeen: 0,
+    timesCorrect: 0,
+    timesIncorrect: 0,
+    timesUnanswered: 0,
+    currentCorrectStreak: 0,
+    averageResponseTimeMs: 0,
+    bestResponseTimeMs: null,
+    lastResponseTimeMs: null,
+    lastSeenAt: null,
+    masteryScore: 0,
+    favorite: false,
+    markedDifficult: false,
+    reported: false,
+    history: [],
+  }
+}
+
 function isBankSelection(value: unknown): value is BankSelection {
-  return value === "legacy-v1" || value === "master-v2" || value === "prep-v3" || value === "curated-v4" || value === "mixed"
+  return (
+    value === "legacy-v1" ||
+    value === "master-v2" ||
+    value === "prep-v3" ||
+    value === "curated-v4" ||
+    value === "massive-v5" ||
+    value === "mixed"
+  )
 }
 
 function normalizePreferences(value: Partial<Preferences>): Preferences {
@@ -129,17 +180,26 @@ export function getPreferences(): Preferences {
     const raw = localStorage.getItem(PREFERENCES_STORAGE_KEY)
     if (!raw) return defaultPreferences
     const parsed = JSON.parse(raw) as unknown
-    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return defaultPreferences
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed))
+      return defaultPreferences
     return normalizePreferences(parsed as Partial<Preferences>)
   } catch {
     return defaultPreferences
   }
 }
 
-export function resolveAvailableBankSelection(selection: BankSelection, availableProfiles: Iterable<BankProfileId>): BankSelection {
+export function resolveAvailableBankSelection(
+  selection: BankSelection,
+  availableProfiles: Iterable<BankProfileId>
+): BankSelection {
   const available = new Set(availableProfiles)
   if (selection === "mixed") {
-    if ((["legacy-v1", "prep-v3", "curated-v4"] as const).some((profile) => available.has(profile))) return selection
+    if (
+      (["legacy-v1", "prep-v3", "curated-v4"] as const).some((profile) =>
+        available.has(profile)
+      )
+    )
+      return selection
   } else if (available.has(selection)) {
     return selection
   }
@@ -161,7 +221,8 @@ export function resolveInitialBankSelection({
   availableProfiles: Iterable<BankProfileId>
 }): BankSelection {
   const available = new Set(availableProfiles)
-  if (!hasStoredPreferences && !hadExistingBanks && available.has("curated-v4")) return "curated-v4"
+  if (!hasStoredPreferences && !hadExistingBanks && available.has("curated-v4"))
+    return "curated-v4"
   return resolveAvailableBankSelection(storedSelection, available)
 }
 
@@ -200,6 +261,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [masterBankError, setMasterBankError] = useState<string | null>(null)
+  const [massiveBankError, setMassiveBankError] = useState<string | null>(null)
+  const [massiveManifest, setMassiveManifest] =
+    useState<MassiveBankManifest | null>(null)
   const [nav, setNav] = useState<NavKey>("dashboard")
   const [banks, setBanks] = useState<Bank[]>([])
   const [questions, setQuestions] = useState<Question[]>([])
@@ -208,6 +272,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   )
   const [sessions, setSessions] = useState<Session[]>([])
   const [reports, setReports] = useState<QuestionReport[]>([])
+  const [exposures, setExposures] = useState<QuestionExposure[]>([])
   const [coverageCycles, setCoverageCycles] = useState<
     Map<string, CoverageCycle>
   >(new Map())
@@ -220,12 +285,15 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setLoading(true)
     setError(null)
     setMasterBankError(null)
+    setMassiveBankError(null)
     try {
       const db = await openAppDb()
       const nextRepositories = createRepositories(db)
       setRepositories(nextRepositories)
       let existingBanks = await nextRepositories.banks.list()
-      const hadStoredPreferences = typeof localStorage !== "undefined" && localStorage.getItem(PREFERENCES_STORAGE_KEY) !== null
+      const hadStoredPreferences =
+        typeof localStorage !== "undefined" &&
+        localStorage.getItem(PREFERENCES_STORAGE_KEY) !== null
       const hadExistingBanks = existingBanks.length > 0
       if (seed) {
         try {
@@ -239,8 +307,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
               const validation = validateBank(raw, fileName)
               if (validation.valid) {
                 const incoming = createBankFromRaw(raw, fileName)
-                const existing = existingBanks.find((bank) => bank.bankId === incoming.bankId)
-                if (shouldReplaceBundledBank(existing, incoming)) await nextRepositories.banks.save(incoming)
+                const existing = existingBanks.find(
+                  (bank) => bank.bankId === incoming.bankId
+                )
+                if (shouldReplaceBundledBank(existing, incoming))
+                  await nextRepositories.banks.save(incoming)
               }
             } catch {
               continue
@@ -276,6 +347,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
             : "V2 no pudo cargarse"
         )
       }
+      try {
+        setMassiveManifest(await readMassiveManifest())
+      } catch (massiveError) {
+        setMassiveManifest(null)
+        setMassiveBankError(
+          massiveError instanceof Error
+            ? massiveError.message
+            : "El banco masivo no pudo cargarse"
+        )
+      }
       const [
         nextQuestions,
         nextProgress,
@@ -283,6 +364,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         nextReports,
         nextCycles,
         nextActiveRound,
+        nextExposures,
       ] = await Promise.all([
         nextRepositories.questions.list(),
         nextRepositories.progress.list(),
@@ -290,8 +372,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
         nextRepositories.reports.list(),
         nextRepositories.coverage.list(),
         nextRepositories.activeRound.get(),
+        nextRepositories.exposures.list(),
       ])
-      const availableProfiles = new Set<BankProfileId>(nextQuestions.map((question) => question.bankProfileId ?? "legacy-v1"))
+      const availableProfiles = new Set<BankProfileId>(
+        nextQuestions.map((question) => question.bankProfileId ?? "legacy-v1")
+      )
       const storedSelection = getPreferences().lastBankSelection
       const desiredSelection = resolveInitialBankSelection({
         storedSelection,
@@ -300,15 +385,22 @@ export function AppProvider({ children }: { children: ReactNode }) {
         availableProfiles,
       })
       if (desiredSelection !== storedSelection) {
-        const updatedPreferences = { ...getPreferences(), lastBankSelection: desiredSelection }
+        const updatedPreferences = {
+          ...getPreferences(),
+          lastBankSelection: desiredSelection,
+        }
         setPreferencesState(updatedPreferences)
-        localStorage.setItem(PREFERENCES_STORAGE_KEY, JSON.stringify(updatedPreferences))
+        localStorage.setItem(
+          PREFERENCES_STORAGE_KEY,
+          JSON.stringify(updatedPreferences)
+        )
       }
       setBanks(existingBanks)
       setQuestions(nextQuestions)
       setProgress(new Map(nextProgress.map((item) => [item.questionKey, item])))
       setSessions(nextSessions)
       setReports(nextReports)
+      setExposures(nextExposures)
       setCoverageCycles(
         new Map(nextCycles.map((cycle) => [cycle.poolKey, cycle]))
       )
@@ -330,6 +422,52 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const refresh = useCallback(() => loadState(false), [loadState])
 
+  const loadMassiveQuestions = useCallback(
+    async (config: import("@/domain/types").SessionConfig) => {
+      if (!repositories || !massiveManifest)
+        throw new Error("El banco masivo todavía no está disponible")
+      const desiredCount = config.count === "all" ? 200 : config.count
+      const allowedBanks = new Set<"DANIEL1-12" | "PR39-44">(
+        config.sourceWorks.map((work) =>
+          work === "Daniel" ? "DANIEL1-12" : "PR39-44"
+        )
+      )
+      const manifestChapters = massiveManifest.shards
+        .filter((shard) => allowedBanks.has(shard.bank))
+        .map((shard) => Number(shard.chapter.match(/\d+/)?.[0]))
+        .filter(Number.isFinite)
+      const chapters = config.chapters.length
+        ? manifestChapters.filter((chapter) => config.chapters.includes(chapter))
+        : manifestChapters
+      const questions = await loadMassiveQuestionPool({
+        manifest: massiveManifest,
+        chapters,
+        count: desiredCount,
+        includeBlind: Boolean(config.includeBlind),
+        blindOnly: config.trainingPresetId === "blind-simulation",
+        contextualOnly: config.trainingPresetId === "contextual-traps",
+        sequenceOnly: config.trainingPresetId === "order-sequence",
+        types: config.types,
+        difficultyBands: config.difficultyBands,
+        seed: Date.now(),
+      })
+      await repositories.questions.putMany(questions)
+      setQuestions((current) => {
+        const byKey = new Map(
+          current.map((question) => [
+            `${question.bankId ?? "local"}:${question.id}`,
+            question,
+          ])
+        )
+        for (const question of questions)
+          byKey.set(`${question.bankId ?? "local"}:${question.id}`, question)
+        return [...byKey.values()]
+      })
+      return questions
+    },
+    [massiveManifest, repositories]
+  )
+
   const importBankFiles = useCallback(
     async (files: File[], replaceBankId?: string) => {
       if (!repositories) return []
@@ -339,20 +477,35 @@ export function AppProvider({ children }: { children: ReactNode }) {
           const raw = JSON.parse(await file.text()) as Record<string, unknown>
           const rawProfileId = getRawBankProfileId(raw)
           const incomingBankId = getBankIdForSourceFileName(file.name)
-          const replacementId = replaceBankId && files.length === 1 ? replaceBankId : incomingBankId
-          const replacementProfileId = banks.find((bank) => bank.bankId === replacementId)?.bankProfileId
-          if (!isGenericBankImportAllowed(rawProfileId, replacementId, replacementProfileId)) {
+          const replacementId =
+            replaceBankId && files.length === 1 ? replaceBankId : incomingBankId
+          const replacementProfileId = banks.find(
+            (bank) => bank.bankId === replacementId
+          )?.bankProfileId
+          if (
+            !isGenericBankImportAllowed(
+              rawProfileId,
+              replacementId,
+              replacementProfileId
+            )
+          ) {
             outcomes.push({
               sourceName: file.name,
               valid: false,
-              questionCount: Array.isArray(raw.questions) ? raw.questions.length : 0,
-              errors: [{
-                code: "INTEGRATED_PROFILE_IMPORT_BLOCKED",
-                path: isIntegratedBankProfile(rawProfileId) ? "$.bank.profileId" : "$.replaceBankId",
-                message: isIntegratedBankProfile(rawProfileId)
-                  ? "Los perfiles integrados V2, V3 y V4 sólo pueden cargarse desde el paquete de la aplicación."
-                  : "No se puede sobrescribir un banco integrado.",
-              }],
+              questionCount: Array.isArray(raw.questions)
+                ? raw.questions.length
+                : 0,
+              errors: [
+                {
+                  code: "INTEGRATED_PROFILE_IMPORT_BLOCKED",
+                  path: isIntegratedBankProfile(rawProfileId)
+                    ? "$.bank.profileId"
+                    : "$.replaceBankId",
+                  message: isIntegratedBankProfile(rawProfileId)
+                    ? "Los perfiles integrados V2, V3 y V4 sólo pueden cargarse desde el paquete de la aplicación."
+                    : "No se puede sobrescribir un banco integrado.",
+                },
+              ],
             })
             continue
           }
@@ -413,7 +566,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const removeBank = useCallback(
     async (bankId: string) => {
       if (!repositories) return
-      if (bankId === "master-v2" || banks.some((bank) => bank.bankId === bankId && (bank.bankProfileId === "prep-v3" || bank.bankProfileId === "curated-v4"))) return
+      if (
+        bankId === "master-v2" ||
+        banks.some(
+          (bank) =>
+            bank.bankId === bankId &&
+            (bank.bankProfileId === "prep-v3" ||
+              bank.bankProfileId === "curated-v4")
+        )
+      )
+        return
       await repositories.banks.remove(bankId)
       await refresh()
     },
@@ -424,23 +586,64 @@ export function AppProvider({ children }: { children: ReactNode }) {
     async (
       question: Question,
       result: EvaluationResult,
-      _answer: AnswerValue,
-      flags: { favorite?: boolean; markedDifficult?: boolean; context?: "practice" | "simulation" } = {}
+      answer: AnswerValue,
+      flags: {
+        favorite?: boolean
+        markedDifficult?: boolean
+        context?: "practice" | "simulation"
+      } = {}
     ) => {
       if (!repositories)
         throw new Error("El almacenamiento local aún no está listo")
       const key = getBankQuestionKey(question.bankId ?? "local", question.id)
-      const previous = progress.get(key)
-      const next = applyProgress(previous, result, Date.now(), flags.context ?? "practice")
-      next.questionKey = key
-      if (flags.favorite !== undefined) next.favorite = flags.favorite
-      if (flags.markedDifficult !== undefined)
-        next.markedDifficult = flags.markedDifficult
-      await repositories.progress.put(next)
+      const next = await repositories.progress.update(key, (previous) => {
+        const updated = applyProgress(
+          previous,
+          result,
+          Date.now(),
+          flags.context ?? "practice"
+        )
+        updated.questionKey = key
+        if (flags.favorite !== undefined) updated.favorite = flags.favorite
+        if (flags.markedDifficult !== undefined)
+          updated.markedDifficult = flags.markedDifficult
+        return updated
+      })
       setProgress((current) => new Map(current).set(key, next))
+      if (question.factId && question.variantId) {
+        const selectedAnswer =
+          typeof answer === "string"
+            ? (question.options.find((option) => option.id === answer)?.text ??
+              answer)
+            : Array.isArray(answer)
+              ? answer.join(", ")
+              : answer && typeof answer === "object"
+                ? JSON.stringify(answer)
+                : null
+        const exposure = await repositories.exposures.record({
+          factId: question.factId,
+          variantId: question.variantId,
+          questionKey: key,
+          timestamp: Date.now(),
+          isCorrect: result.isCorrect,
+          responseTimeMs: result.responseTimeMs,
+          selectedAnswer,
+          errorType: result.isCorrect
+            ? null
+            : question.trapType === "true_elsewhere"
+              ? "context-confusion"
+              : result.reason,
+        })
+        setExposures((current) => [
+          exposure,
+          ...current.filter(
+            (item) => item.exposureKey !== exposure.exposureKey
+          ),
+        ])
+      }
       return next
     },
-    [progress, repositories]
+    [repositories]
   )
 
   const recordReport = useCallback(
@@ -463,29 +666,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
         response: result,
         reason,
       }
-      await repositories.reports.add(report)
-      const existing = progress.get(key)
-      const next = existing
-        ? { ...existing, reported: true }
-        : {
-            ...applyProgress(
-              undefined,
-              result ?? {
-                isCorrect: false,
-                wasAnswered: false,
-                responseTimeMs: 0,
-                reason: "unanswered",
-              },
-              Date.now()
-            ),
-            questionKey: key,
-            reported: true,
-          }
-      await repositories.progress.put(next)
+      const next = await repositories.reports.addWithProgress(
+        report,
+        (existing) => ({
+          ...(existing ?? emptyQuestionProgress(key)),
+          reported: true,
+        })
+      )
       setProgress((current) => new Map(current).set(key, next))
       setReports((current) => [report, ...current])
     },
-    [progress, repositories]
+    [repositories]
   )
 
   const saveSession = useCallback(
@@ -653,9 +844,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
       master: questions.filter(
         (question) => question.bankProfileId === "master-v2"
       ).length,
-      prep: questions.filter(
-        (question) => question.bankProfileId === "prep-v3"
-      ).length,
+      prep: questions.filter((question) => question.bankProfileId === "prep-v3")
+        .length,
       curated: questions.filter(
         (question) => question.bankProfileId === "curated-v4"
       ).length,
@@ -679,6 +869,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       loading,
       error,
       masterBankError,
+      massiveBankError,
       nav,
       setNav,
       banks,
@@ -687,6 +878,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
       progress,
       sessions: scopedSessions,
       reports: scopedReports,
+      exposures,
+      massiveManifest,
       preferences,
       bankSelection,
       setBankSelection,
@@ -695,6 +888,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       activeRound,
       statistics,
       refresh,
+      loadMassiveQuestions,
       importBankFiles,
       removeBank,
       recordAnswer,
@@ -725,13 +919,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
       importBankFiles,
       loading,
       masterBankError,
+      massiveBankError,
+      massiveManifest,
       nav,
       preferences,
       progress,
+      exposures,
       questions,
       recordAnswer,
       recordReport,
       refresh,
+      loadMassiveQuestions,
       removeBank,
       repositories,
       saveActiveRound,
