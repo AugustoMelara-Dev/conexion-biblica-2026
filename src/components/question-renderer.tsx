@@ -1,3 +1,4 @@
+import { useRef } from "react"
 import { ArrowDown, ArrowUp, Check, GripVertical, Link2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -10,13 +11,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import type { AnswerValue, Question } from "@/domain/types"
+import type { AnswerValue, EvaluationResult, Question } from "@/domain/types"
 
 type RendererProps = {
   question: Question
   value: AnswerValue
   onChange: (value: AnswerValue) => void
   disabled?: boolean
+  feedback?: EvaluationResult | null
 }
 
 const letters = ["A", "B", "C", "D", "E", "F"]
@@ -26,6 +28,7 @@ export function QuestionRenderer({
   value,
   onChange,
   disabled = false,
+  feedback = null,
 }: RendererProps) {
   if (question.answerMode === "canonical_text")
     return (
@@ -34,6 +37,7 @@ export function QuestionRenderer({
         value={value}
         onChange={onChange}
         disabled={disabled}
+        feedback={feedback}
       />
     )
   if (question.type === "matching")
@@ -43,6 +47,7 @@ export function QuestionRenderer({
         value={value}
         onChange={onChange}
         disabled={disabled}
+        feedback={feedback}
       />
     )
   if (question.type === "ordering")
@@ -52,6 +57,7 @@ export function QuestionRenderer({
         value={value}
         onChange={onChange}
         disabled={disabled}
+        feedback={feedback}
       />
     )
   if (question.type === "multi_select")
@@ -61,6 +67,7 @@ export function QuestionRenderer({
         value={value}
         onChange={onChange}
         disabled={disabled}
+        feedback={feedback}
       />
     )
   return (
@@ -69,6 +76,7 @@ export function QuestionRenderer({
       value={value}
       onChange={onChange}
       disabled={disabled}
+      feedback={feedback}
     />
   )
 }
@@ -81,7 +89,7 @@ function CanonicalTextQuestion({
 }: RendererProps) {
   return (
     <fieldset className="min-w-0">
-      <legend className="mb-2 text-sm font-medium">{question.question}</legend>
+      <legend className="sr-only">{question.question}</legend>
       <label className="flex flex-col gap-2 text-sm font-medium">
         Escribe la respuesta
         <Textarea
@@ -101,7 +109,9 @@ function ChoiceQuestion({
   value,
   onChange,
   disabled,
+  feedback,
 }: RendererProps) {
+  const buttonRefs = useRef<(HTMLButtonElement | null)[]>([])
   const selected =
     typeof value === "string"
       ? value
@@ -116,15 +126,42 @@ function ChoiceQuestion({
     >
       {question.options.map((option, index) => {
         const active = option.id === selected
+        const isCorrectOption = question.correctAnswer.includes(option.id)
+        const showsIncorrectSelection = Boolean(
+          feedback && active && !feedback.isCorrect
+        )
+        const showsCorrectSelection = Boolean(
+          feedback && active && feedback.isCorrect
+        )
         return (
           <button
             key={option.id}
+            ref={(element) => {
+              buttonRefs.current[index] = element
+            }}
             type="button"
             role="radio"
             disabled={disabled}
             aria-checked={active}
-            className={`group flex min-h-16 items-center gap-4 rounded-xl border px-4 py-3 text-left transition-colors outline-none focus-visible:ring-2 focus-visible:ring-ring motion-reduce:transition-none sm:px-5 ${active ? "border-primary bg-primary/5 ring-1 ring-primary" : "bg-card hover:bg-muted/50"}`}
+            tabIndex={active || (!selected && index === 0) ? 0 : -1}
+            className={`group flex min-h-16 items-center gap-4 rounded-xl border px-4 py-3 text-left transition-colors outline-none focus-visible:ring-2 focus-visible:ring-ring motion-reduce:transition-none sm:px-5 ${showsIncorrectSelection ? "border-destructive bg-destructive/5 ring-1 ring-destructive" : isCorrectOption && feedback ? "border-chart-2 bg-chart-2/10 ring-1 ring-chart-2" : active ? "border-primary bg-primary/5 ring-1 ring-primary" : "bg-card hover:bg-muted/50"}`}
             onClick={() => onChange(option.id)}
+            onKeyDown={(event) => {
+              if (
+                !["ArrowRight", "ArrowDown", "ArrowLeft", "ArrowUp"].includes(
+                  event.key
+                )
+              )
+                return
+              event.preventDefault()
+              const direction =
+                event.key === "ArrowRight" || event.key === "ArrowDown" ? 1 : -1
+              const nextIndex =
+                (index + direction + question.options.length) %
+                question.options.length
+              onChange(question.options[nextIndex].id)
+              buttonRefs.current[nextIndex]?.focus()
+            }}
           >
             <span
               className={`flex size-9 shrink-0 items-center justify-center rounded-lg border text-sm font-semibold ${active ? "border-primary bg-primary text-primary-foreground" : "bg-muted/50 text-muted-foreground"}`}
@@ -140,9 +177,25 @@ function ChoiceQuestion({
                 aria-label="Seleccionada"
               />
             ) : null}
+            {feedback && isCorrectOption ? (
+              <span className="sr-only">Respuesta correcta</span>
+            ) : null}
+            {showsIncorrectSelection ? (
+              <span className="sr-only">Tu selección fue incorrecta.</span>
+            ) : null}
+            {showsCorrectSelection ? (
+              <span className="sr-only">Tu selección es correcta.</span>
+            ) : null}
           </button>
         )
       })}
+      {feedback ? (
+        <p className="text-sm font-medium" role="status">
+          {feedback.isCorrect
+            ? "Tu selección es correcta."
+            : "Tu selección fue incorrecta."}
+        </p>
+      ) : null}
     </div>
   )
 }
@@ -232,6 +285,7 @@ function OrderingQuestion({
                   disabled={disabled || index === 0}
                   size="icon"
                   variant="ghost"
+                  className="min-h-11 min-w-11"
                   onClick={() => move(index, -1)}
                 >
                   <ArrowUp data-icon="inline-start" />
@@ -241,6 +295,7 @@ function OrderingQuestion({
                   disabled={disabled || index === order.length - 1}
                   size="icon"
                   variant="ghost"
+                  className="min-h-11 min-w-11"
                   onClick={() => move(index, 1)}
                 >
                   <ArrowDown data-icon="inline-start" />
@@ -288,7 +343,10 @@ function MatchingQuestion({
             onValueChange={(right) => setMatch(left.id, right)}
             disabled={disabled}
           >
-            <SelectTrigger aria-label={`Relacionar ${left.text}`}>
+            <SelectTrigger
+              className="min-h-11 w-full"
+              aria-label={`Relacionar ${left.text}`}
+            >
               <SelectValue placeholder="Selecciona" />
             </SelectTrigger>
             <SelectContent>

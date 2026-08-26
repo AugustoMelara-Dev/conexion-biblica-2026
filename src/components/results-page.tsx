@@ -18,7 +18,6 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
 import { MetricStrip } from "@/components/layout/metric-strip"
 import { Progress } from "@/components/ui/progress"
@@ -97,15 +96,22 @@ export function ResultsPage({
         </p>
       </section>
 
+      <Card className="shadow-none">
+        <CardHeader>
+          <h2 className="text-xl font-semibold tracking-tight">Resultado</h2>
+          <p className="text-3xl font-semibold tracking-tight">
+            {session.context === "simulation"
+              ? `${session.score} / 100`
+              : `${correct} / ${session.answers.length}`}
+          </p>
+        </CardHeader>
+      </Card>
+
       <MetricStrip
         items={[
-          {
-            label: "Puntuación",
-            value:
-              session.context === "simulation"
-                ? `${session.score} / 100`
-                : `${correct} / ${session.answers.length}`,
-          },
+          { label: "Correctas", value: correct },
+          { label: "Incorrectas", value: incorrect },
+          { label: "Sin responder", value: unanswered },
           { label: "Precisión", value: `${accuracy}%` },
           {
             label: "Tiempo promedio",
@@ -117,7 +123,9 @@ export function ResultsPage({
 
       <Card className="border-primary/20 bg-primary/[0.035] shadow-none">
         <CardHeader>
-          <CardTitle>Recomendación</CardTitle>
+          <h2 className="text-xl font-semibold tracking-tight">
+            Recomendación
+          </h2>
           <CardDescription>{recommendation}</CardDescription>
         </CardHeader>
       </Card>
@@ -125,7 +133,9 @@ export function ResultsPage({
       {session.selectionSummary?.strategy === "coverage-cycle" ? (
         <Card className="shadow-none">
           <CardHeader>
-            <CardTitle>Ciclo de cobertura</CardTitle>
+            <h2 className="text-xl font-semibold tracking-tight">
+              Ciclo de cobertura
+            </h2>
             <CardDescription>
               {session.selectionSummary.seen} / {session.selectionSummary.total}{" "}
               recorridas · {session.selectionSummary.remaining} pendientes
@@ -148,7 +158,9 @@ export function ResultsPage({
 
       <Card className="shadow-none">
         <CardHeader>
-          <CardTitle>Ritmo de la ronda</CardTitle>
+          <h2 className="text-xl font-semibold tracking-tight">
+            Ritmo de la ronda
+          </h2>
           <CardDescription>
             Más rápida {formatElapsedMs(fastest)} · más lenta{" "}
             {formatElapsedMs(slowest)} · mediana{" "}
@@ -164,9 +176,9 @@ export function ResultsPage({
       <Card className="shadow-none">
         <CardHeader className="gap-4">
           <div>
-            <CardTitle>
+            <h2 className="text-xl font-semibold tracking-tight">
               {onlyIncorrect ? "Respuestas incorrectas" : "Lista completa"}
-            </CardTitle>
+            </h2>
             <CardDescription>
               Revisa qué ocurrió en cada pregunta.
             </CardDescription>
@@ -177,8 +189,14 @@ export function ResultsPage({
               checked={onlyIncorrect}
               onCheckedChange={setOnlyIncorrect}
               aria-label="Solo incorrectas"
+              disabled={!hasErrors}
             />
           </label>
+          {!hasErrors ? (
+            <p className="text-sm text-muted-foreground">
+              No hay respuestas incorrectas para filtrar.
+            </p>
+          ) : null}
         </CardHeader>
         <CardContent className="p-0">
           <div className="flex flex-col">
@@ -244,7 +262,7 @@ export function ResultsPage({
           </Button>
           {session.selectionSummary?.strategy === "coverage-cycle" &&
           (session.selectionSummary.remaining ?? 0) > 0 ? (
-            <Button onClick={onNext}>
+            <Button variant="outline" onClick={onNext}>
               Siguiente tanda sin repetir <ArrowRight data-icon="inline-end" />
             </Button>
           ) : null}

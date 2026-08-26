@@ -85,6 +85,9 @@ export function QuizPage({
   const [difficult, setDifficult] = useState(false)
   const [reportReason, setReportReason] = useState("")
   const [reportOpen, setReportOpen] = useState(false)
+  const questionHeadingRef = useRef<HTMLHeadingElement>(null)
+  const hasMountedQuestionRef = useRef(false)
+  const isSubmittingRef = useRef(false)
   const question = queue[index]
   const progressRef = useRef(progress)
   const queueRef = useRef(queue)
@@ -135,6 +138,9 @@ export function QuizPage({
     setFavorite(Boolean(itemProgress?.favorite))
     setDifficult(Boolean(itemProgress?.markedDifficult))
     setReportReason("")
+    isSubmittingRef.current = false
+    if (hasMountedQuestionRef.current) questionHeadingRef.current?.focus()
+    else hasMountedQuestionRef.current = true
   }, [
     config.perQuestionSeconds,
     displayedQuestion,
@@ -180,7 +186,8 @@ export function QuizPage({
       forcedReason?: "timeout" | "unanswered",
       finishRoundOnSubmit = false
     ) => {
-      if (submitted || !question) return
+      if (submitted || isSubmittingRef.current || !question) return
+      isSubmittingRef.current = true
       const responseTimeMs = Date.now() - questionStartedAt
       const result = evaluateAnswer(
         question,
@@ -279,15 +286,18 @@ export function QuizPage({
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
       const target = event.target as HTMLElement | null
-      if (target?.matches("input,textarea,select,[contenteditable='true']"))
+      if (
+        target?.closest(
+          "button,input,textarea,select,a,[role='button'],[role='radio'],[role='checkbox'],[role='switch'],[role='combobox'],[role='option'],[contenteditable='true']"
+        )
+      )
         return
       if (event.key.toLowerCase() === "f") {
         setFavorite((current) => !current)
         return
       }
       if (event.key === "Enter") {
-        if (submitted) advance()
-        else void submit()
+        if (!submitted) void submit()
         return
       }
       if (
@@ -347,7 +357,7 @@ export function QuizPage({
             : "Elige una respuesta y confirma."
 
   return (
-    <article className="mx-auto flex min-h-screen w-full max-w-3xl flex-col px-4 py-5 pb-28 sm:px-6 sm:py-6">
+    <article className="mx-auto flex min-h-screen w-full max-w-3xl scroll-pb-28 flex-col px-4 py-5 pb-28 sm:scroll-pb-6 sm:px-6 sm:py-6">
       <header className="grid grid-cols-[auto_1fr_auto] items-center gap-3">
         <Button variant="ghost" onClick={onExit}>
           <X data-icon="inline-start" />
@@ -362,6 +372,9 @@ export function QuizPage({
           </div>
           <Progress aria-label="Progreso de la ronda" value={completion} />
         </div>
+        <p className="sr-only" aria-live="polite" aria-atomic="true">
+          Pregunta {index + 1} de {queue.length}: {question.question}
+        </p>
         <Button
           aria-label="Pantalla completa"
           size="icon"
@@ -395,6 +408,7 @@ export function QuizPage({
                   : "V1"}
           </Badge>
           <span>{question.source.reference}</span>
+          <span>· {typeLabel(question.type)}</span>
           {config.perQuestionSeconds !== null ? (
             <span
               className={`ml-auto flex items-center gap-1 font-semibold ${remaining && remaining <= 3 ? "text-destructive" : "text-primary"}`}
@@ -445,6 +459,8 @@ export function QuizPage({
         ) : null}
         <h1
           id="question-title"
+          ref={questionHeadingRef}
+          tabIndex={-1}
           className="text-2xl leading-tight font-semibold text-pretty sm:text-3xl"
         >
           {question.question}
@@ -459,6 +475,7 @@ export function QuizPage({
             value={value}
             onChange={setValue}
             disabled={submitted}
+            feedback={showFeedback ? feedback : null}
           />
         </div>
         <div className="mt-5 space-y-4">
@@ -649,6 +666,19 @@ function isEmptyAnswer(value: AnswerValue) {
       !Array.isArray(value) &&
       Object.keys(value).length === 0)
   )
+}
+
+function typeLabel(type: Question["type"]) {
+  const labels: Record<Question["type"], string> = {
+    single_choice: "Opción única",
+    multi_select: "Selección múltiple",
+    ordering: "Ordenamiento",
+    matching: "Relacionar",
+    true_false: "Verdadero o falso",
+    fill_blank: "Completar",
+    negative_choice: "Opción negativa",
+  }
+  return labels[type]
 }
 
 function shuffleQuestionOptions(question: Question, shuffle: boolean) {

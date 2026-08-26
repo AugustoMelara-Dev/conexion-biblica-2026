@@ -24,3 +24,19 @@ Commit de implementación: `dccc62a101d8047478201b7b9e7ad41d2b7a2bd3` (`feat: cr
 
 - Semántica: un único `main` de ronda, progreso nombrado, feedback con alert, grupos/controles de respuesta etiquetados y toggle expuesto como switch.
 - Responsive: la acción final tiene `pb` de reserva, safe-area y ancho completo en móvil; en escritorio vuelve al extremo final. No se ejecutó una inspección visual en navegador; la revisión fue estática sobre clases Tailwind y roles.
+
+## Fix round 1
+
+Estado: **DONE**
+
+- El atajo global Enter ahora excluye todo objetivo interactivo (`button`, campos, enlaces y roles ARIA de control) y usa una guarda síncrona para no registrar ni avanzar dos veces. Fuera de controles conserva la confirmación, incluida la respuesta recién seleccionada.
+- Opción única usa roving tabindex y flechas en las cuatro direcciones; el renderer muestra feedback textual de selección y marca la respuesta correcta además del color. Texto, múltiple, ordenamiento y emparejamiento cuentan con pruebas de valor, interacción y disabled; los controles de ordenar y relacionar alcanzan 44 px.
+- El cambio de pregunta anuncia el nuevo enunciado mediante `aria-live`, enfoca el `h1` y reserva `scroll-padding-bottom` para la barra final.
+- Resultados separa «Resultado» como métrica principal; `MetricStrip` muestra correctas, incorrectas, sin responder y secundarias. La siguiente tanda es outline con errores, el filtro perfecto queda deshabilitado y explica el motivo, y las secciones usan `h2` reales.
+
+Evidencia exacta:
+
+- `npm.cmd test -- src/components/quiz-page.test.tsx src/components/app-shell.test.tsx src/domain/session-resume.test.ts src/domain/domain.test.ts --reporter=dot` → **34/34**, 4 archivos de prueba.
+- `npm.cmd run typecheck` → exit 0.
+- ESLint focal sobre los archivos afectados → exit 0.
+- `git diff --check` → exit 0.
