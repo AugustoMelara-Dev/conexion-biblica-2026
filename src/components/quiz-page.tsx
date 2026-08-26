@@ -389,7 +389,12 @@ export function QuizPage({
 
   const advance = useCallback(
     (lastAnswer?: SessionAnswer) => {
-      if (isAdvancingRef.current || hasFinishedRef.current) return
+      if (
+        isAdvancingRef.current ||
+        hasFinishedRef.current ||
+        isExitingRef.current
+      )
+        return
       isAdvancingRef.current = true
       invalidateTransition()
       const nextAnswers = lastAnswer ? [...answers, lastAnswer] : answers
@@ -404,7 +409,14 @@ export function QuizPage({
       forcedReason?: "timeout" | "unanswered",
       finishRoundOnSubmit = false
     ) => {
-      if (submitted || isSubmittingRef.current || !question) return
+      if (
+        submitted ||
+        isSubmittingRef.current ||
+        isExitingRef.current ||
+        hasFinishedRef.current ||
+        !question
+      )
+        return
       isSubmittingRef.current = true
       const transitionGeneration = transitionGenerationRef.current
       const submittedQuestionKey = `${question.bankId ?? "local"}:${question.id}`
@@ -481,7 +493,13 @@ export function QuizPage({
   )
 
   const saveReport = useCallback(async () => {
-    if (!question || isReportingRef.current) return
+    if (
+      !question ||
+      isReportingRef.current ||
+      isExitingRef.current ||
+      hasFinishedRef.current
+    )
+      return
     const capturedQuestion = question
     const capturedQuestionKey = `${question.bankId ?? "local"}:${question.id}`
     const capturedValue = value
@@ -530,7 +548,8 @@ export function QuizPage({
 
   useEffect(() => {
     const seconds = config.perQuestionSeconds
-    if (submitted || seconds === null) return undefined
+    if (transitionPending !== null || submitted || seconds === null)
+      return undefined
     const interval = window.setInterval(() => {
       const next = Math.max(
         0,
@@ -543,10 +562,17 @@ export function QuizPage({
       }
     }, 100)
     return () => window.clearInterval(interval)
-  }, [config.perQuestionSeconds, questionStartedAt, submit, submitted])
+  }, [
+    config.perQuestionSeconds,
+    questionStartedAt,
+    submit,
+    submitted,
+    transitionPending,
+  ])
 
   useEffect(() => {
-    if (config.totalSeconds === null) return undefined
+    if (transitionPending !== null || config.totalSeconds === null)
+      return undefined
     const interval = window.setInterval(() => {
       const next = Math.max(
         0,
@@ -568,6 +594,7 @@ export function QuizPage({
     startedAt,
     submit,
     submitted,
+    transitionPending,
   ])
 
   useEffect(() => clearDeferredTransition, [clearDeferredTransition])
@@ -585,7 +612,12 @@ export function QuizPage({
 
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
-      if (event.defaultPrevented) return
+      if (
+        event.defaultPrevented ||
+        isExitingRef.current ||
+        hasFinishedRef.current
+      )
+        return
       const target = event.target
       if (
         target instanceof Element &&
@@ -801,8 +833,11 @@ export function QuizPage({
           <QuestionRenderer
             question={displayedQuestion}
             value={value}
-            onChange={setValue}
-            disabled={submitted}
+            onChange={(nextValue) => {
+              if (isExitingRef.current || hasFinishedRef.current) return
+              setValue(nextValue)
+            }}
+            disabled={submitted || transitionPending !== null}
             feedback={showFeedback ? feedback : null}
           />
         </div>
@@ -845,7 +880,7 @@ export function QuizPage({
                 onChange={(event) => setReportReason(event.target.value)}
                 placeholder="Motivo opcional"
                 aria-label="Motivo del reporte"
-                disabled={reportPending}
+                disabled={reportPending || transitionPending !== null}
               />
               {reportPending ? (
                 <p role="status" aria-live="polite" className="text-sm">
@@ -862,7 +897,7 @@ export function QuizPage({
                   size="sm"
                   variant="destructive"
                   className="min-h-11"
-                  disabled={reportPending}
+                  disabled={reportPending || transitionPending !== null}
                   onClick={() => void saveReport()}
                 >
                   Guardar reporte
@@ -871,7 +906,7 @@ export function QuizPage({
                   size="sm"
                   variant="ghost"
                   className="min-h-11"
-                  disabled={reportPending}
+                  disabled={reportPending || transitionPending !== null}
                   onClick={() => setReportOpen(false)}
                 >
                   Cancelar
@@ -887,7 +922,11 @@ export function QuizPage({
             size="sm"
             className="min-h-11"
             variant={favorite ? "secondary" : "outline"}
-            onClick={() => setFavorite((current) => !current)}
+            disabled={transitionPending !== null}
+            onClick={() => {
+              if (isExitingRef.current || hasFinishedRef.current) return
+              setFavorite((current) => !current)
+            }}
           >
             <Heart
               data-icon="inline-start"
@@ -900,7 +939,11 @@ export function QuizPage({
             size="sm"
             className="min-h-11"
             variant={difficult ? "secondary" : "outline"}
-            onClick={() => setDifficult((current) => !current)}
+            disabled={transitionPending !== null}
+            onClick={() => {
+              if (isExitingRef.current || hasFinishedRef.current) return
+              setDifficult((current) => !current)
+            }}
           >
             <Star
               data-icon="inline-start"
@@ -912,7 +955,11 @@ export function QuizPage({
             size="sm"
             variant="ghost"
             className="min-h-11"
-            onClick={() => setReportOpen((current) => !current)}
+            disabled={transitionPending !== null}
+            onClick={() => {
+              if (isExitingRef.current || hasFinishedRef.current) return
+              setReportOpen((current) => !current)
+            }}
           >
             <Flag data-icon="inline-start" />
             Reportar

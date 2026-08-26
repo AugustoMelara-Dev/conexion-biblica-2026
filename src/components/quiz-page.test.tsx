@@ -1052,6 +1052,86 @@ describe("recuperación de transiciones persistidas", () => {
     }
   })
 
+  it("bloquea Enter y timeout mientras exit drena y reanuda sin perder cambios", async () => {
+    await deleteAppDb()
+    const repositories = createRepositories(await openAppDb())
+    const firstWrite = deferred<void>()
+    let isFirstWrite = true
+    const onStateChange = vi.fn(async (round) => {
+      if (isFirstWrite) {
+        isFirstWrite = false
+        await firstWrite.promise
+      }
+      await repositories.activeRound.put(round)
+    })
+    const onExit = vi
+      .fn()
+      .mockRejectedValueOnce(new Error("clear denied"))
+      .mockImplementationOnce(async () => repositories.activeRound.clear())
+    let now = 1_000
+    const clock = vi.spyOn(Date, "now").mockImplementation(() => now)
+    try {
+      render(
+        <QuizPage
+          questions={[twoChoiceQuestion]}
+          config={{ ...studyConfig, perQuestionSeconds: 1 }}
+          onStateChange={onStateChange}
+          onFinish={vi.fn().mockResolvedValue(undefined)}
+          onExit={onExit}
+        />
+      )
+      await waitFor(() => expect(onStateChange).toHaveBeenCalledTimes(1))
+      const radio = screen.getByRole("radio", { name: /Primera/ })
+      fireEvent.click(radio)
+
+      fireEvent.click(screen.getByRole("button", { name: "Salir" }))
+      const confirmWasDisabled = screen
+        .getByRole("button", {
+          name: "Confirmar respuesta",
+        })
+        .hasAttribute("disabled")
+      const answerWasDisabled = radio.hasAttribute("disabled")
+      fireEvent.keyDown(window, { key: "Enter" })
+      now = 3_000
+      await act(
+        async () => new Promise((resolve) => window.setTimeout(resolve, 150))
+      )
+      const answerCallsDuringDrain = appState.recordAnswer.mock.calls.length
+
+      now = 1_000
+      await act(async () => firstWrite.resolve())
+      expect(
+        await screen.findByText(/No se pudo salir de la ronda/)
+      ).toBeVisible()
+
+      fireEvent.keyDown(window, { key: "Enter" })
+      await waitFor(() =>
+        expect(appState.recordAnswer).toHaveBeenCalledTimes(1)
+      )
+      await waitFor(async () =>
+        expect(await repositories.activeRound.get()).toMatchObject({
+          answers: [{ questionKey: "local:two-choice-question" }],
+        })
+      )
+
+      fireEvent.click(screen.getByRole("button", { name: "Salir" }))
+      await waitFor(() => expect(onExit).toHaveBeenCalledTimes(2))
+      const writesAfterClear = onStateChange.mock.calls.length
+      await act(
+        async () => new Promise((resolve) => window.setTimeout(resolve, 150))
+      )
+
+      expect(confirmWasDisabled).toBe(true)
+      expect(answerWasDisabled).toBe(true)
+      expect(answerCallsDuringDrain).toBe(0)
+      expect(await repositories.activeRound.get()).toBeUndefined()
+      expect(onStateChange).toHaveBeenCalledTimes(writesAfterClear)
+    } finally {
+      clock.mockRestore()
+      await deleteAppDb()
+    }
+  })
+
   it("drena el autosave iniciado antes de terminar y no rehidrata después del clear", async () => {
     await deleteAppDb()
     const repositories = createRepositories(await openAppDb())
