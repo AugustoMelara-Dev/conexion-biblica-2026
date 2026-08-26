@@ -49,3 +49,22 @@ La primera inspección de escritorio detectó que la lista de seis pestañas man
 - `npm.cmd exec eslint -- src/components/statistics-page.tsx src/components/family-mastery-panel.tsx src/components/history-page.tsx src/components/review-page.tsx src/components/insight-pages.test.tsx` — aprobado.
 - `git diff --check` — aprobado.
 - QA local: resumen de Progreso cargó en escritorio y a 390 px, con las seis pestañas presentes, navegación móvil visible y sin errores de navegador. La interacción de pestañas queda además cubierta por prueba conductual.
+
+---
+
+## Fix round 2 — Estado: **DONE**
+
+### Correcciones y cobertura
+
+- La prueba de familias ahora dispone de una familia Pendiente y otra Dominada. Comprueba inclusión y exclusión al alternar cada filtro, de modo que una implementación que ignore `visible` falla.
+- La cobertura de Revisión verifica dificultad manual con nivel bajo, un estado combinado con sólo dos badges visibles y su taxonomía completa en el detalle; también fija el orden de empates con la misma prioridad y fecha.
+- Las pruebas de portapapeles cubren tanto ausencia como rechazo de la API y garantizan que ninguno presenta `Copiado` cuando falla.
+- La confirmación `Copiado` conserva un único timer por operación: cancela el anterior antes de agendar el nuevo y se limpia al desmontar. La prueba con timers falsos confirma que una segunda copia no pierde su confirmación al expirar la primera.
+
+### Evidencia
+
+- RED: `npm.cmd test -- src/components/insight-pages.test.tsx --reporter=dot` falló porque el timeout de la primera copia borraba la confirmación de la segunda.
+- GREEN: `npm.cmd test -- src/components/insight-pages.test.tsx src/lib/statistics.test.ts src/domain/family-mastery.test.ts --reporter=dot` — **3 archivos, 17 pruebas aprobadas**.
+- `./node_modules/.bin/tsc.cmd -p tsconfig.app.json --noEmit` — aprobado.
+- `npm.cmd run build` — aprobado; únicamente conserva la advertencia no bloqueante de Vite por bundle mayor de 500 kB.
+- ESLint focal y `git diff --check` — aprobados.

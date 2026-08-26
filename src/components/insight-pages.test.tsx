@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react"
+import { act, fireEvent, render, screen, within } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { describe, expect, it, vi } from "vitest"
 import { useApp } from "@/app/app-state"
@@ -214,15 +214,54 @@ describe("vistas de progreso y revisión", () => {
 
   it("mantiene filtros de familias anunciados y operables", async () => {
     const user = userEvent.setup()
-    render(<FamilyMasteryPanel questions={[question]} progress={new Map()} />)
+    const pending: Question = {
+      ...question,
+      id: "pending-family",
+      factKey: "pending-family",
+      question: "Familia pendiente",
+    }
+    const mastered: Question = {
+      ...question,
+      id: "mastered-family",
+      factKey: "mastered-family",
+      question: "Familia dominada",
+    }
+    const progress = new Map([
+      [
+        "curated-v4:mastered-family",
+        {
+          ...blankProgress,
+          questionKey: "curated-v4:mastered-family",
+          timesSeen: 5,
+          timesCorrect: 5,
+          masteryScore: 5,
+        },
+      ],
+    ])
+    render(
+      <FamilyMasteryPanel
+        questions={[pending, mastered]}
+        progress={progress}
+      />
+    )
 
     const all = screen.getByRole("button", { name: /Todas/ })
-    const pending = screen.getByRole("button", { name: /Pendiente/ })
+    const pendingButton = screen.getByRole("button", { name: /Pendiente/ })
+    const masteredButton = screen.getByRole("button", { name: /Dominado/ })
     expect(all).toHaveAttribute("aria-pressed", "true")
-    expect(pending).toHaveAttribute("aria-pressed", "false")
-    await user.click(pending)
-    expect(pending).toHaveAttribute("aria-pressed", "true")
+    expect(pendingButton).toHaveAttribute("aria-pressed", "false")
+    await user.click(pendingButton)
+    expect(pendingButton).toHaveAttribute("aria-pressed", "true")
     expect(all).toHaveAttribute("aria-pressed", "false")
+    expect(screen.getByText("Familia pendiente", { selector: "p" })).toBeVisible()
+    expect(
+      screen.queryByText("Familia dominada", { selector: "p" })
+    ).not.toBeInTheDocument()
+    await user.click(masteredButton)
+    expect(screen.getByText("Familia dominada", { selector: "p" })).toBeVisible()
+    expect(
+      screen.queryByText("Familia pendiente", { selector: "p" })
+    ).not.toBeInTheDocument()
   })
 
   it("filtra historial y expande detalles con preguntas no respondidas", async () => {
@@ -357,6 +396,9 @@ describe("vistas de progreso y revisión", () => {
       within(items[0]).getByRole("button", { name: "Copiar JSON" })
     )
     expect(screen.getByRole("status")).toHaveTextContent("No se pudo copiar")
+    expect(
+      screen.queryByRole("button", { name: "Copiado" })
+    ).not.toBeInTheDocument()
     if (clipboard) Object.defineProperty(navigator, "clipboard", clipboard)
     else Reflect.deleteProperty(navigator, "clipboard")
     await user.selectOptions(screen.getByLabelText("Motivo"), "Incorrecta")
@@ -375,6 +417,133 @@ describe("vistas de progreso y revisión", () => {
     ).not.toBeInTheDocument()
     await user.click(screen.getByRole("button", { name: "Empezar una ronda" }))
     expect(context.setNav).toHaveBeenCalledWith("practice")
+  })
+
+  it("expone dificultad manual, limita badges y conserva empates de revisión", async () => {
+    const user = userEvent.setup()
+    const manual: Question = {
+      ...question,
+      id: "manual",
+      difficulty: 2,
+      question: "Dificultad manual",
+    }
+    const combined: Question = {
+      ...question,
+      id: "combined",
+      difficulty: 2,
+      question: "Estado combinado",
+    }
+    const firstTie: Question = {
+      ...question,
+      id: "first-tie",
+      difficulty: 2,
+      question: "Empate primero",
+    }
+    const secondTie: Question = {
+      ...question,
+      id: "second-tie",
+      difficulty: 2,
+      question: "Empate segundo",
+    }
+    const progress = new Map([
+      [
+        "curated-v4:manual",
+        {
+          ...blankProgress,
+          questionKey: "curated-v4:manual",
+          markedDifficult: true,
+        },
+      ],
+      [
+        "curated-v4:combined",
+        {
+          ...blankProgress,
+          questionKey: "curated-v4:combined",
+          markedDifficult: true,
+          timesIncorrect: 1,
+          favorite: true,
+        },
+      ],
+    ])
+    renderReview({
+      questions: [manual, combined, firstTie, secondTie],
+      reports: [
+        report(manual, "Ambigua", 4),
+        report(combined, "Ambigua", 3),
+        report(firstTie, "Ambigua", 1),
+        report(secondTie, "Ambigua", 1),
+      ],
+      progress,
+    })
+
+    const rows = within(
+      screen.getByRole("list", { name: "Preguntas pendientes de revisión" })
+    ).getAllByRole("listitem")
+    expect(rows[0]).toHaveTextContent("Estado combinado")
+    expect(rows[1]).toHaveTextContent("Dificultad manual")
+    expect(rows[1]).toHaveTextContent("Difícil")
+    expect(rows[1]).not.toHaveTextContent("Fallada")
+    expect(rows[0].querySelectorAll('[data-slot="badge"]')).toHaveLength(2)
+    await user.click(within(rows[0]).getByText("Estado combinado"))
+    expect(rows[0]).toHaveTextContent(
+      "Estado: Difícil · Fallada · Favorita · Reportada"
+    )
+    expect(rows[2]).toHaveTextContent("Empate primero")
+    expect(rows[3]).toHaveTextContent("Empate segundo")
+  })
+
+  it("muestra error de copia rechazada sin confirmar Copiado", async () => {
+    const user = userEvent.setup()
+    const clipboard = Object.getOwnPropertyDescriptor(navigator, "clipboard")
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: { writeText: vi.fn().mockRejectedValue(new Error("denied")) },
+    })
+    try {
+      renderReview({ reports: [report(question, "Ambigua", 1)] })
+      await user.click(screen.getByText(question.question))
+      await user.click(screen.getByRole("button", { name: "Copiar JSON" }))
+      expect(screen.getByRole("status")).toHaveTextContent("No se pudo copiar")
+      expect(
+        screen.queryByRole("button", { name: "Copiado" })
+      ).not.toBeInTheDocument()
+    } finally {
+      if (clipboard) Object.defineProperty(navigator, "clipboard", clipboard)
+      else Reflect.deleteProperty(navigator, "clipboard")
+    }
+  })
+
+  it("no limpia una confirmación nueva cuando se copia dos veces seguidas", async () => {
+    vi.useFakeTimers()
+    const clipboard = Object.getOwnPropertyDescriptor(navigator, "clipboard")
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: { writeText: vi.fn().mockResolvedValue(undefined) },
+    })
+    try {
+      renderReview({ reports: [report(question, "Ambigua", 1)] })
+      act(() => fireEvent.click(screen.getByText(question.question)))
+      const copy = screen.getByRole("button", { name: "Copiar JSON" })
+      await act(async () => {
+        fireEvent.click(copy)
+        await Promise.resolve()
+      })
+      act(() => vi.advanceTimersByTime(1_000))
+      await act(async () => {
+        fireEvent.click(screen.getByRole("button", { name: "Copiado" }))
+        await Promise.resolve()
+      })
+      act(() => vi.advanceTimersByTime(800))
+      expect(screen.getByRole("button", { name: "Copiado" })).toBeVisible()
+      act(() => vi.advanceTimersByTime(1_000))
+      expect(
+        screen.getByRole("button", { name: "Copiar JSON" })
+      ).toBeVisible()
+    } finally {
+      if (clipboard) Object.defineProperty(navigator, "clipboard", clipboard)
+      else Reflect.deleteProperty(navigator, "clipboard")
+      vi.useRealTimers()
+    }
   })
 })
 

@@ -1,5 +1,5 @@
 import { ChevronDown, ClipboardCheck, Copy, SearchCheck } from "lucide-react"
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { useApp } from "@/app/app-state"
 import { EmptyState } from "@/components/layout/empty-state"
 import { PageHeader } from "@/components/layout/page-header"
@@ -16,6 +16,15 @@ export function ReviewPage() {
   const [family, setFamily] = useState("all")
   const [copied, setCopied] = useState<string | null>(null)
   const [copyError, setCopyError] = useState<string | null>(null)
+  const copiedTimer = useRef<number | null>(null)
+  useEffect(
+    () => () => {
+      if (copiedTimer.current !== null) {
+        window.clearTimeout(copiedTimer.current)
+      }
+    },
+    []
+  )
   const reasons = useMemo(
     () => [...new Set(reports.map((report) => report.reason))],
     [reports]
@@ -53,8 +62,14 @@ export function ReviewPage() {
     if (
       await copyToClipboard(JSON.stringify(question, null, 2), setCopyError)
     ) {
+      if (copiedTimer.current !== null) {
+        window.clearTimeout(copiedTimer.current)
+      }
       setCopied(id)
-      window.setTimeout(() => setCopied(null), 1800)
+      copiedTimer.current = window.setTimeout(() => {
+        setCopied(null)
+        copiedTimer.current = null
+      }, 1800)
     }
   }
   const copyReference = async (reference: string) => {
