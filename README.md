@@ -18,7 +18,19 @@ npm run preview
 
 La aplicación guarda bancos, progreso, sesiones y reportes en IndexedDB. No requiere login, no usa APIs externas, telemetría, analytics ni servicios cloud.
 
-## V1, V2, V3, V4 y Mixto
+## Banco activo V6
+
+La experiencia recomendada usa el banco **V6 — Aprendizaje competitivo**:
+
+- 5,000 preguntas GOLD verificadas: 1,500 de completar, 1,250 de Verdadero/Falso y 2,250 de selección única.
+- 1,851 hechos atómicos con variantes por `fact_id`, sin repetir el mismo hecho en una ronda normal.
+- Rondas competitivas de 100 con mezcla 30/25/45 y al menos 18 trampas contextuales.
+- Recuperación espaciada, métricas de primer intento, seis horas, día siguiente, contextual y ciega.
+- Reservas ciegas A, B y de emergencia que no aparecen durante el entrenamiento normal.
+
+Los 14,000 candidatos V5 y los bancos V1–V4 se conservan para trazabilidad y compatibilidad; no se cuentan como preguntas GOLD activas.
+
+## Bancos históricos y Mixto
 
 - **V1 — Clásica** carga los bancos declarados en `public/banks/manifest.json` y mantiene sus IDs y progreso existentes.
 - **V2 — Banco Maestro** carga `Banco_Maestro_CB2026.json` como asset local canónico de solo lectura. Su adaptador valida 3,558 IDs únicos: 2,211 de Daniel, 1,347 de Profetas y Reyes, 888 históricas y 2,670 generadas.
@@ -76,7 +88,7 @@ Los ciclos y la ronda activa se guardan en IndexedDB. Recargar restaura los mism
 
 IndexedDB v2 añade `coverageCycles` y `activeRound` mediante upgrade transaccional. El progreso V1 existente no se elimina. Los respaldos actuales usan `backupVersion: "2.0"`; los respaldos 1.0 siguen siendo aceptados y se migran en memoria antes de restaurar.
 
-V2 se entrega como asset de Vite y queda en caché después de cargarse. El service worker `conexion-biblica-shell-v4` conserva el shell y los assets locales para uso offline.
+Los bancos se entregan como assets locales fragmentados por capítulo. El service worker `conexion-biblica-shell-v8` elimina automáticamente cachés anteriores durante la activación, por lo que una recarga normal basta para recibir una versión nueva sin borrar los datos de navegación ni el progreso.
 
 ## Verificación
 
@@ -90,7 +102,7 @@ npm run test:e2e
 
 ## Despliegue en Vercel
 
-El sitio publicado es https://conexion-biblica-2026.vercel.app (proyecto `conexion-biblica-2026`). No está conectado a GitHub, así que se despliega manualmente con la CLI:
+El sitio publicado es https://conexion-biblica-2026.vercel.app (proyecto `conexion-biblica-2026`). El repositorio también genera previews de Vercel para cada pull request. Si la promoción automática de `main` no está disponible, se despliega manualmente con la CLI:
 
 ```bash
 npx vercel login                                       # solo la primera vez
@@ -100,4 +112,4 @@ npm run deploy                                         # construye y publica en 
 
 Si `vercel link` no encuentra el proyecto por nombre, omítelo y ejecuta `npx vercel --prod`, eligiendo el proyecto existente `conexion-biblica-2026` cuando lo pregunte.
 
-Después de desplegar, recarga con Ctrl+Shift+R. Si el navegador sigue mostrando bancos viejos, limpia los datos del sitio (DevTools → Application → Clear site data) para forzar el service worker `conexion-biblica-shell-v3`.
+Después de desplegar, una recarga normal activa el service worker nuevo y conserva el historial local.
