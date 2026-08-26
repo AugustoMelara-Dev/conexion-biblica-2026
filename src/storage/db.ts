@@ -6,13 +6,17 @@ import type {
   QuestionExposure,
   QuestionSessionQuery,
   ExposureAttempt,
+  BlindUsage,
+  LegacyHistoryEvent,
+  MigrationBackup,
   QuestionProgress,
   QuestionReport,
   Session,
 } from "@/domain/types"
+import type { FactMastery } from "@/domain/fact-mastery"
 
 export const DB_NAME = "conexion-biblica-2026"
-export const DB_VERSION = 3
+export const DB_VERSION = 4
 
 type StoredQuestion = Question & { questionKey: string; blindPoolKey: 0 | 1 }
 type StoredSetting = { key: string; value: unknown }
@@ -86,6 +90,23 @@ export function openAppDb(): Promise<IDBDatabase> {
         exposures.createIndex("variantId", "variantId", { unique: false })
         exposures.createIndex("lastSeenAt", "lastSeenAt", { unique: false })
       }
+      if (!db.objectStoreNames.contains("factMastery")) {
+        const mastery = db.createObjectStore("factMastery", { keyPath: "factId" })
+        mastery.createIndex("state", "state", { unique: false })
+        mastery.createIndex("nextDueAt", "nextDueAt", { unique: false })
+        mastery.createIndex("chapter", "chapter", { unique: false })
+      }
+      if (!db.objectStoreNames.contains("legacyEvents"))
+        db.createObjectStore("legacyEvents", { keyPath: "id" })
+      if (!db.objectStoreNames.contains("migrationBackups"))
+        db.createObjectStore("migrationBackups", { keyPath: "id" })
+      if (!db.objectStoreNames.contains("missionPlan"))
+        db.createObjectStore("missionPlan", { keyPath: "id" })
+      if (!db.objectStoreNames.contains("blindUsage")) {
+        const blind = db.createObjectStore("blindUsage", { keyPath: ["factId", "pool"] })
+        blind.createIndex("pool", "pool", { unique: false })
+        blind.createIndex("consumedAt", "consumedAt", { unique: false })
+      }
       if (event.oldVersion < 2 && db.objectStoreNames.contains("progress")) {
         const store = request.transaction!.objectStore("progress")
         const cursorRequest = store.openCursor()
@@ -157,6 +178,11 @@ export function createRepositories(db: IDBDatabase) {
         "coverageCycles",
         "activeRound",
         "exposures",
+        "factMastery",
+        "legacyEvents",
+        "migrationBackups",
+        "missionPlan",
+        "blindUsage",
       ]
       const tx = db.transaction(stores, "readwrite")
       stores.forEach((store) => tx.objectStore(store).clear())
@@ -314,6 +340,20 @@ export function createRepositories(db: IDBDatabase) {
           const exposures = (current?.exposures ?? 0) + 1
           const totalResponseTimeMs =
             (current?.totalResponseTimeMs ?? 0) + attempt.responseTimeMs
+          const evidence = current?.evidence ?? {
+            practice: { attempts: 0, correct: 0 },
+            cold: { attempts: 0, correct: 0 },
+            deferred: { attempts: 0, correct: 0 },
+            blind: { attempts: 0, correct: 0 },
+          }
+          const exposureKind = attempt.exposureKind ?? "practice"
+          const nextEvidence = {
+            ...evidence,
+            [exposureKind]: {
+              attempts: evidence[exposureKind].attempts + 1,
+              correct: evidence[exposureKind].correct + (attempt.isCorrect ? 1 : 0),
+            },
+          }
           next = {
             exposureKey,
             factId: attempt.factId,
@@ -328,6 +368,7 @@ export function createRepositories(db: IDBDatabase) {
             lastSeenAt: attempt.timestamp,
             lastSelectedAnswer: attempt.selectedAnswer,
             lastErrorType: attempt.errorType,
+            evidence: nextEvidence,
           }
           store.put(next)
         }
@@ -335,6 +376,65 @@ export function createRepositories(db: IDBDatabase) {
         await transactionDone(tx)
         if (!next) throw new Error("No se pudo guardar la exposición")
         return next
+      },
+    },
+    factMastery: {
+      async get(factId: string): Promise<FactMastery | undefined> {
+        const tx = db.transaction("factMastery", "readonly")
+        const row = await requestResult(tx.objectStore("factMastery").get(factId))
+        await transactionDone(tx)
+        return row as FactMastery | undefined
+      },
+      async put(value: FactMastery) {
+        const tx = db.transaction("factMastery", "readwrite")
+        tx.objectStore("factMastery").put(value)
+        await transactionDone(tx)
+      },
+      async list(): Promise<FactMastery[]> {
+        const tx = db.transaction("factMastery", "readonly")
+        const rows = await requestResult(tx.objectStore("factMastery").getAll())
+        await transactionDone(tx)
+        return rows as FactMastery[]
+      },
+    },
+    legacyEvents: {
+      async putMany(values: LegacyHistoryEvent[]) {
+        if (!values.length) return
+        const tx = db.transaction("legacyEvents", "readwrite")
+        for (const value of values) tx.objectStore("legacyEvents").put(value)
+        await transactionDone(tx)
+      },
+      async list(): Promise<LegacyHistoryEvent[]> {
+        const tx = db.transaction("legacyEvents", "readonly")
+        const rows = await requestResult(tx.objectStore("legacyEvents").getAll())
+        await transactionDone(tx)
+        return rows as LegacyHistoryEvent[]
+      },
+    },
+    migrationBackups: {
+      async put(value: MigrationBackup) {
+        const tx = db.transaction("migrationBackups", "readwrite")
+        tx.objectStore("migrationBackups").put(value)
+        await transactionDone(tx)
+      },
+      async list(): Promise<MigrationBackup[]> {
+        const tx = db.transaction("migrationBackups", "readonly")
+        const rows = await requestResult(tx.objectStore("migrationBackups").getAll())
+        await transactionDone(tx)
+        return rows as MigrationBackup[]
+      },
+    },
+    blindUsage: {
+      async put(value: BlindUsage) {
+        const tx = db.transaction("blindUsage", "readwrite")
+        tx.objectStore("blindUsage").put(value)
+        await transactionDone(tx)
+      },
+      async list(): Promise<BlindUsage[]> {
+        const tx = db.transaction("blindUsage", "readonly")
+        const rows = await requestResult(tx.objectStore("blindUsage").getAll())
+        await transactionDone(tx)
+        return rows as BlindUsage[]
       },
     },
     progress: {

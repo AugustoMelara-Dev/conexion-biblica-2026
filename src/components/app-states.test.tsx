@@ -315,7 +315,7 @@ describe("estados transversales de App", () => {
       screen.getByText("Sin conexión. V1 continúa disponible.")
     ).toBeVisible()
     expect(
-      screen.getByRole("heading", { name: "Entrena con intención." })
+      screen.getByRole("heading", { name: "PLAN FINAL — GANAR EL 29" })
     ).toBeVisible()
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1)
   })

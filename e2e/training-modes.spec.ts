@@ -11,7 +11,7 @@ const bankNames: Record<BankSelection, string> = {
 async function waitForApp(page: Page) {
   await page.goto("/")
   await expect(
-    page.getByRole("heading", { level: 1, name: "Entrena con intención." })
+    page.getByRole("heading", { level: 1, name: "PLAN FINAL — GANAR EL 29" })
   ).toBeVisible({ timeout: 30_000 })
 }
 
@@ -59,6 +59,11 @@ async function navigateTo(page: Page, destination: Destination) {
 }
 
 async function selectBank(page: Page, selection: BankSelection) {
+  const historicalProfiles = page.getByText(
+    "Perfiles históricos y configuración manual",
+    { exact: true }
+  )
+  if (await historicalProfiles.isVisible()) await historicalProfiles.click()
   const detail = page.getByRole("region", {
     name: "Detalle del banco seleccionado",
   })
@@ -177,8 +182,8 @@ test("V4 — Aprender muestra feedback, fuente y pista sin presión", async ({
   await expect(
     page.getByText(/Respuesta (correcta|incorrecta)/).first()
   ).toBeVisible()
-  await expect(page.getByText("Fuente:")).toBeVisible()
-  await expect(page.getByText("Pista para recordar")).toBeVisible()
+  await expect(page.getByText("Respuesta correcta:")).toBeVisible()
+  await expect(page.getByText(/(Próxima recuperación|Nueva variante):/)).toBeVisible()
 })
 
 test("V4 — Repaso inteligente activa la selección adaptativa", async ({
@@ -254,20 +259,21 @@ test("Estadísticas V3 muestra las 252 familias y sus variantes pendientes", asy
   ).toBeVisible()
 })
 
-test("V4 es recomendado en una instalación nueva", async ({ page }) => {
+test("V5 Consolidación es recomendado en una instalación nueva", async ({ page }) => {
   await waitForApp(page)
+  await page.getByText("Perfiles históricos y configuración manual", { exact: true }).click()
   if ((page.viewportSize()?.width ?? 0) >= 1024) {
     await expect(
       page
         .getByRole("radiogroup", { name: "Versión del banco" })
         .getByRole("radio", {
-          name: bankNames["curated-v4"],
+          name: "V5 — Consolidación Final",
         })
     ).toBeChecked()
   } else {
     await expect(
       page.getByRole("combobox", { name: "Seleccionar versión del banco" })
-    ).toHaveValue("curated-v4")
+    ).toHaveValue("consolidation-v5")
   }
   await navigateTo(page, "banks")
   await expect(
@@ -324,7 +330,7 @@ test("V5 carga PR43–44 por fragmentos y conserva la variante dinámica al reca
 }) => {
   await waitForApp(page)
   await navigateTo(page, "practice")
-  const massiveHub = page.getByRole("region", { name: "Entrenamiento masivo" })
+  const massiveHub = page.getByRole("region", { name: "Modos avanzados" })
   await expect(massiveHub).toBeVisible()
 
   const mode = massiveHub.getByRole("combobox", { name: "Modo avanzado" })
@@ -334,7 +340,7 @@ test("V5 carga PR43–44 por fragmentos y conserva la variante dinámica al reca
   await expect(page.getByText("Pregunta 1 de 100", { exact: true })).toBeVisible({
     timeout: 30_000,
   })
-  await expect(page.getByText("V5", { exact: true })).toBeVisible()
+  await expect(page.getByText("V5 GOLD", { exact: true })).toBeVisible()
   const prompt = await page.getByRole("heading", { level: 1 }).textContent()
   const options = await page.getByRole("radio").allTextContents()
 

@@ -8,6 +8,7 @@ type BankSelectorProps = {
   masterCount: number
   prepCount: number
   curatedCount: number
+  consolidationCount?: number
 }
 
 type BankOption = {
@@ -27,15 +28,23 @@ export function BankSelector({
   masterCount,
   prepCount,
   curatedCount,
+  consolidationCount = 0,
 }: BankSelectorProps) {
   const options: BankOption[] = [
+    {
+      id: "consolidation-v5",
+      label: "V5 — Consolidación Final",
+      description: "Banco GOLD y dominio por hechos. Perfil principal.",
+      count: consolidationCount,
+      icon: Sparkles,
+      recommended: true,
+    },
     {
       id: "curated-v4",
       label: "V4 — Banco Curado",
       description: "Recomendado para cobertura amplia.",
       count: curatedCount,
       icon: Sparkles,
-      recommended: true,
     },
     {
       id: "prep-v3",

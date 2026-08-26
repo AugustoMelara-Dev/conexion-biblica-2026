@@ -1,15 +1,15 @@
 import { ArrowRight, BarChart3, Check, Clock3, Flame, Gauge, RotateCcw, Target } from "lucide-react"
 import { useApp } from "@/app/app-state"
-import { QuickStartButton } from "@/components/app-shell"
 import { BankSelector } from "@/components/bank-selector"
+import { FinalMissionDashboard } from "@/components/final-mission-dashboard"
 import { MetricStrip } from "@/components/layout/metric-strip"
-import { PageHeader } from "@/components/layout/page-header"
 import { SectionHeader } from "@/components/layout/section-header"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import type { BankSelection } from "@/domain/types"
+import type { BankSelection, SessionConfig } from "@/domain/types"
+import type { FinalMission } from "@/domain/final-mission-plan"
 import { formatElapsedMs } from "@/lib/format"
 
 const activeBankLabels: Record<BankSelection, string> = {
@@ -19,10 +19,33 @@ const activeBankLabels: Record<BankSelection, string> = {
   mixed: "Mixto curado",
   "master-v2": "V2 — Fuente técnica",
   "massive-v5": "V5 — Entrenamiento masivo",
+  "consolidation-v5": "V5 — Consolidación Final",
 }
 
-export function DashboardPage() {
-  const { statistics, banks, questions, sessions, progress, setNav, bankSelection, setBankSelection, bankCounts } = useApp()
+function missionConfig(mission: FinalMission): SessionConfig {
+  return {
+    mode: mission.mode,
+    count: mission.count,
+    sourceWorks: ["Daniel", "Profetas y Reyes"],
+    chapters: mission.chapters,
+    difficulties: [1, 2, 3, 4, 5],
+    difficultyBands: ["BASIC", "MEDIUM", "HARD", "EXPERT"],
+    types: ["single_choice", "fill_blank", "true_false"],
+    statuses: ["all"],
+    shuffleQuestions: true,
+    shuffleOptions: true,
+    perQuestionSeconds: mission.mode === "simulation" ? 25 : null,
+    totalSeconds: mission.mode === "simulation" ? mission.count * 25 : null,
+    bankSelection: "consolidation-v5",
+    strategy: "adaptive",
+    trainingPresetId: mission.id,
+    includeBlind: mission.blindPool !== null,
+    massive: true,
+  }
+}
+
+export function DashboardPage({ onStartMission }: { onStartMission?: (config: SessionConfig) => void }) {
+  const { statistics, banks, questions, sessions, progress, exposures = [], factMastery = [], consolidationManifest, setNav, bankSelection, setBankSelection, bankCounts } = useApp()
   const { general } = statistics
   const sources = statistics.sources.filter((item) => item.key === "Daniel" || item.key === "Profetas y Reyes")
   const currentStreak = progress.size ? Math.max(...[...progress.values()].map((item) => item.currentCorrectStreak), 0) : 0
@@ -31,17 +54,41 @@ export function DashboardPage() {
     : general.difficult > 0
       ? `${general.difficult} preguntas difíciles merecen un repaso.`
       : "Mantén el ritmo con una ronda breve."
+  const evidenceAccuracy = (kind: "cold" | "deferred" | "blind") => {
+    const totals = exposures.reduce((sum, exposure) => ({
+      attempts: sum.attempts + (exposure.evidence?.[kind].attempts ?? 0),
+      correct: sum.correct + (exposure.evidence?.[kind].correct ?? 0),
+    }), { attempts: 0, correct: 0 })
+    return totals.attempts ? Math.round((totals.correct / totals.attempts) * 100) : 0
+  }
+  const masteredFacts = factMastery.filter((fact) => fact.state === "mastered").length
 
   return (
     <div className="flex min-w-0 flex-col gap-10">
-      <PageHeader
-        eyebrow="Preparación para Conexión Bíblica 2026"
-        title="Entrena con intención."
-        description="Precisión, velocidad y repetición en un solo lugar. Tu avance se guarda en este dispositivo."
-        action={<QuickStartButton />}
+      <FinalMissionDashboard
+        completedMissionIds={sessions.map((session) => session.config.trainingPresetId).filter((id): id is string => Boolean(id))}
+        onContinue={(mission) => onStartMission ? onStartMission(missionConfig(mission)) : setNav("practice")}
+        onManual={() => setNav("practice")}
       />
 
-      <section aria-label="Selección de versión" className="flex flex-col gap-4">
+      <MetricStrip
+        items={[
+          { label: "Precisión fría", value: `${evidenceAccuracy("cold")}%`, detail: "Primer intento sin feedback", icon: Target },
+          { label: "Precisión diferida", value: `${evidenceAccuracy("deferred")}%`, detail: "Después de un intervalo", icon: Clock3 },
+          { label: "Precisión ciega", value: `${evidenceAccuracy("blind")}%`, detail: "Reserva A/B", icon: Gauge },
+          { label: "Dominio por hechos", value: masteredFacts, detail: `${factMastery.length} hechos con evidencia`, icon: Check },
+        ]}
+      />
+
+      <section aria-labelledby="history-config-title">
+        <p className="text-sm font-medium text-primary">Historial y configuración</p>
+        <h2 id="history-config-title" className="mt-2 text-2xl font-semibold tracking-tight">Tu preparación, sin perder lo anterior.</h2>
+        <p className="mt-2 max-w-3xl text-muted-foreground">V1–V4 permanecen disponibles como perfiles históricos; V5 GOLD dirige el plan principal.</p>
+      </section>
+
+      <details className="rounded-2xl border border-border/70 p-5">
+        <summary className="cursor-pointer text-sm font-semibold">Perfiles históricos y configuración manual</summary>
+      <section aria-label="Selección de versión" className="mt-5 flex flex-col gap-4">
         <SectionHeader
           title="Elige tu versión"
           description="Cada pregunta conserva el progreso de su banco de origen."
@@ -54,8 +101,10 @@ export function DashboardPage() {
           masterCount={bankCounts.master}
           prepCount={bankCounts.prep}
           curatedCount={bankCounts.curated}
+          consolidationCount={consolidationManifest?.gold_questions ?? bankCounts.consolidation ?? 0}
         />
       </section>
+      </details>
 
       <MetricStrip
         items={[

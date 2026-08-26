@@ -25,6 +25,7 @@ function resolveBankProfileId(value: unknown): BankProfileId {
     case "prep-v3":
     case "curated-v4":
     case "massive-v5":
+    case "consolidation-v5":
       return value
     default:
       return "legacy-v1"
@@ -38,8 +39,8 @@ export function getRawBankProfileId(raw: Record<string, unknown>): BankProfileId
   return resolveBankProfileId(metadata.profileId)
 }
 
-export function isIntegratedBankProfile(value: unknown): value is "master-v2" | "prep-v3" | "curated-v4" | "massive-v5" {
-  return value === "master-v2" || value === "prep-v3" || value === "curated-v4" || value === "massive-v5"
+export function isIntegratedBankProfile(value: unknown): value is "master-v2" | "prep-v3" | "curated-v4" | "massive-v5" | "consolidation-v5" {
+  return value === "master-v2" || value === "prep-v3" || value === "curated-v4" || value === "massive-v5" || value === "consolidation-v5"
 }
 
 export function isGenericBankImportAllowed(
@@ -82,6 +83,8 @@ export function createBankFromRaw(raw: Record<string, unknown>, sourceFileName: 
         ? `V4 — Banco Curado ${sourceWork}`
         : bankProfileId === "massive-v5"
           ? `V5 — Banco Masivo ${sourceWork}`
+        : bankProfileId === "consolidation-v5"
+          ? `V5 — Consolidación Final ${sourceWork}`
         : sourceWork === "Daniel"
           ? `Daniel ${metadata.chapter ?? firstSource.chapter}`
           : `Profetas y Reyes ${metadata.chapter ?? firstSource.chapter}`,

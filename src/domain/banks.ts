@@ -47,6 +47,14 @@ export const BANK_DEFINITIONS: Record<BankProfileId, BankDefinition> = {
     version: "CB2026-MASSIVE-V5",
     expectedQuestionCount: 14000,
   },
+  "consolidation-v5": {
+    id: "consolidation-v5",
+    label: "V5 — Consolidación Final",
+    description: "Preguntas GOLD, recuperación por hechos y plan guiado",
+    readOnly: true,
+    version: "V5-CONSOLIDACION-FINAL-2026-08-26",
+    expectedQuestionCount: 2549,
+  },
 }
 
 export function getQuestionKey(question: Pick<Question, "bankId" | "id">) {

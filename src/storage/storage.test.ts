@@ -34,7 +34,7 @@ beforeEach(async () => {
 
 describe("repositorios IndexedDB", () => {
   it("crea índices masivos y consulta un subconjunto sin cargar toda la tienda", async () => {
-    expect(DB_VERSION).toBeGreaterThanOrEqual(3)
+    expect(DB_VERSION).toBeGreaterThanOrEqual(4)
     const db = await openAppDb()
     const repositories = createRepositories(db)
     const massiveQuestions: Question[] = Array.from({ length: 6 }, (_, index) => ({
@@ -65,6 +65,23 @@ describe("repositorios IndexedDB", () => {
     expect(indexes).toEqual(expect.arrayContaining(["factId", "difficultyBand", "type", "blindFinalPool"]))
   })
 
+  it("crea stores de consolidación sin eliminar el historial existente", async () => {
+    const db = await openAppDb()
+    expect(Array.from(db.objectStoreNames)).toEqual(expect.arrayContaining([
+      "factMastery",
+      "legacyEvents",
+      "migrationBackups",
+      "missionPlan",
+      "blindUsage",
+      "progress",
+      "sessions",
+    ]))
+    const masteryIndexes = Array.from(
+      db.transaction("factMastery", "readonly").objectStore("factMastery").indexNames,
+    )
+    expect(masteryIndexes).toEqual(expect.arrayContaining(["state", "nextDueAt", "chapter"]))
+  })
+
   it("acumula exposición por hecho y variante", async () => {
     const db = await openAppDb()
     const repositories = createRepositories(db)
@@ -77,6 +94,7 @@ describe("repositorios IndexedDB", () => {
       responseTimeMs: 8000,
       selectedAnswer: "B",
       errorType: "context-confusion",
+      exposureKind: "cold",
     })
     await repositories.exposures.record({
       factId: "DAN7-V01-F01",
@@ -87,6 +105,7 @@ describe("repositorios IndexedDB", () => {
       responseTimeMs: 3000,
       selectedAnswer: "A",
       errorType: null,
+      exposureKind: "deferred",
     })
     expect(await repositories.exposures.get("DAN7-V01-F01", "variant-1")).toMatchObject({
       exposures: 2,
@@ -94,6 +113,10 @@ describe("repositorios IndexedDB", () => {
       incorrect: 1,
       lastSeenAt: 200,
       lastSelectedAnswer: "A",
+      evidence: {
+        cold: { attempts: 1, correct: 0 },
+        deferred: { attempts: 1, correct: 1 },
+      },
     })
   })
 

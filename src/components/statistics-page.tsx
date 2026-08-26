@@ -21,7 +21,7 @@ import {
 } from "@/lib/statistics"
 
 export function StatisticsPage() {
-  const { statistics, sessions, questions, progress, exposures = [], massiveManifest } = useApp()
+  const { statistics, sessions, questions, progress, exposures = [], massiveManifest, consolidationManifest } = useApp()
   const { general } = statistics
   const simulation = buildSimulationStatistics(sessions)
   const uniqueSeen = Math.max(0, questions.length - general.unseen)
@@ -95,9 +95,9 @@ export function StatisticsPage() {
         </TabsList>
         <TabsContent value="summary" className="mt-5">
           <div className="flex flex-col gap-6">
-            {massiveManifest ? (
+            {consolidationManifest || massiveManifest ? (
               <FactCoveragePanel
-                totalFacts={massiveManifest.totals.facts}
+                totalFacts={consolidationManifest?.gold_facts ?? massiveManifest!.totals.facts}
                 exposures={exposures}
               />
             ) : null}

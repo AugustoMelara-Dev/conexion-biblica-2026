@@ -43,7 +43,7 @@ function configForMode(mode: MassiveTrainingMode, count = mode.count): SessionCo
       competition && mode.perQuestionSeconds
         ? mode.perQuestionSeconds * count
         : null,
-    bankSelection: "massive-v5",
+    bankSelection: "consolidation-v5",
     strategy: "adaptive",
     trainingPresetId: mode.id,
     includeBlind: mode.includeBlind,
@@ -70,15 +70,15 @@ export function MassiveTrainingHub({
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="secondary" className="gap-1">
               <Sparkles className="size-3.5" aria-hidden="true" />
-              14,000 verificadas
+              Solo preguntas GOLD
             </Badge>
-            <Badge variant="outline">2,338 hechos</Badge>
-            <Badge variant="outline">15 % reserva ciega</Badge>
+            <Badge variant="outline">1,808 hechos activos</Badge>
+            <Badge variant="outline">A/B ciega protegida</Badge>
           </div>
           <div>
-            <CardTitle id="massive-training-title">Entrenamiento masivo</CardTitle>
+            <CardTitle id="massive-training-title">Modos avanzados</CardTitle>
             <CardDescription className="mt-1 max-w-3xl">
-              Elige un objetivo; el sistema cambia variantes, distractores y posiciones sin repetir el mismo hecho en la ronda.
+              Configuración secundaria sobre el banco GOLD. El plan guiado sigue siendo la ruta recomendada.
             </CardDescription>
           </div>
         </CardHeader>

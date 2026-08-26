@@ -23,6 +23,7 @@ export type BankProfileId =
   | "prep-v3"
   | "curated-v4"
   | "massive-v5"
+  | "consolidation-v5"
 export type BankSelection = BankProfileId | "mixed"
 export type DifficultyBand = "BASIC" | "MEDIUM" | "HARD" | "EXPERT" | "UNRATED"
 export type AnswerMode = "option_id" | "canonical_text"
@@ -71,6 +72,10 @@ export type Question = {
   sourceQuote?: string
   trapType?: string | null
   blindFinalPool?: boolean
+  blindPool?: "A" | "B" | "emergency" | null
+  editorialStatus?: "gold" | "silver" | "quarantine"
+  qualityScore?: number
+  semanticSkill?: string
   leftItems?: MatchItem[]
   rightItems?: MatchItem[]
   correctMatches?: CorrectMatch[]
@@ -89,6 +94,7 @@ export type QuestionExposure = {
   lastSeenAt: number
   lastSelectedAnswer: string | null
   lastErrorType: string | null
+  evidence?: Record<"practice" | "cold" | "deferred" | "blind", { attempts: number; correct: number }>
 }
 
 export type ExposureAttempt = {
@@ -100,6 +106,7 @@ export type ExposureAttempt = {
   responseTimeMs: number
   selectedAnswer: string | null
   errorType: string | null
+  exposureKind?: "practice" | "cold" | "deferred" | "blind"
 }
 
 export type QuestionSessionQuery = {
@@ -281,6 +288,31 @@ export type BackupPayload = {
   preferences: Preferences
   coverageCycles: CoverageCycle[]
   activeRound: ActiveRound | null
+  factMastery?: import("@/domain/fact-mastery").FactMastery[]
+  legacyEvents?: LegacyHistoryEvent[]
+}
+
+export type LegacyHistoryEvent = {
+  id: string
+  sourceQuestionKey: string
+  reason: "no_match" | "ambiguous_match" | "missing_question"
+  progress: QuestionProgress
+  preservedAt: number
+}
+
+export type MigrationBackup = {
+  id: string
+  createdAt: number
+  progress: QuestionProgress[]
+  sessions: Session[]
+  reports: QuestionReport[]
+}
+
+export type BlindUsage = {
+  factId: string
+  pool: "A" | "B" | "emergency"
+  consumedAt: number
+  sessionId: string
 }
 
 export type QuestionReport = {
