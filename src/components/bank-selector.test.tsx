@@ -112,6 +112,9 @@ describe("inicio", () => {
     expect(screen.getByText("Daniel 2")).toBeVisible()
     expect(screen.getByText("Selección única")).toBeVisible()
     expect(screen.getByText("2 preguntas detectadas")).toBeVisible()
+    const weaknessSummary = screen.getByRole("region", { name: "Mis puntos débiles" }).querySelector(":scope > div")
+    expect(weaknessSummary).toHaveClass("lg:grid-cols-3")
+    expect(weaknessSummary).not.toHaveClass("sm:grid-cols-3")
 
     await userEvent.click(screen.getByRole("button", { name: "Abrir práctica enfocada" }))
     expect(setNav).toHaveBeenCalledWith("practice")

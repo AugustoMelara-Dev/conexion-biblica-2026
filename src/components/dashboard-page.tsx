@@ -130,7 +130,7 @@ export function DashboardPage() {
           description="Úsalos para elegir una ronda que refuerce lo que más lo necesita."
           action={<Button variant="ghost" size="sm" onClick={() => setNav("stats")}>Ver progreso <ArrowRight data-icon="inline-end" /></Button>}
         />
-        <div className="mt-5 grid divide-y divide-border/70 rounded-xl border border-border/70 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+        <div className="mt-5 grid divide-y divide-border/70 rounded-xl border border-border/70 lg:grid-cols-3 lg:divide-x lg:divide-y-0">
           <WeakLine
             icon={BarChart3}
             label="Capítulo a reforzar"
