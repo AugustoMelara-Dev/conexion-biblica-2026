@@ -23,6 +23,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { AppShell } from "@/components/app-shell"
+import { FocusShell } from "@/components/layout/focus-shell"
 import { BankManagerPage } from "@/components/bank-manager-page"
 import { DashboardPage } from "@/components/dashboard-page"
 import { HistoryPage } from "@/components/history-page"
@@ -97,7 +98,7 @@ export function App() {
     }
     const roundQuestions = filterQuestionsForSelection(
       allQuestions,
-      nextConfig.bankSelection ?? bankSelection,
+      nextConfig.bankSelection ?? bankSelection
     )
     const eligible =
       subset ?? filterEligibleQuestions(roundQuestions, progress, nextConfig)
@@ -247,9 +248,9 @@ export function App() {
             void saveActiveRound(persisted)
           }}
           onFinish={finishRound}
-      onExit={() => {
-        void clearActiveRound().then(() => setActiveRound(null))
-      }}
+          onExit={() => {
+            void clearActiveRound().then(() => setActiveRound(null))
+          }}
         />
       )
     if (nav === "banks") return <BankManagerPage />
@@ -265,6 +266,10 @@ export function App() {
     if (nav === "history") return <HistoryPage />
     if (nav === "review") return <ReviewPage />
     return <DashboardPage />
+  }
+
+  if (activeRound) {
+    return <FocusShell>{renderPage()}</FocusShell>
   }
 
   return (
