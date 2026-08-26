@@ -72,7 +72,7 @@ export function MassiveTrainingHub({
               <Sparkles className="size-3.5" aria-hidden="true" />
               Solo preguntas GOLD
             </Badge>
-            <Badge variant="outline">1,808 hechos activos</Badge>
+            <Badge variant="outline">1,627 hechos activos</Badge>
             <Badge variant="outline">A/B ciega protegida</Badge>
           </div>
           <div>

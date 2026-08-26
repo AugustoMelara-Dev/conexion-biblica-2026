@@ -100,6 +100,19 @@ def _contains(haystack: str, needle: str) -> bool:
     return normalized_text(needle) in normalized_text(haystack)
 
 
+def fill_anchor_is_sufficient(source: str, answer: str) -> bool:
+    match = re.search(re.escape(answer), source, re.I)
+    if not match:
+        return False
+    before = normalized_text(source[:match.start()]).split()
+    after = normalized_text(source[match.end():]).split()
+    total = len(before) + len(after)
+    return total >= 8 and (
+        (len(before) >= 2 and len(after) >= 2)
+        or max(len(before), len(after)) >= 8
+    )
+
+
 def _option_categories(option: str, context: AuditContext | None) -> frozenset[str]:
     if context is None:
         return frozenset()
@@ -216,6 +229,8 @@ def audit_question(question: dict[str, Any], context: AuditContext | None = None
         reasons.append("non_unique_answer")
     if question.get("distractor_repair_failed"):
         reasons.append("distractor_repair_failed")
+    if qtype == "fill_blank" and not fill_anchor_is_sufficient(source, answer):
+        reasons.append("insufficient_fill_anchor")
     if len(source.split()) < 5 or len(prompt.split()) < 8:
         reasons.append("insufficient_context")
 
@@ -447,6 +462,11 @@ def build_consolidation_bank(root: Path) -> dict[str, Any]:
                 "source_quote_supports_answer": all(_contains(q["source_quote"], q["correct_answer"]) for q in sample),
                 "unique_options": all(len({normalized_text(option) for option in q["options"]}) == len(q["options"]) for q in sample),
                 "normalized_reference": all(q["verse_or_page"] == normalize_reference(q["verse_or_page"]) for q in sample),
+                "sufficient_fill_anchor": all(
+                    q["type"] != "fill_blank"
+                    or fill_anchor_is_sufficient(q["source_span"], q["correct_answer"])
+                    for q in sample
+                ),
             },
         }
     report = {

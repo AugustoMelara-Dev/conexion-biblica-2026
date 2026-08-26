@@ -53,7 +53,7 @@ export const BANK_DEFINITIONS: Record<BankProfileId, BankDefinition> = {
     description: "Preguntas GOLD, recuperación por hechos y plan guiado",
     readOnly: true,
     version: "V5-CONSOLIDACION-FINAL-2026-08-26",
-    expectedQuestionCount: 2549,
+    expectedQuestionCount: 2287,
   },
 }
 

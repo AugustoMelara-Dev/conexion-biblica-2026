@@ -4,6 +4,7 @@ from scripts.lib.gold_quality import (
     EditorialStatus,
     audit_question,
     grammatical_signature,
+    fill_anchor_is_sufficient,
     normalize_reference,
     partition_blind_facts,
 )
@@ -101,6 +102,17 @@ class GoldQualityTests(unittest.TestCase):
         self.assertNotEqual(
             grammatical_signature("rey del norte", frozenset({"phrase_singular"})),
             grammatical_signature("hija por mujer", frozenset({"phrase_singular"})),
+        )
+
+    def test_fill_anchor_requires_context_on_both_sides(self):
+        self.assertFalse(
+            fill_anchor_is_sufficient("relaciones que existen entre las naciones.", "relaciones")
+        )
+        self.assertTrue(
+            fill_anchor_is_sufficient(
+                "Todo lo anterior permite comprender las relaciones que existen entre las naciones hoy.",
+                "relaciones",
+            )
         )
 
     def test_large_blind_reserve_guarantees_two_hundred_fact_simulations(self):

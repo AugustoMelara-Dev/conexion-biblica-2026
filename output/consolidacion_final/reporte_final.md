@@ -7,14 +7,14 @@ Producción: https://conexion-biblica-2026.vercel.app/
 ## Banco editorial activo
 
 - Registros originales preservados: 14,000.
-- Preguntas GOLD: 2,549.
-- Hechos atómicos GOLD: 1,808.
+- Preguntas GOLD: 2,287.
+- Hechos atómicos GOLD: 1,627.
 - Promedio de variantes activas por hecho: 1.41.
-- SILVER conservadas para edición: 2,268.
-- QUARANTINE fuera de entrenamiento: 9,183.
-- Reserva ciega: A 100 hechos, B 100 hechos, emergencia 71; pools disjuntos.
-- Preguntas por tipo: 741 selección múltiple y 1,808 completar con respuesta canónica.
-- Preguntas por dificultad: 3 fáciles, 412 medias, 1,251 difíciles y 883 expertas.
+- SILVER conservadas para edición: 2,036.
+- QUARANTINE fuera de entrenamiento: 9,677.
+- Reserva ciega: A 100 hechos, B 100 hechos, emergencia 50; pools disjuntos.
+- Preguntas por tipo: 741 selección múltiple y 1,546 completar con respuesta canónica.
+- Preguntas por dificultad: 3 fáciles, 358 medias, 1,135 difíciles y 791 expertas.
 - Plantillas GOLD activas: 4.
 - Distractores GOLD distintos: 366, reconstruidos desde hechos del PDF con compatibilidad gramatical.
 
@@ -22,15 +22,15 @@ Producción: https://conexion-biblica-2026.vercel.app/
 
 | Capítulo | GOLD | Capítulo | GOLD |
 |---|---:|---|---:|
-| Daniel 1 | 90 | Daniel 10 | 88 |
-| Daniel 2 | 117 | Daniel 11 | 213 |
-| Daniel 3 | 105 | Daniel 12 | 67 |
-| Daniel 4 | 120 | PR39 | 122 |
-| Daniel 5 | 100 | PR40 | 151 |
-| Daniel 6 | 96 | PR41 | 137 |
-| Daniel 7 | 140 | PR42 | 170 |
-| Daniel 8 | 147 | PR43 | 282 |
-| Daniel 9 | 156 | PR44 | 248 |
+| Daniel 1 | 87 | Daniel 10 | 78 |
+| Daniel 2 | 107 | Daniel 11 | 180 |
+| Daniel 3 | 96 | Daniel 12 | 60 |
+| Daniel 4 | 106 | PR39 | 111 |
+| Daniel 5 | 90 | PR40 | 133 |
+| Daniel 6 | 92 | PR41 | 120 |
+| Daniel 7 | 122 | PR42 | 155 |
+| Daniel 8 | 118 | PR43 | 245 |
+| Daniel 9 | 151 | PR44 | 236 |
 
 ## Rescate de calidad
 
@@ -45,8 +45,9 @@ Razones principales de cuarentena —pueden coexistir en un candidato—:
 - imposibilidad de reconstruir tres distractores gramaticales: 3,724;
 - sustitución insegura en Verdadero/Falso: 1,750;
 - secuencia léxica artificial: 630.
+- contexto insuficiente alrededor del espacio en completar: 615.
 
-La revisión estratificada cubrió 100 preguntas de PR43, PR44, Daniel 7, 8, 9 y 11, más al menos 20 de cada capítulo restante. Resultado automático final: cero fallos en fidelidad de cita, respuesta única, opciones únicas, referencia normalizada y puntuación mínima 85.
+La revisión estratificada cubrió 100 preguntas de PR43, PR44, Daniel 7, 8, 9 y 11, más al menos 20 de cada capítulo restante. Resultado automático final: cero fallos en fidelidad de cita, respuesta única, opciones únicas, referencia normalizada, ancla suficiente en completar y puntuación mínima 85.
 
 ## Motor y experiencia
 
@@ -63,21 +64,22 @@ La revisión estratificada cubrió 100 preguntas de PR43, PR44, Daniel 7, 8, 9 y
 
 ## Verificación
 
-- Auditoría Python: 9/9.
+- Auditoría Python: 10/10.
 - Vitest: 53 archivos, 285/285 pruebas.
 - ESLint: aprobado sin errores ni advertencias.
 - TypeScript: aprobado.
 - Build Vite de producción: aprobado, 1,746 módulos.
-- Playwright de regresión: 22 aprobadas, 4 omisiones deliberadas por proyecto/viewport.
-- Playwright de capturas V5: 1 aprobada.
+- Playwright de regresión: 23 aprobadas, 5 omisiones deliberadas por proyecto/viewport.
+- Playwright de capturas V5: incluida y aprobada dentro de la regresión completa.
 - Navegador real: escritorio y 390 px, cero desbordamiento horizontal y cero errores de consola.
 - Producción: plan V5 y primera misión de 120 preguntas verificadas en la URL pública.
 
 ## Integración y despliegue
 
 - Commit de implementación: `1ff50b4` — `feat: consolidate final V5 training system`.
+- Corrección editorial final: `058ea4a` — `fix: quarantine ambiguous fill prompts`.
 - Merge de producción: `d7d1769`.
-- Pull request: https://github.com/AugustoMelara-Dev/conexion-biblica-2026/pull/4
+- Pull requests: https://github.com/AugustoMelara-Dev/conexion-biblica-2026/pull/4 y https://github.com/AugustoMelara-Dev/conexion-biblica-2026/pull/6
 - Dos checks de Vercel completados correctamente para el merge.
 
 ## Evidencia visual
@@ -86,4 +88,3 @@ La revisión estratificada cubrió 100 preguntas de PR43, PR44, Daniel 7, 8, 9 y
 - `05-feedback-aprendizaje.png`
 - `06-progreso-por-hechos.png`
 - `07-simulacion-ciega-a.png`
-
