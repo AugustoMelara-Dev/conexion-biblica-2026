@@ -35,7 +35,7 @@ function configForMode(mode: MassiveTrainingMode, count = mode.count): SessionCo
         : ["single_choice", "fill_blank", "true_false"],
     statuses: mode.statuses,
     shuffleQuestions: true,
-    // V5 ya baraja de forma determinista por exposición. Evitamos un segundo
+    // V6 ya baraja de forma determinista por exposición. Evitamos un segundo
     // barajado para que recargar no cambie la posición durante la ronda activa.
     shuffleOptions: false,
     perQuestionSeconds: mode.perQuestionSeconds,
@@ -72,7 +72,7 @@ export function MassiveTrainingHub({
               <Sparkles className="size-3.5" aria-hidden="true" />
               Solo preguntas GOLD
             </Badge>
-            <Badge variant="outline">1,627 hechos activos</Badge>
+            <Badge variant="outline">1,851 hechos activos</Badge>
             <Badge variant="outline">A/B ciega protegida</Badge>
           </div>
           <div>

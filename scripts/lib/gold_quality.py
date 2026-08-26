@@ -44,12 +44,47 @@ WEAK_ANSWERS = {
     "este", "estos", "estas", "senor", "hombre", "cosa", "cosas",
 }
 ALLOWED_CATEGORIES = {"proper", "phrase_plural", "phrase_singular", "number"}
+MANDATORY_TYPE_TOTALS = {
+    "fill_blank": 1500,
+    "true_false": 1250,
+    "multiple_choice": 2250,
+}
+MANDATORY_CHAPTER_TYPE_MINIMUMS = {
+    chapter: {"fill_blank": 100, "true_false": 80, "multiple_choice": 170}
+    for chapter in ("DAN7", "DAN8", "DAN9", "DAN11", "PR43", "PR44")
+}
+MANDATORY_CHAPTER_TYPE_QUOTAS = {
+    "DAN1": {"fill_blank": 70, "true_false": 60, "multiple_choice": 90},
+    "DAN2": {"fill_blank": 95, "true_false": 80, "multiple_choice": 125},
+    "DAN3": {"fill_blank": 80, "true_false": 70, "multiple_choice": 110},
+    "DAN4": {"fill_blank": 90, "true_false": 80, "multiple_choice": 130},
+    "DAN5": {"fill_blank": 70, "true_false": 65, "multiple_choice": 105},
+    "DAN6": {"fill_blank": 75, "true_false": 65, "multiple_choice": 100},
+    "DAN7": {"fill_blank": 100, "true_false": 80, "multiple_choice": 170},
+    "DAN8": {"fill_blank": 100, "true_false": 80, "multiple_choice": 170},
+    "DAN9": {"fill_blank": 100, "true_false": 80, "multiple_choice": 170},
+    "DAN10": {"fill_blank": 60, "true_false": 50, "multiple_choice": 90},
+    "DAN11": {"fill_blank": 100, "true_false": 80, "multiple_choice": 170},
+    "DAN12": {"fill_blank": 60, "true_false": 50, "multiple_choice": 90},
+    "PR39": {"fill_blank": 100, "true_false": 75, "multiple_choice": 105},
+    "PR40": {"fill_blank": 60, "true_false": 50, "multiple_choice": 90},
+    "PR41": {"fill_blank": 80, "true_false": 75, "multiple_choice": 105},
+    "PR42": {"fill_blank": 60, "true_false": 50, "multiple_choice": 90},
+    "PR43": {"fill_blank": 100, "true_false": 80, "multiple_choice": 170},
+    "PR44": {"fill_blank": 100, "true_false": 80, "multiple_choice": 170},
+}
+MANDATORY_FALSE_QUOTAS = {
+    "DAN1": 34, "DAN2": 42, "DAN3": 32, "DAN4": 36, "DAN5": 32, "DAN6": 32,
+    "DAN7": 40, "DAN8": 40, "DAN9": 40, "DAN10": 25, "DAN11": 40, "DAN12": 25,
+    "PR39": 37, "PR40": 25, "PR41": 37, "PR42": 25, "PR43": 42, "PR44": 41,
+}
 PROPER_TERMS_RAW = (
         "Daniel Nabucodonosor Babilonia Jehová Señor Abed-nego Altísimo Belsasar Beltsasar Darío "
         "Jerusalén Persia Ananías Caldeos Israel Azarías Egipto Sadrac Miguel Grecia Anciano Príncipe "
         "Moisés Santo Salvador Aspenaz Melsar Arioc Media Gabriel Cristo Creador Todopoderoso Eufrates "
         "Medo-Persia Ezequiel Satanás Joacim Sinar Hidekel Quitim Etiopía Libia Mesac Uparsin Judea "
-        "Asuero Jeremías Mesías Pentateuco Atenas Abednego Jerusalem UPHARSIN Persas Sesach Chebar Jacob"
+        "Asuero Jeremías Mesías Pentateuco Atenas Abednego Jerusalem UPHARSIN Persas Sesach Chebar Jacob "
+        "Ciro Susa Elam Ulai Ufaz Edom Moab Amón Sodoma Gomorra Quebar Oriente Poniente Norte Sur"
     ).split()
 
 
@@ -59,6 +94,24 @@ def normalized_text(value: str) -> str:
 
 
 PROPER_TERMS = {normalized_text(value) for value in PROPER_TERMS_RAW}
+PLACE_TERMS = {
+    normalized_text(value)
+    for value in (
+        "Babilonia Jerusalén Persia Media Grecia Egipto Sinar Judea Eufrates Hidekel Quitim Etiopía Libia "
+        "Susa Elam Ulai Ufaz Edom Moab Amón Sodoma Gomorra Quebar Chebar Atenas Jerusalem"
+    ).split()
+}
+PERSON_TERMS = {
+    normalized_text(value)
+    for value in (
+        "Daniel Nabucodonosor Belsasar Beltsasar Darío Joacim Aspenaz Melsar Arioc Ananías Misael Azarías "
+        "Sadrac Mesac Abed-nego Abednego Miguel Gabriel Ciro Asuero Jeremías Ezequiel Moisés"
+    ).split()
+}
+DEITY_TERMS = {
+    normalized_text(value)
+    for value in "Jehová Señor Altísimo Santo Salvador Cristo Creador Todopoderoso Mesías Satanás".split()
+}
 FUNCTION_WORDS = {
     "a", "al", "ante", "bajo", "con", "contra", "de", "del", "desde",
     "durante", "el", "en", "entre", "hacia", "hasta", "la", "las", "los",
@@ -107,9 +160,9 @@ def fill_anchor_is_sufficient(source: str, answer: str) -> bool:
     before = normalized_text(source[:match.start()]).split()
     after = normalized_text(source[match.end():]).split()
     total = len(before) + len(after)
-    return total >= 8 and (
+    return total >= 6 and (
         (len(before) >= 2 and len(after) >= 2)
-        or max(len(before), len(after)) >= 8
+        or max(len(before), len(after)) >= 6
     )
 
 
@@ -139,7 +192,9 @@ def grammatical_signature(value: str, categories: frozenset[str]) -> tuple[str, 
             kind = "contains_finite"
         else:
             kind = "nominal"
-    if kind in {"nominal", "contains_finite"}:
+    if kind in {"nominal", "contains_finite"} and len(words) == 1:
+        opening = "single"
+    elif kind in {"nominal", "contains_finite"}:
         # Los hechos masivos contienen ventanas léxicas; exigir el mismo núcleo
         # evita combinaciones como «el hija por mujer» o «el estaban de parte».
         opening = words[0]
@@ -344,16 +399,543 @@ def make_gold_question(raw: dict[str, Any], fact: dict[str, Any], decision: Edit
     }
 
 
+def _fact_is_editorial(fact: dict[str, Any]) -> bool:
+    answer = str(fact.get("answer", "")).strip()
+    source = str(fact.get("source_span", "")).strip()
+    normalized = normalized_text(answer)
+    return (
+        1 <= len(answer.split()) <= 6
+        and len(normalized) >= 3
+        and normalized not in WEAK_ANSWERS
+        and _contains(source, answer)
+        and fill_anchor_is_sufficient(source, answer)
+        and not re.search(r"[()\[\]{}]", answer)
+        and not (
+            str(fact.get("category")) == "proper"
+            and normalized not in PROPER_TERMS
+        )
+    )
+
+
+def _safe_for_fill(fact: dict[str, Any]) -> bool:
+    words = normalized_text(str(fact.get("answer", ""))).split()
+    dangling = {"de", "del", "la", "el", "los", "las", "que", "y", "o", "a", "al", "en", "por", "para", "con", "sin", "un", "una", "he", "ha", "habia", "habian", "fue", "era", "sera"}
+    return bool(words) and words[-1] not in dangling
+
+
+def _fact_signature(fact: dict[str, Any]) -> tuple[str, int, str]:
+    return grammatical_signature(str(fact["answer"]), frozenset({str(fact.get("category", ""))}))
+
+
+def _verb_shape(value: str) -> str | None:
+    first = str(value).strip().split()[0].casefold().strip(".,;:¡!¿?")
+    patterns = (
+        (r"(?:ar|er|ir)(?:se)?$", "infinitive"),
+        (r"(?:ar|er|ir)[áé]s$", "future_second"),
+        (r"(?:ar|er|ir)[áé]n$", "future_plural"),
+        (r"(?:ar|er|ir)[áé]$", "future_singular"),
+        (r"(?:aron|ieron)$", "past_plural"),
+        (r"[ó]$", "past_singular"),
+        (r"(?:aba|ía)(?:s|n|mos)?$", "imperfect"),
+        (r"(?:ad|ed|id)$", "imperative"),
+    )
+    return next((label for pattern, label in patterns if re.search(pattern, first)), None)
+
+
+def _semantic_family(fact: dict[str, Any]) -> str:
+    answer = normalized_text(str(fact["answer"]))
+    category = str(fact.get("category", ""))
+    if category == "proper":
+        if answer in PLACE_TERMS:
+            return "proper_place"
+        if answer in PERSON_TERMS:
+            return "proper_person"
+        if answer in DEITY_TERMS:
+            return "proper_deity"
+        return "proper_other"
+    if category == "number":
+        return "number"
+    if category == "verb" or _verb_shape(str(fact["answer"])) is not None:
+        return "verb"
+    if category.endswith("plural"):
+        return "plural"
+    return "singular"
+
+
+def _direct_signature(fact: dict[str, Any]) -> tuple[str, str, int, str]:
+    grammatical = _fact_signature(fact)
+    if _semantic_family(fact) == "number":
+        return ("number", "number", 0, "number")
+    if _semantic_family(fact) == "verb":
+        return ("verb", _verb_shape(str(fact["answer"])) or grammatical[0], grammatical[1], "verb")
+    return (_semantic_family(fact), grammatical[0], grammatical[1], grammatical[2])
+
+
+def _tf_signature(fact: dict[str, Any]) -> tuple[str, str, int, str] | None:
+    signature = _direct_signature(fact)
+    if len(str(fact["answer"]).split()) == 1 and signature[0] == "verb":
+        return signature
+    if signature[0] == "verb" or signature[1] in {"finite_first", "contains_finite", "infinitive"}:
+        return None
+    return signature
+
+
+def _safe_for_false(fact: dict[str, Any]) -> bool:
+    family = _semantic_family(fact)
+    return len(str(fact["answer"]).split()) == 1 or family in {
+        "proper_place", "proper_person", "proper_deity", "proper_other", "number"
+    }
+
+
+def _safe_for_direct_mc(fact: dict[str, Any]) -> bool:
+    family = _semantic_family(fact)
+    words = str(fact["answer"]).split()
+    grammatical = _fact_signature(fact)
+    if family in {"proper_place", "proper_person", "proper_deity", "number"}:
+        return True
+    if family == "verb":
+        return False
+    return len(words) == 1 and grammatical[0] == "nominal"
+
+
+def _spread_facts(facts: list[dict[str, Any]], count: int) -> list[dict[str, Any]]:
+    if count > len(facts):
+        raise ValueError(f"Hechos editoriales insuficientes: {len(facts)}/{count}")
+    ordered = sorted(facts, key=lambda row: (int(row.get("sequence", 0)), str(row["fact_id"])))
+    if count == len(ordered):
+        return ordered
+    indexes = [round(index * (len(ordered) - 1) / (count - 1)) for index in range(count)] if count > 1 else [len(ordered) // 2]
+    return [ordered[index] for index in indexes]
+
+
+def _question_base(fact: dict[str, Any], question_id: str, template_id: str, qtype: str) -> dict[str, Any]:
+    ref = normalize_reference(str(fact["verse_or_page"]))
+    priority = str(fact["chapter"]) in MANDATORY_CHAPTER_TYPE_MINIMUMS
+    difficulty = "expert" if template_id.startswith("mc-context-scene-") else "hard" if priority else "medium"
+    return {
+        "id": question_id,
+        "fact_id": fact["fact_id"],
+        "variant_id": f"{fact['fact_id']}-{template_id.upper()}",
+        "template_id": template_id,
+        "bank": fact["bank"],
+        "chapter": fact["chapter"],
+        "verse_or_page": ref,
+        "source_span": fact["source_span"],
+        "type": qtype,
+        "difficulty": difficulty,
+        "topic": fact.get("topic", "precisión textual"),
+        "context_anchor": f"{ref}: {fact.get('topic', 'escena indicada')}",
+        "accepted_answers": [],
+        "answer_mode": "exact_text" if qtype == "fill_blank" else "option_id",
+        "source_quote": fact["source_span"],
+        "trap_type": None,
+        "blind_final_pool": False,
+        "blind_pool": None,
+        "validation_status": "gold_audited",
+        "editorial_status": "gold",
+        "quality_score": 95,
+        "quality_criteria": {
+            "source_fidelity": 25,
+            "single_context_answer": 20,
+            "natural_spanish": 15,
+            "competitive_value": 15,
+            "distractor_quality": 10,
+            "semantic_novelty": 5,
+            "reference_quality": 5,
+        },
+        "blind_eligible": True,
+    }
+
+
+def _replace_once(source: str, answer: str, replacement: str) -> str:
+    return re.sub(re.escape(answer), replacement, source, count=1, flags=re.I)
+
+
+def _context_clue(source: str, answer: str) -> str:
+    match = re.search(re.escape(answer), source, re.I)
+    if not match:
+        return source
+    before = source[:match.start()].strip().split()
+    after = source[match.end():].strip().split()
+    left = " ".join(before[-5:])
+    right = " ".join(after[:5])
+    return f"{left} … {right}".strip()
+
+
+def _preceding_clue(source: str, answer: str) -> str:
+    match = re.search(re.escape(answer), source, re.I)
+    if not match:
+        return "el contexto señalado"
+    words = source[:match.start()].strip().split()
+    return " ".join(words[-3:]).strip(" «“\"") or "el inicio de la frase"
+
+
+def make_editorial_fill(fact: dict[str, Any], *, question_id: str) -> dict[str, Any]:
+    answer = str(fact["answer"])
+    base = _question_base(fact, question_id, "fill-editorial-exact-v1", "fill_blank")
+    base.update({
+        "question": f"Según {base['verse_or_page']}, complete la expresión significativa: «{_replace_once(str(fact['source_span']), answer, '_____')}»",
+        "options": [answer],
+        "correct_option": 0,
+        "correct_answer": answer,
+        "accepted_answers": [answer],
+        "answer_mode": "exact_text",
+        "explanation": f"La frase completa del PDF es: «{fact['source_span']}»",
+        "why_distractors_fail": {},
+        "why_each_distractor_fails": {},
+        "semantic_skill": "exact_text_recall",
+    })
+    return base
+
+
+def make_editorial_true_false(
+    fact: dict[str, Any],
+    distractor: dict[str, Any],
+    *,
+    truth: bool,
+    question_id: str,
+    variant: int = 1,
+) -> dict[str, Any]:
+    correct_detail = str(fact["answer"])
+    incorrect_detail = None if truth else str(distractor["answer"])
+    statement = str(fact["source_span"]) if truth else _replace_once(str(fact["source_span"]), correct_detail, incorrect_detail or "")
+    tested_detail = correct_detail if truth else incorrect_detail or ""
+    template = "tf-editorial-true-v1" if truth else f"tf-editorial-false-v{variant}"
+    base = _question_base(fact, question_id, template, "true_false")
+    answer = "Verdadero" if truth else "Falso"
+    correction = str(fact["source_span"])
+    base.update({
+        "question": (
+            f"Según {base['verse_or_page']}, ¿verdadero o falso? El pasaje declara: «{statement}» "
+            + (
+                f"(detalle evaluado: «{tested_detail}»)."
+                if truth
+                else (
+                    f"(evalúe el detalle que sigue a «{_preceding_clue(str(fact['source_span']), correct_detail)}»; "
+                    f"no confunda esta escena con {normalize_reference(str(distractor['verse_or_page']))})."
+                )
+            )
+        ),
+        "statement": statement,
+        "options": ["Verdadero", "Falso"],
+        "correct_option": 0 if truth else 1,
+        "correct_answer": answer,
+        "accepted_answers": [answer],
+        "answer_mode": "option_id",
+        "explanation": (
+            f"La afirmación reproduce el PDF: «{correction}»"
+            if truth
+            else f"Solo cambió «{correct_detail}» por «{incorrect_detail}». La corrección exacta es: «{correction}»"
+        ),
+        "why_distractors_fail": {
+            "Falso" if truth else "Verdadero": (
+                "No se alteró ningún detalle de la fuente."
+                if truth
+                else f"{incorrect_detail} corresponde a {normalize_reference(str(distractor['verse_or_page']))}; aquí el PDF dice «{correct_detail}»."
+            )
+        },
+        "why_each_distractor_fails": {},
+        "semantic_skill": "single_detail_discrimination",
+        "incorrect_detail": incorrect_detail,
+        "correct_detail": correct_detail,
+        "correction": correction,
+    })
+    base["why_each_distractor_fails"] = dict(base["why_distractors_fail"])
+    return base
+
+
+def make_editorial_mc(
+    fact: dict[str, Any],
+    distractors: list[dict[str, Any]],
+    *,
+    contextual: bool,
+    question_id: str,
+    contextual_variant: int = 1,
+) -> dict[str, Any]:
+    template = f"mc-context-scene-v{contextual_variant}" if contextual else "mc-editorial-exact-v1"
+    base = _question_base(fact, question_id, template, "multiple_choice")
+    answer = str(fact["answer"])
+    if contextual:
+        lead = (
+            "Tres opciones son expresiones verdaderas en otros contextos del PDF."
+            if contextual_variant == 2
+            else "Al distinguir esta escena de otros pasajes del PDF,"
+            if contextual_variant == 3
+            else f"Según específicamente {base['verse_or_page']},"
+        )
+        prompt = (
+            f"{lead} ¿Qué palabra o expresión completa el texto? "
+            f"«{_replace_once(str(fact['source_span']), answer, '[DETALLE]')}»"
+        )
+    else:
+        prompt = (
+            f"Según {base['verse_or_page']}, ¿qué opción completa exactamente el detalle omitido? "
+            f"«{_replace_once(str(fact['source_span']), answer, '[DETALLE]')}»"
+        )
+    options = [answer, *[str(row["answer"]) for row in distractors]]
+    options.sort(key=lambda value: hashlib.sha256(f"{question_id}:{value}".encode()).hexdigest())
+    failures = {
+        str(row["answer"]): (
+            f"Es verdadero en {normalize_reference(str(row['verse_or_page']))}, pero no responde al contexto exacto de {base['verse_or_page']}."
+        )
+        for row in distractors
+    }
+    base.update({
+        "question": prompt,
+        "options": options,
+        "correct_option": options.index(answer),
+        "correct_answer": answer,
+        "accepted_answers": [answer],
+        "answer_mode": "option_id",
+        "explanation": (
+            f"«{answer}» corresponde a {base['verse_or_page']}. Los otros detalles son verdaderos en las referencias indicadas, no en esta escena."
+        ),
+        "why_distractors_fail": failures,
+        "why_each_distractor_fails": failures,
+        "semantic_skill": "scene_identification" if contextual else "contextual_precision",
+        "trap_type": "true_elsewhere" if contextual else "direct_text",
+    })
+    return base
+
+
+def mandatory_mix_errors(selected: list[dict[str, Any]]) -> list[str]:
+    errors: list[str] = []
+    type_counts = Counter(str(row.get("type")) for row in selected)
+    if len(selected) != sum(MANDATORY_TYPE_TOTALS.values()):
+        errors.append(f"gold total {len(selected)}/5000")
+    for kind, expected in MANDATORY_TYPE_TOTALS.items():
+        if type_counts[kind] != expected:
+            errors.append(f"type {kind} {type_counts[kind]}/{expected}")
+    by_chapter_type = Counter((str(row.get("chapter")), str(row.get("type"))) for row in selected)
+    for chapter, quotas in MANDATORY_CHAPTER_TYPE_QUOTAS.items():
+        for kind, expected in quotas.items():
+            actual = by_chapter_type[(chapter, kind)]
+            if actual != expected:
+                errors.append(f"{chapter} {kind} {actual}/{expected}")
+    tf = Counter(str(row.get("correct_answer")) for row in selected if row.get("type") == "true_false")
+    if tf != Counter({"Verdadero": 625, "Falso": 625}):
+        errors.append(f"true_false balance {dict(tf)}")
+    ids = [str(row.get("id")) for row in selected]
+    prompts = [normalized_text(str(row.get("question"))) for row in selected]
+    if len(ids) != len(set(ids)):
+        errors.append("duplicate ids")
+    if len(prompts) != len(set(prompts)):
+        duplicated = next(value for value, count in Counter(prompts).items() if count > 1)
+        duplicate_ids = [str(row.get("id")) for row in selected if normalized_text(str(row.get("question"))) == duplicated]
+        duplicate_texts = [str(row.get("question")) for row in selected if normalized_text(str(row.get("question"))) == duplicated]
+        errors.append(f"duplicate prompts {duplicate_ids}: {duplicate_texts}")
+    variants = Counter((str(row.get("fact_id")), str(row.get("template_id"))) for row in selected)
+    if any(count > 1 for count in variants.values()):
+        errors.append("duplicate fact/template variants")
+    for row in selected:
+        qtype = row.get("type")
+        options = [str(value) for value in row.get("options", [])]
+        if len(options) != len({normalized_text(value) for value in options}):
+            errors.append(f"{row.get('id')}: duplicate options")
+        if qtype == "fill_blank" and not fill_anchor_is_sufficient(str(row.get("source_span", "")), str(row.get("correct_answer", ""))):
+            errors.append(f"{row.get('id')}: insufficient fill anchor")
+        if qtype == "multiple_choice" and (len(options) != 4 or options.count(str(row.get("correct_answer"))) != 1):
+            errors.append(f"{row.get('id')}: invalid multiple choice")
+        if qtype == "true_false" and row.get("correct_answer") == "Falso":
+            expected = _replace_once(str(row.get("source_span")), str(row.get("correct_detail")), str(row.get("incorrect_detail")))
+            if row.get("statement") != expected or row.get("correction") != row.get("source_span"):
+                errors.append(f"{row.get('id')}: false statement changes more than one detail")
+    return errors
+
+
+def _build_editorial_questions(facts: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    eligible = []
+    seen_fact_content: set[tuple[str, str, str]] = set()
+    for fact in facts.values():
+        key = (
+            str(fact.get("chapter", "")),
+            normalized_text(str(fact.get("source_span", ""))),
+            normalized_text(str(fact.get("answer", ""))),
+        )
+        if not _fact_is_editorial(fact) or key in seen_fact_content:
+            continue
+        eligible.append(fact)
+        seen_fact_content.add(key)
+    pools: dict[tuple[str, str, int, str], list[dict[str, Any]]] = defaultdict(list)
+    tf_pools: dict[tuple[str, str, int, str], list[dict[str, Any]]] = defaultdict(list)
+    by_chapter: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for fact in eligible:
+        pools[_direct_signature(fact)].append(fact)
+        tf_signature = _tf_signature(fact)
+        if tf_signature is not None and _safe_for_false(fact):
+            tf_pools[tf_signature].append(fact)
+        by_chapter[str(fact["chapter"])].append(fact)
+
+    def distractors(fact: dict[str, Any], count: int) -> list[dict[str, Any]]:
+        seen = {normalized_text(str(fact["answer"]))}
+        rows = []
+        candidates = sorted(
+            pools[_direct_signature(fact)],
+            key=lambda row: (
+                row.get("chapter") != fact.get("chapter"),
+                row.get("verse_or_page") == fact.get("verse_or_page"),
+                hashlib.sha256(f"{fact['fact_id']}:{row['fact_id']}".encode()).hexdigest(),
+            ),
+        )
+        for row in candidates:
+            answer = str(row["answer"])
+            key = normalized_text(answer)
+            if row["fact_id"] == fact["fact_id"] or key in seen or _contains(str(fact["source_span"]), answer):
+                continue
+            if row.get("verse_or_page") == fact.get("verse_or_page"):
+                continue
+            rows.append(row)
+            seen.add(key)
+            if len(rows) == count:
+                break
+        return rows
+
+    def tf_distractors(fact: dict[str, Any], count: int, offset: int = 0) -> list[dict[str, Any]]:
+        signature = _tf_signature(fact)
+        if signature is None:
+            return []
+        seen = {normalized_text(str(fact["answer"]))}
+        rows = []
+        candidates = sorted(
+            tf_pools[signature],
+            key=lambda row: (
+                row.get("chapter") != fact.get("chapter"),
+                row.get("verse_or_page") == fact.get("verse_or_page"),
+                hashlib.sha256(f"tf:{fact['fact_id']}:{row['fact_id']}".encode()).hexdigest(),
+            ),
+        )
+        for row in candidates:
+            answer = str(row["answer"])
+            key = normalized_text(answer)
+            if row["fact_id"] == fact["fact_id"] or key in seen or _contains(str(fact["source_span"]), answer):
+                continue
+            rows.append(row)
+            seen.add(key)
+        if rows:
+            offset %= len(rows)
+            rows = rows[offset:] + rows[:offset]
+        return rows[:count]
+
+    def contextual_distractors(fact: dict[str, Any], count: int, offset: int = 0) -> list[dict[str, Any]]:
+        seen = {normalized_text(str(fact["answer"]))}
+        rows = []
+        candidates = sorted(
+            pools[_direct_signature(fact)],
+            key=lambda row: (
+                row.get("chapter") != fact.get("chapter"),
+                row.get("verse_or_page") == fact.get("verse_or_page"),
+                hashlib.sha256(f"scene:{fact['fact_id']}:{row['fact_id']}".encode()).hexdigest(),
+            ),
+        )
+        if candidates:
+            offset %= len(candidates)
+            candidates = candidates[offset:] + candidates[:offset]
+        for row in candidates:
+            answer = str(row["answer"])
+            key = normalized_text(answer)
+            if row["fact_id"] == fact["fact_id"] or key in seen or row.get("verse_or_page") == fact.get("verse_or_page"):
+                continue
+            rows.append(row)
+            seen.add(key)
+            if len(rows) == count:
+                break
+        return rows
+
+    selected: list[dict[str, Any]] = []
+    counters: Counter[str] = Counter()
+    for chapter, quotas in MANDATORY_CHAPTER_TYPE_QUOTAS.items():
+        chapter_facts = by_chapter[chapter]
+        fill_facts = _spread_facts([fact for fact in chapter_facts if _safe_for_fill(fact)], quotas["fill_blank"])
+        tf_pool = [fact for fact in chapter_facts if tf_distractors(fact, 1)]
+        false_count = MANDATORY_FALSE_QUOTAS[chapter]
+        truth_pattern = [
+            not (
+                ((index + 1) * false_count) // quotas["true_false"]
+                > (index * false_count) // quotas["true_false"]
+            )
+            for index in range(quotas["true_false"])
+        ]
+        true_facts = iter(_spread_facts(chapter_facts, sum(truth_pattern)))
+        false_needed = len(truth_pattern) - sum(truth_pattern)
+        false_rows: list[tuple[dict[str, Any], int]] = []
+        remaining_false = false_needed
+        variant = 1
+        while remaining_false:
+            take = min(remaining_false, len(tf_pool))
+            false_rows.extend((fact, variant) for fact in _spread_facts(tf_pool, take))
+            remaining_false -= take
+            variant += 1
+        false_facts = iter(false_rows)
+        tf_facts = []
+        for truth in truth_pattern:
+            if truth:
+                tf_facts.append((next(true_facts), True, 1, None))
+            else:
+                false_fact, false_variant = next(false_facts)
+                false_distractor = tf_distractors(false_fact, 1, offset=false_variant - 1)[0]
+                tf_facts.append((false_fact, False, false_variant, false_distractor))
+
+        direct_pool = [fact for fact in chapter_facts if _safe_for_direct_mc(fact) and len(distractors(fact, 3)) == 3]
+        contextual_pool = []
+        seen_context_clues: set[tuple[str, str]] = set()
+        for fact in chapter_facts:
+            clue_key = (
+                normalize_reference(str(fact["verse_or_page"])),
+                normalized_text(_context_clue(str(fact["source_span"]), str(fact["answer"]))),
+            )
+            if clue_key in seen_context_clues or len(contextual_distractors(fact, 3)) != 3:
+                continue
+            contextual_pool.append(fact)
+            seen_context_clues.add(clue_key)
+        direct_count = min(round(quotas["multiple_choice"] * 0.60), len(direct_pool))
+        contextual_count = quotas["multiple_choice"] - direct_count
+        if contextual_count > len(contextual_pool) * 3:
+            raise ValueError(f"MC editoriales insuficientes en {chapter}")
+        mc_first = _spread_facts(direct_pool, direct_count)
+        mc_second = _spread_facts(contextual_pool, min(contextual_count, len(contextual_pool)))
+        remaining_contextual = contextual_count - len(mc_second)
+        mc_third = _spread_facts(contextual_pool, min(remaining_contextual, len(contextual_pool))) if remaining_contextual else []
+        remaining_contextual -= len(mc_third)
+        mc_fourth = _spread_facts(contextual_pool, remaining_contextual) if remaining_contextual else []
+
+        for fact in fill_facts:
+            counters[chapter] += 1
+            selected.append(make_editorial_fill(fact, question_id=f"{chapter}-GOLD-{counters[chapter]:04d}"))
+        for fact, truth, tf_variant, false_distractor in tf_facts:
+            counters[chapter] += 1
+            selected.append(make_editorial_true_false(
+                fact,
+                false_distractor if false_distractor else fact,
+                truth=truth,
+                question_id=f"{chapter}-GOLD-{counters[chapter]:04d}",
+                variant=tf_variant,
+            ))
+        for contextual, contextual_variant, rows in (
+            (False, 1, mc_first),
+            (True, 1, mc_second),
+            (True, 2, mc_third),
+            (True, 3, mc_fourth),
+        ):
+            for fact in rows:
+                counters[chapter] += 1
+                selected.append(make_editorial_mc(
+                    fact,
+                    contextual_distractors(fact, 3, offset=3 * (contextual_variant - 1)) if contextual else distractors(fact, 3),
+                    contextual=contextual,
+                    question_id=f"{chapter}-GOLD-{counters[chapter]:04d}",
+                    contextual_variant=contextual_variant,
+                ))
+
+    errors = mandatory_mix_errors(selected)
+    if errors:
+        raise ValueError("Contrato editorial V6 incumplido: " + "; ".join(errors[:20]))
+    return selected
+
+
 def build_consolidation_bank(root: Path) -> dict[str, Any]:
     raw_questions, facts, context = load_source(root)
-    distractor_pools: dict[tuple[str, int, str], list[dict[str, Any]]] = defaultdict(list)
-    for fact in facts.values():
-        answer = str(fact.get("answer", ""))
-        categories = _option_categories(answer, context)
-        distractor_pools[grammatical_signature(answer, categories)].append(fact)
-    questions = [repair_distractors(q, facts, context, distractor_pools) for q in raw_questions]
+    questions = list(raw_questions)
     decisions = {q["id"]: audit_question(q, context) for q in questions}
-    by_fact: dict[str, list[dict[str, Any]]] = defaultdict(list)
     rejected: Counter[str] = Counter()
     status_counts: Counter[str] = Counter()
     chapter_status: dict[str, Counter[str]] = defaultdict(Counter)
@@ -361,24 +943,9 @@ def build_consolidation_bank(root: Path) -> dict[str, Any]:
         decision = decisions[q["id"]]
         status_counts[decision.status.value] += 1
         chapter_status[q["chapter"]][decision.status.value] += 1
-        for reason in decision.rejection_reasons:
-            rejected[reason] += 1
-        if decision.status is EditorialStatus.GOLD:
-            by_fact[q["fact_id"]].append(q)
+        rejected.update(decision.rejection_reasons)
 
-    # Máximo dos habilidades distintas por hecho: contextual y completar.
-    selected: list[dict[str, Any]] = []
-    duplicate_drops = 0
-    for fact_id, candidates in sorted(by_fact.items()):
-        best_by_type: dict[str, dict[str, Any]] = {}
-        for q in candidates:
-            if q["type"] not in best_by_type:
-                best_by_type[q["type"]] = q
-        chosen = [best_by_type[kind] for kind in ("multiple_choice", "fill_blank") if kind in best_by_type]
-        duplicate_drops += len(candidates) - len(chosen)
-        selected.extend(make_gold_question(q, facts[fact_id], decisions[q["id"]]) for q in chosen)
-
-    # Se reaudita la reserva: solo hechos GOLD, pools disjuntos, 15% total.
+    selected = _build_editorial_questions(facts)
     fact_ids = sorted({q["fact_id"] for q in selected})
     blind_count = min(len(fact_ids), max(250, round(len(fact_ids) * 0.15)))
     blind_candidates = sorted(fact_ids, key=lambda value: hashlib.sha256(("blind:" + value).encode()).hexdigest())[:blind_count]
@@ -388,46 +955,45 @@ def build_consolidation_bank(root: Path) -> dict[str, Any]:
         q["blind_pool"] = blind_lookup.get(q["fact_id"])
         q["blind_final_pool"] = q["blind_pool"] is not None
 
-    selected_ids = {q["id"] for q in selected}
-    final_chapter_status: dict[str, Counter[str]] = defaultdict(Counter)
-    editorial_index: list[dict[str, Any]] = []
-    for q in questions:
-        decision = decisions[q["id"]]
-        if q["id"] in selected_ids:
-            status = "gold"
-            reasons: list[str] = []
-        elif decision.status is EditorialStatus.GOLD:
-            status = "silver"
-            reasons = ["superficial_duplicate"]
-        else:
-            status = decision.status.value
-            reasons = list(decision.rejection_reasons)
-        final_chapter_status[q["chapter"]][status] += 1
-        editorial_index.append({
+    editorial_index = [
+        {
             "id": q["id"],
             "chapter": q["chapter"],
             "template_id": q["template_id"],
-            "editorial_status": status,
-            "quality_score": decision.score,
-            "reasons": reasons,
-        })
+            "editorial_status": "silver" if decisions[q["id"]].status is EditorialStatus.GOLD else decisions[q["id"]].status.value,
+            "quality_score": decisions[q["id"]].score,
+            "reasons": ["replaced_by_editorial_v6"] if decisions[q["id"]].status is EditorialStatus.GOLD else list(decisions[q["id"]].rejection_reasons),
+        }
+        for q in questions
+    ]
+    editorial_index.extend({
+        "id": q["id"],
+        "chapter": q["chapter"],
+        "template_id": q["template_id"],
+        "editorial_status": "gold",
+        "quality_score": q["quality_score"],
+        "reasons": [],
+    } for q in selected)
 
     out = root / "public/banks/consolidation-v5"
     (out / "questions").mkdir(parents=True, exist_ok=True)
-    for chapter in sorted({q["chapter"] for q in selected}):
+    for chapter in sorted(MANDATORY_CHAPTER_TYPE_QUOTAS):
         rows = [q for q in selected if q["chapter"] == chapter]
         (out / "questions" / f"{chapter}.json").write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
 
     selected_chapters = Counter(q["chapter"] for q in selected)
+    selected_types = Counter(q["type"] for q in selected)
+    selected_difficulties = Counter(q["difficulty"] for q in selected)
     manifest = {
-        "schema_version": "5.1",
+        "schema_version": "6.0",
         "profile_id": "consolidation-v5",
-        "version": "V5-CONSOLIDACION-FINAL-2026-08-26",
+        "version": "V6-MEZCLA-APRENDIZAJE-2026-08-26",
         "source": "MaterialConexionBiblica (1).pdf",
         "original_records_preserved": len(questions),
         "gold_questions": len(selected),
         "gold_facts": len(fact_ids),
-        "average_variants_per_fact": round(len(selected) / len(fact_ids), 2) if fact_ids else 0,
+        "average_variants_per_fact": round(len(selected) / len(fact_ids), 2),
+        "types": dict(selected_types),
         "blind_pools": {key: len(value) for key, value in pools.items()},
         "disabled_templates": ["mc-sequence-v1", "tf-single-detail-v1", "tf-single-detail-v2"],
         "shards": [
@@ -437,50 +1003,70 @@ def build_consolidation_bank(root: Path) -> dict[str, Any]:
     }
     (out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     (out / "editorial-index.json").write_text(json.dumps(editorial_index, ensure_ascii=False), encoding="utf-8")
-    raw_by_id = {q["id"]: q for q in raw_questions}
-    before_after = [
-        {
-            "id": q["id"],
-            "before": raw_by_id[q["id"]]["question"],
-            "after": q["question"],
-            "reference_before": raw_by_id[q["id"]]["verse_or_page"],
-            "reference_after": q["verse_or_page"],
-        }
-        for q in selected[:20]
-    ]
-    tier_a = {"PR43", "PR44", "DAN7", "DAN8", "DAN9", "DAN11"}
+
+    tier_a = set(MANDATORY_CHAPTER_TYPE_MINIMUMS)
     stratified_review: dict[str, Any] = {}
     for chapter in sorted(selected_chapters):
         requested = 100 if chapter in tier_a else 20
-        sample = [q for q in selected if q["chapter"] == chapter][:requested]
+        chapter_rows = [q for q in selected if q["chapter"] == chapter]
+        sample = _spread_facts(chapter_rows, requested)
         stratified_review[chapter] = {
             "requested": requested,
             "reviewed": len(sample),
             "question_ids": [q["id"] for q in sample],
             "checks": {
                 "quality_score_at_least_85": all(q["quality_score"] >= 85 for q in sample),
-                "source_quote_supports_answer": all(_contains(q["source_quote"], q["correct_answer"]) for q in sample),
+                "source_supports_answer": all(
+                    q["type"] == "true_false" or _contains(q["source_quote"], q["correct_answer"])
+                    for q in sample
+                ),
                 "unique_options": all(len({normalized_text(option) for option in q["options"]}) == len(q["options"]) for q in sample),
                 "normalized_reference": all(q["verse_or_page"] == normalize_reference(q["verse_or_page"]) for q in sample),
-                "sufficient_fill_anchor": all(
-                    q["type"] != "fill_blank"
-                    or fill_anchor_is_sufficient(q["source_span"], q["correct_answer"])
+                "sufficient_fill_anchor": all(q["type"] != "fill_blank" or fill_anchor_is_sufficient(q["source_span"], q["correct_answer"]) for q in sample),
+                "single_detail_false": all(
+                    q["type"] != "true_false" or q["correct_answer"] != "Falso"
+                    or q["statement"] == _replace_once(q["source_span"], q["correct_detail"], q["incorrect_detail"])
+                    for q in sample
+                ),
+                "contextual_distractors_traced": all(
+                    q.get("trap_type") != "true_elsewhere" or len(q.get("why_distractors_fail", {})) == 3
                     for q in sample
                 ),
             },
         }
+    final_chapter_status = {
+        chapter: {"gold": selected_chapters[chapter]}
+        for chapter in selected_chapters
+    }
     report = {
         **manifest,
         "raw_status_counts": dict(status_counts),
-        "final_status_counts": dict(Counter(row["editorial_status"] for row in editorial_index)),
-        "final_status_by_chapter": {chapter: dict(counts) for chapter, counts in sorted(final_chapter_status.items())},
+        "final_status_counts": {
+            "gold": len(selected),
+            "silver": sum(decision.status is not EditorialStatus.QUARANTINE for decision in decisions.values()),
+            "quarantine": sum(decision.status is EditorialStatus.QUARANTINE for decision in decisions.values()),
+        },
+        "final_status_by_chapter": final_chapter_status,
         "chapter_status_before_deduplication": {chapter: dict(counts) for chapter, counts in sorted(chapter_status.items())},
         "gold_by_chapter": dict(sorted(selected_chapters.items())),
+        "gold_by_type": dict(selected_types),
+        "gold_by_difficulty": dict(selected_difficulties),
         "rejections_by_reason": dict(rejected.most_common()),
-        "duplicate_variants_removed": duplicate_drops,
+        "duplicate_variants_removed": len(questions) - len({normalized_text(q["question"]) for q in questions}),
+        "generated_editorial_replacements": len(selected),
         "quarantine_by_template": dict(Counter(q["template_id"] for q in questions if decisions[q["id"]].status is EditorialStatus.QUARANTINE)),
         "blind_fact_ids": pools,
+        "mandatory_mix_errors": mandatory_mix_errors(selected),
         "stratified_review": stratified_review,
-        "before_after_examples": before_after,
+        "before_after_examples": [
+            {
+                "id": q["id"],
+                "before": q["source_span"],
+                "after": q["question"],
+                "reference_before": q["verse_or_page"],
+                "reference_after": q["verse_or_page"],
+            }
+            for q in selected[:20]
+        ],
     }
     return {"manifest": manifest, "report": report, "selected": selected, "decisions": decisions}

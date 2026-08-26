@@ -44,4 +44,14 @@ describe("materialización dinámica", () => {
       first.options.map((option) => option.text),
     ])
   })
+
+  it("rematerializa un error sin acumular prefijos controlados", () => {
+    const first = materializeDynamicQuestion(question, { seed: 5, exposure: 1 })
+    const retry = materializeDynamicQuestion(first, { seed: 9, exposure: 2 })
+
+    expect(retry.question).toMatch(/^Sin trasladar datos de otra escena, según/)
+    expect(retry.question).not.toContain("Atendiendo al contexto exacto, según")
+    expect(retry.variantId).toContain("runtime-3")
+    expect(retry.variantId).not.toContain("runtime-2-")
+  })
 })

@@ -259,7 +259,7 @@ test("Estadísticas V3 muestra las 252 familias y sus variantes pendientes", asy
   ).toBeVisible()
 })
 
-test("V5 Consolidación es recomendado en una instalación nueva", async ({ page }) => {
+test("V6 Aprendizaje competitivo es recomendado en una instalación nueva", async ({ page }) => {
   await waitForApp(page)
   await page.getByText("Perfiles históricos y configuración manual", { exact: true }).click()
   if ((page.viewportSize()?.width ?? 0) >= 1024) {
@@ -267,7 +267,7 @@ test("V5 Consolidación es recomendado en una instalación nueva", async ({ page
       page
         .getByRole("radiogroup", { name: "Versión del banco" })
         .getByRole("radio", {
-          name: "V5 — Consolidación Final",
+          name: "V6 — Aprendizaje competitivo",
         })
     ).toBeChecked()
   } else {
@@ -340,7 +340,7 @@ test("V5 carga PR43–44 por fragmentos y conserva la variante dinámica al reca
   await expect(page.getByText("Pregunta 1 de 100", { exact: true })).toBeVisible({
     timeout: 30_000,
   })
-  await expect(page.getByText("V5 GOLD", { exact: true })).toBeVisible()
+  await expect(page.getByText("V6 GOLD", { exact: true })).toBeVisible()
   const prompt = await page.getByRole("heading", { level: 1 }).textContent()
   const options = await page.getByRole("radio").allTextContents()
 

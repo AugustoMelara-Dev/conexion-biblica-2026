@@ -25,4 +25,20 @@ describe("compressed retrieval scheduler", () => {
     const next = scheduleNextRetrieval({ outcome: "fast_correct", now: 1_000, tier: "A" })
     expect(next.dueAt).toBe(1_000 + 6 * 3_600_000)
   })
+
+  it("keeps every first long retrieval inside the six-to-ten-hour window", () => {
+    const next = scheduleNextRetrieval({ outcome: "fast_correct", now: 1_000, tier: "C" })
+    expect(next.dueAt).toBe(1_000 + 10 * 3_600_000)
+  })
+
+  it("moves a successful six-hour retrieval to a next-day recovery", () => {
+    const next = scheduleNextRetrieval({
+      outcome: "fast_correct",
+      now: 1_000,
+      tier: "A",
+      stage: "six_hour",
+    })
+    expect(next.dueAt).toBe(1_000 + 18 * 3_600_000)
+    expect(next.reason).toBe("maintenance")
+  })
 })

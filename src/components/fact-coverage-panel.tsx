@@ -41,7 +41,7 @@ export function FactCoveragePanel({
   return (
     <Card className="border-primary/20 bg-primary/[0.03] shadow-none">
       <CardHeader>
-        <CardTitle>Cobertura V5 por hechos</CardTitle>
+        <CardTitle>Cobertura V6 por hechos</CardTitle>
         <CardDescription>
           Agrupa todas las redacciones del mismo contenido; repetir una variante no infla la cobertura.
         </CardDescription>

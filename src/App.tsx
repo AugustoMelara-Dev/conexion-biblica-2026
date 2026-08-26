@@ -386,7 +386,7 @@ export function App() {
         {massiveBankError ? (
           <Alert>
             <AlertCircle />
-            <AlertTitle>Banco masivo V5</AlertTitle>
+            <AlertTitle>Bancos masivos V5/V6</AlertTitle>
             <AlertDescription>
               {massiveBankError}. Los bancos anteriores siguen disponibles.
             </AlertDescription>

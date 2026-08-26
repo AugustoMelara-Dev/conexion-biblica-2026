@@ -45,6 +45,14 @@ export type FactMastery = {
   hasNextDayRetrieval: boolean
   hasHardRetrieval: boolean
   nextDueAt: number | null
+  firstAttemptAttempts?: number
+  firstAttemptCorrect?: number
+  contextualAttempts?: number
+  contextualCorrect?: number
+  sixHourAttempts?: number
+  sixHourCorrect?: number
+  nextDayAttempts?: number
+  nextDayCorrect?: number
 }
 
 const HOUR = 3_600_000
@@ -77,6 +85,14 @@ export function emptyFactMastery(factId: string): FactMastery {
     hasNextDayRetrieval: false,
     hasHardRetrieval: false,
     nextDueAt: null,
+    firstAttemptAttempts: 0,
+    firstAttemptCorrect: 0,
+    contextualAttempts: 0,
+    contextualCorrect: 0,
+    sixHourAttempts: 0,
+    sixHourCorrect: 0,
+    nextDayAttempts: 0,
+    nextDayCorrect: 0,
   }
 }
 
@@ -97,6 +113,13 @@ function pointsFor(event: FactEvidenceEvent, interval: number | null) {
 export function applyFactEvidence(previous: FactMastery, event: FactEvidenceEvent): FactMastery {
   const interval = previous.lastQualifyingAt === null ? null : event.occurredAt - previous.lastQualifyingAt
   const slow = event.responseTimeMs > event.personalMedianMs * 1.4
+  const validFirstAttempt = event.firstAttempt && !event.hintUsed && !event.afterFeedback
+  const contextual = /context|scene|comparison|difference|sequence|cause|consequence/.test(event.semanticSkill)
+  const sixHourRetrieval = validFirstAttempt && interval !== null && interval >= 6 * HOUR
+  const nextDayRetrieval =
+    validFirstAttempt &&
+    previous.lastQualifyingAt !== null &&
+    tegucigalpaDay(previous.lastQualifyingAt) !== tegucigalpaDay(event.occurredAt)
   const base: FactMastery = {
     ...previous,
     attempts: previous.attempts + 1,
@@ -105,6 +128,14 @@ export function applyFactEvidence(previous: FactMastery, event: FactEvidenceEven
     sessionIds: appendUnique(previous.sessionIds, event.sessionId),
     firstSeenAt: previous.firstSeenAt ?? event.occurredAt,
     lastSeenAt: event.occurredAt,
+    firstAttemptAttempts: (previous.firstAttemptAttempts ?? 0) + Number(validFirstAttempt),
+    firstAttemptCorrect: (previous.firstAttemptCorrect ?? 0) + Number(validFirstAttempt && event.isCorrect),
+    contextualAttempts: (previous.contextualAttempts ?? 0) + Number(validFirstAttempt && contextual),
+    contextualCorrect: (previous.contextualCorrect ?? 0) + Number(validFirstAttempt && contextual && event.isCorrect),
+    sixHourAttempts: (previous.sixHourAttempts ?? 0) + Number(sixHourRetrieval),
+    sixHourCorrect: (previous.sixHourCorrect ?? 0) + Number(sixHourRetrieval && event.isCorrect),
+    nextDayAttempts: (previous.nextDayAttempts ?? 0) + Number(nextDayRetrieval),
+    nextDayCorrect: (previous.nextDayCorrect ?? 0) + Number(nextDayRetrieval && event.isCorrect),
   }
 
   if (!event.isCorrect) {

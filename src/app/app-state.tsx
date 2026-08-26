@@ -779,6 +779,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
           outcome: !result.isCorrect ? "incorrect" : flags.afterFeedback ? "repaired" : result.responseTimeMs > median * 1.4 ? "slow_correct" : "fast_correct",
           now: Date.now(),
           tier: [43, 44, 7, 8, 9, 11].includes(question.source.chapter) ? "A" : [40, 42, 10, 12].includes(question.source.chapter) ? "B" : "C",
+          stage: existingMastery?.state === "repaired"
+            ? "hour"
+            : evidence.hasNextDayRetrieval
+              ? "next_day"
+              : evidence.hasSixHourRetrieval
+                ? "six_hour"
+                : "initial",
         })
         const scheduled = { ...evidence, nextDueAt: schedule.dueAt }
         await repositories.factMastery.put(scheduled)

@@ -64,7 +64,7 @@ test("escritorio a 1024 px muestra seis perfiles verticales y detalle legible", 
   })
   await expect(detail).toBeVisible()
   await expect(
-    detail.getByRole("heading", { name: "V5 — Consolidación Final" })
+    detail.getByRole("heading", { name: "V6 — Aprendizaje competitivo" })
   ).toBeVisible()
   await expectNoHorizontalOverflow(page)
 })

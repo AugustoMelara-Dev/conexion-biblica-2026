@@ -84,7 +84,7 @@ export function createBankFromRaw(raw: Record<string, unknown>, sourceFileName: 
         : bankProfileId === "massive-v5"
           ? `V5 — Banco Masivo ${sourceWork}`
         : bankProfileId === "consolidation-v5"
-          ? `V5 — Consolidación Final ${sourceWork}`
+          ? `V6 — Aprendizaje competitivo ${sourceWork}`
         : sourceWork === "Daniel"
           ? `Daniel ${metadata.chapter ?? firstSource.chapter}`
           : `Profetas y Reyes ${metadata.chapter ?? firstSource.chapter}`,

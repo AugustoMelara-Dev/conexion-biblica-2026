@@ -28,6 +28,41 @@ describe("fact mastery evidence", () => {
     expect(next.state).toBe("repaired")
     expect(next.evidencePoints).toBe(0)
     expect(next.qualifyingFirstAttempts).toBe(0)
+    expect(next.firstAttemptAttempts).toBe(0)
+  })
+
+  it("tracks first-attempt, contextual, six-hour and next-day accuracy separately", () => {
+    let mastery = emptyFactMastery(base.factId)
+    mastery = applyFactEvidence(mastery, {
+      ...base,
+      semanticSkill: "scene_identification",
+    })
+    mastery = applyFactEvidence(mastery, {
+      ...base,
+      variantId: "v2",
+      sessionId: "s2",
+      occurredAt: base.occurredAt + 7 * HOUR,
+      semanticSkill: "scene_identification",
+      isCorrect: false,
+    })
+    mastery = applyFactEvidence(mastery, {
+      ...base,
+      variantId: "v3",
+      sessionId: "s3",
+      occurredAt: base.occurredAt + 25 * HOUR,
+      semanticSkill: "direct_recall",
+    })
+
+    expect(mastery).toMatchObject({
+      firstAttemptAttempts: 3,
+      firstAttemptCorrect: 2,
+      contextualAttempts: 2,
+      contextualCorrect: 1,
+      sixHourAttempts: 2,
+      sixHourCorrect: 1,
+      nextDayAttempts: 1,
+      nextDayCorrect: 1,
+    })
   })
 
   it("does not award mastery evidence when a hint was used", () => {
