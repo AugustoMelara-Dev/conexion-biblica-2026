@@ -1,32 +1,32 @@
 # Rescate editorial V5 - Consolidación Final
 
 - Registros originales preservados: 14000
-- Preguntas GOLD activas: 2549
-- Hechos GOLD: 1808
+- Preguntas GOLD activas: 2287
+- Hechos GOLD: 1627
 - Variantes promedio por hecho: 1.41
-- SILVER conservadas para edición: 2268
-- QUARANTINE fuera de producción: 9183
+- SILVER conservadas para edición: 2036
+- QUARANTINE fuera de producción: 9677
 
 ## GOLD por capítulo
 
-- DAN1: 90
-- DAN10: 88
-- DAN11: 213
-- DAN12: 67
-- DAN2: 117
-- DAN3: 105
-- DAN4: 120
-- DAN5: 100
-- DAN6: 96
-- DAN7: 140
-- DAN8: 147
-- DAN9: 156
-- PR39: 122
-- PR40: 151
-- PR41: 137
-- PR42: 170
-- PR43: 282
-- PR44: 248
+- DAN1: 87
+- DAN10: 78
+- DAN11: 180
+- DAN12: 60
+- DAN2: 107
+- DAN3: 96
+- DAN4: 106
+- DAN5: 90
+- DAN6: 92
+- DAN7: 122
+- DAN8: 118
+- DAN9: 151
+- PR39: 111
+- PR40: 133
+- PR41: 120
+- PR42: 155
+- PR43: 245
+- PR44: 236
 
 ## Cuarentena por razón
 
@@ -37,11 +37,12 @@
 - distractor_repair_failed: 3724
 - unsafe_false_substitution: 1750
 - lexical_sequence: 630
+- insufficient_fill_anchor: 615
 
 ## Cuarentena por template
 
-- fill-context-v1: 530
-- fill-context-v2: 415
+- fill-context-v1: 792
+- fill-context-v2: 647
 - mc-contextual-v1: 1340
 - mc-contextual-v2: 1557
 - mc-contextual-v3: 1211
