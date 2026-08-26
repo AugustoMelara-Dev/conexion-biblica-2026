@@ -42,3 +42,11 @@
 - La cobertura adicional confirma persistencia al cerrar/reabrir, preset de simulacro, cambio de banco y payload completo con ciclo agotado.
 - Validación: `session-builder-page.test.tsx` (11 pruebas) y la regresión focal con dominio (20 pruebas) aprobadas; typecheck, ESLint focal y diff-check aprobados.
 - QA móvil posterior: CTA visible dentro de un `aside` con `position: static`, sin overflow horizontal (`scrollWidth=417`, `innerWidth=434`) y sin errores ni advertencias de consola.
+
+## Fix round 2
+
+**Estado:** DONE
+
+- Se reemplazó la conversión insegura de una fixture parcial por `createAppContext`, que devuelve un `ReturnType<typeof useApp>` completo y tipado.
+- La fixture conserva los valores observables de SessionBuilder (preguntas, progreso, banco, ciclos y callback) y completa el resto de contratos de contexto con valores inertes de prueba.
+- Validación: `tsc -p tsconfig.app.json --noEmit`, 20 pruebas focales/dominio, ESLint focal y `npm.cmd run build` aprobados. El build conserva únicamente el aviso existente de tamaño de chunk superior a 500 kB.

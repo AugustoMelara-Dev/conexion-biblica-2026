@@ -10,7 +10,13 @@ import {
   StudyDayQuickStart,
 } from "@/components/session-builder-page"
 import { buildPoolKey } from "@/domain/session-selection"
-import type { CoverageCycle, Question, SessionConfig } from "@/domain/types"
+import type {
+  CoverageCycle,
+  Question,
+  QuestionProgress,
+  SessionConfig,
+} from "@/domain/types"
+import { buildStatistics } from "@/lib/statistics"
 
 vi.mock("@/app/app-state", () => ({ useApp: vi.fn() }))
 
@@ -62,6 +68,90 @@ const defaultSessionConfig: SessionConfig = {
   strategy: "coverage-cycle",
 }
 
+const emptyProgress: QuestionProgress = {
+  questionKey: "legacy-v1:session-builder-question",
+  timesSeen: 0,
+  timesCorrect: 0,
+  timesIncorrect: 0,
+  timesUnanswered: 0,
+  currentCorrectStreak: 0,
+  averageResponseTimeMs: 0,
+  bestResponseTimeMs: null,
+  lastResponseTimeMs: null,
+  lastSeenAt: null,
+  masteryScore: 0,
+  favorite: false,
+  markedDifficult: false,
+  reported: false,
+  history: [],
+}
+
+function createAppContext({
+  coverageCycles,
+  setBankSelection,
+}: {
+  coverageCycles: Map<string, CoverageCycle>
+  setBankSelection: ReturnType<typeof vi.fn>
+}): ReturnType<typeof useApp> {
+  const progress = new Map<string, QuestionProgress>()
+
+  return {
+    loading: false,
+    error: null,
+    masterBankError: null,
+    nav: "practice",
+    setNav: vi.fn(),
+    banks: [],
+    questions: [question],
+    allQuestions: [question],
+    progress,
+    sessions: [],
+    reports: [],
+    preferences: {
+      theme: "system",
+      lastMode: "learn",
+      reducedMotion: false,
+      lastBankSelection: "legacy-v1",
+    },
+    bankSelection: "legacy-v1",
+    setBankSelection,
+    bankCounts: { legacy: 1, master: 0, prep: 0, curated: 0 },
+    coverageCycles,
+    activeRound: null,
+    statistics: buildStatistics([question], progress),
+    refresh: async () => undefined,
+    importBankFiles: async () => [],
+    removeBank: async () => undefined,
+    recordAnswer: async () => emptyProgress,
+    recordReport: async () => undefined,
+    saveSession: async () => undefined,
+    saveCoverageCycle: async () => undefined,
+    saveActiveRound: async () => undefined,
+    clearActiveRound: async () => undefined,
+    exportBanks: async () => [],
+    exportProgress: async () => [],
+    exportBackup: async () => ({
+      backupVersion: "2.0",
+      exportedAt: 0,
+      banks: [],
+      progress: [],
+      sessions: [],
+      reports: [],
+      preferences: {
+        theme: "system",
+        lastMode: "learn",
+        reducedMotion: false,
+        lastBankSelection: "legacy-v1",
+      },
+      coverageCycles: [],
+      activeRound: null,
+    }),
+    importBackup: async () => ({ valid: true, errors: [] }),
+    setPreferences: vi.fn(),
+    repositories: null,
+  }
+}
+
 function renderSessionBuilder({
   onStart = vi.fn(),
   coverageCycles = new Map<string, CoverageCycle>(),
@@ -70,13 +160,9 @@ function renderSessionBuilder({
   coverageCycles?: Map<string, CoverageCycle>
 } = {}) {
   const setBankSelection = vi.fn()
-  vi.mocked(useApp).mockReturnValue({
-    questions: [question],
-    progress: new Map(),
-    bankSelection: "legacy-v1",
-    coverageCycles,
-    setBankSelection,
-  } as ReturnType<typeof useApp>)
+  vi.mocked(useApp).mockReturnValue(
+    createAppContext({ coverageCycles, setBankSelection })
+  )
 
   return {
     ...render(<SessionBuilderPage onStart={onStart} />),
