@@ -30,3 +30,15 @@
 - El selector de banco de los esenciales actualiza tanto el `SessionConfig` como la selección activa de la aplicación, para que el banco visible coincida con el conjunto de preguntas elegibles.
 - Se conservaron cantidad personalizada (mínimo y máximo elegible), selección de fuentes, capítulos, bandas/niveles, tipos, estados, estrategia, bloques, temporizadores y ambas aleatorizaciones.
 - Única limitación de evidencia: el proceso RED escalado no imprimió el resumen de Vitest después de arrancar; el test se escribió y ejecutó antes de producir los componentes, pero el fallo de aserción no quedó capturado por el runner.
+
+## Fix round 1
+
+**Estado:** DONE
+
+- Los tres `Switch` avanzados se etiquetan mediante `aria-labelledby` y se cubren por rol/nombre accesible.
+- La ruta rápida usa como máximo dos columnas editoriales (`md:grid-cols-2`); una prueba protege que no vuelva `lg:grid-cols-4`.
+- `EssentialSettings` y `RoundSummary` ahora consumen exactamente las props del brief. El detalle del ciclo se compone desde el padre y el CTA mantiene su semántica `onStart(config, resetCycle)` sin ampliar esas APIs.
+- `AdvancedSettings` genera su ID de panel con `useId`, con una prueba que verifica que dos disclosures no colisionen.
+- La cobertura adicional confirma persistencia al cerrar/reabrir, preset de simulacro, cambio de banco y payload completo con ciclo agotado.
+- Validación: `session-builder-page.test.tsx` (11 pruebas) y la regresión focal con dominio (20 pruebas) aprobadas; typecheck, ESLint focal y diff-check aprobados.
+- QA móvil posterior: CTA visible dentro de un `aside` con `position: static`, sin overflow horizontal (`scrollWidth=417`, `innerWidth=434`) y sin errores ni advertencias de consola.

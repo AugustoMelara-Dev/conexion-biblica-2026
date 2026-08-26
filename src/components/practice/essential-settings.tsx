@@ -36,7 +36,6 @@ export function EssentialSettings({
   onBankChange,
   onCountChange,
   onSourceWorksChange,
-  maxCount,
 }: {
   bankSelection: BankSelection
   count: SessionConfig["count"]
@@ -44,7 +43,6 @@ export function EssentialSettings({
   onBankChange: (value: BankSelection) => void
   onCountChange: (value: SessionConfig["count"]) => void
   onSourceWorksChange: (value: SourceWork[]) => void
-  maxCount?: number
 }) {
   const isCustom = typeof count === "number" && !countOptions.includes(count)
   const [customCount, setCustomCount] = useState(() => (isCustom ? count : 30))
@@ -133,9 +131,7 @@ export function EssentialSettings({
                     </SelectItem>
                   ))}
                   <SelectItem value="custom">Personalizada</SelectItem>
-                  <SelectItem value="all">
-                    Todas{maxCount === undefined ? "" : ` (${maxCount})`}
-                  </SelectItem>
+                  <SelectItem value="all">Todas</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
@@ -146,7 +142,6 @@ export function EssentialSettings({
               <Input
                 type="number"
                 min={1}
-                max={maxCount || 1}
                 value={customCount}
                 onChange={(event) => {
                   const next = Math.max(1, Number(event.target.value))

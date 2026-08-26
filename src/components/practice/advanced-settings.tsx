@@ -1,4 +1,4 @@
-import type { ReactNode } from "react"
+import { useId, type ReactNode } from "react"
 import { ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
@@ -18,6 +18,8 @@ export function AdvancedSettings({
   onOpenChange: (open: boolean) => void
   children: ReactNode
 }) {
+  const panelId = useId()
+
   return (
     <Card className="shadow-none">
       <CardHeader className="gap-4 sm:grid-cols-[minmax(0,1fr)_auto]">
@@ -31,7 +33,7 @@ export function AdvancedSettings({
           type="button"
           variant="outline"
           aria-expanded={open}
-          aria-controls="advanced-round-settings"
+          aria-controls={panelId}
           onClick={() => onOpenChange(!open)}
         >
           Configuración avanzada
@@ -42,7 +44,7 @@ export function AdvancedSettings({
         </Button>
       </CardHeader>
       {open ? (
-        <CardContent id="advanced-round-settings" className="grid gap-6">
+        <CardContent id={panelId} className="grid gap-6">
           {children}
         </CardContent>
       ) : null}

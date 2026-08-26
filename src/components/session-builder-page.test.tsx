@@ -3,12 +3,14 @@ import userEvent from "@testing-library/user-event"
 import { useState } from "react"
 import { describe, expect, it, vi } from "vitest"
 import { useApp } from "@/app/app-state"
+import { AdvancedSettings } from "@/components/practice/advanced-settings"
 import {
   SequentialBlockPicker,
   SessionBuilderPage,
   StudyDayQuickStart,
 } from "@/components/session-builder-page"
-import type { Question } from "@/domain/types"
+import { buildPoolKey } from "@/domain/session-selection"
+import type { CoverageCycle, Question, SessionConfig } from "@/domain/types"
 
 vi.mock("@/app/app-state", () => ({ useApp: vi.fn() }))
 
@@ -31,15 +33,56 @@ const question: Question = {
   correctAnswer: ["A"],
 }
 
-function renderSessionBuilder() {
+const defaultSessionConfig: SessionConfig = {
+  mode: "learn",
+  count: 10,
+  sourceWorks: ["Daniel", "Profetas y Reyes"],
+  chapters: [],
+  difficulties: [1, 2, 3, 4, 5],
+  types: [
+    "single_choice",
+    "true_false",
+    "fill_blank",
+    "multi_select",
+    "ordering",
+    "matching",
+    "who_said_it",
+    "to_whom",
+    "reference_detail",
+    "negative_choice",
+    "sequence_choice",
+    "precision",
+  ],
+  statuses: ["all"],
+  shuffleQuestions: true,
+  shuffleOptions: true,
+  perQuestionSeconds: null,
+  totalSeconds: null,
+  bankSelection: "legacy-v1",
+  strategy: "coverage-cycle",
+}
+
+function renderSessionBuilder({
+  onStart = vi.fn(),
+  coverageCycles = new Map<string, CoverageCycle>(),
+}: {
+  onStart?: ReturnType<typeof vi.fn>
+  coverageCycles?: Map<string, CoverageCycle>
+} = {}) {
+  const setBankSelection = vi.fn()
   vi.mocked(useApp).mockReturnValue({
     questions: [question],
     progress: new Map(),
     bankSelection: "legacy-v1",
-    coverageCycles: new Map(),
+    coverageCycles,
+    setBankSelection,
   } as ReturnType<typeof useApp>)
 
-  return render(<SessionBuilderPage onStart={vi.fn()} />)
+  return {
+    ...render(<SessionBuilderPage onStart={onStart} />),
+    onStart,
+    setBankSelection,
+  }
 }
 
 describe("controles de preparación V3", () => {
@@ -77,6 +120,17 @@ describe("controles de preparación V3", () => {
 
     expect(onSelect).toHaveBeenCalledWith(2)
   })
+
+  it("mantiene la ruta rápida en un máximo de dos columnas editoriales", () => {
+    render(<StudyDayQuickStart onSelect={vi.fn()} />)
+
+    const grid = screen
+      .getByRole("button", { name: /Día 1/i })
+      .closest("[data-slot='card-content']")
+
+    expect(grid).toHaveClass("md:grid-cols-2")
+    expect(grid).not.toHaveClass("lg:grid-cols-4")
+  })
 })
 
 describe("configuración progresiva de práctica", () => {
@@ -101,5 +155,141 @@ describe("configuración progresiva de práctica", () => {
     expect(screen.getByRole("combobox", { name: "Cantidad" })).toBeVisible()
     expect(screen.getByText(/preguntas disponibles/)).toBeVisible()
     expect(screen.getByRole("button", { name: "Comenzar ronda" })).toBeEnabled()
+  })
+
+  it("expone nombres accesibles para los interruptores avanzados", async () => {
+    const user = userEvent.setup()
+    renderSessionBuilder()
+
+    await user.click(
+      screen.getByRole("button", { name: "Configuración avanzada" })
+    )
+
+    expect(
+      screen.getByRole("switch", { name: "Temporizador total" })
+    ).toBeVisible()
+    expect(
+      screen.getByRole("switch", { name: "Usar selección no secuencial" })
+    ).toBeVisible()
+    expect(
+      screen.getByRole("switch", { name: "Aleatorizar opciones" })
+    ).toBeVisible()
+  })
+
+  it("conserva filtros avanzados al cerrar y reabrir el disclosure", async () => {
+    const user = userEvent.setup()
+    const onStart = vi.fn()
+    renderSessionBuilder({ onStart })
+
+    const disclosure = screen.getByRole("button", {
+      name: "Configuración avanzada",
+    })
+    await user.click(disclosure)
+    await user.click(screen.getByRole("button", { name: "Nivel 1" }))
+    await user.click(disclosure)
+    await user.click(disclosure)
+    await user.click(screen.getByRole("button", { name: "Comenzar ronda" }))
+
+    expect(onStart).toHaveBeenCalledWith(
+      expect.objectContaining({ difficulties: [2, 3, 4, 5] }),
+      false
+    )
+  })
+
+  it("inicia un simulacro con su preset completo", async () => {
+    const user = userEvent.setup()
+    const onStart = vi.fn()
+    renderSessionBuilder({ onStart })
+
+    await user.click(screen.getByRole("button", { name: /Simulacro/ }))
+    await user.click(screen.getByRole("button", { name: "Comenzar ronda" }))
+
+    expect(onStart).toHaveBeenCalledWith(
+      expect.objectContaining({
+        ...defaultSessionConfig,
+        mode: "simulation",
+        count: 50,
+        perQuestionSeconds: 12,
+        totalSeconds: 600,
+      }),
+      false
+    )
+  })
+
+  it("incluye el banco elegido en el payload de inicio", async () => {
+    const user = userEvent.setup()
+    const onStart = vi.fn()
+    const { setBankSelection } = renderSessionBuilder({ onStart })
+
+    await user.selectOptions(
+      screen.getByRole("combobox", { name: "Banco de preguntas" }),
+      "prep-v3"
+    )
+    await user.click(screen.getByRole("button", { name: "Comenzar ronda" }))
+
+    expect(setBankSelection).toHaveBeenCalledWith("prep-v3")
+    expect(onStart).toHaveBeenCalledWith(
+      expect.objectContaining({
+        ...defaultSessionConfig,
+        bankSelection: "prep-v3",
+      }),
+      false
+    )
+  })
+
+  it("preserva el payload completo y reinicia el ciclo agotado", async () => {
+    const user = userEvent.setup()
+    const onStart = vi.fn()
+    const exhaustedCycle: CoverageCycle = {
+      poolKey: buildPoolKey(defaultSessionConfig),
+      cycleId: "exhausted-cycle",
+      remainingQuestionKeys: [],
+      seenQuestionKeys: ["legacy-v1:session-builder-question"],
+      totalPoolSize: 1,
+      createdAt: 1,
+      updatedAt: 1,
+    }
+    renderSessionBuilder({
+      onStart,
+      coverageCycles: new Map([[exhaustedCycle.poolKey, exhaustedCycle]]),
+    })
+
+    await user.click(screen.getByRole("button", { name: "Comenzar ronda" }))
+
+    expect(onStart).toHaveBeenCalledWith(
+      expect.objectContaining(defaultSessionConfig),
+      true
+    )
+  })
+})
+
+describe("AdvancedSettings", () => {
+  it("asocia cada disclosure con un panel único", () => {
+    render(
+      <>
+        <AdvancedSettings open onOpenChange={vi.fn()}>
+          <p>Primer panel</p>
+        </AdvancedSettings>
+        <AdvancedSettings open onOpenChange={vi.fn()}>
+          <p>Segundo panel</p>
+        </AdvancedSettings>
+      </>
+    )
+
+    const [first, second] = screen.getAllByRole("button", {
+      name: "Configuración avanzada",
+    })
+
+    expect(first).toHaveAttribute("aria-controls")
+    expect(second).toHaveAttribute("aria-controls")
+    expect(first.getAttribute("aria-controls")).not.toBe(
+      second.getAttribute("aria-controls")
+    )
+    expect(
+      document.getElementById(first.getAttribute("aria-controls") ?? "")
+    ).toBeVisible()
+    expect(
+      document.getElementById(second.getAttribute("aria-controls") ?? "")
+    ).toBeVisible()
   })
 })

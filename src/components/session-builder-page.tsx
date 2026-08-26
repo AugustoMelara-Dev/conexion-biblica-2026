@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type ReactNode } from "react"
+import { useEffect, useId, useMemo, useState, type ReactNode } from "react"
 import { CircleHelp, Shuffle, TimerReset } from "lucide-react"
 import { useApp } from "@/app/app-state"
 import { AdvancedSettings } from "@/components/practice/advanced-settings"
@@ -222,7 +222,6 @@ export function SessionBuilderPage({
           <EssentialSettings
             bankSelection={config.bankSelection ?? bankSelection}
             count={config.count}
-            maxCount={estimated}
             sourceWorks={config.sourceWorks}
             onBankChange={(value) => {
               update({ bankSelection: value })
@@ -509,25 +508,24 @@ export function SessionBuilderPage({
             </div>
           </AdvancedSettings>
         </div>
-        <RoundSummary
-          eligibleCount={estimated}
-          count={config.count}
-          mode={config.mode}
-          disabled={
-            !estimated || !config.types.length || !config.sourceWorks.length
-          }
-          startLabel={resetCycle ? "Iniciar nuevo ciclo" : "Comenzar ronda"}
-          onStart={() => onStart(config, resetCycle)}
-          details={
-            currentCycle ? (
-              <p className="mt-3 text-xs text-muted-foreground">
-                {currentCycle.seenQuestionKeys.length} /{" "}
-                {currentCycle.totalPoolSize} recorridas ·{" "}
-                {currentCycle.remainingQuestionKeys.length} pendientes
-              </p>
-            ) : null
-          }
-        />
+        <aside className="min-w-0 xl:sticky xl:top-24 xl:self-start">
+          <RoundSummary
+            eligibleCount={estimated}
+            count={config.count}
+            mode={config.mode}
+            disabled={
+              !estimated || !config.types.length || !config.sourceWorks.length
+            }
+            onStart={() => onStart(config, resetCycle)}
+          />
+          {currentCycle ? (
+            <p className="mt-3 text-xs text-muted-foreground">
+              {currentCycle.seenQuestionKeys.length} /{" "}
+              {currentCycle.totalPoolSize} recorridas ·{" "}
+              {currentCycle.remainingQuestionKeys.length} pendientes
+            </p>
+          ) : null}
+        </aside>
       </section>
     </div>
   )
@@ -580,7 +578,7 @@ export function StudyDayQuickStart({
           por recuperación activa.
         </CardDescription>
       </CardHeader>
-      <CardContent className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+      <CardContent className="grid gap-2 md:grid-cols-2">
         {days.map((day) => {
           const plan = getStudyDay(day)
           return (
@@ -620,18 +618,26 @@ function ToggleSetting({
   checked: boolean
   onCheckedChange: (checked: boolean) => void
 }) {
+  const labelId = useId()
+
   return (
     <div className="flex items-center justify-between gap-3 rounded-lg border px-3 py-3">
       <div className="flex items-center gap-3">
         {icon}
         <div>
-          <p className="text-sm font-medium">{title}</p>
+          <p id={labelId} className="text-sm font-medium">
+            {title}
+          </p>
           {description ? (
             <p className="text-xs text-muted-foreground">{description}</p>
           ) : null}
         </div>
       </div>
-      <Switch checked={checked} onCheckedChange={onCheckedChange} />
+      <Switch
+        aria-labelledby={labelId}
+        checked={checked}
+        onCheckedChange={onCheckedChange}
+      />
     </div>
   )
 }
