@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Clock3, Flame, Target } from "lucide-react"
+import { ArrowRight, BarChart3, Check, Clock3, Flame, Gauge, RotateCcw, Target } from "lucide-react"
 import { useApp } from "@/app/app-state"
 import { QuickStartButton } from "@/components/app-shell"
 import { BankSelector } from "@/components/bank-selector"
@@ -124,6 +124,32 @@ export function DashboardPage() {
         </div>
       </section>
 
+      <section aria-label="Mis puntos débiles" className="min-w-0">
+        <SectionHeader
+          title="Mis puntos débiles"
+          description="Úsalos para elegir una ronda que refuerce lo que más lo necesita."
+          action={<Button variant="ghost" size="sm" onClick={() => setNav("stats")}>Ver progreso <ArrowRight data-icon="inline-end" /></Button>}
+        />
+        <div className="mt-5 grid divide-y divide-border/70 rounded-xl border border-border/70 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+          <WeakLine
+            icon={BarChart3}
+            label="Capítulo a reforzar"
+            value={statistics.weakChapters[0]?.label ?? "Todavía no hay datos"}
+            detail={statistics.weakChapters[0] ? `${statistics.weakChapters[0].accuracy}% de precisión` : "Completa una ronda"}
+          />
+          <WeakLine
+            icon={Gauge}
+            label="Tipo más débil"
+            value={statistics.weakTypes[0]?.label ?? "Todavía no hay datos"}
+            detail={statistics.weakTypes[0] ? `${statistics.weakTypes[0].accuracy}% de precisión` : "Completa una ronda"}
+          />
+          <div className="flex min-w-0 flex-col justify-between gap-4 p-5">
+            <WeakLine icon={RotateCcw} label="Más falladas" value={`${statistics.mostFailed.length} preguntas detectadas`} detail="Repaso recomendado" compact />
+            <Button className="self-start" variant="outline" onClick={() => setNav("practice")}>Abrir práctica enfocada <ArrowRight data-icon="inline-end" /></Button>
+          </div>
+        </div>
+      </section>
+
       <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground" role="status">
         <Check className="size-4 text-chart-2" aria-hidden="true" />
         Guardado local: {banks.length} bancos · {questions.length} preguntas · IndexedDB activo.
@@ -138,6 +164,19 @@ function SourceMetric({ label, metric }: { label: string; metric: { accuracy: nu
       <div className="flex items-center justify-between gap-3"><span className="text-sm font-medium">{label}</span><span className="text-2xl font-semibold tabular-nums">{metric.accuracy}%</span></div>
       <Progress className="mt-4" value={metric.accuracy} />
       <div className="mt-3 flex justify-between gap-3 text-xs text-muted-foreground"><span>{metric.correct}/{metric.total} correctas</span><span className="shrink-0 tabular-nums">{formatElapsedMs(metric.averageResponseTimeMs)} medio</span></div>
+    </div>
+  )
+}
+
+function WeakLine({ icon: Icon, label, value, detail, compact = false }: { icon: typeof BarChart3; label: string; value: string; detail: string; compact?: boolean }) {
+  return (
+    <div className={`flex min-w-0 items-start gap-3 ${compact ? "" : "p-5"}`}>
+      <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-secondary text-primary"><Icon aria-hidden="true" /></div>
+      <div className="min-w-0">
+        <p className="text-xs font-semibold uppercase tracking-[0.1em] text-muted-foreground">{label}</p>
+        <p className="mt-1 truncate text-sm font-medium">{value}</p>
+        <p className="mt-0.5 text-xs text-muted-foreground">{detail}</p>
+      </div>
     </div>
   )
 }
