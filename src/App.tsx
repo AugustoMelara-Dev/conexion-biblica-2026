@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { AlertCircle, Database, LoaderCircle } from "lucide-react"
+import { AlertCircle } from "lucide-react"
 import { useApp } from "@/app/app-state"
 import { filterQuestionsForSelection } from "@/domain/banks"
 import {
@@ -20,8 +20,7 @@ import type {
   SessionConfig,
 } from "@/domain/types"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Skeleton } from "@/components/ui/skeleton"
 import { AppShell } from "@/components/app-shell"
 import { FocusShell } from "@/components/layout/focus-shell"
 import { BankManagerPage } from "@/components/bank-manager-page"
@@ -301,23 +300,33 @@ export function App() {
 
 function LoadingState() {
   return (
-    <Card className="shadow-none">
-      <CardContent className="flex min-h-72 flex-col items-center justify-center gap-4">
-        <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-secondary text-primary">
-          <LoaderCircle className="animate-spin" />
+    <section
+      aria-busy="true"
+      aria-label="Preparando tus bancos"
+      className="min-w-0 space-y-8"
+      role="status"
+    >
+      <h1 className="sr-only">Preparando tus bancos</h1>
+      <span className="sr-only">
+        Cargando preguntas y progreso desde este dispositivo.
+      </span>
+      <div aria-hidden="true" className="space-y-5">
+        <Skeleton
+          data-testid="dashboard-skeleton"
+          className="h-32 rounded-2xl"
+        />
+        <div className="grid min-w-0 gap-4 sm:grid-cols-2">
+          <Skeleton
+            data-testid="dashboard-skeleton"
+            className="h-44 rounded-2xl"
+          />
+          <Skeleton
+            data-testid="dashboard-skeleton"
+            className="h-44 rounded-2xl"
+          />
         </div>
-        <div className="text-center">
-          <p className="font-medium">Preparando tus bancos</p>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Cargando preguntas y progreso desde este dispositivo.
-          </p>
-        </div>
-        <Button variant="outline" disabled>
-          <Database data-icon="inline-start" />
-          IndexedDB
-        </Button>
-      </CardContent>
-    </Card>
+      </div>
+    </section>
   )
 }
 
