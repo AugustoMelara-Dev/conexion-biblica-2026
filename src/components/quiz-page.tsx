@@ -86,8 +86,11 @@ export function QuizPage({
   const [reportReason, setReportReason] = useState("")
   const [reportOpen, setReportOpen] = useState(false)
   const questionHeadingRef = useRef<HTMLHeadingElement>(null)
-  const hasMountedQuestionRef = useRef(false)
+  const focusedQuestionKeyRef = useRef<string | null>(null)
   const isSubmittingRef = useRef(false)
+  const isAdvancingRef = useRef(false)
+  const hasFinishedRef = useRef(false)
+  const deferredTransitionRef = useRef<number | null>(null)
   const question = queue[index]
   const progressRef = useRef(progress)
   const queueRef = useRef(queue)
@@ -99,6 +102,23 @@ export function QuizPage({
   const displayedQuestion = useMemo(
     () => shuffleQuestionOptions(question, config.shuffleOptions),
     [config.shuffleOptions, question]
+  )
+
+  const clearDeferredTransition = useCallback(() => {
+    if (deferredTransitionRef.current === null) return
+    window.clearTimeout(deferredTransitionRef.current)
+    deferredTransitionRef.current = null
+  }, [])
+
+  const scheduleDeferredTransition = useCallback(
+    (callback: () => void, delay: number) => {
+      clearDeferredTransition()
+      deferredTransitionRef.current = window.setTimeout(() => {
+        deferredTransitionRef.current = null
+        callback()
+      }, delay)
+    },
+    [clearDeferredTransition]
   )
 
   useEffect(() => {
@@ -138,18 +158,30 @@ export function QuizPage({
     setFavorite(Boolean(itemProgress?.favorite))
     setDifficult(Boolean(itemProgress?.markedDifficult))
     setReportReason("")
+    clearDeferredTransition()
     isSubmittingRef.current = false
-    if (hasMountedQuestionRef.current) questionHeadingRef.current?.focus()
-    else hasMountedQuestionRef.current = true
+    isAdvancingRef.current = false
+    const questionKey = `${question.bankId ?? "local"}:${question.id}`
+    if (
+      focusedQuestionKeyRef.current !== null &&
+      focusedQuestionKeyRef.current !== questionKey
+    ) {
+      questionHeadingRef.current?.focus()
+    }
+    focusedQuestionKeyRef.current = questionKey
   }, [
     config.perQuestionSeconds,
     displayedQuestion,
     question.bankId,
     question.id,
+    clearDeferredTransition,
   ])
 
   const finish = useCallback(
     (nextAnswers: SessionAnswer[]) => {
+      if (hasFinishedRef.current) return
+      hasFinishedRef.current = true
+      clearDeferredTransition()
       const session: Session = {
         id:
           typeof crypto !== "undefined" && "randomUUID" in crypto
@@ -169,16 +201,19 @@ export function QuizPage({
       }
       onFinish(session)
     },
-    [config, onFinish, startedAt]
+    [clearDeferredTransition, config, onFinish, startedAt]
   )
 
   const advance = useCallback(
     (lastAnswer?: SessionAnswer) => {
+      if (isAdvancingRef.current || hasFinishedRef.current) return
+      isAdvancingRef.current = true
+      clearDeferredTransition()
       const nextAnswers = lastAnswer ? [...answers, lastAnswer] : answers
       if (index >= queueRef.current.length - 1) finish(nextAnswers)
       else setIndex((current) => current + 1)
     },
-    [answers, finish, index]
+    [answers, clearDeferredTransition, finish, index]
   )
 
   const submit = useCallback(
@@ -224,12 +259,15 @@ export function QuizPage({
         )
       }
       if (finishRoundOnSubmit) {
-        window.setTimeout(
+        scheduleDeferredTransition(
           () => finish([...answers, sessionAnswer]),
           isSilent ? 250 : 900
         )
       } else if (forcedReason) {
-        window.setTimeout(() => advance(sessionAnswer), isSilent ? 250 : 900)
+        scheduleDeferredTransition(
+          () => advance(sessionAnswer),
+          isSilent ? 250 : 900
+        )
       }
     },
     [
@@ -244,6 +282,7 @@ export function QuizPage({
       question,
       questionStartedAt,
       recordAnswer,
+      scheduleDeferredTransition,
       submitted,
       value,
     ]
@@ -277,11 +316,13 @@ export function QuizPage({
       if (next <= 0) {
         window.clearInterval(interval)
         if (!submitted) void submit("timeout", true)
-        else window.setTimeout(() => finish(answers), 250)
+        else scheduleDeferredTransition(() => finish(answers), 250)
       }
     }, 250)
     return () => window.clearInterval(interval)
-  }, [answers, config.totalSeconds, finish, startedAt, submit, submitted])
+  }, [answers, config.totalSeconds, finish, scheduleDeferredTransition, startedAt, submit, submitted])
+
+  useEffect(() => clearDeferredTransition, [clearDeferredTransition])
 
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
@@ -357,9 +398,9 @@ export function QuizPage({
             : "Elige una respuesta y confirma."
 
   return (
-    <article className="mx-auto flex min-h-screen w-full max-w-3xl scroll-pb-28 flex-col px-4 py-5 pb-28 sm:scroll-pb-6 sm:px-6 sm:py-6">
+    <article className="mx-auto flex min-h-screen w-full max-w-3xl flex-col px-4 py-5 pb-28 sm:px-6 sm:py-6">
       <header className="grid grid-cols-[auto_1fr_auto] items-center gap-3">
-        <Button variant="ghost" onClick={onExit}>
+        <Button variant="ghost" onClick={() => { clearDeferredTransition(); onExit() }}>
           <X data-icon="inline-start" />
           Salir
         </Button>
@@ -677,6 +718,11 @@ function typeLabel(type: Question["type"]) {
     true_false: "Verdadero o falso",
     fill_blank: "Completar",
     negative_choice: "Opción negativa",
+    who_said_it: "Quién lo dijo",
+    to_whom: "A quién",
+    reference_detail: "Detalle de referencia",
+    sequence_choice: "Secuencia",
+    precision: "Precisión",
   }
   return labels[type]
 }

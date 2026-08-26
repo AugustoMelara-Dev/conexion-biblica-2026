@@ -183,7 +183,9 @@ export function ResultsPage({
               Revisa qué ocurrió en cada pregunta.
             </CardDescription>
           </div>
-          <label className="flex min-h-11 cursor-pointer items-center justify-between gap-3 rounded-lg border px-3 py-2 text-sm font-medium">
+          <label
+            className={`flex min-h-11 items-center justify-between gap-3 rounded-lg border px-3 py-2 text-sm font-medium ${hasErrors ? "cursor-pointer" : "cursor-not-allowed"}`}
+          >
             Solo incorrectas
             <Switch
               checked={onlyIncorrect}

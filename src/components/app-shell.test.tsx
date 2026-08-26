@@ -142,9 +142,9 @@ describe("AppShell", () => {
     expect(
       screen.getByRole("link", { name: "Saltar al contenido" })
     ).toHaveAttribute("href", "#main-content")
-    expect(
-      screen.getByRole("main", { name: "Ronda de estudio" })
-    ).toHaveAttribute("id", "main-content")
+    const studyMain = screen.getByRole("main", { name: "Ronda de estudio" })
+    expect(studyMain).toHaveAttribute("id", "main-content")
+    expect(studyMain).toHaveClass("h-dvh", "overflow-y-auto", "scroll-pb-28")
     expect(
       screen.queryByRole("navigation", { name: "Navegación principal" })
     ).not.toBeInTheDocument()

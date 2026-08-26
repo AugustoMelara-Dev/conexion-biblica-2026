@@ -40,3 +40,24 @@ Evidencia exacta:
 - `npm.cmd run typecheck` → exit 0.
 - ESLint focal sobre los archivos afectados → exit 0.
 - `git diff --check` → exit 0.
+
+## Fix round 2
+
+Estado: **NEEDS_CONTEXT** — la implementación y la batería focal están verificadas; la compilación completa conserva un único error heredado fuera del alcance de Tarea 5.
+
+- `QuizPage` ahora protege de forma síncrona avance y finalización, cancela toda transición diferida al avanzar, cambiar de pregunta, salir o desmontar, y no permite que un timeout antiguo avance o finalice la ronda después de una acción manual. La guarda de avance se restablece al preparar la nueva pregunta.
+- El `main` de `FocusShell` es el contenedor de scroll de la ronda (`h-dvh`, `overflow-y-auto` y reserva inferior); se mantienen el landmark nombrado, skip link, Escape y la reserva de la acción móvil fija.
+- Los metadatos cubren exhaustivamente los 12 tipos de pregunta. Las fixtures de resultados incluyen `responseTimeMs` y los cinco tipos antes ausentes tienen pruebas representativas.
+- La selección múltiple comunica después de evaluar tanto las opciones correctas como la selección incorrecta mediante texto para tecnologías asistivas y estados visuales; antes del envío no revela respuestas. Para texto, ordenamiento y emparejamiento, el `Alert` de Quiz comunica el resultado global. Los `SelectItem` de emparejamiento también respetan 44 px.
+- El filtro de resultados deshabilitado usa cursor de estado no disponible.
+
+Evidencia exacta:
+
+- RED: `npm.cmd test -- src/components/quiz-page.test.tsx src/components/app-shell.test.tsx --reporter=dot` → 7 fallos esperados: contrato de scroll, feedback de múltiple y las cinco etiquetas de tipo.
+- GREEN: `npm.cmd test -- src/components/quiz-page.test.tsx src/components/app-shell.test.tsx --reporter=dot` → **30/30**, 2 archivos de prueba.
+- `npm.cmd test -- src/components/quiz-page.test.tsx src/components/app-shell.test.tsx src/domain/session-resume.test.ts src/domain/domain.test.ts --reporter=dot` → **43/43**, 4 archivos de prueba.
+- `npm.cmd exec -- tsc -p tsconfig.app.json --noEmit` → único residual: `src/components/session-builder-page.test.tsx:73:37`, conversión incompleta a `AppContextValue` (faltan `loading`, `error`, `masterBankError`, `nav` y 24 más). No pertenece a los archivos de Tarea 5.
+- `npm.cmd run typecheck` → exit 0, pero es vacuo para referencias: `tsconfig.json` tiene `files: []` y no usa modo build; el chequeo real anterior es el aplicable.
+- `npm.cmd run build` → bloqueado por el mismo único residual heredado de `session-builder-page.test.tsx` antes de ejecutar Vite.
+- ESLint focal sobre los 6 archivos de producción/prueba modificados → exit 0.
+- `git diff --check` → exit 0.

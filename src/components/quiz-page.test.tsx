@@ -1,4 +1,4 @@
-import { cleanup, render, screen } from "@testing-library/react"
+import { act, cleanup, fireEvent, render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import {
   afterEach,
@@ -29,6 +29,7 @@ vi.mock("@/app/app-state", () => ({
 }))
 
 afterEach(cleanup)
+afterEach(() => vi.useRealTimers())
 beforeAll(() => {
   Object.defineProperty(HTMLElement.prototype, "hasPointerCapture", {
     value: () => false,
@@ -139,8 +140,8 @@ const studyConfig: SessionConfig = {
   shuffleOptions: false,
   perQuestionSeconds: null,
   totalSeconds: null,
-  bankSelection: "all",
-  strategy: "random",
+  bankSelection: "mixed",
+  strategy: "random-balanced",
 }
 
 const twoChoiceQuestion: Question = {
@@ -222,7 +223,12 @@ describe("ronda enfocada", () => {
         question={twoChoiceQuestion}
         value="B"
         onChange={vi.fn()}
-        feedback={{ isCorrect: false, wasAnswered: true, reason: "incorrect" }}
+        feedback={{
+          isCorrect: false,
+          wasAnswered: true,
+          responseTimeMs: 10,
+          reason: "incorrect",
+        }}
       />
     )
 
@@ -236,11 +242,54 @@ describe("ronda enfocada", () => {
         question={twoChoiceQuestion}
         value="A"
         onChange={vi.fn()}
-        feedback={{ isCorrect: true, wasAnswered: true, reason: "correct" }}
+        feedback={{
+          isCorrect: true,
+          wasAnswered: true,
+          responseTimeMs: 10,
+          reason: "correct",
+        }}
       />
     )
     expect(screen.getByRole("status")).toHaveTextContent(
       "Tu selección es correcta."
+    )
+  })
+
+  it("expone las opciones correctas e incorrectas de selección múltiple solo tras evaluar", () => {
+    const multiQuestion: Question = {
+      ...twoChoiceQuestion,
+      id: "feedback-multi",
+      type: "multi_select",
+      correctAnswer: ["A"],
+    }
+    const { rerender } = render(
+      <QuestionRenderer
+        question={multiQuestion}
+        value={["B"]}
+        onChange={vi.fn()}
+      />
+    )
+
+    expect(screen.queryByText("Respuesta correcta")).not.toBeInTheDocument()
+    expect(screen.queryByText("Tu selección fue incorrecta.")).not.toBeInTheDocument()
+
+    rerender(
+      <QuestionRenderer
+        question={multiQuestion}
+        value={["B"]}
+        onChange={vi.fn()}
+        feedback={{
+          isCorrect: false,
+          wasAnswered: true,
+          responseTimeMs: 10,
+          reason: "incorrect",
+        }}
+      />
+    )
+
+    expect(screen.getByText("Respuesta correcta")).toBeInTheDocument()
+    expect(screen.getByRole("status")).toHaveTextContent(
+      "Tu selección fue incorrecta."
     )
   })
 })
@@ -477,6 +526,93 @@ describe("atajos de la ronda", () => {
       })
     )
   })
+
+  it("finaliza una sola vez aunque se pulse dos veces Ver resultados", async () => {
+    const onFinish = vi.fn()
+    render(
+      <QuizPage
+        questions={[twoChoiceQuestion]}
+        config={studyConfig}
+        onFinish={onFinish}
+        onExit={vi.fn()}
+      />
+    )
+
+    fireEvent.click(screen.getByRole("radio", { name: /Primera/ }))
+    fireEvent.click(screen.getByRole("button", { name: "Confirmar respuesta" }))
+    await act(async () => undefined)
+    const results = screen.getByRole("button", { name: "Ver resultados" })
+    fireEvent.click(results)
+    fireEvent.click(results)
+
+    expect(onFinish).toHaveBeenCalledTimes(1)
+  })
+
+  it("cancela el avance diferido de un timeout cuando se avanza manualmente", async () => {
+    vi.useFakeTimers()
+    const timedConfig = { ...studyConfig, perQuestionSeconds: 1 }
+    render(
+      <QuizPage
+        questions={[twoChoiceQuestion, { ...twoChoiceQuestion, id: "timer-second", question: "Pregunta del temporizador" }]}
+        config={timedConfig}
+        onFinish={vi.fn()}
+        onExit={vi.fn()}
+      />
+    )
+
+    await act(async () => {
+      vi.advanceTimersByTime(1_100)
+      await Promise.resolve()
+    })
+    fireEvent.click(screen.getByRole("button", { name: "Siguiente" }))
+    expect(screen.getByRole("heading", { name: "Pregunta del temporizador" })).toBeVisible()
+
+    await act(async () => vi.advanceTimersByTime(1_000))
+    expect(screen.getByRole("heading", { name: "Pregunta del temporizador" })).toBeVisible()
+  })
+
+  it("cancela la finalización diferida al desmontarse", async () => {
+    vi.useFakeTimers()
+    const onFinish = vi.fn()
+    const { unmount } = render(
+      <QuizPage
+        questions={[twoChoiceQuestion]}
+        config={{ ...studyConfig, perQuestionSeconds: 1 }}
+        onFinish={onFinish}
+        onExit={vi.fn()}
+      />
+    )
+
+    await act(async () => {
+      vi.advanceTimersByTime(1_100)
+      await Promise.resolve()
+    })
+    unmount()
+    await act(async () => vi.advanceTimersByTime(1_000))
+
+    expect(onFinish).not.toHaveBeenCalled()
+  })
+})
+
+describe("metadatos de preguntas", () => {
+  it.each([
+    ["who_said_it", "Quién lo dijo"],
+    ["to_whom", "A quién"],
+    ["reference_detail", "Detalle de referencia"],
+    ["sequence_choice", "Secuencia"],
+    ["precision", "Precisión"],
+  ] as const)("nombra el tipo %s", (type, label) => {
+    render(
+      <QuizPage
+        questions={[{ ...studyQuestion, id: `metadata-${type}`, type }]}
+        config={{ ...studyConfig, types: [type] }}
+        onFinish={vi.fn()}
+        onExit={vi.fn()}
+      />
+    )
+
+    expect(screen.getByText(new RegExp(label))).toBeVisible()
+  })
 })
 
 const sessionWithErrors: Session = {
@@ -494,7 +630,12 @@ const sessionWithErrors: Session = {
       questionKey: "local:study-question",
       answer: "B",
       responseTimeMs: 1_000,
-      result: { isCorrect: false, wasAnswered: true, reason: "incorrect" },
+      result: {
+        isCorrect: false,
+        wasAnswered: true,
+        responseTimeMs: 1_000,
+        reason: "incorrect",
+      },
     },
   ],
 }
@@ -509,7 +650,12 @@ const sessionWithMixedAnswers: Session = {
       questionKey: "local:two-choice-question",
       answer: "A",
       responseTimeMs: 800,
-      result: { isCorrect: true, wasAnswered: true, reason: "correct" },
+      result: {
+        isCorrect: true,
+        wasAnswered: true,
+        responseTimeMs: 800,
+        reason: "correct",
+      },
     },
   ],
 }

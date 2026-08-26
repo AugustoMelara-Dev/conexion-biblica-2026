@@ -205,6 +205,7 @@ function MultiSelectQuestion({
   value,
   onChange,
   disabled,
+  feedback,
 }: RendererProps) {
   const selected = Array.isArray(value) ? value : []
   const toggle = (id: string) =>
@@ -218,10 +219,13 @@ function MultiSelectQuestion({
       <legend className="sr-only">{question.question}</legend>
       {question.options.map((option, index) => {
         const active = selected.includes(option.id)
+        const isCorrectOption = question.correctAnswer.includes(option.id)
+        const showsIncorrectSelection = Boolean(feedback && active && !isCorrectOption)
+        const showsCorrectSelection = Boolean(feedback && isCorrectOption)
         return (
           <label
             key={option.id}
-            className={`flex min-h-16 cursor-pointer items-center gap-4 rounded-xl border px-4 py-3 transition-colors motion-reduce:transition-none sm:px-5 ${active ? "border-primary bg-primary/5" : "bg-card hover:bg-muted/50"}`}
+            className={`flex min-h-16 cursor-pointer items-center gap-4 rounded-xl border px-4 py-3 transition-colors motion-reduce:transition-none sm:px-5 ${showsIncorrectSelection ? "border-destructive bg-destructive/5" : showsCorrectSelection ? "border-chart-2 bg-chart-2/10" : active ? "border-primary bg-primary/5" : "bg-card hover:bg-muted/50"}`}
           >
             <Checkbox
               checked={active}
@@ -234,9 +238,22 @@ function MultiSelectQuestion({
             <span className="text-sm leading-6 sm:text-base">
               {option.text}
             </span>
+            {feedback && isCorrectOption ? (
+              <span className="sr-only">Respuesta correcta</span>
+            ) : null}
+            {showsIncorrectSelection ? (
+              <span className="sr-only">Tu selección fue incorrecta.</span>
+            ) : null}
           </label>
         )
       })}
+      {feedback ? (
+        <p className="text-sm font-medium" role="status">
+          {feedback.isCorrect
+            ? "Tu selección es correcta."
+            : "Tu selección fue incorrecta."}
+        </p>
+      ) : null}
     </fieldset>
   )
 }
@@ -351,9 +368,11 @@ function MatchingQuestion({
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="__none">Sin relación</SelectItem>
+                <SelectItem className="min-h-11" value="__none">
+                  Sin relación
+                </SelectItem>
                 {(question.rightItems ?? []).map((right) => (
-                  <SelectItem key={right.id} value={right.id}>
+                  <SelectItem className="min-h-11" key={right.id} value={right.id}>
                     {right.text}
                   </SelectItem>
                 ))}

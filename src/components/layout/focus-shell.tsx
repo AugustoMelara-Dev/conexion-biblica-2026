@@ -31,7 +31,7 @@ export function FocusShell({ children, onExit }: FocusShellProps) {
       <main
         id="main-content"
         aria-label="Ronda de estudio"
-        className="min-h-screen"
+        className="h-dvh overflow-y-auto scroll-pb-28 sm:scroll-pb-6"
         tabIndex={-1}
       >
         {children}
