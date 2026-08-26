@@ -20,6 +20,14 @@ const appState = vi.hoisted(() => ({
   recordReport: vi.fn(),
 }))
 
+function deferred<T>() {
+  let resolve!: (value: T) => void
+  const promise = new Promise<T>((resolvePromise) => {
+    resolve = resolvePromise
+  })
+  return { promise, resolve }
+}
+
 vi.mock("@/app/app-state", () => ({
   useApp: () => ({
     progress: new Map(),
@@ -288,9 +296,12 @@ describe("ronda enfocada", () => {
     )
 
     expect(screen.getByText("Respuesta correcta")).toBeInTheDocument()
-    expect(screen.getByRole("status")).toHaveTextContent(
-      "Tu selección fue incorrecta."
-    )
+    expect(screen.queryByRole("status")).not.toBeInTheDocument()
+    expect(
+      screen.getByRole("checkbox", {
+        name: /Segunda.*Tu selección fue incorrecta/i,
+      })
+    ).toBeVisible()
   })
 })
 
@@ -590,6 +601,90 @@ describe("atajos de la ronda", () => {
     unmount()
     await act(async () => vi.advanceTimersByTime(1_000))
 
+    expect(onFinish).not.toHaveBeenCalled()
+  })
+
+  it("no programa el timeout antiguo al avanzar mientras recordAnswer sigue pendiente", async () => {
+    vi.useFakeTimers()
+    const pending = deferred<{ timesIncorrect: number }>()
+    appState.recordAnswer.mockReturnValueOnce(pending.promise)
+    const onFinish = vi.fn()
+    const secondQuestion = {
+      ...twoChoiceQuestion,
+      id: "deferred-second",
+      question: "Segunda pregunta diferida",
+    }
+    render(
+      <QuizPage
+        questions={[twoChoiceQuestion, secondQuestion, { ...secondQuestion, id: "deferred-third", question: "Tercera pregunta diferida" }]}
+        config={{ ...studyConfig, mode: "simulation", perQuestionSeconds: 1 }}
+        onFinish={onFinish}
+        onExit={vi.fn()}
+      />
+    )
+
+    await act(async () => vi.advanceTimersByTime(1_100))
+    fireEvent.click(screen.getByRole("button", { name: "Siguiente" }))
+    expect(
+      screen.getByRole("heading", { name: "Segunda pregunta diferida" })
+    ).toBeVisible()
+
+    await act(async () => pending.resolve({ timesIncorrect: 0 }))
+    await act(async () => vi.advanceTimersByTime(1_000))
+
+    expect(
+      screen.getByRole("heading", { name: "Segunda pregunta diferida" })
+    ).toBeVisible()
+    expect(onFinish).not.toHaveBeenCalled()
+  })
+
+  it("ignora una persistencia pendiente al desmontar la ronda", async () => {
+    vi.useFakeTimers()
+    const pending = deferred<{ timesIncorrect: number }>()
+    appState.recordAnswer.mockReturnValueOnce(pending.promise)
+    const onFinish = vi.fn()
+    const { unmount } = render(
+      <QuizPage
+        questions={[twoChoiceQuestion]}
+        config={{ ...studyConfig, mode: "simulation", perQuestionSeconds: 1 }}
+        onFinish={onFinish}
+        onExit={vi.fn()}
+      />
+    )
+
+    await act(async () => vi.advanceTimersByTime(1_100))
+    unmount()
+    await act(async () => pending.resolve({ timesIncorrect: 0 }))
+    await act(async () => vi.advanceTimersByTime(1_000))
+
+    expect(onFinish).not.toHaveBeenCalled()
+  })
+
+  it("invalida una persistencia pendiente antes de salir con Escape", async () => {
+    vi.useFakeTimers()
+    const pending = deferred<{ timesIncorrect: number }>()
+    appState.recordAnswer.mockReturnValueOnce(pending.promise)
+    const onFinish = vi.fn()
+    const onExit = vi.fn()
+    render(
+      <FocusShell onExit={onExit}>
+        <QuizPage
+          questions={[twoChoiceQuestion]}
+          config={{ ...studyConfig, mode: "simulation", perQuestionSeconds: 1 }}
+          onFinish={onFinish}
+          onExit={onExit}
+        />
+      </FocusShell>
+    )
+
+    await act(async () => vi.advanceTimersByTime(1_100))
+    fireEvent.keyDown(window, { key: "Escape" })
+    expect(onExit).toHaveBeenCalledTimes(1)
+
+    await act(async () => pending.resolve({ timesIncorrect: 0 }))
+    await act(async () => vi.advanceTimersByTime(1_000))
+
+    expect(onExit).toHaveBeenCalledTimes(1)
     expect(onFinish).not.toHaveBeenCalled()
   })
 })

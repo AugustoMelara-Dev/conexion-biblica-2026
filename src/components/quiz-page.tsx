@@ -91,6 +91,10 @@ export function QuizPage({
   const isAdvancingRef = useRef(false)
   const hasFinishedRef = useRef(false)
   const deferredTransitionRef = useRef<number | null>(null)
+  const transitionGenerationRef = useRef(0)
+  const isMountedRef = useRef(false)
+  const isExitingRef = useRef(false)
+  const currentQuestionKeyRef = useRef<string | null>(null)
   const question = queue[index]
   const progressRef = useRef(progress)
   const queueRef = useRef(queue)
@@ -110,16 +114,51 @@ export function QuizPage({
     deferredTransitionRef.current = null
   }, [])
 
+  const invalidateTransition = useCallback(() => {
+    transitionGenerationRef.current += 1
+    clearDeferredTransition()
+  }, [clearDeferredTransition])
+
+  const isCurrentTransition = useCallback(
+    (generation: number, questionKey: string) =>
+      isMountedRef.current &&
+      !isExitingRef.current &&
+      transitionGenerationRef.current === generation &&
+      currentQuestionKeyRef.current === questionKey,
+    []
+  )
+
   const scheduleDeferredTransition = useCallback(
-    (callback: () => void, delay: number) => {
+    (
+      callback: () => void,
+      delay: number,
+      generation = transitionGenerationRef.current,
+      questionKey = currentQuestionKeyRef.current
+    ) => {
+      if (!questionKey || !isCurrentTransition(generation, questionKey)) return
       clearDeferredTransition()
       deferredTransitionRef.current = window.setTimeout(() => {
         deferredTransitionRef.current = null
-        callback()
+        if (isCurrentTransition(generation, questionKey)) callback()
       }, delay)
     },
-    [clearDeferredTransition]
+    [clearDeferredTransition, isCurrentTransition]
   )
+
+  const exitSafely = useCallback(() => {
+    if (isExitingRef.current) return
+    isExitingRef.current = true
+    invalidateTransition()
+    onExit()
+  }, [invalidateTransition, onExit])
+
+  useEffect(() => {
+    isMountedRef.current = true
+    return () => {
+      isMountedRef.current = false
+      invalidateTransition()
+    }
+  }, [invalidateTransition])
 
   useEffect(() => {
     progressRef.current = progress
@@ -147,8 +186,11 @@ export function QuizPage({
   }, [answers, config, index, queue, startedAt])
 
   useEffect(() => {
+    const questionKey = `${question.bankId ?? "local"}:${question.id}`
+    currentQuestionKeyRef.current = questionKey
+    invalidateTransition()
     const itemProgress = progressRef.current.get(
-      `${question.bankId ?? "local"}:${question.id}`
+      questionKey
     )
     setValue(initialAnswer(displayedQuestion))
     setSubmitted(false)
@@ -158,10 +200,8 @@ export function QuizPage({
     setFavorite(Boolean(itemProgress?.favorite))
     setDifficult(Boolean(itemProgress?.markedDifficult))
     setReportReason("")
-    clearDeferredTransition()
     isSubmittingRef.current = false
     isAdvancingRef.current = false
-    const questionKey = `${question.bankId ?? "local"}:${question.id}`
     if (
       focusedQuestionKeyRef.current !== null &&
       focusedQuestionKeyRef.current !== questionKey
@@ -174,14 +214,15 @@ export function QuizPage({
     displayedQuestion,
     question.bankId,
     question.id,
-    clearDeferredTransition,
+    invalidateTransition,
   ])
 
   const finish = useCallback(
     (nextAnswers: SessionAnswer[]) => {
-      if (hasFinishedRef.current) return
+      if (hasFinishedRef.current || isExitingRef.current || !isMountedRef.current)
+        return
       hasFinishedRef.current = true
-      clearDeferredTransition()
+      invalidateTransition()
       const session: Session = {
         id:
           typeof crypto !== "undefined" && "randomUUID" in crypto
@@ -201,19 +242,19 @@ export function QuizPage({
       }
       onFinish(session)
     },
-    [clearDeferredTransition, config, onFinish, startedAt]
+    [config, invalidateTransition, onFinish, startedAt]
   )
 
   const advance = useCallback(
     (lastAnswer?: SessionAnswer) => {
       if (isAdvancingRef.current || hasFinishedRef.current) return
       isAdvancingRef.current = true
-      clearDeferredTransition()
+      invalidateTransition()
       const nextAnswers = lastAnswer ? [...answers, lastAnswer] : answers
       if (index >= queueRef.current.length - 1) finish(nextAnswers)
       else setIndex((current) => current + 1)
     },
-    [answers, clearDeferredTransition, finish, index]
+    [answers, finish, index, invalidateTransition]
   )
 
   const submit = useCallback(
@@ -223,6 +264,8 @@ export function QuizPage({
     ) => {
       if (submitted || isSubmittingRef.current || !question) return
       isSubmittingRef.current = true
+      const transitionGeneration = transitionGenerationRef.current
+      const submittedQuestionKey = `${question.bankId ?? "local"}:${question.id}`
       const responseTimeMs = Date.now() - questionStartedAt
       const result = evaluateAnswer(
         question,
@@ -246,6 +289,8 @@ export function QuizPage({
         markedDifficult: difficult,
         context: sessionContextForMode(config.mode),
       })
+      if (!isCurrentTransition(transitionGeneration, submittedQuestionKey))
+        return
       if (
         !result.isCorrect &&
         (config.mode === "training" || config.mode === "learn")
@@ -261,12 +306,16 @@ export function QuizPage({
       if (finishRoundOnSubmit) {
         scheduleDeferredTransition(
           () => finish([...answers, sessionAnswer]),
-          isSilent ? 250 : 900
+          isSilent ? 250 : 900,
+          transitionGeneration,
+          submittedQuestionKey
         )
       } else if (forcedReason) {
         scheduleDeferredTransition(
           () => advance(sessionAnswer),
-          isSilent ? 250 : 900
+          isSilent ? 250 : 900,
+          transitionGeneration,
+          submittedQuestionKey
         )
       }
     },
@@ -283,6 +332,7 @@ export function QuizPage({
       questionStartedAt,
       recordAnswer,
       scheduleDeferredTransition,
+      isCurrentTransition,
       submitted,
       value,
     ]
@@ -325,10 +375,22 @@ export function QuizPage({
   useEffect(() => clearDeferredTransition, [clearDeferredTransition])
 
   useEffect(() => {
+    const handleExitKey = (event: KeyboardEvent) => {
+      if (event.key !== "Escape" || event.defaultPrevented) return
+      event.preventDefault()
+      exitSafely()
+    }
+    window.addEventListener("keydown", handleExitKey, true)
+    return () => window.removeEventListener("keydown", handleExitKey, true)
+  }, [exitSafely])
+
+  useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
-      const target = event.target as HTMLElement | null
+      if (event.defaultPrevented) return
+      const target = event.target
       if (
-        target?.closest(
+        target instanceof Element &&
+        target.closest(
           "button,input,textarea,select,a,[role='button'],[role='radio'],[role='checkbox'],[role='switch'],[role='combobox'],[role='option'],[contenteditable='true']"
         )
       )
@@ -400,7 +462,7 @@ export function QuizPage({
   return (
     <article className="mx-auto flex min-h-screen w-full max-w-3xl flex-col px-4 py-5 pb-28 sm:px-6 sm:py-6">
       <header className="grid grid-cols-[auto_1fr_auto] items-center gap-3">
-        <Button variant="ghost" onClick={() => { clearDeferredTransition(); onExit() }}>
+        <Button variant="ghost" onClick={exitSafely}>
           <X data-icon="inline-start" />
           Salir
         </Button>

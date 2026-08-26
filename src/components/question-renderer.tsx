@@ -247,13 +247,6 @@ function MultiSelectQuestion({
           </label>
         )
       })}
-      {feedback ? (
-        <p className="text-sm font-medium" role="status">
-          {feedback.isCorrect
-            ? "Tu selección es correcta."
-            : "Tu selección fue incorrecta."}
-        </p>
-      ) : null}
     </fieldset>
   )
 }

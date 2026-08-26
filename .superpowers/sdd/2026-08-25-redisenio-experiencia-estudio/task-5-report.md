@@ -61,3 +61,23 @@ Evidencia exacta:
 - `npm.cmd run build` → bloqueado por el mismo único residual heredado de `session-builder-page.test.tsx` antes de ejecutar Vite.
 - ESLint focal sobre los 6 archivos de producción/prueba modificados → exit 0.
 - `git diff --check` → exit 0.
+
+## Fix round 3
+
+Estado: **NEEDS_CONTEXT** — la carrera de transición está cubierta y la batería focal pasa; el único bloqueo de compilación continúa siendo la fixture heredada de otra tarea.
+
+- `QuizPage` usa una generación de transición junto con refs de montaje, salida y clave de pregunta. `submit` captura generación y pregunta antes de `recordAnswer`; al resolver, descarta la continuación si hubo avance manual, cambio de pregunta, salida o desmontaje.
+- Avanzar, cambiar de pregunta, salir y desmontar invalidan la generación incluso cuando todavía no existe un timeout. Los callbacks diferidos también validan generación y pregunta antes de ejecutar.
+- Escape se captura en `QuizPage`, invalida primero y realiza una única salida. `FocusShell` conserva su fallback para otros children porque ya respeta `event.defaultPrevented`.
+- El feedback de selección múltiple conserva el texto accesible de correcta/incorrecta, pero elimina su `role=status` duplicado: el `Alert` de la ronda anuncia el resultado global.
+
+Evidencia exacta:
+
+- RED: el caso aislado de avance durante `recordAnswer` pendiente llegó incorrectamente a «Tercera pregunta diferida». Los casos de desmontaje y Escape también invocaban `onFinish` después de resolver la promesa pendiente.
+- GREEN: `npm.cmd test -- src/components/quiz-page.test.tsx -t "no programa el timeout antiguo|ignora una persistencia pendiente|invalida una persistencia pendiente|selección múltiple solo" --reporter=verbose` → **4/4**.
+- `npm.cmd test -- src/components/quiz-page.test.tsx src/components/app-shell.test.tsx src/domain/session-resume.test.ts src/domain/domain.test.ts --reporter=dot` → **46/46**, 4 archivos de prueba.
+- `npm.cmd exec -- tsc -p tsconfig.app.json --noEmit` → único residual heredado: `src/components/session-builder-page.test.tsx:73:37`, fixture incompleta de `AppContextValue`.
+- `npm.cmd run typecheck` → exit 0, vacuo para referencias (`tsconfig.json` tiene `files: []` y no usa modo build).
+- `npm.cmd run build` → bloqueado por el mismo único residual heredado antes de Vite.
+- ESLint focal sobre los archivos modificados → exit 0.
+- `git diff --check` → exit 0.
