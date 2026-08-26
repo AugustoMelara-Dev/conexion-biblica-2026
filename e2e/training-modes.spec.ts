@@ -217,7 +217,7 @@ test("V4 — Simulacro aplica el piloto y oculta la solución inmediata", async 
       "Respuesta registrada. La solución se revelará al finalizar la ronda."
     )
   ).toBeVisible()
-  await expect(page.getByText("Respuesta correcta:")).toBeHidden()
+  await expect(page.getByText("Respuesta correcta:")).toHaveCount(0)
 })
 
 test("V4 — una recarga conserva la ronda, el banco y la pregunta actual", async ({
@@ -228,7 +228,7 @@ test("V4 — una recarga conserva la ronda, el banco y la pregunta actual", asyn
   const question = page.getByRole("heading", { level: 1 })
   const prompt = await question.textContent()
   await page.reload()
-  await expect(page.getByText("Preparando tus bancos")).toBeHidden({
+  await expect(page.getByText("Preparando tus bancos")).toHaveCount(0, {
     timeout: 30_000,
   })
   await expect(page.getByText("V4", { exact: true })).toBeVisible()
