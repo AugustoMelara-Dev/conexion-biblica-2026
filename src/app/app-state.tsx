@@ -31,6 +31,7 @@ import type {
   EvaluationResult,
   Preferences,
   Question,
+  QuestionExposure,
   QuestionProgress,
   QuestionReport,
   Session,
@@ -46,6 +47,11 @@ import {
   isIntegratedBankProfile,
   shouldReplaceBundledBank,
 } from "@/storage/seed"
+import {
+  loadMassiveQuestionPool,
+  readMassiveManifest,
+  type MassiveBankManifest,
+} from "@/storage/massive-bank"
 
 type RepositorySet = ReturnType<typeof createRepositories>
 type NavKey =
@@ -63,6 +69,7 @@ type AppContextValue = {
   loading: boolean
   error: string | null
   masterBankError: string | null
+  massiveBankError: string | null
   nav: NavKey
   setNav: (nav: NavKey) => void
   banks: Bank[]
@@ -71,6 +78,8 @@ type AppContextValue = {
   progress: Map<string, QuestionProgress>
   sessions: Session[]
   reports: QuestionReport[]
+  exposures: QuestionExposure[]
+  massiveManifest: MassiveBankManifest | null
   preferences: Preferences
   bankSelection: BankSelection
   setBankSelection: (selection: BankSelection) => void
@@ -79,6 +88,7 @@ type AppContextValue = {
   activeRound: ActiveRound | null
   statistics: Statistics
   refresh: () => Promise<void>
+  loadMassiveQuestions: (config: import("@/domain/types").SessionConfig) => Promise<Question[]>
   importBankFiles: (
     files: File[],
     replaceBankId?: string
@@ -150,6 +160,7 @@ function isBankSelection(value: unknown): value is BankSelection {
     value === "master-v2" ||
     value === "prep-v3" ||
     value === "curated-v4" ||
+    value === "massive-v5" ||
     value === "mixed"
   )
 }
@@ -250,6 +261,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [masterBankError, setMasterBankError] = useState<string | null>(null)
+  const [massiveBankError, setMassiveBankError] = useState<string | null>(null)
+  const [massiveManifest, setMassiveManifest] =
+    useState<MassiveBankManifest | null>(null)
   const [nav, setNav] = useState<NavKey>("dashboard")
   const [banks, setBanks] = useState<Bank[]>([])
   const [questions, setQuestions] = useState<Question[]>([])
@@ -258,6 +272,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   )
   const [sessions, setSessions] = useState<Session[]>([])
   const [reports, setReports] = useState<QuestionReport[]>([])
+  const [exposures, setExposures] = useState<QuestionExposure[]>([])
   const [coverageCycles, setCoverageCycles] = useState<
     Map<string, CoverageCycle>
   >(new Map())
@@ -270,6 +285,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setLoading(true)
     setError(null)
     setMasterBankError(null)
+    setMassiveBankError(null)
     try {
       const db = await openAppDb()
       const nextRepositories = createRepositories(db)
@@ -331,6 +347,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
             : "V2 no pudo cargarse"
         )
       }
+      try {
+        setMassiveManifest(await readMassiveManifest())
+      } catch (massiveError) {
+        setMassiveManifest(null)
+        setMassiveBankError(
+          massiveError instanceof Error
+            ? massiveError.message
+            : "El banco masivo no pudo cargarse"
+        )
+      }
       const [
         nextQuestions,
         nextProgress,
@@ -338,6 +364,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         nextReports,
         nextCycles,
         nextActiveRound,
+        nextExposures,
       ] = await Promise.all([
         nextRepositories.questions.list(),
         nextRepositories.progress.list(),
@@ -345,6 +372,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         nextRepositories.reports.list(),
         nextRepositories.coverage.list(),
         nextRepositories.activeRound.get(),
+        nextRepositories.exposures.list(),
       ])
       const availableProfiles = new Set<BankProfileId>(
         nextQuestions.map((question) => question.bankProfileId ?? "legacy-v1")
@@ -372,6 +400,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setProgress(new Map(nextProgress.map((item) => [item.questionKey, item])))
       setSessions(nextSessions)
       setReports(nextReports)
+      setExposures(nextExposures)
       setCoverageCycles(
         new Map(nextCycles.map((cycle) => [cycle.poolKey, cycle]))
       )
@@ -392,6 +421,52 @@ export function AppProvider({ children }: { children: ReactNode }) {
   }, [loadState])
 
   const refresh = useCallback(() => loadState(false), [loadState])
+
+  const loadMassiveQuestions = useCallback(
+    async (config: import("@/domain/types").SessionConfig) => {
+      if (!repositories || !massiveManifest)
+        throw new Error("El banco masivo todavía no está disponible")
+      const desiredCount = config.count === "all" ? 200 : config.count
+      const allowedBanks = new Set<"DANIEL1-12" | "PR39-44">(
+        config.sourceWorks.map((work) =>
+          work === "Daniel" ? "DANIEL1-12" : "PR39-44"
+        )
+      )
+      const manifestChapters = massiveManifest.shards
+        .filter((shard) => allowedBanks.has(shard.bank))
+        .map((shard) => Number(shard.chapter.match(/\d+/)?.[0]))
+        .filter(Number.isFinite)
+      const chapters = config.chapters.length
+        ? manifestChapters.filter((chapter) => config.chapters.includes(chapter))
+        : manifestChapters
+      const questions = await loadMassiveQuestionPool({
+        manifest: massiveManifest,
+        chapters,
+        count: desiredCount,
+        includeBlind: Boolean(config.includeBlind),
+        blindOnly: config.trainingPresetId === "blind-simulation",
+        contextualOnly: config.trainingPresetId === "contextual-traps",
+        sequenceOnly: config.trainingPresetId === "order-sequence",
+        types: config.types,
+        difficultyBands: config.difficultyBands,
+        seed: Date.now(),
+      })
+      await repositories.questions.putMany(questions)
+      setQuestions((current) => {
+        const byKey = new Map(
+          current.map((question) => [
+            `${question.bankId ?? "local"}:${question.id}`,
+            question,
+          ])
+        )
+        for (const question of questions)
+          byKey.set(`${question.bankId ?? "local"}:${question.id}`, question)
+        return [...byKey.values()]
+      })
+      return questions
+    },
+    [massiveManifest, repositories]
+  )
 
   const importBankFiles = useCallback(
     async (files: File[], replaceBankId?: string) => {
@@ -511,7 +586,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     async (
       question: Question,
       result: EvaluationResult,
-      _answer: AnswerValue,
+      answer: AnswerValue,
       flags: {
         favorite?: boolean
         markedDifficult?: boolean
@@ -535,6 +610,37 @@ export function AppProvider({ children }: { children: ReactNode }) {
         return updated
       })
       setProgress((current) => new Map(current).set(key, next))
+      if (question.factId && question.variantId) {
+        const selectedAnswer =
+          typeof answer === "string"
+            ? (question.options.find((option) => option.id === answer)?.text ??
+              answer)
+            : Array.isArray(answer)
+              ? answer.join(", ")
+              : answer && typeof answer === "object"
+                ? JSON.stringify(answer)
+                : null
+        const exposure = await repositories.exposures.record({
+          factId: question.factId,
+          variantId: question.variantId,
+          questionKey: key,
+          timestamp: Date.now(),
+          isCorrect: result.isCorrect,
+          responseTimeMs: result.responseTimeMs,
+          selectedAnswer,
+          errorType: result.isCorrect
+            ? null
+            : question.trapType === "true_elsewhere"
+              ? "context-confusion"
+              : result.reason,
+        })
+        setExposures((current) => [
+          exposure,
+          ...current.filter(
+            (item) => item.exposureKey !== exposure.exposureKey
+          ),
+        ])
+      }
       return next
     },
     [repositories]
@@ -763,6 +869,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       loading,
       error,
       masterBankError,
+      massiveBankError,
       nav,
       setNav,
       banks,
@@ -771,6 +878,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
       progress,
       sessions: scopedSessions,
       reports: scopedReports,
+      exposures,
+      massiveManifest,
       preferences,
       bankSelection,
       setBankSelection,
@@ -779,6 +888,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       activeRound,
       statistics,
       refresh,
+      loadMassiveQuestions,
       importBankFiles,
       removeBank,
       recordAnswer,
@@ -809,13 +919,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
       importBankFiles,
       loading,
       masterBankError,
+      massiveBankError,
+      massiveManifest,
       nav,
       preferences,
       progress,
+      exposures,
       questions,
       recordAnswer,
       recordReport,
       refresh,
+      loadMassiveQuestions,
       removeBank,
       repositories,
       saveActiveRound,

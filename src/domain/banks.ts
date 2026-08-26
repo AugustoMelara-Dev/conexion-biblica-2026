@@ -39,6 +39,14 @@ export const BANK_DEFINITIONS: Record<BankProfileId, BankDefinition> = {
     readOnly: true,
     version: "CB2026-CURATED-V4",
   },
+  "massive-v5": {
+    id: "massive-v5",
+    label: "V5 — Sistema Masivo",
+    description: "14,000 preguntas verificadas y variantes dinámicas",
+    readOnly: true,
+    version: "CB2026-MASSIVE-V5",
+    expectedQuestionCount: 14000,
+  },
 }
 
 export function getQuestionKey(question: Pick<Question, "bankId" | "id">) {

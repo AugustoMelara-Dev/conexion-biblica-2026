@@ -189,6 +189,36 @@ function renderQuiz() {
 }
 
 describe("ronda enfocada", () => {
+  it("revela cita y explicación de distractores solo después de responder", async () => {
+    const user = userEvent.setup()
+    const massiveQuestion: Question = {
+      ...twoChoiceQuestion,
+      bankId: "massive-v5",
+      bankProfileId: "massive-v5",
+      factId: "fact-massive",
+      variantId: "variant-massive",
+      sourceQuote: "tuvo Daniel un sueño",
+      whyDistractorsFail: { Segunda: "Corresponde a otra escena." },
+    }
+    render(
+      <QuizPage
+        questions={[massiveQuestion]}
+        config={{ ...studyConfig, bankSelection: "massive-v5" }}
+        onFinish={vi.fn()}
+        onExit={vi.fn()}
+      />
+    )
+    expect(screen.queryByText("tuvo Daniel un sueño")).not.toBeInTheDocument()
+    await user.click(screen.getByRole("radio", { name: /Segunda/ }))
+    await user.click(screen.getByRole("button", { name: "Confirmar respuesta" }))
+    expect(await screen.findByText("tuvo Daniel un sueño")).toBeVisible()
+    expect(screen.getByText("Corresponde a otra escena.")).toBeVisible()
+    expect(screen.getByText("V5", { exact: true })).toHaveAttribute(
+      "data-bank-profile",
+      "massive-v5"
+    )
+  })
+
   it("presenta metadatos, pregunta y acción dentro de la región de estudio", () => {
     renderQuiz()
 

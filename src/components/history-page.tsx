@@ -314,6 +314,7 @@ function bankLabel(bank: BankSelection) {
     "master-v2": "Banco V2",
     "prep-v3": "Banco V3",
     "curated-v4": "Banco V4",
+    "massive-v5": "Banco V5",
     mixed: "Bancos mezclados",
   }
   return labels[bank]

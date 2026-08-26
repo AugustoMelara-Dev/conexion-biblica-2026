@@ -17,7 +17,12 @@ export type QuestionType = (typeof SUPPORTED_QUESTION_TYPES)[number]
 export type SourceWork = "Daniel" | "Profetas y Reyes"
 
 export type QuestionOption = { id: string; text: string }
-export type BankProfileId = "legacy-v1" | "master-v2" | "prep-v3" | "curated-v4"
+export type BankProfileId =
+  | "legacy-v1"
+  | "master-v2"
+  | "prep-v3"
+  | "curated-v4"
+  | "massive-v5"
 export type BankSelection = BankProfileId | "mixed"
 export type DifficultyBand = "BASIC" | "MEDIUM" | "HARD" | "EXPERT" | "UNRATED"
 export type AnswerMode = "option_id" | "canonical_text"
@@ -55,9 +60,55 @@ export type Question = {
   memoryCue?: string
   integrative?: boolean
   verified?: boolean
+  factId?: string
+  variantId?: string
+  templateId?: string
+  verseOrPage?: string
+  sourceSpan?: string
+  contextAnchor?: string
+  acceptedAnswers?: string[]
+  whyDistractorsFail?: Record<string, string>
+  sourceQuote?: string
+  trapType?: string | null
+  blindFinalPool?: boolean
   leftItems?: MatchItem[]
   rightItems?: MatchItem[]
   correctMatches?: CorrectMatch[]
+}
+
+export type QuestionExposure = {
+  exposureKey: string
+  factId: string
+  variantId: string
+  questionKey: string
+  exposures: number
+  correct: number
+  incorrect: number
+  totalResponseTimeMs: number
+  averageResponseTimeMs: number
+  lastSeenAt: number
+  lastSelectedAnswer: string | null
+  lastErrorType: string | null
+}
+
+export type ExposureAttempt = {
+  factId: string
+  variantId: string
+  questionKey: string
+  timestamp: number
+  isCorrect: boolean
+  responseTimeMs: number
+  selectedAnswer: string | null
+  errorType: string | null
+}
+
+export type QuestionSessionQuery = {
+  bankId?: string
+  chapters?: number[]
+  difficultyBands?: DifficultyBand[]
+  types?: QuestionType[]
+  includeBlind?: boolean
+  limit: number
 }
 
 export type Bank = {
@@ -144,6 +195,9 @@ export type SessionConfig = {
   strategy?: SelectionStrategy
   difficultyBands?: DifficultyBand[]
   sequentialBlock?: number
+  trainingPresetId?: string
+  includeBlind?: boolean
+  massive?: boolean
 }
 
 export type CoverageCycle = {
@@ -162,6 +216,7 @@ export type ActiveRound = {
   updatedAt: number
   currentIndex: number
   questionKeys: string[]
+  questionSnapshots?: Question[]
   answers: SessionAnswer[]
   config: SessionConfig
   selectionSummary?: SelectionSummary

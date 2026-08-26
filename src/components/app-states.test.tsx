@@ -119,6 +119,7 @@ function createAppContext(overrides: Partial<AppContext> = {}): AppContext {
     questions,
     allQuestions: questions,
     progress,
+    exposures: [],
     sessions: [],
     reports: [],
     preferences: {
@@ -133,6 +134,7 @@ function createAppContext(overrides: Partial<AppContext> = {}): AppContext {
     coverageCycles: new Map(),
     activeRound: null,
     statistics: buildStatistics(questions, progress),
+    massiveManifest: null,
     refresh: async () => undefined,
     importBankFiles: async () => [],
     removeBank: async () => undefined,
@@ -144,6 +146,7 @@ function createAppContext(overrides: Partial<AppContext> = {}): AppContext {
     saveCoverageCycle: async () => undefined,
     saveActiveRound: async () => undefined,
     clearActiveRound: async () => undefined,
+    loadMassiveQuestions: async () => [],
     exportBanks: async () => [],
     exportProgress: async () => [],
     exportBackup: async () => ({
@@ -166,6 +169,7 @@ function createAppContext(overrides: Partial<AppContext> = {}): AppContext {
     setPreferences: vi.fn(),
     repositories: null,
     ...overrides,
+    massiveBankError: overrides.massiveBankError ?? null,
   }
 }
 

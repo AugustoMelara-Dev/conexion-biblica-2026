@@ -3,15 +3,18 @@ import type {
   Bank,
   CoverageCycle,
   Question,
+  QuestionExposure,
+  QuestionSessionQuery,
+  ExposureAttempt,
   QuestionProgress,
   QuestionReport,
   Session,
 } from "@/domain/types"
 
 export const DB_NAME = "conexion-biblica-2026"
-export const DB_VERSION = 2
+export const DB_VERSION = 3
 
-type StoredQuestion = Question & { questionKey: string }
+type StoredQuestion = Question & { questionKey: string; blindPoolKey: 0 | 1 }
 type StoredSetting = { key: string; value: unknown }
 
 let activeDb: IDBDatabase | null = null
@@ -51,6 +54,18 @@ export function openAppDb(): Promise<IDBDatabase> {
           unique: false,
         })
       }
+      const questions = request.transaction!.objectStore("questions")
+      const questionIndexes: Array<[string, string | string[]]> = [
+        ["bankId", "bankId"],
+        ["sourceChapterV3", "source.chapter"],
+        ["factId", "factId"],
+        ["difficultyBand", "difficultyBand"],
+        ["type", "type"],
+        ["blindFinalPool", "blindPoolKey"],
+      ]
+      for (const [name, keyPath] of questionIndexes)
+        if (!questions.indexNames.contains(name))
+          questions.createIndex(name, keyPath, { unique: false })
       if (!db.objectStoreNames.contains("progress"))
         db.createObjectStore("progress", { keyPath: "questionKey" })
       if (!db.objectStoreNames.contains("sessions"))
@@ -63,6 +78,14 @@ export function openAppDb(): Promise<IDBDatabase> {
         db.createObjectStore("coverageCycles", { keyPath: "poolKey" })
       if (!db.objectStoreNames.contains("activeRound"))
         db.createObjectStore("activeRound", { keyPath: "id" })
+      if (!db.objectStoreNames.contains("exposures")) {
+        const exposures = db.createObjectStore("exposures", {
+          keyPath: "exposureKey",
+        })
+        exposures.createIndex("factId", "factId", { unique: false })
+        exposures.createIndex("variantId", "variantId", { unique: false })
+        exposures.createIndex("lastSeenAt", "lastSeenAt", { unique: false })
+      }
       if (event.oldVersion < 2 && db.objectStoreNames.contains("progress")) {
         const store = request.transaction!.objectStore("progress")
         const cursorRequest = store.openCursor()
@@ -109,7 +132,9 @@ function questionKey(question: Question) {
 
 function withoutKey(question: StoredQuestion): Question {
   const value = Object.fromEntries(
-    Object.entries(question).filter(([key]) => key !== "questionKey")
+    Object.entries(question).filter(
+      ([key]) => key !== "questionKey" && key !== "blindPoolKey"
+    )
   ) as Question
   return {
     ...value,
@@ -131,6 +156,7 @@ export function createRepositories(db: IDBDatabase) {
         "settings",
         "coverageCycles",
         "activeRound",
+        "exposures",
       ]
       const tx = db.transaction(stores, "readwrite")
       stores.forEach((store) => tx.objectStore(store).clear())
@@ -155,6 +181,7 @@ export function createRepositories(db: IDBDatabase) {
                 ...question,
                 bankId: bank.bankId,
                 questionKey: questionKey({ ...question, bankId: bank.bankId }),
+                blindPoolKey: question.blindFinalPool ? 1 : 0,
               }
               questionsStore.put(record)
             })
@@ -203,6 +230,111 @@ export function createRepositories(db: IDBDatabase) {
         const row = await requestResult(tx.objectStore("questions").get(key))
         await transactionDone(tx)
         return row ? withoutKey(row as StoredQuestion) : undefined
+      },
+      async putMany(questions: Question[]) {
+        if (questions.length === 0) return
+        const tx = db.transaction("questions", "readwrite")
+        const store = tx.objectStore("questions")
+        for (const question of questions)
+          store.put({
+            ...question,
+            questionKey: questionKey(question),
+            blindPoolKey: question.blindFinalPool ? 1 : 0,
+          } satisfies StoredQuestion)
+        await transactionDone(tx)
+      },
+      async listForSession(query: QuestionSessionQuery): Promise<Question[]> {
+        if (query.limit <= 0) return []
+        const tx = db.transaction("questions", "readonly")
+        const store = tx.objectStore("questions")
+        const source: IDBObjectStore | IDBIndex = query.bankId
+          ? store.index("bankId")
+          : store
+        const range = query.bankId ? IDBKeyRange.only(query.bankId) : undefined
+        const rows: Question[] = []
+        await new Promise<void>((resolve, reject) => {
+          const request = source.openCursor(range)
+          request.onerror = () => reject(request.error)
+          request.onsuccess = () => {
+            const cursor = request.result
+            if (!cursor || rows.length >= query.limit) {
+              resolve()
+              return
+            }
+            const value = withoutKey(cursor.value as StoredQuestion)
+            const chapterMatches =
+              !query.chapters?.length || query.chapters.includes(value.source.chapter)
+            const difficultyMatches =
+              !query.difficultyBands?.length ||
+              (value.difficultyBand !== undefined &&
+                query.difficultyBands.includes(value.difficultyBand))
+            const typeMatches =
+              !query.types?.length || query.types.includes(value.type)
+            const blindMatches = query.includeBlind || !value.blindFinalPool
+            if (
+              chapterMatches &&
+              difficultyMatches &&
+              typeMatches &&
+              blindMatches
+            )
+              rows.push(value)
+            cursor.continue()
+          }
+        })
+        await transactionDone(tx)
+        return rows
+      },
+    },
+    exposures: {
+      async get(
+        factId: string,
+        variantId: string
+      ): Promise<QuestionExposure | undefined> {
+        const tx = db.transaction("exposures", "readonly")
+        const row = await requestResult(
+          tx.objectStore("exposures").get(`${factId}:${variantId}`)
+        )
+        await transactionDone(tx)
+        return row as QuestionExposure | undefined
+      },
+      async list(): Promise<QuestionExposure[]> {
+        const tx = db.transaction("exposures", "readonly")
+        const rows = await requestResult(tx.objectStore("exposures").getAll())
+        await transactionDone(tx)
+        return rows as QuestionExposure[]
+      },
+      async record(attempt: ExposureAttempt): Promise<QuestionExposure> {
+        const exposureKey = `${attempt.factId}:${attempt.variantId}`
+        const tx = db.transaction("exposures", "readwrite")
+        const store = tx.objectStore("exposures")
+        let next: QuestionExposure | undefined
+        const request = store.get(exposureKey)
+        request.onsuccess = () => {
+          const current = request.result as QuestionExposure | undefined
+          const exposures = (current?.exposures ?? 0) + 1
+          const totalResponseTimeMs =
+            (current?.totalResponseTimeMs ?? 0) + attempt.responseTimeMs
+          next = {
+            exposureKey,
+            factId: attempt.factId,
+            variantId: attempt.variantId,
+            questionKey: attempt.questionKey,
+            exposures,
+            correct: (current?.correct ?? 0) + (attempt.isCorrect ? 1 : 0),
+            incorrect:
+              (current?.incorrect ?? 0) + (attempt.isCorrect ? 0 : 1),
+            totalResponseTimeMs,
+            averageResponseTimeMs: totalResponseTimeMs / exposures,
+            lastSeenAt: attempt.timestamp,
+            lastSelectedAnswer: attempt.selectedAnswer,
+            lastErrorType: attempt.errorType,
+          }
+          store.put(next)
+        }
+        request.onerror = () => tx.abort()
+        await transactionDone(tx)
+        if (!next) throw new Error("No se pudo guardar la exposición")
+        return next
       },
     },
     progress: {

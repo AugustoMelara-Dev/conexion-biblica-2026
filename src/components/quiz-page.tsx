@@ -287,6 +287,7 @@ export function QuizPage({
       updatedAt: Date.now(),
       currentIndex: index,
       questionKeys: queue.map((item) => `${item.bankId ?? "local"}:${item.id}`),
+      questionSnapshots: config.massive ? queue : undefined,
       answers,
       config,
       selectionSummary: selectionSummaryRef.current,
@@ -765,6 +766,8 @@ export function QuizPage({
                 ? "V2"
                 : question.bankProfileId === "curated-v4"
                   ? "V4"
+                  : question.bankProfileId === "massive-v5"
+                    ? "V5"
                   : "V1"}
           </Badge>
           <span>{question.source.reference}</span>
@@ -858,6 +861,25 @@ export function QuizPage({
                 </span>
                 {question.explanation ? (
                   <span>{question.explanation}</span>
+                ) : null}
+                {question.sourceQuote ? (
+                  <span className="rounded-lg border bg-background/70 p-3 text-sm">
+                    <strong className="block text-foreground">Cita de respaldo</strong>
+                    <span className="mt-1 block">{question.sourceQuote}</span>
+                  </span>
+                ) : null}
+                {question.whyDistractorsFail &&
+                Object.keys(question.whyDistractorsFail).length > 0 ? (
+                  <span className="grid gap-1 rounded-lg border bg-background/70 p-3 text-sm">
+                    <strong className="text-foreground">Por qué no aplican las otras opciones</strong>
+                    {Object.entries(question.whyDistractorsFail).map(
+                      ([option, reason]) => (
+                        <span key={option}>
+                          <strong>{option}:</strong> {reason}
+                        </span>
+                      )
+                    )}
+                  </span>
                 ) : null}
                 <span>
                   Fuente: <strong>{question.source.reference}</strong>

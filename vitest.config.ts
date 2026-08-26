@@ -9,7 +9,7 @@ export default defineConfig({
     alias: { "@": path.resolve(__dirname, "./src") },
   },
   test: {
-    exclude: [...configDefaults.exclude, "e2e/**"],
+    exclude: [...configDefaults.exclude, "e2e/**", ".worktrees/**"],
     environment: "jsdom",
     setupFiles: ["./src/test/setup.ts"],
     globals: true,

@@ -318,3 +318,31 @@ test("Revisar preguntas conserva la etiqueta V4 de un reporte", async ({
   await expect(reportedQuestion).toHaveCount(1)
   await expect(reportedQuestion).toContainText("V4")
 })
+
+test("V5 carga PR43–44 por fragmentos y conserva la variante dinámica al recargar", async ({
+  page,
+}) => {
+  await waitForApp(page)
+  await navigateTo(page, "practice")
+  const massiveHub = page.getByRole("region", { name: "Entrenamiento masivo" })
+  await expect(massiveHub).toBeVisible()
+
+  const mode = massiveHub.getByRole("combobox", { name: "Modo avanzado" })
+  await mode.selectOption("pr43-44-intensive")
+  await massiveHub.getByRole("button", { name: "Iniciar modo avanzado" }).click()
+
+  await expect(page.getByText("Pregunta 1 de 100", { exact: true })).toBeVisible({
+    timeout: 30_000,
+  })
+  await expect(page.getByText("V5", { exact: true })).toBeVisible()
+  const prompt = await page.getByRole("heading", { level: 1 }).textContent()
+  const options = await page.getByRole("radio").allTextContents()
+
+  await page.reload()
+
+  await expect(page.getByText("Pregunta 1 de 100", { exact: true })).toBeVisible({
+    timeout: 30_000,
+  })
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText(prompt ?? "")
+  await expect(page.getByRole("radio")).toHaveText(options)
+})

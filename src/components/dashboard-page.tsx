@@ -18,6 +18,7 @@ const activeBankLabels: Record<BankSelection, string> = {
   "legacy-v1": "V1 — Clásica",
   mixed: "Mixto curado",
   "master-v2": "V2 — Fuente técnica",
+  "massive-v5": "V5 — Entrenamiento masivo",
 }
 
 export function DashboardPage() {

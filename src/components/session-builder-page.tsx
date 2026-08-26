@@ -4,6 +4,7 @@ import { useApp } from "@/app/app-state"
 import { AdvancedSettings } from "@/components/practice/advanced-settings"
 import { EssentialSettings } from "@/components/practice/essential-settings"
 import { ModePicker } from "@/components/practice/mode-picker"
+import { MassiveTrainingHub } from "@/components/massive-training-hub"
 import { RoundSummary } from "@/components/practice/round-summary"
 import { PageHeader } from "@/components/layout/page-header"
 import { Button } from "@/components/ui/button"
@@ -215,6 +216,7 @@ export function SessionBuilderPage({
         title="Configura tu próxima ronda"
         description="Elige cómo quieres estudiar; ajusta los detalles solo si los necesitas."
       />
+      <MassiveTrainingHub onStart={(massiveConfig) => onStart(massiveConfig)} />
       <StudyDayQuickStart onSelect={startStudyDay} />
       <ModePicker value={config.mode} onChange={selectMode} />
       <section className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_22rem]">

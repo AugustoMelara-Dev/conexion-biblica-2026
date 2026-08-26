@@ -1,6 +1,7 @@
 import { Clock3, Heart, Target, TrendingUp, Trophy } from "lucide-react"
 import { useApp } from "@/app/app-state"
 import { FamilyMasteryPanel } from "@/components/family-mastery-panel"
+import { FactCoveragePanel } from "@/components/fact-coverage-panel"
 import { MetricStrip } from "@/components/layout/metric-strip"
 import { PageHeader } from "@/components/layout/page-header"
 import { SectionHeader } from "@/components/layout/section-header"
@@ -20,7 +21,7 @@ import {
 } from "@/lib/statistics"
 
 export function StatisticsPage() {
-  const { statistics, sessions, questions, progress } = useApp()
+  const { statistics, sessions, questions, progress, exposures = [], massiveManifest } = useApp()
   const { general } = statistics
   const simulation = buildSimulationStatistics(sessions)
   const uniqueSeen = Math.max(0, questions.length - general.unseen)
@@ -94,6 +95,12 @@ export function StatisticsPage() {
         </TabsList>
         <TabsContent value="summary" className="mt-5">
           <div className="flex flex-col gap-6">
+            {massiveManifest ? (
+              <FactCoveragePanel
+                totalFacts={massiveManifest.totals.facts}
+                exposures={exposures}
+              />
+            ) : null}
             <Card className="border-primary/20 bg-primary/[0.03] shadow-none">
               <CardHeader>
                 <CardTitle>Resultado de simulacros</CardTitle>

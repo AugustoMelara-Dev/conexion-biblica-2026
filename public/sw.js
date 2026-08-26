@@ -1,5 +1,11 @@
-const CACHE_NAME = "conexion-biblica-shell-v5"
-const SHELL = ["/", "/index.html", "/manifest.webmanifest", "/banks/manifest.json"]
+const CACHE_NAME = "conexion-biblica-shell-v6"
+const SHELL = [
+  "/",
+  "/index.html",
+  "/manifest.webmanifest",
+  "/banks/manifest.json",
+  "/banks/massive-v5/manifest.json",
+]
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(SHELL)))
