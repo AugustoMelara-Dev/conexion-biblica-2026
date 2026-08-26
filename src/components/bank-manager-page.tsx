@@ -11,6 +11,9 @@ import {
 } from "lucide-react"
 import { useApp, type ImportOutcome } from "@/app/app-state"
 import { downloadJson, formatDate } from "@/lib/format"
+import { EmptyState } from "@/components/layout/empty-state"
+import { PageHeader } from "@/components/layout/page-header"
+import { SectionHeader } from "@/components/layout/section-header"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -21,7 +24,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
+import { Input } from "@/components/ui/input"
+import type { SourceWork } from "@/domain/types"
 
 type CurationSummary = {
   approved: number
@@ -38,8 +42,11 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return Boolean(value) && typeof value === "object" && !Array.isArray(value)
 }
 
-function getCurationSummary(raw: Record<string, unknown> | undefined): CurationSummary | null {
-  if (!raw || !isRecord(raw.bank) || !isRecord(raw.bank.curationSummary)) return null
+function getCurationSummary(
+  raw: Record<string, unknown> | undefined
+): CurationSummary | null {
+  if (!raw || !isRecord(raw.bank) || !isRecord(raw.bank.curationSummary))
+    return null
   const summary = raw.bank.curationSummary
   const { approved, repaired, rejected } = summary
   if (
@@ -51,15 +58,30 @@ function getCurationSummary(raw: Record<string, unknown> | undefined): CurationS
   return { approved, repaired, rejected }
 }
 
-function getCurationMetadata(raw: Record<string, unknown> | undefined): CurationMetadata | null {
+function getCurationMetadata(
+  raw: Record<string, unknown> | undefined
+): CurationMetadata | null {
   if (!raw || !isRecord(raw.bank)) return null
-  const generatedAt = typeof raw.bank.generatedAt === "string" && Number.isFinite(Date.parse(raw.bank.generatedAt))
-    ? raw.bank.generatedAt
+  const generatedAt =
+    typeof raw.bank.generatedAt === "string" &&
+    Number.isFinite(Date.parse(raw.bank.generatedAt))
+      ? raw.bank.generatedAt
+      : null
+  const masterFingerprint =
+    typeof raw.bank.masterFingerprint === "string" &&
+    raw.bank.masterFingerprint.length > 0
+      ? raw.bank.masterFingerprint
+      : null
+  return generatedAt || masterFingerprint
+    ? { generatedAt, masterFingerprint }
     : null
-  const masterFingerprint = typeof raw.bank.masterFingerprint === "string" && raw.bank.masterFingerprint.length > 0
-    ? raw.bank.masterFingerprint
-    : null
-  return generatedAt || masterFingerprint ? { generatedAt, masterFingerprint } : null
+}
+
+function normalize(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
 }
 
 export function BankManagerPage() {
@@ -80,6 +102,8 @@ export function BankManagerPage() {
   const [replaceBankId, setReplaceBankId] = useState<string | undefined>()
   const [outcomes, setOutcomes] = useState<ImportOutcome[]>([])
   const [backupMessage, setBackupMessage] = useState<string | null>(null)
+  const [query, setQuery] = useState("")
+  const [source, setSource] = useState<"all" | SourceWork>("all")
 
   const selectFiles = (nextReplaceBankId?: string) => {
     setReplaceBankId(nextReplaceBankId)
@@ -122,29 +146,47 @@ export function BankManagerPage() {
     )
   }
 
+  const visibleBanks = banks.filter((bank) => {
+    const matchesQuery = normalize(
+      `${bank.name} ${bank.sourceFileName ?? ""}`
+    ).includes(normalize(query))
+    const matchesSource = source === "all" || bank.sourceWork === source
+    return matchesQuery && matchesSource
+  })
+  const questionCounts = new Map(
+    banks.map((bank) => [
+      bank.bankId,
+      allQuestions.filter((question) => question.bankId === bank.bankId).length,
+    ])
+  )
+
   return (
-    <div className="flex flex-col gap-7">
-      <section className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
-        <div>
-          <p className="text-sm font-medium text-muted-foreground">
-            Datos locales
-          </p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight">
-            Banco de preguntas
-          </h1>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">
-            Importa, valida y audita tus bancos sin modificar los archivos
-            originales. Se encontraron {banks.length} bancos y{" "}
-            {allQuestions.length} preguntas.
-          </p>
-        </div>
-        <Button variant="outline" onClick={() => void refresh()}>
-          <RefreshCw data-icon="inline-start" />
-          Actualizar
-        </Button>
-      </section>
+    <div className="flex min-w-0 flex-col gap-8">
+      <PageHeader
+        eyebrow="Datos locales"
+        title="Banco de preguntas"
+        description="Administra fuentes y respaldos sin mezclar el progreso de cada banco."
+        action={
+          <Button onClick={() => selectFiles()}>
+            Importar banco <UploadCloud data-icon="inline-end" />
+          </Button>
+        }
+      />
 
       <Card className="border-dashed shadow-none">
+        <CardHeader className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
+          <div>
+            <CardTitle>Importar archivos JSON</CardTitle>
+            <CardDescription>
+              Se validan antes de guardarlos y no se modifica el archivo
+              original.
+            </CardDescription>
+          </div>
+          <Button variant="outline" onClick={() => void refresh()}>
+            <RefreshCw data-icon="inline-start" />
+            Actualizar
+          </Button>
+        </CardHeader>
         <CardContent className="p-0">
           <button
             type="button"
@@ -244,7 +286,7 @@ export function BankManagerPage() {
         </Card>
       ) : null}
 
-      <section className="grid gap-4 sm:grid-cols-3">
+      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <ActionCard
           icon={Download}
           title="Exportar bancos"
@@ -319,123 +361,204 @@ export function BankManagerPage() {
         </CardHeader>
       </Card>
 
-      <section>
-        <div className="mb-4 flex items-end justify-between gap-3">
+      <section className="min-w-0" aria-label="Gestión de bancos">
+        <SectionHeader
+          title="Bancos cargados"
+          description={`Cada banco conserva su fuente, versión y archivo original. ${banks.length} bancos y ${allQuestions.length} preguntas.`}
+          action={
+            <Badge variant="secondary">{visibleBanks.length} visibles</Badge>
+          }
+        />
+        <div className="mt-5 grid gap-3 sm:grid-cols-[minmax(0,1fr)_14rem]">
           <div>
-            <h2 className="text-xl font-semibold">Bancos cargados</h2>
-            <p className="mt-1 text-sm text-muted-foreground">
-              Cada banco conserva su fuente, versión y archivo original.
-            </p>
+            <label
+              htmlFor="bank-search"
+              className="mb-1.5 block text-sm font-medium"
+            >
+              Buscar bancos
+            </label>
+            <Input
+              id="bank-search"
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Nombre o archivo"
+            />
           </div>
-          <Badge variant="secondary">{banks.length} bancos</Badge>
+          <div>
+            <label
+              htmlFor="bank-source"
+              className="mb-1.5 block text-sm font-medium"
+            >
+              Fuente
+            </label>
+            <select
+              id="bank-source"
+              className="h-9 w-full rounded-md border border-input bg-transparent px-3 text-sm shadow-xs outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 dark:bg-input/30"
+              value={source}
+              onChange={(event) =>
+                setSource(event.target.value as "all" | SourceWork)
+              }
+            >
+              <option value="all">Todas las fuentes</option>
+              <option value="Daniel">Daniel</option>
+              <option value="Profetas y Reyes">Profetas y Reyes</option>
+            </select>
+          </div>
         </div>
-        <div className="grid gap-4 lg:grid-cols-2">
-          {banks.map((bank) => {
-            const count = allQuestions.filter(
-              (question) => question.bankId === bank.bankId
-            ).length
-            const curationSummary =
-              bank.bankProfileId === "curated-v4"
-                ? getCurationSummary(bank.raw)
-                : null
-            const curationMetadata =
-              bank.bankProfileId === "curated-v4"
-                ? getCurationMetadata(bank.raw)
-                : null
-            const isTechnicalBank =
-              bank.bankId === "master-v2" || bank.bankProfileId === "master-v2"
-            const readOnly =
-              isTechnicalBank ||
-              bank.bankProfileId === "prep-v3" ||
-              bank.bankProfileId === "curated-v4"
-            return (
-              <Card key={bank.bankId} className="shadow-none">
-                <CardHeader className="flex flex-row items-start justify-between gap-3 space-y-0">
-                  <div className="flex min-w-0 gap-3">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
-                      <FileJson />
+
+        {visibleBanks.length > 0 ? (
+          <div
+            role="table"
+            aria-label="Bancos disponibles"
+            className="mt-5 divide-y rounded-xl border border-border/70"
+          >
+            <div role="rowgroup" className="sr-only">
+              <div role="row">
+                <span role="columnheader">Banco</span>
+                <span role="columnheader">Fuente</span>
+                <span role="columnheader">Preguntas</span>
+                <span role="columnheader">Acciones</span>
+              </div>
+            </div>
+            <div role="rowgroup" className="divide-y">
+              {visibleBanks.map((bank) => {
+                const curationSummary =
+                  bank.bankProfileId === "curated-v4"
+                    ? getCurationSummary(bank.raw)
+                    : null
+                const curationMetadata =
+                  bank.bankProfileId === "curated-v4"
+                    ? getCurationMetadata(bank.raw)
+                    : null
+                const isTechnicalBank =
+                  bank.bankId === "master-v2" ||
+                  bank.bankProfileId === "master-v2"
+                const readOnly =
+                  isTechnicalBank ||
+                  bank.bankProfileId === "prep-v3" ||
+                  bank.bankProfileId === "curated-v4"
+                const count = questionCounts.get(bank.bankId) ?? 0
+
+                return (
+                  <div
+                    role="row"
+                    key={bank.bankId}
+                    className="grid min-w-0 gap-2 px-4 py-4 sm:grid-cols-[minmax(0,1fr)_10rem_8rem_auto] sm:items-center"
+                  >
+                    <div role="cell" className="min-w-0">
+                      <p className="truncate font-medium">{bank.name}</p>
+                      <p className="mt-1 truncate text-xs text-muted-foreground">
+                        {bank.sourceFileName ?? "Banco local"} ·{" "}
+                        {bank.sourceVersion} · Importado{" "}
+                        {formatDate(bank.importedAt)}
+                      </p>
                     </div>
-                    <div className="min-w-0">
-                      <CardTitle className="truncate text-base">
-                        {bank.name}
-                      </CardTitle>
-                      <CardDescription className="mt-1 truncate">
-                        {bank.sourceFileName ?? "Banco local"}
-                      </CardDescription>
-                    </div>
-                  </div>
-                  <Badge variant="outline">{count} preguntas</Badge>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">
-                    <span>{bank.sourceWork}</span>
-                    <span>{bank.sourceVersion}</span>
-                    <span>Importado {formatDate(bank.importedAt)}</span>
-                  </div>
-                  {curationSummary ? (
-                    <div aria-label="Resumen de curación V4" className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs font-medium text-muted-foreground">
-                      <span>{curationSummary.approved} aprobadas</span>
-                      <span>{curationSummary.repaired} reparadas</span>
-                      <span>{curationSummary.rejected} rechazadas</span>
-                    </div>
-                  ) : null}
-                  {curationMetadata ? (
-                    <div aria-label="Metadatos de generación V4" className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted-foreground">
-                      {curationMetadata.generatedAt ? <span>Generado {formatDate(Date.parse(curationMetadata.generatedAt))}</span> : null}
-                      {curationMetadata.masterFingerprint ? <span title={curationMetadata.masterFingerprint}>Maestro SHA-256 {curationMetadata.masterFingerprint.slice(0, 12)}…</span> : null}
-                    </div>
-                  ) : null}
-                  {isTechnicalBank ? (
-                    <p className="mt-4 text-xs font-medium text-amber-700 dark:text-amber-300">
-                      Fuente técnica conservada sin modificaciones
-                    </p>
-                  ) : null}
-                  <Separator className="my-4" />
-                  <div className="flex flex-wrap gap-2">
-                    {readOnly ? (
-                      <Badge variant="secondary">
-                        Integrado · solo lectura
-                      </Badge>
-                    ) : (
-                      <>
-                        <Button
-                          size="sm"
-                          variant="outline"
-                          onClick={() => selectFiles(bank.bankId)}
-                        >
-                          Reemplazar
-                        </Button>
-                        <Button
-                          size="sm"
-                          variant="ghost"
-                          className="text-destructive hover:text-destructive"
-                          onClick={() => {
-                            if (
-                              window.confirm(
-                                `¿Eliminar ${bank.name}? El progreso se conserva separado.`
+                    <span role="cell" className="text-sm text-muted-foreground">
+                      {bank.sourceWork}
+                    </span>
+                    <span role="cell" className="text-sm tabular-nums">
+                      {count} preguntas
+                    </span>
+                    <div
+                      role="cell"
+                      className="flex min-w-0 flex-wrap items-center gap-2 sm:justify-end"
+                    >
+                      {readOnly ? (
+                        <Badge variant="secondary">
+                          Integrado · solo lectura
+                        </Badge>
+                      ) : (
+                        <>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() => selectFiles(bank.bankId)}
+                          >
+                            Reemplazar
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            className="text-destructive hover:text-destructive"
+                            onClick={() => {
+                              if (
+                                window.confirm(
+                                  `¿Eliminar ${bank.name}? El progreso se conserva separado.`
+                                )
                               )
-                            )
-                              void removeBank(bank.bankId)
-                          }}
-                        >
-                          <Trash2 data-icon="inline-start" />
-                          Eliminar
-                        </Button>
-                      </>
-                    )}
+                                void removeBank(bank.bankId)
+                            }}
+                          >
+                            <Trash2 data-icon="inline-start" />
+                            Eliminar
+                          </Button>
+                        </>
+                      )}
+                      {isTechnicalBank ? (
+                        <span className="text-xs font-medium text-amber-700 dark:text-amber-300">
+                          Fuente técnica conservada sin modificaciones
+                        </span>
+                      ) : null}
+                      {curationSummary || curationMetadata ? (
+                        <details className="w-full text-xs text-muted-foreground">
+                          <summary className="cursor-pointer font-medium">
+                            Ver resumen de curación de {bank.name}
+                          </summary>
+                          {curationSummary ? (
+                            <div
+                              aria-label="Resumen de curación V4"
+                              className="mt-2 flex flex-wrap gap-x-3 gap-y-1"
+                            >
+                              <span>{curationSummary.approved} aprobadas</span>
+                              <span>{curationSummary.repaired} reparadas</span>
+                              <span>{curationSummary.rejected} rechazadas</span>
+                            </div>
+                          ) : null}
+                          {curationMetadata ? (
+                            <div
+                              aria-label="Metadatos de generación V4"
+                              className="mt-2 flex flex-wrap gap-x-3 gap-y-1"
+                            >
+                              {curationMetadata.generatedAt ? (
+                                <span>
+                                  Generado{" "}
+                                  {formatDate(
+                                    Date.parse(curationMetadata.generatedAt)
+                                  )}
+                                </span>
+                              ) : null}
+                              {curationMetadata.masterFingerprint ? (
+                                <span
+                                  title={curationMetadata.masterFingerprint}
+                                >
+                                  Maestro SHA-256{" "}
+                                  {curationMetadata.masterFingerprint.slice(
+                                    0,
+                                    12
+                                  )}
+                                  …
+                                </span>
+                              ) : null}
+                            </div>
+                          ) : null}
+                        </details>
+                      ) : null}
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
-            )
-          })}
-          {banks.length === 0 ? (
-            <Card className="shadow-none lg:col-span-2">
-              <CardContent className="p-8 text-center text-sm text-muted-foreground">
-                No hay bancos cargados todavía.
-              </CardContent>
-            </Card>
-          ) : null}
-        </div>
+                )
+              })}
+            </div>
+          </div>
+        ) : (
+          <div className="mt-5">
+            <EmptyState
+              icon={FileJson}
+              title="No hay bancos que coincidan"
+              description="Prueba otra búsqueda o fuente, o importa un banco nuevo."
+            />
+          </div>
+        )}
       </section>
     </div>
   )
