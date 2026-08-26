@@ -19,11 +19,13 @@ import {
   buildSimulationStatistics,
   type AggregateMetric,
 } from "@/lib/statistics"
+import { buildLearningMetrics } from "@/lib/learning-metrics"
 
 export function StatisticsPage() {
-  const { statistics, sessions, questions, progress, exposures = [], massiveManifest, consolidationManifest } = useApp()
+  const { statistics, sessions, questions, progress, exposures = [], factMastery = [], massiveManifest, consolidationManifest } = useApp()
   const { general } = statistics
   const simulation = buildSimulationStatistics(sessions)
+  const learning = buildLearningMetrics(factMastery, exposures)
   const uniqueSeen = Math.max(0, questions.length - general.unseen)
   const trend = sessionTrend(sessions)
   const summaryMetrics = [
@@ -101,6 +103,26 @@ export function StatisticsPage() {
                 exposures={exposures}
               />
             ) : null}
+            <Card className="shadow-none">
+              <CardHeader>
+                <CardTitle>Evidencia de aprendizaje</CardTitle>
+                <CardDescription>
+                  Una corrección inmediata no cuenta como dominio. Estas cifras separan recuperación real, demora y transferencia.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+                <EvidenceMetric label="Primer intento" metric={learning.firstAttempt} />
+                <EvidenceMetric label="Trampas contextuales" metric={learning.contextual} />
+                <EvidenceMetric label="Después de 6 horas" metric={learning.sixHour} />
+                <EvidenceMetric label="Al día siguiente" metric={learning.nextDay} />
+                <EvidenceMetric label="Prueba ciega" metric={learning.blind} />
+                <SummaryMetric
+                  label="Errores recurrentes"
+                  value={learning.recurringErrors}
+                  detail="Hechos fallados dos veces o más"
+                />
+              </CardContent>
+            </Card>
             <Card className="border-primary/20 bg-primary/[0.03] shadow-none">
               <CardHeader>
                 <CardTitle>Resultado de simulacros</CardTitle>
@@ -170,6 +192,22 @@ export function StatisticsPage() {
         </TabsContent>
       </Tabs>
     </div>
+  )
+}
+
+function EvidenceMetric({
+  label,
+  metric,
+}: {
+  label: string
+  metric: { attempts: number; correct: number; accuracy: number }
+}) {
+  return (
+    <SummaryMetric
+      label={label}
+      value={`${metric.accuracy}%`}
+      detail={`${metric.correct}/${metric.attempts} recuperaciones correctas`}
+    />
   )
 }
 

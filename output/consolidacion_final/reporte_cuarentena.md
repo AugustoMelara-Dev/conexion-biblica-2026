@@ -1,51 +1,63 @@
-# Rescate editorial V5 - Consolidación Final
+# Auditoría editorial V6 - Aprendizaje competitivo
 
 - Registros originales preservados: 14000
-- Preguntas GOLD activas: 2287
-- Hechos GOLD: 1627
-- Variantes promedio por hecho: 1.41
-- SILVER conservadas para edición: 2036
-- QUARANTINE fuera de producción: 9677
+- Preguntas GOLD activas: 5000
+- Hechos GOLD: 1851
+- Variantes promedio por hecho: 2.7
+- Reemplazos editoriales nuevos desde el PDF: 5000
+- SILVER conservadas para edición: 2136
+- QUARANTINE fuera de producción: 11864
 
 ## GOLD por capítulo
 
-- DAN1: 87
-- DAN10: 78
-- DAN11: 180
-- DAN12: 60
-- DAN2: 107
-- DAN3: 96
-- DAN4: 106
-- DAN5: 90
-- DAN6: 92
-- DAN7: 122
-- DAN8: 118
-- DAN9: 151
-- PR39: 111
-- PR40: 133
-- PR41: 120
-- PR42: 155
-- PR43: 245
-- PR44: 236
+- DAN1: 220
+- DAN10: 200
+- DAN11: 350
+- DAN12: 200
+- DAN2: 300
+- DAN3: 260
+- DAN4: 300
+- DAN5: 240
+- DAN6: 240
+- DAN7: 350
+- DAN8: 350
+- DAN9: 350
+- PR39: 280
+- PR40: 200
+- PR41: 260
+- PR42: 200
+- PR43: 350
+- PR44: 350
+
+## GOLD por tipo
+
+- fill_blank: 1500
+- true_false: 1250
+- multiple_choice: 2250
+
+## Contrato obligatorio
+
+- Errores de mezcla o cuota: 0
+- Duplicados semánticos eliminados: 0
+- Reserva ciega A/B/emergencia: {'A': 100, 'B': 100, 'emergency': 78}
 
 ## Cuarentena por razón
 
+- incompatible_distractors: 7437
 - low_value_atomic_fragment: 6093
 - unsupported_answer: 4115
 - answer_not_in_source: 4105
-- incompatible_distractors: 4080
-- distractor_repair_failed: 3724
 - unsafe_false_substitution: 1750
 - lexical_sequence: 630
-- insufficient_fill_anchor: 615
+- insufficient_fill_anchor: 296
 
 ## Cuarentena por template
 
-- fill-context-v1: 792
-- fill-context-v2: 647
-- mc-contextual-v1: 1340
-- mc-contextual-v2: 1557
-- mc-contextual-v3: 1211
+- fill-context-v1: 1772
+- fill-context-v2: 1456
+- mc-contextual-v1: 1404
+- mc-contextual-v2: 1737
+- mc-contextual-v3: 1365
 - mc-sequence-v1: 630
 - tf-single-detail-v1: 2338
 - tf-single-detail-v2: 1162
@@ -54,123 +66,123 @@
 
 ## 20 ejemplos antes/después
 
-### DAN1-0226
+### DAN1-GOLD-0001
 
-- Antes: Según 3, Daniel 1:1, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:1), ¿qué formulación corresponde específicamente a este contexto? Marco: «En el tercer año del reinado de Joacim, rey de Judá, vino [DETALLE], rey de Babilonia, a Jerusalén, y la sitió.»
-- Después: Según Daniel 1:1, ¿qué opción completa exactamente este contexto? «En el tercer año del reinado de Joacim, rey de Judá, vino _____, rey de Babilonia, a Jerusalén, y la sitió.»
-- Referencia: 3, Daniel 1:1 -> Daniel 1:1
+- Antes: En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.
+- Después: Según Daniel 1:1, complete la expresión significativa: «En el tercer año del reinado de Joacim, rey de Judá, vino _____, rey de Babilonia, a Jerusalén, y la sitió.»
+- Referencia: Daniel 1:1 -> Daniel 1:1
 
-### DAN1-0076
+### DAN1-GOLD-0002
 
-- Antes: Según 3, Daniel 1:1, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:1), complete con la expresión exacta del PDF: «En el tercer año del reinado de Joacim, rey de Judá, vino _____, rey de Babilonia, a Jerusalén, y la sitió.»
-- Después: Según Daniel 1:1, complete la expresión significativa del pasaje: «En el tercer año del reinado de Joacim, rey de Judá, vino _____, rey de Babilonia, a Jerusalén, y la sitió.»
-- Referencia: 3, Daniel 1:1 -> Daniel 1:1
+- Antes: En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.
+- Después: Según Daniel 1:1, complete la expresión significativa: «En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de _____, a Jerusalén, y la sitió.»
+- Referencia: Daniel 1:1 -> Daniel 1:1
 
-### DAN1-0254
+### DAN1-GOLD-0003
 
-- Antes: Según 3, Daniel 1:1, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:1), ¿qué formulación corresponde específicamente a este contexto? Marco: «En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de [DETALLE], a Jerusalén, y la sitió.»
-- Después: Según Daniel 1:1, ¿qué opción completa exactamente este contexto? «En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de _____, a Jerusalén, y la sitió.»
-- Referencia: 3, Daniel 1:1 -> Daniel 1:1
+- Antes: En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.
+- Después: Según Daniel 1:1, complete la expresión significativa: «En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a _____, y la sitió.»
+- Referencia: Daniel 1:1 -> Daniel 1:1
 
-### DAN1-0179
+### DAN1-GOLD-0004
 
-- Antes: Según 3, Daniel 1:1, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:1), complete con la expresión exacta del PDF: «En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de _____, a Jerusalén, y la sitió.»
-- Después: Según Daniel 1:1, complete la expresión significativa del pasaje: «En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de _____, a Jerusalén, y la sitió.»
-- Referencia: 3, Daniel 1:1 -> Daniel 1:1
+- Antes: El Señor entregó en sus manos a Joacim, rey de Judá, y parte de los utensilios de la casa de Dios
+- Después: Según Daniel 1:2, complete la expresión significativa: «El Señor entregó en sus manos a _____, rey de Judá, y parte de los utensilios de la casa de Dios»
+- Referencia: Daniel 1:2 -> Daniel 1:2
 
-### DAN1-0282
+### DAN1-GOLD-0005
 
-- Antes: Según 3, Daniel 1:1, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:1), ¿qué formulación corresponde específicamente a este contexto? Marco: «En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a [DETALLE], y la sitió.»
-- Después: Según Daniel 1:1, ¿qué opción completa exactamente este contexto? «En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a _____, y la sitió.»
-- Referencia: 3, Daniel 1:1 -> Daniel 1:1
+- Antes: El Señor entregó en sus manos a Joacim, rey de Judá, y parte de los utensilios de la casa de Dios
+- Después: Según Daniel 1:2, complete la expresión significativa: «El Señor entregó en sus manos a Joacim, rey de Judá, y parte de los _____ de la casa de Dios»
+- Referencia: Daniel 1:2 -> Daniel 1:2
 
-### DAN1-0207
+### DAN1-GOLD-0006
 
-- Antes: Según 3, Daniel 1:1, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:1), complete con la expresión exacta del PDF: «En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a _____, y la sitió.»
-- Después: Según Daniel 1:1, complete la expresión significativa del pasaje: «En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a _____, y la sitió.»
-- Referencia: 3, Daniel 1:1 -> Daniel 1:1
+- Antes: los trajo a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.
+- Después: Según Daniel 1:2, complete la expresión significativa: «los trajo a tierra de _____, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.»
+- Referencia: Daniel 1:2 -> Daniel 1:2
 
-### DAN1-0227
+### DAN1-GOLD-0007
 
-- Antes: Según 3, Daniel 1:2, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:2), ¿qué formulación corresponde específicamente a este contexto? Marco: «El Señor entregó en sus manos a [DETALLE], rey de Judá, y parte de los utensilios de la casa de Dios»
-- Después: Según Daniel 1:2, ¿qué opción completa exactamente este contexto? «El Señor entregó en sus manos a _____, rey de Judá, y parte de los utensilios de la casa de Dios»
-- Referencia: 3, Daniel 1:2 -> Daniel 1:2
+- Antes: los trajo a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.
+- Después: Según Daniel 1:2, complete la expresión significativa: «los _____ a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.»
+- Referencia: Daniel 1:2 -> Daniel 1:2
 
-### DAN1-0077
+### DAN1-GOLD-0008
 
-- Antes: Según 3, Daniel 1:2, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:2), complete con la expresión exacta del PDF: «El Señor entregó en sus manos a _____, rey de Judá, y parte de los utensilios de la casa de Dios»
-- Después: Según Daniel 1:2, complete la expresión significativa del pasaje: «El Señor entregó en sus manos a _____, rey de Judá, y parte de los utensilios de la casa de Dios»
-- Referencia: 3, Daniel 1:2 -> Daniel 1:2
+- Antes: los trajo a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.
+- Después: Según Daniel 1:2, complete la expresión significativa: «los trajo a tierra de Sinar, a la casa de su dios, y _____ en la casa del tesoro de su dios.»
+- Referencia: Daniel 1:2 -> Daniel 1:2
 
-### DAN1-0003
+### DAN1-GOLD-0009
 
-- Antes: Según 3, Daniel 1:2, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:2), ¿qué opción completa correctamente el detalle señalado? Marco: «los trajo a tierra de [DETALLE], a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.»
-- Después: Según Daniel 1:2, ¿qué opción completa exactamente este contexto? «los trajo a tierra de _____, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.»
-- Referencia: 3, Daniel 1:2 -> Daniel 1:2
+- Antes: Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,
+- Después: Según Daniel 1:3, complete la expresión significativa: «Y dijo el rey a _____, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,»
+- Referencia: Daniel 1:3 -> Daniel 1:3
 
-### DAN1-0078
+### DAN1-GOLD-0010
 
-- Antes: Según 3, Daniel 1:2, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:2), complete con la expresión exacta del PDF: «los trajo a tierra de _____, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.»
-- Después: Según Daniel 1:2, complete la expresión significativa del pasaje: «los trajo a tierra de _____, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.»
-- Referencia: 3, Daniel 1:2 -> Daniel 1:2
+- Antes: Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,
+- Después: Según Daniel 1:3, complete la expresión significativa: «Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de _____, del linaje real de los príncipes,»
+- Referencia: Daniel 1:3 -> Daniel 1:3
 
-### DAN1-0209
+### DAN1-GOLD-0011
 
-- Antes: Según 3, Daniel 1:2, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:2), complete con la expresión exacta del PDF: «los trajo a tierra de Sinar, a la casa de su dios, y _____ en la casa del tesoro de su dios.»
-- Después: Según Daniel 1:2, complete la expresión significativa del pasaje: «los trajo a tierra de Sinar, a la casa de su dios, y _____ en la casa del tesoro de su dios.»
-- Referencia: 3, Daniel 1:2 -> Daniel 1:2
+- Antes: Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,
+- Después: Según Daniel 1:3, complete la expresión significativa: «Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del _____ de los príncipes,»
+- Referencia: Daniel 1:3 -> Daniel 1:3
 
-### DAN1-0229
+### DAN1-GOLD-0012
 
-- Antes: Según 3, Daniel 1:3, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:3), ¿qué formulación corresponde específicamente a este contexto? Marco: «Y dijo el rey a [DETALLE], jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,»
-- Después: Según Daniel 1:3, ¿qué opción completa exactamente este contexto? «Y dijo el rey a _____, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,»
-- Referencia: 3, Daniel 1:3 -> Daniel 1:3
+- Antes: muchachos en quienes no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey
+- Después: Según Daniel 1:4, complete la expresión significativa: «_____ no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey»
+- Referencia: Daniel 1:4 -> Daniel 1:4
 
-### DAN1-0079
+### DAN1-GOLD-0013
 
-- Antes: Según 3, Daniel 1:3, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:3), complete con la expresión exacta del PDF: «Y dijo el rey a _____, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,»
-- Después: Según Daniel 1:3, complete la expresión significativa del pasaje: «Y dijo el rey a _____, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,»
-- Referencia: 3, Daniel 1:3 -> Daniel 1:3
+- Antes: muchachos en quienes no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey
+- Después: Según Daniel 1:4, complete la expresión significativa: «muchachos en quienes no _____, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey»
+- Referencia: Daniel 1:4 -> Daniel 1:4
 
-### DAN1-0257
+### DAN1-GOLD-0014
 
-- Antes: Según 3, Daniel 1:3, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:3), ¿qué formulación corresponde específicamente a este contexto? Marco: «Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de [DETALLE], del linaje real de los príncipes,»
-- Después: Según Daniel 1:3, ¿qué opción completa exactamente este contexto? «Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de _____, del linaje real de los príncipes,»
-- Referencia: 3, Daniel 1:3 -> Daniel 1:3
+- Antes: muchachos en quienes no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey
+- Después: Según Daniel 1:4, complete la expresión significativa: «muchachos en quienes no hubiera tacha alguna, de buen parecer, _____ sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey»
+- Referencia: Daniel 1:4 -> Daniel 1:4
 
-### DAN1-0107
+### DAN1-GOLD-0015
 
-- Antes: Según 3, Daniel 1:3, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:3), complete con la expresión exacta del PDF: «Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de _____, del linaje real de los príncipes,»
-- Después: Según Daniel 1:3, complete la expresión significativa del pasaje: «Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de _____, del linaje real de los príncipes,»
-- Referencia: 3, Daniel 1:3 -> Daniel 1:3
+- Antes: y que les enseñara las letras y la lengua de los caldeos.
+- Después: Según Daniel 1:4, complete la expresión significativa: «y que les _____ y la lengua de los caldeos.»
+- Referencia: Daniel 1:4 -> Daniel 1:4
 
-### DAN1-0135
+### DAN1-GOLD-0016
 
-- Antes: Según 3, Daniel 1:3, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:3), complete con la expresión exacta del PDF: «Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del _____ de los príncipes,»
-- Después: Según Daniel 1:3, complete la expresión significativa del pasaje: «Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del _____ de los príncipes,»
-- Referencia: 3, Daniel 1:3 -> Daniel 1:3
+- Antes: y que les enseñara las letras y la lengua de los caldeos.
+- Después: Según Daniel 1:4, complete la expresión significativa: «y que les enseñara las letras y la lengua de los _____.»
+- Referencia: Daniel 1:4 -> Daniel 1:4
 
-### DAN1-0080
+### DAN1-GOLD-0017
 
-- Antes: Según 3, Daniel 1:4, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:4), complete con la expresión exacta del PDF: «_____ no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey»
-- Después: Según Daniel 1:4, complete la expresión significativa del pasaje: «_____ no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey»
-- Referencia: 3, Daniel 1:4 -> Daniel 1:4
+- Antes: y que les enseñara las letras y la lengua de los caldeos.
+- Después: Según Daniel 1:4, complete la expresión significativa: «y que les enseñara las letras y la _____ de los caldeos.»
+- Referencia: Daniel 1:4 -> Daniel 1:4
 
-### DAN1-0183
+### DAN1-GOLD-0018
 
-- Antes: Según 3, Daniel 1:4, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:4), complete con la expresión exacta del PDF: «muchachos en quienes no _____, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey»
-- Después: Según Daniel 1:4, complete la expresión significativa del pasaje: «muchachos en quienes no _____, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey»
-- Referencia: 3, Daniel 1:4 -> Daniel 1:4
+- Antes: Y les señaló el rey una porción diaria de la comida del rey y del vino que él bebía
+- Después: Según Daniel 1:5, complete la expresión significativa: «Y les _____ una porción diaria de la comida del rey y del vino que él bebía»
+- Referencia: Daniel 1:5 -> Daniel 1:5
 
-### DAN1-0211
+### DAN1-GOLD-0019
 
-- Antes: Según 3, Daniel 1:4, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:4), complete con la expresión exacta del PDF: «muchachos en quienes no hubiera tacha alguna, de buen parecer, _____ sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey»
-- Después: Según Daniel 1:4, complete la expresión significativa del pasaje: «muchachos en quienes no hubiera tacha alguna, de buen parecer, _____ sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey»
-- Referencia: 3, Daniel 1:4 -> Daniel 1:4
+- Antes: Y les señaló el rey una porción diaria de la comida del rey y del vino que él bebía
+- Después: Según Daniel 1:5, complete la expresión significativa: «Y les señaló el rey una _____ de la comida del rey y del vino que él bebía»
+- Referencia: Daniel 1:5 -> Daniel 1:5
 
-### DAN1-0081
+### DAN1-GOLD-0020
 
-- Antes: Según 3, Daniel 1:4, en la escena sobre cautiverio, formación, fidelidad y sabiduría (Daniel 1:4), complete con la expresión exacta del PDF: «y que les _____ y la lengua de los caldeos.»
-- Después: Según Daniel 1:4, complete la expresión significativa del pasaje: «y que les _____ y la lengua de los caldeos.»
-- Referencia: 3, Daniel 1:4 -> Daniel 1:4
+- Antes: y que los educara durante tres años, para que al fin de ellos se presentaran delante del rey.
+- Después: Según Daniel 1:5, complete la expresión significativa: «y que los _____ años, para que al fin de ellos se presentaran delante del rey.»
+- Referencia: Daniel 1:5 -> Daniel 1:5
 

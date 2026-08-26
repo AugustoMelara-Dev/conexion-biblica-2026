@@ -14,7 +14,7 @@ describe("preferencias y fallback de perfiles", () => {
   beforeEach(() => localStorage.clear())
   afterEach(() => localStorage.clear())
 
-  it("activa V5 Consolidación Final cuando no existe preferencia", () => {
+  it("activa V6 Aprendizaje competitivo cuando no existe preferencia", () => {
     expect(getPreferences().lastBankSelection).toBe("consolidation-v5")
   })
 

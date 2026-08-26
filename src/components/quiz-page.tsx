@@ -12,6 +12,7 @@ import {
   X,
 } from "lucide-react"
 import { useApp } from "@/app/app-state"
+import { materializeDynamicQuestion } from "@/domain/dynamic-question"
 import { evaluateAnswer } from "@/domain/evaluation"
 import { scheduleTrainingRetry } from "@/domain/session-selector"
 import {
@@ -464,10 +465,16 @@ export function QuizPage({
       ) {
         const retryGap = Math.min(
           8 + Math.max(0, nextProgress.timesIncorrect - 1) * 4,
-          20
+          15
         )
+        const retryQuestion = question.bankProfileId === "consolidation-v5"
+          ? materializeDynamicQuestion(question, {
+              seed: questionStartedAt + nextProgress.timesIncorrect,
+              exposure: Math.max(1, nextProgress.timesSeen),
+            })
+          : question
         setQueue((current) =>
-          scheduleTrainingRetry(current, question, index, retryGap)
+          scheduleTrainingRetry(current, retryQuestion, index, retryGap)
         )
       }
       if (finishRoundOnSubmit) {
@@ -775,7 +782,7 @@ export function QuizPage({
                   : question.bankProfileId === "massive-v5"
                     ? "V5"
                   : question.bankProfileId === "consolidation-v5"
-                    ? "V5 GOLD"
+                    ? "V6 GOLD"
                   : "V1"}
           </Badge>
           <span>{question.source.reference}</span>

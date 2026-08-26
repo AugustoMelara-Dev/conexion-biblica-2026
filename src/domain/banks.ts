@@ -49,11 +49,11 @@ export const BANK_DEFINITIONS: Record<BankProfileId, BankDefinition> = {
   },
   "consolidation-v5": {
     id: "consolidation-v5",
-    label: "V5 — Consolidación Final",
-    description: "Preguntas GOLD, recuperación por hechos y plan guiado",
+    label: "V6 — Aprendizaje competitivo",
+    description: "5,000 preguntas GOLD, mezcla obligatoria y recuperación espaciada",
     readOnly: true,
-    version: "V5-CONSOLIDACION-FINAL-2026-08-26",
-    expectedQuestionCount: 2287,
+    version: "V6-MEZCLA-APRENDIZAJE-2026-08-26",
+    expectedQuestionCount: 5000,
   },
 }
 

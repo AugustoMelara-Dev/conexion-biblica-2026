@@ -33,7 +33,7 @@ export function BankSelector({
   const options: BankOption[] = [
     {
       id: "consolidation-v5",
-      label: "V5 — Consolidación Final",
+      label: "V6 — Aprendizaje competitivo",
       description: "Banco GOLD y dominio por hechos. Perfil principal.",
       count: consolidationCount,
       icon: Sparkles,

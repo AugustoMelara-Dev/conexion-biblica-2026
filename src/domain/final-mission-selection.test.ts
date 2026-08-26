@@ -3,7 +3,12 @@ import { describe, expect, it } from "vitest"
 import { selectBlindSimulation, selectMissionQuestions } from "@/domain/final-mission-selection"
 import type { Question } from "@/domain/types"
 
-const make = (index: number, chapter = 7, blindPool: Question["blindPool"] = null): Question => ({
+const make = (
+  index: number,
+  chapter = 7,
+  blindPool: Question["blindPool"] = null,
+  overrides: Partial<Question> = {},
+): Question => ({
   id: `Q${index}`,
   bankId: "consolidation-v5",
   bankProfileId: "consolidation-v5",
@@ -20,6 +25,7 @@ const make = (index: number, chapter = 7, blindPool: Question["blindPool"] = nul
   blindPool,
   blindFinalPool: blindPool !== null,
   editorialStatus: "gold",
+  ...overrides,
 })
 
 describe("final mission selection", () => {
@@ -36,5 +42,38 @@ describe("final mission selection", () => {
     const b = selectBlindSimulation(questions, "B", 10, 1, new Set(a.map((item) => item.factId!)))
     expect(a.map((item) => item.factId)).toEqual(["F1", "F2"])
     expect(b.map((item) => item.factId)).toEqual(["F3"])
+  })
+
+  it("builds every general round of 100 with the mandatory 30/25/45 learning mix", () => {
+    let cursor = 0
+    const fill = Array.from({ length: 45 }, () => make(cursor++, 7, null, { type: "fill_blank" }))
+    const trueFalse = Array.from({ length: 40 }, (_, index) => make(cursor++, 7, null, {
+      type: "true_false",
+      correctAnswerText: index % 2 === 0 ? "Verdadero" : "Falso",
+    }))
+    const choice = Array.from({ length: 80 }, (_, index) => make(cursor++, 7, null, {
+      type: "single_choice",
+      trapType: index < 30 ? "true_elsewhere" : "direct_text",
+      semanticSkill: index < 20 ? "scene_identification" : "contextual_precision",
+    }))
+
+    const selected = selectMissionQuestions({ questions: [...fill, ...trueFalse, ...choice], count: 100, seed: 91 })
+    const types = selected.reduce<Record<string, number>>((counts, item) => {
+      counts[item.type] = (counts[item.type] ?? 0) + 1
+      return counts
+    }, {})
+    const tfAnswers = selected
+      .filter((item) => item.type === "true_false")
+      .reduce<Record<string, number>>((counts, item) => {
+        const answer = item.correctAnswerText ?? ""
+        counts[answer] = (counts[answer] ?? 0) + 1
+        return counts
+      }, {})
+
+    expect(types).toEqual({ fill_blank: 30, true_false: 25, single_choice: 45 })
+    expect([tfAnswers.Verdadero, tfAnswers.Falso].sort()).toEqual([12, 13])
+    expect(selected.filter((item) => item.trapType === "true_elsewhere").length).toBeGreaterThanOrEqual(18)
+    expect(selected.filter((item) => item.semanticSkill === "scene_identification").length).toBeGreaterThanOrEqual(10)
+    expect(new Set(selected.map((item) => item.factId)).size).toBe(100)
   })
 })

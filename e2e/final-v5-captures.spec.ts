@@ -40,6 +40,6 @@ test("capturas finales V5: plan, feedback, progreso y simulación ciega", async 
   await advanced.getByRole("combobox", { name: "Modo avanzado" }).selectOption("blind-simulation")
   await advanced.getByRole("button", { name: "Iniciar modo avanzado" }).click()
   await expect(page.getByText("Pregunta 1 de 100", { exact: true })).toBeVisible({ timeout: 30_000 })
-  await expect(page.getByText("V5 GOLD", { exact: true })).toBeVisible()
+  await expect(page.getByText("V6 GOLD", { exact: true })).toBeVisible()
   await page.screenshot({ path: join(output, "07-simulacion-ciega-a.png"), fullPage: true })
 })

@@ -34,18 +34,22 @@ const CONTROLLED_PREFIXES = [
 ]
 
 function rewritePrompt(question: string, exposure: number) {
+  const canonical = CONTROLLED_PREFIXES.slice(1).reduce((text, prefix) => {
+    if (!text.startsWith(prefix)) return text
+    const remainder = text.slice(prefix.length)
+    return `${remainder.charAt(0).toUpperCase()}${remainder.slice(1)}`
+  }, question)
   const prefix = CONTROLLED_PREFIXES[exposure % CONTROLLED_PREFIXES.length]
-  if (!prefix) return question
-  return `${prefix}${question.charAt(0).toLowerCase()}${question.slice(1)}`
+  if (!prefix) return canonical
+  return `${prefix}${canonical.charAt(0).toLowerCase()}${canonical.slice(1)}`
 }
 
 export function materializeDynamicQuestion(
   question: Question,
   { seed, exposure }: { seed: number; exposure: number }
 ): Question {
-  const variantSeed = hash(
-    `${seed}:${exposure}:${question.variantId ?? question.id}`
-  )
+  const baseVariantId = String(question.metadata?.runtimeBaseVariantId ?? question.variantId ?? question.id)
+  const variantSeed = hash(`${seed}:${exposure}:${baseVariantId}`)
   const random = randomFrom(variantSeed)
   const correctTexts = new Set(
     question.options
@@ -63,10 +67,10 @@ export function materializeDynamicQuestion(
     question: rewritePrompt(question.question, exposure),
     options,
     correctAnswer,
-    variantId: `${question.variantId ?? question.id}-runtime-${exposure + 1}-${variantSeed.toString(16)}`,
+    variantId: `${baseVariantId}-runtime-${exposure + 1}-${variantSeed.toString(16)}`,
     metadata: {
       ...question.metadata,
-      runtimeBaseVariantId: question.variantId ?? question.id,
+      runtimeBaseVariantId: baseVariantId,
       runtimeExposure: exposure,
       runtimeSeed: variantSeed,
     },

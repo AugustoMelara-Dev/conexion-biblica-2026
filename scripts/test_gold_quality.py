@@ -1,10 +1,17 @@
 import unittest
+from collections import Counter
+from pathlib import Path
 
 from scripts.lib.gold_quality import (
+    MANDATORY_CHAPTER_TYPE_MINIMUMS,
+    MANDATORY_TYPE_TOTALS,
     EditorialStatus,
     audit_question,
+    build_consolidation_bank,
     grammatical_signature,
     fill_anchor_is_sufficient,
+    mandatory_mix_errors,
+    make_editorial_true_false,
     normalize_reference,
     partition_blind_facts,
 )
@@ -37,6 +44,53 @@ def question(**overrides):
 
 
 class GoldQualityTests(unittest.TestCase):
+    def test_mandatory_contract_requires_five_thousand_and_all_three_types(self):
+        self.assertEqual(MANDATORY_TYPE_TOTALS, {
+            "fill_blank": 1500,
+            "true_false": 1250,
+            "multiple_choice": 2250,
+        })
+        self.assertEqual(sum(MANDATORY_TYPE_TOTALS.values()), 5000)
+        for chapter in ("DAN7", "DAN8", "DAN9", "DAN11", "PR43", "PR44"):
+            self.assertEqual(MANDATORY_CHAPTER_TYPE_MINIMUMS[chapter], {
+                "fill_blank": 100,
+                "true_false": 80,
+                "multiple_choice": 170,
+            })
+
+    def test_editorial_false_statement_changes_one_plausible_detail(self):
+        fact = {
+            "fact_id": "DAN8-V04-F01",
+            "bank": "DANIEL1-12",
+            "chapter": "DAN8",
+            "verse_or_page": "Daniel 8:4",
+            "source_span": "Vi que el carnero hería con los cuernos al poniente, al norte y al sur.",
+            "answer": "sur",
+            "category": "word_singular",
+            "topic": "direcciones del carnero",
+        }
+        distractor = {
+            "fact_id": "DAN8-V09-F01",
+            "verse_or_page": "Daniel 8:9",
+            "answer": "oriente",
+            "category": "word_singular",
+        }
+
+        result = make_editorial_true_false(fact, distractor, truth=False, question_id="DAN8-GOLD-0001")
+
+        self.assertEqual(result["correct_answer"], "Falso")
+        self.assertEqual(result["incorrect_detail"], "oriente")
+        self.assertEqual(result["correction"], fact["source_span"])
+        self.assertIn("poniente, al norte y al oriente", result["statement"])
+        self.assertEqual(result["question"].count("oriente"), 1)
+
+    def test_generated_bank_meets_every_mandatory_quota(self):
+        result = build_consolidation_bank(Path.cwd())
+        selected = result["selected"]
+
+        self.assertEqual(mandatory_mix_errors(selected), [])
+        self.assertEqual(Counter(row["type"] for row in selected), Counter(MANDATORY_TYPE_TOTALS))
+
     def test_normalizes_pdf_page_prefix_out_of_bible_reference(self):
         self.assertEqual(normalize_reference("16, Daniel 7:9"), "Daniel 7:9")
 

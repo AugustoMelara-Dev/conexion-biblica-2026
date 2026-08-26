@@ -1,4 +1,5 @@
 import type { DifficultyBand, Question, QuestionType, SourceWork } from "@/domain/types"
+import { selectMandatoryHundred } from "@/domain/final-mission-selection"
 
 export type GoldRawQuestion = {
   id: string
@@ -33,7 +34,7 @@ export type GoldRawQuestion = {
 }
 
 export type ConsolidationManifest = {
-  schema_version: "5.1"
+  schema_version: "5.1" | "6.0"
   profile_id: "consolidation-v5"
   version: string
   gold_questions: number
@@ -146,6 +147,14 @@ export async function loadConsolidationQuestionPool(input: {
       .filter((question) => !input.types?.length || input.types.includes(question.type)))
   }
   const ordered = sample(candidates, candidates.length, input.seed)
+  const supportsMandatoryMix = !input.types?.length || (
+    input.types.includes("fill_blank") &&
+    input.types.includes("true_false") &&
+    input.types.includes("single_choice")
+  )
+  if (input.count === 100 && supportsMandatoryMix) {
+    return selectMandatoryHundred(ordered, input.seed)
+  }
   const usedFacts = new Set<string>()
   return ordered.filter((question) => {
     const fact = question.factId ?? question.factKey

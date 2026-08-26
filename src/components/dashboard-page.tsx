@@ -19,7 +19,7 @@ const activeBankLabels: Record<BankSelection, string> = {
   mixed: "Mixto curado",
   "master-v2": "V2 — Fuente técnica",
   "massive-v5": "V5 — Entrenamiento masivo",
-  "consolidation-v5": "V5 — Consolidación Final",
+  "consolidation-v5": "V6 — Aprendizaje competitivo",
 }
 
 function missionConfig(mission: FinalMission): SessionConfig {
@@ -83,7 +83,7 @@ export function DashboardPage({ onStartMission }: { onStartMission?: (config: Se
       <section aria-labelledby="history-config-title">
         <p className="text-sm font-medium text-primary">Historial y configuración</p>
         <h2 id="history-config-title" className="mt-2 text-2xl font-semibold tracking-tight">Tu preparación, sin perder lo anterior.</h2>
-        <p className="mt-2 max-w-3xl text-muted-foreground">V1–V4 permanecen disponibles como perfiles históricos; V5 GOLD dirige el plan principal.</p>
+        <p className="mt-2 max-w-3xl text-muted-foreground">V1–V5 permanecen disponibles como perfiles históricos; V6 GOLD dirige el plan principal.</p>
       </section>
 
       <details className="rounded-2xl border border-border/70 p-5">
