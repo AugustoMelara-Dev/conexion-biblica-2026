@@ -109,8 +109,11 @@ export function QuizPage({
   const autosaveInFlightRef = useRef<Promise<void> | null>(null)
   const autosaveQueuedRef = useRef(false)
   const autosaveStoppedRef = useRef(false)
-  const stopAutosaveAndDrainRef = useRef<() => Promise<void>>(
-    async () => undefined
+  const stopAutosaveAndDrainRef = useRef<() => Promise<ActiveRound | null>>(
+    async () => null
+  )
+  const resumeAutosaveRef = useRef<(round: ActiveRound | null) => void>(
+    () => undefined
   )
   const currentQuestionKeyRef = useRef<string | null>(null)
   const question = queue[index]
@@ -169,11 +172,13 @@ export function QuizPage({
     invalidateTransition()
     setTransitionError(null)
     setTransitionPending("exit")
+    let stoppedRound: ActiveRound | null = null
     try {
-      await stopAutosaveAndDrainRef.current()
+      stoppedRound = await stopAutosaveAndDrainRef.current()
       await onExit()
     } catch {
       if (!isMountedRef.current) return
+      resumeAutosaveRef.current(stoppedRound)
       isExitingRef.current = false
       setTransitionPending(null)
       setTransitionError(
@@ -248,16 +253,31 @@ export function QuizPage({
   }, [])
 
   const stopAutosaveAndDrain = useCallback(async () => {
+    const stoppedRound = latestRoundRef.current
     autosaveStoppedRef.current = true
     autosaveQueuedRef.current = false
     latestRoundRef.current = null
     if (isMountedRef.current) setAutosaveError(null)
     await autosaveInFlightRef.current
+    return stoppedRound
   }, [])
+
+  const resumeAutosave = useCallback(
+    (round: ActiveRound | null) => {
+      if (!isMountedRef.current) return
+      autosaveStoppedRef.current = false
+      if (!round) return
+      latestRoundRef.current = round
+      autosaveQueuedRef.current = true
+      void persistLatestRound()
+    },
+    [persistLatestRound]
+  )
 
   useEffect(() => {
     stopAutosaveAndDrainRef.current = stopAutosaveAndDrain
-  }, [stopAutosaveAndDrain])
+    resumeAutosaveRef.current = resumeAutosave
+  }, [resumeAutosave, stopAutosaveAndDrain])
 
   useEffect(() => {
     if (autosaveStoppedRef.current) return
@@ -342,11 +362,13 @@ export function QuizPage({
           durationMs: Date.now() - startedAt,
         } satisfies Session)
       finishSessionRef.current = session
+      let stoppedRound: ActiveRound | null = null
       try {
-        await stopAutosaveAndDrain()
+        stoppedRound = await stopAutosaveAndDrain()
         await onFinish(session)
       } catch {
         if (!isMountedRef.current) return
+        resumeAutosave(stoppedRound)
         hasFinishedRef.current = false
         isAdvancingRef.current = false
         setTransitionPending(null)
@@ -355,7 +377,14 @@ export function QuizPage({
         )
       }
     },
-    [config, invalidateTransition, onFinish, startedAt, stopAutosaveAndDrain]
+    [
+      config,
+      invalidateTransition,
+      onFinish,
+      resumeAutosave,
+      startedAt,
+      stopAutosaveAndDrain,
+    ]
   )
 
   const advance = useCallback(

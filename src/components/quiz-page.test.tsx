@@ -1000,6 +1000,58 @@ describe("recuperación de transiciones persistidas", () => {
     }
   })
 
+  it("reactiva el autosave tras un exit fallido y el reintento vuelve a drenar antes del clear", async () => {
+    await deleteAppDb()
+    const repositories = createRepositories(await openAppDb())
+    const onStateChange = vi.fn(async (round) => {
+      await repositories.activeRound.put(round)
+    })
+    const onExit = vi
+      .fn()
+      .mockRejectedValueOnce(new Error("clear denied"))
+      .mockImplementationOnce(async () => repositories.activeRound.clear())
+    const user = userEvent.setup()
+    try {
+      render(
+        <QuizPage
+          questions={[twoChoiceQuestion, studyQuestion]}
+          config={studyConfig}
+          onStateChange={onStateChange}
+          onFinish={vi.fn().mockResolvedValue(undefined)}
+          onExit={onExit}
+        />
+      )
+      await waitFor(() => expect(onStateChange).toHaveBeenCalledTimes(1))
+
+      await user.click(screen.getByRole("button", { name: "Salir" }))
+      expect(await screen.findByRole("alert")).toHaveTextContent(
+        "No se pudo salir de la ronda"
+      )
+
+      await user.click(screen.getByRole("radio", { name: /Primera/ }))
+      await user.click(
+        screen.getByRole("button", { name: "Confirmar respuesta" })
+      )
+      await user.click(screen.getByRole("button", { name: "Siguiente" }))
+
+      await waitFor(async () =>
+        expect(await repositories.activeRound.get()).toMatchObject({
+          currentIndex: 1,
+          answers: [{ questionKey: "local:two-choice-question" }],
+        })
+      )
+
+      await user.click(screen.getByRole("button", { name: "Salir" }))
+      await waitFor(() => expect(onExit).toHaveBeenCalledTimes(2))
+      expect(await repositories.activeRound.get()).toBeUndefined()
+      expect(onStateChange.mock.calls.at(-1)?.[0]).toMatchObject({
+        currentIndex: 1,
+      })
+    } finally {
+      await deleteAppDb()
+    }
+  })
+
   it("drena el autosave iniciado antes de terminar y no rehidrata después del clear", async () => {
     await deleteAppDb()
     const repositories = createRepositories(await openAppDb())

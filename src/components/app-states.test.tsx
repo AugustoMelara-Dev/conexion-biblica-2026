@@ -1,4 +1,11 @@
-import { cleanup, render, screen, waitFor } from "@testing-library/react"
+import {
+  act,
+  cleanup,
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+} from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { afterEach, beforeAll, describe, expect, it, vi } from "vitest"
 
@@ -16,6 +23,16 @@ import type {
 vi.mock("@/app/app-state", () => ({ useApp: vi.fn() }))
 
 type AppContext = ReturnType<typeof useApp>
+
+function deferred<T>() {
+  let resolve!: (value: T | PromiseLike<T>) => void
+  let reject!: (reason?: unknown) => void
+  const promise = new Promise<T>((resolvePromise, rejectPromise) => {
+    resolve = resolvePromise
+    reject = rejectPromise
+  })
+  return { promise, resolve, reject }
+}
 
 const roundQuestion: Question = {
   id: "app-round-question",
@@ -486,6 +503,91 @@ describe("estados transversales de App", () => {
     } finally {
       random.mockRestore()
     }
+  })
+
+  it("conserva todas las ocurrencias repetidas al ordenar aleatoriamente el subset", async () => {
+    const bank = Array.from({ length: 3 }, (_, index) =>
+      createBankQuestion(index)
+    )
+    const subset = [bank[0], bank[1], bank[0], bank[2], bank[1]]
+    const stored = storedReviewRound(subset)
+    const { user, saveActiveRound } = await finishRehydratedReviewRound(
+      bank,
+      subset,
+      stored
+    )
+    const callsBeforeRandom = saveActiveRound.mock.calls.length
+    const random = vi.spyOn(Math, "random").mockReturnValue(0)
+    try {
+      await user.click(
+        screen.getByRole("button", { name: "Otra tanda aleatoria" })
+      )
+
+      await waitFor(() =>
+        expect(saveActiveRound.mock.calls.length).toBeGreaterThan(
+          callsBeforeRandom
+        )
+      )
+      const randomized = saveActiveRound.mock.calls
+        .slice(callsBeforeRandom)
+        .map(([round]) => round as ActiveRound)
+        .find((round) => round.currentIndex === 0)!
+      expect(randomized.questionKeys).toHaveLength(5)
+      expect(
+        randomized.questionKeys.filter((key) => key === keyOf(bank[0]))
+      ).toHaveLength(2)
+      expect(
+        randomized.questionKeys.filter((key) => key === keyOf(bank[1]))
+      ).toHaveLength(2)
+      expect(
+        randomized.questionKeys.filter((key) => key === keyOf(bank[2]))
+      ).toHaveLength(1)
+      expect(randomized.questionKeys).not.toEqual(subset.map(keyOf))
+      expect(randomized.config).toEqual({
+        ...stored.config,
+        strategy: "random-balanced",
+      })
+    } finally {
+      random.mockRestore()
+    }
+  })
+
+  it("mantiene Resultados ante un rechazo, bloquea doble acción y permite reintentar", async () => {
+    const bank = [createBankQuestion(0)]
+    const pending = deferred<void>()
+    const { user, saveActiveRound } = await finishRehydratedReviewRound(
+      bank,
+      bank
+    )
+    const callsBeforeRepeat = saveActiveRound.mock.calls.length
+    saveActiveRound
+      .mockImplementationOnce(() => pending.promise)
+      .mockResolvedValueOnce(undefined)
+    const repeat = screen.getByRole("button", { name: "Repetir esta tanda" })
+
+    fireEvent.click(repeat)
+    fireEvent.click(repeat)
+    expect(repeat).toBeDisabled()
+    expect(saveActiveRound).toHaveBeenCalledTimes(callsBeforeRepeat + 1)
+
+    await act(async () => pending.reject(new Error("storage denied")))
+    expect(await screen.findByRole("alert")).toHaveTextContent(
+      "No se pudo iniciar la práctica"
+    )
+    expect(
+      screen.getByRole("heading", { name: "Ronda completada." })
+    ).toBeVisible()
+    expect(repeat).toBeEnabled()
+
+    await user.click(repeat)
+    await waitFor(() =>
+      expect(saveActiveRound.mock.calls.length).toBeGreaterThan(
+        callsBeforeRepeat + 1
+      )
+    )
+    expect(
+      await screen.findByRole("heading", { name: bank[0].question })
+    ).toBeVisible()
   })
 
   it("repasa errores en el orden exacto de questionKeys del resultado", async () => {

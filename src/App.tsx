@@ -77,6 +77,20 @@ function questionsForSession(session: Session, questions: Question[]) {
     .filter((question): question is Question => Boolean(question))
 }
 
+function shuffleExactSubset(
+  questions: Question[],
+  rng: () => number = Math.random
+) {
+  const shuffled = questions.slice()
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(rng() * (index + 1))
+    const current = shuffled[index]
+    shuffled[index] = shuffled[swapIndex]
+    shuffled[swapIndex] = current
+  }
+  return shuffled
+}
+
 export function App() {
   const {
     loading,
@@ -144,7 +158,7 @@ export function App() {
     if (subset)
       selected =
         nextConfig.strategy === "random-balanced"
-          ? selectBalancedRandom(subset, subset.length)
+          ? shuffleExactSubset(subset)
           : subset.slice()
     else if (nextConfig.strategy === "coverage-cycle") {
       const poolKey = buildPoolKey(nextConfig)
@@ -238,8 +252,8 @@ export function App() {
         <ResultsPage
           session={result}
           questions={allQuestions}
-          onErrors={() => {
-            void startRound(
+          onErrors={() =>
+            startRound(
               {
                 ...result.config,
                 mode: "errors",
@@ -249,19 +263,17 @@ export function App() {
               },
               errorQuestions
             )
-          }}
-          onRepeat={() => {
-            void startRound(result.config, resultQuestions)
-          }}
-          onNext={() => {
-            void startRound({ ...result.config, strategy: "coverage-cycle" })
-          }}
-          onRandom={() => {
-            void startRound(
+          }
+          onRepeat={() => startRound(result.config, resultQuestions)}
+          onNext={() =>
+            startRound({ ...result.config, strategy: "coverage-cycle" })
+          }
+          onRandom={() =>
+            startRound(
               { ...result.config, strategy: "random-balanced" },
               resultQuestions
             )
-          }}
+          }
           onNew={() => {
             setResult(null)
             setNav("practice")

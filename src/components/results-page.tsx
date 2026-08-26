@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import {
   ArrowRight,
   Check,
@@ -35,13 +35,16 @@ export function ResultsPage({
 }: {
   session: Session
   questions: Question[]
-  onErrors: () => void
-  onRepeat: () => void
-  onNext: () => void
-  onRandom: () => void
-  onNew: () => void
+  onErrors: () => void | Promise<void>
+  onRepeat: () => void | Promise<void>
+  onNext: () => void | Promise<void>
+  onRandom: () => void | Promise<void>
+  onNew: () => void | Promise<void>
 }) {
   const [onlyIncorrect, setOnlyIncorrect] = useState(false)
+  const [actionPending, setActionPending] = useState(false)
+  const [actionError, setActionError] = useState<string | null>(null)
+  const actionPendingRef = useRef(false)
   const answeredTimes = session.answers
     .filter((item) => item.result.wasAnswered)
     .map((item) => item.responseTimeMs)
@@ -76,6 +79,22 @@ export function ResultsPage({
   const recommendation = hasErrors
     ? `Repasa las ${incorrect + unanswered} preguntas que necesitan refuerzo antes de repetir la tanda.`
     : "Consolidaste esta tanda sin errores. Repite la práctica más adelante para afianzarla."
+  const runAction = async (action: () => void | Promise<void>) => {
+    if (actionPendingRef.current) return
+    actionPendingRef.current = true
+    setActionPending(true)
+    setActionError(null)
+    try {
+      await action()
+    } catch {
+      setActionError(
+        "No se pudo iniciar la práctica. Revisa el almacenamiento e inténtalo de nuevo."
+      )
+    } finally {
+      actionPendingRef.current = false
+      setActionPending(false)
+    }
+  }
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-7 px-4 pb-8 sm:px-6">
@@ -249,29 +268,58 @@ export function ResultsPage({
       </Card>
 
       <Separator />
+      {actionPending ? (
+        <p role="status" className="text-sm text-muted-foreground">
+          Iniciando práctica…
+        </p>
+      ) : null}
+      {actionError ? (
+        <p
+          role="alert"
+          className="rounded-lg border border-destructive/30 bg-destructive/5 px-4 py-3 text-sm text-destructive"
+        >
+          {actionError}
+        </p>
+      ) : null}
       <div className="flex flex-col gap-3">
         <Button
           variant={hasErrors ? "default" : "outline"}
-          onClick={onErrors}
-          disabled={!hasErrors}
+          onClick={() => void runAction(onErrors)}
+          disabled={!hasErrors || actionPending}
         >
           <RotateCcw data-icon="inline-start" />
           Repasar errores
         </Button>
         <div className="flex flex-wrap gap-2">
-          <Button variant="outline" onClick={onRepeat}>
+          <Button
+            variant="outline"
+            onClick={() => void runAction(onRepeat)}
+            disabled={actionPending}
+          >
             Repetir esta tanda
           </Button>
           {session.selectionSummary?.strategy === "coverage-cycle" &&
           (session.selectionSummary.remaining ?? 0) > 0 ? (
-            <Button variant="outline" onClick={onNext}>
+            <Button
+              variant="outline"
+              onClick={() => void runAction(onNext)}
+              disabled={actionPending}
+            >
               Siguiente tanda sin repetir <ArrowRight data-icon="inline-end" />
             </Button>
           ) : null}
-          <Button variant="outline" onClick={onRandom}>
+          <Button
+            variant="outline"
+            onClick={() => void runAction(onRandom)}
+            disabled={actionPending}
+          >
             Otra tanda aleatoria
           </Button>
-          <Button variant="outline" onClick={onNew}>
+          <Button
+            variant="outline"
+            onClick={() => void runAction(onNew)}
+            disabled={actionPending}
+          >
             <Settings2 data-icon="inline-start" />
             Nueva configuración
           </Button>
