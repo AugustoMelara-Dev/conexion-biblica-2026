@@ -15,11 +15,12 @@ import { AppShell } from "@/components/app-shell"
 import { FocusShell } from "@/components/layout/focus-shell"
 import { ThemeProvider } from "@/components/theme-provider"
 
+const appState = vi.hoisted(() => ({ nav: "dashboard" }))
 const setNav = vi.fn()
 
 vi.mock("@/app/app-state", () => ({
   useApp: () => ({
-    nav: "dashboard",
+    nav: appState.nav,
     setNav,
     statistics: { general: { difficult: 0 } },
     bankSelection: "prep-v3",
@@ -48,7 +49,11 @@ describe("AppShell", () => {
     })
   })
 
-  beforeEach(() => localStorage.clear())
+  beforeEach(() => {
+    appState.nav = "dashboard"
+    localStorage.clear()
+    setNav.mockClear()
+  })
   afterEach(() => localStorage.clear())
 
   it("ofrece un enlace para saltar al contenido", () => {
@@ -106,6 +111,23 @@ describe("AppShell", () => {
     expect(screen.getByRole("menuitem", { name: "Revisión" })).toBeVisible()
   })
 
+  it("marca el destino secundario activo dentro de Más", async () => {
+    const user = userEvent.setup()
+    appState.nav = "review"
+    renderWithApp(
+      <AppShell>
+        <p>Contenido</p>
+      </AppShell>
+    )
+
+    await user.click(screen.getByRole("button", { name: "Más" }))
+
+    expect(screen.getByRole("menuitem", { name: "Revisión" })).toHaveAttribute(
+      "aria-current",
+      "page"
+    )
+  })
+
   it("mantiene la ronda en una superficie sin navegación global", () => {
     render(
       <FocusShell>
@@ -115,7 +137,28 @@ describe("AppShell", () => {
 
     expect(screen.getByText("Ronda activa")).toBeVisible()
     expect(
+      screen.getByRole("link", { name: "Saltar al contenido" })
+    ).toHaveAttribute("href", "#main-content")
+    expect(screen.getByRole("main")).toHaveAttribute("id", "main-content")
+    expect(
       screen.queryByRole("navigation", { name: "Navegación principal" })
+    ).not.toBeInTheDocument()
+  })
+
+  it("permite salir de una ronda con Escape sin añadir otra acción visible", async () => {
+    const user = userEvent.setup()
+    const onExit = vi.fn()
+    render(
+      <FocusShell onExit={onExit}>
+        <p>Ronda activa</p>
+      </FocusShell>
+    )
+
+    await user.keyboard("{Escape}")
+
+    expect(onExit).toHaveBeenCalledTimes(1)
+    expect(
+      screen.queryByRole("button", { name: /Salir/ })
     ).not.toBeInTheDocument()
   })
 })

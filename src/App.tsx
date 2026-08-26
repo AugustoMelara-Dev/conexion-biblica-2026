@@ -184,6 +184,10 @@ export function App() {
     })()
   }
 
+  const exitRound = () => {
+    void clearActiveRound().then(() => setActiveRound(null))
+  }
+
   const renderPage = () => {
     if (result && nav === "dashboard") {
       const errorKeys = new Set(
@@ -248,9 +252,7 @@ export function App() {
             void saveActiveRound(persisted)
           }}
           onFinish={finishRound}
-          onExit={() => {
-            void clearActiveRound().then(() => setActiveRound(null))
-          }}
+          onExit={exitRound}
         />
       )
     if (nav === "banks") return <BankManagerPage />
@@ -269,7 +271,7 @@ export function App() {
   }
 
   if (activeRound) {
-    return <FocusShell>{renderPage()}</FocusShell>
+    return <FocusShell onExit={exitRound}>{renderPage()}</FocusShell>
   }
 
   return (

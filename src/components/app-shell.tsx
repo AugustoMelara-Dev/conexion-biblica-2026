@@ -335,7 +335,11 @@ export function AppShell({ children }: { children: ReactNode }) {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" side="top">
               {mobileMoreItems.map(({ key, label, icon: Icon }) => (
-                <DropdownMenuItem key={key} onSelect={() => setNav(key)}>
+                <DropdownMenuItem
+                  key={key}
+                  aria-current={nav === key ? "page" : undefined}
+                  onSelect={() => setNav(key)}
+                >
                   <Icon aria-hidden="true" />
                   {label}
                 </DropdownMenuItem>
