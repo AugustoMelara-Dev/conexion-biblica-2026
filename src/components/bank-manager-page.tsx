@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useMemo, useRef, useState } from "react"
 import {
   AlertTriangle,
   CheckCircle2,
@@ -153,12 +153,14 @@ export function BankManagerPage() {
     const matchesSource = source === "all" || bank.sourceWork === source
     return matchesQuery && matchesSource
   })
-  const questionCounts = new Map(
-    banks.map((bank) => [
-      bank.bankId,
-      allQuestions.filter((question) => question.bankId === bank.bankId).length,
-    ])
-  )
+  const questionCounts = useMemo(() => {
+    const counts = new Map<string, number>()
+    for (const question of allQuestions) {
+      if (!question.bankId) continue
+      counts.set(question.bankId, (counts.get(question.bankId) ?? 0) + 1)
+    }
+    return counts
+  }, [allQuestions])
 
   return (
     <div className="flex min-w-0 flex-col gap-8">
@@ -380,6 +382,7 @@ export function BankManagerPage() {
             <Input
               id="bank-search"
               type="search"
+              className="min-h-11 py-2"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Nombre o archivo"
@@ -394,7 +397,7 @@ export function BankManagerPage() {
             </label>
             <select
               id="bank-source"
-              className="h-9 w-full rounded-md border border-input bg-transparent px-3 text-sm shadow-xs outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 dark:bg-input/30"
+              className="h-11 min-h-11 w-full rounded-md border border-input bg-transparent px-3 text-sm shadow-xs outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 dark:bg-input/30"
               value={source}
               onChange={(event) =>
                 setSource(event.target.value as "all" | SourceWork)
@@ -473,6 +476,8 @@ export function BankManagerPage() {
                           <Button
                             size="sm"
                             variant="outline"
+                            className="min-h-11 px-4"
+                            aria-label={`Reemplazar ${bank.name}`}
                             onClick={() => selectFiles(bank.bankId)}
                           >
                             Reemplazar
@@ -480,7 +485,8 @@ export function BankManagerPage() {
                           <Button
                             size="sm"
                             variant="ghost"
-                            className="text-destructive hover:text-destructive"
+                            className="min-h-11 px-4 text-destructive hover:text-destructive"
+                            aria-label={`Eliminar ${bank.name}`}
                             onClick={() => {
                               if (
                                 window.confirm(
@@ -502,7 +508,7 @@ export function BankManagerPage() {
                       ) : null}
                       {curationSummary || curationMetadata ? (
                         <details className="w-full text-xs text-muted-foreground">
-                          <summary className="cursor-pointer font-medium">
+                          <summary className="flex min-h-11 w-full cursor-pointer items-center rounded-md px-2 font-medium focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none">
                             Ver resumen de curación de {bank.name}
                           </summary>
                           {curationSummary ? (

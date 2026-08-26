@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react"
+import { render, screen, waitFor, within } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { describe, expect, it, vi } from "vitest"
 import { useApp } from "@/app/app-state"
@@ -39,6 +39,30 @@ const bankFixtures: Bank[] = [
     sourceFileName: "Daniel 2.json",
     questions: [],
   },
+  {
+    bankId: "master-v2",
+    bankProfileId: "master-v2",
+    name: "V2 — Banco Maestro",
+    sourceWork: "Daniel",
+    sourceVersion: "CB2026",
+    schemaVersion: "2.0",
+    importedAt: 3,
+    fingerprint: "master-fingerprint",
+    sourceFileName: "Banco_Maestro_CB2026.json",
+    questions: [],
+  },
+  {
+    bankId: "prep-v3-daniel",
+    bankProfileId: "prep-v3",
+    name: "V3 — Preparación Daniel",
+    sourceWork: "Daniel",
+    sourceVersion: "RVR95",
+    schemaVersion: "2.0",
+    importedAt: 4,
+    fingerprint: "prep-fingerprint",
+    sourceFileName: "v3_daniel.json",
+    questions: [],
+  },
 ]
 
 const questions: Question[] = ["v4-1", "v4-2", "legacy-1"].map((id) => ({
@@ -62,10 +86,12 @@ const questions: Question[] = ["v4-1", "v4-2", "legacy-1"].map((id) => ({
 
 function renderBankManager({ banks = bankFixtures }: { banks?: Bank[] } = {}) {
   const removeBank = vi.fn(async () => undefined)
+  const importBankFiles = vi.fn(async () => [])
+  const importBackup = vi.fn(async () => ({ valid: true, errors: [] }))
   vi.mocked(useApp).mockReturnValue({
     banks,
     allQuestions: questions,
-    importBankFiles: vi.fn(async () => []),
+    importBankFiles,
     removeBank,
     exportBanks: vi.fn(async () => []),
     exportProgress: vi.fn(async () => []),
@@ -85,11 +111,16 @@ function renderBankManager({ banks = bankFixtures }: { banks?: Bank[] } = {}) {
       coverageCycles: [],
       activeRound: null,
     })),
-    importBackup: vi.fn(async () => ({ valid: true, errors: [] })),
+    importBackup,
     refresh: vi.fn(async () => undefined),
   } as never)
 
-  return { ...render(<BankManagerPage />), removeBank }
+  return {
+    ...render(<BankManagerPage />),
+    importBackup,
+    importBankFiles,
+    removeBank,
+  }
 }
 
 describe("gestor de bancos", () => {
@@ -151,6 +182,7 @@ describe("gestor de bancos", () => {
     const summary = within(row).getByText(
       "Ver resumen de curación de V4 — Banco Curado Daniel"
     )
+    expect(summary).toHaveClass("min-h-11")
     const details = summary.closest("details")
     expect(details).not.toHaveAttribute("open")
 
@@ -159,6 +191,41 @@ describe("gestor de bancos", () => {
     expect(
       within(row).getByLabelText("Resumen de curación V4")
     ).toHaveTextContent("2 aprobadas")
+    expect(
+      within(row).getByLabelText("Metadatos de generación V4")
+    ).toHaveTextContent("Maestro SHA-256 aaaaaaaaaaaa…")
+  })
+
+  it("expone acciones editables con nombres únicos y conserva el ID de reemplazo", async () => {
+    const user = userEvent.setup()
+    const { importBankFiles } = renderBankManager()
+    const replacement = new File(["{}"], "reemplazo.json", {
+      type: "application/json",
+    })
+
+    expect(
+      screen.getByRole("searchbox", { name: "Buscar bancos" })
+    ).toHaveClass("min-h-11")
+    expect(screen.getByRole("combobox", { name: "Fuente" })).toHaveClass(
+      "min-h-11"
+    )
+    const replace = screen.getByRole("button", { name: "Reemplazar Daniel 2" })
+    expect(replace).toHaveClass("min-h-11")
+    expect(
+      screen.getByRole("button", { name: "Eliminar Daniel 2" })
+    ).toHaveClass("min-h-11")
+
+    await user.click(replace)
+    const bankInput = document.querySelector<HTMLInputElement>(
+      'input[type="file"][multiple]'
+    )
+    if (!bankInput) throw new Error("No se encontró el selector de bancos")
+    await user.upload(bankInput, replacement)
+
+    expect(importBankFiles).toHaveBeenCalledWith(
+      [replacement],
+      "legacy-daniel-2"
+    )
   })
 
   it("conserva la confirmación y el ID al eliminar un banco editable", async () => {
@@ -166,13 +233,44 @@ describe("gestor de bancos", () => {
     const confirm = vi.spyOn(window, "confirm").mockReturnValue(true)
     const { removeBank } = renderBankManager()
 
-    const row = screen.getByRole("row", { name: /^Daniel 2/ })
-    await user.click(within(row).getByRole("button", { name: "Eliminar" }))
+    await user.click(screen.getByRole("button", { name: "Eliminar Daniel 2" }))
 
     expect(confirm).toHaveBeenCalledWith(
       "¿Eliminar Daniel 2? El progreso se conserva separado."
     )
     expect(removeBank).toHaveBeenCalledWith("legacy-daniel-2")
     confirm.mockRestore()
+  })
+
+  it("mantiene V2 y V3 sin acciones destructivas", () => {
+    renderBankManager()
+
+    for (const name of ["V2 — Banco Maestro", "V3 — Preparación Daniel"]) {
+      const row = screen.getByRole("row", { name: new RegExp(`^${name}`) })
+      expect(within(row).getByText("Integrado · solo lectura")).toBeVisible()
+      expect(
+        screen.queryByRole("button", { name: `Reemplazar ${name}` })
+      ).not.toBeInTheDocument()
+      expect(
+        screen.queryByRole("button", { name: `Eliminar ${name}` })
+      ).not.toBeInTheDocument()
+    }
+  })
+
+  it("restaura un respaldo mediante el callback y muestra el resultado", async () => {
+    const user = userEvent.setup()
+    const { importBackup } = renderBankManager()
+    const backup = new File(["{}"], "respaldo.json", {
+      type: "application/json",
+    })
+
+    const [bankInput, backupInput] =
+      document.querySelectorAll<HTMLInputElement>('input[type="file"]')
+    if (!bankInput || !backupInput)
+      throw new Error("No se encontraron los selectores de archivos")
+    await user.upload(backupInput, backup)
+
+    await waitFor(() => expect(importBackup).toHaveBeenCalledWith(backup))
+    expect(screen.getByText("Restauración completada")).toBeVisible()
   })
 })
