@@ -1,0 +1,191 @@
+from __future__ import annotations
+
+import importlib
+import json
+import subprocess
+import sys
+import unittest
+from collections import Counter
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+INVENTORY_PATH = ROOT / "public/banks/final-2026/source_inventory.json"
+
+
+class FinalEditorialTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        try:
+            cls.editorial = importlib.import_module("scripts.lib.final_editorial")
+        except ModuleNotFoundError:
+            cls.editorial = None
+        cls.inventory = json.loads(INVENTORY_PATH.read_text(encoding="utf-8"))
+        if cls.editorial is not None:
+            cls.facts, cls.fact_rejected = cls.editorial.derive_atomic_facts(
+                cls.inventory["units"]
+            )
+            cls.questions, cls.question_rejected = cls.editorial.generate_gold_questions(
+                cls.facts
+            )
+
+    def require_editorial(self):
+        self.assertIsNotNone(self.editorial, "falta scripts.lib.final_editorial")
+        return self.editorial
+
+    def test_derives_1950_facts_and_covers_every_source_unit(self) -> None:
+        editorial = self.require_editorial()
+        if editorial is None:
+            return
+        facts, rejected = self.facts, self.fact_rejected
+        self.assertEqual(len(facts), 1950)
+        self.assertGreater(rejected, 0)
+        covered = {fact["source_unit_id"] for fact in facts}
+        expected = {unit["source_unit_id"] for unit in self.inventory["units"]}
+        self.assertEqual(covered, expected)
+        self.assertEqual(len({fact["fact_id"] for fact in facts}), 1950)
+        self.assertTrue(all(fact["answer"] in fact["source_quote"] for fact in facts))
+
+    def test_generates_7800_gold_questions_balanced_across_four_families(self) -> None:
+        editorial = self.require_editorial()
+        if editorial is None:
+            return
+        facts = self.facts
+        questions, rejected = self.questions, self.question_rejected
+        self.assertEqual(len(questions), 7800)
+        self.assertGreater(rejected, 0)
+        self.assertEqual(
+            Counter(question["family"] for question in questions),
+            {
+                "single_choice_direct": 1950,
+                "fill_choice": 1950,
+                "true_false": 1950,
+                "single_choice_contextual": 1950,
+            },
+        )
+        self.assertEqual(
+            Counter(question["difficulty"] for question in questions),
+            {"easy": 390, "medium": 1560, "hard": 3510, "expert": 2340},
+        )
+        self.assertTrue(
+            all(question["final_editorial_status"] == "GOLD" for question in questions)
+        )
+        self.assertTrue(
+            all(question["bank_id"] == "BANCO_UNICO_CONEXION_BIBLICA_2026" for question in questions)
+        )
+
+    def test_each_family_has_only_one_answer_and_compatible_options(self) -> None:
+        editorial = self.require_editorial()
+        if editorial is None:
+            return
+        questions = self.questions
+        for question in questions:
+            expected_options = 2 if question["family"] == "true_false" else 4
+            self.assertEqual(len(question["options"]), expected_options, question["id"])
+            self.assertEqual(len(set(question["options"])), expected_options, question["id"])
+            self.assertGreaterEqual(question["correct_option"], 0, question["id"])
+            self.assertLess(question["correct_option"], expected_options, question["id"])
+            self.assertEqual(
+                question["correct_answer"],
+                question["options"][question["correct_option"]],
+                question["id"],
+            )
+            self.assertEqual(question["validation_adversarial"]["status"], "passed")
+            self.assertEqual(
+                question["validation_adversarial"]["selected_option"],
+                question["correct_option"],
+            )
+
+    def test_gold_language_is_natural_and_schema_is_complete(self) -> None:
+        editorial = self.require_editorial()
+        if editorial is None:
+            return
+        required = {
+            "source_ref",
+            "source_span",
+            "accepted_answers",
+            "answer_mode",
+            "why_distractors_fail",
+        }
+        for question in self.questions:
+            self.assertTrue(required.issubset(question), question["id"])
+            self.assertNotIn("[DETALLE]", question["question"], question["id"])
+            self.assertNotIn("identifica correctamente el detalle descrito", question["question"], question["id"])
+            if question["family"] == "true_false":
+                self.assertTrue(question["question"].endswith("¿Verdadero o falso?"), question["id"])
+                continue
+            signatures = [
+                editorial.option_signature(option, question["option_category"])
+                for option in question["options"]
+            ]
+            self.assertEqual(len(set(signatures)), 1, (question["id"], signatures, question["options"]))
+
+        forbidden_fragments = {
+            "poder se",
+            "cuernos que yo",
+            "favores y gran",
+            "ejército y muchas",
+        }
+        used_options = {
+            option.casefold()
+            for question in self.questions
+            for option in question["options"]
+        }
+        self.assertTrue(forbidden_fragments.isdisjoint(used_options))
+        self.assertFalse(
+            any(
+                "puesto de mucha" in question["question"].casefold()
+                and "puestas del sol" in {option.casefold() for option in question["options"]}
+                for question in self.questions
+            )
+        )
+
+    def test_audit_and_coverage_gates_finish_at_zero(self) -> None:
+        editorial = self.require_editorial()
+        if editorial is None:
+            return
+        facts, questions = self.facts, self.questions
+        coverage = editorial.build_coverage_manifest(
+            self.inventory["units"], facts, questions
+        )
+        audit = editorial.audit_final_bank(facts, questions, coverage)
+        self.assertEqual(coverage["uncovered_source_units"], 0)
+        self.assertEqual(coverage["fact_without_gold_question"], 0)
+        self.assertEqual(coverage["unmapped_source_units"], 0)
+        for key in (
+            "ambiguous_gold_questions",
+            "unsupported_gold_answers",
+            "duplicate_gold_questions",
+            "lexical_sequence_questions",
+            "broken_true_false",
+            "invalid_references",
+            "external_knowledge_questions",
+            "answer_length_leaks",
+        ):
+            self.assertEqual(audit[key], 0, key)
+
+    def test_build_cli_writes_canonical_manifest_and_chapter_shards(self) -> None:
+        result = subprocess.run(
+            [sys.executable, "scripts/build-final-bank.py"],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        manifest_path = ROOT / "public/banks/final-2026/manifest.json"
+        self.assertTrue(manifest_path.exists(), "falta manifest.json")
+        if not manifest_path.exists():
+            return
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        self.assertEqual(manifest["bank_id"], "BANCO_UNICO_CONEXION_BIBLICA_2026")
+        self.assertEqual(manifest["gold_questions"], 7800)
+        self.assertEqual(manifest["unique_facts"], 1950)
+        self.assertEqual(len(manifest["shards"]), 18)
+        self.assertTrue(
+            all((ROOT / "public" / shard["questions_file"]).exists() for shard in manifest["shards"])
+        )
+
+
+if __name__ == "__main__":
+    unittest.main()
