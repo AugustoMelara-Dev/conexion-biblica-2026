@@ -1,14 +1,15 @@
 {
-  "schema_version": "8.0",
+  "schema_version": "9.0",
   "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
-  "gold_questions": 8000,
-  "unique_facts": 2000,
+  "gold_questions": 12000,
+  "unique_facts": 3000,
   "ambiguous_gold_questions": 0,
   "unsupported_gold_answers": 0,
   "source_location_questions": 0,
   "duplicate_gold_questions": 0,
   "lexical_sequence_questions": 0,
   "broken_true_false": 0,
+  "unsafe_true_false_templates": 0,
   "invalid_references": 0,
   "external_knowledge_questions": 0,
   "answer_length_leaks": 0,
@@ -21,48 +22,53 @@
     "unmapped_source_units": 0
   },
   "by_family": {
-    "single_choice_direct": 2000,
-    "fill_choice": 2000,
-    "true_false": 2000,
-    "single_choice_contextual": 2000
+    "single_choice_direct": 3000,
+    "fill_choice": 3000,
+    "single_choice_contextual": 3000,
+    "true_false": 3000
   },
   "by_difficulty": {
-    "easy": 400,
-    "hard": 3600,
-    "medium": 1600,
-    "expert": 2400
+    "easy": 600,
+    "hard": 5400,
+    "medium": 2400,
+    "expert": 3600
   },
   "by_chapter": {
-    "DAN1": 220,
-    "DAN10": 360,
-    "DAN11": 736,
-    "DAN12": 360,
-    "DAN2": 320,
-    "DAN3": 240,
-    "DAN4": 280,
-    "DAN5": 240,
-    "DAN6": 240,
-    "DAN7": 600,
-    "DAN8": 600,
-    "DAN9": 600,
-    "PR39": 560,
-    "PR40": 520,
-    "PR41": 480,
-    "PR42": 480,
-    "PR43": 644,
-    "PR44": 520
+    "DAN1": 355,
+    "DAN10": 509,
+    "DAN11": 1236,
+    "DAN12": 367,
+    "DAN2": 480,
+    "DAN3": 374,
+    "DAN4": 435,
+    "DAN5": 374,
+    "DAN6": 378,
+    "DAN7": 855,
+    "DAN8": 849,
+    "DAN9": 823,
+    "PR39": 870,
+    "PR40": 797,
+    "PR41": 740,
+    "PR42": 756,
+    "PR43": 999,
+    "PR44": 803
   },
   "true_false_balance": {
-    "Falso": 1000,
-    "Verdadero": 1000
+    "Verdadero": 1500,
+    "Falso": 1500
   },
   "blind_pools": {
-    "A": 400,
-    "B": 400,
-    "emergency": 400
+    "A": 562,
+    "B": 602,
+    "emergency": 576
   },
-  "fact_candidates_rejected": 18431,
-  "question_candidates_rejected": 123973,
-  "new_editorial_questions": 8000,
-  "silver_repaired": 0
+  "fact_candidates_rejected": 17429,
+  "question_candidates_rejected": 264579,
+  "new_editorial_questions": 12000,
+  "silver_repaired": 0,
+  "blind_fact_pools": {
+    "A": 150,
+    "B": 150,
+    "emergency": 150
+  }
 }

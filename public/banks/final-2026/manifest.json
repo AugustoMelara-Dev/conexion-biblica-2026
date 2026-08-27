@@ -1,5 +1,5 @@
 {
-  "schema_version": "8.0",
+  "schema_version": "9.0",
   "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
   "display_name": "Banco Maestro Único — Final 2026",
   "source": "MaterialConexionBiblica (1).pdf",
@@ -8,25 +8,30 @@
   "daniel_verses": 357,
   "pr_paragraphs": 203,
   "pr_propositions": 673,
-  "unique_facts": 2000,
-  "gold_questions": 8000,
+  "unique_facts": 3000,
+  "gold_questions": 12000,
   "average_variants_per_fact": 4.0,
   "families": {
-    "single_choice_direct": 2000,
-    "fill_choice": 2000,
-    "true_false": 2000,
-    "single_choice_contextual": 2000
+    "single_choice_direct": 3000,
+    "fill_choice": 3000,
+    "single_choice_contextual": 3000,
+    "true_false": 3000
   },
   "difficulty": {
-    "easy": 400,
-    "hard": 3600,
-    "medium": 1600,
-    "expert": 2400
+    "easy": 600,
+    "hard": 5400,
+    "medium": 2400,
+    "expert": 3600
   },
   "blind_pools": {
-    "A": 400,
-    "B": 400,
-    "emergency": 400
+    "A": 562,
+    "B": 602,
+    "emergency": 576
+  },
+  "blind_fact_pools": {
+    "A": 150,
+    "B": 150,
+    "emergency": 150
   },
   "coverage": {
     "covered_source_units": 1029,
@@ -38,110 +43,110 @@
   "shards": [
     {
       "chapter": "DAN1",
-      "question_count": 220,
-      "training_question_count": 180,
+      "question_count": 355,
+      "training_question_count": 299,
       "questions_file": "banks/final-2026/questions/DAN1.json"
     },
     {
       "chapter": "DAN2",
-      "question_count": 320,
-      "training_question_count": 296,
+      "question_count": 480,
+      "training_question_count": 432,
       "questions_file": "banks/final-2026/questions/DAN2.json"
     },
     {
       "chapter": "DAN3",
-      "question_count": 240,
-      "training_question_count": 212,
+      "question_count": 374,
+      "training_question_count": 324,
       "questions_file": "banks/final-2026/questions/DAN3.json"
     },
     {
       "chapter": "DAN4",
-      "question_count": 280,
-      "training_question_count": 244,
+      "question_count": 435,
+      "training_question_count": 370,
       "questions_file": "banks/final-2026/questions/DAN4.json"
     },
     {
       "chapter": "DAN5",
-      "question_count": 240,
-      "training_question_count": 228,
+      "question_count": 374,
+      "training_question_count": 354,
       "questions_file": "banks/final-2026/questions/DAN5.json"
     },
     {
       "chapter": "DAN6",
-      "question_count": 240,
-      "training_question_count": 188,
+      "question_count": 378,
+      "training_question_count": 297,
       "questions_file": "banks/final-2026/questions/DAN6.json"
     },
     {
       "chapter": "DAN7",
-      "question_count": 600,
-      "training_question_count": 492,
+      "question_count": 855,
+      "training_question_count": 709,
       "questions_file": "banks/final-2026/questions/DAN7.json"
     },
     {
       "chapter": "DAN8",
-      "question_count": 600,
-      "training_question_count": 496,
+      "question_count": 849,
+      "training_question_count": 711,
       "questions_file": "banks/final-2026/questions/DAN8.json"
     },
     {
       "chapter": "DAN9",
-      "question_count": 600,
-      "training_question_count": 520,
+      "question_count": 823,
+      "training_question_count": 717,
       "questions_file": "banks/final-2026/questions/DAN9.json"
     },
     {
       "chapter": "DAN10",
-      "question_count": 360,
-      "training_question_count": 312,
+      "question_count": 509,
+      "training_question_count": 439,
       "questions_file": "banks/final-2026/questions/DAN10.json"
     },
     {
       "chapter": "DAN11",
-      "question_count": 736,
-      "training_question_count": 648,
+      "question_count": 1236,
+      "training_question_count": 1098,
       "questions_file": "banks/final-2026/questions/DAN11.json"
     },
     {
       "chapter": "DAN12",
-      "question_count": 360,
-      "training_question_count": 272,
+      "question_count": 367,
+      "training_question_count": 287,
       "questions_file": "banks/final-2026/questions/DAN12.json"
     },
     {
       "chapter": "PR39",
-      "question_count": 560,
-      "training_question_count": 496,
+      "question_count": 870,
+      "training_question_count": 758,
       "questions_file": "banks/final-2026/questions/PR39.json"
     },
     {
       "chapter": "PR40",
-      "question_count": 520,
-      "training_question_count": 452,
+      "question_count": 797,
+      "training_question_count": 699,
       "questions_file": "banks/final-2026/questions/PR40.json"
     },
     {
       "chapter": "PR41",
-      "question_count": 480,
-      "training_question_count": 412,
+      "question_count": 740,
+      "training_question_count": 622,
       "questions_file": "banks/final-2026/questions/PR41.json"
     },
     {
       "chapter": "PR42",
-      "question_count": 480,
-      "training_question_count": 404,
+      "question_count": 756,
+      "training_question_count": 653,
       "questions_file": "banks/final-2026/questions/PR42.json"
     },
     {
       "chapter": "PR43",
-      "question_count": 644,
-      "training_question_count": 556,
+      "question_count": 999,
+      "training_question_count": 861,
       "questions_file": "banks/final-2026/questions/PR43.json"
     },
     {
       "chapter": "PR44",
-      "question_count": 520,
-      "training_question_count": 392,
+      "question_count": 803,
+      "training_question_count": 630,
       "questions_file": "banks/final-2026/questions/PR44.json"
     }
   ]
