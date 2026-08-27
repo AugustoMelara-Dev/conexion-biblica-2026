@@ -225,6 +225,13 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
         words = answer.split()
         roles = [_word_role(word) for word in words]
         broad_category = _broad_category(answer, raw_category, unit)
+        content_words = [word for word, role in zip(words, roles) if role == "content"]
+        crosses_plural_into_name = (
+            len(content_words) >= 2
+            and content_words[-1][:1].isupper()
+            and content_words[-2][:1].islower()
+            and content_words[-2].lower().endswith("s")
+        )
         if (
             not normalized
             or normalized in STOP_ANSWERS
@@ -243,6 +250,7 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
                 )
             )
             or (broad_category == "phrase" and len(words) == 1)
+            or crosses_plural_into_name
         ):
             rejected += 1
             continue
@@ -355,7 +363,7 @@ def _category_label(category: str) -> str:
     return {
         "person": "personaje",
         "place": "lugar",
-        "number": "número o período",
+        "number": "detalle numérico",
         "action": "acción",
         "phrase": "expresión",
     }[category]
