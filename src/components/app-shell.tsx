@@ -5,13 +5,11 @@ import {
   ChevronLeft,
   ChevronRight,
   ClipboardList,
-  Database,
   History,
   LayoutDashboard,
   Moon,
   PanelLeft,
   Sun,
-  Upload,
   X,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -40,7 +38,6 @@ const navItems: { key: NavKey; label: string; icon: typeof LayoutDashboard }[] =
   [
     { key: "dashboard", label: "Resumen", icon: LayoutDashboard },
     { key: "practice", label: "Practicar", icon: BookOpen },
-    { key: "banks", label: "Banco de preguntas", icon: Database },
     { key: "stats", label: "Estadísticas", icon: ChartNoAxesColumn },
     { key: "history", label: "Historial", icon: History },
     { key: "review", label: "Revisar preguntas", icon: ClipboardList },
@@ -55,7 +52,6 @@ const mobileMoreItems: {
   label: string
   icon: typeof LayoutDashboard
 }[] = [
-  { key: "banks", label: "Bancos", icon: Database },
   { key: "history", label: "Historial", icon: History },
   { key: "review", label: "Revisión", icon: ClipboardList },
 ]
@@ -358,16 +354,6 @@ export function QuickStartButton() {
     <Button onClick={() => setNav("practice")}>
       <BookOpen data-icon="inline-start" />
       Empezar una ronda
-    </Button>
-  )
-}
-
-export function ImportShortcut() {
-  const { setNav } = useApp()
-  return (
-    <Button variant="outline" onClick={() => setNav("banks")}>
-      <Upload data-icon="inline-start" />
-      Importar banco
     </Button>
   )
 }

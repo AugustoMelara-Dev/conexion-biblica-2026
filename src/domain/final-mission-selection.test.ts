@@ -25,6 +25,7 @@ const make = (
   blindPool,
   blindFinalPool: blindPool !== null,
   editorialStatus: "gold",
+  family: "single_choice_direct",
   ...overrides,
 })
 
@@ -44,20 +45,32 @@ describe("final mission selection", () => {
     expect(b.map((item) => item.factId)).toEqual(["F3"])
   })
 
-  it("builds every general round of 100 with the mandatory 30/25/45 learning mix", () => {
+  it("builds every general round of 100 with 25 questions from each family", () => {
     let cursor = 0
-    const fill = Array.from({ length: 45 }, () => make(cursor++, 7, null, { type: "fill_blank" }))
+    const fill = Array.from({ length: 45 }, () =>
+      make(cursor++, 7, null, {
+        type: "fill_blank",
+        family: "fill_choice",
+      }),
+    )
     const trueFalse = Array.from({ length: 40 }, (_, index) => make(cursor++, 7, null, {
       type: "true_false",
+      family: "true_false",
       correctAnswerText: index % 2 === 0 ? "Verdadero" : "Falso",
     }))
-    const choice = Array.from({ length: 80 }, (_, index) => make(cursor++, 7, null, {
+    const direct = Array.from({ length: 45 }, (_, index) => make(cursor++, 7, null, {
       type: "single_choice",
-      trapType: index < 30 ? "true_elsewhere" : "direct_text",
-      semanticSkill: index < 20 ? "scene_identification" : "contextual_precision",
+      family: "single_choice_direct",
+      semanticSkill: index < 20 ? "cause_consequence" : "contextual_precision",
+    }))
+    const contextual = Array.from({ length: 45 }, () => make(cursor++, 7, null, {
+      type: "single_choice",
+      family: "single_choice_contextual",
+      trapType: "true_elsewhere",
+      semanticSkill: "scene_identification",
     }))
 
-    const selected = selectMissionQuestions({ questions: [...fill, ...trueFalse, ...choice], count: 100, seed: 91 })
+    const selected = selectMissionQuestions({ questions: [...fill, ...trueFalse, ...direct, ...contextual], count: 100, seed: 91 })
     const types = selected.reduce<Record<string, number>>((counts, item) => {
       counts[item.type] = (counts[item.type] ?? 0) + 1
       return counts
@@ -70,9 +83,27 @@ describe("final mission selection", () => {
         return counts
       }, {})
 
-    expect(types).toEqual({ fill_blank: 30, true_false: 25, single_choice: 45 })
+    expect(types).toEqual({ fill_blank: 25, true_false: 25, single_choice: 50 })
+    expect(
+      Object.fromEntries(
+        [
+          "single_choice_direct",
+          "fill_choice",
+          "true_false",
+          "single_choice_contextual",
+        ].map((family) => [
+          family,
+          selected.filter((item) => item.family === family).length,
+        ]),
+      ),
+    ).toEqual({
+      single_choice_direct: 25,
+      fill_choice: 25,
+      true_false: 25,
+      single_choice_contextual: 25,
+    })
     expect([tfAnswers.Verdadero, tfAnswers.Falso].sort()).toEqual([12, 13])
-    expect(selected.filter((item) => item.trapType === "true_elsewhere").length).toBeGreaterThanOrEqual(18)
+    expect(selected.filter((item) => item.trapType === "true_elsewhere").length).toBe(25)
     expect(selected.filter((item) => item.semanticSkill === "scene_identification").length).toBeGreaterThanOrEqual(10)
     expect(new Set(selected.map((item) => item.factId)).size).toBe(100)
   })

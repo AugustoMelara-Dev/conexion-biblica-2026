@@ -15,7 +15,7 @@ describe("centro de entrenamiento masivo", () => {
     expect(onStart).toHaveBeenCalledWith(
       expect.objectContaining({
         count: 200,
-        bankSelection: "consolidation-v5",
+        bankSelection: "final-v7",
         massive: true,
         shuffleOptions: false,
         trainingPresetId: "extreme-championship",

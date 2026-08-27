@@ -3,19 +3,29 @@ import { describe, expect, it } from "vitest"
 import { buildFinalMissionPlan, getNextMission } from "@/domain/final-mission-plan"
 
 describe("PLAN FINAL — GANAR EL 29", () => {
-  it("starts on August 26 with a 120-question cold priority diagnosis", () => {
+  it("starts on August 26 with the required 150-question cold diagnosis", () => {
     const plan = buildFinalMissionPlan(new Date("2026-08-26T08:00:00-06:00"))
     expect(plan[0]).toMatchObject({
       id: "26-cold-tier-a",
       date: "2026-08-26",
-      count: 120,
+      count: 150,
       exposureKind: "cold",
       chapters: [43, 44, 7, 8, 9, 11],
     })
   })
 
-  it("uses blind A and B on August 28", () => {
+  it("keeps the complete Day 2 plan available on August 28", () => {
     const plan = buildFinalMissionPlan(new Date("2026-08-28T08:00:00-06:00"))
+    expect(plan.map((mission) => mission.id)).toEqual([
+      "27-morning",
+      "27-context",
+      "27-fill",
+      "27-true-false",
+      "27-blind-a",
+      "27-repair",
+      "27-blind-b",
+      "27-red-sheet",
+    ])
     expect(plan.filter((mission) => mission.blindPool).map((mission) => mission.blindPool)).toEqual(["A", "B"])
   })
 

@@ -15,7 +15,6 @@ import {
   migrateBackupPayload,
   validateBackupPayload,
 } from "@/domain/backup"
-import { adaptMasterBank } from "@/domain/master-bank"
 import {
   filterReportsForSelection,
   filterSessionsForSelection,
@@ -47,19 +46,21 @@ import {
   getRawBankProfileId,
   isGenericBankImportAllowed,
   isIntegratedBankProfile,
-  shouldReplaceBundledBank,
 } from "@/storage/seed"
 import {
   loadMassiveQuestionPool,
-  readMassiveManifest,
   type MassiveBankManifest,
 } from "@/storage/massive-bank"
 import {
   loadConsolidationQuestionPool,
-  readConsolidationManifest,
   type ConsolidationManifest,
 } from "@/storage/consolidation-bank"
 import { mapLegacyProgressToFacts } from "@/storage/history-migration"
+import {
+  loadFinalQuestionPool,
+  readFinalManifest,
+  type FinalBankManifest,
+} from "@/storage/final-bank"
 
 type RepositorySet = ReturnType<typeof createRepositories>
 type NavKey =
@@ -90,10 +91,11 @@ type AppContextValue = {
   factMastery?: FactMastery[]
   massiveManifest: MassiveBankManifest | null
   consolidationManifest?: ConsolidationManifest | null
+  finalManifest?: FinalBankManifest | null
   preferences: Preferences
   bankSelection: BankSelection
   setBankSelection: (selection: BankSelection) => void
-  bankCounts: { legacy: number; master: number; prep: number; curated: number; consolidation?: number }
+  bankCounts: { legacy: number; master: number; prep: number; curated: number; consolidation?: number; final?: number }
   coverageCycles: Map<string, CoverageCycle>
   activeRound: ActiveRound | null
   statistics: Statistics
@@ -143,7 +145,7 @@ const defaultPreferences: Preferences = {
   theme: "system",
   lastMode: "training",
   reducedMotion: false,
-  lastBankSelection: "consolidation-v5",
+  lastBankSelection: "final-v7",
 }
 const AppContext = createContext<AppContextValue | undefined>(undefined)
 const PREFERENCES_STORAGE_KEY = "conexion-biblica-preferences"
@@ -168,25 +170,11 @@ function emptyQuestionProgress(questionKey: string): QuestionProgress {
   }
 }
 
-function isBankSelection(value: unknown): value is BankSelection {
-  return (
-    value === "legacy-v1" ||
-    value === "master-v2" ||
-    value === "prep-v3" ||
-    value === "curated-v4" ||
-    value === "massive-v5" ||
-    value === "consolidation-v5" ||
-    value === "mixed"
-  )
-}
-
 function normalizePreferences(value: Partial<Preferences>): Preferences {
   return {
     ...defaultPreferences,
     ...value,
-    lastBankSelection: isBankSelection(value.lastBankSelection)
-      ? value.lastBankSelection
-      : defaultPreferences.lastBankSelection,
+    lastBankSelection: "final-v7",
   }
 }
 
@@ -208,6 +196,7 @@ export function resolveAvailableBankSelection(
   availableProfiles: Iterable<BankProfileId>
 ): BankSelection {
   const available = new Set(availableProfiles)
+  if (available.has("final-v7")) return "final-v7"
   if (selection === "mixed") {
     if (
       (["legacy-v1", "prep-v3", "curated-v4"] as const).some((profile) =>
@@ -236,41 +225,11 @@ export function resolveInitialBankSelection({
   availableProfiles: Iterable<BankProfileId>
 }): BankSelection {
   const available = new Set(availableProfiles)
+  if (available.has("final-v7")) return "final-v7"
   if (available.has("consolidation-v5")) return "consolidation-v5"
   if (!hasStoredPreferences && !hadExistingBanks && available.has("curated-v4"))
     return "curated-v4"
   return resolveAvailableBankSelection(storedSelection, available)
-}
-
-async function readBundledBank(fileName: string) {
-  const response = await fetch(`/banks/${encodeURIComponent(fileName)}`)
-  if (!response.ok) throw new Error(`No se pudo leer ${fileName}`)
-  return (await response.json()) as Record<string, unknown>
-}
-
-const MASTER_BANK_URL = new URL(
-  "../../Banco_Maestro_CB2026.json",
-  import.meta.url
-).href
-const MASTER_CACHE = "conexion-biblica-master-v1"
-
-async function readMasterBank() {
-  try {
-    const response = await fetch(MASTER_BANK_URL)
-    if (!response.ok)
-      throw new Error(`No se pudo leer el Banco Maestro (${response.status})`)
-    if ("caches" in globalThis) {
-      const cache = await caches.open(MASTER_CACHE)
-      await cache.put(MASTER_BANK_URL, response.clone())
-    }
-    return (await response.json()) as Record<string, unknown>
-  } catch (loadError) {
-    if ("caches" in globalThis) {
-      const cached = await caches.match(MASTER_BANK_URL)
-      if (cached) return (await cached.json()) as Record<string, unknown>
-    }
-    throw loadError
-  }
 }
 
 export function AppProvider({ children }: { children: ReactNode }) {
@@ -278,10 +237,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [error, setError] = useState<string | null>(null)
   const [masterBankError, setMasterBankError] = useState<string | null>(null)
   const [massiveBankError, setMassiveBankError] = useState<string | null>(null)
-  const [massiveManifest, setMassiveManifest] =
+  const [massiveManifest] =
     useState<MassiveBankManifest | null>(null)
-  const [consolidationManifest, setConsolidationManifest] =
+  const [consolidationManifest] =
     useState<ConsolidationManifest | null>(null)
+  const [finalManifest, setFinalManifest] =
+    useState<FinalBankManifest | null>(null)
   const [nav, setNav] = useState<NavKey>("dashboard")
   const [banks, setBanks] = useState<Bank[]>([])
   const [questions, setQuestions] = useState<Question[]>([])
@@ -300,92 +261,30 @@ export function AppProvider({ children }: { children: ReactNode }) {
     useState<Preferences>(getPreferences)
   const [repositories, setRepositories] = useState<RepositorySet | null>(null)
 
-  const loadState = useCallback(async (seed = true) => {
+  const loadState = useCallback(async () => {
     setLoading(true)
     setError(null)
     setMasterBankError(null)
     setMassiveBankError(null)
     try {
-      let loadedConsolidationManifest: ConsolidationManifest | null = null
+      let loadedFinalManifest: FinalBankManifest | null = null
       const db = await openAppDb()
       const nextRepositories = createRepositories(db)
       setRepositories(nextRepositories)
-      let existingBanks = await nextRepositories.banks.list()
+      const existingBanks = await nextRepositories.banks.list()
       const hadStoredPreferences =
         typeof localStorage !== "undefined" &&
         localStorage.getItem(PREFERENCES_STORAGE_KEY) !== null
       const hadExistingBanks = existingBanks.length > 0
-      if (seed) {
-        try {
-          const manifestResponse = await fetch("/banks/manifest.json")
-          const manifest = manifestResponse.ok
-            ? ((await manifestResponse.json()) as { files?: string[] })
-            : { files: [] }
-          for (const fileName of manifest.files ?? []) {
-            try {
-              const raw = await readBundledBank(fileName)
-              const validation = validateBank(raw, fileName)
-              if (validation.valid) {
-                const incoming = createBankFromRaw(raw, fileName)
-                const existing = existingBanks.find(
-                  (bank) => bank.bankId === incoming.bankId
-                )
-                if (shouldReplaceBundledBank(existing, incoming))
-                  await nextRepositories.banks.save(incoming)
-              }
-            } catch {
-              continue
-            }
-          }
-          existingBanks = await nextRepositories.banks.list()
-        } catch (seedError) {
-          if (existingBanks.length === 0)
-            setError(
-              seedError instanceof Error
-                ? seedError.message
-                : "No se pudieron cargar los bancos iniciales"
-            )
-        }
-      }
       try {
-        const masterRaw = await readMasterBank()
-        const masterBank = adaptMasterBank(masterRaw)
-        const existingMaster = existingBanks.find(
-          (bank) => bank.bankId === "master-v2"
-        )
-        if (
-          !existingMaster ||
-          existingMaster.fingerprint !== masterBank.fingerprint
-        ) {
-          await nextRepositories.banks.save(masterBank)
-          existingBanks = await nextRepositories.banks.list()
-        }
-      } catch (masterError) {
-        setMasterBankError(
-          masterError instanceof Error
-            ? masterError.message
-            : "V2 no pudo cargarse"
-        )
-      }
-      try {
-        setMassiveManifest(await readMassiveManifest())
-      } catch (massiveError) {
-        setMassiveManifest(null)
+        loadedFinalManifest = await readFinalManifest()
+        setFinalManifest(loadedFinalManifest)
+      } catch (finalError) {
+        setFinalManifest(null)
         setMassiveBankError(
-          massiveError instanceof Error
-            ? massiveError.message
-            : "El banco masivo no pudo cargarse"
-        )
-      }
-      try {
-        loadedConsolidationManifest = await readConsolidationManifest()
-        setConsolidationManifest(loadedConsolidationManifest)
-      } catch (consolidationError) {
-        setConsolidationManifest(null)
-        setMassiveBankError(
-          consolidationError instanceof Error
-            ? consolidationError.message
-            : "El banco GOLD no pudo cargarse"
+          finalError instanceof Error
+            ? finalError.message
+            : "El Banco Maestro Único no pudo cargarse"
         )
       }
       const [
@@ -410,8 +309,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       const availableProfiles = new Set<BankProfileId>(
         nextQuestions.map((question) => question.bankProfileId ?? "legacy-v1")
       )
-      if (loadedConsolidationManifest)
-        availableProfiles.add("consolidation-v5")
+      if (loadedFinalManifest) availableProfiles.add("final-v7")
       const storedSelection = getPreferences().lastBankSelection
       const desiredSelection = resolveInitialBankSelection({
         storedSelection,
@@ -441,9 +339,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
         new Map(nextCycles.map((cycle) => [cycle.poolKey, cycle]))
       )
       setActiveRound(nextActiveRound ?? null)
-      const existingMigration = await nextRepositories.settings.get<string | null>("v5-history-backup", null)
+      const existingMigration = await nextRepositories.settings.get<string | null>("v7-history-backup", null)
       if (!existingMigration && (nextProgress.length || nextSessions.length || nextReports.length)) {
-        const backupId = `pre-v5-${Date.now()}`
+        const backupId = `pre-v7-${Date.now()}`
         await nextRepositories.migrationBackups.put({
           id: backupId,
           createdAt: Date.now(),
@@ -451,7 +349,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
           sessions: nextSessions,
           reports: nextReports,
         })
-        await nextRepositories.settings.put("v5-history-backup", backupId)
+        await nextRepositories.settings.put("v7-history-backup", backupId)
       }
     } catch (loadError) {
       setError(
@@ -468,13 +366,102 @@ export function AppProvider({ children }: { children: ReactNode }) {
     void loadState()
   }, [loadState])
 
-  const refresh = useCallback(() => loadState(false), [loadState])
+  const refresh = useCallback(() => loadState(), [loadState])
 
   const loadMassiveQuestions = useCallback(
     async (config: import("@/domain/types").SessionConfig) => {
       if (!repositories)
         throw new Error("El almacenamiento todavía no está disponible")
       const desiredCount = config.count === "all" ? 200 : config.count
+      if (config.bankSelection === "final-v7") {
+        if (!finalManifest)
+          throw new Error("El Banco Maestro Único todavía no está disponible")
+        const works = new Set(config.sourceWorks)
+        const manifestChapters = finalManifest.shards
+          .filter((shard) =>
+            shard.chapter.startsWith("DAN")
+              ? works.has("Daniel")
+              : works.has("Profetas y Reyes")
+          )
+          .map((shard) => Number(shard.chapter.match(/\d+/)?.[0]))
+        const chapters = config.chapters.length
+          ? manifestChapters.filter((chapter) => config.chapters.includes(chapter))
+          : manifestChapters
+        const blindPool = config.trainingPresetId?.endsWith("blind-a")
+          ? "A" as const
+          : config.trainingPresetId?.endsWith("blind-b")
+            ? "B" as const
+            : config.trainingPresetId === "blind-simulation"
+              ? "A" as const
+              : undefined
+        const gold = await loadFinalQuestionPool({
+          manifest: finalManifest,
+          chapters,
+          count: desiredCount,
+          blindPool,
+          difficultyBands: config.difficultyBands,
+          types: config.types,
+          family: config.trainingPresetId === "27-context" || config.trainingPresetId === "contextual-traps"
+            ? "single_choice_contextual"
+            : config.trainingPresetId === "expert-multiple-choice"
+              ? "single_choice_direct"
+            : config.trainingPresetId === "27-fill"
+              ? "fill_choice"
+              : config.trainingPresetId === "27-true-false"
+                ? "true_false"
+                : undefined,
+          seed: Date.now(),
+        })
+        await repositories.questions.putMany(gold)
+        const [storedQuestions, storedProgress] = await Promise.all([
+          repositories.questions.list(),
+          repositories.progress.list(),
+        ])
+        const legacyQuestions = storedQuestions.filter(
+          (question) => question.bankProfileId !== "final-v7"
+        )
+        const migration = mapLegacyProgressToFacts(
+          legacyQuestions,
+          storedProgress,
+          gold,
+        )
+        for (const item of migration.mapped) {
+          const existing = await repositories.factMastery.get(item.factId)
+          if (existing) continue
+          const prior = emptyFactMastery(item.factId)
+          await repositories.factMastery.put({
+            ...prior,
+            state: item.progress.timesIncorrect > 0
+              ? "due"
+              : item.progress.timesCorrect > 0
+                ? "exposed"
+                : "unseen",
+            attempts: item.progress.timesSeen,
+            failures: item.progress.timesIncorrect,
+            firstSeenAt:
+              item.progress.history.at(0)?.timestamp ?? item.progress.lastSeenAt,
+            lastSeenAt: item.progress.lastSeenAt,
+          })
+        }
+        await repositories.legacyEvents.putMany(migration.legacy)
+        await repositories.settings.put("v7-history-migration-summary", {
+          mapped: migration.mapped.length,
+          preservedLegacy: migration.legacy.length,
+          updatedAt: Date.now(),
+        })
+        setQuestions((current) => {
+          const byKey = new Map(
+            current.map((question) => [
+              `${question.bankId ?? "local"}:${question.id}`,
+              question,
+            ])
+          )
+          for (const question of gold)
+            byKey.set(`${question.bankId}:${question.id}`, question)
+          return [...byKey.values()]
+        })
+        return gold
+      }
       if (config.bankSelection === "consolidation-v5") {
         if (!consolidationManifest)
           throw new Error("El banco GOLD todavía no está disponible")
@@ -578,7 +565,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       })
       return questions
     },
-    [consolidationManifest, massiveManifest, repositories]
+    [consolidationManifest, finalManifest, massiveManifest, repositories]
   )
 
   const importBankFiles = useCallback(
@@ -950,7 +937,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
           "conexion-biblica-preferences",
           JSON.stringify(payload.preferences)
         )
-        await loadState(true)
+        await loadState()
         return validation
       } catch (importError) {
         return {
@@ -973,7 +960,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const setPreferences = useCallback((next: Partial<Preferences>) => {
     setPreferencesState((current) => {
-      const updated = { ...current, ...next }
+      const updated = {
+        ...current,
+        ...next,
+        lastBankSelection: "final-v7" as const,
+      }
       localStorage.setItem(PREFERENCES_STORAGE_KEY, JSON.stringify(updated))
       return updated
     })
@@ -982,7 +973,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const bankSelection = preferences.lastBankSelection
   const setBankSelection = useCallback(
     (selection: BankSelection) => {
-      setPreferences({ lastBankSelection: selection })
+      void selection
+      setPreferences({ lastBankSelection: "final-v7" })
     },
     [setPreferences]
   )
@@ -1009,6 +1001,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
       ).length,
       consolidation: questions.filter(
         (question) => question.bankProfileId === "consolidation-v5"
+      ).length,
+      final: questions.filter(
+        (question) => question.bankProfileId === "final-v7"
       ).length,
     }),
     [questions]
@@ -1043,6 +1038,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       factMastery,
       massiveManifest,
       consolidationManifest,
+      finalManifest,
       preferences,
       bankSelection,
       setBankSelection,
@@ -1085,6 +1081,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       massiveBankError,
       massiveManifest,
       consolidationManifest,
+      finalManifest,
       nav,
       preferences,
       progress,

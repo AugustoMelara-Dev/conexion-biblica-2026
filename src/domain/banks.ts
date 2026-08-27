@@ -55,6 +55,14 @@ export const BANK_DEFINITIONS: Record<BankProfileId, BankDefinition> = {
     version: "V6-MEZCLA-APRENDIZAJE-2026-08-26",
     expectedQuestionCount: 5000,
   },
+  "final-v7": {
+    id: "final-v7",
+    label: "Banco Maestro Único — Final 2026",
+    description: "Entrenamiento canónico con cobertura completa del PDF",
+    readOnly: true,
+    version: "7.0",
+    expectedQuestionCount: 7800,
+  },
 }
 
 export function getQuestionKey(question: Pick<Question, "bankId" | "id">) {

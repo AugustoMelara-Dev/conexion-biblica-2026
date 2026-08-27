@@ -2,7 +2,8 @@ import type { Question } from "@/domain/types"
 
 function randomGenerator(seed: number) {
   let state = seed >>> 0
-  return () => ((state = (Math.imul(state, 1103515245) + 12345) >>> 0) / 0x100000000)
+  return () =>
+    ((state = (Math.imul(state, 1103515245) + 12345) >>> 0) / 0x100000000)
 }
 
 function shuffle<T>(rows: T[], seed: number) {
@@ -15,45 +16,114 @@ function shuffle<T>(rows: T[], seed: number) {
   return result
 }
 
-const RELATIONAL_SKILLS = new Set([
-  "scene_identification",
-  "cause_consequence",
-  "comparison",
-  "narrative_order",
-  "verse_difference",
-])
+type Bucket = "direct" | "fill" | "tf_true" | "tf_false" | "contextual"
 
-export function selectMandatoryHundred(
+function roundQuotas(count: number, seed: number): Array<[Bucket, number]> | null {
+  const trueTarget =
+    count === 100
+      ? seed % 2 === 0
+        ? 13
+        : 12
+      : count === 50
+        ? 6
+        : count === 20
+          ? seed % 2 === 0
+            ? 3
+            : 2
+          : 0
+  if (count === 100)
+    return [
+      ["direct", 25],
+      ["fill", 25],
+      ["tf_true", trueTarget],
+      ["tf_false", 25 - trueTarget],
+      ["contextual", 25],
+    ]
+  if (count === 50)
+    return [
+      ["direct", 13],
+      ["fill", 12],
+      ["tf_true", 6],
+      ["tf_false", 6],
+      ["contextual", 13],
+    ]
+  if (count === 20)
+    return [
+      ["direct", 5],
+      ["fill", 5],
+      ["tf_true", trueTarget],
+      ["tf_false", 5 - trueTarget],
+      ["contextual", 5],
+    ]
+  return null
+}
+
+function isCauseOrConsequence(question: Question) {
+  return (
+    question.semanticSkill === "cause_consequence" ||
+    /cause|consequence/.test(String(question.metadata?.relationType ?? ""))
+  )
+}
+
+export function selectMandatoryRound(
   questions: Question[],
+  count: 20 | 50 | 100,
   seed: number,
   excludedFacts = new Set<string>(),
 ) {
-  const trueTarget = seed % 2 === 0 ? 13 : 12
-  const falseTarget = 25 - trueTarget
-  type Bucket = "fill" | "tf_true" | "tf_false" | "mc_trap" | "mc_any"
-  const quotas: Array<[Bucket, number]> = [
-    ["fill", 30],
-    ["tf_true", trueTarget],
-    ["tf_false", falseTarget],
-    ["mc_trap", 18],
-    ["mc_any", 27],
-  ]
+  const quotas = roundQuotas(count, seed)!
   const eligible = shuffle(
-    questions.filter((item) => !excludedFacts.has(item.factId ?? item.factKey)),
+    questions.filter(
+      (item) => !excludedFacts.has(item.factId ?? item.factKey),
+    ),
     seed,
   )
   const candidates: Record<Bucket, Question[]> = {
-    fill: eligible.filter((item) => item.type === "fill_blank"),
-    tf_true: eligible.filter((item) => item.type === "true_false" && item.correctAnswerText === "Verdadero"),
-    tf_false: eligible.filter((item) => item.type === "true_false" && item.correctAnswerText === "Falso"),
-    mc_trap: eligible.filter((item) => item.type === "single_choice" && item.trapType === "true_elsewhere"),
-    mc_any: eligible
-      .filter((item) => item.type === "single_choice")
-      .sort((left, right) => Number(left.trapType === "true_elsewhere") - Number(right.trapType === "true_elsewhere")),
+    direct: eligible
+      .filter(
+        (item) =>
+          item.family === "single_choice_direct" ||
+          (!item.family &&
+            item.type === "single_choice" &&
+            item.trapType !== "true_elsewhere"),
+      )
+      .sort(
+        (left, right) =>
+          Number(isCauseOrConsequence(right)) -
+          Number(isCauseOrConsequence(left)),
+      ),
+    fill: eligible.filter(
+      (item) => item.family === "fill_choice" || item.type === "fill_blank",
+    ),
+    tf_true: eligible.filter(
+      (item) =>
+        (item.family === "true_false" || item.type === "true_false") &&
+        item.correctAnswerText === "Verdadero",
+    ),
+    tf_false: eligible.filter(
+      (item) =>
+        (item.family === "true_false" || item.type === "true_false") &&
+        item.correctAnswerText === "Falso",
+    ),
+    contextual: eligible.filter(
+      (item) =>
+        item.family === "single_choice_contextual" ||
+        (!item.family &&
+          item.type === "single_choice" &&
+          item.trapType === "true_elsewhere"),
+    ),
   }
-  const slots = quotas.flatMap(([bucket, count]) =>
-    Array.from({ length: count }, (_, index) => ({ id: `${bucket}:${index}`, bucket })),
-  ).sort((left, right) => candidates[left.bucket].length - candidates[right.bucket].length)
+  const slots = quotas
+    .flatMap(([bucket, quota]) =>
+      Array.from({ length: quota }, (_, index) => ({
+        id: `${bucket}:${index}`,
+        bucket,
+      })),
+    )
+    .sort(
+      (left, right) =>
+        candidates[left.bucket].length - candidates[right.bucket].length,
+    )
   const factToSlot = new Map<string, string>()
   const slotToQuestion = new Map<string, Question>()
   const slotById = new Map(slots.map((slot) => [slot.id, slot]))
@@ -74,14 +144,29 @@ export function selectMandatoryHundred(
   }
 
   for (const slot of slots) {
-    if (!assign(slot.id, new Set())) {
-      throw new Error(`El banco GOLD no alcanza la cuota obligatoria de ${slot.bucket}`)
-    }
+    if (!assign(slot.id, new Set()))
+      throw new Error(
+        `El banco GOLD no alcanza la cuota obligatoria de ${slot.bucket}`,
+      )
   }
   const result = [...slotToQuestion.values()]
-  const relationalCount = result.filter((item) => RELATIONAL_SKILLS.has(item.semanticSkill ?? "")).length
-  if (relationalCount < 10) throw new Error(`El banco GOLD solo aporta ${relationalCount}/10 relaciones o escenas`)
+  if (
+    count === 100 &&
+    result.some((question) => question.family !== undefined) &&
+    result.filter(isCauseOrConsequence).length < 10
+  )
+    throw new Error(
+      "El banco GOLD no alcanza 10 preguntas de causa o consecuencia",
+    )
   return shuffle(result, seed ^ 0x5f3759df)
+}
+
+export function selectMandatoryHundred(
+  questions: Question[],
+  seed: number,
+  excludedFacts = new Set<string>(),
+) {
+  return selectMandatoryRound(questions, 100, seed, excludedFacts)
 }
 
 export function selectMissionQuestions(input: {
@@ -91,10 +176,16 @@ export function selectMissionQuestions(input: {
   excludedFacts?: Set<string>
 }) {
   const excludedFacts = new Set(input.excludedFacts ?? [])
-  const eligible = input.questions.filter((question) =>
-    question.editorialStatus === "gold" && !question.blindPool
+  const eligible = input.questions.filter(
+    (question) => question.editorialStatus === "gold" && !question.blindPool,
   )
-  if (input.count === 100) return selectMandatoryHundred(eligible, input.seed, excludedFacts)
+  if (input.count === 20 || input.count === 50 || input.count === 100)
+    return selectMandatoryRound(
+      eligible,
+      input.count,
+      input.seed,
+      excludedFacts,
+    )
 
   const used = new Set(excludedFacts)
   const result: Question[] = []
@@ -119,7 +210,12 @@ export function selectBlindSimulation(
   const result: Question[] = []
   for (const question of questions) {
     const fact = question.factId ?? question.factKey
-    if (question.editorialStatus !== "gold" || question.blindPool !== pool || used.has(fact)) continue
+    if (
+      question.editorialStatus !== "gold" ||
+      question.blindPool !== pool ||
+      used.has(fact)
+    )
+      continue
     used.add(fact)
     result.push(question)
     if (result.length === count) break

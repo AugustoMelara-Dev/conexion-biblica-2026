@@ -14,6 +14,11 @@ export const SUPPORTED_QUESTION_TYPES = [
 ] as const
 
 export type QuestionType = (typeof SUPPORTED_QUESTION_TYPES)[number]
+export type FinalQuestionFamily =
+  | "single_choice_direct"
+  | "fill_choice"
+  | "true_false"
+  | "single_choice_contextual"
 export type SourceWork = "Daniel" | "Profetas y Reyes"
 
 export type QuestionOption = { id: string; text: string }
@@ -24,6 +29,7 @@ export type BankProfileId =
   | "curated-v4"
   | "massive-v5"
   | "consolidation-v5"
+  | "final-v7"
 export type BankSelection = BankProfileId | "mixed"
 export type DifficultyBand = "BASIC" | "MEDIUM" | "HARD" | "EXPERT" | "UNRATED"
 export type AnswerMode = "option_id" | "canonical_text"
@@ -42,6 +48,7 @@ export type Question = {
   id: string
   bankId?: string
   type: QuestionType
+  family?: FinalQuestionFamily
   difficulty: 1 | 2 | 3 | 4 | 5
   source: QuestionSource
   tags: string[]

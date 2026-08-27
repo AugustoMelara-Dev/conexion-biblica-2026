@@ -81,7 +81,7 @@ export function HistoryPage() {
             value={bank}
             onChange={(value) => setBank(value as BankSelection | "all")}
           >
-            <option value="all">Todos los bancos</option>
+            <option value="all">Todo el historial</option>
             {banks.map((item) => (
               <option key={item} value={item}>
                 {bankLabel(item)}
@@ -310,13 +310,14 @@ function MiniMetric({
 
 function bankLabel(bank: BankSelection) {
   const labels: Record<BankSelection, string> = {
-    "legacy-v1": "Banco V1",
-    "master-v2": "Banco V2",
-    "prep-v3": "Banco V3",
-    "curated-v4": "Banco V4",
-    "massive-v5": "Banco V5",
-    "consolidation-v5": "V6 Aprendizaje competitivo",
-    mixed: "Bancos mezclados",
+    "legacy-v1": "Historial migrado",
+    "master-v2": "Historial migrado",
+    "prep-v3": "Historial migrado",
+    "curated-v4": "Historial migrado",
+    "massive-v5": "Historial migrado",
+    "consolidation-v5": "Historial migrado",
+    "final-v7": "Banco Maestro Único",
+    mixed: "Historial migrado",
   }
   return labels[bank]
 }

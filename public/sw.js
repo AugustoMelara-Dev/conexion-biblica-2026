@@ -1,11 +1,9 @@
-const CACHE_NAME = "conexion-biblica-shell-v8"
+const CACHE_NAME = "conexion-biblica-shell-v9"
 const SHELL = [
   "/",
   "/index.html",
   "/manifest.webmanifest",
-  "/banks/manifest.json",
-  "/banks/massive-v5/manifest.json",
-  "/banks/consolidation-v5/manifest.json",
+  "/banks/final-2026/manifest.json",
 ]
 
 self.addEventListener("install", (event) => {

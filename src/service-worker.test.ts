@@ -84,11 +84,12 @@ function loadServiceWorker(options: {
 }
 
 describe("actualización del contenido offline", () => {
-  it("precachea el manifiesto masivo sin descargar los 14,000 registros de golpe", () => {
+  it("precachea solo el manifiesto canónico sin descargar las preguntas de golpe", () => {
     const source = readFileSync(join(process.cwd(), "public", "sw.js"), "utf8")
-    expect(source).toContain('"/banks/massive-v5/manifest.json"')
-    expect(source).toContain('"/banks/consolidation-v5/manifest.json"')
-    expect(source).not.toContain('"/banks/massive-v5/questions/DAN1.json"')
+    expect(source).toContain('"/banks/final-2026/manifest.json"')
+    expect(source).not.toContain('"/banks/massive-v5/manifest.json"')
+    expect(source).not.toContain('"/banks/consolidation-v5/manifest.json"')
+    expect(source).not.toContain('"/banks/final-2026/questions/DAN1.json"')
   })
 
   it("consulta la red antes del caché para el manifiesto de bancos", async () => {

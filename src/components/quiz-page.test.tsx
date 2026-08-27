@@ -77,8 +77,8 @@ describe("pista de memoria", () => {
   })
 })
 
-describe("badge de perfil del banco", () => {
-  it("expone el ID estable del perfil curado", () => {
+describe("identidad canónica del banco", () => {
+  it("muestra un único nombre aunque el dato proceda del historial", () => {
     const question: Question = {
       id: "curated-question",
       bankId: "curated-v4",
@@ -123,7 +123,7 @@ describe("badge de perfil del banco", () => {
       />
     )
 
-    expect(screen.getByText("V4", { exact: true })).toHaveAttribute(
+    expect(screen.getByText("Banco Maestro Único", { exact: true })).toHaveAttribute(
       "data-bank-profile",
       "curated-v4"
     )
@@ -213,7 +213,7 @@ describe("ronda enfocada", () => {
     await user.click(screen.getByRole("button", { name: "Confirmar respuesta" }))
     expect(await screen.findByText("tuvo Daniel un sueño")).toBeVisible()
     expect(screen.getByText("Corresponde a otra escena.")).toBeVisible()
-    expect(screen.getByText("V5", { exact: true })).toHaveAttribute(
+    expect(screen.getByText("Banco Maestro Único", { exact: true })).toHaveAttribute(
       "data-bank-profile",
       "massive-v5"
     )
@@ -305,17 +305,17 @@ describe("ronda enfocada", () => {
     )
   })
 
-  it("expone las opciones correctas e incorrectas de selección múltiple solo tras evaluar", () => {
+  it("expone la opción correcta y el estado solo tras evaluar", () => {
     const multiQuestion: Question = {
       ...twoChoiceQuestion,
       id: "feedback-multi",
-      type: "multi_select",
+      type: "single_choice",
       correctAnswer: ["A"],
     }
     const { rerender } = render(
       <QuestionRenderer
         question={multiQuestion}
-        value={["B"]}
+        value="B"
         onChange={vi.fn()}
       />
     )
@@ -328,7 +328,7 @@ describe("ronda enfocada", () => {
     rerender(
       <QuestionRenderer
         question={multiQuestion}
-        value={["B"]}
+        value="B"
         onChange={vi.fn()}
         feedback={{
           isCorrect: false,
@@ -340,17 +340,13 @@ describe("ronda enfocada", () => {
     )
 
     expect(screen.getByText("Respuesta correcta")).toBeInTheDocument()
-    expect(screen.queryByRole("status")).not.toBeInTheDocument()
-    expect(
-      screen.getByRole("checkbox", {
-        name: /Segunda.*Tu selección fue incorrecta/i,
-      })
-    ).toBeVisible()
+    expect(screen.getByRole("status")).toHaveTextContent("Tu selección fue incorrecta.")
+    expect(screen.getByRole("radio", { name: /Segunda/ })).toBeVisible()
   })
 })
 
 describe("interacciones de QuestionRenderer", () => {
-  it("actualiza y deshabilita respuestas de texto y selección múltiple", async () => {
+  it("convierte cualquier dato legado en selección única y permite deshabilitarla", async () => {
     const user = userEvent.setup()
     const onText = vi.fn()
     const textQuestion: Question = {
@@ -362,22 +358,17 @@ describe("interacciones de QuestionRenderer", () => {
     const { rerender } = render(
       <QuestionRenderer question={textQuestion} value="" onChange={onText} />
     )
-    await user.type(
-      screen.getByRole("textbox", { name: "Escribe la respuesta" }),
-      "D"
-    )
-    expect(onText).toHaveBeenLastCalledWith("D")
+    await user.click(screen.getByRole("radio", { name: /Respuesta/ }))
+    expect(onText).toHaveBeenLastCalledWith("A")
     rerender(
       <QuestionRenderer
         question={textQuestion}
-        value="D"
+        value="A"
         onChange={onText}
         disabled
       />
     )
-    expect(
-      screen.getByRole("textbox", { name: "Escribe la respuesta" })
-    ).toBeDisabled()
+    expect(screen.getByRole("radio", { name: /Respuesta/ })).toBeDisabled()
 
     const multiQuestion: Question = {
       ...twoChoiceQuestion,
@@ -393,8 +384,8 @@ describe("interacciones de QuestionRenderer", () => {
         onChange={onMulti}
       />
     )
-    await user.click(screen.getByRole("checkbox", { name: /Primera/ }))
-    expect(onMulti).toHaveBeenLastCalledWith(["A"])
+    await user.click(screen.getByRole("radio", { name: /Primera/ }))
+    expect(onMulti).toHaveBeenLastCalledWith("A")
 
     rerender(
       <QuestionRenderer
@@ -404,74 +395,64 @@ describe("interacciones de QuestionRenderer", () => {
         disabled
       />
     )
-    expect(screen.getByRole("checkbox", { name: /Primera/ })).toBeDisabled()
+    expect(screen.getByRole("radio", { name: /Primera/ })).toBeDisabled()
   })
 
-  it("permite ordenar por teclado y relacionar elementos", async () => {
-    const user = userEvent.setup()
+  it("no activa ordenamiento ni relación aunque lleguen tipos legados", () => {
     const orderingQuestion: Question = {
       ...twoChoiceQuestion,
       id: "ordering-question",
       type: "ordering",
       correctAnswer: ["B", "A"],
     }
-    const onOrder = vi.fn()
     const { rerender } = render(
       <QuestionRenderer
         question={orderingQuestion}
         value={["A", "B"]}
-        onChange={onOrder}
+        onChange={vi.fn()}
       />
     )
-    const down = screen.getByRole("button", { name: "Mover Primera abajo" })
-    down.focus()
-    await user.keyboard("{Enter}")
-    expect(onOrder).toHaveBeenLastCalledWith(["B", "A"])
+    expect(screen.getAllByRole("radio")).toHaveLength(2)
+    expect(screen.queryByRole("button", { name: /Mover/ })).not.toBeInTheDocument()
     rerender(
       <QuestionRenderer
         question={orderingQuestion}
         value={["A", "B"]}
-        onChange={onOrder}
+        onChange={vi.fn()}
         disabled
       />
     )
-    expect(
-      screen.getByRole("button", { name: "Mover Primera abajo" })
-    ).toBeDisabled()
+    expect(screen.getByRole("radio", { name: /Primera/ })).toBeDisabled()
 
     const matchingQuestion: Question = {
       ...studyQuestion,
       id: "matching-question",
       type: "matching",
-      options: [],
-      correctAnswer: [],
+      options: twoChoiceQuestion.options,
+      correctAnswer: ["A"],
       leftItems: [{ id: "left", text: "Uno" }],
       rightItems: [{ id: "right", text: "Uno relacionado" }],
       correctMatches: [{ left: "left", right: "right" }],
     }
-    const onMatch = vi.fn()
     rerender(
       <QuestionRenderer
         question={matchingQuestion}
-        value={{}}
-        onChange={onMatch}
+        value=""
+        onChange={vi.fn()}
       />
     )
-    await user.click(screen.getByRole("combobox", { name: "Relacionar Uno" }))
-    await user.click(screen.getByRole("option", { name: "Uno relacionado" }))
-    expect(onMatch).toHaveBeenLastCalledWith({ left: "right" })
+    expect(screen.getAllByRole("radio")).toHaveLength(2)
+    expect(screen.queryByRole("combobox")).not.toBeInTheDocument()
 
     rerender(
       <QuestionRenderer
         question={matchingQuestion}
-        value={{}}
-        onChange={onMatch}
+        value=""
+        onChange={vi.fn()}
         disabled
       />
     )
-    expect(
-      screen.getByRole("combobox", { name: "Relacionar Uno" })
-    ).toBeDisabled()
+    expect(screen.getByRole("radio", { name: /Primera/ })).toBeDisabled()
   })
 })
 
@@ -505,19 +486,9 @@ describe("atajos de la ronda", () => {
     expect(onExit).toHaveBeenCalledTimes(1)
   })
 
-  it("no confirma al presionar Enter en una opción, botón auxiliar o select", async () => {
+  it("no confirma al presionar Enter en una opción o botón auxiliar", async () => {
     const user = userEvent.setup()
-    const matchingQuestion: Question = {
-      ...studyQuestion,
-      id: "quiz-matching",
-      type: "matching",
-      options: [],
-      correctAnswer: [],
-      leftItems: [{ id: "left", text: "Uno" }],
-      rightItems: [{ id: "right", text: "Uno relacionado" }],
-      correctMatches: [{ left: "left", right: "right" }],
-    }
-    const { unmount } = render(
+    render(
       <QuizPage
         questions={[twoChoiceQuestion]}
         config={studyConfig}
@@ -534,18 +505,6 @@ describe("atajos de la ronda", () => {
     await user.keyboard("{Enter}")
     expect(appState.recordAnswer).not.toHaveBeenCalled()
 
-    unmount()
-    render(
-      <QuizPage
-        questions={[matchingQuestion]}
-        config={studyConfig}
-        onFinish={vi.fn()}
-        onExit={vi.fn()}
-      />
-    )
-    screen.getByRole("combobox", { name: "Relacionar Uno" }).focus()
-    await user.keyboard("{Enter}")
-    expect(appState.recordAnswer).not.toHaveBeenCalled()
   })
 
   it("confirma una vez con Enter fuera de controles y enfoca el nuevo enunciado al avanzar", async () => {
@@ -834,7 +793,7 @@ describe("persistencia acotada de reportes", () => {
 
     fireEvent.click(screen.getByRole("button", { name: "Reportar" }))
     fireEvent.change(screen.getByLabelText("Motivo del reporte"), {
-      target: { value: "Primera pregunta" },
+      target: { value: "Redacción confusa" },
     })
     fireEvent.click(screen.getByRole("button", { name: "Guardar reporte" }))
     fireEvent.click(screen.getByRole("radio", { name: /Primera/ }))
@@ -862,7 +821,7 @@ describe("persistencia acotada de reportes", () => {
       twoChoiceQuestion,
       undefined,
       null,
-      "Primera pregunta"
+      "Redacción confusa"
     )
   })
 
@@ -1266,12 +1225,12 @@ describe("recuperación de transiciones persistidas", () => {
 
 describe("metadatos de preguntas", () => {
   it.each([
-    ["who_said_it", "Quién lo dijo"],
-    ["to_whom", "A quién"],
-    ["reference_detail", "Detalle de referencia"],
-    ["sequence_choice", "Secuencia"],
-    ["precision", "Precisión"],
-  ] as const)("nombra el tipo %s", (type, label) => {
+    "who_said_it",
+    "to_whom",
+    "reference_detail",
+    "sequence_choice",
+    "precision",
+  ] as const)("presenta el tipo legado %s como selección directa", (type) => {
     render(
       <QuizPage
         questions={[{ ...studyQuestion, id: `metadata-${type}`, type }]}
@@ -1281,7 +1240,7 @@ describe("metadatos de preguntas", () => {
       />
     )
 
-    expect(screen.getByText(new RegExp(label))).toBeVisible()
+    expect(screen.getByText(/Selección directa/)).toBeVisible()
   })
 })
 

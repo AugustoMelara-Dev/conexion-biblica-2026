@@ -1,6 +1,5 @@
 import { ArrowRight, BarChart3, Check, Clock3, Flame, Gauge, RotateCcw, Target } from "lucide-react"
 import { useApp } from "@/app/app-state"
-import { BankSelector } from "@/components/bank-selector"
 import { FinalMissionDashboard } from "@/components/final-mission-dashboard"
 import { MetricStrip } from "@/components/layout/metric-strip"
 import { SectionHeader } from "@/components/layout/section-header"
@@ -8,21 +7,18 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
-import type { BankSelection, SessionConfig } from "@/domain/types"
+import type { SessionConfig } from "@/domain/types"
 import type { FinalMission } from "@/domain/final-mission-plan"
 import { formatElapsedMs } from "@/lib/format"
 
-const activeBankLabels: Record<BankSelection, string> = {
-  "curated-v4": "V4 — cobertura amplia",
-  "prep-v3": "V3 — Preparación intensiva de 4 días",
-  "legacy-v1": "V1 — Clásica",
-  mixed: "Mixto curado",
-  "master-v2": "V2 — Fuente técnica",
-  "massive-v5": "V5 — Entrenamiento masivo",
-  "consolidation-v5": "V6 — Aprendizaje competitivo",
-}
-
 function missionConfig(mission: FinalMission): SessionConfig {
+  const types = mission.id === "27-fill"
+    ? ["fill_blank" as const]
+    : mission.id === "27-true-false"
+      ? ["true_false" as const]
+      : mission.id === "27-context"
+        ? ["single_choice" as const]
+        : ["single_choice" as const, "fill_blank" as const, "true_false" as const]
   return {
     mode: mission.mode,
     count: mission.count,
@@ -30,13 +26,13 @@ function missionConfig(mission: FinalMission): SessionConfig {
     chapters: mission.chapters,
     difficulties: [1, 2, 3, 4, 5],
     difficultyBands: ["BASIC", "MEDIUM", "HARD", "EXPERT"],
-    types: ["single_choice", "fill_blank", "true_false"],
+    types,
     statuses: ["all"],
     shuffleQuestions: true,
     shuffleOptions: true,
     perQuestionSeconds: mission.mode === "simulation" ? 25 : null,
     totalSeconds: mission.mode === "simulation" ? mission.count * 25 : null,
-    bankSelection: "consolidation-v5",
+    bankSelection: "final-v7",
     strategy: "adaptive",
     trainingPresetId: mission.id,
     includeBlind: mission.blindPool !== null,
@@ -45,7 +41,7 @@ function missionConfig(mission: FinalMission): SessionConfig {
 }
 
 export function DashboardPage({ onStartMission }: { onStartMission?: (config: SessionConfig) => void }) {
-  const { statistics, banks, questions, sessions, progress, exposures = [], factMastery = [], consolidationManifest, setNav, bankSelection, setBankSelection, bankCounts } = useApp()
+  const { statistics, questions, sessions, progress, exposures = [], factMastery = [], finalManifest, setNav } = useApp()
   const { general } = statistics
   const sources = statistics.sources.filter((item) => item.key === "Daniel" || item.key === "Profetas y Reyes")
   const currentStreak = progress.size ? Math.max(...[...progress.values()].map((item) => item.currentCorrectStreak), 0) : 0
@@ -80,31 +76,16 @@ export function DashboardPage({ onStartMission }: { onStartMission?: (config: Se
         ]}
       />
 
-      <section aria-labelledby="history-config-title">
-        <p className="text-sm font-medium text-primary">Historial y configuración</p>
-        <h2 id="history-config-title" className="mt-2 text-2xl font-semibold tracking-tight">Tu preparación, sin perder lo anterior.</h2>
-        <p className="mt-2 max-w-3xl text-muted-foreground">V1–V5 permanecen disponibles como perfiles históricos; V6 GOLD dirige el plan principal.</p>
+      <section className="rounded-2xl bg-secondary/45 px-5 py-6 sm:px-7" aria-labelledby="canonical-bank-title">
+        <p className="text-sm font-medium text-primary">Fuente activa</p>
+        <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 id="canonical-bank-title" className="text-2xl font-semibold tracking-tight">Banco Maestro Único — Final 2026</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">Un solo historial, una sola cobertura y cuatro familias de selección. La versión técnica no aparece como perfil de estudio.</p>
+          </div>
+          <Badge variant="outline" className="w-fit bg-background/70">{finalManifest?.gold_questions ?? 7800} preguntas GOLD</Badge>
+        </div>
       </section>
-
-      <details className="rounded-2xl border border-border/70 p-5">
-        <summary className="cursor-pointer text-sm font-semibold">Perfiles históricos y configuración manual</summary>
-      <section aria-label="Selección de versión" className="mt-5 flex flex-col gap-4">
-        <SectionHeader
-          title="Elige tu versión"
-          description="Cada pregunta conserva el progreso de su banco de origen."
-          action={<Badge variant="outline">Perfil activo: {activeBankLabels[bankSelection]}</Badge>}
-        />
-        <BankSelector
-          value={bankSelection}
-          onChange={setBankSelection}
-          legacyCount={bankCounts.legacy}
-          masterCount={bankCounts.master}
-          prepCount={bankCounts.prep}
-          curatedCount={bankCounts.curated}
-          consolidationCount={consolidationManifest?.gold_questions ?? bankCounts.consolidation ?? 0}
-        />
-      </section>
-      </details>
 
       <MetricStrip
         items={[
@@ -202,7 +183,7 @@ export function DashboardPage({ onStartMission }: { onStartMission?: (config: Se
 
       <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground" role="status">
         <Check className="size-4 text-chart-2" aria-hidden="true" />
-        Guardado local: {banks.length} bancos · {questions.length} preguntas · IndexedDB activo.
+        Guardado local: banco maestro único · {questions.length} preguntas cargadas · IndexedDB activo.
       </p>
     </div>
   )

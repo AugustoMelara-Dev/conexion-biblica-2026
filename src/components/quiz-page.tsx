@@ -42,7 +42,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
 import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
@@ -461,14 +460,25 @@ export function QuizPage({
         return
       if (
         !result.isCorrect &&
-        (config.mode === "training" || config.mode === "learn")
+        (config.mode === "training" ||
+          config.mode === "learn" ||
+          config.mode === "smart-review")
       ) {
         const retryGap = Math.min(
           8 + Math.max(0, nextProgress.timesIncorrect - 1) * 4,
           15
         )
-        const retryQuestion = question.bankProfileId === "consolidation-v5"
-          ? materializeDynamicQuestion(question, {
+        const retryVariants = Array.isArray(question.metadata?.retryVariants)
+          ? (question.metadata.retryVariants as Question[])
+          : []
+        const retryBase = retryVariants.length
+          ? retryVariants[
+              Math.max(0, nextProgress.timesIncorrect - 1) %
+                retryVariants.length
+            ]
+          : question
+        const retryQuestion = question.factId
+          ? materializeDynamicQuestion(retryBase, {
               seed: questionStartedAt + nextProgress.timesIncorrect,
               exposure: Math.max(1, nextProgress.timesSeen),
             })
@@ -693,16 +703,7 @@ export function QuizPage({
       answers.length
     : 0
   const completion = ((index + (submitted ? 1 : 0)) / queue.length) * 100
-  const instruction =
-    question.answerMode === "canonical_text"
-      ? "Escribe la respuesta canónica y confirma."
-      : question.type === "multi_select"
-        ? "Selecciona todas las correctas y confirma."
-        : question.type === "ordering"
-          ? "Ordena con los botones accesibles."
-          : question.type === "matching"
-            ? "Relaciona cada elemento con su correspondencia."
-            : "Elige una respuesta y confirma."
+  const instruction = "Elige una respuesta y confirma."
 
   return (
     <article className="mx-auto flex min-h-screen w-full max-w-3xl flex-col px-4 py-5 pb-28 sm:px-6 sm:py-6">
@@ -773,20 +774,10 @@ export function QuizPage({
             data-bank-profile={question.bankProfileId ?? "legacy-v1"}
             variant="outline"
           >
-            {question.bankProfileId === "prep-v3"
-              ? "V3"
-              : question.bankProfileId === "master-v2"
-                ? "V2"
-                : question.bankProfileId === "curated-v4"
-                  ? "V4"
-                  : question.bankProfileId === "massive-v5"
-                    ? "V5"
-                  : question.bankProfileId === "consolidation-v5"
-                    ? "V6 GOLD"
-                  : "V1"}
+            Banco Maestro Único
           </Badge>
           <span>{question.source.reference}</span>
-          <span>· {typeLabel(question.type)}</span>
+          <span>· {familyLabel(question)}</span>
           {config.perQuestionSeconds !== null ? (
             <span
               className={`ml-auto flex items-center gap-1 font-semibold ${remaining && remaining <= 3 ? "text-destructive" : "text-primary"}`}
@@ -879,13 +870,19 @@ export function QuizPage({
           {reportOpen ? (
             <div className="flex flex-col gap-3 rounded-xl border border-destructive/30 bg-destructive/5 p-4">
               <p className="text-sm font-medium">¿Qué quieres auditar?</p>
-              <Input
+              <select
                 value={reportReason}
                 onChange={(event) => setReportReason(event.target.value)}
-                placeholder="Motivo opcional"
                 aria-label="Motivo del reporte"
                 disabled={reportPending || transitionPending !== null}
-              />
+                className="h-11 rounded-md border border-input bg-background px-3 text-sm"
+              >
+                <option value="">Selecciona un motivo</option>
+                <option value="Respuesta ambigua">Respuesta ambigua</option>
+                <option value="Referencia incorrecta">Referencia incorrecta</option>
+                <option value="Redacción confusa">Redacción confusa</option>
+                <option value="Posible error de fuente">Posible error de fuente</option>
+              </select>
               {reportPending ? (
                 <p role="status" aria-live="polite" className="text-sm">
                   Guardando reporte…
@@ -1056,22 +1053,17 @@ function isEmptyAnswer(value: AnswerValue) {
   )
 }
 
-function typeLabel(type: Question["type"]) {
-  const labels: Record<Question["type"], string> = {
-    single_choice: "Opción única",
-    multi_select: "Selección múltiple",
-    ordering: "Ordenamiento",
-    matching: "Relacionar",
-    true_false: "Verdadero o falso",
-    fill_blank: "Completar",
-    negative_choice: "Opción negativa",
-    who_said_it: "Quién lo dijo",
-    to_whom: "A quién",
-    reference_detail: "Detalle de referencia",
-    sequence_choice: "Secuencia",
-    precision: "Precisión",
-  }
-  return labels[type]
+function familyLabel(question: Question) {
+  if (question.family === "single_choice_direct") return "Selección directa"
+  if (question.family === "single_choice_contextual")
+    return "Selección contextual"
+  if (question.family === "fill_choice") return "Completar con opciones"
+  if (question.family === "true_false") return "Verdadero o falso"
+  return question.type === "true_false"
+    ? "Verdadero o falso"
+    : question.type === "fill_blank"
+      ? "Completar con opciones"
+      : "Selección directa"
 }
 
 function shuffleQuestionOptions(question: Question, shuffle: boolean) {
