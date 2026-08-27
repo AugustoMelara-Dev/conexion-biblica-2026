@@ -448,6 +448,47 @@ def _boundary_collision(context: str, answer: str, replacement: str) -> bool:
     )
 
 
+DIVINE_NAMES = {"dios", "jehova", "senor", "salvador", "mesias", "altisimo"}
+
+
+def _phrase_entity_target(
+    fact: dict[str, Any], entity_categories: dict[str, str]
+) -> tuple[int, str] | None:
+    for index, word in reversed(list(enumerate(fact["answer"].split()))):
+        normalized = _norm(word)
+        if index > 0 and normalized in entity_categories:
+            return index, entity_categories[normalized]
+    return None
+
+
+def _named_entity_phrase_replacement(
+    fact: dict[str, Any], entity_categories: dict[str, str], facts: list[dict[str, Any]]
+) -> str | None:
+    target = _phrase_entity_target(fact, entity_categories)
+    if target is None:
+        return None
+    index, category = target
+    original = fact["answer"].split()
+    original_name = _norm(original[index])
+    candidates = sorted(
+        {
+            row["answer"]
+            for row in facts
+            if row["category"] == category
+            and len(row["answer"].split()) == 1
+            and _norm(row["answer"]) != original_name
+            and _norm(row["answer"]) not in fact["_normalized_source"]
+            and _norm(row["answer"]) not in DIVINE_NAMES
+        },
+        key=lambda answer: _hash(f"entity-false:{fact['fact_id']}:{answer}"),
+    )
+    if not candidates:
+        return None
+    altered = [*original]
+    altered[index] = candidates[0]
+    return " ".join(altered)
+
+
 def _review_choice(question: dict[str, Any]) -> dict[str, Any]:
     quote_norm = _norm(question["source_quote"])
     supported = [
@@ -509,6 +550,12 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
     if len(facts) != 1950:
         raise ValueError("Se requieren exactamente 1,950 hechos seleccionados")
     distractor_pools: dict[tuple[str, tuple[Any, ...]], list[dict[str, Any]]] = defaultdict(list)
+    entity_categories = {
+        _norm(fact["answer"]): fact["category"]
+        for fact in facts
+        if fact["category"] in {"person", "place"}
+        and len(fact["answer"].split()) == 1
+    }
     for fact in facts:
         distractor_pools[(fact["category"], option_signature(fact["answer"], fact["category"]))].append(fact)
 
@@ -549,6 +596,16 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
     false_candidates = sorted(
         facts,
         key=lambda fact: (
+            fact["category"] == "phrase",
+            fact["category"] == "phrase"
+            and _phrase_entity_target(fact, entity_categories) is None,
+            fact["category"] == "phrase"
+            and _phrase_entity_target(fact, entity_categories) is not None
+            and _norm(
+                fact["answer"].split()[
+                    _phrase_entity_target(fact, entity_categories)[0]
+                ]
+            ) in DIVINE_NAMES,
             fact["grammatical_category"] not in {"proper", "number", "verb", "word_singular", "word_plural", "phrase_singular", "phrase_plural"},
             _hash("false:" + fact["fact_id"]),
         ),
@@ -568,7 +625,14 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             base = _base_question(fact, family, index)
             if family == "true_false":
                 false = fact["fact_id"] in false_facts
-                replacement = next(
+                phrase_replacement = (
+                    _named_entity_phrase_replacement(
+                        fact, entity_categories, facts
+                    )
+                    if false and fact["category"] == "phrase"
+                    else None
+                )
+                replacement = phrase_replacement or next(
                     (
                         row["answer"] for row in distractor_facts
                         if not _boundary_collision(fact["context"], fact["answer"], row["answer"])
