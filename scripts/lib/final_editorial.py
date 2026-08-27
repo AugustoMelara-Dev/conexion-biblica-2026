@@ -640,13 +640,12 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                     distractors[0],
                 )
                 statement = _masked(fact["context"], fact["answer"], replacement) if false else fact["context"]
-                masked_focus = _masked(fact["context"], fact["answer"], "________")
                 proposed_detail = replacement if false else fact["answer"]
                 base.update(
                     {
                         "question": (
-                            f"Según {fact['reference']}, la expresión «{proposed_detail}» completa "
-                            f"la frase «{masked_focus}». ¿Verdadero o falso?"
+                            f"Según {fact['reference']}, la afirmación «{statement}» reproduce "
+                            f"correctamente el detalle «{proposed_detail}». ¿Verdadero o falso?"
                         ),
                         "statement": statement,
                         "options": ["Verdadero", "Falso"],
@@ -787,6 +786,32 @@ def audit_final_bank(
         peers = [length for index, length in enumerate(lengths) if index != question["correct_option"]]
         if peers and (correct > max(peers) * 2.5 or correct * 2.5 < min(peers)):
             length_leaks += 1
+    blank_pattern = re.compile(r"_{4,}")
+    family_contract_errors: Counter[str] = Counter()
+    for question in questions:
+        blank_count = len(blank_pattern.findall(question["question"]))
+        family = question["family"]
+        if family == "true_false":
+            invalid = (
+                blank_count != 0
+                or question.get("statement", "") not in question["question"]
+                or "completa la frase" in question["question"]
+            )
+        elif family == "fill_choice":
+            invalid = (
+                blank_count != 1
+                or "complete la expresión significativa" not in question["question"]
+            )
+        elif family == "single_choice_contextual":
+            invalid = (
+                blank_count != 1
+                or question.get("trap_type") != "true_in_other_context"
+                or len(question.get("why_distractors_fail", {})) != 3
+            )
+        else:
+            invalid = blank_count != 1
+        if invalid:
+            family_contract_errors[family] += 1
     return {
         "schema_version": "7.0",
         "bank_id": BANK_ID,
@@ -809,6 +834,8 @@ def audit_final_bank(
         "orphan_numeric_source_fragments": sum(
             bool(re.match(r"^\d+\)?,", fact["source_quote"])) for fact in facts
         ),
+        "family_contract_violations": sum(family_contract_errors.values()),
+        "family_contract_violations_by_family": dict(family_contract_errors),
         "coverage": {
             key: coverage[key]
             for key in ("uncovered_source_units", "fact_without_gold_question", "unmapped_source_units")

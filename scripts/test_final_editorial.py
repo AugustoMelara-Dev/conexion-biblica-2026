@@ -125,6 +125,22 @@ class FinalEditorialTests(unittest.TestCase):
                 question["correct_option"],
             )
 
+    def test_each_family_obeys_its_visible_question_contract(self) -> None:
+        blank = re.compile(r"_{4,}")
+        for question in self.questions:
+            blank_count = len(blank.findall(question["question"]))
+            if question["family"] == "true_false":
+                self.assertEqual(blank_count, 0, question["id"])
+                self.assertIn(question["statement"], question["question"], question["id"])
+                self.assertNotIn("completa la frase", question["question"], question["id"])
+            else:
+                self.assertEqual(blank_count, 1, question["id"])
+            if question["family"] == "fill_choice":
+                self.assertIn("complete la expresión significativa", question["question"], question["id"])
+            if question["family"] == "single_choice_contextual":
+                self.assertEqual(question["trap_type"], "true_in_other_context", question["id"])
+                self.assertEqual(len(question["why_distractors_fail"]), 3, question["id"])
+
     def test_gold_language_is_natural_and_schema_is_complete(self) -> None:
         editorial = self.require_editorial()
         if editorial is None:
@@ -266,6 +282,7 @@ class FinalEditorialTests(unittest.TestCase):
             "external_knowledge_questions",
             "answer_length_leaks",
             "orphan_numeric_source_fragments",
+            "family_contract_violations",
         ):
             self.assertEqual(audit[key], 0, key)
 
