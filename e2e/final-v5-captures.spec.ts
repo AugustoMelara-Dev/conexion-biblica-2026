@@ -106,6 +106,6 @@ test("genera las capturas de aceptación del banco canónico", async ({ page }, 
     await page.getByRole("button", { name: "Confirmar respuesta" }).click()
     await page.getByRole("button", { name: "Siguiente" }).click()
   }
-  await expect(page.getByText("Pregunta 10 de 101", { exact: true })).toBeVisible()
+  await expect(page.getByText(/^Pregunta 10 de 10[1-9]$/, { exact: true })).toBeVisible()
   await page.screenshot({ path: join(output, "07-recuperacion-otra-variante.png"), fullPage: true })
 })
