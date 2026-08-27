@@ -45,7 +45,7 @@ describe("final mission selection", () => {
     expect(b.map((item) => item.factId)).toEqual(["F3"])
   })
 
-  it("builds every general round of 100 with 25 questions from each family", () => {
+  it("builds every general round of 100 with the mandatory 30/25/45 mix", () => {
     let cursor = 0
     const fill = Array.from({ length: 45 }, () =>
       make(cursor++, 7, null, {
@@ -83,7 +83,7 @@ describe("final mission selection", () => {
         return counts
       }, {})
 
-    expect(types).toEqual({ fill_blank: 25, true_false: 25, single_choice: 50 })
+    expect(types).toEqual({ fill_blank: 30, true_false: 25, single_choice: 45 })
     expect(
       Object.fromEntries(
         [
@@ -97,14 +97,14 @@ describe("final mission selection", () => {
         ]),
       ),
     ).toEqual({
-      single_choice_direct: 25,
-      fill_choice: 25,
+      single_choice_direct: 27,
+      fill_choice: 30,
       true_false: 25,
-      single_choice_contextual: 25,
+      single_choice_contextual: 18,
     })
     expect([tfAnswers.Verdadero, tfAnswers.Falso].sort()).toEqual([12, 13])
-    expect(selected.filter((item) => item.trapType === "true_elsewhere").length).toBe(25)
-    expect(selected.filter((item) => item.semanticSkill === "scene_identification").length).toBeGreaterThanOrEqual(10)
+    expect(selected.filter((item) => item.trapType === "true_elsewhere").length).toBeGreaterThanOrEqual(18)
+    expect(selected.filter((item) => item.semanticSkill === "cause_consequence").length).toBeGreaterThanOrEqual(10)
     expect(new Set(selected.map((item) => item.factId)).size).toBe(100)
   })
 })

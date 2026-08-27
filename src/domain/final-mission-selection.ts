@@ -33,27 +33,27 @@ function roundQuotas(count: number, seed: number): Array<[Bucket, number]> | nul
           : 0
   if (count === 100)
     return [
-      ["direct", 25],
-      ["fill", 25],
+      ["direct", 27],
+      ["fill", 30],
       ["tf_true", trueTarget],
       ["tf_false", 25 - trueTarget],
-      ["contextual", 25],
+      ["contextual", 18],
     ]
   if (count === 50)
     return [
-      ["direct", 13],
-      ["fill", 12],
+      ["direct", 14],
+      ["fill", 15],
       ["tf_true", 6],
       ["tf_false", 6],
-      ["contextual", 13],
+      ["contextual", 9],
     ]
   if (count === 20)
     return [
       ["direct", 5],
-      ["fill", 5],
+      ["fill", 6],
       ["tf_true", trueTarget],
       ["tf_false", 5 - trueTarget],
-      ["contextual", 5],
+      ["contextual", 4],
     ]
   return null
 }

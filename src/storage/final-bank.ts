@@ -104,7 +104,7 @@ export function adaptFinalQuestion(raw: FinalRawQuestion): Question {
     raw.validation_adversarial.status !== "passed" ||
     raw.validation_adversarial.second_defensible_option
   )
-    throw new Error(`La pregunta ${raw.id} no cumple las puertas V7`)
+    throw new Error(`La pregunta ${raw.id} no cumple las puertas V8`)
   if (raw.correct_option < 0 || raw.correct_option >= raw.options.length)
     throw new Error(`Respuesta fuera de rango en ${raw.id}`)
   const options = raw.options.map((text, index) => ({

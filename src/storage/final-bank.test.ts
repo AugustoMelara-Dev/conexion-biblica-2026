@@ -12,7 +12,7 @@ const raw = (overrides: Partial<FinalRawQuestion> = {}): FinalRawQuestion => ({
   id: "DAN7-GOLD-0001-SINGLE_CHOICE_CONTEXTUAL",
   bank_id: "BANCO_UNICO_CONEXION_BIBLICA_2026",
   bank_name: "Banco Maestro Único — Final 2026",
-  schema_version: "7.0",
+  schema_version: "8.0",
   source_unit_id: "DAN7-V019",
   fact_id: "DAN7-V019-F01",
   variant_id: "DAN7-V019-F01-SINGLE_CHOICE_CONTEXTUAL",
@@ -52,7 +52,7 @@ const raw = (overrides: Partial<FinalRawQuestion> = {}): FinalRawQuestion => ({
 })
 
 describe("canonical final bank storage", () => {
-  it("adapts V7 without exposing a versioned bank name", () => {
+  it("adapts V8 without exposing a versioned bank name", () => {
     const question = adaptFinalQuestion(raw())
     expect(question.bankId).toBe("BANCO_UNICO_CONEXION_BIBLICA_2026")
     expect(question.bankProfileId).toBe("final-v7")
@@ -72,7 +72,7 @@ describe("canonical final bank storage", () => {
 
   it("reads the canonical manifest and loads chapter shards lazily", async () => {
     const manifest: FinalBankManifest = {
-      schema_version: "7.0",
+      schema_version: "8.0",
       bank_id: "BANCO_UNICO_CONEXION_BIBLICA_2026",
       display_name: "Banco Maestro Único — Final 2026",
       gold_questions: 4,
@@ -93,7 +93,7 @@ describe("canonical final bank storage", () => {
 
   it("attaches alternate families for delayed repair without repeating the prompt", async () => {
     const manifest: FinalBankManifest = {
-      schema_version: "7.0",
+      schema_version: "8.0",
       bank_id: "BANCO_UNICO_CONEXION_BIBLICA_2026",
       display_name: "Banco Maestro Único — Final 2026",
       gold_questions: 4,
