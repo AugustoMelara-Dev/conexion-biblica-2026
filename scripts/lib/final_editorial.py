@@ -10,6 +10,7 @@ from typing import Any, Iterable
 
 from scripts.lib.final_bank import BANK_ID, DISPLAY_NAME, QUESTION_FAMILIES
 from scripts.lib.massive_generator import NUMBER_WORDS, STOPWORDS, TOKEN_RE, _candidate_spans
+from scripts.lib.source_inventory import _split_propositions
 
 
 FACT_QUOTAS = {
@@ -269,7 +270,7 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
 
 
 def _context_for(text: str, answer: str) -> str:
-    clauses = re.split(r"(?<=[.!?])(?:[”’\"»])?\s+", text)
+    clauses = _split_propositions(text)
     containing = [clause.strip() for clause in clauses if answer in clause]
     return min(containing, key=len) if containing else text
 
@@ -678,6 +679,9 @@ def audit_final_bank(
         "invalid_references": invalid_references,
         "external_knowledge_questions": sum(question["validation_source"].get("external_knowledge") is not False for question in questions),
         "answer_length_leaks": length_leaks,
+        "orphan_numeric_source_fragments": sum(
+            bool(re.match(r"^\d+\)?,", fact["source_quote"])) for fact in facts
+        ),
         "coverage": {
             key: coverage[key]
             for key in ("uncovered_source_units", "fact_without_gold_question", "unmapped_source_units")
