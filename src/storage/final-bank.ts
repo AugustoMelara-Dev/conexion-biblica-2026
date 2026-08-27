@@ -210,6 +210,7 @@ export async function loadFinalQuestionPool(input: {
   difficultyBands?: DifficultyBand[]
   types?: QuestionType[]
   family?: FinalQuestionFamily
+  seenFactIds?: Set<string>
   fetcher?: typeof fetch
 }) {
   const fetcher = input.fetcher ?? fetch
@@ -247,6 +248,13 @@ export async function loadFinalQuestionPool(input: {
     )
   }
   const ordered = shuffle(candidates, input.seed)
+  const seenFactIds = input.seenFactIds ?? new Set<string>()
+  const unseen = ordered.filter(
+    (question) => !seenFactIds.has(question.factId ?? question.factKey),
+  )
+  const seen = ordered.filter((question) =>
+    seenFactIds.has(question.factId ?? question.factKey),
+  )
   const supportsMandatoryMix =
     !input.types?.length ||
     (["fill_blank", "true_false", "single_choice"] as QuestionType[]).every(
@@ -256,13 +264,17 @@ export async function loadFinalQuestionPool(input: {
     (input.count === 20 || input.count === 50 || input.count === 100) &&
     supportsMandatoryMix &&
     !input.family
-  )
-    return attachRetryVariants(
-      selectMandatoryRound(ordered, input.count, input.seed),
-      retryCandidates,
-    )
+  ) {
+    let selected: Question[]
+    try {
+      selected = selectMandatoryRound(unseen, input.count, input.seed)
+    } catch {
+      selected = selectMandatoryRound(ordered, input.count, input.seed)
+    }
+    return attachRetryVariants(selected, retryCandidates)
+  }
   const facts = new Set<string>()
-  return attachRetryVariants(ordered
+  return attachRetryVariants([...unseen, ...seen]
     .filter((question) => {
       const fact = question.factId ?? question.factKey
       if (facts.has(fact)) return false

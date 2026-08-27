@@ -128,4 +128,63 @@ describe("canonical final bank storage", () => {
     expect(alternatives).toHaveLength(3)
     expect(alternatives.every((item) => item.family !== loaded.family)).toBe(true)
   })
+
+  it("prefers unseen facts across rounds and falls back only after novelty is exhausted", async () => {
+    const manifest: FinalBankManifest = {
+      schema_version: "8.0",
+      bank_id: "BANCO_UNICO_CONEXION_BIBLICA_2026",
+      display_name: "Banco Maestro Único — Final 2026",
+      gold_questions: 8,
+      unique_facts: 8,
+      shards: [
+        {
+          chapter: "DAN7",
+          question_count: 8,
+          questions_file: "banks/final-2026/questions/DAN7.json",
+        },
+      ],
+    }
+    const rows = [
+      ...Array.from({ length: 6 }, (_, index) =>
+        raw({
+          id: `SEEN-${index}`,
+          fact_id: `F-SEEN-${index}`,
+          variant_id: `V-SEEN-${index}`,
+        }),
+      ),
+      raw({ id: "NEW-1", fact_id: "F-NEW-1", variant_id: "V-NEW-1" }),
+      raw({ id: "NEW-2", fact_id: "F-NEW-2", variant_id: "V-NEW-2" }),
+    ]
+    const fetcher = vi.fn(async () => ({
+      ok: true,
+      json: async () => rows,
+    })) as unknown as typeof fetch
+
+    for (const seed of [1, 2, 3, 4, 5, 9, 17, 29]) {
+      const fresh = await loadFinalQuestionPool({
+        manifest,
+        chapters: [7],
+        count: 2,
+        seed,
+        seenFactIds: new Set(
+          Array.from({ length: 6 }, (_, index) => `F-SEEN-${index}`),
+        ),
+        fetcher,
+      })
+      expect(fresh.map((question) => question.factId).sort()).toEqual([
+        "F-NEW-1",
+        "F-NEW-2",
+      ])
+    }
+
+    const fallback = await loadFinalQuestionPool({
+      manifest,
+      chapters: [7],
+      count: 2,
+      seed: 9,
+      seenFactIds: new Set(rows.map((row) => row.fact_id)),
+      fetcher,
+    })
+    expect(fallback).toHaveLength(2)
+  })
 })

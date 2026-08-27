@@ -410,6 +410,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
               : config.trainingPresetId === "27-true-false"
                 ? "true_false"
                 : undefined,
+          seenFactIds: new Set(exposures.map((exposure) => exposure.factId)),
           seed: Date.now(),
         })
         await repositories.questions.putMany(gold)
@@ -565,7 +566,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       })
       return questions
     },
-    [consolidationManifest, finalManifest, massiveManifest, repositories]
+    [consolidationManifest, exposures, finalManifest, massiveManifest, repositories]
   )
 
   const importBankFiles = useCallback(
