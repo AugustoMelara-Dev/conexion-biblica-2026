@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { filterQuestionsForSelection, filterReportsForSelection, filterSessionsForSelection, questionBelongsToSelection } from "@/domain/banks"
+import { BANK_DEFINITIONS, filterQuestionsForSelection, filterReportsForSelection, filterSessionsForSelection, questionBelongsToSelection } from "@/domain/banks"
 import type { Question, QuestionReport, Session } from "@/domain/types"
 
 function question(bankProfileId: string) {
@@ -7,6 +7,13 @@ function question(bankProfileId: string) {
 }
 
 describe("selecciones de bancos", () => {
+  it("declara el banco final V9 de doce mil preguntas sin cambiar el perfil histórico", () => {
+    expect(BANK_DEFINITIONS["final-v7"]).toMatchObject({
+      version: "9.0",
+      expectedQuestionCount: 12000,
+    })
+  })
+
   it("V3 contiene sólo el banco curado de 500", () => {
     const master = question("master-v2")
     const supplement = question("prep-v3")

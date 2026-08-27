@@ -1,4 +1,4 @@
-const CACHE_NAME = "conexion-biblica-shell-v10"
+const CACHE_NAME = "conexion-biblica-shell-v11"
 const SHELL = [
   "/",
   "/index.html",

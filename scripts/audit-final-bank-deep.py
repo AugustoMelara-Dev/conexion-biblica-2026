@@ -6,6 +6,7 @@ import re
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
+from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -17,7 +18,9 @@ from scripts.lib.final_editorial import (
     MAX_CHAPTER_FACTS_PER_ANSWER,
     MAX_GLOBAL_FACTS_PER_ANSWER,
     _norm,
+    _atomic_true_false_statement,
     _complete_statement_text,
+    _negate_exact_action_statement,
     option_signature,
 )
 
@@ -150,22 +153,37 @@ def main() -> int:
         if family == "true_false":
             if blank_count or options != ["Verdadero", "Falso"]:
                 fail(errors, qid, "broken_true_false_contract")
+            if question.get("focused_true_statement") or (
+                "al evaluar específicamente" in question.get("statement", "").casefold()
+            ):
+                fail(errors, qid, "unsafe_true_false_template")
+            if question["correct_answer"] == "Falso" and fact["category"] not in {
+                "person", "place", "number", "action"
+            }:
+                fail(errors, qid, "unsafe_false_category")
             if question.get("statement", "") not in question["question"]:
                 fail(errors, qid, "statement_not_visible")
             if question["question"] != f"Verdadero o falso: {question.get('statement', '')}":
                 fail(errors, qid, "true_false_added_template_text")
+            exact_source_texts = {
+                _complete_statement_text(fact["context"]),
+                _complete_statement_text(fact["source_quote"]),
+            }
+            statement_mode = question.get("statement_mode")
+            truth_source_statement = question.get("truth_source_statement")
+            if statement_mode == "exact_source":
+                if truth_source_statement not in exact_source_texts:
+                    fail(errors, qid, "invalid_exact_true_false_source")
+            elif statement_mode == "atomic_presence":
+                if truth_source_statement != _atomic_true_false_statement(fact):
+                    fail(errors, qid, "invalid_atomic_true_false_statement")
+            else:
+                fail(errors, qid, "missing_true_false_statement_mode")
             expected_true_statement = (
-                f"Según {question['reference']}, {_complete_statement_text(fact['context'])}"
+                f"Según {question['reference']}, {truth_source_statement}"
             )
             if question["correct_answer"] == "Verdadero":
-                expected_visible_statement = (
-                    f"Según {question['reference']}, al evaluar específicamente "
-                    f"«{fact['answer']}», el pasaje afirma: "
-                    f"{_complete_statement_text(fact['context'])}"
-                    if question.get("focused_true_statement")
-                    else expected_true_statement
-                )
-                if question.get("statement") != expected_visible_statement:
+                if question.get("statement") != expected_true_statement:
                     fail(errors, qid, "true_statement_not_exact_source")
             else:
                 if question.get("corrected_statement") != expected_true_statement:
@@ -174,16 +192,37 @@ def main() -> int:
                     fail(errors, qid, "false_missing_precise_correction")
                 elif question["correction"] != fact["answer"]:
                     fail(errors, qid, "false_correction_answer_mismatch")
-                if option_signature(
-                    question["incorrect_detail"], fact["category"]
-                ) != option_signature(question["correction"], fact["category"]):
-                    fail(errors, qid, "false_grammatical_signature_mismatch")
-                if fact["category"] == "person" and (
+                mutation_kind = question.get("false_mutation_kind")
+                if mutation_kind == "negation":
+                    expected_negated = _negate_exact_action_statement(
+                        truth_source_statement, fact["answer"]
+                    )
+                    if fact["category"] != "action" or statement_mode != "exact_source":
+                        fail(errors, qid, "invalid_negation_category_or_mode")
+                    if question["incorrect_detail"].casefold() != f"no {fact['answer'].lower()}":
+                        fail(errors, qid, "invalid_negation_detail")
+                    if expected_negated is None or question.get("statement") != (
+                        f"Según {question['reference']}, {expected_negated}"
+                    ):
+                        fail(errors, qid, "invalid_controlled_negation")
+                else:
+                    if mutation_kind not in {
+                        "closed_category_substitution",
+                        "atomic_presence_substitution",
+                    }:
+                        fail(errors, qid, "missing_false_mutation_kind")
+                    if option_signature(
+                        question["incorrect_detail"], fact["category"]
+                    ) != option_signature(question["correction"], fact["category"]):
+                        fail(errors, qid, "false_grammatical_signature_mismatch")
+                if fact["category"] == "person" and statement_mode == "exact_source" and (
                     (_norm(question["incorrect_detail"]) in DIVINE_NAMES)
                     != (_norm(question["correction"]) in DIVINE_NAMES)
                 ):
                     fail(errors, qid, "false_divine_human_swap")
-                if _norm(question["incorrect_detail"]) in _norm(question["source_quote"]):
+                incorrect_norm = _norm(question["incorrect_detail"])
+                source_norm = _norm(question["source_quote"])
+                if f" {incorrect_norm} " in f" {source_norm} ":
                     fail(errors, qid, "false_detail_also_in_source")
                 if question["option_category"] == "term" and (
                     question.get("replacement_slot_signature")
@@ -258,9 +297,25 @@ def main() -> int:
             if question.get(status_field, {}).get("status") != "passed":
                 fail(errors, qid, f"{status_field}_not_passed")
 
+    universal_families = {
+        "single_choice_direct", "fill_choice", "single_choice_contextual"
+    }
+    true_false_by_fact: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for question in questions:
+        if question["family"] == "true_false":
+            true_false_by_fact[question["fact_id"]].append(question)
     for fact_id in facts_by_id:
-        if families_by_fact.get(fact_id) != FAMILIES:
-            errors.append(f"{fact_id}:missing_family_variant")
+        fact_families = families_by_fact.get(fact_id, set())
+        if not universal_families.issubset(fact_families):
+            errors.append(f"{fact_id}:missing_universal_family_variant")
+        tf_rows = true_false_by_fact.get(fact_id, [])
+        if tf_rows and (
+            len(tf_rows) != 2
+            or {row["correct_answer"] for row in tf_rows} != {"Verdadero", "Falso"}
+        ):
+            errors.append(f"{fact_id}:invalid_true_false_pair")
+    if len(true_false_by_fact) != 1500:
+        errors.append("facts:invalid_true_false_fact_count")
 
     global_answer_counts = Counter(_norm(fact["answer"]) for fact in facts)
     if global_answer_counts and max(global_answer_counts.values()) > MAX_GLOBAL_FACTS_PER_ANSWER:
@@ -275,6 +330,13 @@ def main() -> int:
             errors.append(f"{chapter}:answer_repetition_cap_exceeded")
 
     category_counts = Counter(fact["category"] for fact in facts)
+    dangling_answer_words = {
+        "a", "al", "con", "contra", "de", "del", "en", "entre", "hacia",
+        "hasta", "para", "por", "que", "sin", "sobre", "y", "o",
+    }
+    for fact in facts:
+        if fact["answer"].casefold().split()[-1] in dangling_answer_words:
+            errors.append(f"{fact['fact_id']}:dangling_answer_connector")
     for category, minimum in {
         "person": 150,
         "place": 60,
@@ -298,9 +360,9 @@ def main() -> int:
         and question["family"] == "single_choice_contextual"
         for question in questions
     )
-    if expert_contextual < 1200:
+    if expert_contextual < 1800:
         errors.append("difficulty:insufficient_expert_contextual_questions")
-    for family, minimum in {"single_choice_direct": 180, "true_false": 140}.items():
+    for family, minimum in {"single_choice_direct": 270, "true_false": 210}.items():
         if sum(
             question["difficulty"] == "expert" and question["family"] == family
             for question in questions

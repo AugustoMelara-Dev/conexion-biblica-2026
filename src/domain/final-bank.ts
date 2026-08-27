@@ -2,7 +2,7 @@ import type { QuestionOption } from "@/domain/types"
 
 export const FINAL_BANK_ID = "BANCO_UNICO_CONEXION_BIBLICA_2026" as const
 export const FINAL_BANK_DISPLAY_NAME = "Banco Maestro Único — Final 2026" as const
-export const FINAL_BANK_SCHEMA_VERSION = "8.0" as const
+export const FINAL_BANK_SCHEMA_VERSION = "9.0" as const
 
 export const FINAL_QUESTION_FAMILIES = [
   "single_choice_direct",

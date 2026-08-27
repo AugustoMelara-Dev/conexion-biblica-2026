@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs"
 import { resolve } from "node:path"
 import { describe, expect, it } from "vitest"
 
-import { selectMandatoryHundred } from "@/domain/final-mission-selection"
+import { selectMandatoryHundred, selectMissionQuestions } from "@/domain/final-mission-selection"
 import {
   adaptFinalQuestion,
   type FinalBankManifest,
@@ -21,7 +21,13 @@ const questions = manifest.shards.flatMap((shard) => {
   return rows.filter((row) => row.blind_pool === null).map(adaptFinalQuestion)
 })
 
-describe("real V8 final bank rounds", () => {
+describe("real V9 final bank rounds", () => {
+  it("loads exactly twelve thousand GOLD variants over three thousand facts", () => {
+    expect(manifest.gold_questions).toBe(12000)
+    expect(manifest.unique_facts).toBe(3000)
+    expect(manifest.shards.reduce((sum, shard) => sum + shard.question_count, 0)).toBe(12000)
+  })
+
   it("selects 100 distinct facts with the required competitive mix", () => {
     const selected = selectMandatoryHundred(questions, 20260829)
     const byType = {
@@ -51,4 +57,13 @@ describe("real V8 final bank rounds", () => {
     ).length
     expect([trueCount, 25 - trueCount].sort()).toEqual([12, 13])
   })
+
+  it.each([50, 100, 200] as const)(
+    "builds a %i-question session without repeating a fact",
+    (count) => {
+      const selected = selectMissionQuestions({ questions, count, seed: 20260829 + count })
+      expect(selected).toHaveLength(count)
+      expect(new Set(selected.map((question) => question.factId)).size).toBe(count)
+    },
+  )
 })

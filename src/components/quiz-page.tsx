@@ -125,8 +125,8 @@ export function QuizPage({
   const showFeedback =
     showsImmediateFeedback(config.mode) && submitted && feedback
   const displayedQuestion = useMemo(
-    () => shuffleQuestionOptions(question, config.shuffleOptions),
-    [config.shuffleOptions, question]
+    () => shuffleQuestionOptions(question, config.shuffleOptions, startedAt),
+    [config.shuffleOptions, question, startedAt]
   )
 
   const clearDeferredTransition = useCallback(() => {
@@ -1068,13 +1068,18 @@ function familyLabel(question: Question) {
       : "Selección única"
 }
 
-function shuffleQuestionOptions(question: Question, shuffle: boolean) {
+export function shuffleQuestionOptions(
+  question: Question,
+  shuffle: boolean,
+  sessionSeed = 0,
+) {
   if (!shuffle || question.options.length < 2) return question
   const options = [...question.options]
   const offset =
-    question.id
+    (question.id
       .split("")
-      .reduce((sum, character) => sum + character.charCodeAt(0), 0) %
+      .reduce((sum, character) => sum + character.charCodeAt(0), 0) +
+      sessionSeed) %
     options.length
   return {
     ...question,

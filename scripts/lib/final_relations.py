@@ -127,6 +127,19 @@ def _first_words(value: str, maximum: int = 8) -> str:
     return value[selected[0].start():selected[-1].end()]
 
 
+def _complete_short_answer(value: str, maximum: int = 8) -> str:
+    matches = list(re.finditer(_WORD, value))
+    if not matches or len(matches) > maximum:
+        return ""
+    answer = value[matches[0].start():matches[-1].end()]
+    if answer.casefold().split()[-1] in {
+        "a", "al", "con", "contra", "de", "del", "en", "entre", "hacia",
+        "hasta", "para", "por", "que", "sin", "sobre", "y", "o",
+    }:
+        return ""
+    return answer
+
+
 def _generic_purposes(unit: dict[str, Any]) -> list[dict[str, Any]]:
     text = _source_text(unit)
     reference = str(unit["reference"])
@@ -137,13 +150,19 @@ def _generic_purposes(unit: dict[str, Any]) -> list[dict[str, Any]]:
         raw = match.group("answer").strip()
         # El auxiliar no es el contenido que se desea recuperar.
         raw = re.sub(r"^(?:sea|sean|fuera|fuesen)\s+", "", raw, flags=re.IGNORECASE)
-        answer = _first_words(raw)
+        answer = _complete_short_answer(raw)
+        if not answer:
+            continue
+        before_words = re.findall(_WORD, text[:match.start()])[-10:]
+        anchor = " ".join(before_words).strip()
+        if not anchor:
+            continue
         row = _candidate(
             unit,
             answer=answer,
             question=(
-                f"Según {reference}, ¿qué propósito declara explícitamente "
-                "la expresión «para que» en esta escena?"
+                f"Según {reference}, en la afirmación «{anchor}», ¿qué "
+                "propósito introduce explícitamente la expresión «para que»?"
             ),
             relation_type="purpose",
             category="phrase" if len(answer.split()) > 1 else "action",
@@ -163,9 +182,9 @@ def _generic_causes(unit: dict[str, Any]) -> list[dict[str, Any]]:
         text,
         re.IGNORECASE,
     ):
-        answer = _first_words(match.group("answer"))
+        answer = _complete_short_answer(match.group("answer"))
         # Exigir sujeto o verbo reduce fragmentos editoriales sin autonomía.
-        if len(answer.split()) < 2:
+        if not answer or len(answer.split()) < 2:
             continue
         before_words = re.findall(_WORD, text[:match.start()])[-12:]
         anchor = " ".join(before_words).strip()
@@ -196,8 +215,8 @@ def _generic_consequences(unit: dict[str, Any]) -> list[dict[str, Any]]:
         text,
         re.IGNORECASE,
     ):
-        answer = _first_words(match.group("answer"))
-        if len(answer.split()) < 2:
+        answer = _complete_short_answer(match.group("answer"))
+        if not answer or len(answer.split()) < 2:
             continue
         row = _candidate(
             unit,

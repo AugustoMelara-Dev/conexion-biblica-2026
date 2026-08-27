@@ -8,6 +8,8 @@ describe("centro de entrenamiento masivo", () => {
   it("muestra una sola acción recomendada y oculta los veinte modos hasta pedirlos", async () => {
     const onStart = vi.fn<(config: SessionConfig) => void>()
     render(<MassiveTrainingHub onStart={onStart} />)
+    expect(screen.getByText("12,000 preguntas GOLD")).toBeVisible()
+    expect(screen.getByText("3,000 hechos")).toBeVisible()
     expect(screen.getByText("Ronda recomendada")).toBeVisible()
     expect(screen.queryByRole("combobox", { name: "Modo avanzado" })).not.toBeInTheDocument()
     await userEvent.click(screen.getByRole("button", { name: "Ver plan y modos" }))
@@ -20,7 +22,7 @@ describe("centro de entrenamiento masivo", () => {
         count: 200,
         bankSelection: "final-v7",
         massive: true,
-        shuffleOptions: false,
+        shuffleOptions: true,
         trainingPresetId: "extreme-championship",
         includeBlind: false,
       })

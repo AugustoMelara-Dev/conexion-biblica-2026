@@ -17,7 +17,7 @@ import {
   it,
   vi,
 } from "vitest"
-import { MemoryCue, QuizPage } from "@/components/quiz-page"
+import { MemoryCue, QuizPage, shuffleQuestionOptions } from "@/components/quiz-page"
 import { ResultsPage } from "@/components/results-page"
 import { FocusShell } from "@/components/layout/focus-shell"
 import { QuestionRenderer } from "@/components/question-renderer"
@@ -189,6 +189,23 @@ function renderQuiz() {
 }
 
 describe("ronda enfocada", () => {
+  it("cambia la posición de las opciones entre sesiones y la conserva al recargar", () => {
+    const question = {
+      ...studyQuestion,
+      options: [
+        { id: "A", text: "Uno" },
+        { id: "B", text: "Dos" },
+        { id: "C", text: "Tres" },
+        { id: "D", text: "Cuatro" },
+      ],
+    }
+    const first = shuffleQuestionOptions(question, true, 1001)
+    const reload = shuffleQuestionOptions(question, true, 1001)
+    const nextSession = shuffleQuestionOptions(question, true, 1002)
+    expect(reload.options).toEqual(first.options)
+    expect(nextSession.options).not.toEqual(first.options)
+  })
+
   it("revela cita y explicación de distractores solo después de responder", async () => {
     const user = userEvent.setup()
     const massiveQuestion: Question = {

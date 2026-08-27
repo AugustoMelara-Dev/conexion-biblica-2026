@@ -34,12 +34,12 @@ class FinalEditorialTests(unittest.TestCase):
         self.assertIsNotNone(self.editorial, "falta scripts.lib.final_editorial")
         return self.editorial
 
-    def test_derives_2000_facts_and_covers_every_source_unit(self) -> None:
+    def test_derives_3000_facts_and_covers_every_source_unit(self) -> None:
         editorial = self.require_editorial()
         if editorial is None:
             return
         facts, rejected = self.facts, self.fact_rejected
-        self.assertEqual(len(facts), 2000)
+        self.assertEqual(len(facts), 3000)
         self.assertGreater(rejected, 0)
         covered = {fact["source_unit_id"] for fact in facts}
         expected = {
@@ -48,7 +48,7 @@ class FinalEditorialTests(unittest.TestCase):
             if unit["source_unit_id"] not in editorial.EDITORIALLY_EXCLUDED_SOURCE_UNITS
         }
         self.assertEqual(covered, expected)
-        self.assertEqual(len({fact["fact_id"] for fact in facts}), 2000)
+        self.assertEqual(len({fact["fact_id"] for fact in facts}), 3000)
         self.assertEqual(
             Counter(fact["chapter"] for fact in facts),
             editorial.FACT_QUOTAS,
@@ -110,6 +110,13 @@ class FinalEditorialTests(unittest.TestCase):
         self.assertFalse(
             any(fact["answer"] == "A los israelitas Moisés" for fact in facts)
         )
+        dangling = {
+            "a", "al", "con", "contra", "de", "del", "en", "entre",
+            "hacia", "hasta", "para", "por", "que", "sin", "sobre", "y", "o",
+        }
+        self.assertFalse(
+            any(fact["answer"].casefold().split()[-1] in dangling for fact in facts)
+        )
 
     def test_named_entities_and_sentence_starters_are_not_mixed(self) -> None:
         facts_by_answer = {}
@@ -130,6 +137,29 @@ class FinalEditorialTests(unittest.TestCase):
             ),
             "una mayúscula por inicio de oración no convierte la palabra en hecho competitivo",
         )
+        self.assertFalse(
+            any(
+                fact["source_unit_id"] == "DAN1-V003"
+                and fact["answer"] == "Israel"
+                and fact["category"] == "place"
+                for fact in self.facts
+            ),
+            "en «hijos de Israel», Israel no debe preguntarse como lugar",
+        )
+        self.assertFalse(
+            any(
+                fact["category"] == "person"
+                and fact["answer"] in {"santo", "invisible", "anciano"}
+                for fact in self.facts
+            ),
+            "adjetivos y sustantivos comunes en minúscula no son personajes",
+        )
+        pr39_spirit = [
+            fact for fact in self.facts
+            if fact["source_unit_id"] == "PR39-P030-P002-S002"
+        ]
+        self.assertTrue(any(fact["answer"] == "Espíritu Santo" for fact in pr39_spirit))
+        self.assertFalse(any(fact["answer"] == "Santo" for fact in pr39_spirit))
 
     def test_atomic_facts_are_not_inflated_by_the_same_answer(self) -> None:
         answer_counts = Counter(
@@ -137,7 +167,7 @@ class FinalEditorialTests(unittest.TestCase):
         )
         self.assertLessEqual(
             max(answer_counts.values()),
-            self.editorial.MAX_GLOBAL_FACTS_PER_ANSWER,
+            60,
             answer_counts.most_common(10),
         )
         for chapter in {fact["chapter"] for fact in self.facts}:
@@ -148,7 +178,7 @@ class FinalEditorialTests(unittest.TestCase):
             )
             self.assertLessEqual(
                 max(chapter_counts.values()),
-                self.editorial.MAX_CHAPTER_FACTS_PER_ANSWER,
+                10,
                 (chapter, chapter_counts.most_common(10)),
             )
 
@@ -169,26 +199,26 @@ class FinalEditorialTests(unittest.TestCase):
         )
         self.assertEqual(editorial._context_for(text, "38"), text)
 
-    def test_generates_8000_gold_questions_balanced_across_four_families(self) -> None:
+    def test_generates_12000_gold_questions_with_the_approved_mix(self) -> None:
         editorial = self.require_editorial()
         if editorial is None:
             return
         facts = self.facts
         questions, rejected = self.questions, self.question_rejected
-        self.assertEqual(len(questions), 8000)
+        self.assertEqual(len(questions), 12000)
         self.assertGreater(rejected, 0)
         self.assertEqual(
             Counter(question["family"] for question in questions),
             {
-                "single_choice_direct": 2000,
-                "fill_choice": 2000,
-                "true_false": 2000,
-                "single_choice_contextual": 2000,
+                "single_choice_direct": 3000,
+                "fill_choice": 3000,
+                "true_false": 3000,
+                "single_choice_contextual": 3000,
             },
         )
         self.assertEqual(
             Counter(question["difficulty"] for question in questions),
-            {"easy": 400, "medium": 1600, "hard": 3600, "expert": 2400},
+            {"easy": 600, "medium": 2400, "hard": 5400, "expert": 3600},
         )
         self.assertTrue(
             all(question["final_editorial_status"] == "GOLD" for question in questions)
@@ -214,16 +244,16 @@ class FinalEditorialTests(unittest.TestCase):
         )
         self.assertGreaterEqual(
             sum(question["family"] == "single_choice_contextual" for question in expert),
-            1200,
+            1800,
             Counter(question["family"] for question in expert),
         )
         self.assertGreaterEqual(
             sum(question["family"] == "single_choice_direct" for question in expert),
-            180,
+            270,
         )
         self.assertGreaterEqual(
             sum(question["family"] == "true_false" for question in expert),
-            140,
+            210,
         )
         self.assertGreaterEqual(
             sum(
@@ -232,6 +262,20 @@ class FinalEditorialTests(unittest.TestCase):
                 for question in expert
             ),
             100,
+        )
+
+    def test_blind_reserve_contains_fifteen_percent_of_facts_without_overlap(self) -> None:
+        blind_by_fact = {}
+        for question in self.questions:
+            if question["blind_pool"]:
+                blind_by_fact.setdefault(question["fact_id"], set()).add(
+                    question["blind_pool"]
+                )
+        self.assertEqual(len(blind_by_fact), 450)
+        self.assertTrue(all(len(pools) == 1 for pools in blind_by_fact.values()))
+        self.assertEqual(
+            Counter(next(iter(pools)) for pools in blind_by_fact.values()),
+            {"A": 150, "B": 150, "emergency": 150},
         )
 
     def test_each_family_has_only_one_answer_and_compatible_options(self) -> None:
@@ -277,6 +321,7 @@ class FinalEditorialTests(unittest.TestCase):
                         self.editorial.SAFE_FALSE_ACTION_FORMS,
                         question["id"],
                     )
+
             else:
                 expected_blanks = 0 if question["family"] == "single_choice_contextual" else 1
                 self.assertEqual(blank_count, expected_blanks, question["id"])
@@ -300,6 +345,137 @@ class FinalEditorialTests(unittest.TestCase):
                     ),
                     question["id"],
                 )
+
+    def test_true_false_never_uses_focused_answer_reveal_templates(self) -> None:
+        """V/F debe evaluar una afirmación completa, no regalar el detalle evaluado."""
+        focused = [
+            question["id"]
+            for question in self.questions
+            if question["family"] == "true_false"
+            and question.get("focused_true_statement")
+        ]
+        self.assertEqual(focused, [])
+        for question in self.questions:
+            if question["family"] != "true_false":
+                continue
+            self.assertNotIn(
+                "al evaluar específicamente",
+                question["statement"].casefold(),
+                question["id"],
+            )
+
+    def test_true_false_is_balanced_unique_and_uses_only_safe_false_details(self) -> None:
+        """El equilibrio no puede depender de duplicados ni sustituciones abiertas."""
+        self.assertIsNone(
+            self.editorial._negate_exact_action_statement(
+                "Compara luego nuestros rostros con los otros rostros.",
+                "Compara",
+            )
+        )
+        rows = [
+            question for question in self.questions
+            if question["family"] == "true_false"
+        ]
+        self.assertEqual(
+            Counter(row["correct_answer"] for row in rows),
+            {"Verdadero": 1500, "Falso": 1500},
+        )
+        self.assertEqual(len({row["question"] for row in rows}), 3000)
+        rows_by_fact = {}
+        for row in rows:
+            rows_by_fact.setdefault(row["fact_id"], []).append(row)
+        self.assertEqual(len(rows_by_fact), 1500)
+        self.assertTrue(
+            all(
+                {row["correct_answer"] for row in fact_rows}
+                == {"Verdadero", "Falso"}
+                for fact_rows in rows_by_fact.values()
+            )
+        )
+        for false_row in (row for row in rows if row["correct_answer"] == "Falso"):
+            self.assertIn(
+                false_row["option_category"],
+                {"person", "place", "number", "action"},
+                false_row["id"],
+            )
+            if (
+                false_row["option_category"] == "action"
+                and false_row["statement_mode"] == "exact_source"
+            ):
+                self.assertEqual(
+                    false_row.get("false_mutation_kind"),
+                    "negation",
+                    false_row["id"],
+                )
+                self.assertTrue(
+                    false_row["incorrect_detail"].casefold().startswith("no "),
+                    false_row["id"],
+                )
+            if (
+                false_row["option_category"] == "person"
+                and self.editorial._norm(false_row["correction"])
+                in self.editorial.DIVINE_NAMES
+            ):
+                self.assertEqual(
+                    false_row["statement_mode"],
+                    "atomic_presence",
+                    false_row["id"],
+                )
+
+        self.assertFalse(
+            any(
+                fact["category"] == "action"
+                and self.editorial._norm(fact["answer"]) == "triste"
+                for fact in self.facts
+            )
+        )
+
+    def test_known_broken_formulations_can_never_reenter_gold(self) -> None:
+        broken_fragments = {
+            "confusión púrpura",
+            "se hizo enhiesta",
+            "por tanto, fuese el sueño",
+            "con fe, oraron por sabiduría y varón",
+            "verdadero éxito de ellos mejor",
+            "perdió llamar",
+            "pasaba dar cuenta",
+            "se selló aceleradamente al puesto",
+            "el rostro hablaba un relámpago",
+            "prosperó bien a darío",
+        }
+        visible_text = "\n".join(
+            question["question"].casefold() for question in self.questions
+        )
+        for fragment in broken_fragments:
+            self.assertNotIn(fragment, visible_text)
+
+    def test_curated_pr_phrases_are_complete_meaningful_units(self) -> None:
+        answers = {fact["answer"] for fact in self.facts}
+        self.assertTrue(
+            {
+                "principio divino de cooperación",
+                "facultades superiores del ser",
+                "leyes inmutables",
+                "una gran verdad al monarca babilónico",
+                "libres para elegir a quien quieren servir",
+                "último libro del Nuevo Testamento",
+            }.issubset(answers)
+        )
+        self.assertTrue(
+            {
+                "divino de cooperación",
+                "superiores del ser",
+                "dependen de leyes",
+                "gran verdad al monarca",
+                "último libro",
+            }.isdisjoint(answers)
+        )
+
+    def test_relation_candidates_keep_the_grammar_of_their_answer(self) -> None:
+        self.assertEqual(
+            self.editorial._relation_grammatical_category("sintiera", "action"),
+            "verb",
+        )
 
     def test_no_gold_question_asks_for_or_answers_with_source_location(self) -> None:
         location = re.compile(
@@ -432,6 +608,7 @@ class FinalEditorialTests(unittest.TestCase):
                     question["correction"], question["option_category"]
                 )
                 for question in false_questions
+                if question.get("false_mutation_kind") != "negation"
             ),
             "cada alteración falsa debe conservar la clase gramatical del detalle correcto",
         )
@@ -531,6 +708,7 @@ class FinalEditorialTests(unittest.TestCase):
                 for question in self.questions
                 if question["family"] == "true_false"
                 and question["correct_answer"] == "Falso"
+                and question.get("false_mutation_kind") != "negation"
             )
         )
 
@@ -558,6 +736,7 @@ class FinalEditorialTests(unittest.TestCase):
             "source_location_questions",
             "orphan_numeric_source_fragments",
             "family_contract_violations",
+            "unsafe_true_false_templates",
         ):
             self.assertEqual(audit[key], 0, key)
 
@@ -576,8 +755,12 @@ class FinalEditorialTests(unittest.TestCase):
             return
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         self.assertEqual(manifest["bank_id"], "BANCO_UNICO_CONEXION_BIBLICA_2026")
-        self.assertEqual(manifest["gold_questions"], 8000)
-        self.assertEqual(manifest["unique_facts"], 2000)
+        self.assertEqual(manifest["gold_questions"], 12000)
+        self.assertEqual(manifest["unique_facts"], 3000)
+        self.assertEqual(
+            manifest["blind_fact_pools"],
+            {"A": 150, "B": 150, "emergency": 150},
+        )
         self.assertEqual(len(manifest["shards"]), 18)
         self.assertTrue(
             all((ROOT / "public" / shard["questions_file"]).exists() for shard in manifest["shards"])

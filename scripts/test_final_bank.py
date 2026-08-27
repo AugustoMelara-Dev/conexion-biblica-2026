@@ -21,7 +21,7 @@ class FinalBankContractTests(unittest.TestCase):
         self.assertEqual(
             self.contract.DISPLAY_NAME, "Banco Maestro Único — Final 2026"
         )
-        self.assertEqual(self.contract.SCHEMA_VERSION, "8.0")
+        self.assertEqual(self.contract.SCHEMA_VERSION, "9.0")
         self.assertEqual(
             set(self.contract.QUESTION_FAMILIES),
             {

@@ -123,7 +123,7 @@ function createAppContext({
     statistics: buildStatistics([question], progress),
     massiveManifest: null,
     finalManifest: {
-      schema_version: "8.0",
+      schema_version: "9.0",
       bank_id: "BANCO_UNICO_CONEXION_BIBLICA_2026",
       display_name: "Banco Maestro Único — Final 2026",
       gold_questions: 300,

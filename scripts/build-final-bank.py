@@ -118,6 +118,12 @@ def main() -> None:
             "silver_repaired": 0,
         }
     )
+    blind_pool_by_fact = {
+        question["fact_id"]: question["blind_pool"]
+        for question in questions
+        if question["blind_pool"]
+    }
+    audit["blind_fact_pools"] = dict(Counter(blind_pool_by_fact.values()))
     manifest = {
         "schema_version": SCHEMA_VERSION,
         "bank_id": BANK_ID,
@@ -141,6 +147,9 @@ def main() -> None:
         "difficulty": dict(Counter(question["difficulty"] for question in questions)),
         "blind_pools": dict(
             Counter(fact["blind_pool"] for fact in questions if fact["blind_pool"])
+        ),
+        "blind_fact_pools": dict(
+            Counter(blind_pool_by_fact.values())
         ),
         "coverage": {
             key: coverage[key]

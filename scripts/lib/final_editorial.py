@@ -16,12 +16,12 @@ from scripts.lib.source_inventory import _split_propositions
 
 
 FACT_QUOTAS = {
-    "DAN1": 55, "DAN2": 80, "DAN3": 60, "DAN4": 70, "DAN5": 60,
-    "DAN6": 60, "DAN7": 150, "DAN8": 150, "DAN9": 150, "DAN10": 90,
-    "DAN11": 184, "DAN12": 90, "PR39": 140, "PR40": 130, "PR41": 120,
-    "PR42": 120, "PR43": 161, "PR44": 130,
+    "DAN1": 83, "DAN2": 120, "DAN3": 90, "DAN4": 105, "DAN5": 90,
+    "DAN6": 90, "DAN7": 225, "DAN8": 225, "DAN9": 225, "DAN10": 135,
+    "DAN11": 306, "DAN12": 105, "PR39": 210, "PR40": 195, "PR41": 180,
+    "PR42": 180, "PR43": 241, "PR44": 195,
 }
-DIFFICULTY_COUNTS = {"easy": 400, "medium": 1600, "hard": 3600, "expert": 2400}
+DIFFICULTY_COUNTS = {"easy": 600, "medium": 2400, "hard": 5400, "expert": 3600}
 SAFE_FALSE_ACTION_FORMS = {
     "future_second_singular", "future_plural", "future_singular",
     "preterite_plural", "preterite_second_singular", "preterite_singular",
@@ -49,10 +49,21 @@ CATEGORY_TARGET_SHARES = {
 # Algunas unidades breves solo contienen un nombre central (por ejemplo,
 # «Dios»). El límite sigue evitando inflación global sin dejar unidades fuente
 # sin representación.
-MAX_GLOBAL_FACTS_PER_ANSWER = 30
-MAX_CHAPTER_FACTS_PER_ANSWER = 6
+# Una misma respuesta puede ser legítima en muchos capítulos (Daniel, Dios,
+# Babilonia). El límite global evita dominancia sin convertir esas apariciones
+# independientes en falsos duplicados; el objetivo por capítulo sigue siendo 10.
+MAX_GLOBAL_FACTS_PER_ANSWER = 60
+MAX_CHAPTER_FACTS_PER_ANSWER = 10
 EDITORIALLY_EXCLUDED_SOURCE_UNITS = {
     "PR39-P027-P001-S005": "Frase anafórica sin detalle autónomo: Y así lo hicieron.",
+}
+SAFE_EXACT_NEGATION_ACTION_FORMS = {
+    form
+    for form in SAFE_FALSE_ACTION_FORMS
+    if form not in {"gerund", "infinitive", "imperative", "participle"}
+}
+EDITORIALLY_EXCLUDED_CANDIDATES = {
+    "PR39-P030-P002-S002": {"santo"},
 }
 
 # Estas unidades no ofrecen por sí solas suficientes nombres, números, lugares
@@ -63,37 +74,37 @@ PHRASE_ONLY_OVERRIDES = {
     "DAN4-V003": "de generación en generación",
     "DAN4-V015": "bronce entre la hierba",
     "DAN10-V009": "un profundo sueño",
-    "DAN11-V005": "dominio será grande",
+    "DAN11-V005": "su dominio será grande",
     "DAN12-V001": "inscritos en el libro",
     "DAN12-V007": "la dispersión del poder",
-    "PR39-P030-P004-S002": "divino de cooperación",
+    "PR39-P030-P004-S002": "principio divino de cooperación",
     "PR39-P031-P004-S004": "satisfacción del apetito",
     "PR39-P031-P005-S001": "edificación del carácter",
     "PR39-P031-P005-S002": "adversario de las almas",
-    "PR39-P031-P005-S005": "superiores del ser",
-    "PR39-P031-P005-S008": "dependen de leyes",
+    "PR39-P031-P005-S005": "facultades superiores del ser",
+    "PR39-P031-P005-S008": "leyes inmutables",
     "PR39-P032-P003-S001": "esos nobles hebreos",
     "PR40-P033-P004-S003": "dones y mercedes",
     "PR40-P035-P001-S001": "una grande imagen",
-    "PR40-P035-P003-S003": "gran verdad al monarca",
+    "PR40-P035-P003-S003": "una gran verdad al monarca babilónico",
     "PR40-P037-P005-S002": "parecen hacerlos invencibles",
-    "PR41-P038-P001-S004": "sueño es verdadero",
-    "PR41-P038-P004-S002": "superar el original",
+    "PR41-P038-P001-S004": "El sueño es verdadero",
+    "PR41-P038-P004-S002": "iba a superar el original",
     "PR41-P040-P003-S001": "amenazas del rey",
-    "PR41-P041-P006-S004": "libres para elegir",
+    "PR41-P041-P006-S004": "libres para elegir a quien quieren servir",
     "PR43-P047-P004-S004": "hombres de genio",
     "PR43-P050-P006-S002": "el Fuerte",
-    "PR43-P051-P004-S001": "hiciste misericordias",
+    "PR43-P051-P004-S001": "no les hiciste misericordias",
     "PR43-P053-P001-S002": "todo está en agitación",
     "PR43-P053-P002-S001": "momento actual",
     "PR43-P053-P002-S002": "acontecimientos que se producen",
     "PR43-P053-P002-S003": "las naciones",
     "PR43-P053-P002-S004": "una crisis estupenda",
     "PR43-P053-P003-S001": "tan sólo la Biblia",
-    "PR44-P057-P007-S003": "se apoya en Dios",
+    "PR44-P057-P007-S003": "Un hombre cuyo corazón se apoya en Dios",
     "PR44-P057-P007-S004": "las realidades eternas",
-    "PR44-P058-P004-S002": "último libro",
-    "PR44-P059-P001-S006": "su propósito",
+    "PR44-P058-P004-S002": "último libro del Nuevo Testamento",
+    "PR44-P059-P001-S006": "se vincula con su propósito",
     "PR44-P059-P001-S007": "lo único firme",
 }
 ADDITIONAL_EDITORIAL_OVERRIDES = {
@@ -124,6 +135,7 @@ ADDITIONAL_EDITORIAL_OVERRIDES = {
     ],
     "DAN12-V012": [("mil trescientos treinta y cinco días", "number")],
     "DAN12-V013": [("fin de los días", "phrase")],
+    "PR39-P030-P002-S002": [("Espíritu Santo", "phrase")],
 }
 STOP_ANSWERS = {
     "alguno", "aquella", "aquello", "aquellos", "ellos", "estas", "estos", "mismo",
@@ -179,7 +191,7 @@ NON_VERB_IA = {
     "victoria", "vigilancia",
     "armonia", "idolatria", "mayoria", "mia", "simpatia", "vigia",
 }
-NON_VERB_FORMS = NON_VERB_IA | {"citara", "ira"}
+NON_VERB_FORMS = NON_VERB_IA | {"citara", "ira", "triste"}
 
 FUNCTION_WORDS = {
     "a", "al", "ante", "como", "con", "contra", "de", "del", "desde",
@@ -367,6 +379,18 @@ def _chapter_key(unit: dict[str, Any]) -> str:
     return ("DAN" if unit["work"] == "Daniel" else "PR") + str(unit["chapter"])
 
 
+def _relation_grammatical_category(answer: str, category: str) -> str:
+    if len(answer.split()) == 1:
+        if category == "action":
+            return "verb"
+        if category == "number":
+            return "number"
+        if category in {"person", "place"}:
+            return "proper"
+        return "word_plural" if answer.lower().endswith("s") else "word_singular"
+    return "phrase_plural" if answer.lower().endswith("s") else "phrase_singular"
+
+
 def _source_text(unit: dict[str, Any]) -> str:
     return str(unit.get("full_text") or unit.get("exact_text") or "").strip()
 
@@ -378,7 +402,11 @@ def _is_sentence_initial(text: str, start: int) -> bool:
 
 def _broad_category(answer: str, raw_category: str, unit: dict[str, Any]) -> str:
     normalized_answer = _norm(answer)
-    if normalized_answer in DIVINE_NAMES or normalized_answer in EXTRA_PERSON_NAMES:
+    if normalized_answer == "israel":
+        return "term"
+    if (
+        normalized_answer in DIVINE_NAMES and answer[:1].isupper()
+    ) or normalized_answer in EXTRA_PERSON_NAMES:
         return "person"
     if normalized_answer in EXTRA_PLACE_NAMES:
         return "place"
@@ -420,6 +448,8 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
         )
         raw_category = "number" if role == "number" else "verb" if role == "verb" else "proper" if is_named_entity else "word_plural" if answer.lower().endswith("s") else "word_singular"
         score = (5 if raw_category in {"proper", "number"} else 3 if raw_category == "verb" else 2) + len(answer) / 20
+        if normalized in EXTRA_PERSON_NAMES or normalized in EXTRA_PLACE_NAMES:
+            score += 20
         if raw_category == "verb" and _action_form(answer).startswith("conditional_"):
             score += 5
         raw_candidates.append((token.start(), token.end(), answer, raw_category, score))
@@ -594,7 +624,14 @@ def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any
             continue
         candidates, unit_rejected = _fact_candidates(unit)
         rejected += unit_rejected
-        editorial_candidates = [row for row in candidates if row["category"] != "phrase"]
+        excluded_candidates = EDITORIALLY_EXCLUDED_CANDIDATES.get(
+            unit["source_unit_id"], set()
+        )
+        editorial_candidates = [
+            row for row in candidates
+            if row["category"] != "phrase"
+            and _norm(row["answer"]) not in excluded_candidates
+        ]
         for relation in extract_relation_candidates(unit):
             text = _source_text(unit)
             answer = str(relation["answer"])
@@ -604,8 +641,8 @@ def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any
                     "answer": answer,
                     "start": start,
                     "end": start + len(answer),
-                    "grammatical_category": (
-                        "phrase_plural" if answer.lower().endswith("s") else "phrase_singular"
+                    "grammatical_category": _relation_grammatical_category(
+                        answer, str(relation["category"])
                     ),
                     "category": relation["category"],
                     "score": relation["score"],
@@ -673,6 +710,8 @@ def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any
             candidate, candidate_index = min(
                 available,
                 key=lambda row: (
+                    _norm(row[0]["answer"])
+                    not in (EXTRA_PERSON_NAMES | EXTRA_PLACE_NAMES),
                     chapter_answer_usage[_norm(row[0]["answer"])] >= MAX_CHAPTER_FACTS_PER_ANSWER,
                     global_answer_usage[_norm(row[0]["answer"])] >= MAX_GLOBAL_FACTS_PER_ANSWER,
                     chapter_category_usage[row[0]["category"]]
@@ -830,10 +869,52 @@ def _complete_statement_text(text: str) -> str:
     return core.rstrip(" ,;:") + "." + closing
 
 
+def _atomic_true_false_statement(fact: dict[str, Any]) -> str:
+    lead = {
+        "person": "entre los personajes o seres nombrados aparece",
+        "place": "entre los lugares o direcciones mencionados aparece",
+        "number": "entre los números o períodos expresados aparece",
+        "action": "el texto emplea la forma verbal",
+    }[fact["category"]]
+    return f"{lead} «{fact['answer']}»."
+
+
+def _negate_exact_action_statement(statement: str, answer: str) -> str | None:
+    """Negate one finite verb without breaking adjacent Spanish clitics."""
+    if _action_form(answer) not in SAFE_EXACT_NEGATION_ACTION_FORMS:
+        return None
+    if statement.count(answer) != 1:
+        return None
+    answer_start = statement.index(answer)
+    if (
+        _action_form(answer) == "subjunctive_past_singular"
+        and _is_sentence_initial(statement, answer_start)
+    ):
+        # Terminaciones como «Compara» coinciden superficialmente con «-ara»,
+        # pero aquí pueden ser imperativos y exigirían «No compares».
+        return None
+    if _norm(answer).endswith("iase"):
+        # Formas enclíticas antiguas como «manteníase» requieren mover «se».
+        return None
+    prefix = statement[:answer_start]
+    insert_at = answer_start
+    clitic = re.search(r"\b(?:me|te|se|lo|la|los|las|le|les|nos)\s+$", prefix, re.I)
+    if clitic:
+        insert_at = clitic.start()
+    words_before = re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+", statement[:insert_at])
+    if words_before and _norm(words_before[-1]) in {"no", "ni", "nunca", "tampoco", "sin"}:
+        return None
+    negation = "No " if _is_sentence_initial(statement, insert_at) else "no "
+    suffix = statement[insert_at:]
+    if negation == "No " and suffix:
+        suffix = suffix[:1].lower() + suffix[1:]
+    return statement[:insert_at] + negation + suffix
+
+
 def _category_label(category: str) -> str:
     return {
-        "person": "personaje",
-        "place": "lugar",
+        "person": "personaje o ser",
+        "place": "lugar o dirección",
         "number": "detalle numérico",
         "action": "acción",
         "term": "término",
@@ -952,15 +1033,17 @@ def _named_entity_phrase_replacement(
 
 def _review_choice(question: dict[str, Any]) -> dict[str, Any]:
     quote_norm = _norm(question["source_quote"])
+    def contains_phrase(value: str) -> bool:
+        normalized = _norm(value)
+        return bool(normalized) and f" {normalized} " in f" {quote_norm} "
+
     supported = [
         index for index, option in enumerate(question["options"])
-        if _norm(option) and _norm(option) in quote_norm
+        if contains_phrase(option)
     ]
     if question["family"] == "true_false":
-        asserted_norm = _norm(question.get("asserted_detail") or "")
-        correction_norm = _norm(question.get("correction") or "")
-        statement_supported = bool(asserted_norm) and asserted_norm in quote_norm
-        correction_supported = bool(correction_norm) and correction_norm in quote_norm
+        statement_supported = contains_phrase(question.get("asserted_detail") or "")
+        correction_supported = contains_phrase(question.get("correction") or "")
         selected = 0 if statement_supported else 1 if correction_supported else -1
         ambiguous = statement_supported and correction_supported
     else:
@@ -1009,8 +1092,8 @@ def _base_question(fact: dict[str, Any], family: str, index: int) -> dict[str, A
 
 
 def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], int]:
-    if len(facts) != 2000:
-        raise ValueError("Se requieren exactamente 2,000 hechos seleccionados")
+    if len(facts) != 3000:
+        raise ValueError("Se requieren exactamente 3,000 hechos seleccionados")
     distractor_pools: dict[tuple[str, tuple[Any, ...]], list[dict[str, Any]]] = defaultdict(list)
     entity_categories = {
         _norm(fact["answer"]): fact["category"]
@@ -1102,41 +1185,72 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             and bool(false_replacements(fact))
         )
 
-    false_candidates = sorted(
-        facts,
+    safe_false_candidates = sorted(
+        [fact for fact in facts if can_make_false(fact)],
         key=lambda fact: (
-            not can_make_false(fact),
-            fact["grammatical_category"] not in {"proper", "number", "verb", "word_singular", "word_plural", "phrase_singular", "phrase_plural"},
-            _hash("false:" + fact["fact_id"]),
+            fact["grammatical_category"] not in {
+                "proper", "number", "verb", "word_singular", "word_plural"
+            },
+            _hash("safe-false:" + fact["fact_id"]),
         ),
     )
-    facts_by_context = _group_by(facts, "context")
-    false_facts: set[str] = set()
-    for context_facts in facts_by_context.values():
-        ordered_context = sorted(
-            context_facts,
-            key=lambda fact: (
-                can_make_false(fact),
-                _hash("true-anchor:" + fact["fact_id"]),
-            ),
-        )
-        unreplaceable = [fact for fact in ordered_context if not can_make_false(fact)]
-        if unreplaceable:
-            false_facts.update(
-                fact["fact_id"] for fact in ordered_context if can_make_false(fact)
-            )
-        else:
-            false_facts.update(fact["fact_id"] for fact in ordered_context[1:])
-    for fact in false_candidates:
-        if len(false_facts) >= 1000:
+
+    # Cada hecho V/F necesita una afirmación verdadera completa y única. Un
+    # hecho puede usar la cláusula local o la unidad fuente íntegra; ambas son
+    # citas literales, nunca una paráfrasis inventada para distinguir variantes.
+    def true_statement_options(fact: dict[str, Any]) -> list[str]:
+        rows = []
+        for source_text in (fact["context"], fact["source_quote"]):
+            if source_text.count(fact["answer"]) != 1:
+                continue
+            completed = _complete_statement_text(source_text)
+            if completed not in rows:
+                rows.append(completed)
+        rows.append(_atomic_true_false_statement(fact))
+        return rows
+
+    facts_by_id = {fact["fact_id"]: fact for fact in safe_false_candidates}
+    statement_owner: dict[tuple[str, str], str] = {}
+    statement_by_fact: dict[str, str] = {}
+
+    def assign_unique_statement(fact: dict[str, Any], seen: set[tuple[str, str]]) -> bool:
+        for statement_text in true_statement_options(fact):
+            key = (fact["reference"], statement_text)
+            if key in seen:
+                continue
+            seen.add(key)
+            previous_id = statement_owner.get(key)
+            if previous_id is None or assign_unique_statement(facts_by_id[previous_id], seen):
+                statement_owner[key] = fact["fact_id"]
+                statement_by_fact[fact["fact_id"]] = statement_text
+                return True
+        return False
+
+    for fact in safe_false_candidates:
+        assign_unique_statement(fact, set())
+        if len(statement_by_fact) >= 1500:
             break
-        if not can_make_false(fact):
-            continue
-        false_facts.add(fact["fact_id"])
-    if len(false_facts) != 1000:
-        raise ValueError(f"No se pudo equilibrar Verdadero/Falso: {len(false_facts)} falsas")
+    if len(statement_by_fact) < 1500:
+        raise ValueError(
+            "La fuente no permite 1,500 pares V/F seguros y únicos: "
+            f"{len(statement_by_fact)}"
+        )
+    true_facts = [
+        facts_by_id[fact_id]
+        for fact_id in sorted(
+            statement_by_fact,
+            key=lambda fact_id: _hash("tf-true-selected:" + fact_id),
+        )[:1500]
+    ]
+    selected_true_ids = {fact["fact_id"] for fact in true_facts}
+    statement_by_fact = {
+        fact_id: statement
+        for fact_id, statement in statement_by_fact.items()
+        if fact_id in selected_true_ids
+    }
     questions: list[dict[str, Any]] = []
     used_true_false_prompts: set[str] = set()
+    used_true_false_prompt_norms: set[str] = set()
     rejected = sum(max(0, len(rows) - 3) for rows in distractor_map.values())
 
     for index, fact in enumerate(facts):
@@ -1150,124 +1264,264 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                 f"Es verdadero en {row['reference']}, pero no responde al contexto exacto de {fact['reference']}."
             for row in distractor_facts[:3]
         }
-        for family_offset, family in enumerate(QUESTION_FAMILIES):
+        for family_offset, family in enumerate(
+            ("single_choice_direct", "fill_choice", "single_choice_contextual")
+        ):
             base = _base_question(fact, family, index)
-            if family == "true_false":
-                false = fact["fact_id"] in false_facts
-                if not false:
-                    replacement_choices = [(fact["answer"], None)]
-                elif fact["category"] == "phrase":
-                    replacement_choices = []
-                else:
-                    replacement_choices = [
-                        (row["answer"], row) for row in false_replacements(fact)
-                    ]
-                if not replacement_choices:
-                    raise ValueError(f"V/F sin reemplazo natural: {fact['fact_id']}")
-                selected_choice: tuple[str, dict[str, Any] | None] | None = None
-                selected_statement = ""
-                for raw_replacement, candidate_row in replacement_choices:
-                    candidate_replacement = _match_initial_case(raw_replacement, fact["answer"])
-                    candidate_context = (
-                        fact["context"].replace(fact["answer"], candidate_replacement, 1)
-                        if false
-                        else fact["context"]
-                    )
-                    if not false and not can_make_false(fact):
-                        candidate_statement = (
-                            f"Según {fact['reference']}, al evaluar específicamente "
-                            f"«{fact['answer']}», el pasaje afirma: "
-                            f"{_complete_statement_text(candidate_context)}"
-                        )
-                    else:
-                        candidate_statement = (
-                            f"Según {fact['reference']}, {_complete_statement_text(candidate_context)}"
-                        )
-                    candidate_prompt = f"Verdadero o falso: {candidate_statement}"
-                    if candidate_prompt not in used_true_false_prompts:
-                        selected_choice = (candidate_replacement, candidate_row)
-                        selected_statement = candidate_statement
-                        break
-                if selected_choice is None:
-                    raise ValueError(f"V/F duplicado sin reemplazo alternativo: {fact['fact_id']}")
-                replacement, replacement_row = selected_choice
-                asserted_detail = replacement if false else fact["answer"]
-                statement = selected_statement
-                corrected_statement = f"Según {fact['reference']}, {_complete_statement_text(fact['context'])}"
-                used_true_false_prompts.add(f"Verdadero o falso: {statement}")
-                base.update(
-                    {
-                        "question": f"Verdadero o falso: {statement}",
-                        "statement": statement,
-                        "asserted_detail": asserted_detail,
-                        "options": ["Verdadero", "Falso"],
-                        "correct_option": 1 if false else 0,
-                        "correct_answer": "Falso" if false else "Verdadero",
-                        "corrected_statement": corrected_statement if false else "",
-                        "incorrect_detail": replacement if false else None,
-                        "correction": fact["answer"] if false else None,
-                        "focused_true_statement": not false and not can_make_false(fact),
-                        "replacement_source_ref": (
-                            replacement_row["reference"] if false and replacement_row else None
-                        ),
-                        "correct_slot_signature": fact.get("_slot_signature"),
-                        "replacement_slot_signature": (
-                            replacement_row.get("_slot_signature")
-                            if false and replacement_row
-                            else None
-                        ),
-                        "explanation": (
-                            f"Es falsa: la fuente dice «{fact['answer']}», no «{replacement}»."
-                            if false else f"Es verdadera y reproduce el detalle de {fact['reference']}."
-                        ),
-                        "why_distractors_fail": {
-                            "Verdadero" if false else "Falso": (
-                                f"La única alteración es «{replacement}»; la fuente contiene «{fact['answer']}»."
-                                if false else "La afirmación coincide literalmente con la unidad fuente."
-                            )
-                        },
-                        "trap_type": "single_plausible_detail" if false else None,
-                    }
+            position = (index + family_offset) % 4
+            options = _arrange_options(fact["answer"], distractors, position)
+            masked_context = _masked(fact["context"], fact["answer"], "________")
+            if family == "fill_choice":
+                question_text = f"Complete {fact['reference']}: «{masked_context}»"
+                trap_type = None
+            elif family == "single_choice_contextual":
+                question_text = fact.get("relation_prompt") or (
+                    f"Según {fact['reference']}, ¿qué {_category_label(fact['category'])} "
+                    f"corresponde específicamente a esta escena: "
+                    f"«{_masked(fact['context'], fact['answer'], '[…]')}»?"
                 )
+                trap_type = "true_in_other_context"
             else:
-                position = (index + family_offset) % 4
-                options = _arrange_options(fact["answer"], distractors, position)
-                masked_context = _masked(fact["context"], fact["answer"], "________")
-                if family == "fill_choice":
-                    question_text = f"Complete {fact['reference']}: «{masked_context}»"
-                    trap_type = None
-                elif family == "single_choice_contextual":
-                    question_text = fact.get("relation_prompt") or (
-                        f"Según {fact['reference']}, ¿qué {_category_label(fact['category'])} "
-                        f"corresponde específicamente a esta escena: "
-                        f"«{_masked(fact['context'], fact['answer'], '[…]')}»?"
-                    )
-                    trap_type = "true_in_other_context"
-                else:
-                    question_text = (
-                        f"Según {fact['reference']}, ¿qué {_category_label(fact['category'])} completa "
-                        f"correctamente «{masked_context}»?"
-                    )
-                    trap_type = None
-                base.update(
-                    {
-                        "question": question_text,
-                        "options": options,
-                        "correct_option": position,
-                        "correct_answer": fact["answer"],
-                        "explanation": (
-                            f"En el contexto exacto de {fact['reference']}, el detalle aplicable es «{fact['answer']}»: «{fact['context']}»."
-                            if family == "single_choice_contextual"
-                            else f"{fact['reference']} declara literalmente «{fact['context']}». La respuesta pedida es «{fact['answer']}»."
-                        ),
-                        "why_distractors_fail": why,
-                        "trap_type": trap_type,
-                    }
+                question_text = (
+                    f"Según {fact['reference']}, ¿qué {_category_label(fact['category'])} completa "
+                    f"correctamente «{masked_context}»?"
                 )
+                trap_type = None
+            base.update(
+                {
+                    "question": question_text,
+                    "options": options,
+                    "correct_option": position,
+                    "correct_answer": fact["answer"],
+                    "explanation": (
+                        f"En el contexto exacto de {fact['reference']}, el detalle aplicable es «{fact['answer']}»: «{fact['context']}»."
+                        if family == "single_choice_contextual"
+                        else f"{fact['reference']} declara literalmente «{fact['context']}». La respuesta pedida es «{fact['answer']}»."
+                    ),
+                    "why_distractors_fail": why,
+                    "trap_type": trap_type,
+                }
+            )
             base["validation_adversarial"] = _review_choice(base)
             if base["validation_adversarial"]["status"] != "passed":
                 raise ValueError(f"Revisión adversarial fallida: {base['id']}")
             questions.append(base)
+
+    fact_index = {fact["fact_id"]: index for index, fact in enumerate(facts)}
+    def append_true_false(
+        fact: dict[str, Any],
+        source_statement: str,
+        false: bool,
+        replacement_row: dict[str, Any] | None = None,
+        *,
+        visible_text_override: str | None = None,
+        incorrect_detail_override: str | None = None,
+        false_mutation_kind: str | None = None,
+    ) -> None:
+        base = _base_question(fact, "true_false", fact_index[fact["fact_id"]])
+        variant_label = "FALSE" if false else "TRUE"
+        base["id"] = f"{base['id']}-{variant_label}"
+        base["variant_id"] = f"{base['variant_id']}-{variant_label}"
+        base["template_id"] = "true-false-safe-editorial-v2"
+        replacement = (
+            _match_initial_case(replacement_row["answer"], fact["answer"])
+            if replacement_row else fact["answer"]
+        )
+        visible_text = visible_text_override or (
+            source_statement.replace(fact["answer"], replacement, 1)
+            if false else source_statement
+        )
+        incorrect_detail = incorrect_detail_override or replacement
+        statement = f"Según {fact['reference']}, {visible_text}"
+        prompt = f"Verdadero o falso: {statement}"
+        if prompt in used_true_false_prompts:
+            raise ValueError(f"V/F duplicado: {fact['fact_id']} ({variant_label})")
+        used_true_false_prompts.add(prompt)
+        used_true_false_prompt_norms.add(_norm(prompt))
+        corrected_statement = f"Según {fact['reference']}, {source_statement}"
+        exact_source_statements = {
+            _complete_statement_text(fact["context"]),
+            _complete_statement_text(fact["source_quote"]),
+        }
+        statement_mode = (
+            "exact_source" if source_statement in exact_source_statements else "atomic_presence"
+        )
+        base.update(
+            {
+                "question": prompt,
+                "statement": statement,
+                "asserted_detail": incorrect_detail,
+                "options": ["Verdadero", "Falso"],
+                "correct_option": 1 if false else 0,
+                "correct_answer": "Falso" if false else "Verdadero",
+                "corrected_statement": corrected_statement if false else "",
+                "incorrect_detail": incorrect_detail if false else None,
+                "correction": fact["answer"] if false else None,
+                "false_mutation_kind": false_mutation_kind if false else None,
+                "focused_true_statement": False,
+                "statement_mode": statement_mode,
+                "truth_source_statement": source_statement,
+                "replacement_source_ref": replacement_row["reference"] if replacement_row else None,
+                "correct_slot_signature": fact.get("_slot_signature"),
+                "replacement_slot_signature": replacement_row.get("_slot_signature") if replacement_row else None,
+                "explanation": (
+                    f"Es falsa: la fuente dice «{fact['answer']}», no «{incorrect_detail}»."
+                    if false else f"Es verdadera y reproduce literalmente {fact['reference']}."
+                ),
+                "why_distractors_fail": {
+                    "Verdadero" if false else "Falso": (
+                        f"La única alteración es «{incorrect_detail}»; la fuente contiene «{fact['answer']}»."
+                        if false else "La afirmación coincide literalmente con la unidad fuente."
+                    )
+                },
+                "trap_type": "single_plausible_detail" if false else None,
+            }
+        )
+        base["validation_adversarial"] = _review_choice(base)
+        if base["validation_adversarial"]["status"] != "passed":
+            raise ValueError(
+                f"Revisión adversarial fallida: {base['id']} "
+                f"({base['question']!r}; detalle={base.get('incorrect_detail')!r}; "
+                f"corrección={base.get('correction')!r})"
+            )
+        questions.append(base)
+
+    for fact in true_facts:
+        append_true_false(fact, statement_by_fact[fact["fact_id"]], False)
+
+    false_specs: list[tuple[dict[str, Any], str, dict[str, Any], str, str, str]] = []
+    for fact in true_facts:
+        selected: tuple[str, dict[str, Any], str, str, str] | None = None
+        source_statement = statement_by_fact[fact["fact_id"]]
+        replacement_candidates = false_replacements(fact)
+        if fact["category"] == "action":
+            exact_source_statements = {
+                _complete_statement_text(fact["context"]),
+                _complete_statement_text(fact["source_quote"]),
+            }
+            negated = (
+                _negate_exact_action_statement(source_statement, fact["answer"])
+                if source_statement in exact_source_statements
+                else None
+            )
+            if negated is not None:
+                incorrect_detail = f"no {fact['answer'].lower()}"
+                prompt = f"Verdadero o falso: Según {fact['reference']}, {negated}"
+                if (
+                    prompt not in used_true_false_prompts
+                    and _norm(prompt) not in used_true_false_prompt_norms
+                ):
+                    selected = (
+                        source_statement,
+                        {
+                            "answer": incorrect_detail,
+                            "reference": fact["reference"],
+                            "_slot_signature": fact.get("_slot_signature"),
+                        },
+                        negated,
+                        incorrect_detail,
+                        "negation",
+                    )
+            if selected is None:
+                source_statement = _atomic_true_false_statement(fact)
+        elif (
+            fact["category"] == "person"
+            and _norm(fact["answer"]) in DIVINE_NAMES
+        ):
+            # Sustituir «Señor» por «Santo» puede conservar el mismo referente
+            # y no produce una falsedad semántica inequívoca. En estos casos se
+            # pregunta solo por presencia textual y se usa otro personaje.
+            source_statement = _atomic_true_false_statement(fact)
+            replacement_candidates = [
+                row
+                for row in strict_false_distractor_map[fact["fact_id"]]
+                if _norm(row["answer"]) not in DIVINE_NAMES
+                and not _boundary_collision(
+                    fact["context"], fact["answer"], row["answer"]
+                )
+            ]
+        for replacement_row in replacement_candidates:
+            if selected is not None:
+                break
+            replacement = _match_initial_case(replacement_row["answer"], fact["answer"])
+            visible_text = source_statement.replace(fact["answer"], replacement, 1)
+            prompt = f"Verdadero o falso: Según {fact['reference']}, {visible_text}"
+            if (
+                prompt not in used_true_false_prompts
+                and _norm(prompt) not in used_true_false_prompt_norms
+            ):
+                selected = (
+                    source_statement,
+                    replacement_row,
+                    visible_text,
+                    replacement,
+                    (
+                        "atomic_presence_substitution"
+                        if source_statement == _atomic_true_false_statement(fact)
+                        else "closed_category_substitution"
+                    ),
+                )
+                break
+        if selected:
+            (
+                source_statement,
+                replacement_row,
+                visible_text,
+                incorrect_detail,
+                false_mutation_kind,
+            ) = selected
+            # Reservar antes de continuar para impedir que otro hecho produzca
+            # el mismo enunciado alterado durante la selección.
+            used_true_false_prompts.add(
+                f"Verdadero o falso: Según {fact['reference']}, "
+                f"{visible_text}"
+            )
+            used_true_false_prompt_norms.add(
+                _norm(
+                    f"Verdadero o falso: Según {fact['reference']}, "
+                    f"{visible_text}"
+                )
+            )
+            false_specs.append(
+                (
+                    fact,
+                    source_statement,
+                    replacement_row,
+                    visible_text,
+                    incorrect_detail,
+                    false_mutation_kind,
+                )
+            )
+    if len(false_specs) != 1500:
+        raise ValueError(
+            "La fuente no permite 1,500 alteraciones V/F seguras y únicas: "
+            f"{len(false_specs)}"
+        )
+    # Las reservas anteriores solo sirvieron durante la selección; la función
+    # de emisión vuelve a registrarlas junto con las verdaderas ya emitidas.
+    used_true_false_prompts = {
+        question["question"]
+        for question in questions
+        if question["family"] == "true_false"
+    }
+    used_true_false_prompt_norms = {_norm(prompt) for prompt in used_true_false_prompts}
+    for (
+        fact,
+        source_statement,
+        replacement_row,
+        visible_text,
+        incorrect_detail,
+        false_mutation_kind,
+    ) in false_specs:
+        append_true_false(
+            fact,
+            source_statement,
+            True,
+            replacement_row,
+            visible_text_override=visible_text,
+            incorrect_detail_override=incorrect_detail,
+            false_mutation_kind=false_mutation_kind,
+        )
 
     answer_frequency = Counter(fact["_normalized_answer"] for fact in facts)
 
@@ -1305,15 +1559,15 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
     expert_reserved = (
         hardest(
             [question for question in questions if question["family"] == "single_choice_direct"],
-            180,
+            270,
         )
         + hardest(
             [question for question in questions if question["family"] == "true_false"],
-            140,
+            210,
         )
         + hardest(
             [question for question in questions if question["family"] == "single_choice_contextual"],
-            1200,
+            1800,
         )
     )
     expert_ids = {question["id"] for question in expert_reserved}
@@ -1337,9 +1591,9 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             question["difficulty"] = label
         cursor += count
 
-    blind_order = sorted(facts, key=lambda fact: _hash("blind:" + fact["fact_id"]))[:300]
+    blind_order = sorted(facts, key=lambda fact: _hash("blind:" + fact["fact_id"]))[:450]
     blind_lookup = {
-        fact["fact_id"]: ("A" if index < 100 else "B" if index < 200 else "emergency")
+        fact["fact_id"]: ("A" if index < 150 else "B" if index < 300 else "emergency")
         for index, fact in enumerate(blind_order)
     }
     for question in questions:
@@ -1483,6 +1737,16 @@ def audit_final_bank(
         "broken_true_false": sum(
             not question.get("incorrect_detail") or not question.get("correction")
             for question in false_questions
+        ),
+        "unsafe_true_false_templates": sum(
+            bool(question.get("focused_true_statement"))
+            or "al evaluar específicamente" in question.get("statement", "").casefold()
+            or (
+                question["correct_answer"] == "Falso"
+                and question.get("option_category") not in {"person", "place", "number", "action"}
+            )
+            for question in questions
+            if question["family"] == "true_false"
         ),
         "invalid_references": invalid_references,
         "external_knowledge_questions": sum(question["validation_source"].get("external_knowledge") is not False for question in questions),

@@ -93,6 +93,29 @@ class FinalRelationTests(unittest.TestCase):
                 )
                 self.assertIn(str(unit["reference"]), str(candidate["question"]))
 
+    def test_repeated_connectors_receive_distinct_context_anchors(self) -> None:
+        candidates = self.extract("PR40-P036-P002-S002")
+        purposes = [row for row in candidates if row["relation_type"] == "purpose"]
+        self.assertEqual(len(purposes), 2)
+        self.assertEqual(len({row["question"] for row in purposes}), 2)
+        self.assertTrue(all("afirmación" in row["question"] for row in purposes))
+
+    def test_generic_relations_never_truncate_an_answer_at_a_connector(self) -> None:
+        dangling = {
+            "a", "al", "con", "contra", "de", "del", "en", "entre",
+            "hacia", "hasta", "para", "por", "que", "sin", "sobre", "y", "o",
+        }
+        for unit in self.inventory["units"]:
+            for candidate in self.extract(unit["source_unit_id"]):
+                last_word = str(candidate["answer"]).casefold().split()[-1]
+                self.assertNotIn(last_word, dangling, candidate)
+        self.assertFalse(
+            any(
+                row["answer"] == "al fin de ellos se presentarán delante del"
+                for row in self.extract("DAN1-V005")
+            )
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

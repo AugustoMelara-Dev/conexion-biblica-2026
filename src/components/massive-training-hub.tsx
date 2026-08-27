@@ -35,9 +35,8 @@ function configForMode(mode: MassiveTrainingMode, count = mode.count): SessionCo
         : ["single_choice", "fill_blank", "true_false"],
     statuses: mode.statuses,
     shuffleQuestions: true,
-    // El banco único baraja de forma determinista por exposición. Evitamos un segundo
-    // barajado para que recargar no cambie la posición durante la ronda activa.
-    shuffleOptions: false,
+    // La semilla de la ronda cambia la posición entre sesiones y la conserva al recargar.
+    shuffleOptions: true,
     perQuestionSeconds: mode.perQuestionSeconds,
     totalSeconds:
       competition && mode.perQuestionSeconds
@@ -81,8 +80,8 @@ export function MassiveTrainingHub({
               Final nacional de 100 preguntas: 30 completar, 25 verdadero/falso y 45 de selección. Sin repetir hechos.
             </CardDescription>
             <div className="mt-4 flex flex-wrap gap-2">
-              <Badge variant="secondary">8,000 preguntas GOLD</Badge>
-              <Badge variant="outline">2,000 hechos</Badge>
+              <Badge variant="secondary">12,000 preguntas GOLD</Badge>
+              <Badge variant="outline">3,000 hechos</Badge>
               <Badge variant="outline">Reserva ciega protegida</Badge>
             </div>
           </div>
