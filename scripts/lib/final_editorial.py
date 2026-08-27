@@ -28,7 +28,10 @@ STOP_ANSWERS = {
     "eres", "es", "era", "eran", "estaba", "estaban", "estuve", "estuvo",
     "ser", "sido", "sea", "sean", "sera", "seran", "fue", "fueron", "habia",
     "hay", "hoy", "ayer", "manana", "cuan", "cuanto", "como", "derribad",
-    "levantate",
+    "levantate", "ocurrir",
+    "rey demanda es dificil", "cosa semejante a ningun",
+    "tiempo algunos hombres caldeos", "dioses ni tampoco adoraremos",
+    "rey confirmare pueda mudarse", "a los israelitas moises",
 }
 
 ADVERB_FORMS = {
@@ -50,6 +53,7 @@ FUNCTION_WORDS = {
     "todos", "todas", "otro", "otra", "otros", "otras",
     "cuyo", "cuya", "cuyos", "cuyas", "aquel", "aquella", "aquellos",
     "aquellas", "alguno", "alguna", "algunos", "algunas", "unos", "unas",
+    "ningun", "ninguna", "ningunos", "ningunas",
 }
 VERB_FORMS = {
     "dijo", "respondio", "hablo", "vino", "fue", "hizo", "vio", "miraba",
@@ -63,6 +67,7 @@ VERB_FORMS = {
     "llamese", "fueron", "trajeron", "acercandose", "levantate", "llevara",
     "volvera", "llegara", "elevara", "pasados", "sentados", "considerados",
     "rodeado", "fuese", "tuve", "manteniase", "vi", "oi",
+    "confirmare", "pueda", "ocurrir",
 }
 
 
@@ -79,17 +84,17 @@ def _word_role(word: str) -> str:
     normalized = _norm(word)
     if normalized in ADVERB_FORMS or normalized.endswith("mente"):
         return "adverb"
-    if (normalized in FUNCTION_WORDS or normalized in STOPWORDS) and word.lower() != "hacía":
-        return "function"
     if normalized in NUMBER_WORDS or normalized.isdigit():
         return "number"
-    if re.search(r"(?:rá|rás|rán|ré|ría|rías|rían|ía|ían|ó)$", word.lower()):
+    if re.search(r"(?:rá|rás|rán|ré|remos|ría|rías|rían|ía|ían|ó|aremos|eremos|iremos)$", word.lower()):
         return "verb"
     if normalized in VERB_FORMS or re.search(
         r"(?:ando|iendo|andose|iendose|ado|ada|ados|adas|ido|ida|idos|idas|aron|ieron|aba|aban|ia|ian|ara|ira|aran|eran|iran)$",
         word.lower(),
     ):
         return "verb"
+    if (normalized in FUNCTION_WORDS or normalized in STOPWORDS) and word.lower() != "hacía":
+        return "function"
     return "content"
 
 
@@ -109,7 +114,15 @@ def option_signature(value: str, category: str | None = None) -> tuple[Any, ...]
     if category == "action":
         return (category, _action_form(value))
     if category == "phrase":
-        return (category, length)
+        if length == 2:
+            return (category, length, ("short_phrase",))
+        phrase_shape = tuple(
+            "function" if role == "function"
+            else "number" if role == "number"
+            else "content"
+            for role in roles
+        )
+        return (category, length, phrase_shape)
     shapes = tuple(
         f"function:{_norm(word)}" if role == "function"
         else role if role in {"number", "verb"}
@@ -205,7 +218,7 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
                 continue
             roles = [_word_role(token.group()) for token in group]
             starts_meaningfully = roles[0] in {"content", "function"}
-            if not starts_meaningfully or roles[-1] != "content" or "verb" in roles:
+            if not starts_meaningfully or roles[-1] != "content" or roles.count("verb") > 1:
                 continue
             raw_category = "phrase_plural" if answer.lower().endswith("s") else "phrase_singular"
             # Las expresiones completas tienen más valor editorial que una palabra
@@ -226,6 +239,16 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
         roles = [_word_role(word) for word in words]
         broad_category = _broad_category(answer, raw_category, unit)
         content_words = [word for word, role in zip(words, roles) if role == "content"]
+        invalid_content_determiner_start = (
+            len(words) > 1
+            and roles[0] == "content"
+            and roles[1] == "function"
+            and _norm(words[1]) not in {
+                "a", "al", "como", "con", "contra", "de", "del", "en",
+                "entre", "hacia", "hasta", "para", "por", "que", "sin",
+                "sobre", "tras",
+            }
+        )
         crosses_plural_into_name = (
             len(content_words) >= 2
             and content_words[-1][:1].isupper()
@@ -246,11 +269,12 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
                 and (
                     roles[0] not in {"content", "function"}
                     or roles[-1] != "content"
-                    or "verb" in roles
+                    or roles.count("verb") > 1
                 )
             )
             or (broad_category == "phrase" and len(words) == 1)
             or crosses_plural_into_name
+            or invalid_content_determiner_start
         ):
             rejected += 1
             continue
@@ -265,11 +289,12 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
             }
         )
     phrase_candidates = [row for row in candidates if row["category"] == "phrase"]
-    if len(phrase_candidates) > 2:
+    phrase_limit = 3 if unit["work"] == "Daniel" and unit["chapter"] == 12 else 2
+    if len(phrase_candidates) > phrase_limit:
         best_phrases = sorted(
             phrase_candidates,
             key=lambda row: (-float(row["score"]), -len(row["answer"]), int(row["start"])),
-        )[:2]
+        )[:phrase_limit]
         candidates = [row for row in candidates if row["category"] != "phrase"] + best_phrases
     if not candidates:
         raise ValueError(f"Unidad sin un detalle editorial significativo: {unit['source_unit_id']}")
@@ -408,6 +433,21 @@ def _arrange_options(correct: str, distractors: list[str], position: int) -> lis
     return options
 
 
+def _boundary_collision(context: str, answer: str, replacement: str) -> bool:
+    before, separator, after = context.partition(answer)
+    if not separator:
+        return True
+    before_words = _norm(before).split()
+    replacement_words = _norm(replacement).split()
+    after_words = _norm(after).split()
+    if not replacement_words:
+        return True
+    return bool(
+        (before_words and before_words[-1] == replacement_words[0])
+        or (after_words and replacement_words[-1] == after_words[0])
+    )
+
+
 def _review_choice(question: dict[str, Any]) -> dict[str, Any]:
     quote_norm = _norm(question["source_quote"])
     supported = [
@@ -474,6 +514,13 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
 
     def compatible_rows(fact: dict[str, Any]) -> list[dict[str, Any]]:
         rows = distractor_pools[(fact["category"], option_signature(fact["answer"], fact["category"]))]
+        if len(rows) < 4 and fact["category"] == "phrase":
+            answer_words = len(fact["answer"].split())
+            rows = [
+                row for row in facts
+                if row["category"] == "phrase"
+                and len(row["answer"].split()) == answer_words
+            ]
         eligible = [
             row for row in rows
             if row["fact_id"] != fact["fact_id"]
@@ -486,6 +533,8 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         return sorted(
             unique.values(),
             key=lambda row: (
+                option_signature(row["answer"], row["category"])
+                != option_signature(fact["answer"], fact["category"]),
                 fact["category"] == "action" and _action_form(row["answer"]) != _action_form(fact["answer"]),
                 row["chapter"] != fact["chapter"],
                 row["grammatical_category"] != fact["grammatical_category"],
@@ -519,7 +568,13 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             base = _base_question(fact, family, index)
             if family == "true_false":
                 false = fact["fact_id"] in false_facts
-                replacement = distractors[0]
+                replacement = next(
+                    (
+                        row["answer"] for row in distractor_facts
+                        if not _boundary_collision(fact["context"], fact["answer"], row["answer"])
+                    ),
+                    distractors[0],
+                )
                 statement = _masked(fact["context"], fact["answer"], replacement) if false else fact["context"]
                 masked_focus = _masked(fact["context"], fact["answer"], "________")
                 proposed_detail = replacement if false else fact["answer"]
