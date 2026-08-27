@@ -34,12 +34,12 @@ class FinalEditorialTests(unittest.TestCase):
         self.assertIsNotNone(self.editorial, "falta scripts.lib.final_editorial")
         return self.editorial
 
-    def test_derives_1500_facts_and_covers_every_source_unit(self) -> None:
+    def test_derives_2000_facts_and_covers_every_source_unit(self) -> None:
         editorial = self.require_editorial()
         if editorial is None:
             return
         facts, rejected = self.facts, self.fact_rejected
-        self.assertEqual(len(facts), 1500)
+        self.assertEqual(len(facts), 2000)
         self.assertGreater(rejected, 0)
         covered = {fact["source_unit_id"] for fact in facts}
         expected = {
@@ -48,10 +48,19 @@ class FinalEditorialTests(unittest.TestCase):
             if unit["source_unit_id"] not in editorial.EDITORIALLY_EXCLUDED_SOURCE_UNITS
         }
         self.assertEqual(covered, expected)
-        self.assertEqual(len({fact["fact_id"] for fact in facts}), 1500)
+        self.assertEqual(len({fact["fact_id"] for fact in facts}), 2000)
+        self.assertEqual(
+            Counter(fact["chapter"] for fact in facts),
+            editorial.FACT_QUOTAS,
+        )
         self.assertLessEqual(
             sum(fact["category"] == "phrase" for fact in facts),
-            37,
+            250,
+        )
+        self.assertGreaterEqual(
+            sum(bool(fact.get("relation_prompt")) for fact in facts),
+            40,
+            "el banco ampliado debe incluir relaciones explícitas, no solo huecos léxicos",
         )
         self.assertTrue(all(fact["answer"] in fact["source_quote"] for fact in facts))
         self.assertTrue(
@@ -160,26 +169,26 @@ class FinalEditorialTests(unittest.TestCase):
         )
         self.assertEqual(editorial._context_for(text, "38"), text)
 
-    def test_generates_6000_gold_questions_balanced_across_four_families(self) -> None:
+    def test_generates_8000_gold_questions_balanced_across_four_families(self) -> None:
         editorial = self.require_editorial()
         if editorial is None:
             return
         facts = self.facts
         questions, rejected = self.questions, self.question_rejected
-        self.assertEqual(len(questions), 6000)
+        self.assertEqual(len(questions), 8000)
         self.assertGreater(rejected, 0)
         self.assertEqual(
             Counter(question["family"] for question in questions),
             {
-                "single_choice_direct": 1500,
-                "fill_choice": 1500,
-                "true_false": 1500,
-                "single_choice_contextual": 1500,
+                "single_choice_direct": 2000,
+                "fill_choice": 2000,
+                "true_false": 2000,
+                "single_choice_contextual": 2000,
             },
         )
         self.assertEqual(
             Counter(question["difficulty"] for question in questions),
-            {"easy": 300, "medium": 1200, "hard": 2700, "expert": 1800},
+            {"easy": 400, "medium": 1600, "hard": 3600, "expert": 2400},
         )
         self.assertTrue(
             all(question["final_editorial_status"] == "GOLD" for question in questions)
@@ -205,16 +214,16 @@ class FinalEditorialTests(unittest.TestCase):
         )
         self.assertGreaterEqual(
             sum(question["family"] == "single_choice_contextual" for question in expert),
-            900,
+            1200,
             Counter(question["family"] for question in expert),
         )
         self.assertGreaterEqual(
             sum(question["family"] == "single_choice_direct" for question in expert),
-            130,
+            180,
         )
         self.assertGreaterEqual(
             sum(question["family"] == "true_false" for question in expert),
-            100,
+            140,
         )
         self.assertGreaterEqual(
             sum(
@@ -549,8 +558,8 @@ class FinalEditorialTests(unittest.TestCase):
             return
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         self.assertEqual(manifest["bank_id"], "BANCO_UNICO_CONEXION_BIBLICA_2026")
-        self.assertEqual(manifest["gold_questions"], 6000)
-        self.assertEqual(manifest["unique_facts"], 1500)
+        self.assertEqual(manifest["gold_questions"], 8000)
+        self.assertEqual(manifest["unique_facts"], 2000)
         self.assertEqual(len(manifest["shards"]), 18)
         self.assertTrue(
             all((ROOT / "public" / shard["questions_file"]).exists() for shard in manifest["shards"])

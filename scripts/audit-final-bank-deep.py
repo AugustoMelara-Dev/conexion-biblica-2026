@@ -292,9 +292,9 @@ def main() -> int:
         and question["family"] == "single_choice_contextual"
         for question in questions
     )
-    if expert_contextual < 900:
+    if expert_contextual < 1200:
         errors.append("difficulty:insufficient_expert_contextual_questions")
-    for family, minimum in {"single_choice_direct": 130, "true_false": 100}.items():
+    for family, minimum in {"single_choice_direct": 180, "true_false": 140}.items():
         if sum(
             question["difficulty"] == "expert" and question["family"] == family
             for question in questions

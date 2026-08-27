@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Construye los artefactos canónicos V7 desde el PDF y su caché OCR local."""
+"""Construye los artefactos canónicos V8 desde el PDF y su caché OCR verificada."""
 
 from __future__ import annotations
 
@@ -15,7 +15,13 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.lib.source_inventory import build_source_inventory
-from scripts.lib.final_bank import BANK_ID, DISPLAY_NAME, validate_coverage, validate_gold_bank
+from scripts.lib.final_bank import (
+    BANK_ID,
+    DISPLAY_NAME,
+    SCHEMA_VERSION,
+    validate_coverage,
+    validate_gold_bank,
+)
 from scripts.lib.final_editorial import (
     audit_final_bank,
     build_coverage_manifest,
@@ -113,7 +119,7 @@ def main() -> None:
         }
     )
     manifest = {
-        "schema_version": "7.0",
+        "schema_version": SCHEMA_VERSION,
         "bank_id": BANK_ID,
         "display_name": DISPLAY_NAME,
         "source": PDF_PATH.name,

@@ -8,7 +8,7 @@ from typing import Any
 
 BANK_ID = "BANCO_UNICO_CONEXION_BIBLICA_2026"
 DISPLAY_NAME = "Banco Maestro Único — Final 2026"
-SCHEMA_VERSION = "7.0"
+SCHEMA_VERSION = "8.0"
 QUESTION_FAMILIES = (
     "single_choice_direct",
     "fill_choice",

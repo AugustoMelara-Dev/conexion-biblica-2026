@@ -9,35 +9,39 @@ import unicodedata
 from collections import Counter, defaultdict
 from typing import Any, Iterable
 
-from scripts.lib.final_bank import BANK_ID, DISPLAY_NAME, QUESTION_FAMILIES
+from scripts.lib.final_bank import BANK_ID, DISPLAY_NAME, QUESTION_FAMILIES, SCHEMA_VERSION
+from scripts.lib.final_relations import extract_relation_candidates
 from scripts.lib.massive_generator import NUMBER_WORDS, STOPWORDS, TOKEN_RE, _candidate_spans
 from scripts.lib.source_inventory import _split_propositions
 
 
 FACT_QUOTAS = {
-    "DAN1": 41, "DAN2": 75, "DAN3": 50, "DAN4": 62, "DAN5": 51,
-    "DAN6": 48, "DAN7": 100, "DAN8": 100, "DAN9": 100, "DAN10": 50,
-    "DAN11": 100, "DAN12": 50, "PR39": 140, "PR40": 101, "PR41": 108,
-    "PR42": 62, "PR43": 161, "PR44": 101,
+    "DAN1": 55, "DAN2": 80, "DAN3": 60, "DAN4": 70, "DAN5": 60,
+    "DAN6": 60, "DAN7": 150, "DAN8": 150, "DAN9": 150, "DAN10": 90,
+    "DAN11": 184, "DAN12": 90, "PR39": 140, "PR40": 130, "PR41": 120,
+    "PR42": 120, "PR43": 161, "PR44": 130,
 }
-DIFFICULTY_COUNTS = {"easy": 300, "medium": 1200, "hard": 2700, "expert": 1800}
+DIFFICULTY_COUNTS = {"easy": 400, "medium": 1600, "hard": 3600, "expert": 2400}
 CATEGORY_SHARE_CAPS = {
     "person": 0.18,
     "place": 0.10,
     "number": 0.12,
     "action": 0.38,
     "term": 0.45,
-    "phrase": 0.04,
+    "phrase": 0.12,
 }
 CATEGORY_TARGET_SHARES = {
     "person": 0.12,
     "place": 0.06,
     "number": 0.08,
     "action": 0.30,
-    "term": 0.30,
-    "phrase": 0.02,
+    "term": 0.26,
+    "phrase": 0.08,
 }
-MAX_GLOBAL_FACTS_PER_ANSWER = 24
+# Algunas unidades breves solo contienen un nombre central (por ejemplo,
+# «Dios»). El límite sigue evitando inflación global sin dejar unidades fuente
+# sin representación.
+MAX_GLOBAL_FACTS_PER_ANSWER = 30
 MAX_CHAPTER_FACTS_PER_ANSWER = 6
 EDITORIALLY_EXCLUDED_SOURCE_UNITS = {
     "PR39-P027-P001-S005": "Frase anafórica sin detalle autónomo: Y así lo hicieron.",
@@ -90,9 +94,28 @@ ADDITIONAL_EDITORIAL_OVERRIDES = {
     "DAN7-V025": [("tiempo, tiempos y medio tiempo", "number")],
     "DAN8-V014": [("dos mil trescientas tardes y mañanas", "number")],
     "DAN9-V024": [("Setenta semanas", "number")],
-    "DAN12-V007": [("tiempo, tiempos y la mitad de un tiempo", "number")],
-    "DAN12-V011": [("mil doscientos noventa días", "number")],
+    "DAN12-V001": [
+        ("tiempo de angustia", "phrase"),
+        ("inscritos en el libro", "phrase"),
+    ],
+    "DAN12-V002": [
+        ("vida eterna", "phrase"),
+        ("confusión perpetua", "phrase"),
+    ],
+    "DAN12-V003": [("resplandor del firmamento", "phrase")],
+    "DAN12-V004": [("tiempo del fin", "phrase")],
+    "DAN12-V006": [("varón vestido de lino", "phrase")],
+    "DAN12-V007": [
+        ("tiempo, tiempos y la mitad de un tiempo", "number"),
+        ("pueblo santo", "phrase"),
+    ],
+    "DAN12-V010": [("limpios, emblanquecidos y purificados", "phrase")],
+    "DAN12-V011": [
+        ("mil doscientos noventa días", "number"),
+        ("abominación desoladora", "phrase"),
+    ],
     "DAN12-V012": [("mil trescientos treinta y cinco días", "number")],
+    "DAN12-V013": [("fin de los días", "phrase")],
 }
 STOP_ANSWERS = {
     "alguno", "aquella", "aquello", "aquellos", "ellos", "estas", "estos", "mismo",
@@ -230,13 +253,12 @@ def option_signature(value: str, category: str | None = None) -> tuple[Any, ...]
         return (category, _action_form(value))
     if category == "phrase":
         # Estas respuestas ya pasaron selección editorial como expresiones
-        # completas. La longitud y la función de la palabra inicial conservan
-        # opciones paralelas sin confundir una oración verbal con un sintagma.
-        if length == 2:
-            return (category, length, ("short_phrase",))
+        # completas. La función de la palabra inicial conserva opciones
+        # paralelas; la selección posterior favorece longitudes cercanas sin
+        # dejar sin distractores a relaciones verbales poco frecuentes.
         head = roles[0]
         head_shape = "verb_head" if head == "verb" else "function_head" if head == "function" else "content_head"
-        return (category, length, (head_shape,))
+        return (category, (head_shape,))
     if category == "term" and len(words) == 1:
         normalized = _norm(words[0])
         role = _word_role(words[0])
@@ -561,6 +583,24 @@ def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any
         candidates, unit_rejected = _fact_candidates(unit)
         rejected += unit_rejected
         editorial_candidates = [row for row in candidates if row["category"] != "phrase"]
+        for relation in extract_relation_candidates(unit):
+            text = _source_text(unit)
+            answer = str(relation["answer"])
+            start = text.index(answer)
+            editorial_candidates.append(
+                {
+                    "answer": answer,
+                    "start": start,
+                    "end": start + len(answer),
+                    "grammatical_category": (
+                        "phrase_plural" if answer.lower().endswith("s") else "phrase_singular"
+                    ),
+                    "category": relation["category"],
+                    "score": relation["score"],
+                    "relation_type": relation["relation_type"],
+                    "relation_prompt": relation["question"],
+                }
+            )
         overrides: list[tuple[str, str]] = []
         phrase_override = PHRASE_ONLY_OVERRIDES.get(unit["source_unit_id"])
         if phrase_override:
@@ -587,6 +627,13 @@ def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any
             )
         if not editorial_candidates:
             raise ValueError(f"Unidad sin hecho editorial revisado: {unit['source_unit_id']}")
+        deduplicated_candidates: dict[tuple[str, str], dict[str, Any]] = {}
+        for candidate in editorial_candidates:
+            key = (_norm(candidate["answer"]), str(candidate.get("relation_type") or "detail"))
+            current = deduplicated_candidates.get(key)
+            if current is None or float(candidate["score"]) > float(current["score"]):
+                deduplicated_candidates[key] = candidate
+        editorial_candidates = list(deduplicated_candidates.values())
         editorial_candidates.sort(key=lambda row: (-float(row["score"]), row["start"], row["answer"]))
         rejected += len(candidates) - len(editorial_candidates)
         by_chapter[_chapter_key(unit)].append((unit, editorial_candidates))
@@ -678,7 +725,8 @@ def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any
                     "context": _context_for(source_quote, answer),
                     "_slot_signature": _slot_syntax(source_quote, answer, candidate["category"]),
                     "importance": "critical" if chapter in {"DAN7", "DAN8", "DAN9", "DAN11", "PR43", "PR44"} else "high" if chapter in {"DAN10", "DAN12", "PR40", "PR42"} else "essential",
-                    "relation_type": "cause" if re.search(r"\bporque\b|\bpor cuanto\b", source_quote, re.I) else "consequence" if re.search(r"\bpor tanto\b|\bentonces\b|\basí\b", source_quote, re.I) else candidate["category"],
+                    "relation_type": candidate.get("relation_type") or candidate["category"],
+                    "relation_prompt": candidate.get("relation_prompt"),
                 }
             )
     facts.sort(key=lambda row: (row["chapter"], row["source_unit_id"], row["fact_id"]))
@@ -910,7 +958,7 @@ def _base_question(fact: dict[str, Any], family: str, index: int) -> dict[str, A
         "id": f"{fact['chapter']}-GOLD-{index + 1:04d}-{family.upper()}",
         "bank_id": BANK_ID,
         "bank_name": DISPLAY_NAME,
-        "schema_version": "7.0",
+        "schema_version": SCHEMA_VERSION,
         "source_unit_id": fact["source_unit_id"],
         "fact_id": fact["fact_id"],
         "variant_id": f"{fact['fact_id']}-{family.upper()}",
@@ -939,8 +987,8 @@ def _base_question(fact: dict[str, Any], family: str, index: int) -> dict[str, A
 
 
 def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], int]:
-    if len(facts) != 1500:
-        raise ValueError("Se requieren exactamente 1,500 hechos seleccionados")
+    if len(facts) != 2000:
+        raise ValueError("Se requieren exactamente 2,000 hechos seleccionados")
     distractor_pools: dict[tuple[str, tuple[Any, ...]], list[dict[str, Any]]] = defaultdict(list)
     entity_categories = {
         _norm(fact["answer"]): fact["category"]
@@ -1034,7 +1082,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             and strict_false_distractor_map[fact["fact_id"]]
         )
     for fact in false_candidates:
-        if len(false_facts) >= 750:
+        if len(false_facts) >= 1000:
             break
         if (
             fact["_normalized_answer"] in DIVINE_NAMES
@@ -1043,7 +1091,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         ):
             continue
         false_facts.add(fact["fact_id"])
-    if len(false_facts) != 750:
+    if len(false_facts) != 1000:
         raise ValueError(f"No se pudo equilibrar Verdadero/Falso: {len(false_facts)} falsas")
     questions: list[dict[str, Any]] = []
     rejected = sum(max(0, len(rows) - 3) for rows in distractor_map.values())
@@ -1140,7 +1188,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                     question_text = f"Complete {fact['reference']}: «{masked_context}»"
                     trap_type = None
                 elif family == "single_choice_contextual":
-                    question_text = (
+                    question_text = fact.get("relation_prompt") or (
                         f"Según {fact['reference']}, ¿qué {_category_label(fact['category'])} "
                         f"corresponde específicamente a esta escena: "
                         f"«{_masked(fact['context'], fact['answer'], '[…]')}»?"
@@ -1208,15 +1256,15 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
     expert_reserved = (
         hardest(
             [question for question in questions if question["family"] == "single_choice_direct"],
-            130,
+            180,
         )
         + hardest(
             [question for question in questions if question["family"] == "true_false"],
-            100,
+            140,
         )
         + hardest(
             [question for question in questions if question["family"] == "single_choice_contextual"],
-            900,
+            1200,
         )
     )
     expert_ids = {question["id"] for question in expert_reserved}
@@ -1240,9 +1288,9 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             question["difficulty"] = label
         cursor += count
 
-    blind_order = sorted(facts, key=lambda fact: _hash("blind:" + fact["fact_id"]))[:225]
+    blind_order = sorted(facts, key=lambda fact: _hash("blind:" + fact["fact_id"]))[:300]
     blind_lookup = {
-        fact["fact_id"]: ("A" if index < 75 else "B" if index < 150 else "emergency")
+        fact["fact_id"]: ("A" if index < 100 else "B" if index < 200 else "emergency")
         for index, fact in enumerate(blind_order)
     }
     for question in questions:
@@ -1292,7 +1340,7 @@ def build_coverage_manifest(
     covered = sum(entry["coverage_status"] == "covered" for entry in entries)
     mapped = {entry["source_unit_id"] for entry in entries}
     return {
-        "schema_version": "7.0",
+        "schema_version": SCHEMA_VERSION,
         "bank_id": BANK_ID,
         "source_units": len(entries),
         "covered_source_units": covered,
@@ -1370,7 +1418,7 @@ def audit_final_bank(
         if invalid:
             family_contract_errors[family] += 1
     return {
-        "schema_version": "7.0",
+        "schema_version": SCHEMA_VERSION,
         "bank_id": BANK_ID,
         "gold_questions": len(questions),
         "unique_facts": len(facts),
