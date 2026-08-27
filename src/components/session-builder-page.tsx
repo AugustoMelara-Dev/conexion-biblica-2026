@@ -88,6 +88,7 @@ export function SessionBuilderPage({
     progress,
     bankSelection,
     coverageCycles,
+    finalManifest,
   } = useApp()
   const [config, setConfig] = useState<SessionConfig>(() => ({
     ...initialConfig,
@@ -99,15 +100,29 @@ export function SessionBuilderPage({
   }))
   const [advancedOpen, setAdvancedOpen] = useState(false)
   const [totalEnabled, setTotalEnabled] = useState(false)
-  const availableChapters = useMemo(
-    () =>
-      new Set(
-        questions.map(
-          (question) => `${question.source.work}:${question.source.chapter}`
-        )
-      ),
-    [questions]
-  )
+  const finalChapterCounts = useMemo(() => {
+    const counts = new Map<string, number>()
+    if (bankSelection !== "final-v7" || !finalManifest) return counts
+    for (const shard of finalManifest.shards) {
+      const chapter = Number(shard.chapter.match(/\d+/)?.[0])
+      const work = shard.chapter.startsWith("DAN")
+        ? "Daniel"
+        : "Profetas y Reyes"
+      counts.set(
+        `${work}:${chapter}`,
+        shard.training_question_count ?? shard.question_count
+      )
+    }
+    return counts
+  }, [bankSelection, finalManifest])
+  const availableChapters = useMemo(() => {
+    if (finalChapterCounts.size) return new Set(finalChapterCounts.keys())
+    return new Set(
+      questions.map(
+        (question) => `${question.source.work}:${question.source.chapter}`
+      )
+    )
+  }, [finalChapterCounts, questions])
 
   useEffect(() => {
     setConfig((current) => ({
@@ -130,7 +145,27 @@ export function SessionBuilderPage({
     () => filterEligibleQuestions(questions, progress, config),
     [config, progress, questions]
   )
-  const estimated = eligibleQuestions.length
+  const manifestEstimate = useMemo(() => {
+    if (bankSelection !== "final-v7" || !finalChapterCounts.size) return null
+    if (!config.sourceWorks.length || !config.types.length) return 0
+    if (
+      config.difficultyBands?.length &&
+      !config.difficultyBands.some((band) => band !== "UNRATED")
+    )
+      return 0
+    const works = new Set(config.sourceWorks)
+    const chapters = new Set(config.chapters)
+    let total = 0
+    for (const [key, count] of finalChapterCounts) {
+      const [work, rawChapter] = key.split(":")
+      const chapter = Number(rawChapter)
+      if (!works.has(work as (typeof config.sourceWorks)[number])) continue
+      if (chapters.size && !chapters.has(chapter)) continue
+      total += count
+    }
+    return total
+  }, [bankSelection, config, finalChapterCounts])
+  const estimated = manifestEstimate ?? eligibleQuestions.length
   const update = (partial: Partial<SessionConfig>) =>
     setConfig((current) => ({ ...current, ...partial }))
   const toggleDifficulty = (difficulty: number) =>
@@ -203,6 +238,7 @@ export function SessionBuilderPage({
         sourceWorks: plan.chapters.map((group) => group.work),
         chapters: chaptersForStudyDay(day),
         bankSelection: "final-v7",
+        massive: true,
         strategy: "coverage-cycle",
         difficultyBands: ["BASIC", "MEDIUM", "HARD", "EXPERT", "UNRATED"],
       },
@@ -337,13 +373,12 @@ export function SessionBuilderPage({
                         {source === "Daniel" ? `D${chapter}` : `PR ${chapter}`}
                         {available ? (
                           <span className="ml-1 text-[10px] opacity-70">
-                            {
+                            {finalChapterCounts.get(`${source}:${chapter}`) ??
                               questions.filter(
                                 (q) =>
                                   q.source.work === source &&
                                   q.source.chapter === chapter
-                              ).length
-                            }
+                              ).length}
                           </span>
                         ) : null}
                       </Button>
@@ -517,7 +552,16 @@ export function SessionBuilderPage({
             disabled={
               !estimated || !config.types.length || !config.sourceWorks.length
             }
-            onStart={() => onStart(config, resetCycle)}
+            onStart={() =>
+              onStart(
+                {
+                  ...config,
+                  massive:
+                    config.massive || config.bankSelection === "final-v7",
+                },
+                resetCycle
+              )
+            }
           />
           {currentCycle ? (
             <p className="mt-3 text-xs text-muted-foreground">

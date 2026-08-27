@@ -87,9 +87,11 @@ function getQuestionProgress(input: Question): QuestionProgress {
 function createAppContext({
   coverageCycles,
   setBankSelection,
+  questions = [question],
 }: {
   coverageCycles: Map<string, CoverageCycle>
   setBankSelection: AppContext["setBankSelection"]
+  questions?: Question[]
 }): AppContext {
   const progress = new Map<string, QuestionProgress>()
 
@@ -101,8 +103,8 @@ function createAppContext({
     nav: "practice",
     setNav: vi.fn<AppContext["setNav"]>(),
     banks: [],
-    questions: [question],
-    allQuestions: [question],
+    questions,
+    allQuestions: questions,
     progress,
     exposures: [],
     sessions: [],
@@ -120,6 +122,21 @@ function createAppContext({
     activeRound: null,
     statistics: buildStatistics([question], progress),
     massiveManifest: null,
+    finalManifest: {
+      schema_version: "7.0",
+      bank_id: "BANCO_UNICO_CONEXION_BIBLICA_2026",
+      display_name: "Banco Maestro Único — Final 2026",
+      gold_questions: 300,
+      unique_facts: 75,
+      shards: [
+        {
+          chapter: "DAN1",
+          question_count: 300,
+          training_question_count: 252,
+          questions_file: "banks/final-2026/questions/DAN1.json",
+        },
+      ],
+    },
     refresh: async () => undefined,
     importBankFiles: async () => [],
     removeBank: async () => undefined,
@@ -255,6 +272,36 @@ describe("controles de preparación V3", () => {
 })
 
 describe("configuración progresiva de práctica", () => {
+  it("habilita la ronda desde el manifiesto antes de cargar preguntas por capítulos", async () => {
+    const user = userEvent.setup()
+    const onStart = vi.fn<StartRound>()
+    const setBankSelection = vi.fn<AppContext["setBankSelection"]>()
+    vi.mocked(useApp).mockReturnValue(
+      createAppContext({
+        coverageCycles: new Map(),
+        setBankSelection,
+        questions: [],
+      })
+    )
+
+    render(<SessionBuilderPage onStart={onStart} />)
+    await user.click(
+      screen.getByRole("button", { name: "Configuración avanzada" })
+    )
+
+    expect(screen.getByRole("button", { name: /D1\s+252/ })).toBeEnabled()
+    expect(screen.getByRole("button", { name: "D2" })).toBeDisabled()
+    expect(screen.getByText("252 preguntas disponibles con los filtros actuales.")).toBeVisible()
+    await user.click(screen.getByRole("button", { name: "Comenzar ronda" }))
+    expect(onStart).toHaveBeenCalledWith(
+      expect.objectContaining({
+        bankSelection: "final-v7",
+        massive: true,
+      }),
+      false
+    )
+  })
+
   it("oculta filtros secundarios hasta abrir configuración avanzada", async () => {
     const user = userEvent.setup()
     renderSessionBuilder()

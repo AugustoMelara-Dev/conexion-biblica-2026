@@ -96,6 +96,9 @@ def main() -> None:
             {
                 "chapter": chapter,
                 "question_count": len(rows),
+                "training_question_count": sum(
+                    question["blind_pool"] is None for question in rows
+                ),
                 "questions_file": file_name,
             }
         )

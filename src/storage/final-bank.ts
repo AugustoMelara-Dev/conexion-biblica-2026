@@ -63,6 +63,7 @@ export type FinalBankManifest = {
   shards: Array<{
     chapter: string
     question_count: number
+    training_question_count?: number
     questions_file: string
   }>
 }
