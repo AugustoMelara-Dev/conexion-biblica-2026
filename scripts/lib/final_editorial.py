@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import math
 import re
 import unicodedata
 from collections import Counter, defaultdict
@@ -20,6 +21,27 @@ FACT_QUOTAS = {
     "PR42": 62, "PR43": 161, "PR44": 101,
 }
 DIFFICULTY_COUNTS = {"easy": 300, "medium": 1200, "hard": 2700, "expert": 1800}
+CATEGORY_SHARE_CAPS = {
+    "person": 0.18,
+    "place": 0.10,
+    "number": 0.12,
+    "action": 0.38,
+    "term": 0.45,
+    "phrase": 0.04,
+}
+CATEGORY_TARGET_SHARES = {
+    "person": 0.12,
+    "place": 0.06,
+    "number": 0.08,
+    "action": 0.30,
+    "term": 0.30,
+    "phrase": 0.02,
+}
+MAX_GLOBAL_FACTS_PER_ANSWER = 24
+MAX_CHAPTER_FACTS_PER_ANSWER = 6
+EDITORIALLY_EXCLUDED_SOURCE_UNITS = {
+    "PR39-P027-P001-S005": "Frase anafórica sin detalle autónomo: Y así lo hicieron.",
+}
 
 # Estas unidades no ofrecen por sí solas suficientes nombres, números, lugares
 # o verbos aislados con valor competitivo. Sus expresiones se revisaron manualmente para
@@ -58,12 +80,13 @@ PHRASE_ONLY_OVERRIDES = {
     "PR43-P053-P003-S001": "tan sólo la Biblia",
     "PR44-P057-P007-S003": "se apoya en Dios",
     "PR44-P057-P007-S004": "las realidades eternas",
-    "PR44-P058-P002-S001": "imparte bendiciones temporales",
     "PR44-P058-P004-S002": "último libro",
     "PR44-P059-P001-S006": "su propósito",
     "PR44-P059-P001-S007": "lo único firme",
 }
 ADDITIONAL_EDITORIAL_OVERRIDES = {
+    "DAN7-V002": [("los cuatro vientos", "phrase")],
+    "DAN7-V013": [("un hijo de hombre", "phrase")],
     "DAN7-V025": [("tiempo, tiempos y medio tiempo", "number")],
     "DAN8-V014": [("dos mil trescientas tardes y mañanas", "number")],
     "DAN9-V024": [("Setenta semanas", "number")],
@@ -79,17 +102,41 @@ STOP_ANSWERS = {
     "eres", "es", "era", "eran", "estaba", "estaban", "estuve", "estuvo",
     "ser", "sido", "sea", "sean", "sera", "seran", "fue", "fueron", "habia",
     "hay", "hoy", "ayer", "manana", "cuan", "cuanto", "como", "derribad", "cortad", "trajeran",
-    "levantate", "ocurrir",
+    "levantate", "ocurrir", "sabes", "asimismo", "cualquiera", "tanto",
+    "dijo", "dije", "dijeron", "decia", "dio", "habia", "habian",
+    "hizo", "hicieron", "vio", "vino",
     "rey demanda es dificil", "cosa semejante a ningun",
     "tiempo algunos hombres caldeos", "dioses ni tampoco adoraremos",
-    "rey confirmare pueda mudarse", "a los israelitas moises",
+    "rey confirmare pueda mudarse", "a los israelitas moises", "nadie",
 }
-DIVINE_NAMES = {"dios", "jehova", "senor", "salvador", "mesias", "altisimo"}
+DIVINE_NAMES = {
+    "altisimo", "anciano", "cristo", "dios", "eterno", "huesped",
+    "invisible", "juez", "maestro", "jehova", "mesias", "omnipotente", "principe",
+    "redentor", "revelador", "salvador", "santo", "senor",
+    "todopoderoso", "vigilante",
+}
+
+EXTRA_PERSON_NAMES = {
+    "abednego", "aspenaz", "ezequiel", "jacob", "jeremias", "moises", "pablo",
+    "satanas", "samuel",
+}
+
+EXTRA_PLACE_NAMES = {
+    "atenas", "dura", "edom", "eufrates", "medo persia", "sesach", "ufaz",
+}
+
+# La fuente conserva muchas mayúsculas reverenciales o editoriales. No son
+# nombres de personajes y nunca deben competir con Aspenaz, Daniel o Gabriel.
+NON_ENTITY_CAPITALIZED = {
+    "apocalipsis", "caldeos", "cielo", "espiritu", "escrituras",
+    "evangelio", "fuente", "inspiracion", "palabra", "profecia",
+    "providencia", "sabiduria", "verdad",
+}
 
 ADVERB_FORMS = {
     "asi", "ahora", "luego", "despues", "tambien", "solo", "aqui", "debajo",
-    "ciertamente", "dondequiera", "entonces", "pronto", "delante", "encima",
-    "hoy", "ayer", "manana", "cuan", "cuanto", "como",
+    "ciertamente", "dondequiera", "entonces", "pronto", "adelante", "delante", "encima",
+    "hoy", "ayer", "manana", "cuan", "cuanto", "como", "ademas",
 }
 NON_VERB_IA = {
     "abundancia", "angustia", "apariencia", "bestia", "ciencia", "clemencia",
@@ -106,7 +153,8 @@ FUNCTION_WORDS = {
     "durante", "el", "en", "entre", "hacia", "hasta", "la", "las", "los",
     "para", "por", "segun", "sin", "sobre", "tras", "un", "una", "y",
     "este", "esta", "estos", "estas", "ese", "esa", "esos", "esas", "mi",
-    "mis", "tu", "tus", "entonces",
+    "mis", "tu", "tus", "nuestro", "nuestra", "nuestros", "nuestras",
+    "mediante", "entonces",
     "yo", "el", "ella", "ellos", "ellas", "nosotros", "vosotros", "usted",
     "ustedes", "me", "te", "se", "nos", "os", "le", "les", "lo", "la",
     "mucho", "mucha", "muchos", "muchas", "gran", "grandes", "varios",
@@ -152,9 +200,11 @@ def _word_role(word: str) -> str:
     if re.search(r"(?:ía|ían)$", word.lower()) and normalized not in NON_VERB_IA:
         return "verb"
     if normalized in VERB_FORMS or re.search(
-        r"(?:ando|iendo|andose|iendose|aron|ieron|aba|aban|ara|ira|aran|eran|iran)$",
+        r"(?:ando|iendo|andose|iendose|aron|ieron|aste|iste|aba|aban|ara|ira|aran|eran|iran|ar(?:me|te|se|lo|la|los|las|le|les|nos)|er(?:me|te|se|lo|la|los|las|le|les|nos)|ir(?:me|te|se|lo|la|los|las|le|les|nos))$",
         word.lower(),
     ):
+        return "verb"
+    if normalized.endswith("mos") and normalized not in {"ultimos", "ramos", "blasfemos"}:
         return "verb"
     if (normalized in FUNCTION_WORDS or normalized in STOPWORDS) and word.lower() != "hacía":
         return "function"
@@ -187,6 +237,43 @@ def option_signature(value: str, category: str | None = None) -> tuple[Any, ...]
         head = roles[0]
         head_shape = "verb_head" if head == "verb" else "function_head" if head == "function" else "content_head"
         return (category, length, (head_shape,))
+    if category == "term" and len(words) == 1:
+        normalized = _norm(words[0])
+        role = _word_role(words[0])
+        if role == "verb":
+            suffix = f"verb_like:{_action_form(words[0])}"
+        elif role == "adverb":
+            suffix = "adverb"
+        elif normalized.endswith(("ivo", "iva", "ivos", "ivas")):
+            suffix = "adjective_ive"
+        elif normalized.endswith(("oso", "osa", "osos", "osas")):
+            suffix = "adjective_ose"
+        elif normalized.endswith(("ante", "ente")):
+            suffix = "adjective_agent"
+        elif normalized.endswith(("ados", "idos")):
+            suffix = "masculine_participle_plural"
+        elif normalized.endswith(("adas", "idas")):
+            suffix = "feminine_participle_plural"
+        elif normalized.endswith(("antes", "entes")):
+            suffix = "agent_plural"
+        elif normalized.endswith("os"):
+            suffix = "masculine_plural"
+        elif normalized.endswith("as"):
+            suffix = "feminine_plural"
+        elif normalized.endswith("es"):
+            suffix = "e_or_consonant_plural"
+        elif normalized.endswith(("cion", "sion", "dad", "tad", "encia", "ancia")):
+            suffix = "feminine_consonant"
+        elif normalized.endswith("a"):
+            suffix = "a"
+        elif normalized.endswith("o"):
+            suffix = "o"
+        elif normalized.endswith("e"):
+            suffix = "e"
+        else:
+            suffix = "consonant"
+        plurality = "plural" if normalized.endswith("s") else "singular"
+        return (category, plurality, suffix)
     shapes = tuple(
         f"function:{_norm(word)}" if role == "function"
         else role if role in {"number", "verb", "adverb"}
@@ -203,11 +290,11 @@ def _action_form(value: str) -> str:
     irregular = {
         "eres": "present_e", "es": "present_e", "soy": "present_other", "son": "present_other",
         "esta": "present_a", "estan": "present_other", "tiene": "present_e", "tienen": "present_other",
-        "sabes": "present_other", "tuvo": "preterite", "dijo": "preterite", "dije": "preterite",
-        "hizo": "preterite", "vino": "preterite", "puso": "preterite",
-        "dio": "preterite", "bendijo": "preterite",
-        "trajo": "preterite", "trajeron": "preterite",
-        "fue": "preterite", "fueron": "preterite",
+        "sabes": "present_other", "tuvo": "preterite_singular", "dijo": "preterite_singular", "dije": "preterite_singular",
+        "hizo": "preterite_singular", "vino": "preterite_singular", "puso": "preterite_singular",
+        "dio": "preterite_singular", "bendijo": "preterite_singular",
+        "trajo": "preterite_singular", "trajeron": "preterite_plural",
+        "fue": "preterite_singular", "fueron": "preterite_plural",
     }
     if lower in irregular:
         return irregular[lower]
@@ -216,6 +303,7 @@ def _action_form(value: str) -> str:
         (r"(?:rán|remos)$", "future_plural"),
         (r"(?:rá|ré)$", "future_singular"),
         (r"(?:aron|ieron)$", "preterite_plural"),
+        (r"(?:aste|iste)$", "preterite_second_singular"),
         (r"(?:ó|é|í)$", "preterite_singular"),
         (r"(?:rían)$", "conditional_plural"),
         (r"(?:ría)$", "conditional_singular"),
@@ -228,6 +316,8 @@ def _action_form(value: str) -> str:
             return label
     if re.search(r"(?:ando|iendo|andose|iendose)$", lower):
         return "gerund"
+    if re.search(r"(?:ar|er|ir)(?:me|te|se|lo|la|los|las|le|les|nos)?$", lower):
+        return "infinitive"
     if re.search(r"(?:ad|ed|id|ate|ete|ite)$", lower):
         return "imperative"
     if re.search(r"(?:ado|ada|ados|adas|ido|ida|idos|idas)$", lower):
@@ -247,9 +337,17 @@ def _source_text(unit: dict[str, Any]) -> str:
     return str(unit.get("full_text") or unit.get("exact_text") or "").strip()
 
 
+def _is_sentence_initial(text: str, start: int) -> bool:
+    prefix = text[:start].rstrip()
+    return not prefix or prefix[-1] in ".!?¡¿:;—–-«“”\"'"
+
+
 def _broad_category(answer: str, raw_category: str, unit: dict[str, Any]) -> str:
-    if _norm(answer) in {"dios", "jehova", "senor", "salvador", "mesias", "miguel", "gabriel"}:
+    normalized_answer = _norm(answer)
+    if normalized_answer in DIVINE_NAMES or normalized_answer in EXTRA_PERSON_NAMES:
         return "person"
+    if normalized_answer in EXTRA_PLACE_NAMES:
+        return "place"
     answer_words = {_norm(word) for word in answer.split()}
     if any(word in NUMBER_WORDS or word.isdigit() for word in answer_words):
         return "number"
@@ -257,6 +355,10 @@ def _broad_category(answer: str, raw_category: str, unit: dict[str, Any]) -> str
         return "person"
     if answer in unit.get("places", []) or answer in unit.get("rivers", []):
         return "place"
+    if answer in unit.get("directions", []):
+        return "place"
+    if raw_category == "proper":
+        return "term"
     if raw_category == "number" or answer in unit.get("numbers", []):
         return "number"
     if raw_category == "verb" or answer in unit.get("actions", []):
@@ -277,7 +379,12 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
         if normalized in STOPWORDS or (len(normalized) < 3 and not answer.isdigit()):
             continue
         role = _word_role(answer)
-        raw_category = "number" if role == "number" else "verb" if role == "verb" else "proper" if answer[:1].isupper() else "word_plural" if answer.lower().endswith("s") else "word_singular"
+        is_named_entity = (
+            answer[:1].isupper()
+            and not _is_sentence_initial(text, token.start())
+            and normalized not in NON_ENTITY_CAPITALIZED
+        )
+        raw_category = "number" if role == "number" else "verb" if role == "verb" else "proper" if is_named_entity else "word_plural" if answer.lower().endswith("s") else "word_singular"
         score = (5 if raw_category in {"proper", "number"} else 3 if raw_category == "verb" else 2) + len(answer) / 20
         if raw_category == "verb" and _action_form(answer).startswith("conditional_"):
             score += 5
@@ -352,6 +459,7 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
             )
             or (broad_category == "phrase" and len(words) == 1)
             or (broad_category == "term" and len(normalized) < 5)
+            or (broad_category in {"person", "place"} and len(words) > 1)
             or is_reference_number
             or (
                 broad_category == "number"
@@ -360,6 +468,13 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
             )
             or crosses_plural_into_name
             or invalid_content_determiner_start
+            or (
+                start == 0
+                and (
+                    roles[0] in {"adverb", "function"}
+                    or re.search(r"(?:ados|adas|ado|ada)$", normalized)
+                )
+            )
         ):
             rejected += 1
             continue
@@ -404,10 +519,45 @@ def _context_for(text: str, answer: str) -> str:
     return min(containing, key=len) if containing else text
 
 
+def _slot_syntax(text: str, answer: str, category: str) -> str:
+    if category != "term":
+        return category
+    before, separator, after = text.partition(answer)
+    if not separator:
+        return "term:unknown"
+    before_words = TOKEN_RE.findall(before)
+    after_words = TOKEN_RE.findall(after)
+    previous_raw = before_words[-1] if before_words else ""
+    following_raw = after_words[0] if after_words else ""
+    previous = _norm(previous_raw)
+    following = _norm(following_raw)
+    answer_role = _word_role(answer)
+    if answer_role == "adverb":
+        return "term:adverb"
+    if answer_role == "verb":
+        return f"term:verb_like:{_action_form(answer)}"
+    if previous in {"el", "la", "los", "las", "un", "una", "unos", "unas", "su", "sus"}:
+        return "term:determined_nominal"
+    if previous in {"a", "al", "ante", "con", "contra", "de", "del", "desde", "en", "entre", "hacia", "hasta", "para", "por", "sin", "sobre", "tras"}:
+        return "term:prepositional"
+    if previous and _word_role(previous_raw) == "content" and (
+        following == "que" or (following and _word_role(following_raw) == "verb")
+    ):
+        return "term:postnominal_modifier"
+    if following in {"de", "del"}:
+        return "term:nominal_head"
+    if before.rstrip().endswith((",", ";", ":", "—", "–")):
+        return "term:list_or_clause_item"
+    return "term:generic"
+
+
 def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], int]:
     by_chapter: dict[str, list[tuple[dict[str, Any], list[dict[str, Any]]]]] = defaultdict(list)
     rejected = 0
     for unit in units:
+        if unit["source_unit_id"] in EDITORIALLY_EXCLUDED_SOURCE_UNITS:
+            rejected += 1
+            continue
         candidates, unit_rejected = _fact_candidates(unit)
         rejected += unit_rejected
         editorial_candidates = [row for row in candidates if row["category"] != "phrase"]
@@ -442,23 +592,66 @@ def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any
         by_chapter[_chapter_key(unit)].append((unit, editorial_candidates))
 
     facts: list[dict[str, Any]] = []
+    global_answer_usage: Counter[str] = Counter()
     for chapter, quota in FACT_QUOTAS.items():
         rows = by_chapter[chapter]
         selected: list[tuple[dict[str, Any], dict[str, Any], int]] = []
+        chapter_answer_usage: Counter[str] = Counter()
+        chapter_category_usage: Counter[str] = Counter()
+        used_candidate_indexes: dict[str, set[int]] = defaultdict(set)
+
+        def select_best_candidate(
+            unit: dict[str, Any], candidates: list[dict[str, Any]]
+        ) -> tuple[dict[str, Any], int] | None:
+            source_unit_id = unit["source_unit_id"]
+            available = [
+                (candidate, index)
+                for index, candidate in enumerate(candidates)
+                if index not in used_candidate_indexes[source_unit_id]
+            ]
+            if not available:
+                return None
+            candidate, candidate_index = min(
+                available,
+                key=lambda row: (
+                    chapter_answer_usage[_norm(row[0]["answer"])] >= MAX_CHAPTER_FACTS_PER_ANSWER,
+                    global_answer_usage[_norm(row[0]["answer"])] >= MAX_GLOBAL_FACTS_PER_ANSWER,
+                    chapter_category_usage[row[0]["category"]]
+                    / max(1, math.ceil(quota * CATEGORY_TARGET_SHARES[row[0]["category"]])),
+                    chapter_category_usage[row[0]["category"]]
+                    >= math.ceil(quota * CATEGORY_SHARE_CAPS[row[0]["category"]]),
+                    chapter_answer_usage[_norm(row[0]["answer"])] * 8
+                    + global_answer_usage[_norm(row[0]["answer"])] * 2
+                    - float(row[0]["score"]),
+                    row[1],
+                    row[0]["start"],
+                ),
+            )
+            used_candidate_indexes[source_unit_id].add(candidate_index)
+            normalized_answer = _norm(candidate["answer"])
+            chapter_answer_usage[normalized_answer] += 1
+            global_answer_usage[normalized_answer] += 1
+            chapter_category_usage[candidate["category"]] += 1
+            return candidate, candidate_index + 1
+
         for unit, candidates in rows:
-            selected.append((unit, candidates[0], 1))
-        candidate_index = 1
+            choice = select_best_candidate(unit, candidates)
+            if choice is None:
+                raise ValueError(f"Unidad sin hecho seleccionable: {unit['source_unit_id']}")
+            candidate, ordinal = choice
+            selected.append((unit, candidate, ordinal))
         while len(selected) < quota:
             added = False
             for unit, candidates in rows:
                 if len(selected) >= quota:
                     break
-                if candidate_index < len(candidates):
-                    selected.append((unit, candidates[candidate_index], candidate_index + 1))
+                choice = select_best_candidate(unit, candidates)
+                if choice is not None:
+                    candidate, ordinal = choice
+                    selected.append((unit, candidate, ordinal))
                     added = True
             if not added:
                 raise ValueError(f"La fuente no permite {quota} hechos legítimos en {chapter}")
-            candidate_index += 1
         rejected += sum(len(candidates) for _, candidates in rows) - len(selected)
         selected.sort(key=lambda row: (row[0]["source_unit_id"], row[2]))
         per_unit: Counter[str] = Counter()
@@ -483,11 +676,69 @@ def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any
                     "_normalized_answer": _norm(answer),
                     "_normalized_source": _norm(source_quote),
                     "context": _context_for(source_quote, answer),
+                    "_slot_signature": _slot_syntax(source_quote, answer, candidate["category"]),
                     "importance": "critical" if chapter in {"DAN7", "DAN8", "DAN9", "DAN11", "PR43", "PR44"} else "high" if chapter in {"DAN10", "DAN12", "PR40", "PR42"} else "essential",
                     "relation_type": "cause" if re.search(r"\bporque\b|\bpor cuanto\b", source_quote, re.I) else "consequence" if re.search(r"\bpor tanto\b|\bentonces\b|\basí\b", source_quote, re.I) else candidate["category"],
                 }
             )
     facts.sort(key=lambda row: (row["chapter"], row["source_unit_id"], row["fact_id"]))
+    support_rows: list[dict[str, Any]] = []
+    for chapter, chapter_rows in by_chapter.items():
+        for unit, candidates in chapter_rows:
+            source_text = _source_text(unit)
+            for candidate_index, candidate in enumerate(candidates):
+                support_rows.append(
+                    {
+                        "fact_id": f"SUPPORT-{unit['source_unit_id']}-{candidate_index:03d}",
+                        "source_unit_id": unit["source_unit_id"],
+                        "chapter": chapter,
+                        "reference": unit["reference"],
+                        "answer": candidate["answer"],
+                        "category": candidate["category"],
+                        "grammatical_category": candidate["grammatical_category"],
+                        "_normalized_answer": _norm(candidate["answer"]),
+                        "_normalized_source": _norm(source_text),
+                        "_slot_signature": _slot_syntax(
+                            source_text, candidate["answer"], candidate["category"]
+                        ),
+                    }
+                )
+
+    def support_key(row: dict[str, Any]) -> tuple[Any, ...]:
+        grammar = (
+            None
+            if row["category"] in {"person", "place", "phrase", "term"}
+            else row["grammatical_category"]
+        )
+        return (
+            row["category"],
+            option_signature(row["answer"], row["category"]),
+            grammar,
+        )
+
+    support_pools: dict[tuple[Any, ...], list[dict[str, Any]]] = defaultdict(list)
+    for row in support_rows:
+        support_pools[support_key(row)].append(row)
+
+    for fact in facts:
+        compatible_support = [
+            row
+            for row in support_pools[support_key(fact)]
+            if row["_normalized_answer"] != fact["_normalized_answer"]
+            and row["_normalized_answer"] not in fact["_normalized_source"]
+        ]
+        unique_support: dict[str, dict[str, Any]] = {}
+        for row in sorted(
+            compatible_support,
+            key=lambda row: (
+                row["chapter"] != fact["chapter"],
+                abs(len(row["answer"]) - len(fact["answer"])),
+                _hash(f"support:{fact['fact_id']}:{row['fact_id']}"),
+            ),
+        ):
+            unique_support.setdefault(row["_normalized_answer"], row)
+        fact["_support_distractors"] = list(unique_support.values())[:12]
+
     for chapter, chapter_facts in _group_by(facts, "chapter").items():
         for index, fact in enumerate(chapter_facts):
             fact["nearby_fact_ids"] = [
@@ -563,6 +814,17 @@ def _arrange_options(correct: str, distractors: list[str], position: int) -> lis
     return options
 
 
+def _match_initial_case(value: str, model: str) -> str:
+    """Ajusta solo la inicial para que el distractor encaje en el mismo hueco."""
+    if not value or not model:
+        return value
+    if model[0].islower() and value[0].isupper():
+        return value[0].lower() + value[1:]
+    if model[0].isupper() and value[0].islower():
+        return value[0].upper() + value[1:]
+    return value
+
+
 def _boundary_collision(context: str, answer: str, replacement: str) -> bool:
     before, separator, after = context.partition(answer)
     if not separator:
@@ -631,8 +893,9 @@ def _review_choice(question: dict[str, Any]) -> dict[str, Any]:
             if _norm(option) and _norm(option) in quote_norm
         ]
     if question["family"] == "true_false":
-        statement_supported = _norm(question["statement"]) in quote_norm
-        correction_norm = _norm(question.get("corrected_statement", ""))
+        asserted_norm = _norm(question.get("asserted_detail") or "")
+        correction_norm = _norm(question.get("correction") or "")
+        statement_supported = bool(asserted_norm) and asserted_norm in quote_norm
         correction_supported = bool(correction_norm) and correction_norm in quote_norm
         selected = 0 if statement_supported else 1 if correction_supported else -1
         ambiguous = statement_supported and correction_supported
@@ -695,19 +958,18 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         distractor_pools[(fact["category"], option_signature(fact["answer"], fact["category"]))].append(fact)
 
     def compatible_rows(fact: dict[str, Any]) -> list[dict[str, Any]]:
-        rows = distractor_pools[(fact["category"], option_signature(fact["answer"], fact["category"]))]
-        if len(rows) < 4 and fact["category"] == "phrase":
-            answer_words = len(fact["answer"].split())
-            rows = [
-                row for row in facts
-                if row["category"] == "phrase"
-                and len(row["answer"].split()) == answer_words
-            ]
+        rows = list(
+            distractor_pools[(fact["category"], option_signature(fact["answer"], fact["category"]))]
+        ) + list(fact.get("_support_distractors", []))
         eligible = [
             row for row in rows
             if row["fact_id"] != fact["fact_id"]
             and row["_normalized_answer"] != fact["_normalized_answer"]
             and row["_normalized_answer"] not in fact["_normalized_source"]
+            and (
+                fact["category"] in {"person", "place", "phrase", "term"}
+                or row["grammatical_category"] == fact["grammatical_category"]
+            )
         ]
         unique: dict[str, dict[str, Any]] = {}
         for row in eligible:
@@ -731,6 +993,15 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
     insufficient = [fact_id for fact_id, rows in distractor_map.items() if len(rows) < 3]
     if insufficient:
         raise ValueError(f"Hay hechos sin tres distractores compatibles: {insufficient[:20]}")
+    strict_false_distractor_map = {
+        fact["fact_id"]: [
+            row
+            for row in distractor_map[fact["fact_id"]]
+            if fact["category"] != "term"
+            or row.get("_slot_signature") == fact.get("_slot_signature")
+        ]
+        for fact in facts
+    }
     false_candidates = sorted(
         facts,
         key=lambda fact: (
@@ -761,11 +1032,21 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                 _hash("true-anchor:" + fact["fact_id"]),
             ),
         )
-        false_facts.update(fact["fact_id"] for fact in ordered_context[1:])
+        false_facts.update(
+            fact["fact_id"]
+            for fact in ordered_context[1:]
+            if fact["category"] not in {"action", "phrase"}
+            and fact["_normalized_answer"] not in DIVINE_NAMES
+            and strict_false_distractor_map[fact["fact_id"]]
+        )
     for fact in false_candidates:
         if len(false_facts) >= 750:
             break
-        if fact["_normalized_answer"] in DIVINE_NAMES:
+        if (
+            fact["_normalized_answer"] in DIVINE_NAMES
+            or fact["category"] in {"action", "phrase"}
+            or not strict_false_distractor_map[fact["fact_id"]]
+        ):
             continue
         false_facts.add(fact["fact_id"])
     if len(false_facts) != 750:
@@ -775,15 +1056,20 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
 
     for index, fact in enumerate(facts):
         distractor_facts = distractor_map[fact["fact_id"]]
-        distractors = [row["answer"] for row in distractor_facts[:3]]
+        distractors = [
+            _match_initial_case(row["answer"], fact["answer"])
+            for row in distractor_facts[:3]
+        ]
         why = {
-            row["answer"]: f"Es verdadero en {row['reference']}, pero no responde al contexto exacto de {fact['reference']}."
+            _match_initial_case(row["answer"], fact["answer"]):
+                f"Es verdadero en {row['reference']}, pero no responde al contexto exacto de {fact['reference']}."
             for row in distractor_facts[:3]
         }
         for family_offset, family in enumerate(QUESTION_FAMILIES):
             base = _base_question(fact, family, index)
             if family == "true_false":
                 false = fact["fact_id"] in false_facts
+                false_distractor_facts = strict_false_distractor_map[fact["fact_id"]]
                 phrase_replacement = (
                     _named_entity_phrase_replacement(
                         fact, entity_categories, facts
@@ -791,9 +1077,9 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                     if false and fact["category"] == "phrase"
                     else None
                 )
-                replacement = phrase_replacement or next(
+                replacement_row = next(
                     (
-                        row["answer"] for row in distractor_facts
+                        row for row in false_distractor_facts
                         if (
                             not _boundary_collision(fact["context"], fact["answer"], row["answer"])
                             and (
@@ -802,19 +1088,43 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                             )
                         )
                     ),
-                    distractors[0],
+                    None,
                 )
-                statement = _masked(fact["context"], fact["answer"], replacement) if false else fact["context"]
+                replacement = (
+                    phrase_replacement
+                    or (replacement_row["answer"] if replacement_row else distractors[0])
+                )
+                replacement = _match_initial_case(replacement, fact["answer"])
+                asserted_detail = replacement if false else fact["answer"]
+                fragment = _masked(fact["context"], fact["answer"], "[…]")
+                statement = (
+                    f"Según {fact['reference']}, en el fragmento «{fragment}», "
+                    f"la expresión que ocupa […] es «{asserted_detail}»."
+                )
+                corrected_statement = (
+                    f"Según {fact['reference']}, en el fragmento «{fragment}», "
+                    f"la expresión que ocupa […] es «{fact['answer']}»."
+                )
                 base.update(
                     {
-                        "question": f"Verdadero o falso según {fact['reference']}: «{statement}»",
+                        "question": f"Verdadero o falso: {statement}",
                         "statement": statement,
+                        "asserted_detail": asserted_detail,
                         "options": ["Verdadero", "Falso"],
                         "correct_option": 1 if false else 0,
                         "correct_answer": "Falso" if false else "Verdadero",
-                        "corrected_statement": fact["context"] if false else "",
+                        "corrected_statement": corrected_statement if false else "",
                         "incorrect_detail": replacement if false else None,
                         "correction": fact["answer"] if false else None,
+                        "replacement_source_ref": (
+                            replacement_row["reference"] if false and replacement_row else None
+                        ),
+                        "correct_slot_signature": fact.get("_slot_signature"),
+                        "replacement_slot_signature": (
+                            replacement_row.get("_slot_signature")
+                            if false and replacement_row
+                            else None
+                        ),
                         "explanation": (
                             f"Es falsa: la fuente dice «{fact['answer']}», no «{replacement}»."
                             if false else f"Es verdadera y reproduce el detalle de {fact['reference']}."
@@ -902,10 +1212,71 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                 raise ValueError(f"Revisión adversarial fallida: {base['id']}")
             questions.append(base)
 
-    difficulty_order = sorted(questions, key=lambda row: _hash("difficulty:" + row["id"]))
+    answer_frequency = Counter(fact["_normalized_answer"] for fact in facts)
+
+    def difficulty_score(question: dict[str, Any]) -> float:
+        family_score = {
+            "single_choice_direct": 1.0,
+            "fill_choice": 1.3,
+            "true_false": 3.6 if question["correct_answer"] == "Falso" else 2.2,
+            "single_choice_contextual": 5.0,
+        }[question["family"]]
+        category_score = {
+            "person": 0.0,
+            "place": 0.2,
+            "term": 0.6,
+            "action": 0.8,
+            "number": 1.0,
+            "phrase": 1.2,
+            "reference": 1.0,
+        }.get(question["option_category"], 0.5)
+        importance_score = {
+            "critical": 0.7,
+            "high": 0.4,
+            "essential": 0.0,
+        }[question["importance"]]
+        context_score = min(0.8, len(question["source_quote"].split()) / 80)
+        rarity_score = 0.4 if answer_frequency[_norm(question["accepted_answers"][0])] <= 2 else 0.0
+        return family_score + category_score + importance_score + context_score + rarity_score
+
+    def hardest(rows: list[dict[str, Any]], count: int) -> list[dict[str, Any]]:
+        return sorted(
+            rows,
+            key=lambda row: (-difficulty_score(row), _hash("difficulty:" + row["id"])),
+        )[:count]
+
+    expert_reserved = (
+        hardest(
+            [question for question in questions if question["family"] == "single_choice_direct"],
+            130,
+        )
+        + hardest(
+            [question for question in questions if question["family"] == "true_false"],
+            100,
+        )
+        + hardest(
+            [question for question in questions if question["family"] == "single_choice_contextual"],
+            900,
+        )
+    )
+    expert_ids = {question["id"] for question in expert_reserved}
+    expert_fill = hardest(
+        [question for question in questions if question["id"] not in expert_ids],
+        DIFFICULTY_COUNTS["expert"] - len(expert_ids),
+    )
+    expert_ids.update(question["id"] for question in expert_fill)
+    for question in questions:
+        if question["id"] in expert_ids:
+            question["difficulty"] = "expert"
+
+    remaining = sorted(
+        [question for question in questions if question["id"] not in expert_ids],
+        key=lambda row: (difficulty_score(row), _hash("difficulty:" + row["id"])),
+    )
     cursor = 0
-    for label, count in DIFFICULTY_COUNTS.items():
-        for question in difficulty_order[cursor:cursor + count]:
+    for label in ("easy", "medium", "hard"):
+        count = DIFFICULTY_COUNTS[label]
+        for question in remaining[cursor:cursor + count]:
             question["difficulty"] = label
         cursor += count
 
@@ -932,6 +1303,7 @@ def build_coverage_manifest(
             for fact in unit_facts
             for question in questions_by_fact.get(fact["fact_id"], [])
         ]
+        excluded_reason = EDITORIALLY_EXCLUDED_SOURCE_UNITS.get(unit["source_unit_id"])
         entries.append(
             {
                 "source_unit_id": unit["source_unit_id"],
@@ -941,18 +1313,30 @@ def build_coverage_manifest(
                 "fact_ids": [fact["fact_id"] for fact in unit_facts],
                 "gold_question_ids": [question["id"] for question in question_rows],
                 "question_families": sorted({question["family"] for question in question_rows}),
-                "coverage_status": "covered" if unit_facts and question_rows else "uncovered",
-                "reviewer_status": "passed" if question_rows and all(question["validation_adversarial"]["status"] == "passed" for question in question_rows) else "failed",
+                "coverage_status": (
+                    "excluded_low_value"
+                    if excluded_reason
+                    else "covered" if unit_facts and question_rows else "uncovered"
+                ),
+                "exclusion_reason": excluded_reason,
+                "reviewer_status": (
+                    "excluded"
+                    if excluded_reason
+                    else "passed" if question_rows and all(question["validation_adversarial"]["status"] == "passed" for question in question_rows) else "failed"
+                ),
             }
         )
     fact_without = sum(not questions_by_fact.get(fact["fact_id"]) for fact in facts)
-    uncovered = sum(entry["coverage_status"] != "covered" for entry in entries)
+    uncovered = sum(entry["coverage_status"] == "uncovered" for entry in entries)
+    excluded = sum(entry["coverage_status"] == "excluded_low_value" for entry in entries)
+    covered = sum(entry["coverage_status"] == "covered" for entry in entries)
     mapped = {entry["source_unit_id"] for entry in entries}
     return {
         "schema_version": "7.0",
         "bank_id": BANK_ID,
         "source_units": len(entries),
-        "covered_source_units": len(entries) - uncovered,
+        "covered_source_units": covered,
+        "excluded_low_value_source_units": excluded,
         "uncovered_source_units": uncovered,
         "fact_without_gold_question": fact_without,
         "unmapped_source_units": len({unit["source_unit_id"] for unit in units} - mapped),

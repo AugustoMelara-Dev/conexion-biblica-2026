@@ -42,7 +42,11 @@ class FinalEditorialTests(unittest.TestCase):
         self.assertEqual(len(facts), 1500)
         self.assertGreater(rejected, 0)
         covered = {fact["source_unit_id"] for fact in facts}
-        expected = {unit["source_unit_id"] for unit in self.inventory["units"]}
+        expected = {
+            unit["source_unit_id"]
+            for unit in self.inventory["units"]
+            if unit["source_unit_id"] not in editorial.EDITORIALLY_EXCLUDED_SOURCE_UNITS
+        }
         self.assertEqual(covered, expected)
         self.assertEqual(len({fact["fact_id"] for fact in facts}), 1500)
         self.assertLessEqual(
@@ -98,6 +102,54 @@ class FinalEditorialTests(unittest.TestCase):
             any(fact["answer"] == "A los israelitas Moisés" for fact in facts)
         )
 
+    def test_named_entities_and_sentence_starters_are_not_mixed(self) -> None:
+        facts_by_answer = {}
+        for fact in self.facts:
+            facts_by_answer.setdefault(fact["answer"], []).append(fact)
+
+        self.assertTrue(
+            any(
+                fact["answer"] == "Aspenaz" and fact["category"] == "person"
+                for fact in self.facts
+            ),
+            "Aspenaz debe clasificarse como persona, no como término genérico",
+        )
+        self.assertFalse(
+            any(
+                fact["answer"] in {"Nuestro", "Pasados", "Además", "Mediante"}
+                for fact in self.facts
+            ),
+            "una mayúscula por inicio de oración no convierte la palabra en hecho competitivo",
+        )
+
+    def test_atomic_facts_are_not_inflated_by_the_same_answer(self) -> None:
+        answer_counts = Counter(
+            self.editorial._norm(fact["answer"]) for fact in self.facts
+        )
+        self.assertLessEqual(
+            max(answer_counts.values()),
+            self.editorial.MAX_GLOBAL_FACTS_PER_ANSWER,
+            answer_counts.most_common(10),
+        )
+        for chapter in {fact["chapter"] for fact in self.facts}:
+            chapter_counts = Counter(
+                self.editorial._norm(fact["answer"])
+                for fact in self.facts
+                if fact["chapter"] == chapter
+            )
+            self.assertLessEqual(
+                max(chapter_counts.values()),
+                self.editorial.MAX_CHAPTER_FACTS_PER_ANSWER,
+                (chapter, chapter_counts.most_common(10)),
+            )
+
+        category_counts = Counter(fact["category"] for fact in self.facts)
+        self.assertGreaterEqual(category_counts["person"], 150, category_counts)
+        self.assertGreaterEqual(category_counts["place"], 60, category_counts)
+        self.assertGreaterEqual(category_counts["number"], 80, category_counts)
+        self.assertGreaterEqual(category_counts["action"], 350, category_counts)
+        self.assertGreaterEqual(category_counts["term"], 350, category_counts)
+
     def test_context_does_not_split_an_abbreviated_verse_reference(self) -> None:
         editorial = self.require_editorial()
         if editorial is None:
@@ -134,6 +186,43 @@ class FinalEditorialTests(unittest.TestCase):
         )
         self.assertTrue(
             all(question["bank_id"] == "BANCO_UNICO_CONEXION_BIBLICA_2026" for question in questions)
+        )
+
+    def test_difficulty_labels_follow_competitive_complexity(self) -> None:
+        easy = [question for question in self.questions if question["difficulty"] == "easy"]
+        expert = [question for question in self.questions if question["difficulty"] == "expert"]
+        self.assertFalse(
+            any(question["family"] == "single_choice_contextual" for question in easy),
+            "una trampa contextual no puede etiquetarse como fácil",
+        )
+        self.assertFalse(
+            any(
+                question["family"] == "true_false"
+                and question["correct_answer"] == "Falso"
+                for question in easy
+            ),
+            "una alteración plausible no puede etiquetarse como fácil",
+        )
+        self.assertGreaterEqual(
+            sum(question["family"] == "single_choice_contextual" for question in expert),
+            900,
+            Counter(question["family"] for question in expert),
+        )
+        self.assertGreaterEqual(
+            sum(question["family"] == "single_choice_direct" for question in expert),
+            130,
+        )
+        self.assertGreaterEqual(
+            sum(question["family"] == "true_false" for question in expert),
+            100,
+        )
+        self.assertGreaterEqual(
+            sum(
+                question["family"] == "single_choice_direct"
+                and question["blind_pool"] is None
+                for question in expert
+            ),
+            100,
         )
 
     def test_each_family_has_only_one_answer_and_compatible_options(self) -> None:
@@ -185,7 +274,18 @@ class FinalEditorialTests(unittest.TestCase):
                 self.assertNotIn("reproduce correctamente el detalle", question["question"], question["id"])
                 self.assertEqual(
                     question["question"],
-                    f"Verdadero o falso según {question['reference']}: «{question['statement']}»",
+                    f"Verdadero o falso: {question['statement']}",
+                    question["id"],
+                )
+                self.assertRegex(
+                    question["statement"],
+                    rf"^Según {re.escape(question['reference'])}, en el fragmento «.+», "
+                    r"la expresión que ocupa \[…] es «.+»\.$",
+                    question["id"],
+                )
+                self.assertNotRegex(
+                    question["statement"],
+                    r"[,;:]\s*$",
                     question["id"],
                 )
             if question["family"] == "single_choice_contextual":
@@ -214,7 +314,7 @@ class FinalEditorialTests(unittest.TestCase):
             self.assertNotIn("identifica correctamente el detalle descrito", question["question"], question["id"])
             self.assertNotIn("qué número o período", question["question"], question["id"])
             if question["family"] == "true_false":
-                self.assertTrue(question["question"].startswith("Verdadero o falso según "), question["id"])
+                self.assertTrue(question["question"].startswith("Verdadero o falso: Según "), question["id"])
                 continue
             signatures = [
                 editorial.option_signature(option, question["option_category"])
@@ -232,6 +332,8 @@ class FinalEditorialTests(unittest.TestCase):
             "cosa semejante a ningún",
             "tiempo algunos hombres caldeos",
             "dioses ni tampoco adoraremos",
+            "dijo el rey a entendimiento",
+            "de buen aspenaz",
         }
         used_options = {
             option.casefold()
@@ -267,9 +369,62 @@ class FinalEditorialTests(unittest.TestCase):
             editorial.option_signature("una proclamación para exaltar", "phrase"),
             editorial.option_signature("tiene derecho a interponerse", "phrase"),
         )
+
+        false_questions = [
+            question
+            for question in self.questions
+            if question["family"] == "true_false"
+            and question["correct_answer"] == "Falso"
+        ]
+        self.assertTrue(
+            all(
+                editorial.option_signature(
+                    question["incorrect_detail"], question["option_category"]
+                )
+                == editorial.option_signature(
+                    question["correction"], question["option_category"]
+                )
+                for question in false_questions
+            ),
+            "cada alteración falsa debe conservar la clase gramatical del detalle correcto",
+        )
         self.assertNotEqual(
             editorial.option_signature("establecía", "action"),
             editorial.option_signature("permitiría", "action"),
+        )
+        self.assertNotEqual(
+            editorial.option_signature("certificados", "term"),
+            editorial.option_signature("provenientes", "term"),
+        )
+        self.assertNotEqual(
+            editorial.option_signature("certificados", "term"),
+            editorial.option_signature("controladas", "term"),
+        )
+        self.assertNotEqual(
+            editorial.option_signature("certificados", "term"),
+            editorial.option_signature("manifestarles", "term"),
+        )
+        self.assertNotEqual(
+            editorial.option_signature("rápidamente", "term"),
+            editorial.option_signature("valiente", "term"),
+        )
+        self.assertNotEqual(
+            editorial.option_signature("valiente", "term"),
+            editorial.option_signature("adelante", "term"),
+        )
+        self.assertNotEqual(
+            editorial.option_signature("estatua", "term"),
+            editorial.option_signature("negativa", "term"),
+        )
+        self.assertNotEqual(
+            editorial.option_signature("hebreos", "term"),
+            editorial.option_signature("podemos", "term"),
+        )
+        self.assertTrue(
+            any(
+                fact["answer"] == "creciste" and fact["category"] == "action"
+                for fact in self.facts
+            )
         )
         forbidden_answers = {
             "así", "ahora", "luego", "después", "también", "sólo", "aquí",
@@ -317,6 +472,15 @@ class FinalEditorialTests(unittest.TestCase):
                 == 1
                 for question in false_phrase_questions
             )
+        )
+        self.assertFalse(
+            any(
+                question["option_category"] in {"action", "phrase"}
+                for question in self.questions
+                if question["family"] == "true_false"
+                and question["correct_answer"] == "Falso"
+            ),
+            "las alteraciones de verbos o frases completas no son seguras sin revisión manual",
         )
 
     def test_audit_and_coverage_gates_finish_at_zero(self) -> None:

@@ -55,6 +55,10 @@ def validate_coverage(manifest: Mapping[str, Any]) -> list[str]:
             errors.append(f"{key}={value}")
     for unit in manifest.get("units", []):
         source_unit_id = str(unit.get("source_unit_id", "missing-unit"))
+        if unit.get("coverage_status") == "excluded_low_value":
+            if not unit.get("exclusion_reason"):
+                errors.append(f"{source_unit_id}:missing_exclusion_reason")
+            continue
         if not unit.get("fact_ids"):
             errors.append(f"{source_unit_id}:missing_fact_ids")
         if not unit.get("gold_question_ids"):

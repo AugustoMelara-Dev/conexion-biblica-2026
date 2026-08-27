@@ -11,7 +11,14 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from scripts.lib.final_editorial import DIVINE_NAMES, _norm, option_signature
+from scripts.lib.final_editorial import (
+    DIVINE_NAMES,
+    EDITORIALLY_EXCLUDED_SOURCE_UNITS,
+    MAX_CHAPTER_FACTS_PER_ANSWER,
+    MAX_GLOBAL_FACTS_PER_ANSWER,
+    _norm,
+    option_signature,
+)
 
 
 BANK = ROOT / "public" / "banks" / "final-2026"
@@ -116,6 +123,8 @@ def main() -> int:
             fail(errors, qid, "question_fact_quote_mismatch")
         if fact["source_quote"] not in unit_text:
             fail(errors, qid, "quote_not_in_source_unit")
+        if fact["source_quote"].count(fact["answer"]) != 1:
+            fail(errors, qid, "answer_not_unique_in_source_quote")
         if question["reference"] != fact["reference"]:
             fail(errors, qid, "reference_mismatch")
 
@@ -135,16 +144,18 @@ def main() -> int:
                 fail(errors, qid, "broken_true_false_contract")
             if question.get("statement", "") not in question["question"]:
                 fail(errors, qid, "statement_not_visible")
-            if question["question"] != (
-                f"Verdadero o falso según {question['reference']}: "
-                f"«{question.get('statement', '')}»"
-            ):
+            if question["question"] != f"Verdadero o falso: {question.get('statement', '')}":
                 fail(errors, qid, "true_false_added_template_text")
+            expected_fragment = fact["context"].replace(fact["answer"], "[…]", 1)
+            expected_true_statement = (
+                f"Según {question['reference']}, en el fragmento «{expected_fragment}», "
+                f"la expresión que ocupa […] es «{fact['answer']}»."
+            )
             if question["correct_answer"] == "Verdadero":
-                if question.get("statement") != fact["context"]:
+                if question.get("statement") != expected_true_statement:
                     fail(errors, qid, "true_statement_not_exact_source")
             else:
-                if question.get("corrected_statement") != fact["context"]:
+                if question.get("corrected_statement") != expected_true_statement:
                     fail(errors, qid, "false_correction_not_exact_source")
                 if not question.get("incorrect_detail") or not question.get("correction"):
                     fail(errors, qid, "false_missing_precise_correction")
@@ -159,6 +170,15 @@ def main() -> int:
                     != (_norm(question["correction"]) in DIVINE_NAMES)
                 ):
                     fail(errors, qid, "false_divine_human_swap")
+                if _norm(question["incorrect_detail"]) in _norm(question["source_quote"]):
+                    fail(errors, qid, "false_detail_also_in_source")
+                if question["option_category"] == "term" and (
+                    question.get("replacement_slot_signature")
+                    != question.get("correct_slot_signature")
+                ):
+                    fail(errors, qid, "false_term_slot_signature_mismatch")
+                if not question.get("replacement_source_ref"):
+                    fail(errors, qid, "false_replacement_missing_source_reference")
         elif family == "single_choice_contextual":
             if blank_count:
                 fail(errors, qid, "contextual_question_contains_blank")
@@ -181,6 +201,18 @@ def main() -> int:
                 fail(errors, qid, "answer_fact_mismatch")
             if question["correct_answer"] not in question["source_quote"]:
                 fail(errors, qid, "answer_not_in_source")
+            signatures = [
+                option_signature(option, question["option_category"])
+                for option in options
+            ]
+            if len(set(signatures)) != 1:
+                fail(errors, qid, "distractor_grammatical_signature_mismatch")
+            if any(
+                option[:1].isupper() != question["correct_answer"][:1].isupper()
+                for option in options
+                if option and question["correct_answer"]
+            ):
+                fail(errors, qid, "distractor_initial_case_mismatch")
 
         normalized = re.sub(r"\W+", " ", question["question"].casefold()).strip()
         if normalized in normalized_questions:
@@ -211,6 +243,67 @@ def main() -> int:
         if families_by_fact.get(fact_id) != FAMILIES:
             errors.append(f"{fact_id}:missing_family_variant")
 
+    global_answer_counts = Counter(_norm(fact["answer"]) for fact in facts)
+    if global_answer_counts and max(global_answer_counts.values()) > MAX_GLOBAL_FACTS_PER_ANSWER:
+        errors.append("facts:global_answer_repetition_cap_exceeded")
+    for chapter in {fact["chapter"] for fact in facts}:
+        chapter_counts = Counter(
+            _norm(fact["answer"])
+            for fact in facts
+            if fact["chapter"] == chapter
+        )
+        if chapter_counts and max(chapter_counts.values()) > MAX_CHAPTER_FACTS_PER_ANSWER:
+            errors.append(f"{chapter}:answer_repetition_cap_exceeded")
+
+    category_counts = Counter(fact["category"] for fact in facts)
+    for category, minimum in {
+        "person": 150,
+        "place": 60,
+        "number": 80,
+        "action": 350,
+        "term": 350,
+    }.items():
+        if category_counts[category] < minimum:
+            errors.append(f"facts:insufficient_{category}_coverage")
+
+    easy_questions = [question for question in questions if question["difficulty"] == "easy"]
+    if any(question["family"] == "single_choice_contextual" for question in easy_questions):
+        errors.append("difficulty:contextual_marked_easy")
+    if any(
+        question["family"] == "true_false" and question["correct_answer"] == "Falso"
+        for question in easy_questions
+    ):
+        errors.append("difficulty:false_statement_marked_easy")
+    expert_contextual = sum(
+        question["difficulty"] == "expert"
+        and question["family"] == "single_choice_contextual"
+        for question in questions
+    )
+    if expert_contextual < 900:
+        errors.append("difficulty:insufficient_expert_contextual_questions")
+    for family, minimum in {"single_choice_direct": 130, "true_false": 100}.items():
+        if sum(
+            question["difficulty"] == "expert" and question["family"] == family
+            for question in questions
+        ) < minimum:
+            errors.append(f"difficulty:insufficient_expert_{family}")
+    if sum(
+        question["difficulty"] == "expert"
+        and question["family"] == "single_choice_direct"
+        and question["blind_pool"] is None
+        for question in questions
+    ) < 100:
+        errors.append("difficulty:insufficient_visible_expert_single_choice_direct")
+
+    coverage = json.loads((BANK / "coverage_manifest.json").read_text(encoding="utf-8"))
+    excluded_ids = {
+        unit["source_unit_id"]
+        for unit in coverage["units"]
+        if unit["coverage_status"] == "excluded_low_value"
+    }
+    if excluded_ids != set(EDITORIALLY_EXCLUDED_SOURCE_UNITS):
+        errors.append("coverage:excluded_source_units_mismatch")
+
     declared = sum(shard["question_count"] for shard in manifest["shards"])
     if len(questions) != manifest["gold_questions"] or len(questions) != declared:
         errors.append("manifest:question_total_mismatch")
@@ -226,6 +319,9 @@ def main() -> int:
         "questions": len(questions),
         "families": Counter(q["family"] for q in questions),
         "difficulty": Counter(q["difficulty"] for q in questions),
+        "fact_categories": category_counts,
+        "max_global_fact_answer_repetition": max(global_answer_counts.values()),
+        "excluded_low_value_source_units": len(excluded_ids),
         "true_false_answers": Counter(
             q["correct_answer"] for q in questions if q["family"] == "true_false"
         ),

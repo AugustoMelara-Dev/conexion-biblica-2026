@@ -139,6 +139,7 @@ def main() -> None:
             key: coverage[key]
             for key in (
                 "covered_source_units",
+                "excluded_low_value_source_units",
                 "uncovered_source_units",
                 "fact_without_gold_question",
                 "unmapped_source_units",
