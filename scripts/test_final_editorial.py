@@ -220,6 +220,29 @@ class FinalEditorialTests(unittest.TestCase):
                 if question["family"] == "true_false"
             )
         )
+        false_phrase_questions = [
+            question
+            for question in self.questions
+            if question["family"] == "true_false"
+            and question["correct_answer"] == "Falso"
+            and question["option_category"] == "phrase"
+        ]
+        self.assertEqual(len(false_phrase_questions), 29)
+        self.assertTrue(
+            all(
+                len(question["correction"].split())
+                == len(question["incorrect_detail"].split())
+                and sum(
+                    original.casefold() != altered.casefold()
+                    for original, altered in zip(
+                        question["correction"].split(),
+                        question["incorrect_detail"].split(),
+                    )
+                )
+                == 1
+                for question in false_phrase_questions
+            )
+        )
 
     def test_audit_and_coverage_gates_finish_at_zero(self) -> None:
         editorial = self.require_editorial()
