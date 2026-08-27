@@ -32,7 +32,6 @@ import {
 } from "@/domain/session-selection"
 import { SIMULATION_PRESET } from "@/domain/simulation-calibration"
 import {
-  chaptersForStudyDay,
   getStudyDay,
   type StudyDay,
 } from "@/domain/study-plan"
@@ -228,23 +227,6 @@ export function SessionBuilderPage({
     )
     setTotalEnabled(mode === "simulation")
   }
-  const startStudyDay = (day: StudyDay) => {
-    const plan = getStudyDay(day)
-    onStart(
-      {
-        ...initialConfig,
-        mode: "learn",
-        count: 50,
-        sourceWorks: plan.chapters.map((group) => group.work),
-        chapters: chaptersForStudyDay(day),
-        bankSelection: "final-v7",
-        massive: true,
-        strategy: "coverage-cycle",
-        difficultyBands: ["BASIC", "MEDIUM", "HARD", "EXPERT", "UNRATED"],
-      },
-      false
-    )
-  }
   const resetCycle = Boolean(
     currentCycle && currentCycle.remainingQuestionKeys.length === 0
   )
@@ -257,7 +239,6 @@ export function SessionBuilderPage({
         description="Elige cómo quieres estudiar; ajusta los detalles solo si los necesitas."
       />
       <MassiveTrainingHub onStart={(massiveConfig) => onStart(massiveConfig)} />
-      <StudyDayQuickStart onSelect={startStudyDay} />
       <ModePicker value={config.mode} onChange={selectMode} />
       <section className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="grid gap-6">

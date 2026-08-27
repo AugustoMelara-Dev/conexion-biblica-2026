@@ -50,43 +50,35 @@ export function ModePicker({
   return (
     <section
       aria-label="Modo de práctica"
-      className="grid gap-3 sm:grid-cols-3"
+      className="rounded-2xl bg-secondary/55 p-2"
     >
-      {modes.map(({ mode, label, description, icon: Icon }) => {
-        const selected = mode === value
-        return (
-          <button
-            key={mode}
-            type="button"
-            aria-pressed={selected}
-            className={`min-h-40 rounded-xl border p-4 text-left transition-colors motion-reduce:transition-none ${
-              selected
-                ? "border-primary bg-primary/5"
-                : "bg-card hover:bg-muted/40"
-            }`}
-            onClick={() => onChange(mode)}
-          >
-            <span className="flex items-start justify-between gap-2">
-              <span
-                className={`flex size-10 shrink-0 items-center justify-center rounded-lg ${
-                  selected
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-primary"
-                }`}
-              >
-                <Icon aria-hidden="true" />
+      <div className="grid grid-cols-1 gap-1 sm:grid-cols-3">
+        {modes.map(({ mode, label, icon: Icon }) => {
+          const selected = mode === value
+          return (
+            <button
+              key={mode}
+              type="button"
+              aria-pressed={selected}
+              className={`flex min-h-14 items-center gap-3 rounded-xl px-3 py-2 text-left transition-all active:translate-y-px motion-reduce:transition-none ${
+                selected
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground hover:bg-background/60 hover:text-foreground"
+              }`}
+              onClick={() => onChange(mode)}
+            >
+              <span className={`flex size-8 shrink-0 items-center justify-center rounded-lg ${selected ? "bg-primary text-primary-foreground" : "bg-muted text-primary"}`}>
+                <Icon className="size-4" aria-hidden="true" />
               </span>
-              {selected ? (
-                <Check className="text-primary" aria-label="Seleccionado" />
-              ) : null}
-            </span>
-            <span className="mt-5 block text-sm font-semibold">{label}</span>
-            <span className="mt-1 block text-xs leading-5 text-muted-foreground">
-              {description}
-            </span>
-          </button>
-        )
-      })}
+              <span className="min-w-0 flex-1 text-sm font-semibold">{label}</span>
+              {selected ? <Check className="size-4 shrink-0 text-primary" aria-label="Seleccionado" /> : null}
+            </button>
+          )
+        })}
+      </div>
+      <p className="px-3 pt-2 pb-1 text-xs leading-5 text-muted-foreground">
+        {getModeOption(value).description}
+      </p>
     </section>
   )
 }

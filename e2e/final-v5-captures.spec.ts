@@ -14,6 +14,8 @@ async function openPractice(page: Page) {
 
 async function startMode(page: Page, mode: string, family: string) {
   await openPractice(page)
+  const reveal = page.getByRole("button", { name: "Ver plan y modos" })
+  if (await reveal.isVisible()) await reveal.click()
   const hub = page.getByRole("region", { name: "Modos avanzados" })
   await hub.getByRole("combobox", { name: "Modo avanzado" }).selectOption(mode)
   await hub.getByRole("button", { name: "Iniciar modo avanzado" }).click()
@@ -82,10 +84,10 @@ test("genera las capturas de aceptación del banco canónico", async ({ page }, 
   await page.screenshot({ path: join(output, "01-resumen-unico.png"), fullPage: true })
 
   const modes = [
-    ["expert-multiple-choice", "Selección directa", "02-seleccion-directa.png"],
+    ["expert-multiple-choice", "Selección única", "02-seleccion-directa.png"],
     ["fill-text", "Completar con opciones", "03-completar-opciones.png"],
     ["expert-true-false", "Verdadero o falso", "04-verdadero-falso.png"],
-    ["contextual-traps", "Selección contextual", "05-seleccion-contextual.png"],
+    ["contextual-traps", "Selección única", "05-seleccion-contextual.png"],
   ] as const
   for (const [mode, family, filename] of modes) {
     await startMode(page, mode, family)

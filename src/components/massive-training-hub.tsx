@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Clock3, ShieldCheck, Sparkles } from "lucide-react"
+import { ChevronDown, Clock3, ShieldCheck, Target } from "lucide-react"
 import { buildFinal48HourPlan, type ChapterSignal } from "@/domain/final-48h-plan"
 import {
   getMassiveTrainingMode,
@@ -60,27 +60,61 @@ export function MassiveTrainingHub({
 }) {
   const [selectedId, setSelectedId] =
     useState<MassiveTrainingModeId>("national-final")
+  const [expanded, setExpanded] = useState(false)
   const selected = getMassiveTrainingMode(selectedId)
+  const recommended = getMassiveTrainingMode("national-final")
   const plan = buildFinal48HourPlan(signals)
 
   return (
-    <section className="grid gap-5" aria-labelledby="massive-training-title">
-      <Card className="overflow-hidden border-primary/25 bg-gradient-to-br from-primary/[0.08] via-card to-card shadow-sm">
-        <CardHeader className="gap-3">
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="secondary" className="gap-1">
-              <Sparkles className="size-3.5" aria-hidden="true" />
-              Solo preguntas GOLD
-            </Badge>
-            <Badge variant="outline">1,500 hechos activos</Badge>
-            <Badge variant="outline">A/B ciega protegida</Badge>
-          </div>
-          <div>
-            <CardTitle id="massive-training-title">Modos avanzados</CardTitle>
-            <CardDescription className="mt-1 max-w-3xl">
-              Configuración secundaria sobre el banco GOLD. El plan guiado sigue siendo la ruta recomendada.
+    <section className="grid gap-4" aria-label="Modos avanzados">
+      <Card className="overflow-hidden border-primary/25 bg-card shadow-none">
+        <CardContent className="grid gap-5 p-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center sm:p-6">
+          <div className="min-w-0">
+            <div className="flex items-center gap-2 text-sm font-medium text-primary">
+              <Target className="size-4" aria-hidden="true" />
+              Próximo paso
+            </div>
+            <CardTitle id="massive-training-title" className="mt-2 text-xl tracking-tight">
+              Ronda recomendada
+            </CardTitle>
+            <CardDescription className="mt-2 max-w-2xl leading-6">
+              Final nacional de 100 preguntas: 30 completar, 25 verdadero/falso y 45 de selección. Sin repetir hechos.
             </CardDescription>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <Badge variant="secondary">8,000 preguntas GOLD</Badge>
+              <Badge variant="outline">2,000 hechos</Badge>
+              <Badge variant="outline">Reserva ciega protegida</Badge>
+            </div>
           </div>
+          <div className="grid gap-2 sm:min-w-56">
+            <Button
+              className="min-h-12 w-full"
+              onClick={() => onStart(configForMode(recommended))}
+            >
+              Empezar final nacional · 100
+            </Button>
+            <Button
+              variant="ghost"
+              className="min-h-11 w-full"
+              aria-expanded={expanded}
+              aria-controls="training-plan-details"
+              onClick={() => setExpanded((current) => !current)}
+            >
+              {expanded ? "Ocultar plan y modos" : "Ver plan y modos"}
+              <ChevronDown
+                className={`transition-transform ${expanded ? "rotate-180" : ""}`}
+                aria-hidden="true"
+              />
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+
+      {expanded ? <div id="training-plan-details" className="grid gap-4">
+      <Card className="shadow-none">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-base">Elegir otro modo</CardTitle>
+          <CardDescription>Usa esto solo cuando quieras concentrarte en un tipo o capítulo.</CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <label className="grid gap-2 text-sm font-medium">
@@ -89,30 +123,21 @@ export function MassiveTrainingHub({
               aria-label="Modo avanzado"
               className="h-11 w-full rounded-lg border bg-background px-3 text-sm text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
               value={selectedId}
-              onChange={(event) =>
-                setSelectedId(event.target.value as MassiveTrainingModeId)
-              }
+              onChange={(event) => setSelectedId(event.target.value as MassiveTrainingModeId)}
             >
               {MASSIVE_TRAINING_MODES.map((mode) => (
-                <option key={mode.id} value={mode.id}>
-                  {mode.label} · {mode.count}
-                </option>
+                <option key={mode.id} value={mode.id}>{mode.label} · {mode.count}</option>
               ))}
             </select>
-            <span className="text-xs font-normal leading-5 text-muted-foreground">
-              {selected.description}
-            </span>
+            <span className="text-xs font-normal leading-5 text-muted-foreground">{selected.description}</span>
           </label>
-          <Button
-            className="min-h-11"
-            onClick={() => onStart(configForMode(selected))}
-          >
+          <Button className="min-h-11" onClick={() => onStart(configForMode(selected))}>
             Iniciar modo avanzado
           </Button>
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="shadow-none">
         <CardHeader>
           <div className="flex flex-wrap items-start justify-between gap-3">
             <div>
@@ -166,6 +191,7 @@ export function MassiveTrainingHub({
           ))}
         </CardContent>
       </Card>
+      </div> : null}
     </section>
   )
 }

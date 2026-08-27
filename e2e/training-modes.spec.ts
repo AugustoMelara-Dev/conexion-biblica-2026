@@ -24,6 +24,8 @@ async function openPractice(page: Page) {
 
 async function startAdvanced(page: Page, id: string, count: number) {
   await openPractice(page)
+  const reveal = page.getByRole("button", { name: "Ver plan y modos" })
+  if (await reveal.isVisible()) await reveal.click()
   const hub = page.getByRole("region", { name: "Modos avanzados" })
   await hub.getByRole("combobox", { name: "Modo avanzado" }).selectOption(id)
   await hub.getByRole("button", { name: "Iniciar modo avanzado" }).click()
@@ -93,10 +95,10 @@ test("la carga canónica y una pregunta no producen errores de consola", async (
 
 test("las cuatro familias canónicas usan solamente botones de selección", async ({ page }) => {
   const families = [
-    ["expert-multiple-choice", "Selección directa", 4],
+    ["expert-multiple-choice", "Selección única", 4],
     ["fill-text", "Completar con opciones", 4],
     ["expert-true-false", "Verdadero o falso", 2],
-    ["contextual-traps", "Selección contextual", 4],
+    ["contextual-traps", "Selección única", 4],
   ] as const
 
   await waitForHome(page)

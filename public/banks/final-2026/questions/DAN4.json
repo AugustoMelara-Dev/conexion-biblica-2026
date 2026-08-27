@@ -175,8 +175,8 @@
       "Nabucodonosor"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:1, en el fragmento ««[…], rey, a todos los pueblos, naciones y lenguas que moran en toda la tierra: Paz os sea multiplicada.», la expresión que ocupa […] es «Beltsasar».",
-    "statement": "Según Daniel 4:1, en el fragmento ««[…], rey, a todos los pueblos, naciones y lenguas que moran en toda la tierra: Paz os sea multiplicada.», la expresión que ocupa […] es «Beltsasar».",
+    "question": "Verdadero o falso: Según Daniel 4:1, «Beltsasar, rey, a todos los pueblos, naciones y lenguas que moran en toda la tierra: Paz os sea multiplicada.",
+    "statement": "Según Daniel 4:1, «Beltsasar, rey, a todos los pueblos, naciones y lenguas que moran en toda la tierra: Paz os sea multiplicada.",
     "asserted_detail": "Beltsasar",
     "options": [
       "Verdadero",
@@ -184,9 +184,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:1, en el fragmento ««[…], rey, a todos los pueblos, naciones y lenguas que moran en toda la tierra: Paz os sea multiplicada.», la expresión que ocupa […] es «Nabucodonosor».",
+    "corrected_statement": "Según Daniel 4:1, «Nabucodonosor, rey, a todos los pueblos, naciones y lenguas que moran en toda la tierra: Paz os sea multiplicada.",
     "incorrect_detail": "Beltsasar",
     "correction": "Nabucodonosor",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 4:8",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
@@ -447,30 +448,31 @@
       "multiplicada"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:1, en el fragmento ««Nabucodonosor, rey, a todos los pueblos, naciones y lenguas que moran en toda la tierra: Paz os sea […].», la expresión que ocupa […] es «gobierna».",
-    "statement": "Según Daniel 4:1, en el fragmento ««Nabucodonosor, rey, a todos los pueblos, naciones y lenguas que moran en toda la tierra: Paz os sea […].», la expresión que ocupa […] es «gobierna».",
-    "asserted_detail": "gobierna",
+    "question": "Verdadero o falso: Según Daniel 4:1, al evaluar específicamente «multiplicada», el pasaje afirma: «Nabucodonosor, rey, a todos los pueblos, naciones y lenguas que moran en toda la tierra: Paz os sea multiplicada.",
+    "statement": "Según Daniel 4:1, al evaluar específicamente «multiplicada», el pasaje afirma: «Nabucodonosor, rey, a todos los pueblos, naciones y lenguas que moran en toda la tierra: Paz os sea multiplicada.",
+    "asserted_detail": "multiplicada",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:1, en el fragmento ««Nabucodonosor, rey, a todos los pueblos, naciones y lenguas que moran en toda la tierra: Paz os sea […].», la expresión que ocupa […] es «multiplicada».",
-    "incorrect_detail": "gobierna",
-    "correction": "multiplicada",
-    "replacement_source_ref": "Daniel 4:17",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «multiplicada», no «gobierna».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:1.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «gobierna»; la fuente contiene «multiplicada»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -719,8 +721,8 @@
       "Conviene"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:2, en el fragmento «[…] que yo declare las señales y milagros que el Dios Altísimo ha hecho conmigo.», la expresión que ocupa […] es «Conviene».",
-    "statement": "Según Daniel 4:2, en el fragmento «[…] que yo declare las señales y milagros que el Dios Altísimo ha hecho conmigo.», la expresión que ocupa […] es «Conviene».",
+    "question": "Verdadero o falso: Según Daniel 4:2, al evaluar específicamente «Conviene», el pasaje afirma: Conviene que yo declare las señales y milagros que el Dios Altísimo ha hecho conmigo.",
+    "statement": "Según Daniel 4:2, al evaluar específicamente «Conviene», el pasaje afirma: Conviene que yo declare las señales y milagros que el Dios Altísimo ha hecho conmigo.",
     "asserted_detail": "Conviene",
     "options": [
       "Verdadero",
@@ -731,6 +733,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
@@ -991,30 +994,31 @@
       "milagros"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:2, en el fragmento «Conviene que yo declare las señales y […] que el Dios Altísimo ha hecho conmigo.», la expresión que ocupa […] es «enemigos».",
-    "statement": "Según Daniel 4:2, en el fragmento «Conviene que yo declare las señales y […] que el Dios Altísimo ha hecho conmigo.», la expresión que ocupa […] es «enemigos».",
-    "asserted_detail": "enemigos",
+    "question": "Verdadero o falso: Según Daniel 4:2, al evaluar específicamente «milagros», el pasaje afirma: Conviene que yo declare las señales y milagros que el Dios Altísimo ha hecho conmigo.",
+    "statement": "Según Daniel 4:2, al evaluar específicamente «milagros», el pasaje afirma: Conviene que yo declare las señales y milagros que el Dios Altísimo ha hecho conmigo.",
+    "asserted_detail": "milagros",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:2, en el fragmento «Conviene que yo declare las señales y […] que el Dios Altísimo ha hecho conmigo.», la expresión que ocupa […] es «milagros».",
-    "incorrect_detail": "enemigos",
-    "correction": "milagros",
-    "replacement_source_ref": "Daniel 4:19",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «milagros», no «enemigos».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:2.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «enemigos»; la fuente contiene «milagros»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -1263,8 +1267,8 @@
       "de generación en generación"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:3, en el fragmento «Su reino, reino sempiterno; su señorío, […].», la expresión que ocupa […] es «de generación en generación».",
-    "statement": "Según Daniel 4:3, en el fragmento «Su reino, reino sempiterno; su señorío, […].», la expresión que ocupa […] es «de generación en generación».",
+    "question": "Verdadero o falso: Según Daniel 4:3, al evaluar específicamente «de generación en generación», el pasaje afirma: Su reino, reino sempiterno; su señorío, de generación en generación.",
+    "statement": "Según Daniel 4:3, al evaluar específicamente «de generación en generación», el pasaje afirma: Su reino, reino sempiterno; su señorío, de generación en generación.",
     "asserted_detail": "de generación en generación",
     "options": [
       "Verdadero",
@@ -1275,6 +1279,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "phrase",
     "replacement_slot_signature": null,
@@ -1535,30 +1540,31 @@
       "maravillas"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:3, en el fragmento «¡Cuán grandes son sus señales y cuán potentes sus […]!», la expresión que ocupa […] es «obras».",
-    "statement": "Según Daniel 4:3, en el fragmento «¡Cuán grandes son sus señales y cuán potentes sus […]!», la expresión que ocupa […] es «obras».",
-    "asserted_detail": "obras",
+    "question": "Verdadero o falso: Según Daniel 4:3, al evaluar específicamente «maravillas», el pasaje afirma: ¡Cuán grandes son sus señales y cuán potentes sus maravillas!",
+    "statement": "Según Daniel 4:3, al evaluar específicamente «maravillas», el pasaje afirma: ¡Cuán grandes son sus señales y cuán potentes sus maravillas!",
+    "asserted_detail": "maravillas",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:3, en el fragmento «¡Cuán grandes son sus señales y cuán potentes sus […]!», la expresión que ocupa […] es «maravillas».",
-    "incorrect_detail": "obras",
-    "correction": "maravillas",
-    "replacement_source_ref": "Daniel 4:37",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «maravillas», no «obras».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:3.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «obras»; la fuente contiene «maravillas»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -1807,8 +1813,8 @@
       "Nabucodonosor"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:4, en el fragmento «Yo, […], estaba tranquilo en mi casa, floreciente en mi palacio.», la expresión que ocupa […] es «Beltsasar».",
-    "statement": "Según Daniel 4:4, en el fragmento «Yo, […], estaba tranquilo en mi casa, floreciente en mi palacio.», la expresión que ocupa […] es «Beltsasar».",
+    "question": "Verdadero o falso: Según Daniel 4:4, Yo, Beltsasar, estaba tranquilo en mi casa, floreciente en mi palacio.",
+    "statement": "Según Daniel 4:4, Yo, Beltsasar, estaba tranquilo en mi casa, floreciente en mi palacio.",
     "asserted_detail": "Beltsasar",
     "options": [
       "Verdadero",
@@ -1816,9 +1822,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:4, en el fragmento «Yo, […], estaba tranquilo en mi casa, floreciente en mi palacio.», la expresión que ocupa […] es «Nabucodonosor».",
+    "corrected_statement": "Según Daniel 4:4, Yo, Nabucodonosor, estaba tranquilo en mi casa, floreciente en mi palacio.",
     "incorrect_detail": "Beltsasar",
     "correction": "Nabucodonosor",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 4:8",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
@@ -1948,17 +1955,17 @@
     "question": "Según Daniel 4:4, ¿qué término completa correctamente «Yo, Nabucodonosor, estaba tranquilo en mi casa, ________ en mi palacio.»?",
     "options": [
       "abundante",
-      "ascendiente",
+      "proveniente",
       "floreciente",
-      "defiéndante"
+      "ascendiente"
     ],
     "correct_option": 2,
     "correct_answer": "floreciente",
     "explanation": "Daniel 4:4 declara literalmente «Yo, Nabucodonosor, estaba tranquilo en mi casa, floreciente en mi palacio.». La respuesta pedida es «floreciente».",
     "why_distractors_fail": {
       "abundante": "Es verdadero en Daniel 4:21, pero no responde al contexto exacto de Daniel 4:4.",
-      "ascendiente": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 4:4.",
-      "defiéndante": "Es verdadero en PR43, p. 51, párrafo 9, pero no responde al contexto exacto de Daniel 4:4."
+      "proveniente": "Es verdadero en PR39, p. 28, párrafo 1, pero no responde al contexto exacto de Daniel 4:4.",
+      "ascendiente": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 4:4."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -2015,8 +2022,8 @@
     "question": "Complete Daniel 4:4: «Yo, Nabucodonosor, estaba tranquilo en mi casa, ________ en mi palacio.»",
     "options": [
       "abundante",
+      "proveniente",
       "ascendiente",
-      "defiéndante",
       "floreciente"
     ],
     "correct_option": 3,
@@ -2024,8 +2031,8 @@
     "explanation": "Daniel 4:4 declara literalmente «Yo, Nabucodonosor, estaba tranquilo en mi casa, floreciente en mi palacio.». La respuesta pedida es «floreciente».",
     "why_distractors_fail": {
       "abundante": "Es verdadero en Daniel 4:21, pero no responde al contexto exacto de Daniel 4:4.",
-      "ascendiente": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 4:4.",
-      "defiéndante": "Es verdadero en PR43, p. 51, párrafo 9, pero no responde al contexto exacto de Daniel 4:4."
+      "proveniente": "Es verdadero en PR39, p. 28, párrafo 1, pero no responde al contexto exacto de Daniel 4:4.",
+      "ascendiente": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 4:4."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -2079,8 +2086,8 @@
       "floreciente"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:4, en el fragmento «Yo, Nabucodonosor, estaba tranquilo en mi casa, […] en mi palacio.», la expresión que ocupa […] es «floreciente».",
-    "statement": "Según Daniel 4:4, en el fragmento «Yo, Nabucodonosor, estaba tranquilo en mi casa, […] en mi palacio.», la expresión que ocupa […] es «floreciente».",
+    "question": "Verdadero o falso: Según Daniel 4:4, al evaluar específicamente «floreciente», el pasaje afirma: Yo, Nabucodonosor, estaba tranquilo en mi casa, floreciente en mi palacio.",
+    "statement": "Según Daniel 4:4, al evaluar específicamente «floreciente», el pasaje afirma: Yo, Nabucodonosor, estaba tranquilo en mi casa, floreciente en mi palacio.",
     "asserted_detail": "floreciente",
     "options": [
       "Verdadero",
@@ -2091,6 +2098,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "term:list_or_clause_item",
     "replacement_slot_signature": null,
@@ -2154,16 +2162,16 @@
     "options": [
       "abundante",
       "floreciente",
-      "ascendiente",
-      "defiéndante"
+      "proveniente",
+      "ascendiente"
     ],
     "correct_option": 1,
     "correct_answer": "floreciente",
     "explanation": "En el contexto exacto de Daniel 4:4, el detalle aplicable es «floreciente»: «Yo, Nabucodonosor, estaba tranquilo en mi casa, floreciente en mi palacio.».",
     "why_distractors_fail": {
       "abundante": "Es verdadero en Daniel 4:21, pero no responde al contexto exacto de Daniel 4:4.",
-      "ascendiente": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 4:4.",
-      "defiéndante": "Es verdadero en PR43, p. 51, párrafo 9, pero no responde al contexto exacto de Daniel 4:4."
+      "proveniente": "Es verdadero en PR39, p. 28, párrafo 1, pero no responde al contexto exacto de Daniel 4:4.",
+      "ascendiente": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 4:4."
     },
     "trap_type": "true_in_other_context",
     "validation_adversarial": {
@@ -2351,30 +2359,31 @@
       "turbaron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:5, en el fragmento «Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me […].», la expresión que ocupa […] es «turbaron».",
-    "statement": "Según Daniel 4:5, en el fragmento «Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me […].», la expresión que ocupa […] es «turbaron».",
-    "asserted_detail": "turbaron",
+    "question": "Verdadero o falso: Según Daniel 4:5, Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me pudieron.",
+    "statement": "Según Daniel 4:5, Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me pudieron.",
+    "asserted_detail": "pudieron",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:5, Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
+    "incorrect_detail": "pudieron",
+    "correction": "turbaron",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:7",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:5.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «turbaron», no «pudieron».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «pudieron»; la fuente contiene «turbaron»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -2623,8 +2632,8 @@
       "Tuve"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:5, en el fragmento «[…] un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.», la expresión que ocupa […] es «Tuve».",
-    "statement": "Según Daniel 4:5, en el fragmento «[…] un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.», la expresión que ocupa […] es «Tuve».",
+    "question": "Verdadero o falso: Según Daniel 4:5, al evaluar específicamente «Tuve», el pasaje afirma: Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
+    "statement": "Según Daniel 4:5, al evaluar específicamente «Tuve», el pasaje afirma: Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
     "asserted_detail": "Tuve",
     "options": [
       "Verdadero",
@@ -2635,6 +2644,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
@@ -2895,8 +2905,8 @@
       "me dieran la interpretación del sueño"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:6, en el fragmento «Por esto mandé que vinieran ante mí todos los sabios de Babilonia para que […].», la expresión que ocupa […] es «me dieran la interpretación del sueño».",
-    "statement": "Según Daniel 4:6, en el fragmento «Por esto mandé que vinieran ante mí todos los sabios de Babilonia para que […].», la expresión que ocupa […] es «me dieran la interpretación del sueño».",
+    "question": "Verdadero o falso: Según Daniel 4:6, al evaluar específicamente «me dieran la interpretación del sueño», el pasaje afirma: Por esto mandé que vinieran ante mí todos los sabios de Babilonia para que me dieran la interpretación del sueño.",
+    "statement": "Según Daniel 4:6, al evaluar específicamente «me dieran la interpretación del sueño», el pasaje afirma: Por esto mandé que vinieran ante mí todos los sabios de Babilonia para que me dieran la interpretación del sueño.",
     "asserted_detail": "me dieran la interpretación del sueño",
     "options": [
       "Verdadero",
@@ -2907,6 +2917,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "phrase",
     "replacement_slot_signature": null,
@@ -3167,8 +3178,8 @@
       "Babilonia"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:6, en el fragmento «Por esto mandé que vinieran ante mí todos los sabios de […] para que me dieran la interpretación del sueño.», la expresión que ocupa […] es «Jerusalén».",
-    "statement": "Según Daniel 4:6, en el fragmento «Por esto mandé que vinieran ante mí todos los sabios de […] para que me dieran la interpretación del sueño.», la expresión que ocupa […] es «Jerusalén».",
+    "question": "Verdadero o falso: Según Daniel 4:6, Por esto mandé que vinieran ante mí todos los sabios de Jerusalén para que me dieran la interpretación del sueño.",
+    "statement": "Según Daniel 4:6, Por esto mandé que vinieran ante mí todos los sabios de Jerusalén para que me dieran la interpretación del sueño.",
     "asserted_detail": "Jerusalén",
     "options": [
       "Verdadero",
@@ -3176,9 +3187,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:6, en el fragmento «Por esto mandé que vinieran ante mí todos los sabios de […] para que me dieran la interpretación del sueño.», la expresión que ocupa […] es «Babilonia».",
+    "corrected_statement": "Según Daniel 4:6, Por esto mandé que vinieran ante mí todos los sabios de Babilonia para que me dieran la interpretación del sueño.",
     "incorrect_detail": "Jerusalén",
     "correction": "Babilonia",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 1:1",
     "correct_slot_signature": "place",
     "replacement_slot_signature": "place",
@@ -3439,30 +3451,31 @@
       "pudieron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:7, en el fragmento «Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me […] dar su interpretación,», la expresión que ocupa […] es «pudieron».",
-    "statement": "Según Daniel 4:7, en el fragmento «Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me […] dar su interpretación,», la expresión que ocupa […] es «pudieron».",
-    "asserted_detail": "pudieron",
+    "question": "Verdadero o falso: Según Daniel 4:7, Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me turbaron dar su interpretación.",
+    "statement": "Según Daniel 4:7, Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me turbaron dar su interpretación.",
+    "asserted_detail": "turbaron",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:7, Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación.",
+    "incorrect_detail": "turbaron",
+    "correction": "pudieron",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:5",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:7.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «pudieron», no «turbaron».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «turbaron»; la fuente contiene «pudieron»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -3580,17 +3593,17 @@
     "question": "Según Daniel 4:7, ¿qué término completa correctamente «Y vinieron magos, ________, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación,»?",
     "options": [
       "astrólogos",
+      "consejeros",
       "enemigos",
-      "milagros",
-      "pensamientos"
+      "milagros"
     ],
     "correct_option": 0,
     "correct_answer": "astrólogos",
     "explanation": "Daniel 4:7 declara literalmente «Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación,». La respuesta pedida es «astrólogos».",
     "why_distractors_fail": {
+      "consejeros": "Es verdadero en Daniel 4:36, pero no responde al contexto exacto de Daniel 4:7.",
       "enemigos": "Es verdadero en Daniel 4:19, pero no responde al contexto exacto de Daniel 4:7.",
-      "milagros": "Es verdadero en Daniel 4:2, pero no responde al contexto exacto de Daniel 4:7.",
-      "pensamientos": "Es verdadero en Daniel 4:19, pero no responde al contexto exacto de Daniel 4:7."
+      "milagros": "Es verdadero en Daniel 4:2, pero no responde al contexto exacto de Daniel 4:7."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -3646,18 +3659,18 @@
     "answer_mode": "option_id",
     "question": "Complete Daniel 4:7: «Y vinieron magos, ________, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación,»",
     "options": [
-      "enemigos",
+      "consejeros",
       "astrólogos",
-      "milagros",
-      "pensamientos"
+      "enemigos",
+      "milagros"
     ],
     "correct_option": 1,
     "correct_answer": "astrólogos",
     "explanation": "Daniel 4:7 declara literalmente «Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación,». La respuesta pedida es «astrólogos».",
     "why_distractors_fail": {
+      "consejeros": "Es verdadero en Daniel 4:36, pero no responde al contexto exacto de Daniel 4:7.",
       "enemigos": "Es verdadero en Daniel 4:19, pero no responde al contexto exacto de Daniel 4:7.",
-      "milagros": "Es verdadero en Daniel 4:2, pero no responde al contexto exacto de Daniel 4:7.",
-      "pensamientos": "Es verdadero en Daniel 4:19, pero no responde al contexto exacto de Daniel 4:7."
+      "milagros": "Es verdadero en Daniel 4:2, pero no responde al contexto exacto de Daniel 4:7."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -3711,30 +3724,31 @@
       "astrólogos"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:7, en el fragmento «Y vinieron magos, […], caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación,», la expresión que ocupa […] es «consejeros».",
-    "statement": "Según Daniel 4:7, en el fragmento «Y vinieron magos, […], caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación,», la expresión que ocupa […] es «consejeros».",
-    "asserted_detail": "consejeros",
+    "question": "Verdadero o falso: Según Daniel 4:7, al evaluar específicamente «astrólogos», el pasaje afirma: Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación.",
+    "statement": "Según Daniel 4:7, al evaluar específicamente «astrólogos», el pasaje afirma: Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación.",
+    "asserted_detail": "astrólogos",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:7, en el fragmento «Y vinieron magos, […], caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación,», la expresión que ocupa […] es «astrólogos».",
-    "incorrect_detail": "consejeros",
-    "correction": "astrólogos",
-    "replacement_source_ref": "Daniel 3:3",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:list_or_clause_item",
-    "replacement_slot_signature": "term:list_or_clause_item",
-    "explanation": "Es falsa: la fuente dice «astrólogos», no «consejeros».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:7.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «consejeros»; la fuente contiene «astrólogos»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -3784,18 +3798,18 @@
     "answer_mode": "option_id",
     "question": "Según Daniel 4:7, ¿qué término corresponde específicamente a esta escena: «Y vinieron magos, […], caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación,»?",
     "options": [
+      "consejeros",
       "enemigos",
       "milagros",
-      "pensamientos",
       "astrólogos"
     ],
     "correct_option": 3,
     "correct_answer": "astrólogos",
     "explanation": "En el contexto exacto de Daniel 4:7, el detalle aplicable es «astrólogos»: «Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación,».",
     "why_distractors_fail": {
+      "consejeros": "Es verdadero en Daniel 4:36, pero no responde al contexto exacto de Daniel 4:7.",
       "enemigos": "Es verdadero en Daniel 4:19, pero no responde al contexto exacto de Daniel 4:7.",
-      "milagros": "Es verdadero en Daniel 4:2, pero no responde al contexto exacto de Daniel 4:7.",
-      "pensamientos": "Es verdadero en Daniel 4:19, pero no responde al contexto exacto de Daniel 4:7."
+      "milagros": "Es verdadero en Daniel 4:2, pero no responde al contexto exacto de Daniel 4:7."
     },
     "trap_type": "true_in_other_context",
     "validation_adversarial": {
@@ -3983,34 +3997,35 @@
       "Beltsasar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:8, en el fragmento «hasta que entró ante mí Daniel, cuyo nombre es […], como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.», la expresión que ocupa […] es «Abed-nego».",
-    "statement": "Según Daniel 4:8, en el fragmento «hasta que entró ante mí Daniel, cuyo nombre es […], como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.», la expresión que ocupa […] es «Abed-nego».",
-    "asserted_detail": "Abed-nego",
+    "question": "Verdadero o falso: Según Daniel 4:8, hasta que entró ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.",
+    "statement": "Según Daniel 4:8, hasta que entró ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.",
+    "asserted_detail": "Beltsasar",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:8, en el fragmento «hasta que entró ante mí Daniel, cuyo nombre es […], como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.», la expresión que ocupa […] es «Beltsasar».",
-    "incorrect_detail": "Abed-nego",
-    "correction": "Beltsasar",
-    "replacement_source_ref": "Daniel 3:13",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": false,
+    "replacement_source_ref": null,
     "correct_slot_signature": "person",
-    "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Beltsasar», no «Abed-nego».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:8.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Abed-nego»; la fuente contiene «Beltsasar»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "hard"
+    "difficulty": "medium"
   },
   {
     "id": "DAN4-GOLD-0574-SINGLE_CHOICE_CONTEXTUAL",
@@ -4255,30 +4270,31 @@
       "entró"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:8, en el fragmento «hasta que […] ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.», la expresión que ocupa […] es «entró».",
-    "statement": "Según Daniel 4:8, en el fragmento «hasta que […] ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.», la expresión que ocupa […] es «entró».",
-    "asserted_detail": "entró",
+    "question": "Verdadero o falso: Según Daniel 4:8, hasta que cumplió ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.",
+    "statement": "Según Daniel 4:8, hasta que cumplió ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.",
+    "asserted_detail": "cumplió",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:8, hasta que entró ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.",
+    "incorrect_detail": "cumplió",
+    "correction": "entró",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:33",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:8.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «entró», no «cumplió».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «cumplió»; la fuente contiene «entró»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -4527,30 +4543,31 @@
       "entendido"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:9, en el fragmento «“Beltsasar, jefe de los magos, ya que he […] que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.», la expresión que ocupa […] es «gigantesco».",
-    "statement": "Según Daniel 4:9, en el fragmento «“Beltsasar, jefe de los magos, ya que he […] que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.», la expresión que ocupa […] es «gigantesco».",
-    "asserted_detail": "gigantesco",
+    "question": "Verdadero o falso: Según Daniel 4:9, al evaluar específicamente «entendido», el pasaje afirma: “Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.",
+    "statement": "Según Daniel 4:9, al evaluar específicamente «entendido», el pasaje afirma: “Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.",
+    "asserted_detail": "entendido",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:9, en el fragmento «“Beltsasar, jefe de los magos, ya que he […] que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.», la expresión que ocupa […] es «entendido».",
-    "incorrect_detail": "gigantesco",
-    "correction": "entendido",
-    "replacement_source_ref": "PR42, p. 43, párrafo 4",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:postnominal_modifier",
-    "replacement_slot_signature": "term:postnominal_modifier",
-    "explanation": "Es falsa: la fuente dice «entendido», no «gigantesco».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:9.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «gigantesco»; la fuente contiene «entendido»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -4799,30 +4816,31 @@
       "declárame"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:9, en el fragmento «“Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, […] las visiones de mi sueño que he visto, y su interpretación.», la expresión que ocupa […] es «quitadle».",
-    "statement": "Según Daniel 4:9, en el fragmento «“Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, […] las visiones de mi sueño que he visto, y su interpretación.», la expresión que ocupa […] es «quitadle».",
-    "asserted_detail": "quitadle",
+    "question": "Verdadero o falso: Según Daniel 4:9, al evaluar específicamente «declárame», el pasaje afirma: “Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.",
+    "statement": "Según Daniel 4:9, al evaluar específicamente «declárame», el pasaje afirma: “Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.",
+    "asserted_detail": "declárame",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:9, en el fragmento «“Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, […] las visiones de mi sueño que he visto, y su interpretación.», la expresión que ocupa […] es «declárame».",
-    "incorrect_detail": "quitadle",
-    "correction": "declárame",
-    "replacement_source_ref": "Daniel 4:14",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:list_or_clause_item",
-    "replacement_slot_signature": "term:list_or_clause_item",
-    "explanation": "Es falsa: la fuente dice «declárame», no «quitadle».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:9.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «quitadle»; la fuente contiene «declárame»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -5071,30 +5089,31 @@
       "parecía"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:10, en el fragmento «Éstas fueron las visiones de mi cabeza mientras estaba en mi cama: »”Me […] ver en medio de la tierra un árbol cuya altura era grande.», la expresión que ocupa […] es «parecía».",
-    "statement": "Según Daniel 4:10, en el fragmento «Éstas fueron las visiones de mi cabeza mientras estaba en mi cama: »”Me […] ver en medio de la tierra un árbol cuya altura era grande.», la expresión que ocupa […] es «parecía».",
-    "asserted_detail": "parecía",
+    "question": "Verdadero o falso: Según Daniel 4:10, Éstas fueron las visiones de mi cabeza mientras estaba en mi cama: »”Me llegaba ver en medio de la tierra un árbol cuya altura era grande.",
+    "statement": "Según Daniel 4:10, Éstas fueron las visiones de mi cabeza mientras estaba en mi cama: »”Me llegaba ver en medio de la tierra un árbol cuya altura era grande.",
+    "asserted_detail": "llegaba",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:10, Éstas fueron las visiones de mi cabeza mientras estaba en mi cama: »”Me parecía ver en medio de la tierra un árbol cuya altura era grande.",
+    "incorrect_detail": "llegaba",
+    "correction": "parecía",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:20",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:10.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «parecía», no «llegaba».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «llegaba»; la fuente contiene «parecía»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -5343,30 +5362,31 @@
       "visiones"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:10, en el fragmento «Éstas fueron las […] de mi cabeza mientras estaba en mi cama: »”Me parecía ver en medio de la tierra un árbol cuya altura era grande.», la expresión que ocupa […] es «confines».",
-    "statement": "Según Daniel 4:10, en el fragmento «Éstas fueron las […] de mi cabeza mientras estaba en mi cama: »”Me parecía ver en medio de la tierra un árbol cuya altura era grande.», la expresión que ocupa […] es «confines».",
-    "asserted_detail": "confines",
+    "question": "Verdadero o falso: Según Daniel 4:10, al evaluar específicamente «visiones», el pasaje afirma: Éstas fueron las visiones de mi cabeza mientras estaba en mi cama: »”Me parecía ver en medio de la tierra un árbol cuya altura era grande.",
+    "statement": "Según Daniel 4:10, al evaluar específicamente «visiones», el pasaje afirma: Éstas fueron las visiones de mi cabeza mientras estaba en mi cama: »”Me parecía ver en medio de la tierra un árbol cuya altura era grande.",
+    "asserted_detail": "visiones",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:10, en el fragmento «Éstas fueron las […] de mi cabeza mientras estaba en mi cama: »”Me parecía ver en medio de la tierra un árbol cuya altura era grande.», la expresión que ocupa […] es «visiones».",
-    "incorrect_detail": "confines",
-    "correction": "visiones",
-    "replacement_source_ref": "Daniel 4:11",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «visiones», no «confines».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:10.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «confines»; la fuente contiene «visiones»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -5615,30 +5635,31 @@
       "alcanzaba"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:11, en el fragmento «Crecía este árbol, y se hacía fuerte, y su copa llegaba hasta el cielo y se le […] a ver desde todos los confines de la tierra.», la expresión que ocupa […] es «alcanzaba».",
-    "statement": "Según Daniel 4:11, en el fragmento «Crecía este árbol, y se hacía fuerte, y su copa llegaba hasta el cielo y se le […] a ver desde todos los confines de la tierra.», la expresión que ocupa […] es «alcanzaba».",
-    "asserted_detail": "alcanzaba",
+    "question": "Verdadero o falso: Según Daniel 4:11, Crecía este árbol, y se hacía fuerte, y su copa llegaba hasta el cielo y se le descendía a ver desde todos los confines de la tierra.",
+    "statement": "Según Daniel 4:11, Crecía este árbol, y se hacía fuerte, y su copa llegaba hasta el cielo y se le descendía a ver desde todos los confines de la tierra.",
+    "asserted_detail": "descendía",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:11, Crecía este árbol, y se hacía fuerte, y su copa llegaba hasta el cielo y se le alcanzaba a ver desde todos los confines de la tierra.",
+    "incorrect_detail": "descendía",
+    "correction": "alcanzaba",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:13",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:11.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «alcanzaba», no «descendía».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «descendía»; la fuente contiene «alcanzaba»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -5887,30 +5908,31 @@
       "confines"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:11, en el fragmento «Crecía este árbol, y se hacía fuerte, y su copa llegaba hasta el cielo y se le alcanzaba a ver desde todos los […] de la tierra.», la expresión que ocupa […] es «visiones».",
-    "statement": "Según Daniel 4:11, en el fragmento «Crecía este árbol, y se hacía fuerte, y su copa llegaba hasta el cielo y se le alcanzaba a ver desde todos los […] de la tierra.», la expresión que ocupa […] es «visiones».",
-    "asserted_detail": "visiones",
+    "question": "Verdadero o falso: Según Daniel 4:11, al evaluar específicamente «confines», el pasaje afirma: Crecía este árbol, y se hacía fuerte, y su copa llegaba hasta el cielo y se le alcanzaba a ver desde todos los confines de la tierra.",
+    "statement": "Según Daniel 4:11, al evaluar específicamente «confines», el pasaje afirma: Crecía este árbol, y se hacía fuerte, y su copa llegaba hasta el cielo y se le alcanzaba a ver desde todos los confines de la tierra.",
+    "asserted_detail": "confines",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:11, en el fragmento «Crecía este árbol, y se hacía fuerte, y su copa llegaba hasta el cielo y se le alcanzaba a ver desde todos los […] de la tierra.», la expresión que ocupa […] es «confines».",
-    "incorrect_detail": "visiones",
-    "correction": "confines",
-    "replacement_source_ref": "Daniel 4:10",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «confines», no «visiones».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:11.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «visiones»; la fuente contiene «confines»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -6159,8 +6181,8 @@
       "anidaban"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:12, en el fragmento «Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas […] las aves del cielo y se mantenía de él todo ser viviente.», la expresión que ocupa […] es «anidaban».",
-    "statement": "Según Daniel 4:12, en el fragmento «Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas […] las aves del cielo y se mantenía de él todo ser viviente.», la expresión que ocupa […] es «anidaban».",
+    "question": "Verdadero o falso: Según Daniel 4:12, Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se mantenía de él todo ser viviente.",
+    "statement": "Según Daniel 4:12, Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se mantenía de él todo ser viviente.",
     "asserted_detail": "anidaban",
     "options": [
       "Verdadero",
@@ -6171,6 +6193,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": false,
     "replacement_source_ref": null,
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
@@ -6431,30 +6454,31 @@
       "mantenía"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:12, en el fragmento «Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se […] de él todo ser viviente.», la expresión que ocupa […] es «mantenía».",
-    "statement": "Según Daniel 4:12, en el fragmento «Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se […] de él todo ser viviente.», la expresión que ocupa […] es «mantenía».",
-    "asserted_detail": "mantenía",
+    "question": "Verdadero o falso: Según Daniel 4:12, Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se empapaba de él todo ser viviente.",
+    "statement": "Según Daniel 4:12, Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se empapaba de él todo ser viviente.",
+    "asserted_detail": "empapaba",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:12, Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se mantenía de él todo ser viviente.",
+    "incorrect_detail": "empapaba",
+    "correction": "mantenía",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:33",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:12.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «mantenía», no «empapaba».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «empapaba»; la fuente contiene «mantenía»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -6703,8 +6727,8 @@
       "descendía"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:13, en el fragmento «”Vi en las visiones de mi cabeza, mientras estaba en mi cama, que un vigilante y santo […] del cielo.», la expresión que ocupa […] es «descendía».",
-    "statement": "Según Daniel 4:13, en el fragmento «”Vi en las visiones de mi cabeza, mientras estaba en mi cama, que un vigilante y santo […] del cielo.», la expresión que ocupa […] es «descendía».",
+    "question": "Verdadero o falso: Según Daniel 4:13, ”Vi en las visiones de mi cabeza, mientras estaba en mi cama, que un vigilante y santo descendía del cielo.",
+    "statement": "Según Daniel 4:13, ”Vi en las visiones de mi cabeza, mientras estaba en mi cama, que un vigilante y santo descendía del cielo.",
     "asserted_detail": "descendía",
     "options": [
       "Verdadero",
@@ -6715,6 +6739,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": false,
     "replacement_source_ref": null,
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
@@ -6845,16 +6870,16 @@
     "options": [
       "vigilante",
       "altísimo",
-      "revelador",
-      "invisible"
+      "invisible",
+      "príncipe"
     ],
     "correct_option": 0,
     "correct_answer": "vigilante",
     "explanation": "Daniel 4:13 declara literalmente «”Vi en las visiones de mi cabeza, mientras estaba en mi cama, que un vigilante y santo descendía del cielo.». La respuesta pedida es «vigilante».",
     "why_distractors_fail": {
       "altísimo": "Es verdadero en Daniel 4:17, pero no responde al contexto exacto de Daniel 4:13.",
-      "revelador": "Es verdadero en PR44, p. 58, párrafo 4, pero no responde al contexto exacto de Daniel 4:13.",
-      "invisible": "Es verdadero en PR44, p. 57, párrafo 7, pero no responde al contexto exacto de Daniel 4:13."
+      "invisible": "Es verdadero en PR44, p. 57, párrafo 7, pero no responde al contexto exacto de Daniel 4:13.",
+      "príncipe": "Es verdadero en Daniel 10:21, pero no responde al contexto exacto de Daniel 4:13."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -6912,16 +6937,16 @@
     "options": [
       "altísimo",
       "vigilante",
-      "revelador",
-      "invisible"
+      "invisible",
+      "príncipe"
     ],
     "correct_option": 1,
     "correct_answer": "vigilante",
     "explanation": "Daniel 4:13 declara literalmente «”Vi en las visiones de mi cabeza, mientras estaba en mi cama, que un vigilante y santo descendía del cielo.». La respuesta pedida es «vigilante».",
     "why_distractors_fail": {
       "altísimo": "Es verdadero en Daniel 4:17, pero no responde al contexto exacto de Daniel 4:13.",
-      "revelador": "Es verdadero en PR44, p. 58, párrafo 4, pero no responde al contexto exacto de Daniel 4:13.",
-      "invisible": "Es verdadero en PR44, p. 57, párrafo 7, pero no responde al contexto exacto de Daniel 4:13."
+      "invisible": "Es verdadero en PR44, p. 57, párrafo 7, pero no responde al contexto exacto de Daniel 4:13.",
+      "príncipe": "Es verdadero en Daniel 10:21, pero no responde al contexto exacto de Daniel 4:13."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -6975,34 +7000,35 @@
       "vigilante"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:13, en el fragmento «”Vi en las visiones de mi cabeza, mientras estaba en mi cama, que un […] y santo descendía del cielo.», la expresión que ocupa […] es «vigilante».",
-    "statement": "Según Daniel 4:13, en el fragmento «”Vi en las visiones de mi cabeza, mientras estaba en mi cama, que un […] y santo descendía del cielo.», la expresión que ocupa […] es «vigilante».",
-    "asserted_detail": "vigilante",
+    "question": "Verdadero o falso: Según Daniel 4:13, ”Vi en las visiones de mi cabeza, mientras estaba en mi cama, que un altísimo y santo descendía del cielo.",
+    "statement": "Según Daniel 4:13, ”Vi en las visiones de mi cabeza, mientras estaba en mi cama, que un altísimo y santo descendía del cielo.",
+    "asserted_detail": "altísimo",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:13, ”Vi en las visiones de mi cabeza, mientras estaba en mi cama, que un vigilante y santo descendía del cielo.",
+    "incorrect_detail": "altísimo",
+    "correction": "vigilante",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:17",
     "correct_slot_signature": "person",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:13.",
+    "replacement_slot_signature": "person",
+    "explanation": "Es falsa: la fuente dice «vigilante», no «altísimo».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «altísimo»; la fuente contiene «vigilante»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "DAN4-GOLD-0585-SINGLE_CHOICE_CONTEXTUAL",
@@ -7049,8 +7075,8 @@
     "question": "Según Daniel 4:13, ¿qué personaje corresponde específicamente a esta escena: «”Vi en las visiones de mi cabeza, mientras estaba en mi cama, que un […] y santo descendía del cielo.»?",
     "options": [
       "altísimo",
-      "revelador",
       "invisible",
+      "príncipe",
       "vigilante"
     ],
     "correct_option": 3,
@@ -7058,8 +7084,8 @@
     "explanation": "En el contexto exacto de Daniel 4:13, el detalle aplicable es «vigilante»: «”Vi en las visiones de mi cabeza, mientras estaba en mi cama, que un vigilante y santo descendía del cielo.».",
     "why_distractors_fail": {
       "altísimo": "Es verdadero en Daniel 4:17, pero no responde al contexto exacto de Daniel 4:13.",
-      "revelador": "Es verdadero en PR44, p. 58, párrafo 4, pero no responde al contexto exacto de Daniel 4:13.",
-      "invisible": "Es verdadero en PR44, p. 57, párrafo 7, pero no responde al contexto exacto de Daniel 4:13."
+      "invisible": "Es verdadero en PR44, p. 57, párrafo 7, pero no responde al contexto exacto de Daniel 4:13.",
+      "príncipe": "Es verdadero en Daniel 10:21, pero no responde al contexto exacto de Daniel 4:13."
     },
     "trap_type": "true_in_other_context",
     "validation_adversarial": {
@@ -7247,30 +7273,31 @@
       "Clamaba"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:14, en el fragmento «[…] fuertemente y decía así: »”‘Derribad el árbol y cortad sus ramas, quitadle el follaje y dispersad su fruto; váyanse las bestias que están debajo de él, y las aves de sus ramas.», la expresión que ocupa […] es «Clamaba».",
-    "statement": "Según Daniel 4:14, en el fragmento «[…] fuertemente y decía así: »”‘Derribad el árbol y cortad sus ramas, quitadle el follaje y dispersad su fruto; váyanse las bestias que están debajo de él, y las aves de sus ramas.», la expresión que ocupa […] es «Clamaba».",
-    "asserted_detail": "Clamaba",
+    "question": "Verdadero o falso: Según Daniel 4:14, Llegaba fuertemente y decía así: »”‘Derribad el árbol y cortad sus ramas, quitadle el follaje y dispersad su fruto; váyanse las bestias que están debajo de él, y las aves de sus ramas.",
+    "statement": "Según Daniel 4:14, Llegaba fuertemente y decía así: »”‘Derribad el árbol y cortad sus ramas, quitadle el follaje y dispersad su fruto; váyanse las bestias que están debajo de él, y las aves de sus ramas.",
+    "asserted_detail": "Llegaba",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:14, Clamaba fuertemente y decía así: »”‘Derribad el árbol y cortad sus ramas, quitadle el follaje y dispersad su fruto; váyanse las bestias que están debajo de él, y las aves de sus ramas.",
+    "incorrect_detail": "Llegaba",
+    "correction": "Clamaba",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:20",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:14.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «Clamaba», no «Llegaba».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Llegaba»; la fuente contiene «Clamaba»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -7519,30 +7546,31 @@
       "fuertemente"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:14, en el fragmento «Clamaba […] y decía así: »”‘Derribad el árbol y cortad sus ramas, quitadle el follaje y dispersad su fruto; váyanse las bestias que están debajo de él, y las aves de sus ramas.», la expresión que ocupa […] es «diariamente».",
-    "statement": "Según Daniel 4:14, en el fragmento «Clamaba […] y decía así: »”‘Derribad el árbol y cortad sus ramas, quitadle el follaje y dispersad su fruto; váyanse las bestias que están debajo de él, y las aves de sus ramas.», la expresión que ocupa […] es «diariamente».",
-    "asserted_detail": "diariamente",
+    "question": "Verdadero o falso: Según Daniel 4:14, al evaluar específicamente «fuertemente», el pasaje afirma: Clamaba fuertemente y decía así: »”‘Derribad el árbol y cortad sus ramas, quitadle el follaje y dispersad su fruto; váyanse las bestias que están debajo de él, y las aves de sus ramas.",
+    "statement": "Según Daniel 4:14, al evaluar específicamente «fuertemente», el pasaje afirma: Clamaba fuertemente y decía así: »”‘Derribad el árbol y cortad sus ramas, quitadle el follaje y dispersad su fruto; váyanse las bestias que están debajo de él, y las aves de sus ramas.",
+    "asserted_detail": "fuertemente",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:14, en el fragmento «Clamaba […] y decía así: »”‘Derribad el árbol y cortad sus ramas, quitadle el follaje y dispersad su fruto; váyanse las bestias que están debajo de él, y las aves de sus ramas.», la expresión que ocupa […] es «fuertemente».",
-    "incorrect_detail": "diariamente",
-    "correction": "fuertemente",
-    "replacement_source_ref": "PR39, p. 31, párrafo 1",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:adverb",
-    "replacement_slot_signature": "term:adverb",
-    "explanation": "Es falsa: la fuente dice «fuertemente», no «diariamente».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:14.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «diariamente»; la fuente contiene «fuertemente»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -7791,8 +7819,8 @@
       "bronce entre la hierba"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:15, en el fragmento «Mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de […] del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.», la expresión que ocupa […] es «bronce entre la hierba».",
-    "statement": "Según Daniel 4:15, en el fragmento «Mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de […] del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.», la expresión que ocupa […] es «bronce entre la hierba».",
+    "question": "Verdadero o falso: Según Daniel 4:15, al evaluar específicamente «bronce entre la hierba», el pasaje afirma: Mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.",
+    "statement": "Según Daniel 4:15, al evaluar específicamente «bronce entre la hierba», el pasaje afirma: Mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.",
     "asserted_detail": "bronce entre la hierba",
     "options": [
       "Verdadero",
@@ -7803,6 +7831,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "phrase",
     "replacement_slot_signature": null,
@@ -7932,17 +7961,17 @@
     "question": "Según Daniel 4:15, ¿qué término completa correctamente «Mas la cepa de sus raíces ________ en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.»?",
     "options": [
       "dejaréis",
-      "postréis",
       "mostráis",
-      "adoréis"
+      "postréis",
+      "adorareis"
     ],
     "correct_option": 0,
     "correct_answer": "dejaréis",
     "explanation": "Daniel 4:15 declara literalmente «Mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.». La respuesta pedida es «dejaréis».",
     "why_distractors_fail": {
-      "postréis": "Es verdadero en Daniel 3:15, pero no responde al contexto exacto de Daniel 4:15.",
       "mostráis": "Es verdadero en PR40, p. 33, párrafo 6, pero no responde al contexto exacto de Daniel 4:15.",
-      "adoréis": "Es verdadero en Daniel 3:15, pero no responde al contexto exacto de Daniel 4:15."
+      "postréis": "Es verdadero en Daniel 3:5, pero no responde al contexto exacto de Daniel 4:15.",
+      "adorareis": "Es verdadero en PR41, p. 40, párrafo 2, pero no responde al contexto exacto de Daniel 4:15."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -7998,18 +8027,18 @@
     "answer_mode": "option_id",
     "question": "Complete Daniel 4:15: «Mas la cepa de sus raíces ________ en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.»",
     "options": [
-      "postréis",
-      "dejaréis",
       "mostráis",
-      "adoréis"
+      "dejaréis",
+      "postréis",
+      "adorareis"
     ],
     "correct_option": 1,
     "correct_answer": "dejaréis",
     "explanation": "Daniel 4:15 declara literalmente «Mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.». La respuesta pedida es «dejaréis».",
     "why_distractors_fail": {
-      "postréis": "Es verdadero en Daniel 3:15, pero no responde al contexto exacto de Daniel 4:15.",
       "mostráis": "Es verdadero en PR40, p. 33, párrafo 6, pero no responde al contexto exacto de Daniel 4:15.",
-      "adoréis": "Es verdadero en Daniel 3:15, pero no responde al contexto exacto de Daniel 4:15."
+      "postréis": "Es verdadero en Daniel 3:5, pero no responde al contexto exacto de Daniel 4:15.",
+      "adorareis": "Es verdadero en PR41, p. 40, párrafo 2, pero no responde al contexto exacto de Daniel 4:15."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -8063,30 +8092,31 @@
       "dejaréis"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:15, en el fragmento «Mas la cepa de sus raíces […] en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.», la expresión que ocupa […] es «postréis».",
-    "statement": "Según Daniel 4:15, en el fragmento «Mas la cepa de sus raíces […] en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.», la expresión que ocupa […] es «postréis».",
-    "asserted_detail": "postréis",
+    "question": "Verdadero o falso: Según Daniel 4:15, al evaluar específicamente «dejaréis», el pasaje afirma: Mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.",
+    "statement": "Según Daniel 4:15, al evaluar específicamente «dejaréis», el pasaje afirma: Mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.",
+    "asserted_detail": "dejaréis",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:15, en el fragmento «Mas la cepa de sus raíces […] en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.», la expresión que ocupa […] es «dejaréis».",
-    "incorrect_detail": "postréis",
-    "correction": "dejaréis",
-    "replacement_source_ref": "Daniel 3:15",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «dejaréis», no «postréis».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:15.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «postréis»; la fuente contiene «dejaréis»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -8136,18 +8166,18 @@
     "answer_mode": "option_id",
     "question": "Según Daniel 4:15, ¿qué término corresponde específicamente a esta escena: «Mas la cepa de sus raíces […] en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.»?",
     "options": [
-      "postréis",
       "mostráis",
-      "adoréis",
+      "postréis",
+      "adorareis",
       "dejaréis"
     ],
     "correct_option": 3,
     "correct_answer": "dejaréis",
     "explanation": "En el contexto exacto de Daniel 4:15, el detalle aplicable es «dejaréis»: «Mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.».",
     "why_distractors_fail": {
-      "postréis": "Es verdadero en Daniel 3:15, pero no responde al contexto exacto de Daniel 4:15.",
       "mostráis": "Es verdadero en PR40, p. 33, párrafo 6, pero no responde al contexto exacto de Daniel 4:15.",
-      "adoréis": "Es verdadero en Daniel 3:15, pero no responde al contexto exacto de Daniel 4:15."
+      "postréis": "Es verdadero en Daniel 3:5, pero no responde al contexto exacto de Daniel 4:15.",
+      "adorareis": "Es verdadero en PR41, p. 40, párrafo 2, pero no responde al contexto exacto de Daniel 4:15."
     },
     "trap_type": "true_in_other_context",
     "validation_adversarial": {
@@ -8335,8 +8365,8 @@
       "siete"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:16, en el fragmento «Su corazón de hombre sea cambiado y le sea dado corazón de bestia, y pasen sobre él […] tiempos.», la expresión que ocupa […] es «doce».",
-    "statement": "Según Daniel 4:16, en el fragmento «Su corazón de hombre sea cambiado y le sea dado corazón de bestia, y pasen sobre él […] tiempos.», la expresión que ocupa […] es «doce».",
+    "question": "Verdadero o falso: Según Daniel 4:16, Su corazón de hombre sea cambiado y le sea dado corazón de bestia, y pasen sobre él doce tiempos.",
+    "statement": "Según Daniel 4:16, Su corazón de hombre sea cambiado y le sea dado corazón de bestia, y pasen sobre él doce tiempos.",
     "asserted_detail": "doce",
     "options": [
       "Verdadero",
@@ -8344,9 +8374,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:16, en el fragmento «Su corazón de hombre sea cambiado y le sea dado corazón de bestia, y pasen sobre él […] tiempos.», la expresión que ocupa […] es «siete».",
+    "corrected_statement": "Según Daniel 4:16, Su corazón de hombre sea cambiado y le sea dado corazón de bestia, y pasen sobre él siete tiempos.",
     "incorrect_detail": "doce",
     "correction": "siete",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 4:29",
     "correct_slot_signature": "number",
     "replacement_slot_signature": "number",
@@ -8607,30 +8638,31 @@
       "cambiado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:16, en el fragmento «Su corazón de hombre sea […] y le sea dado corazón de bestia, y pasen sobre él siete tiempos.», la expresión que ocupa […] es «alimento».",
-    "statement": "Según Daniel 4:16, en el fragmento «Su corazón de hombre sea […] y le sea dado corazón de bestia, y pasen sobre él siete tiempos.», la expresión que ocupa […] es «alimento».",
-    "asserted_detail": "alimento",
+    "question": "Verdadero o falso: Según Daniel 4:16, al evaluar específicamente «cambiado», el pasaje afirma: Su corazón de hombre sea cambiado y le sea dado corazón de bestia, y pasen sobre él siete tiempos.",
+    "statement": "Según Daniel 4:16, al evaluar específicamente «cambiado», el pasaje afirma: Su corazón de hombre sea cambiado y le sea dado corazón de bestia, y pasen sobre él siete tiempos.",
+    "asserted_detail": "cambiado",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:16, en el fragmento «Su corazón de hombre sea […] y le sea dado corazón de bestia, y pasen sobre él siete tiempos.», la expresión que ocupa […] es «cambiado».",
-    "incorrect_detail": "alimento",
-    "correction": "cambiado",
-    "replacement_source_ref": "Daniel 4:21",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «cambiado», no «alimento».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:16.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «alimento»; la fuente contiene «cambiado»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -8879,8 +8911,8 @@
       "conozcan los vivientes que el Altísimo gobierna el"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:17, en el fragmento «La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que […] reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’», la expresión que ocupa […] es «conozcan los vivientes que el Altísimo gobierna el».",
-    "statement": "Según Daniel 4:17, en el fragmento «La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que […] reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’», la expresión que ocupa […] es «conozcan los vivientes que el Altísimo gobierna el».",
+    "question": "Verdadero o falso: Según Daniel 4:17, al evaluar específicamente «conozcan los vivientes que el Altísimo gobierna el», el pasaje afirma: La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "statement": "Según Daniel 4:17, al evaluar específicamente «conozcan los vivientes que el Altísimo gobierna el», el pasaje afirma: La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
     "asserted_detail": "conozcan los vivientes que el Altísimo gobierna el",
     "options": [
       "Verdadero",
@@ -8891,6 +8923,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "phrase",
     "replacement_slot_signature": null,
@@ -9022,7 +9055,7 @@
       "Altísimo",
       "Salvador",
       "Anciano",
-      "Huésped"
+      "Revelador"
     ],
     "correct_option": 0,
     "correct_answer": "Altísimo",
@@ -9030,7 +9063,7 @@
     "why_distractors_fail": {
       "Salvador": "Es verdadero en PR41, p. 40, párrafo 6, pero no responde al contexto exacto de Daniel 4:17.",
       "Anciano": "Es verdadero en Daniel 7:9, pero no responde al contexto exacto de Daniel 4:17.",
-      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 4:17."
+      "Revelador": "Es verdadero en PR40, p. 35, párrafo 9, pero no responde al contexto exacto de Daniel 4:17."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -9089,7 +9122,7 @@
       "Salvador",
       "Altísimo",
       "Anciano",
-      "Huésped"
+      "Revelador"
     ],
     "correct_option": 1,
     "correct_answer": "Altísimo",
@@ -9097,7 +9130,7 @@
     "why_distractors_fail": {
       "Salvador": "Es verdadero en PR41, p. 40, párrafo 6, pero no responde al contexto exacto de Daniel 4:17.",
       "Anciano": "Es verdadero en Daniel 7:9, pero no responde al contexto exacto de Daniel 4:17.",
-      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 4:17."
+      "Revelador": "Es verdadero en PR40, p. 35, párrafo 9, pero no responde al contexto exacto de Daniel 4:17."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -9151,34 +9184,35 @@
       "Altísimo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:17, en el fragmento «La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el […] gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’», la expresión que ocupa […] es «Altísimo».",
-    "statement": "Según Daniel 4:17, en el fragmento «La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el […] gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’», la expresión que ocupa […] es «Altísimo».",
-    "asserted_detail": "Altísimo",
+    "question": "Verdadero o falso: Según Daniel 4:17, La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Salvador gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "statement": "Según Daniel 4:17, La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Salvador gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "asserted_detail": "Salvador",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:17, La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "incorrect_detail": "Salvador",
+    "correction": "Altísimo",
+    "focused_true_statement": false,
+    "replacement_source_ref": "PR41, p. 40, párrafo 6",
     "correct_slot_signature": "person",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:17.",
+    "replacement_slot_signature": "person",
+    "explanation": "Es falsa: la fuente dice «Altísimo», no «Salvador».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Salvador»; la fuente contiene «Altísimo»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "DAN4-GOLD-0593-SINGLE_CHOICE_CONTEXTUAL",
@@ -9226,7 +9260,7 @@
     "options": [
       "Salvador",
       "Anciano",
-      "Huésped",
+      "Revelador",
       "Altísimo"
     ],
     "correct_option": 3,
@@ -9235,7 +9269,7 @@
     "why_distractors_fail": {
       "Salvador": "Es verdadero en PR41, p. 40, párrafo 6, pero no responde al contexto exacto de Daniel 4:17.",
       "Anciano": "Es verdadero en Daniel 7:9, pero no responde al contexto exacto de Daniel 4:17.",
-      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 4:17."
+      "Revelador": "Es verdadero en PR40, p. 35, párrafo 9, pero no responde al contexto exacto de Daniel 4:17."
     },
     "trap_type": "true_in_other_context",
     "validation_adversarial": {
@@ -9245,7 +9279,7 @@
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "expert"
+    "difficulty": "hard"
   },
   {
     "id": "DAN4-GOLD-0594-SINGLE_CHOICE_DIRECT",
@@ -9423,8 +9457,8 @@
       "Beltsasar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:18, en el fragmento «Tú, pues, […], darás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar; pero tú puedes, porque habita en ti el espíritu de los dioses santos.”», la expresión que ocupa […] es «Abed-nego».",
-    "statement": "Según Daniel 4:18, en el fragmento «Tú, pues, […], darás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar; pero tú puedes, porque habita en ti el espíritu de los dioses santos.”», la expresión que ocupa […] es «Abed-nego».",
+    "question": "Verdadero o falso: Según Daniel 4:18, Tú, pues, Abed-nego, darás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar; pero tú puedes, porque habita en ti el espíritu de los dioses santos.”",
+    "statement": "Según Daniel 4:18, Tú, pues, Abed-nego, darás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar; pero tú puedes, porque habita en ti el espíritu de los dioses santos.”",
     "asserted_detail": "Abed-nego",
     "options": [
       "Verdadero",
@@ -9432,9 +9466,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:18, en el fragmento «Tú, pues, […], darás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar; pero tú puedes, porque habita en ti el espíritu de los dioses santos.”», la expresión que ocupa […] es «Beltsasar».",
+    "corrected_statement": "Según Daniel 4:18, Tú, pues, Beltsasar, darás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar; pero tú puedes, porque habita en ti el espíritu de los dioses santos.”",
     "incorrect_detail": "Abed-nego",
     "correction": "Beltsasar",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 3:13",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
@@ -9695,30 +9730,31 @@
       "darás"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:18, en el fragmento «Tú, pues, Beltsasar, […] su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar; pero tú puedes, porque habita en ti el espíritu de los dioses santos.”», la expresión que ocupa […] es «darás».",
-    "statement": "Según Daniel 4:18, en el fragmento «Tú, pues, Beltsasar, […] su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar; pero tú puedes, porque habita en ti el espíritu de los dioses santos.”», la expresión que ocupa […] es «darás».",
-    "asserted_detail": "darás",
+    "question": "Verdadero o falso: Según Daniel 4:18, Tú, pues, Beltsasar, serás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar; pero tú puedes, porque habita en ti el espíritu de los dioses santos.”",
+    "statement": "Según Daniel 4:18, Tú, pues, Beltsasar, serás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar; pero tú puedes, porque habita en ti el espíritu de los dioses santos.”",
+    "asserted_detail": "serás",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:18, Tú, pues, Beltsasar, darás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar; pero tú puedes, porque habita en ti el espíritu de los dioses santos.”",
+    "incorrect_detail": "serás",
+    "correction": "darás",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:25",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:18.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «darás», no «serás».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «serás»; la fuente contiene «darás»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -9967,30 +10003,31 @@
       "turbaban"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:19, en el fragmento «Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus pensamientos lo […].», la expresión que ocupa […] es «turbaban».",
-    "statement": "Según Daniel 4:19, en el fragmento «Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus pensamientos lo […].», la expresión que ocupa […] es «turbaban».",
-    "asserted_detail": "turbaban",
+    "question": "Verdadero o falso: Según Daniel 4:19, Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus pensamientos lo anidaban.",
+    "statement": "Según Daniel 4:19, Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus pensamientos lo anidaban.",
+    "asserted_detail": "anidaban",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:19, Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus pensamientos lo turbaban.",
+    "incorrect_detail": "anidaban",
+    "correction": "turbaban",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:12",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:19.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «turbaban», no «anidaban».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «anidaban»; la fuente contiene «turbaban»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -10109,16 +10146,16 @@
     "options": [
       "pensamientos",
       "astrólogos",
-      "adivinos",
-      "milagros"
+      "consejeros",
+      "adivinos"
     ],
     "correct_option": 0,
     "correct_answer": "pensamientos",
     "explanation": "Daniel 4:19 declara literalmente «Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus pensamientos lo turbaban.». La respuesta pedida es «pensamientos».",
     "why_distractors_fail": {
       "astrólogos": "Es verdadero en Daniel 4:7, pero no responde al contexto exacto de Daniel 4:19.",
-      "adivinos": "Es verdadero en Daniel 4:7, pero no responde al contexto exacto de Daniel 4:19.",
-      "milagros": "Es verdadero en Daniel 4:2, pero no responde al contexto exacto de Daniel 4:19."
+      "consejeros": "Es verdadero en Daniel 4:36, pero no responde al contexto exacto de Daniel 4:19.",
+      "adivinos": "Es verdadero en Daniel 4:7, pero no responde al contexto exacto de Daniel 4:19."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -10176,16 +10213,16 @@
     "options": [
       "astrólogos",
       "pensamientos",
-      "adivinos",
-      "milagros"
+      "consejeros",
+      "adivinos"
     ],
     "correct_option": 1,
     "correct_answer": "pensamientos",
     "explanation": "Daniel 4:19 declara literalmente «Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus pensamientos lo turbaban.». La respuesta pedida es «pensamientos».",
     "why_distractors_fail": {
       "astrólogos": "Es verdadero en Daniel 4:7, pero no responde al contexto exacto de Daniel 4:19.",
-      "adivinos": "Es verdadero en Daniel 4:7, pero no responde al contexto exacto de Daniel 4:19.",
-      "milagros": "Es verdadero en Daniel 4:2, pero no responde al contexto exacto de Daniel 4:19."
+      "consejeros": "Es verdadero en Daniel 4:36, pero no responde al contexto exacto de Daniel 4:19.",
+      "adivinos": "Es verdadero en Daniel 4:7, pero no responde al contexto exacto de Daniel 4:19."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -10239,30 +10276,31 @@
       "pensamientos"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:19, en el fragmento «Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus […] lo turbaban.», la expresión que ocupa […] es «caminos».",
-    "statement": "Según Daniel 4:19, en el fragmento «Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus […] lo turbaban.», la expresión que ocupa […] es «caminos».",
-    "asserted_detail": "caminos",
+    "question": "Verdadero o falso: Según Daniel 4:19, al evaluar específicamente «pensamientos», el pasaje afirma: Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus pensamientos lo turbaban.",
+    "statement": "Según Daniel 4:19, al evaluar específicamente «pensamientos», el pasaje afirma: Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus pensamientos lo turbaban.",
+    "asserted_detail": "pensamientos",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:19, en el fragmento «Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus […] lo turbaban.», la expresión que ocupa […] es «pensamientos».",
-    "incorrect_detail": "caminos",
-    "correction": "pensamientos",
-    "replacement_source_ref": "Daniel 4:37",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «pensamientos», no «caminos».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:19.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «caminos»; la fuente contiene «pensamientos»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -10313,8 +10351,8 @@
     "question": "Según Daniel 4:19, ¿qué término corresponde específicamente a esta escena: «Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus […] lo turbaban.»?",
     "options": [
       "astrólogos",
+      "consejeros",
       "adivinos",
-      "milagros",
       "pensamientos"
     ],
     "correct_option": 3,
@@ -10322,8 +10360,8 @@
     "explanation": "En el contexto exacto de Daniel 4:19, el detalle aplicable es «pensamientos»: «Entonces Daniel, cuyo nombre era Beltsasar, quedó atónito casi una hora, y sus pensamientos lo turbaban.».",
     "why_distractors_fail": {
       "astrólogos": "Es verdadero en Daniel 4:7, pero no responde al contexto exacto de Daniel 4:19.",
-      "adivinos": "Es verdadero en Daniel 4:7, pero no responde al contexto exacto de Daniel 4:19.",
-      "milagros": "Es verdadero en Daniel 4:2, pero no responde al contexto exacto de Daniel 4:19."
+      "consejeros": "Es verdadero en Daniel 4:36, pero no responde al contexto exacto de Daniel 4:19.",
+      "adivinos": "Es verdadero en Daniel 4:7, pero no responde al contexto exacto de Daniel 4:19."
     },
     "trap_type": "true_in_other_context",
     "validation_adversarial": {
@@ -10511,30 +10549,31 @@
       "llegaba"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:20, en el fragmento «El árbol que viste, que crecía y se hacía fuerte, cuya copa […] hasta el cielo, que se veía desde todos los confines de la tierra,», la expresión que ocupa […] es «llegaba».",
-    "statement": "Según Daniel 4:20, en el fragmento «El árbol que viste, que crecía y se hacía fuerte, cuya copa […] hasta el cielo, que se veía desde todos los confines de la tierra,», la expresión que ocupa […] es «llegaba».",
-    "asserted_detail": "llegaba",
+    "question": "Verdadero o falso: Según Daniel 4:20, El árbol que viste, que crecía y se hacía fuerte, cuya copa clamaba hasta el cielo, que se veía desde todos los confines de la tierra.",
+    "statement": "Según Daniel 4:20, El árbol que viste, que crecía y se hacía fuerte, cuya copa clamaba hasta el cielo, que se veía desde todos los confines de la tierra.",
+    "asserted_detail": "clamaba",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:20, El árbol que viste, que crecía y se hacía fuerte, cuya copa llegaba hasta el cielo, que se veía desde todos los confines de la tierra.",
+    "incorrect_detail": "clamaba",
+    "correction": "llegaba",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:14",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:20.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «llegaba», no «clamaba».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «clamaba»; la fuente contiene «llegaba»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -10783,30 +10822,31 @@
       "crecía"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:20, en el fragmento «El árbol que viste, que […] y se hacía fuerte, cuya copa llegaba hasta el cielo, que se veía desde todos los confines de la tierra,», la expresión que ocupa […] es «crecía».",
-    "statement": "Según Daniel 4:20, en el fragmento «El árbol que viste, que […] y se hacía fuerte, cuya copa llegaba hasta el cielo, que se veía desde todos los confines de la tierra,», la expresión que ocupa […] es «crecía».",
-    "asserted_detail": "crecía",
+    "question": "Verdadero o falso: Según Daniel 4:20, El árbol que viste, que comía y se hacía fuerte, cuya copa llegaba hasta el cielo, que se veía desde todos los confines de la tierra.",
+    "statement": "Según Daniel 4:20, El árbol que viste, que comía y se hacía fuerte, cuya copa llegaba hasta el cielo, que se veía desde todos los confines de la tierra.",
+    "asserted_detail": "comía",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:20, El árbol que viste, que crecía y se hacía fuerte, cuya copa llegaba hasta el cielo, que se veía desde todos los confines de la tierra.",
+    "incorrect_detail": "comía",
+    "correction": "crecía",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:33",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:20.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «crecía», no «comía».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «comía»; la fuente contiene «crecía»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -11055,30 +11095,31 @@
       "abundante"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:21, en el fragmento «cuyo follaje era hermoso y su fruto […], en el que había alimento para todos, debajo del cual vivían las bestias del campo y en cuyas ramas anidaban las aves del cielo,», la expresión que ocupa […] es «imponente».",
-    "statement": "Según Daniel 4:21, en el fragmento «cuyo follaje era hermoso y su fruto […], en el que había alimento para todos, debajo del cual vivían las bestias del campo y en cuyas ramas anidaban las aves del cielo,», la expresión que ocupa […] es «imponente».",
-    "asserted_detail": "imponente",
+    "question": "Verdadero o falso: Según Daniel 4:21, al evaluar específicamente «abundante», el pasaje afirma: cuyo follaje era hermoso y su fruto abundante, en el que había alimento para todos, debajo del cual vivían las bestias del campo y en cuyas ramas anidaban las aves del cielo.",
+    "statement": "Según Daniel 4:21, al evaluar específicamente «abundante», el pasaje afirma: cuyo follaje era hermoso y su fruto abundante, en el que había alimento para todos, debajo del cual vivían las bestias del campo y en cuyas ramas anidaban las aves del cielo.",
+    "asserted_detail": "abundante",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:21, en el fragmento «cuyo follaje era hermoso y su fruto […], en el que había alimento para todos, debajo del cual vivían las bestias del campo y en cuyas ramas anidaban las aves del cielo,», la expresión que ocupa […] es «abundante».",
-    "incorrect_detail": "imponente",
-    "correction": "abundante",
-    "replacement_source_ref": "PR41, p. 39, párrafo 2",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «abundante», no «imponente».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:21.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «imponente»; la fuente contiene «abundante»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -11327,30 +11368,31 @@
       "alimento"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:21, en el fragmento «cuyo follaje era hermoso y su fruto abundante, en el que había […] para todos, debajo del cual vivían las bestias del campo y en cuyas ramas anidaban las aves del cielo,», la expresión que ocupa […] es «misterio».",
-    "statement": "Según Daniel 4:21, en el fragmento «cuyo follaje era hermoso y su fruto abundante, en el que había […] para todos, debajo del cual vivían las bestias del campo y en cuyas ramas anidaban las aves del cielo,», la expresión que ocupa […] es «misterio».",
-    "asserted_detail": "misterio",
+    "question": "Verdadero o falso: Según Daniel 4:21, al evaluar específicamente «alimento», el pasaje afirma: cuyo follaje era hermoso y su fruto abundante, en el que había alimento para todos, debajo del cual vivían las bestias del campo y en cuyas ramas anidaban las aves del cielo.",
+    "statement": "Según Daniel 4:21, al evaluar específicamente «alimento», el pasaje afirma: cuyo follaje era hermoso y su fruto abundante, en el que había alimento para todos, debajo del cual vivían las bestias del campo y en cuyas ramas anidaban las aves del cielo.",
+    "asserted_detail": "alimento",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:21, en el fragmento «cuyo follaje era hermoso y su fruto abundante, en el que había […] para todos, debajo del cual vivían las bestias del campo y en cuyas ramas anidaban las aves del cielo,», la expresión que ocupa […] es «alimento».",
-    "incorrect_detail": "misterio",
-    "correction": "alimento",
-    "replacement_source_ref": "Daniel 4:9",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «alimento», no «misterio».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:21.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «misterio»; la fuente contiene «alimento»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -11599,30 +11641,31 @@
       "creciste"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:22, en el fragmento «tú mismo eres, oh rey, que […] y te hiciste fuerte, pues creció tu grandeza y ha llegado hasta el cielo, y tu dominio hasta los confines de la tierra.», la expresión que ocupa […] es «creciste».",
-    "statement": "Según Daniel 4:22, en el fragmento «tú mismo eres, oh rey, que […] y te hiciste fuerte, pues creció tu grandeza y ha llegado hasta el cielo, y tu dominio hasta los confines de la tierra.», la expresión que ocupa […] es «creciste».",
-    "asserted_detail": "creciste",
+    "question": "Verdadero o falso: Según Daniel 4:22, tú mismo eres, oh rey, que honraste y te hiciste fuerte, pues creció tu grandeza y ha llegado hasta el cielo, y tu dominio hasta los confines de la tierra.",
+    "statement": "Según Daniel 4:22, tú mismo eres, oh rey, que honraste y te hiciste fuerte, pues creció tu grandeza y ha llegado hasta el cielo, y tu dominio hasta los confines de la tierra.",
+    "asserted_detail": "honraste",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:22, tú mismo eres, oh rey, que creciste y te hiciste fuerte, pues creció tu grandeza y ha llegado hasta el cielo, y tu dominio hasta los confines de la tierra.",
+    "incorrect_detail": "honraste",
+    "correction": "creciste",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:23",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:22.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «creciste», no «honraste».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «honraste»; la fuente contiene «creciste»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -11871,8 +11914,8 @@
       "hiciste"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:22, en el fragmento «tú mismo eres, oh rey, que creciste y te […] fuerte, pues creció tu grandeza y ha llegado hasta el cielo, y tu dominio hasta los confines de la tierra.», la expresión que ocupa […] es «hiciste».",
-    "statement": "Según Daniel 4:22, en el fragmento «tú mismo eres, oh rey, que creciste y te […] fuerte, pues creció tu grandeza y ha llegado hasta el cielo, y tu dominio hasta los confines de la tierra.», la expresión que ocupa […] es «hiciste».",
+    "question": "Verdadero o falso: Según Daniel 4:22, tú mismo eres, oh rey, que creciste y te hiciste fuerte, pues creció tu grandeza y ha llegado hasta el cielo, y tu dominio hasta los confines de la tierra.",
+    "statement": "Según Daniel 4:22, tú mismo eres, oh rey, que creciste y te hiciste fuerte, pues creció tu grandeza y ha llegado hasta el cielo, y tu dominio hasta los confines de la tierra.",
     "asserted_detail": "hiciste",
     "options": [
       "Verdadero",
@@ -11883,6 +11926,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": false,
     "replacement_source_ref": null,
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
@@ -12143,30 +12187,31 @@
       "siete"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:23, en el fragmento «En cuanto a lo que vio el rey, un vigilante y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él […] tiempos”,», la expresión que ocupa […] es «doce».",
-    "statement": "Según Daniel 4:23, en el fragmento «En cuanto a lo que vio el rey, un vigilante y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él […] tiempos”,», la expresión que ocupa […] es «doce».",
-    "asserted_detail": "doce",
+    "question": "Verdadero o falso: Según Daniel 4:23, En cuanto a lo que vio el rey, un vigilante y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él siete tiempos”.",
+    "statement": "Según Daniel 4:23, En cuanto a lo que vio el rey, un vigilante y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él siete tiempos”.",
+    "asserted_detail": "siete",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:23, en el fragmento «En cuanto a lo que vio el rey, un vigilante y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él […] tiempos”,», la expresión que ocupa […] es «siete».",
-    "incorrect_detail": "doce",
-    "correction": "siete",
-    "replacement_source_ref": "Daniel 4:29",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": false,
+    "replacement_source_ref": null,
     "correct_slot_signature": "number",
-    "replacement_slot_signature": "number",
-    "explanation": "Es falsa: la fuente dice «siete», no «doce».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:23.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «doce»; la fuente contiene «siete»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -12285,16 +12330,16 @@
     "options": [
       "vigilante",
       "altísimo",
-      "revelador",
-      "invisible"
+      "invisible",
+      "príncipe"
     ],
     "correct_option": 0,
     "correct_answer": "vigilante",
     "explanation": "Daniel 4:23 declara literalmente «En cuanto a lo que vio el rey, un vigilante y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él siete tiempos”,». La respuesta pedida es «vigilante».",
     "why_distractors_fail": {
       "altísimo": "Es verdadero en Daniel 4:17, pero no responde al contexto exacto de Daniel 4:23.",
-      "revelador": "Es verdadero en PR44, p. 58, párrafo 4, pero no responde al contexto exacto de Daniel 4:23.",
-      "invisible": "Es verdadero en PR44, p. 57, párrafo 7, pero no responde al contexto exacto de Daniel 4:23."
+      "invisible": "Es verdadero en PR44, p. 57, párrafo 7, pero no responde al contexto exacto de Daniel 4:23.",
+      "príncipe": "Es verdadero en Daniel 10:21, pero no responde al contexto exacto de Daniel 4:23."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -12352,16 +12397,16 @@
     "options": [
       "altísimo",
       "vigilante",
-      "revelador",
-      "invisible"
+      "invisible",
+      "príncipe"
     ],
     "correct_option": 1,
     "correct_answer": "vigilante",
     "explanation": "Daniel 4:23 declara literalmente «En cuanto a lo que vio el rey, un vigilante y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él siete tiempos”,». La respuesta pedida es «vigilante».",
     "why_distractors_fail": {
       "altísimo": "Es verdadero en Daniel 4:17, pero no responde al contexto exacto de Daniel 4:23.",
-      "revelador": "Es verdadero en PR44, p. 58, párrafo 4, pero no responde al contexto exacto de Daniel 4:23.",
-      "invisible": "Es verdadero en PR44, p. 57, párrafo 7, pero no responde al contexto exacto de Daniel 4:23."
+      "invisible": "Es verdadero en PR44, p. 57, párrafo 7, pero no responde al contexto exacto de Daniel 4:23.",
+      "príncipe": "Es verdadero en Daniel 10:21, pero no responde al contexto exacto de Daniel 4:23."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -12415,30 +12460,31 @@
       "vigilante"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:23, en el fragmento «En cuanto a lo que vio el rey, un […] y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él siete tiempos”,», la expresión que ocupa […] es «vigilante».",
-    "statement": "Según Daniel 4:23, en el fragmento «En cuanto a lo que vio el rey, un […] y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él siete tiempos”,», la expresión que ocupa […] es «vigilante».",
-    "asserted_detail": "vigilante",
+    "question": "Verdadero o falso: Según Daniel 4:23, En cuanto a lo que vio el rey, un altísimo y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él siete tiempos”.",
+    "statement": "Según Daniel 4:23, En cuanto a lo que vio el rey, un altísimo y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él siete tiempos”.",
+    "asserted_detail": "altísimo",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:23, En cuanto a lo que vio el rey, un vigilante y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él siete tiempos”.",
+    "incorrect_detail": "altísimo",
+    "correction": "vigilante",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:17",
     "correct_slot_signature": "person",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:23.",
+    "replacement_slot_signature": "person",
+    "explanation": "Es falsa: la fuente dice «vigilante», no «altísimo».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «altísimo»; la fuente contiene «vigilante»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -12489,8 +12535,8 @@
     "question": "Según Daniel 4:23, ¿qué personaje corresponde específicamente a esta escena: «En cuanto a lo que vio el rey, un […] y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él siete tiempos”,»?",
     "options": [
       "altísimo",
-      "revelador",
       "invisible",
+      "príncipe",
       "vigilante"
     ],
     "correct_option": 3,
@@ -12498,8 +12544,8 @@
     "explanation": "En el contexto exacto de Daniel 4:23, el detalle aplicable es «vigilante»: «En cuanto a lo que vio el rey, un vigilante y santo que descendía del cielo y decía: “Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él siete tiempos”,».",
     "why_distractors_fail": {
       "altísimo": "Es verdadero en Daniel 4:17, pero no responde al contexto exacto de Daniel 4:23.",
-      "revelador": "Es verdadero en PR44, p. 58, párrafo 4, pero no responde al contexto exacto de Daniel 4:23.",
-      "invisible": "Es verdadero en PR44, p. 57, párrafo 7, pero no responde al contexto exacto de Daniel 4:23."
+      "invisible": "Es verdadero en PR44, p. 57, párrafo 7, pero no responde al contexto exacto de Daniel 4:23.",
+      "príncipe": "Es verdadero en Daniel 10:21, pero no responde al contexto exacto de Daniel 4:23."
     },
     "trap_type": "true_in_other_context",
     "validation_adversarial": {
@@ -12687,34 +12733,35 @@
       "Altísimo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:24, en el fragmento «ésta es la interpretación, oh rey, y la sentencia del […], que ha venido sobre mi señor, el rey:», la expresión que ocupa […] es «Altísimo».",
-    "statement": "Según Daniel 4:24, en el fragmento «ésta es la interpretación, oh rey, y la sentencia del […], que ha venido sobre mi señor, el rey:», la expresión que ocupa […] es «Altísimo».",
-    "asserted_detail": "Altísimo",
+    "question": "Verdadero o falso: Según Daniel 4:24, ésta es la interpretación, oh rey, y la sentencia del Vigilante, que ha venido sobre mi señor, el rey.",
+    "statement": "Según Daniel 4:24, ésta es la interpretación, oh rey, y la sentencia del Vigilante, que ha venido sobre mi señor, el rey.",
+    "asserted_detail": "Vigilante",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:24, ésta es la interpretación, oh rey, y la sentencia del Altísimo, que ha venido sobre mi señor, el rey.",
+    "incorrect_detail": "Vigilante",
+    "correction": "Altísimo",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:13",
     "correct_slot_signature": "person",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:24.",
+    "replacement_slot_signature": "person",
+    "explanation": "Es falsa: la fuente dice «Altísimo», no «Vigilante».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Vigilante»; la fuente contiene «Altísimo»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "DAN4-GOLD-0606-SINGLE_CHOICE_CONTEXTUAL",
@@ -12959,30 +13006,31 @@
       "venido"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:24, en el fragmento «ésta es la interpretación, oh rey, y la sentencia del Altísimo, que ha […] sobre mi señor, el rey:», la expresión que ocupa […] es «podido».",
-    "statement": "Según Daniel 4:24, en el fragmento «ésta es la interpretación, oh rey, y la sentencia del Altísimo, que ha […] sobre mi señor, el rey:», la expresión que ocupa […] es «podido».",
-    "asserted_detail": "podido",
+    "question": "Verdadero o falso: Según Daniel 4:24, al evaluar específicamente «venido», el pasaje afirma: ésta es la interpretación, oh rey, y la sentencia del Altísimo, que ha venido sobre mi señor, el rey.",
+    "statement": "Según Daniel 4:24, al evaluar específicamente «venido», el pasaje afirma: ésta es la interpretación, oh rey, y la sentencia del Altísimo, que ha venido sobre mi señor, el rey.",
+    "asserted_detail": "venido",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:24, en el fragmento «ésta es la interpretación, oh rey, y la sentencia del Altísimo, que ha […] sobre mi señor, el rey:», la expresión que ocupa […] es «venido».",
-    "incorrect_detail": "podido",
-    "correction": "venido",
-    "replacement_source_ref": "Daniel 4:18",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «venido», no «podido».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:24.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «podido»; la fuente contiene «venido»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -13231,8 +13279,8 @@
       "siete"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:25, en el fragmento «Que te echarán de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado; y […] tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.», la expresión que ocupa […] es «doce».",
-    "statement": "Según Daniel 4:25, en el fragmento «Que te echarán de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado; y […] tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.», la expresión que ocupa […] es «doce».",
+    "question": "Verdadero o falso: Según Daniel 4:25, Que te echarán de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado; y doce tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.",
+    "statement": "Según Daniel 4:25, Que te echarán de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado; y doce tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.",
     "asserted_detail": "doce",
     "options": [
       "Verdadero",
@@ -13240,9 +13288,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:25, en el fragmento «Que te echarán de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado; y […] tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.», la expresión que ocupa […] es «siete».",
+    "corrected_statement": "Según Daniel 4:25, Que te echarán de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado; y siete tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.",
     "incorrect_detail": "doce",
     "correction": "siete",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 4:29",
     "correct_slot_signature": "number",
     "replacement_slot_signature": "number",
@@ -13503,30 +13552,31 @@
       "echarán"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:25, en el fragmento «Que te […] de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado; y siete tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.», la expresión que ocupa […] es «echarán».",
-    "statement": "Según Daniel 4:25, en el fragmento «Que te […] de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado; y siete tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.», la expresión que ocupa […] es «echarán».",
-    "asserted_detail": "echarán",
+    "question": "Verdadero o falso: Según Daniel 4:25, Que te arrojarán de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado; y siete tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.",
+    "statement": "Según Daniel 4:25, Que te arrojarán de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado; y siete tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.",
+    "asserted_detail": "arrojarán",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:25, Que te echarán de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado; y siete tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.",
+    "incorrect_detail": "arrojarán",
+    "correction": "echarán",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:32",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:25.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «echarán», no «arrojarán».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «arrojarán»; la fuente contiene «echarán»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -13775,8 +13825,8 @@
       "significa"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:26, en el fragmento «Y en cuanto a la orden de dejar en la tierra la cepa de las raíces del mismo árbol, […] que tu reino te quedará firme, después que reconozcas que es el cielo el que gobierna.», la expresión que ocupa […] es «significa».",
-    "statement": "Según Daniel 4:26, en el fragmento «Y en cuanto a la orden de dejar en la tierra la cepa de las raíces del mismo árbol, […] que tu reino te quedará firme, después que reconozcas que es el cielo el que gobierna.», la expresión que ocupa […] es «significa».",
+    "question": "Verdadero o falso: Según Daniel 4:26, al evaluar específicamente «significa», el pasaje afirma: Y en cuanto a la orden de dejar en la tierra la cepa de las raíces del mismo árbol, significa que tu reino te quedará firme, después que reconozcas que es el cielo el que gobierna.",
+    "statement": "Según Daniel 4:26, al evaluar específicamente «significa», el pasaje afirma: Y en cuanto a la orden de dejar en la tierra la cepa de las raíces del mismo árbol, significa que tu reino te quedará firme, después que reconozcas que es el cielo el que gobierna.",
     "asserted_detail": "significa",
     "options": [
       "Verdadero",
@@ -13787,6 +13837,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
@@ -14047,30 +14098,31 @@
       "reconozcas"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:26, en el fragmento «Y en cuanto a la orden de dejar en la tierra la cepa de las raíces del mismo árbol, significa que tu reino te quedará firme, después que […] que es el cielo el que gobierna.», la expresión que ocupa […] es «verdaderas».",
-    "statement": "Según Daniel 4:26, en el fragmento «Y en cuanto a la orden de dejar en la tierra la cepa de las raíces del mismo árbol, significa que tu reino te quedará firme, después que […] que es el cielo el que gobierna.», la expresión que ocupa […] es «verdaderas».",
-    "asserted_detail": "verdaderas",
+    "question": "Verdadero o falso: Según Daniel 4:26, al evaluar específicamente «reconozcas», el pasaje afirma: Y en cuanto a la orden de dejar en la tierra la cepa de las raíces del mismo árbol, significa que tu reino te quedará firme, después que reconozcas que es el cielo el que gobierna.",
+    "statement": "Según Daniel 4:26, al evaluar específicamente «reconozcas», el pasaje afirma: Y en cuanto a la orden de dejar en la tierra la cepa de las raíces del mismo árbol, significa que tu reino te quedará firme, después que reconozcas que es el cielo el que gobierna.",
+    "asserted_detail": "reconozcas",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:26, en el fragmento «Y en cuanto a la orden de dejar en la tierra la cepa de las raíces del mismo árbol, significa que tu reino te quedará firme, después que […] que es el cielo el que gobierna.», la expresión que ocupa […] es «reconozcas».",
-    "incorrect_detail": "verdaderas",
-    "correction": "reconozcas",
-    "replacement_source_ref": "Daniel 4:37",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «reconozcas», no «verdaderas».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:26.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «verdaderas»; la fuente contiene «reconozcas»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -14319,30 +14371,31 @@
       "haciendo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:27, en el fragmento «Por tanto, oh rey, acepta mi consejo: redime tus pecados con justicia, y tus iniquidades […] misericordias con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.», la expresión que ocupa […] es «haciendo».",
-    "statement": "Según Daniel 4:27, en el fragmento «Por tanto, oh rey, acepta mi consejo: redime tus pecados con justicia, y tus iniquidades […] misericordias con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.», la expresión que ocupa […] es «haciendo».",
-    "asserted_detail": "haciendo",
+    "question": "Verdadero o falso: Según Daniel 4:27, Por tanto, oh rey, acepta mi consejo: redime tus pecados con justicia, y tus iniquidades paseando misericordias con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.",
+    "statement": "Según Daniel 4:27, Por tanto, oh rey, acepta mi consejo: redime tus pecados con justicia, y tus iniquidades paseando misericordias con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.",
+    "asserted_detail": "paseando",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:27, Por tanto, oh rey, acepta mi consejo: redime tus pecados con justicia, y tus iniquidades haciendo misericordias con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.",
+    "incorrect_detail": "paseando",
+    "correction": "haciendo",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:29",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:27.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «haciendo», no «paseando».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «paseando»; la fuente contiene «haciendo»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -14591,30 +14644,31 @@
       "misericordias"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:27, en el fragmento «Por tanto, oh rey, acepta mi consejo: redime tus pecados con justicia, y tus iniquidades haciendo […] con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.», la expresión que ocupa […] es «reconozcas».",
-    "statement": "Según Daniel 4:27, en el fragmento «Por tanto, oh rey, acepta mi consejo: redime tus pecados con justicia, y tus iniquidades haciendo […] con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.», la expresión que ocupa […] es «reconozcas».",
-    "asserted_detail": "reconozcas",
+    "question": "Verdadero o falso: Según Daniel 4:27, al evaluar específicamente «misericordias», el pasaje afirma: Por tanto, oh rey, acepta mi consejo: redime tus pecados con justicia, y tus iniquidades haciendo misericordias con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.",
+    "statement": "Según Daniel 4:27, al evaluar específicamente «misericordias», el pasaje afirma: Por tanto, oh rey, acepta mi consejo: redime tus pecados con justicia, y tus iniquidades haciendo misericordias con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.",
+    "asserted_detail": "misericordias",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:27, en el fragmento «Por tanto, oh rey, acepta mi consejo: redime tus pecados con justicia, y tus iniquidades haciendo […] con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.», la expresión que ocupa […] es «misericordias».",
-    "incorrect_detail": "reconozcas",
-    "correction": "misericordias",
-    "replacement_source_ref": "Daniel 4:26",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «misericordias», no «reconozcas».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:27.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «reconozcas»; la fuente contiene «misericordias»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -14863,34 +14917,35 @@
       "Nabucodonosor"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:28, en el fragmento «Todo esto vino sobre el rey […]:», la expresión que ocupa […] es «Beltsasar».",
-    "statement": "Según Daniel 4:28, en el fragmento «Todo esto vino sobre el rey […]:», la expresión que ocupa […] es «Beltsasar».",
-    "asserted_detail": "Beltsasar",
+    "question": "Verdadero o falso: Según Daniel 4:28, Todo esto vino sobre el rey Nabucodonosor.",
+    "statement": "Según Daniel 4:28, Todo esto vino sobre el rey Nabucodonosor.",
+    "asserted_detail": "Nabucodonosor",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:28, en el fragmento «Todo esto vino sobre el rey […]:», la expresión que ocupa […] es «Nabucodonosor».",
-    "incorrect_detail": "Beltsasar",
-    "correction": "Nabucodonosor",
-    "replacement_source_ref": "Daniel 4:8",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": false,
+    "replacement_source_ref": null,
     "correct_slot_signature": "person",
-    "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Nabucodonosor», no «Beltsasar».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:28.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Beltsasar»; la fuente contiene «Nabucodonosor»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "hard"
+    "difficulty": "medium"
   },
   {
     "id": "DAN4-GOLD-0614-SINGLE_CHOICE_CONTEXTUAL",
@@ -15135,34 +15190,35 @@
       "Babilonia"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:29, en el fragmento «Al cabo de doce meses, paseando por el palacio real de […],», la expresión que ocupa […] es «Jerusalén».",
-    "statement": "Según Daniel 4:29, en el fragmento «Al cabo de doce meses, paseando por el palacio real de […],», la expresión que ocupa […] es «Jerusalén».",
-    "asserted_detail": "Jerusalén",
+    "question": "Verdadero o falso: Según Daniel 4:29, Al cabo de doce meses, paseando por el palacio real de Babilonia.",
+    "statement": "Según Daniel 4:29, Al cabo de doce meses, paseando por el palacio real de Babilonia.",
+    "asserted_detail": "Babilonia",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:29, en el fragmento «Al cabo de doce meses, paseando por el palacio real de […],», la expresión que ocupa […] es «Babilonia».",
-    "incorrect_detail": "Jerusalén",
-    "correction": "Babilonia",
-    "replacement_source_ref": "Daniel 1:1",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": false,
+    "replacement_source_ref": null,
     "correct_slot_signature": "place",
-    "replacement_slot_signature": "place",
-    "explanation": "Es falsa: la fuente dice «Babilonia», no «Jerusalén».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:29.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jerusalén»; la fuente contiene «Babilonia»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "hard"
+    "difficulty": "medium"
   },
   {
     "id": "DAN4-GOLD-0615-SINGLE_CHOICE_CONTEXTUAL",
@@ -15407,8 +15463,8 @@
       "doce"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:29, en el fragmento «Al cabo de […] meses, paseando por el palacio real de Babilonia,», la expresión que ocupa […] es «seis».",
-    "statement": "Según Daniel 4:29, en el fragmento «Al cabo de […] meses, paseando por el palacio real de Babilonia,», la expresión que ocupa […] es «seis».",
+    "question": "Verdadero o falso: Según Daniel 4:29, Al cabo de seis meses, paseando por el palacio real de Babilonia.",
+    "statement": "Según Daniel 4:29, Al cabo de seis meses, paseando por el palacio real de Babilonia.",
     "asserted_detail": "seis",
     "options": [
       "Verdadero",
@@ -15416,9 +15472,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:29, en el fragmento «Al cabo de […] meses, paseando por el palacio real de Babilonia,», la expresión que ocupa […] es «doce».",
+    "corrected_statement": "Según Daniel 4:29, Al cabo de doce meses, paseando por el palacio real de Babilonia.",
     "incorrect_detail": "seis",
     "correction": "doce",
+    "focused_true_statement": false,
     "replacement_source_ref": "PR41, p. 39, párrafo 2",
     "correct_slot_signature": "number",
     "replacement_slot_signature": "number",
@@ -15679,8 +15736,8 @@
       "Babilonia"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:30, en el fragmento «habló el rey y dijo: «¿No es ésta la gran […] que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?», la expresión que ocupa […] es «Jerusalén».",
-    "statement": "Según Daniel 4:30, en el fragmento «habló el rey y dijo: «¿No es ésta la gran […] que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?», la expresión que ocupa […] es «Jerusalén».",
+    "question": "Verdadero o falso: Según Daniel 4:30, habló el rey y dijo: «¿No es ésta la gran Jerusalén que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
+    "statement": "Según Daniel 4:30, habló el rey y dijo: «¿No es ésta la gran Jerusalén que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
     "asserted_detail": "Jerusalén",
     "options": [
       "Verdadero",
@@ -15688,9 +15745,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:30, en el fragmento «habló el rey y dijo: «¿No es ésta la gran […] que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?», la expresión que ocupa […] es «Babilonia».",
+    "corrected_statement": "Según Daniel 4:30, habló el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
     "incorrect_detail": "Jerusalén",
     "correction": "Babilonia",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 1:1",
     "correct_slot_signature": "place",
     "replacement_slot_signature": "place",
@@ -15773,7 +15831,7 @@
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "expert"
+    "difficulty": "hard"
   },
   {
     "id": "DAN4-GOLD-0618-SINGLE_CHOICE_DIRECT",
@@ -15951,30 +16009,31 @@
       "habló"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:30, en el fragmento «[…] el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?», la expresión que ocupa […] es «habló».",
-    "statement": "Según Daniel 4:30, en el fragmento «[…] el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?», la expresión que ocupa […] es «habló».",
-    "asserted_detail": "habló",
+    "question": "Verdadero o falso: Según Daniel 4:30, cumplió el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
+    "statement": "Según Daniel 4:30, cumplió el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
+    "asserted_detail": "cumplió",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:30, habló el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
+    "incorrect_detail": "cumplió",
+    "correction": "habló",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:33",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:30.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «habló», no «cumplió».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «cumplió»; la fuente contiene «habló»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -16223,8 +16282,8 @@
       "Nabucodonosor"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:31, en el fragmento «Aún estaba la palabra en la boca del rey, cuando vino una voz del cielo: «A ti se te dice, rey […]: “El reino te ha sido quitado;», la expresión que ocupa […] es «Beltsasar».",
-    "statement": "Según Daniel 4:31, en el fragmento «Aún estaba la palabra en la boca del rey, cuando vino una voz del cielo: «A ti se te dice, rey […]: “El reino te ha sido quitado;», la expresión que ocupa […] es «Beltsasar».",
+    "question": "Verdadero o falso: Según Daniel 4:31, Aún estaba la palabra en la boca del rey, cuando vino una voz del cielo: «A ti se te dice, rey Beltsasar: “El reino te ha sido quitado.",
+    "statement": "Según Daniel 4:31, Aún estaba la palabra en la boca del rey, cuando vino una voz del cielo: «A ti se te dice, rey Beltsasar: “El reino te ha sido quitado.",
     "asserted_detail": "Beltsasar",
     "options": [
       "Verdadero",
@@ -16232,9 +16291,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:31, en el fragmento «Aún estaba la palabra en la boca del rey, cuando vino una voz del cielo: «A ti se te dice, rey […]: “El reino te ha sido quitado;», la expresión que ocupa […] es «Nabucodonosor».",
+    "corrected_statement": "Según Daniel 4:31, Aún estaba la palabra en la boca del rey, cuando vino una voz del cielo: «A ti se te dice, rey Nabucodonosor: “El reino te ha sido quitado.",
     "incorrect_detail": "Beltsasar",
     "correction": "Nabucodonosor",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 4:8",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
@@ -16495,30 +16555,31 @@
       "palabra"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:31, en el fragmento «Aún estaba la […] en la boca del rey, cuando vino una voz del cielo: «A ti se te dice, rey Nabucodonosor: “El reino te ha sido quitado;», la expresión que ocupa […] es «monarca».",
-    "statement": "Según Daniel 4:31, en el fragmento «Aún estaba la […] en la boca del rey, cuando vino una voz del cielo: «A ti se te dice, rey Nabucodonosor: “El reino te ha sido quitado;», la expresión que ocupa […] es «monarca».",
-    "asserted_detail": "monarca",
+    "question": "Verdadero o falso: Según Daniel 4:31, al evaluar específicamente «palabra», el pasaje afirma: Aún estaba la palabra en la boca del rey, cuando vino una voz del cielo: «A ti se te dice, rey Nabucodonosor: “El reino te ha sido quitado.",
+    "statement": "Según Daniel 4:31, al evaluar específicamente «palabra», el pasaje afirma: Aún estaba la palabra en la boca del rey, cuando vino una voz del cielo: «A ti se te dice, rey Nabucodonosor: “El reino te ha sido quitado.",
+    "asserted_detail": "palabra",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:31, en el fragmento «Aún estaba la […] en la boca del rey, cuando vino una voz del cielo: «A ti se te dice, rey Nabucodonosor: “El reino te ha sido quitado;», la expresión que ocupa […] es «palabra».",
-    "incorrect_detail": "monarca",
-    "correction": "palabra",
-    "replacement_source_ref": "PR44, p. 56, párrafo 6",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «palabra», no «monarca».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:31.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «monarca»; la fuente contiene «palabra»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -16767,8 +16828,8 @@
       "siete"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:32, en el fragmento «de entre los hombres te arrojarán, con las bestias del campo será tu habitación y como a los bueyes te apacentarán; y […] tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.”», la expresión que ocupa […] es «doce».",
-    "statement": "Según Daniel 4:32, en el fragmento «de entre los hombres te arrojarán, con las bestias del campo será tu habitación y como a los bueyes te apacentarán; y […] tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.”», la expresión que ocupa […] es «doce».",
+    "question": "Verdadero o falso: Según Daniel 4:32, de entre los hombres te arrojarán, con las bestias del campo será tu habitación y como a los bueyes te apacentarán; y doce tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.”",
+    "statement": "Según Daniel 4:32, de entre los hombres te arrojarán, con las bestias del campo será tu habitación y como a los bueyes te apacentarán; y doce tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.”",
     "asserted_detail": "doce",
     "options": [
       "Verdadero",
@@ -16776,9 +16837,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:32, en el fragmento «de entre los hombres te arrojarán, con las bestias del campo será tu habitación y como a los bueyes te apacentarán; y […] tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.”», la expresión que ocupa […] es «siete».",
+    "corrected_statement": "Según Daniel 4:32, de entre los hombres te arrojarán, con las bestias del campo será tu habitación y como a los bueyes te apacentarán; y siete tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.”",
     "incorrect_detail": "doce",
     "correction": "siete",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 4:29",
     "correct_slot_signature": "number",
     "replacement_slot_signature": "number",
@@ -17039,30 +17101,31 @@
       "apacentarán"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:32, en el fragmento «de entre los hombres te arrojarán, con las bestias del campo será tu habitación y como a los bueyes te […]; y siete tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.”», la expresión que ocupa […] es «apacentarán».",
-    "statement": "Según Daniel 4:32, en el fragmento «de entre los hombres te arrojarán, con las bestias del campo será tu habitación y como a los bueyes te […]; y siete tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.”», la expresión que ocupa […] es «apacentarán».",
-    "asserted_detail": "apacentarán",
+    "question": "Verdadero o falso: Según Daniel 4:32, de entre los hombres te arrojarán, con las bestias del campo será tu habitación y como a los bueyes te echarán; y siete tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.”",
+    "statement": "Según Daniel 4:32, de entre los hombres te arrojarán, con las bestias del campo será tu habitación y como a los bueyes te echarán; y siete tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.”",
+    "asserted_detail": "echarán",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:32, de entre los hombres te arrojarán, con las bestias del campo será tu habitación y como a los bueyes te apacentarán; y siete tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.”",
+    "incorrect_detail": "echarán",
+    "correction": "apacentarán",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:25",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:32.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «apacentarán», no «echarán».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «echarán»; la fuente contiene «apacentarán»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -17311,30 +17374,31 @@
       "hombres"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:33, en el fragmento «En la misma hora se cumplió la palabra sobre Nabucodonosor: Fue echado de entre los […], comía hierba como los bueyes y su cuerpo se empapaba del rocío del cielo, hasta que su pelo creció como plumas de águila y sus uñas como las de las aves.», la expresión que ocupa […] es «visiones».",
-    "statement": "Según Daniel 4:33, en el fragmento «En la misma hora se cumplió la palabra sobre Nabucodonosor: Fue echado de entre los […], comía hierba como los bueyes y su cuerpo se empapaba del rocío del cielo, hasta que su pelo creció como plumas de águila y sus uñas como las de las aves.», la expresión que ocupa […] es «visiones».",
-    "asserted_detail": "visiones",
+    "question": "Verdadero o falso: Según Daniel 4:33, al evaluar específicamente «hombres», el pasaje afirma: En la misma hora se cumplió la palabra sobre Nabucodonosor: Fue echado de entre los hombres, comía hierba como los bueyes y su cuerpo se empapaba del rocío del cielo, hasta que su pelo creció como plumas de águila y sus uñas como las de las aves.",
+    "statement": "Según Daniel 4:33, al evaluar específicamente «hombres», el pasaje afirma: En la misma hora se cumplió la palabra sobre Nabucodonosor: Fue echado de entre los hombres, comía hierba como los bueyes y su cuerpo se empapaba del rocío del cielo, hasta que su pelo creció como plumas de águila y sus uñas como las de las aves.",
+    "asserted_detail": "hombres",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:33, en el fragmento «En la misma hora se cumplió la palabra sobre Nabucodonosor: Fue echado de entre los […], comía hierba como los bueyes y su cuerpo se empapaba del rocío del cielo, hasta que su pelo creció como plumas de águila y sus uñas como las de las aves.», la expresión que ocupa […] es «hombres».",
-    "incorrect_detail": "visiones",
-    "correction": "hombres",
-    "replacement_source_ref": "Daniel 4:10",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «hombres», no «visiones».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:33.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «visiones»; la fuente contiene «hombres»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -17583,30 +17647,31 @@
       "hierba"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:33, en el fragmento «En la misma hora se cumplió la palabra sobre Nabucodonosor: Fue echado de entre los hombres, comía […] como los bueyes y su cuerpo se empapaba del rocío del cielo, hasta que su pelo creció como plumas de águila y sus uñas como las de las aves.», la expresión que ocupa […] es «habita».",
-    "statement": "Según Daniel 4:33, en el fragmento «En la misma hora se cumplió la palabra sobre Nabucodonosor: Fue echado de entre los hombres, comía […] como los bueyes y su cuerpo se empapaba del rocío del cielo, hasta que su pelo creció como plumas de águila y sus uñas como las de las aves.», la expresión que ocupa […] es «habita».",
-    "asserted_detail": "habita",
+    "question": "Verdadero o falso: Según Daniel 4:33, al evaluar específicamente «hierba», el pasaje afirma: En la misma hora se cumplió la palabra sobre Nabucodonosor: Fue echado de entre los hombres, comía hierba como los bueyes y su cuerpo se empapaba del rocío del cielo, hasta que su pelo creció como plumas de águila y sus uñas como las de las aves.",
+    "statement": "Según Daniel 4:33, al evaluar específicamente «hierba», el pasaje afirma: En la misma hora se cumplió la palabra sobre Nabucodonosor: Fue echado de entre los hombres, comía hierba como los bueyes y su cuerpo se empapaba del rocío del cielo, hasta que su pelo creció como plumas de águila y sus uñas como las de las aves.",
+    "asserted_detail": "hierba",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:33, en el fragmento «En la misma hora se cumplió la palabra sobre Nabucodonosor: Fue echado de entre los hombres, comía […] como los bueyes y su cuerpo se empapaba del rocío del cielo, hasta que su pelo creció como plumas de águila y sus uñas como las de las aves.», la expresión que ocupa […] es «hierba».",
-    "incorrect_detail": "habita",
-    "correction": "hierba",
-    "replacement_source_ref": "Daniel 4:18",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «hierba», no «habita».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:33.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «habita»; la fuente contiene «hierba»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -17855,34 +17920,35 @@
       "Altísimo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:34, en el fragmento ««Al fin del tiempo, yo, Nabucodonosor, alcé mis ojos al cielo y mi razón me fue devuelta; bendije al […], y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.», la expresión que ocupa […] es «Altísimo».",
-    "statement": "Según Daniel 4:34, en el fragmento ««Al fin del tiempo, yo, Nabucodonosor, alcé mis ojos al cielo y mi razón me fue devuelta; bendije al […], y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.», la expresión que ocupa […] es «Altísimo».",
-    "asserted_detail": "Altísimo",
+    "question": "Verdadero o falso: Según Daniel 4:34, «Al fin del tiempo, yo, Nabucodonosor, alcé mis ojos al cielo y mi razón me fue devuelta; bendije al Vigilante, y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.",
+    "statement": "Según Daniel 4:34, «Al fin del tiempo, yo, Nabucodonosor, alcé mis ojos al cielo y mi razón me fue devuelta; bendije al Vigilante, y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.",
+    "asserted_detail": "Vigilante",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:34, «Al fin del tiempo, yo, Nabucodonosor, alcé mis ojos al cielo y mi razón me fue devuelta; bendije al Altísimo, y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.",
+    "incorrect_detail": "Vigilante",
+    "correction": "Altísimo",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:13",
     "correct_slot_signature": "person",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:34.",
+    "replacement_slot_signature": "person",
+    "explanation": "Es falsa: la fuente dice «Altísimo», no «Vigilante».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Vigilante»; la fuente contiene «Altísimo»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "DAN4-GOLD-0625-SINGLE_CHOICE_CONTEXTUAL",
@@ -17997,16 +18063,16 @@
     "options": [
       "cumplió",
       "alcé",
-      "mató",
-      "leyó"
+      "echó",
+      "mató"
     ],
     "correct_option": 1,
     "correct_answer": "alcé",
     "explanation": "Daniel 4:34 declara literalmente ««Al fin del tiempo, yo, Nabucodonosor, alcé mis ojos al cielo y mi razón me fue devuelta; bendije al Altísimo, y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.». La respuesta pedida es «alcé».",
     "why_distractors_fail": {
       "cumplió": "Es verdadero en Daniel 4:33, pero no responde al contexto exacto de Daniel 4:34.",
-      "mató": "Es verdadero en Daniel 3:22, pero no responde al contexto exacto de Daniel 4:34.",
-      "leyó": "Es verdadero en PR43, p. 49, párrafo 4, pero no responde al contexto exacto de Daniel 4:34."
+      "echó": "Es verdadero en Daniel 8:10, pero no responde al contexto exacto de Daniel 4:34.",
+      "mató": "Es verdadero en Daniel 3:22, pero no responde al contexto exacto de Daniel 4:34."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -18063,17 +18129,17 @@
     "question": "Complete Daniel 4:34: ««Al fin del tiempo, yo, Nabucodonosor, ________ mis ojos al cielo y mi razón me fue devuelta; bendije al Altísimo, y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.»",
     "options": [
       "cumplió",
-      "mató",
+      "echó",
       "alcé",
-      "leyó"
+      "mató"
     ],
     "correct_option": 2,
     "correct_answer": "alcé",
     "explanation": "Daniel 4:34 declara literalmente ««Al fin del tiempo, yo, Nabucodonosor, alcé mis ojos al cielo y mi razón me fue devuelta; bendije al Altísimo, y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.». La respuesta pedida es «alcé».",
     "why_distractors_fail": {
       "cumplió": "Es verdadero en Daniel 4:33, pero no responde al contexto exacto de Daniel 4:34.",
-      "mató": "Es verdadero en Daniel 3:22, pero no responde al contexto exacto de Daniel 4:34.",
-      "leyó": "Es verdadero en PR43, p. 49, párrafo 4, pero no responde al contexto exacto de Daniel 4:34."
+      "echó": "Es verdadero en Daniel 8:10, pero no responde al contexto exacto de Daniel 4:34.",
+      "mató": "Es verdadero en Daniel 3:22, pero no responde al contexto exacto de Daniel 4:34."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -18127,30 +18193,31 @@
       "alcé"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:34, en el fragmento ««Al fin del tiempo, yo, Nabucodonosor, […] mis ojos al cielo y mi razón me fue devuelta; bendije al Altísimo, y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.», la expresión que ocupa […] es «alcé».",
-    "statement": "Según Daniel 4:34, en el fragmento ««Al fin del tiempo, yo, Nabucodonosor, […] mis ojos al cielo y mi razón me fue devuelta; bendije al Altísimo, y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.», la expresión que ocupa […] es «alcé».",
-    "asserted_detail": "alcé",
+    "question": "Verdadero o falso: Según Daniel 4:34, «Al fin del tiempo, yo, Nabucodonosor, cumplió mis ojos al cielo y mi razón me fue devuelta; bendije al Altísimo, y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.",
+    "statement": "Según Daniel 4:34, «Al fin del tiempo, yo, Nabucodonosor, cumplió mis ojos al cielo y mi razón me fue devuelta; bendije al Altísimo, y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.",
+    "asserted_detail": "cumplió",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:34, «Al fin del tiempo, yo, Nabucodonosor, alcé mis ojos al cielo y mi razón me fue devuelta; bendije al Altísimo, y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.",
+    "incorrect_detail": "cumplió",
+    "correction": "alcé",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:33",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:34.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «alcé», no «cumplió».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «cumplió»; la fuente contiene «alcé»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -18202,16 +18269,16 @@
     "options": [
       "alcé",
       "cumplió",
-      "mató",
-      "leyó"
+      "echó",
+      "mató"
     ],
     "correct_option": 0,
     "correct_answer": "alcé",
     "explanation": "En el contexto exacto de Daniel 4:34, el detalle aplicable es «alcé»: ««Al fin del tiempo, yo, Nabucodonosor, alcé mis ojos al cielo y mi razón me fue devuelta; bendije al Altísimo, y alabé y glorifiqué al que vive para siempre: »“Su dominio es sempiterno; su reino, por todas las edades.».",
     "why_distractors_fail": {
       "cumplió": "Es verdadero en Daniel 4:33, pero no responde al contexto exacto de Daniel 4:34.",
-      "mató": "Es verdadero en Daniel 3:22, pero no responde al contexto exacto de Daniel 4:34.",
-      "leyó": "Es verdadero en PR43, p. 49, párrafo 4, pero no responde al contexto exacto de Daniel 4:34."
+      "echó": "Es verdadero en Daniel 8:10, pero no responde al contexto exacto de Daniel 4:34.",
+      "mató": "Es verdadero en Daniel 3:22, pero no responde al contexto exacto de Daniel 4:34."
     },
     "trap_type": "true_in_other_context",
     "validation_adversarial": {
@@ -18399,30 +18466,31 @@
       "detenga"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:35, en el fragmento «Considerados como nada son los habitantes todos de la tierra; él hace según su voluntad en el ejército del cielo y en los habitantes de la tierra; no hay quien […] su mano y le diga: ‘¿Qué haces?’”», la expresión que ocupa […] es «añadida».",
-    "statement": "Según Daniel 4:35, en el fragmento «Considerados como nada son los habitantes todos de la tierra; él hace según su voluntad en el ejército del cielo y en los habitantes de la tierra; no hay quien […] su mano y le diga: ‘¿Qué haces?’”», la expresión que ocupa […] es «añadida».",
-    "asserted_detail": "añadida",
+    "question": "Verdadero o falso: Según Daniel 4:35, al evaluar específicamente «detenga», el pasaje afirma: Considerados como nada son los habitantes todos de la tierra; él hace según su voluntad en el ejército del cielo y en los habitantes de la tierra; no hay quien detenga su mano y le diga: ‘¿Qué haces?’”",
+    "statement": "Según Daniel 4:35, al evaluar específicamente «detenga», el pasaje afirma: Considerados como nada son los habitantes todos de la tierra; él hace según su voluntad en el ejército del cielo y en los habitantes de la tierra; no hay quien detenga su mano y le diga: ‘¿Qué haces?’”",
+    "asserted_detail": "detenga",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:35, en el fragmento «Considerados como nada son los habitantes todos de la tierra; él hace según su voluntad en el ejército del cielo y en los habitantes de la tierra; no hay quien […] su mano y le diga: ‘¿Qué haces?’”», la expresión que ocupa […] es «detenga».",
-    "incorrect_detail": "añadida",
-    "correction": "detenga",
-    "replacement_source_ref": "Daniel 4:36",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «detenga», no «añadida».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:35.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «añadida»; la fuente contiene «detenga»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -18671,30 +18739,31 @@
       "volvieron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:36, en el fragmento «En el mismo tiempo mi razón me fue devuelta, la majestad de mi reino, mi dignidad y mi grandeza […] a mí, y mis gobernadores y mis consejeros me buscaron; fui restablecido en mi reino, y mayor grandeza me fue añadida.», la expresión que ocupa […] es «volvieron».",
-    "statement": "Según Daniel 4:36, en el fragmento «En el mismo tiempo mi razón me fue devuelta, la majestad de mi reino, mi dignidad y mi grandeza […] a mí, y mis gobernadores y mis consejeros me buscaron; fui restablecido en mi reino, y mayor grandeza me fue añadida.», la expresión que ocupa […] es «volvieron».",
-    "asserted_detail": "volvieron",
+    "question": "Verdadero o falso: Según Daniel 4:36, En el mismo tiempo mi razón me fue devuelta, la majestad de mi reino, mi dignidad y mi grandeza pudieron a mí, y mis gobernadores y mis consejeros me buscaron; fui restablecido en mi reino, y mayor grandeza me fue añadida.",
+    "statement": "Según Daniel 4:36, En el mismo tiempo mi razón me fue devuelta, la majestad de mi reino, mi dignidad y mi grandeza pudieron a mí, y mis gobernadores y mis consejeros me buscaron; fui restablecido en mi reino, y mayor grandeza me fue añadida.",
+    "asserted_detail": "pudieron",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:36, En el mismo tiempo mi razón me fue devuelta, la majestad de mi reino, mi dignidad y mi grandeza volvieron a mí, y mis gobernadores y mis consejeros me buscaron; fui restablecido en mi reino, y mayor grandeza me fue añadida.",
+    "incorrect_detail": "pudieron",
+    "correction": "volvieron",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 4:7",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 4:36.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «volvieron», no «pudieron».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «pudieron»; la fuente contiene «volvieron»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -18943,8 +19012,8 @@
       "todas sus obras son verdaderas y sus caminos"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:37, en el fragmento «Ahora yo, Nabucodonosor, alabo, engrandezco y glorifico al Rey del cielo, porque […] justos; y él puede humillar a los que andan con soberbia.», la expresión que ocupa […] es «todas sus obras son verdaderas y sus caminos».",
-    "statement": "Según Daniel 4:37, en el fragmento «Ahora yo, Nabucodonosor, alabo, engrandezco y glorifico al Rey del cielo, porque […] justos; y él puede humillar a los que andan con soberbia.», la expresión que ocupa […] es «todas sus obras son verdaderas y sus caminos».",
+    "question": "Verdadero o falso: Según Daniel 4:37, al evaluar específicamente «todas sus obras son verdaderas y sus caminos», el pasaje afirma: Ahora yo, Nabucodonosor, alabo, engrandezco y glorifico al Rey del cielo, porque todas sus obras son verdaderas y sus caminos justos; y él puede humillar a los que andan con soberbia.",
+    "statement": "Según Daniel 4:37, al evaluar específicamente «todas sus obras son verdaderas y sus caminos», el pasaje afirma: Ahora yo, Nabucodonosor, alabo, engrandezco y glorifico al Rey del cielo, porque todas sus obras son verdaderas y sus caminos justos; y él puede humillar a los que andan con soberbia.",
     "asserted_detail": "todas sus obras son verdaderas y sus caminos",
     "options": [
       "Verdadero",
@@ -18955,6 +19024,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "phrase",
     "replacement_slot_signature": null,

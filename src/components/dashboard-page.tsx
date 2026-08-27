@@ -81,9 +81,9 @@ export function DashboardPage({ onStartMission }: { onStartMission?: (config: Se
         <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 id="canonical-bank-title" className="text-2xl font-semibold tracking-tight">Banco Maestro Único — Final 2026</h2>
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">Un solo historial, una sola cobertura y cuatro familias de selección. La versión técnica no aparece como perfil de estudio.</p>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">Un solo historial, cobertura por hecho y tres tipos visibles: completar, verdadero/falso y selección única.</p>
           </div>
-          <Badge variant="outline" className="w-fit bg-background/70">{finalManifest?.gold_questions ?? 6000} preguntas GOLD</Badge>
+          <Badge variant="outline" className="w-fit bg-background/70">{finalManifest?.gold_questions ?? 8000} preguntas GOLD</Badge>
         </div>
       </section>
 

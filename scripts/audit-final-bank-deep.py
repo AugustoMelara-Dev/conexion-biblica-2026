@@ -17,6 +17,7 @@ from scripts.lib.final_editorial import (
     MAX_CHAPTER_FACTS_PER_ANSWER,
     MAX_GLOBAL_FACTS_PER_ANSWER,
     _norm,
+    _complete_statement_text,
     option_signature,
 )
 
@@ -153,13 +154,18 @@ def main() -> int:
                 fail(errors, qid, "statement_not_visible")
             if question["question"] != f"Verdadero o falso: {question.get('statement', '')}":
                 fail(errors, qid, "true_false_added_template_text")
-            expected_fragment = fact["context"].replace(fact["answer"], "[…]", 1)
             expected_true_statement = (
-                f"Según {question['reference']}, en el fragmento «{expected_fragment}», "
-                f"la expresión que ocupa […] es «{fact['answer']}»."
+                f"Según {question['reference']}, {_complete_statement_text(fact['context'])}"
             )
             if question["correct_answer"] == "Verdadero":
-                if question.get("statement") != expected_true_statement:
+                expected_visible_statement = (
+                    f"Según {question['reference']}, al evaluar específicamente "
+                    f"«{fact['answer']}», el pasaje afirma: "
+                    f"{_complete_statement_text(fact['context'])}"
+                    if question.get("focused_true_statement")
+                    else expected_true_statement
+                )
+                if question.get("statement") != expected_visible_statement:
                     fail(errors, qid, "true_statement_not_exact_source")
             else:
                 if question.get("corrected_statement") != expected_true_statement:

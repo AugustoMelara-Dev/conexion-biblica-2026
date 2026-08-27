@@ -175,8 +175,8 @@
       "ciento"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:1, en el fragmento «Pareció bien a Darío constituir sobre el reino […] veinte sátrapas que gobernaran en todo el reino.», la expresión que ocupa […] es «cuatro».",
-    "statement": "Según Daniel 6:1, en el fragmento «Pareció bien a Darío constituir sobre el reino […] veinte sátrapas que gobernaran en todo el reino.», la expresión que ocupa […] es «cuatro».",
+    "question": "Verdadero o falso: Según Daniel 6:1, Pareció bien a Darío constituir sobre el reino cuatro veinte sátrapas que gobernaran en todo el reino.",
+    "statement": "Según Daniel 6:1, Pareció bien a Darío constituir sobre el reino cuatro veinte sátrapas que gobernaran en todo el reino.",
     "asserted_detail": "cuatro",
     "options": [
       "Verdadero",
@@ -184,9 +184,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:1, en el fragmento «Pareció bien a Darío constituir sobre el reino […] veinte sátrapas que gobernaran en todo el reino.», la expresión que ocupa […] es «ciento».",
+    "corrected_statement": "Según Daniel 6:1, Pareció bien a Darío constituir sobre el reino ciento veinte sátrapas que gobernaran en todo el reino.",
     "incorrect_detail": "cuatro",
     "correction": "ciento",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 11:4",
     "correct_slot_signature": "number",
     "replacement_slot_signature": "number",
@@ -447,8 +448,8 @@
       "veinte"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:1, en el fragmento «Pareció bien a Darío constituir sobre el reino ciento […] sátrapas que gobernaran en todo el reino.», la expresión que ocupa […] es «cuatro».",
-    "statement": "Según Daniel 6:1, en el fragmento «Pareció bien a Darío constituir sobre el reino ciento […] sátrapas que gobernaran en todo el reino.», la expresión que ocupa […] es «cuatro».",
+    "question": "Verdadero o falso: Según Daniel 6:1, Pareció bien a Darío constituir sobre el reino ciento cuatro sátrapas que gobernaran en todo el reino.",
+    "statement": "Según Daniel 6:1, Pareció bien a Darío constituir sobre el reino ciento cuatro sátrapas que gobernaran en todo el reino.",
     "asserted_detail": "cuatro",
     "options": [
       "Verdadero",
@@ -456,9 +457,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:1, en el fragmento «Pareció bien a Darío constituir sobre el reino ciento […] sátrapas que gobernaran en todo el reino.», la expresión que ocupa […] es «veinte».",
+    "corrected_statement": "Según Daniel 6:1, Pareció bien a Darío constituir sobre el reino ciento veinte sátrapas que gobernaran en todo el reino.",
     "incorrect_detail": "cuatro",
     "correction": "veinte",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 11:4",
     "correct_slot_signature": "number",
     "replacement_slot_signature": "number",
@@ -719,30 +721,31 @@
       "gobernaran"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:1, en el fragmento «Pareció bien a Darío constituir sobre el reino ciento veinte sátrapas que […] en todo el reino.», la expresión que ocupa […] es «gobernaran».",
-    "statement": "Según Daniel 6:1, en el fragmento «Pareció bien a Darío constituir sobre el reino ciento veinte sátrapas que […] en todo el reino.», la expresión que ocupa […] es «gobernaran».",
-    "asserted_detail": "gobernaran",
+    "question": "Verdadero o falso: Según Daniel 6:1, Pareció bien a Darío constituir sobre el reino ciento veinte sátrapas que hicieran en todo el reino.",
+    "statement": "Según Daniel 6:1, Pareció bien a Darío constituir sobre el reino ciento veinte sátrapas que hicieran en todo el reino.",
+    "asserted_detail": "hicieran",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:1, Pareció bien a Darío constituir sobre el reino ciento veinte sátrapas que gobernaran en todo el reino.",
+    "incorrect_detail": "hicieran",
+    "correction": "gobernaran",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:22",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:1.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «gobernaran», no «hicieran».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «hicieran»; la fuente contiene «gobernaran»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -991,8 +994,8 @@
       "el rey no fuera perjudicado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:2, en el fragmento «Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que […].», la expresión que ocupa […] es «el rey no fuera perjudicado».",
-    "statement": "Según Daniel 6:2, en el fragmento «Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que […].», la expresión que ocupa […] es «el rey no fuera perjudicado».",
+    "question": "Verdadero o falso: Según Daniel 6:2, al evaluar específicamente «el rey no fuera perjudicado», el pasaje afirma: Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.",
+    "statement": "Según Daniel 6:2, al evaluar específicamente «el rey no fuera perjudicado», el pasaje afirma: Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.",
     "asserted_detail": "el rey no fuera perjudicado",
     "options": [
       "Verdadero",
@@ -1003,6 +1006,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "phrase",
     "replacement_slot_signature": null,
@@ -1263,8 +1267,8 @@
       "tres"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:2, en el fragmento «Y sobre ellos […] gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.», la expresión que ocupa […] es «ciento».",
-    "statement": "Según Daniel 6:2, en el fragmento «Y sobre ellos […] gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.», la expresión que ocupa […] es «ciento».",
+    "question": "Verdadero o falso: Según Daniel 6:2, Y sobre ellos ciento gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.",
+    "statement": "Según Daniel 6:2, Y sobre ellos ciento gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.",
     "asserted_detail": "ciento",
     "options": [
       "Verdadero",
@@ -1272,9 +1276,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:2, en el fragmento «Y sobre ellos […] gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.», la expresión que ocupa […] es «tres».",
+    "corrected_statement": "Según Daniel 6:2, Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.",
     "incorrect_detail": "ciento",
     "correction": "tres",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 6:1",
     "correct_slot_signature": "number",
     "replacement_slot_signature": "number",
@@ -1535,30 +1540,31 @@
       "dieran"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:2, en el fragmento «Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas […] cuenta, para que el rey no fuera perjudicado.», la expresión que ocupa […] es «dieran».",
-    "statement": "Según Daniel 6:2, en el fragmento «Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas […] cuenta, para que el rey no fuera perjudicado.», la expresión que ocupa […] es «dieran».",
-    "asserted_detail": "dieran",
+    "question": "Verdadero o falso: Según Daniel 6:2, Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas hicieran cuenta, para que el rey no fuera perjudicado.",
+    "statement": "Según Daniel 6:2, Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas hicieran cuenta, para que el rey no fuera perjudicado.",
+    "asserted_detail": "hicieran",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:2, Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.",
+    "incorrect_detail": "hicieran",
+    "correction": "dieran",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:22",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:2.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «dieran», no «hicieran».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «hicieran»; la fuente contiene «dieran»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -1807,8 +1813,8 @@
       "había en él un espíritu superior"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:3, en el fragmento «Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque […]; y el rey pensó en ponerlo sobre todo el reino.», la expresión que ocupa […] es «había en él un espíritu superior».",
-    "statement": "Según Daniel 6:3, en el fragmento «Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque […]; y el rey pensó en ponerlo sobre todo el reino.», la expresión que ocupa […] es «había en él un espíritu superior».",
+    "question": "Verdadero o falso: Según Daniel 6:3, al evaluar específicamente «había en él un espíritu superior», el pasaje afirma: Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en ponerlo sobre todo el reino.",
+    "statement": "Según Daniel 6:3, al evaluar específicamente «había en él un espíritu superior», el pasaje afirma: Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en ponerlo sobre todo el reino.",
     "asserted_detail": "había en él un espíritu superior",
     "options": [
       "Verdadero",
@@ -1819,6 +1825,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "phrase",
     "replacement_slot_signature": null,
@@ -2079,30 +2086,31 @@
       "ponerlo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:3, en el fragmento «Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en […] sobre todo el reino.», la expresión que ocupa […] es «ponerlo».",
-    "statement": "Según Daniel 6:3, en el fragmento «Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en […] sobre todo el reino.», la expresión que ocupa […] es «ponerlo».",
-    "asserted_detail": "ponerlo",
+    "question": "Verdadero o falso: Según Daniel 6:3, Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en hacerlo sobre todo el reino.",
+    "statement": "Según Daniel 6:3, Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en hacerlo sobre todo el reino.",
+    "asserted_detail": "hacerlo",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:3, Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en ponerlo sobre todo el reino.",
+    "incorrect_detail": "hacerlo",
+    "correction": "ponerlo",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:10",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:3.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «ponerlo», no «hacerlo».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «hacerlo»; la fuente contiene «ponerlo»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -2351,30 +2359,31 @@
       "pensó"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:3, en el fragmento «Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey […] en ponerlo sobre todo el reino.», la expresión que ocupa […] es «pensó».",
-    "statement": "Según Daniel 6:3, en el fragmento «Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey […] en ponerlo sobre todo el reino.», la expresión que ocupa […] es «pensó».",
-    "asserted_detail": "pensó",
+    "question": "Verdadero o falso: Según Daniel 6:3, Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey firmó en ponerlo sobre todo el reino.",
+    "statement": "Según Daniel 6:3, Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey firmó en ponerlo sobre todo el reino.",
+    "asserted_detail": "firmó",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:3, Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en ponerlo sobre todo el reino.",
+    "incorrect_detail": "firmó",
+    "correction": "pensó",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:9",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:3.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «pensó», no «firmó».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «firmó»; la fuente contiene «pensó»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -2623,8 +2632,8 @@
       "Daniel"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:4, en el fragmento «Los gobernadores y sátrapas buscaron ocasión para acusar a […] en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.», la expresión que ocupa […] es «Joacim».",
-    "statement": "Según Daniel 6:4, en el fragmento «Los gobernadores y sátrapas buscaron ocasión para acusar a […] en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.», la expresión que ocupa […] es «Joacim».",
+    "question": "Verdadero o falso: Según Daniel 6:4, Los gobernadores y sátrapas buscaron ocasión para acusar a Joacim en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+    "statement": "Según Daniel 6:4, Los gobernadores y sátrapas buscaron ocasión para acusar a Joacim en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
     "asserted_detail": "Joacim",
     "options": [
       "Verdadero",
@@ -2632,9 +2641,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:4, en el fragmento «Los gobernadores y sátrapas buscaron ocasión para acusar a […] en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.», la expresión que ocupa […] es «Daniel».",
+    "corrected_statement": "Según Daniel 6:4, Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
     "incorrect_detail": "Joacim",
     "correction": "Daniel",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 1:2",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
@@ -2895,30 +2905,31 @@
       "relacionado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:4, en el fragmento «Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo […] con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.», la expresión que ocupa […] es «perjudicado».",
-    "statement": "Según Daniel 6:4, en el fragmento «Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo […] con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.», la expresión que ocupa […] es «perjudicado».",
-    "asserted_detail": "perjudicado",
+    "question": "Verdadero o falso: Según Daniel 6:4, al evaluar específicamente «relacionado», el pasaje afirma: Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+    "statement": "Según Daniel 6:4, al evaluar específicamente «relacionado», el pasaje afirma: Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+    "asserted_detail": "relacionado",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:4, en el fragmento «Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo […] con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.», la expresión que ocupa […] es «relacionado».",
-    "incorrect_detail": "perjudicado",
-    "correction": "relacionado",
-    "replacement_source_ref": "Daniel 6:2",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «relacionado», no «perjudicado».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:4.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «perjudicado»; la fuente contiene «relacionado»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -3167,30 +3178,31 @@
       "ocasión"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:4, en el fragmento «Los gobernadores y sátrapas buscaron […] para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.», la expresión que ocupa […] es «lesión».",
-    "statement": "Según Daniel 6:4, en el fragmento «Los gobernadores y sátrapas buscaron […] para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.», la expresión que ocupa […] es «lesión».",
-    "asserted_detail": "lesión",
+    "question": "Verdadero o falso: Según Daniel 6:4, al evaluar específicamente «ocasión», el pasaje afirma: Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+    "statement": "Según Daniel 6:4, al evaluar específicamente «ocasión», el pasaje afirma: Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+    "asserted_detail": "ocasión",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:4, en el fragmento «Los gobernadores y sátrapas buscaron […] para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.», la expresión que ocupa […] es «ocasión».",
-    "incorrect_detail": "lesión",
-    "correction": "ocasión",
-    "replacement_source_ref": "Daniel 6:23",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «ocasión», no «lesión».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:4.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «lesión»; la fuente contiene «ocasión»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -3439,34 +3451,35 @@
       "Daniel"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:5, en el fragmento «Entonces dijeron aquellos hombres: «No hallaremos contra este […] motivo alguno para acusarlo, si no lo hallamos contra él en relación con la ley de su Dios.», la expresión que ocupa […] es «Samuel».",
-    "statement": "Según Daniel 6:5, en el fragmento «Entonces dijeron aquellos hombres: «No hallaremos contra este […] motivo alguno para acusarlo, si no lo hallamos contra él en relación con la ley de su Dios.», la expresión que ocupa […] es «Samuel».",
-    "asserted_detail": "Samuel",
+    "question": "Verdadero o falso: Según Daniel 6:5, Entonces dijeron aquellos hombres: «No hallaremos contra este Daniel motivo alguno para acusarlo, si no lo hallamos contra él en relación con la ley de su Dios.",
+    "statement": "Según Daniel 6:5, Entonces dijeron aquellos hombres: «No hallaremos contra este Daniel motivo alguno para acusarlo, si no lo hallamos contra él en relación con la ley de su Dios.",
+    "asserted_detail": "Daniel",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:5, en el fragmento «Entonces dijeron aquellos hombres: «No hallaremos contra este […] motivo alguno para acusarlo, si no lo hallamos contra él en relación con la ley de su Dios.», la expresión que ocupa […] es «Daniel».",
-    "incorrect_detail": "Samuel",
-    "correction": "Daniel",
-    "replacement_source_ref": "PR39, p. 29, párrafo 5",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": false,
+    "replacement_source_ref": null,
     "correct_slot_signature": "person",
-    "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Daniel», no «Samuel».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:5.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Samuel»; la fuente contiene «Daniel»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "hard"
+    "difficulty": "medium"
   },
   {
     "id": "DAN6-GOLD-0702-SINGLE_CHOICE_CONTEXTUAL",
@@ -3711,30 +3724,31 @@
       "hallaremos"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:5, en el fragmento «Entonces dijeron aquellos hombres: «No […] contra este Daniel motivo alguno para acusarlo, si no lo hallamos contra él en relación con la ley de su Dios.», la expresión que ocupa […] es «hallaremos».",
-    "statement": "Según Daniel 6:5, en el fragmento «Entonces dijeron aquellos hombres: «No […] contra este Daniel motivo alguno para acusarlo, si no lo hallamos contra él en relación con la ley de su Dios.», la expresión que ocupa […] es «hallaremos».",
-    "asserted_detail": "hallaremos",
+    "question": "Verdadero o falso: Según Daniel 6:5, Entonces dijeron aquellos hombres: «No adoraremos contra este Daniel motivo alguno para acusarlo, si no lo hallamos contra él en relación con la ley de su Dios.",
+    "statement": "Según Daniel 6:5, Entonces dijeron aquellos hombres: «No adoraremos contra este Daniel motivo alguno para acusarlo, si no lo hallamos contra él en relación con la ley de su Dios.",
+    "asserted_detail": "adoraremos",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:5, Entonces dijeron aquellos hombres: «No hallaremos contra este Daniel motivo alguno para acusarlo, si no lo hallamos contra él en relación con la ley de su Dios.",
+    "incorrect_detail": "adoraremos",
+    "correction": "hallaremos",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 3:18",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:5.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «hallaremos», no «adoraremos».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «adoraremos»; la fuente contiene «hallaremos»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -3983,30 +3997,31 @@
       "juntaron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:6, en el fragmento «Entonces estos gobernadores y sátrapas se […] delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!», la expresión que ocupa […] es «juntaron».",
-    "statement": "Según Daniel 6:6, en el fragmento «Entonces estos gobernadores y sátrapas se […] delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!», la expresión que ocupa […] es «juntaron».",
-    "asserted_detail": "juntaron",
+    "question": "Verdadero o falso: Según Daniel 6:6, Entonces estos gobernadores y sátrapas se hallaron delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!",
+    "statement": "Según Daniel 6:6, Entonces estos gobernadores y sátrapas se hallaron delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!",
+    "asserted_detail": "hallaron",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:6, Entonces estos gobernadores y sátrapas se juntaron delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!",
+    "incorrect_detail": "hallaron",
+    "correction": "juntaron",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:11",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:6.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «juntaron», no «hallaron».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «hallaron»; la fuente contiene «juntaron»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -4255,30 +4270,31 @@
       "sátrapas"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:6, en el fragmento «Entonces estos gobernadores y […] se juntaron delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!», la expresión que ocupa […] es «gracias».",
-    "statement": "Según Daniel 6:6, en el fragmento «Entonces estos gobernadores y […] se juntaron delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!», la expresión que ocupa […] es «gracias».",
-    "asserted_detail": "gracias",
+    "question": "Verdadero o falso: Según Daniel 6:6, al evaluar específicamente «sátrapas», el pasaje afirma: Entonces estos gobernadores y sátrapas se juntaron delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!",
+    "statement": "Según Daniel 6:6, al evaluar específicamente «sátrapas», el pasaje afirma: Entonces estos gobernadores y sátrapas se juntaron delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!",
+    "asserted_detail": "sátrapas",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:6, en el fragmento «Entonces estos gobernadores y […] se juntaron delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!», la expresión que ocupa […] es «sátrapas».",
-    "incorrect_detail": "gracias",
-    "correction": "sátrapas",
-    "replacement_source_ref": "Daniel 6:10",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «sátrapas», no «gracias».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:6.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «gracias»; la fuente contiene «sátrapas»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -4527,8 +4543,8 @@
       "treinta"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:7, en el fragmento «Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de […] días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.», la expresión que ocupa […] es «veinte».",
-    "statement": "Según Daniel 6:7, en el fragmento «Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de […] días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.», la expresión que ocupa […] es «veinte».",
+    "question": "Verdadero o falso: Según Daniel 6:7, Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de veinte días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "statement": "Según Daniel 6:7, Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de veinte días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
     "asserted_detail": "veinte",
     "options": [
       "Verdadero",
@@ -4536,9 +4552,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:7, en el fragmento «Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de […] días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.», la expresión que ocupa […] es «treinta».",
+    "corrected_statement": "Según Daniel 6:7, Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
     "incorrect_detail": "veinte",
     "correction": "treinta",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 6:1",
     "correct_slot_signature": "number",
     "replacement_slot_signature": "number",
@@ -4799,30 +4816,31 @@
       "promulgues"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:7, en el fragmento «Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que […] un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.», la expresión que ocupa […] es «musicales».",
-    "statement": "Según Daniel 6:7, en el fragmento «Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que […] un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.», la expresión que ocupa […] es «musicales».",
-    "asserted_detail": "musicales",
+    "question": "Verdadero o falso: Según Daniel 6:7, al evaluar específicamente «promulgues», el pasaje afirma: Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "statement": "Según Daniel 6:7, al evaluar específicamente «promulgues», el pasaje afirma: Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "asserted_detail": "promulgues",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:7, en el fragmento «Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que […] un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.», la expresión que ocupa […] es «promulgues».",
-    "incorrect_detail": "musicales",
-    "correction": "promulgues",
-    "replacement_source_ref": "Daniel 6:18",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «promulgues», no «musicales».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:7.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «musicales»; la fuente contiene «promulgues»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -5071,8 +5089,8 @@
       "Persia"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:8, en el fragmento «Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de […], que no puede ser abrogada.», la expresión que ocupa […] es «Grecia».",
-    "statement": "Según Daniel 6:8, en el fragmento «Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de […], que no puede ser abrogada.», la expresión que ocupa […] es «Grecia».",
+    "question": "Verdadero o falso: Según Daniel 6:8, Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Grecia, que no puede ser abrogada.",
+    "statement": "Según Daniel 6:8, Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Grecia, que no puede ser abrogada.",
     "asserted_detail": "Grecia",
     "options": [
       "Verdadero",
@@ -5080,9 +5098,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:8, en el fragmento «Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de […], que no puede ser abrogada.», la expresión que ocupa […] es «Persia».",
+    "corrected_statement": "Según Daniel 6:8, Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
     "incorrect_detail": "Grecia",
     "correction": "Persia",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 10:20",
     "correct_slot_signature": "place",
     "replacement_slot_signature": "place",
@@ -5165,7 +5184,7 @@
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "expert"
+    "difficulty": "hard"
   },
   {
     "id": "DAN6-GOLD-0709-SINGLE_CHOICE_DIRECT",
@@ -5343,8 +5362,8 @@
       "Media"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:8, en el fragmento «Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de […] y de Persia, que no puede ser abrogada.», la expresión que ocupa […] es «Sinar».",
-    "statement": "Según Daniel 6:8, en el fragmento «Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de […] y de Persia, que no puede ser abrogada.», la expresión que ocupa […] es «Sinar».",
+    "question": "Verdadero o falso: Según Daniel 6:8, Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Sinar y de Persia, que no puede ser abrogada.",
+    "statement": "Según Daniel 6:8, Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Sinar y de Persia, que no puede ser abrogada.",
     "asserted_detail": "Sinar",
     "options": [
       "Verdadero",
@@ -5352,9 +5371,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:8, en el fragmento «Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de […] y de Persia, que no puede ser abrogada.», la expresión que ocupa […] es «Media».",
+    "corrected_statement": "Según Daniel 6:8, Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
     "incorrect_detail": "Sinar",
     "correction": "Media",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 1:2",
     "correct_slot_signature": "place",
     "replacement_slot_signature": "place",
@@ -5437,7 +5457,7 @@
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "expert"
+    "difficulty": "hard"
   },
   {
     "id": "DAN6-GOLD-0710-SINGLE_CHOICE_DIRECT",
@@ -5483,17 +5503,17 @@
     "answer_mode": "option_id",
     "question": "Según Daniel 6:9, ¿qué personaje completa correctamente «Firmó, pues, el rey ________ el edicto y la prohibición.»?",
     "options": [
-      "Mesac",
-      "Darío",
       "Arioc",
+      "Darío",
+      "Mesac",
       "Jacob"
     ],
     "correct_option": 1,
     "correct_answer": "Darío",
     "explanation": "Daniel 6:9 declara literalmente «Firmó, pues, el rey Darío el edicto y la prohibición.». La respuesta pedida es «Darío».",
     "why_distractors_fail": {
-      "Mesac": "Es verdadero en Daniel 3:16, pero no responde al contexto exacto de Daniel 6:9.",
       "Arioc": "Es verdadero en Daniel 2:24, pero no responde al contexto exacto de Daniel 6:9.",
+      "Mesac": "Es verdadero en Daniel 3:22, pero no responde al contexto exacto de Daniel 6:9.",
       "Jacob": "Es verdadero en PR43, p. 53, párrafo 7, pero no responde al contexto exacto de Daniel 6:9."
     },
     "trap_type": null,
@@ -5550,8 +5570,8 @@
     "answer_mode": "option_id",
     "question": "Complete Daniel 6:9: «Firmó, pues, el rey ________ el edicto y la prohibición.»",
     "options": [
-      "Mesac",
       "Arioc",
+      "Mesac",
       "Darío",
       "Jacob"
     ],
@@ -5559,8 +5579,8 @@
     "correct_answer": "Darío",
     "explanation": "Daniel 6:9 declara literalmente «Firmó, pues, el rey Darío el edicto y la prohibición.». La respuesta pedida es «Darío».",
     "why_distractors_fail": {
-      "Mesac": "Es verdadero en Daniel 3:16, pero no responde al contexto exacto de Daniel 6:9.",
       "Arioc": "Es verdadero en Daniel 2:24, pero no responde al contexto exacto de Daniel 6:9.",
+      "Mesac": "Es verdadero en Daniel 3:22, pero no responde al contexto exacto de Daniel 6:9.",
       "Jacob": "Es verdadero en PR43, p. 53, párrafo 7, pero no responde al contexto exacto de Daniel 6:9."
     },
     "trap_type": null,
@@ -5615,24 +5635,25 @@
       "Darío"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:9, en el fragmento «Firmó, pues, el rey […] el edicto y la prohibición.», la expresión que ocupa […] es «Mesac».",
-    "statement": "Según Daniel 6:9, en el fragmento «Firmó, pues, el rey […] el edicto y la prohibición.», la expresión que ocupa […] es «Mesac».",
-    "asserted_detail": "Mesac",
+    "question": "Verdadero o falso: Según Daniel 6:9, Firmó, pues, el rey Arioc el edicto y la prohibición.",
+    "statement": "Según Daniel 6:9, Firmó, pues, el rey Arioc el edicto y la prohibición.",
+    "asserted_detail": "Arioc",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:9, en el fragmento «Firmó, pues, el rey […] el edicto y la prohibición.», la expresión que ocupa […] es «Darío».",
-    "incorrect_detail": "Mesac",
+    "corrected_statement": "Según Daniel 6:9, Firmó, pues, el rey Darío el edicto y la prohibición.",
+    "incorrect_detail": "Arioc",
     "correction": "Darío",
-    "replacement_source_ref": "Daniel 3:16",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 2:24",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Darío», no «Mesac».",
+    "explanation": "Es falsa: la fuente dice «Darío», no «Arioc».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Mesac»; la fuente contiene «Darío»."
+      "Verdadero": "La única alteración es «Arioc»; la fuente contiene «Darío»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {
@@ -5689,16 +5710,16 @@
     "question": "Según Daniel 6:9, ¿qué personaje corresponde específicamente a esta escena: «Firmó, pues, el rey […] el edicto y la prohibición.»?",
     "options": [
       "Darío",
-      "Mesac",
       "Arioc",
+      "Mesac",
       "Jacob"
     ],
     "correct_option": 0,
     "correct_answer": "Darío",
     "explanation": "En el contexto exacto de Daniel 6:9, el detalle aplicable es «Darío»: «Firmó, pues, el rey Darío el edicto y la prohibición.».",
     "why_distractors_fail": {
-      "Mesac": "Es verdadero en Daniel 3:16, pero no responde al contexto exacto de Daniel 6:9.",
       "Arioc": "Es verdadero en Daniel 2:24, pero no responde al contexto exacto de Daniel 6:9.",
+      "Mesac": "Es verdadero en Daniel 3:22, pero no responde al contexto exacto de Daniel 6:9.",
       "Jacob": "Es verdadero en PR43, p. 53, párrafo 7, pero no responde al contexto exacto de Daniel 6:9."
     },
     "trap_type": "true_in_other_context",
@@ -5887,30 +5908,31 @@
       "Firmó"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:9, en el fragmento «[…], pues, el rey Darío el edicto y la prohibición.», la expresión que ocupa […] es «Firmó».",
-    "statement": "Según Daniel 6:9, en el fragmento «[…], pues, el rey Darío el edicto y la prohibición.», la expresión que ocupa […] es «Firmó».",
-    "asserted_detail": "Firmó",
+    "question": "Verdadero o falso: Según Daniel 6:9, Llamó, pues, el rey Darío el edicto y la prohibición.",
+    "statement": "Según Daniel 6:9, Llamó, pues, el rey Darío el edicto y la prohibición.",
+    "asserted_detail": "Llamó",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:9, Firmó, pues, el rey Darío el edicto y la prohibición.",
+    "incorrect_detail": "Llamó",
+    "correction": "Firmó",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:20",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:9.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «Firmó», no «Llamó».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Llamó»; la fuente contiene «Firmó»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -6027,18 +6049,18 @@
     "answer_mode": "option_id",
     "question": "Según Daniel 6:10, ¿qué acción completa correctamente «Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se ________ tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.»?",
     "options": [
-      "mía",
       "engrandecía",
       "consideraba",
+      "despreciaba",
       "arrodillaba"
     ],
     "correct_option": 3,
     "correct_answer": "arrodillaba",
     "explanation": "Daniel 6:10 declara literalmente «Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.». La respuesta pedida es «arrodillaba».",
     "why_distractors_fail": {
-      "mía": "Es verdadero en Daniel 6:26, pero no responde al contexto exacto de Daniel 6:10.",
       "engrandecía": "Es verdadero en Daniel 5:19, pero no responde al contexto exacto de Daniel 6:10.",
-      "consideraba": "Es verdadero en Daniel 8:5, pero no responde al contexto exacto de Daniel 6:10."
+      "consideraba": "Es verdadero en Daniel 8:5, pero no responde al contexto exacto de Daniel 6:10.",
+      "despreciaba": "Es verdadero en PR39, p. 28, párrafo 4, pero no responde al contexto exacto de Daniel 6:10."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -6095,17 +6117,17 @@
     "question": "Complete Daniel 6:10: «Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se ________ tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.»",
     "options": [
       "arrodillaba",
-      "mía",
       "engrandecía",
-      "consideraba"
+      "consideraba",
+      "despreciaba"
     ],
     "correct_option": 0,
     "correct_answer": "arrodillaba",
     "explanation": "Daniel 6:10 declara literalmente «Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.». La respuesta pedida es «arrodillaba».",
     "why_distractors_fail": {
-      "mía": "Es verdadero en Daniel 6:26, pero no responde al contexto exacto de Daniel 6:10.",
       "engrandecía": "Es verdadero en Daniel 5:19, pero no responde al contexto exacto de Daniel 6:10.",
-      "consideraba": "Es verdadero en Daniel 8:5, pero no responde al contexto exacto de Daniel 6:10."
+      "consideraba": "Es verdadero en Daniel 8:5, pero no responde al contexto exacto de Daniel 6:10.",
+      "despreciaba": "Es verdadero en PR39, p. 28, párrafo 4, pero no responde al contexto exacto de Daniel 6:10."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -6159,30 +6181,31 @@
       "arrodillaba"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:10, en el fragmento «Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se […] tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.», la expresión que ocupa […] es «arrodillaba».",
-    "statement": "Según Daniel 6:10, en el fragmento «Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se […] tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.», la expresión que ocupa […] es «arrodillaba».",
-    "asserted_detail": "arrodillaba",
+    "question": "Verdadero o falso: Según Daniel 6:10, Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se engrandecía tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "statement": "Según Daniel 6:10, Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se engrandecía tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "asserted_detail": "engrandecía",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:10, Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "incorrect_detail": "engrandecía",
+    "correction": "arrodillaba",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:19",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:10.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «arrodillaba», no «engrandecía».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «engrandecía»; la fuente contiene «arrodillaba»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -6232,18 +6255,18 @@
     "answer_mode": "option_id",
     "question": "Según Daniel 6:10, ¿qué acción corresponde específicamente a esta escena: «Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se […] tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.»?",
     "options": [
-      "mía",
       "engrandecía",
+      "consideraba",
       "arrodillaba",
-      "consideraba"
+      "despreciaba"
     ],
     "correct_option": 2,
     "correct_answer": "arrodillaba",
     "explanation": "En el contexto exacto de Daniel 6:10, el detalle aplicable es «arrodillaba»: «Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.».",
     "why_distractors_fail": {
-      "mía": "Es verdadero en Daniel 6:26, pero no responde al contexto exacto de Daniel 6:10.",
       "engrandecía": "Es verdadero en Daniel 5:19, pero no responde al contexto exacto de Daniel 6:10.",
-      "consideraba": "Es verdadero en Daniel 8:5, pero no responde al contexto exacto de Daniel 6:10."
+      "consideraba": "Es verdadero en Daniel 8:5, pero no responde al contexto exacto de Daniel 6:10.",
+      "despreciaba": "Es verdadero en PR39, p. 28, párrafo 4, pero no responde al contexto exacto de Daniel 6:10."
     },
     "trap_type": "true_in_other_context",
     "validation_adversarial": {
@@ -6431,30 +6454,31 @@
       "habitación"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:10, en el fragmento «Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su […] que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.», la expresión que ocupa […] es «prohibición».",
-    "statement": "Según Daniel 6:10, en el fragmento «Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su […] que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.», la expresión que ocupa […] es «prohibición».",
-    "asserted_detail": "prohibición",
+    "question": "Verdadero o falso: Según Daniel 6:10, al evaluar específicamente «habitación», el pasaje afirma: Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "statement": "Según Daniel 6:10, al evaluar específicamente «habitación», el pasaje afirma: Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "asserted_detail": "habitación",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:10, en el fragmento «Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su […] que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.», la expresión que ocupa […] es «habitación».",
-    "incorrect_detail": "prohibición",
-    "correction": "habitación",
-    "replacement_source_ref": "Daniel 6:9",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «habitación», no «prohibición».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:10.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «prohibición»; la fuente contiene «habitación»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -6703,34 +6727,35 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:11, en el fragmento «Se juntaron entonces aquellos hombres, y hallaron a Daniel orando y rogando en presencia de su […].», la expresión que ocupa […] es «Dios».",
-    "statement": "Según Daniel 6:11, en el fragmento «Se juntaron entonces aquellos hombres, y hallaron a Daniel orando y rogando en presencia de su […].», la expresión que ocupa […] es «Dios».",
-    "asserted_detail": "Dios",
+    "question": "Verdadero o falso: Según Daniel 6:11, Se juntaron entonces aquellos hombres, y hallaron a Daniel orando y rogando en presencia de su Juez.",
+    "statement": "Según Daniel 6:11, Se juntaron entonces aquellos hombres, y hallaron a Daniel orando y rogando en presencia de su Juez.",
+    "asserted_detail": "Juez",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:11, Se juntaron entonces aquellos hombres, y hallaron a Daniel orando y rogando en presencia de su Dios.",
+    "incorrect_detail": "Juez",
+    "correction": "Dios",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 7:10",
     "correct_slot_signature": "person",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:11.",
+    "replacement_slot_signature": "person",
+    "explanation": "Es falsa: la fuente dice «Dios», no «Juez».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Juez»; la fuente contiene «Dios»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "DAN6-GOLD-0714-SINGLE_CHOICE_CONTEXTUAL",
@@ -6975,30 +7000,31 @@
       "presencia"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:11, en el fragmento «Se juntaron entonces aquellos hombres, y hallaron a Daniel orando y rogando en […] de su Dios.», la expresión que ocupa […] es «relación».",
-    "statement": "Según Daniel 6:11, en el fragmento «Se juntaron entonces aquellos hombres, y hallaron a Daniel orando y rogando en […] de su Dios.», la expresión que ocupa […] es «relación».",
-    "asserted_detail": "relación",
+    "question": "Verdadero o falso: Según Daniel 6:11, al evaluar específicamente «presencia», el pasaje afirma: Se juntaron entonces aquellos hombres, y hallaron a Daniel orando y rogando en presencia de su Dios.",
+    "statement": "Según Daniel 6:11, al evaluar específicamente «presencia», el pasaje afirma: Se juntaron entonces aquellos hombres, y hallaron a Daniel orando y rogando en presencia de su Dios.",
+    "asserted_detail": "presencia",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:11, en el fragmento «Se juntaron entonces aquellos hombres, y hallaron a Daniel orando y rogando en […] de su Dios.», la expresión que ocupa […] es «presencia».",
-    "incorrect_detail": "relación",
-    "correction": "presencia",
-    "replacement_source_ref": "Daniel 6:5",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:prepositional",
-    "replacement_slot_signature": "term:prepositional",
-    "explanation": "Es falsa: la fuente dice «presencia», no «relación».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:11.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «relación»; la fuente contiene «presencia»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -7247,30 +7273,31 @@
       "ordenando"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:12, en el fragmento «Fueron luego ante el rey y le hablaron del edicto real: —¿No has confirmado un edicto […] que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones?», la expresión que ocupa […] es «ordenando».",
-    "statement": "Según Daniel 6:12, en el fragmento «Fueron luego ante el rey y le hablaron del edicto real: —¿No has confirmado un edicto […] que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones?», la expresión que ocupa […] es «ordenando».",
-    "asserted_detail": "ordenando",
+    "question": "Verdadero o falso: Según Daniel 6:12, Fueron luego ante el rey y le hablaron del edicto real: —¿No has confirmado un edicto acercándose que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones?",
+    "statement": "Según Daniel 6:12, Fueron luego ante el rey y le hablaron del edicto real: —¿No has confirmado un edicto acercándose que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones?",
+    "asserted_detail": "acercándose",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:12, Fueron luego ante el rey y le hablaron del edicto real: —¿No has confirmado un edicto ordenando que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones?",
+    "incorrect_detail": "acercándose",
+    "correction": "ordenando",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:20",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:12.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «ordenando», no «acercándose».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «acercándose»; la fuente contiene «ordenando»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -7519,30 +7546,31 @@
       "hablaron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:12, en el fragmento «Fueron luego ante el rey y le […] del edicto real: —¿No has confirmado un edicto ordenando que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones?», la expresión que ocupa […] es «hablaron».",
-    "statement": "Según Daniel 6:12, en el fragmento «Fueron luego ante el rey y le […] del edicto real: —¿No has confirmado un edicto ordenando que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones?», la expresión que ocupa […] es «hablaron».",
-    "asserted_detail": "hablaron",
+    "question": "Verdadero o falso: Según Daniel 6:12, Fueron luego ante el rey y le hallaron del edicto real: —¿No has confirmado un edicto ordenando que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones?",
+    "statement": "Según Daniel 6:12, Fueron luego ante el rey y le hallaron del edicto real: —¿No has confirmado un edicto ordenando que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones?",
+    "asserted_detail": "hallaron",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:12, Fueron luego ante el rey y le hablaron del edicto real: —¿No has confirmado un edicto ordenando que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones?",
+    "incorrect_detail": "hallaron",
+    "correction": "hablaron",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:4",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:12.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «hablaron», no «hallaron».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «hallaron»; la fuente contiene «hablaron»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -7791,30 +7819,31 @@
       "cautivos"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:13, en el fragmento «Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los […] de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.», la expresión que ocupa […] es «motivos».",
-    "statement": "Según Daniel 6:13, en el fragmento «Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los […] de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.», la expresión que ocupa […] es «motivos».",
-    "asserted_detail": "motivos",
+    "question": "Verdadero o falso: Según Daniel 6:13, al evaluar específicamente «cautivos», el pasaje afirma: Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.",
+    "statement": "Según Daniel 6:13, al evaluar específicamente «cautivos», el pasaje afirma: Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.",
+    "asserted_detail": "cautivos",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:13, en el fragmento «Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los […] de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.», la expresión que ocupa […] es «cautivos».",
-    "incorrect_detail": "motivos",
-    "correction": "cautivos",
-    "replacement_source_ref": "PR44, p. 58, párrafo 1",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «cautivos», no «motivos».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:13.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «motivos»; la fuente contiene «cautivos»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -8063,30 +8092,31 @@
       "petición"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:13, en el fragmento «Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su […].», la expresión que ocupa […] es «habitación».",
-    "statement": "Según Daniel 6:13, en el fragmento «Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su […].», la expresión que ocupa […] es «habitación».",
-    "asserted_detail": "habitación",
+    "question": "Verdadero o falso: Según Daniel 6:13, al evaluar específicamente «petición», el pasaje afirma: Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.",
+    "statement": "Según Daniel 6:13, al evaluar específicamente «petición», el pasaje afirma: Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.",
+    "asserted_detail": "petición",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:13, en el fragmento «Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su […].», la expresión que ocupa […] es «petición».",
-    "incorrect_detail": "habitación",
-    "correction": "petición",
-    "replacement_source_ref": "Daniel 6:10",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «petición», no «habitación».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:13.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «habitación»; la fuente contiene «petición»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -8335,30 +8365,31 @@
       "resolvió"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:14, en el fragmento «Cuando el rey oyó el asunto, le pesó en gran manera y […] librar a Daniel; y hasta la puesta del sol trabajó para librarlo.», la expresión que ocupa […] es «resolvió».",
-    "statement": "Según Daniel 6:14, en el fragmento «Cuando el rey oyó el asunto, le pesó en gran manera y […] librar a Daniel; y hasta la puesta del sol trabajó para librarlo.», la expresión que ocupa […] es «resolvió».",
-    "asserted_detail": "resolvió",
+    "question": "Verdadero o falso: Según Daniel 6:14, Cuando el rey oyó el asunto, le pesó en gran manera y prosperó librar a Daniel; y hasta la puesta del sol trabajó para librarlo.",
+    "statement": "Según Daniel 6:14, Cuando el rey oyó el asunto, le pesó en gran manera y prosperó librar a Daniel; y hasta la puesta del sol trabajó para librarlo.",
+    "asserted_detail": "prosperó",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:14, Cuando el rey oyó el asunto, le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para librarlo.",
+    "incorrect_detail": "prosperó",
+    "correction": "resolvió",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:28",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:14.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «resolvió», no «prosperó».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «prosperó»; la fuente contiene «resolvió»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -8607,30 +8638,31 @@
       "librarlo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:14, en el fragmento «Cuando el rey oyó el asunto, le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para […].», la expresión que ocupa […] es «librarlo».",
-    "statement": "Según Daniel 6:14, en el fragmento «Cuando el rey oyó el asunto, le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para […].», la expresión que ocupa […] es «librarlo».",
-    "asserted_detail": "librarlo",
+    "question": "Verdadero o falso: Según Daniel 6:14, Cuando el rey oyó el asunto, le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para acusarlo.",
+    "statement": "Según Daniel 6:14, Cuando el rey oyó el asunto, le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para acusarlo.",
+    "asserted_detail": "acusarlo",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:14, Cuando el rey oyó el asunto, le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para librarlo.",
+    "incorrect_detail": "acusarlo",
+    "correction": "librarlo",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:5",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:14.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «librarlo», no «acusarlo».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «acusarlo»; la fuente contiene «librarlo»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -8879,8 +8911,8 @@
       "Media"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:15, en el fragmento «Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de […] y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.», la expresión que ocupa […] es «Libia».",
-    "statement": "Según Daniel 6:15, en el fragmento «Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de […] y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.», la expresión que ocupa […] es «Libia».",
+    "question": "Verdadero o falso: Según Daniel 6:15, Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de Libia y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.",
+    "statement": "Según Daniel 6:15, Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de Libia y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.",
     "asserted_detail": "Libia",
     "options": [
       "Verdadero",
@@ -8888,9 +8920,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:15, en el fragmento «Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de […] y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.», la expresión que ocupa […] es «Media».",
+    "corrected_statement": "Según Daniel 6:15, Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de Media y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.",
     "incorrect_detail": "Libia",
     "correction": "Media",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 11:43",
     "correct_slot_signature": "place",
     "replacement_slot_signature": "place",
@@ -9151,30 +9184,31 @@
       "ordenanza"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:15, en el fragmento «Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de Media y de Persia que ningún edicto u […] que el rey confirme puede ser abrogado.», la expresión que ocupa […] es «desoladora».",
-    "statement": "Según Daniel 6:15, en el fragmento «Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de Media y de Persia que ningún edicto u […] que el rey confirme puede ser abrogado.», la expresión que ocupa […] es «desoladora».",
-    "asserted_detail": "desoladora",
+    "question": "Verdadero o falso: Según Daniel 6:15, al evaluar específicamente «ordenanza», el pasaje afirma: Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de Media y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.",
+    "statement": "Según Daniel 6:15, al evaluar específicamente «ordenanza», el pasaje afirma: Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de Media y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.",
+    "asserted_detail": "ordenanza",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:15, en el fragmento «Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de Media y de Persia que ningún edicto u […] que el rey confirme puede ser abrogado.», la expresión que ocupa […] es «ordenanza».",
-    "incorrect_detail": "desoladora",
-    "correction": "ordenanza",
-    "replacement_source_ref": "Daniel 12:11",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:postnominal_modifier",
-    "replacement_slot_signature": "term:postnominal_modifier",
-    "explanation": "Es falsa: la fuente dice «ordenanza», no «desoladora».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:15.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «desoladora»; la fuente contiene «ordenanza»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -9423,34 +9457,35 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:16, en el fragmento «El rey dijo a Daniel: —El […] tuyo, a quien tú continuamente sirves, él te libre.», la expresión que ocupa […] es «Dios».",
-    "statement": "Según Daniel 6:16, en el fragmento «El rey dijo a Daniel: —El […] tuyo, a quien tú continuamente sirves, él te libre.», la expresión que ocupa […] es «Dios».",
-    "asserted_detail": "Dios",
+    "question": "Verdadero o falso: Según Daniel 6:16, El rey dijo a Daniel: —El Juez tuyo, a quien tú continuamente sirves, él te libre.",
+    "statement": "Según Daniel 6:16, El rey dijo a Daniel: —El Juez tuyo, a quien tú continuamente sirves, él te libre.",
+    "asserted_detail": "Juez",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:16, El rey dijo a Daniel: —El Dios tuyo, a quien tú continuamente sirves, él te libre.",
+    "incorrect_detail": "Juez",
+    "correction": "Dios",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 7:10",
     "correct_slot_signature": "person",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:16.",
+    "replacement_slot_signature": "person",
+    "explanation": "Es falsa: la fuente dice «Dios», no «Juez».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Juez»; la fuente contiene «Dios»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "DAN6-GOLD-0724-SINGLE_CHOICE_CONTEXTUAL",
@@ -9695,30 +9730,31 @@
       "continuamente"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:16, en el fragmento «El rey dijo a Daniel: —El Dios tuyo, a quien tú […] sirves, él te libre.», la expresión que ocupa […] es «correctamente».",
-    "statement": "Según Daniel 6:16, en el fragmento «El rey dijo a Daniel: —El Dios tuyo, a quien tú […] sirves, él te libre.», la expresión que ocupa […] es «correctamente».",
-    "asserted_detail": "correctamente",
+    "question": "Verdadero o falso: Según Daniel 6:16, al evaluar específicamente «continuamente», el pasaje afirma: El rey dijo a Daniel: —El Dios tuyo, a quien tú continuamente sirves, él te libre.",
+    "statement": "Según Daniel 6:16, al evaluar específicamente «continuamente», el pasaje afirma: El rey dijo a Daniel: —El Dios tuyo, a quien tú continuamente sirves, él te libre.",
+    "asserted_detail": "continuamente",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:16, en el fragmento «El rey dijo a Daniel: —El Dios tuyo, a quien tú […] sirves, él te libre.», la expresión que ocupa […] es «continuamente».",
-    "incorrect_detail": "correctamente",
-    "correction": "continuamente",
-    "replacement_source_ref": "PR43, p. 49, párrafo 2",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:adverb",
-    "replacement_slot_signature": "term:adverb",
-    "explanation": "Es falsa: la fuente dice «continuamente», no «correctamente».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:16.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «correctamente»; la fuente contiene «continuamente»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -9967,8 +10003,8 @@
       "el acuerdo acerca de Daniel no se cambiara"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:17, en el fragmento «Trajeron una piedra y la pusieron sobre la puerta del foso, la cual selló el rey con su anillo y con el anillo de sus príncipes, para que […].», la expresión que ocupa […] es «el acuerdo acerca de Daniel no se cambiara».",
-    "statement": "Según Daniel 6:17, en el fragmento «Trajeron una piedra y la pusieron sobre la puerta del foso, la cual selló el rey con su anillo y con el anillo de sus príncipes, para que […].», la expresión que ocupa […] es «el acuerdo acerca de Daniel no se cambiara».",
+    "question": "Verdadero o falso: Según Daniel 6:17, al evaluar específicamente «el acuerdo acerca de Daniel no se cambiara», el pasaje afirma: Trajeron una piedra y la pusieron sobre la puerta del foso, la cual selló el rey con su anillo y con el anillo de sus príncipes, para que el acuerdo acerca de Daniel no se cambiara.",
+    "statement": "Según Daniel 6:17, al evaluar específicamente «el acuerdo acerca de Daniel no se cambiara», el pasaje afirma: Trajeron una piedra y la pusieron sobre la puerta del foso, la cual selló el rey con su anillo y con el anillo de sus príncipes, para que el acuerdo acerca de Daniel no se cambiara.",
     "asserted_detail": "el acuerdo acerca de Daniel no se cambiara",
     "options": [
       "Verdadero",
@@ -9979,6 +10015,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "phrase",
     "replacement_slot_signature": null,
@@ -10239,30 +10276,31 @@
       "pusieron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:17, en el fragmento «Trajeron una piedra y la […] sobre la puerta del foso, la cual selló el rey con su anillo y con el anillo de sus príncipes, para que el acuerdo acerca de Daniel no se cambiara.», la expresión que ocupa […] es «pusieron».",
-    "statement": "Según Daniel 6:17, en el fragmento «Trajeron una piedra y la […] sobre la puerta del foso, la cual selló el rey con su anillo y con el anillo de sus príncipes, para que el acuerdo acerca de Daniel no se cambiara.», la expresión que ocupa […] es «pusieron».",
-    "asserted_detail": "pusieron",
+    "question": "Verdadero o falso: Según Daniel 6:17, Trajeron una piedra y la hallaron sobre la puerta del foso, la cual selló el rey con su anillo y con el anillo de sus príncipes, para que el acuerdo acerca de Daniel no se cambiara.",
+    "statement": "Según Daniel 6:17, Trajeron una piedra y la hallaron sobre la puerta del foso, la cual selló el rey con su anillo y con el anillo de sus príncipes, para que el acuerdo acerca de Daniel no se cambiara.",
+    "asserted_detail": "hallaron",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:17, Trajeron una piedra y la pusieron sobre la puerta del foso, la cual selló el rey con su anillo y con el anillo de sus príncipes, para que el acuerdo acerca de Daniel no se cambiara.",
+    "incorrect_detail": "hallaron",
+    "correction": "pusieron",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:4",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:17.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «pusieron», no «hallaron».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «hallaron»; la fuente contiene «pusieron»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -10511,30 +10549,31 @@
       "acostó"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:18, en el fragmento «Luego el rey se fue a su palacio, y se […] en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.», la expresión que ocupa […] es «acostó».",
-    "statement": "Según Daniel 6:18, en el fragmento «Luego el rey se fue a su palacio, y se […] en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.», la expresión que ocupa […] es «acostó».",
-    "asserted_detail": "acostó",
+    "question": "Verdadero o falso: Según Daniel 6:18, Luego el rey se fue a su palacio, y se alegró en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "statement": "Según Daniel 6:18, Luego el rey se fue a su palacio, y se alegró en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "asserted_detail": "alegró",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:18, Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "incorrect_detail": "alegró",
+    "correction": "acostó",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:23",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:18.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «acostó», no «alegró».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «alegró»; la fuente contiene «acostó»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -10783,30 +10822,31 @@
       "instrumentos"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:18, en el fragmento «Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él […] musicales, y se le fue el sueño.», la expresión que ocupa […] es «pueblos».",
-    "statement": "Según Daniel 6:18, en el fragmento «Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él […] musicales, y se le fue el sueño.», la expresión que ocupa […] es «pueblos».",
-    "asserted_detail": "pueblos",
+    "question": "Verdadero o falso: Según Daniel 6:18, al evaluar específicamente «instrumentos», el pasaje afirma: Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "statement": "Según Daniel 6:18, al evaluar específicamente «instrumentos», el pasaje afirma: Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "asserted_detail": "instrumentos",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:18, en el fragmento «Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él […] musicales, y se le fue el sueño.», la expresión que ocupa […] es «instrumentos».",
-    "incorrect_detail": "pueblos",
-    "correction": "instrumentos",
-    "replacement_source_ref": "Daniel 6:25",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «instrumentos», no «pueblos».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:18.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «pueblos»; la fuente contiene «instrumentos»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -11055,30 +11095,31 @@
       "levantó"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:19, en el fragmento «El rey se […] muy de mañana, y fue apresuradamente al foso de los leones.», la expresión que ocupa […] es «levantó».",
-    "statement": "Según Daniel 6:19, en el fragmento «El rey se […] muy de mañana, y fue apresuradamente al foso de los leones.», la expresión que ocupa […] es «levantó».",
-    "asserted_detail": "levantó",
+    "question": "Verdadero o falso: Según Daniel 6:19, El rey se trabajó muy de mañana, y fue apresuradamente al foso de los leones.",
+    "statement": "Según Daniel 6:19, El rey se trabajó muy de mañana, y fue apresuradamente al foso de los leones.",
+    "asserted_detail": "trabajó",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:19, El rey se levantó muy de mañana, y fue apresuradamente al foso de los leones.",
+    "incorrect_detail": "trabajó",
+    "correction": "levantó",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:14",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:19.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «levantó», no «trabajó».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «trabajó»; la fuente contiene «levantó»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -11327,30 +11368,31 @@
       "leones"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:19, en el fragmento «El rey se levantó muy de mañana, y fue apresuradamente al foso de los […].», la expresión que ocupa […] es «cuales».",
-    "statement": "Según Daniel 6:19, en el fragmento «El rey se levantó muy de mañana, y fue apresuradamente al foso de los […].», la expresión que ocupa […] es «cuales».",
-    "asserted_detail": "cuales",
+    "question": "Verdadero o falso: Según Daniel 6:19, al evaluar específicamente «leones», el pasaje afirma: El rey se levantó muy de mañana, y fue apresuradamente al foso de los leones.",
+    "statement": "Según Daniel 6:19, al evaluar específicamente «leones», el pasaje afirma: El rey se levantó muy de mañana, y fue apresuradamente al foso de los leones.",
+    "asserted_detail": "leones",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:19, en el fragmento «El rey se levantó muy de mañana, y fue apresuradamente al foso de los […].», la expresión que ocupa […] es «leones».",
-    "incorrect_detail": "cuales",
-    "correction": "leones",
-    "replacement_source_ref": "Daniel 6:2",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «leones», no «cuales».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:19.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «cuales»; la fuente contiene «leones»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -11599,30 +11641,31 @@
       "Acercándose"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:20, en el fragmento «[…] al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?», la expresión que ocupa […] es «Acercándose».",
-    "statement": "Según Daniel 6:20, en el fragmento «[…] al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?», la expresión que ocupa […] es «Acercándose».",
-    "asserted_detail": "Acercándose",
+    "question": "Verdadero o falso: Según Daniel 6:20, Ordenando al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?",
+    "statement": "Según Daniel 6:20, Ordenando al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?",
+    "asserted_detail": "Ordenando",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:20, Acercándose al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?",
+    "incorrect_detail": "Ordenando",
+    "correction": "Acercándose",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:12",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:20.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «Acercándose», no «Ordenando».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Ordenando»; la fuente contiene «Acercándose»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -11742,7 +11785,7 @@
       "viviente",
       "inocente",
       "simiente",
-      "obstante"
+      "instante"
     ],
     "correct_option": 0,
     "correct_answer": "viviente",
@@ -11750,7 +11793,7 @@
     "why_distractors_fail": {
       "inocente": "Es verdadero en Daniel 6:22, pero no responde al contexto exacto de Daniel 6:20.",
       "simiente": "Es verdadero en PR40, p. 35, párrafo 7, pero no responde al contexto exacto de Daniel 6:20.",
-      "obstante": "Es verdadero en PR39, p. 31, párrafo 7, pero no responde al contexto exacto de Daniel 6:20."
+      "instante": "Es verdadero en Daniel 3:13, pero no responde al contexto exacto de Daniel 6:20."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -11809,7 +11852,7 @@
       "inocente",
       "viviente",
       "simiente",
-      "obstante"
+      "instante"
     ],
     "correct_option": 1,
     "correct_answer": "viviente",
@@ -11817,7 +11860,7 @@
     "why_distractors_fail": {
       "inocente": "Es verdadero en Daniel 6:22, pero no responde al contexto exacto de Daniel 6:20.",
       "simiente": "Es verdadero en PR40, p. 35, párrafo 7, pero no responde al contexto exacto de Daniel 6:20.",
-      "obstante": "Es verdadero en PR39, p. 31, párrafo 7, pero no responde al contexto exacto de Daniel 6:20."
+      "instante": "Es verdadero en Daniel 3:13, pero no responde al contexto exacto de Daniel 6:20."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -11871,30 +11914,31 @@
       "viviente"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:20, en el fragmento «Acercándose al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios […], el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?», la expresión que ocupa […] es «inocente».",
-    "statement": "Según Daniel 6:20, en el fragmento «Acercándose al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios […], el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?», la expresión que ocupa […] es «inocente».",
-    "asserted_detail": "inocente",
+    "question": "Verdadero o falso: Según Daniel 6:20, al evaluar específicamente «viviente», el pasaje afirma: Acercándose al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?",
+    "statement": "Según Daniel 6:20, al evaluar específicamente «viviente», el pasaje afirma: Acercándose al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?",
+    "asserted_detail": "viviente",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:20, en el fragmento «Acercándose al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios […], el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?», la expresión que ocupa […] es «viviente».",
-    "incorrect_detail": "inocente",
-    "correction": "viviente",
-    "replacement_source_ref": "Daniel 6:22",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «viviente», no «inocente».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:20.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «inocente»; la fuente contiene «viviente»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -11946,7 +11990,7 @@
     "options": [
       "inocente",
       "simiente",
-      "obstante",
+      "instante",
       "viviente"
     ],
     "correct_option": 3,
@@ -11955,7 +11999,7 @@
     "why_distractors_fail": {
       "inocente": "Es verdadero en Daniel 6:22, pero no responde al contexto exacto de Daniel 6:20.",
       "simiente": "Es verdadero en PR40, p. 35, párrafo 7, pero no responde al contexto exacto de Daniel 6:20.",
-      "obstante": "Es verdadero en PR39, p. 31, párrafo 7, pero no responde al contexto exacto de Daniel 6:20."
+      "instante": "Es verdadero en Daniel 3:13, pero no responde al contexto exacto de Daniel 6:20."
     },
     "trap_type": "true_in_other_context",
     "validation_adversarial": {
@@ -12143,34 +12187,35 @@
       "Daniel"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:21, en el fragmento «Entonces […] respondió al rey: —¡Rey, vive para siempre!», la expresión que ocupa […] es «Miguel».",
-    "statement": "Según Daniel 6:21, en el fragmento «Entonces […] respondió al rey: —¡Rey, vive para siempre!», la expresión que ocupa […] es «Miguel».",
-    "asserted_detail": "Miguel",
+    "question": "Verdadero o falso: Según Daniel 6:21, Entonces Daniel respondió al rey: —¡Rey, vive para siempre!",
+    "statement": "Según Daniel 6:21, Entonces Daniel respondió al rey: —¡Rey, vive para siempre!",
+    "asserted_detail": "Daniel",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:21, en el fragmento «Entonces […] respondió al rey: —¡Rey, vive para siempre!», la expresión que ocupa […] es «Daniel».",
-    "incorrect_detail": "Miguel",
-    "correction": "Daniel",
-    "replacement_source_ref": "Daniel 10:13",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": false,
+    "replacement_source_ref": null,
     "correct_slot_signature": "person",
-    "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Daniel», no «Miguel».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:21.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Miguel»; la fuente contiene «Daniel»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "hard"
+    "difficulty": "medium"
   },
   {
     "id": "DAN6-GOLD-0734-SINGLE_CHOICE_CONTEXTUAL",
@@ -12415,30 +12460,31 @@
       "respondió"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:21, en el fragmento «Entonces Daniel […] al rey: —¡Rey, vive para siempre!», la expresión que ocupa […] es «respondió».",
-    "statement": "Según Daniel 6:21, en el fragmento «Entonces Daniel […] al rey: —¡Rey, vive para siempre!», la expresión que ocupa […] es «respondió».",
-    "asserted_detail": "respondió",
+    "question": "Verdadero o falso: Según Daniel 6:21, Entonces Daniel prosperó al rey: —¡Rey, vive para siempre!",
+    "statement": "Según Daniel 6:21, Entonces Daniel prosperó al rey: —¡Rey, vive para siempre!",
+    "asserted_detail": "prosperó",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:21, Entonces Daniel respondió al rey: —¡Rey, vive para siempre!",
+    "incorrect_detail": "prosperó",
+    "correction": "respondió",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:28",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:21.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «respondió», no «prosperó».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «prosperó»; la fuente contiene «respondió»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -12687,8 +12733,8 @@
       "no me hicieran daño"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:22, en el fragmento «Mi Dios envió su ángel, el cual cerró la boca de los leones para que […], porque ante él fui hallado inocente; y aun delante de ti, oh rey, yo no he hecho nada malo.», la expresión que ocupa […] es «no me hicieran daño».",
-    "statement": "Según Daniel 6:22, en el fragmento «Mi Dios envió su ángel, el cual cerró la boca de los leones para que […], porque ante él fui hallado inocente; y aun delante de ti, oh rey, yo no he hecho nada malo.», la expresión que ocupa […] es «no me hicieran daño».",
+    "question": "Verdadero o falso: Según Daniel 6:22, al evaluar específicamente «no me hicieran daño», el pasaje afirma: Mi Dios envió su ángel, el cual cerró la boca de los leones para que no me hicieran daño, porque ante él fui hallado inocente; y aun delante de ti, oh rey, yo no he hecho nada malo.",
+    "statement": "Según Daniel 6:22, al evaluar específicamente «no me hicieran daño», el pasaje afirma: Mi Dios envió su ángel, el cual cerró la boca de los leones para que no me hicieran daño, porque ante él fui hallado inocente; y aun delante de ti, oh rey, yo no he hecho nada malo.",
     "asserted_detail": "no me hicieran daño",
     "options": [
       "Verdadero",
@@ -12699,6 +12745,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "phrase",
     "replacement_slot_signature": null,
@@ -12959,30 +13006,31 @@
       "inocente"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:22, en el fragmento «Mi Dios envió su ángel, el cual cerró la boca de los leones para que no me hicieran daño, porque ante él fui hallado […]; y aun delante de ti, oh rey, yo no he hecho nada malo.», la expresión que ocupa […] es «viviente».",
-    "statement": "Según Daniel 6:22, en el fragmento «Mi Dios envió su ángel, el cual cerró la boca de los leones para que no me hicieran daño, porque ante él fui hallado […]; y aun delante de ti, oh rey, yo no he hecho nada malo.», la expresión que ocupa […] es «viviente».",
-    "asserted_detail": "viviente",
+    "question": "Verdadero o falso: Según Daniel 6:22, al evaluar específicamente «inocente», el pasaje afirma: Mi Dios envió su ángel, el cual cerró la boca de los leones para que no me hicieran daño, porque ante él fui hallado inocente; y aun delante de ti, oh rey, yo no he hecho nada malo.",
+    "statement": "Según Daniel 6:22, al evaluar específicamente «inocente», el pasaje afirma: Mi Dios envió su ángel, el cual cerró la boca de los leones para que no me hicieran daño, porque ante él fui hallado inocente; y aun delante de ti, oh rey, yo no he hecho nada malo.",
+    "asserted_detail": "inocente",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:22, en el fragmento «Mi Dios envió su ángel, el cual cerró la boca de los leones para que no me hicieran daño, porque ante él fui hallado […]; y aun delante de ti, oh rey, yo no he hecho nada malo.», la expresión que ocupa […] es «inocente».",
-    "incorrect_detail": "viviente",
-    "correction": "inocente",
-    "replacement_source_ref": "Daniel 6:20",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «inocente», no «viviente».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:22.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «viviente»; la fuente contiene «inocente»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -13231,8 +13279,8 @@
       "había confiado en su Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:23, en el fragmento «Sacaron, pues, del foso a Daniel, pero ninguna lesión se halló en él, porque […].», la expresión que ocupa […] es «había confiado en su Dios».",
-    "statement": "Según Daniel 6:23, en el fragmento «Sacaron, pues, del foso a Daniel, pero ninguna lesión se halló en él, porque […].», la expresión que ocupa […] es «había confiado en su Dios».",
+    "question": "Verdadero o falso: Según Daniel 6:23, al evaluar específicamente «había confiado en su Dios», el pasaje afirma: Sacaron, pues, del foso a Daniel, pero ninguna lesión se halló en él, porque había confiado en su Dios.",
+    "statement": "Según Daniel 6:23, al evaluar específicamente «había confiado en su Dios», el pasaje afirma: Sacaron, pues, del foso a Daniel, pero ninguna lesión se halló en él, porque había confiado en su Dios.",
     "asserted_detail": "había confiado en su Dios",
     "options": [
       "Verdadero",
@@ -13243,6 +13291,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "phrase",
     "replacement_slot_signature": null,
@@ -13503,34 +13552,35 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:23, en el fragmento «Sacaron, pues, del foso a Daniel, pero ninguna lesión se halló en él, porque había confiado en su […].», la expresión que ocupa […] es «Dios».",
-    "statement": "Según Daniel 6:23, en el fragmento «Sacaron, pues, del foso a Daniel, pero ninguna lesión se halló en él, porque había confiado en su […].», la expresión que ocupa […] es «Dios».",
-    "asserted_detail": "Dios",
+    "question": "Verdadero o falso: Según Daniel 6:23, Sacaron, pues, del foso a Daniel, pero ninguna lesión se halló en él, porque había confiado en su Juez.",
+    "statement": "Según Daniel 6:23, Sacaron, pues, del foso a Daniel, pero ninguna lesión se halló en él, porque había confiado en su Juez.",
+    "asserted_detail": "Juez",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:23, Sacaron, pues, del foso a Daniel, pero ninguna lesión se halló en él, porque había confiado en su Dios.",
+    "incorrect_detail": "Juez",
+    "correction": "Dios",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 7:10",
     "correct_slot_signature": "person",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:23.",
+    "replacement_slot_signature": "person",
+    "explanation": "Es falsa: la fuente dice «Dios», no «Juez».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Juez»; la fuente contiene «Dios»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "DAN6-GOLD-0739-SINGLE_CHOICE_CONTEXTUAL",
@@ -13775,8 +13825,8 @@
       "Daniel"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:24, en el fragmento «Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a […], y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.», la expresión que ocupa […] es «Miguel».",
-    "statement": "Según Daniel 6:24, en el fragmento «Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a […], y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.», la expresión que ocupa […] es «Miguel».",
+    "question": "Verdadero o falso: Según Daniel 6:24, Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Miguel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.",
+    "statement": "Según Daniel 6:24, Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Miguel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.",
     "asserted_detail": "Miguel",
     "options": [
       "Verdadero",
@@ -13784,9 +13834,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:24, en el fragmento «Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a […], y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.», la expresión que ocupa […] es «Daniel».",
+    "corrected_statement": "Según Daniel 6:24, Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.",
     "incorrect_detail": "Miguel",
     "correction": "Daniel",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 10:13",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
@@ -14047,30 +14098,31 @@
       "apoderaron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:24, en el fragmento «Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se […] de ellos y quebraron todos sus huesos.», la expresión que ocupa […] es «apoderaron».",
-    "statement": "Según Daniel 6:24, en el fragmento «Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se […] de ellos y quebraron todos sus huesos.», la expresión que ocupa […] es «apoderaron».",
-    "asserted_detail": "apoderaron",
+    "question": "Verdadero o falso: Según Daniel 6:24, Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se hallaron de ellos y quebraron todos sus huesos.",
+    "statement": "Según Daniel 6:24, Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se hallaron de ellos y quebraron todos sus huesos.",
+    "asserted_detail": "hallaron",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:24, Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.",
+    "incorrect_detail": "hallaron",
+    "correction": "apoderaron",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:4",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:24.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «apoderaron», no «hallaron».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «hallaron»; la fuente contiene «apoderaron»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -14319,30 +14371,31 @@
       "naciones"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:25, en el fragmento «Entonces el rey Darío escribió a todos los pueblos, […] y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.», la expresión que ocupa […] es «encantadores».",
-    "statement": "Según Daniel 6:25, en el fragmento «Entonces el rey Darío escribió a todos los pueblos, […] y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.», la expresión que ocupa […] es «encantadores».",
-    "asserted_detail": "encantadores",
+    "question": "Verdadero o falso: Según Daniel 6:25, al evaluar específicamente «naciones», el pasaje afirma: Entonces el rey Darío escribió a todos los pueblos, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.",
+    "statement": "Según Daniel 6:25, al evaluar específicamente «naciones», el pasaje afirma: Entonces el rey Darío escribió a todos los pueblos, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.",
+    "asserted_detail": "naciones",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:25, en el fragmento «Entonces el rey Darío escribió a todos los pueblos, […] y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.», la expresión que ocupa […] es «naciones».",
-    "incorrect_detail": "encantadores",
-    "correction": "naciones",
-    "replacement_source_ref": "Daniel 2:2",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:list_or_clause_item",
-    "replacement_slot_signature": "term:list_or_clause_item",
-    "explanation": "Es falsa: la fuente dice «naciones», no «encantadores».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:25.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «encantadores»; la fuente contiene «naciones»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -14460,17 +14513,17 @@
     "question": "Según Daniel 6:25, ¿qué término completa correctamente «Entonces el rey Darío escribió a todos los ________, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.»?",
     "options": [
       "gritos",
-      "huesos",
+      "siglos",
       "pueblos",
-      "siglos"
+      "huesos"
     ],
     "correct_option": 2,
     "correct_answer": "pueblos",
     "explanation": "Daniel 6:25 declara literalmente «Entonces el rey Darío escribió a todos los pueblos, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.». La respuesta pedida es «pueblos».",
     "why_distractors_fail": {
       "gritos": "Es verdadero en Daniel 6:20, pero no responde al contexto exacto de Daniel 6:25.",
-      "huesos": "Es verdadero en Daniel 6:24, pero no responde al contexto exacto de Daniel 6:25.",
-      "siglos": "Es verdadero en Daniel 6:26, pero no responde al contexto exacto de Daniel 6:25."
+      "siglos": "Es verdadero en Daniel 6:26, pero no responde al contexto exacto de Daniel 6:25.",
+      "huesos": "Es verdadero en Daniel 6:24, pero no responde al contexto exacto de Daniel 6:25."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -14527,8 +14580,8 @@
     "question": "Complete Daniel 6:25: «Entonces el rey Darío escribió a todos los ________, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.»",
     "options": [
       "gritos",
-      "huesos",
       "siglos",
+      "huesos",
       "pueblos"
     ],
     "correct_option": 3,
@@ -14536,8 +14589,8 @@
     "explanation": "Daniel 6:25 declara literalmente «Entonces el rey Darío escribió a todos los pueblos, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.». La respuesta pedida es «pueblos».",
     "why_distractors_fail": {
       "gritos": "Es verdadero en Daniel 6:20, pero no responde al contexto exacto de Daniel 6:25.",
-      "huesos": "Es verdadero en Daniel 6:24, pero no responde al contexto exacto de Daniel 6:25.",
-      "siglos": "Es verdadero en Daniel 6:26, pero no responde al contexto exacto de Daniel 6:25."
+      "siglos": "Es verdadero en Daniel 6:26, pero no responde al contexto exacto de Daniel 6:25.",
+      "huesos": "Es verdadero en Daniel 6:24, pero no responde al contexto exacto de Daniel 6:25."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -14591,30 +14644,31 @@
       "pueblos"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:25, en el fragmento «Entonces el rey Darío escribió a todos los […], naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.», la expresión que ocupa […] es «huesos».",
-    "statement": "Según Daniel 6:25, en el fragmento «Entonces el rey Darío escribió a todos los […], naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.», la expresión que ocupa […] es «huesos».",
-    "asserted_detail": "huesos",
+    "question": "Verdadero o falso: Según Daniel 6:25, al evaluar específicamente «pueblos», el pasaje afirma: Entonces el rey Darío escribió a todos los pueblos, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.",
+    "statement": "Según Daniel 6:25, al evaluar específicamente «pueblos», el pasaje afirma: Entonces el rey Darío escribió a todos los pueblos, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.",
+    "asserted_detail": "pueblos",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:25, en el fragmento «Entonces el rey Darío escribió a todos los […], naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.», la expresión que ocupa […] es «pueblos».",
-    "incorrect_detail": "huesos",
-    "correction": "pueblos",
-    "replacement_source_ref": "Daniel 6:24",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «pueblos», no «huesos».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:25.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «huesos»; la fuente contiene «pueblos»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -14666,16 +14720,16 @@
     "options": [
       "gritos",
       "pueblos",
-      "huesos",
-      "siglos"
+      "siglos",
+      "huesos"
     ],
     "correct_option": 1,
     "correct_answer": "pueblos",
     "explanation": "En el contexto exacto de Daniel 6:25, el detalle aplicable es «pueblos»: «Entonces el rey Darío escribió a todos los pueblos, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.».",
     "why_distractors_fail": {
       "gritos": "Es verdadero en Daniel 6:20, pero no responde al contexto exacto de Daniel 6:25.",
-      "huesos": "Es verdadero en Daniel 6:24, pero no responde al contexto exacto de Daniel 6:25.",
-      "siglos": "Es verdadero en Daniel 6:26, pero no responde al contexto exacto de Daniel 6:25."
+      "siglos": "Es verdadero en Daniel 6:26, pero no responde al contexto exacto de Daniel 6:25.",
+      "huesos": "Es verdadero en Daniel 6:24, pero no responde al contexto exacto de Daniel 6:25."
     },
     "trap_type": "true_in_other_context",
     "validation_adversarial": {
@@ -14863,8 +14917,8 @@
       "él es el Dios viviente y permanece por"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:26, en el fragmento «»”Porque […] todos los siglos, su reino no será jamás destruido y su dominio perdurará hasta el fin.», la expresión que ocupa […] es «él es el Dios viviente y permanece por».",
-    "statement": "Según Daniel 6:26, en el fragmento «»”Porque […] todos los siglos, su reino no será jamás destruido y su dominio perdurará hasta el fin.», la expresión que ocupa […] es «él es el Dios viviente y permanece por».",
+    "question": "Verdadero o falso: Según Daniel 6:26, al evaluar específicamente «él es el Dios viviente y permanece por», el pasaje afirma: »”Porque él es el Dios viviente y permanece por todos los siglos, su reino no será jamás destruido y su dominio perdurará hasta el fin.",
+    "statement": "Según Daniel 6:26, al evaluar específicamente «él es el Dios viviente y permanece por», el pasaje afirma: »”Porque él es el Dios viviente y permanece por todos los siglos, su reino no será jamás destruido y su dominio perdurará hasta el fin.",
     "asserted_detail": "él es el Dios viviente y permanece por",
     "options": [
       "Verdadero",
@@ -14875,6 +14929,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "phrase",
     "replacement_slot_signature": null,
@@ -15135,30 +15190,31 @@
       "perdurará"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:26, en el fragmento «»”Porque él es el Dios viviente y permanece por todos los siglos, su reino no será jamás destruido y su dominio […] hasta el fin.», la expresión que ocupa […] es «perdurará».",
-    "statement": "Según Daniel 6:26, en el fragmento «»”Porque él es el Dios viviente y permanece por todos los siglos, su reino no será jamás destruido y su dominio […] hasta el fin.», la expresión que ocupa […] es «perdurará».",
-    "asserted_detail": "perdurará",
+    "question": "Verdadero o falso: Según Daniel 6:26, »”Porque él es el Dios viviente y permanece por todos los siglos, su reino no será jamás destruido y su dominio tropezará hasta el fin.",
+    "statement": "Según Daniel 6:26, »”Porque él es el Dios viviente y permanece por todos los siglos, su reino no será jamás destruido y su dominio tropezará hasta el fin.",
+    "asserted_detail": "tropezará",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:26, »”Porque él es el Dios viviente y permanece por todos los siglos, su reino no será jamás destruido y su dominio perdurará hasta el fin.",
+    "incorrect_detail": "tropezará",
+    "correction": "perdurará",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 11:19",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:26.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «perdurará», no «tropezará».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «tropezará»; la fuente contiene «perdurará»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -15407,30 +15463,31 @@
       "señales"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:27, en el fragmento «Él salva y libra, y hace […] y maravillas en el cielo y en la tierra; él ha librado a Daniel del poder de los leones.”», la expresión que ocupa […] es «confirmes».",
-    "statement": "Según Daniel 6:27, en el fragmento «Él salva y libra, y hace […] y maravillas en el cielo y en la tierra; él ha librado a Daniel del poder de los leones.”», la expresión que ocupa […] es «confirmes».",
-    "asserted_detail": "confirmes",
+    "question": "Verdadero o falso: Según Daniel 6:27, al evaluar específicamente «señales», el pasaje afirma: Él salva y libra, y hace señales y maravillas en el cielo y en la tierra; él ha librado a Daniel del poder de los leones.”",
+    "statement": "Según Daniel 6:27, al evaluar específicamente «señales», el pasaje afirma: Él salva y libra, y hace señales y maravillas en el cielo y en la tierra; él ha librado a Daniel del poder de los leones.”",
+    "asserted_detail": "señales",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:27, en el fragmento «Él salva y libra, y hace […] y maravillas en el cielo y en la tierra; él ha librado a Daniel del poder de los leones.”», la expresión que ocupa […] es «señales».",
-    "incorrect_detail": "confirmes",
-    "correction": "señales",
-    "replacement_source_ref": "Daniel 6:7",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «señales», no «confirmes».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:27.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «confirmes»; la fuente contiene «señales»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -15679,30 +15736,31 @@
       "librado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:27, en el fragmento «Él salva y libra, y hace señales y maravillas en el cielo y en la tierra; él ha […] a Daniel del poder de los leones.”», la expresión que ocupa […] es «fírmalo».",
-    "statement": "Según Daniel 6:27, en el fragmento «Él salva y libra, y hace señales y maravillas en el cielo y en la tierra; él ha […] a Daniel del poder de los leones.”», la expresión que ocupa […] es «fírmalo».",
-    "asserted_detail": "fírmalo",
+    "question": "Verdadero o falso: Según Daniel 6:27, al evaluar específicamente «librado», el pasaje afirma: Él salva y libra, y hace señales y maravillas en el cielo y en la tierra; él ha librado a Daniel del poder de los leones.”",
+    "statement": "Según Daniel 6:27, al evaluar específicamente «librado», el pasaje afirma: Él salva y libra, y hace señales y maravillas en el cielo y en la tierra; él ha librado a Daniel del poder de los leones.”",
+    "asserted_detail": "librado",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:27, en el fragmento «Él salva y libra, y hace señales y maravillas en el cielo y en la tierra; él ha […] a Daniel del poder de los leones.”», la expresión que ocupa […] es «librado».",
-    "incorrect_detail": "fírmalo",
-    "correction": "librado",
-    "replacement_source_ref": "Daniel 6:8",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «librado», no «fírmalo».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:27.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «fírmalo»; la fuente contiene «librado»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -15819,8 +15877,8 @@
     "answer_mode": "option_id",
     "question": "Según Daniel 6:28, ¿qué personaje completa correctamente «Daniel prosperó durante los reinados de Darío y de ________, el persa.»?",
     "options": [
-      "Pablo",
       "Mesac",
+      "Pablo",
       "Nadab",
       "Ciro"
     ],
@@ -15828,8 +15886,8 @@
     "correct_answer": "Ciro",
     "explanation": "Daniel 6:28 declara literalmente «Daniel prosperó durante los reinados de Darío y de Ciro, el persa.». La respuesta pedida es «Ciro».",
     "why_distractors_fail": {
+      "Mesac": "Es verdadero en Daniel 3:22, pero no responde al contexto exacto de Daniel 6:28.",
       "Pablo": "Es verdadero en PR40, p. 36, párrafo 2, pero no responde al contexto exacto de Daniel 6:28.",
-      "Mesac": "Es verdadero en Daniel 3:16, pero no responde al contexto exacto de Daniel 6:28.",
       "Nadab": "Es verdadero en PR39, p. 28, párrafo 2, pero no responde al contexto exacto de Daniel 6:28."
     },
     "trap_type": null,
@@ -15887,16 +15945,16 @@
     "question": "Complete Daniel 6:28: «Daniel prosperó durante los reinados de Darío y de ________, el persa.»",
     "options": [
       "Ciro",
-      "Pablo",
       "Mesac",
+      "Pablo",
       "Nadab"
     ],
     "correct_option": 0,
     "correct_answer": "Ciro",
     "explanation": "Daniel 6:28 declara literalmente «Daniel prosperó durante los reinados de Darío y de Ciro, el persa.». La respuesta pedida es «Ciro».",
     "why_distractors_fail": {
+      "Mesac": "Es verdadero en Daniel 3:22, pero no responde al contexto exacto de Daniel 6:28.",
       "Pablo": "Es verdadero en PR40, p. 36, párrafo 2, pero no responde al contexto exacto de Daniel 6:28.",
-      "Mesac": "Es verdadero en Daniel 3:16, pero no responde al contexto exacto de Daniel 6:28.",
       "Nadab": "Es verdadero en PR39, p. 28, párrafo 2, pero no responde al contexto exacto de Daniel 6:28."
     },
     "trap_type": null,
@@ -15951,24 +16009,25 @@
       "Ciro"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:28, en el fragmento «Daniel prosperó durante los reinados de Darío y de […], el persa.», la expresión que ocupa […] es «Pablo».",
-    "statement": "Según Daniel 6:28, en el fragmento «Daniel prosperó durante los reinados de Darío y de […], el persa.», la expresión que ocupa […] es «Pablo».",
-    "asserted_detail": "Pablo",
+    "question": "Verdadero o falso: Según Daniel 6:28, Daniel prosperó durante los reinados de Darío y de Mesac, el persa.",
+    "statement": "Según Daniel 6:28, Daniel prosperó durante los reinados de Darío y de Mesac, el persa.",
+    "asserted_detail": "Mesac",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 6:28, en el fragmento «Daniel prosperó durante los reinados de Darío y de […], el persa.», la expresión que ocupa […] es «Ciro».",
-    "incorrect_detail": "Pablo",
+    "corrected_statement": "Según Daniel 6:28, Daniel prosperó durante los reinados de Darío y de Ciro, el persa.",
+    "incorrect_detail": "Mesac",
     "correction": "Ciro",
-    "replacement_source_ref": "PR40, p. 36, párrafo 2",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 3:22",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Ciro», no «Pablo».",
+    "explanation": "Es falsa: la fuente dice «Ciro», no «Mesac».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Pablo»; la fuente contiene «Ciro»."
+      "Verdadero": "La única alteración es «Mesac»; la fuente contiene «Ciro»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {
@@ -16024,8 +16083,8 @@
     "answer_mode": "option_id",
     "question": "Según Daniel 6:28, ¿qué personaje corresponde específicamente a esta escena: «Daniel prosperó durante los reinados de Darío y de […], el persa.»?",
     "options": [
-      "Pablo",
       "Mesac",
+      "Pablo",
       "Ciro",
       "Nadab"
     ],
@@ -16033,8 +16092,8 @@
     "correct_answer": "Ciro",
     "explanation": "En el contexto exacto de Daniel 6:28, el detalle aplicable es «Ciro»: «Daniel prosperó durante los reinados de Darío y de Ciro, el persa.».",
     "why_distractors_fail": {
+      "Mesac": "Es verdadero en Daniel 3:22, pero no responde al contexto exacto de Daniel 6:28.",
       "Pablo": "Es verdadero en PR40, p. 36, párrafo 2, pero no responde al contexto exacto de Daniel 6:28.",
-      "Mesac": "Es verdadero en Daniel 3:16, pero no responde al contexto exacto de Daniel 6:28.",
       "Nadab": "Es verdadero en PR39, p. 28, párrafo 2, pero no responde al contexto exacto de Daniel 6:28."
     },
     "trap_type": "true_in_other_context",
@@ -16223,30 +16282,31 @@
       "prosperó"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 6:28, en el fragmento «Daniel […] durante los reinados de Darío y de Ciro, el persa.», la expresión que ocupa […] es «prosperó».",
-    "statement": "Según Daniel 6:28, en el fragmento «Daniel […] durante los reinados de Darío y de Ciro, el persa.», la expresión que ocupa […] es «prosperó».",
-    "asserted_detail": "prosperó",
+    "question": "Verdadero o falso: Según Daniel 6:28, Daniel resolvió durante los reinados de Darío y de Ciro, el persa.",
+    "statement": "Según Daniel 6:28, Daniel resolvió durante los reinados de Darío y de Ciro, el persa.",
+    "asserted_detail": "resolvió",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 6:28, Daniel prosperó durante los reinados de Darío y de Ciro, el persa.",
+    "incorrect_detail": "resolvió",
+    "correction": "prosperó",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 6:14",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 6:28.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «prosperó», no «resolvió».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «resolvió»; la fuente contiene «prosperó»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },

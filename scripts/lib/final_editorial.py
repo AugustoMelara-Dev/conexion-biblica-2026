@@ -22,6 +22,14 @@ FACT_QUOTAS = {
     "PR42": 120, "PR43": 161, "PR44": 130,
 }
 DIFFICULTY_COUNTS = {"easy": 400, "medium": 1600, "hard": 3600, "expert": 2400}
+SAFE_FALSE_ACTION_FORMS = {
+    "future_second_singular", "future_plural", "future_singular",
+    "preterite_plural", "preterite_second_singular", "preterite_singular",
+    "conditional_plural", "conditional_singular",
+    "imperfect_plural", "imperfect_singular",
+    "subjunctive_past_plural", "subjunctive_past_singular",
+    "gerund", "infinitive", "imperative", "participle",
+}
 CATEGORY_SHARE_CAPS = {
     "person": 0.18,
     "place": 0.10,
@@ -169,7 +177,9 @@ NON_VERB_IA = {
     "misericordia", "obediencia", "postrimeria", "potencia", "presencia",
     "profecia", "providencia", "provincia", "sabiduria", "sentencia", "todavia",
     "victoria", "vigilancia",
+    "armonia", "idolatria", "mayoria", "mia", "simpatia", "vigia",
 }
+NON_VERB_FORMS = NON_VERB_IA | {"citara", "ira"}
 
 FUNCTION_WORDS = {
     "a", "al", "ante", "como", "con", "contra", "de", "del", "desde",
@@ -218,6 +228,8 @@ def _word_role(word: str) -> str:
         return "adverb"
     if normalized in NUMBER_WORDS or normalized.isdigit():
         return "number"
+    if normalized in NON_VERB_FORMS:
+        return "content"
     if re.search(r"(?:rá|rás|rán|ré|remos|ó|aremos|eremos|iremos)$", word.lower()):
         return "verb"
     if re.search(r"(?:ía|ían)$", word.lower()) and normalized not in NON_VERB_IA:
@@ -808,6 +820,16 @@ def _masked(text: str, answer: str, marker: str) -> str:
     return text.replace(answer, marker, 1)
 
 
+def _complete_statement_text(text: str) -> str:
+    stripped = text.strip()
+    closing_match = re.search(r"([”’\"»]+)$", stripped)
+    closing = closing_match.group(1) if closing_match else ""
+    core = stripped[:-len(closing)] if closing else stripped
+    if re.search(r"[.!?]$", core):
+        return core + closing
+    return core.rstrip(" ,;:") + "." + closing
+
+
 def _category_label(category: str) -> str:
     return {
         "person": "personaje",
@@ -1044,20 +1066,46 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         ]
         for fact in facts
     }
+    def false_replacements(fact: dict[str, Any]) -> list[dict[str, Any]]:
+        return [
+            row
+            for row in strict_false_distractor_map[fact["fact_id"]]
+            if not _boundary_collision(fact["context"], fact["answer"], row["answer"])
+            and (
+                fact["category"] != "action"
+                or (
+                    _word_role(fact["answer"]) == "verb"
+                    and _word_role(row["answer"]) == "verb"
+                    and _action_form(fact["answer"]) in SAFE_FALSE_ACTION_FORMS
+                    and _action_form(fact["answer"]) == _action_form(row["answer"])
+                )
+            )
+            and (
+                fact["category"] != "person"
+                or ((_norm(row["answer"]) in DIVINE_NAMES) == (_norm(fact["answer"]) in DIVINE_NAMES))
+            )
+        ]
+
+    def can_make_false(fact: dict[str, Any]) -> bool:
+        # Free substitution inside a long phrase can remain grammatical while
+        # becoming absurd. Phrase facts stay as exact, complete statements;
+        # other categories supply the balanced false half of the bank.
+        return (
+            fact["category"] in {"person", "place", "number", "action"}
+            and (
+                fact["category"] != "action"
+                or (
+                    _word_role(fact["answer"]) == "verb"
+                    and _action_form(fact["answer"]) in SAFE_FALSE_ACTION_FORMS
+                )
+            )
+            and bool(false_replacements(fact))
+        )
+
     false_candidates = sorted(
         facts,
         key=lambda fact: (
-            fact["category"] == "action",
-            fact["category"] == "phrase",
-            fact["category"] == "phrase"
-            and _phrase_entity_target(fact, entity_categories) is None,
-            fact["category"] == "phrase"
-            and _phrase_entity_target(fact, entity_categories) is not None
-            and _norm(
-                fact["answer"].split()[
-                    _phrase_entity_target(fact, entity_categories)[0]
-                ]
-            ) in DIVINE_NAMES,
+            not can_make_false(fact),
             fact["grammatical_category"] not in {"proper", "number", "verb", "word_singular", "word_plural", "phrase_singular", "phrase_plural"},
             _hash("false:" + fact["fact_id"]),
         ),
@@ -1068,32 +1116,27 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         ordered_context = sorted(
             context_facts,
             key=lambda fact: (
-                fact["_normalized_answer"] not in DIVINE_NAMES,
-                fact["category"] != "phrase",
-                fact["category"] != "action",
+                can_make_false(fact),
                 _hash("true-anchor:" + fact["fact_id"]),
             ),
         )
-        false_facts.update(
-            fact["fact_id"]
-            for fact in ordered_context[1:]
-            if fact["category"] not in {"action", "phrase"}
-            and fact["_normalized_answer"] not in DIVINE_NAMES
-            and strict_false_distractor_map[fact["fact_id"]]
-        )
+        unreplaceable = [fact for fact in ordered_context if not can_make_false(fact)]
+        if unreplaceable:
+            false_facts.update(
+                fact["fact_id"] for fact in ordered_context if can_make_false(fact)
+            )
+        else:
+            false_facts.update(fact["fact_id"] for fact in ordered_context[1:])
     for fact in false_candidates:
         if len(false_facts) >= 1000:
             break
-        if (
-            fact["_normalized_answer"] in DIVINE_NAMES
-            or fact["category"] in {"action", "phrase"}
-            or not strict_false_distractor_map[fact["fact_id"]]
-        ):
+        if not can_make_false(fact):
             continue
         false_facts.add(fact["fact_id"])
     if len(false_facts) != 1000:
         raise ValueError(f"No se pudo equilibrar Verdadero/Falso: {len(false_facts)} falsas")
     questions: list[dict[str, Any]] = []
+    used_true_false_prompts: set[str] = set()
     rejected = sum(max(0, len(rows) - 3) for rows in distractor_map.values())
 
     for index, fact in enumerate(facts):
@@ -1111,42 +1154,47 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             base = _base_question(fact, family, index)
             if family == "true_false":
                 false = fact["fact_id"] in false_facts
-                false_distractor_facts = strict_false_distractor_map[fact["fact_id"]]
-                phrase_replacement = (
-                    _named_entity_phrase_replacement(
-                        fact, entity_categories, facts
+                if not false:
+                    replacement_choices = [(fact["answer"], None)]
+                elif fact["category"] == "phrase":
+                    replacement_choices = []
+                else:
+                    replacement_choices = [
+                        (row["answer"], row) for row in false_replacements(fact)
+                    ]
+                if not replacement_choices:
+                    raise ValueError(f"V/F sin reemplazo natural: {fact['fact_id']}")
+                selected_choice: tuple[str, dict[str, Any] | None] | None = None
+                selected_statement = ""
+                for raw_replacement, candidate_row in replacement_choices:
+                    candidate_replacement = _match_initial_case(raw_replacement, fact["answer"])
+                    candidate_context = (
+                        fact["context"].replace(fact["answer"], candidate_replacement, 1)
+                        if false
+                        else fact["context"]
                     )
-                    if false and fact["category"] == "phrase"
-                    else None
-                )
-                replacement_row = next(
-                    (
-                        row for row in false_distractor_facts
-                        if (
-                            not _boundary_collision(fact["context"], fact["answer"], row["answer"])
-                            and (
-                                fact["category"] != "person"
-                                or ((_norm(row["answer"]) in DIVINE_NAMES) == (_norm(fact["answer"]) in DIVINE_NAMES))
-                            )
+                    if not false and not can_make_false(fact):
+                        candidate_statement = (
+                            f"Según {fact['reference']}, al evaluar específicamente "
+                            f"«{fact['answer']}», el pasaje afirma: "
+                            f"{_complete_statement_text(candidate_context)}"
                         )
-                    ),
-                    None,
-                )
-                replacement = (
-                    phrase_replacement
-                    or (replacement_row["answer"] if replacement_row else distractors[0])
-                )
-                replacement = _match_initial_case(replacement, fact["answer"])
+                    else:
+                        candidate_statement = (
+                            f"Según {fact['reference']}, {_complete_statement_text(candidate_context)}"
+                        )
+                    candidate_prompt = f"Verdadero o falso: {candidate_statement}"
+                    if candidate_prompt not in used_true_false_prompts:
+                        selected_choice = (candidate_replacement, candidate_row)
+                        selected_statement = candidate_statement
+                        break
+                if selected_choice is None:
+                    raise ValueError(f"V/F duplicado sin reemplazo alternativo: {fact['fact_id']}")
+                replacement, replacement_row = selected_choice
                 asserted_detail = replacement if false else fact["answer"]
-                fragment = _masked(fact["context"], fact["answer"], "[…]")
-                statement = (
-                    f"Según {fact['reference']}, en el fragmento «{fragment}», "
-                    f"la expresión que ocupa […] es «{asserted_detail}»."
-                )
-                corrected_statement = (
-                    f"Según {fact['reference']}, en el fragmento «{fragment}», "
-                    f"la expresión que ocupa […] es «{fact['answer']}»."
-                )
+                statement = selected_statement
+                corrected_statement = f"Según {fact['reference']}, {_complete_statement_text(fact['context'])}"
+                used_true_false_prompts.add(f"Verdadero o falso: {statement}")
                 base.update(
                     {
                         "question": f"Verdadero o falso: {statement}",
@@ -1158,6 +1206,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                         "corrected_statement": corrected_statement if false else "",
                         "incorrect_detail": replacement if false else None,
                         "correction": fact["answer"] if false else None,
+                        "focused_true_statement": not false and not can_make_false(fact),
                         "replacement_source_ref": (
                             replacement_row["reference"] if false and replacement_row else None
                         ),

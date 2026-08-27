@@ -1237,7 +1237,7 @@ describe("metadatos de preguntas", () => {
     "reference_detail",
     "sequence_choice",
     "precision",
-  ] as const)("presenta el tipo legado %s como selección directa", (type) => {
+  ] as const)("presenta el tipo legado %s como selección única", (type) => {
     render(
       <QuizPage
         questions={[{ ...studyQuestion, id: `metadata-${type}`, type }]}
@@ -1247,7 +1247,7 @@ describe("metadatos de preguntas", () => {
       />
     )
 
-    expect(screen.getByText(/Selección directa/)).toBeVisible()
+    expect(screen.getByText(/Selección única/)).toBeVisible()
   })
 })
 

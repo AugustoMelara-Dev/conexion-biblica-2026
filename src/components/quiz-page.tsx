@@ -1057,16 +1057,15 @@ function isEmptyAnswer(value: AnswerValue) {
 }
 
 function familyLabel(question: Question) {
-  if (question.family === "single_choice_direct") return "Selección directa"
-  if (question.family === "single_choice_contextual")
-    return "Selección contextual"
+  if (question.family === "single_choice_direct") return "Selección única"
+  if (question.family === "single_choice_contextual") return "Selección única"
   if (question.family === "fill_choice") return "Completar con opciones"
   if (question.family === "true_false") return "Verdadero o falso"
   return question.type === "true_false"
     ? "Verdadero o falso"
     : question.type === "fill_blank"
       ? "Completar con opciones"
-      : "Selección directa"
+      : "Selección única"
 }
 
 function shuffleQuestionOptions(question: Question, shuffle: boolean) {

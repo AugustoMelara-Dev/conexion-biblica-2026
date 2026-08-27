@@ -175,34 +175,35 @@
       "Belsasar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:1, en el fragmento «El rey […] hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.», la expresión que ocupa […] es «Jeremías».",
-    "statement": "Según Daniel 5:1, en el fragmento «El rey […] hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.», la expresión que ocupa […] es «Jeremías».",
-    "asserted_detail": "Jeremías",
+    "question": "Verdadero o falso: Según Daniel 5:1, El rey Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.",
+    "statement": "Según Daniel 5:1, El rey Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.",
+    "asserted_detail": "Belsasar",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:1, en el fragmento «El rey […] hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.», la expresión que ocupa […] es «Belsasar».",
-    "incorrect_detail": "Jeremías",
-    "correction": "Belsasar",
-    "replacement_source_ref": "Daniel 9:2",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": false,
+    "replacement_source_ref": null,
     "correct_slot_signature": "person",
-    "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Belsasar», no «Jeremías».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:1.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jeremías»; la fuente contiene «Belsasar»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "hard"
+    "difficulty": "medium"
   },
   {
     "id": "DAN5-GOLD-0630-SINGLE_CHOICE_CONTEXTUAL",
@@ -447,30 +448,31 @@
       "bebía"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:1, en el fragmento «El rey Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil […] vino.», la expresión que ocupa […] es «bebía».",
-    "statement": "Según Daniel 5:1, en el fragmento «El rey Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil […] vino.», la expresión que ocupa […] es «bebía».",
-    "asserted_detail": "bebía",
+    "question": "Verdadero o falso: Según Daniel 5:1, El rey Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil daba vino.",
+    "statement": "Según Daniel 5:1, El rey Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil daba vino.",
+    "asserted_detail": "daba",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:1, El rey Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.",
+    "incorrect_detail": "daba",
+    "correction": "bebía",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:19",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:1.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «bebía», no «daba».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «daba»; la fuente contiene «bebía»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -719,8 +721,8 @@
       "bebieran de ellos el rey y sus grandes"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:2, en el fragmento «Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de Jerusalén, para que […], sus mujeres y sus concubinas.», la expresión que ocupa […] es «bebieran de ellos el rey y sus grandes».",
-    "statement": "Según Daniel 5:2, en el fragmento «Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de Jerusalén, para que […], sus mujeres y sus concubinas.», la expresión que ocupa […] es «bebieran de ellos el rey y sus grandes».",
+    "question": "Verdadero o falso: Según Daniel 5:2, al evaluar específicamente «bebieran de ellos el rey y sus grandes», el pasaje afirma: Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de Jerusalén, para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas.",
+    "statement": "Según Daniel 5:2, al evaluar específicamente «bebieran de ellos el rey y sus grandes», el pasaje afirma: Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de Jerusalén, para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas.",
     "asserted_detail": "bebieran de ellos el rey y sus grandes",
     "options": [
       "Verdadero",
@@ -731,6 +733,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "phrase",
     "replacement_slot_signature": null,
@@ -991,8 +994,8 @@
       "Jerusalén"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:2, en el fragmento «Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de […], para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas.», la expresión que ocupa […] es «Judea».",
-    "statement": "Según Daniel 5:2, en el fragmento «Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de […], para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas.», la expresión que ocupa […] es «Judea».",
+    "question": "Verdadero o falso: Según Daniel 5:2, Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de Judea, para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas.",
+    "statement": "Según Daniel 5:2, Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de Judea, para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas.",
     "asserted_detail": "Judea",
     "options": [
       "Verdadero",
@@ -1000,9 +1003,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:2, en el fragmento «Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de […], para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas.», la expresión que ocupa […] es «Jerusalén».",
+    "corrected_statement": "Según Daniel 5:2, Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de Jerusalén, para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas.",
     "incorrect_detail": "Judea",
     "correction": "Jerusalén",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 5:13",
     "correct_slot_signature": "place",
     "replacement_slot_signature": "place",
@@ -1263,8 +1267,8 @@
       "Jerusalén"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:3, en el fragmento «Entonces trajeron los vasos de oro que habían traído del templo de la casa de Dios, que estaba en […], y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.», la expresión que ocupa […] es «Judea».",
-    "statement": "Según Daniel 5:3, en el fragmento «Entonces trajeron los vasos de oro que habían traído del templo de la casa de Dios, que estaba en […], y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.», la expresión que ocupa […] es «Judea».",
+    "question": "Verdadero o falso: Según Daniel 5:3, Entonces trajeron los vasos de oro que habían traído del templo de la casa de Dios, que estaba en Judea, y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
+    "statement": "Según Daniel 5:3, Entonces trajeron los vasos de oro que habían traído del templo de la casa de Dios, que estaba en Judea, y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
     "asserted_detail": "Judea",
     "options": [
       "Verdadero",
@@ -1272,9 +1276,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:3, en el fragmento «Entonces trajeron los vasos de oro que habían traído del templo de la casa de Dios, que estaba en […], y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.», la expresión que ocupa […] es «Jerusalén».",
+    "corrected_statement": "Según Daniel 5:3, Entonces trajeron los vasos de oro que habían traído del templo de la casa de Dios, que estaba en Jerusalén, y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
     "incorrect_detail": "Judea",
     "correction": "Jerusalén",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 5:13",
     "correct_slot_signature": "place",
     "replacement_slot_signature": "place",
@@ -1535,30 +1540,31 @@
       "trajeron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:3, en el fragmento «Entonces […] los vasos de oro que habían traído del templo de la casa de Dios, que estaba en Jerusalén, y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.», la expresión que ocupa […] es «trajeron».",
-    "statement": "Según Daniel 5:3, en el fragmento «Entonces […] los vasos de oro que habían traído del templo de la casa de Dios, que estaba en Jerusalén, y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.», la expresión que ocupa […] es «trajeron».",
-    "asserted_detail": "trajeron",
+    "question": "Verdadero o falso: Según Daniel 5:3, Entonces alabaron los vasos de oro que habían traído del templo de la casa de Dios, que estaba en Jerusalén, y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
+    "statement": "Según Daniel 5:3, Entonces alabaron los vasos de oro que habían traído del templo de la casa de Dios, que estaba en Jerusalén, y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
+    "asserted_detail": "alabaron",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:3, Entonces trajeron los vasos de oro que habían traído del templo de la casa de Dios, que estaba en Jerusalén, y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
+    "incorrect_detail": "alabaron",
+    "correction": "trajeron",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:4",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:3.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «trajeron», no «alabaron».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «alabaron»; la fuente contiene «trajeron»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -1807,30 +1813,31 @@
       "Bebieron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:4, en el fragmento «[…] vino y alabaron a los dioses de oro y plata, de bronce, de hierro, de madera y de piedra.», la expresión que ocupa […] es «Bebieron».",
-    "statement": "Según Daniel 5:4, en el fragmento «[…] vino y alabaron a los dioses de oro y plata, de bronce, de hierro, de madera y de piedra.», la expresión que ocupa […] es «Bebieron».",
-    "asserted_detail": "Bebieron",
+    "question": "Verdadero o falso: Según Daniel 5:4, Trajeron vino y alabaron a los dioses de oro y plata, de bronce, de hierro, de madera y de piedra.",
+    "statement": "Según Daniel 5:4, Trajeron vino y alabaron a los dioses de oro y plata, de bronce, de hierro, de madera y de piedra.",
+    "asserted_detail": "Trajeron",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:4, Bebieron vino y alabaron a los dioses de oro y plata, de bronce, de hierro, de madera y de piedra.",
+    "incorrect_detail": "Trajeron",
+    "correction": "Bebieron",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:3",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:4.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «Bebieron», no «Trajeron».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Trajeron»; la fuente contiene «Bebieron»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -2079,8 +2086,8 @@
       "alabaron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:4, en el fragmento «Bebieron vino y […] a los dioses de oro y plata, de bronce, de hierro, de madera y de piedra.», la expresión que ocupa […] es «alabaron».",
-    "statement": "Según Daniel 5:4, en el fragmento «Bebieron vino y […] a los dioses de oro y plata, de bronce, de hierro, de madera y de piedra.», la expresión que ocupa […] es «alabaron».",
+    "question": "Verdadero o falso: Según Daniel 5:4, Bebieron vino y alabaron a los dioses de oro y plata, de bronce, de hierro, de madera y de piedra.",
+    "statement": "Según Daniel 5:4, Bebieron vino y alabaron a los dioses de oro y plata, de bronce, de hierro, de madera y de piedra.",
     "asserted_detail": "alabaron",
     "options": [
       "Verdadero",
@@ -2091,6 +2098,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": false,
     "replacement_source_ref": null,
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
@@ -2351,30 +2359,31 @@
       "candelabro"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:5, en el fragmento «En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del […], sobre lo encalado de la pared del palacio real; y el rey veía la mano que escribía.», la expresión que ocupa […] es «nacimiento».",
-    "statement": "Según Daniel 5:5, en el fragmento «En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del […], sobre lo encalado de la pared del palacio real; y el rey veía la mano que escribía.», la expresión que ocupa […] es «nacimiento».",
-    "asserted_detail": "nacimiento",
+    "question": "Verdadero o falso: Según Daniel 5:5, al evaluar específicamente «candelabro», el pasaje afirma: En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del candelabro, sobre lo encalado de la pared del palacio real; y el rey veía la mano que escribía.",
+    "statement": "Según Daniel 5:5, al evaluar específicamente «candelabro», el pasaje afirma: En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del candelabro, sobre lo encalado de la pared del palacio real; y el rey veía la mano que escribía.",
+    "asserted_detail": "candelabro",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:5, en el fragmento «En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del […], sobre lo encalado de la pared del palacio real; y el rey veía la mano que escribía.», la expresión que ocupa […] es «candelabro».",
-    "incorrect_detail": "nacimiento",
-    "correction": "candelabro",
-    "replacement_source_ref": "PR42, p. 43, párrafo 2",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:prepositional",
-    "replacement_slot_signature": "term:prepositional",
-    "explanation": "Es falsa: la fuente dice «candelabro», no «nacimiento».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:5.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «nacimiento»; la fuente contiene «candelabro»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -2623,30 +2632,31 @@
       "encalado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:5, en el fragmento «En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del candelabro, sobre lo […] de la pared del palacio real; y el rey veía la mano que escribía.», la expresión que ocupa […] es «depuesto».",
-    "statement": "Según Daniel 5:5, en el fragmento «En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del candelabro, sobre lo […] de la pared del palacio real; y el rey veía la mano que escribía.», la expresión que ocupa […] es «depuesto».",
-    "asserted_detail": "depuesto",
+    "question": "Verdadero o falso: Según Daniel 5:5, al evaluar específicamente «encalado», el pasaje afirma: En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del candelabro, sobre lo encalado de la pared del palacio real; y el rey veía la mano que escribía.",
+    "statement": "Según Daniel 5:5, al evaluar específicamente «encalado», el pasaje afirma: En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del candelabro, sobre lo encalado de la pared del palacio real; y el rey veía la mano que escribía.",
+    "asserted_detail": "encalado",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:5, en el fragmento «En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del candelabro, sobre lo […] de la pared del palacio real; y el rey veía la mano que escribía.», la expresión que ocupa […] es «encalado».",
-    "incorrect_detail": "depuesto",
-    "correction": "encalado",
-    "replacement_source_ref": "Daniel 5:20",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:nominal_head",
-    "replacement_slot_signature": "term:nominal_head",
-    "explanation": "Es falsa: la fuente dice «encalado», no «depuesto».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:5.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «depuesto»; la fuente contiene «encalado»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -2895,30 +2905,31 @@
       "debilitaron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:6, en el fragmento «Entonces el rey palideció y sus pensamientos lo turbaron, se […] sus caderas y sus rodillas daban la una contra la otra.», la expresión que ocupa […] es «debilitaron».",
-    "statement": "Según Daniel 5:6, en el fragmento «Entonces el rey palideció y sus pensamientos lo turbaron, se […] sus caderas y sus rodillas daban la una contra la otra.», la expresión que ocupa […] es «debilitaron».",
-    "asserted_detail": "debilitaron",
+    "question": "Verdadero o falso: Según Daniel 5:6, Entonces el rey palideció y sus pensamientos lo turbaron, se aparecieron sus caderas y sus rodillas daban la una contra la otra.",
+    "statement": "Según Daniel 5:6, Entonces el rey palideció y sus pensamientos lo turbaron, se aparecieron sus caderas y sus rodillas daban la una contra la otra.",
+    "asserted_detail": "aparecieron",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:6, Entonces el rey palideció y sus pensamientos lo turbaron, se debilitaron sus caderas y sus rodillas daban la una contra la otra.",
+    "incorrect_detail": "aparecieron",
+    "correction": "debilitaron",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:5",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:6.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «debilitaron», no «aparecieron».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «aparecieron»; la fuente contiene «debilitaron»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -3167,30 +3178,31 @@
       "palideció"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:6, en el fragmento «Entonces el rey […] y sus pensamientos lo turbaron, se debilitaron sus caderas y sus rodillas daban la una contra la otra.», la expresión que ocupa […] es «palideció».",
-    "statement": "Según Daniel 5:6, en el fragmento «Entonces el rey […] y sus pensamientos lo turbaron, se debilitaron sus caderas y sus rodillas daban la una contra la otra.», la expresión que ocupa […] es «palideció».",
-    "asserted_detail": "palideció",
+    "question": "Verdadero o falso: Según Daniel 5:6, Entonces el rey endureció y sus pensamientos lo turbaron, se debilitaron sus caderas y sus rodillas daban la una contra la otra.",
+    "statement": "Según Daniel 5:6, Entonces el rey endureció y sus pensamientos lo turbaron, se debilitaron sus caderas y sus rodillas daban la una contra la otra.",
+    "asserted_detail": "endureció",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:6, Entonces el rey palideció y sus pensamientos lo turbaron, se debilitaron sus caderas y sus rodillas daban la una contra la otra.",
+    "incorrect_detail": "endureció",
+    "correction": "palideció",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:20",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:6.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «palideció», no «endureció».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «endureció»; la fuente contiene «palideció»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -3439,8 +3451,8 @@
       "Babilonia"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:7, en el fragmento «El rey gritó en alta voz que hicieran venir magos, caldeos y adivinos; y dijo el rey a los sabios de […]: «Cualquiera que lea esta escritura y me dé su interpretación, será vestido de púrpura, llevará en su cuello un collar de oro y será el tercer señor en el reino.», la expresión que ocupa […] es «Judea».",
-    "statement": "Según Daniel 5:7, en el fragmento «El rey gritó en alta voz que hicieran venir magos, caldeos y adivinos; y dijo el rey a los sabios de […]: «Cualquiera que lea esta escritura y me dé su interpretación, será vestido de púrpura, llevará en su cuello un collar de oro y será el tercer señor en el reino.», la expresión que ocupa […] es «Judea».",
+    "question": "Verdadero o falso: Según Daniel 5:7, El rey gritó en alta voz que hicieran venir magos, caldeos y adivinos; y dijo el rey a los sabios de Judea: «Cualquiera que lea esta escritura y me dé su interpretación, será vestido de púrpura, llevará en su cuello un collar de oro y será el tercer señor en el reino.",
+    "statement": "Según Daniel 5:7, El rey gritó en alta voz que hicieran venir magos, caldeos y adivinos; y dijo el rey a los sabios de Judea: «Cualquiera que lea esta escritura y me dé su interpretación, será vestido de púrpura, llevará en su cuello un collar de oro y será el tercer señor en el reino.",
     "asserted_detail": "Judea",
     "options": [
       "Verdadero",
@@ -3448,9 +3460,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:7, en el fragmento «El rey gritó en alta voz que hicieran venir magos, caldeos y adivinos; y dijo el rey a los sabios de […]: «Cualquiera que lea esta escritura y me dé su interpretación, será vestido de púrpura, llevará en su cuello un collar de oro y será el tercer señor en el reino.», la expresión que ocupa […] es «Babilonia».",
+    "corrected_statement": "Según Daniel 5:7, El rey gritó en alta voz que hicieran venir magos, caldeos y adivinos; y dijo el rey a los sabios de Babilonia: «Cualquiera que lea esta escritura y me dé su interpretación, será vestido de púrpura, llevará en su cuello un collar de oro y será el tercer señor en el reino.",
     "incorrect_detail": "Judea",
     "correction": "Babilonia",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 5:13",
     "correct_slot_signature": "place",
     "replacement_slot_signature": "place",
@@ -3711,30 +3724,31 @@
       "escritura"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:7, en el fragmento «El rey gritó en alta voz que hicieran venir magos, caldeos y adivinos; y dijo el rey a los sabios de Babilonia: «Cualquiera que lea esta […] y me dé su interpretación, será vestido de púrpura, llevará en su cuello un collar de oro y será el tercer señor en el reino.», la expresión que ocupa […] es «palidezca».",
-    "statement": "Según Daniel 5:7, en el fragmento «El rey gritó en alta voz que hicieran venir magos, caldeos y adivinos; y dijo el rey a los sabios de Babilonia: «Cualquiera que lea esta […] y me dé su interpretación, será vestido de púrpura, llevará en su cuello un collar de oro y será el tercer señor en el reino.», la expresión que ocupa […] es «palidezca».",
-    "asserted_detail": "palidezca",
+    "question": "Verdadero o falso: Según Daniel 5:7, al evaluar específicamente «escritura», el pasaje afirma: El rey gritó en alta voz que hicieran venir magos, caldeos y adivinos; y dijo el rey a los sabios de Babilonia: «Cualquiera que lea esta escritura y me dé su interpretación, será vestido de púrpura, llevará en su cuello un collar de oro y será el tercer señor en el reino.",
+    "statement": "Según Daniel 5:7, al evaluar específicamente «escritura», el pasaje afirma: El rey gritó en alta voz que hicieran venir magos, caldeos y adivinos; y dijo el rey a los sabios de Babilonia: «Cualquiera que lea esta escritura y me dé su interpretación, será vestido de púrpura, llevará en su cuello un collar de oro y será el tercer señor en el reino.",
+    "asserted_detail": "escritura",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:7, en el fragmento «El rey gritó en alta voz que hicieran venir magos, caldeos y adivinos; y dijo el rey a los sabios de Babilonia: «Cualquiera que lea esta […] y me dé su interpretación, será vestido de púrpura, llevará en su cuello un collar de oro y será el tercer señor en el reino.», la expresión que ocupa […] es «escritura».",
-    "incorrect_detail": "palidezca",
-    "correction": "escritura",
-    "replacement_source_ref": "Daniel 5:10",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «escritura», no «palidezca».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:7.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «palidezca»; la fuente contiene «escritura»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -3983,30 +3997,31 @@
       "pudieron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:8, en el fragmento «Entonces fueron introducidos todos los sabios del rey, pero no […] leer la escritura ni dar al rey su interpretación.», la expresión que ocupa […] es «pudieron».",
-    "statement": "Según Daniel 5:8, en el fragmento «Entonces fueron introducidos todos los sabios del rey, pero no […] leer la escritura ni dar al rey su interpretación.», la expresión que ocupa […] es «pudieron».",
-    "asserted_detail": "pudieron",
+    "question": "Verdadero o falso: Según Daniel 5:8, Entonces fueron introducidos todos los sabios del rey, pero no trajeron leer la escritura ni dar al rey su interpretación.",
+    "statement": "Según Daniel 5:8, Entonces fueron introducidos todos los sabios del rey, pero no trajeron leer la escritura ni dar al rey su interpretación.",
+    "asserted_detail": "trajeron",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:8, Entonces fueron introducidos todos los sabios del rey, pero no pudieron leer la escritura ni dar al rey su interpretación.",
+    "incorrect_detail": "trajeron",
+    "correction": "pudieron",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:3",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:8.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «pudieron», no «trajeron».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «trajeron»; la fuente contiene «pudieron»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -4255,30 +4270,31 @@
       "introducidos"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:8, en el fragmento «Entonces fueron […] todos los sabios del rey, pero no pudieron leer la escritura ni dar al rey su interpretación.», la expresión que ocupa […] es «despreciados».",
-    "statement": "Según Daniel 5:8, en el fragmento «Entonces fueron […] todos los sabios del rey, pero no pudieron leer la escritura ni dar al rey su interpretación.», la expresión que ocupa […] es «despreciados».",
-    "asserted_detail": "despreciados",
+    "question": "Verdadero o falso: Según Daniel 5:8, al evaluar específicamente «introducidos», el pasaje afirma: Entonces fueron introducidos todos los sabios del rey, pero no pudieron leer la escritura ni dar al rey su interpretación.",
+    "statement": "Según Daniel 5:8, al evaluar específicamente «introducidos», el pasaje afirma: Entonces fueron introducidos todos los sabios del rey, pero no pudieron leer la escritura ni dar al rey su interpretación.",
+    "asserted_detail": "introducidos",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:8, en el fragmento «Entonces fueron […] todos los sabios del rey, pero no pudieron leer la escritura ni dar al rey su interpretación.», la expresión que ocupa […] es «introducidos».",
-    "incorrect_detail": "despreciados",
-    "correction": "introducidos",
-    "replacement_source_ref": "PR42, p. 45, párrafo 6",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «introducidos», no «despreciados».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:8.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «despreciados»; la fuente contiene «introducidos»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -4527,8 +4543,8 @@
       "Belsasar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:9, en el fragmento «Entonces el rey […] se turbó sobremanera y palideció, y sus príncipes estaban perplejos.», la expresión que ocupa […] es «Ezequiel».",
-    "statement": "Según Daniel 5:9, en el fragmento «Entonces el rey […] se turbó sobremanera y palideció, y sus príncipes estaban perplejos.», la expresión que ocupa […] es «Ezequiel».",
+    "question": "Verdadero o falso: Según Daniel 5:9, Entonces el rey Ezequiel se turbó sobremanera y palideció, y sus príncipes estaban perplejos.",
+    "statement": "Según Daniel 5:9, Entonces el rey Ezequiel se turbó sobremanera y palideció, y sus príncipes estaban perplejos.",
     "asserted_detail": "Ezequiel",
     "options": [
       "Verdadero",
@@ -4536,9 +4552,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:9, en el fragmento «Entonces el rey […] se turbó sobremanera y palideció, y sus príncipes estaban perplejos.», la expresión que ocupa […] es «Belsasar».",
+    "corrected_statement": "Según Daniel 5:9, Entonces el rey Belsasar se turbó sobremanera y palideció, y sus príncipes estaban perplejos.",
     "incorrect_detail": "Ezequiel",
     "correction": "Belsasar",
+    "focused_true_statement": false,
     "replacement_source_ref": "PR42, p. 43, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
@@ -4799,30 +4816,31 @@
       "sobremanera"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:9, en el fragmento «Entonces el rey Belsasar se turbó […] y palideció, y sus príncipes estaban perplejos.», la expresión que ocupa […] es «escritura».",
-    "statement": "Según Daniel 5:9, en el fragmento «Entonces el rey Belsasar se turbó […] y palideció, y sus príncipes estaban perplejos.», la expresión que ocupa […] es «escritura».",
-    "asserted_detail": "escritura",
+    "question": "Verdadero o falso: Según Daniel 5:9, al evaluar específicamente «sobremanera», el pasaje afirma: Entonces el rey Belsasar se turbó sobremanera y palideció, y sus príncipes estaban perplejos.",
+    "statement": "Según Daniel 5:9, al evaluar específicamente «sobremanera», el pasaje afirma: Entonces el rey Belsasar se turbó sobremanera y palideció, y sus príncipes estaban perplejos.",
+    "asserted_detail": "sobremanera",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:9, en el fragmento «Entonces el rey Belsasar se turbó […] y palideció, y sus príncipes estaban perplejos.», la expresión que ocupa […] es «sobremanera».",
-    "incorrect_detail": "escritura",
-    "correction": "sobremanera",
-    "replacement_source_ref": "Daniel 5:7",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «sobremanera», no «escritura».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:9.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «escritura»; la fuente contiene «sobremanera»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -5071,30 +5089,31 @@
       "entró"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:10, en el fragmento «La reina, por las palabras del rey y de sus príncipes, […] a la sala del banquete, y dijo: —¡Rey, vive para siempre!», la expresión que ocupa […] es «entró».",
-    "statement": "Según Daniel 5:10, en el fragmento «La reina, por las palabras del rey y de sus príncipes, […] a la sala del banquete, y dijo: —¡Rey, vive para siempre!», la expresión que ocupa […] es «entró».",
-    "asserted_detail": "entró",
+    "question": "Verdadero o falso: Según Daniel 5:10, La reina, por las palabras del rey y de sus príncipes, trazó a la sala del banquete, y dijo: —¡Rey, vive para siempre!",
+    "statement": "Según Daniel 5:10, La reina, por las palabras del rey y de sus príncipes, trazó a la sala del banquete, y dijo: —¡Rey, vive para siempre!",
+    "asserted_detail": "trazó",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:10, La reina, por las palabras del rey y de sus príncipes, entró a la sala del banquete, y dijo: —¡Rey, vive para siempre!",
+    "incorrect_detail": "trazó",
+    "correction": "entró",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:24",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:10.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «entró», no «trazó».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «trazó»; la fuente contiene «entró»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -5343,30 +5362,31 @@
       "palidezca"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:10, en el fragmento «No te turben tus pensamientos ni […] tu rostro.», la expresión que ocupa […] es «escritura».",
-    "statement": "Según Daniel 5:10, en el fragmento «No te turben tus pensamientos ni […] tu rostro.», la expresión que ocupa […] es «escritura».",
-    "asserted_detail": "escritura",
+    "question": "Verdadero o falso: Según Daniel 5:10, al evaluar específicamente «palidezca», el pasaje afirma: No te turben tus pensamientos ni palidezca tu rostro.",
+    "statement": "Según Daniel 5:10, al evaluar específicamente «palidezca», el pasaje afirma: No te turben tus pensamientos ni palidezca tu rostro.",
+    "asserted_detail": "palidezca",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:10, en el fragmento «No te turben tus pensamientos ni […] tu rostro.», la expresión que ocupa […] es «palidezca».",
-    "incorrect_detail": "escritura",
-    "correction": "palidezca",
-    "replacement_source_ref": "Daniel 5:7",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «palidezca», no «escritura».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:10.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «escritura»; la fuente contiene «palidezca»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -5615,8 +5635,8 @@
       "Nabucodonosor"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:11, en el fragmento «El rey […], tu padre, oh rey, lo constituyó jefe sobre todos los magos, astrólogos, caldeos y adivinos,», la expresión que ocupa […] es «Belsasar».",
-    "statement": "Según Daniel 5:11, en el fragmento «El rey […], tu padre, oh rey, lo constituyó jefe sobre todos los magos, astrólogos, caldeos y adivinos,», la expresión que ocupa […] es «Belsasar».",
+    "question": "Verdadero o falso: Según Daniel 5:11, El rey Belsasar, tu padre, oh rey, lo constituyó jefe sobre todos los magos, astrólogos, caldeos y adivinos.",
+    "statement": "Según Daniel 5:11, El rey Belsasar, tu padre, oh rey, lo constituyó jefe sobre todos los magos, astrólogos, caldeos y adivinos.",
     "asserted_detail": "Belsasar",
     "options": [
       "Verdadero",
@@ -5624,9 +5644,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:11, en el fragmento «El rey […], tu padre, oh rey, lo constituyó jefe sobre todos los magos, astrólogos, caldeos y adivinos,», la expresión que ocupa […] es «Nabucodonosor».",
+    "corrected_statement": "Según Daniel 5:11, El rey Nabucodonosor, tu padre, oh rey, lo constituyó jefe sobre todos los magos, astrólogos, caldeos y adivinos.",
     "incorrect_detail": "Belsasar",
     "correction": "Nabucodonosor",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 5:1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
@@ -5887,30 +5908,31 @@
       "constituyó"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:11, en el fragmento «El rey Nabucodonosor, tu padre, oh rey, lo […] jefe sobre todos los magos, astrólogos, caldeos y adivinos,», la expresión que ocupa […] es «constituyó».",
-    "statement": "Según Daniel 5:11, en el fragmento «El rey Nabucodonosor, tu padre, oh rey, lo […] jefe sobre todos los magos, astrólogos, caldeos y adivinos,», la expresión que ocupa […] es «constituyó».",
-    "asserted_detail": "constituyó",
+    "question": "Verdadero o falso: Según Daniel 5:11, El rey Nabucodonosor, tu padre, oh rey, lo reconoció jefe sobre todos los magos, astrólogos, caldeos y adivinos.",
+    "statement": "Según Daniel 5:11, El rey Nabucodonosor, tu padre, oh rey, lo reconoció jefe sobre todos los magos, astrólogos, caldeos y adivinos.",
+    "asserted_detail": "reconoció",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:11, El rey Nabucodonosor, tu padre, oh rey, lo constituyó jefe sobre todos los magos, astrólogos, caldeos y adivinos.",
+    "incorrect_detail": "reconoció",
+    "correction": "constituyó",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:21",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:11.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «constituyó», no «reconoció».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «reconoció»; la fuente contiene «constituyó»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -6159,8 +6181,8 @@
       "Llámese"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:12, en el fragmento «[…], pues, ahora a Daniel, y él te dará la interpretación.», la expresión que ocupa […] es «Llámese».",
-    "statement": "Según Daniel 5:12, en el fragmento «[…], pues, ahora a Daniel, y él te dará la interpretación.», la expresión que ocupa […] es «Llámese».",
+    "question": "Verdadero o falso: Según Daniel 5:12, al evaluar específicamente «Llámese», el pasaje afirma: Llámese, pues, ahora a Daniel, y él te dará la interpretación.",
+    "statement": "Según Daniel 5:12, al evaluar específicamente «Llámese», el pasaje afirma: Llámese, pues, ahora a Daniel, y él te dará la interpretación.",
     "asserted_detail": "Llámese",
     "options": [
       "Verdadero",
@@ -6171,6 +6193,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
@@ -6431,30 +6454,31 @@
       "interpretar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:12, en el fragmento «por cuanto en él se halló más espíritu, ciencia y entendimiento para […] sueños, descifrar enigmas y resolver dudas; esto es, en Daniel, al cual el rey puso por nombre Beltsasar.», la expresión que ocupa […] es «intrepidez».",
-    "statement": "Según Daniel 5:12, en el fragmento «por cuanto en él se halló más espíritu, ciencia y entendimiento para […] sueños, descifrar enigmas y resolver dudas; esto es, en Daniel, al cual el rey puso por nombre Beltsasar.», la expresión que ocupa […] es «intrepidez».",
-    "asserted_detail": "intrepidez",
+    "question": "Verdadero o falso: Según Daniel 5:12, al evaluar específicamente «interpretar», el pasaje afirma: por cuanto en él se halló más espíritu, ciencia y entendimiento para interpretar sueños, descifrar enigmas y resolver dudas; esto es, en Daniel, al cual el rey puso por nombre Beltsasar.",
+    "statement": "Según Daniel 5:12, al evaluar específicamente «interpretar», el pasaje afirma: por cuanto en él se halló más espíritu, ciencia y entendimiento para interpretar sueños, descifrar enigmas y resolver dudas; esto es, en Daniel, al cual el rey puso por nombre Beltsasar.",
+    "asserted_detail": "interpretar",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:12, en el fragmento «por cuanto en él se halló más espíritu, ciencia y entendimiento para […] sueños, descifrar enigmas y resolver dudas; esto es, en Daniel, al cual el rey puso por nombre Beltsasar.», la expresión que ocupa […] es «interpretar».",
-    "incorrect_detail": "intrepidez",
-    "correction": "interpretar",
-    "replacement_source_ref": "PR44, p. 56, párrafo 2",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:prepositional",
-    "replacement_slot_signature": "term:prepositional",
-    "explanation": "Es falsa: la fuente dice «interpretar», no «intrepidez».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:12.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «intrepidez»; la fuente contiene «interpretar»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -6703,8 +6727,8 @@
       "Judea"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:13, en el fragmento «Y dijo el rey a Daniel: —¿Eres tú aquel Daniel de los hijos de la cautividad de Judá, que mi padre trajo de […]?», la expresión que ocupa […] es «Sinar».",
-    "statement": "Según Daniel 5:13, en el fragmento «Y dijo el rey a Daniel: —¿Eres tú aquel Daniel de los hijos de la cautividad de Judá, que mi padre trajo de […]?», la expresión que ocupa […] es «Sinar».",
+    "question": "Verdadero o falso: Según Daniel 5:13, Y dijo el rey a Daniel: —¿Eres tú aquel Daniel de los hijos de la cautividad de Judá, que mi padre trajo de Sinar?",
+    "statement": "Según Daniel 5:13, Y dijo el rey a Daniel: —¿Eres tú aquel Daniel de los hijos de la cautividad de Judá, que mi padre trajo de Sinar?",
     "asserted_detail": "Sinar",
     "options": [
       "Verdadero",
@@ -6712,9 +6736,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:13, en el fragmento «Y dijo el rey a Daniel: —¿Eres tú aquel Daniel de los hijos de la cautividad de Judá, que mi padre trajo de […]?», la expresión que ocupa […] es «Judea».",
+    "corrected_statement": "Según Daniel 5:13, Y dijo el rey a Daniel: —¿Eres tú aquel Daniel de los hijos de la cautividad de Judá, que mi padre trajo de Judea?",
     "incorrect_detail": "Sinar",
     "correction": "Judea",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 1:2",
     "correct_slot_signature": "place",
     "replacement_slot_signature": "place",
@@ -6975,30 +7000,31 @@
       "trajeron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:13, en el fragmento «Entonces […] a Daniel ante el rey.», la expresión que ocupa […] es «trajeron».",
-    "statement": "Según Daniel 5:13, en el fragmento «Entonces […] a Daniel ante el rey.», la expresión que ocupa […] es «trajeron».",
-    "asserted_detail": "trajeron",
+    "question": "Verdadero o falso: Según Daniel 5:13, Entonces bebieron a Daniel ante el rey.",
+    "statement": "Según Daniel 5:13, Entonces bebieron a Daniel ante el rey.",
+    "asserted_detail": "bebieron",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:13, Entonces trajeron a Daniel ante el rey.",
+    "incorrect_detail": "bebieron",
+    "correction": "trajeron",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:4",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:13.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «trajeron», no «bebieron».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «bebieron»; la fuente contiene «trajeron»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -7247,30 +7273,31 @@
       "dioses"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:14, en el fragmento «Yo he oído de ti que el espíritu de los […] santos está en ti, y que en ti se halló luz, entendimiento y mayor sabiduría.», la expresión que ocupa […] es «mujeres».",
-    "statement": "Según Daniel 5:14, en el fragmento «Yo he oído de ti que el espíritu de los […] santos está en ti, y que en ti se halló luz, entendimiento y mayor sabiduría.», la expresión que ocupa […] es «mujeres».",
-    "asserted_detail": "mujeres",
+    "question": "Verdadero o falso: Según Daniel 5:14, al evaluar específicamente «dioses», el pasaje afirma: Yo he oído de ti que el espíritu de los dioses santos está en ti, y que en ti se halló luz, entendimiento y mayor sabiduría.",
+    "statement": "Según Daniel 5:14, al evaluar específicamente «dioses», el pasaje afirma: Yo he oído de ti que el espíritu de los dioses santos está en ti, y que en ti se halló luz, entendimiento y mayor sabiduría.",
+    "asserted_detail": "dioses",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:14, en el fragmento «Yo he oído de ti que el espíritu de los […] santos está en ti, y que en ti se halló luz, entendimiento y mayor sabiduría.», la expresión que ocupa […] es «dioses».",
-    "incorrect_detail": "mujeres",
-    "correction": "dioses",
-    "replacement_source_ref": "Daniel 5:3",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «dioses», no «mujeres».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:14.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «mujeres»; la fuente contiene «dioses»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -7519,30 +7546,31 @@
       "santos"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:14, en el fragmento «Yo he oído de ti que el espíritu de los dioses […] está en ti, y que en ti se halló luz, entendimiento y mayor sabiduría.», la expresión que ocupa […] es «sueños».",
-    "statement": "Según Daniel 5:14, en el fragmento «Yo he oído de ti que el espíritu de los dioses […] está en ti, y que en ti se halló luz, entendimiento y mayor sabiduría.», la expresión que ocupa […] es «sueños».",
-    "asserted_detail": "sueños",
+    "question": "Verdadero o falso: Según Daniel 5:14, al evaluar específicamente «santos», el pasaje afirma: Yo he oído de ti que el espíritu de los dioses santos está en ti, y que en ti se halló luz, entendimiento y mayor sabiduría.",
+    "statement": "Según Daniel 5:14, al evaluar específicamente «santos», el pasaje afirma: Yo he oído de ti que el espíritu de los dioses santos está en ti, y que en ti se halló luz, entendimiento y mayor sabiduría.",
+    "asserted_detail": "santos",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:14, en el fragmento «Yo he oído de ti que el espíritu de los dioses […] está en ti, y que en ti se halló luz, entendimiento y mayor sabiduría.», la expresión que ocupa […] es «santos».",
-    "incorrect_detail": "sueños",
-    "correction": "santos",
-    "replacement_source_ref": "Daniel 5:12",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «santos», no «sueños».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:14.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «sueños»; la fuente contiene «santos»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -7791,8 +7819,8 @@
       "leyeran esta escritura y me dieran su interpretación"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:15, en el fragmento «Y ahora trajeron ante mí sabios y astrólogos para que […]; pero no han podido interpretarme el asunto.», la expresión que ocupa […] es «leyeran esta escritura y me dieran su interpretación».",
-    "statement": "Según Daniel 5:15, en el fragmento «Y ahora trajeron ante mí sabios y astrólogos para que […]; pero no han podido interpretarme el asunto.», la expresión que ocupa […] es «leyeran esta escritura y me dieran su interpretación».",
+    "question": "Verdadero o falso: Según Daniel 5:15, al evaluar específicamente «leyeran esta escritura y me dieran su interpretación», el pasaje afirma: Y ahora trajeron ante mí sabios y astrólogos para que leyeran esta escritura y me dieran su interpretación; pero no han podido interpretarme el asunto.",
+    "statement": "Según Daniel 5:15, al evaluar específicamente «leyeran esta escritura y me dieran su interpretación», el pasaje afirma: Y ahora trajeron ante mí sabios y astrólogos para que leyeran esta escritura y me dieran su interpretación; pero no han podido interpretarme el asunto.",
     "asserted_detail": "leyeran esta escritura y me dieran su interpretación",
     "options": [
       "Verdadero",
@@ -7803,6 +7831,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": true,
     "replacement_source_ref": null,
     "correct_slot_signature": "phrase",
     "replacement_slot_signature": null,
@@ -8063,30 +8092,31 @@
       "interpretarme"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:15, en el fragmento «Y ahora trajeron ante mí sabios y astrólogos para que leyeran esta escritura y me dieran su interpretación; pero no han podido […] el asunto.», la expresión que ocupa […] es «interpretarme».",
-    "statement": "Según Daniel 5:15, en el fragmento «Y ahora trajeron ante mí sabios y astrólogos para que leyeran esta escritura y me dieran su interpretación; pero no han podido […] el asunto.», la expresión que ocupa […] es «interpretarme».",
-    "asserted_detail": "interpretarme",
+    "question": "Verdadero o falso: Según Daniel 5:15, Y ahora trajeron ante mí sabios y astrólogos para que leyeran esta escritura y me dieran su interpretación; pero no han podido darme el asunto.",
+    "statement": "Según Daniel 5:15, Y ahora trajeron ante mí sabios y astrólogos para que leyeran esta escritura y me dieran su interpretación; pero no han podido darme el asunto.",
+    "asserted_detail": "darme",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:15, Y ahora trajeron ante mí sabios y astrólogos para que leyeran esta escritura y me dieran su interpretación; pero no han podido interpretarme el asunto.",
+    "incorrect_detail": "darme",
+    "correction": "interpretarme",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:16",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:15.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «interpretarme», no «darme».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «darme»; la fuente contiene «interpretarme»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -8335,30 +8365,31 @@
       "dificultades"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:16, en el fragmento «Yo, pues, he oído de ti que puedes interpretar y resolver […].», la expresión que ocupa […] es «mujeres».",
-    "statement": "Según Daniel 5:16, en el fragmento «Yo, pues, he oído de ti que puedes interpretar y resolver […].», la expresión que ocupa […] es «mujeres».",
-    "asserted_detail": "mujeres",
+    "question": "Verdadero o falso: Según Daniel 5:16, al evaluar específicamente «dificultades», el pasaje afirma: Yo, pues, he oído de ti que puedes interpretar y resolver dificultades.",
+    "statement": "Según Daniel 5:16, al evaluar específicamente «dificultades», el pasaje afirma: Yo, pues, he oído de ti que puedes interpretar y resolver dificultades.",
+    "asserted_detail": "dificultades",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:16, en el fragmento «Yo, pues, he oído de ti que puedes interpretar y resolver […].», la expresión que ocupa […] es «dificultades».",
-    "incorrect_detail": "mujeres",
-    "correction": "dificultades",
-    "replacement_source_ref": "Daniel 5:23",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «dificultades», no «mujeres».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:16.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «mujeres»; la fuente contiene «dificultades»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -8607,8 +8638,8 @@
       "señor"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:16, en el fragmento «Si ahora puedes leer esta escritura y darme su interpretación, serás vestido de púrpura, llevarás en tu cuello un collar de oro y serás el tercer […] en el reino.», la expresión que ocupa […] es «señor».",
-    "statement": "Según Daniel 5:16, en el fragmento «Si ahora puedes leer esta escritura y darme su interpretación, serás vestido de púrpura, llevarás en tu cuello un collar de oro y serás el tercer […] en el reino.», la expresión que ocupa […] es «señor».",
+    "question": "Verdadero o falso: Según Daniel 5:16, Si ahora puedes leer esta escritura y darme su interpretación, serás vestido de púrpura, llevarás en tu cuello un collar de oro y serás el tercer señor en el reino.",
+    "statement": "Según Daniel 5:16, Si ahora puedes leer esta escritura y darme su interpretación, serás vestido de púrpura, llevarás en tu cuello un collar de oro y serás el tercer señor en el reino.",
     "asserted_detail": "señor",
     "options": [
       "Verdadero",
@@ -8619,6 +8650,7 @@
     "corrected_statement": "",
     "incorrect_detail": null,
     "correction": null,
+    "focused_true_statement": false,
     "replacement_source_ref": null,
     "correct_slot_signature": "person",
     "replacement_slot_signature": null,
@@ -8879,8 +8911,8 @@
       "Daniel"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:17, en el fragmento «Entonces […] respondió y dijo al rey: —Tus dones sean para ti; da tus recompensas a otros.», la expresión que ocupa […] es «Belsasar».",
-    "statement": "Según Daniel 5:17, en el fragmento «Entonces […] respondió y dijo al rey: —Tus dones sean para ti; da tus recompensas a otros.», la expresión que ocupa […] es «Belsasar».",
+    "question": "Verdadero o falso: Según Daniel 5:17, Entonces Belsasar respondió y dijo al rey: —Tus dones sean para ti; da tus recompensas a otros.",
+    "statement": "Según Daniel 5:17, Entonces Belsasar respondió y dijo al rey: —Tus dones sean para ti; da tus recompensas a otros.",
     "asserted_detail": "Belsasar",
     "options": [
       "Verdadero",
@@ -8888,9 +8920,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:17, en el fragmento «Entonces […] respondió y dijo al rey: —Tus dones sean para ti; da tus recompensas a otros.», la expresión que ocupa […] es «Daniel».",
+    "corrected_statement": "Según Daniel 5:17, Entonces Daniel respondió y dijo al rey: —Tus dones sean para ti; da tus recompensas a otros.",
     "incorrect_detail": "Belsasar",
     "correction": "Daniel",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 5:1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
@@ -9029,7 +9062,7 @@
     "explanation": "Daniel 5:17 declara literalmente «Leeré la escritura al rey y le daré la interpretación.». La respuesta pedida es «Leeré».",
     "why_distractors_fail": {
       "Dará": "Es verdadero en Daniel 5:12, pero no responde al contexto exacto de Daniel 5:17.",
-      "Habrá": "Es verdadero en Daniel 12:11, pero no responde al contexto exacto de Daniel 5:17.",
+      "Habrá": "Es verdadero en Daniel 11:15, pero no responde al contexto exacto de Daniel 5:17.",
       "Caerá": "Es verdadero en Daniel 11:19, pero no responde al contexto exacto de Daniel 5:17."
     },
     "trap_type": null,
@@ -9096,7 +9129,7 @@
     "explanation": "Daniel 5:17 declara literalmente «Leeré la escritura al rey y le daré la interpretación.». La respuesta pedida es «Leeré».",
     "why_distractors_fail": {
       "Dará": "Es verdadero en Daniel 5:12, pero no responde al contexto exacto de Daniel 5:17.",
-      "Habrá": "Es verdadero en Daniel 12:11, pero no responde al contexto exacto de Daniel 5:17.",
+      "Habrá": "Es verdadero en Daniel 11:15, pero no responde al contexto exacto de Daniel 5:17.",
       "Caerá": "Es verdadero en Daniel 11:19, pero no responde al contexto exacto de Daniel 5:17."
     },
     "trap_type": null,
@@ -9151,30 +9184,31 @@
       "Leeré"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:17, en el fragmento «[…] la escritura al rey y le daré la interpretación.», la expresión que ocupa […] es «Leeré».",
-    "statement": "Según Daniel 5:17, en el fragmento «[…] la escritura al rey y le daré la interpretación.», la expresión que ocupa […] es «Leeré».",
-    "asserted_detail": "Leeré",
+    "question": "Verdadero o falso: Según Daniel 5:17, Dará la escritura al rey y le daré la interpretación.",
+    "statement": "Según Daniel 5:17, Dará la escritura al rey y le daré la interpretación.",
+    "asserted_detail": "Dará",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:17, Leeré la escritura al rey y le daré la interpretación.",
+    "incorrect_detail": "Dará",
+    "correction": "Leeré",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:12",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:17.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «Leeré», no «Dará».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Dará»; la fuente contiene «Leeré»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -9234,7 +9268,7 @@
     "explanation": "En el contexto exacto de Daniel 5:17, el detalle aplicable es «Leeré»: «Leeré la escritura al rey y le daré la interpretación.».",
     "why_distractors_fail": {
       "Dará": "Es verdadero en Daniel 5:12, pero no responde al contexto exacto de Daniel 5:17.",
-      "Habrá": "Es verdadero en Daniel 12:11, pero no responde al contexto exacto de Daniel 5:17.",
+      "Habrá": "Es verdadero en Daniel 11:15, pero no responde al contexto exacto de Daniel 5:17.",
       "Caerá": "Es verdadero en Daniel 11:19, pero no responde al contexto exacto de Daniel 5:17."
     },
     "trap_type": "true_in_other_context",
@@ -9423,30 +9457,31 @@
       "grandeza"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:18, en el fragmento «El Altísimo Dios, oh rey, dio a Nabucodonosor, tu padre, el reino, la […], la gloria y la majestad.», la expresión que ocupa […] es «reina».",
-    "statement": "Según Daniel 5:18, en el fragmento «El Altísimo Dios, oh rey, dio a Nabucodonosor, tu padre, el reino, la […], la gloria y la majestad.», la expresión que ocupa […] es «reina».",
-    "asserted_detail": "reina",
+    "question": "Verdadero o falso: Según Daniel 5:18, al evaluar específicamente «grandeza», el pasaje afirma: El Altísimo Dios, oh rey, dio a Nabucodonosor, tu padre, el reino, la grandeza, la gloria y la majestad.",
+    "statement": "Según Daniel 5:18, al evaluar específicamente «grandeza», el pasaje afirma: El Altísimo Dios, oh rey, dio a Nabucodonosor, tu padre, el reino, la grandeza, la gloria y la majestad.",
+    "asserted_detail": "grandeza",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:18, en el fragmento «El Altísimo Dios, oh rey, dio a Nabucodonosor, tu padre, el reino, la […], la gloria y la majestad.», la expresión que ocupa […] es «grandeza».",
-    "incorrect_detail": "reina",
-    "correction": "grandeza",
-    "replacement_source_ref": "Daniel 5:10",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «grandeza», no «reina».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:18.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «reina»; la fuente contiene «grandeza»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -9695,30 +9730,31 @@
       "majestad"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:18, en el fragmento «El Altísimo Dios, oh rey, dio a Nabucodonosor, tu padre, el reino, la grandeza, la gloria y la […].», la expresión que ocupa […] es «santidad».",
-    "statement": "Según Daniel 5:18, en el fragmento «El Altísimo Dios, oh rey, dio a Nabucodonosor, tu padre, el reino, la grandeza, la gloria y la […].», la expresión que ocupa […] es «santidad».",
-    "asserted_detail": "santidad",
+    "question": "Verdadero o falso: Según Daniel 5:18, al evaluar específicamente «majestad», el pasaje afirma: El Altísimo Dios, oh rey, dio a Nabucodonosor, tu padre, el reino, la grandeza, la gloria y la majestad.",
+    "statement": "Según Daniel 5:18, al evaluar específicamente «majestad», el pasaje afirma: El Altísimo Dios, oh rey, dio a Nabucodonosor, tu padre, el reino, la grandeza, la gloria y la majestad.",
+    "asserted_detail": "majestad",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:18, en el fragmento «El Altísimo Dios, oh rey, dio a Nabucodonosor, tu padre, el reino, la grandeza, la gloria y la […].», la expresión que ocupa […] es «majestad».",
-    "incorrect_detail": "santidad",
-    "correction": "majestad",
-    "replacement_source_ref": "PR39, p. 27, párrafo 2",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «majestad», no «santidad».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:18.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «santidad»; la fuente contiene «majestad»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -9835,17 +9871,17 @@
     "answer_mode": "option_id",
     "question": "Según Daniel 5:19, ¿qué acción completa correctamente «A quien le placía, mataba, y a quien le placía, daba vida; ________ a quien le placía, y a quien le placía, humillaba.»?",
     "options": [
-      "despreciaba",
-      "engrandecía",
       "presenciaba",
+      "engrandecía",
+      "despreciaba",
       "arrodillaba"
     ],
     "correct_option": 1,
     "correct_answer": "engrandecía",
     "explanation": "Daniel 5:19 declara literalmente «A quien le placía, mataba, y a quien le placía, daba vida; engrandecía a quien le placía, y a quien le placía, humillaba.». La respuesta pedida es «engrandecía».",
     "why_distractors_fail": {
-      "despreciaba": "Es verdadero en PR39, p. 28, párrafo 4, pero no responde al contexto exacto de Daniel 5:19.",
       "presenciaba": "Es verdadero en PR43, p. 47, párrafo 6, pero no responde al contexto exacto de Daniel 5:19.",
+      "despreciaba": "Es verdadero en PR39, p. 28, párrafo 4, pero no responde al contexto exacto de Daniel 5:19.",
       "arrodillaba": "Es verdadero en Daniel 6:10, pero no responde al contexto exacto de Daniel 5:19."
     },
     "trap_type": null,
@@ -9902,8 +9938,8 @@
     "answer_mode": "option_id",
     "question": "Complete Daniel 5:19: «A quien le placía, mataba, y a quien le placía, daba vida; ________ a quien le placía, y a quien le placía, humillaba.»",
     "options": [
-      "despreciaba",
       "presenciaba",
+      "despreciaba",
       "engrandecía",
       "arrodillaba"
     ],
@@ -9911,8 +9947,8 @@
     "correct_answer": "engrandecía",
     "explanation": "Daniel 5:19 declara literalmente «A quien le placía, mataba, y a quien le placía, daba vida; engrandecía a quien le placía, y a quien le placía, humillaba.». La respuesta pedida es «engrandecía».",
     "why_distractors_fail": {
-      "despreciaba": "Es verdadero en PR39, p. 28, párrafo 4, pero no responde al contexto exacto de Daniel 5:19.",
       "presenciaba": "Es verdadero en PR43, p. 47, párrafo 6, pero no responde al contexto exacto de Daniel 5:19.",
+      "despreciaba": "Es verdadero en PR39, p. 28, párrafo 4, pero no responde al contexto exacto de Daniel 5:19.",
       "arrodillaba": "Es verdadero en Daniel 6:10, pero no responde al contexto exacto de Daniel 5:19."
     },
     "trap_type": null,
@@ -9967,30 +10003,31 @@
       "engrandecía"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:19, en el fragmento «A quien le placía, mataba, y a quien le placía, daba vida; […] a quien le placía, y a quien le placía, humillaba.», la expresión que ocupa […] es «engrandecía».",
-    "statement": "Según Daniel 5:19, en el fragmento «A quien le placía, mataba, y a quien le placía, daba vida; […] a quien le placía, y a quien le placía, humillaba.», la expresión que ocupa […] es «engrandecía».",
-    "asserted_detail": "engrandecía",
+    "question": "Verdadero o falso: Según Daniel 5:19, A quien le placía, mataba, y a quien le placía, daba vida; presenciaba a quien le placía, y a quien le placía, humillaba.",
+    "statement": "Según Daniel 5:19, A quien le placía, mataba, y a quien le placía, daba vida; presenciaba a quien le placía, y a quien le placía, humillaba.",
+    "asserted_detail": "presenciaba",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:19, A quien le placía, mataba, y a quien le placía, daba vida; engrandecía a quien le placía, y a quien le placía, humillaba.",
+    "incorrect_detail": "presenciaba",
+    "correction": "engrandecía",
+    "focused_true_statement": false,
+    "replacement_source_ref": "PR43, p. 47, párrafo 6",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:19.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «engrandecía», no «presenciaba».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «presenciaba»; la fuente contiene «engrandecía»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -10041,16 +10078,16 @@
     "question": "Según Daniel 5:19, ¿qué acción corresponde específicamente a esta escena: «A quien le placía, mataba, y a quien le placía, daba vida; […] a quien le placía, y a quien le placía, humillaba.»?",
     "options": [
       "engrandecía",
-      "despreciaba",
       "presenciaba",
+      "despreciaba",
       "arrodillaba"
     ],
     "correct_option": 0,
     "correct_answer": "engrandecía",
     "explanation": "En el contexto exacto de Daniel 5:19, el detalle aplicable es «engrandecía»: «A quien le placía, mataba, y a quien le placía, daba vida; engrandecía a quien le placía, y a quien le placía, humillaba.».",
     "why_distractors_fail": {
-      "despreciaba": "Es verdadero en PR39, p. 28, párrafo 4, pero no responde al contexto exacto de Daniel 5:19.",
       "presenciaba": "Es verdadero en PR43, p. 47, párrafo 6, pero no responde al contexto exacto de Daniel 5:19.",
+      "despreciaba": "Es verdadero en PR39, p. 28, párrafo 4, pero no responde al contexto exacto de Daniel 5:19.",
       "arrodillaba": "Es verdadero en Daniel 6:10, pero no responde al contexto exacto de Daniel 5:19."
     },
     "trap_type": "true_in_other_context",
@@ -10239,30 +10276,31 @@
       "temblaban"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:19, en el fragmento «Y por la grandeza que le dio, todos los pueblos, naciones y lenguas […] y temían delante de él.», la expresión que ocupa […] es «temblaban».",
-    "statement": "Según Daniel 5:19, en el fragmento «Y por la grandeza que le dio, todos los pueblos, naciones y lenguas […] y temían delante de él.», la expresión que ocupa […] es «temblaban».",
-    "asserted_detail": "temblaban",
+    "question": "Verdadero o falso: Según Daniel 5:19, Y por la grandeza que le dio, todos los pueblos, naciones y lenguas sostenían y temían delante de él.",
+    "statement": "Según Daniel 5:19, Y por la grandeza que le dio, todos los pueblos, naciones y lenguas sostenían y temían delante de él.",
+    "asserted_detail": "sostenían",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:19, Y por la grandeza que le dio, todos los pueblos, naciones y lenguas temblaban y temían delante de él.",
+    "incorrect_detail": "sostenían",
+    "correction": "temblaban",
+    "focused_true_statement": false,
+    "replacement_source_ref": "PR39, p. 27, párrafo 1",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:19.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «temblaban», no «sostenían».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «sostenían»; la fuente contiene «temblaban»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -10511,30 +10549,31 @@
       "ensoberbeció"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:20, en el fragmento «Pero cuando su corazón se […] y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y despojado de su gloria.», la expresión que ocupa […] es «ensoberbeció».",
-    "statement": "Según Daniel 5:20, en el fragmento «Pero cuando su corazón se […] y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y despojado de su gloria.», la expresión que ocupa […] es «ensoberbeció».",
-    "asserted_detail": "ensoberbeció",
+    "question": "Verdadero o falso: Según Daniel 5:20, Pero cuando su corazón se constituyó y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y despojado de su gloria.",
+    "statement": "Según Daniel 5:20, Pero cuando su corazón se constituyó y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y despojado de su gloria.",
+    "asserted_detail": "constituyó",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:20, Pero cuando su corazón se ensoberbeció y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y despojado de su gloria.",
+    "incorrect_detail": "constituyó",
+    "correction": "ensoberbeció",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:11",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:20.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «ensoberbeció», no «constituyó».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «constituyó»; la fuente contiene «ensoberbeció»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -10783,30 +10822,31 @@
       "despojado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:20, en el fragmento «Pero cuando su corazón se ensoberbeció y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y […] de su gloria.», la expresión que ocupa […] es «encalado».",
-    "statement": "Según Daniel 5:20, en el fragmento «Pero cuando su corazón se ensoberbeció y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y […] de su gloria.», la expresión que ocupa […] es «encalado».",
-    "asserted_detail": "encalado",
+    "question": "Verdadero o falso: Según Daniel 5:20, al evaluar específicamente «despojado», el pasaje afirma: Pero cuando su corazón se ensoberbeció y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y despojado de su gloria.",
+    "statement": "Según Daniel 5:20, al evaluar específicamente «despojado», el pasaje afirma: Pero cuando su corazón se ensoberbeció y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y despojado de su gloria.",
+    "asserted_detail": "despojado",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:20, en el fragmento «Pero cuando su corazón se ensoberbeció y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y […] de su gloria.», la expresión que ocupa […] es «despojado».",
-    "incorrect_detail": "encalado",
-    "correction": "despojado",
-    "replacement_source_ref": "Daniel 5:5",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:nominal_head",
-    "replacement_slot_signature": "term:nominal_head",
-    "explanation": "Es falsa: la fuente dice «despojado», no «encalado».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:20.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «encalado»; la fuente contiene «despojado»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -10925,16 +10965,16 @@
     "options": [
       "Salvador",
       "Altísimo",
-      "Huésped",
-      "Anciano"
+      "Revelador",
+      "Huésped"
     ],
     "correct_option": 1,
     "correct_answer": "Altísimo",
     "explanation": "Daniel 5:21 declara literalmente «Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el Altísimo Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.». La respuesta pedida es «Altísimo».",
     "why_distractors_fail": {
       "Salvador": "Es verdadero en PR41, p. 40, párrafo 6, pero no responde al contexto exacto de Daniel 5:21.",
-      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 5:21.",
-      "Anciano": "Es verdadero en Daniel 7:9, pero no responde al contexto exacto de Daniel 5:21."
+      "Revelador": "Es verdadero en PR40, p. 35, párrafo 9, pero no responde al contexto exacto de Daniel 5:21.",
+      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 5:21."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -10991,17 +11031,17 @@
     "question": "Complete Daniel 5:21: «Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el ________ Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.»",
     "options": [
       "Salvador",
-      "Huésped",
+      "Revelador",
       "Altísimo",
-      "Anciano"
+      "Huésped"
     ],
     "correct_option": 2,
     "correct_answer": "Altísimo",
     "explanation": "Daniel 5:21 declara literalmente «Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el Altísimo Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.». La respuesta pedida es «Altísimo».",
     "why_distractors_fail": {
       "Salvador": "Es verdadero en PR41, p. 40, párrafo 6, pero no responde al contexto exacto de Daniel 5:21.",
-      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 5:21.",
-      "Anciano": "Es verdadero en Daniel 7:9, pero no responde al contexto exacto de Daniel 5:21."
+      "Revelador": "Es verdadero en PR40, p. 35, párrafo 9, pero no responde al contexto exacto de Daniel 5:21.",
+      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 5:21."
     },
     "trap_type": null,
     "validation_adversarial": {
@@ -11055,30 +11095,31 @@
       "Altísimo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:21, en el fragmento «Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el […] Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.», la expresión que ocupa […] es «Altísimo».",
-    "statement": "Según Daniel 5:21, en el fragmento «Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el […] Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.», la expresión que ocupa […] es «Altísimo».",
-    "asserted_detail": "Altísimo",
+    "question": "Verdadero o falso: Según Daniel 5:21, Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el Salvador Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.",
+    "statement": "Según Daniel 5:21, Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el Salvador Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.",
+    "asserted_detail": "Salvador",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:21, Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el Altísimo Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.",
+    "incorrect_detail": "Salvador",
+    "correction": "Altísimo",
+    "focused_true_statement": false,
+    "replacement_source_ref": "PR41, p. 40, párrafo 6",
     "correct_slot_signature": "person",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:21.",
+    "replacement_slot_signature": "person",
+    "explanation": "Es falsa: la fuente dice «Altísimo», no «Salvador».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Salvador»; la fuente contiene «Altísimo»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -11130,16 +11171,16 @@
     "options": [
       "Altísimo",
       "Salvador",
-      "Huésped",
-      "Anciano"
+      "Revelador",
+      "Huésped"
     ],
     "correct_option": 0,
     "correct_answer": "Altísimo",
     "explanation": "En el contexto exacto de Daniel 5:21, el detalle aplicable es «Altísimo»: «Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el Altísimo Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.».",
     "why_distractors_fail": {
       "Salvador": "Es verdadero en PR41, p. 40, párrafo 6, pero no responde al contexto exacto de Daniel 5:21.",
-      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 5:21.",
-      "Anciano": "Es verdadero en Daniel 7:9, pero no responde al contexto exacto de Daniel 5:21."
+      "Revelador": "Es verdadero en PR40, p. 35, párrafo 9, pero no responde al contexto exacto de Daniel 5:21.",
+      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 5:21."
     },
     "trap_type": "true_in_other_context",
     "validation_adversarial": {
@@ -11327,30 +11368,31 @@
       "reconoció"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:21, en el fragmento «Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que […] que el Altísimo Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.», la expresión que ocupa […] es «reconoció».",
-    "statement": "Según Daniel 5:21, en el fragmento «Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que […] que el Altísimo Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.», la expresión que ocupa […] es «reconoció».",
-    "asserted_detail": "reconoció",
+    "question": "Verdadero o falso: Según Daniel 5:21, Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que palideció que el Altísimo Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.",
+    "statement": "Según Daniel 5:21, Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que palideció que el Altísimo Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.",
+    "asserted_detail": "palideció",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:21, Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el Altísimo Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.",
+    "incorrect_detail": "palideció",
+    "correction": "reconoció",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:6",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:21.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «reconoció», no «palideció».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «palideció»; la fuente contiene «reconoció»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -11599,8 +11641,8 @@
       "Belsasar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:22, en el fragmento «Pero tú, su hijo […], no has humillado tu corazón sabiendo todo esto,», la expresión que ocupa […] es «Jeremías».",
-    "statement": "Según Daniel 5:22, en el fragmento «Pero tú, su hijo […], no has humillado tu corazón sabiendo todo esto,», la expresión que ocupa […] es «Jeremías».",
+    "question": "Verdadero o falso: Según Daniel 5:22, Pero tú, su hijo Jeremías, no has humillado tu corazón sabiendo todo esto.",
+    "statement": "Según Daniel 5:22, Pero tú, su hijo Jeremías, no has humillado tu corazón sabiendo todo esto.",
     "asserted_detail": "Jeremías",
     "options": [
       "Verdadero",
@@ -11608,9 +11650,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:22, en el fragmento «Pero tú, su hijo […], no has humillado tu corazón sabiendo todo esto,», la expresión que ocupa […] es «Belsasar».",
+    "corrected_statement": "Según Daniel 5:22, Pero tú, su hijo Belsasar, no has humillado tu corazón sabiendo todo esto.",
     "incorrect_detail": "Jeremías",
     "correction": "Belsasar",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 9:2",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
@@ -11871,30 +11914,31 @@
       "sabiendo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:22, en el fragmento «Pero tú, su hijo Belsasar, no has humillado tu corazón […] todo esto,», la expresión que ocupa […] es «sabiendo».",
-    "statement": "Según Daniel 5:22, en el fragmento «Pero tú, su hijo Belsasar, no has humillado tu corazón […] todo esto,», la expresión que ocupa […] es «sabiendo».",
-    "asserted_detail": "sabiendo",
+    "question": "Verdadero o falso: Según Daniel 5:22, Pero tú, su hijo Belsasar, no has humillado tu corazón apelando todo esto.",
+    "statement": "Según Daniel 5:22, Pero tú, su hijo Belsasar, no has humillado tu corazón apelando todo esto.",
+    "asserted_detail": "apelando",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:22, Pero tú, su hijo Belsasar, no has humillado tu corazón sabiendo todo esto.",
+    "incorrect_detail": "apelando",
+    "correction": "sabiendo",
+    "focused_true_statement": false,
+    "replacement_source_ref": "PR44, p. 55, párrafo 5",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:22.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «sabiendo», no «apelando».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «apelando»; la fuente contiene «sabiendo»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -12143,30 +12187,31 @@
       "ensoberbecido"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:23, en el fragmento «sino que contra el Señor del cielo te has […]; hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus concubinas bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos.», la expresión que ocupa […] es «gigantesco».",
-    "statement": "Según Daniel 5:23, en el fragmento «sino que contra el Señor del cielo te has […]; hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus concubinas bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos.», la expresión que ocupa […] es «gigantesco».",
-    "asserted_detail": "gigantesco",
+    "question": "Verdadero o falso: Según Daniel 5:23, al evaluar específicamente «ensoberbecido», el pasaje afirma: sino que contra el Señor del cielo te has ensoberbecido; hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus concubinas bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos.",
+    "statement": "Según Daniel 5:23, al evaluar específicamente «ensoberbecido», el pasaje afirma: sino que contra el Señor del cielo te has ensoberbecido; hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus concubinas bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos.",
+    "asserted_detail": "ensoberbecido",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:23, en el fragmento «sino que contra el Señor del cielo te has […]; hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus concubinas bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos.», la expresión que ocupa […] es «ensoberbecido».",
-    "incorrect_detail": "gigantesco",
-    "correction": "ensoberbecido",
-    "replacement_source_ref": "PR42, p. 43, párrafo 4",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:postnominal_modifier",
-    "replacement_slot_signature": "term:postnominal_modifier",
-    "explanation": "Es falsa: la fuente dice «ensoberbecido», no «gigantesco».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:23.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «gigantesco»; la fuente contiene «ensoberbecido»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -12415,30 +12460,31 @@
       "concubinas"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:23, en el fragmento «sino que contra el Señor del cielo te has ensoberbecido; hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus […] bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos.», la expresión que ocupa […] es «recompensas».",
-    "statement": "Según Daniel 5:23, en el fragmento «sino que contra el Señor del cielo te has ensoberbecido; hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus […] bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos.», la expresión que ocupa […] es «recompensas».",
-    "asserted_detail": "recompensas",
+    "question": "Verdadero o falso: Según Daniel 5:23, al evaluar específicamente «concubinas», el pasaje afirma: sino que contra el Señor del cielo te has ensoberbecido; hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus concubinas bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos.",
+    "statement": "Según Daniel 5:23, al evaluar específicamente «concubinas», el pasaje afirma: sino que contra el Señor del cielo te has ensoberbecido; hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus concubinas bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos.",
+    "asserted_detail": "concubinas",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:23, en el fragmento «sino que contra el Señor del cielo te has ensoberbecido; hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus […] bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos.», la expresión que ocupa […] es «concubinas».",
-    "incorrect_detail": "recompensas",
-    "correction": "concubinas",
-    "replacement_source_ref": "Daniel 5:17",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «concubinas», no «recompensas».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:23.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «recompensas»; la fuente contiene «concubinas»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -12687,30 +12733,31 @@
       "envió"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:24, en el fragmento «Por eso, de su presencia […] él la mano que trazó esta escritura.», la expresión que ocupa […] es «envió».",
-    "statement": "Según Daniel 5:24, en el fragmento «Por eso, de su presencia […] él la mano que trazó esta escritura.», la expresión que ocupa […] es «envió».",
-    "asserted_detail": "envió",
+    "question": "Verdadero o falso: Según Daniel 5:24, Por eso, de su presencia halló él la mano que trazó esta escritura.",
+    "statement": "Según Daniel 5:24, Por eso, de su presencia halló él la mano que trazó esta escritura.",
+    "asserted_detail": "halló",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:24, Por eso, de su presencia envió él la mano que trazó esta escritura.",
+    "incorrect_detail": "halló",
+    "correction": "envió",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:14",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:24.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «envió», no «halló».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «halló»; la fuente contiene «envió»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -12959,30 +13006,31 @@
       "trazó"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:24, en el fragmento «Por eso, de su presencia envió él la mano que […] esta escritura.», la expresión que ocupa […] es «trazó».",
-    "statement": "Según Daniel 5:24, en el fragmento «Por eso, de su presencia envió él la mano que […] esta escritura.», la expresión que ocupa […] es «trazó».",
-    "asserted_detail": "trazó",
+    "question": "Verdadero o falso: Según Daniel 5:24, Por eso, de su presencia envió él la mano que halló esta escritura.",
+    "statement": "Según Daniel 5:24, Por eso, de su presencia envió él la mano que halló esta escritura.",
+    "asserted_detail": "halló",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:24, Por eso, de su presencia envió él la mano que trazó esta escritura.",
+    "incorrect_detail": "halló",
+    "correction": "trazó",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:11",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:24.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «trazó», no «halló».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «halló»; la fuente contiene «trazó»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -13231,30 +13279,31 @@
       "Uparsin"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:25, en el fragmento «Y la escritura que trazó es: “Mene, Mene, Tekel, […].”», la expresión que ocupa […] es «Mesach».",
-    "statement": "Según Daniel 5:25, en el fragmento «Y la escritura que trazó es: “Mene, Mene, Tekel, […].”», la expresión que ocupa […] es «Mesach».",
-    "asserted_detail": "Mesach",
+    "question": "Verdadero o falso: Según Daniel 5:25, al evaluar específicamente «Uparsin», el pasaje afirma: Y la escritura que trazó es: “Mene, Mene, Tekel, Uparsin.”",
+    "statement": "Según Daniel 5:25, al evaluar específicamente «Uparsin», el pasaje afirma: Y la escritura que trazó es: “Mene, Mene, Tekel, Uparsin.”",
+    "asserted_detail": "Uparsin",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:25, en el fragmento «Y la escritura que trazó es: “Mene, Mene, Tekel, […].”», la expresión que ocupa […] es «Uparsin».",
-    "incorrect_detail": "Mesach",
-    "correction": "Uparsin",
-    "replacement_source_ref": "PR41, p. 41, párrafo 2",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:list_or_clause_item",
-    "replacement_slot_signature": "term:list_or_clause_item",
-    "explanation": "Es falsa: la fuente dice «Uparsin», no «Mesach».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:25.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Mesach»; la fuente contiene «Uparsin»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -13503,30 +13552,31 @@
       "Tekel"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:25, en el fragmento «Y la escritura que trazó es: “Mene, Mene, […], Uparsin.”», la expresión que ocupa […] es «Poner».",
-    "statement": "Según Daniel 5:25, en el fragmento «Y la escritura que trazó es: “Mene, Mene, […], Uparsin.”», la expresión que ocupa […] es «Poner».",
-    "asserted_detail": "Poner",
+    "question": "Verdadero o falso: Según Daniel 5:25, al evaluar específicamente «Tekel», el pasaje afirma: Y la escritura que trazó es: “Mene, Mene, Tekel, Uparsin.”",
+    "statement": "Según Daniel 5:25, al evaluar específicamente «Tekel», el pasaje afirma: Y la escritura que trazó es: “Mene, Mene, Tekel, Uparsin.”",
+    "asserted_detail": "Tekel",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:25, en el fragmento «Y la escritura que trazó es: “Mene, Mene, […], Uparsin.”», la expresión que ocupa […] es «Tekel».",
-    "incorrect_detail": "Poner",
-    "correction": "Tekel",
-    "replacement_source_ref": "Daniel 5:29",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:list_or_clause_item",
-    "replacement_slot_signature": "term:list_or_clause_item",
-    "explanation": "Es falsa: la fuente dice «Tekel», no «Poner».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:25.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Poner»; la fuente contiene «Tekel»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -13775,34 +13825,35 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:26, en el fragmento «Ésta es la interpretación del asunto: “Mene”: Contó […] tu reino y le ha puesto fin.», la expresión que ocupa […] es «Dios».",
-    "statement": "Según Daniel 5:26, en el fragmento «Ésta es la interpretación del asunto: “Mene”: Contó […] tu reino y le ha puesto fin.», la expresión que ocupa […] es «Dios».",
-    "asserted_detail": "Dios",
+    "question": "Verdadero o falso: Según Daniel 5:26, Ésta es la interpretación del asunto: “Mene”: Contó Juez tu reino y le ha puesto fin.",
+    "statement": "Según Daniel 5:26, Ésta es la interpretación del asunto: “Mene”: Contó Juez tu reino y le ha puesto fin.",
+    "asserted_detail": "Juez",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:26, Ésta es la interpretación del asunto: “Mene”: Contó Dios tu reino y le ha puesto fin.",
+    "incorrect_detail": "Juez",
+    "correction": "Dios",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 7:10",
     "correct_slot_signature": "person",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:26.",
+    "replacement_slot_signature": "person",
+    "explanation": "Es falsa: la fuente dice «Dios», no «Juez».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Juez»; la fuente contiene «Dios»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "medium"
+    "difficulty": "hard"
   },
   {
     "id": "DAN5-GOLD-0680-SINGLE_CHOICE_CONTEXTUAL",
@@ -14047,30 +14098,31 @@
       "Contó"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:26, en el fragmento «Ésta es la interpretación del asunto: “Mene”: […] Dios tu reino y le ha puesto fin.», la expresión que ocupa […] es «Contó».",
-    "statement": "Según Daniel 5:26, en el fragmento «Ésta es la interpretación del asunto: “Mene”: […] Dios tu reino y le ha puesto fin.», la expresión que ocupa […] es «Contó».",
-    "asserted_detail": "Contó",
+    "question": "Verdadero o falso: Según Daniel 5:26, Ésta es la interpretación del asunto: “Mene”: Envió Dios tu reino y le ha puesto fin.",
+    "statement": "Según Daniel 5:26, Ésta es la interpretación del asunto: “Mene”: Envió Dios tu reino y le ha puesto fin.",
+    "asserted_detail": "Envió",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:26, Ésta es la interpretación del asunto: “Mene”: Contó Dios tu reino y le ha puesto fin.",
+    "incorrect_detail": "Envió",
+    "correction": "Contó",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:24",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:26.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «Contó», no «Envió».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «Envió»; la fuente contiene «Contó»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -14319,30 +14371,31 @@
       "balanza"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:27, en el fragmento «“Tekel”: Pesado has sido en […] y hallado falto.», la expresión que ocupa […] es «piedra».",
-    "statement": "Según Daniel 5:27, en el fragmento «“Tekel”: Pesado has sido en […] y hallado falto.», la expresión que ocupa […] es «piedra».",
-    "asserted_detail": "piedra",
+    "question": "Verdadero o falso: Según Daniel 5:27, al evaluar específicamente «balanza», el pasaje afirma: “Tekel”: Pesado has sido en balanza y hallado falto.",
+    "statement": "Según Daniel 5:27, al evaluar específicamente «balanza», el pasaje afirma: “Tekel”: Pesado has sido en balanza y hallado falto.",
+    "asserted_detail": "balanza",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:27, en el fragmento «“Tekel”: Pesado has sido en […] y hallado falto.», la expresión que ocupa […] es «balanza».",
-    "incorrect_detail": "piedra",
-    "correction": "balanza",
-    "replacement_source_ref": "Daniel 5:23",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:prepositional",
-    "replacement_slot_signature": "term:prepositional",
-    "explanation": "Es falsa: la fuente dice «balanza», no «piedra».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:27.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «piedra»; la fuente contiene «balanza»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -14591,30 +14644,31 @@
       "hallado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:27, en el fragmento «“Tekel”: Pesado has sido en balanza y […] falto.», la expresión que ocupa […] es «muerto».",
-    "statement": "Según Daniel 5:27, en el fragmento «“Tekel”: Pesado has sido en balanza y […] falto.», la expresión que ocupa […] es «muerto».",
-    "asserted_detail": "muerto",
+    "question": "Verdadero o falso: Según Daniel 5:27, al evaluar específicamente «hallado», el pasaje afirma: “Tekel”: Pesado has sido en balanza y hallado falto.",
+    "statement": "Según Daniel 5:27, al evaluar específicamente «hallado», el pasaje afirma: “Tekel”: Pesado has sido en balanza y hallado falto.",
+    "asserted_detail": "hallado",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:27, en el fragmento «“Tekel”: Pesado has sido en balanza y […] falto.», la expresión que ocupa […] es «hallado».",
-    "incorrect_detail": "muerto",
-    "correction": "hallado",
-    "replacement_source_ref": "Daniel 5:30",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «hallado», no «muerto».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:27.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «muerto»; la fuente contiene «hallado»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -14863,30 +14917,31 @@
       "persas"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:28, en el fragmento «“Peres”: Tu reino ha sido roto y dado a los medos y a los […].», la expresión que ocupa […] es «caderas».",
-    "statement": "Según Daniel 5:28, en el fragmento «“Peres”: Tu reino ha sido roto y dado a los medos y a los […].», la expresión que ocupa […] es «caderas».",
-    "asserted_detail": "caderas",
+    "question": "Verdadero o falso: Según Daniel 5:28, al evaluar específicamente «persas», el pasaje afirma: “Peres”: Tu reino ha sido roto y dado a los medos y a los persas.",
+    "statement": "Según Daniel 5:28, al evaluar específicamente «persas», el pasaje afirma: “Peres”: Tu reino ha sido roto y dado a los medos y a los persas.",
+    "asserted_detail": "persas",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:28, en el fragmento «“Peres”: Tu reino ha sido roto y dado a los medos y a los […].», la expresión que ocupa […] es «persas».",
-    "incorrect_detail": "caderas",
-    "correction": "persas",
-    "replacement_source_ref": "Daniel 5:6",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:determined_nominal",
-    "replacement_slot_signature": "term:determined_nominal",
-    "explanation": "Es falsa: la fuente dice «persas», no «caderas».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:28.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «caderas»; la fuente contiene «persas»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -15135,30 +15190,31 @@
       "Peres"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:28, en el fragmento «“[…]”: Tu reino ha sido roto y dado a los medos y a los persas.», la expresión que ocupa […] es «Dones».",
-    "statement": "Según Daniel 5:28, en el fragmento «“[…]”: Tu reino ha sido roto y dado a los medos y a los persas.», la expresión que ocupa […] es «Dones».",
-    "asserted_detail": "Dones",
+    "question": "Verdadero o falso: Según Daniel 5:28, al evaluar específicamente «Peres», el pasaje afirma: “Peres”: Tu reino ha sido roto y dado a los medos y a los persas.",
+    "statement": "Según Daniel 5:28, al evaluar específicamente «Peres», el pasaje afirma: “Peres”: Tu reino ha sido roto y dado a los medos y a los persas.",
+    "asserted_detail": "Peres",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:28, en el fragmento «“[…]”: Tu reino ha sido roto y dado a los medos y a los persas.», la expresión que ocupa […] es «Peres».",
-    "incorrect_detail": "Dones",
-    "correction": "Peres",
-    "replacement_source_ref": "Daniel 5:17",
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "focused_true_statement": true,
+    "replacement_source_ref": null,
     "correct_slot_signature": "term:generic",
-    "replacement_slot_signature": "term:generic",
-    "explanation": "Es falsa: la fuente dice «Peres», no «Dones».",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:28.",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Dones»; la fuente contiene «Peres»."
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": null,
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 1,
+      "selected_option": 0,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -15407,8 +15463,8 @@
       "Daniel"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:29, en el fragmento «Entonces Belsasar mandó vestir a […] de púrpura, poner en su cuello un collar de oro y proclamar que él era el tercer señor del reino.», la expresión que ocupa […] es «Asuero».",
-    "statement": "Según Daniel 5:29, en el fragmento «Entonces Belsasar mandó vestir a […] de púrpura, poner en su cuello un collar de oro y proclamar que él era el tercer señor del reino.», la expresión que ocupa […] es «Asuero».",
+    "question": "Verdadero o falso: Según Daniel 5:29, Entonces Belsasar mandó vestir a Asuero de púrpura, poner en su cuello un collar de oro y proclamar que él era el tercer señor del reino.",
+    "statement": "Según Daniel 5:29, Entonces Belsasar mandó vestir a Asuero de púrpura, poner en su cuello un collar de oro y proclamar que él era el tercer señor del reino.",
     "asserted_detail": "Asuero",
     "options": [
       "Verdadero",
@@ -15416,9 +15472,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:29, en el fragmento «Entonces Belsasar mandó vestir a […] de púrpura, poner en su cuello un collar de oro y proclamar que él era el tercer señor del reino.», la expresión que ocupa […] es «Daniel».",
+    "corrected_statement": "Según Daniel 5:29, Entonces Belsasar mandó vestir a Daniel de púrpura, poner en su cuello un collar de oro y proclamar que él era el tercer señor del reino.",
     "incorrect_detail": "Asuero",
     "correction": "Daniel",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 9:1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
@@ -15679,30 +15736,31 @@
       "mandó"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:29, en el fragmento «Entonces Belsasar […] vestir a Daniel de púrpura, poner en su cuello un collar de oro y proclamar que él era el tercer señor del reino.», la expresión que ocupa […] es «mandó».",
-    "statement": "Según Daniel 5:29, en el fragmento «Entonces Belsasar […] vestir a Daniel de púrpura, poner en su cuello un collar de oro y proclamar que él era el tercer señor del reino.», la expresión que ocupa […] es «mandó».",
-    "asserted_detail": "mandó",
+    "question": "Verdadero o falso: Según Daniel 5:29, Entonces Belsasar contó vestir a Daniel de púrpura, poner en su cuello un collar de oro y proclamar que él era el tercer señor del reino.",
+    "statement": "Según Daniel 5:29, Entonces Belsasar contó vestir a Daniel de púrpura, poner en su cuello un collar de oro y proclamar que él era el tercer señor del reino.",
+    "asserted_detail": "contó",
     "options": [
       "Verdadero",
       "Falso"
     ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "replacement_source_ref": null,
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 5:29, Entonces Belsasar mandó vestir a Daniel de púrpura, poner en su cuello un collar de oro y proclamar que él era el tercer señor del reino.",
+    "incorrect_detail": "contó",
+    "correction": "mandó",
+    "focused_true_statement": false,
+    "replacement_source_ref": "Daniel 5:26",
     "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce el detalle de Daniel 5:29.",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «mandó», no «contó».",
     "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+      "Verdadero": "La única alteración es «contó»; la fuente contiene «mandó»."
     },
-    "trap_type": null,
+    "trap_type": "single_plausible_detail",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
-      "selected_option": 0,
+      "selected_option": 1,
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
@@ -15951,8 +16009,8 @@
       "Belsasar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:30, en el fragmento «La misma noche fue muerto […], rey de los caldeos.», la expresión que ocupa […] es «Jeremías».",
-    "statement": "Según Daniel 5:30, en el fragmento «La misma noche fue muerto […], rey de los caldeos.», la expresión que ocupa […] es «Jeremías».",
+    "question": "Verdadero o falso: Según Daniel 5:30, La misma noche fue muerto Jeremías, rey de los caldeos.",
+    "statement": "Según Daniel 5:30, La misma noche fue muerto Jeremías, rey de los caldeos.",
     "asserted_detail": "Jeremías",
     "options": [
       "Verdadero",
@@ -15960,9 +16018,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:30, en el fragmento «La misma noche fue muerto […], rey de los caldeos.», la expresión que ocupa […] es «Belsasar».",
+    "corrected_statement": "Según Daniel 5:30, La misma noche fue muerto Belsasar, rey de los caldeos.",
     "incorrect_detail": "Jeremías",
     "correction": "Belsasar",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 9:2",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
@@ -16223,8 +16282,8 @@
       "dos"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 5:31, en el fragmento «Y Darío, de Media, cuando tenía sesenta y […] años, tomó el reino.», la expresión que ocupa […] es «mil».",
-    "statement": "Según Daniel 5:31, en el fragmento «Y Darío, de Media, cuando tenía sesenta y […] años, tomó el reino.», la expresión que ocupa […] es «mil».",
+    "question": "Verdadero o falso: Según Daniel 5:31, Y Darío, de Media, cuando tenía sesenta y mil años, tomó el reino.",
+    "statement": "Según Daniel 5:31, Y Darío, de Media, cuando tenía sesenta y mil años, tomó el reino.",
     "asserted_detail": "mil",
     "options": [
       "Verdadero",
@@ -16232,9 +16291,10 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 5:31, en el fragmento «Y Darío, de Media, cuando tenía sesenta y […] años, tomó el reino.», la expresión que ocupa […] es «dos».",
+    "corrected_statement": "Según Daniel 5:31, Y Darío, de Media, cuando tenía sesenta y dos años, tomó el reino.",
     "incorrect_detail": "mil",
     "correction": "dos",
+    "focused_true_statement": false,
     "replacement_source_ref": "Daniel 12:11",
     "correct_slot_signature": "number",
     "replacement_slot_signature": "number",

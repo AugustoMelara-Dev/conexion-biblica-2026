@@ -86,6 +86,7 @@ function loadServiceWorker(options: {
 describe("actualización del contenido offline", () => {
   it("precachea solo el manifiesto canónico sin descargar las preguntas de golpe", () => {
     const source = readFileSync(join(process.cwd(), "public", "sw.js"), "utf8")
+    expect(source).toContain('conexion-biblica-shell-v10')
     expect(source).toContain('"/banks/final-2026/manifest.json"')
     expect(source).not.toContain('"/banks/massive-v5/manifest.json"')
     expect(source).not.toContain('"/banks/consolidation-v5/manifest.json"')

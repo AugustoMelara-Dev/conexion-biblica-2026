@@ -264,6 +264,19 @@ class FinalEditorialTests(unittest.TestCase):
                 self.assertEqual(blank_count, 0, question["id"])
                 self.assertIn(question["statement"], question["question"], question["id"])
                 self.assertNotIn("completa la frase", question["question"], question["id"])
+                self.assertNotIn("[…]", question["question"], question["id"])
+                self.assertNotIn("expresión que ocupa", question["question"], question["id"])
+                if question["option_category"] in {"phrase", "term"}:
+                    self.assertEqual(question["correct_answer"], "Verdadero", question["id"])
+                if (
+                    question["correct_answer"] == "Falso"
+                    and question["option_category"] == "action"
+                ):
+                    self.assertIn(
+                        self.editorial._action_form(question["correction"]),
+                        self.editorial.SAFE_FALSE_ACTION_FORMS,
+                        question["id"],
+                    )
             else:
                 expected_blanks = 0 if question["family"] == "single_choice_contextual" else 1
                 self.assertEqual(blank_count, expected_blanks, question["id"])
@@ -314,12 +327,13 @@ class FinalEditorialTests(unittest.TestCase):
                     f"Verdadero o falso: {question['statement']}",
                     question["id"],
                 )
-                self.assertRegex(
-                    question["statement"],
-                    rf"^Según {re.escape(question['reference'])}, en el fragmento «.+», "
-                    r"la expresión que ocupa \[…] es «.+»\.$",
+                self.assertTrue(
+                    question["statement"].startswith(
+                        f"Según {question['reference']}, "
+                    ),
                     question["id"],
                 )
+                self.assertNotIn("[…]", question["statement"], question["id"])
                 self.assertNotRegex(
                     question["statement"],
                     r"[,;:]\s*$",
@@ -506,14 +520,18 @@ class FinalEditorialTests(unittest.TestCase):
                 for question in false_phrase_questions
             )
         )
-        self.assertFalse(
-            any(
-                question["option_category"] in {"action", "phrase"}
+        self.assertTrue(
+            all(
+                editorial.option_signature(
+                    question["incorrect_detail"], question["option_category"]
+                )
+                == editorial.option_signature(
+                    question["correction"], question["option_category"]
+                )
                 for question in self.questions
                 if question["family"] == "true_false"
                 and question["correct_answer"] == "Falso"
-            ),
-            "las alteraciones de verbos o frases completas no son seguras sin revisión manual",
+            )
         )
 
     def test_audit_and_coverage_gates_finish_at_zero(self) -> None:
