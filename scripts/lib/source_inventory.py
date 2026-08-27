@@ -225,6 +225,16 @@ def _pr_chapter(page: int) -> int:
     return 44
 
 
+def _strip_pr_running_page_number(text: str, pdf_page: int) -> str:
+    """Remove the printed book page number accidentally joined to body text."""
+    printed_page = pdf_page + 76
+    return re.sub(
+        rf"(?<![:\d])\s+{printed_page}\s*$",
+        "",
+        text,
+    ).rstrip()
+
+
 def extract_pr_inventory(
     document: fitz.Document, ocr_pages: dict[str, str]
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
@@ -237,7 +247,8 @@ def extract_pr_inventory(
         for block in document[page - 1].get_text("blocks"):
             if re.fullmatch(r"\s*\d{2,3}\s*", block[4]):
                 continue
-            block_text = re.sub(r"\n\s*\d{2,3}\s*$", "", block[4])
+            block_text = _strip_pr_running_page_number(block[4], page)
+            block_text = re.sub(r"\n\s*\d{2,3}\s*$", "", block_text)
             for raw_paragraph in re.split(r"\n\s*\n", block_text):
                 embedded = normalize_space(raw_paragraph)
                 if len(embedded.split()) < 7:

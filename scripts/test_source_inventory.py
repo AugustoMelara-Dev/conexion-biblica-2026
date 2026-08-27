@@ -64,7 +64,30 @@ class SourceInventoryTests(unittest.TestCase):
         self.assertTrue(all(unit["proposition"] >= 1 for unit in units))
         self.assertTrue(all(unit["exact_text"].strip() for unit in units))
         self.assertTrue(all("�" not in unit["exact_text"] for unit in units))
+        self.assertFalse(
+            any(
+                re.search(rf"(?:^|\s){unit['page'] + 76}(?:\s|$)", unit["exact_text"])
+                for unit in units
+            ),
+            "un número de página impreso entró al contenido de PR",
+        )
         self.assertEqual([issue for issue in issues if issue["status"] == "unresolved"], [])
+
+    def test_strips_the_printed_page_number_without_touching_bible_references(self) -> None:
+        self.assertIsNotNone(self.inventory, "falta scripts.lib.source_inventory")
+        assert self.inventory is not None
+        self.assertEqual(
+            self.inventory._strip_pr_running_page_number(
+                "pues pudiste revelar este arcano. 111", 35
+            ),
+            "pues pudiste revelar este arcano.",
+        )
+        self.assertEqual(
+            self.inventory._strip_pr_running_page_number(
+                "Se cumplió la promesa de 1 Samuel 2:30.", 29
+            ),
+            "Se cumplió la promesa de 1 Samuel 2:30.",
+        )
 
     def test_keeps_top_of_page_content_and_joins_cross_page_paragraphs(self) -> None:
         self.assertIsNotNone(self.inventory, "falta scripts.lib.source_inventory")

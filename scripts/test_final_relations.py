@@ -94,7 +94,7 @@ class FinalRelationTests(unittest.TestCase):
                 self.assertIn(str(unit["reference"]), str(candidate["question"]))
 
     def test_repeated_connectors_receive_distinct_context_anchors(self) -> None:
-        candidates = self.extract("PR40-P036-P002-S002")
+        candidates = self.extract("PR40-P036-P003-S002")
         purposes = [row for row in candidates if row["relation_type"] == "purpose"]
         self.assertEqual(len(purposes), 2)
         self.assertEqual(len({row["question"] for row in purposes}), 2)

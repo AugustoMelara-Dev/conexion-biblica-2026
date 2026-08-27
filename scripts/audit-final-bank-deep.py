@@ -20,7 +20,10 @@ from scripts.lib.final_editorial import (
     _norm,
     _atomic_true_false_statement,
     _complete_statement_text,
+    _contextual_word_role,
+    _is_bible_reference_number,
     _negate_exact_action_statement,
+    _word_role,
     option_signature,
 )
 
@@ -95,6 +98,10 @@ def main() -> int:
         source_text = (unit.get("full_text") or unit.get("exact_text", "")).strip()
         if DANGLING_CONNECTOR.search(source_text.strip(" ”’\"»")):
             errors.append(f"{unit['source_unit_id']}:dangling_source_fragment")
+        if unit["work"] == "Profetas y Reyes" and re.search(
+            rf"(?:^|\s){unit['page'] + 76}(?:\s|$)", source_text
+        ):
+            errors.append(f"{unit['source_unit_id']}:printed_page_number_in_source")
 
     for question in questions:
         qid = question.get("id", "<missing-id>")
@@ -138,6 +145,22 @@ def main() -> int:
             fail(errors, qid, "answer_not_unique_in_source_quote")
         if question["reference"] != fact["reference"]:
             fail(errors, qid, "reference_mismatch")
+        if len(fact["context"]) > 420:
+            fail(errors, qid, "context_text_wall")
+        if len(question["question"]) > 580:
+            fail(errors, qid, "question_text_wall")
+        if any(
+            weak in question["question"]
+            for weak in (
+                "el texto emplea la forma verbal",
+                "entre los números o períodos expresados",
+                "entre los lugares o direcciones mencionados",
+                "entre los personajes o seres nombrados",
+            )
+        ):
+            fail(errors, qid, "weak_metalinguistic_prompt")
+        if "««" in question["question"] or "«»" in question["question"]:
+            fail(errors, qid, "duplicated_or_empty_quote")
 
         options = question["options"]
         expected_options = 2 if family == "true_false" else 4
@@ -165,6 +188,11 @@ def main() -> int:
                 fail(errors, qid, "statement_not_visible")
             if question["question"] != f"Verdadero o falso: {question.get('statement', '')}":
                 fail(errors, qid, "true_false_added_template_text")
+            if (
+                question["statement"].count("«") != question["statement"].count("»")
+                or question["statement"].count("“") != question["statement"].count("”")
+            ):
+                fail(errors, qid, "unbalanced_true_false_quotes")
             exact_source_texts = {
                 _complete_statement_text(fact["context"]),
                 _complete_statement_text(fact["source_quote"]),
@@ -253,13 +281,21 @@ def main() -> int:
                 fail(errors, qid, "answer_fact_mismatch")
             if question["correct_answer"] not in question["source_quote"]:
                 fail(errors, qid, "answer_not_in_source")
-            signatures = [
-                option_signature(option, question["option_category"])
-                for option in options
-            ]
-            if len(set(signatures)) != 1:
-                fail(errors, qid, "distractor_grammatical_signature_mismatch")
-            if any(
+            if question["option_category"] == "term":
+                slot_signatures = question.get("option_slot_signatures", [])
+                if len(slot_signatures) != 4 or len(set(slot_signatures)) != 1:
+                    fail(errors, qid, "distractor_slot_signature_mismatch")
+                signatures = [option_signature(option, "term") for option in options]
+                if len(set(signatures)) != 1:
+                    fail(errors, qid, "distractor_term_morphology_mismatch")
+            else:
+                signatures = [
+                    option_signature(option, question["option_category"])
+                    for option in options
+                ]
+                if len(set(signatures)) != 1:
+                    fail(errors, qid, "distractor_grammatical_signature_mismatch")
+            if question["option_category"] != "place" and any(
                 option[:1].isupper() != question["correct_answer"][:1].isupper()
                 for option in options
                 if option and question["correct_answer"]
@@ -337,6 +373,21 @@ def main() -> int:
     for fact in facts:
         if fact["answer"].casefold().split()[-1] in dangling_answer_words:
             errors.append(f"{fact['fact_id']}:dangling_answer_connector")
+        if (
+            fact["category"] == "action"
+            and _contextual_word_role(
+                fact["source_quote"],
+                fact["source_quote"].index(fact["answer"]),
+                fact["source_quote"].index(fact["answer"]) + len(fact["answer"]),
+            ) != "verb"
+        ):
+            errors.append(f"{fact['fact_id']}:nonverb_labeled_as_action")
+        if fact["answer"].isdigit():
+            start = fact["source_quote"].index(fact["answer"])
+            if _is_bible_reference_number(
+                fact["source_quote"], start, start + len(fact["answer"])
+            ):
+                errors.append(f"{fact['fact_id']}:isolated_bible_reference_number")
     for category, minimum in {
         "person": 150,
         "place": 60,

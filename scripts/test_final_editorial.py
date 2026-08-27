@@ -110,6 +110,22 @@ class FinalEditorialTests(unittest.TestCase):
         self.assertFalse(
             any(fact["answer"] == "A los israelitas Moisés" for fact in facts)
         )
+        self.assertFalse(
+            any(fact["source_unit_id"] == "PR40-P036-P001-S004" for fact in facts),
+            "una errata visible de la fuente no debe convertirse en conocimiento evaluable",
+        )
+        self.assertFalse(
+            any(
+                fact["answer"].isdigit()
+                and editorial._is_bible_reference_number(
+                    fact["source_quote"],
+                    fact["source_quote"].index(fact["answer"]),
+                    fact["source_quote"].index(fact["answer"]) + len(fact["answer"]),
+                )
+                for fact in facts
+            ),
+            "los componentes aislados de una cita bíblica no son hechos competitivos",
+        )
         dangling = {
             "a", "al", "con", "contra", "de", "del", "en", "entre",
             "hacia", "hasta", "para", "por", "que", "sin", "sobre", "y", "o",
@@ -206,6 +222,36 @@ class FinalEditorialTests(unittest.TestCase):
         facts = self.facts
         questions, rejected = self.questions, self.question_rejected
         self.assertEqual(len(questions), 12000)
+        self.assertFalse(
+            any("el texto emplea la forma verbal" in q["question"] for q in questions)
+        )
+        self.assertFalse(
+            any("entre los números o períodos" in q["question"] for q in questions)
+        )
+        self.assertFalse(
+            any("««" in q["question"] or "«»" in q["question"] for q in questions)
+        )
+        self.assertFalse(
+            any(
+                q["truth_source_statement"].lstrip().startswith("¿")
+                for q in questions
+                if q["family"] == "true_false"
+            )
+        )
+        for question in questions:
+            if question.get("false_mutation_kind") != "negation":
+                continue
+            statement = question["statement"]
+            answer_start = statement.lower().index(question["correction"].lower())
+            clause_prefix = re.split(r"[.;:!?]", statement[:answer_start])[-1]
+            inserted_negations = list(re.finditer(r"(?i)\bno\b", clause_prefix))
+            self.assertTrue(inserted_negations, question["id"])
+            prior_prefix = clause_prefix[:inserted_negations[-1].start()]
+            self.assertNotRegex(
+                prior_prefix,
+                r"(?i)\b(?:no|ni|ningún|ninguna|ninguno|nadie|nunca|jamás|sin|tampoco)\b",
+                "una falsedad no debe crear dobles negaciones dentro de la misma cláusula",
+            )
         self.assertGreater(rejected, 0)
         self.assertEqual(
             Counter(question["family"] for question in questions),
@@ -315,6 +361,7 @@ class FinalEditorialTests(unittest.TestCase):
                 if (
                     question["correct_answer"] == "Falso"
                     and question["option_category"] == "action"
+                    and question["statement_mode"] == "exact_source"
                 ):
                     self.assertIn(
                         self.editorial._action_form(question["correction"]),
@@ -361,6 +408,16 @@ class FinalEditorialTests(unittest.TestCase):
             self.assertNotIn(
                 "al evaluar específicamente",
                 question["statement"].casefold(),
+                question["id"],
+            )
+            self.assertEqual(
+                question["statement"].count("«"),
+                question["statement"].count("»"),
+                question["id"],
+            )
+            self.assertEqual(
+                question["statement"].count("“"),
+                question["statement"].count("”"),
                 question["id"],
             )
 
@@ -421,6 +478,15 @@ class FinalEditorialTests(unittest.TestCase):
                     "atomic_presence",
                     false_row["id"],
                 )
+            if (
+                false_row["option_category"] == "number"
+                and len(false_row["correction"].split()) > 1
+            ):
+                self.assertEqual(
+                    false_row["statement_mode"],
+                    "atomic_presence",
+                    false_row["id"],
+                )
 
         self.assertFalse(
             any(
@@ -449,6 +515,148 @@ class FinalEditorialTests(unittest.TestCase):
         for fragment in broken_fragments:
             self.assertNotIn(fragment, visible_text)
 
+    def test_question_contexts_do_not_become_unreadable_text_walls(self) -> None:
+        self.assertLessEqual(
+            max(len(fact["context"]) for fact in self.facts),
+            420,
+        )
+        self.assertLessEqual(
+            max(len(question["question"]) for question in self.questions),
+            580,
+        )
+
+    def test_compound_numbers_are_never_split_into_nonsense_components(self) -> None:
+        facts_by_unit = {}
+        for fact in self.facts:
+            facts_by_unit.setdefault(fact["source_unit_id"], set()).add(fact["answer"])
+        self.assertIn("ciento veinte", facts_by_unit["DAN6-V001"])
+        self.assertIn(
+            "dos mil trescientas tardes y mañanas",
+            facts_by_unit["DAN8-V014"],
+        )
+        self.assertIn(
+            "ciento veinte",
+            facts_by_unit["PR44-P055-P001-S002"],
+        )
+        for source_unit_id, forbidden in {
+            "DAN6-V001": {"ciento", "veinte"},
+            "DAN8-V014": {"dos", "mil"},
+            "PR44-P055-P001-S002": {"ciento", "veinte"},
+        }.items():
+            self.assertTrue(
+                facts_by_unit[source_unit_id].isdisjoint(forbidden),
+                source_unit_id,
+            )
+
+    def test_nouns_and_adjectives_are_not_mislabeled_as_actions(self) -> None:
+        forbidden_actions = {
+            "alegría",
+            "aparte",
+            "cuernos",
+            "firme",
+            "fuerte",
+            "mayordomía",
+            "muerte",
+            "parte",
+            "suerte",
+            "supremacía",
+        }
+        self.assertFalse(
+            any(
+                fact["category"] == "action"
+                and fact["answer"].casefold() in forbidden_actions
+                for fact in self.facts
+            )
+        )
+        cuenta_facts = [
+            fact
+            for fact in self.facts
+            if fact["answer"].casefold() == "cuenta"
+        ]
+        self.assertTrue(
+            all(
+                fact["category"] == "action"
+                if fact["source_unit_id"] == "DAN2-V004"
+                else fact["category"] == "term"
+                for fact in cuenta_facts
+            )
+        )
+
+    def test_single_word_distractors_preserve_competitive_morphology(self) -> None:
+        editorial = self.require_editorial()
+        assert editorial is not None
+        self.assertEqual(
+            editorial.option_signature("ordenamiento", "term"),
+            editorial.option_signature("ofrecimiento", "term"),
+        )
+        self.assertNotEqual(
+            editorial.option_signature("ordenamiento", "term"),
+            editorial.option_signature("aterrorizado", "term"),
+        )
+        self.assertEqual(editorial._word_role("propuso"), "verb")
+        self.assertEqual(editorial._action_form("oré"), "preterite_singular")
+        self.assertNotEqual(
+            editorial._action_form("oré"), editorial._action_form("confirmará")
+        )
+        for question in self.questions:
+            if question.get("option_category") != "term":
+                continue
+            self.assertEqual(
+                len(set(question["option_slot_signatures"])), 1, question["id"]
+            )
+            self.assertEqual(
+                len(
+                    {
+                        editorial.option_signature(option, "term")
+                        for option in question["options"]
+                    }
+                ),
+                1,
+                question["id"],
+            )
+
+    def test_context_disambiguates_present_verbs_from_nouns(self) -> None:
+        editorial = self.require_editorial()
+        assert editorial is not None
+        by_source_answer = {
+            (fact["source_unit_id"], fact["answer"].casefold()): fact
+            for fact in self.facts
+        }
+        for key in {
+            ("DAN2-V011", "demanda"),
+            ("DAN2-V038", "habitan"),
+            ("DAN12-V004", "sella"),
+        }:
+            unit = next(
+                unit
+                for unit in self.inventory["units"]
+                if unit["source_unit_id"] == key[0]
+            )
+            source_text = unit["full_text"]
+            start = source_text.casefold().index(key[1])
+            self.assertEqual(
+                editorial._contextual_word_role(
+                    source_text, start, start + len(key[1])
+                ),
+                "verb",
+                key,
+            )
+        salva_unit = next(
+            unit
+            for unit in self.inventory["units"]
+            if unit["source_unit_id"] == "PR44-P057-P005-S003"
+        )
+        salva_start = salva_unit["exact_text"].index("salva")
+        self.assertEqual(
+            editorial._contextual_word_role(
+                salva_unit["exact_text"], salva_start, salva_start + len("salva")
+            ),
+            "verb",
+        )
+        self.assertEqual(
+            by_source_answer[("PR43-P048-P004-S003", "busca")]["category"],
+            "term",
+        )
     def test_curated_pr_phrases_are_complete_meaningful_units(self) -> None:
         answers = {fact["answer"] for fact in self.facts}
         self.assertTrue(
@@ -539,11 +747,18 @@ class FinalEditorialTests(unittest.TestCase):
             if question["family"] == "true_false":
                 self.assertTrue(question["question"].startswith("Verdadero o falso: Según "), question["id"])
                 continue
-            signatures = [
-                editorial.option_signature(option, question["option_category"])
-                for option in question["options"]
-            ]
-            self.assertEqual(len(set(signatures)), 1, (question["id"], signatures, question["options"]))
+            if question["option_category"] == "term":
+                self.assertEqual(
+                    len(set(question["option_slot_signatures"])),
+                    1,
+                    (question["id"], question["option_slot_signatures"], question["options"]),
+                )
+            else:
+                signatures = [
+                    editorial.option_signature(option, question["option_category"])
+                    for option in question["options"]
+                ]
+                self.assertEqual(len(set(signatures)), 1, (question["id"], signatures, question["options"]))
 
         forbidden_fragments = {
             "poder se",
