@@ -114,8 +114,27 @@ def restore_corrupted_glyphs(embedded_text: str, ocr_text: str) -> tuple[str, li
 
 def _split_propositions(text: str) -> list[str]:
     normalized = normalize_space(text)
-    raw = re.split(r"(?<=[.!?])(?:[”’\"»])?\s+|\s*;\s+(?=[A-ZÁÉÍÓÚÜÑ])", normalized)
-    propositions = [item.strip() for item in raw if len(item.strip().split()) >= 4]
+    # Las referencias abreviadas de PR (por ejemplo, «Vers. 38») no cierran
+    # una oración. Proteger el punto evita crear unidades artificiales cuyo
+    # texto comienza en el número de versículo.
+    protected = re.sub(
+        r"\b(Vers?|Caps?|Págs?|Núm)\.",
+        lambda match: f"{match.group(1)}∯",
+        normalized,
+        flags=re.IGNORECASE,
+    )
+    raw = re.split(r"(?<=[.!?])(?:[”’\"»])?\s+|\s*;\s+(?=[A-ZÁÉÍÓÚÜÑ])", protected)
+    restored = [item.replace("∯", ".").strip() for item in raw if item.strip()]
+    merged: list[str] = []
+    for item in restored:
+        # Un fragmento que empieza con minúscula, número o puntuación de cierre
+        # continúa la proposición anterior; aislado produciría preguntas sin
+        # antecedente como «38), habían hecho…».
+        if merged and re.match(r"^[a-záéíóúüñ\d),;:]", item):
+            merged[-1] = f"{merged[-1]} {item}"
+        else:
+            merged.append(item)
+    propositions = [item for item in merged if len(item.split()) >= 4]
     return propositions or [normalized]
 
 

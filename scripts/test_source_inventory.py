@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib
 import json
+import re
 import subprocess
 import sys
 import unittest
@@ -65,6 +66,15 @@ class SourceInventoryTests(unittest.TestCase):
         self.assertTrue(all("�" not in unit["exact_text"] for unit in units))
         self.assertEqual([issue for issue in issues if issue["status"] == "unresolved"], [])
 
+    def test_keeps_abbreviated_verse_reference_with_its_sentence(self) -> None:
+        self.assertIsNotNone(self.inventory, "falta scripts.lib.source_inventory")
+        assert self.inventory is not None
+        text = (
+            "Las palabras: “Tú eres aquella cabeza de oro” (Vers. 38), "
+            "habían hecho una profunda impresión en la mente del gobernante."
+        )
+        self.assertEqual(self.inventory._split_propositions(text), [text])
+
     def test_builds_combined_inventory_with_no_unresolved_source_units(self) -> None:
         self.assertIsNotNone(self.inventory, "falta scripts.lib.source_inventory")
         self.assertTrue(OCR_CACHE.exists(), "falta caché OCR generado desde el PDF")
@@ -79,7 +89,14 @@ class SourceInventoryTests(unittest.TestCase):
         inventory, issue_report = self.inventory.build_source_inventory(PDF, pages)
         self.assertEqual(inventory["schema_version"], "7.0")
         self.assertEqual(inventory["daniel_verses"], 357)
-        self.assertGreater(inventory["pr_propositions"], 600)
+        self.assertGreaterEqual(inventory["pr_propositions"], 580)
+        self.assertFalse(
+            any(
+                unit["work"] == "Profetas y Reyes"
+                and re.match(r"^\d+\)?,", unit["exact_text"])
+                for unit in inventory["units"]
+            )
+        )
         self.assertEqual(inventory["source_units"], len(inventory["units"]))
         self.assertEqual(issue_report["unresolved_count"], 0)
 

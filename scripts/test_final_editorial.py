@@ -62,6 +62,16 @@ class FinalEditorialTests(unittest.TestCase):
             )
         )
 
+    def test_context_does_not_split_an_abbreviated_verse_reference(self) -> None:
+        editorial = self.require_editorial()
+        if editorial is None:
+            return
+        text = (
+            "Las palabras: “Tú eres aquella cabeza de oro” (Vers. 38), "
+            "habían hecho una profunda impresión en la mente del gobernante."
+        )
+        self.assertEqual(editorial._context_for(text, "38"), text)
+
     def test_generates_7800_gold_questions_balanced_across_four_families(self) -> None:
         editorial = self.require_editorial()
         if editorial is None:
@@ -208,6 +218,7 @@ class FinalEditorialTests(unittest.TestCase):
             "invalid_references",
             "external_knowledge_questions",
             "answer_length_leaks",
+            "orphan_numeric_source_fragments",
         ):
             self.assertEqual(audit[key], 0, key)
 
