@@ -20,6 +20,8 @@
     "test:gold": "python -m unittest scripts/test_gold_quality.py",
     "build:final-bank": "python scripts/build-final-bank.py",
     "test:final-bank": "python -m unittest scripts.test_final_editorial",
+    "audit:final:deep": "python scripts/audit-final-bank-deep.py",
+    "audit:production": "node scripts/audit-live-final-bank.mjs",
     "preview": "vite preview",
     "deploy": "vercel --prod --yes"
   },

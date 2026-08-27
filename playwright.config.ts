@@ -3,6 +3,7 @@ import { tmpdir } from "node:os"
 import { join } from "node:path"
 
 const artifactRoot = join(tmpdir(), "conexion-biblica-playwright")
+const externalBaseURL = process.env.PLAYWRIGHT_BASE_URL
 
 export default defineConfig({
   testDir: "./e2e",
@@ -16,7 +17,7 @@ export default defineConfig({
     ["html", { open: "never", outputFolder: join(artifactRoot, "report") }],
   ],
   use: {
-    baseURL: "http://127.0.0.1:4173",
+    baseURL: externalBaseURL ?? "http://127.0.0.1:4173",
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
   },
@@ -37,10 +38,12 @@ export default defineConfig({
       },
     },
   ],
-  webServer: {
-    command: "npm run build && npm run preview -- --host 127.0.0.1 --port 4173 --strictPort",
-    url: "http://127.0.0.1:4173",
-    reuseExistingServer: true,
-    timeout: 120_000,
-  },
+  webServer: externalBaseURL
+    ? undefined
+    : {
+        command: "npm run build && npm run preview -- --host 127.0.0.1 --port 4173 --strictPort",
+        url: "http://127.0.0.1:4173",
+        reuseExistingServer: true,
+        timeout: 120_000,
+      },
 })
