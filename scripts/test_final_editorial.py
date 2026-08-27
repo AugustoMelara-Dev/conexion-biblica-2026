@@ -61,6 +61,9 @@ class FinalEditorialTests(unittest.TestCase):
                 for unit in self.inventory["units"]
             )
         )
+        self.assertFalse(
+            any(fact["answer"] == "A los israelitas Moisés" for fact in facts)
+        )
 
     def test_context_does_not_split_an_abbreviated_verse_reference(self) -> None:
         editorial = self.require_editorial()
@@ -137,6 +140,7 @@ class FinalEditorialTests(unittest.TestCase):
             self.assertTrue(required.issubset(question), question["id"])
             self.assertNotIn("[DETALLE]", question["question"], question["id"])
             self.assertNotIn("identifica correctamente el detalle descrito", question["question"], question["id"])
+            self.assertNotIn("qué número o período", question["question"], question["id"])
             if question["family"] == "true_false":
                 self.assertTrue(question["question"].endswith("¿Verdadero o falso?"), question["id"])
                 continue
