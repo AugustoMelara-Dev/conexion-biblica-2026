@@ -312,6 +312,7 @@ export function QuizPage({
     isReportingRef.current = false
     setReportReason("")
     setReportOpen(false)
+    setReferenceOpen(false)
     setReportPending(false)
     setReportError(null)
     isSubmittingRef.current = false
@@ -776,7 +777,7 @@ export function QuizPage({
           >
             Banco Maestro Único
           </Badge>
-          <span>{question.source.reference}</span>
+          {showFeedback ? <span>{question.source.reference}</span> : null}
           <span>· {familyLabel(question)}</span>
           {config.perQuestionSeconds !== null ? (
             <span
@@ -965,25 +966,27 @@ export function QuizPage({
             <Flag data-icon="inline-start" />
             Reportar
           </Button>
-          <Dialog open={referenceOpen} onOpenChange={setReferenceOpen}>
-            <DialogTrigger asChild>
-              <Button size="sm" variant="ghost" className="min-h-11">
-                <Info data-icon="inline-start" />
-                Referencia
-              </Button>
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>Volver al texto / referencia</DialogTitle>
-                <DialogDescription>
-                  Busca manualmente esta cita en tu Biblia RVR95.
-                </DialogDescription>
-              </DialogHeader>
-              <div className="rounded-xl bg-muted/40 p-4 text-sm font-medium">
-                {question.source.reference}
-              </div>
-            </DialogContent>
-          </Dialog>
+          {showFeedback ? (
+            <Dialog open={referenceOpen} onOpenChange={setReferenceOpen}>
+              <DialogTrigger asChild>
+                <Button size="sm" variant="ghost" className="min-h-11">
+                  <Info data-icon="inline-start" />
+                  Referencia
+                </Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Volver al texto / referencia</DialogTitle>
+                  <DialogDescription>
+                    Busca manualmente esta cita en tu Biblia RVR95.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="rounded-xl bg-muted/40 p-4 text-sm font-medium">
+                  {question.source.reference}
+                </div>
+              </DialogContent>
+            </Dialog>
+          ) : null}
         </div>
       </section>
 

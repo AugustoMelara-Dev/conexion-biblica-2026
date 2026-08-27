@@ -457,7 +457,7 @@ describe("interacciones de QuestionRenderer", () => {
 })
 
 describe("atajos de la ronda", () => {
-  it("cierra Referencia con Escape antes de salir de la ronda", async () => {
+  it("oculta la referencia hasta responder y luego cierra su diálogo con Escape", async () => {
     const user = userEvent.setup()
     const onExit = vi.fn().mockResolvedValue(undefined)
     render(
@@ -471,6 +471,13 @@ describe("atajos de la ronda", () => {
       </FocusShell>
     )
 
+    expect(
+      screen.queryByRole("button", { name: "Referencia" })
+    ).not.toBeInTheDocument()
+    expect(screen.queryByText("Daniel 1:1")).not.toBeInTheDocument()
+
+    await user.click(screen.getByRole("radio", { name: /Primera/ }))
+    await user.click(screen.getByRole("button", { name: "Confirmar respuesta" }))
     await user.click(screen.getByRole("button", { name: "Referencia" }))
     expect(
       screen.getByRole("dialog", { name: "Volver al texto / referencia" })

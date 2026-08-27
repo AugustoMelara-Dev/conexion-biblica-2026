@@ -34,23 +34,56 @@ class FinalEditorialTests(unittest.TestCase):
         self.assertIsNotNone(self.editorial, "falta scripts.lib.final_editorial")
         return self.editorial
 
-    def test_derives_1950_facts_and_covers_every_source_unit(self) -> None:
+    def test_derives_1500_facts_and_covers_every_source_unit(self) -> None:
         editorial = self.require_editorial()
         if editorial is None:
             return
         facts, rejected = self.facts, self.fact_rejected
-        self.assertEqual(len(facts), 1950)
+        self.assertEqual(len(facts), 1500)
         self.assertGreater(rejected, 0)
         covered = {fact["source_unit_id"] for fact in facts}
         expected = {unit["source_unit_id"] for unit in self.inventory["units"]}
         self.assertEqual(covered, expected)
-        self.assertEqual(len({fact["fact_id"] for fact in facts}), 1950)
+        self.assertEqual(len({fact["fact_id"] for fact in facts}), 1500)
+        self.assertLessEqual(
+            sum(fact["category"] == "phrase" for fact in facts),
+            37,
+        )
         self.assertTrue(all(fact["answer"] in fact["source_quote"] for fact in facts))
         self.assertTrue(
             all(
                 fact["category"] != "phrase" or len(fact["answer"].split()) >= 2
                 for fact in facts
             )
+        )
+        self.assertTrue(
+            all(
+                fact["category"] != "number"
+                or len(fact["answer"].split()) == 1
+                or editorial._word_role(fact["answer"].split()[0]) == "number"
+                or any(
+                    fact["answer"] == answer
+                    for overrides in editorial.ADDITIONAL_EDITORIAL_OVERRIDES.values()
+                    for answer, category in overrides
+                    if category == "number"
+                )
+                for fact in facts
+            ),
+            "los períodos numéricos no deben incluir preposiciones o verbos ajenos al detalle",
+        )
+        non_actions = {
+            "abundancia", "angustia", "ciencia", "frecuencia", "gloria",
+            "gracia", "inteligencia", "justicia", "misericordia", "presencia",
+            "profecía", "provincia", "sabiduría", "sentencia", "todavía",
+            "victoria",
+        }
+        self.assertFalse(
+            any(
+                fact["category"] == "action"
+                and fact["answer"].casefold() in non_actions
+                for fact in facts
+            ),
+            "los sustantivos no pueden presentarse como acciones",
         )
         self.assertFalse(
             any(
@@ -75,26 +108,26 @@ class FinalEditorialTests(unittest.TestCase):
         )
         self.assertEqual(editorial._context_for(text, "38"), text)
 
-    def test_generates_7800_gold_questions_balanced_across_four_families(self) -> None:
+    def test_generates_6000_gold_questions_balanced_across_four_families(self) -> None:
         editorial = self.require_editorial()
         if editorial is None:
             return
         facts = self.facts
         questions, rejected = self.questions, self.question_rejected
-        self.assertEqual(len(questions), 7800)
+        self.assertEqual(len(questions), 6000)
         self.assertGreater(rejected, 0)
         self.assertEqual(
             Counter(question["family"] for question in questions),
             {
-                "single_choice_direct": 1950,
-                "fill_choice": 1950,
-                "true_false": 1950,
-                "single_choice_contextual": 1950,
+                "single_choice_direct": 1500,
+                "fill_choice": 1500,
+                "true_false": 1500,
+                "single_choice_contextual": 1500,
             },
         )
         self.assertEqual(
             Counter(question["difficulty"] for question in questions),
-            {"easy": 390, "medium": 1560, "hard": 3510, "expert": 2340},
+            {"easy": 300, "medium": 1200, "hard": 2700, "expert": 1800},
         )
         self.assertTrue(
             all(question["final_editorial_status"] == "GOLD" for question in questions)
@@ -134,12 +167,35 @@ class FinalEditorialTests(unittest.TestCase):
                 self.assertIn(question["statement"], question["question"], question["id"])
                 self.assertNotIn("completa la frase", question["question"], question["id"])
             else:
-                self.assertEqual(blank_count, 1, question["id"])
+                expected_blanks = 0 if question["family"] == "single_choice_contextual" else 1
+                self.assertEqual(blank_count, expected_blanks, question["id"])
             if question["family"] == "fill_choice":
-                self.assertIn("complete la expresión significativa", question["question"], question["id"])
+                self.assertTrue(question["question"].startswith("Complete "), question["id"])
             if question["family"] == "single_choice_contextual":
                 self.assertEqual(question["trap_type"], "true_in_other_context", question["id"])
                 self.assertEqual(len(question["why_distractors_fail"]), 3, question["id"])
+                self.assertEqual(question["correct_answer"], question["reference"], question["id"])
+                self.assertEqual(len(set(question["options"])), 4, question["id"])
+                self.assertTrue(all(re.fullmatch(r"Daniel \d+:\d+|PR\d+, p\. \d+, párrafo \d+", option) for option in question["options"]), question["id"])
+
+    def test_formulations_do_not_repeat_or_add_the_answer_inside_one_prompt(self) -> None:
+        facts_by_id = {fact["fact_id"]: fact for fact in self.facts}
+        for question in self.questions:
+            if question["family"] == "true_false":
+                self.assertNotIn("reproduce correctamente el detalle", question["question"], question["id"])
+                self.assertEqual(
+                    question["question"],
+                    f"Verdadero o falso según {question['reference']}: «{question['statement']}»",
+                    question["id"],
+                )
+            if question["family"] == "single_choice_contextual":
+                fact_answer = facts_by_id[question["fact_id"]]["answer"]
+                self.assertEqual(
+                    question["question"].count(f"«{fact_answer}»"),
+                    1,
+                    question["id"],
+                )
+                self.assertNotIn("________", question["question"], question["id"])
 
     def test_gold_language_is_natural_and_schema_is_complete(self) -> None:
         editorial = self.require_editorial()
@@ -158,7 +214,7 @@ class FinalEditorialTests(unittest.TestCase):
             self.assertNotIn("identifica correctamente el detalle descrito", question["question"], question["id"])
             self.assertNotIn("qué número o período", question["question"], question["id"])
             if question["family"] == "true_false":
-                self.assertTrue(question["question"].endswith("¿Verdadero o falso?"), question["id"])
+                self.assertTrue(question["question"].startswith("Verdadero o falso según "), question["id"])
                 continue
             signatures = [
                 editorial.option_signature(option, question["option_category"])
@@ -211,6 +267,10 @@ class FinalEditorialTests(unittest.TestCase):
             editorial.option_signature("una proclamación para exaltar", "phrase"),
             editorial.option_signature("tiene derecho a interponerse", "phrase"),
         )
+        self.assertNotEqual(
+            editorial.option_signature("establecía", "action"),
+            editorial.option_signature("permitiría", "action"),
+        )
         forbidden_answers = {
             "así", "ahora", "luego", "después", "también", "sólo", "aquí",
             "debajo", "ciertamente", "dondequiera",
@@ -243,7 +303,6 @@ class FinalEditorialTests(unittest.TestCase):
             and question["correct_answer"] == "Falso"
             and question["option_category"] == "phrase"
         ]
-        self.assertEqual(len(false_phrase_questions), 29)
         self.assertTrue(
             all(
                 len(question["correction"].split())
@@ -301,8 +360,8 @@ class FinalEditorialTests(unittest.TestCase):
             return
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         self.assertEqual(manifest["bank_id"], "BANCO_UNICO_CONEXION_BIBLICA_2026")
-        self.assertEqual(manifest["gold_questions"], 7800)
-        self.assertEqual(manifest["unique_facts"], 1950)
+        self.assertEqual(manifest["gold_questions"], 6000)
+        self.assertEqual(manifest["unique_facts"], 1500)
         self.assertEqual(len(manifest["shards"]), 18)
         self.assertTrue(
             all((ROOT / "public" / shard["questions_file"]).exists() for shard in manifest["shards"])

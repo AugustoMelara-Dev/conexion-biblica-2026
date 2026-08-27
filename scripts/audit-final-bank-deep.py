@@ -7,13 +7,21 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from scripts.lib.final_editorial import DIVINE_NAMES, _norm, option_signature
+
+
 BANK = ROOT / "public" / "banks" / "final-2026"
 PDF = ROOT / "MaterialConexionBiblica (1).pdf"
 BLANK = re.compile(r"_{4,}")
 BROKEN_TEXT = re.compile(r"\ufffd|\(cid:\d+\)|\x00")
 DUPLICATED_WORD = re.compile(r"\b([\wáéíóúüñ]+)\s+\1\b", re.IGNORECASE)
+DANGLING_CONNECTOR = re.compile(
+    r"\b(?:y|o|de|del|en|con|por|para|que|como|a|al)$", re.IGNORECASE
+)
 REQUIRED_FIELDS = {
     "id", "fact_id", "variant_id", "template_id", "bank_id", "chapter",
     "reference", "source_unit_id", "source_quote", "family", "difficulty",
@@ -53,6 +61,22 @@ def main() -> int:
     pdf_hash = hashlib.sha256(PDF.read_bytes()).hexdigest()
     if pdf_hash != manifest["source_sha256"]:
         errors.append("manifest:pdf_hash_mismatch")
+
+    pr_texts = [
+        unit["exact_text"]
+        for unit in inventory["units"]
+        if unit["work"] == "Profetas y Reyes"
+    ]
+    if not any("Entre los hijos de Israel" in text for text in pr_texts):
+        errors.append("inventory:missing_top_of_page_content")
+    if not any(
+        "y con las bestias del campo será tu morada" in text for text in pr_texts
+    ):
+        errors.append("inventory:cross_page_paragraph_not_joined")
+    for unit in inventory["units"]:
+        source_text = (unit.get("full_text") or unit.get("exact_text", "")).strip()
+        if DANGLING_CONNECTOR.search(source_text.strip(" ”’\"»")):
+            errors.append(f"{unit['source_unit_id']}:dangling_source_fragment")
 
     for question in questions:
         qid = question.get("id", "<missing-id>")
@@ -111,6 +135,11 @@ def main() -> int:
                 fail(errors, qid, "broken_true_false_contract")
             if question.get("statement", "") not in question["question"]:
                 fail(errors, qid, "statement_not_visible")
+            if question["question"] != (
+                f"Verdadero o falso según {question['reference']}: "
+                f"«{question.get('statement', '')}»"
+            ):
+                fail(errors, qid, "true_false_added_template_text")
             if question["correct_answer"] == "Verdadero":
                 if question.get("statement") != fact["context"]:
                     fail(errors, qid, "true_statement_not_exact_source")
@@ -121,6 +150,30 @@ def main() -> int:
                     fail(errors, qid, "false_missing_precise_correction")
                 elif question["correction"] != fact["answer"]:
                     fail(errors, qid, "false_correction_answer_mismatch")
+                if option_signature(
+                    question["incorrect_detail"], fact["category"]
+                ) != option_signature(question["correction"], fact["category"]):
+                    fail(errors, qid, "false_grammatical_signature_mismatch")
+                if fact["category"] == "person" and (
+                    (_norm(question["incorrect_detail"]) in DIVINE_NAMES)
+                    != (_norm(question["correction"]) in DIVINE_NAMES)
+                ):
+                    fail(errors, qid, "false_divine_human_swap")
+        elif family == "single_choice_contextual":
+            if blank_count:
+                fail(errors, qid, "contextual_question_contains_blank")
+            if question["correct_answer"] != fact["reference"]:
+                fail(errors, qid, "contextual_reference_answer_mismatch")
+            if not all(re.fullmatch(r"Daniel \d+:\d+|PR\d+, p\. \d+, párrafo \d+", option) for option in options):
+                fail(errors, qid, "contextual_options_are_not_references")
+            if question["question"].count(f"«{fact['answer']}»") != 1:
+                fail(errors, qid, "contextual_answer_not_used_once")
+            if question.get("trap_type") != "true_in_other_context":
+                fail(errors, qid, "missing_contextual_trap")
+            if set(question["why_distractors_fail"]) != (
+                set(options) - {question["correct_answer"]}
+            ):
+                fail(errors, qid, "incomplete_distractor_explanations")
         else:
             if blank_count != 1:
                 fail(errors, qid, "invalid_blank_count")
@@ -128,13 +181,6 @@ def main() -> int:
                 fail(errors, qid, "answer_fact_mismatch")
             if question["correct_answer"] not in question["source_quote"]:
                 fail(errors, qid, "answer_not_in_source")
-            if family == "single_choice_contextual":
-                if question.get("trap_type") != "true_in_other_context":
-                    fail(errors, qid, "missing_contextual_trap")
-                if set(question["why_distractors_fail"]) != (
-                    set(options) - {question["correct_answer"]}
-                ):
-                    fail(errors, qid, "incomplete_distractor_explanations")
 
         normalized = re.sub(r"\W+", " ", question["question"].casefold()).strip()
         if normalized in normalized_questions:
@@ -142,6 +188,16 @@ def main() -> int:
         normalized_questions.add(normalized)
         if BROKEN_TEXT.search(question["question"] + question["explanation"]):
             fail(errors, qid, "broken_text_marker")
+        if any(
+            prefix in question["question"]
+            for prefix in (
+                "Atendiendo al contexto exacto",
+                "Sin trasladar datos de otra escena",
+                "Para distinguir este detalle de otros cercanos",
+                "reproduce correctamente el detalle",
+            )
+        ):
+            fail(errors, qid, "synthetic_prompt_prefix")
         if DUPLICATED_WORD.search(question["question"]):
             fail(errors, qid, "duplicated_adjacent_word")
         for status_field in (

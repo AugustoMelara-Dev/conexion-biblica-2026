@@ -36,21 +36,22 @@ describe("materialización dinámica", () => {
     expect(first.variantId).toContain("runtime")
   })
 
-  it("cambia posición o formulación al aumentar la exposición", () => {
+  it("cambia las opciones sin agregar muletillas al enunciado canónico", () => {
     const first = materializeDynamicQuestion(question, { seed: 5, exposure: 0 })
     const next = materializeDynamicQuestion(question, { seed: 5, exposure: 1 })
-    expect([next.question, next.options.map((option) => option.text)]).not.toEqual([
-      first.question,
+    expect(first.question).toBe(question.question)
+    expect(next.question).toBe(question.question)
+    expect(next.options.map((option) => option.text)).not.toEqual(
       first.options.map((option) => option.text),
-    ])
+    )
   })
 
-  it("rematerializa un error sin acumular prefijos controlados", () => {
+  it("rematerializa un error sin alterar ni acumular texto en el enunciado", () => {
     const first = materializeDynamicQuestion(question, { seed: 5, exposure: 1 })
     const retry = materializeDynamicQuestion(first, { seed: 9, exposure: 2 })
 
-    expect(retry.question).toMatch(/^Sin trasladar datos de otra escena, según/)
-    expect(retry.question).not.toContain("Atendiendo al contexto exacto, según")
+    expect(first.question).toBe(question.question)
+    expect(retry.question).toBe(question.question)
     expect(retry.variantId).toContain("runtime-3")
     expect(retry.variantId).not.toContain("runtime-2-")
   })

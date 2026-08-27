@@ -26,24 +26,6 @@ function shuffled<T>(items: readonly T[], random: () => number) {
   return result
 }
 
-const CONTROLLED_PREFIXES = [
-  "",
-  "Atendiendo al contexto exacto, ",
-  "Sin trasladar datos de otra escena, ",
-  "Para distinguir este pasaje de los cercanos, ",
-]
-
-function rewritePrompt(question: string, exposure: number) {
-  const canonical = CONTROLLED_PREFIXES.slice(1).reduce((text, prefix) => {
-    if (!text.startsWith(prefix)) return text
-    const remainder = text.slice(prefix.length)
-    return `${remainder.charAt(0).toUpperCase()}${remainder.slice(1)}`
-  }, question)
-  const prefix = CONTROLLED_PREFIXES[exposure % CONTROLLED_PREFIXES.length]
-  if (!prefix) return canonical
-  return `${prefix}${canonical.charAt(0).toLowerCase()}${canonical.slice(1)}`
-}
-
 export function materializeDynamicQuestion(
   question: Question,
   { seed, exposure }: { seed: number; exposure: number }
@@ -64,7 +46,7 @@ export function materializeDynamicQuestion(
     .map((option) => option.id)
   return {
     ...question,
-    question: rewritePrompt(question.question, exposure),
+    question: question.question,
     options,
     correctAnswer,
     variantId: `${baseVariantId}-runtime-${exposure + 1}-${variantSeed.toString(16)}`,

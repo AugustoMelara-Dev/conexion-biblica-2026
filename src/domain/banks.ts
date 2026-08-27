@@ -61,7 +61,7 @@ export const BANK_DEFINITIONS: Record<BankProfileId, BankDefinition> = {
     description: "Entrenamiento canónico con cobertura completa del PDF",
     readOnly: true,
     version: "7.0",
-    expectedQuestionCount: 7800,
+    expectedQuestionCount: 6000,
   },
 }
 

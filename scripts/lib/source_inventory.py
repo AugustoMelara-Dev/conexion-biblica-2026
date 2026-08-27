@@ -228,55 +228,87 @@ def _pr_chapter(page: int) -> int:
 def extract_pr_inventory(
     document: fitz.Document, ocr_pages: dict[str, str]
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    paragraph_records: list[dict[str, Any]] = []
     units: list[dict[str, Any]] = []
     issues: list[dict[str, Any]] = []
     for page in range(27, 60):
         paragraph_number = 0
+        first_meaningful = True
         for block in document[page - 1].get_text("blocks"):
-            if block[1] < 85 or re.fullmatch(r"\s*\d{2,3}\s*", block[4]):
+            if re.fullmatch(r"\s*\d{2,3}\s*", block[4]):
                 continue
             block_text = re.sub(r"\n\s*\d{2,3}\s*$", "", block[4])
             for raw_paragraph in re.split(r"\n\s*\n", block_text):
                 embedded = normalize_space(raw_paragraph)
                 if len(embedded.split()) < 7:
                     continue
-                paragraph_number += 1
                 restored, unresolved = restore_corrupted_glyphs(embedded, ocr_pages[str(page)])
-                propositions = _split_propositions(restored)
-                for proposition_number, proposition in enumerate(propositions, 1):
-                    source_unit_id = (
-                        f"PR{_pr_chapter(page)}-P{page:03d}-"
-                        f"P{paragraph_number:03d}-S{proposition_number:03d}"
+                continues_previous_page = (
+                    first_meaningful
+                    and bool(paragraph_records)
+                    and (
+                        re.match(r"^[a-záéíóúüñ]", restored) is not None
+                        or re.search(r"[.!?][”’\"»]?$", paragraph_records[-1]["text"]) is None
                     )
-                    related = [
-                        {**issue, "source_unit_id": source_unit_id, "page": page}
-                        for issue in unresolved
-                        if issue["damaged_token"] in proposition or "�" in proposition
-                    ]
-                    issues.extend(related)
-                    units.append(
-                        {
-                            "source_unit_id": source_unit_id,
-                            "work": "Profetas y Reyes",
-                            "chapter": _pr_chapter(page),
-                            "page": page,
-                            "paragraph": paragraph_number,
-                            "proposition": proposition_number,
-                            "reference": f"PR{_pr_chapter(page)}, p. {page}, párrafo {paragraph_number}",
-                            "parent_text": restored,
-                            "exact_text": proposition,
-                            "meaningful_clauses": [proposition],
-                            **_metadata(proposition),
-                            "applications": _phrases(proposition, ("debemos", "pueden", "necesitamos", "iglesia")),
-                            "comparisons": _phrases(proposition, ("como", "así como", "más que")),
-                            "descriptions": [proposition],
-                            "cited_bible_references": re.findall(
-                                r"\b(?:Daniel|Isaías|Jeremías|Ezequiel|Mateo|Salmos|Miqueas|Joel|Hechos|Deuteronomio|Proverbios|Apocalipsis)\s+\d+(?::\d+(?:[-–]\d+)?)?",
-                                proposition,
-                            ),
-                            "fact_ids": [],
-                        }
+                )
+                first_meaningful = False
+                if continues_previous_page:
+                    paragraph_records[-1]["text"] = normalize_space(
+                        f"{paragraph_records[-1]['text']} {restored}"
                     )
+                    paragraph_records[-1]["unresolved"].extend(
+                        (issue, page) for issue in unresolved
+                    )
+                    continue
+                paragraph_number += 1
+                paragraph_records.append(
+                    {
+                        "page": page,
+                        "paragraph": paragraph_number,
+                        "text": restored,
+                        "unresolved": [(issue, page) for issue in unresolved],
+                    }
+                )
+
+    for record in paragraph_records:
+        page = record["page"]
+        paragraph_number = record["paragraph"]
+        restored = record["text"]
+        propositions = _split_propositions(restored)
+        for proposition_number, proposition in enumerate(propositions, 1):
+            source_unit_id = (
+                f"PR{_pr_chapter(page)}-P{page:03d}-"
+                f"P{paragraph_number:03d}-S{proposition_number:03d}"
+            )
+            related = [
+                {**issue, "source_unit_id": source_unit_id, "page": issue_page}
+                for issue, issue_page in record["unresolved"]
+                if issue["damaged_token"] in proposition or "�" in proposition
+            ]
+            issues.extend(related)
+            units.append(
+                {
+                    "source_unit_id": source_unit_id,
+                    "work": "Profetas y Reyes",
+                    "chapter": _pr_chapter(page),
+                    "page": page,
+                    "paragraph": paragraph_number,
+                    "proposition": proposition_number,
+                    "reference": f"PR{_pr_chapter(page)}, p. {page}, párrafo {paragraph_number}",
+                    "parent_text": restored,
+                    "exact_text": proposition,
+                    "meaningful_clauses": [proposition],
+                    **_metadata(proposition),
+                    "applications": _phrases(proposition, ("debemos", "pueden", "necesitamos", "iglesia")),
+                    "comparisons": _phrases(proposition, ("como", "así como", "más que")),
+                    "descriptions": [proposition],
+                    "cited_bible_references": re.findall(
+                        r"\b(?:Daniel|Isaías|Jeremías|Ezequiel|Mateo|Salmos|Miqueas|Joel|Hechos|Deuteronomio|Proverbios|Apocalipsis)\s+\d+(?::\d+(?:[-–]\d+)?)?",
+                        proposition,
+                    ),
+                    "fact_ids": [],
+                }
+            )
     return units, issues
 
 

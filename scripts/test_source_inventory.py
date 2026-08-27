@@ -66,6 +66,36 @@ class SourceInventoryTests(unittest.TestCase):
         self.assertTrue(all("�" not in unit["exact_text"] for unit in units))
         self.assertEqual([issue for issue in issues if issue["status"] == "unresolved"], [])
 
+    def test_keeps_top_of_page_content_and_joins_cross_page_paragraphs(self) -> None:
+        self.assertIsNotNone(self.inventory, "falta scripts.lib.source_inventory")
+        assert self.inventory is not None
+        pages = json.loads(OCR_CACHE.read_text(encoding="utf-8"))["pages"]
+        with fitz.open(PDF) as document:
+            units, _ = self.inventory.extract_pr_inventory(document, pages)
+
+        source_texts = [unit["exact_text"] for unit in units]
+        self.assertTrue(
+            any("Entre los hijos de Israel" in text for text in source_texts),
+            "se perdió el primer bloque de contenido de PR39",
+        )
+        joined = next(
+            text
+            for text in source_texts
+            if "esta es la declaración, oh rey" in text
+        )
+        self.assertIn("y con las bestias del campo será tu morada", joined)
+        self.assertFalse(
+            any(
+                re.search(
+                    r"\b(?:y|o|de|del|en|con|por|para|que|como|a|al)$",
+                    unit["exact_text"].strip(" ”’\"»"),
+                    re.IGNORECASE,
+                )
+                for unit in units
+            ),
+            "hay proposiciones cortadas al cambiar de página",
+        )
+
     def test_keeps_abbreviated_verse_reference_with_its_sentence(self) -> None:
         self.assertIsNotNone(self.inventory, "falta scripts.lib.source_inventory")
         assert self.inventory is not None
