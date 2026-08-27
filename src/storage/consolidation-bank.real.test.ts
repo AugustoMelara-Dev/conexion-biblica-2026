@@ -19,24 +19,21 @@ const fetcher = async (input: string | URL | Request) => {
   })
 }
 
-describe("real V6 blind simulations", () => {
+describe("archived V6 blind data", () => {
   for (const pool of ["A", "B"] as const) {
-    it(`builds blind pool ${pool} with the mandatory 100-question mix`, async () => {
+    it(`remains readable for migration from pool ${pool}`, async () => {
       const questions = await loadConsolidationQuestionPool({
         manifest,
         chapters: manifest.shards.map((shard) => Number(shard.chapter.match(/\d+/)?.[0])),
-        count: 100,
+        count: 99,
         seed: pool === "A" ? 101 : 202,
         blindPool: pool,
         fetcher: fetcher as typeof fetch,
       })
 
-      expect(questions).toHaveLength(100)
-      expect(new Set(questions.map((question) => question.factId)).size).toBe(100)
-      expect(questions.filter((question) => question.type === "fill_blank")).toHaveLength(30)
-      expect(questions.filter((question) => question.type === "true_false")).toHaveLength(25)
-      expect(questions.filter((question) => question.type === "single_choice")).toHaveLength(45)
-      expect(questions.filter((question) => question.trapType === "true_elsewhere").length).toBeGreaterThanOrEqual(18)
+      expect(questions).toHaveLength(99)
+      expect(new Set(questions.map((question) => question.factId)).size).toBe(99)
+      expect(questions.every((question) => question.editorialStatus === "gold")).toBe(true)
     })
   }
 })

@@ -182,7 +182,7 @@ export function ReviewPage({
   return (
     <div className="flex min-w-0 flex-col gap-8">
       <PageHeader
-        eyebrow="Auditoría de bancos generados"
+        eyebrow="Auditoría del Banco Maestro Único"
         title="Revisión"
         description="Empieza por la cola recomendada; abre el contexto completo sólo cuando lo necesites."
         action={
@@ -530,13 +530,7 @@ function chapterLabel(value: string) {
 }
 
 function profileLabel(profile: Question["bankProfileId"]) {
-  return profile === "curated-v4"
-    ? "V4"
-    : profile === "prep-v3"
-      ? "V3"
-      : profile === "master-v2"
-        ? "V2"
-        : "V1"
+  return profile === "final-v7" ? "Banco Maestro Único" : "Historial migrado"
 }
 
 function formatAnswer(answer: unknown) {

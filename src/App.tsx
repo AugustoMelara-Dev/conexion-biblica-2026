@@ -25,7 +25,6 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Skeleton } from "@/components/ui/skeleton"
 import { AppShell } from "@/components/app-shell"
 import { FocusShell } from "@/components/layout/focus-shell"
-import { BankManagerPage } from "@/components/bank-manager-page"
 import { DashboardPage } from "@/components/dashboard-page"
 import { HistoryPage } from "@/components/history-page"
 import { QuizPage } from "@/components/quiz-page"
@@ -338,7 +337,8 @@ export function App() {
           onExit={exitRound}
         />
       )
-    if (nav === "banks") return <BankManagerPage />
+    if (nav === "banks")
+      return <DashboardPage onStartMission={(config) => void startRound(config)} />
     if (nav === "practice")
       return (
         <SessionBuilderPage
@@ -377,19 +377,15 @@ export function App() {
         {masterBankError ? (
           <Alert>
             <AlertCircle />
-            <AlertTitle>Banco Maestro V2</AlertTitle>
-            <AlertDescription>
-              {masterBankError}. V1 continúa disponible.
-            </AlertDescription>
+            <AlertTitle>Banco Maestro Único</AlertTitle>
+            <AlertDescription>{masterBankError}</AlertDescription>
           </Alert>
         ) : null}
         {massiveBankError ? (
           <Alert>
             <AlertCircle />
-            <AlertTitle>Bancos masivos V5/V6</AlertTitle>
-            <AlertDescription>
-              {massiveBankError}. Los bancos anteriores siguen disponibles.
-            </AlertDescription>
+            <AlertTitle>Banco Maestro Único</AlertTitle>
+            <AlertDescription>{massiveBankError}</AlertDescription>
           </Alert>
         ) : null}
         {loading ? <LoadingState /> : renderPage()}
@@ -402,11 +398,11 @@ function LoadingState() {
   return (
     <section
       aria-busy="true"
-      aria-label="Preparando tus bancos"
+      aria-label="Preparando tu banco maestro"
       className="min-w-0 space-y-8"
       role="status"
     >
-      <h1 className="sr-only">Preparando tus bancos</h1>
+      <h1 className="sr-only">Preparando tu banco maestro</h1>
       <span className="sr-only">
         Cargando preguntas y progreso desde este dispositivo.
       </span>

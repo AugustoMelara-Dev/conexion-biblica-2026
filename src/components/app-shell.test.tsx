@@ -109,7 +109,7 @@ describe("AppShell", () => {
       within(mobileNavigation).getByRole("button", { name: "Más" })
     )
 
-    expect(screen.getByRole("menuitem", { name: "Bancos" })).toBeVisible()
+    expect(screen.queryByRole("menuitem", { name: "Bancos" })).not.toBeInTheDocument()
     expect(screen.getByRole("menuitem", { name: "Historial" })).toBeVisible()
     expect(screen.getByRole("menuitem", { name: "Revisión" })).toBeVisible()
   })

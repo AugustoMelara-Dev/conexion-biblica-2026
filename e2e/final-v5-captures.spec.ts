@@ -1,45 +1,109 @@
-import { expect, test } from "@playwright/test"
+import { expect, test, type Page } from "@playwright/test"
 import { mkdir } from "node:fs/promises"
 import { join } from "node:path"
 
-const output = join(process.cwd(), "output", "consolidacion_final", "screenshots")
+const output = join(process.cwd(), "output", "playwright", "final-2026")
 
-test("capturas finales V5: plan, feedback, progreso y simulación ciega", async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== "desktop-chromium", "Las capturas canónicas se generan en escritorio")
+async function openPractice(page: Page) {
+  const heading = page.getByRole("heading", { name: "Configura tu próxima ronda" })
+  if (await heading.isVisible()) return
+  const navigation = page.getByRole("navigation", { name: "Navegación principal" })
+  await navigation.getByRole("button", { name: "Practicar", exact: true }).click()
+  await expect(heading).toBeVisible()
+}
+
+async function startMode(page: Page, mode: string, family: string) {
+  await openPractice(page)
+  const hub = page.getByRole("region", { name: "Modos avanzados" })
+  await hub.getByRole("combobox", { name: "Modo avanzado" }).selectOption(mode)
+  await hub.getByRole("button", { name: "Iniciar modo avanzado" }).click()
+  await expect(page.getByText(`· ${family}`, { exact: true })).toBeVisible({ timeout: 30_000 })
+}
+
+async function chooseWrong(page: Page) {
+  const prompt = (await page.getByRole("heading", { level: 1 }).textContent()) ?? ""
+  const canonical = prompt.replace(
+    /^(Atendiendo al contexto exacto, |Sin trasladar datos de otra escena, |Para distinguir este pasaje de los cercanos, )/,
+    "",
+  )
+  const normalized = canonical.charAt(0).toUpperCase() + canonical.slice(1)
+  const correct = await page.evaluate(async (questionText) => {
+    const manifest = await fetch("/banks/final-2026/manifest.json").then((response) => response.json())
+    for (const shard of manifest.shards as Array<{ questions_file: string }>) {
+      const rows = await fetch(`/${shard.questions_file}`).then((response) => response.json())
+      const match = (rows as Array<{ question: string; correct_answer: string }>).find(
+        (row) => row.question === questionText,
+      )
+      if (match) return match.correct_answer
+    }
+    return null
+  }, normalized)
+  expect(correct).toBeTruthy()
+  const radios = page.getByRole("radio")
+  for (let index = 0; index < (await radios.count()); index += 1) {
+    if (!((await radios.nth(index).textContent()) ?? "").includes(correct ?? "")) {
+      await radios.nth(index).click()
+      return
+    }
+  }
+}
+
+async function chooseCorrect(page: Page) {
+  const prompt = (await page.getByRole("heading", { level: 1 }).textContent()) ?? ""
+  const canonical = prompt.replace(
+    /^(Atendiendo al contexto exacto, |Sin trasladar datos de otra escena, |Para distinguir este pasaje de los cercanos, )/,
+    "",
+  )
+  const normalized = canonical.charAt(0).toUpperCase() + canonical.slice(1)
+  const correct = await page.evaluate(async (questionText) => {
+    const manifest = await fetch("/banks/final-2026/manifest.json").then((response) => response.json())
+    for (const shard of manifest.shards as Array<{ questions_file: string }>) {
+      const rows = await fetch(`/${shard.questions_file}`).then((response) => response.json())
+      const match = (rows as Array<{ question: string; correct_answer: string }>).find((row) => row.question === questionText)
+      if (match) return match.correct_answer
+    }
+    return null
+  }, normalized)
+  const radios = page.getByRole("radio")
+  for (let index = 0; index < (await radios.count()); index += 1) {
+    if (((await radios.nth(index).textContent()) ?? "").includes(correct ?? "")) {
+      await radios.nth(index).click()
+      return
+    }
+  }
+  throw new Error("No se encontró la respuesta correcta")
+}
+
+test("genera las capturas de aceptación del banco canónico", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "desktop-chromium", "Capturas canónicas de escritorio")
   await mkdir(output, { recursive: true })
   await page.goto("/")
-  await expect(page.getByRole("heading", { level: 1, name: "PLAN FINAL — GANAR EL 29" })).toBeVisible({ timeout: 30_000 })
-  await page.screenshot({ path: join(output, "04-plan-final-produccion.png"), fullPage: true })
+  await expect(page.getByRole("heading", { name: "PLAN FINAL — GANAR EL 29" })).toBeVisible({ timeout: 30_000 })
+  await page.screenshot({ path: join(output, "01-resumen-unico.png"), fullPage: true })
 
-  await page.getByRole("button", { name: "Configurar manualmente" }).click()
-  await expect(page.getByRole("heading", { name: "Configura tu próxima ronda" })).toBeVisible()
-  const guidedReview = page.getByRole("region", { name: "Modos avanzados" })
-  await guidedReview.getByRole("combobox", { name: "Modo avanzado" }).selectOption("spaced-review")
-  await guidedReview.getByRole("button", { name: "Iniciar modo avanzado" }).click()
-  await expect(page.getByText("Pregunta 1 de 50", { exact: true })).toBeVisible({ timeout: 30_000 })
-
-  const textAnswer = page.getByPlaceholder("Respuesta canónica")
-  if ((await textAnswer.count()) && (await textAnswer.isVisible())) {
-    await textAnswer.fill("respuesta deliberadamente incorrecta")
-  } else {
-    await page.getByRole("radio").last().click()
+  const modes = [
+    ["expert-multiple-choice", "Selección directa", "02-seleccion-directa.png"],
+    ["fill-text", "Completar con opciones", "03-completar-opciones.png"],
+    ["expert-true-false", "Verdadero o falso", "04-verdadero-falso.png"],
+    ["contextual-traps", "Selección contextual", "05-seleccion-contextual.png"],
+  ] as const
+  for (const [mode, family, filename] of modes) {
+    await startMode(page, mode, family)
+    await page.screenshot({ path: join(output, filename), fullPage: true })
+    await page.getByRole("button", { name: "Salir" }).click()
   }
+
+  await startMode(page, "fill-text", "Completar con opciones")
+  await chooseWrong(page)
   await page.getByRole("button", { name: "Confirmar respuesta" }).click()
-  await expect(page.getByText(/Respuesta correcta:/)).toBeVisible()
-  await page.screenshot({ path: join(output, "05-feedback-aprendizaje.png"), fullPage: true })
-
-  await page.getByRole("button", { name: "Salir" }).click()
-  await page.getByRole("navigation", { name: "Navegación principal" })
-    .getByRole("button", { name: "Estadísticas", exact: true }).click()
-  await expect(page.getByRole("heading", { level: 1, name: "Progreso" })).toBeVisible()
-  await page.screenshot({ path: join(output, "06-progreso-por-hechos.png"), fullPage: true })
-
-  await page.getByRole("navigation", { name: "Navegación principal" })
-    .getByRole("button", { name: "Practicar", exact: true }).click()
-  const advanced = page.getByRole("region", { name: "Modos avanzados" })
-  await advanced.getByRole("combobox", { name: "Modo avanzado" }).selectOption("blind-simulation")
-  await advanced.getByRole("button", { name: "Iniciar modo avanzado" }).click()
-  await expect(page.getByText("Pregunta 1 de 100", { exact: true })).toBeVisible({ timeout: 30_000 })
-  await expect(page.getByText("V6 GOLD", { exact: true })).toBeVisible()
-  await page.screenshot({ path: join(output, "07-simulacion-ciega-a.png"), fullPage: true })
+  await expect(page.getByText("Respuesta correcta:")).toBeVisible()
+  await page.screenshot({ path: join(output, "06-feedback-fundamentado.png"), fullPage: true })
+  await page.getByRole("button", { name: "Siguiente" }).click()
+  for (let answered = 0; answered < 8; answered += 1) {
+    await chooseCorrect(page)
+    await page.getByRole("button", { name: "Confirmar respuesta" }).click()
+    await page.getByRole("button", { name: "Siguiente" }).click()
+  }
+  await expect(page.getByText("Pregunta 10 de 101", { exact: true })).toBeVisible()
+  await page.screenshot({ path: join(output, "07-recuperacion-otra-variante.png"), fullPage: true })
 })

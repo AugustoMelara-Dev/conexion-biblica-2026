@@ -299,7 +299,7 @@ describe("estados transversales de App", () => {
     renderApp({ loading: true })
 
     expect(
-      screen.getByRole("status", { name: "Preparando tus bancos" })
+      screen.getByRole("status", { name: "Preparando tu banco maestro" })
     ).toHaveAttribute("aria-busy", "true")
     expect(
       screen.getByText("Cargando preguntas y progreso desde este dispositivo.")
@@ -308,11 +308,11 @@ describe("estados transversales de App", () => {
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1)
   })
 
-  it("mantiene el resumen usable cuando la carga de V2 falla", () => {
+  it("mantiene el resumen usable cuando falla una carga histórica", () => {
     renderApp({ masterBankError: "Sin conexión" })
 
     expect(
-      screen.getByText("Sin conexión. V1 continúa disponible.")
+      screen.getByText("Sin conexión")
     ).toBeVisible()
     expect(
       screen.getByRole("heading", { name: "PLAN FINAL — GANAR EL 29" })

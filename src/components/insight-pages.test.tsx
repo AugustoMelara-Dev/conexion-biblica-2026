@@ -443,7 +443,7 @@ describe("vistas de progreso y revisión", () => {
     expect(within(answers).getAllByRole("listitem")).toHaveLength(1)
   })
 
-  it("prioriza y distingue la taxonomía de revisión, filtros, detalle V4 y CTA", async () => {
+  it("prioriza y distingue la taxonomía de revisión, historial migrado y CTA", async () => {
     const user = userEvent.setup()
     const high: Question = {
       ...question,
@@ -541,7 +541,7 @@ describe("vistas de progreso y revisión", () => {
     expect(within(items[0]).getByRole("group")).toHaveAttribute("open")
     expect(screen.getByText("Explicación completa")).toBeVisible()
     expect(
-      within(items[0]).getByText(/ · V4 ·/, { selector: "p" })
+      within(items[0]).getByText(/ · Historial migrado ·/, { selector: "p" })
     ).toBeVisible()
     expect(screen.getByText("Sin respuesta")).toBeVisible()
     const clipboard = Object.getOwnPropertyDescriptor(navigator, "clipboard")

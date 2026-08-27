@@ -22,6 +22,18 @@ DIFFICULTY_COUNTS = {"easy": 390, "medium": 1560, "hard": 3510, "expert": 2340}
 STOP_ANSWERS = {
     "alguno", "aquella", "aquello", "aquellos", "ellos", "estas", "estos", "mismo",
     "misma", "otros", "porque", "sobre", "todas", "todos", "cuando", "donde",
+    "asi", "ahora", "luego", "despues", "tambien", "solo", "aqui", "debajo",
+    "ciertamente", "dondequiera",
+    "eres", "es", "era", "eran", "estaba", "estaban", "estuve", "estuvo",
+    "ser", "sido", "sea", "sean", "sera", "seran", "fue", "fueron", "habia",
+    "hay", "hoy", "ayer", "manana", "cuan", "cuanto", "como", "derribad",
+    "levantate",
+}
+
+ADVERB_FORMS = {
+    "asi", "ahora", "luego", "despues", "tambien", "solo", "aqui", "debajo",
+    "ciertamente", "dondequiera", "entonces", "pronto", "delante", "encima",
+    "hoy", "ayer", "manana", "cuan", "cuanto", "como",
 }
 
 FUNCTION_WORDS = {
@@ -42,9 +54,14 @@ VERB_FORMS = {
     "dijo", "respondio", "hablo", "vino", "fue", "hizo", "vio", "miraba",
     "tuvo", "pidio", "dio", "puso", "salio", "volvio", "mando", "ordeno",
     "declaro", "oyo", "recibio", "levanto", "entro", "llevo", "trajo",
-    "revelo", "bendijo", "oro", "sera", "seran", "estaba", "estaban",
+    "revelo", "bendijo", "sera", "seran", "estaba", "estaban",
     "era", "eran", "ocupaba", "significa", "derribara", "destruira",
-    "estate", "cumplia", "pesole", "sea", "sean",
+    "estate", "cumplia", "pesole", "sea", "sean", "estuvo", "estuve", "temo",
+    "alce", "quedo", "hable", "sabes", "dije", "anda", "cuenta", "cuente",
+    "decidme", "contadme", "estabas", "conviene", "derribad", "cortad", "eres",
+    "llamese", "fueron", "trajeron", "acercandose", "levantate", "llevara",
+    "volvera", "llegara", "elevara", "pasados", "sentados", "considerados",
+    "rodeado", "fuese", "tuve", "manteniase", "vi", "oi",
 }
 
 
@@ -59,15 +76,17 @@ def _hash(value: str) -> str:
 
 def _word_role(word: str) -> str:
     normalized = _norm(word)
+    if normalized in ADVERB_FORMS or normalized.endswith("mente"):
+        return "adverb"
     if (normalized in FUNCTION_WORDS or normalized in STOPWORDS) and word.lower() != "hacía":
         return "function"
     if normalized in NUMBER_WORDS or normalized.isdigit():
         return "number"
-    if re.search(r"(?:rá|rán|ré|ría|rían|ía|ían|ó)$", word.lower()):
+    if re.search(r"(?:rá|rás|rán|ré|ría|rías|rían|ía|ían|ó)$", word.lower()):
         return "verb"
     if normalized in VERB_FORMS or re.search(
-        r"(?:ando|iendo|aron|ieron|aba|aban|ara|ira|aran|eran|iran)$",
-        normalized,
+        r"(?:ando|iendo|andose|iendose|ado|ada|ados|adas|ido|ida|idos|idas|aron|ieron|aba|aban|ia|ian|ara|ira|aran|eran|iran)$",
+        word.lower(),
     ):
         return "verb"
     return "content"
@@ -84,17 +103,12 @@ def option_signature(value: str, category: str | None = None) -> tuple[Any, ...]
     roles = [_word_role(word) for word in words]
     numeric = "numeric" if any(role == "number" for role in roles) else "lexical"
     if category == "number":
-        return (category, "numeric_value")
+        representation = "digits" if all(word.isdigit() for word in words) else "words"
+        return (category, length, representation)
     if category == "action":
-        return (category, length, "verb_form")
+        return (category, _action_form(value))
     if category == "phrase":
-        skeleton = tuple(
-            f"function:{_norm(word)}" if role == "function"
-            else "number" if role == "number"
-            else "content"
-            for word, role in zip(words, roles)
-        )
-        return (category, length, skeleton)
+        return (category, length)
     shapes = tuple(
         f"function:{_norm(word)}" if role == "function"
         else role if role in {"number", "verb"}
@@ -106,15 +120,30 @@ def option_signature(value: str, category: str | None = None) -> tuple[Any, ...]
 
 
 def _action_form(value: str) -> str:
-    lower = value.lower()
-    if re.search(r"(?:rá|rán|ré|remos)$", lower):
+    raw = value.lower()
+    lower = _norm(value)
+    irregular = {
+        "eres": "present_e", "es": "present_e", "soy": "present_other", "son": "present_other",
+        "esta": "present_a", "estan": "present_other", "tiene": "present_e", "tienen": "present_other",
+        "sabes": "present_other", "tuvo": "preterite", "dijo": "preterite", "dije": "preterite",
+        "hizo": "preterite", "vino": "preterite", "puso": "preterite",
+        "trajo": "preterite", "trajeron": "preterite",
+        "fue": "preterite", "fueron": "preterite",
+    }
+    if lower in irregular:
+        return irregular[lower]
+    if re.search(r"(?:rá|rás|rán|ré|remos)$", raw):
         return "future"
-    if re.search(r"(?:ó|aron|ieron)$", lower):
+    if re.search(r"(?:ó|é|í|aron|ieron)$", raw):
         return "preterite"
-    if re.search(r"(?:aba|aban|ía|ían)$", lower):
+    if re.search(r"(?:aba|aban|ía|ían)$", raw):
         return "imperfect"
-    if re.search(r"(?:ando|iendo)$", lower):
+    if re.search(r"(?:ara|aran|iera|ieran|yera|yeran|ase|asen|iese|iesen)$", lower):
+        return "subjunctive_past"
+    if re.search(r"(?:ando|iendo|andose|iendose)$", lower):
         return "gerund"
+    if re.search(r"(?:ad|ed|id|ate|ete|ite)$", lower):
+        return "imperative"
     if re.search(r"(?:ado|ada|ados|adas|ido|ida|idos|idas)$", lower):
         return "participle"
     if lower.endswith("a"):
@@ -166,20 +195,22 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
         score = (5 if raw_category in {"proper", "number"} else 3 if raw_category == "verb" else 2) + len(answer) / 20
         raw_candidates.append((token.start(), token.end(), answer, raw_category, score))
     for index in range(len(tokens)):
-        for size in (2, 3):
+        for size in (2, 3, 4):
             group = tokens[index:index + size]
             if len(group) != size:
                 continue
             answer = text[group[0].start():group[-1].end()]
-            if not re.fullmatch(r"[\wÁÉÍÓÚÜÑáéíóúüñ-]+(?: [\wÁÉÍÓÚÜÑáéíóúüñ-]+){1,2}", answer):
+            if not re.fullmatch(r"[\wÁÉÍÓÚÜÑáéíóúüñ-]+(?: [\wÁÉÍÓÚÜÑáéíóúüñ-]+){1,3}", answer):
                 continue
             roles = [_word_role(token.group()) for token in group]
-            if roles[0] != "content" or roles[-1] != "content" or "verb" in roles:
-                continue
-            if any(role == "function" and token.group().lower() not in {"de", "del", "y"} for role, token in zip(roles, group)):
+            starts_meaningfully = roles[0] in {"content", "function"}
+            if not starts_meaningfully or roles[-1] != "content" or "verb" in roles:
                 continue
             raw_category = "phrase_plural" if answer.lower().endswith("s") else "phrase_singular"
-            raw_candidates.append((group[0].start(), group[-1].end(), answer, raw_category, 0.5 + size / 10))
+            # Las expresiones completas tienen más valor editorial que una palabra
+            # suelta: preservan relaciones y contexto, y producen distractores de
+            # la misma estructura.
+            raw_candidates.append((group[0].start(), group[-1].end(), answer, raw_category, 4.5 + size / 10))
             editorial_phrase_keys.add((group[0].start(), group[-1].end(), _norm(answer)))
     raw_candidates.extend(_candidate_spans(text))
 
@@ -192,6 +223,7 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
         normalized = _norm(answer)
         words = answer.split()
         roles = [_word_role(word) for word in words]
+        broad_category = _broad_category(answer, raw_category, unit)
         if (
             not normalized
             or normalized in STOP_ANSWERS
@@ -201,7 +233,15 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
             or text.count(answer) != 1
             or "..." in answer
             or (len(words) > 1 and candidate_key not in editorial_phrase_keys)
-            or (len(words) > 1 and (roles[0] != "content" or roles[-1] != "content" or "verb" in roles))
+            or (
+                len(words) > 1
+                and (
+                    roles[0] not in {"content", "function"}
+                    or roles[-1] != "content"
+                    or "verb" in roles
+                )
+            )
+            or (broad_category == "phrase" and len(words) == 1)
         ):
             rejected += 1
             continue
@@ -211,30 +251,25 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
                 "start": start,
                 "end": end,
                 "grammatical_category": raw_category,
-                "category": _broad_category(answer, raw_category, unit),
+                "category": broad_category,
                 "score": score,
             }
         )
+    phrase_candidates = [row for row in candidates if row["category"] == "phrase"]
+    if len(phrase_candidates) > 2:
+        best_phrases = sorted(
+            phrase_candidates,
+            key=lambda row: (-float(row["score"]), -len(row["answer"]), int(row["start"])),
+        )[:2]
+        candidates = [row for row in candidates if row["category"] != "phrase"] + best_phrases
     if not candidates:
-        tokens = re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ-]{5,}", text)
-        answer = max(tokens, key=len, default=text.strip(" .,:;¡!¿?"))
-        start = text.find(answer)
-        candidates.append(
-            {
-                "answer": answer,
-                "start": start,
-                "end": start + len(answer),
-                "grammatical_category": "word_plural" if answer.lower().endswith("s") else "word_singular",
-                "category": "phrase",
-                "score": 0,
-            }
-        )
+        raise ValueError(f"Unidad sin un detalle editorial significativo: {unit['source_unit_id']}")
     candidates.sort(key=lambda row: (-float(row["score"]), row["start"], row["answer"]))
     return candidates, rejected
 
 
 def _context_for(text: str, answer: str) -> str:
-    clauses = re.split(r"(?<=[.!?])(?:[”’\"»])?\s+|\s*;\s+", text)
+    clauses = re.split(r"(?<=[.!?])(?:[”’\"»])?\s+", text)
     containing = [clause.strip() for clause in clauses if answer in clause]
     return min(containing, key=len) if containing else text
 

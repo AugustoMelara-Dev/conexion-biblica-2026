@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib
 import json
+import re
 import subprocess
 import sys
 import unittest
@@ -45,6 +46,21 @@ class FinalEditorialTests(unittest.TestCase):
         self.assertEqual(covered, expected)
         self.assertEqual(len({fact["fact_id"] for fact in facts}), 1950)
         self.assertTrue(all(fact["answer"] in fact["source_quote"] for fact in facts))
+        self.assertTrue(
+            all(
+                fact["category"] != "phrase" or len(fact["answer"].split()) >= 2
+                for fact in facts
+            )
+        )
+        self.assertFalse(
+            any(
+                re.search(
+                    r"[.!?]\d{1,3}$",
+                    unit.get("full_text") or unit.get("exact_text", ""),
+                )
+                for unit in self.inventory["units"]
+            )
+        )
 
     def test_generates_7800_gold_questions_balanced_across_four_families(self) -> None:
         editorial = self.require_editorial()
@@ -137,6 +153,37 @@ class FinalEditorialTests(unittest.TestCase):
                 "puesto de mucha" in question["question"].casefold()
                 and "puestas del sol" in {option.casefold() for option in question["options"]}
                 for question in self.questions
+            )
+        )
+
+    def test_distractor_signatures_do_not_mix_verbs_names_and_connectors(self) -> None:
+        editorial = self.require_editorial()
+        if editorial is None:
+            return
+        self.assertNotEqual(
+            editorial.option_signature("leyeran", "action"),
+            editorial.option_signature("oído", "action"),
+        )
+        self.assertNotEqual(
+            editorial.option_signature("eres", "action"),
+            editorial.option_signature("habló", "action"),
+        )
+        self.assertNotEqual(
+            editorial.option_signature("eres", "action"),
+            editorial.option_signature("tuvo", "action"),
+        )
+        forbidden_answers = {
+            "así", "ahora", "luego", "después", "también", "sólo", "aquí",
+            "debajo", "ciertamente", "dondequiera",
+            "eres", "es", "era", "eran", "estaba", "estaban", "estuve", "estuvo",
+            "ser", "sido", "sea", "sean", "será", "serán", "fue", "fueron", "había",
+            "hay", "hoy", "ayer", "mañana", "cuán", "cuánto", "cómo",
+        }
+        self.assertFalse(
+            any(
+                question["correct_answer"].casefold() in forbidden_answers
+                for question in self.questions
+                if question["family"] != "true_false"
             )
         )
 

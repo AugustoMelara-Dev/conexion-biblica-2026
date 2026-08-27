@@ -18,6 +18,8 @@
     "test:e2e": "playwright test",
     "audit:gold": "python scripts/audit-gold-bank.py",
     "test:gold": "python -m unittest scripts/test_gold_quality.py",
+    "build:final-bank": "python scripts/build-final-bank.py",
+    "test:final-bank": "python -m unittest scripts.test_final_editorial",
     "preview": "vite preview",
     "deploy": "vercel --prod --yes"
   },

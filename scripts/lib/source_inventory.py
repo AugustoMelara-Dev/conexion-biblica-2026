@@ -32,6 +32,7 @@ KNOWN_CHARACTERS = {
 KNOWN_PLACES = {
     "Amón", "Babilonia", "Egipto", "Elam", "Etiopía", "Grecia", "Jerusalén",
     "Judá", "Libia", "Media", "Moab", "Persia", "Quitim", "Sinar", "Susa",
+    "Israel", "Roma", "Sión", "Canaán", "Caldea", "Judea",
 }
 KNOWN_RIVERS = {"Éufrates", "Hidekel", "Quebar", "Chebar", "Ulai"}
 DIRECTIONS = {"norte", "sur", "oriente", "occidente", "poniente"}
@@ -169,6 +170,9 @@ def extract_daniel_inventory(
         assert len(verses[chapter]) == DANIEL_LAST_VERSE[chapter]
         for verse, (page, embedded) in verses[chapter].items():
             restored, unresolved = restore_corrupted_glyphs(embedded, ocr_pages[str(page)])
+            # El texto embebido pega una marca de nota al final de Daniel 1:21.
+            # No forma parte del versículo ni puede convertirse en un hecho.
+            restored = re.sub(r"(?<=[.!?])\d{1,3}$", "", restored)
             source_unit_id = f"DAN{chapter}-V{verse:03d}"
             issues.extend({**issue, "source_unit_id": source_unit_id, "page": page} for issue in unresolved)
             units.append(

@@ -37,7 +37,6 @@ import {
   type StudyDay,
 } from "@/domain/study-plan"
 import {
-  SUPPORTED_QUESTION_TYPES,
   type DifficultyBand,
   type QuestionStatus,
   type QuestionType,
@@ -57,19 +56,25 @@ const allChapters = [
   })),
 ]
 
+const FINAL_VISIBLE_TYPES: QuestionType[] = [
+  "single_choice",
+  "fill_blank",
+  "true_false",
+]
+
 const initialConfig: SessionConfig = {
   mode: "learn",
   count: 10,
   sourceWorks: ["Daniel", "Profetas y Reyes"],
   chapters: [],
   difficulties: [1, 2, 3, 4, 5],
-  types: [...SUPPORTED_QUESTION_TYPES],
+  types: [...FINAL_VISIBLE_TYPES],
   statuses: ["all"],
   shuffleQuestions: true,
   shuffleOptions: true,
   perQuestionSeconds: null,
   totalSeconds: null,
-  bankSelection: "legacy-v1",
+  bankSelection: "final-v7",
   strategy: "coverage-cycle",
 }
 
@@ -83,7 +88,6 @@ export function SessionBuilderPage({
     progress,
     bankSelection,
     coverageCycles,
-    setBankSelection,
   } = useApp()
   const [config, setConfig] = useState<SessionConfig>(() => ({
     ...initialConfig,
@@ -198,7 +202,7 @@ export function SessionBuilderPage({
         count: 50,
         sourceWorks: plan.chapters.map((group) => group.work),
         chapters: chaptersForStudyDay(day),
-        bankSelection: "prep-v3",
+        bankSelection: "final-v7",
         strategy: "coverage-cycle",
         difficultyBands: ["BASIC", "MEDIUM", "HARD", "EXPERT", "UNRATED"],
       },
@@ -222,13 +226,8 @@ export function SessionBuilderPage({
       <section className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="grid gap-6">
           <EssentialSettings
-            bankSelection={config.bankSelection ?? bankSelection}
             count={config.count}
             sourceWorks={config.sourceWorks}
-            onBankChange={(value) => {
-              update({ bankSelection: value })
-              setBankSelection(value)
-            }}
             onCountChange={(value) => update({ count: value })}
             onSourceWorksChange={(value) => update({ sourceWorks: value })}
           />
@@ -358,11 +357,11 @@ export function SessionBuilderPage({
                     Tipos de pregunta
                   </h2>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Activa o desactiva cualquier tipo soportado por tus bancos.
+                    Activa o desactiva las familias de pregunta del banco maestro.
                   </p>
                 </div>
                 <div className="grid gap-2 sm:grid-cols-2">
-                  {SUPPORTED_QUESTION_TYPES.map((type) => (
+                  {FINAL_VISIBLE_TYPES.map((type) => (
                     <label
                       key={type}
                       className="flex min-h-11 cursor-pointer items-center gap-3 rounded-lg border px-3 py-2.5 text-sm transition-colors hover:bg-muted/40"

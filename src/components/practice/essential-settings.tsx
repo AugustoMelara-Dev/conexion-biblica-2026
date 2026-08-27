@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import type { BankSelection, SessionConfig, SourceWork } from "@/domain/types"
+import type { SessionConfig, SourceWork } from "@/domain/types"
 import { Badge } from "@/components/ui/badge"
 import {
   Card,
@@ -19,28 +19,16 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
-const bankOptions: { value: BankSelection; label: string }[] = [
-  { value: "curated-v4", label: "V4 — cobertura amplia" },
-  { value: "prep-v3", label: "V3 — Preparación intensiva de 4 días" },
-  { value: "legacy-v1", label: "V1 — Clásica" },
-  { value: "mixed", label: "Mixto curado" },
-  { value: "master-v2", label: "V2 — Fuente técnica" },
-]
-
 const countOptions = [10, 25, 50, 100]
 
 export function EssentialSettings({
-  bankSelection,
   count,
   sourceWorks,
-  onBankChange,
   onCountChange,
   onSourceWorksChange,
 }: {
-  bankSelection: BankSelection
   count: SessionConfig["count"]
   sourceWorks: SourceWork[]
-  onBankChange: (value: BankSelection) => void
   onCountChange: (value: SessionConfig["count"]) => void
   onSourceWorksChange: (value: SourceWork[]) => void
 }) {
@@ -64,27 +52,10 @@ export function EssentialSettings({
       <CardHeader>
         <CardTitle>Ajustes esenciales</CardTitle>
         <CardDescription>
-          Elige el banco, el alcance y el tamaño de la ronda.
+          Elige el alcance y el tamaño de la ronda dentro del Banco Maestro Único.
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-5">
-        <label className="grid gap-2 text-sm font-medium">
-          Banco de preguntas
-          <select
-            aria-label="Banco de preguntas"
-            className="min-h-11 w-full rounded-md border bg-background px-3 text-sm font-medium focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
-            value={bankSelection}
-            onChange={(event) =>
-              onBankChange(event.target.value as BankSelection)
-            }
-          >
-            {bankOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </label>
         <div className="grid gap-3 sm:grid-cols-2">
           {(["Daniel", "Profetas y Reyes"] as SourceWork[]).map((source) => {
             const checked = sourceWorks.includes(source)

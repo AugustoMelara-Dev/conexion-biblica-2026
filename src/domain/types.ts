@@ -29,6 +29,7 @@ export type BankProfileId =
   | "curated-v4"
   | "massive-v5"
   | "consolidation-v5"
+  | "final-v7"
 export type BankSelection = BankProfileId | "mixed"
 export type DifficultyBand = "BASIC" | "MEDIUM" | "HARD" | "EXPERT" | "UNRATED"
 export type AnswerMode = "option_id" | "canonical_text"

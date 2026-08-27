@@ -29,7 +29,7 @@ export function FinalMissionDashboard({
       <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(17rem,0.75fr)] lg:p-10">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
-            <Badge className="gap-1"><Flag className="size-3.5" aria-hidden="true" /> V6 — Aprendizaje competitivo</Badge>
+            <Badge className="gap-1"><Flag className="size-3.5" aria-hidden="true" /> Banco Maestro Único</Badge>
             <Badge variant="outline">{remainingHours} h para competir</Badge>
           </div>
           <h1 id="final-mission-title" className="mt-5 max-w-3xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl">PLAN FINAL — GANAR EL 29</h1>
@@ -46,7 +46,7 @@ export function FinalMissionDashboard({
             </div>
           </div>
 
-          <Button size="lg" className="mt-6 min-h-12 w-full sm:w-auto sm:min-w-64" onClick={() => onContinue(next)}>Continuar mi misión</Button>
+          <Button size="lg" className="mt-6 min-h-12 w-full sm:w-auto sm:min-w-64" onClick={() => onContinue(next)}>CONTINUAR MI MISIÓN</Button>
           {onManual ? <button type="button" className="mt-4 block text-sm text-muted-foreground underline-offset-4 hover:underline sm:ml-5 sm:inline" onClick={onManual}>Configurar manualmente</button> : null}
         </div>
 

@@ -14,17 +14,17 @@ describe("preferencias y fallback de perfiles", () => {
   beforeEach(() => localStorage.clear())
   afterEach(() => localStorage.clear())
 
-  it("activa V6 Aprendizaje competitivo cuando no existe preferencia", () => {
-    expect(getPreferences().lastBankSelection).toBe("consolidation-v5")
+  it("activa el Banco Maestro Único cuando no existe preferencia", () => {
+    expect(getPreferences().lastBankSelection).toBe("final-v7")
   })
 
-  it("conserva una preferencia V4 guardada", () => {
+  it("migra una preferencia V4 guardada al banco único", () => {
     localStorage.setItem(
       "conexion-biblica-preferences",
       JSON.stringify({ lastBankSelection: "curated-v4" })
     )
 
-    expect(getPreferences().lastBankSelection).toBe("curated-v4")
+    expect(getPreferences().lastBankSelection).toBe("final-v7")
   })
 
   it("retrocede a V1 si V4 no está disponible", () => {
@@ -33,26 +33,26 @@ describe("preferencias y fallback de perfiles", () => {
     )
   })
 
-  it("recomienda V4 sólo en una instalación nueva cuando carga", () => {
+  it("elige el banco único siempre que su manifiesto esté disponible", () => {
     expect(
       resolveInitialBankSelection({
         storedSelection: "prep-v3",
         hasStoredPreferences: false,
         hadExistingBanks: false,
-        availableProfiles: ["curated-v4", "prep-v3"],
+        availableProfiles: ["final-v7", "curated-v4", "prep-v3"],
       })
-    ).toBe("curated-v4")
+    ).toBe("final-v7")
   })
 
-  it("conserva el default histórico de una instalación existente", () => {
+  it("migra también una instalación existente al banco único", () => {
     expect(
       resolveInitialBankSelection({
         storedSelection: "prep-v3",
         hasStoredPreferences: false,
         hadExistingBanks: true,
-        availableProfiles: ["curated-v4", "prep-v3"],
+        availableProfiles: ["final-v7", "curated-v4", "prep-v3"],
       })
-    ).toBe("prep-v3")
+    ).toBe("final-v7")
   })
 })
 

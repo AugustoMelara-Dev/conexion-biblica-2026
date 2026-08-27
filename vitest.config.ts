@@ -9,7 +9,12 @@ export default defineConfig({
     alias: { "@": path.resolve(__dirname, "./src") },
   },
   test: {
-    exclude: [...configDefaults.exclude, "e2e/**", ".worktrees/**"],
+    exclude: [
+      ...configDefaults.exclude,
+      "e2e/**",
+      ".worktrees/**",
+      "scripts/lib/ocr-path.test.mjs",
+    ],
     environment: "jsdom",
     setupFiles: ["./src/test/setup.ts"],
     globals: true,

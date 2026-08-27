@@ -26,8 +26,8 @@ type StartRound = (config: SessionConfig, resetCycle?: boolean) => void
 
 const question: Question = {
   id: "session-builder-question",
-  bankId: "legacy-v1",
-  bankProfileId: "legacy-v1",
+  bankId: "BANCO_UNICO_CONEXION_BIBLICA_2026",
+  bankProfileId: "final-v7",
   type: "single_choice",
   difficulty: 3,
   source: {
@@ -51,25 +51,17 @@ const defaultSessionConfig: SessionConfig = {
   difficulties: [1, 2, 3, 4, 5],
   types: [
     "single_choice",
-    "true_false",
     "fill_blank",
-    "multi_select",
-    "ordering",
-    "matching",
-    "who_said_it",
-    "to_whom",
-    "reference_detail",
-    "negative_choice",
-    "sequence_choice",
-    "precision",
+    "true_false",
   ],
   statuses: ["all"],
   shuffleQuestions: true,
   shuffleOptions: true,
   perQuestionSeconds: null,
   totalSeconds: null,
-  bankSelection: "legacy-v1",
+  bankSelection: "final-v7",
   strategy: "coverage-cycle",
+  difficultyBands: ["BASIC", "MEDIUM", "HARD", "EXPERT", "UNRATED"],
 }
 
 function getQuestionProgress(input: Question): QuestionProgress {
@@ -119,9 +111,9 @@ function createAppContext({
       theme: "system",
       lastMode: "learn",
       reducedMotion: false,
-      lastBankSelection: "legacy-v1",
+      lastBankSelection: "final-v7",
     },
-    bankSelection: "legacy-v1",
+    bankSelection: "final-v7",
     setBankSelection,
     bankCounts: { legacy: 1, master: 0, prep: 0, curated: 0 },
     coverageCycles,
@@ -152,7 +144,7 @@ function createAppContext({
         theme: "system",
         lastMode: "learn",
         reducedMotion: false,
-        lastBankSelection: "legacy-v1",
+        lastBankSelection: "final-v7",
       },
       coverageCycles: [],
       activeRound: null,
@@ -277,10 +269,13 @@ describe("configuración progresiva de práctica", () => {
     expect(screen.getByText("Tipos de pregunta")).toBeVisible()
   })
 
-  it("mantiene visibles banco, cantidad y resumen", () => {
+  it("mantiene visibles el banco canónico, cantidad y resumen", () => {
     renderSessionBuilder()
 
-    expect(screen.getByText("Banco de preguntas")).toBeVisible()
+    expect(screen.getByText(/dentro del Banco Maestro Único/)).toBeVisible()
+    expect(
+      screen.queryByRole("combobox", { name: "Banco de preguntas" })
+    ).not.toBeInTheDocument()
     expect(screen.getByRole("combobox", { name: "Cantidad" })).toBeVisible()
     expect(screen.getByText(/preguntas disponibles/)).toBeVisible()
     expect(screen.getByRole("button", { name: "Comenzar ronda" })).toBeEnabled()
@@ -314,13 +309,15 @@ describe("configuración progresiva de práctica", () => {
       name: "Configuración avanzada",
     })
     await user.click(disclosure)
-    await user.click(screen.getByRole("button", { name: "Nivel 1" }))
+    await user.click(screen.getByRole("button", { name: "BASIC" }))
     await user.click(disclosure)
     await user.click(disclosure)
     await user.click(screen.getByRole("button", { name: "Comenzar ronda" }))
 
     expect(onStart).toHaveBeenCalledWith(
-      expect.objectContaining({ difficulties: [2, 3, 4, 5] }),
+      expect.objectContaining({
+        difficultyBands: ["MEDIUM", "HARD", "EXPERT", "UNRATED"],
+      }),
       false
     )
   })
@@ -345,22 +342,18 @@ describe("configuración progresiva de práctica", () => {
     )
   })
 
-  it("incluye el banco elegido en el payload de inicio", async () => {
+  it("mantiene el banco único en el payload de inicio", async () => {
     const user = userEvent.setup()
     const onStart = vi.fn<StartRound>()
     const { setBankSelection } = renderSessionBuilder({ onStart })
 
-    await user.selectOptions(
-      screen.getByRole("combobox", { name: "Banco de preguntas" }),
-      "prep-v3"
-    )
     await user.click(screen.getByRole("button", { name: "Comenzar ronda" }))
 
-    expect(setBankSelection).toHaveBeenCalledWith("prep-v3")
+    expect(setBankSelection).not.toHaveBeenCalled()
     expect(onStart).toHaveBeenCalledWith(
       expect.objectContaining({
         ...defaultSessionConfig,
-        bankSelection: "prep-v3",
+        bankSelection: "final-v7",
       }),
       false
     )
@@ -373,7 +366,9 @@ describe("configuración progresiva de práctica", () => {
       poolKey: buildPoolKey(defaultSessionConfig),
       cycleId: "exhausted-cycle",
       remainingQuestionKeys: [],
-      seenQuestionKeys: ["legacy-v1:session-builder-question"],
+      seenQuestionKeys: [
+        "BANCO_UNICO_CONEXION_BIBLICA_2026:session-builder-question",
+      ],
       totalPoolSize: 1,
       createdAt: 1,
       updatedAt: 1,
