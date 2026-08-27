@@ -29,6 +29,13 @@ DUPLICATED_WORD = re.compile(r"\b([\wáéíóúüñ]+)\s+\1\b", re.IGNORECASE)
 DANGLING_CONNECTOR = re.compile(
     r"\b(?:y|o|de|del|en|con|por|para|que|como|a|al)$", re.IGNORECASE
 )
+LOCATION_ANSWER = re.compile(
+    r"^(?:Daniel \d+:\d+|PR\d+, p\. \d+(?:, párrafo \d+)?)$"
+)
+LOCATION_PROMPT = re.compile(
+    r"\ben (?:qué|cuál) (?:referencia|versículo|página|párrafo)\b",
+    re.IGNORECASE,
+)
 REQUIRED_FIELDS = {
     "id", "fact_id", "variant_id", "template_id", "bank_id", "chapter",
     "reference", "source_unit_id", "source_quote", "family", "difficulty",
@@ -182,12 +189,12 @@ def main() -> int:
         elif family == "single_choice_contextual":
             if blank_count:
                 fail(errors, qid, "contextual_question_contains_blank")
-            if question["correct_answer"] != fact["reference"]:
-                fail(errors, qid, "contextual_reference_answer_mismatch")
-            if not all(re.fullmatch(r"Daniel \d+:\d+|PR\d+, p\. \d+, párrafo \d+", option) for option in options):
-                fail(errors, qid, "contextual_options_are_not_references")
-            if question["question"].count(f"«{fact['answer']}»") != 1:
-                fail(errors, qid, "contextual_answer_not_used_once")
+            if question["correct_answer"] != fact["answer"]:
+                fail(errors, qid, "contextual_answer_fact_mismatch")
+            if question["correct_answer"] not in question["source_quote"]:
+                fail(errors, qid, "contextual_answer_not_in_source")
+            if f"«{fact['answer']}»" in question["question"]:
+                fail(errors, qid, "contextual_prompt_reveals_answer")
             if question.get("trap_type") != "true_in_other_context":
                 fail(errors, qid, "missing_contextual_trap")
             if set(question["why_distractors_fail"]) != (
@@ -215,6 +222,12 @@ def main() -> int:
                 fail(errors, qid, "distractor_initial_case_mismatch")
 
         normalized = re.sub(r"\W+", " ", question["question"].casefold()).strip()
+        if LOCATION_ANSWER.fullmatch(str(question["correct_answer"]).strip()) or any(
+            LOCATION_ANSWER.fullmatch(str(option).strip()) for option in options
+        ):
+            fail(errors, qid, "source_location_used_as_answer")
+        if LOCATION_PROMPT.search(question["question"]):
+            fail(errors, qid, "source_location_requested")
         if normalized in normalized_questions:
             fail(errors, qid, "duplicate_visible_question")
         normalized_questions.add(normalized)

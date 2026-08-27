@@ -882,16 +882,10 @@ def _named_entity_phrase_replacement(
 
 def _review_choice(question: dict[str, Any]) -> dict[str, Any]:
     quote_norm = _norm(question["source_quote"])
-    if question["family"] == "single_choice_contextual":
-        supported = [
-            index for index, option in enumerate(question["options"])
-            if option == question["reference"]
-        ]
-    else:
-        supported = [
-            index for index, option in enumerate(question["options"])
-            if _norm(option) and _norm(option) in quote_norm
-        ]
+    supported = [
+        index for index, option in enumerate(question["options"])
+        if _norm(option) and _norm(option) in quote_norm
+    ]
     if question["family"] == "true_false":
         asserted_norm = _norm(question.get("asserted_detail") or "")
         correction_norm = _norm(question.get("correction") or "")
@@ -1146,45 +1140,11 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                     question_text = f"Complete {fact['reference']}: «{masked_context}»"
                     trap_type = None
                 elif family == "single_choice_contextual":
-                    reference_rows: list[dict[str, Any]] = []
-                    used_references = {fact["reference"]}
-                    for row in sorted(
-                        facts,
-                        key=lambda candidate: (
-                            candidate["category"] != fact["category"],
-                            candidate["chapter"] != fact["chapter"],
-                            _hash(f"context-reference:{fact['fact_id']}:{candidate['fact_id']}"),
-                        ),
-                    ):
-                        if (
-                            row["work"] != fact["work"]
-                            or
-                            row["reference"] in used_references
-                            or fact["_normalized_answer"] in row["_normalized_source"]
-                        ):
-                            continue
-                        used_references.add(row["reference"])
-                        reference_rows.append(row)
-                        if len(reference_rows) == 3:
-                            break
-                    if len(reference_rows) != 3:
-                        raise ValueError(f"Faltan referencias contextuales para {fact['fact_id']}")
-                    contextual_distractors = [row["reference"] for row in reference_rows]
-                    options = _arrange_options(fact["reference"], contextual_distractors, position)
                     question_text = (
-                        f"Dentro de {_chapter_label(fact['chapter'])}, ¿en cuál referencia se emplea «{fact['answer']}» "
-                        f"en esta afirmación: "
+                        f"Según {fact['reference']}, ¿qué {_category_label(fact['category'])} "
+                        f"corresponde específicamente a esta escena: "
                         f"«{_masked(fact['context'], fact['answer'], '[…]')}»?"
                     )
-                    base["accepted_answers"] = [fact["reference"]]
-                    base["option_category"] = "reference"
-                    why = {
-                        row["reference"]: (
-                            f"En {row['reference']} aparece «{row['answer']}»; no es la referencia "
-                            f"solicitada para «{fact['answer']}»."
-                        )
-                        for row in reference_rows
-                    }
                     trap_type = "true_in_other_context"
                 else:
                     question_text = (
@@ -1197,9 +1157,9 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                         "question": question_text,
                         "options": options,
                         "correct_option": position,
-                        "correct_answer": fact["reference"] if family == "single_choice_contextual" else fact["answer"],
+                        "correct_answer": fact["answer"],
                         "explanation": (
-                            f"El detalle «{fact['answer']}» aparece en {fact['reference']}: «{fact['context']}»."
+                            f"En el contexto exacto de {fact['reference']}, el detalle aplicable es «{fact['answer']}»: «{fact['context']}»."
                             if family == "single_choice_contextual"
                             else f"{fact['reference']} declara literalmente «{fact['context']}». La respuesta pedida es «{fact['answer']}»."
                         ),
@@ -1358,6 +1318,22 @@ def audit_final_bank(
         not re.fullmatch(r"Daniel \d+:\d+|PR\d+, p\. \d+, párrafo \d+", question["reference"])
         for question in questions
     )
+    location_answer_pattern = re.compile(
+        r"^(?:Daniel \d+:\d+|PR\d+, p\. \d+(?:, párrafo \d+)?)$"
+    )
+    location_prompt_pattern = re.compile(
+        r"\ben (?:qué|cuál) (?:referencia|versículo|página|párrafo)\b",
+        re.IGNORECASE,
+    )
+    source_location_questions = sum(
+        bool(location_prompt_pattern.search(question["question"]))
+        or bool(location_answer_pattern.fullmatch(str(question["correct_answer"]).strip()))
+        or any(
+            location_answer_pattern.fullmatch(str(option).strip())
+            for option in question["options"]
+        )
+        for question in questions
+    )
     length_leaks = 0
     for question in questions:
         if question["family"] == "true_false":
@@ -1400,10 +1376,11 @@ def audit_final_bank(
         "unique_facts": len(facts),
         "ambiguous_gold_questions": sum(question["validation_adversarial"]["status"] != "passed" for question in questions),
         "unsupported_gold_answers": sum(
-            question["family"] not in {"true_false", "single_choice_contextual"}
+            question["family"] != "true_false"
             and question["correct_answer"] not in question["source_quote"]
             for question in questions
         ),
+        "source_location_questions": source_location_questions,
         "duplicate_gold_questions": len(normalized_questions) - len(set(normalized_questions)),
         "lexical_sequence_questions": sum("→" in question["question"] for question in questions),
         "broken_true_false": sum(

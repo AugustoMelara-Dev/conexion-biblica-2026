@@ -263,9 +263,37 @@ class FinalEditorialTests(unittest.TestCase):
             if question["family"] == "single_choice_contextual":
                 self.assertEqual(question["trap_type"], "true_in_other_context", question["id"])
                 self.assertEqual(len(question["why_distractors_fail"]), 3, question["id"])
-                self.assertEqual(question["correct_answer"], question["reference"], question["id"])
+                fact = next(
+                    fact for fact in self.facts if fact["fact_id"] == question["fact_id"]
+                )
+                self.assertEqual(question["correct_answer"], fact["answer"], question["id"])
                 self.assertEqual(len(set(question["options"])), 4, question["id"])
-                self.assertTrue(all(re.fullmatch(r"Daniel \d+:\d+|PR\d+, p\. \d+, párrafo \d+", option) for option in question["options"]), question["id"])
+                self.assertFalse(
+                    any(
+                        re.fullmatch(
+                            r"Daniel \d+:\d+|PR\d+, p\. \d+(?:, párrafo \d+)?",
+                            option,
+                        )
+                        for option in question["options"]
+                    ),
+                    question["id"],
+                )
+
+    def test_no_gold_question_asks_for_or_answers_with_source_location(self) -> None:
+        location = re.compile(
+            r"^(?:Daniel \d+:\d+|PR\d+, p\. \d+(?:, párrafo \d+)?)$"
+        )
+        location_prompt = re.compile(
+            r"\ben (?:qué|cuál) (?:referencia|versículo|página|párrafo)\b",
+            re.IGNORECASE,
+        )
+        for question in self.questions:
+            self.assertFalse(location.fullmatch(question["correct_answer"]), question["id"])
+            self.assertFalse(
+                any(location.fullmatch(option) for option in question["options"]),
+                question["id"],
+            )
+            self.assertNotRegex(question["question"], location_prompt, question["id"])
 
     def test_formulations_do_not_repeat_or_add_the_answer_inside_one_prompt(self) -> None:
         facts_by_id = {fact["fact_id"]: fact for fact in self.facts}
@@ -290,11 +318,7 @@ class FinalEditorialTests(unittest.TestCase):
                 )
             if question["family"] == "single_choice_contextual":
                 fact_answer = facts_by_id[question["fact_id"]]["answer"]
-                self.assertEqual(
-                    question["question"].count(f"«{fact_answer}»"),
-                    1,
-                    question["id"],
-                )
+                self.assertNotIn(f"«{fact_answer}»", question["question"], question["id"])
                 self.assertNotIn("________", question["question"], question["id"])
 
     def test_gold_language_is_natural_and_schema_is_complete(self) -> None:
@@ -504,6 +528,7 @@ class FinalEditorialTests(unittest.TestCase):
             "invalid_references",
             "external_knowledge_questions",
             "answer_length_leaks",
+            "source_location_questions",
             "orphan_numeric_source_fragments",
             "family_contract_violations",
         ):
