@@ -155,6 +155,11 @@ class FinalEditorialTests(unittest.TestCase):
             "cuernos que yo",
             "favores y gran",
             "ejército y muchas",
+            "rey confirmare pueda mudarse",
+            "rey demanda es difícil",
+            "cosa semejante a ningún",
+            "tiempo algunos hombres caldeos",
+            "dioses ni tampoco adoraremos",
         }
         used_options = {
             option.casefold()
@@ -186,6 +191,10 @@ class FinalEditorialTests(unittest.TestCase):
             editorial.option_signature("eres", "action"),
             editorial.option_signature("tuvo", "action"),
         )
+        self.assertNotEqual(
+            editorial.option_signature("una proclamación para exaltar", "phrase"),
+            editorial.option_signature("tiene derecho a interponerse", "phrase"),
+        )
         forbidden_answers = {
             "así", "ahora", "luego", "después", "también", "sólo", "aquí",
             "debajo", "ciertamente", "dondequiera",
@@ -198,6 +207,17 @@ class FinalEditorialTests(unittest.TestCase):
                 question["correct_answer"].casefold() in forbidden_answers
                 for question in self.questions
                 if question["family"] != "true_false"
+            )
+        )
+        duplicated_connector = re.compile(
+            r"\b(que|de|la|el|a|en|y|por|para|con|los|las)\s+\1\b",
+            re.IGNORECASE,
+        )
+        self.assertFalse(
+            any(
+                duplicated_connector.search(question.get("statement", ""))
+                for question in self.questions
+                if question["family"] == "true_false"
             )
         )
 
