@@ -17,7 +17,11 @@ La revisión automática y la revisión editorial asistida por IA no encontraron
 - 108 preguntas competitivas revisadas en 36 estratos: completar, V/F falsas y contextuales para DAN7–12 y PR39–44.
 - Paquete priorizado de 600 preguntas de alto riesgo regenerado y sin banderas automáticas.
 - 1,500 V/F verdaderas y 1,500 falsas; todas las falsas usan una afirmación completa.
-- Cero respuestas sin respaldo, duplicados visibles, referencias inválidas, colisiones de `fact_id`, plantillas falsas de presencia o errores de auditoría profunda.
+- V/F verdaderas de presencia léxica: 0.
+- Contextuales con plantilla universal: 0.
+- Identidades contextuales trazables: 353.
+- Preguntas contextuales con papel explícito y evidencia enmascarada: 3,000.
+- Cero respuestas sin respaldo, duplicados visibles, referencias inválidas, colisiones de `fact_id`, fugas de respuesta contextual o errores de auditoría profunda.
 
 ## Correcciones surgidas de esta revisión
 
@@ -27,6 +31,8 @@ La revisión automática y la revisión editorial asistida por IA no encontraron
 - Se prohibieron negaciones locales de infinitivos, gerundios, participios y predicados no verbales.
 - Se bloquearon negaciones dentro de cláusulas que ya contienen otra polaridad negativa.
 - Distribución final de las 1,500 falsas: 598 negaciones finitas controladas, 372 sustituciones de categoría cerrada y 530 trampas de atribución contextual.
+- Se sustituyeron 353 comprobaciones léxicas verdaderas por identidades derivadas de la escena y se eliminaron 2,928 usos de la plantilla contextual universal.
+- Se añadieron papeles contextuales deterministas, recomputación independiente en auditoría y saneamiento de comillas editoriales sin alterar el texto léxico de la fuente.
 
 ## Aplicación y aprendizaje
 
@@ -34,4 +40,4 @@ La suite web confirma rondas de 100 con 30 completar, 25 V/F y 45 selecciones, s
 
 ## Límite explícito
 
-La calidad semántica absoluta no puede demostrarse matemáticamente. Permanecen 353 V/F verdaderas de comprobación léxica y 2,928 preguntas contextuales basadas en una escena con detalle oculto; son válidas y trazables, pero una revisión humana puede preferir reformular algunas por criterio competitivo. Por eso este informe se identifica como revisión IA y no altera el contador humano.
+La calidad semántica absoluta no puede demostrarse matemáticamente. La revisión IA de las 12,000 preguntas y la muestra competitiva estratificada no encontró bloqueadores abiertos, pero una revisión humana independiente aún puede preferir reformular elementos por criterio competitivo. Por eso este informe no altera el contador: las 12,000 firmas humanas permanecen correctamente en `pending_human`.

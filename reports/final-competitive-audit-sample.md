@@ -4,7 +4,7 @@
 - Preguntas activas: 12000
 - Muestra estratificada: 108 preguntas (12 capítulos × 3 familias × 3 casos).
 - Alertas estructurales en la muestra: 0
-- Estado de revisión visual: pendiente de registrar en este informe.
+- Revisión visual asistida por IA: completada para las 108 preguntas; no constituye firma humana.
 
 ## Muestra
 
