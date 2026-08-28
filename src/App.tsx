@@ -24,6 +24,7 @@ import type {
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Skeleton } from "@/components/ui/skeleton"
 import { AppShell } from "@/components/app-shell"
+import { BankManagerPage } from "@/components/bank-manager-page"
 import { FocusShell } from "@/components/layout/focus-shell"
 import { DashboardPage } from "@/components/dashboard-page"
 import { HistoryPage } from "@/components/history-page"
@@ -338,7 +339,7 @@ export function App() {
         />
       )
     if (nav === "banks")
-      return <DashboardPage onStartMission={(config) => void startRound(config)} />
+      return <BankManagerPage />
     if (nav === "practice")
       return (
         <SessionBuilderPage

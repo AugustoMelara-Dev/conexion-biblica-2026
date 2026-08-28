@@ -153,7 +153,7 @@ test("el aprendizaje muestra fuente y repara un fallo después de separación", 
 })
 
 test("resumen, estadísticas e historial conservan la identidad canónica", async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== "desktop-chromium", "La navegación móvil se valida por separado")
+  test.skip(!testInfo.project.name.startsWith("desktop-"), "La navegación móvil se valida por separado")
   await waitForHome(page)
   const desktop = page.getByRole("navigation", { name: "Navegación principal" })
   for (const [destination, heading] of [

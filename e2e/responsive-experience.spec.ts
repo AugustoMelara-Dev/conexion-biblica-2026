@@ -18,7 +18,7 @@ async function expectNoHorizontalOverflow(page: Page) {
 test("escritorio presenta jerarquía clara y navegación canónica", async ({
   page,
 }, testInfo) => {
-  test.skip(testInfo.project.name !== "desktop-chromium", "Geometría de escritorio")
+  test.skip(!testInfo.project.name.startsWith("desktop-"), "Geometría de escritorio")
   await page.setViewportSize({ width: 1024, height: 900 })
   await waitForHome(page)
 
@@ -37,7 +37,7 @@ test("escritorio presenta jerarquía clara y navegación canónica", async ({
 test("móvil a 390 px navega sin solapamiento ni desbordamiento", async ({
   page,
 }, testInfo) => {
-  test.skip(testInfo.project.name !== "mobile-chromium", "Viewport móvil")
+  test.skip(!testInfo.project.name.startsWith("mobile-"), "Viewport móvil")
   await waitForHome(page)
   await expectNoHorizontalOverflow(page)
 

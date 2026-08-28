@@ -112,6 +112,7 @@ describe("AppShell", () => {
     expect(screen.queryByRole("menuitem", { name: "Bancos" })).not.toBeInTheDocument()
     expect(screen.getByRole("menuitem", { name: "Historial" })).toBeVisible()
     expect(screen.getByRole("menuitem", { name: "Revisión" })).toBeVisible()
+    expect(screen.getByRole("menuitem", { name: "Respaldo" })).toBeVisible()
   })
 
   it("marca el destino secundario activo dentro de Más", async () => {

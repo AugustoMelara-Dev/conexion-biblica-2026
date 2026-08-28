@@ -5,6 +5,7 @@ import {
   ChevronLeft,
   ChevronRight,
   ClipboardList,
+  DatabaseBackup,
   History,
   LayoutDashboard,
   Moon,
@@ -41,6 +42,7 @@ const navItems: { key: NavKey; label: string; icon: typeof LayoutDashboard }[] =
     { key: "stats", label: "Estadísticas", icon: ChartNoAxesColumn },
     { key: "history", label: "Historial", icon: History },
     { key: "review", label: "Revisar preguntas", icon: ClipboardList },
+    { key: "banks", label: "Respaldo", icon: DatabaseBackup },
   ]
 
 const mobilePrimaryItems = navItems.filter(({ key }) =>
@@ -54,6 +56,7 @@ const mobileMoreItems: {
 }[] = [
   { key: "history", label: "Historial", icon: History },
   { key: "review", label: "Revisión", icon: ClipboardList },
+  { key: "banks", label: "Respaldo", icon: DatabaseBackup },
 ]
 
 const NAVIGATION_STORAGE_KEY = "conexion-biblica-navigation-collapsed"
@@ -252,7 +255,12 @@ export function AppShell({ children }: { children: ReactNode }) {
   })
 
   useEffect(() => {
-    window.localStorage.setItem(NAVIGATION_STORAGE_KEY, String(collapsed))
+    try {
+      window.localStorage.setItem(NAVIGATION_STORAGE_KEY, String(collapsed))
+    } catch {
+      // Una preferencia visual no debe impedir usar la aplicación cuando el
+      // almacenamiento local está lleno o bloqueado por el navegador.
+    }
   }, [collapsed])
 
   const { nav, setNav } = useApp()
