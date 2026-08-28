@@ -1,0 +1,281 @@
+{
+  "schema_version": "1.2",
+  "reviewer_type": "ai_semantic_audit",
+  "human_signatures": 0,
+  "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+  "audit_date": "2026-08-28",
+  "audit_kind": "final_post_regeneration_delta",
+  "human_review": false,
+  "status": "passed_ai_only",
+  "scope": {
+    "chapters": ["PR39", "PR40"],
+    "question_files": [
+      "public/banks/final-2026/questions/PR39.json",
+      "public/banks/final-2026/questions/PR40.json"
+    ],
+    "source_file": "MaterialConexionBiblica (1).pdf",
+    "fact_inventory": "public/banks/final-2026/fact_inventory.json",
+    "source_inventory": "public/banks/final-2026/source_inventory.json",
+    "manifest": "public/banks/final-2026/manifest.json",
+    "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3"
+  },
+  "chapters": {
+    "PR39": {
+      "questions": 868,
+      "facts": 210,
+      "source_units": 140,
+      "family_counts": {
+        "single_choice_direct": 210,
+        "fill_choice": 210,
+        "single_choice_contextual": 210,
+        "true_false": 238
+      }
+    },
+    "PR40": {
+      "questions": 799,
+      "facts": 195,
+      "source_units": 102,
+      "family_counts": {
+        "single_choice_direct": 195,
+        "fill_choice": 195,
+        "single_choice_contextual": 195,
+        "true_false": 214
+      }
+    }
+  },
+  "total_questions_reviewed": 1667,
+  "family_counts": {
+    "single_choice_direct": 405,
+    "fill_choice": 405,
+    "single_choice_contextual": 405,
+    "true_false": 452
+  },
+  "ids_checked_sha256": "ae83d2f504a75cc88c371e0f1b1445876b6f335b174f5bd25adef33eb769bd36",
+  "ids_hash_method": "SHA-256 de IDs UTF-8 unidos por LF, en orden de filas PR39.json y después PR40.json",
+  "delta_from_previous_report": {
+    "previous_total_questions": 1671,
+    "current_total_questions": 1667,
+    "previous_ids_sha256": "cf84f708cd5e4539683b6e0dffe3df0d1ac3d39cc7c1dcd75013e05c275f750d",
+    "current_ids_sha256": "ae83d2f504a75cc88c371e0f1b1445876b6f335b174f5bd25adef33eb769bd36",
+    "id_set_unchanged": false,
+    "question_delta": 0,
+    "change_note": "La última regeneración conservó los 1.667 registros y redistribuyó IDs/mutaciones V/F; todos los IDs actuales están cubiertos por este hash.",
+    "content_regeneration_verified": true,
+    "regressions": []
+  },
+  "audit_coverage": {
+    "records_loaded_from_shards": 1667,
+    "records_contrasted_record_by_record": 1667,
+    "source_fact_traceability": {
+      "reviewed": 1667,
+      "clean": 1667,
+      "fields_checked": [
+        "fact_id",
+        "source_unit_id",
+        "chapter",
+        "reference",
+        "source_ref",
+        "source_span",
+        "source_quote",
+        "context_anchor",
+        "relation_type",
+        "option_category"
+      ]
+    },
+    "answer_support_and_correct_option": {
+      "reviewed": 1215,
+      "source_supported": 1215,
+      "correct_option_equals_answer": 1215,
+      "issues": 0
+    },
+    "true_false_statement_and_correction": {
+      "reviewed": 452,
+      "true_records": 226,
+      "false_records": 226,
+      "source_statement_checks_passed": 452,
+      "false_correction_checks_passed": 226,
+      "false_mutation_kinds": {
+        "negation": 77,
+        "closed_category_substitution": 55,
+        "cross_reference_statement": 94
+      },
+      "issues": 0
+    },
+    "contextual_role_and_evidence": {
+      "reviewed": 405,
+      "evidence_present": 405,
+      "role_contract_resolved": 405,
+      "automated_role_failures": 0,
+      "manual_semantic_findings": 0
+    },
+    "fill_and_distractor_grammar": {
+      "reviewed": 1215,
+      "correct_blanks_source_supported": 1215,
+      "automated_option_signature_failures": 0,
+      "manual_grammar_findings": 0
+    },
+    "answer_exposure_and_source_fragments": {
+      "all_non_tf_questions_scanned": 1215,
+      "current_exact_answer_exposure_findings": 0,
+      "source_fragment_findings": 0,
+      "ocr_visual_cotejo_confirmed_original": 2
+    }
+  },
+  "validation_assertions": {
+    "unique_ids": 1667,
+    "duplicate_ids": 0,
+    "missing_fact_ids": 0,
+    "source_fact_mismatches": 0,
+    "source_quote_not_in_unit": 0,
+    "mc_option_or_answer_issues": 0,
+    "true_false_schema_issues": 0,
+    "true_false_correction_issues": 0,
+    "contextual_reconstruction_failures": 0,
+    "adversarial_validation_failures": 0,
+    "automated_exhaustive_risk_flags": 0,
+    "deep_audit_errors_in_scope": 0,
+    "deep_audit_pdf_sha256_matches": true,
+    "manual_semantic_open_findings": 0
+  },
+  "distribution": {
+    "difficulty_counts": {
+      "easy": 129,
+      "medium": 465,
+      "hard": 674,
+      "expert": 399
+    },
+    "contextual_role_counts": {
+      "destination": 1,
+      "named_entity": 49,
+      "action": 157,
+      "concept": 80,
+      "connector_object": 26,
+      "location": 4,
+      "geographic_relation": 11,
+      "recipient": 14,
+      "purpose": 6,
+      "duration": 4,
+      "modifier": 15,
+      "predicate": 17,
+      "quantity": 3,
+      "formulation": 12,
+      "cause": 5,
+      "territorial_title": 1
+    },
+    "true_false_statement_modes": {
+      "exact_source": 421,
+      "contextual_identity": 31
+    }
+  },
+  "previous_findings_status": [
+    {
+      "id": "PR39-GOLD-1817-SINGLE_CHOICE_CONTEXTUAL",
+      "status": "resolved",
+      "evidence": "El hecho ahora responde «sencillez», con category=term/word_singular; direct, fill y contextual usan una ranura nominal coherente y las dos V/F antiguas fueron retiradas.",
+      "recommendation": "Sin acción adicional."
+    },
+    {
+      "id": "PR39-GOLD-1851-SINGLE_CHOICE_DIRECT",
+      "status": "resolved",
+      "evidence": "Las alertas morfológicas anteriores quedaron corregidas en los cuatro hechos: los distractores son nominales compatibles en 1851/1943, nominales en 1855 y adjetivos postnominales en 1926; deep audit actual=0.",
+      "recommendation": "Sin acción adicional."
+    },
+    {
+      "id": "PR40-GOLD-2142-SINGLE_CHOICE_CONTEXTUAL",
+      "status": "resolved",
+      "evidence": "El objetivo actual es «dones» en «le dió muchos y grandes ________»; las opciones son nominales y el prompt contextual coincide con la construcción.",
+      "recommendation": "Sin acción adicional."
+    },
+    {
+      "id": "PR40-GOLD-2076-SINGLE_CHOICE_CONTEXTUAL",
+      "status": "resolved",
+      "evidence": "El objetivo actual es «fortaleza» en «me diste sabiduría y ________»; el hecho es nominal, las opciones son sustantivos y el prompt contextual es coherente.",
+      "recommendation": "Sin acción adicional."
+    },
+    {
+      "id": "PR40-GOLD-2200-SINGLE_CHOICE_DIRECT",
+      "status": "resolved",
+      "evidence": "Las dos posiciones de «Comprender» permanecen ocultas en el enunciado mostrado; no hay exposición exacta de la respuesta en direct/fill.",
+      "recommendation": "Sin acción adicional."
+    },
+    {
+      "id": "PR39-GOLD-1889-SINGLE_CHOICE_CONTEXTUAL",
+      "status": "resolved",
+      "evidence": "Los seis casos de relación personal fueron regenerados con prompts neutrales de «persona o ser» y opciones homogéneas; los roles/evidencias pasan el contrato contextual y la revisión semántica delta.",
+      "recommendation": "Sin acción adicional."
+    },
+    {
+      "id": "PR39-GOLD-1826-SINGLE_CHOICE_CONTEXTUAL",
+      "status": "resolved",
+      "evidence": "Los ocho objetivos problemáticos fueron sustituidos por formas con función contextual adecuada: modificadores («plenamente», «audaces»), complementos nominales («preservación», «ración») y nombres/participantes que ahora tienen prompts y opciones coherentes.",
+      "recommendation": "Sin acción adicional."
+    },
+    {
+      "id": "PR40-GOLD-2059-SINGLE_CHOICE_CONTEXTUAL",
+      "status": "resolved",
+      "evidence": "«Fuente» fue excluido; el objetivo actual es «conocimiento» en una coordinación nominal y sus cuatro opciones comparten firma nominal compatible.",
+      "recommendation": "Sin acción adicional."
+    },
+    {
+      "id": "PR39-GOLD-1892-SINGLE_CHOICE_CONTEXTUAL",
+      "status": "resolved",
+      "evidence": "«Embargo» fue excluido; el objetivo actual es «príncipe» en «Sin embargo, el ________ vacilaba», una ranura nominal ordinaria con distractores compatibles.",
+      "recommendation": "Sin acción adicional."
+    },
+    {
+      "id": "PR39-GOLD-1819-SINGLE_CHOICE_DIRECT",
+      "status": "resolved",
+      "evidence": "La unidad PR39-P027-P003-S003 conserva la elipsis/comilla fragmentaria, pero el cotejo visual contra el PDF confirmó que la puntuación es original y no OCR defectuoso.",
+      "recommendation": "Sin acción adicional."
+    },
+    {
+      "id": "PR40-GOLD-2149-SINGLE_CHOICE_DIRECT",
+      "status": "resolved",
+      "evidence": "La unidad PR40-P036-P003-S002 conserva la elipsis interna y delimitador abierto, pero el cotejo visual contra el PDF confirmó que el fragmento es original.",
+      "recommendation": "Sin acción adicional."
+    }
+  ],
+  "findings": [],
+  "summary": {
+    "status": "passed_ai_only",
+    "risk_level": "low",
+    "reviewer_type": "ai_semantic_audit",
+    "human_signatures": 0,
+    "human_review": false,
+    "all_questions_contrasted": true,
+    "questions_with_findings": 0,
+    "questions_without_findings": 1667,
+    "findings_total": 0,
+    "findings_by_severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "findings_by_category": {},
+    "previous_findings": {
+      "resolved": 11,
+      "unresolved": 0,
+      "resolved_with_regression": 0
+    },
+    "baseline_result": "La regeneración final corrige los objetivos verbales/adjetivales y roles señalados, excluye «Fuente» y «embargo», elimina la exposición de «Comprender», confirma visualmente los dos fragmentos OCR contra el PDF y aplica el último ajuste V/F. Los controles automatizados y la revisión semántica delta no dejan hallazgos abiertos.",
+    "main_risks": [],
+    "regressions": [],
+    "release_recommendation": "El delta PR39–PR40 pasa la auditoría semántica asistida por IA; human_signatures permanece en 0 y no equivale a firma editorial humana."
+  },
+  "verification": {
+    "commands": [
+      "npm run audit:final:deep",
+      "node --input-type=module -e '<read-only PR39/PR40 current traceability, answer, correct_option, V/F, contextual evidence, ID hash and count checks>'",
+      "node --input-type=module -e '<read-only exhaustiveRiskFlags for all current PR39/PR40 records>'"
+    ],
+    "deep_audit_result": "exit 0; 12.000 preguntas globales, PDF SHA-256 coincidente y 0 errores globales; PR39=868 y PR40=799.",
+    "targeted_checks_result": "1.667 registros cargados, 1.667 IDs únicos, hash ae83d2f504a75cc88c371e0f1b1445876b6f335b174f5bd25adef33eb769bd36, 0 errores de trazabilidad/respuesta/correct_option/V-F/contrato contextual y 0 exhaustiveRiskFlags.",
+    "manual_delta_result": "Los 11 hallazgos históricos están resueltos; el último reparto V/F quedó verificado sin regresiones."
+  },
+  "notes": [
+    "El hash cubre las filas actuales en orden PR39.json y después PR40.json; no se ordenan lexicográficamente.",
+    "El reporte registra exclusivamente la revisión AI; human_signatures=0.",
+    "Los controles automatizados pasan y el cotejo visual del PDF confirmó como originales las dos delimitaciones fragmentarias.",
+    "No se modificaron código, bancos ni otros reportes; este archivo es el único artefacto de esta auditoría."
+  ]
+}

@@ -269,6 +269,9 @@ STOPWORDS = {
 NUMBER_WORDS = {
     "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve",
     "diez", "once", "doce", "trece", "catorce", "quince", "veinte", "treinta",
+    "dieciseis", "diecisiete", "dieciocho", "diecinueve",
+    "veintiuno", "veintiun", "veintidos", "veintitres", "veinticuatro",
+    "veinticinco", "veintiseis", "veintisiete", "veintiocho", "veintinueve",
     "cuarenta", "cincuenta", "sesenta", "setenta", "ciento", "mil", "millones",
 }
 

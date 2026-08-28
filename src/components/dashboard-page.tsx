@@ -141,7 +141,7 @@ export function DashboardPage({ onStartMission }: { onStartMission?: (config: Se
                   <TableCell className="font-medium">{row.label}</TableCell>
                   <TableCell className="tabular-nums">{row.total}</TableCell>
                   <TableCell>
-                    <div className="flex items-center gap-2"><span className="tabular-nums">{row.accuracy}%</span><Progress className="w-20" value={row.accuracy} /></div>
+                    <div className="flex items-center gap-2"><span className="tabular-nums">{row.accuracy}%</span><Progress aria-label={`Precisión de ${row.label}`} className="w-20" value={row.accuracy} /></div>
                   </TableCell>
                   <TableCell className="tabular-nums">{formatElapsedMs(row.averageResponseTimeMs)}</TableCell>
                   <TableCell><Badge variant={row.mastery >= 4 ? "default" : "secondary"}>{row.mastery}/5</Badge></TableCell>
@@ -193,7 +193,7 @@ function SourceMetric({ label, metric }: { label: string; metric: { accuracy: nu
   return (
     <div className="min-w-0 rounded-xl bg-background/70 p-4">
       <div className="flex items-center justify-between gap-3"><span className="text-sm font-medium">{label}</span><span className="text-2xl font-semibold tabular-nums">{metric.accuracy}%</span></div>
-      <Progress className="mt-4" value={metric.accuracy} />
+      <Progress aria-label={`Precisión de ${label}`} className="mt-4" value={metric.accuracy} />
       <div className="mt-3 flex justify-between gap-3 text-xs text-muted-foreground"><span>{metric.correct}/{metric.total} correctas</span><span className="shrink-0 tabular-nums">{formatElapsedMs(metric.averageResponseTimeMs)} medio</span></div>
     </div>
   )

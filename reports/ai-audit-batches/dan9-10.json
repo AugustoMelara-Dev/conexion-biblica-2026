@@ -1,0 +1,465 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-28",
+  "reviewer_type": "ai_semantic_audit",
+  "human_signatures": 0,
+  "human_review": false,
+  "status": "passed",
+  "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+  "source": {
+    "question_files": [
+      "public/banks/final-2026/questions/DAN9.json",
+      "public/banks/final-2026/questions/DAN10.json"
+    ],
+    "fact_inventory": "public/banks/final-2026/fact_inventory.json",
+    "source_inventory": "public/banks/final-2026/source_inventory.json",
+    "embedded_material": "MaterialConexionBiblica (1).pdf",
+    "embedded_material_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3"
+  },
+  "chapters": {
+    "DAN9": {
+      "questions": 879,
+      "facts": 225,
+      "source_units": 27,
+      "family_counts": {
+        "single_choice_direct": 225,
+        "fill_choice": 225,
+        "single_choice_contextual": 225,
+        "true_false": 204
+      },
+      "difficulty_counts": {
+        "easy": 6,
+        "medium": 94,
+        "hard": 429,
+        "expert": 350
+      },
+      "true_false_counts": {
+        "Verdadero": 102,
+        "Falso": 102
+      }
+    },
+    "DAN10": {
+      "questions": 543,
+      "facts": 135,
+      "source_units": 21,
+      "family_counts": {
+        "single_choice_direct": 135,
+        "fill_choice": 135,
+        "single_choice_contextual": 135,
+        "true_false": 138
+      },
+      "difficulty_counts": {
+        "easy": 16,
+        "medium": 106,
+        "hard": 271,
+        "expert": 150
+      },
+      "true_false_counts": {
+        "Verdadero": 69,
+        "Falso": 69
+      }
+    }
+  },
+  "total_questions_reviewed": 1422,
+  "family_counts": {
+    "single_choice_direct": 360,
+    "fill_choice": 360,
+    "single_choice_contextual": 360,
+    "true_false": 342
+  },
+  "fact_counts": {
+    "DAN9": 225,
+    "DAN10": 135,
+    "total": 360
+  },
+  "source_unit_counts": {
+    "DAN9": 27,
+    "DAN10": 21,
+    "total": 48
+  },
+  "fact_category_counts_by_chapter": {
+    "DAN9": {
+      "person": 29,
+      "term": 92,
+      "place": 6,
+      "number": 5,
+      "action": 88,
+      "phrase": 5
+    },
+    "DAN10": {
+      "person": 11,
+      "place": 5,
+      "action": 57,
+      "term": 53,
+      "number": 4,
+      "phrase": 5
+    }
+  },
+  "contextual_role_counts": {
+    "named_entity": 35,
+    "connector_object": 32,
+    "geographic_relation": 6,
+    "duration": 7,
+    "action": 145,
+    "modifier": 9,
+    "recipient": 5,
+    "concept": 93,
+    "predicate": 11,
+    "cause": 8,
+    "consequence": 1,
+    "location": 2,
+    "quantity": 2,
+    "territorial_title": 3,
+    "formulation": 1
+  },
+  "true_false_counts": {
+    "total": 342,
+    "by_answer": {
+      "Verdadero": 171,
+      "Falso": 171
+    },
+    "false_mutation_kind": {
+      "negation": 43,
+      "closed_category_substitution": 33,
+      "cross_reference_statement": 95
+    },
+    "false_records_with_correction": 171
+  },
+  "variant_coverage": {
+    "records_per_fact": {
+      "3": 189,
+      "5": 171
+    },
+    "facts_with_true_false_variants": 171,
+    "facts_without_true_false_variants": 189,
+    "source_units_with_questions": 48
+  },
+  "ids_checked_sha256": "afa31b761d83d14c4dc20c92e763925e8fd04c87595887fef73c4fed9277215c",
+  "ids_checked_canonicalization": "SHA-256(JSON.stringify([...question IDs en orden de DAN9.json y luego DAN10.json]))",
+  "ids_checked_hashes": {
+    "ordered_json": "afa31b761d83d14c4dc20c92e763925e8fd04c87595887fef73c4fed9277215c",
+    "ordered_newline": "bf4f47b8d08edbd2155d55bc1cbde08b9e51d03482fbec0c2de1219a483b9664",
+    "sorted_json": "461697c0958f8306b5d0829e2edf6ad39bc8976f523484afbc027378145bd5b4",
+    "sorted_newline": "6f3fc2137b59e0a8c6ec5618e3374aaf93702a133609bd7733b4aa299ff6bce8"
+  },
+  "coverage": {
+    "ids_checked_count": 1422,
+    "id_order": "orden físico de DAN9.json seguido de DAN10.json",
+    "all_current_ids_checked": true
+  },
+  "input_sha256": {
+    "public/banks/final-2026/questions/DAN9.json": "4bbc5497e13a57e81254e2969135a78fda20b2fe1d11603938a903eadcfef972",
+    "public/banks/final-2026/questions/DAN10.json": "a245c7440bf37eab9d6014ecfa63780dfcccd63a1e3c4363017b3365dff9cf4c",
+    "public/banks/final-2026/fact_inventory.json": "35f63d905a6191f5c239875c99632f068871f406012dd187bfbed0a2ac11c650",
+    "public/banks/final-2026/source_inventory.json": "2f62a0ab324043fc1194046e62214df82a7596a2baadd7c182e5ae55e1712419",
+    "MaterialConexionBiblica (1).pdf": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3"
+  },
+  "audit_method": {
+    "scope": "Cada registro actual de DAN9 y DAN10 se contrastó con fact_inventory, source_inventory y el material embebido; se revisaron enunciado, respuesta, opciones, corrección V/F, completar gramatical, rol contextual y distractores.",
+    "delta_basis": "Comparación contra el snapshot inmediato anterior: 1420 registros e ID hash c89203b6e5b697ddf166408de9fe16e05213e559df20edf121f88b2a08050c6b.",
+    "semantic_rule": "Los hallazgos de datos fuente o metadatos se separan de los riesgos de discriminación y calibración; un hallazgo resuelto conserva evidencia de verificación actual."
+  },
+  "checks": {
+    "records_loaded": 1422,
+    "question_ids_unique": true,
+    "missing_fact_links": 0,
+    "missing_source_unit_links": 0,
+    "source_quote_mismatches": 0,
+    "source_span_mismatches": 0,
+    "non_tf_answer_mismatches": 0,
+    "non_tf_options_length_mismatches": 0,
+    "duplicate_non_tf_options": 0,
+    "non_tf_correct_option_mismatches": 0,
+    "non_tf_answer_option_count_mismatches": 0,
+    "option_category_mismatches": 0,
+    "contextual_role_mismatches": 0,
+    "true_false_option_mismatches": 0,
+    "true_false_correction_mismatches": 0,
+    "true_false_missing_corrections": 0,
+    "true_false_missing_mutation_kinds": 0,
+    "true_false_targeted_prior_grammar_regressions": 0,
+    "distractor_key_mismatches": 0,
+    "distractor_source_grounding_failures": 0,
+    "automatic_deep_audit_exit_code": 0,
+    "automatic_deep_audit_errors": 0
+  },
+  "delta": {
+    "previous_snapshot": {
+      "total_questions": 1420,
+      "ids_checked_sha256": "c89203b6e5b697ddf166408de9fe16e05213e559df20edf121f88b2a08050c6b"
+    },
+    "current_snapshot": {
+      "total_questions": 1422,
+      "ids_checked_sha256": "afa31b761d83d14c4dc20c92e763925e8fd04c87595887fef73c4fed9277215c"
+    },
+    "record_delta": {
+      "added_records": 2,
+      "removed_records": 0,
+      "changed_or_reassigned_records": "La regeneración final añadió 2 registros V/F y cambió el reparto/orden; la cobertura actual es completa."
+    },
+    "prior_findings_status": {
+      "SEM-DAN9-V007-F08": "resolved",
+      "SEM-VERB-TERM-CATEGORY": "resolved",
+      "SEM-NUMBER-TERM-CATEGORY": "resolved",
+      "SEM-TF-DAN9-1719": "resolved",
+      "SEM-FUNCTION-WORD-DISCRIMINATION": "resolved",
+      "SEM-DISTRACTOR-PLAUSIBILITY": "resolved",
+      "SEM-DIFFICULTY-EASY": "accepted_observation"
+    },
+    "regressions": [],
+    "regression_basis": "Los registros actuales pasan enlaces, fuente, opciones, correcciones V/F y roles; el auditor profundo de todo el banco terminó con errors=0."
+  },
+  "findings": [
+    {
+      "finding_id": "SEM-DAN9-V007-F08",
+      "severity": "high",
+      "status": "resolved",
+      "delta_status": "resolved",
+      "historical_record_count": 5,
+      "historical_fact_count": 1,
+      "current_issue_record_count": 0,
+      "current_fact_ids": [
+        "DAN9-V007-F08"
+      ],
+      "assessment": "La etiqueta errónea de «Tuya» desapareció del inventario de respuestas. El fact actual es «has», que completa literalmente «adonde los has echado», con category/action, grammatical_category/verb y relation_type/action; las cinco variantes actuales son coherentes.",
+      "evidence": {
+        "source_fragment": "…en todas las tierras adonde los has echado a causa de su rebelión…",
+        "current_answer": "has",
+        "current_category": "action",
+        "current_grammatical_category": "verb",
+        "current_relation_type": "action"
+      }
+    },
+    {
+      "finding_id": "SEM-VERB-TERM-CATEGORY",
+      "severity": "high",
+      "status": "resolved",
+      "delta_status": "resolved",
+      "historical_record_count": 33,
+      "historical_fact_count": 11,
+      "current_issue_record_count": 0,
+      "current_verified_non_tf_record_count": 30,
+      "current_answer_to_fact_id": {
+        "buscándolo": "DAN9-V003-F02",
+        "guardan": "DAN9-V004-F04",
+        "trayendo": "DAN9-V012-F04",
+        "entendido": "DAN9-V013-F05",
+        "apártese": "DAN9-V016-F01",
+        "rodean": "DAN9-V016-F02",
+        "resplandezca": "DAN9-V017-F02",
+        "huyeron": "DAN10-V007-F04",
+        "opuso": "DAN10-V013-F04",
+        "vendrá": "DAN10-V020-F07",
+        "cobra": null,
+        "tengo": null
+      },
+      "verification": "Los diez valores verbales presentes son category/action, grammatical_category/verb y relation_type/action; sus variantes direct/fill/contextual usan option_category action y role action. Los valores históricos «cobra» y «tengo» ya no aparecen como respuestas actuales."
+    },
+    {
+      "finding_id": "SEM-NUMBER-TERM-CATEGORY",
+      "severity": "high",
+      "status": "resolved",
+      "delta_status": "resolved",
+      "historical_record_count": 6,
+      "historical_fact_count": 2,
+      "current_issue_record_count": 0,
+      "current_verified_non_tf_record_count": 6,
+      "current_fact_ids": [
+        "DAN10-V004-F01",
+        "DAN10-V013-F01"
+      ],
+      "verification": {
+        "DAN10-V004-F01": {
+          "answer": "veinticuatro",
+          "category": "number",
+          "grammatical_category": "number",
+          "relation_type": "number",
+          "contextual_role": "quantity"
+        },
+        "DAN10-V013-F01": {
+          "answer": "veintiún",
+          "category": "number",
+          "grammatical_category": "number",
+          "relation_type": "number",
+          "contextual_role": "duration"
+        }
+      }
+    },
+    {
+      "finding_id": "SEM-TF-DAN9-1719",
+      "severity": "medium",
+      "status": "resolved",
+      "delta_status": "resolved",
+      "historical_record_count": 1,
+      "historical_fact_count": 1,
+      "current_issue_record_count": 0,
+      "historical_record_id": "DAN9-GOLD-1719-TRUE_FALSE-FALSE",
+      "current_record_id": "DAN9-GOLD-1718-TRUE_FALSE-FALSE",
+      "current_fact_id": "DAN9-V018-F04",
+      "assessment": "La mutación defectuosa anterior «no mira» ya no existe. El registro actual es una afirmación Falso gramatical de tipo cross_reference_statement, con corrección «mira» y corrected_statement respaldado por Daniel 9:18.",
+      "current_statement": "Según Daniel 9:18, Pero cuando se haya levantado, su reino será quebrantado y repartido hacia los cuatro vientos del cielo.",
+      "current_correction": "mira",
+      "current_corrected_statement": "Según Daniel 9:18, abre tus ojos y mira nuestras desolaciones y la ciudad sobre la cual es invocado tu nombre."
+    },
+    {
+      "finding_id": "SEM-FUNCTION-WORD-DISCRIMINATION",
+      "severity": "medium",
+      "status": "resolved",
+      "delta_status": "resolved",
+      "historical_record_count": 12,
+      "historical_fact_count": 4,
+      "current_issue_record_count": 0,
+      "current_verification_record_count": 9,
+      "current_fact_ids": [
+        "DAN9-V010-F06",
+        "DAN9-V012-F08",
+        "DAN9-V020-F07"
+      ],
+      "assessment": "La regeneración eliminó «Conforme» de este conjunto, cambió los roles contextuales a modifier y mantuvo distractores de la misma clase funcional. Las tres facts actuales («delante», «nunca», «delante») tienen 9 variantes verificadas sin incompatibilidad de rol.",
+      "examples": [
+        {
+          "fact_id": "DAN9-V010-F06",
+          "answer": "delante",
+          "contextual_role": "modifier",
+          "options": [
+            "conforme",
+            "encima",
+            "siquiera",
+            "delante"
+          ]
+        },
+        {
+          "fact_id": "DAN9-V012-F08",
+          "answer": "nunca",
+          "contextual_role": "modifier",
+          "options": [
+            "junto",
+            "encima",
+            "pronto",
+            "nunca"
+          ]
+        },
+        {
+          "fact_id": "DAN9-V020-F07",
+          "answer": "delante",
+          "contextual_role": "modifier",
+          "options": [
+            "encima",
+            "conforme",
+            "pronto",
+            "delante"
+          ]
+        }
+      ]
+    },
+    {
+      "finding_id": "SEM-DISTRACTOR-PLAUSIBILITY",
+      "severity": "medium",
+      "status": "resolved",
+      "delta_status": "resolved",
+      "historical_record_count": 33,
+      "historical_fact_count": 11,
+      "current_issue_record_count": 0,
+      "current_verified_record_count": 18,
+      "current_fact_ids": [
+        "DAN9-V003-F02",
+        "DAN9-V012-F04",
+        "DAN9-V017-F02",
+        "DAN10-V007-F04",
+        "DAN10-V013-F04",
+        "DAN10-V020-F07"
+      ],
+      "assessment": "La regeneración final corrigió la morfología de los distractores: cada conjunto mantiene la misma forma verbal que la respuesta (gerundio, presente de subjuntivo 3.ª singular, pretérito 3.ª plural, pretérito 3.ª singular o futuro 3.ª singular). Los dos conjuntos numéricos previos también permanecen homogéneos.",
+      "form_checks": {
+        "DAN9-V003-F02": "buscándolo/confesando/escuchando/cumpliendo: gerundios",
+        "DAN9-V012-F04": "trayendo/hablando/educando/sabiendo: gerundios",
+        "DAN9-V017-F02": "resplandezca/palidezca/confirme/detenga: subjuntivo presente, 3.ª singular",
+        "DAN10-V007-F04": "huyeron/echaron/obraron/mataron: pretérito, 3.ª plural",
+        "DAN10-V013-F04": "opuso/quedó/entró/llegó: pretérito, 3.ª singular",
+        "DAN10-V020-F07": "vendrá/morará/tendrá/pasará: futuro, 3.ª singular"
+      },
+      "resolved_subsets": {
+        "numeric_facts": [
+          "DAN10-V004-F01",
+          "DAN10-V013-F01"
+        ],
+        "numeric_record_count": 6,
+        "removed_legacy_answers": [
+          "cobra",
+          "tengo"
+        ]
+      }
+    },
+    {
+      "finding_id": "SEM-DIFFICULTY-EASY",
+      "severity": "low",
+      "status": "accepted_observation",
+      "delta_status": "accepted_observation",
+      "active": false,
+      "record_count": 22,
+      "fact_count": 20,
+      "record_ids": [
+        "DAN9-GOLD-1576-SINGLE_CHOICE_DIRECT",
+        "DAN9-GOLD-1590-SINGLE_CHOICE_DIRECT",
+        "DAN9-GOLD-1634-SINGLE_CHOICE_DIRECT",
+        "DAN9-GOLD-1641-SINGLE_CHOICE_DIRECT",
+        "DAN9-GOLD-1708-SINGLE_CHOICE_DIRECT",
+        "DAN9-GOLD-1760-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0084-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0085-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0086-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0087-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0092-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0092-FILL_CHOICE",
+        "DAN10-GOLD-0123-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0153-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0154-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0159-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0162-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0186-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0206-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0207-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0213-SINGLE_CHOICE_DIRECT",
+        "DAN10-GOLD-0213-FILL_CHOICE"
+      ],
+      "assessment": "Se mantienen 22 registros easy, mayormente preguntas directas de nombres/lugares explícitos. Observación no bloqueante: el contrato global exige 600 preguntas easy y estas preguntas son factualmente válidas; no constituyen un hallazgo abierto ni una regresión.",
+      "acceptance_basis": {
+        "global_easy_contract": 600,
+        "scoped_easy_records": 22,
+        "factually_valid": true,
+        "blocking": false
+      }
+    }
+  ],
+  "summary": {
+    "status": "passed",
+    "semantic_audit": "passed",
+    "records_reviewed": 1422,
+    "facts_reviewed": 360,
+    "source_units_reviewed": 48,
+    "finding_count": 7,
+    "resolved_prior_findings": 6,
+    "open_or_partial_findings": 0,
+    "active_findings": 0,
+    "accepted_observations": 1,
+    "finding_count_by_status": {
+      "resolved": 6,
+      "accepted_observation": 1
+    },
+    "finding_count_by_severity": {
+      "high": 3,
+      "medium": 3,
+      "low": 1,
+      "critical": 0
+    },
+    "current_open_record_count": 0,
+    "historical_affected_record_count": 79,
+    "key_risks": [
+      "Las incompatibilidades de Tuya, verbos, números, palabras funcionales y V/F quedaron resueltas en el snapshot definitivo.",
+      "Los seis hechos verbales revisados ya tienen distractores con la misma forma morfológica.",
+      "Los 22 registros easy quedan aceptados como observación no bloqueante dentro del contrato global de 600 easy; no hay hallazgos activos.",
+      "No se observaron regresiones estructurales, de fuente ni de corrección V/F tras el nuevo reparto."
+    ],
+    "recommended_action": "Sin acción correctiva pendiente: conservar las correcciones morfológicas y semánticas y la observación accepted_observation de los 22 registros easy."
+  }
+}

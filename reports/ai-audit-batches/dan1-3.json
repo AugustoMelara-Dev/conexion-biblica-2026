@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.1",
+  "reviewer_type": "ai_semantic_audit",
+  "human_signatures": 0,
+  "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+  "audit_date": "2026-08-28",
+  "audit_mode": "final_shard_delta_clean",
+  "last_refresh": "2026-08-28",
+  "delta_status": "clean",
+  "latest_generation": "frozen_post_vf_correction_with_editorial_overrides",
+  "scope": {
+    "chapters": ["DAN1", "DAN2", "DAN3"],
+    "question_files": [
+      "public/banks/final-2026/questions/DAN1.json",
+      "public/banks/final-2026/questions/DAN2.json",
+      "public/banks/final-2026/questions/DAN3.json"
+    ],
+    "fact_inventory": "public/banks/final-2026/fact_inventory.json",
+    "manifest": "public/banks/final-2026/manifest.json",
+    "manifest_source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3"
+  },
+  "chapters": {
+    "DAN1": 351,
+    "DAN2": 482,
+    "DAN3": 366
+  },
+  "total_questions_reviewed": 1199,
+  "family_counts": {
+    "single_choice_direct": 293,
+    "fill_choice": 293,
+    "single_choice_contextual": 293,
+    "true_false": 320
+  },
+  "ids_checked_sha256": "bf80f6f71bb99e7edd540762c3bfae2b459b416499e28113f50fff97ba5a3d6d",
+  "ids_hash_method": "sha256(sorted question IDs joined by newline)",
+  "audit_coverage": {
+    "source_fact_traceability": {
+      "reviewed": 1199,
+      "clean": 1199,
+      "fields_checked": [
+        "fact_id",
+        "source_unit_id",
+        "chapter",
+        "reference",
+        "source_ref",
+        "verse_or_page",
+        "source_span",
+        "source_quote",
+        "context_anchor",
+        "importance",
+        "relation_type",
+        "option_category"
+      ]
+    },
+    "answer_support_and_correct_option": {
+      "reviewed": 1199,
+      "clean": 1199
+    },
+    "choice_option_sets_and_distractors": {
+      "reviewed": 879,
+      "clean": 879,
+      "flagged": 0,
+      "checks": [
+        "four unique options",
+        "correct_option points to correct_answer",
+        "source-supported answer",
+        "no semantic option collisions"
+      ]
+    },
+    "true_false_statement_and_correction": {
+      "reviewed": 320,
+      "clean": 320,
+      "false_records_reviewed": 160,
+      "false_records_with_source_correction": 160
+    },
+    "fill_slot_and_distractor_grammar": {
+      "reviewed": 879,
+      "clean": 879
+    },
+    "fill_prompt_wording": {
+      "reviewed": 293,
+      "clean": 293,
+      "flagged": 0
+    },
+    "contextual_role_and_evidence": {
+      "reviewed": 293,
+      "clean": 293,
+      "context_reconstruction_failures": 0
+    }
+  },
+  "validation_assertions": {
+    "unique_ids": 1199,
+    "duplicate_ids": 0,
+    "missing_fact_ids": 0,
+    "source_fact_mismatches": 0,
+    "answer_support_issues": 0,
+    "mc_option_or_answer_issues": 0,
+    "strict_term_morphology_mismatches": 0,
+    "true_false_schema_or_correction_issues": 0,
+    "semantic_option_collisions": 0,
+    "contextual_reconstruction_failures": 0,
+    "clitic_negation_regressions": 0,
+    "validation_status_failures": 0,
+    "deep_audit_errors_in_scope": 0,
+    "deep_audit_errors_all_bank": 0
+  },
+  "distribution": {
+    "difficulty_counts": {
+      "easy": 148,
+      "medium": 398,
+      "hard": 413,
+      "expert": 240
+    },
+    "contextual_role_counts": {
+      "territorial_title": 3,
+      "destination": 1,
+      "action": 112,
+      "connector_object": 27,
+      "geographic_relation": 10,
+      "recipient": 9,
+      "named_entity": 37,
+      "concept": 58,
+      "duration": 4,
+      "predicate": 8,
+      "quantity": 8,
+      "purpose": 2,
+      "cause": 6,
+      "actor": 1,
+      "modifier": 4,
+      "consequence": 1,
+      "formulation": 1,
+      "order": 1
+    },
+    "true_false_modes": {
+      "true_exact_source": 120,
+      "true_contextual_identity": 40,
+      "false_exact_source": 160
+    },
+    "false_mutation_kind_counts": {
+      "closed_category_substitution": 56,
+      "negation": 57,
+      "cross_reference_statement": 47
+    }
+  },
+  "findings": [],
+  "previous_findings_delta": {
+    "prior_report": "previous revision (pre-regeneration) of this report",
+    "prior_findings_reviewed": 15,
+    "resolved": 15,
+    "unresolved": 0,
+    "items": [
+      {
+        "id": "DAN1-GOLD-0005-FILL_CHOICE",
+        "status": "resolved",
+        "evidence": "Ahora responde «reinado» y usa distractores nominales («sonido», «pecado», «estado»); ya no aparece «tercero» ante «año»."
+      },
+      {
+        "id": "DAN1-GOLD-0005-SINGLE_CHOICE_CONTEXTUAL",
+        "status": "resolved",
+        "evidence": "La evidencia contextual ahora enmascara «reinado» y los cuatro distractores son válidos para esa ranura nominal."
+      },
+      {
+        "id": "DAN1-GOLD-0005-SINGLE_CHOICE_DIRECT",
+        "status": "resolved",
+        "evidence": "La ranura actual es «del ________ de Joacim»; respuesta y distractores son gramaticalmente compatibles."
+      },
+      {
+        "id": "DAN1-GOLD-0059-FILL_CHOICE",
+        "status": "resolved",
+        "evidence": "La ranura «más ________ que» usa «robusto» con distractores adjetivales («atónito», «seguro», «muerto»); ya no contiene «tercer»."
+      },
+      {
+        "id": "DAN1-GOLD-0059-SINGLE_CHOICE_CONTEXTUAL",
+        "status": "resolved",
+        "evidence": "La evidencia contextual y las cuatro opciones son adjetivales y gramaticales en la comparación."
+      },
+      {
+        "id": "DAN1-GOLD-0059-SINGLE_CHOICE_DIRECT",
+        "status": "resolved",
+        "evidence": "La pregunta directa conserva «robusto» y ya no ofrece el distractor inválido «tercer»."
+      },
+      {
+        "id": "DAN2-GOLD-0632-FILL_CHOICE",
+        "status": "resolved",
+        "evidence": "El registro actual pregunta por «sueños» y sus opciones son sustantivos («reinos», «pedazos», «tiempos»), no ordinales incompatibles."
+      },
+      {
+        "id": "DAN2-GOLD-0632-SINGLE_CHOICE_CONTEXTUAL",
+        "status": "resolved",
+        "evidence": "La ranura contextual actual es «tuvo Nabucodonosor […]»; respuesta y distractores son sintácticamente posibles."
+      },
+      {
+        "id": "DAN2-GOLD-0632-SINGLE_CHOICE_DIRECT",
+        "status": "resolved",
+        "evidence": "La pregunta directa actual completa «tuvo Nabucodonosor ________» con «sueños» y no contiene el distractor ordinal anterior."
+      },
+      {
+        "id": "DAN3-GOLD-0764-TRUE_FALSE-FALSE",
+        "status": "resolved",
+        "evidence": "La afirmación falsa actual dice «no os postréis»; la negación está correctamente antepuesta al clítico y la corrección apunta a «postréis»."
+      },
+      {
+        "id": "DAN3-GOLD-0834-SINGLE_CHOICE_CONTEXTUAL",
+        "status": "resolved",
+        "evidence": "La cita actual conserva el sujeto completo y la puntuación de Daniel 3:29 antes de preguntar por la razón causal."
+      },
+      {
+        "id": "DAN1-GOLD-0001-FILL_CHOICE",
+        "status": "resolved",
+        "evidence": "La regresión transversal anterior «Complete de …» quedó corregida: los 293 registros fill_choice actuales empiezan «Complete [referencia]:» y no contienen «Complete de»."
+      },
+      {
+        "id": "DAN2-GOLD-0635-SINGLE_CHOICE_DIRECT",
+        "status": "resolved",
+        "evidence": "El hecho actual es «turbado» y las tres variantes usan participios plurales («hallado», «quitado», «actuado»), sin el distractor adjetival anterior."
+      },
+      {
+        "id": "DAN2-GOLD-0711-SINGLE_CHOICE_DIRECT",
+        "status": "resolved",
+        "evidence": "El hecho actual es «terrible» y las opciones («singular», «difícil», «visible») son adjetivos compatibles con la ranura."
+      },
+      {
+        "id": "DAN3-GOLD-0771-SINGLE_CHOICE_DIRECT",
+        "status": "resolved",
+        "evidence": "El hecho actual es «acusaron» y las opciones («salieron», «juntaron», «hablaron») son formas verbales pretéritas compatibles."
+      }
+    ]
+  },
+  "delta_summary": {
+    "questions_reviewed": 1199,
+    "new_findings": 0,
+    "new_affected_records": 0,
+    "prior_findings_resolved": 15,
+    "prior_findings_unresolved": 0,
+    "source_regressions": 0,
+    "answer_regressions": 0,
+    "option_regressions": 0,
+    "vf_regressions": 0,
+    "context_regressions": 0,
+    "grammar_regressions": 0
+  },
+  "summary": {
+    "questions_reviewed": 1199,
+    "findings_total": 0,
+    "records_with_findings": 0,
+    "clean_records": 1199,
+    "severity_counts": {
+      "blocker": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "info": 0
+    },
+    "category_counts": {},
+    "main_risks": [
+      "No quedan riesgos residuales detectados en DAN1–DAN3.",
+      "Los 15 hallazgos de las revisiones previas están resueltos; no hay regresiones verificadas de fuente, respuesta, opciones, V/F, gramática ni evidencia contextual."
+    ]
+  },
+  "verification": {
+    "commands": [
+      "python scripts/audit-final-bank-deep.py",
+      "node --input-type=module -e '<read-only DAN1-DAN3 delta checks: source/fact traceability, sorted-ID hash, options, V/F corrections, contextual reconstruction, clitic negation and fill grammar>'"
+    ],
+    "deep_audit_exit_code": 0,
+    "deep_audit_errors_in_scope": 0,
+    "deep_audit_errors_all_bank": 0,
+    "targeted_checks_exit_code": 0
+  },
+  "notes": [
+    "El hash de IDs cubre los 1,199 registros actuales ordenados y separados por salto de línea.",
+    "La comprobación de regresión fill_prompt_grammar encontró 0/293 ocurrencias de «Complete de»; los 293 prefijos son «Complete [referencia]:».",
+    "La variante corregida «no os postréis» ya no dispara el detector de orden de clíticos.",
+    "Refresco final contra el snapshot congelado con overrides editoriales: 0 regresiones de fuente, respuesta, V/F, contexto o gramática.",
+    "Este reporte es una auditoría semántica asistida por IA; human_signatures=0 y no implica revisión humana."
+  ]
+}

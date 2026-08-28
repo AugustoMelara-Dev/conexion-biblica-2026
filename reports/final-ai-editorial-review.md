@@ -12,6 +12,7 @@ La revisión automática y la revisión editorial asistida por IA no encontraron
 ## Evidencia revisada
 
 - 12,000 preguntas contrastadas con 3,000 hechos y 1,031 unidades fuente.
+- Ocho lotes de auditoría IA cubren exactamente las 12,000 preguntas; tras las correcciones, los ocho registran cero hallazgos reales activos y cero firmas humanas.
 - Coincidencia SHA-256 del PDF fuente confirmada.
 - 3,000 preguntas por familia: completar, V/F, selección directa y selección contextual.
 - 108 preguntas competitivas revisadas en 36 estratos: completar, V/F falsas y contextuales para DAN7–12 y PR39–44.
@@ -19,7 +20,7 @@ La revisión automática y la revisión editorial asistida por IA no encontraron
 - 1,500 V/F verdaderas y 1,500 falsas; todas las falsas usan una afirmación completa.
 - V/F verdaderas de presencia léxica: 0.
 - Contextuales con plantilla universal: 0.
-- Identidades contextuales trazables: 353.
+- Identidades contextuales trazables: 361.
 - Preguntas contextuales con papel explícito y evidencia enmascarada: 3,000.
 - Cero respuestas sin respaldo, duplicados visibles, referencias inválidas, colisiones de `fact_id`, fugas de respuesta contextual o errores de auditoría profunda.
 
@@ -30,9 +31,10 @@ La revisión automática y la revisión editorial asistida por IA no encontraron
 - Se reemplazaron las negaciones previsibles del tipo “Es falso que…” por citas literales verdaderas en otra referencia, con referencia de origen y corrección trazables.
 - Se prohibieron negaciones locales de infinitivos, gerundios, participios y predicados no verbales.
 - Se bloquearon negaciones dentro de cláusulas que ya contienen otra polaridad negativa.
-- Distribución final de las 1,500 falsas: 598 negaciones finitas controladas, 372 sustituciones de categoría cerrada y 530 trampas de atribución contextual.
-- Se sustituyeron 353 comprobaciones léxicas verdaderas por identidades derivadas de la escena y se eliminaron 2,928 usos de la plantilla contextual universal.
+- Distribución final de las 1,500 falsas: 576 negaciones finitas controladas, 356 sustituciones de categoría cerrada y 568 trampas de atribución contextual.
+- Se mantienen 361 identidades contextuales verdaderas derivadas de la escena y se eliminaron los usos de la plantilla contextual universal.
 - Se añadieron papeles contextuales deterministas, recomputación independiente en auditoría y saneamiento de comillas editoriales sin alterar el texto léxico de la fuente.
+- La auditoría semántica corrigió 53 hechos con distractores demasiado fáciles y 11 papeles contextuales; los reemplazos conservan trazabilidad al inventario fuente.
 
 ## Aplicación y aprendizaje
 

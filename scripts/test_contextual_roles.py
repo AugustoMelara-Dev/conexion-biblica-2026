@@ -24,6 +24,41 @@ def fact(**overrides):
 
 
 class ContextualRoleTests(unittest.TestCase):
+    def test_distinguishes_connectors_nominals_and_adjectival_slots(self):
+        self.assertEqual(
+            derive_contextual_role(
+                fact(
+                    answer="embargo",
+                    category="term",
+                    context="Sin embargo, el príncipe vacilaba.",
+                    _slot_signature="term:prepositional:sin",
+                )
+            ),
+            "discourse_connector",
+        )
+        self.assertEqual(
+            derive_contextual_role(
+                fact(
+                    answer="Fuente",
+                    category="term",
+                    context="pidieron sabiduría a la Fuente de luz",
+                    _slot_signature="term:determined_nominal:feminine_singular:('term', 'singular', 'adjective_agent')",
+                )
+            ),
+            "connector_object",
+        )
+        self.assertEqual(
+            derive_contextual_role(
+                fact(
+                    answer="espirituales",
+                    category="term",
+                    context="las facultades espirituales crecieron",
+                    _slot_signature="term:postnominal_adjective:crecieron",
+                )
+            ),
+            "modifier",
+        )
+
     def test_classifies_explicit_and_syntactic_roles(self):
         self.assertEqual(derive_contextual_role(fact()), "recipient")
         self.assertEqual(
@@ -190,13 +225,32 @@ class ContextualRoleTests(unittest.TestCase):
         self.assertEqual(mask_context_answer(row), "[…] respondió al rey.")
         self.assertNotIn("Daniel", mask_context_answer(row))
 
+    def test_explains_when_case_variants_create_multiple_masked_positions(self):
+        row = fact(
+            answer="Dios",
+            context="Del Dios de sus padres no hará caso ni respetará a dios alguno.",
+        )
+        question, _, evidence = render_contextual_question(row)
+        self.assertEqual(evidence.count("[…]"), 2)
+        self.assertIn("posiciones marcadas", question)
+
     def test_renders_role_aware_question_without_generic_copy(self):
         question, role, evidence = render_contextual_question(fact())
         self.assertEqual(role, "recipient")
-        self.assertIn("¿a quién", question)
+        self.assertIn("¿qué persona o ser", question)
         self.assertIn("[…]", evidence)
         self.assertNotIn("corresponde específicamente a esta escena", question)
         self.assertNotIn("Daniel", question)
+
+    def test_question_opening_never_repeats_a_common_answer_word(self):
+        row = fact(
+            answer="completa",
+            category="term",
+            context="la justicia fuese más completa.",
+        )
+        question, _, _ = render_contextual_question(row)
+        self.assertNotIn("completa", question.casefold())
+        self.assertIn("espacio marcado", question)
 
     def test_renders_contextual_identity_with_one_answer_occurrence(self):
         statement, role, evidence = render_contextual_identity(fact())

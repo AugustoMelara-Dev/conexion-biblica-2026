@@ -152,6 +152,20 @@ def _complete_short_answer(value: str, maximum: int = 8) -> str:
     return answer
 
 
+def _complete_anchor_before(text: str, end: int) -> str:
+    """Keep a complete visible sentence before a relation connector."""
+    prefix = text[:end].strip()
+    sentence_start = max((prefix.rfind(mark) for mark in ".!?"), default=-1) + 1
+    anchor = prefix[sentence_start:].strip("  ,;:.¡!¿?\"“”«»")
+    if len(re.findall(_WORD, anchor)) >= 3:
+        return anchor
+    # A connector may start a new sentence ("Porque..."). In that case the
+    # relevant antecedent is the complete preceding sentence.
+    trimmed = prefix.rstrip("  ,;:.¡!¿?\"“”«»")
+    previous_start = max((trimmed.rfind(mark) for mark in ".!?"), default=-1) + 1
+    return trimmed[previous_start:].strip("  ,;:.¡!¿?\"“”«»")
+
+
 def _generic_purposes(unit: dict[str, Any]) -> list[dict[str, Any]]:
     text = _source_text(unit)
     reference = str(unit["reference"])
@@ -165,8 +179,7 @@ def _generic_purposes(unit: dict[str, Any]) -> list[dict[str, Any]]:
         answer = _complete_short_answer(raw)
         if not answer:
             continue
-        before_words = re.findall(_WORD, text[:match.start()])[-10:]
-        anchor = " ".join(before_words).strip()
+        anchor = _complete_anchor_before(text, match.start())
         if not anchor:
             continue
         row = _candidate(
@@ -198,8 +211,7 @@ def _generic_causes(unit: dict[str, Any]) -> list[dict[str, Any]]:
         # Exigir sujeto o verbo reduce fragmentos editoriales sin autonomía.
         if not answer or len(answer.split()) < 2:
             continue
-        before_words = re.findall(_WORD, text[:match.start()])[-12:]
-        anchor = " ".join(before_words).strip()
+        anchor = _complete_anchor_before(text, match.start())
         if not anchor:
             continue
         row = _candidate(

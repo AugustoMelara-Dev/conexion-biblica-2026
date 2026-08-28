@@ -52,7 +52,7 @@ export function FinalMissionDashboard({
 
         <aside className="rounded-2xl bg-secondary/55 p-5 sm:p-6" aria-label="Progreso de hoy">
           <div className="flex items-end justify-between gap-4"><div><p className="text-sm font-medium">Progreso de hoy</p><p className="mt-1 text-xs text-muted-foreground">{plan.filter((mission) => completed.has(mission.id)).length} de {plan.length} misiones</p></div><strong className="text-3xl tabular-nums">{progress}%</strong></div>
-          <Progress className="mt-4" value={progress} />
+          <Progress aria-label="Progreso de la misión de hoy" className="mt-4" value={progress} />
           <div className="mt-7 border-t border-border/70 pt-5">
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">Prioridad crítica</p>
             <div className="mt-3 flex flex-wrap gap-2">{["PR43", "PR44", "Daniel 7", "Daniel 8", "Daniel 9", "Daniel 11"].map((label) => <Badge key={label} variant="outline" className="bg-background/70">{label}</Badge>)}</div>

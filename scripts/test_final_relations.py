@@ -110,6 +110,25 @@ class FinalRelationTests(unittest.TestCase):
         self.assertEqual(len({row["question"] for row in purposes}), 2)
         self.assertTrue(all("afirmación" in row["question"] for row in purposes))
 
+    def test_generic_relation_anchors_preserve_complete_visible_clauses(self) -> None:
+        daniel_three = next(
+            row
+            for row in self.extract("DAN3-V029")
+            if row["relation_type"] == "cause"
+        )
+        self.assertIn("todo pueblo", str(daniel_three["question"]).casefold())
+
+        daniel_eleven = next(
+            row
+            for row in self.extract("DAN11-V014")
+            if row["relation_type"] == "purpose"
+        )
+        self.assertIn(
+            "hombres turbulentos de tu pueblo se levantarán",
+            str(daniel_eleven["question"]).casefold(),
+        )
+        self.assertNotIn("rey del sur hombres", str(daniel_eleven["question"]).casefold())
+
     def test_generic_relations_never_truncate_an_answer_at_a_connector(self) -> None:
         dangling = {
             "a", "al", "con", "contra", "de", "del", "en", "entre",

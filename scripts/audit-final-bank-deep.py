@@ -22,6 +22,7 @@ from scripts.lib.final_editorial import (
     _contextual_word_role,
     _is_bible_reference_number,
     _negate_exact_action_statement,
+    _negated_action_detail,
     _slot_syntax,
     _word_role,
     option_signature,
@@ -33,6 +34,7 @@ from scripts.lib.contextual_roles import (
     render_contextual_identity,
     render_contextual_question,
 )
+from scripts.lib.editorial_overrides import DISTRACTOR_FACT_ID_OVERRIDES
 
 
 BANK = ROOT / "public" / "banks" / "final-2026"
@@ -265,7 +267,11 @@ def main() -> int:
                     )
                     if fact["category"] != "action" or statement_mode != "exact_source":
                         fail(errors, qid, "invalid_negation_category_or_mode")
-                    if question["incorrect_detail"].casefold() != f"no {fact['answer'].lower()}":
+                    if (
+                        expected_negated is None
+                        or question["incorrect_detail"].casefold()
+                        != _negated_action_detail(expected_negated, fact["answer"])
+                    ):
                         fail(errors, qid, "invalid_negation_detail")
                     if expected_negated is None or question.get("statement") != (
                         f"Según {question['reference']}, {expected_negated}"
@@ -350,13 +356,31 @@ def main() -> int:
             ):
                 fail(errors, qid, "incomplete_distractor_explanations")
         else:
-            if blank_count != 1:
+            if blank_count < 1:
                 fail(errors, qid, "invalid_blank_count")
             if question["correct_answer"] != fact["answer"]:
                 fail(errors, qid, "answer_fact_mismatch")
             if question["correct_answer"] not in question["source_quote"]:
                 fail(errors, qid, "answer_not_in_source")
-            if question["option_category"] == "term":
+            audited_override_ids = question.get("audited_distractor_fact_ids", [])
+            expected_override_ids = list(
+                DISTRACTOR_FACT_ID_OVERRIDES.get(question["fact_id"], ())
+            )
+            if audited_override_ids != expected_override_ids:
+                fail(errors, qid, "invalid_audited_distractor_override")
+            if expected_override_ids:
+                expected_override_answers = {
+                    semantic_option_key(facts_by_id[candidate_id]["answer"])
+                    for candidate_id in expected_override_ids
+                }
+                visible_distractors = {
+                    semantic_option_key(option)
+                    for option in options
+                    if option != question["correct_answer"]
+                }
+                if expected_override_answers != visible_distractors:
+                    fail(errors, qid, "audited_distractor_override_mismatch")
+            elif question["option_category"] == "term":
                 slot_signatures = question.get("option_slot_signatures", [])
                 if len(slot_signatures) != 4 or len(set(slot_signatures)) != 1:
                     fail(errors, qid, "distractor_slot_signature_mismatch")
@@ -466,7 +490,9 @@ def main() -> int:
     for category, minimum in {
         "person": 150,
         "place": 60,
-        "number": 80,
+        # Los componentes aislados de cardinales compuestos no son hechos
+        # competitivos (p. ej. «treinta» dentro de «mil trescientos...»).
+        "number": 75,
         "action": 350,
         "term": 350,
     }.items():

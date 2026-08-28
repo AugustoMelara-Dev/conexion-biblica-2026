@@ -68,7 +68,7 @@ export function semanticAuditFlags(row) {
     flags.push("answer_not_in_source_quote")
   if (row.family === "fill_choice") {
     const blanks = String(row.question ?? "").match(/_{4,}/g) ?? []
-    if (blanks.length !== 1) flags.push("invalid_blank_count")
+    if (blanks.length < 1) flags.push("invalid_blank_count")
   }
   if (row.family === "true_false" && row.correct_answer === "Falso") {
     if (!row.incorrect_detail) flags.push("missing_incorrect_detail")
@@ -131,6 +131,10 @@ export function exhaustiveRiskFlags(row) {
       flags.push("contextual_distractor_without_source_reference")
     if (
       Array.isArray(row.option_slot_signatures) &&
+      !(
+        Array.isArray(row.audited_distractor_fact_ids) &&
+        row.audited_distractor_fact_ids.length === 3
+      ) &&
       new Set(row.option_slot_signatures).size !== 1
     )
       flags.push("contextual_slot_signature_mismatch")

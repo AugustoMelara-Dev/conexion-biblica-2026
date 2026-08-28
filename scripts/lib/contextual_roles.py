@@ -4,6 +4,8 @@ import re
 import unicodedata
 from typing import Any
 
+from scripts.lib.editorial_overrides import CONTEXTUAL_ROLE_OVERRIDES
+
 
 GENERIC_CONTEXTUAL_FRAGMENT = "¿que opcion corresponde especificamente a esta escena:"
 ALLOWED_CONTEXTUAL_ROLES = {
@@ -27,6 +29,7 @@ ALLOWED_CONTEXTUAL_ROLES = {
     "object",
     "predicate",
     "modifier",
+    "discourse_connector",
     "connector_object",
     "concept",
     "cause",
@@ -73,6 +76,9 @@ def _answer_span(fact: dict[str, Any]) -> tuple[str, str]:
 
 
 def derive_contextual_role(fact: dict[str, Any]) -> str:
+    overridden = CONTEXTUAL_ROLE_OVERRIDES.get(str(fact.get("fact_id") or ""))
+    if overridden:
+        return overridden
     relation = str(fact.get("relation_type") or "")
     if fact.get("relation_prompt") and relation in {
         "cause",
@@ -126,6 +132,8 @@ def derive_contextual_role(fact: dict[str, Any]) -> str:
     if category == "action":
         return "action"
     if category == "term":
+        if _norm(str(fact["answer"])) == "embargo" and re.search(r"\bsin$", before_norm):
+            return "discourse_connector"
         if _norm(str(fact["answer"])) in {
             "primer",
             "primero",
@@ -154,8 +162,12 @@ def derive_contextual_role(fact: dict[str, Any]) -> str:
         signature = str(fact.get("_slot_signature") or "")
         if "subject" in signature:
             return "subject"
-        if "predicate" in signature or "adjective" in signature:
+        if signature.startswith("term:predicate_adjective"):
             return "predicate"
+        if signature.startswith("term:postnominal_adjective") or signature.startswith("term:adverb"):
+            return "modifier"
+        if "generic_adjective" in signature:
+            return "modifier"
         if "preposition" in signature:
             return "connector_object"
         if "object" in signature:
@@ -195,7 +207,7 @@ def mask_context_answer(fact: dict[str, Any], marker: str = "[…]") -> str:
 
 _QUESTION_OPENINGS = {
     "actor": "¿quién realiza la acción descrita en",
-    "recipient": "¿a quién se dirige la acción u orden expresada en",
+    "recipient": "¿qué persona o ser completa la relación expresada en",
     "named_entity": "¿qué nombre o designación completa la relación descrita en",
     "origin": "¿qué lugar funciona como origen en",
     "territorial_title": "¿qué territorio completa el título territorial presente en",
@@ -214,6 +226,7 @@ _QUESTION_OPENINGS = {
     "object": "¿qué objeto completa la acción expresada en",
     "predicate": "¿qué término completa la construcción gramatical de",
     "modifier": "¿qué modificador precisa la descripción de",
+    "discourse_connector": "¿qué conector discursivo completa",
     "connector_object": "¿qué concepto completa la relación introducida por la preposición en",
     "concept": "¿qué concepto completa la relación literal de",
     "cause": "¿qué causa declara explícitamente",
@@ -225,7 +238,7 @@ _QUESTION_OPENINGS = {
 
 _IDENTITY_LABELS = {
     "actor": "quien realiza la acción",
-    "recipient": "el destinatario",
+    "recipient": "la persona o ser vinculado",
     "named_entity": "el nombre o designación indicada",
     "origin": "el lugar de origen",
     "territorial_title": "el territorio asociado al título",
@@ -244,6 +257,7 @@ _IDENTITY_LABELS = {
     "object": "el objeto de la acción",
     "predicate": "el término de la construcción",
     "modifier": "el modificador",
+    "discourse_connector": "el conector discursivo",
     "connector_object": "el término regido por la preposición",
     "concept": "el concepto",
     "cause": "la causa declarada",
@@ -271,8 +285,10 @@ def render_contextual_question(fact: dict[str, Any]) -> tuple[str, str, str]:
             else reference
         )
         opening = _QUESTION_OPENINGS[role]
+        if evidence.count("[…]") > 1:
+            opening = "¿qué término completa las posiciones marcadas en"
         if contains_normalized_phrase(opening, answer):
-            opening = "¿qué detalle completa correctamente"
+            opening = "¿qué elemento corresponde al espacio marcado en"
         question = f"Según {source_label}, {opening} «{evidence}»?"
     if contains_normalized_phrase(question, str(fact["answer"])):
         raise ValueError(f"{fact.get('fact_id', '<sin-id>')}:context_question_answer_leak")

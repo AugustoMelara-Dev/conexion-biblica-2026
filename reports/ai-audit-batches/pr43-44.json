@@ -1,0 +1,150 @@
+{
+  "reviewer_type": "ai_semantic_audit",
+  "human_signatures": 0,
+  "chapters": [
+    "PR43",
+    "PR44"
+  ],
+  "total_questions_reviewed": 1790,
+  "family_counts": {
+    "PR43": {
+      "single_choice_direct": 241,
+      "fill_choice": 241,
+      "single_choice_contextual": 241,
+      "true_false": 278
+    },
+    "PR44": {
+      "single_choice_direct": 195,
+      "fill_choice": 195,
+      "single_choice_contextual": 195,
+      "true_false": 204
+    },
+    "combined": {
+      "single_choice_direct": 436,
+      "fill_choice": 436,
+      "single_choice_contextual": 436,
+      "true_false": 482
+    }
+  },
+  "ids_checked_sha256": "bef99b2a293b72eb53aefaae85729bb6eeaa8842c0b52a910ce3d0efc304419b",
+  "findings": [
+    {
+      "id": "PR43-P050-P006-S004-F01",
+      "status": "resolved",
+      "severity": "high",
+      "category": "citation_only_source",
+      "evidence": "El inventario actual conserva la unidad bibliográfica aislada «Jeremías 51:41; 50:23, 46; 51:8, 56, 57; 50:24, 25, 33, 34.» con fact_ids vacío; no existe ningún registro actual cuyo fact_id sea PR43-P050-P006-S004-F01 (0 preguntas afectadas).",
+      "recommendation": "Mantener la unidad fuera del banco evaluable y conservarla solo como referencia de fuente; no regenerar preguntas para ella.",
+      "affected_records": 0
+    },
+    {
+      "id": "PR43-P052-P004-S005-F01",
+      "status": "resolved",
+      "severity": "high",
+      "category": "citation_only_source",
+      "evidence": "La unidad actual «Ezequiel 1:4, 26; 10:8.» también tiene fact_ids vacío y no aparece en PR43.json (0 preguntas afectadas); ya no hay preguntas triviales que pidan únicamente el nombre de la referencia.",
+      "recommendation": "Mantener esta cita aislada excluida del banco evaluable y formular preguntas solo sobre proposiciones completas del párrafo.",
+      "affected_records": 0
+    },
+    {
+      "id": "PR43-P048-P003-S001-F01",
+      "status": "resolved",
+      "severity": "high",
+      "category": "answer_category_mismatch",
+      "evidence": "Los 5 registros actuales para «Belsasar era el más aterrorizado de todos.» usan option_category=person y ranuras person; el contextual pregunta por «qué nombre o designación», no por una forma verbal. El banco ya no ofrece distractores verbales. Permanece únicamente grammatical_category=verb en el inventario auxiliar, sin propagarse al registro generado.",
+      "recommendation": "No requiere corrección del banco actual; corregir el metadato auxiliar en una futura regeneración para evitar regresión.",
+      "affected_records": 5
+    },
+    {
+      "id": "PR44-P058-P002-S002-F01",
+      "status": "resolved",
+      "severity": "high",
+      "category": "answer_category_mismatch",
+      "evidence": "Los 3 registros actuales de PR44 p. 58, párrafo 2 responden «Inquebrantable», con categoría term y firma adjective_invariant, y el contextual pide el término que completa la relación adjetival. El antiguo answer «joven» y sus distractores verbales ya no aparecen.",
+      "recommendation": "No requiere corrección del banco actual; revisar la política de ranuras múltiples porque esta unidad repite el mismo adjetivo en dos posiciones.",
+      "affected_records": 3
+    },
+    {
+      "id": "PR43-P048-P003-S005-F02",
+      "status": "resolved",
+      "severity": "medium",
+      "category": "answer_category_mismatch",
+      "evidence": "El grupo actual contiene «batían» (5 registros), con option_category=action, firmas action y contextual_role=action; la respuesta ya no es «Desatáronse» ni se presenta como sustantivo.",
+      "recommendation": "No requiere corrección del banco actual.",
+      "affected_records": 5
+    },
+    {
+      "id": "PR44-P056-P007-S002-F02",
+      "status": "resolved",
+      "severity": "medium",
+      "category": "answer_category_mismatch",
+      "evidence": "El grupo actual contiene «continuamente» (3 registros), con firma adverb y contextual_role=modifier; ya no pregunta por el verbo «sirves» usando ranuras nominales.",
+      "recommendation": "No requiere corrección del banco actual.",
+      "affected_records": 3
+    },
+    {
+      "id": "PR44-P057-P004-S001-F02",
+      "status": "resolved",
+      "severity": "medium",
+      "category": "answer_category_mismatch",
+      "evidence": "El grupo actual contiene «huesos» (3 registros), con firma nominal determinada masculina plural; el antiguo «mandándolo» y sus distractores incompatibles ya no aparecen.",
+      "recommendation": "No requiere corrección del banco actual.",
+      "affected_records": 3
+    },
+    {
+      "id": "PR44-P057-P005-S003-F02",
+      "status": "resolved",
+      "severity": "medium",
+      "category": "answer_category_mismatch",
+      "evidence": "El grupo actual contiene «leones» (3 registros), con firma nominal masculina plural y contextual_role=connector_object; el antiguo «libra» verbal ya no aparece.",
+      "recommendation": "No requiere corrección del banco actual.",
+      "affected_records": 3
+    },
+    {
+      "id": "PR44-P059-P001-S005-F01",
+      "status": "resolved",
+      "severity": "medium",
+      "category": "answer_category_mismatch",
+      "evidence": "El grupo actual contiene «perece» (5 registros), con option_category=action y firmas verbales; la contextual lo formula como «qué forma verbal» y ya no lo trata como término nominal.",
+      "recommendation": "No requiere corrección del banco actual.",
+      "affected_records": 5
+    },
+    {
+      "id": "PR43-PR44-PHRASE-LENGTH-OUTLIERS",
+      "status": "resolved",
+      "severity": "medium",
+      "category": "distractor_length_leak",
+      "evidence": "La revisión final de los 4 grupos señalados confirma que no existe fuga unívoca: cada respuesta tiene al menos un competidor a 0–4 caracteres. Diferencias mínimas actuales: PR43-P047-P005-S002-F02 = 3 (41 frente a 38); PR43-P051-P003-S001-F01 = 1 (38 frente a 39); PR43-P051-P004-S001-F01 = 4 (28 frente a 24); PR44-P055-P001-S002-F01 = 2 (13 frente a 15). Aunque los gaps globales llegan a 12–18 por otros distractores, la opción correcta no queda identificable solo por longitud.",
+      "recommendation": "No requiere corrección por longitud; mantener la revisión general de pools como control preventivo.",
+      "affected_records": 9
+    },
+    {
+      "id": "PR44-P057-P007-S003-F01",
+      "status": "resolved",
+      "severity": "low",
+      "category": "distractor_length_leak",
+      "evidence": "La dispersión 33/52/35/39 (gap 19) se revisó contra la posición de la respuesta: «Un hombre cuyo corazón se apoya en Dios» mide 39 y es una opción intermedia, no la más larga ni la más corta. Por tanto no ofrece una pista de longitud real; queda como variación cosmética.",
+      "recommendation": "No requiere corrección por longitud; conservar la compatibilidad semántica de los distractores.",
+      "affected_records": 3
+    },
+    {
+      "id": "PR43-P051-OCR-AGÜEROS",
+      "status": "resolved",
+      "severity": "low",
+      "category": "ocr_provenance",
+      "evidence": "La fuente visual de PR43 p. 51 confirma «agüeros» y los 10 registros actuales afectados usan esa grafía; no aparece «agiieros» en source_quote, correct_answer ni question del banco actual. El typo queda confinado al caché OCR scripts/source-cache/final-v7/ocr-pages.json y no es visible al concursante.",
+      "recommendation": "No requiere corrección del banco actual; documentar opcionalmente la normalización en la capa de extracción para prevenir regresiones.",
+      "affected_records": 10
+    },
+    {
+      "id": "PR43-PR44-MULTI-BLANK-CONTRACT-WARNING",
+      "status": "resolved",
+      "severity": "low",
+      "category": "syntax_contract_warning",
+      "evidence": "Los 8 registros (4 hechos, DIRECT/FILL) repiten intencionalmente una misma respuesta en dos posiciones: Habiendo, Quebrantamiento, Tres e Inquebrantable. La redacción «completa todas las posiciones» es natural e inequívoca y la regeneración actual ya no activa family_contract_violations (editorial_audit.json: 0); queda reconocido como contrato intencional, no como error sintáctico.",
+      "recommendation": "No requiere corrección del banco actual.",
+      "affected_records": 8
+    }
+  ],
+  "summary": "Verificación final de 1.790/1.790 registros actuales de PR43–PR44. Conteos: PR43 241/241/241/278 y PR44 195/195/195/204 (DIRECT/FILL/CONTEXTUAL/VF); SHA-256 de IDs ordenados y unidos por salto de línea: bef99b2a293b72eb53aefaae85729bb6eeaa8842c0b52a910ce3d0efc304419b. Los 13 hallazgos revisados quedan resueltos: las diferencias de longitud tienen competidor cercano (0–4 caracteres) y no son fugas unívocas; el multiblanco es contrato intencional; «agiieros» no aparece en el banco visible y la fuente usa «agüeros». audit-final-bank-deep.py: pdf_sha256_matches=true, errors=0; editorial_audit.json: answer_length_leaks=0, family_contract_violations=0; comprobaciones de correct_option, soporte de fuente, referencias, roles contextuales, colisiones semánticas y V/F sin errores. No se modificaron código ni banco; human_signatures=0."
+}

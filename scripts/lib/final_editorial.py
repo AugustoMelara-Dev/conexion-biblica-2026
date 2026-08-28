@@ -17,6 +17,7 @@ from scripts.lib.contextual_roles import (
     render_contextual_question,
 )
 from scripts.lib.final_relations import extract_relation_candidates
+from scripts.lib.editorial_overrides import DISTRACTOR_FACT_ID_OVERRIDES
 from scripts.lib.massive_generator import NUMBER_WORDS, STOPWORDS, TOKEN_RE, _candidate_spans
 from scripts.lib.source_inventory import _split_propositions
 
@@ -24,13 +25,13 @@ from scripts.lib.source_inventory import _split_propositions
 FACT_QUOTAS = {
     "DAN1": 83, "DAN2": 120, "DAN3": 90, "DAN4": 105, "DAN5": 90,
     "DAN6": 90, "DAN7": 225, "DAN8": 225, "DAN9": 225, "DAN10": 135,
-    "DAN11": 306, "DAN12": 105, "PR39": 210, "PR40": 195, "PR41": 180,
+    "DAN11": 306, "DAN12": 104, "PR39": 210, "PR40": 195, "PR41": 181,
     "PR42": 180, "PR43": 241, "PR44": 195,
 }
 DIFFICULTY_COUNTS = {"easy": 600, "medium": 2400, "hard": 5400, "expert": 3600}
 SAFE_FALSE_ACTION_FORMS = {
     "future_second_singular", "future_plural", "future_singular",
-    "preterite_plural", "preterite_second_singular", "preterite_singular",
+    "preterite_first_singular", "preterite_plural", "preterite_second_singular", "preterite_singular",
     "conditional_plural", "conditional_singular",
     "imperfect_plural", "imperfect_singular",
     "subjunctive_past_plural", "subjunctive_past_singular",
@@ -78,6 +79,13 @@ EDITORIALLY_EXCLUDED_SOURCE_UNITS = {
         "Lista aislada de referencias bíblicas sin proposición evaluable: "
         "Isaías 13:11, 19-22; 14:23."
     ),
+    "PR43-P050-P006-S004": (
+        "Lista aislada de referencias bíblicas sin proposición evaluable: "
+        "Jeremías 51:41; 50:23, 46; 51:8, 56, 57; 50:24, 25, 33, 34."
+    ),
+    "PR43-P052-P004-S005": (
+        "Referencia bíblica aislada sin proposición evaluable: Ezequiel 1:4, 26; 10:8."
+    ),
     "PR44-P058-P003-S006": (
         "Referencia bíblica aislada sin proposición evaluable: Daniel 12:4, 9, 13."
     ),
@@ -88,8 +96,6 @@ SAFE_EXACT_NEGATION_ACTION_FORMS = {
     if form not in {"imperative", "infinitive", "gerund"}
     and not form.startswith("participle_")
 } | {
-    "present_a",
-    "present_e",
     "present_plural",
     "present_second_singular",
 }
@@ -97,6 +103,26 @@ EDITORIALLY_EXCLUDED_CANDIDATES = {
     "DAN9-V003": {"asperas"},
     "DAN2-V004": {"cuenta"},
     "DAN7-V025": {"medio"},
+    # Es un componente interno de «dos mil trescientas»; aislado como término
+    # crea una pregunta categorialmente incorrecta.
+    "DAN8-V014": {"trescientas"},
+    # La respuesta predicativa larga no tiene tres alternativas fuente de
+    # extensión y sintaxis comparables; mantenerla delataría la opción.
+    "DAN7-V026": {"destruido y arruinado hasta el fin"},
+    # La frase predicativa es mucho más larga que todas las alternativas
+    # fuente disponibles y convertiría la longitud en pista de respuesta.
+    "PR41-P041-P006-S004": {"libres para elegir a quien quieren servir"},
+    # «Sin embargo» es una locución fija; ocultar solo «embargo» produce
+    # distractores nominales que delatan la respuesta.
+    "PR39-P028-P007-S002": {"embargo"},
+    # La mayúscula editorial de «Fuente» comparte sufijo con adjetivos en
+    # -ente; sin un pool nominal estable la opción resulta delatora.
+    "PR40-P034-P002-S003": {"fuente"},
+    # Estos sustantivos comparten terminaciones productivas con verbos o
+    # adjetivos y no conservan tres distractores nominales inequívocos.
+    "PR42-P043-P004-S005": {"carne"},
+    "PR42-P043-P002-S005": {"gobernante"},
+    "PR42-P046-P001-S004": {"sentido"},
     "PR39-P030-P002-S002": {"santo"},
     "PR40-P033-P006-S002": {"sentencia"},
     # No existen tres distractores de la misma ranura y morfología para
@@ -135,7 +161,6 @@ PHRASE_ONLY_OVERRIDES = {
     "PR41-P038-P001-S004": "El sueño es verdadero",
     "PR41-P038-P004-S002": "iba a superar el original",
     "PR41-P040-P003-S001": "amenazas del rey",
-    "PR41-P041-P006-S004": "libres para elegir a quien quieren servir",
     "PR43-P047-P004-S004": "hombres de genio",
     "PR43-P050-P006-S002": "el Fuerte",
     "PR43-P051-P004-S001": "no les hiciste misericordias",
@@ -207,7 +232,7 @@ DIVINE_NAMES = {
 }
 
 EXTRA_PERSON_NAMES = {
-    "abednego", "aspenaz", "ezequiel", "jacob", "jeremias", "moises", "pablo",
+    "abednego", "aspenaz", "belsasar", "ezequiel", "jacob", "jeremias", "moises", "pablo",
     "satanas", "samuel", "sadrach", "mesach", "israel",
 }
 
@@ -228,7 +253,7 @@ ADVERB_FORMS = {
     "asi", "ahora", "luego", "despues", "tambien", "solo", "aqui", "debajo",
     "ciertamente", "dondequiera", "entonces", "pronto", "adelante", "delante", "encima", "junto",
     "hoy", "ayer", "manana", "cuan", "cuanto", "como", "ademas", "alli",
-    "siquiera", "nunca", "antes",
+    "siquiera", "nunca", "antes", "sobremanera", "juntos", "conforme",
 }
 NON_VERB_IA = {
     "abundancia", "angustia", "apariencia", "bestia", "ciencia", "clemencia",
@@ -248,7 +273,15 @@ NON_VERB_FORMS = NON_VERB_IA | {
     "alegria", "aparte", "carrera", "citara", "collar", "cuenta", "cuernos", "firme", "fuerte",
     "ira", "lugar", "manjar", "mar", "mujer", "altar", "poder", "primer",
     "tercer", "caracter", "bienestar", "singular", "mayordomia", "muerte",
-    "parte", "suerte", "supremacia", "triste", "viviente", "concerniente", "varon", "lomos",
+    "parte", "suerte", "supremacia", "triste", "viviente", "concerniente", "varon", "lomos", "joven",
+    "hogar", "tuya", "tuyo", "tuyos", "tuyas",
+    "capacitado", "capacitada", "capacitados", "capacitadas",
+    "desmoralizador", "desmoralizadora", "desmoralizadores", "desmoralizadoras",
+    "nutrido", "nutrida", "nutridos", "nutridas", "pequeno", "pequena", "pequenos", "pequenas",
+    "importante", "importantes", "audaz", "audaces", "controlado", "controlada", "controlados", "controladas",
+    "espiritual", "espirituales", "majestuoso", "majestuosa", "majestuosos", "majestuosas",
+    "enhiesto", "enhiesta", "enhiestos", "enhiestas",
+    "parecer",
 }
 INVARIANT_ADJECTIVE_FORMS = {
     "dificil", "fragil", "fuerte", "grande", "imposible", "inferior",
@@ -260,9 +293,23 @@ EXPLICIT_ADJECTIVE_FORMS = {
     "primer", "primero", "primera", "segundo", "segunda", "tercer", "tercero",
     "tercera", "ultimo", "ultima", "rapido", "rapida", "correcto", "correcta",
     "idolatra", "terrenal", "mundanal", "mental", "especial", "robusto", "ulterior",
-    "bueno", "buena", "confuso", "confusa", "santo", "santa",
+    "bueno", "buena", "confuso", "confusa", "santo", "santa", "seguro", "segura",
     "justo", "justa", "digno", "digna", "ancho", "ancha", "limpio", "limpia",
     "alto", "alta", "halagueno", "halaguena", "seductor", "seductora", "patriota",
+    "atonito", "atonita", "verdadero", "verdadera", "perpetuo", "perpetua",
+    "potente", "potentes", "musical", "musicales", "muerto", "muerta",
+    "tuya", "tuyo", "tuyos", "tuyas",
+    "capacitado", "capacitada", "capacitados", "capacitadas",
+    "desmoralizador", "desmoralizadora", "desmoralizadores", "desmoralizadoras",
+    "nutrido", "nutrida", "nutridos", "nutridas", "pequeno", "pequena", "pequenos", "pequenas",
+    "importante", "importantes", "audaz", "audaces", "controlado", "controlada", "controlados", "controladas",
+    "espiritual", "espirituales", "majestuoso", "majestuosa", "majestuosos", "majestuosas",
+    "enhiesto", "enhiesta", "enhiestos", "enhiestas",
+    "profundo", "profunda", "profundos", "profundas", "flagrante", "flagrantes",
+    "fiel", "fieles", "libre", "libres", "firme",
+    "mundanal", "mundanales", "cansador", "cansadora", "cansadores", "cansadoras",
+    "gigantesco", "gigantesca", "grandioso", "grandiosa", "anterior", "anteriores",
+    "restituido", "restituida", "restituidos", "restituidas",
 }
 EXPLICIT_NOMINAL_FORMS = {
     "manera",
@@ -303,7 +350,14 @@ VERB_FORMS = {
     "ha", "has", "han", "he", "hemos", "habeis",
     "dicho", "hecho", "puesto", "visto",
     "esfuerzate", "haz", "hazlo", "cierra", "inclina", "presta",
-    "entiende", "reprende", "lleva",
+    "entiende", "reprende", "lleva", "desataronse", "sirves", "mandandolo",
+    "libra", "perece", "declarame", "destruidlo", "engrandezco", "dispersad",
+    "tiene", "triunfe", "gobierna", "demanda", "resulta", "pudiera", "debiera",
+    "encuentra", "salva", "acata", "respeta", "confirme", "revela",
+    "buscandolo", "guardan", "trayendo", "entendido", "apartese", "rodean",
+    "resplandezca", "huyeron", "opuso", "cobra", "tengo", "confieso", "pusolo", "alabo",
+    "devora", "ensena", "guarda", "adore",
+    "dispuso", "libertandolos", "aprueba", "juntaronse", "perturbose",
 }
 
 
@@ -574,6 +628,10 @@ def option_signature(value: str, category: str | None = None) -> tuple[Any, ...]
             suffix = f"verb_like:{_action_form(words[0])}"
         elif role == "adverb":
             suffix = "adverb"
+        elif normalized in {"primer", "tercer"}:
+            suffix = "ordinal_apocopated_masculine_singular"
+        elif normalized in {"primero", "tercero"}:
+            suffix = "ordinal_full_apocopatable_masculine_singular"
         elif normalized in EXPLICIT_ADJECTIVE_FORMS or singular in EXPLICIT_ADJECTIVE_FORMS:
             ending = (
                 "feminine_plural" if normalized.endswith("as")
@@ -642,13 +700,13 @@ def _action_form(value: str) -> str:
     irregular = {
         "eres": "present_second_singular", "es": "present_e", "soy": "present_other", "son": "present_plural",
         "esta": "present_a", "estan": "present_plural", "tiene": "present_e", "tienen": "present_plural",
-        "sabes": "present_other", "tuvo": "preterite_singular", "dijo": "preterite_singular", "dije": "preterite_singular",
+        "sabes": "present_other", "tuvo": "preterite_singular", "dijo": "preterite_singular", "dije": "preterite_first_singular",
         "hizo": "preterite_singular", "vino": "preterite_singular", "puso": "preterite_singular",
         "dio": "preterite_singular", "bendijo": "preterite_singular",
         "trajo": "preterite_singular", "trajeron": "preterite_plural",
         "fue": "preterite_singular", "fueron": "preterite_plural",
-        "ore": "preterite_singular", "mire": "preterite_singular",
-        "postre": "preterite_singular", "recobre": "preterite_singular",
+        "ore": "preterite_first_singular", "mire": "preterite_first_singular",
+        "postre": "preterite_first_singular", "recobre": "preterite_first_singular",
         "dicho": "participle_masculine_singular",
         "hecho": "participle_masculine_singular",
         "puesto": "participle_masculine_singular",
@@ -661,6 +719,19 @@ def _action_form(value: str) -> str:
         "haz": "imperative", "hazlo": "imperative",
         "quiso": "preterite_singular",
         "hemos": "present_first_plural",
+        "detenga": "subjunctive_present_singular",
+        "palidezca": "subjunctive_present_singular",
+        "confirme": "subjunctive_present_singular",
+        "triunfe": "subjunctive_present_singular",
+        "trajera": "subjunctive_past_singular",
+        "resplandezca": "subjunctive_present_singular",
+        "opuso": "preterite_singular", "pusolo": "preterite_singular",
+        "huyeron": "preterite_plural", "tengo": "present_first_singular",
+        "confieso": "present_first_singular", "alabo": "present_first_singular",
+        "dalos": "imperative", "destruidlo": "imperative",
+        "tuve": "preterite_first_singular",
+        "dispuso": "preterite_singular", "juntaronse": "preterite_plural",
+        "perturbose": "preterite_singular",
     }
     if lower in irregular:
         return irregular[lower]
@@ -671,7 +742,8 @@ def _action_form(value: str) -> str:
         (r"(?:rá|ré)$", "future_singular"),
         (r"(?:aron|ieron)$", "preterite_plural"),
         (r"(?:aste|iste)$", "preterite_second_singular"),
-        (r"(?:ó|é|í)$", "preterite_singular"),
+        (r"(?:ó)$", "preterite_singular"),
+        (r"(?:é|í)$", "preterite_first_singular"),
         (r"(?:rían)$", "conditional_plural"),
         (r"(?:ría)$", "conditional_singular"),
         (r"(?:aban|ían)$", "imperfect_plural"),
@@ -683,7 +755,10 @@ def _action_form(value: str) -> str:
     ):
         if re.search(pattern, raw):
             return label
-    if re.search(r"(?:ando|iendo|andose|iendose)$", lower):
+    if re.search(
+        r"(?:ando|iendo|yendo)(?:me|te|se|lo|la|los|las|le|les|nos)?$",
+        lower,
+    ):
         return "gerund"
     if re.search(r"(?:ar|er|ir)(?:me|te|se|lo|la|los|las|le|les|nos)?$", lower):
         return "infinitive"
@@ -699,6 +774,8 @@ def _action_form(value: str) -> str:
         return "participle_feminine_singular"
     if lower.endswith(("an", "en")):
         return "present_plural"
+    if lower.endswith(("ais", "eis")):
+        return "present_second_plural"
     if lower.endswith("mos"):
         return "present_first_plural"
     if lower.endswith(("as", "es")):
@@ -731,8 +808,8 @@ def _source_text(unit: dict[str, Any]) -> str:
 
 
 def _is_sentence_initial(text: str, start: int) -> bool:
-    prefix = text[:start].rstrip()
-    return not prefix or prefix[-1] in ".!?¡¿:;—–-«“”\"'"
+    prefix = text[:start].rstrip().rstrip('«»“”\"\'')
+    return not prefix or prefix[-1] in ".!?¡¿"
 
 
 def _broad_category(answer: str, raw_category: str, unit: dict[str, Any]) -> str:
@@ -764,20 +841,59 @@ def _broad_category(answer: str, raw_category: str, unit: dict[str, Any]) -> str
 
 
 def _is_compound_number_component(text: str, start: int, end: int) -> bool:
+    def is_number_word(value: str) -> bool:
+        normalized = _norm(value)
+        return (
+            normalized in NUMBER_WORDS
+            or normalized.isdigit()
+            or bool(
+                re.fullmatch(
+                    r"(?:dos|tres|cuatro|seis|sete|ocho|nove)cientos|quinientos",
+                    normalized,
+                )
+            )
+        )
+
     previous_tokens = list(TOKEN_RE.finditer(text[:start]))
     previous = previous_tokens[-1] if previous_tokens else None
-    following = TOKEN_RE.search(text, end)
+    following_tokens = list(TOKEN_RE.finditer(text, end))
+    following = following_tokens[0] if following_tokens else None
     previous_is_number = bool(
         previous
         and text[previous.end():start].isspace()
-        and _norm(previous.group()) in NUMBER_WORDS
+        and is_number_word(previous.group())
     )
     following_is_number = bool(
         following
         and text[end:following.start()].isspace()
-        and _norm(following.group()) in NUMBER_WORDS
+        and is_number_word(following.group())
     )
+    if previous and _norm(previous.group()) == "y" and len(previous_tokens) >= 2:
+        before_y = previous_tokens[-2]
+        previous_is_number = bool(
+            text[before_y.end():previous.start()].isspace()
+            and text[previous.end():start].isspace()
+            and is_number_word(before_y.group())
+        )
+    if following and _norm(following.group()) == "y" and len(following_tokens) >= 2:
+        after_y = following_tokens[1]
+        following_is_number = bool(
+            text[end:following.start()].isspace()
+            and text[following.end():after_y.start()].isspace()
+            and is_number_word(after_y.group())
+        )
     return previous_is_number or following_is_number
+
+
+def _number_answer_is_compound_component(fact: dict[str, Any]) -> bool:
+    if fact.get("category") != "number" or len(str(fact.get("answer", "")).split()) != 1:
+        return False
+    context = str(fact.get("context") or "")
+    answer = str(fact["answer"])
+    if context.count(answer) != 1:
+        return False
+    start = context.index(answer)
+    return _is_compound_number_component(context, start, start + len(answer))
 
 
 def _is_bible_reference_number(text: str, start: int, end: int) -> bool:
@@ -857,7 +973,11 @@ def _fact_candidates(unit: dict[str, Any]) -> tuple[list[dict[str, Any]], int]:
         broad_category = _broad_category(answer, raw_category, unit)
         # La sintaxis local tiene la última palabra para formas homógrafas:
         # «Cuenta el sueño» es verbo, aunque «cuenta» también sea sustantivo.
-        if len(words) == 1 and roles[0] == "verb":
+        if (
+            len(words) == 1
+            and roles[0] == "verb"
+            and broad_category not in {"person", "place"}
+        ):
             broad_category = "action"
         is_reference_number = bool(
             re.fullmatch(r"\d+(?:-\d+)+", answer)
@@ -1078,7 +1198,11 @@ def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any
             text = _source_text(unit)
             answer = str(relation["answer"])
             normalized_answer = _norm(answer)
-            if normalized_answer in STOP_ANSWERS or normalized_answer in STOPWORDS:
+            if (
+                normalized_answer in STOP_ANSWERS
+                or normalized_answer in STOPWORDS
+                or normalized_answer in excluded_candidates
+            ):
                 rejected += 1
                 continue
             start = text.index(answer)
@@ -1418,7 +1542,12 @@ def _group_by(rows: Iterable[dict[str, Any]], key: str) -> dict[str, list[dict[s
 
 
 def _masked(text: str, answer: str, marker: str) -> str:
-    return text.replace(answer, marker, 1)
+    return re.sub(
+        rf"(?<!\w){re.escape(answer)}(?!\w)",
+        lambda _: marker,
+        text,
+        flags=re.IGNORECASE,
+    )
 
 
 def _display_excerpt(text: str) -> str:
@@ -1472,7 +1601,11 @@ def _negate_exact_action_statement(statement: str, answer: str) -> str | None:
         return None
     prefix = statement[:answer_start]
     insert_at = answer_start
-    clitic = re.search(r"\b(?:me|te|se|lo|la|los|las|le|les|nos)\s+$", prefix, re.I)
+    clitic = re.search(
+        r"\b(?:(?:me|te|se|lo|la|los|las|le|les|nos|os)\s+){1,3}$",
+        prefix,
+        re.I,
+    )
     if clitic:
         insert_at = clitic.start()
     words_before = re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+", statement[:insert_at])
@@ -1508,6 +1641,18 @@ def _negate_exact_action_statement(statement: str, answer: str) -> str | None:
     if negation == "No " and suffix:
         suffix = suffix[:1].lower() + suffix[1:]
     return statement[:insert_at] + negation + suffix
+
+
+def _negated_action_detail(statement: str, answer: str) -> str:
+    """Return the exact visible negated verb phrase, including a clitic."""
+    match = re.search(
+        rf"\bno\s+(?:(?:me|te|se|lo|la|los|las|le|les|nos|os)\s+){{0,3}}{re.escape(answer)}\b",
+        statement,
+        re.IGNORECASE,
+    )
+    if not match:
+        raise ValueError(f"No se encontró el detalle negado visible para {answer!r}")
+    return match.group(0).lower()
 
 
 def _category_label(category: str) -> str:
@@ -1730,6 +1875,10 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                 fact["category"] in {"person", "place", "phrase", "term"}
                 or row["grammatical_category"] == fact["grammatical_category"]
             )
+            and (
+                fact["category"] != "action"
+                or _action_form(row["answer"]) == _action_form(fact["answer"])
+            )
         ]
         unique: dict[str, dict[str, Any]] = {}
         for row in eligible:
@@ -1744,14 +1893,23 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                 fact["category"] == "person"
                 and ((_norm(row["answer"]) in DIVINE_NAMES) != (_norm(fact["answer"]) in DIVINE_NAMES)),
                 fact["category"] == "action" and _action_form(row["answer"]) != _action_form(fact["answer"]),
-                row["chapter"] != fact["chapter"],
                 row["grammatical_category"] != fact["grammatical_category"],
+                abs(len(row["answer"].split()) - len(fact["answer"].split())),
                 abs(len(row["answer"]) - len(fact["answer"])),
+                row["chapter"] != fact["chapter"],
                 _hash(f"{fact['fact_id']}:{row['fact_id']}"),
             ),
         )
 
     distractor_map = {fact["fact_id"]: compatible_rows(fact) for fact in facts}
+    facts_by_id = {fact["fact_id"]: fact for fact in facts}
+    for fact_id, replacement_ids in DISTRACTOR_FACT_ID_OVERRIDES.items():
+        if fact_id not in facts_by_id:
+            raise ValueError(f"Override editorial sin hecho objetivo: {fact_id}")
+        missing = [candidate_id for candidate_id in replacement_ids if candidate_id not in facts_by_id]
+        if missing:
+            raise ValueError(f"Override editorial {fact_id} apunta a hechos ausentes: {missing}")
+        distractor_map[fact_id] = [facts_by_id[candidate_id] for candidate_id in replacement_ids]
     insufficient = [fact_id for fact_id, rows in distractor_map.items() if len(rows) < 3]
     if insufficient:
         raise ValueError(f"Hay hechos sin tres distractores compatibles: {insufficient[:20]}")
@@ -1765,10 +1923,17 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         for fact in facts
     }
     def false_replacements(fact: dict[str, Any]) -> list[dict[str, Any]]:
+        answer_start = fact["context"].find(fact["answer"])
+        fused_article = bool(
+            fact["category"] in {"person", "place"}
+            and answer_start >= 0
+            and re.search(r"\b(?:al|del)\s+$", fact["context"][:answer_start], re.I)
+        )
         return [
             row
             for row in strict_false_distractor_map[fact["fact_id"]]
             if not _boundary_collision(fact["context"], fact["answer"], row["answer"])
+            and not fused_article
             and (
                 fact["category"] != "action"
                 or (
@@ -1931,6 +2096,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
 
     for index, fact in enumerate(facts):
         distractor_facts = distractor_map[fact["fact_id"]]
+        audited_override_ids = DISTRACTOR_FACT_ID_OVERRIDES.get(fact["fact_id"])
         distractors = [
             row["answer"]
             if fact["category"] == "place"
@@ -1958,10 +2124,15 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             option_slot_signatures = [*distractor_slot_signatures]
             option_slot_signatures.insert(position, fact.get("_slot_signature"))
             masked_context = _masked(fact["context"], fact["answer"], "________")
+            multiple_blanks = masked_context.count("________") > 1
             contextual_role = None
             context_evidence = None
             if family == "fill_choice":
-                question_text = f"Complete {fact['reference']}: {_display_excerpt(masked_context)}"
+                question_text = (
+                    f"Complete todas las posiciones de {fact['reference']}: {_display_excerpt(masked_context)}"
+                    if multiple_blanks
+                    else f"Complete {fact['reference']}: {_display_excerpt(masked_context)}"
+                )
                 trap_type = None
             elif family == "single_choice_contextual":
                 (
@@ -1973,7 +2144,8 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             else:
                 question_text = (
                     f"Según {fact['reference']}, ¿qué opción completa "
-                    f"correctamente {_display_excerpt(masked_context)}?"
+                    f"{'todas las posiciones marcadas de ' if multiple_blanks else 'correctamente '}"
+                    f"{_display_excerpt(masked_context)}?"
                 )
                 trap_type = None
             base.update(
@@ -1981,6 +2153,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                     "question": question_text,
                     "options": options,
                     "option_slot_signatures": option_slot_signatures,
+                    "audited_distractor_fact_ids": list(audited_override_ids or ()),
                     "correct_option": position,
                     "correct_answer": fact["answer"],
                     "explanation": (
@@ -2182,7 +2355,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                 else None
             )
             if negated is not None:
-                incorrect_detail = f"no {fact['answer'].lower()}"
+                incorrect_detail = _negated_action_detail(negated, fact["answer"])
                 prompt = f"Verdadero o falso: Según {fact['reference']}, {negated}"
                 if (
                     prompt not in used_true_false_prompts
@@ -2217,7 +2390,10 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             selected = cross_reference_statement_spec(
                 fact, source_statement, replacement_candidates
             )
-        elif fact["category"] == "number" and len(fact["answer"].split()) > 1:
+        elif fact["category"] == "number" and (
+            len(fact["answer"].split()) > 1
+            or _number_answer_is_compound_component(fact)
+        ):
             # Las expresiones numéricas compuestas pueden incluir unidades
             # distintas. Sustituirlas dentro de una cita crea frases como
             # «tiempo, tiempos... gobernadores». Se usa una proposición completa
@@ -2498,7 +2674,7 @@ def audit_final_bank(
             )
         elif family == "fill_choice":
             invalid = (
-                blank_count != 1
+                blank_count < 1
                 or not question["question"].startswith("Complete ")
             )
         elif family == "single_choice_contextual":
@@ -2508,7 +2684,7 @@ def audit_final_bank(
                 or len(question.get("why_distractors_fail", {})) != 3
             )
         else:
-            invalid = blank_count != 1
+            invalid = blank_count < 1
         if invalid:
             family_contract_errors[family] += 1
         fact = facts_by_id[question["fact_id"]]

@@ -109,6 +109,8 @@ describe("inicio", () => {
     render(<DashboardPage />)
 
     expect(screen.getByRole("heading", { name: "Mis puntos débiles" })).toBeVisible()
+    expect(screen.getByRole("progressbar", { name: "Precisión de Daniel" })).toBeVisible()
+    expect(screen.getByRole("progressbar", { name: "Precisión de Profetas y Reyes" })).toBeVisible()
     expect(screen.getByText("Daniel 2")).toBeVisible()
     expect(screen.getByText("Selección única")).toBeVisible()
     expect(screen.getByText("2 preguntas detectadas")).toBeVisible()

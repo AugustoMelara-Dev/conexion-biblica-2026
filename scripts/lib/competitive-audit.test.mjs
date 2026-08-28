@@ -247,6 +247,20 @@ describe("competitive audit sampling", () => {
     ).toContain("contextual_distractor_without_source_reference")
   })
 
+  it("accepts slot differences only when three source-backed overrides are recorded", () => {
+    const row = {
+      ...contextualBase,
+      option_slot_signatures: ["verb:transitive", "verb:copular", "verb:transitive", "verb:transitive"],
+    }
+    expect(exhaustiveRiskFlags(row)).toContain("contextual_slot_signature_mismatch")
+    expect(
+      exhaustiveRiskFlags({
+        ...row,
+        audited_distractor_fact_ids: ["FACT-1", "FACT-2", "FACT-3"],
+      }),
+    ).not.toContain("contextual_slot_signature_mismatch")
+  })
+
   it("flags the deprecated generic wording in false statements", () => {
     expect(
       exhaustiveRiskFlags({
