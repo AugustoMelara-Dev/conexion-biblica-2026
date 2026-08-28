@@ -1,7 +1,10 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises"
 import { resolve } from "node:path"
 
-import { buildExhaustiveReviewQueue } from "./lib/competitive-audit.mjs"
+import {
+  buildExhaustiveReviewQueue,
+  buildPublicReviewIndex,
+} from "./lib/competitive-audit.mjs"
 
 const root = resolve(import.meta.dirname, "..")
 const bankRoot = resolve(root, "public/banks/final-2026")
@@ -10,6 +13,7 @@ const decisionsPath = resolve(reportRoot, "final-human-review-decisions.json")
 const ledgerPath = resolve(reportRoot, "final-exhaustive-audit-ledger.json")
 const packetPath = resolve(reportRoot, "final-exhaustive-review-packet.json")
 const summaryPath = resolve(reportRoot, "final-exhaustive-audit.md")
+const publicIndexPath = resolve(bankRoot, "review-index.json")
 
 async function readJson(path, fallback) {
   try {
@@ -115,6 +119,17 @@ await writeFile(
     null,
     2
   )}\n`,
+  "utf8"
+)
+await writeFile(
+  publicIndexPath,
+  `${JSON.stringify({
+    schema_version: "1.0",
+    bank_id: manifest.bank_id,
+    bank_questions: questions.length,
+    source_sha256: manifest.source_sha256,
+    entries: buildPublicReviewIndex(queue, manifest.shards),
+  })}\n`,
   "utf8"
 )
 

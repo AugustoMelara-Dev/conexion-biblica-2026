@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest"
 
 import {
   buildExhaustiveReviewQueue,
+  buildPublicReviewIndex,
   buildCompetitiveAuditReport,
   exhaustiveRiskFlags,
   selectStratifiedSample,
@@ -143,6 +144,36 @@ describe("competitive audit sampling", () => {
     expect(queue[0].review_status).toBe("pending_human")
     expect(queue[0].automatic_flags).toContain("answer_index_mismatch")
     expect(queue[1].risk_score).toBeLessThan(queue[0].risk_score)
+  })
+
+  it("publica un índice completo con la ruta del capítulo sin decisiones humanas", () => {
+    const queue = buildExhaustiveReviewQueue([
+      {
+        id: "DAN7-Q1",
+        chapter: "DAN7",
+        family: "fill_choice",
+        reference: "Daniel 7:1",
+        question: "Completa: ____.",
+        options: ["sueño", "visión"],
+        correct_option: 0,
+        correct_answer: "sueño",
+        source_quote: "sueño",
+      },
+    ])
+
+    expect(
+      buildPublicReviewIndex(queue, [
+        {
+          chapter: "DAN7",
+          questions_file: "banks/final-2026/questions/DAN7.json",
+        },
+      ]),
+    ).toEqual([
+      expect.objectContaining({
+        id: "DAN7-Q1",
+        questions_file: "banks/final-2026/questions/DAN7.json",
+      }),
+    ])
   })
 
   it("flags contextual distractors without auditable source references", () => {

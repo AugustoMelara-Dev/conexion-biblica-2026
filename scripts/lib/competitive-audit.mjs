@@ -207,3 +207,26 @@ export function buildExhaustiveReviewQueue(rows) {
       right.risk_score - left.risk_score || left.id.localeCompare(right.id)
   )
 }
+
+export function buildPublicReviewIndex(queue, shards) {
+  const filesByChapter = new Map(
+    shards.map((shard) => [shard.chapter, shard.questions_file])
+  )
+  return queue.map((row) => {
+    const questionsFile = filesByChapter.get(row.chapter)
+    if (!questionsFile)
+      throw new Error(`No hay shard para la auditoría de ${row.chapter}.`)
+    return {
+      id: row.id,
+      fact_id: row.fact_id,
+      chapter: row.chapter,
+      family: row.family,
+      reference: row.reference,
+      content_sha256: row.content_sha256,
+      risk_score: row.risk_score,
+      automatic_flags: row.automatic_flags,
+      automatic_status: row.automatic_status,
+      questions_file: questionsFile,
+    }
+  })
+}

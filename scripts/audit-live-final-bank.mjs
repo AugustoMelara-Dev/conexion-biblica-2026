@@ -10,6 +10,7 @@ const resources = [
   "banks/final-2026/fact_inventory.json",
   "banks/final-2026/coverage_manifest.json",
   "banks/final-2026/editorial_audit.json",
+  "banks/final-2026/review-index.json",
 ]
 
 const manifest = JSON.parse(

@@ -16,6 +16,9 @@ import type {
 import { buildStatistics } from "@/lib/statistics"
 
 vi.mock("@/app/app-state", () => ({ useApp: vi.fn() }))
+vi.mock("@/components/editorial-audit-panel", () => ({
+  EditorialAuditPanel: () => <h2>Auditoría humana final</h2>,
+}))
 
 const question: Question = {
   id: "insight-question",
@@ -166,6 +169,9 @@ describe("vistas de progreso y revisión", () => {
   it("ofrece una acción clara cuando la revisión está vacía", () => {
     renderReview({ reports: [], progress: new Map() })
 
+    expect(
+      screen.getByRole("heading", { name: "Auditoría humana final" }),
+    ).toBeVisible()
     expect(
       screen.getByRole("heading", { name: "No hay preguntas pendientes" })
     ).toBeVisible()

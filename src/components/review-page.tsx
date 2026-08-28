@@ -2,6 +2,7 @@ import { ChevronDown, ClipboardCheck, Copy, SearchCheck } from "lucide-react"
 import { useEffect, useMemo, useRef, useState } from "react"
 import { useApp } from "@/app/app-state"
 import { EmptyState } from "@/components/layout/empty-state"
+import { EditorialAuditPanel } from "@/components/editorial-audit-panel"
 import { PageHeader } from "@/components/layout/page-header"
 import { SectionHeader } from "@/components/layout/section-header"
 import { Badge } from "@/components/ui/badge"
@@ -205,6 +206,7 @@ export function ReviewPage({
           {practiceError}
         </p>
       ) : null}
+      <EditorialAuditPanel />
       <section aria-label="Cola de revisión">
         <SectionHeader
           title="Cola recomendada"
