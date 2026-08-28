@@ -8,7 +8,12 @@ import {
   type ReactNode,
 } from "react"
 import { applyProgress } from "@/domain/mastery"
-import { applyFactEvidence, emptyFactMastery, type EvidenceKind, type FactMastery } from "@/domain/fact-mastery"
+import {
+  applyFactEvidence,
+  emptyFactMastery,
+  type EvidenceKind,
+  type FactMastery,
+} from "@/domain/fact-mastery"
 import { scheduleNextRetrieval } from "@/domain/compressed-scheduler"
 import {
   createBackupPayload,
@@ -95,12 +100,21 @@ type AppContextValue = {
   preferences: Preferences
   bankSelection: BankSelection
   setBankSelection: (selection: BankSelection) => void
-  bankCounts: { legacy: number; master: number; prep: number; curated: number; consolidation?: number; final?: number }
+  bankCounts: {
+    legacy: number
+    master: number
+    prep: number
+    curated: number
+    consolidation?: number
+    final?: number
+  }
   coverageCycles: Map<string, CoverageCycle>
   activeRound: ActiveRound | null
   statistics: Statistics
   refresh: () => Promise<void>
-  loadMassiveQuestions: (config: import("@/domain/types").SessionConfig) => Promise<Question[]>
+  loadMassiveQuestions: (
+    config: import("@/domain/types").SessionConfig
+  ) => Promise<Question[]>
   importBankFiles: (
     files: File[],
     replaceBankId?: string
@@ -237,12 +251,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [error, setError] = useState<string | null>(null)
   const [masterBankError, setMasterBankError] = useState<string | null>(null)
   const [massiveBankError, setMassiveBankError] = useState<string | null>(null)
-  const [massiveManifest] =
-    useState<MassiveBankManifest | null>(null)
-  const [consolidationManifest] =
-    useState<ConsolidationManifest | null>(null)
-  const [finalManifest, setFinalManifest] =
-    useState<FinalBankManifest | null>(null)
+  const [massiveManifest] = useState<MassiveBankManifest | null>(null)
+  const [consolidationManifest] = useState<ConsolidationManifest | null>(null)
+  const [finalManifest, setFinalManifest] = useState<FinalBankManifest | null>(
+    null
+  )
   const [nav, setNav] = useState<NavKey>("dashboard")
   const [banks, setBanks] = useState<Bank[]>([])
   const [questions, setQuestions] = useState<Question[]>([])
@@ -339,8 +352,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
         new Map(nextCycles.map((cycle) => [cycle.poolKey, cycle]))
       )
       setActiveRound(nextActiveRound ?? null)
-      const existingMigration = await nextRepositories.settings.get<string | null>("v7-history-backup", null)
-      if (!existingMigration && (nextProgress.length || nextSessions.length || nextReports.length)) {
+      const existingMigration = await nextRepositories.settings.get<
+        string | null
+      >("v7-history-backup", null)
+      if (
+        !existingMigration &&
+        (nextProgress.length || nextSessions.length || nextReports.length)
+      ) {
         const backupId = `pre-v7-${Date.now()}`
         await nextRepositories.migrationBackups.put({
           id: backupId,
@@ -385,14 +403,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
           )
           .map((shard) => Number(shard.chapter.match(/\d+/)?.[0]))
         const chapters = config.chapters.length
-          ? manifestChapters.filter((chapter) => config.chapters.includes(chapter))
+          ? manifestChapters.filter((chapter) =>
+              config.chapters.includes(chapter)
+            )
           : manifestChapters
         const blindPool = config.trainingPresetId?.endsWith("blind-a")
-          ? "A" as const
+          ? ("A" as const)
           : config.trainingPresetId?.endsWith("blind-b")
-            ? "B" as const
+            ? ("B" as const)
             : config.trainingPresetId === "blind-simulation"
-              ? "A" as const
+              ? ("A" as const)
               : undefined
         const gold = await loadFinalQuestionPool({
           manifest: finalManifest,
@@ -401,16 +421,19 @@ export function AppProvider({ children }: { children: ReactNode }) {
           blindPool,
           difficultyBands: config.difficultyBands,
           types: config.types,
-          family: config.trainingPresetId === "27-context" || config.trainingPresetId === "contextual-traps"
-            ? "single_choice_contextual"
-            : config.trainingPresetId === "expert-multiple-choice"
-              ? "single_choice_direct"
-            : config.trainingPresetId === "27-fill"
-              ? "fill_choice"
-              : config.trainingPresetId === "27-true-false"
-                ? "true_false"
-                : undefined,
+          family:
+            config.trainingPresetId === "27-context" ||
+            config.trainingPresetId === "contextual-traps"
+              ? "single_choice_contextual"
+              : config.trainingPresetId === "expert-multiple-choice"
+                ? "single_choice_direct"
+                : config.trainingPresetId === "27-fill"
+                  ? "fill_choice"
+                  : config.trainingPresetId === "27-true-false"
+                    ? "true_false"
+                    : undefined,
           seenFactIds: new Set(exposures.map((exposure) => exposure.factId)),
+          exposures,
           seed: Date.now(),
         })
         await repositories.questions.putMany(gold)
@@ -424,7 +447,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         const migration = mapLegacyProgressToFacts(
           legacyQuestions,
           storedProgress,
-          gold,
+          gold
         )
         for (const item of migration.mapped) {
           const existing = await repositories.factMastery.get(item.factId)
@@ -432,15 +455,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
           const prior = emptyFactMastery(item.factId)
           await repositories.factMastery.put({
             ...prior,
-            state: item.progress.timesIncorrect > 0
-              ? "due"
-              : item.progress.timesCorrect > 0
-                ? "exposed"
-                : "unseen",
+            state:
+              item.progress.timesIncorrect > 0
+                ? "due"
+                : item.progress.timesCorrect > 0
+                  ? "exposed"
+                  : "unseen",
             attempts: item.progress.timesSeen,
             failures: item.progress.timesIncorrect,
             firstSeenAt:
-              item.progress.history.at(0)?.timestamp ?? item.progress.lastSeenAt,
+              item.progress.history.at(0)?.timestamp ??
+              item.progress.lastSeenAt,
             lastSeenAt: item.progress.lastSeenAt,
           })
         }
@@ -475,15 +500,18 @@ export function AppProvider({ children }: { children: ReactNode }) {
           )
           .map((shard) => Number(shard.chapter.match(/\d+/)?.[0]))
         const chapters = config.chapters.length
-          ? manifestChapters.filter((chapter) => config.chapters.includes(chapter))
+          ? manifestChapters.filter((chapter) =>
+              config.chapters.includes(chapter)
+            )
           : manifestChapters
-        const blindPool = config.trainingPresetId === "28-blind-a"
-          ? "A" as const
-          : config.trainingPresetId === "28-blind-b"
-            ? "B" as const
-            : config.trainingPresetId === "blind-simulation"
-              ? "A" as const
-            : undefined
+        const blindPool =
+          config.trainingPresetId === "28-blind-a"
+            ? ("A" as const)
+            : config.trainingPresetId === "28-blind-b"
+              ? ("B" as const)
+              : config.trainingPresetId === "blind-simulation"
+                ? ("A" as const)
+                : undefined
         const gold = await loadConsolidationQuestionPool({
           manifest: consolidationManifest,
           chapters,
@@ -498,18 +526,31 @@ export function AppProvider({ children }: { children: ReactNode }) {
           repositories.questions.list(),
           repositories.progress.list(),
         ])
-        const legacyQuestions = storedQuestions.filter((question) => question.bankProfileId !== "consolidation-v5")
-        const migration = mapLegacyProgressToFacts(legacyQuestions, storedProgress, gold)
+        const legacyQuestions = storedQuestions.filter(
+          (question) => question.bankProfileId !== "consolidation-v5"
+        )
+        const migration = mapLegacyProgressToFacts(
+          legacyQuestions,
+          storedProgress,
+          gold
+        )
         for (const item of migration.mapped) {
           const existing = await repositories.factMastery.get(item.factId)
           if (existing) continue
           const prior = emptyFactMastery(item.factId)
           await repositories.factMastery.put({
             ...prior,
-            state: item.progress.timesIncorrect > 0 ? "due" : item.progress.timesCorrect > 0 ? "exposed" : "unseen",
+            state:
+              item.progress.timesIncorrect > 0
+                ? "due"
+                : item.progress.timesCorrect > 0
+                  ? "exposed"
+                  : "unseen",
             attempts: item.progress.timesSeen,
             failures: item.progress.timesIncorrect,
-            firstSeenAt: item.progress.history.at(0)?.timestamp ?? item.progress.lastSeenAt,
+            firstSeenAt:
+              item.progress.history.at(0)?.timestamp ??
+              item.progress.lastSeenAt,
             lastSeenAt: item.progress.lastSeenAt,
           })
         }
@@ -520,8 +561,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
           updatedAt: Date.now(),
         })
         setQuestions((current) => {
-          const byKey = new Map(current.map((question) => [`${question.bankId ?? "local"}:${question.id}`, question]))
-          for (const question of gold) byKey.set(`${question.bankId}:${question.id}`, question)
+          const byKey = new Map(
+            current.map((question) => [
+              `${question.bankId ?? "local"}:${question.id}`,
+              question,
+            ])
+          )
+          for (const question of gold)
+            byKey.set(`${question.bankId}:${question.id}`, question)
           return [...byKey.values()]
         })
         return gold
@@ -538,7 +585,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
         .map((shard) => Number(shard.chapter.match(/\d+/)?.[0]))
         .filter(Number.isFinite)
       const chapters = config.chapters.length
-        ? manifestChapters.filter((chapter) => config.chapters.includes(chapter))
+        ? manifestChapters.filter((chapter) =>
+            config.chapters.includes(chapter)
+          )
         : manifestChapters
       const questions = await loadMassiveQuestionPool({
         manifest: massiveManifest,
@@ -566,7 +615,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
       })
       return questions
     },
-    [consolidationManifest, exposures, finalManifest, massiveManifest, repositories]
+    [
+      consolidationManifest,
+      exposures,
+      finalManifest,
+      massiveManifest,
+      repositories,
+    ]
   )
 
   const importBankFiles = useCallback(
@@ -738,7 +793,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
             : question.trapType === "true_elsewhere"
               ? "context-confusion"
               : result.reason,
-          exposureKind: flags.exposureKind ?? (flags.context === "simulation" ? "cold" : "practice"),
+          exposureKind:
+            flags.exposureKind ??
+            (flags.context === "simulation" ? "cold" : "practice"),
         })
         setExposures((current) => [
           exposure,
@@ -746,38 +803,60 @@ export function AppProvider({ children }: { children: ReactNode }) {
             (item) => item.exposureKey !== exposure.exposureKey
           ),
         ])
-        const existingMastery = await repositories.factMastery.get(question.factId)
+        const existingMastery = await repositories.factMastery.get(
+          question.factId
+        )
         const median = exposure.averageResponseTimeMs || 5_000
-        const evidence = applyFactEvidence(existingMastery ?? emptyFactMastery(question.factId), {
-          factId: question.factId,
-          variantId: question.variantId,
-          semanticSkill: question.semanticSkill ?? question.type,
-          sessionId: flags.sessionId ?? `round:${activeRound?.startedAt ?? "legacy"}`,
-          occurredAt: Date.now(),
-          isCorrect: result.isCorrect,
-          firstAttempt: !flags.afterFeedback,
-          hintUsed: Boolean(flags.hintUsed),
-          afterFeedback: Boolean(flags.afterFeedback),
-          responseTimeMs: result.responseTimeMs,
-          personalMedianMs: median,
-          difficulty: question.difficulty,
-          exposureKind: flags.exposureKind ?? (flags.context === "simulation" ? "cold" : "practice"),
-        })
+        const evidence = applyFactEvidence(
+          existingMastery ?? emptyFactMastery(question.factId),
+          {
+            factId: question.factId,
+            variantId: question.variantId,
+            semanticSkill: question.semanticSkill ?? question.type,
+            sessionId:
+              flags.sessionId ?? `round:${activeRound?.startedAt ?? "legacy"}`,
+            occurredAt: Date.now(),
+            isCorrect: result.isCorrect,
+            firstAttempt: !flags.afterFeedback,
+            hintUsed: Boolean(flags.hintUsed),
+            afterFeedback: Boolean(flags.afterFeedback),
+            responseTimeMs: result.responseTimeMs,
+            personalMedianMs: median,
+            difficulty: question.difficulty,
+            exposureKind:
+              flags.exposureKind ??
+              (flags.context === "simulation" ? "cold" : "practice"),
+          }
+        )
         const schedule = scheduleNextRetrieval({
-          outcome: !result.isCorrect ? "incorrect" : flags.afterFeedback ? "repaired" : result.responseTimeMs > median * 1.4 ? "slow_correct" : "fast_correct",
+          outcome: !result.isCorrect
+            ? "incorrect"
+            : flags.afterFeedback
+              ? "repaired"
+              : result.responseTimeMs > median * 1.4
+                ? "slow_correct"
+                : "fast_correct",
           now: Date.now(),
-          tier: [43, 44, 7, 8, 9, 11].includes(question.source.chapter) ? "A" : [40, 42, 10, 12].includes(question.source.chapter) ? "B" : "C",
-          stage: existingMastery?.state === "repaired"
-            ? "hour"
-            : evidence.hasNextDayRetrieval
-              ? "next_day"
-              : evidence.hasSixHourRetrieval
-                ? "six_hour"
-                : "initial",
+          tier: [43, 44, 7, 8, 9, 11].includes(question.source.chapter)
+            ? "A"
+            : [40, 42, 10, 12].includes(question.source.chapter)
+              ? "B"
+              : "C",
+          stage:
+            existingMastery?.state === "repaired"
+              ? "hour"
+              : evidence.hasNextDayRetrieval
+                ? "next_day"
+                : evidence.hasSixHourRetrieval
+                  ? "six_hour"
+                  : "initial",
         })
         const scheduled = { ...evidence, nextDueAt: schedule.dueAt }
         await repositories.factMastery.put(scheduled)
-        setFactMastery((current) => [scheduled, ...current.filter((item) => item.factId !== scheduled.factId)])
+        setFactMastery((current) => [
+          scheduled,
+          ...current.filter((item) => item.factId !== scheduled.factId),
+        ])
       }
       return next
     },
@@ -861,7 +940,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
         (question) => question.bankId === bank.bankId
       ),
     }))
-    const legacyEvents = repositories ? await repositories.legacyEvents.list() : []
+    const legacyEvents = repositories
+      ? await repositories.legacyEvents.list()
+      : []
     return createBackupPayload({
       banks: completeBanks,
       progress: [...progress.values()],

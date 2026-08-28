@@ -8,6 +8,7 @@ import type {
   DifficultyBand,
   FinalQuestionFamily,
   Question,
+  QuestionExposure,
   QuestionType,
   SourceWork,
 } from "@/domain/types"
@@ -78,7 +79,8 @@ const difficulty: Record<
   expert: { value: 5, band: "EXPERT" },
 }
 
-const chapterNumber = (chapter: string) => Number(chapter.match(/\d+/)?.[0] ?? 0)
+const chapterNumber = (chapter: string) =>
+  Number(chapter.match(/\d+/)?.[0] ?? 0)
 
 function typeForFamily(family: FinalQuestionFamily): QuestionType {
   if (family === "true_false") return "true_false"
@@ -173,8 +175,7 @@ export function adaptFinalQuestion(raw: FinalRawQuestion): Question {
 function randomGenerator(seed: number) {
   let state = seed >>> 0
   return () =>
-    ((state = (Math.imul(state, 1664525) + 1013904223) >>> 0) /
-      0x100000000)
+    (state = (Math.imul(state, 1664525) + 1013904223) >>> 0) / 0x100000000
 }
 
 function shuffle<T>(rows: T[], seed: number) {
@@ -188,7 +189,7 @@ function shuffle<T>(rows: T[], seed: number) {
 }
 
 export async function readFinalManifest(
-  fetcher: typeof fetch = fetch,
+  fetcher: typeof fetch = fetch
 ): Promise<FinalBankManifest> {
   const response = await fetcher("/banks/final-2026/manifest.json")
   if (!response.ok) throw new Error("No se pudo leer el banco maestro único")
@@ -211,12 +212,13 @@ export async function loadFinalQuestionPool(input: {
   types?: QuestionType[]
   family?: FinalQuestionFamily
   seenFactIds?: Set<string>
+  exposures?: QuestionExposure[]
   fetcher?: typeof fetch
 }) {
   const fetcher = input.fetcher ?? fetch
   const allowed = new Set(input.chapters)
   const shards = input.manifest.shards.filter((shard) =>
-    allowed.has(chapterNumber(shard.chapter)),
+    allowed.has(chapterNumber(shard.chapter))
   )
   const candidates: Question[] = []
   const retryCandidates: Question[] = []
@@ -225,63 +227,105 @@ export async function loadFinalQuestionPool(input: {
     if (!response.ok) throw new Error(`No se pudo leer ${shard.chapter}`)
     const rows = (await response.json()) as FinalRawQuestion[]
     const eligibleRows = rows
-        .filter((row) =>
-          input.blindPool
-            ? row.blind_pool === input.blindPool
-            : row.blind_pool === null,
-        )
-        .map(adaptFinalQuestion)
-        .filter(
-          (question) =>
-            !input.difficultyBands?.length ||
-            (question.difficultyBand !== undefined &&
-              input.difficultyBands.includes(question.difficultyBand)),
-        )
+      .filter((row) =>
+        input.blindPool
+          ? row.blind_pool === input.blindPool
+          : row.blind_pool === null
+      )
+      .map(adaptFinalQuestion)
+      .filter(
+        (question) =>
+          !input.difficultyBands?.length ||
+          (question.difficultyBand !== undefined &&
+            input.difficultyBands.includes(question.difficultyBand))
+      )
     retryCandidates.push(...eligibleRows)
     candidates.push(
       ...eligibleRows
         .filter((question) => !input.family || question.family === input.family)
         .filter(
           (question) =>
-            !input.types?.length || input.types.includes(question.type),
-        ),
+            !input.types?.length || input.types.includes(question.type)
+        )
     )
   }
   const ordered = shuffle(candidates, input.seed)
-  const seenFactIds = input.seenFactIds ?? new Set<string>()
-  const unseen = ordered.filter(
-    (question) => !seenFactIds.has(question.factId ?? question.factKey),
-  )
-  const seen = ordered.filter((question) =>
-    seenFactIds.has(question.factId ?? question.factKey),
-  )
+  const seenFactIds = new Set(input.seenFactIds ?? [])
+  const exposureByFact = new Map<
+    string,
+    { correct: number; incorrect: number; totalMs: number; attempts: number }
+  >()
+  for (const exposure of input.exposures ?? []) {
+    seenFactIds.add(exposure.factId)
+    const summary = exposureByFact.get(exposure.factId) ?? {
+      correct: 0,
+      incorrect: 0,
+      totalMs: 0,
+      attempts: 0,
+    }
+    summary.correct += exposure.correct
+    summary.incorrect += exposure.incorrect
+    summary.totalMs += exposure.totalResponseTimeMs
+    summary.attempts += exposure.exposures
+    exposureByFact.set(exposure.factId, summary)
+  }
+  const priorityByFact = new Map<string, number>()
+  for (const question of ordered) {
+    const fact = question.factId ?? question.factKey
+    const exposure = exposureByFact.get(fact)
+    const failed = Boolean(
+      exposure &&
+      exposure.incorrect > 0 &&
+      exposure.incorrect >= exposure.correct
+    )
+    const slow = Boolean(
+      exposure &&
+      exposure.attempts > 0 &&
+      exposure.totalMs / exposure.attempts >= 8_000
+    )
+    priorityByFact.set(
+      fact,
+      failed ? 400 : slow ? 300 : seenFactIds.has(fact) ? 0 : 200
+    )
+  }
+  const prioritized = ordered
+    .slice()
+    .sort(
+      (left, right) =>
+        (priorityByFact.get(right.factId ?? right.factKey) ?? 0) -
+        (priorityByFact.get(left.factId ?? left.factKey) ?? 0)
+    )
   const supportsMandatoryMix =
     !input.types?.length ||
     (["fill_blank", "true_false", "single_choice"] as QuestionType[]).every(
-      (type) => input.types?.includes(type),
+      (type) => input.types?.includes(type)
     )
   if (
     (input.count === 20 || input.count === 50 || input.count === 100) &&
     supportsMandatoryMix &&
     !input.family
   ) {
-    let selected: Question[]
-    try {
-      selected = selectMandatoryRound(unseen, input.count, input.seed)
-    } catch {
-      selected = selectMandatoryRound(ordered, input.count, input.seed)
-    }
+    const selected = selectMandatoryRound(
+      ordered,
+      input.count,
+      input.seed,
+      new Set<string>(),
+      priorityByFact
+    )
     return attachRetryVariants(selected, retryCandidates)
   }
   const facts = new Set<string>()
-  return attachRetryVariants([...unseen, ...seen]
-    .filter((question) => {
-      const fact = question.factId ?? question.factKey
-      if (facts.has(fact)) return false
-      facts.add(fact)
-      return true
-    })
-    .slice(0, input.count), retryCandidates)
+  return attachRetryVariants(
+    prioritized
+      .filter((question) => {
+        const fact = question.factId ?? question.factKey
+        if (facts.has(fact)) return false
+        facts.add(fact)
+        return true
+      })
+      .slice(0, input.count),
+    retryCandidates
+  )
 }
 
 function attachRetryVariants(selected: Question[], candidates: Question[]) {
@@ -296,7 +340,7 @@ function attachRetryVariants(selected: Question[], candidates: Question[]) {
     const fact = question.factId ?? question.factKey
     const alternatives = (byFact.get(fact) ?? []).filter(
       (candidate) =>
-        candidate.id !== question.id && candidate.family !== question.family,
+        candidate.id !== question.id && candidate.family !== question.family
     )
     return {
       ...question,

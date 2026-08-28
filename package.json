@@ -22,6 +22,7 @@
     "test:final-bank": "python -m unittest scripts.test_final_editorial",
     "audit:final:deep": "python scripts/audit-final-bank-deep.py",
     "audit:production": "node scripts/audit-live-final-bank.mjs",
+    "audit:competitive": "node scripts/audit-competitive-readiness.mjs",
     "preview": "vite preview",
     "deploy": "vercel --prod --yes"
   },

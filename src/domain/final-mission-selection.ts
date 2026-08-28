@@ -3,7 +3,7 @@ import type { Question } from "@/domain/types"
 function randomGenerator(seed: number) {
   let state = seed >>> 0
   return () =>
-    ((state = (Math.imul(state, 1103515245) + 12345) >>> 0) / 0x100000000)
+    (state = (Math.imul(state, 1103515245) + 12345) >>> 0) / 0x100000000
 }
 
 function shuffle<T>(rows: T[], seed: number) {
@@ -16,9 +16,18 @@ function shuffle<T>(rows: T[], seed: number) {
   return result
 }
 
-type Bucket = "direct" | "fill" | "tf_true" | "tf_false" | "contextual"
+type Bucket =
+  | "direct"
+  | "relational_direct"
+  | "fill"
+  | "tf_true"
+  | "tf_false"
+  | "contextual"
 
-function roundQuotas(count: number, seed: number): Array<[Bucket, number]> | null {
+function roundQuotas(
+  count: number,
+  seed: number
+): Array<[Bucket, number]> | null {
   const trueTarget =
     count === 100
       ? seed % 2 === 0
@@ -33,7 +42,8 @@ function roundQuotas(count: number, seed: number): Array<[Bucket, number]> | nul
           : 0
   if (count === 100)
     return [
-      ["direct", 27],
+      ["direct", 17],
+      ["relational_direct", 10],
       ["fill", 30],
       ["tf_true", trueTarget],
       ["tf_false", 25 - trueTarget],
@@ -70,13 +80,12 @@ export function selectMandatoryRound(
   count: 20 | 50 | 100,
   seed: number,
   excludedFacts = new Set<string>(),
+  priorityByFact = new Map<string, number>()
 ) {
   const quotas = roundQuotas(count, seed)!
   const eligible = shuffle(
-    questions.filter(
-      (item) => !excludedFacts.has(item.factId ?? item.factKey),
-    ),
-    seed,
+    questions.filter((item) => !excludedFacts.has(item.factId ?? item.factKey)),
+    seed
   )
   const candidates: Record<Bucket, Question[]> = {
     direct: eligible
@@ -85,44 +94,84 @@ export function selectMandatoryRound(
           item.family === "single_choice_direct" ||
           (!item.family &&
             item.type === "single_choice" &&
-            item.trapType !== "true_elsewhere"),
+            item.trapType !== "true_elsewhere")
       )
       .sort(
         (left, right) =>
+          (priorityByFact.get(right.factId ?? right.factKey) ?? 0) -
+            (priorityByFact.get(left.factId ?? left.factKey) ?? 0) ||
           Number(isCauseOrConsequence(right)) -
-          Number(isCauseOrConsequence(left)),
+            Number(isCauseOrConsequence(left))
       ),
-    fill: eligible.filter(
-      (item) => item.family === "fill_choice" || item.type === "fill_blank",
-    ),
-    tf_true: eligible.filter(
-      (item) =>
-        (item.family === "true_false" || item.type === "true_false") &&
-        item.correctAnswerText === "Verdadero",
-    ),
-    tf_false: eligible.filter(
-      (item) =>
-        (item.family === "true_false" || item.type === "true_false") &&
-        item.correctAnswerText === "Falso",
-    ),
-    contextual: eligible.filter(
-      (item) =>
-        item.family === "single_choice_contextual" ||
-        (!item.family &&
-          item.type === "single_choice" &&
-          item.trapType === "true_elsewhere"),
-    ),
+    relational_direct: eligible
+      .filter(
+        (item) =>
+          (item.family === "single_choice_direct" ||
+            (!item.family &&
+              item.type === "single_choice" &&
+              item.trapType !== "true_elsewhere")) &&
+          isCauseOrConsequence(item)
+      )
+      .sort(
+        (left, right) =>
+          (priorityByFact.get(right.factId ?? right.factKey) ?? 0) -
+          (priorityByFact.get(left.factId ?? left.factKey) ?? 0)
+      ),
+    fill: eligible
+      .filter(
+        (item) => item.family === "fill_choice" || item.type === "fill_blank"
+      )
+      .sort(
+        (left, right) =>
+          (priorityByFact.get(right.factId ?? right.factKey) ?? 0) -
+          (priorityByFact.get(left.factId ?? left.factKey) ?? 0)
+      ),
+    tf_true: eligible
+      .filter(
+        (item) =>
+          (item.family === "true_false" || item.type === "true_false") &&
+          item.correctAnswerText === "Verdadero"
+      )
+      .sort(
+        (left, right) =>
+          (priorityByFact.get(right.factId ?? right.factKey) ?? 0) -
+          (priorityByFact.get(left.factId ?? left.factKey) ?? 0)
+      ),
+    tf_false: eligible
+      .filter(
+        (item) =>
+          (item.family === "true_false" || item.type === "true_false") &&
+          item.correctAnswerText === "Falso"
+      )
+      .sort(
+        (left, right) =>
+          (priorityByFact.get(right.factId ?? right.factKey) ?? 0) -
+          (priorityByFact.get(left.factId ?? left.factKey) ?? 0)
+      ),
+    contextual: eligible
+      .filter(
+        (item) =>
+          item.family === "single_choice_contextual" ||
+          (!item.family &&
+            item.type === "single_choice" &&
+            item.trapType === "true_elsewhere")
+      )
+      .sort(
+        (left, right) =>
+          (priorityByFact.get(right.factId ?? right.factKey) ?? 0) -
+          (priorityByFact.get(left.factId ?? left.factKey) ?? 0)
+      ),
   }
   const slots = quotas
     .flatMap(([bucket, quota]) =>
       Array.from({ length: quota }, (_, index) => ({
         id: `${bucket}:${index}`,
         bucket,
-      })),
+      }))
     )
     .sort(
       (left, right) =>
-        candidates[left.bucket].length - candidates[right.bucket].length,
+        candidates[left.bucket].length - candidates[right.bucket].length
     )
   const factToSlot = new Map<string, string>()
   const slotToQuestion = new Map<string, Question>()
@@ -146,7 +195,7 @@ export function selectMandatoryRound(
   for (const slot of slots) {
     if (!assign(slot.id, new Set()))
       throw new Error(
-        `El banco GOLD no alcanza la cuota obligatoria de ${slot.bucket}`,
+        `El banco GOLD no alcanza la cuota obligatoria de ${slot.bucket}`
       )
   }
   const result = [...slotToQuestion.values()]
@@ -156,7 +205,7 @@ export function selectMandatoryRound(
     result.filter(isCauseOrConsequence).length < 10
   )
     throw new Error(
-      "El banco GOLD no alcanza 10 preguntas de causa o consecuencia",
+      "El banco GOLD no alcanza 10 preguntas de causa o consecuencia"
     )
   return shuffle(result, seed ^ 0x5f3759df)
 }
@@ -164,7 +213,7 @@ export function selectMandatoryRound(
 export function selectMandatoryHundred(
   questions: Question[],
   seed: number,
-  excludedFacts = new Set<string>(),
+  excludedFacts = new Set<string>()
 ) {
   return selectMandatoryRound(questions, 100, seed, excludedFacts)
 }
@@ -177,14 +226,14 @@ export function selectMissionQuestions(input: {
 }) {
   const excludedFacts = new Set(input.excludedFacts ?? [])
   const eligible = input.questions.filter(
-    (question) => question.editorialStatus === "gold" && !question.blindPool,
+    (question) => question.editorialStatus === "gold" && !question.blindPool
   )
   if (input.count === 20 || input.count === 50 || input.count === 100)
     return selectMandatoryRound(
       eligible,
       input.count,
       input.seed,
-      excludedFacts,
+      excludedFacts
     )
 
   const used = new Set(excludedFacts)
@@ -204,7 +253,7 @@ export function selectBlindSimulation(
   pool: "A" | "B",
   count: number,
   _seed: number,
-  excludedFacts = new Set<string>(),
+  excludedFacts = new Set<string>()
 ) {
   const used = new Set(excludedFacts)
   const result: Question[] = []
