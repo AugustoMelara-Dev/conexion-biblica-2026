@@ -1,5 +1,7 @@
 import { expect, test, type Page } from "@playwright/test"
 
+import { canonicalAnswerForPrompt } from "./canonical-answer"
+
 async function waitForHome(page: Page) {
   await page.goto("/")
   await expect(
@@ -43,22 +45,7 @@ async function answerAndAdvance(page: Page) {
 
 async function chooseKnownAnswer(page: Page, correctAnswer: boolean) {
   const prompt = (await page.getByRole("heading", { level: 1 }).textContent()) ?? ""
-  const canonical = prompt.replace(
-    /^(Atendiendo al contexto exacto, |Sin trasladar datos de otra escena, |Para distinguir este pasaje de los cercanos, )/,
-    "",
-  )
-  const normalized = canonical.charAt(0).toUpperCase() + canonical.slice(1)
-  const correct = await page.evaluate(async (questionText) => {
-    const manifest = await fetch("/banks/final-2026/manifest.json").then((response) => response.json())
-    for (const shard of manifest.shards as Array<{ questions_file: string }>) {
-      const rows = await fetch(`/${shard.questions_file}`).then((response) => response.json())
-      const match = (rows as Array<{ question: string; correct_answer: string }>).find(
-        (row) => row.question === questionText,
-      )
-      if (match) return match.correct_answer
-    }
-    return null
-  }, normalized)
+  const correct = await canonicalAnswerForPrompt(page, prompt)
   expect(correct).toBeTruthy()
   const radios = page.getByRole("radio")
   for (let index = 0; index < (await radios.count()); index += 1) {

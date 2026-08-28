@@ -33,7 +33,7 @@ test("la auditoría humana firma por huella y avanza sobre las doce mil", async 
   })
   await expect(
     page.getByText(
-      /Según Daniel 1:1, ¿qué opción corresponde específicamente a esta escena/,
+      /Según Daniel 1:1, ¿qué lugar funciona como origen/,
     ),
   ).toBeVisible({ timeout: 30_000 })
   await page.getByLabel("Nombre del revisor").fill("Auditor E2E")
@@ -57,7 +57,7 @@ test("la auditoría humana firma por huella y avanza sobre las doce mil", async 
   await expect(page.getByText("0 de 12000 revisadas")).toBeVisible()
   await expect(
     page.getByText(
-      /Según Daniel 1:1, ¿qué opción corresponde específicamente a esta escena/,
+      /Según Daniel 1:1, ¿qué lugar funciona como origen/,
     ),
   ).toBeVisible()
   expect(

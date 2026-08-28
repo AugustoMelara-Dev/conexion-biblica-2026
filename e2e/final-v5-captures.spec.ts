@@ -2,6 +2,8 @@ import { expect, test, type Page } from "@playwright/test"
 import { mkdir } from "node:fs/promises"
 import { join } from "node:path"
 
+import { canonicalAnswerForPrompt } from "./canonical-answer"
+
 const output = join(process.cwd(), "output", "playwright", "final-2026")
 
 async function openPractice(page: Page) {
@@ -24,22 +26,7 @@ async function startMode(page: Page, mode: string, family: string) {
 
 async function chooseWrong(page: Page) {
   const prompt = (await page.getByRole("heading", { level: 1 }).textContent()) ?? ""
-  const canonical = prompt.replace(
-    /^(Atendiendo al contexto exacto, |Sin trasladar datos de otra escena, |Para distinguir este pasaje de los cercanos, )/,
-    "",
-  )
-  const normalized = canonical.charAt(0).toUpperCase() + canonical.slice(1)
-  const correct = await page.evaluate(async (questionText) => {
-    const manifest = await fetch("/banks/final-2026/manifest.json").then((response) => response.json())
-    for (const shard of manifest.shards as Array<{ questions_file: string }>) {
-      const rows = await fetch(`/${shard.questions_file}`).then((response) => response.json())
-      const match = (rows as Array<{ question: string; correct_answer: string }>).find(
-        (row) => row.question === questionText,
-      )
-      if (match) return match.correct_answer
-    }
-    return null
-  }, normalized)
+  const correct = await canonicalAnswerForPrompt(page, prompt)
   expect(correct).toBeTruthy()
   const radios = page.getByRole("radio")
   for (let index = 0; index < (await radios.count()); index += 1) {
@@ -52,20 +39,7 @@ async function chooseWrong(page: Page) {
 
 async function chooseCorrect(page: Page) {
   const prompt = (await page.getByRole("heading", { level: 1 }).textContent()) ?? ""
-  const canonical = prompt.replace(
-    /^(Atendiendo al contexto exacto, |Sin trasladar datos de otra escena, |Para distinguir este pasaje de los cercanos, )/,
-    "",
-  )
-  const normalized = canonical.charAt(0).toUpperCase() + canonical.slice(1)
-  const correct = await page.evaluate(async (questionText) => {
-    const manifest = await fetch("/banks/final-2026/manifest.json").then((response) => response.json())
-    for (const shard of manifest.shards as Array<{ questions_file: string }>) {
-      const rows = await fetch(`/${shard.questions_file}`).then((response) => response.json())
-      const match = (rows as Array<{ question: string; correct_answer: string }>).find((row) => row.question === questionText)
-      if (match) return match.correct_answer
-    }
-    return null
-  }, normalized)
+  const correct = await canonicalAnswerForPrompt(page, prompt)
   const radios = page.getByRole("radio")
   for (let index = 0; index < (await radios.count()); index += 1) {
     if (((await radios.nth(index).textContent()) ?? "").includes(correct ?? "")) {
