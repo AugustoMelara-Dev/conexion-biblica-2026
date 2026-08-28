@@ -117,6 +117,20 @@ def derive_contextual_role(fact: dict[str, Any]) -> str:
             return "connector_object"
         if "object" in signature:
             return "object"
+        if _norm(str(fact["answer"])).endswith("mente"):
+            return "modifier"
+        if re.search(
+            r"\b(?:es|son|era|eran|fue|fueron|sera|seran|sea|sean|sido|"
+            r"esta|estan|estaba|estaban|quedo|quedaron)$",
+            before_norm,
+        ):
+            return "predicate"
+        if re.search(
+            r"\b(?:de|del|a|al|con|sin|por|para|hasta|sobre|entre|contra|"
+            r"desde|hacia)(?:\s+(?:el|la|los|las|un|una|unos|unas))?$",
+            before_norm,
+        ):
+            return "connector_object"
         return "concept"
     return relation if relation in {"cause", "purpose", "consequence"} else "formulation"
 
@@ -130,37 +144,38 @@ def mask_context_answer(fact: dict[str, Any], marker: str = "[…]") -> str:
         str(fact["context"]),
         flags=re.IGNORECASE,
     )
+    result = result.translate(str.maketrans("", "", '«»“”"'))
     if contains_normalized_phrase(result, str(fact["answer"])):
         raise ValueError(f"{fact.get('fact_id', '<sin-id>')}:masked_answer_leak")
     return result.strip()
 
 
 _QUESTION_OPENINGS = {
-    "actor": "¿Quién realiza la acción descrita en",
-    "recipient": "¿A quién se dirige la acción u orden expresada en",
-    "named_entity": "¿Qué personaje completa la relación descrita en",
-    "origin": "¿Qué lugar funciona como origen en",
-    "destination": "¿Qué destino completa el movimiento descrito en",
-    "location": "¿Qué lugar completa la relación espacial descrita en",
-    "direction": "¿Qué dirección geográfica precisa",
-    "quantity": "¿Qué dato cuantitativo precisa",
-    "duration": "¿Qué duración precisa el período descrito en",
-    "order": "¿Qué dato ordinal completa",
-    "measure": "¿Qué medida precisa",
-    "action": "¿Qué acción completa la secuencia descrita en",
-    "state": "¿Qué estado completa la descripción presentada en",
-    "change": "¿Qué cambio completa la secuencia presentada en",
-    "subject": "¿Qué sujeto completa la relación literal expresada en",
-    "object": "¿Qué objeto completa la acción expresada en",
-    "predicate": "¿Qué cualidad o estado completa la predicación de",
-    "modifier": "¿Qué modificador precisa la descripción de",
-    "connector_object": "¿Qué concepto completa la relación introducida por la preposición en",
-    "concept": "¿Qué concepto completa la relación literal de",
-    "cause": "¿Qué causa declara explícitamente",
-    "purpose": "¿Qué propósito declara explícitamente",
-    "consequence": "¿Qué consecuencia declara explícitamente",
-    "description": "¿Qué descripción completa la relación literal de",
-    "formulation": "¿Qué formulación completa la relación literal de",
+    "actor": "¿quién realiza la acción descrita en",
+    "recipient": "¿a quién se dirige la acción u orden expresada en",
+    "named_entity": "¿qué personaje completa la relación descrita en",
+    "origin": "¿qué lugar funciona como origen en",
+    "destination": "¿qué destino completa el movimiento descrito en",
+    "location": "¿qué lugar completa la relación espacial descrita en",
+    "direction": "¿qué dirección geográfica precisa",
+    "quantity": "¿qué dato cuantitativo precisa",
+    "duration": "¿qué duración precisa el período descrito en",
+    "order": "¿qué dato ordinal completa",
+    "measure": "¿qué medida precisa",
+    "action": "¿qué acción completa la secuencia descrita en",
+    "state": "¿qué estado completa la descripción presentada en",
+    "change": "¿qué cambio completa la secuencia presentada en",
+    "subject": "¿qué sujeto completa la relación literal expresada en",
+    "object": "¿qué objeto completa la acción expresada en",
+    "predicate": "¿qué cualidad o estado completa la predicación de",
+    "modifier": "¿qué modificador precisa la descripción de",
+    "connector_object": "¿qué concepto completa la relación introducida por la preposición en",
+    "concept": "¿qué concepto completa la relación literal de",
+    "cause": "¿qué causa declara explícitamente",
+    "purpose": "¿qué propósito declara explícitamente",
+    "consequence": "¿qué consecuencia declara explícitamente",
+    "description": "¿qué descripción completa la relación literal de",
+    "formulation": "¿qué formulación completa la relación literal de",
 }
 
 _IDENTITY_LABELS = {
@@ -210,7 +225,7 @@ def render_contextual_question(fact: dict[str, Any]) -> tuple[str, str, str]:
         )
         opening = _QUESTION_OPENINGS[role]
         if contains_normalized_phrase(opening, answer):
-            opening = "¿Qué detalle completa correctamente"
+            opening = "¿qué detalle completa correctamente"
         question = f"Según {source_label}, {opening} «{evidence}»?"
     if contains_normalized_phrase(question, str(fact["answer"])):
         raise ValueError(f"{fact.get('fact_id', '<sin-id>')}:context_question_answer_leak")
@@ -221,7 +236,7 @@ def render_contextual_identity(fact: dict[str, Any]) -> tuple[str, str, str]:
     role = derive_contextual_role(fact)
     evidence = mask_context_answer(fact)
     statement = (
-        f"En la escena «{evidence}», {_IDENTITY_LABELS[role]} "
+        f"en la escena «{evidence}», {_IDENTITY_LABELS[role]} "
         f"es «{fact['answer']}»."
     )
     if statement.count(str(fact["answer"])) != 1:

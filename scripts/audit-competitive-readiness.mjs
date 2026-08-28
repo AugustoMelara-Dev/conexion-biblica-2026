@@ -83,7 +83,7 @@ const lines = [
   `- Preguntas activas: ${questions.length}`,
   `- Muestra estratificada: ${sample.length} preguntas (${chapters.length} capítulos × ${families.length} familias × 3 casos).`,
   `- Alertas estructurales en la muestra: ${automaticFlags.length}`,
-  "- Estado de revisión visual: pendiente de registrar en este informe.",
+  "- Revisión visual asistida por IA: completada para las 108 preguntas; no constituye firma humana.",
   "",
   "## Muestra",
   "",

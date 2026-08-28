@@ -22,6 +22,7 @@ from scripts.lib.final_editorial import (
     _contextual_word_role,
     _is_bible_reference_number,
     _negate_exact_action_statement,
+    _slot_syntax,
     _word_role,
     option_signature,
 )
@@ -149,6 +150,11 @@ def main() -> int:
 
         unit = units_by_id[source_unit_id]
         fact = facts_by_id[fact_id]
+        contextual_fact = dict(fact)
+        if fact["category"] == "term":
+            contextual_fact["_slot_signature"] = _slot_syntax(
+                fact["context"], fact["answer"], fact["category"]
+            )
         unit_text = unit.get("full_text") or unit.get("exact_text", "")
         if fact["source_unit_id"] != source_unit_id:
             fail(errors, qid, "fact_source_unit_mismatch")
@@ -219,7 +225,7 @@ def main() -> int:
                     fail(errors, qid, "invalid_exact_true_false_source")
             elif statement_mode == "contextual_identity":
                 expected_identity, expected_role, expected_evidence = (
-                    render_contextual_identity(fact)
+                    render_contextual_identity(contextual_fact)
                 )
                 if question["correct_answer"] != "Verdadero":
                     fail(errors, qid, "contextual_identity_not_true")
@@ -321,7 +327,7 @@ def main() -> int:
             if question.get("trap_type") != "true_in_other_context":
                 fail(errors, qid, "missing_contextual_trap")
             expected_question, expected_role, expected_evidence = (
-                render_contextual_question(fact)
+                render_contextual_question(contextual_fact)
             )
             if GENERIC_CONTEXTUAL_FRAGMENT in _norm(question["question"]):
                 fail(errors, qid, "generic_contextual_prompt")

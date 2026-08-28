@@ -69,7 +69,7 @@ class ContextualRoleTests(unittest.TestCase):
     def test_renders_role_aware_question_without_generic_copy(self):
         question, role, evidence = render_contextual_question(fact())
         self.assertEqual(role, "recipient")
-        self.assertIn("¿A quién", question)
+        self.assertIn("¿a quién", question)
         self.assertIn("[…]", evidence)
         self.assertNotIn("corresponde específicamente a esta escena", question)
         self.assertNotIn("Daniel", question)
@@ -78,6 +78,7 @@ class ContextualRoleTests(unittest.TestCase):
         statement, role, evidence = render_contextual_identity(fact())
         self.assertEqual(role, "recipient")
         self.assertIn("Daniel", statement)
+        self.assertTrue(statement.startswith("en la escena"))
         self.assertEqual(statement.count("Daniel"), 1)
         self.assertNotIn("Daniel", evidence)
         self.assertNotIn("se menciona", statement.casefold())
@@ -98,6 +99,51 @@ class ContextualRoleTests(unittest.TestCase):
     def test_rejects_multiple_exact_answer_occurrences(self):
         with self.assertRaisesRegex(ValueError, "context_answer_count"):
             mask_context_answer(fact(context="Daniel habló con Daniel"))
+
+    def test_balances_source_dialogue_quotes_inside_rendered_evidence(self):
+        row = fact(context="Y el rey dijo: «Daniel respondió sin temor")
+        question, _, evidence = render_contextual_question(row)
+        statement, _, identity_evidence = render_contextual_identity(row)
+        self.assertNotIn("«", evidence)
+        self.assertNotIn("»", evidence)
+        self.assertEqual(question.count("«"), question.count("»"))
+        self.assertEqual(statement.count("«"), statement.count("»"))
+        self.assertEqual(evidence, identity_evidence)
+
+    def test_classifies_term_roles_from_local_syntax_when_signature_is_generic(self):
+        self.assertEqual(
+            derive_contextual_role(
+                fact(
+                    answer="puestos",
+                    category="term",
+                    context="fueron puestos unos tronos",
+                    _slot_signature="term:generic_nominal",
+                )
+            ),
+            "predicate",
+        )
+        self.assertEqual(
+            derive_contextual_role(
+                fact(
+                    answer="impíamente",
+                    category="term",
+                    context="hemos actuado impíamente, hemos sido rebeldes",
+                    _slot_signature="term:generic_nominal",
+                )
+            ),
+            "modifier",
+        )
+        self.assertEqual(
+            derive_contextual_role(
+                fact(
+                    answer="tardes",
+                    category="term",
+                    context="la visión de las tardes y mañanas",
+                    _slot_signature="term:generic_nominal",
+                )
+            ),
+            "connector_object",
+        )
 
 
 if __name__ == "__main__":
