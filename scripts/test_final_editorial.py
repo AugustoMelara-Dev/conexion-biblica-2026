@@ -350,7 +350,11 @@ class FinalEditorialTests(unittest.TestCase):
                 self.assertEqual(blank_count, 0, question["id"])
                 self.assertIn(question["statement"], question["question"], question["id"])
                 self.assertNotIn("completa la frase", question["question"], question["id"])
-                self.assertNotIn("[…]", question["question"], question["id"])
+                if question.get("statement_mode") == "contextual_identity":
+                    self.assertEqual(question["correct_answer"], "Verdadero", question["id"])
+                    self.assertIn("[…]", question["context_evidence"], question["id"])
+                else:
+                    self.assertNotIn("[…]", question["question"], question["id"])
                 self.assertNotIn("expresión que ocupa", question["question"], question["id"])
                 if question["option_category"] in {"phrase", "term"}:
                     self.assertEqual(question["correct_answer"], "Verdadero", question["id"])
@@ -656,6 +660,21 @@ class FinalEditorialTests(unittest.TestCase):
             Counter(row["correct_answer"] for row in rows),
             {"Verdadero": 1500, "Falso": 1500},
         )
+        self.assertEqual(
+            sum(row.get("statement_mode") == "atomic_presence" for row in rows),
+            0,
+        )
+        contextual_identities = [
+            row
+            for row in rows
+            if row.get("statement_mode") == "contextual_identity"
+        ]
+        self.assertEqual(len(contextual_identities), 353)
+        for row in contextual_identities:
+            self.assertEqual(row["correct_answer"], "Verdadero", row["id"])
+            self.assertIn("[…]", row["context_evidence"], row["id"])
+            self.assertNotIn(row["asserted_detail"], row["context_evidence"], row["id"])
+            self.assertEqual(row["statement"].count(f"«{row['asserted_detail']}»"), 1)
         self.assertEqual(len({row["question"] for row in rows}), 3000)
         false_rows = [
             row for row in rows if row["correct_answer"] == "Falso"

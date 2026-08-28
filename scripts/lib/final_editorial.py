@@ -10,7 +10,7 @@ from collections import Counter, defaultdict
 from typing import Any, Iterable
 
 from scripts.lib.final_bank import BANK_ID, DISPLAY_NAME, QUESTION_FAMILIES, SCHEMA_VERSION
-from scripts.lib.contextual_roles import render_contextual_question
+from scripts.lib.contextual_roles import render_contextual_identity, render_contextual_question
 from scripts.lib.final_relations import extract_relation_candidates
 from scripts.lib.massive_generator import NUMBER_WORDS, STOPWORDS, TOKEN_RE, _candidate_spans
 from scripts.lib.source_inventory import _split_propositions
@@ -1425,18 +1425,6 @@ def _complete_statement_text(text: str) -> str:
     return result
 
 
-def _atomic_true_false_statement(fact: dict[str, Any]) -> str:
-    label = {
-        "action": "se emplea la forma verbal",
-        "person": "se menciona como personaje o ser",
-        "place": "se menciona como lugar o dirección",
-        "number": "se indica como dato numérico",
-        "term": "se emplea el término",
-        "phrase": "se usa la formulación",
-    }[fact["category"]]
-    return f"{label} «{fact['answer']}»."
-
-
 def _negate_exact_action_statement(statement: str, answer: str) -> str | None:
     """Negate one finite verb without breaking adjacent Spanish clitics."""
     if _action_form(answer) not in SAFE_EXACT_NEGATION_ACTION_FORMS:
@@ -1795,7 +1783,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
     # hecho puede usar la cláusula local o la unidad fuente íntegra; ambas son
     # citas literales, nunca una paráfrasis inventada para distinguir variantes.
     def true_statement_options(
-        fact: dict[str, Any], *, include_atomic: bool = True
+        fact: dict[str, Any], *, include_contextual_identity: bool = True
     ) -> list[str]:
         rows = []
         for source_text in (fact["context"], fact["source_quote"]):
@@ -1808,12 +1796,13 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                 continue
             if completed not in rows:
                 rows.append(completed)
-        if include_atomic:
-            rows.append(_atomic_true_false_statement(fact))
+        if include_contextual_identity:
+            identity, _, _ = render_contextual_identity(fact)
+            rows.append(identity)
         return rows
 
     def can_use_exact_false_statement(fact: dict[str, Any]) -> bool:
-        if not true_statement_options(fact, include_atomic=False):
+        if not true_statement_options(fact, include_contextual_identity=False):
             return False
         return bool(false_replacements(fact))
 
@@ -1825,10 +1814,10 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         fact: dict[str, Any],
         seen: set[tuple[str, str]],
         *,
-        include_atomic: bool,
+        include_contextual_identity: bool,
     ) -> bool:
         for statement_text in true_statement_options(
-            fact, include_atomic=include_atomic
+            fact, include_contextual_identity=include_contextual_identity
         ):
             key = (fact["reference"], statement_text)
             if key in seen:
@@ -1838,7 +1827,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             if previous_id is None or assign_unique_statement(
                 facts_by_id[previous_id],
                 seen,
-                include_atomic=include_atomic,
+                include_contextual_identity=include_contextual_identity,
             ):
                 statement_owner[key] = fact["fact_id"]
                 statement_by_fact[fact["fact_id"]] = statement_text
@@ -1849,7 +1838,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
     # el emparejamiento al llegar a 1,500 hechos y aceptaba presencia léxica
     # demasiado pronto, aunque quedaran cláusulas literales únicas disponibles.
     for fact in safe_false_candidates:
-        assign_unique_statement(fact, set(), include_atomic=False)
+        assign_unique_statement(fact, set(), include_contextual_identity=False)
 
     exact_false_ready = sum(
         can_use_exact_false_statement(facts_by_id[fact_id])
@@ -1867,7 +1856,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                 continue
             if not can_use_exact_false_statement(fact):
                 continue
-            statement_text = _atomic_true_false_statement(fact)
+            statement_text, _, _ = render_contextual_identity(fact)
             key = (fact["reference"], statement_text)
             if key in statement_owner:
                 continue
@@ -1881,7 +1870,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         for fact in safe_false_candidates:
             if fact["fact_id"] in statement_by_fact:
                 continue
-            assign_unique_statement(fact, set(), include_atomic=True)
+            assign_unique_statement(fact, set(), include_contextual_identity=True)
             if len(statement_by_fact) >= 1500:
                 break
             break
@@ -1897,7 +1886,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             key=lambda fact_id: (
                 not can_use_exact_false_statement(facts_by_id[fact_id]),
                 statement_by_fact[fact_id]
-                == _atomic_true_false_statement(facts_by_id[fact_id]),
+                == render_contextual_identity(facts_by_id[fact_id])[0],
                 _hash("tf-true-selected:" + fact_id),
             ),
         )[:1500]
@@ -2023,9 +2012,17 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             _complete_statement_text(fact["context"]),
             _complete_statement_text(fact["source_quote"]),
         }
-        statement_mode = (
-            "exact_source" if source_statement in exact_source_statements else "atomic_presence"
-        )
+        identity_statement, identity_role, identity_evidence = render_contextual_identity(fact)
+        if source_statement in exact_source_statements:
+            statement_mode = "exact_source"
+            contextual_role = None
+            context_evidence = None
+        elif not false and source_statement == identity_statement:
+            statement_mode = "contextual_identity"
+            contextual_role = identity_role
+            context_evidence = identity_evidence
+        else:
+            raise ValueError(f"Modo V/F desconocido: {fact['fact_id']}")
         base.update(
             {
                 "question": prompt,
@@ -2041,6 +2038,8 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                 "focused_true_statement": False,
                 "statement_mode": statement_mode,
                 "truth_source_statement": source_statement,
+                "contextual_role": contextual_role,
+                "context_evidence": context_evidence,
                 "replacement_source_ref": replacement_row["reference"] if replacement_row else None,
                 "correct_slot_signature": fact.get("_slot_signature"),
                 "replacement_slot_signature": replacement_row.get("_slot_signature") if replacement_row else None,
@@ -2052,7 +2051,12 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                     )
                     if false and false_mutation_kind == "cross_reference_statement"
                     else f"Es falsa: la fuente dice «{fact['answer']}», no «{incorrect_detail}»."
-                    if false else f"Es verdadera y reproduce literalmente {fact['reference']}."
+                    if false
+                    else (
+                        f"Es verdadera: la identidad se deriva del contexto literal de {fact['reference']}."
+                        if statement_mode == "contextual_identity"
+                        else f"Es verdadera y reproduce literalmente {fact['reference']}."
+                    )
                 ),
                 "why_distractors_fail": {
                     "Verdadero" if false else "Falso": (
@@ -2062,7 +2066,12 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                         )
                         if false and false_mutation_kind == "cross_reference_statement"
                         else f"La única alteración es «{incorrect_detail}»; la fuente contiene «{fact['answer']}»."
-                        if false else "La afirmación coincide literalmente con la unidad fuente."
+                        if false
+                        else (
+                            "La identidad coincide con el papel que muestra el contexto fuente."
+                            if statement_mode == "contextual_identity"
+                            else "La afirmación coincide literalmente con la unidad fuente."
+                        )
                     )
                 },
                 "trap_type": (
@@ -2098,7 +2107,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             if replacement_row["reference"] == fact["reference"]:
                 continue
             for visible_text in true_statement_options(
-                replacement_row, include_atomic=False
+                replacement_row, include_contextual_identity=False
             ):
                 if _norm(visible_text) in target_source_norm:
                     continue
@@ -2130,7 +2139,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         selected: tuple[str, dict[str, Any], str, str, str] | None = None
         source_statement = statement_by_fact[fact["fact_id"]]
         exact_false_statements = true_statement_options(
-            fact, include_atomic=False
+            fact, include_contextual_identity=False
         )
         if exact_false_statements:
             source_statement = exact_false_statements[0]
@@ -2209,11 +2218,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                     replacement_row,
                     visible_text,
                     replacement,
-                    (
-                        "atomic_presence_substitution"
-                        if source_statement == _atomic_true_false_statement(fact)
-                        else "closed_category_substitution"
-                    ),
+                    "closed_category_substitution",
                 )
                 break
         if selected:
