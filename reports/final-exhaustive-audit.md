@@ -3,6 +3,8 @@
 - Banco: BANCO_UNICO_CONEXION_BIBLICA_2026
 - Variantes enumeradas: 12000 de 12000
 - Revisión editorial trazable completada: 0
+- Aprobadas o corregidas: 0
+- Rechazos abiertos: 0
 - Pendientes de revisión editorial: 12000
 - Pasaron controles automáticos: 12000
 - Requieren atención automática: 0

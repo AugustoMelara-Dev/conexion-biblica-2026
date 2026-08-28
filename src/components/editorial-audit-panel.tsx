@@ -155,16 +155,18 @@ export function EditorialAuditPanel() {
         ...decisions.filter((decision) => decision.id !== current.id),
         next,
       ]
-      setDecisions(updated)
-      localStorage.setItem(DECISIONS_KEY, JSON.stringify(updated))
       localStorage.setItem(REVIEWER_KEY, next.reviewer)
+      localStorage.setItem(DECISIONS_KEY, JSON.stringify(updated))
+      setDecisions(updated)
       setReviewer(next.reviewer)
       setNotes("")
       setError(null)
     } catch (decisionError) {
       setError(
-        decisionError instanceof Error
-          ? decisionError.message
+        decisionError &&
+          typeof decisionError === "object" &&
+          "message" in decisionError
+          ? String(decisionError.message)
           : "No se pudo guardar la decisión.",
       )
     }
@@ -196,14 +198,30 @@ export function EditorialAuditPanel() {
       const merged = new Map(decisions.map((item) => [item.id, item]))
       for (const item of parsed as HumanReviewDecision[]) merged.set(item.id, item)
       const updated = [...merged.values()]
-      setDecisions(updated)
       localStorage.setItem(DECISIONS_KEY, JSON.stringify(updated))
+      setDecisions(updated)
       setError(null)
     } catch (importError) {
       setError(
         importError instanceof Error
           ? importError.message
           : "No se pudieron importar las decisiones.",
+      )
+    }
+  }
+
+  const undoLastDecision = () => {
+    if (decisions.length === 0) return
+    try {
+      const updated = decisions.slice(0, -1)
+      localStorage.setItem(DECISIONS_KEY, JSON.stringify(updated))
+      setDecisions(updated)
+      setError(null)
+    } catch (undoError) {
+      setError(
+        undoError instanceof Error
+          ? undoError.message
+          : "No se pudo deshacer la decisión.",
       )
     }
   }
@@ -256,6 +274,13 @@ export function EditorialAuditPanel() {
                 <Download data-icon="inline-start" />
                 Exportar decisiones
               </Button>
+              <Button
+                variant="outline"
+                disabled={decisions.length === 0}
+                onClick={undoLastDecision}
+              >
+                Deshacer última decisión
+              </Button>
             </div>
           </div>
         </CardHeader>
@@ -263,6 +288,17 @@ export function EditorialAuditPanel() {
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="secondary">
               {reconciliation.reviewed.length} de {index?.bank_questions ?? "…"} revisadas
+            </Badge>
+            <Badge variant="outline">
+              {reconciliation.accepted.length} aprobadas o corregidas
+            </Badge>
+            <Badge
+              variant={reconciliation.rejected.length > 0 ? "destructive" : "outline"}
+            >
+              {reconciliation.rejected.length}{" "}
+              {reconciliation.rejected.length === 1
+                ? "rechazo abierto"
+                : "rechazos abiertos"}
             </Badge>
             <Badge variant="outline">
               {reconciliation.pending.length} pendientes

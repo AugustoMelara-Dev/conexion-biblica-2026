@@ -52,5 +52,20 @@ test("la auditoría humana firma por huella y avanza sobre las doce mil", async 
     disposition: "approved",
   })
   expect(stored[0].content_sha256).toMatch(/^[a-f0-9]{64}$/)
+
+  await page.getByRole("button", { name: "Deshacer última decisión" }).click()
+  await expect(page.getByText("0 de 12000 revisadas")).toBeVisible()
+  await expect(
+    page.getByText(
+      /Según Daniel 1:1, ¿qué opción corresponde específicamente a esta escena/,
+    ),
+  ).toBeVisible()
+  expect(
+    await page.evaluate(() =>
+      JSON.parse(
+        localStorage.getItem("conexion-biblica-human-review-v1") ?? "[]",
+      ),
+    ),
+  ).toEqual([])
   expect(errors).toEqual([])
 })

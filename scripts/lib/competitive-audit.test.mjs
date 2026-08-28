@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest"
 
+import * as competitiveAudit from "./competitive-audit.mjs"
+
 import {
   buildExhaustiveReviewQueue,
   buildPublicReviewIndex,
@@ -10,6 +12,37 @@ import {
 } from "./competitive-audit.mjs"
 
 describe("competitive audit sampling", () => {
+  it("mantiene los rechazos humanos como defectos abiertos", () => {
+    expect(
+      competitiveAudit.summarizeHumanReviewQueue?.([
+        { review_status: "pending_human", disposition: null },
+        { review_status: "reviewed", disposition: "approved" },
+        { review_status: "reviewed", disposition: "corrected" },
+        { review_status: "reviewed", disposition: "rejected" },
+      ]) ?? null,
+    ).toEqual({
+      reviewed: 3,
+      accepted: 2,
+      rejected: 1,
+      pending_human: 1,
+    })
+  })
+
+  it("bloquea el cierre editorial mientras exista un rechazo humano", () => {
+    expect(
+      competitiveAudit.hasBlockingHumanReviewFindings?.({
+        rejected: 1,
+        pending_human: 0,
+      }) ?? null,
+    ).toBe(true)
+    expect(
+      competitiveAudit.hasBlockingHumanReviewFindings?.({
+        rejected: 0,
+        pending_human: 12000,
+      }) ?? null,
+    ).toBe(false)
+  })
+
   it("builds a reproducible report for identical audited input", () => {
     const input = {
       bank: "BANK-1",

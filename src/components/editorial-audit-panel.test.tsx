@@ -58,6 +58,7 @@ const questions = {
 
 afterEach(() => {
   vi.unstubAllGlobals()
+  vi.restoreAllMocks()
   localStorage.clear()
 })
 
@@ -130,6 +131,93 @@ it("advierte y no acredita una decisión con huella obsoleta", async () => {
       "1 decisión corresponde a contenido anterior",
     ),
   )
+  expect(screen.getByText("0 de 2 revisadas")).toBeVisible()
+})
+
+it("mantiene visible un rechazo como defecto abierto", async () => {
+  vi.stubGlobal(
+    "fetch",
+    vi.fn(async (input: RequestInfo | URL) => ({
+      ok: true,
+      json: async () =>
+        String(input).includes("review-index")
+          ? { bank_questions: 2, entries }
+          : String(input).includes("DAN7")
+            ? questions.DAN7
+            : questions.DAN8,
+    })) as unknown as typeof fetch,
+  )
+  const user = userEvent.setup()
+  render(<EditorialAuditPanel />)
+  await screen.findByText("¿Qué corresponde a esta escena?")
+
+  await user.type(screen.getByLabelText("Nombre del revisor"), "María")
+  await user.type(
+    screen.getByLabelText("Nota editorial"),
+    "El distractor no es plausible.",
+  )
+  await user.click(screen.getByRole("button", { name: "Rechazar pregunta" }))
+
+  expect(await screen.findByText("1 rechazo abierto")).toBeVisible()
+  expect(screen.getByText("0 aprobadas o corregidas")).toBeVisible()
+})
+
+it("permite deshacer la última decisión sin dejar una firma fantasma", async () => {
+  vi.stubGlobal(
+    "fetch",
+    vi.fn(async (input: RequestInfo | URL) => ({
+      ok: true,
+      json: async () =>
+        String(input).includes("review-index")
+          ? { bank_questions: 2, entries }
+          : String(input).includes("DAN7")
+            ? questions.DAN7
+            : questions.DAN8,
+    })) as unknown as typeof fetch,
+  )
+  const user = userEvent.setup()
+  render(<EditorialAuditPanel />)
+  await screen.findByText("¿Qué corresponde a esta escena?")
+  await user.type(screen.getByLabelText("Nombre del revisor"), "María")
+  await user.click(screen.getByRole("button", { name: "Aprobar pregunta" }))
+  await screen.findByText("Completa la afirmación.")
+
+  await user.click(
+    screen.getByRole("button", { name: "Deshacer última decisión" }),
+  )
+
+  expect(await screen.findByText("¿Qué corresponde a esta escena?")).toBeVisible()
+  expect(screen.getByText("0 de 2 revisadas")).toBeVisible()
+  expect(
+    JSON.parse(
+      localStorage.getItem("conexion-biblica-human-review-v1") ?? "[]",
+    ),
+  ).toEqual([])
+})
+
+it("no avanza ni acredita una firma cuando se agota el almacenamiento", async () => {
+  vi.stubGlobal(
+    "fetch",
+    vi.fn(async (input: RequestInfo | URL) => ({
+      ok: true,
+      json: async () =>
+        String(input).includes("review-index")
+          ? { bank_questions: 2, entries }
+          : questions.DAN7,
+    })) as unknown as typeof fetch,
+  )
+  const user = userEvent.setup()
+  render(<EditorialAuditPanel />)
+  await screen.findByText("¿Qué corresponde a esta escena?")
+  await user.type(screen.getByLabelText("Nombre del revisor"), "María")
+  vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => {
+    throw new DOMException("Quota exceeded", "QuotaExceededError")
+  })
+
+  await user.click(screen.getByRole("button", { name: "Aprobar pregunta" }))
+
+  expect(screen.getByRole("alert")).toHaveTextContent("Quota exceeded")
+  expect(screen.getByText("¿Qué corresponde a esta escena?")).toBeVisible()
   expect(screen.getByText("0 de 2 revisadas")).toBeVisible()
 })
 

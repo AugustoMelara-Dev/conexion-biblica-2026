@@ -35,13 +35,19 @@ const decision = (
 describe("auditoría editorial humana", () => {
   it("sólo acredita decisiones cuya huella coincide con el contenido actual", () => {
     const result = reconcileHumanReview(
-      [entry("q1"), entry("q2")],
-      [decision("q1"), decision("q2", "huella-obsoleta")],
+      [entry("q1"), entry("q2"), entry("q3")],
+      [
+        decision("q1"),
+        { ...decision("q2"), disposition: "rejected" },
+        decision("q3", "huella-obsoleta"),
+      ],
     )
 
-    expect(result.reviewed.map((item) => item.id)).toEqual(["q1"])
-    expect(result.pending.map((item) => item.id)).toEqual(["q2"])
-    expect(result.stale.map((item) => item.id)).toEqual(["q2"])
+    expect(result.reviewed.map((item) => item.id)).toEqual(["q1", "q2"])
+    expect(result.accepted.map((item) => item.id)).toEqual(["q1"])
+    expect(result.rejected.map((item) => item.id)).toEqual(["q2"])
+    expect(result.pending.map((item) => item.id)).toEqual(["q3"])
+    expect(result.stale.map((item) => item.id)).toEqual(["q3"])
   })
 
   it("crea una decisión trazable y exige revisor", () => {

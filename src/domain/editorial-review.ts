@@ -27,18 +27,23 @@ export function reconcileHumanReview(
 ) {
   const decisionsById = new Map(decisions.map((item) => [item.id, item]))
   const reviewed: HumanReviewEntry[] = []
+  const accepted: HumanReviewEntry[] = []
+  const rejected: HumanReviewEntry[] = []
   const pending: HumanReviewEntry[] = []
   const stale: HumanReviewEntry[] = []
 
   for (const entry of entries) {
     const decision = decisionsById.get(entry.id)
-    if (decision?.content_sha256 === entry.content_sha256) reviewed.push(entry)
-    else {
+    if (decision?.content_sha256 === entry.content_sha256) {
+      reviewed.push(entry)
+      if (decision.disposition === "rejected") rejected.push(entry)
+      else accepted.push(entry)
+    } else {
       pending.push(entry)
       if (decision) stale.push(entry)
     }
   }
-  return { reviewed, pending, stale }
+  return { reviewed, accepted, rejected, pending, stale }
 }
 
 export function buildHumanReviewDecision(

@@ -230,3 +230,25 @@ export function buildPublicReviewIndex(queue, shards) {
     }
   })
 }
+
+export function summarizeHumanReviewQueue(queue) {
+  return {
+    reviewed: queue.filter((row) => row.review_status === "reviewed").length,
+    accepted: queue.filter(
+      (row) =>
+        row.review_status === "reviewed" &&
+        ["approved", "corrected"].includes(row.disposition)
+    ).length,
+    rejected: queue.filter(
+      (row) =>
+        row.review_status === "reviewed" && row.disposition === "rejected"
+    ).length,
+    pending_human: queue.filter(
+      (row) => row.review_status === "pending_human"
+    ).length,
+  }
+}
+
+export function hasBlockingHumanReviewFindings(summary) {
+  return summary.rejected > 0
+}

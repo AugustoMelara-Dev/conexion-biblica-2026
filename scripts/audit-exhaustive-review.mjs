@@ -4,6 +4,8 @@ import { resolve } from "node:path"
 import {
   buildExhaustiveReviewQueue,
   buildPublicReviewIndex,
+  hasBlockingHumanReviewFindings,
+  summarizeHumanReviewQueue,
 } from "./lib/competitive-audit.mjs"
 
 const root = resolve(import.meta.dirname, "..")
@@ -72,6 +74,7 @@ const attention = queue.filter(
   (row) => row.automatic_status === "requires_attention"
 )
 const pending = queue.filter((row) => row.review_status === "pending_human")
+const humanCounts = summarizeHumanReviewQueue(queue)
 const highRiskPending = pending
   .filter((row) => row.risk_score > 0)
   .slice(0, 600)
@@ -93,8 +96,7 @@ const ledger = {
   source_sha256: manifest.source_sha256,
   generated_at: new Date().toISOString(),
   counts: {
-    reviewed: queue.length - pending.length,
-    pending_human: pending.length,
+    ...humanCounts,
     automatic_attention: attention.length,
     automatic_passed: queue.length - attention.length,
   },
@@ -138,8 +140,10 @@ const summary = [
   "",
   `- Banco: ${manifest.bank_id}`,
   `- Variantes enumeradas: ${queue.length} de ${manifest.gold_questions}`,
-  `- Revisión editorial trazable completada: ${queue.length - pending.length}`,
-  `- Pendientes de revisión editorial: ${pending.length}`,
+  `- Revisión editorial trazable completada: ${humanCounts.reviewed}`,
+  `- Aprobadas o corregidas: ${humanCounts.accepted}`,
+  `- Rechazos abiertos: ${humanCounts.rejected}`,
+  `- Pendientes de revisión editorial: ${humanCounts.pending_human}`,
   `- Pasaron controles automáticos: ${queue.length - attention.length}`,
   `- Requieren atención automática: ${attention.length}`,
   "",
@@ -165,8 +169,7 @@ console.log(
   JSON.stringify(
     {
       bank_questions: questions.length,
-      reviewed: queue.length - pending.length,
-      pending_human: pending.length,
+      ...humanCounts,
       automatic_attention: attention.length,
       automatic_flag_counts: flagCounts,
       review_packet: highRiskPending.length,
@@ -175,4 +178,5 @@ console.log(
     2
   )
 )
-if (attention.length) process.exitCode = 1
+if (attention.length || hasBlockingHumanReviewFindings(humanCounts))
+  process.exitCode = 1
