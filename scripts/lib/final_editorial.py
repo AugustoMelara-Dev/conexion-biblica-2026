@@ -75,7 +75,12 @@ EDITORIALLY_EXCLUDED_SOURCE_UNITS = {
 SAFE_EXACT_NEGATION_ACTION_FORMS = {
     form
     for form in SAFE_FALSE_ACTION_FORMS
-    if form not in {"gerund", "infinitive", "imperative", "participle"}
+    if form not in {"imperative", "participle"}
+} | {
+    "present_a",
+    "present_e",
+    "present_plural",
+    "present_second_singular",
 }
 EDITORIALLY_EXCLUDED_CANDIDATES = {
     "DAN9-V003": {"asperas"},
@@ -209,7 +214,7 @@ NON_ENTITY_CAPITALIZED = {
 ADVERB_FORMS = {
     "asi", "ahora", "luego", "despues", "tambien", "solo", "aqui", "debajo",
     "ciertamente", "dondequiera", "entonces", "pronto", "adelante", "delante", "encima", "junto",
-    "hoy", "ayer", "manana", "cuan", "cuanto", "como", "ademas",
+    "hoy", "ayer", "manana", "cuan", "cuanto", "como", "ademas", "alli",
 }
 NON_VERB_IA = {
     "abundancia", "angustia", "apariencia", "bestia", "ciencia", "clemencia",
@@ -229,7 +234,7 @@ NON_VERB_FORMS = NON_VERB_IA | {
     "alegria", "aparte", "citara", "cuenta", "cuernos", "firme", "fuerte",
     "ira", "lugar", "manjar", "mar", "mujer", "altar", "poder", "primer",
     "tercer", "caracter", "bienestar", "singular", "mayordomia", "muerte",
-    "parte", "suerte", "supremacia", "triste",
+    "parte", "suerte", "supremacia", "triste", "viviente",
 }
 INVARIANT_ADJECTIVE_FORMS = {
     "dificil", "fragil", "fuerte", "grande", "imposible", "inferior",
@@ -265,7 +270,8 @@ VERB_FORMS = {
     "llamese", "fueron", "trajeron", "acercandose", "levantate", "llevara",
     "volvera", "llegara", "elevara", "fuese", "tuve", "manteniase", "vi", "oi",
     "confirmare", "pueda", "ocurrir", "comprender", "declarar", "ensenorear",
-    "perdonar", "reemplazar", "sintiera", "puede", "pueden", "dalos", "propuso",
+    "perdonar", "reemplazar", "sintiera", "puede", "pueden", "dalos", "propuso", "quiso",
+    "ha", "has", "han", "he", "hemos", "habeis",
 }
 
 
@@ -291,12 +297,16 @@ def _word_role(word: str) -> str:
         return "number"
     if normalized in NON_VERB_FORMS:
         return "content"
+    if normalized.endswith(
+        ("ancia", "encia", "ismo", "miento", "sion", "cion", "tad", "dad", "ura", "eza")
+    ):
+        return "content"
     if re.search(r"(?:rá|rás|rán|ré|réis|remos|áis|éis|ó|é|í|aremos|eremos|iremos)$", word.lower()):
         return "verb"
     if re.search(r"(?:ía|ían)$", word.lower()) and normalized not in NON_VERB_IA:
         return "verb"
     if normalized in VERB_FORMS or re.search(
-        r"(?:ando|iendo|andose|iendose|aron|ieron|aste|iste|aba|aban|ara|ira|aran|ieran|asen|iesen|esen|eran|iran|(?:ar|er|ir)(?:me|te|se|lo|la|los|las|le|les|nos)?)$",
+        r"(?:ando|iendo|andose|iendose|aron|ieron|aste|iste|aba|aban|ara|ira|ase|iese|aran|ieran|asen|iesen|esen|eran|iran|(?:ar|er|ir)(?:me|te|se|lo|la|los|las|le|les|nos)?)$",
         word.lower(),
     ):
         return "verb"
@@ -307,31 +317,114 @@ def _word_role(word: str) -> str:
     return "content"
 
 
+def _term_word_class(word: str) -> str:
+    """Distinguish high-confidence adjective forms from nominal terms."""
+    normalized = _norm(word)
+    singular = normalized[:-1] if normalized.endswith("s") else normalized
+    if normalized in INVARIANT_ADJECTIVE_FORMS or singular in {
+        "cabrio",
+        "vano",
+        "vana",
+        "verdadero",
+        "verdadera",
+        "venidero",
+        "venidera",
+    } or singular.endswith(
+        (
+            "ico",
+            "ica",
+            "ivo",
+            "iva",
+            "oso",
+            "osa",
+            "ano",
+            "ana",
+            "ero",
+            "era",
+            "able",
+            "ible",
+        )
+    ):
+        return "adjective"
+    return "nominal"
+
+
 def _contextual_word_role(text: str, start: int, end: int) -> str:
     """Refine ambiguous present-tense forms using their local syntax."""
     word = text[start:end]
     normalized_word = _norm(word)
     if word == "Cuenta" and _is_sentence_initial(text, start):
         return "verb"
+    if word[:1].isupper() and (
+        not _is_sentence_initial(text, start)
+        or re.match(r"\s*[,;]", text[end:])
+    ):
+        return "content"
     if normalized_word in NON_VERB_FORMS:
         return "content"
-    role = _word_role(word)
-    if role != "content" or not re.search(r"(?:a|e|an|en|as|es)$", word.lower()):
-        return role
+    if normalized_word.endswith(
+        ("ancia", "encia", "ismo", "miento", "sion", "cion", "tad", "dad", "ura", "eza")
+    ):
+        return "content"
     previous_tokens = list(TOKEN_RE.finditer(text[:start]))
     previous = previous_tokens[-1].group() if previous_tokens else ""
+    previous_separator = (
+        text[previous_tokens[-1].end():start] if previous_tokens else ""
+    )
     following_match = TOKEN_RE.search(text, end)
     following = following_match.group() if following_match else ""
+    following_separator = (
+        text[end:following_match.start()] if following_match else text[end:]
+    )
     previous_norm = _norm(previous)
+    previous_previous_norm = (
+        _norm(previous_tokens[-2].group()) if len(previous_tokens) > 1 else ""
+    )
     following_norm = _norm(following)
+    role = _word_role(word)
     ambiguous_determiners = {
         "el", "la", "los", "las", "un", "una", "unos", "unas", "su", "sus",
         "este", "esta", "estos", "estas", "aquel", "aquella", "aquellos", "aquellas",
     }
-    if previous_norm in ambiguous_determiners and following_norm in {
-        "", "de", "del", "que", "es", "era", "eran", "sera", "seran", "fue", "fueron", "y", "o",
-    }:
+    plural_determiners = {
+        "los", "las", "unos", "unas", "sus", "estos", "estas", "aquellos", "aquellas",
+    }
+    noun_followers = {
+        "de", "del", "en", "que", "es", "era", "eran", "sera", "seran", "fue", "fueron", "y", "o",
+    }
+    previous_is_determiner = (
+        previous.lower() != "él" and previous_norm in ambiguous_determiners
+    )
+    if previous_is_determiner and role == "content":
         return "content"
+    if (
+        previous_norm in ambiguous_determiners
+        and normalized_word in {"primera", "prueba", "vida"}
+    ) or (
+        previous_norm in {"buen", "mal"}
+        and normalized_word == "parecer"
+    ):
+        return "content"
+    if previous_is_determiner and (
+        following_norm in noun_followers
+        or previous_previous_norm in {
+            "a", "al", "ante", "con", "contra", "de", "del", "desde", "en",
+            "entre", "hacia", "hasta", "para", "por", "sin", "sobre", "tras",
+        }
+        or (
+            previous_norm in plural_determiners
+            and normalized_word.endswith("s")
+            and bool(re.search(r"[,.;:!?»”\"]", following_separator))
+        )
+        or (
+            not following_norm
+            and previous_norm in plural_determiners
+            and normalized_word.endswith("s")
+        )
+    ):
+        return "content"
+    if role != "content" or not re.search(r"(?:a|e|an|en|as|es)$", word.lower()):
+        return role
     subject_or_link = {
         "yo", "tu", "el", "ella", "ellos", "ellas", "nosotros", "vosotros",
         "usted", "ustedes", "que", "quien", "quienes", "se", "me", "te",
@@ -343,6 +436,7 @@ def _contextual_word_role(text: str, start: int, end: int) -> str:
     coordinated_verb = previous_norm in {"y", "o"} and following_norm in direct_object_lead
     proper_subject = (
         bool(previous[:1].isupper())
+        and previous_separator.isspace()
         and previous_norm not in FUNCTION_WORDS
         and previous_norm not in STOPWORDS
         and following_norm in (
@@ -786,6 +880,7 @@ def _slot_syntax(text: str, answer: str, category: str) -> str:
     previous = _norm(previous_raw)
     following = _norm(following_raw)
     answer_role = _word_role(answer)
+    term_word_class = _term_word_class(answer)
     morphology = repr(option_signature(answer, "term"))
 
     def slot(label: str) -> str:
@@ -795,6 +890,21 @@ def _slot_syntax(text: str, answer: str, category: str) -> str:
         return slot("term:adverb")
     if answer_role == "verb":
         return slot(f"term:verb_like:{_action_form(answer)}")
+    copulas = {"es", "era", "eran", "sera", "seran", "fue", "fueron"}
+    if term_word_class == "adjective" and (
+        previous in copulas
+        or (
+            following in copulas
+            and (not previous_raw or _word_role(previous_raw) != "content")
+        )
+    ):
+        return slot("term:predicate_adjective")
+    if (
+        term_word_class == "adjective"
+        and previous_raw
+        and _word_role(previous_raw) == "content"
+    ):
+        return slot(f"term:postnominal_adjective:{following}")
     determiner_shape = {
         "el": "masculine_singular", "un": "masculine_singular",
         "este": "masculine_singular", "aquel": "masculine_singular",
@@ -808,18 +918,24 @@ def _slot_syntax(text: str, answer: str, category: str) -> str:
     }.get(previous)
     if determiner_shape:
         return slot(f"term:determined_nominal:{determiner_shape}")
+    if previous and _word_role(previous_raw) == "number":
+        return slot("term:counted_nominal")
     if previous in {"a", "al", "ante", "con", "contra", "de", "del", "desde", "en", "entre", "hacia", "hasta", "para", "por", "sin", "sobre", "tras"}:
         return slot(f"term:prepositional:{previous}")
     if previous and _word_role(previous_raw) == "content" and (
         following in {"que", "y", "o"}
+        or following in {"es", "era", "eran", "sera", "seran", "fue", "fueron"}
         or (following and _word_role(following_raw) == "verb")
+        or after.lstrip().startswith((",", ";", ".", ":"))
     ):
+        if term_word_class == "adjective":
+            return slot(f"term:postnominal_adjective:{following}")
         return slot(f"term:postnominal_modifier:{following}")
     if following in {"de", "del"}:
         return slot("term:nominal_head")
     if before.rstrip().endswith((",", ";", ":", "—", "–")):
         return slot("term:list_or_clause_item")
-    return slot("term:generic")
+    return slot(f"term:generic_{term_word_class}")
 
 
 def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], int]:
@@ -904,6 +1020,12 @@ def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any
                         if candidate["answer"].lower().endswith("s")
                         else "word_singular"
                     )
+            if candidate["category"] == "number":
+                candidate["grammatical_category"] = (
+                    "number_phrase"
+                    if len(candidate["answer"].split()) > 1
+                    else "number"
+                )
             normalized_editorial_candidates.append(candidate)
         editorial_candidates = normalized_editorial_candidates
         if not editorial_candidates:
@@ -1167,7 +1289,15 @@ def _complete_statement_text(text: str) -> str:
 
 
 def _atomic_true_false_statement(fact: dict[str, Any]) -> str:
-    return f"aparece la expresión «{fact['answer']}»."
+    label = {
+        "action": "se emplea la forma verbal",
+        "person": "se menciona como personaje o ser",
+        "place": "se menciona como lugar o dirección",
+        "number": "se indica como dato numérico",
+        "term": "se emplea el término",
+        "phrase": "se usa la formulación",
+    }[fact["category"]]
+    return f"{label} «{fact['answer']}»."
 
 
 def _negate_exact_action_statement(statement: str, answer: str) -> str | None:
@@ -1178,7 +1308,8 @@ def _negate_exact_action_statement(statement: str, answer: str) -> str | None:
         return None
     answer_start = statement.index(answer)
     if (
-        _action_form(answer) == "subjunctive_past_singular"
+        _action_form(answer)
+        in {"present_a", "present_e", "subjunctive_past_singular"}
         and _is_sentence_initial(statement, answer_start)
     ):
         # Terminaciones como «Compara» coinciden superficialmente con «-ara»,
@@ -1508,7 +1639,9 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
     # Cada hecho V/F necesita una afirmación verdadera completa y única. Un
     # hecho puede usar la cláusula local o la unidad fuente íntegra; ambas son
     # citas literales, nunca una paráfrasis inventada para distinguir variantes.
-    def true_statement_options(fact: dict[str, Any]) -> list[str]:
+    def true_statement_options(
+        fact: dict[str, Any], *, include_atomic: bool = True
+    ) -> list[str]:
         rows = []
         for source_text in (fact["context"], fact["source_quote"]):
             if source_text.count(fact["answer"]) != 1:
@@ -1520,29 +1653,64 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                 continue
             if completed not in rows:
                 rows.append(completed)
-        rows.append(_atomic_true_false_statement(fact))
+        if include_atomic:
+            rows.append(_atomic_true_false_statement(fact))
         return rows
 
     facts_by_id = {fact["fact_id"]: fact for fact in safe_false_candidates}
     statement_owner: dict[tuple[str, str], str] = {}
     statement_by_fact: dict[str, str] = {}
 
-    def assign_unique_statement(fact: dict[str, Any], seen: set[tuple[str, str]]) -> bool:
-        for statement_text in true_statement_options(fact):
+    def assign_unique_statement(
+        fact: dict[str, Any],
+        seen: set[tuple[str, str]],
+        *,
+        include_atomic: bool,
+    ) -> bool:
+        for statement_text in true_statement_options(
+            fact, include_atomic=include_atomic
+        ):
             key = (fact["reference"], statement_text)
             if key in seen:
                 continue
             seen.add(key)
             previous_id = statement_owner.get(key)
-            if previous_id is None or assign_unique_statement(facts_by_id[previous_id], seen):
+            if previous_id is None or assign_unique_statement(
+                facts_by_id[previous_id],
+                seen,
+                include_atomic=include_atomic,
+            ):
                 statement_owner[key] = fact["fact_id"]
                 statement_by_fact[fact["fact_id"]] = statement_text
                 return True
         return False
 
+    # Maximizar primero afirmaciones completas. La versión anterior detenía
+    # el emparejamiento al llegar a 1,500 hechos y aceptaba presencia léxica
+    # demasiado pronto, aunque quedaran cláusulas literales únicas disponibles.
     for fact in safe_false_candidates:
-        assign_unique_statement(fact, set())
-        if len(statement_by_fact) >= 1500:
+        assign_unique_statement(fact, set(), include_atomic=False)
+
+    if len(statement_by_fact) < 1500:
+        for fact in safe_false_candidates:
+            if fact["fact_id"] in statement_by_fact:
+                continue
+            statement_text = _atomic_true_false_statement(fact)
+            key = (fact["reference"], statement_text)
+            if key in statement_owner:
+                continue
+            statement_owner[key] = fact["fact_id"]
+            statement_by_fact[fact["fact_id"]] = statement_text
+            if len(statement_by_fact) >= 1500:
+                break
+
+    if len(statement_by_fact) < 1500:
+        for fact in safe_false_candidates:
+            if fact["fact_id"] in statement_by_fact:
+                continue
+            assign_unique_statement(fact, set(), include_atomic=True)
+            if len(statement_by_fact) >= 1500:
+                break
             break
     if len(statement_by_fact) < 1500:
         raise ValueError(
@@ -1553,7 +1721,11 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         facts_by_id[fact_id]
         for fact_id in sorted(
             statement_by_fact,
-            key=lambda fact_id: _hash("tf-true-selected:" + fact_id),
+            key=lambda fact_id: (
+                statement_by_fact[fact_id]
+                == _atomic_true_false_statement(facts_by_id[fact_id]),
+                _hash("tf-true-selected:" + fact_id),
+            ),
         )[:1500]
     ]
     selected_true_ids = {fact["fact_id"] for fact in true_facts}
@@ -1723,6 +1895,11 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
     for fact in true_facts:
         selected: tuple[str, dict[str, Any], str, str, str] | None = None
         source_statement = statement_by_fact[fact["fact_id"]]
+        exact_false_statements = true_statement_options(
+            fact, include_atomic=False
+        )
+        if exact_false_statements:
+            source_statement = exact_false_statements[0]
         replacement_candidates = false_replacements(fact)
         if fact["category"] == "action":
             exact_source_statements = {
@@ -1759,8 +1936,9 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             and _norm(fact["answer"]) in DIVINE_NAMES
         ):
             # Sustituir «Señor» por «Santo» puede conservar el mismo referente
-            # y no produce una falsedad semántica inequívoca. En estos casos se
-            # pregunta solo por presencia textual y se usa otro personaje.
+            # y no produce una falsedad semántica inequívoca. Además, insertar
+            # un personaje humano en una acción divina crea una pista demasiado
+            # obvia. Se formula por mención textual y se usa otro personaje.
             source_statement = _atomic_true_false_statement(fact)
             replacement_candidates = [
                 row

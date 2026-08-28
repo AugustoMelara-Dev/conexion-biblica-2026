@@ -242,15 +242,11 @@ class FinalEditorialTests(unittest.TestCase):
             if question.get("false_mutation_kind") != "negation":
                 continue
             statement = question["statement"]
-            answer_start = statement.lower().index(question["correction"].lower())
-            clause_prefix = re.split(r"[.;:!?]", statement[:answer_start])[-1]
-            inserted_negations = list(re.finditer(r"(?i)\bno\b", clause_prefix))
-            self.assertTrue(inserted_negations, question["id"])
-            prior_prefix = clause_prefix[:inserted_negations[-1].start()]
-            self.assertNotRegex(
-                prior_prefix,
-                r"(?i)\b(?:no|ni|ningún|ninguna|ninguno|nadie|nunca|jamás|sin|tampoco)\b",
-                "una falsedad no debe crear dobles negaciones dentro de la misma cláusula",
+            corrected = question["corrected_statement"]
+            self.assertEqual(
+                len(re.findall(r"(?i)\bno\b", statement)),
+                len(re.findall(r"(?i)\bno\b", corrected)) + 1,
+                question["id"],
             )
         self.assertGreater(rejected, 0)
         self.assertEqual(
@@ -365,7 +361,7 @@ class FinalEditorialTests(unittest.TestCase):
                 ):
                     self.assertIn(
                         self.editorial._action_form(question["correction"]),
-                        self.editorial.SAFE_FALSE_ACTION_FORMS,
+                        self.editorial.SAFE_EXACT_NEGATION_ACTION_FORMS,
                         question["id"],
                     )
 
@@ -421,11 +417,194 @@ class FinalEditorialTests(unittest.TestCase):
                 question["id"],
             )
 
+    def test_appositive_nouns_and_capitalized_names_are_not_verbs(self) -> None:
+        """La morfología no debe convertir nombres ni aposiciones en acciones."""
+        cases = (
+            ("Y dijo el rey a Aspenaz, jefe de sus eunucos", "jefe"),
+            ("Entonces dijo Daniel a Melsar, a quien había puesto", "Melsar"),
+            ("A Daniel puso por nombre Beltsasar", "Beltsasar"),
+            ("los dedos de los pies en parte de hierro", "pies"),
+            ("Tú eres aquella imagen que viste", "imagen"),
+            ("cambia los tiempos y las edades", "edades"),
+            ("se puso enhiesta sobre los pies, a manera de hombre", "pies"),
+            ("muda los tiempos y las edades, quita reyes", "edades"),
+            ("postrándose ante la imagen.", "imagen"),
+            ("Dijo: «Beltsasar, el sueño no te espante", "Beltsasar"),
+            ("La escritura yo la leeré al rey", "escritura"),
+        )
+        for text, answer in cases:
+            start = text.index(answer)
+            self.assertEqual(
+                self.editorial._contextual_word_role(
+                    text, start, start + len(answer)
+                ),
+                "content",
+                answer,
+            )
+
+        text = "Daniel propuso en su corazón"
+        start = text.index("propuso")
+        self.assertEqual(
+            self.editorial._contextual_word_role(
+                text, start, start + len("propuso")
+            ),
+            "verb",
+        )
+        text = "y quedé allí con los reyes"
+        start = text.index("allí")
+        self.assertEqual(
+            self.editorial._contextual_word_role(
+                text, start, start + len("allí")
+            ),
+            "adverb",
+        )
+        text = "El rey quiso ordenar la ceremonia"
+        start = text.index("quiso")
+        self.assertEqual(
+            self.editorial._contextual_word_role(
+                text, start, start + len("quiso")
+            ),
+            "verb",
+        )
+        text = "en forma que honrase a su pueblo y glorificase al Dios del cielo"
+        start = text.index("glorificase")
+        self.assertEqual(
+            self.editorial._contextual_word_role(
+                text, start, start + len("glorificase")
+            ),
+            "verb",
+        )
+        for text, answer in (
+            ("que hagas la prueba con tus siervos", "prueba"),
+            ("la última venida no será como la primera", "primera"),
+            ("les había sido prolongada la vida hasta cierto tiempo", "vida"),
+            ("muchachos de buen parecer", "parecer"),
+            ("Daniel, siervo del Dios viviente, el Dios tuyo", "viviente"),
+            ("llevará la guerra hasta su fortaleza", "guerra"),
+            ("Las fuerzas enemigas serán barridas", "fuerzas"),
+            ("pero la última venida no será como la primera", "última"),
+            ("todas las cosas preciosas de Egipto", "cosas"),
+            ("los jóvenes fueron examinados", "jóvenes"),
+        ):
+            start = text.index(answer)
+            self.assertEqual(
+                self.editorial._contextual_word_role(
+                    text, start, start + len(answer)
+                ),
+                "content",
+                (text, answer),
+            )
+        for text, answer in (
+            ("Él muda los tiempos y las edades", "muda"),
+            ("Él revela lo profundo y lo escondido", "revela"),
+            ("adonde los has echado", "has"),
+            ("el rey los consultó", "consultó"),
+        ):
+            start = text.index(answer)
+            self.assertEqual(
+                self.editorial._contextual_word_role(
+                    text, start, start + len(answer)
+                ),
+                "verb",
+                (text, answer),
+            )
+
+        self.assertTrue(
+            self.editorial._slot_syntax(
+                "la revelación de las cosas venideras, nos ayudará",
+                "venideras",
+                "term",
+            ).startswith("term:postnominal_adjective"),
+        )
+        self.assertTrue(
+            self.editorial._slot_syntax(
+                "Vino hasta el carnero de dos cuernos que yo había visto",
+                "cuernos",
+                "term",
+            ).startswith("term:counted_nominal"),
+        )
+        self.assertTrue(
+            self.editorial._slot_syntax(
+                "El macho cabrío es el rey de Grecia",
+                "cabrío",
+                "term",
+            ).startswith("term:postnominal_adjective"),
+        )
+        self.assertTrue(
+            self.editorial._slot_syntax(
+                "el espíritu del poder profético",
+                "profético",
+                "term",
+            ).startswith("term:postnominal_adjective"),
+        )
+        self.assertTrue(
+            self.editorial._slot_syntax(
+                "Vanas fueron las amenazas del rey",
+                "Vanas",
+                "term",
+            ).startswith("term:predicate_adjective"),
+        )
+        self.assertTrue(
+            self.editorial._slot_syntax(
+                "la visión de las tardes y mañanas es verdadera",
+                "verdadera",
+                "term",
+            ).startswith("term:predicate_adjective"),
+        )
+        self.assertTrue(
+            self.editorial._slot_syntax(
+                "Fuerte avanzó el ejército",
+                "Fuerte",
+                "term",
+            ).startswith("term:generic_adjective"),
+        )
+        self.assertTrue(
+            self.editorial._slot_syntax(
+                "Daniel recibió sabiduría",
+                "sabiduría",
+                "term",
+            ).startswith("term:generic_nominal"),
+        )
+
     def test_true_false_is_balanced_unique_and_uses_only_safe_false_details(self) -> None:
         """El equilibrio no puede depender de duplicados ni sustituciones abiertas."""
         self.assertIsNone(
             self.editorial._negate_exact_action_statement(
                 "Compara luego nuestros rostros con los otros rostros.",
+                "Compara",
+            )
+        )
+        self.assertEqual(
+            self.editorial._negate_exact_action_statement(
+                "procurase exaltar al Dios de los cielos.",
+                "exaltar",
+            ),
+            "procurase no exaltar al Dios de los cielos.",
+        )
+        self.assertEqual(
+            self.editorial._negate_exact_action_statement(
+                "y mirando con humildad hacia el Dios del cielo.",
+                "mirando",
+            ),
+            "y no mirando con humildad hacia el Dios del cielo.",
+        )
+        self.assertEqual(
+            self.editorial._negate_exact_action_statement(
+                "que trajera de los hijos de Israel.",
+                "trajera",
+            ),
+            "que no trajera de los hijos de Israel.",
+        )
+        self.assertEqual(
+            self.editorial._negate_exact_action_statement(
+                "los muchachos que comen de la comida del rey.",
+                "comen",
+            ),
+            "los muchachos que no comen de la comida del rey.",
+        )
+        self.assertIsNone(
+            self.editorial._negate_exact_action_statement(
+                "Compara luego nuestros rostros.",
                 "Compara",
             )
         )
@@ -438,6 +617,18 @@ class FinalEditorialTests(unittest.TestCase):
             {"Verdadero": 1500, "Falso": 1500},
         )
         self.assertEqual(len({row["question"] for row in rows}), 3000)
+        false_rows = [
+            row for row in rows if row["correct_answer"] == "Falso"
+        ]
+        self.assertFalse(
+            any("aparece la expresión" in row["statement"] for row in false_rows),
+            "Las V/F falsas deben formular el tipo de detalle, no una presencia genérica.",
+        )
+        self.assertGreaterEqual(
+            sum(row.get("statement_mode") == "exact_source" for row in false_rows),
+            1100,
+            "Las V/F falsas deben priorizar afirmaciones completas sobre presencia léxica.",
+        )
         rows_by_fact = {}
         for row in rows:
             rows_by_fact.setdefault(row["fact_id"], []).append(row)
@@ -472,6 +663,9 @@ class FinalEditorialTests(unittest.TestCase):
                 false_row["option_category"] == "person"
                 and self.editorial._norm(false_row["correction"])
                 in self.editorial.DIVINE_NAMES
+                and false_row["source_quote"].count(false_row["correction"]) == 1
+                and "¿" not in false_row["source_quote"]
+                and not false_row["source_quote"].rstrip('»”"').endswith("?")
             ):
                 self.assertEqual(
                     false_row["statement_mode"],
