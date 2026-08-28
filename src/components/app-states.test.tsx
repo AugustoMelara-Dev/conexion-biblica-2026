@@ -248,7 +248,8 @@ async function finishRehydratedReviewRound(
   bank: Question[],
   subset: Question[],
   stored = storedReviewRound(subset),
-  answerName: RegExp = /Sí/
+  answerName: RegExp = /Sí/,
+  overrides: Partial<AppContext> = {}
 ) {
   const user = userEvent.setup()
   const saveActiveRound = vi.fn().mockResolvedValue(undefined)
@@ -262,6 +263,7 @@ async function finishRehydratedReviewRound(
       saveActiveRound,
       saveSession,
       clearActiveRound,
+      ...overrides,
     })
   )
   await screen.findByRole("heading", { name: subset.at(-1)!.question })
@@ -507,6 +509,53 @@ describe("estados transversales de App", () => {
     } finally {
       random.mockRestore()
     }
+  })
+
+  it("solicita preguntas nuevas al banco masivo para otra tanda aleatoria", async () => {
+    const previous = Array.from({ length: 20 }, (_, index) =>
+      createBankQuestion(index)
+    )
+    const replacement = Array.from({ length: 40 }, (_, index) => ({
+      ...createBankQuestion(1_000 + index),
+      bankId: "final-v7",
+      bankProfileId: "final-v7" as const,
+      factId: `NEW-FACT-${index}`,
+      variantId: `NEW-VARIANT-${index}`,
+    }))
+    const stored = {
+      ...storedReviewRound(previous),
+      config: {
+        ...storedReviewRound(previous).config,
+        bankSelection: "final-v7" as const,
+        massive: true,
+      },
+    }
+    const loadMassiveQuestions = vi.fn().mockResolvedValue(replacement)
+    const { user, saveActiveRound } = await finishRehydratedReviewRound(
+      previous,
+      previous,
+      stored,
+      /Sí/,
+      { loadMassiveQuestions },
+    )
+    const callsBeforeRandom = saveActiveRound.mock.calls.length
+
+    await user.click(
+      screen.getByRole("button", { name: "Otra tanda aleatoria" }),
+    )
+
+    await waitFor(() => expect(loadMassiveQuestions).toHaveBeenCalledTimes(1))
+    const randomized = saveActiveRound.mock.calls
+      .slice(callsBeforeRandom)
+      .map(([round]) => round as ActiveRound)
+      .find((round) => round.currentIndex === 0)!
+    expect(randomized.questionKeys).toHaveLength(20)
+    expect(
+      randomized.questionKeys.every((key) => key.startsWith("final-v7:")),
+    ).toBe(true)
+    expect(new Set(randomized.questionKeys)).not.toEqual(
+      new Set(previous.map(keyOf)),
+    )
   })
 
   it("conserva todas las ocurrencias repetidas al ordenar aleatoriamente el subset", async () => {

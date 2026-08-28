@@ -312,7 +312,7 @@ export function App() {
           onRandom={() =>
             startRound(
               { ...result.config, strategy: "random-balanced" },
-              resultQuestions
+              result.config.massive ? undefined : resultQuestions
             )
           }
           onNew={() => {
