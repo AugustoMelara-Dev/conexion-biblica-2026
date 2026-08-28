@@ -61779,22 +61779,22 @@
     "difficulty": "hard"
   },
   {
-    "id": "PR43-GOLD-2698-TRUE_FALSE-TRUE",
+    "id": "PR43-GOLD-2637-TRUE_FALSE-TRUE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
     "schema_version": "9.0",
-    "source_unit_id": "PR43-P049-P006-S002",
-    "fact_id": "PR43-P049-P006-S002-F02",
-    "variant_id": "PR43-P049-P006-S002-F02-TRUE_FALSE-TRUE",
+    "source_unit_id": "PR43-P048-P004-S001",
+    "fact_id": "PR43-P048-P004-S001-F01",
+    "variant_id": "PR43-P048-P004-S001-F01-TRUE_FALSE-TRUE",
     "template_id": "true-false-safe-editorial-v2",
     "family": "true_false",
     "chapter": "PR43",
-    "reference": "PR43, p. 49, párrafo 6",
-    "source_ref": "PR43, p. 49, párrafo 6",
-    "verse_or_page": "PR43, p. 49, párrafo 6",
-    "source_span": "Ya no podía la mano refrenadora de Dios desviar el mal que los amenazaba.",
-    "source_quote": "Ya no podía la mano refrenadora de Dios desviar el mal que los amenazaba.",
-    "context_anchor": "Ya no podía la mano refrenadora de Dios desviar el mal que los amenazaba.",
+    "reference": "PR43, p. 48, párrafo 4",
+    "source_ref": "PR43, p. 48, párrafo 4",
+    "verse_or_page": "PR43, p. 48, párrafo 4",
+    "source_span": "En vano trató el rey de leer las letras ardientes.",
+    "source_quote": "En vano trató el rey de leer las letras ardientes.",
+    "context_anchor": "En vano trató el rey de leer las letras ardientes.",
     "topic": "action",
     "importance": "critical",
     "relation_type": "action",
@@ -61817,12 +61817,12 @@
     },
     "final_editorial_status": "GOLD",
     "accepted_answers": [
-      "amenazaba"
+      "trató"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 6, se emplea la forma verbal «amenazaba».",
-    "statement": "Según PR43, p. 49, párrafo 6, se emplea la forma verbal «amenazaba».",
-    "asserted_detail": "amenazaba",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, se emplea la forma verbal «trató».",
+    "statement": "Según PR43, p. 48, párrafo 4, se emplea la forma verbal «trató».",
+    "asserted_detail": "trató",
     "options": [
       "Verdadero",
       "Falso"
@@ -61835,11 +61835,86 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «amenazaba».",
+    "truth_source_statement": "se emplea la forma verbal «trató».",
     "replacement_source_ref": null,
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce literalmente PR43, p. 49, párrafo 6.",
+    "explanation": "Es verdadera y reproduce literalmente PR43, p. 48, párrafo 4.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+    },
+    "trap_type": null,
+    "validation_adversarial": {
+      "reviewer": "source-blind-v1",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
+      "second_defensible_option": false
+    },
+    "difficulty": "hard"
+  },
+  {
+    "id": "PR43-GOLD-2651-TRUE_FALSE-TRUE",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "9.0",
+    "source_unit_id": "PR43-P048-P004-S008",
+    "fact_id": "PR43-P048-P004-S008-F01",
+    "variant_id": "PR43-P048-P004-S008-F01-TRUE_FALSE-TRUE",
+    "template_id": "true-false-safe-editorial-v2",
+    "family": "true_false",
+    "chapter": "PR43",
+    "reference": "PR43, p. 48, párrafo 4",
+    "source_ref": "PR43, p. 48, párrafo 4",
+    "verse_or_page": "PR43, p. 48, párrafo 4",
+    "source_span": "“Todos los sabios del rey ... no pudieron leer la escritura, ni mostrar al rey su declaración.",
+    "source_quote": "“Todos los sabios del rey ... no pudieron leer la escritura, ni mostrar al rey su declaración.",
+    "context_anchor": "“Todos los sabios del rey ... no pudieron leer la escritura, ni mostrar al rey su declaración.",
+    "topic": "action",
+    "importance": "critical",
+    "relation_type": "action",
+    "option_category": "action",
+    "blind_pool": null,
+    "validation_generator": {
+      "status": "passed",
+      "source_supported": true
+    },
+    "validation_schema": {
+      "status": "passed"
+    },
+    "validation_source": {
+      "status": "passed",
+      "external_knowledge": false
+    },
+    "validation_language": {
+      "status": "passed",
+      "natural_span": true
+    },
+    "final_editorial_status": "GOLD",
+    "accepted_answers": [
+      "pudieron"
+    ],
+    "answer_mode": "option_id",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, se emplea la forma verbal «pudieron».",
+    "statement": "Según PR43, p. 48, párrafo 4, se emplea la forma verbal «pudieron».",
+    "asserted_detail": "pudieron",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "false_mutation_kind": null,
+    "focused_true_statement": false,
+    "statement_mode": "atomic_presence",
+    "truth_source_statement": "se emplea la forma verbal «pudieron».",
+    "replacement_source_ref": null,
+    "correct_slot_signature": "action",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce literalmente PR43, p. 48, párrafo 4.",
     "why_distractors_fail": {
       "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
@@ -61929,22 +62004,22 @@
     "difficulty": "hard"
   },
   {
-    "id": "PR43-GOLD-2634-TRUE_FALSE-TRUE",
+    "id": "PR43-GOLD-2598-TRUE_FALSE-TRUE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
     "schema_version": "9.0",
-    "source_unit_id": "PR43-P048-P003-S006",
-    "fact_id": "PR43-P048-P003-S006-F02",
-    "variant_id": "PR43-P048-P003-S006-F02-TRUE_FALSE-TRUE",
+    "source_unit_id": "PR43-P047-P004-S005",
+    "fact_id": "PR43-P047-P004-S005-F02",
+    "variant_id": "PR43-P047-P004-S005-F02-TRUE_FALSE-TRUE",
     "template_id": "true-false-safe-editorial-v2",
     "family": "true_false",
     "chapter": "PR43",
-    "reference": "PR43, p. 48, párrafo 3",
-    "source_ref": "PR43, p. 48, párrafo 3",
-    "verse_or_page": "PR43, p. 48, párrafo 3",
-    "source_span": "Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle: ¿Por qué obras así?",
-    "source_quote": "Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle: ¿Por qué obras así?",
-    "context_anchor": "Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle",
+    "reference": "PR43, p. 47, párrafo 4",
+    "source_ref": "PR43, p. 47, párrafo 4",
+    "verse_or_page": "PR43, p. 47, párrafo 4",
+    "source_span": "Los príncipes y los estadistas bebían vino como agua, y bajo su influencia enloquecedora se entregaban a la orgía.",
+    "source_quote": "Los príncipes y los estadistas bebían vino como agua, y bajo su influencia enloquecedora se entregaban a la orgía.",
+    "context_anchor": "Los príncipes y los estadistas bebían vino como agua, y bajo su influencia enloquecedora se entregaban a la orgía.",
     "topic": "action",
     "importance": "critical",
     "relation_type": "action",
@@ -61967,12 +62042,12 @@
     },
     "final_editorial_status": "GOLD",
     "accepted_answers": [
-      "atreverse"
+      "bebían"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 3, se emplea la forma verbal «atreverse».",
-    "statement": "Según PR43, p. 48, párrafo 3, se emplea la forma verbal «atreverse».",
-    "asserted_detail": "atreverse",
+    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 4, se emplea la forma verbal «bebían».",
+    "statement": "Según PR43, p. 47, párrafo 4, se emplea la forma verbal «bebían».",
+    "asserted_detail": "bebían",
     "options": [
       "Verdadero",
       "Falso"
@@ -61985,86 +62060,11 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «atreverse».",
+    "truth_source_statement": "se emplea la forma verbal «bebían».",
     "replacement_source_ref": null,
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce literalmente PR43, p. 48, párrafo 3.",
-    "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
-    },
-    "trap_type": null,
-    "validation_adversarial": {
-      "reviewer": "source-blind-v1",
-      "status": "passed",
-      "selected_option": 0,
-      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
-      "second_defensible_option": false
-    },
-    "difficulty": "hard"
-  },
-  {
-    "id": "PR43-GOLD-2574-TRUE_FALSE-TRUE",
-    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
-    "bank_name": "Banco Maestro Único — Final 2026",
-    "schema_version": "9.0",
-    "source_unit_id": "PR43-P047-P002-S003",
-    "fact_id": "PR43-P047-P002-S003-F02",
-    "variant_id": "PR43-P047-P002-S003-F02-TRUE_FALSE-TRUE",
-    "template_id": "true-false-safe-editorial-v2",
-    "family": "true_false",
-    "chapter": "PR43",
-    "reference": "PR43, p. 47, párrafo 2",
-    "source_ref": "PR43, p. 47, párrafo 2",
-    "verse_or_page": "PR43, p. 47, párrafo 2",
-    "source_span": "Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
-    "source_quote": "Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
-    "context_anchor": "Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
-    "topic": "action",
-    "importance": "critical",
-    "relation_type": "action",
-    "option_category": "action",
-    "blind_pool": null,
-    "validation_generator": {
-      "status": "passed",
-      "source_supported": true
-    },
-    "validation_schema": {
-      "status": "passed"
-    },
-    "validation_source": {
-      "status": "passed",
-      "external_knowledge": false
-    },
-    "validation_language": {
-      "status": "passed",
-      "natural_span": true
-    },
-    "final_editorial_status": "GOLD",
-    "accepted_answers": [
-      "prestarle"
-    ],
-    "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 2, se emplea la forma verbal «prestarle».",
-    "statement": "Según PR43, p. 47, párrafo 2, se emplea la forma verbal «prestarle».",
-    "asserted_detail": "prestarle",
-    "options": [
-      "Verdadero",
-      "Falso"
-    ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "false_mutation_kind": null,
-    "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «prestarle».",
-    "replacement_source_ref": null,
-    "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce literalmente PR43, p. 47, párrafo 2.",
+    "explanation": "Es verdadera y reproduce literalmente PR43, p. 47, párrafo 4.",
     "why_distractors_fail": {
       "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
@@ -62154,26 +62154,26 @@
     "difficulty": "hard"
   },
   {
-    "id": "PR43-GOLD-2704-TRUE_FALSE-TRUE",
+    "id": "PR43-GOLD-2669-TRUE_FALSE-TRUE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
     "schema_version": "9.0",
-    "source_unit_id": "PR43-P049-P006-S005",
-    "fact_id": "PR43-P049-P006-S005-F02",
-    "variant_id": "PR43-P049-P006-S005-F02-TRUE_FALSE-TRUE",
+    "source_unit_id": "PR43-P049-P002-S002",
+    "fact_id": "PR43-P049-P002-S002-F01",
+    "variant_id": "PR43-P049-P002-S002-F01-TRUE_FALSE-TRUE",
     "template_id": "true-false-safe-editorial-v2",
     "family": "true_false",
     "chapter": "PR43",
-    "reference": "PR43, p. 49, párrafo 6",
-    "source_ref": "PR43, p. 49, párrafo 6",
-    "verse_or_page": "PR43, p. 49, párrafo 6",
-    "source_span": "A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
-    "source_quote": "A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
-    "context_anchor": "A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
-    "topic": "action",
+    "reference": "PR43, p. 49, párrafo 2",
+    "source_ref": "PR43, p. 49, párrafo 2",
+    "verse_or_page": "PR43, p. 49, párrafo 2",
+    "source_span": "Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció su orgullo y del subsiguiente reconocimiento que había expresado acerca del poder y la misericordia del Dios de Israel.",
+    "source_quote": "Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció su orgullo y del subsiguiente reconocimiento que había expresado acerca del poder y la misericordia del Dios de Israel.",
+    "context_anchor": "Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció s",
+    "topic": "person",
     "importance": "critical",
-    "relation_type": "action",
-    "option_category": "action",
+    "relation_type": "person",
+    "option_category": "person",
     "blind_pool": null,
     "validation_generator": {
       "status": "passed",
@@ -62192,12 +62192,12 @@
     },
     "final_editorial_status": "GOLD",
     "accepted_answers": [
-      "dictar"
+      "Israel"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 6, se emplea la forma verbal «dictar».",
-    "statement": "Según PR43, p. 49, párrafo 6, se emplea la forma verbal «dictar».",
-    "asserted_detail": "dictar",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 2, se menciona como personaje o ser «Israel».",
+    "statement": "Según PR43, p. 49, párrafo 2, se menciona como personaje o ser «Israel».",
+    "asserted_detail": "Israel",
     "options": [
       "Verdadero",
       "Falso"
@@ -62210,11 +62210,11 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «dictar».",
+    "truth_source_statement": "se menciona como personaje o ser «Israel».",
     "replacement_source_ref": null,
-    "correct_slot_signature": "action",
+    "correct_slot_signature": "person",
     "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce literalmente PR43, p. 49, párrafo 6.",
+    "explanation": "Es verdadera y reproduce literalmente PR43, p. 49, párrafo 2.",
     "why_distractors_fail": {
       "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
@@ -62229,27 +62229,27 @@
     "difficulty": "hard"
   },
   {
-    "id": "PR43-GOLD-2578-TRUE_FALSE-TRUE",
+    "id": "PR43-GOLD-2569-TRUE_FALSE-TRUE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
     "schema_version": "9.0",
-    "source_unit_id": "PR43-P047-P002-S005",
-    "fact_id": "PR43-P047-P002-S005-F02",
-    "variant_id": "PR43-P047-P002-S005-F02-TRUE_FALSE-TRUE",
+    "source_unit_id": "PR43-P047-P002-S001",
+    "fact_id": "PR43-P047-P002-S001-F01",
+    "variant_id": "PR43-P047-P002-S001-F01-TRUE_FALSE-TRUE",
     "template_id": "true-false-safe-editorial-v2",
     "family": "true_false",
     "chapter": "PR43",
     "reference": "PR43, p. 47, párrafo 2",
     "source_ref": "PR43, p. 47, párrafo 2",
     "verse_or_page": "PR43, p. 47, párrafo 2",
-    "source_span": "Pero Belsasar dejó que el amor por los placeres y la glorificación propia borrasen las lecciones que nunca debiera haber olvidado.",
-    "source_quote": "Pero Belsasar dejó que el amor por los placeres y la glorificación propia borrasen las lecciones que nunca debiera haber olvidado.",
-    "context_anchor": "Pero Belsasar dejó que el amor por los placeres y la glorificación propia borrasen las lecciones que nunca debiera haber olvidado.",
-    "topic": "action",
+    "source_span": "Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
+    "source_quote": "Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
+    "context_anchor": "Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
+    "topic": "place",
     "importance": "critical",
-    "relation_type": "action",
-    "option_category": "action",
-    "blind_pool": "B",
+    "relation_type": "place",
+    "option_category": "place",
+    "blind_pool": null,
     "validation_generator": {
       "status": "passed",
       "source_supported": true
@@ -62267,12 +62267,12 @@
     },
     "final_editorial_status": "GOLD",
     "accepted_answers": [
-      "borrasen"
+      "Babilonia"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 2, se emplea la forma verbal «borrasen».",
-    "statement": "Según PR43, p. 47, párrafo 2, se emplea la forma verbal «borrasen».",
-    "asserted_detail": "borrasen",
+    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 2, se menciona como lugar o dirección «Babilonia».",
+    "statement": "Según PR43, p. 47, párrafo 2, se menciona como lugar o dirección «Babilonia».",
+    "asserted_detail": "Babilonia",
     "options": [
       "Verdadero",
       "Falso"
@@ -62285,9 +62285,9 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «borrasen».",
+    "truth_source_statement": "se menciona como lugar o dirección «Babilonia».",
     "replacement_source_ref": null,
-    "correct_slot_signature": "action",
+    "correct_slot_signature": "place",
     "replacement_slot_signature": null,
     "explanation": "Es verdadera y reproduce literalmente PR43, p. 47, párrafo 2.",
     "why_distractors_fail": {
@@ -62379,6 +62379,81 @@
     "difficulty": "hard"
   },
   {
+    "id": "PR43-GOLD-2588-TRUE_FALSE-TRUE",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "9.0",
+    "source_unit_id": "PR43-P047-P003-S003",
+    "fact_id": "PR43-P047-P003-S003-F02",
+    "variant_id": "PR43-P047-P003-S003-F02-TRUE_FALSE-TRUE",
+    "template_id": "true-false-safe-editorial-v2",
+    "family": "true_false",
+    "chapter": "PR43",
+    "reference": "PR43, p. 47, párrafo 3",
+    "source_ref": "PR43, p. 47, párrafo 3",
+    "verse_or_page": "PR43, p. 47, párrafo 3",
+    "source_span": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "source_quote": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "context_anchor": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el vo",
+    "topic": "action",
+    "importance": "critical",
+    "relation_type": "action",
+    "option_category": "action",
+    "blind_pool": null,
+    "validation_generator": {
+      "status": "passed",
+      "source_supported": true
+    },
+    "validation_schema": {
+      "status": "passed"
+    },
+    "validation_source": {
+      "status": "passed",
+      "external_knowledge": false
+    },
+    "validation_language": {
+      "status": "passed",
+      "natural_span": true
+    },
+    "final_editorial_status": "GOLD",
+    "accepted_answers": [
+      "dedicaba"
+    ],
+    "answer_mode": "option_id",
+    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 3, se emplea la forma verbal «dedicaba».",
+    "statement": "Según PR43, p. 47, párrafo 3, se emplea la forma verbal «dedicaba».",
+    "asserted_detail": "dedicaba",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "false_mutation_kind": null,
+    "focused_true_statement": false,
+    "statement_mode": "atomic_presence",
+    "truth_source_statement": "se emplea la forma verbal «dedicaba».",
+    "replacement_source_ref": null,
+    "correct_slot_signature": "action",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce literalmente PR43, p. 47, párrafo 3.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+    },
+    "trap_type": null,
+    "validation_adversarial": {
+      "reviewer": "source-blind-v1",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
+      "second_defensible_option": false
+    },
+    "difficulty": "hard"
+  },
+  {
     "id": "PR43-GOLD-2721-TRUE_FALSE-TRUE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -62440,81 +62515,6 @@
     "correct_slot_signature": "place",
     "replacement_slot_signature": null,
     "explanation": "Es verdadera y reproduce literalmente PR43, p. 50, párrafo 4.",
-    "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
-    },
-    "trap_type": null,
-    "validation_adversarial": {
-      "reviewer": "source-blind-v1",
-      "status": "passed",
-      "selected_option": 0,
-      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
-      "second_defensible_option": false
-    },
-    "difficulty": "hard"
-  },
-  {
-    "id": "PR43-GOLD-2613-TRUE_FALSE-TRUE",
-    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
-    "bank_name": "Banco Maestro Único — Final 2026",
-    "schema_version": "9.0",
-    "source_unit_id": "PR43-P048-P001-S002",
-    "fact_id": "PR43-P048-P001-S002-F01",
-    "variant_id": "PR43-P048-P001-S002-F01-TRUE_FALSE-TRUE",
-    "template_id": "true-false-safe-editorial-v2",
-    "family": "true_false",
-    "chapter": "PR43",
-    "reference": "PR43, p. 48, párrafo 1",
-    "source_ref": "PR43, p. 48, párrafo 1",
-    "verse_or_page": "PR43, p. 48, párrafo 1",
-    "source_span": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
-    "source_quote": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
-    "context_anchor": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas",
-    "topic": "action",
-    "importance": "critical",
-    "relation_type": "action",
-    "option_category": "action",
-    "blind_pool": null,
-    "validation_generator": {
-      "status": "passed",
-      "source_supported": true
-    },
-    "validation_schema": {
-      "status": "passed"
-    },
-    "validation_source": {
-      "status": "passed",
-      "external_knowledge": false
-    },
-    "validation_language": {
-      "status": "passed",
-      "natural_span": true
-    },
-    "final_editorial_status": "GOLD",
-    "accepted_answers": [
-      "resplandecían"
-    ],
-    "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 1, se emplea la forma verbal «resplandecían».",
-    "statement": "Según PR43, p. 48, párrafo 1, se emplea la forma verbal «resplandecían».",
-    "asserted_detail": "resplandecían",
-    "options": [
-      "Verdadero",
-      "Falso"
-    ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "false_mutation_kind": null,
-    "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «resplandecían».",
-    "replacement_source_ref": null,
-    "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce literalmente PR43, p. 48, párrafo 1.",
     "why_distractors_fail": {
       "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
@@ -63095,30 +63095,30 @@
       "tuvieron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 53, párrafo 5, se emplea la forma verbal «labraron».",
-    "statement": "Según PR43, p. 53, párrafo 5, se emplea la forma verbal «labraron».",
-    "asserted_detail": "labraron",
+    "question": "Verdadero o falso: Según PR43, p. 53, párrafo 5, No tardaron en ocurrir reveses.",
+    "statement": "Según PR43, p. 53, párrafo 5, No tardaron en ocurrir reveses.",
+    "asserted_detail": "tardaron",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 53, párrafo 5, se emplea la forma verbal «tuvieron».",
-    "incorrect_detail": "labraron",
+    "corrected_statement": "Según PR43, p. 53, párrafo 5, ¡cuán turbados anduvieron los hatos de los bueyes, porque no tuvieron pastos! también fueron asolados los rebaños de las ovejas.",
+    "incorrect_detail": "tardaron",
     "correction": "tuvieron",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «tuvieron».",
-    "replacement_source_ref": "PR43, p. 52, párrafo 3",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "¡cuán turbados anduvieron los hatos de los bueyes, porque no tuvieron pastos! también fueron asolados los rebaños de las ovejas.",
+    "replacement_source_ref": "PR43, p. 47, párrafo 3",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «tuvieron», no «labraron».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 47, párrafo 3, no a PR43, p. 53, párrafo 5. La fuente correcta declara: «¡cuán turbados anduvieron los hatos de los bueyes, porque no tuvieron pastos! también fueron asolados los rebaños de las ovejas.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «labraron»; la fuente contiene «tuvieron»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 47, párrafo 3, pero no corresponde a PR43, p. 53, párrafo 5."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -63395,9 +63395,9 @@
       "valió"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, Pero de nada no valió la súplica que dirigió a sus consejeros de confianza ni su ofrecimiento de ricas recompensas.",
-    "statement": "Según PR43, p. 48, párrafo 4, Pero de nada no valió la súplica que dirigió a sus consejeros de confianza ni su ofrecimiento de ricas recompensas.",
-    "asserted_detail": "no valió",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, Así hizo cesar Jehová de los ejércitos “la arrogancia de los soberbios” y abatió “la altivez de los fuertes.”",
+    "statement": "Según PR43, p. 48, párrafo 4, Así hizo cesar Jehová de los ejércitos “la arrogancia de los soberbios” y abatió “la altivez de los fuertes.”",
+    "asserted_detail": "abatió",
     "options": [
       "Verdadero",
       "Falso"
@@ -63405,20 +63405,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 48, párrafo 4, Pero de nada valió la súplica que dirigió a sus consejeros de confianza ni su ofrecimiento de ricas recompensas.",
-    "incorrect_detail": "no valió",
+    "incorrect_detail": "abatió",
     "correction": "valió",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Pero de nada valió la súplica que dirigió a sus consejeros de confianza ni su ofrecimiento de ricas recompensas.",
-    "replacement_source_ref": "PR43, p. 48, párrafo 4",
+    "replacement_source_ref": "PR43, p. 50, párrafo 7",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «valió», no «no valió».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 50, párrafo 7, no a PR43, p. 48, párrafo 4. La fuente correcta declara: «Pero de nada valió la súplica que dirigió a sus consejeros de confianza ni su ofrecimiento de ricas recompensas.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no valió»; la fuente contiene «valió»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 50, párrafo 7, pero no corresponde a PR43, p. 48, párrafo 4."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -63545,30 +63545,30 @@
       "Salvador"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 53, párrafo 1, se menciona como personaje o ser «Jacob».",
-    "statement": "Según PR43, p. 53, párrafo 1, se menciona como personaje o ser «Jacob».",
-    "asserted_detail": "Jacob",
+    "question": "Verdadero o falso: Según PR43, p. 53, párrafo 1, A cada nación que subió al escenario de acción se le permitió ocupar su lugar en la tierra, para que pudiese determinarse si iba a cumplir los propósitos del Vigilante y Santo.",
+    "statement": "Según PR43, p. 53, párrafo 1, A cada nación que subió al escenario de acción se le permitió ocupar su lugar en la tierra, para que pudiese determinarse si iba a cumplir los propósitos del Vigilante y Santo.",
+    "asserted_detail": "Vigilante",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 53, párrafo 1, se menciona como personaje o ser «Salvador».",
-    "incorrect_detail": "Jacob",
+    "corrected_statement": "Según PR43, p. 53, párrafo 1, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "incorrect_detail": "Vigilante",
     "correction": "Salvador",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Salvador».",
-    "replacement_source_ref": "PR43, p. 53, párrafo 7",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "replacement_source_ref": "PR43, p. 52, párrafo 2",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Salvador», no «Jacob».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 52, párrafo 2, no a PR43, p. 53, párrafo 1. La fuente correcta declara: «Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jacob»; la fuente contiene «Salvador»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 52, párrafo 2, pero no corresponde a PR43, p. 53, párrafo 1."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -63620,30 +63620,30 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 5, se menciona como personaje o ser «Jacob».",
-    "statement": "Según PR43, p. 49, párrafo 5, se menciona como personaje o ser «Jacob».",
-    "asserted_detail": "Jacob",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 5, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "statement": "Según PR43, p. 49, párrafo 5, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "asserted_detail": "Huésped",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 49, párrafo 5, se menciona como personaje o ser «Dios».",
-    "incorrect_detail": "Jacob",
+    "corrected_statement": "Según PR43, p. 49, párrafo 5, Contó Dios tu reino, y halo rematado.",
+    "incorrect_detail": "Huésped",
     "correction": "Dios",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Dios».",
-    "replacement_source_ref": "PR43, p. 53, párrafo 7",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Contó Dios tu reino, y halo rematado.",
+    "replacement_source_ref": "PR43, p. 48, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Dios», no «Jacob».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 48, párrafo 1, no a PR43, p. 49, párrafo 5. La fuente correcta declara: «Contó Dios tu reino, y halo rematado.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jacob»; la fuente contiene «Dios»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 48, párrafo 1, pero no corresponde a PR43, p. 49, párrafo 5."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -64595,30 +64595,30 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 2, se menciona como personaje o ser «Jacob».",
-    "statement": "Según PR43, p. 48, párrafo 2, se menciona como personaje o ser «Jacob».",
-    "asserted_detail": "Jacob",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 2, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "statement": "Según PR43, p. 48, párrafo 2, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "asserted_detail": "Huésped",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 48, párrafo 2, se menciona como personaje o ser «Dios».",
-    "incorrect_detail": "Jacob",
+    "corrected_statement": "Según PR43, p. 48, párrafo 2, les pareció estar emplazados ante el tribunal del Dios eterno, cuyo poder acababan de desafiar.",
+    "incorrect_detail": "Huésped",
     "correction": "Dios",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Dios».",
-    "replacement_source_ref": "PR43, p. 53, párrafo 7",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "les pareció estar emplazados ante el tribunal del Dios eterno, cuyo poder acababan de desafiar.",
+    "replacement_source_ref": "PR43, p. 48, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Dios», no «Jacob».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 48, párrafo 1, no a PR43, p. 48, párrafo 2. La fuente correcta declara: «les pareció estar emplazados ante el tribunal del Dios eterno, cuyo poder acababan de desafiar.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jacob»; la fuente contiene «Dios»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 48, párrafo 1, pero no corresponde a PR43, p. 48, párrafo 2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -65045,9 +65045,9 @@
       "comprender"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 2, Muchas habían sido sus oportunidades para conocer la voluntad divina, y para no comprender que era su responsabilidad prestarle obediencia.",
-    "statement": "Según PR43, p. 47, párrafo 2, Muchas habían sido sus oportunidades para conocer la voluntad divina, y para no comprender que era su responsabilidad prestarle obediencia.",
-    "asserted_detail": "no comprender",
+    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 2, Se le había concedido la oportunidad de conocer al verdadero Dios y de obedecerle, pero no le había prestado atención, y estaba por cosechar las consecuencias de su rebelión.",
+    "statement": "Según PR43, p. 47, párrafo 2, Se le había concedido la oportunidad de conocer al verdadero Dios y de obedecerle, pero no le había prestado atención, y estaba por cosechar las consecuencias de su rebelión.",
+    "asserted_detail": "obedecerle",
     "options": [
       "Verdadero",
       "Falso"
@@ -65055,20 +65055,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 47, párrafo 2, Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
-    "incorrect_detail": "no comprender",
+    "incorrect_detail": "obedecerle",
     "correction": "comprender",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
-    "replacement_source_ref": "PR43, p. 47, párrafo 2",
+    "replacement_source_ref": "PR43, p. 49, párrafo 2",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «comprender», no «no comprender».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 49, párrafo 2, no a PR43, p. 47, párrafo 2. La fuente correcta declara: «Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no comprender»; la fuente contiene «comprender»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 49, párrafo 2, pero no corresponde a PR43, p. 47, párrafo 2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -65120,30 +65120,30 @@
       "prevalecido"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 2, se emplea la forma verbal «procurado».",
-    "statement": "Según PR43, p. 48, párrafo 2, se emplea la forma verbal «procurado».",
-    "asserted_detail": "procurado",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 2, Malgastó las oportunidades que se le habían concedido misericordiosamente, y no aprovechó los medios que tenía a su alcance para conocer mejor la verdad.",
+    "statement": "Según PR43, p. 48, párrafo 2, Malgastó las oportunidades que se le habían concedido misericordiosamente, y no aprovechó los medios que tenía a su alcance para conocer mejor la verdad.",
+    "asserted_detail": "concedido",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 48, párrafo 2, se emplea la forma verbal «prevalecido».",
-    "incorrect_detail": "procurado",
+    "corrected_statement": "Según PR43, p. 48, párrafo 2, Donde tan sólo unos momentos antes habían prevalecido la hilaridad y los chistes blasfemos, se veían rostros pálidos y se oían gritos de miedo.",
+    "incorrect_detail": "concedido",
     "correction": "prevalecido",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «prevalecido».",
-    "replacement_source_ref": "PR43, p. 49, párrafo 6",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Donde tan sólo unos momentos antes habían prevalecido la hilaridad y los chistes blasfemos, se veían rostros pálidos y se oían gritos de miedo.",
+    "replacement_source_ref": "PR43, p. 47, párrafo 2",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «prevalecido», no «procurado».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 47, párrafo 2, no a PR43, p. 48, párrafo 2. La fuente correcta declara: «Donde tan sólo unos momentos antes habían prevalecido la hilaridad y los chistes blasfemos, se veían rostros pálidos y se oían gritos de miedo.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «procurado»; la fuente contiene «prevalecido»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 47, párrafo 2, pero no corresponde a PR43, p. 48, párrafo 2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -65195,8 +65195,8 @@
       "acordaste"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 51, párrafo 5, se emplea la forma verbal «confiaste».",
-    "statement": "Según PR43, p. 51, párrafo 5, se emplea la forma verbal «confiaste».",
+    "question": "Verdadero o falso: Según PR43, p. 51, párrafo 5, Porque te confiaste en tu maldad, diciendo.",
+    "statement": "Según PR43, p. 51, párrafo 5, Porque te confiaste en tu maldad, diciendo.",
     "asserted_detail": "confiaste",
     "options": [
       "Verdadero",
@@ -65204,21 +65204,21 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 51, párrafo 5, se emplea la forma verbal «acordaste».",
+    "corrected_statement": "Según PR43, p. 51, párrafo 5, y no has pensado en esto, ni te acordaste de tu postrimería.",
     "incorrect_detail": "confiaste",
     "correction": "acordaste",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «acordaste».",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "y no has pensado en esto, ni te acordaste de tu postrimería.",
     "replacement_source_ref": "PR43, p. 51, párrafo 6",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «acordaste», no «confiaste».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 51, párrafo 6, no a PR43, p. 51, párrafo 5. La fuente correcta declara: «y no has pensado en esto, ni te acordaste de tu postrimería.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «confiaste»; la fuente contiene «acordaste»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 51, párrafo 6, pero no corresponde a PR43, p. 51, párrafo 5."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -65420,9 +65420,9 @@
       "Volviéndose"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 4, No volviéndose hacia el mensaje enviado por el Cielo, el profeta leyó en la pared.",
-    "statement": "Según PR43, p. 49, párrafo 4, No volviéndose hacia el mensaje enviado por el Cielo, el profeta leyó en la pared.",
-    "asserted_detail": "no volviéndose",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 4, Hacia el fin de la vida de Daniel, se estaban produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos.",
+    "statement": "Según PR43, p. 49, párrafo 4, Hacia el fin de la vida de Daniel, se estaban produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos.",
+    "asserted_detail": "Produciendo",
     "options": [
       "Verdadero",
       "Falso"
@@ -65430,20 +65430,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 49, párrafo 4, Volviéndose hacia el mensaje enviado por el Cielo, el profeta leyó en la pared.",
-    "incorrect_detail": "no volviéndose",
+    "incorrect_detail": "Produciendo",
     "correction": "Volviéndose",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Volviéndose hacia el mensaje enviado por el Cielo, el profeta leyó en la pared.",
-    "replacement_source_ref": "PR43, p. 49, párrafo 4",
+    "replacement_source_ref": "PR43, p. 47, párrafo 1",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «Volviéndose», no «no volviéndose».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 47, párrafo 1, no a PR43, p. 49, párrafo 4. La fuente correcta declara: «Volviéndose hacia el mensaje enviado por el Cielo, el profeta leyó en la pared.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no volviéndose»; la fuente contiene «Volviéndose»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 47, párrafo 1, pero no corresponde a PR43, p. 49, párrafo 4."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -65720,30 +65720,30 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 6, se menciona como personaje o ser «Jacob».",
-    "statement": "Según PR43, p. 49, párrafo 6, se menciona como personaje o ser «Jacob».",
-    "asserted_detail": "Jacob",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 6, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "statement": "Según PR43, p. 49, párrafo 6, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "asserted_detail": "Huésped",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 49, párrafo 6, se menciona como personaje o ser «Dios».",
-    "incorrect_detail": "Jacob",
+    "corrected_statement": "Según PR43, p. 49, párrafo 6, Ya no podía la mano refrenadora de Dios desviar el mal que los amenazaba.",
+    "incorrect_detail": "Huésped",
     "correction": "Dios",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Dios».",
-    "replacement_source_ref": "PR43, p. 53, párrafo 7",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Ya no podía la mano refrenadora de Dios desviar el mal que los amenazaba.",
+    "replacement_source_ref": "PR43, p. 48, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Dios», no «Jacob».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 48, párrafo 1, no a PR43, p. 49, párrafo 6. La fuente correcta declara: «Ya no podía la mano refrenadora de Dios desviar el mal que los amenazaba.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jacob»; la fuente contiene «Dios»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 48, párrafo 1, pero no corresponde a PR43, p. 49, párrafo 6."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -66095,9 +66095,9 @@
       "probar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 5, El rey quería no probar que nada era demasiado sagrado para sus manos.",
-    "statement": "Según PR43, p. 47, párrafo 5, El rey quería no probar que nada era demasiado sagrado para sus manos.",
-    "asserted_detail": "no probar",
+    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 5, A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
+    "statement": "Según PR43, p. 47, párrafo 5, A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
+    "asserted_detail": "dictar",
     "options": [
       "Verdadero",
       "Falso"
@@ -66105,20 +66105,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 47, párrafo 5, El rey quería probar que nada era demasiado sagrado para sus manos.",
-    "incorrect_detail": "no probar",
+    "incorrect_detail": "dictar",
     "correction": "probar",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "El rey quería probar que nada era demasiado sagrado para sus manos.",
-    "replacement_source_ref": "PR43, p. 47, párrafo 5",
+    "replacement_source_ref": "PR43, p. 49, párrafo 6",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «probar», no «no probar».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 49, párrafo 6, no a PR43, p. 47, párrafo 5. La fuente correcta declara: «El rey quería probar que nada era demasiado sagrado para sus manos.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no probar»; la fuente contiene «probar»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 49, párrafo 6, pero no corresponde a PR43, p. 47, párrafo 5."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -66395,30 +66395,30 @@
       "Vigilante"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 52, párrafo 2, se menciona como personaje o ser «Jacob».",
-    "statement": "Según PR43, p. 52, párrafo 2, se menciona como personaje o ser «Jacob».",
-    "asserted_detail": "Jacob",
+    "question": "Verdadero o falso: Según PR43, p. 52, párrafo 2, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "statement": "Según PR43, p. 52, párrafo 2, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "asserted_detail": "Salvador",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 52, párrafo 2, se menciona como personaje o ser «Vigilante».",
-    "incorrect_detail": "Jacob",
+    "corrected_statement": "Según PR43, p. 52, párrafo 2, A cada nación que subió al escenario de acción se le permitió ocupar su lugar en la tierra, para que pudiese determinarse si iba a cumplir los propósitos del Vigilante y Santo.",
+    "incorrect_detail": "Salvador",
     "correction": "Vigilante",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Vigilante».",
-    "replacement_source_ref": "PR43, p. 53, párrafo 7",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "A cada nación que subió al escenario de acción se le permitió ocupar su lugar en la tierra, para que pudiese determinarse si iba a cumplir los propósitos del Vigilante y Santo.",
+    "replacement_source_ref": "PR43, p. 53, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Vigilante», no «Jacob».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 53, párrafo 1, no a PR43, p. 52, párrafo 2. La fuente correcta declara: «A cada nación que subió al escenario de acción se le permitió ocupar su lugar en la tierra, para que pudiese determinarse si iba a cumplir los propósitos del Vigilante y Santo.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jacob»; la fuente contiene «Vigilante»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 53, párrafo 1, pero no corresponde a PR43, p. 52, párrafo 2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -66470,9 +66470,9 @@
       "leer"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, En vano trató el rey de no leer las letras ardientes.",
-    "statement": "Según PR43, p. 48, párrafo 4, En vano trató el rey de no leer las letras ardientes.",
-    "asserted_detail": "no leer",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
+    "statement": "Según PR43, p. 48, párrafo 4, Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
+    "asserted_detail": "caer",
     "options": [
       "Verdadero",
       "Falso"
@@ -66480,20 +66480,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 48, párrafo 4, En vano trató el rey de leer las letras ardientes.",
-    "incorrect_detail": "no leer",
+    "incorrect_detail": "caer",
     "correction": "leer",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "En vano trató el rey de leer las letras ardientes.",
-    "replacement_source_ref": "PR43, p. 48, párrafo 4",
+    "replacement_source_ref": "PR43, p. 47, párrafo 2",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «leer», no «no leer».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 47, párrafo 2, no a PR43, p. 48, párrafo 4. La fuente correcta declara: «En vano trató el rey de leer las letras ardientes.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no leer»; la fuente contiene «leer»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 47, párrafo 2, pero no corresponde a PR43, p. 48, párrafo 4."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -66695,30 +66695,30 @@
       "contradecir"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, se emplea la forma verbal «pronosticar».",
-    "statement": "Según PR43, p. 48, párrafo 4, se emplea la forma verbal «pronosticar».",
-    "asserted_detail": "pronosticar",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, Mediante múltiples providencias, Dios había procurado enseñarles a reverenciar su ley.",
+    "statement": "Según PR43, p. 48, párrafo 4, Mediante múltiples providencias, Dios había procurado enseñarles a reverenciar su ley.",
+    "asserted_detail": "reverenciar",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 48, párrafo 4, se emplea la forma verbal «contradecir».",
-    "incorrect_detail": "pronosticar",
+    "corrected_statement": "Según PR43, p. 48, párrafo 4, Encerraban un secreto que él no podía sondear, un poder que le era imposible comprender o contradecir.",
+    "incorrect_detail": "reverenciar",
     "correction": "contradecir",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «contradecir».",
-    "replacement_source_ref": "PR43, p. 51, párrafo 9",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Encerraban un secreto que él no podía sondear, un poder que le era imposible comprender o contradecir.",
+    "replacement_source_ref": "PR43, p. 49, párrafo 6",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «contradecir», no «pronosticar».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 49, párrafo 6, no a PR43, p. 48, párrafo 4. La fuente correcta declara: «Encerraban un secreto que él no podía sondear, un poder que le era imposible comprender o contradecir.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «pronosticar»; la fuente contiene «contradecir»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 49, párrafo 6, pero no corresponde a PR43, p. 48, párrafo 4."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -66920,9 +66920,9 @@
       "llevaba"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 3, El era quien no llevaba la mayor responsabilidad por la rebelión contra Dios que había llegado esa noche a su apogeo en el reino babilónico.",
-    "statement": "Según PR43, p. 48, párrafo 3, El era quien no llevaba la mayor responsabilidad por la rebelión contra Dios que había llegado esa noche a su apogeo en el reino babilónico.",
-    "asserted_detail": "no llevaba",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 3, Aquella última noche de loca insensatez, Belsasar y sus señores habían colmado la medida de su culpabilidad y de la que incumbía al reino caldeo.",
+    "statement": "Según PR43, p. 48, párrafo 3, Aquella última noche de loca insensatez, Belsasar y sus señores habían colmado la medida de su culpabilidad y de la que incumbía al reino caldeo.",
+    "asserted_detail": "incumbía",
     "options": [
       "Verdadero",
       "Falso"
@@ -66930,20 +66930,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 48, párrafo 3, El era quien llevaba la mayor responsabilidad por la rebelión contra Dios que había llegado esa noche a su apogeo en el reino babilónico.",
-    "incorrect_detail": "no llevaba",
+    "incorrect_detail": "incumbía",
     "correction": "llevaba",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "El era quien llevaba la mayor responsabilidad por la rebelión contra Dios que había llegado esa noche a su apogeo en el reino babilónico.",
-    "replacement_source_ref": "PR43, p. 48, párrafo 3",
+    "replacement_source_ref": "PR43, p. 49, párrafo 6",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «llevaba», no «no llevaba».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 49, párrafo 6, no a PR43, p. 48, párrafo 3. La fuente correcta declara: «El era quien llevaba la mayor responsabilidad por la rebelión contra Dios que había llegado esa noche a su apogeo en el reino babilónico.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no llevaba»; la fuente contiene «llevaba»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 49, párrafo 6, pero no corresponde a PR43, p. 48, párrafo 3."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -66995,30 +66995,30 @@
       "trazó"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 1, se emplea la forma verbal «subió».",
-    "statement": "Según PR43, p. 48, párrafo 1, se emplea la forma verbal «subió».",
-    "asserted_detail": "subió",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 1, Pero de nada valió la súplica que dirigió a sus consejeros de confianza ni su ofrecimiento de ricas recompensas.",
+    "statement": "Según PR43, p. 48, párrafo 1, Pero de nada valió la súplica que dirigió a sus consejeros de confianza ni su ofrecimiento de ricas recompensas.",
+    "asserted_detail": "valió",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 48, párrafo 1, se emplea la forma verbal «trazó».",
-    "incorrect_detail": "subió",
+    "corrected_statement": "Según PR43, p. 48, párrafo 1, Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "incorrect_detail": "valió",
     "correction": "trazó",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «trazó».",
-    "replacement_source_ref": "PR43, p. 52, párrafo 2",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "replacement_source_ref": "PR43, p. 48, párrafo 4",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «trazó», no «subió».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 48, párrafo 4, no a PR43, p. 48, párrafo 1. La fuente correcta declara: «Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «subió»; la fuente contiene «trazó»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 48, párrafo 4, pero no corresponde a PR43, p. 48, párrafo 1."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -67070,9 +67070,9 @@
       "resaltar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 2, Hizo no resaltar el pecado del rey y le señaló las lecciones que podría haber aprendido, pero que no aprendió.",
-    "statement": "Según PR43, p. 49, párrafo 2, Hizo no resaltar el pecado del rey y le señaló las lecciones que podría haber aprendido, pero que no aprendió.",
-    "asserted_detail": "no resaltar",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 2, Belsasar era el más aterrorizado de todos.",
+    "statement": "Según PR43, p. 49, párrafo 2, Belsasar era el más aterrorizado de todos.",
+    "asserted_detail": "belsasar",
     "options": [
       "Verdadero",
       "Falso"
@@ -67080,20 +67080,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 49, párrafo 2, Hizo resaltar el pecado del rey y le señaló las lecciones que podría haber aprendido, pero que no aprendió.",
-    "incorrect_detail": "no resaltar",
+    "incorrect_detail": "belsasar",
     "correction": "resaltar",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Hizo resaltar el pecado del rey y le señaló las lecciones que podría haber aprendido, pero que no aprendió.",
-    "replacement_source_ref": "PR43, p. 49, párrafo 2",
+    "replacement_source_ref": "PR43, p. 48, párrafo 3",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «resaltar», no «no resaltar».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 48, párrafo 3, no a PR43, p. 49, párrafo 2. La fuente correcta declara: «Hizo resaltar el pecado del rey y le señaló las lecciones que podría haber aprendido, pero que no aprendió.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no resaltar»; la fuente contiene «resaltar»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 48, párrafo 3, pero no corresponde a PR43, p. 49, párrafo 2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -67145,9 +67145,9 @@
       "Belsasar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 3, No belsasar era el más aterrorizado de todos.",
-    "statement": "Según PR43, p. 48, párrafo 3, No belsasar era el más aterrorizado de todos.",
-    "asserted_detail": "no belsasar",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 3, Hizo resaltar el pecado del rey y le señaló las lecciones que podría haber aprendido, pero que no aprendió.",
+    "statement": "Según PR43, p. 48, párrafo 3, Hizo resaltar el pecado del rey y le señaló las lecciones que podría haber aprendido, pero que no aprendió.",
+    "asserted_detail": "Resaltar",
     "options": [
       "Verdadero",
       "Falso"
@@ -67155,20 +67155,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 48, párrafo 3, Belsasar era el más aterrorizado de todos.",
-    "incorrect_detail": "no belsasar",
+    "incorrect_detail": "Resaltar",
     "correction": "Belsasar",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Belsasar era el más aterrorizado de todos.",
-    "replacement_source_ref": "PR43, p. 48, párrafo 3",
+    "replacement_source_ref": "PR43, p. 49, párrafo 2",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «Belsasar», no «no belsasar».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 49, párrafo 2, no a PR43, p. 48, párrafo 3. La fuente correcta declara: «Belsasar era el más aterrorizado de todos.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no belsasar»; la fuente contiene «Belsasar»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 49, párrafo 2, pero no corresponde a PR43, p. 48, párrafo 3."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -67295,30 +67295,30 @@
       "resplandeciendo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 4, se emplea la forma verbal «interpretando».",
-    "statement": "Según PR43, p. 49, párrafo 4, se emplea la forma verbal «interpretando».",
-    "asserted_detail": "interpretando",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 4, Belsasar, no has humillado tu corazón, sabiendo todo esto.",
+    "statement": "Según PR43, p. 49, párrafo 4, Belsasar, no has humillado tu corazón, sabiendo todo esto.",
+    "asserted_detail": "sabiendo",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 49, párrafo 4, se emplea la forma verbal «resplandeciendo».",
-    "incorrect_detail": "interpretando",
+    "corrected_statement": "Según PR43, p. 49, párrafo 4, La mano que había trazado los caracteres ya no era visible, pero aquellas cuatro palabras seguían resplandeciendo con terrible claridad.",
+    "incorrect_detail": "sabiendo",
     "correction": "resplandeciendo",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «resplandeciendo».",
-    "replacement_source_ref": "PR43, p. 48, párrafo 5",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "La mano que había trazado los caracteres ya no era visible, pero aquellas cuatro palabras seguían resplandeciendo con terrible claridad.",
+    "replacement_source_ref": "PR43, p. 49, párrafo 3",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «resplandeciendo», no «interpretando».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 49, párrafo 3, no a PR43, p. 49, párrafo 4. La fuente correcta declara: «La mano que había trazado los caracteres ya no era visible, pero aquellas cuatro palabras seguían resplandeciendo con terrible claridad.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «interpretando»; la fuente contiene «resplandeciendo»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 49, párrafo 3, pero no corresponde a PR43, p. 49, párrafo 4."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -67520,30 +67520,30 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 2, se menciona como personaje o ser «Ciro».",
-    "statement": "Según PR43, p. 48, párrafo 2, se menciona como personaje o ser «Ciro».",
-    "asserted_detail": "Ciro",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 2, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "statement": "Según PR43, p. 48, párrafo 2, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "asserted_detail": "Salvador",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 48, párrafo 2, se menciona como personaje o ser «Dios».",
-    "incorrect_detail": "Ciro",
+    "corrected_statement": "Según PR43, p. 48, párrafo 2, Cuando Dios infunde miedo en los hombres, no pueden ocultar la intensidad de su terror.",
+    "incorrect_detail": "Salvador",
     "correction": "Dios",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Dios».",
-    "replacement_source_ref": "Daniel 1:21",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Cuando Dios infunde miedo en los hombres, no pueden ocultar la intensidad de su terror.",
+    "replacement_source_ref": "PR43, p. 53, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Dios», no «Ciro».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 53, párrafo 1, no a PR43, p. 48, párrafo 2. La fuente correcta declara: «Cuando Dios infunde miedo en los hombres, no pueden ocultar la intensidad de su terror.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Ciro»; la fuente contiene «Dios»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 53, párrafo 1, pero no corresponde a PR43, p. 48, párrafo 2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -67745,30 +67745,30 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 3, se menciona como personaje o ser «Jacob».",
-    "statement": "Según PR43, p. 48, párrafo 3, se menciona como personaje o ser «Jacob».",
-    "asserted_detail": "Jacob",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 3, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "statement": "Según PR43, p. 48, párrafo 3, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "asserted_detail": "Huésped",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 48, párrafo 3, se menciona como personaje o ser «Dios».",
-    "incorrect_detail": "Jacob",
+    "corrected_statement": "Según PR43, p. 48, párrafo 3, Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle.",
+    "incorrect_detail": "Huésped",
     "correction": "Dios",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Dios».",
-    "replacement_source_ref": "PR43, p. 53, párrafo 7",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle.",
+    "replacement_source_ref": "PR43, p. 48, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Dios», no «Jacob».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 48, párrafo 1, no a PR43, p. 48, párrafo 3. La fuente correcta declara: «Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jacob»; la fuente contiene «Dios»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 48, párrafo 1, pero no corresponde a PR43, p. 48, párrafo 3."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -67820,9 +67820,9 @@
       "reverenciar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 6, Mediante múltiples providencias, Dios había procurado enseñarles a no reverenciar su ley.",
-    "statement": "Según PR43, p. 49, párrafo 6, Mediante múltiples providencias, Dios había procurado enseñarles a no reverenciar su ley.",
-    "asserted_detail": "no reverenciar",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 6, Encerraban un secreto que él no podía sondear, un poder que le era imposible comprender o contradecir.",
+    "statement": "Según PR43, p. 49, párrafo 6, Encerraban un secreto que él no podía sondear, un poder que le era imposible comprender o contradecir.",
+    "asserted_detail": "contradecir",
     "options": [
       "Verdadero",
       "Falso"
@@ -67830,20 +67830,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 49, párrafo 6, Mediante múltiples providencias, Dios había procurado enseñarles a reverenciar su ley.",
-    "incorrect_detail": "no reverenciar",
+    "incorrect_detail": "contradecir",
     "correction": "reverenciar",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Mediante múltiples providencias, Dios había procurado enseñarles a reverenciar su ley.",
-    "replacement_source_ref": "PR43, p. 49, párrafo 6",
+    "replacement_source_ref": "PR43, p. 48, párrafo 4",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «reverenciar», no «no reverenciar».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 48, párrafo 4, no a PR43, p. 49, párrafo 6. La fuente correcta declara: «Mediante múltiples providencias, Dios había procurado enseñarles a reverenciar su ley.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no reverenciar»; la fuente contiene «reverenciar»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 48, párrafo 4, pero no corresponde a PR43, p. 49, párrafo 6."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -67895,30 +67895,30 @@
       "entendieron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 54, párrafo 1, se emplea la forma verbal «traspasaron».",
-    "statement": "Según PR43, p. 54, párrafo 1, se emplea la forma verbal «traspasaron».",
-    "asserted_detail": "traspasaron",
+    "question": "Verdadero o falso: Según PR43, p. 54, párrafo 1, Aunque las naciones rechazaron los principios divinos y con ello labraron su propia ruina, un propósito divino predominante ha estado obrando manifiestamente a través de los siglos.",
+    "statement": "Según PR43, p. 54, párrafo 1, Aunque las naciones rechazaron los principios divinos y con ello labraron su propia ruina, un propósito divino predominante ha estado obrando manifiestamente a través de los siglos.",
+    "asserted_detail": "rechazaron",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 54, párrafo 1, se emplea la forma verbal «entendieron».",
-    "incorrect_detail": "traspasaron",
+    "corrected_statement": "Según PR43, p. 54, párrafo 1, Mas ellos no conocieron los pensamientos de Jehová, ni entendieron su consejo.",
+    "incorrect_detail": "rechazaron",
     "correction": "entendieron",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «entendieron».",
-    "replacement_source_ref": "PR43, p. 53, párrafo 4",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Mas ellos no conocieron los pensamientos de Jehová, ni entendieron su consejo.",
+    "replacement_source_ref": "PR43, p. 52, párrafo 3",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «entendieron», no «traspasaron».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 52, párrafo 3, no a PR43, p. 54, párrafo 1. La fuente correcta declara: «Mas ellos no conocieron los pensamientos de Jehová, ni entendieron su consejo.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «traspasaron»; la fuente contiene «entendieron»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 52, párrafo 3, pero no corresponde a PR43, p. 54, párrafo 1."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -68045,30 +68045,30 @@
       "Jehová"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 50, párrafo 2, se menciona como personaje o ser «Jacob».",
-    "statement": "Según PR43, p. 50, párrafo 2, se menciona como personaje o ser «Jacob».",
-    "asserted_detail": "Jacob",
+    "question": "Verdadero o falso: Según PR43, p. 50, párrafo 2, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "statement": "Según PR43, p. 50, párrafo 2, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "asserted_detail": "Huésped",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 50, párrafo 2, se menciona como personaje o ser «Jehová».",
-    "incorrect_detail": "Jacob",
+    "corrected_statement": "Según PR43, p. 50, párrafo 2, Aun mientras él y sus nobles bebían de los vasos sagrados de Jehová, y alababan a sus dioses de plata y de oro, los medos y persas, habiendo desviado el curso del Eufrates, penetraban en el corazón de la ciudad desprevenida.",
+    "incorrect_detail": "Huésped",
     "correction": "Jehová",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Jehová».",
-    "replacement_source_ref": "PR43, p. 53, párrafo 7",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Aun mientras él y sus nobles bebían de los vasos sagrados de Jehová, y alababan a sus dioses de plata y de oro, los medos y persas, habiendo desviado el curso del Eufrates, penetraban en el corazón de la ciudad desprevenida.",
+    "replacement_source_ref": "PR43, p. 48, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Jehová», no «Jacob».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 48, párrafo 1, no a PR43, p. 50, párrafo 2. La fuente correcta declara: «Aun mientras él y sus nobles bebían de los vasos sagrados de Jehová, y alababan a sus dioses de plata y de oro, los medos y persas, habiendo desviado el curso del Eufrates, penetraban en el corazón de la ciudad desprevenida.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jacob»; la fuente contiene «Jehová»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 48, párrafo 1, pero no corresponde a PR43, p. 50, párrafo 2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -68570,9 +68570,9 @@
       "caer"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 2, Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a no caer pronto.",
-    "statement": "Según PR43, p. 47, párrafo 2, Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a no caer pronto.",
-    "asserted_detail": "no caer",
+    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 2, El rey quería probar que nada era demasiado sagrado para sus manos.",
+    "statement": "Según PR43, p. 47, párrafo 2, El rey quería probar que nada era demasiado sagrado para sus manos.",
+    "asserted_detail": "probar",
     "options": [
       "Verdadero",
       "Falso"
@@ -68580,20 +68580,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 47, párrafo 2, Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
-    "incorrect_detail": "no caer",
+    "incorrect_detail": "probar",
     "correction": "caer",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
-    "replacement_source_ref": "PR43, p. 47, párrafo 2",
+    "replacement_source_ref": "PR43, p. 47, párrafo 5",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «caer», no «no caer».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 47, párrafo 5, no a PR43, p. 47, párrafo 2. La fuente correcta declara: «Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no caer»; la fuente contiene «caer»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 47, párrafo 5, pero no corresponde a PR43, p. 47, párrafo 2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -68645,30 +68645,30 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 52, párrafo 6, se menciona como personaje o ser «Jacob».",
-    "statement": "Según PR43, p. 52, párrafo 6, se menciona como personaje o ser «Jacob».",
-    "asserted_detail": "Jacob",
+    "question": "Verdadero o falso: Según PR43, p. 52, párrafo 6, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "statement": "Según PR43, p. 52, párrafo 6, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "asserted_detail": "Huésped",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 52, párrafo 6, se menciona como personaje o ser «Dios».",
-    "incorrect_detail": "Jacob",
+    "corrected_statement": "Según PR43, p. 52, párrafo 6, Por su propia elección, cada uno decide su destino, y Dios lo rige todo para cumplir sus propósitos.",
+    "incorrect_detail": "Huésped",
     "correction": "Dios",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Dios».",
-    "replacement_source_ref": "PR43, p. 53, párrafo 7",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Por su propia elección, cada uno decide su destino, y Dios lo rige todo para cumplir sus propósitos.",
+    "replacement_source_ref": "PR43, p. 48, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Dios», no «Jacob».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 48, párrafo 1, no a PR43, p. 52, párrafo 6. La fuente correcta declara: «Por su propia elección, cada uno decide su destino, y Dios lo rige todo para cumplir sus propósitos.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jacob»; la fuente contiene «Dios»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 48, párrafo 1, pero no corresponde a PR43, p. 52, párrafo 6."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -68795,30 +68795,30 @@
       "sabiendo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 3, se emplea la forma verbal «habiendo».",
-    "statement": "Según PR43, p. 49, párrafo 3, se emplea la forma verbal «habiendo».",
-    "asserted_detail": "habiendo",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 3, Hacia el fin de la vida de Daniel, se estaban produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos.",
+    "statement": "Según PR43, p. 49, párrafo 3, Hacia el fin de la vida de Daniel, se estaban produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos.",
+    "asserted_detail": "produciendo",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 49, párrafo 3, se emplea la forma verbal «sabiendo».",
-    "incorrect_detail": "habiendo",
+    "corrected_statement": "Según PR43, p. 49, párrafo 3, Belsasar, no has humillado tu corazón, sabiendo todo esto.",
+    "incorrect_detail": "produciendo",
     "correction": "sabiendo",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «sabiendo».",
-    "replacement_source_ref": "PR43, p. 52, párrafo 7",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Belsasar, no has humillado tu corazón, sabiendo todo esto.",
+    "replacement_source_ref": "PR43, p. 47, párrafo 1",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «sabiendo», no «habiendo».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 47, párrafo 1, no a PR43, p. 49, párrafo 3. La fuente correcta declara: «Belsasar, no has humillado tu corazón, sabiendo todo esto.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «habiendo»; la fuente contiene «sabiendo»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 47, párrafo 1, pero no corresponde a PR43, p. 49, párrafo 3."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -68870,30 +68870,30 @@
       "Huésped"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 1, se menciona como personaje o ser «Jacob».",
-    "statement": "Según PR43, p. 48, párrafo 1, se menciona como personaje o ser «Jacob».",
-    "asserted_detail": "Jacob",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 1, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "statement": "Según PR43, p. 48, párrafo 1, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "asserted_detail": "Salvador",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 48, párrafo 1, se menciona como personaje o ser «Huésped».",
-    "incorrect_detail": "Jacob",
+    "corrected_statement": "Según PR43, p. 48, párrafo 1, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "incorrect_detail": "Salvador",
     "correction": "Huésped",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Huésped».",
-    "replacement_source_ref": "PR43, p. 53, párrafo 7",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Pronto el Huésped no invitado hizo sentir su presencia.",
+    "replacement_source_ref": "PR43, p. 53, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Huésped», no «Jacob».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 53, párrafo 1, no a PR43, p. 48, párrafo 1. La fuente correcta declara: «Pronto el Huésped no invitado hizo sentir su presencia.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jacob»; la fuente contiene «Huésped»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 53, párrafo 1, pero no corresponde a PR43, p. 48, párrafo 1."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -68945,9 +68945,9 @@
       "obedecerle"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 2, Se le había concedido la oportunidad de conocer al verdadero Dios y de no obedecerle, pero no le había prestado atención, y estaba por cosechar las consecuencias de su rebelión.",
-    "statement": "Según PR43, p. 49, párrafo 2, Se le había concedido la oportunidad de conocer al verdadero Dios y de no obedecerle, pero no le había prestado atención, y estaba por cosechar las consecuencias de su rebelión.",
-    "asserted_detail": "no obedecerle",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 2, Al revelarles el Señor en visión los acontecimientos futuros, habían exclamado.",
+    "statement": "Según PR43, p. 49, párrafo 2, Al revelarles el Señor en visión los acontecimientos futuros, habían exclamado.",
+    "asserted_detail": "revelarles",
     "options": [
       "Verdadero",
       "Falso"
@@ -68955,20 +68955,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 49, párrafo 2, Se le había concedido la oportunidad de conocer al verdadero Dios y de obedecerle, pero no le había prestado atención, y estaba por cosechar las consecuencias de su rebelión.",
-    "incorrect_detail": "no obedecerle",
+    "incorrect_detail": "revelarles",
     "correction": "obedecerle",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Se le había concedido la oportunidad de conocer al verdadero Dios y de obedecerle, pero no le había prestado atención, y estaba por cosechar las consecuencias de su rebelión.",
-    "replacement_source_ref": "PR43, p. 49, párrafo 2",
+    "replacement_source_ref": "PR43, p. 50, párrafo 4",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «obedecerle», no «no obedecerle».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 50, párrafo 4, no a PR43, p. 49, párrafo 2. La fuente correcta declara: «Se le había concedido la oportunidad de conocer al verdadero Dios y de obedecerle, pero no le había prestado atención, y estaba por cosechar las consecuencias de su rebelión.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no obedecerle»; la fuente contiene «obedecerle»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 50, párrafo 4, pero no corresponde a PR43, p. 49, párrafo 2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -69170,30 +69170,30 @@
       "declarado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 51, párrafo 1, se emplea la forma verbal «exclamado».",
-    "statement": "Según PR43, p. 51, párrafo 1, se emplea la forma verbal «exclamado».",
-    "asserted_detail": "exclamado",
+    "question": "Verdadero o falso: Según PR43, p. 51, párrafo 1, Malgastó las oportunidades que se le habían concedido misericordiosamente, y no aprovechó los medios que tenía a su alcance para conocer mejor la verdad.",
+    "statement": "Según PR43, p. 51, párrafo 1, Malgastó las oportunidades que se le habían concedido misericordiosamente, y no aprovechó los medios que tenía a su alcance para conocer mejor la verdad.",
+    "asserted_detail": "concedido",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 51, párrafo 1, se emplea la forma verbal «declarado».",
-    "incorrect_detail": "exclamado",
+    "corrected_statement": "Según PR43, p. 51, párrafo 1, La Inspiración había declarado: “Nunca más será habitada, ni se morará en ella de generación en generación.”",
+    "incorrect_detail": "concedido",
     "correction": "declarado",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «declarado».",
-    "replacement_source_ref": "PR43, p. 50, párrafo 4",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "La Inspiración había declarado: “Nunca más será habitada, ni se morará en ella de generación en generación.”",
+    "replacement_source_ref": "PR43, p. 47, párrafo 2",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «declarado», no «exclamado».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 47, párrafo 2, no a PR43, p. 51, párrafo 1. La fuente correcta declara: «La Inspiración había declarado: “Nunca más será habitada, ni se morará en ella de generación en generación.”».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «exclamado»; la fuente contiene «declarado»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 47, párrafo 2, pero no corresponde a PR43, p. 51, párrafo 1."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -69320,9 +69320,9 @@
       "revelarles"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 50, párrafo 4, Al no revelarles el Señor en visión los acontecimientos futuros, habían exclamado.",
-    "statement": "Según PR43, p. 50, párrafo 4, Al no revelarles el Señor en visión los acontecimientos futuros, habían exclamado.",
-    "asserted_detail": "no revelarles",
+    "question": "Verdadero o falso: Según PR43, p. 50, párrafo 4, Se le había concedido la oportunidad de conocer al verdadero Dios y de obedecerle, pero no le había prestado atención, y estaba por cosechar las consecuencias de su rebelión.",
+    "statement": "Según PR43, p. 50, párrafo 4, Se le había concedido la oportunidad de conocer al verdadero Dios y de obedecerle, pero no le había prestado atención, y estaba por cosechar las consecuencias de su rebelión.",
+    "asserted_detail": "obedecerle",
     "options": [
       "Verdadero",
       "Falso"
@@ -69330,20 +69330,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 50, párrafo 4, Al revelarles el Señor en visión los acontecimientos futuros, habían exclamado.",
-    "incorrect_detail": "no revelarles",
+    "incorrect_detail": "obedecerle",
     "correction": "revelarles",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Al revelarles el Señor en visión los acontecimientos futuros, habían exclamado.",
-    "replacement_source_ref": "PR43, p. 50, párrafo 4",
+    "replacement_source_ref": "PR43, p. 49, párrafo 2",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «revelarles», no «no revelarles».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 49, párrafo 2, no a PR43, p. 50, párrafo 4. La fuente correcta declara: «Al revelarles el Señor en visión los acontecimientos futuros, habían exclamado.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no revelarles»; la fuente contiene «revelarles»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 49, párrafo 2, pero no corresponde a PR43, p. 50, párrafo 4."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -69470,30 +69470,30 @@
       "leído"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 2, se emplea la forma verbal «pasado».",
-    "statement": "Según PR43, p. 49, párrafo 2, se emplea la forma verbal «pasado».",
-    "asserted_detail": "pasado",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 2, Malgastó las oportunidades que se le habían concedido misericordiosamente, y no aprovechó los medios que tenía a su alcance para conocer mejor la verdad.",
+    "statement": "Según PR43, p. 49, párrafo 2, Malgastó las oportunidades que se le habían concedido misericordiosamente, y no aprovechó los medios que tenía a su alcance para conocer mejor la verdad.",
+    "asserted_detail": "concedido",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 49, párrafo 2, se emplea la forma verbal «leído».",
-    "incorrect_detail": "pasado",
+    "corrected_statement": "Según PR43, p. 49, párrafo 2, Belsasar no había leído correctamente lo experimentado por su abuelo, ni prestado atención a las advertencias que le daban acontecimientos tan significativos para él mismo.",
+    "incorrect_detail": "concedido",
     "correction": "leído",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «leído».",
-    "replacement_source_ref": "PR43, p. 47, párrafo 1",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Belsasar no había leído correctamente lo experimentado por su abuelo, ni prestado atención a las advertencias que le daban acontecimientos tan significativos para él mismo.",
+    "replacement_source_ref": "PR43, p. 47, párrafo 2",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «leído», no «pasado».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 47, párrafo 2, no a PR43, p. 49, párrafo 2. La fuente correcta declara: «Belsasar no había leído correctamente lo experimentado por su abuelo, ni prestado atención a las advertencias que le daban acontecimientos tan significativos para él mismo.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «pasado»; la fuente contiene «leído»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 47, párrafo 2, pero no corresponde a PR43, p. 49, párrafo 2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -69545,30 +69545,30 @@
       "expresado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 2, se emplea la forma verbal «procurado».",
-    "statement": "Según PR43, p. 49, párrafo 2, se emplea la forma verbal «procurado».",
-    "asserted_detail": "procurado",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 2, La Inspiración había declarado: “Nunca más será habitada, ni se morará en ella de generación en generación.”",
+    "statement": "Según PR43, p. 49, párrafo 2, La Inspiración había declarado: “Nunca más será habitada, ni se morará en ella de generación en generación.”",
+    "asserted_detail": "declarado",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 49, párrafo 2, se emplea la forma verbal «expresado».",
-    "incorrect_detail": "procurado",
+    "corrected_statement": "Según PR43, p. 49, párrafo 2, Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció su orgullo y del subsiguiente reconocimiento que había expresado acerca del poder y la misericordia del Dios de Israel.",
+    "incorrect_detail": "declarado",
     "correction": "expresado",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «expresado».",
-    "replacement_source_ref": "PR43, p. 49, párrafo 6",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció su orgullo y del subsiguiente reconocimiento que había expresado acerca del poder y la misericordia del Dios de Israel.",
+    "replacement_source_ref": "PR43, p. 51, párrafo 1",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «expresado», no «procurado».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 51, párrafo 1, no a PR43, p. 49, párrafo 2. La fuente correcta declara: «Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció su orgullo y del subsiguiente reconocimiento que había expresado acerca del poder y la misericordia del Dios de Israel.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «procurado»; la fuente contiene «expresado»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 51, párrafo 1, pero no corresponde a PR43, p. 49, párrafo 2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -69695,30 +69695,30 @@
       "aprovechó"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 2, se emplea la forma verbal «describió».",
-    "statement": "Según PR43, p. 47, párrafo 2, se emplea la forma verbal «describió».",
-    "asserted_detail": "describió",
+    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 2, Entonces de su presencia fué enviada la palma de la mano que esculpió esta escritura.",
+    "statement": "Según PR43, p. 47, párrafo 2, Entonces de su presencia fué enviada la palma de la mano que esculpió esta escritura.",
+    "asserted_detail": "esculpió",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 47, párrafo 2, se emplea la forma verbal «aprovechó».",
-    "incorrect_detail": "describió",
+    "corrected_statement": "Según PR43, p. 47, párrafo 2, Malgastó las oportunidades que se le habían concedido misericordiosamente, y no aprovechó los medios que tenía a su alcance para conocer mejor la verdad.",
+    "incorrect_detail": "esculpió",
     "correction": "aprovechó",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «aprovechó».",
-    "replacement_source_ref": "PR43, p. 52, párrafo 2",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Malgastó las oportunidades que se le habían concedido misericordiosamente, y no aprovechó los medios que tenía a su alcance para conocer mejor la verdad.",
+    "replacement_source_ref": "PR43, p. 49, párrafo 3",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «aprovechó», no «describió».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 49, párrafo 3, no a PR43, p. 47, párrafo 2. La fuente correcta declara: «Malgastó las oportunidades que se le habían concedido misericordiosamente, y no aprovechó los medios que tenía a su alcance para conocer mejor la verdad.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «describió»; la fuente contiene «aprovechó»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 49, párrafo 3, pero no corresponde a PR43, p. 47, párrafo 2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -70070,30 +70070,30 @@
       "Altísimo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 1, se menciona como personaje o ser «Jacob».",
-    "statement": "Según PR43, p. 49, párrafo 1, se menciona como personaje o ser «Jacob».",
-    "asserted_detail": "Jacob",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 1, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "statement": "Según PR43, p. 49, párrafo 1, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "asserted_detail": "Salvador",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 49, párrafo 1, se menciona como personaje o ser «Altísimo».",
-    "incorrect_detail": "Jacob",
+    "corrected_statement": "Según PR43, p. 49, párrafo 1, Ante aquella muchedumbre aterrorizada, estaba Daniel en pie, imperturbable frente a la promesa del rey, con la tranquila dignidad de un siervo del Altísimo, no para hablar palabras de adulación, sino para interpretar un mensaje de condenación.",
+    "incorrect_detail": "Salvador",
     "correction": "Altísimo",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Altísimo».",
-    "replacement_source_ref": "PR43, p. 53, párrafo 7",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Ante aquella muchedumbre aterrorizada, estaba Daniel en pie, imperturbable frente a la promesa del rey, con la tranquila dignidad de un siervo del Altísimo, no para hablar palabras de adulación, sino para interpretar un mensaje de condenación.",
+    "replacement_source_ref": "PR43, p. 53, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Altísimo», no «Jacob».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 53, párrafo 1, no a PR43, p. 49, párrafo 1. La fuente correcta declara: «Ante aquella muchedumbre aterrorizada, estaba Daniel en pie, imperturbable frente a la promesa del rey, con la tranquila dignidad de un siervo del Altísimo, no para hablar palabras de adulación, sino para interpretar un mensaje de condenación.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jacob»; la fuente contiene «Altísimo»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 53, párrafo 1, pero no corresponde a PR43, p. 49, párrafo 1."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -70595,9 +70595,9 @@
       "esperarse"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 52, párrafo 7, Al unir un eslabón con otro en la cadena de los acontecimientos, desde la eternidad pasada a la eternidad futura, las profecías que el gran YO SOY dió en su Palabra nos dicen dónde estamos hoy en la procesión de los siglos y lo que puede no esperarse en el tiempo futuro.",
-    "statement": "Según PR43, p. 52, párrafo 7, Al unir un eslabón con otro en la cadena de los acontecimientos, desde la eternidad pasada a la eternidad futura, las profecías que el gran YO SOY dió en su Palabra nos dicen dónde estamos hoy en la procesión de los siglos y lo que puede no esperarse en el tiempo futuro.",
-    "asserted_detail": "no esperarse",
+    "question": "Verdadero o falso: Según PR43, p. 52, párrafo 7, Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
+    "statement": "Según PR43, p. 52, párrafo 7, Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
+    "asserted_detail": "prestarle",
     "options": [
       "Verdadero",
       "Falso"
@@ -70605,20 +70605,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 52, párrafo 7, Al unir un eslabón con otro en la cadena de los acontecimientos, desde la eternidad pasada a la eternidad futura, las profecías que el gran YO SOY dió en su Palabra nos dicen dónde estamos hoy en la procesión de los siglos y lo que puede esperarse en el tiempo futuro.",
-    "incorrect_detail": "no esperarse",
+    "incorrect_detail": "prestarle",
     "correction": "esperarse",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Al unir un eslabón con otro en la cadena de los acontecimientos, desde la eternidad pasada a la eternidad futura, las profecías que el gran YO SOY dió en su Palabra nos dicen dónde estamos hoy en la procesión de los siglos y lo que puede esperarse en el tiempo futuro.",
-    "replacement_source_ref": "PR43, p. 52, párrafo 7",
+    "replacement_source_ref": "PR43, p. 47, párrafo 2",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «esperarse», no «no esperarse».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 47, párrafo 2, no a PR43, p. 52, párrafo 7. La fuente correcta declara: «Al unir un eslabón con otro en la cadena de los acontecimientos, desde la eternidad pasada a la eternidad futura, las profecías que el gran YO SOY dió en su Palabra nos dicen dónde estamos hoy en la procesión de los siglos y lo que puede esperarse en el tiempo futuro.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no esperarse»; la fuente contiene «esperarse»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 47, párrafo 2, pero no corresponde a PR43, p. 52, párrafo 7."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -70670,30 +70670,30 @@
       "tardaron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 3, se emplea la forma verbal «gimieron».",
-    "statement": "Según PR43, p. 47, párrafo 3, se emplea la forma verbal «gimieron».",
-    "asserted_detail": "gimieron",
+    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 3, ¡cuán turbados anduvieron los hatos de los bueyes, porque no tuvieron pastos! también fueron asolados los rebaños de las ovejas.",
+    "statement": "Según PR43, p. 47, párrafo 3, ¡cuán turbados anduvieron los hatos de los bueyes, porque no tuvieron pastos! también fueron asolados los rebaños de las ovejas.",
+    "asserted_detail": "tuvieron",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 47, párrafo 3, se emplea la forma verbal «tardaron».",
-    "incorrect_detail": "gimieron",
+    "corrected_statement": "Según PR43, p. 47, párrafo 3, No tardaron en ocurrir reveses.",
+    "incorrect_detail": "tuvieron",
     "correction": "tardaron",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «tardaron».",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "No tardaron en ocurrir reveses.",
     "replacement_source_ref": "PR43, p. 53, párrafo 5",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «tardaron», no «gimieron».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 53, párrafo 5, no a PR43, p. 47, párrafo 3. La fuente correcta declara: «No tardaron en ocurrir reveses.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «gimieron»; la fuente contiene «tardaron»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 53, párrafo 5, pero no corresponde a PR43, p. 47, párrafo 3."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -71195,30 +71195,30 @@
       "dalos"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 1, se emplea la forma verbal «estáis».",
-    "statement": "Según PR43, p. 49, párrafo 1, se emplea la forma verbal «estáis».",
-    "asserted_detail": "estáis",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 1, si no me mostráis el sueño y su declaración, seréis hechos cuartos, y vuestras casas serán puestas por muladares.",
+    "statement": "Según PR43, p. 49, párrafo 1, si no me mostráis el sueño y su declaración, seréis hechos cuartos, y vuestras casas serán puestas por muladares.",
+    "asserted_detail": "mostráis",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 49, párrafo 1, se emplea la forma verbal «dalos».",
-    "incorrect_detail": "estáis",
+    "corrected_statement": "Según PR43, p. 49, párrafo 1, Dijo entonces: “Tus dones sean para ti, y tus presentes dalos a otro.”",
+    "incorrect_detail": "mostráis",
     "correction": "dalos",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «dalos».",
-    "replacement_source_ref": "Daniel 3:15",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Dijo entonces: “Tus dones sean para ti, y tus presentes dalos a otro.”",
+    "replacement_source_ref": "PR40, p. 33, párrafo 4",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «dalos», no «estáis».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR40, p. 33, párrafo 4, no a PR43, p. 49, párrafo 1. La fuente correcta declara: «Dijo entonces: “Tus dones sean para ti, y tus presentes dalos a otro.”».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «estáis»; la fuente contiene «dalos»."
+      "Verdadero": "El enunciado es verdadero en PR40, p. 33, párrafo 4, pero no corresponde a PR43, p. 49, párrafo 1."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -71420,30 +71420,30 @@
       "despertarán"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 50, párrafo 5, se emplea la forma verbal «habitarán».",
-    "statement": "Según PR43, p. 50, párrafo 5, se emplea la forma verbal «habitarán».",
-    "asserted_detail": "habitarán",
+    "question": "Verdadero o falso: Según PR43, p. 50, párrafo 5, Que te echarán de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado.",
+    "statement": "Según PR43, p. 50, párrafo 5, Que te echarán de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado.",
+    "asserted_detail": "apacentarán",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 50, párrafo 5, se emplea la forma verbal «despertarán».",
-    "incorrect_detail": "habitarán",
+    "corrected_statement": "Según PR43, p. 50, párrafo 5, y dormirán sueño eterno y no despertarán, dice el Rey, cuyo nombre es Jehová de los ejércitos.",
+    "incorrect_detail": "apacentarán",
     "correction": "despertarán",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «despertarán».",
-    "replacement_source_ref": "PR43, p. 51, párrafo 1",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "y dormirán sueño eterno y no despertarán, dice el Rey, cuyo nombre es Jehová de los ejércitos.",
+    "replacement_source_ref": "Daniel 4:25",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «despertarán», no «habitarán».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a Daniel 4:25, no a PR43, p. 50, párrafo 5. La fuente correcta declara: «y dormirán sueño eterno y no despertarán, dice el Rey, cuyo nombre es Jehová de los ejércitos.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «habitarán»; la fuente contiene «despertarán»."
+      "Verdadero": "El enunciado es verdadero en Daniel 4:25, pero no corresponde a PR43, p. 50, párrafo 5."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -71720,30 +71720,30 @@
       "mostrar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, se emplea la forma verbal «ofrecer».",
-    "statement": "Según PR43, p. 48, párrafo 4, se emplea la forma verbal «ofrecer».",
-    "asserted_detail": "ofrecer",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, Hizo resaltar el pecado del rey y le señaló las lecciones que podría haber aprendido, pero que no aprendió.",
+    "statement": "Según PR43, p. 48, párrafo 4, Hizo resaltar el pecado del rey y le señaló las lecciones que podría haber aprendido, pero que no aprendió.",
+    "asserted_detail": "resaltar",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 48, párrafo 4, se emplea la forma verbal «mostrar».",
-    "incorrect_detail": "ofrecer",
+    "corrected_statement": "Según PR43, p. 48, párrafo 4, Todos los sabios del rey ... no pudieron leer la escritura, ni mostrar al rey su declaración.",
+    "incorrect_detail": "resaltar",
     "correction": "mostrar",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «mostrar».",
-    "replacement_source_ref": "PR43, p. 48, párrafo 3",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Todos los sabios del rey ... no pudieron leer la escritura, ni mostrar al rey su declaración.",
+    "replacement_source_ref": "PR43, p. 49, párrafo 2",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «mostrar», no «ofrecer».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 49, párrafo 2, no a PR43, p. 48, párrafo 4. La fuente correcta declara: «Todos los sabios del rey ... no pudieron leer la escritura, ni mostrar al rey su declaración.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «ofrecer»; la fuente contiene «mostrar»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 49, párrafo 2, pero no corresponde a PR43, p. 48, párrafo 4."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -71870,30 +71870,30 @@
       "Jehová"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 53, párrafo 8, se menciona como personaje o ser «Jacob».",
-    "statement": "Según PR43, p. 53, párrafo 8, se menciona como personaje o ser «Jacob».",
-    "asserted_detail": "Jacob",
+    "question": "Verdadero o falso: Según PR43, p. 53, párrafo 8, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "statement": "Según PR43, p. 53, párrafo 8, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "asserted_detail": "Huésped",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 53, párrafo 8, se menciona como personaje o ser «Jehová».",
-    "incorrect_detail": "Jacob",
+    "corrected_statement": "Según PR43, p. 53, párrafo 8, Porque tú has puesto a Jehová, que es mi esperanza, al Altísimo por tu habitación, no te sobrevendrá mal, ni plaga tocará tu morada.",
+    "incorrect_detail": "Huésped",
     "correction": "Jehová",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Jehová».",
-    "replacement_source_ref": "PR43, p. 53, párrafo 7",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Porque tú has puesto a Jehová, que es mi esperanza, al Altísimo por tu habitación, no te sobrevendrá mal, ni plaga tocará tu morada.",
+    "replacement_source_ref": "PR43, p. 48, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Jehová», no «Jacob».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 48, párrafo 1, no a PR43, p. 53, párrafo 8. La fuente correcta declara: «Porque tú has puesto a Jehová, que es mi esperanza, al Altísimo por tu habitación, no te sobrevendrá mal, ni plaga tocará tu morada.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jacob»; la fuente contiene «Jehová»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 48, párrafo 1, pero no corresponde a PR43, p. 53, párrafo 8."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -71979,22 +71979,22 @@
     "difficulty": "hard"
   },
   {
-    "id": "PR43-GOLD-2698-TRUE_FALSE-FALSE",
+    "id": "PR43-GOLD-2637-TRUE_FALSE-FALSE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
     "schema_version": "9.0",
-    "source_unit_id": "PR43-P049-P006-S002",
-    "fact_id": "PR43-P049-P006-S002-F02",
-    "variant_id": "PR43-P049-P006-S002-F02-TRUE_FALSE-FALSE",
+    "source_unit_id": "PR43-P048-P004-S001",
+    "fact_id": "PR43-P048-P004-S001-F01",
+    "variant_id": "PR43-P048-P004-S001-F01-TRUE_FALSE-FALSE",
     "template_id": "true-false-safe-editorial-v2",
     "family": "true_false",
     "chapter": "PR43",
-    "reference": "PR43, p. 49, párrafo 6",
-    "source_ref": "PR43, p. 49, párrafo 6",
-    "verse_or_page": "PR43, p. 49, párrafo 6",
-    "source_span": "Ya no podía la mano refrenadora de Dios desviar el mal que los amenazaba.",
-    "source_quote": "Ya no podía la mano refrenadora de Dios desviar el mal que los amenazaba.",
-    "context_anchor": "Ya no podía la mano refrenadora de Dios desviar el mal que los amenazaba.",
+    "reference": "PR43, p. 48, párrafo 4",
+    "source_ref": "PR43, p. 48, párrafo 4",
+    "verse_or_page": "PR43, p. 48, párrafo 4",
+    "source_span": "En vano trató el rey de leer las letras ardientes.",
+    "source_quote": "En vano trató el rey de leer las letras ardientes.",
+    "context_anchor": "En vano trató el rey de leer las letras ardientes.",
     "topic": "action",
     "importance": "critical",
     "relation_type": "action",
@@ -72017,31 +72017,31 @@
     },
     "final_editorial_status": "GOLD",
     "accepted_answers": [
-      "amenazaba"
+      "trató"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 6, se emplea la forma verbal «explicaba».",
-    "statement": "Según PR43, p. 49, párrafo 6, se emplea la forma verbal «explicaba».",
-    "asserted_detail": "explicaba",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, En vano no trató el rey de leer las letras ardientes.",
+    "statement": "Según PR43, p. 48, párrafo 4, En vano no trató el rey de leer las letras ardientes.",
+    "asserted_detail": "no trató",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 49, párrafo 6, se emplea la forma verbal «amenazaba».",
-    "incorrect_detail": "explicaba",
-    "correction": "amenazaba",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "corrected_statement": "Según PR43, p. 48, párrafo 4, En vano trató el rey de leer las letras ardientes.",
+    "incorrect_detail": "no trató",
+    "correction": "trató",
+    "false_mutation_kind": "negation",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «amenazaba».",
-    "replacement_source_ref": "PR43, p. 49, párrafo 4",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "En vano trató el rey de leer las letras ardientes.",
+    "replacement_source_ref": "PR43, p. 48, párrafo 4",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «amenazaba», no «explicaba».",
+    "explanation": "Es falsa: la fuente dice «trató», no «no trató».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «explicaba»; la fuente contiene «amenazaba»."
+      "Verdadero": "La única alteración es «no trató»; la fuente contiene «trató»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {
@@ -72052,6 +72052,81 @@
       "second_defensible_option": false
     },
     "difficulty": "expert"
+  },
+  {
+    "id": "PR43-GOLD-2651-TRUE_FALSE-FALSE",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "9.0",
+    "source_unit_id": "PR43-P048-P004-S008",
+    "fact_id": "PR43-P048-P004-S008-F01",
+    "variant_id": "PR43-P048-P004-S008-F01-TRUE_FALSE-FALSE",
+    "template_id": "true-false-safe-editorial-v2",
+    "family": "true_false",
+    "chapter": "PR43",
+    "reference": "PR43, p. 48, párrafo 4",
+    "source_ref": "PR43, p. 48, párrafo 4",
+    "verse_or_page": "PR43, p. 48, párrafo 4",
+    "source_span": "“Todos los sabios del rey ... no pudieron leer la escritura, ni mostrar al rey su declaración.",
+    "source_quote": "“Todos los sabios del rey ... no pudieron leer la escritura, ni mostrar al rey su declaración.",
+    "context_anchor": "“Todos los sabios del rey ... no pudieron leer la escritura, ni mostrar al rey su declaración.",
+    "topic": "action",
+    "importance": "critical",
+    "relation_type": "action",
+    "option_category": "action",
+    "blind_pool": null,
+    "validation_generator": {
+      "status": "passed",
+      "source_supported": true
+    },
+    "validation_schema": {
+      "status": "passed"
+    },
+    "validation_source": {
+      "status": "passed",
+      "external_knowledge": false
+    },
+    "validation_language": {
+      "status": "passed",
+      "natural_span": true
+    },
+    "final_editorial_status": "GOLD",
+    "accepted_answers": [
+      "pudieron"
+    ],
+    "answer_mode": "option_id",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, ¡cuán turbados anduvieron los hatos de los bueyes, porque no tuvieron pastos! también fueron asolados los rebaños de las ovejas.",
+    "statement": "Según PR43, p. 48, párrafo 4, ¡cuán turbados anduvieron los hatos de los bueyes, porque no tuvieron pastos! también fueron asolados los rebaños de las ovejas.",
+    "asserted_detail": "tuvieron",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según PR43, p. 48, párrafo 4, Todos los sabios del rey ... no pudieron leer la escritura, ni mostrar al rey su declaración.",
+    "incorrect_detail": "tuvieron",
+    "correction": "pudieron",
+    "false_mutation_kind": "cross_reference_statement",
+    "focused_true_statement": false,
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Todos los sabios del rey ... no pudieron leer la escritura, ni mostrar al rey su declaración.",
+    "replacement_source_ref": "PR43, p. 53, párrafo 5",
+    "correct_slot_signature": "action",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 53, párrafo 5, no a PR43, p. 48, párrafo 4. La fuente correcta declara: «Todos los sabios del rey ... no pudieron leer la escritura, ni mostrar al rey su declaración.».",
+    "why_distractors_fail": {
+      "Verdadero": "El enunciado es verdadero en PR43, p. 53, párrafo 5, pero no corresponde a PR43, p. 48, párrafo 4."
+    },
+    "trap_type": "true_in_other_context",
+    "validation_adversarial": {
+      "reviewer": "source-blind-v1",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
+      "second_defensible_option": false
+    },
+    "difficulty": "hard"
   },
   {
     "id": "PR43-GOLD-2667-TRUE_FALSE-FALSE",
@@ -72095,8 +72170,8 @@
       "podría"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 2, se emplea la forma verbal «quería».",
-    "statement": "Según PR43, p. 49, párrafo 2, se emplea la forma verbal «quería».",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 2, El rey quería probar que nada era demasiado sagrado para sus manos.",
+    "statement": "Según PR43, p. 49, párrafo 2, El rey quería probar que nada era demasiado sagrado para sus manos.",
     "asserted_detail": "quería",
     "options": [
       "Verdadero",
@@ -72104,21 +72179,21 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 49, párrafo 2, se emplea la forma verbal «podría».",
+    "corrected_statement": "Según PR43, p. 49, párrafo 2, El profeta recordó primero a Belsasar asuntos que le eran familiares, pero que no le habían enseñado la lección de humildad que podría haberle salvado.",
     "incorrect_detail": "quería",
     "correction": "podría",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «podría».",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "El profeta recordó primero a Belsasar asuntos que le eran familiares, pero que no le habían enseñado la lección de humildad que podría haberle salvado.",
     "replacement_source_ref": "PR43, p. 47, párrafo 5",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «podría», no «quería».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 47, párrafo 5, no a PR43, p. 49, párrafo 2. La fuente correcta declara: «El profeta recordó primero a Belsasar asuntos que le eran familiares, pero que no le habían enseñado la lección de humildad que podría haberle salvado.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «quería»; la fuente contiene «podría»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 47, párrafo 5, pero no corresponde a PR43, p. 49, párrafo 2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -72129,22 +72204,22 @@
     "difficulty": "expert"
   },
   {
-    "id": "PR43-GOLD-2634-TRUE_FALSE-FALSE",
+    "id": "PR43-GOLD-2598-TRUE_FALSE-FALSE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
     "schema_version": "9.0",
-    "source_unit_id": "PR43-P048-P003-S006",
-    "fact_id": "PR43-P048-P003-S006-F02",
-    "variant_id": "PR43-P048-P003-S006-F02-TRUE_FALSE-FALSE",
+    "source_unit_id": "PR43-P047-P004-S005",
+    "fact_id": "PR43-P047-P004-S005-F02",
+    "variant_id": "PR43-P047-P004-S005-F02-TRUE_FALSE-FALSE",
     "template_id": "true-false-safe-editorial-v2",
     "family": "true_false",
     "chapter": "PR43",
-    "reference": "PR43, p. 48, párrafo 3",
-    "source_ref": "PR43, p. 48, párrafo 3",
-    "verse_or_page": "PR43, p. 48, párrafo 3",
-    "source_span": "Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle: ¿Por qué obras así?",
-    "source_quote": "Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle: ¿Por qué obras así?",
-    "context_anchor": "Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle",
+    "reference": "PR43, p. 47, párrafo 4",
+    "source_ref": "PR43, p. 47, párrafo 4",
+    "verse_or_page": "PR43, p. 47, párrafo 4",
+    "source_span": "Los príncipes y los estadistas bebían vino como agua, y bajo su influencia enloquecedora se entregaban a la orgía.",
+    "source_quote": "Los príncipes y los estadistas bebían vino como agua, y bajo su influencia enloquecedora se entregaban a la orgía.",
+    "context_anchor": "Los príncipes y los estadistas bebían vino como agua, y bajo su influencia enloquecedora se entregaban a la orgía.",
     "topic": "action",
     "importance": "critical",
     "relation_type": "action",
@@ -72167,106 +72242,31 @@
     },
     "final_editorial_status": "GOLD",
     "accepted_answers": [
-      "atreverse"
+      "bebían"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 3, se emplea la forma verbal «esperarse».",
-    "statement": "Según PR43, p. 48, párrafo 3, se emplea la forma verbal «esperarse».",
-    "asserted_detail": "esperarse",
+    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 4, Los príncipes y los estadistas no bebían vino como agua, y bajo su influencia enloquecedora se entregaban a la orgía.",
+    "statement": "Según PR43, p. 47, párrafo 4, Los príncipes y los estadistas no bebían vino como agua, y bajo su influencia enloquecedora se entregaban a la orgía.",
+    "asserted_detail": "no bebían",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 48, párrafo 3, se emplea la forma verbal «atreverse».",
-    "incorrect_detail": "esperarse",
-    "correction": "atreverse",
-    "false_mutation_kind": "atomic_presence_substitution",
-    "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «atreverse».",
-    "replacement_source_ref": "PR43, p. 52, párrafo 7",
-    "correct_slot_signature": "action",
-    "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «atreverse», no «esperarse».",
-    "why_distractors_fail": {
-      "Verdadero": "La única alteración es «esperarse»; la fuente contiene «atreverse»."
-    },
-    "trap_type": "single_plausible_detail",
-    "validation_adversarial": {
-      "reviewer": "source-blind-v1",
-      "status": "passed",
-      "selected_option": 1,
-      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
-      "second_defensible_option": false
-    },
-    "difficulty": "expert"
-  },
-  {
-    "id": "PR43-GOLD-2574-TRUE_FALSE-FALSE",
-    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
-    "bank_name": "Banco Maestro Único — Final 2026",
-    "schema_version": "9.0",
-    "source_unit_id": "PR43-P047-P002-S003",
-    "fact_id": "PR43-P047-P002-S003-F02",
-    "variant_id": "PR43-P047-P002-S003-F02-TRUE_FALSE-FALSE",
-    "template_id": "true-false-safe-editorial-v2",
-    "family": "true_false",
-    "chapter": "PR43",
-    "reference": "PR43, p. 47, párrafo 2",
-    "source_ref": "PR43, p. 47, párrafo 2",
-    "verse_or_page": "PR43, p. 47, párrafo 2",
-    "source_span": "Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
-    "source_quote": "Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
-    "context_anchor": "Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
-    "topic": "action",
-    "importance": "critical",
-    "relation_type": "action",
-    "option_category": "action",
-    "blind_pool": null,
-    "validation_generator": {
-      "status": "passed",
-      "source_supported": true
-    },
-    "validation_schema": {
-      "status": "passed"
-    },
-    "validation_source": {
-      "status": "passed",
-      "external_knowledge": false
-    },
-    "validation_language": {
-      "status": "passed",
-      "natural_span": true
-    },
-    "final_editorial_status": "GOLD",
-    "accepted_answers": [
-      "prestarle"
-    ],
-    "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 2, Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad no prestarle obediencia.",
-    "statement": "Según PR43, p. 47, párrafo 2, Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad no prestarle obediencia.",
-    "asserted_detail": "no prestarle",
-    "options": [
-      "Verdadero",
-      "Falso"
-    ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 47, párrafo 2, Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
-    "incorrect_detail": "no prestarle",
-    "correction": "prestarle",
+    "corrected_statement": "Según PR43, p. 47, párrafo 4, Los príncipes y los estadistas bebían vino como agua, y bajo su influencia enloquecedora se entregaban a la orgía.",
+    "incorrect_detail": "no bebían",
+    "correction": "bebían",
     "false_mutation_kind": "negation",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
-    "truth_source_statement": "Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
-    "replacement_source_ref": "PR43, p. 47, párrafo 2",
+    "truth_source_statement": "Los príncipes y los estadistas bebían vino como agua, y bajo su influencia enloquecedora se entregaban a la orgía.",
+    "replacement_source_ref": "PR43, p. 47, párrafo 4",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «prestarle», no «no prestarle».",
+    "explanation": "Es falsa: la fuente dice «bebían», no «no bebían».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no prestarle»; la fuente contiene «prestarle»."
+      "Verdadero": "La única alteración es «no bebían»; la fuente contiene «bebían»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {
@@ -72354,26 +72354,26 @@
     "difficulty": "hard"
   },
   {
-    "id": "PR43-GOLD-2704-TRUE_FALSE-FALSE",
+    "id": "PR43-GOLD-2669-TRUE_FALSE-FALSE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
     "schema_version": "9.0",
-    "source_unit_id": "PR43-P049-P006-S005",
-    "fact_id": "PR43-P049-P006-S005-F02",
-    "variant_id": "PR43-P049-P006-S005-F02-TRUE_FALSE-FALSE",
+    "source_unit_id": "PR43-P049-P002-S002",
+    "fact_id": "PR43-P049-P002-S002-F01",
+    "variant_id": "PR43-P049-P002-S002-F01-TRUE_FALSE-FALSE",
     "template_id": "true-false-safe-editorial-v2",
     "family": "true_false",
     "chapter": "PR43",
-    "reference": "PR43, p. 49, párrafo 6",
-    "source_ref": "PR43, p. 49, párrafo 6",
-    "verse_or_page": "PR43, p. 49, párrafo 6",
-    "source_span": "A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
-    "source_quote": "A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
-    "context_anchor": "A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
-    "topic": "action",
+    "reference": "PR43, p. 49, párrafo 2",
+    "source_ref": "PR43, p. 49, párrafo 2",
+    "verse_or_page": "PR43, p. 49, párrafo 2",
+    "source_span": "Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció su orgullo y del subsiguiente reconocimiento que había expresado acerca del poder y la misericordia del Dios de Israel.",
+    "source_quote": "Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció su orgullo y del subsiguiente reconocimiento que había expresado acerca del poder y la misericordia del Dios de Israel.",
+    "context_anchor": "Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció s",
+    "topic": "person",
     "importance": "critical",
-    "relation_type": "action",
-    "option_category": "action",
+    "relation_type": "person",
+    "option_category": "person",
     "blind_pool": null,
     "validation_generator": {
       "status": "passed",
@@ -72392,31 +72392,31 @@
     },
     "final_editorial_status": "GOLD",
     "accepted_answers": [
-      "dictar"
+      "Israel"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 6, A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario no dictar la sentencia irrevocable.",
-    "statement": "Según PR43, p. 49, párrafo 6, A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario no dictar la sentencia irrevocable.",
-    "asserted_detail": "no dictar",
+    "question": "Verdadero o falso: Según PR43, p. 49, párrafo 2, Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció su orgullo y del subsiguiente reconocimiento que había expresado acerca del poder y la misericordia del Dios de Jacob.",
+    "statement": "Según PR43, p. 49, párrafo 2, Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció su orgullo y del subsiguiente reconocimiento que había expresado acerca del poder y la misericordia del Dios de Jacob.",
+    "asserted_detail": "Jacob",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 49, párrafo 6, A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
-    "incorrect_detail": "no dictar",
-    "correction": "dictar",
-    "false_mutation_kind": "negation",
+    "corrected_statement": "Según PR43, p. 49, párrafo 2, Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció su orgullo y del subsiguiente reconocimiento que había expresado acerca del poder y la misericordia del Dios de Israel.",
+    "incorrect_detail": "Jacob",
+    "correction": "Israel",
+    "false_mutation_kind": "closed_category_substitution",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
-    "truth_source_statement": "A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
-    "replacement_source_ref": "PR43, p. 49, párrafo 6",
-    "correct_slot_signature": "action",
-    "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «dictar», no «no dictar».",
+    "truth_source_statement": "Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció su orgullo y del subsiguiente reconocimiento que había expresado acerca del poder y la misericordia del Dios de Israel.",
+    "replacement_source_ref": "PR43, p. 53, párrafo 7",
+    "correct_slot_signature": "person",
+    "replacement_slot_signature": "person",
+    "explanation": "Es falsa: la fuente dice «Israel», no «Jacob».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no dictar»; la fuente contiene «dictar»."
+      "Verdadero": "La única alteración es «Jacob»; la fuente contiene «Israel»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {
@@ -72426,30 +72426,30 @@
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "expert"
+    "difficulty": "hard"
   },
   {
-    "id": "PR43-GOLD-2578-TRUE_FALSE-FALSE",
+    "id": "PR43-GOLD-2569-TRUE_FALSE-FALSE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
     "schema_version": "9.0",
-    "source_unit_id": "PR43-P047-P002-S005",
-    "fact_id": "PR43-P047-P002-S005-F02",
-    "variant_id": "PR43-P047-P002-S005-F02-TRUE_FALSE-FALSE",
+    "source_unit_id": "PR43-P047-P002-S001",
+    "fact_id": "PR43-P047-P002-S001-F01",
+    "variant_id": "PR43-P047-P002-S001-F01-TRUE_FALSE-FALSE",
     "template_id": "true-false-safe-editorial-v2",
     "family": "true_false",
     "chapter": "PR43",
     "reference": "PR43, p. 47, párrafo 2",
     "source_ref": "PR43, p. 47, párrafo 2",
     "verse_or_page": "PR43, p. 47, párrafo 2",
-    "source_span": "Pero Belsasar dejó que el amor por los placeres y la glorificación propia borrasen las lecciones que nunca debiera haber olvidado.",
-    "source_quote": "Pero Belsasar dejó que el amor por los placeres y la glorificación propia borrasen las lecciones que nunca debiera haber olvidado.",
-    "context_anchor": "Pero Belsasar dejó que el amor por los placeres y la glorificación propia borrasen las lecciones que nunca debiera haber olvidado.",
-    "topic": "action",
+    "source_span": "Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
+    "source_quote": "Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
+    "context_anchor": "Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
+    "topic": "place",
     "importance": "critical",
-    "relation_type": "action",
-    "option_category": "action",
-    "blind_pool": "B",
+    "relation_type": "place",
+    "option_category": "place",
+    "blind_pool": null,
     "validation_generator": {
       "status": "passed",
       "source_supported": true
@@ -72467,31 +72467,31 @@
     },
     "final_editorial_status": "GOLD",
     "accepted_answers": [
-      "borrasen"
+      "Babilonia"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 2, Pero Belsasar dejó que el amor por los placeres y la glorificación propia no borrasen las lecciones que nunca debiera haber olvidado.",
-    "statement": "Según PR43, p. 47, párrafo 2, Pero Belsasar dejó que el amor por los placeres y la glorificación propia no borrasen las lecciones que nunca debiera haber olvidado.",
-    "asserted_detail": "no borrasen",
+    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 2, Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Jerusalem iba a caer pronto.",
+    "statement": "Según PR43, p. 47, párrafo 2, Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Jerusalem iba a caer pronto.",
+    "asserted_detail": "Jerusalem",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 47, párrafo 2, Pero Belsasar dejó que el amor por los placeres y la glorificación propia borrasen las lecciones que nunca debiera haber olvidado.",
-    "incorrect_detail": "no borrasen",
-    "correction": "borrasen",
-    "false_mutation_kind": "negation",
+    "corrected_statement": "Según PR43, p. 47, párrafo 2, Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
+    "incorrect_detail": "Jerusalem",
+    "correction": "Babilonia",
+    "false_mutation_kind": "closed_category_substitution",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
-    "truth_source_statement": "Pero Belsasar dejó que el amor por los placeres y la glorificación propia borrasen las lecciones que nunca debiera haber olvidado.",
-    "replacement_source_ref": "PR43, p. 47, párrafo 2",
-    "correct_slot_signature": "action",
-    "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «borrasen», no «no borrasen».",
+    "truth_source_statement": "Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
+    "replacement_source_ref": "PR43, p. 47, párrafo 5",
+    "correct_slot_signature": "place",
+    "replacement_slot_signature": "place",
+    "explanation": "Es falsa: la fuente dice «Babilonia», no «Jerusalem».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no borrasen»; la fuente contiene «borrasen»."
+      "Verdadero": "La única alteración es «Jerusalem»; la fuente contiene «Babilonia»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {
@@ -72501,7 +72501,7 @@
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "expert"
+    "difficulty": "hard"
   },
   {
     "id": "PR43-GOLD-2566-TRUE_FALSE-FALSE",
@@ -72545,9 +72545,9 @@
       "produciendo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 1, Hacia el fin de la vida de Daniel, se estaban no produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos.",
-    "statement": "Según PR43, p. 47, párrafo 1, Hacia el fin de la vida de Daniel, se estaban no produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos.",
-    "asserted_detail": "no produciendo",
+    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 1, Volviéndose hacia el mensaje enviado por el Cielo, el profeta leyó en la pared.",
+    "statement": "Según PR43, p. 47, párrafo 1, Volviéndose hacia el mensaje enviado por el Cielo, el profeta leyó en la pared.",
+    "asserted_detail": "volviéndose",
     "options": [
       "Verdadero",
       "Falso"
@@ -72555,18 +72555,93 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 47, párrafo 1, Hacia el fin de la vida de Daniel, se estaban produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos.",
-    "incorrect_detail": "no produciendo",
+    "incorrect_detail": "volviéndose",
     "correction": "produciendo",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Hacia el fin de la vida de Daniel, se estaban produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos.",
-    "replacement_source_ref": "PR43, p. 47, párrafo 1",
+    "replacement_source_ref": "PR43, p. 49, párrafo 4",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «produciendo», no «no produciendo».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 49, párrafo 4, no a PR43, p. 47, párrafo 1. La fuente correcta declara: «Hacia el fin de la vida de Daniel, se estaban produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no produciendo»; la fuente contiene «produciendo»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 49, párrafo 4, pero no corresponde a PR43, p. 47, párrafo 1."
+    },
+    "trap_type": "true_in_other_context",
+    "validation_adversarial": {
+      "reviewer": "source-blind-v1",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
+      "second_defensible_option": false
+    },
+    "difficulty": "expert"
+  },
+  {
+    "id": "PR43-GOLD-2588-TRUE_FALSE-FALSE",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "9.0",
+    "source_unit_id": "PR43-P047-P003-S003",
+    "fact_id": "PR43-P047-P003-S003-F02",
+    "variant_id": "PR43-P047-P003-S003-F02-TRUE_FALSE-FALSE",
+    "template_id": "true-false-safe-editorial-v2",
+    "family": "true_false",
+    "chapter": "PR43",
+    "reference": "PR43, p. 47, párrafo 3",
+    "source_ref": "PR43, p. 47, párrafo 3",
+    "verse_or_page": "PR43, p. 47, párrafo 3",
+    "source_span": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "source_quote": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "context_anchor": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el vo",
+    "topic": "action",
+    "importance": "critical",
+    "relation_type": "action",
+    "option_category": "action",
+    "blind_pool": null,
+    "validation_generator": {
+      "status": "passed",
+      "source_supported": true
+    },
+    "validation_schema": {
+      "status": "passed"
+    },
+    "validation_source": {
+      "status": "passed",
+      "external_knowledge": false
+    },
+    "validation_language": {
+      "status": "passed",
+      "natural_span": true
+    },
+    "final_editorial_status": "GOLD",
+    "accepted_answers": [
+      "dedicaba"
+    ],
+    "answer_mode": "option_id",
+    "question": "Verdadero o falso: Según PR43, p. 47, párrafo 3, Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y no dedicaba su tiempo a la alegría y las orgías.",
+    "statement": "Según PR43, p. 47, párrafo 3, Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y no dedicaba su tiempo a la alegría y las orgías.",
+    "asserted_detail": "no dedicaba",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según PR43, p. 47, párrafo 3, Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "incorrect_detail": "no dedicaba",
+    "correction": "dedicaba",
+    "false_mutation_kind": "negation",
+    "focused_true_statement": false,
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "replacement_source_ref": "PR43, p. 47, párrafo 3",
+    "correct_slot_signature": "action",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa: la fuente dice «dedicaba», no «no dedicaba».",
+    "why_distractors_fail": {
+      "Verdadero": "La única alteración es «no dedicaba»; la fuente contiene «dedicaba»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {
@@ -72652,81 +72727,6 @@
       "second_defensible_option": false
     },
     "difficulty": "hard"
-  },
-  {
-    "id": "PR43-GOLD-2613-TRUE_FALSE-FALSE",
-    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
-    "bank_name": "Banco Maestro Único — Final 2026",
-    "schema_version": "9.0",
-    "source_unit_id": "PR43-P048-P001-S002",
-    "fact_id": "PR43-P048-P001-S002-F01",
-    "variant_id": "PR43-P048-P001-S002-F01-TRUE_FALSE-FALSE",
-    "template_id": "true-false-safe-editorial-v2",
-    "family": "true_false",
-    "chapter": "PR43",
-    "reference": "PR43, p. 48, párrafo 1",
-    "source_ref": "PR43, p. 48, párrafo 1",
-    "verse_or_page": "PR43, p. 48, párrafo 1",
-    "source_span": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
-    "source_quote": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
-    "context_anchor": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas",
-    "topic": "action",
-    "importance": "critical",
-    "relation_type": "action",
-    "option_category": "action",
-    "blind_pool": null,
-    "validation_generator": {
-      "status": "passed",
-      "source_supported": true
-    },
-    "validation_schema": {
-      "status": "passed"
-    },
-    "validation_source": {
-      "status": "passed",
-      "external_knowledge": false
-    },
-    "validation_language": {
-      "status": "passed",
-      "natural_span": true
-    },
-    "final_editorial_status": "GOLD",
-    "accepted_answers": [
-      "resplandecían"
-    ],
-    "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 1, se emplea la forma verbal «correspondían».",
-    "statement": "Según PR43, p. 48, párrafo 1, se emplea la forma verbal «correspondían».",
-    "asserted_detail": "correspondían",
-    "options": [
-      "Verdadero",
-      "Falso"
-    ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 48, párrafo 1, se emplea la forma verbal «resplandecían».",
-    "incorrect_detail": "correspondían",
-    "correction": "resplandecían",
-    "false_mutation_kind": "atomic_presence_substitution",
-    "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «resplandecían».",
-    "replacement_source_ref": "PR43, p. 50, párrafo 1",
-    "correct_slot_signature": "action",
-    "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «resplandecían», no «correspondían».",
-    "why_distractors_fail": {
-      "Verdadero": "La única alteración es «correspondían»; la fuente contiene «resplandecían»."
-    },
-    "trap_type": "single_plausible_detail",
-    "validation_adversarial": {
-      "reviewer": "source-blind-v1",
-      "status": "passed",
-      "selected_option": 1,
-      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
-      "second_defensible_option": false
-    },
-    "difficulty": "expert"
   },
   {
     "id": "PR43-GOLD-2643-TRUE_FALSE-FALSE",
@@ -72845,30 +72845,30 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 50, párrafo 1, se menciona como personaje o ser «Jacob».",
-    "statement": "Según PR43, p. 50, párrafo 1, se menciona como personaje o ser «Jacob».",
-    "asserted_detail": "Jacob",
+    "question": "Verdadero o falso: Según PR43, p. 50, párrafo 1, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "statement": "Según PR43, p. 50, párrafo 1, Pronto el Huésped no invitado hizo sentir su presencia.",
+    "asserted_detail": "Huésped",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según PR43, p. 50, párrafo 1, se menciona como personaje o ser «Dios».",
-    "incorrect_detail": "Jacob",
+    "corrected_statement": "Según PR43, p. 50, párrafo 1, Más de un siglo antes, la Inspiración había predicho que “la noche de ... placer” durante la cual el rey y sus consejeros rivalizarían unos con otros para blasfemar contra Dios, se vería de repente trocada en ocasión de miedo y destrucción.",
+    "incorrect_detail": "Huésped",
     "correction": "Dios",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Dios».",
-    "replacement_source_ref": "PR43, p. 53, párrafo 7",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Más de un siglo antes, la Inspiración había predicho que “la noche de ... placer” durante la cual el rey y sus consejeros rivalizarían unos con otros para blasfemar contra Dios, se vería de repente trocada en ocasión de miedo y destrucción.",
+    "replacement_source_ref": "PR43, p. 48, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Dios», no «Jacob».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 48, párrafo 1, no a PR43, p. 50, párrafo 1. La fuente correcta declara: «Más de un siglo antes, la Inspiración había predicho que “la noche de ... placer” durante la cual el rey y sus consejeros rivalizarían unos con otros para blasfemar contra Dios, se vería de repente trocada en ocasión de miedo y destrucción.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jacob»; la fuente contiene «Dios»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 48, párrafo 1, pero no corresponde a PR43, p. 50, párrafo 1."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -72995,9 +72995,9 @@
       "dirigió"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, Pero de nada valió la súplica que no dirigió a sus consejeros de confianza ni su ofrecimiento de ricas recompensas.",
-    "statement": "Según PR43, p. 48, párrafo 4, Pero de nada valió la súplica que no dirigió a sus consejeros de confianza ni su ofrecimiento de ricas recompensas.",
-    "asserted_detail": "no dirigió",
+    "question": "Verdadero o falso: Según PR43, p. 48, párrafo 4, Con cada uno de ellos, como con las naciones de menos potencia, la historia se repitió.",
+    "statement": "Según PR43, p. 48, párrafo 4, Con cada uno de ellos, como con las naciones de menos potencia, la historia se repitió.",
+    "asserted_detail": "repitió",
     "options": [
       "Verdadero",
       "Falso"
@@ -73005,20 +73005,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según PR43, p. 48, párrafo 4, Pero de nada valió la súplica que dirigió a sus consejeros de confianza ni su ofrecimiento de ricas recompensas.",
-    "incorrect_detail": "no dirigió",
+    "incorrect_detail": "repitió",
     "correction": "dirigió",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Pero de nada valió la súplica que dirigió a sus consejeros de confianza ni su ofrecimiento de ricas recompensas.",
-    "replacement_source_ref": "PR43, p. 48, párrafo 4",
+    "replacement_source_ref": "PR43, p. 52, párrafo 2",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «dirigió», no «no dirigió».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 52, párrafo 2, no a PR43, p. 48, párrafo 4. La fuente correcta declara: «Pero de nada valió la súplica que dirigió a sus consejeros de confianza ni su ofrecimiento de ricas recompensas.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no dirigió»; la fuente contiene «dirigió»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 52, párrafo 2, pero no corresponde a PR43, p. 48, párrafo 4."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",

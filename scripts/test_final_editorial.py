@@ -358,6 +358,7 @@ class FinalEditorialTests(unittest.TestCase):
                     question["correct_answer"] == "Falso"
                     and question["option_category"] == "action"
                     and question["statement_mode"] == "exact_source"
+                    and question.get("false_mutation_kind") == "negation"
                 ):
                     self.assertIn(
                         self.editorial._action_form(question["correction"]),
@@ -574,19 +575,35 @@ class FinalEditorialTests(unittest.TestCase):
                 "Compara",
             )
         )
-        self.assertEqual(
+        self.assertIsNone(
             self.editorial._negate_exact_action_statement(
                 "procurase exaltar al Dios de los cielos.",
                 "exaltar",
-            ),
-            "procurase no exaltar al Dios de los cielos.",
+            )
         )
-        self.assertEqual(
+        self.assertIsNone(
             self.editorial._negate_exact_action_statement(
                 "y mirando con humildad hacia el Dios del cielo.",
                 "mirando",
-            ),
-            "y no mirando con humildad hacia el Dios del cielo.",
+            )
+        )
+        self.assertIsNone(
+            self.editorial._negate_exact_action_statement(
+                "La razón debe regir la vida.",
+                "regir",
+            )
+        )
+        self.assertIsNone(
+            self.editorial._negate_exact_action_statement(
+                "mientras era todavía joven.",
+                "joven",
+            )
+        )
+        self.assertIsNone(
+            self.editorial._negate_exact_action_statement(
+                "Su poder se fortalecerá, mas no con fuerza propia.",
+                "fortalecerá",
+            )
         )
         self.assertEqual(
             self.editorial._negate_exact_action_statement(
@@ -624,10 +641,10 @@ class FinalEditorialTests(unittest.TestCase):
             any("aparece la expresión" in row["statement"] for row in false_rows),
             "Las V/F falsas deben formular el tipo de detalle, no una presencia genérica.",
         )
-        self.assertGreaterEqual(
+        self.assertEqual(
             sum(row.get("statement_mode") == "exact_source" for row in false_rows),
-            1100,
-            "Las V/F falsas deben priorizar afirmaciones completas sobre presencia léxica.",
+            1500,
+            "Cada V/F falsa debe plantear una afirmación completa, no presencia léxica.",
         )
         rows_by_fact = {}
         for row in rows:
@@ -650,37 +667,38 @@ class FinalEditorialTests(unittest.TestCase):
                 false_row["option_category"] == "action"
                 and false_row["statement_mode"] == "exact_source"
             ):
-                self.assertEqual(
+                self.assertIn(
                     false_row.get("false_mutation_kind"),
-                    "negation",
+                    {"negation", "cross_reference_statement"},
                     false_row["id"],
                 )
-                self.assertTrue(
-                    false_row["incorrect_detail"].casefold().startswith("no "),
-                    false_row["id"],
-                )
+                if false_row.get("false_mutation_kind") == "negation":
+                    self.assertTrue(
+                        false_row["incorrect_detail"].casefold().startswith("no "),
+                        false_row["id"],
+                    )
             if (
                 false_row["option_category"] == "person"
                 and self.editorial._norm(false_row["correction"])
                 in self.editorial.DIVINE_NAMES
-                and false_row["source_quote"].count(false_row["correction"]) == 1
-                and "¿" not in false_row["source_quote"]
-                and not false_row["source_quote"].rstrip('»”"').endswith("?")
-            ):
-                self.assertEqual(
-                    false_row["statement_mode"],
-                    "atomic_presence",
-                    false_row["id"],
-                )
-            if (
+            ) or (
                 false_row["option_category"] == "number"
                 and len(false_row["correction"].split()) > 1
             ):
                 self.assertEqual(
-                    false_row["statement_mode"],
-                    "atomic_presence",
+                    false_row.get("false_mutation_kind"),
+                    "cross_reference_statement",
                     false_row["id"],
                 )
+                self.assertNotEqual(
+                    false_row.get("replacement_source_ref"),
+                    false_row["reference"],
+                    false_row["id"],
+                )
+        self.assertFalse(
+            any(row.get("false_mutation_kind") == "statement_negation" for row in false_rows),
+            "Una V/F competitiva no debe revelar su polaridad con 'Es falso que'.",
+        )
 
         self.assertFalse(
             any(
@@ -1103,7 +1121,8 @@ class FinalEditorialTests(unittest.TestCase):
                     question["correction"], question["option_category"]
                 )
                 for question in false_questions
-                if question.get("false_mutation_kind") != "negation"
+                if question.get("false_mutation_kind")
+                not in {"negation", "statement_negation"}
             ),
             "cada alteración falsa debe conservar la clase gramatical del detalle correcto",
         )

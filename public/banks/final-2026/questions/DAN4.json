@@ -26670,22 +26670,97 @@
     "difficulty": "hard"
   },
   {
-    "id": "DAN4-GOLD-0853-TRUE_FALSE-TRUE",
+    "id": "DAN4-GOLD-0861-TRUE_FALSE-TRUE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
     "schema_version": "9.0",
-    "source_unit_id": "DAN4-V005",
-    "fact_id": "DAN4-V005-F02",
-    "variant_id": "DAN4-V005-F02-TRUE_FALSE-TRUE",
+    "source_unit_id": "DAN4-V008",
+    "fact_id": "DAN4-V008-F01",
+    "variant_id": "DAN4-V008-F01-TRUE_FALSE-TRUE",
     "template_id": "true-false-safe-editorial-v2",
     "family": "true_false",
     "chapter": "DAN4",
-    "reference": "Daniel 4:5",
-    "source_ref": "Daniel 4:5",
-    "verse_or_page": "Daniel 4:5",
-    "source_span": "Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
-    "source_quote": "Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
-    "context_anchor": "Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
+    "reference": "Daniel 4:8",
+    "source_ref": "Daniel 4:8",
+    "verse_or_page": "Daniel 4:8",
+    "source_span": "hasta que entró ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos. Conté delante de él el sueño, diciendo:",
+    "source_quote": "hasta que entró ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos. Conté delante de él el sueño, diciendo:",
+    "context_anchor": "hasta que entró ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.",
+    "topic": "person",
+    "importance": "essential",
+    "relation_type": "person",
+    "option_category": "person",
+    "blind_pool": null,
+    "validation_generator": {
+      "status": "passed",
+      "source_supported": true
+    },
+    "validation_schema": {
+      "status": "passed"
+    },
+    "validation_source": {
+      "status": "passed",
+      "external_knowledge": false
+    },
+    "validation_language": {
+      "status": "passed",
+      "natural_span": true
+    },
+    "final_editorial_status": "GOLD",
+    "accepted_answers": [
+      "Beltsasar"
+    ],
+    "answer_mode": "option_id",
+    "question": "Verdadero o falso: Según Daniel 4:8, se menciona como personaje o ser «Beltsasar».",
+    "statement": "Según Daniel 4:8, se menciona como personaje o ser «Beltsasar».",
+    "asserted_detail": "Beltsasar",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "false_mutation_kind": null,
+    "focused_true_statement": false,
+    "statement_mode": "atomic_presence",
+    "truth_source_statement": "se menciona como personaje o ser «Beltsasar».",
+    "replacement_source_ref": null,
+    "correct_slot_signature": "person",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce literalmente Daniel 4:8.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+    },
+    "trap_type": null,
+    "validation_adversarial": {
+      "reviewer": "source-blind-v1",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
+      "second_defensible_option": false
+    },
+    "difficulty": "medium"
+  },
+  {
+    "id": "DAN4-GOLD-0889-TRUE_FALSE-TRUE",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "9.0",
+    "source_unit_id": "DAN4-V017",
+    "fact_id": "DAN4-V017-F02",
+    "variant_id": "DAN4-V017-F02-TRUE_FALSE-TRUE",
+    "template_id": "true-false-safe-editorial-v2",
+    "family": "true_false",
+    "chapter": "DAN4",
+    "reference": "Daniel 4:17",
+    "source_ref": "Daniel 4:17",
+    "verse_or_page": "Daniel 4:17",
+    "source_span": "La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "source_quote": "La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "context_anchor": "La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien",
     "topic": "action",
     "importance": "essential",
     "relation_type": "action",
@@ -26708,12 +26783,12 @@
     },
     "final_editorial_status": "GOLD",
     "accepted_answers": [
-      "espantó"
+      "constituye"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:5, se emplea la forma verbal «espantó».",
-    "statement": "Según Daniel 4:5, se emplea la forma verbal «espantó».",
-    "asserted_detail": "espantó",
+    "question": "Verdadero o falso: Según Daniel 4:17, se emplea la forma verbal «constituye».",
+    "statement": "Según Daniel 4:17, se emplea la forma verbal «constituye».",
+    "asserted_detail": "constituye",
     "options": [
       "Verdadero",
       "Falso"
@@ -26726,11 +26801,11 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «espantó».",
+    "truth_source_statement": "se emplea la forma verbal «constituye».",
     "replacement_source_ref": null,
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce literalmente Daniel 4:5.",
+    "explanation": "Es verdadera y reproduce literalmente Daniel 4:17.",
     "why_distractors_fail": {
       "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
@@ -26820,97 +26895,22 @@
     "difficulty": "hard"
   },
   {
-    "id": "DAN4-GOLD-0925-TRUE_FALSE-TRUE",
+    "id": "DAN4-GOLD-0875-TRUE_FALSE-TRUE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
     "schema_version": "9.0",
-    "source_unit_id": "DAN4-V030",
-    "fact_id": "DAN4-V030-F01",
-    "variant_id": "DAN4-V030-F01-TRUE_FALSE-TRUE",
+    "source_unit_id": "DAN4-V012",
+    "fact_id": "DAN4-V012-F03",
+    "variant_id": "DAN4-V012-F03-TRUE_FALSE-TRUE",
     "template_id": "true-false-safe-editorial-v2",
     "family": "true_false",
     "chapter": "DAN4",
-    "reference": "Daniel 4:30",
-    "source_ref": "Daniel 4:30",
-    "verse_or_page": "Daniel 4:30",
-    "source_span": "habló el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
-    "source_quote": "habló el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
-    "context_anchor": "«¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
-    "topic": "place",
-    "importance": "essential",
-    "relation_type": "place",
-    "option_category": "place",
-    "blind_pool": null,
-    "validation_generator": {
-      "status": "passed",
-      "source_supported": true
-    },
-    "validation_schema": {
-      "status": "passed"
-    },
-    "validation_source": {
-      "status": "passed",
-      "external_knowledge": false
-    },
-    "validation_language": {
-      "status": "passed",
-      "natural_span": true
-    },
-    "final_editorial_status": "GOLD",
-    "accepted_answers": [
-      "Babilonia"
-    ],
-    "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:30, se menciona como lugar o dirección «Babilonia».",
-    "statement": "Según Daniel 4:30, se menciona como lugar o dirección «Babilonia».",
-    "asserted_detail": "Babilonia",
-    "options": [
-      "Verdadero",
-      "Falso"
-    ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "false_mutation_kind": null,
-    "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como lugar o dirección «Babilonia».",
-    "replacement_source_ref": null,
-    "correct_slot_signature": "place",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce literalmente Daniel 4:30.",
-    "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
-    },
-    "trap_type": null,
-    "validation_adversarial": {
-      "reviewer": "source-blind-v1",
-      "status": "passed",
-      "selected_option": 0,
-      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
-      "second_defensible_option": false
-    },
-    "difficulty": "medium"
-  },
-  {
-    "id": "DAN4-GOLD-0926-TRUE_FALSE-TRUE",
-    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
-    "bank_name": "Banco Maestro Único — Final 2026",
-    "schema_version": "9.0",
-    "source_unit_id": "DAN4-V030",
-    "fact_id": "DAN4-V030-F02",
-    "variant_id": "DAN4-V030-F02-TRUE_FALSE-TRUE",
-    "template_id": "true-false-safe-editorial-v2",
-    "family": "true_false",
-    "chapter": "DAN4",
-    "reference": "Daniel 4:30",
-    "source_ref": "Daniel 4:30",
-    "verse_or_page": "Daniel 4:30",
-    "source_span": "habló el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
-    "source_quote": "habló el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
-    "context_anchor": "«¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
+    "reference": "Daniel 4:12",
+    "source_ref": "Daniel 4:12",
+    "verse_or_page": "Daniel 4:12",
+    "source_span": "Su follaje era hermoso, su fruto abundante y había en él alimento para todos. Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se mantenía de él todo ser viviente.",
+    "source_quote": "Su follaje era hermoso, su fruto abundante y había en él alimento para todos. Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se mantenía de él todo ser viviente.",
+    "context_anchor": "Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se mantenía de él todo ser viviente.",
     "topic": "action",
     "importance": "essential",
     "relation_type": "action",
@@ -26933,12 +26933,12 @@
     },
     "final_editorial_status": "GOLD",
     "accepted_answers": [
-      "edifiqué"
+      "ponían"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:30, se emplea la forma verbal «edifiqué».",
-    "statement": "Según Daniel 4:30, se emplea la forma verbal «edifiqué».",
-    "asserted_detail": "edifiqué",
+    "question": "Verdadero o falso: Según Daniel 4:12, se emplea la forma verbal «ponían».",
+    "statement": "Según Daniel 4:12, se emplea la forma verbal «ponían».",
+    "asserted_detail": "ponían",
     "options": [
       "Verdadero",
       "Falso"
@@ -26951,11 +26951,11 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «edifiqué».",
+    "truth_source_statement": "se emplea la forma verbal «ponían».",
     "replacement_source_ref": null,
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce literalmente Daniel 4:30.",
+    "explanation": "Es verdadera y reproduce literalmente Daniel 4:12.",
     "why_distractors_fail": {
       "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
@@ -27106,6 +27106,81 @@
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
     "explanation": "Es verdadera y reproduce literalmente Daniel 4:22.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación coincide literalmente con la unidad fuente."
+    },
+    "trap_type": null,
+    "validation_adversarial": {
+      "reviewer": "source-blind-v1",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
+      "second_defensible_option": false
+    },
+    "difficulty": "hard"
+  },
+  {
+    "id": "DAN4-GOLD-0864-TRUE_FALSE-TRUE",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "9.0",
+    "source_unit_id": "DAN4-V009",
+    "fact_id": "DAN4-V009-F01",
+    "variant_id": "DAN4-V009-F01-TRUE_FALSE-TRUE",
+    "template_id": "true-false-safe-editorial-v2",
+    "family": "true_false",
+    "chapter": "DAN4",
+    "reference": "Daniel 4:9",
+    "source_ref": "Daniel 4:9",
+    "verse_or_page": "Daniel 4:9",
+    "source_span": "“Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.",
+    "source_quote": "“Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.",
+    "context_anchor": "“Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto,",
+    "topic": "action",
+    "importance": "essential",
+    "relation_type": "action",
+    "option_category": "action",
+    "blind_pool": null,
+    "validation_generator": {
+      "status": "passed",
+      "source_supported": true
+    },
+    "validation_schema": {
+      "status": "passed"
+    },
+    "validation_source": {
+      "status": "passed",
+      "external_knowledge": false
+    },
+    "validation_language": {
+      "status": "passed",
+      "natural_span": true
+    },
+    "final_editorial_status": "GOLD",
+    "accepted_answers": [
+      "entendido"
+    ],
+    "answer_mode": "option_id",
+    "question": "Verdadero o falso: Según Daniel 4:9, se emplea la forma verbal «entendido».",
+    "statement": "Según Daniel 4:9, se emplea la forma verbal «entendido».",
+    "asserted_detail": "entendido",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "false_mutation_kind": null,
+    "focused_true_statement": false,
+    "statement_mode": "atomic_presence",
+    "truth_source_statement": "se emplea la forma verbal «entendido».",
+    "replacement_source_ref": null,
+    "correct_slot_signature": "action",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera y reproduce literalmente Daniel 4:9.",
     "why_distractors_fail": {
       "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
@@ -27331,81 +27406,6 @@
     "correct_slot_signature": "action",
     "replacement_slot_signature": null,
     "explanation": "Es verdadera y reproduce literalmente Daniel 4:10.",
-    "why_distractors_fail": {
-      "Falso": "La afirmación coincide literalmente con la unidad fuente."
-    },
-    "trap_type": null,
-    "validation_adversarial": {
-      "reviewer": "source-blind-v1",
-      "status": "passed",
-      "selected_option": 0,
-      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
-      "second_defensible_option": false
-    },
-    "difficulty": "hard"
-  },
-  {
-    "id": "DAN4-GOLD-0924-TRUE_FALSE-TRUE",
-    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
-    "bank_name": "Banco Maestro Único — Final 2026",
-    "schema_version": "9.0",
-    "source_unit_id": "DAN4-V029",
-    "fact_id": "DAN4-V029-F03",
-    "variant_id": "DAN4-V029-F03-TRUE_FALSE-TRUE",
-    "template_id": "true-false-safe-editorial-v2",
-    "family": "true_false",
-    "chapter": "DAN4",
-    "reference": "Daniel 4:29",
-    "source_ref": "Daniel 4:29",
-    "verse_or_page": "Daniel 4:29",
-    "source_span": "Al cabo de doce meses, paseando por el palacio real de Babilonia,",
-    "source_quote": "Al cabo de doce meses, paseando por el palacio real de Babilonia,",
-    "context_anchor": "Al cabo de doce meses, paseando por el palacio real de Babilonia,",
-    "topic": "action",
-    "importance": "essential",
-    "relation_type": "action",
-    "option_category": "action",
-    "blind_pool": null,
-    "validation_generator": {
-      "status": "passed",
-      "source_supported": true
-    },
-    "validation_schema": {
-      "status": "passed"
-    },
-    "validation_source": {
-      "status": "passed",
-      "external_knowledge": false
-    },
-    "validation_language": {
-      "status": "passed",
-      "natural_span": true
-    },
-    "final_editorial_status": "GOLD",
-    "accepted_answers": [
-      "paseando"
-    ],
-    "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:29, se emplea la forma verbal «paseando».",
-    "statement": "Según Daniel 4:29, se emplea la forma verbal «paseando».",
-    "asserted_detail": "paseando",
-    "options": [
-      "Verdadero",
-      "Falso"
-    ],
-    "correct_option": 0,
-    "correct_answer": "Verdadero",
-    "corrected_statement": "",
-    "incorrect_detail": null,
-    "correction": null,
-    "false_mutation_kind": null,
-    "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «paseando».",
-    "replacement_source_ref": null,
-    "correct_slot_signature": "action",
-    "replacement_slot_signature": null,
-    "explanation": "Es verdadera y reproduce literalmente Daniel 4:29.",
     "why_distractors_fail": {
       "Falso": "La afirmación coincide literalmente con la unidad fuente."
     },
@@ -27686,30 +27686,30 @@
       "Altísimo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:24, se menciona como personaje o ser «Abednego».",
-    "statement": "Según Daniel 4:24, se menciona como personaje o ser «Abednego».",
-    "asserted_detail": "Abednego",
+    "question": "Verdadero o falso: Según Daniel 4:24, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "statement": "Según Daniel 4:24, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "asserted_detail": "Salvador",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:24, se menciona como personaje o ser «Altísimo».",
-    "incorrect_detail": "Abednego",
+    "corrected_statement": "Según Daniel 4:24, ésta es la interpretación, oh rey, y la sentencia del Altísimo, que ha venido sobre mi señor, el rey.",
+    "incorrect_detail": "Salvador",
     "correction": "Altísimo",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Altísimo».",
-    "replacement_source_ref": "PR39, p. 27, párrafo 5",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "ésta es la interpretación, oh rey, y la sentencia del Altísimo, que ha venido sobre mi señor, el rey.",
+    "replacement_source_ref": "PR43, p. 53, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Altísimo», no «Abednego».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 53, párrafo 1, no a Daniel 4:24. La fuente correcta declara: «ésta es la interpretación, oh rey, y la sentencia del Altísimo, que ha venido sobre mi señor, el rey.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Abednego»; la fuente contiene «Altísimo»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 53, párrafo 1, pero no corresponde a Daniel 4:24."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -28361,30 +28361,30 @@
       "Altísimo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:32, se menciona como personaje o ser «Abednego».",
-    "statement": "Según Daniel 4:32, se menciona como personaje o ser «Abednego».",
-    "asserted_detail": "Abednego",
+    "question": "Verdadero o falso: Según Daniel 4:32, Se levantará contra el Príncipe de los príncipes, pero será quebrantado, aunque no por mano humana.",
+    "statement": "Según Daniel 4:32, Se levantará contra el Príncipe de los príncipes, pero será quebrantado, aunque no por mano humana.",
+    "asserted_detail": "Príncipe",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:32, se menciona como personaje o ser «Altísimo».",
-    "incorrect_detail": "Abednego",
+    "corrected_statement": "Según Daniel 4:32, y siete tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.",
+    "incorrect_detail": "Príncipe",
     "correction": "Altísimo",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Altísimo».",
-    "replacement_source_ref": "PR39, p. 27, párrafo 5",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "y siete tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.",
+    "replacement_source_ref": "Daniel 8:25",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Altísimo», no «Abednego».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a Daniel 8:25, no a Daniel 4:32. La fuente correcta declara: «y siete tiempos pasarán sobre ti, hasta que reconozcas que el Altísimo tiene el dominio en el reino de los hombres, y lo da a quien él quiere.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Abednego»; la fuente contiene «Altísimo»."
+      "Verdadero": "El enunciado es verdadero en Daniel 8:25, pero no corresponde a Daniel 4:32."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -28436,8 +28436,8 @@
       "Tuve"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:5, se emplea la forma verbal «Dice».",
-    "statement": "Según Daniel 4:5, se emplea la forma verbal «Dice».",
+    "question": "Verdadero o falso: Según Daniel 4:5, A ti se te dice, rey Nabucodonosor: “El reino te ha sido quitado.”",
+    "statement": "Según Daniel 4:5, A ti se te dice, rey Nabucodonosor: “El reino te ha sido quitado.”",
     "asserted_detail": "Dice",
     "options": [
       "Verdadero",
@@ -28445,21 +28445,21 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:5, se emplea la forma verbal «Tuve».",
+    "corrected_statement": "Según Daniel 4:5, Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
     "incorrect_detail": "Dice",
     "correction": "Tuve",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «Tuve».",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
     "replacement_source_ref": "Daniel 4:31",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «Tuve», no «Dice».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a Daniel 4:31, no a Daniel 4:5. La fuente correcta declara: «Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Dice»; la fuente contiene «Tuve»."
+      "Verdadero": "El enunciado es verdadero en Daniel 4:31, pero no corresponde a Daniel 4:5."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -28961,8 +28961,8 @@
       "pudieron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:7, se emplea la forma verbal «turbaron».",
-    "statement": "Según Daniel 4:7, se emplea la forma verbal «turbaron».",
+    "question": "Verdadero o falso: Según Daniel 4:7, tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
+    "statement": "Según Daniel 4:7, tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
     "asserted_detail": "turbaron",
     "options": [
       "Verdadero",
@@ -28970,21 +28970,21 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:7, se emplea la forma verbal «pudieron».",
+    "corrected_statement": "Según Daniel 4:7, Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación.",
     "incorrect_detail": "turbaron",
     "correction": "pudieron",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «pudieron».",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación.",
     "replacement_source_ref": "Daniel 4:5",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «pudieron», no «turbaron».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a Daniel 4:5, no a Daniel 4:7. La fuente correcta declara: «Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «turbaron»; la fuente contiene «pudieron»."
+      "Verdadero": "El enunciado es verdadero en Daniel 4:5, pero no corresponde a Daniel 4:7."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -29111,30 +29111,30 @@
       "Altísimo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:25, se menciona como personaje o ser «Abednego».",
-    "statement": "Según Daniel 4:25, se menciona como personaje o ser «Abednego».",
-    "asserted_detail": "Abednego",
+    "question": "Verdadero o falso: Según Daniel 4:25, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "statement": "Según Daniel 4:25, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "asserted_detail": "Salvador",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:25, se menciona como personaje o ser «Altísimo».",
-    "incorrect_detail": "Abednego",
+    "corrected_statement": "Según Daniel 4:25, y siete tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.",
+    "incorrect_detail": "Salvador",
     "correction": "Altísimo",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Altísimo».",
-    "replacement_source_ref": "PR39, p. 27, párrafo 5",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "y siete tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.",
+    "replacement_source_ref": "PR43, p. 53, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Altísimo», no «Abednego».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 53, párrafo 1, no a Daniel 4:25. La fuente correcta declara: «y siete tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Abednego»; la fuente contiene «Altísimo»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 53, párrafo 1, pero no corresponde a Daniel 4:25."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -29711,30 +29711,30 @@
       "Altísimo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:17, se menciona como personaje o ser «Belsasar».",
-    "statement": "Según Daniel 4:17, se menciona como personaje o ser «Belsasar».",
-    "asserted_detail": "Belsasar",
+    "question": "Verdadero o falso: Según Daniel 4:17, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "statement": "Según Daniel 4:17, Ante nuestros ojos se cumple la profecía por la cual el Salvador anunció los acontecimientos que habían de preceder su venida.",
+    "asserted_detail": "Salvador",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:17, se menciona como personaje o ser «Altísimo».",
-    "incorrect_detail": "Belsasar",
+    "corrected_statement": "Según Daniel 4:17, La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "incorrect_detail": "Salvador",
     "correction": "Altísimo",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Altísimo».",
-    "replacement_source_ref": "Daniel 5:1",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "replacement_source_ref": "PR43, p. 53, párrafo 1",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Altísimo», no «Belsasar».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR43, p. 53, párrafo 1, no a Daniel 4:17. La fuente correcta declara: «La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Belsasar»; la fuente contiene «Altísimo»."
+      "Verdadero": "El enunciado es verdadero en PR43, p. 53, párrafo 1, pero no corresponde a Daniel 4:17."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -29786,8 +29786,8 @@
       "interpretar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:18, se emplea la forma verbal «humillar».",
-    "statement": "Según Daniel 4:18, se emplea la forma verbal «humillar».",
+    "question": "Verdadero o falso: Según Daniel 4:18, y él puede humillar a los que andan con soberbia.",
+    "statement": "Según Daniel 4:18, y él puede humillar a los que andan con soberbia.",
     "asserted_detail": "humillar",
     "options": [
       "Verdadero",
@@ -29795,21 +29795,21 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:18, se emplea la forma verbal «interpretar».",
+    "corrected_statement": "Según Daniel 4:18, Yo, el rey Nabucodonosor, he visto este sueño. Tú, pues, Beltsasar, darás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar.",
     "incorrect_detail": "humillar",
     "correction": "interpretar",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «interpretar».",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Yo, el rey Nabucodonosor, he visto este sueño. Tú, pues, Beltsasar, darás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar.",
     "replacement_source_ref": "Daniel 4:37",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «interpretar», no «humillar».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a Daniel 4:37, no a Daniel 4:18. La fuente correcta declara: «Yo, el rey Nabucodonosor, he visto este sueño. Tú, pues, Beltsasar, darás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «humillar»; la fuente contiene «interpretar»."
+      "Verdadero": "El enunciado es verdadero en Daniel 4:37, pero no corresponde a Daniel 4:18."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -29861,8 +29861,8 @@
       "Conviene"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:2, se emplea la forma verbal «Constituye».",
-    "statement": "Según Daniel 4:2, se emplea la forma verbal «Constituye».",
+    "question": "Verdadero o falso: Según Daniel 4:2, La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "statement": "Según Daniel 4:2, La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
     "asserted_detail": "Constituye",
     "options": [
       "Verdadero",
@@ -29870,21 +29870,21 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:2, se emplea la forma verbal «Conviene».",
+    "corrected_statement": "Según Daniel 4:2, Conviene que yo declare las señales y milagros que el Dios Altísimo ha hecho conmigo.",
     "incorrect_detail": "Constituye",
     "correction": "Conviene",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «Conviene».",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Conviene que yo declare las señales y milagros que el Dios Altísimo ha hecho conmigo.",
     "replacement_source_ref": "Daniel 4:17",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «Conviene», no «Constituye».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a Daniel 4:17, no a Daniel 4:2. La fuente correcta declara: «Conviene que yo declare las señales y milagros que el Dios Altísimo ha hecho conmigo.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Constituye»; la fuente contiene «Conviene»."
+      "Verdadero": "El enunciado es verdadero en Daniel 4:17, pero no corresponde a Daniel 4:2."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -30236,30 +30236,30 @@
       "detenga"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:35, se emplea la forma verbal «gobierna».",
-    "statement": "Según Daniel 4:35, se emplea la forma verbal «gobierna».",
-    "asserted_detail": "gobierna",
+    "question": "Verdadero o falso: Según Daniel 4:35, Finalmente, el negocio que el rey demanda, es singular, ni hay quien lo pueda declarar delante del rey, salvo los dioses cuya morada no es con la carne.",
+    "statement": "Según Daniel 4:35, Finalmente, el negocio que el rey demanda, es singular, ni hay quien lo pueda declarar delante del rey, salvo los dioses cuya morada no es con la carne.",
+    "asserted_detail": "demanda",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:35, se emplea la forma verbal «detenga».",
-    "incorrect_detail": "gobierna",
+    "corrected_statement": "Según Daniel 4:35, no hay quien detenga su mano y le diga: ‘¿Qué haces?’",
+    "incorrect_detail": "demanda",
     "correction": "detenga",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «detenga».",
-    "replacement_source_ref": "Daniel 4:17",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "no hay quien detenga su mano y le diga: ‘¿Qué haces?’",
+    "replacement_source_ref": "PR40, p. 33, párrafo 7",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «detenga», no «gobierna».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR40, p. 33, párrafo 7, no a Daniel 4:35. La fuente correcta declara: «no hay quien detenga su mano y le diga: ‘¿Qué haces?’».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «gobierna»; la fuente contiene «detenga»."
+      "Verdadero": "El enunciado es verdadero en PR40, p. 33, párrafo 7, pero no corresponde a Daniel 4:35."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -30461,9 +30461,9 @@
       "haciendo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:27, redime tus pecados con justicia, y tus iniquidades no haciendo misericordias con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.",
-    "statement": "Según Daniel 4:27, redime tus pecados con justicia, y tus iniquidades no haciendo misericordias con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.",
-    "asserted_detail": "no haciendo",
+    "question": "Verdadero o falso: Según Daniel 4:27, Al cabo de doce meses, paseando por el palacio real de Babilonia.",
+    "statement": "Según Daniel 4:27, Al cabo de doce meses, paseando por el palacio real de Babilonia.",
+    "asserted_detail": "paseando",
     "options": [
       "Verdadero",
       "Falso"
@@ -30471,20 +30471,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según Daniel 4:27, redime tus pecados con justicia, y tus iniquidades haciendo misericordias con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.",
-    "incorrect_detail": "no haciendo",
+    "incorrect_detail": "paseando",
     "correction": "haciendo",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "redime tus pecados con justicia, y tus iniquidades haciendo misericordias con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.",
-    "replacement_source_ref": "Daniel 4:27",
+    "replacement_source_ref": "Daniel 4:29",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «haciendo», no «no haciendo».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a Daniel 4:29, no a Daniel 4:27. La fuente correcta declara: «redime tus pecados con justicia, y tus iniquidades haciendo misericordias con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no haciendo»; la fuente contiene «haciendo»."
+      "Verdadero": "El enunciado es verdadero en Daniel 4:29, pero no corresponde a Daniel 4:27."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -30761,30 +30761,30 @@
       "Señor"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:19, se menciona como personaje o ser «Gabriel».",
-    "statement": "Según Daniel 4:19, se menciona como personaje o ser «Gabriel».",
-    "asserted_detail": "Gabriel",
+    "question": "Verdadero o falso: Según Daniel 4:19, La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "statement": "Según Daniel 4:19, La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "asserted_detail": "Altísimo",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:19, se menciona como personaje o ser «Señor».",
-    "incorrect_detail": "Gabriel",
+    "corrected_statement": "Según Daniel 4:19, Beltsasar respondió y dijo: —Señor mío, el sueño sea para tus enemigos y su interpretación para los que mal te quieren.",
+    "incorrect_detail": "Altísimo",
     "correction": "Señor",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como personaje o ser «Señor».",
-    "replacement_source_ref": "Daniel 8:16",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Beltsasar respondió y dijo: —Señor mío, el sueño sea para tus enemigos y su interpretación para los que mal te quieren.",
+    "replacement_source_ref": "Daniel 4:17",
     "correct_slot_signature": "person",
     "replacement_slot_signature": "person",
-    "explanation": "Es falsa: la fuente dice «Señor», no «Gabriel».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a Daniel 4:17, no a Daniel 4:19. La fuente correcta declara: «Beltsasar respondió y dijo: —Señor mío, el sueño sea para tus enemigos y su interpretación para los que mal te quieren.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Gabriel»; la fuente contiene «Señor»."
+      "Verdadero": "El enunciado es verdadero en Daniel 4:17, pero no corresponde a Daniel 4:19."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -30836,9 +30836,9 @@
       "humillar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:37, y él puede no humillar a los que andan con soberbia.",
-    "statement": "Según Daniel 4:37, y él puede no humillar a los que andan con soberbia.",
-    "asserted_detail": "no humillar",
+    "question": "Verdadero o falso: Según Daniel 4:37, Yo, el rey Nabucodonosor, he visto este sueño. Tú, pues, Beltsasar, darás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar.",
+    "statement": "Según Daniel 4:37, Yo, el rey Nabucodonosor, he visto este sueño. Tú, pues, Beltsasar, darás su interpretación, porque ninguno entre los sabios de mi reino lo ha podido interpretar.",
+    "asserted_detail": "interpretar",
     "options": [
       "Verdadero",
       "Falso"
@@ -30846,20 +30846,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según Daniel 4:37, y él puede humillar a los que andan con soberbia.",
-    "incorrect_detail": "no humillar",
+    "incorrect_detail": "interpretar",
     "correction": "humillar",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "y él puede humillar a los que andan con soberbia.",
-    "replacement_source_ref": "Daniel 4:37",
+    "replacement_source_ref": "Daniel 4:18",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «humillar», no «no humillar».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a Daniel 4:18, no a Daniel 4:37. La fuente correcta declara: «y él puede humillar a los que andan con soberbia.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no humillar»; la fuente contiene «humillar»."
+      "Verdadero": "El enunciado es verdadero en Daniel 4:18, pero no corresponde a Daniel 4:37."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -30986,9 +30986,9 @@
       "ver"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:10, Éstas fueron las visiones de mi cabeza mientras estaba en mi cama: Me parecía no ver en medio de la tierra un árbol cuya altura era grande.",
-    "statement": "Según Daniel 4:10, Éstas fueron las visiones de mi cabeza mientras estaba en mi cama: Me parecía no ver en medio de la tierra un árbol cuya altura era grande.",
-    "asserted_detail": "no ver",
+    "question": "Verdadero o falso: Según Daniel 4:10, y él puede humillar a los que andan con soberbia.",
+    "statement": "Según Daniel 4:10, y él puede humillar a los que andan con soberbia.",
+    "asserted_detail": "humillar",
     "options": [
       "Verdadero",
       "Falso"
@@ -30996,20 +30996,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según Daniel 4:10, Éstas fueron las visiones de mi cabeza mientras estaba en mi cama: Me parecía ver en medio de la tierra un árbol cuya altura era grande.",
-    "incorrect_detail": "no ver",
+    "incorrect_detail": "humillar",
     "correction": "ver",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Éstas fueron las visiones de mi cabeza mientras estaba en mi cama: Me parecía ver en medio de la tierra un árbol cuya altura era grande.",
-    "replacement_source_ref": "Daniel 4:10",
+    "replacement_source_ref": "Daniel 4:37",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «ver», no «no ver».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a Daniel 4:37, no a Daniel 4:10. La fuente correcta declara: «Éstas fueron las visiones de mi cabeza mientras estaba en mi cama: Me parecía ver en medio de la tierra un árbol cuya altura era grande.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no ver»; la fuente contiene «ver»."
+      "Verdadero": "El enunciado es verdadero en Daniel 4:37, pero no corresponde a Daniel 4:10."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -31092,25 +31092,100 @@
       "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
       "second_defensible_option": false
     },
-    "difficulty": "hard"
+    "difficulty": "expert"
   },
   {
-    "id": "DAN4-GOLD-0853-TRUE_FALSE-FALSE",
+    "id": "DAN4-GOLD-0861-TRUE_FALSE-FALSE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
     "schema_version": "9.0",
-    "source_unit_id": "DAN4-V005",
-    "fact_id": "DAN4-V005-F02",
-    "variant_id": "DAN4-V005-F02-TRUE_FALSE-FALSE",
+    "source_unit_id": "DAN4-V008",
+    "fact_id": "DAN4-V008-F01",
+    "variant_id": "DAN4-V008-F01-TRUE_FALSE-FALSE",
     "template_id": "true-false-safe-editorial-v2",
     "family": "true_false",
     "chapter": "DAN4",
-    "reference": "Daniel 4:5",
-    "source_ref": "Daniel 4:5",
-    "verse_or_page": "Daniel 4:5",
-    "source_span": "Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
-    "source_quote": "Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
-    "context_anchor": "Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
+    "reference": "Daniel 4:8",
+    "source_ref": "Daniel 4:8",
+    "verse_or_page": "Daniel 4:8",
+    "source_span": "hasta que entró ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos. Conté delante de él el sueño, diciendo:",
+    "source_quote": "hasta que entró ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos. Conté delante de él el sueño, diciendo:",
+    "context_anchor": "hasta que entró ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.",
+    "topic": "person",
+    "importance": "essential",
+    "relation_type": "person",
+    "option_category": "person",
+    "blind_pool": null,
+    "validation_generator": {
+      "status": "passed",
+      "source_supported": true
+    },
+    "validation_schema": {
+      "status": "passed"
+    },
+    "validation_source": {
+      "status": "passed",
+      "external_knowledge": false
+    },
+    "validation_language": {
+      "status": "passed",
+      "natural_span": true
+    },
+    "final_editorial_status": "GOLD",
+    "accepted_answers": [
+      "Beltsasar"
+    ],
+    "answer_mode": "option_id",
+    "question": "Verdadero o falso: Según Daniel 4:8, hasta que entró ante mí Daniel, cuyo nombre es Abed-nego, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.",
+    "statement": "Según Daniel 4:8, hasta que entró ante mí Daniel, cuyo nombre es Abed-nego, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.",
+    "asserted_detail": "Abed-nego",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:8, hasta que entró ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.",
+    "incorrect_detail": "Abed-nego",
+    "correction": "Beltsasar",
+    "false_mutation_kind": "closed_category_substitution",
+    "focused_true_statement": false,
+    "statement_mode": "exact_source",
+    "truth_source_statement": "hasta que entró ante mí Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios, y en quien mora el espíritu de los dioses santos.",
+    "replacement_source_ref": "Daniel 2:49",
+    "correct_slot_signature": "person",
+    "replacement_slot_signature": "person",
+    "explanation": "Es falsa: la fuente dice «Beltsasar», no «Abed-nego».",
+    "why_distractors_fail": {
+      "Verdadero": "La única alteración es «Abed-nego»; la fuente contiene «Beltsasar»."
+    },
+    "trap_type": "single_plausible_detail",
+    "validation_adversarial": {
+      "reviewer": "source-blind-v1",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
+      "second_defensible_option": false
+    },
+    "difficulty": "hard"
+  },
+  {
+    "id": "DAN4-GOLD-0889-TRUE_FALSE-FALSE",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "9.0",
+    "source_unit_id": "DAN4-V017",
+    "fact_id": "DAN4-V017-F02",
+    "variant_id": "DAN4-V017-F02-TRUE_FALSE-FALSE",
+    "template_id": "true-false-safe-editorial-v2",
+    "family": "true_false",
+    "chapter": "DAN4",
+    "reference": "Daniel 4:17",
+    "source_ref": "Daniel 4:17",
+    "verse_or_page": "Daniel 4:17",
+    "source_span": "La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "source_quote": "La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "context_anchor": "La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien",
     "topic": "action",
     "importance": "essential",
     "relation_type": "action",
@@ -31133,31 +31208,31 @@
     },
     "final_editorial_status": "GOLD",
     "accepted_answers": [
-      "espantó"
+      "constituye"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:5, Tuve un sueño que no me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
-    "statement": "Según Daniel 4:5, Tuve un sueño que no me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
-    "asserted_detail": "no espantó",
+    "question": "Verdadero o falso: Según Daniel 4:17, La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él no constituye al más humilde de los hombres.’",
+    "statement": "Según Daniel 4:17, La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él no constituye al más humilde de los hombres.’",
+    "asserted_detail": "no constituye",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:5, Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
-    "incorrect_detail": "no espantó",
-    "correction": "espantó",
+    "corrected_statement": "Según Daniel 4:17, La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "incorrect_detail": "no constituye",
+    "correction": "constituye",
     "false_mutation_kind": "negation",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
-    "truth_source_statement": "Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
-    "replacement_source_ref": "Daniel 4:5",
+    "truth_source_statement": "La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+    "replacement_source_ref": "Daniel 4:17",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «espantó», no «no espantó».",
+    "explanation": "Es falsa: la fuente dice «constituye», no «no constituye».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no espantó»; la fuente contiene «espantó»."
+      "Verdadero": "La única alteración es «no constituye»; la fuente contiene «constituye»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {
@@ -31211,8 +31286,8 @@
       "venido"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:24, se emplea la forma verbal «entendido».",
-    "statement": "Según Daniel 4:24, se emplea la forma verbal «entendido».",
+    "question": "Verdadero o falso: Según Daniel 4:24, Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.",
+    "statement": "Según Daniel 4:24, Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.",
     "asserted_detail": "entendido",
     "options": [
       "Verdadero",
@@ -31220,21 +31295,21 @@
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:24, se emplea la forma verbal «venido».",
+    "corrected_statement": "Según Daniel 4:24, ésta es la interpretación, oh rey, y la sentencia del Altísimo, que ha venido sobre mi señor, el rey.",
     "incorrect_detail": "entendido",
     "correction": "venido",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «venido».",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "ésta es la interpretación, oh rey, y la sentencia del Altísimo, que ha venido sobre mi señor, el rey.",
     "replacement_source_ref": "Daniel 4:9",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «venido», no «entendido».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a Daniel 4:9, no a Daniel 4:24. La fuente correcta declara: «ésta es la interpretación, oh rey, y la sentencia del Altísimo, que ha venido sobre mi señor, el rey.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «entendido»; la fuente contiene «venido»."
+      "Verdadero": "El enunciado es verdadero en Daniel 4:9, pero no corresponde a Daniel 4:24."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -31245,97 +31320,22 @@
     "difficulty": "hard"
   },
   {
-    "id": "DAN4-GOLD-0925-TRUE_FALSE-FALSE",
+    "id": "DAN4-GOLD-0875-TRUE_FALSE-FALSE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
     "schema_version": "9.0",
-    "source_unit_id": "DAN4-V030",
-    "fact_id": "DAN4-V030-F01",
-    "variant_id": "DAN4-V030-F01-TRUE_FALSE-FALSE",
+    "source_unit_id": "DAN4-V012",
+    "fact_id": "DAN4-V012-F03",
+    "variant_id": "DAN4-V012-F03-TRUE_FALSE-FALSE",
     "template_id": "true-false-safe-editorial-v2",
     "family": "true_false",
     "chapter": "DAN4",
-    "reference": "Daniel 4:30",
-    "source_ref": "Daniel 4:30",
-    "verse_or_page": "Daniel 4:30",
-    "source_span": "habló el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
-    "source_quote": "habló el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
-    "context_anchor": "«¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
-    "topic": "place",
-    "importance": "essential",
-    "relation_type": "place",
-    "option_category": "place",
-    "blind_pool": null,
-    "validation_generator": {
-      "status": "passed",
-      "source_supported": true
-    },
-    "validation_schema": {
-      "status": "passed"
-    },
-    "validation_source": {
-      "status": "passed",
-      "external_knowledge": false
-    },
-    "validation_language": {
-      "status": "passed",
-      "natural_span": true
-    },
-    "final_editorial_status": "GOLD",
-    "accepted_answers": [
-      "Babilonia"
-    ],
-    "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:30, se menciona como lugar o dirección «Jerusalem».",
-    "statement": "Según Daniel 4:30, se menciona como lugar o dirección «Jerusalem».",
-    "asserted_detail": "Jerusalem",
-    "options": [
-      "Verdadero",
-      "Falso"
-    ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:30, se menciona como lugar o dirección «Babilonia».",
-    "incorrect_detail": "Jerusalem",
-    "correction": "Babilonia",
-    "false_mutation_kind": "atomic_presence_substitution",
-    "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se menciona como lugar o dirección «Babilonia».",
-    "replacement_source_ref": "PR43, p. 47, párrafo 5",
-    "correct_slot_signature": "place",
-    "replacement_slot_signature": "place",
-    "explanation": "Es falsa: la fuente dice «Babilonia», no «Jerusalem».",
-    "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jerusalem»; la fuente contiene «Babilonia»."
-    },
-    "trap_type": "single_plausible_detail",
-    "validation_adversarial": {
-      "reviewer": "source-blind-v1",
-      "status": "passed",
-      "selected_option": 1,
-      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
-      "second_defensible_option": false
-    },
-    "difficulty": "hard"
-  },
-  {
-    "id": "DAN4-GOLD-0926-TRUE_FALSE-FALSE",
-    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
-    "bank_name": "Banco Maestro Único — Final 2026",
-    "schema_version": "9.0",
-    "source_unit_id": "DAN4-V030",
-    "fact_id": "DAN4-V030-F02",
-    "variant_id": "DAN4-V030-F02-TRUE_FALSE-FALSE",
-    "template_id": "true-false-safe-editorial-v2",
-    "family": "true_false",
-    "chapter": "DAN4",
-    "reference": "Daniel 4:30",
-    "source_ref": "Daniel 4:30",
-    "verse_or_page": "Daniel 4:30",
-    "source_span": "habló el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
-    "source_quote": "habló el rey y dijo: «¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
-    "context_anchor": "«¿No es ésta la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad?",
+    "reference": "Daniel 4:12",
+    "source_ref": "Daniel 4:12",
+    "verse_or_page": "Daniel 4:12",
+    "source_span": "Su follaje era hermoso, su fruto abundante y había en él alimento para todos. Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se mantenía de él todo ser viviente.",
+    "source_quote": "Su follaje era hermoso, su fruto abundante y había en él alimento para todos. Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se mantenía de él todo ser viviente.",
+    "context_anchor": "Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se mantenía de él todo ser viviente.",
     "topic": "action",
     "importance": "essential",
     "relation_type": "action",
@@ -31358,31 +31358,31 @@
     },
     "final_editorial_status": "GOLD",
     "accepted_answers": [
-      "edifiqué"
+      "ponían"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:30, se emplea la forma verbal «cumplió».",
-    "statement": "Según Daniel 4:30, se emplea la forma verbal «cumplió».",
-    "asserted_detail": "cumplió",
+    "question": "Verdadero o falso: Según Daniel 4:12, Debajo de él, a su sombra, no se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se mantenía de él todo ser viviente.",
+    "statement": "Según Daniel 4:12, Debajo de él, a su sombra, no se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se mantenía de él todo ser viviente.",
+    "asserted_detail": "no ponían",
     "options": [
       "Verdadero",
       "Falso"
     ],
     "correct_option": 1,
     "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:30, se emplea la forma verbal «edifiqué».",
-    "incorrect_detail": "cumplió",
-    "correction": "edifiqué",
-    "false_mutation_kind": "atomic_presence_substitution",
+    "corrected_statement": "Según Daniel 4:12, Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se mantenía de él todo ser viviente.",
+    "incorrect_detail": "no ponían",
+    "correction": "ponían",
+    "false_mutation_kind": "negation",
     "focused_true_statement": false,
-    "statement_mode": "atomic_presence",
-    "truth_source_statement": "se emplea la forma verbal «edifiqué».",
-    "replacement_source_ref": "Daniel 4:33",
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Debajo de él, a su sombra, se ponían las bestias del campo, en sus ramas anidaban las aves del cielo y se mantenía de él todo ser viviente.",
+    "replacement_source_ref": "Daniel 4:12",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «edifiqué», no «cumplió».",
+    "explanation": "Es falsa: la fuente dice «ponían», no «no ponían».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «cumplió»; la fuente contiene «edifiqué»."
+      "Verdadero": "La única alteración es «no ponían»; la fuente contiene «ponían»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {
@@ -31545,6 +31545,81 @@
     "difficulty": "hard"
   },
   {
+    "id": "DAN4-GOLD-0864-TRUE_FALSE-FALSE",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "9.0",
+    "source_unit_id": "DAN4-V009",
+    "fact_id": "DAN4-V009-F01",
+    "variant_id": "DAN4-V009-F01-TRUE_FALSE-FALSE",
+    "template_id": "true-false-safe-editorial-v2",
+    "family": "true_false",
+    "chapter": "DAN4",
+    "reference": "Daniel 4:9",
+    "source_ref": "Daniel 4:9",
+    "verse_or_page": "Daniel 4:9",
+    "source_span": "“Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.",
+    "source_quote": "“Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.",
+    "context_anchor": "“Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto,",
+    "topic": "action",
+    "importance": "essential",
+    "relation_type": "action",
+    "option_category": "action",
+    "blind_pool": null,
+    "validation_generator": {
+      "status": "passed",
+      "source_supported": true
+    },
+    "validation_schema": {
+      "status": "passed"
+    },
+    "validation_source": {
+      "status": "passed",
+      "external_knowledge": false
+    },
+    "validation_language": {
+      "status": "passed",
+      "natural_span": true
+    },
+    "final_editorial_status": "GOLD",
+    "accepted_answers": [
+      "entendido"
+    ],
+    "answer_mode": "option_id",
+    "question": "Verdadero o falso: Según Daniel 4:9, De la historia de sus padres habían aprendido que la desobediencia a Dios resulta en deshonor, desastre y muerte.",
+    "statement": "Según Daniel 4:9, De la historia de sus padres habían aprendido que la desobediencia a Dios resulta en deshonor, desastre y muerte.",
+    "asserted_detail": "aprendido",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 4:9, Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.",
+    "incorrect_detail": "aprendido",
+    "correction": "entendido",
+    "false_mutation_kind": "cross_reference_statement",
+    "focused_true_statement": false,
+    "statement_mode": "exact_source",
+    "truth_source_statement": "Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.",
+    "replacement_source_ref": "PR41, p. 40, párrafo 3",
+    "correct_slot_signature": "action",
+    "replacement_slot_signature": "action",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a PR41, p. 40, párrafo 3, no a Daniel 4:9. La fuente correcta declara: «Beltsasar, jefe de los magos, ya que he entendido que hay en ti espíritu de los dioses santos y que ningún misterio se te esconde, declárame las visiones de mi sueño que he visto, y su interpretación.».",
+    "why_distractors_fail": {
+      "Verdadero": "El enunciado es verdadero en PR41, p. 40, párrafo 3, pero no corresponde a Daniel 4:9."
+    },
+    "trap_type": "true_in_other_context",
+    "validation_adversarial": {
+      "reviewer": "source-blind-v1",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
+      "second_defensible_option": false
+    },
+    "difficulty": "hard"
+  },
+  {
     "id": "DAN4-GOLD-0859-TRUE_FALSE-FALSE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -31586,9 +31661,9 @@
       "conté"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:7, Y vinieron magos, astrólogos, caldeos y adivinos, y no les conté el sueño, pero no me pudieron dar su interpretación.",
-    "statement": "Según Daniel 4:7, Y vinieron magos, astrólogos, caldeos y adivinos, y no les conté el sueño, pero no me pudieron dar su interpretación.",
-    "asserted_detail": "no conté",
+    "question": "Verdadero o falso: Según Daniel 4:7, En la misma hora se cumplió la palabra sobre Nabucodonosor.",
+    "statement": "Según Daniel 4:7, En la misma hora se cumplió la palabra sobre Nabucodonosor.",
+    "asserted_detail": "cumplió",
     "options": [
       "Verdadero",
       "Falso"
@@ -31596,20 +31671,20 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según Daniel 4:7, Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación.",
-    "incorrect_detail": "no conté",
+    "incorrect_detail": "cumplió",
     "correction": "conté",
-    "false_mutation_kind": "negation",
+    "false_mutation_kind": "cross_reference_statement",
     "focused_true_statement": false,
     "statement_mode": "exact_source",
     "truth_source_statement": "Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación.",
-    "replacement_source_ref": "Daniel 4:7",
+    "replacement_source_ref": "Daniel 4:33",
     "correct_slot_signature": "action",
     "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «conté», no «no conté».",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a Daniel 4:33, no a Daniel 4:7. La fuente correcta declara: «Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación.».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no conté»; la fuente contiene «conté»."
+      "Verdadero": "El enunciado es verdadero en Daniel 4:33, pero no corresponde a Daniel 4:7."
     },
-    "trap_type": "single_plausible_detail",
+    "trap_type": "true_in_other_context",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
       "status": "passed",
@@ -31758,81 +31833,6 @@
     "explanation": "Es falsa: la fuente dice «parecía», no «no parecía».",
     "why_distractors_fail": {
       "Verdadero": "La única alteración es «no parecía»; la fuente contiene «parecía»."
-    },
-    "trap_type": "single_plausible_detail",
-    "validation_adversarial": {
-      "reviewer": "source-blind-v1",
-      "status": "passed",
-      "selected_option": 1,
-      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
-      "second_defensible_option": false
-    },
-    "difficulty": "hard"
-  },
-  {
-    "id": "DAN4-GOLD-0924-TRUE_FALSE-FALSE",
-    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
-    "bank_name": "Banco Maestro Único — Final 2026",
-    "schema_version": "9.0",
-    "source_unit_id": "DAN4-V029",
-    "fact_id": "DAN4-V029-F03",
-    "variant_id": "DAN4-V029-F03-TRUE_FALSE-FALSE",
-    "template_id": "true-false-safe-editorial-v2",
-    "family": "true_false",
-    "chapter": "DAN4",
-    "reference": "Daniel 4:29",
-    "source_ref": "Daniel 4:29",
-    "verse_or_page": "Daniel 4:29",
-    "source_span": "Al cabo de doce meses, paseando por el palacio real de Babilonia,",
-    "source_quote": "Al cabo de doce meses, paseando por el palacio real de Babilonia,",
-    "context_anchor": "Al cabo de doce meses, paseando por el palacio real de Babilonia,",
-    "topic": "action",
-    "importance": "essential",
-    "relation_type": "action",
-    "option_category": "action",
-    "blind_pool": null,
-    "validation_generator": {
-      "status": "passed",
-      "source_supported": true
-    },
-    "validation_schema": {
-      "status": "passed"
-    },
-    "validation_source": {
-      "status": "passed",
-      "external_knowledge": false
-    },
-    "validation_language": {
-      "status": "passed",
-      "natural_span": true
-    },
-    "final_editorial_status": "GOLD",
-    "accepted_answers": [
-      "paseando"
-    ],
-    "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 4:29, Al cabo de doce meses, no paseando por el palacio real de Babilonia.",
-    "statement": "Según Daniel 4:29, Al cabo de doce meses, no paseando por el palacio real de Babilonia.",
-    "asserted_detail": "no paseando",
-    "options": [
-      "Verdadero",
-      "Falso"
-    ],
-    "correct_option": 1,
-    "correct_answer": "Falso",
-    "corrected_statement": "Según Daniel 4:29, Al cabo de doce meses, paseando por el palacio real de Babilonia.",
-    "incorrect_detail": "no paseando",
-    "correction": "paseando",
-    "false_mutation_kind": "negation",
-    "focused_true_statement": false,
-    "statement_mode": "exact_source",
-    "truth_source_statement": "Al cabo de doce meses, paseando por el palacio real de Babilonia.",
-    "replacement_source_ref": "Daniel 4:29",
-    "correct_slot_signature": "action",
-    "replacement_slot_signature": "action",
-    "explanation": "Es falsa: la fuente dice «paseando», no «no paseando».",
-    "why_distractors_fail": {
-      "Verdadero": "La única alteración es «no paseando»; la fuente contiene «paseando»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {

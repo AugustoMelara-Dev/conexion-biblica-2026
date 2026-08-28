@@ -73,6 +73,16 @@ def main() -> int:
 
     units_by_id = {unit["source_unit_id"]: unit for unit in inventory["units"]}
     facts_by_id = {fact["fact_id"]: fact for fact in facts}
+    exact_statements_by_reference: dict[str, set[str]] = defaultdict(set)
+    for inventory_fact in facts:
+        for source_text in (
+            inventory_fact["context"],
+            inventory_fact["source_quote"],
+        ):
+            if source_text.count(inventory_fact["answer"]) == 1:
+                exact_statements_by_reference[inventory_fact["reference"]].add(
+                    _complete_statement_text(source_text)
+                )
     errors: list[str] = []
     ids: set[str] = set()
     variants: set[str] = set()
@@ -233,6 +243,30 @@ def main() -> int:
                         f"Según {question['reference']}, {expected_negated}"
                     ):
                         fail(errors, qid, "invalid_controlled_negation")
+                elif mutation_kind == "cross_reference_statement":
+                    replacement_ref = question.get("replacement_source_ref")
+                    if not replacement_ref or replacement_ref == question["reference"]:
+                        fail(errors, qid, "invalid_cross_reference_source")
+                    if question.get("statement") == expected_true_statement:
+                        fail(errors, qid, "cross_reference_repeats_target_source")
+                    expected_foreign_statements = {
+                        f"Según {question['reference']}, {statement}"
+                        for statement in exact_statements_by_reference.get(
+                            replacement_ref, set()
+                        )
+                    }
+                    if question.get("statement") not in expected_foreign_statements:
+                        fail(errors, qid, "cross_reference_statement_not_source_exact")
+                    if question.get("trap_type") != "true_in_other_context":
+                        fail(errors, qid, "missing_cross_reference_trap")
+                    if _norm(question["incorrect_detail"]) not in _norm(
+                        question.get("statement", "")
+                    ):
+                        fail(errors, qid, "cross_reference_detail_missing_from_statement")
+                    if option_signature(
+                        question["incorrect_detail"], fact["category"]
+                    ) != option_signature(question["correction"], fact["category"]):
+                        fail(errors, qid, "false_grammatical_signature_mismatch")
                 else:
                     if mutation_kind not in {
                         "closed_category_substitution",

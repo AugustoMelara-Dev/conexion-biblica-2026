@@ -79,7 +79,8 @@ EDITORIALLY_EXCLUDED_SOURCE_UNITS = {
 SAFE_EXACT_NEGATION_ACTION_FORMS = {
     form
     for form in SAFE_FALSE_ACTION_FORMS
-    if form != "imperative" and not form.startswith("participle_")
+    if form not in {"imperative", "infinitive", "gerund"}
+    and not form.startswith("participle_")
 } | {
     "present_a",
     "present_e",
@@ -1461,10 +1462,28 @@ def _negate_exact_action_statement(statement: str, answer: str) -> str | None:
     words_before = re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+", statement[:insert_at])
     if words_before and _norm(words_before[-1]) in {"no", "ni", "nunca", "tampoco", "sin"}:
         return None
-    clause_prefix = re.split(r"[.;:!?]", statement[:insert_at])[-1]
+    normalized_before = [_norm(word) for word in words_before[-3:]]
+    if normalized_before and normalized_before[-1] == "todavia":
+        return None
+    if any(
+        word in {"es", "era", "eran", "fue", "fueron", "esta", "estaba", "estaban"}
+        for word in normalized_before[-2:]
+    ):
+        return None
+    clause_start = max(
+        (statement.rfind(mark, 0, insert_at) for mark in ".;:!?"),
+        default=-1,
+    ) + 1
+    clause_ends = [
+        position
+        for mark in ".;:!?"
+        if (position := statement.find(mark, insert_at)) >= 0
+    ]
+    clause_end = min(clause_ends, default=len(statement))
+    complete_clause = statement[clause_start:clause_end]
     if re.search(
         r"\b(?:no|ni|ningún|ninguna|ninguno|nadie|nunca|jamás|sin|tampoco)\b",
-        clause_prefix,
+        complete_clause,
         re.IGNORECASE,
     ):
         return None
@@ -1750,8 +1769,8 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
 
     def can_make_false(fact: dict[str, Any]) -> bool:
         # Free substitution inside a long phrase can remain grammatical while
-        # becoming absurd. Phrase facts stay as exact, complete statements;
-        # other categories supply the balanced false half of the bank.
+        # becoming absurd. Phrase and term facts stay as exact, complete true
+        # statements; closed semantic categories supply the false half.
         return (
             fact["category"] in {"person", "place", "number", "action"}
             and (
@@ -1792,6 +1811,11 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             rows.append(_atomic_true_false_statement(fact))
         return rows
 
+    def can_use_exact_false_statement(fact: dict[str, Any]) -> bool:
+        if not true_statement_options(fact, include_atomic=False):
+            return False
+        return bool(false_replacements(fact))
+
     facts_by_id = {fact["fact_id"]: fact for fact in safe_false_candidates}
     statement_owner: dict[tuple[str, str], str] = {}
     statement_by_fact: dict[str, str] = {}
@@ -1826,9 +1850,21 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
     for fact in safe_false_candidates:
         assign_unique_statement(fact, set(), include_atomic=False)
 
-    if len(statement_by_fact) < 1500:
-        for fact in safe_false_candidates:
+    exact_false_ready = sum(
+        can_use_exact_false_statement(facts_by_id[fact_id])
+        for fact_id in statement_by_fact
+    )
+    if exact_false_ready < 1500:
+        for fact in sorted(
+            safe_false_candidates,
+            key=lambda row: (
+                not can_use_exact_false_statement(row),
+                _hash("atomic-true-fill:" + row["fact_id"]),
+            ),
+        ):
             if fact["fact_id"] in statement_by_fact:
+                continue
+            if not can_use_exact_false_statement(fact):
                 continue
             statement_text = _atomic_true_false_statement(fact)
             key = (fact["reference"], statement_text)
@@ -1836,7 +1872,8 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                 continue
             statement_owner[key] = fact["fact_id"]
             statement_by_fact[fact["fact_id"]] = statement_text
-            if len(statement_by_fact) >= 1500:
+            exact_false_ready += 1
+            if exact_false_ready >= 1500:
                 break
 
     if len(statement_by_fact) < 1500:
@@ -1857,6 +1894,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         for fact_id in sorted(
             statement_by_fact,
             key=lambda fact_id: (
+                not can_use_exact_false_statement(facts_by_id[fact_id]),
                 statement_by_fact[fact_id]
                 == _atomic_true_false_statement(facts_by_id[fact_id]),
                 _hash("tf-true-selected:" + fact_id),
@@ -2002,16 +2040,31 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                 "correct_slot_signature": fact.get("_slot_signature"),
                 "replacement_slot_signature": replacement_row.get("_slot_signature") if replacement_row else None,
                 "explanation": (
-                    f"Es falsa: la fuente dice «{fact['answer']}», no «{incorrect_detail}»."
+                    (
+                        f"Es falsa por atribución contextual: el enunciado citado pertenece a "
+                        f"{replacement_row['reference']}, no a {fact['reference']}. "
+                        f"La fuente correcta declara: {_display_excerpt(source_statement)}."
+                    )
+                    if false and false_mutation_kind == "cross_reference_statement"
+                    else f"Es falsa: la fuente dice «{fact['answer']}», no «{incorrect_detail}»."
                     if false else f"Es verdadera y reproduce literalmente {fact['reference']}."
                 ),
                 "why_distractors_fail": {
                     "Verdadero" if false else "Falso": (
-                        f"La única alteración es «{incorrect_detail}»; la fuente contiene «{fact['answer']}»."
+                        (
+                            f"El enunciado es verdadero en {replacement_row['reference']}, "
+                            f"pero no corresponde a {fact['reference']}."
+                        )
+                        if false and false_mutation_kind == "cross_reference_statement"
+                        else f"La única alteración es «{incorrect_detail}»; la fuente contiene «{fact['answer']}»."
                         if false else "La afirmación coincide literalmente con la unidad fuente."
                     )
                 },
-                "trap_type": "single_plausible_detail" if false else None,
+                "trap_type": (
+                    "true_in_other_context"
+                    if false and false_mutation_kind == "cross_reference_statement"
+                    else "single_plausible_detail" if false else None
+                ),
             }
         )
         base["validation_adversarial"] = _review_choice(base)
@@ -2027,6 +2080,47 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         append_true_false(fact, statement_by_fact[fact["fact_id"]], False)
 
     false_specs: list[tuple[dict[str, Any], str, dict[str, Any], str, str, str]] = []
+
+    def cross_reference_statement_spec(
+        fact: dict[str, Any],
+        source_statement: str,
+        replacement_rows: list[dict[str, Any]],
+    ) -> tuple[str, dict[str, Any], str, str, str]:
+        target_source_norm = _norm(fact["source_quote"])
+        for replacement_row in replacement_rows:
+            if "context" not in replacement_row or "source_quote" not in replacement_row:
+                continue
+            if replacement_row["reference"] == fact["reference"]:
+                continue
+            for visible_text in true_statement_options(
+                replacement_row, include_atomic=False
+            ):
+                if _norm(visible_text) in target_source_norm:
+                    continue
+                prompt = f"Verdadero o falso: Según {fact['reference']}, {visible_text}"
+                if (
+                    prompt not in used_true_false_prompts
+                    and _norm(prompt) not in used_true_false_prompt_norms
+                ):
+                    replacement = (
+                        replacement_row["answer"]
+                        if fact["category"] == "place"
+                        else _match_initial_case(
+                            replacement_row["answer"], fact["answer"]
+                        )
+                    )
+                    return (
+                        source_statement,
+                        replacement_row,
+                        visible_text,
+                        replacement,
+                        "cross_reference_statement",
+                    )
+        raise ValueError(
+            "No hay afirmación contextual ajena y única para "
+            f"{fact['fact_id']}"
+        )
+
     for fact in true_facts:
         selected: tuple[str, dict[str, Any], str, str, str] | None = None
         source_statement = statement_by_fact[fact["fact_id"]]
@@ -2065,7 +2159,10 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                         "negation",
                     )
             if selected is None:
-                source_statement = _atomic_true_false_statement(fact)
+                source_statement = exact_false_statements[0]
+                selected = cross_reference_statement_spec(
+                    fact, source_statement, replacement_candidates
+                )
         elif (
             fact["category"] == "person"
             and _norm(fact["answer"]) in DIVINE_NAMES
@@ -2073,22 +2170,21 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             # Sustituir «Señor» por «Santo» puede conservar el mismo referente
             # y no produce una falsedad semántica inequívoca. Además, insertar
             # un personaje humano en una acción divina crea una pista demasiado
-            # obvia. Se formula por mención textual y se usa otro personaje.
-            source_statement = _atomic_true_false_statement(fact)
-            replacement_candidates = [
-                row
-                for row in strict_false_distractor_map[fact["fact_id"]]
-                if _norm(row["answer"]) not in DIVINE_NAMES
-                and not _boundary_collision(
-                    fact["context"], fact["answer"], row["answer"]
-                )
-            ]
+            # obvia. Se atribuye al pasaje una afirmación completa que sí es
+            # literal en otra referencia y exige distinguir el contexto.
+            source_statement = exact_false_statements[0]
+            selected = cross_reference_statement_spec(
+                fact, source_statement, replacement_candidates
+            )
         elif fact["category"] == "number" and len(fact["answer"].split()) > 1:
             # Las expresiones numéricas compuestas pueden incluir unidades
             # distintas. Sustituirlas dentro de una cita crea frases como
-            # «tiempo, tiempos... gobernadores»; la presencia textual conserva
-            # una falsedad clara sin romper la gramática.
-            source_statement = _atomic_true_false_statement(fact)
+            # «tiempo, tiempos... gobernadores». Se usa una proposición completa
+            # tomada de otra referencia para preservar la gramática.
+            source_statement = exact_false_statements[0]
+            selected = cross_reference_statement_spec(
+                fact, source_statement, replacement_candidates
+            )
         for replacement_row in replacement_candidates:
             if selected is not None:
                 break
