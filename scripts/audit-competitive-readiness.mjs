@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises"
 import { resolve } from "node:path"
 
 import {
+  buildCompetitiveAuditReport,
   selectStratifiedSample,
   semanticAuditFlags,
 } from "./lib/competitive-audit.mjs"
@@ -59,20 +60,15 @@ const sample = selectStratifiedSample(questions, {
 const automaticFlags = sample.flatMap((row) =>
   row.automatic_flags.map((flag) => `${row.id}:${flag}`)
 )
-const report = {
-  generated_at: new Date().toISOString(),
+const report = buildCompetitiveAuditReport({
   bank: manifest.bank_id,
-  bank_questions: questions.length,
-  sample_size: sample.length,
-  design: {
-    chapters,
-    families,
-    per_stratum: 3,
-    strata: chapters.length * families.length,
-  },
-  automatic_flags: automaticFlags,
+  bankQuestions: questions.length,
+  chapters,
+  families,
+  perStratum: 3,
+  automaticFlags,
   sample,
-}
+})
 
 await writeFile(
   resolve(root, "reports/final-competitive-audit.json"),

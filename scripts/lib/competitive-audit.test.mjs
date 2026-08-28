@@ -1,11 +1,41 @@
 import { describe, expect, it } from "vitest"
 
 import {
+  buildCompetitiveAuditReport,
   selectStratifiedSample,
   semanticAuditFlags,
 } from "./competitive-audit.mjs"
 
 describe("competitive audit sampling", () => {
+  it("builds a reproducible report for identical audited input", () => {
+    const input = {
+      bank: "BANK-1",
+      bankQuestions: 12000,
+      chapters: ["DAN7"],
+      families: ["fill_choice"],
+      perStratum: 3,
+      automaticFlags: [],
+      sample: [{ id: "DAN7-FILL-1" }],
+    }
+
+    expect(buildCompetitiveAuditReport(input)).toEqual(
+      buildCompetitiveAuditReport(input)
+    )
+    expect(buildCompetitiveAuditReport(input)).toEqual({
+      bank: "BANK-1",
+      bank_questions: 12000,
+      sample_size: 1,
+      design: {
+        chapters: ["DAN7"],
+        families: ["fill_choice"],
+        per_stratum: 3,
+        strata: 1,
+      },
+      automatic_flags: [],
+      sample: [{ id: "DAN7-FILL-1" }],
+    })
+  })
+
   it("selects the requested number from every chapter and high-risk family", () => {
     const chapters = ["DAN7", "PR39"]
     const families = ["fill_choice", "true_false_false"]

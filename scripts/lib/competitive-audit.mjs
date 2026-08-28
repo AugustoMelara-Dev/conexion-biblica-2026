@@ -10,6 +10,30 @@ function deterministicRank(row) {
   return createHash("sha256").update(String(row.id)).digest("hex")
 }
 
+export function buildCompetitiveAuditReport({
+  bank,
+  bankQuestions,
+  chapters,
+  families,
+  perStratum,
+  automaticFlags,
+  sample,
+}) {
+  return {
+    bank,
+    bank_questions: bankQuestions,
+    sample_size: sample.length,
+    design: {
+      chapters,
+      families,
+      per_stratum: perStratum,
+      strata: chapters.length * families.length,
+    },
+    automatic_flags: automaticFlags,
+    sample,
+  }
+}
+
 export function selectStratifiedSample(
   rows,
   { chapters, families, perStratum }
