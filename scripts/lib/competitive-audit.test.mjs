@@ -11,6 +11,24 @@ import {
   semanticAuditFlags,
 } from "./competitive-audit.mjs"
 
+const contextualBase = {
+  id: "CTX",
+  family: "single_choice_contextual",
+  question: "Según Daniel 7:1, ¿quién realiza la acción descrita en «[…] respondió»?",
+  options: ["Daniel", "Gabriel", "Miguel", "Darío"],
+  correct_option: 0,
+  correct_answer: "Daniel",
+  source_quote: "Daniel respondió",
+  trap_type: "true_in_other_context",
+  contextual_role: "actor",
+  context_evidence: "[…] respondió",
+  why_distractors_fail: {
+    Gabriel: "Es verdadero en Daniel 8:16, pero no aquí.",
+    Miguel: "Es verdadero en Daniel 10:13, pero no aquí.",
+    Darío: "Es verdadero en Daniel 6:1, pero no aquí.",
+  },
+}
+
 describe("competitive audit sampling", () => {
   it("mantiene los rechazos humanos como defectos abiertos", () => {
     expect(
@@ -245,5 +263,43 @@ describe("competitive audit sampling", () => {
         corrected_statement: "Según Daniel 7:1 aparece la expresión sueño.",
       })
     ).toContain("deprecated_generic_false_wording")
+  })
+
+  it("flags generic contextual prompts", () => {
+    expect(
+      exhaustiveRiskFlags({
+        ...contextualBase,
+        question:
+          "Según Daniel 7:1, ¿qué opción corresponde específicamente a esta escena: «[…]»?",
+      })
+    ).toContain("generic_contextual_prompt")
+  })
+
+  it("flags atomic true-false templates", () => {
+    expect(
+      exhaustiveRiskFlags({
+        ...contextualBase,
+        family: "true_false",
+        statement_mode: "atomic_presence",
+      })
+    ).toContain("atomic_true_false")
+  })
+
+  it("flags a contextual row without a role", () => {
+    expect(
+      exhaustiveRiskFlags({
+        ...contextualBase,
+        contextual_role: null,
+      })
+    ).toContain("contextual_role_mismatch")
+  })
+
+  it("flags contextual evidence that reveals the answer", () => {
+    expect(
+      exhaustiveRiskFlags({
+        ...contextualBase,
+        context_evidence: "Daniel respondió al rey",
+      })
+    ).toContain("context_evidence_leak")
   })
 })

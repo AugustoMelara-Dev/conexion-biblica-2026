@@ -10,7 +10,12 @@ from collections import Counter, defaultdict
 from typing import Any, Iterable
 
 from scripts.lib.final_bank import BANK_ID, DISPLAY_NAME, QUESTION_FAMILIES, SCHEMA_VERSION
-from scripts.lib.contextual_roles import render_contextual_identity, render_contextual_question
+from scripts.lib.contextual_roles import (
+    GENERIC_CONTEXTUAL_FRAGMENT,
+    contains_normalized_phrase,
+    render_contextual_identity,
+    render_contextual_question,
+)
 from scripts.lib.final_relations import extract_relation_candidates
 from scripts.lib.massive_generator import NUMBER_WORDS, STOPWORDS, TOKEN_RE, _candidate_spans
 from scripts.lib.source_inventory import _split_propositions
@@ -2419,6 +2424,7 @@ def audit_final_bank(
     questions: list[dict[str, Any]],
     coverage: dict[str, Any],
 ) -> dict[str, Any]:
+    facts_by_id = {fact["fact_id"]: fact for fact in facts}
     normalized_questions = [_norm(question["question"]) for question in questions]
     false_questions = [
         question for question in questions
@@ -2455,6 +2461,10 @@ def audit_final_bank(
             length_leaks += 1
     blank_pattern = re.compile(r"_{4,}")
     family_contract_errors: Counter[str] = Counter()
+    atomic_true_false_templates = 0
+    generic_contextual_prompts = 0
+    contextual_role_errors = 0
+    context_evidence_leaks = 0
     for question in questions:
         blank_count = len(blank_pattern.findall(question["question"]))
         family = question["family"]
@@ -2479,6 +2489,45 @@ def audit_final_bank(
             invalid = blank_count != 1
         if invalid:
             family_contract_errors[family] += 1
+        fact = facts_by_id[question["fact_id"]]
+        if question.get("statement_mode") == "atomic_presence":
+            atomic_true_false_templates += 1
+        if family == "single_choice_contextual":
+            expected_question, expected_role, expected_evidence = (
+                render_contextual_question(fact)
+            )
+            if GENERIC_CONTEXTUAL_FRAGMENT in _norm(question["question"]):
+                generic_contextual_prompts += 1
+            if (
+                question["question"] != expected_question
+                or question.get("contextual_role") != expected_role
+                or question.get("context_evidence") != expected_evidence
+            ):
+                contextual_role_errors += 1
+            if contains_normalized_phrase(
+                str(question.get("context_evidence") or ""),
+                str(question["correct_answer"]),
+            ):
+                context_evidence_leaks += 1
+        if question.get("statement_mode") == "contextual_identity":
+            expected_statement, expected_role, expected_evidence = (
+                render_contextual_identity(fact)
+            )
+            expected_visible_statement = (
+                f"Según {question['reference']}, {expected_statement}"
+            )
+            if (
+                question.get("statement") != expected_visible_statement
+                or question.get("truth_source_statement") != expected_statement
+                or question.get("contextual_role") != expected_role
+                or question.get("context_evidence") != expected_evidence
+            ):
+                contextual_role_errors += 1
+            if contains_normalized_phrase(
+                str(question.get("context_evidence") or ""),
+                str(question.get("asserted_detail") or ""),
+            ):
+                context_evidence_leaks += 1
     return {
         "schema_version": SCHEMA_VERSION,
         "bank_id": BANK_ID,
@@ -2507,6 +2556,10 @@ def audit_final_bank(
             for question in questions
             if question["family"] == "true_false"
         ),
+        "atomic_true_false_templates": atomic_true_false_templates,
+        "generic_contextual_prompts": generic_contextual_prompts,
+        "contextual_role_errors": contextual_role_errors,
+        "context_evidence_leaks": context_evidence_leaks,
         "invalid_references": invalid_references,
         "external_knowledge_questions": sum(question["validation_source"].get("external_knowledge") is not False for question in questions),
         "answer_length_leaks": length_leaks,

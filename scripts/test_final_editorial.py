@@ -1293,6 +1293,10 @@ class FinalEditorialTests(unittest.TestCase):
             "orphan_numeric_source_fragments",
             "family_contract_violations",
             "unsafe_true_false_templates",
+            "atomic_true_false_templates",
+            "generic_contextual_prompts",
+            "contextual_role_errors",
+            "context_evidence_leaks",
         ):
             self.assertEqual(audit[key], 0, key)
 

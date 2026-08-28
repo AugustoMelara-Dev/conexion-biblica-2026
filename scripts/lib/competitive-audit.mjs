@@ -100,6 +100,13 @@ function normalizeText(value) {
     .trim()
 }
 
+function containsNormalizedPhrase(text, phrase) {
+  const normalizedText = normalizeText(text)
+  const normalizedPhrase = normalizeText(phrase)
+  if (!normalizedPhrase) return false
+  return (` ${normalizedText} `).includes(` ${normalizedPhrase} `)
+}
+
 export function exhaustiveRiskFlags(row) {
   const flags = [...semanticAuditFlags(row)]
   const options = Array.isArray(row.options) ? row.options : []
@@ -127,7 +134,25 @@ export function exhaustiveRiskFlags(row) {
       new Set(row.option_slot_signatures).size !== 1
     )
       flags.push("contextual_slot_signature_mismatch")
+    if (
+      normalizeText(row.question).includes(
+        "¿que opcion corresponde especificamente a esta escena:"
+      )
+    )
+      flags.push("generic_contextual_prompt")
+    if (!row.contextual_role || !row.context_evidence)
+      flags.push("contextual_role_mismatch")
   }
+
+  if (row.family === "true_false" && row.statement_mode === "atomic_presence")
+    flags.push("atomic_true_false")
+
+  if (
+    (row.family === "single_choice_contextual" ||
+      row.statement_mode === "contextual_identity") &&
+    containsNormalizedPhrase(row.context_evidence, row.correct_answer)
+  )
+    flags.push("context_evidence_leak")
 
   if (
     row.family === "true_false" &&
@@ -154,6 +179,10 @@ const RISK_WEIGHT = {
   missing_contextual_trap: 80,
   incomplete_distractor_explanations: 80,
   contextual_slot_signature_mismatch: 80,
+  generic_contextual_prompt: 100,
+  atomic_true_false: 100,
+  contextual_role_mismatch: 100,
+  context_evidence_leak: 100,
   deprecated_generic_false_wording: 60,
   contextual_distractor_without_source_reference: 40,
 }

@@ -18,13 +18,18 @@ from scripts.lib.final_editorial import (
     MAX_CHAPTER_FACTS_PER_ANSWER,
     MAX_GLOBAL_FACTS_PER_ANSWER,
     _norm,
-    _atomic_true_false_statement,
     _complete_statement_text,
     _contextual_word_role,
     _is_bible_reference_number,
     _negate_exact_action_statement,
     _word_role,
     option_signature,
+)
+from scripts.lib.contextual_roles import (
+    GENERIC_CONTEXTUAL_FRAGMENT,
+    contains_normalized_phrase,
+    render_contextual_identity,
+    render_contextual_question,
 )
 
 
@@ -212,9 +217,23 @@ def main() -> int:
             if statement_mode == "exact_source":
                 if truth_source_statement not in exact_source_texts:
                     fail(errors, qid, "invalid_exact_true_false_source")
-            elif statement_mode == "atomic_presence":
-                if truth_source_statement != _atomic_true_false_statement(fact):
-                    fail(errors, qid, "invalid_atomic_true_false_statement")
+            elif statement_mode == "contextual_identity":
+                expected_identity, expected_role, expected_evidence = (
+                    render_contextual_identity(fact)
+                )
+                if question["correct_answer"] != "Verdadero":
+                    fail(errors, qid, "contextual_identity_not_true")
+                if truth_source_statement != expected_identity:
+                    fail(errors, qid, "invalid_contextual_identity_statement")
+                if question.get("contextual_role") != expected_role:
+                    fail(errors, qid, "contextual_identity_role_mismatch")
+                if question.get("context_evidence") != expected_evidence:
+                    fail(errors, qid, "contextual_identity_evidence_mismatch")
+                if contains_normalized_phrase(
+                    str(question.get("context_evidence") or ""),
+                    str(question.get("asserted_detail") or ""),
+                ):
+                    fail(errors, qid, "context_evidence_leak")
             else:
                 fail(errors, qid, "missing_true_false_statement_mode")
             expected_true_statement = (
@@ -268,10 +287,7 @@ def main() -> int:
                     ) != option_signature(question["correction"], fact["category"]):
                         fail(errors, qid, "false_grammatical_signature_mismatch")
                 else:
-                    if mutation_kind not in {
-                        "closed_category_substitution",
-                        "atomic_presence_substitution",
-                    }:
+                    if mutation_kind != "closed_category_substitution":
                         fail(errors, qid, "missing_false_mutation_kind")
                     if option_signature(
                         question["incorrect_detail"], fact["category"]
@@ -304,6 +320,22 @@ def main() -> int:
                 fail(errors, qid, "contextual_prompt_reveals_answer")
             if question.get("trap_type") != "true_in_other_context":
                 fail(errors, qid, "missing_contextual_trap")
+            expected_question, expected_role, expected_evidence = (
+                render_contextual_question(fact)
+            )
+            if GENERIC_CONTEXTUAL_FRAGMENT in _norm(question["question"]):
+                fail(errors, qid, "generic_contextual_prompt")
+            if question["question"] != expected_question:
+                fail(errors, qid, "contextual_question_mismatch")
+            if question.get("contextual_role") != expected_role:
+                fail(errors, qid, "contextual_role_mismatch")
+            if question.get("context_evidence") != expected_evidence:
+                fail(errors, qid, "context_evidence_mismatch")
+            if contains_normalized_phrase(
+                str(question.get("context_evidence") or ""),
+                str(question["correct_answer"]),
+            ):
+                fail(errors, qid, "context_evidence_leak")
             if set(question["why_distractors_fail"]) != (
                 set(options) - {question["correct_answer"]}
             ):
