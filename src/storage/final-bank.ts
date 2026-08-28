@@ -222,10 +222,14 @@ export async function loadFinalQuestionPool(input: {
   )
   const candidates: Question[] = []
   const retryCandidates: Question[] = []
-  for (const shard of shards) {
-    const response = await fetcher(`/${shard.questions_file}`)
-    if (!response.ok) throw new Error(`No se pudo leer ${shard.chapter}`)
-    const rows = (await response.json()) as FinalRawQuestion[]
+  const shardRows = await Promise.all(
+    shards.map(async (shard) => {
+      const response = await fetcher(`/${shard.questions_file}`)
+      if (!response.ok) throw new Error(`No se pudo leer ${shard.chapter}`)
+      return (await response.json()) as FinalRawQuestion[]
+    })
+  )
+  for (const rows of shardRows) {
     const eligibleRows = rows
       .filter((row) =>
         input.blindPool

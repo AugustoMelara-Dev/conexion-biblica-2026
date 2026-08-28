@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { AlertCircle } from "lucide-react"
 import { useApp } from "@/app/app-state"
 import { filterQuestionsForSelection } from "@/domain/banks"
@@ -115,6 +115,7 @@ export function App() {
   } = useApp()
   const [activeRound, setActiveRound] = useState<RoundView | null>(null)
   const [result, setResult] = useState<Session | null>(null)
+  const roundStarting = useRef(false)
 
   useEffect(() => {
     if (activeRound || !storedActiveRound || allQuestions.length === 0) return
@@ -125,7 +126,8 @@ export function App() {
       ])
     )
     const selected =
-      storedActiveRound.questionSnapshots?.length === storedActiveRound.questionKeys.length
+      storedActiveRound.questionSnapshots?.length ===
+      storedActiveRound.questionKeys.length
         ? storedActiveRound.questionSnapshots
         : storedActiveRound.questionKeys
             .map((key) => questionMap.get(key))
@@ -144,121 +146,135 @@ export function App() {
     subset?: Question[],
     resetCycle = false
   ) => {
-    const nextConfig: SessionConfig = {
-      ...config,
-      bankSelection: config.bankSelection ?? bankSelection,
-      strategy:
-        config.strategy ??
-        (config.shuffleQuestions ? "coverage-cycle" : "sequential-blocks"),
-    }
-    const roundQuestions = nextConfig.massive
-      ? await loadMassiveQuestions(nextConfig)
-      : filterQuestionsForSelection(
-          allQuestions,
-          nextConfig.bankSelection ?? bankSelection
-        )
-    const eligible =
-      subset ?? filterEligibleQuestions(roundQuestions, progress, nextConfig)
-    const target =
-      nextConfig.count === "all"
-        ? eligible.length
-        : Math.min(nextConfig.count, eligible.length)
-    let selected: Question[]
-    let selectionSummary: SelectionSummary = { strategy: nextConfig.strategy! }
-    if (nextConfig.massive) {
-      const weakChapters = [...new Set(
-        roundQuestions
-          .filter((question) => {
-            const key = `${question.bankId ?? "local"}:${question.id}`
-            return (progress.get(key)?.timesIncorrect ?? 0) > 0
-          })
-          .map((question) => question.source.chapter)
-      )]
-      const adaptive = selectAdaptiveSession({
-        questions: eligible,
-        exposures,
-        count: target,
-        weakChapters,
-        includeBlind: Boolean(nextConfig.includeBlind),
-        seed: timestamp(),
-      })
-      const exposureByFact = new Map<string, number>()
-      for (const exposure of exposures)
-        exposureByFact.set(
-          exposure.factId,
-          (exposureByFact.get(exposure.factId) ?? 0) + exposure.exposures
-        )
-      selected = adaptive.map((question, index) =>
-        materializeDynamicQuestion(question, {
-          seed: timestamp() + index,
-          exposure: exposureByFact.get(question.factId ?? question.factKey) ?? 0,
-        })
-      )
-      selectionSummary = { strategy: "adaptive" }
-    } else if (subset)
-      selected =
-        nextConfig.strategy === "random-balanced"
-          ? shuffleExactSubset(subset)
-          : subset.slice()
-    else if (nextConfig.strategy === "coverage-cycle") {
-      const poolKey = buildPoolKey(nextConfig)
-      const selection = selectCoverageCycle({
-        pool: eligible,
-        count: target,
-        poolKey,
-        cycle: coverageCycles.get(poolKey),
-        reset: resetCycle,
-      })
-      selected = selection.questions
-      await saveCoverageCycle(selection.cycle)
-      selectionSummary = {
-        strategy: "coverage-cycle",
-        poolKey,
-        cycleId: selection.cycle.cycleId,
-        seen: selection.seen,
-        remaining: selection.remaining,
-        total: selection.total,
+    if (roundStarting.current) return
+    roundStarting.current = true
+    try {
+      const nextConfig: SessionConfig = {
+        ...config,
+        bankSelection: config.bankSelection ?? bankSelection,
+        strategy:
+          config.strategy ??
+          (config.shuffleQuestions ? "coverage-cycle" : "sequential-blocks"),
       }
-    } else if (nextConfig.strategy === "random-balanced")
-      selected = selectBalancedRandom(eligible, target)
-    else if (nextConfig.strategy === "sequential-blocks")
-      selected = selectSequentialBlock(
-        eligible,
-        target,
-        nextConfig.sequentialBlock ?? 0
-      ).questions
-    else
-      selected = selectSessionQuestions(
-        roundQuestions,
-        progress,
-        nextConfig,
-        timestamp()
-      )
-    if (selected.length === 0) return
+      const roundQuestions = nextConfig.massive
+        ? await loadMassiveQuestions(nextConfig)
+        : filterQuestionsForSelection(
+            allQuestions,
+            nextConfig.bankSelection ?? bankSelection
+          )
+      const eligible =
+        subset ?? filterEligibleQuestions(roundQuestions, progress, nextConfig)
+      const target =
+        nextConfig.count === "all"
+          ? eligible.length
+          : Math.min(nextConfig.count, eligible.length)
+      let selected: Question[]
+      let selectionSummary: SelectionSummary = {
+        strategy: nextConfig.strategy!,
+      }
+      if (nextConfig.massive) {
+        const weakChapters = [
+          ...new Set(
+            roundQuestions
+              .filter((question) => {
+                const key = `${question.bankId ?? "local"}:${question.id}`
+                return (progress.get(key)?.timesIncorrect ?? 0) > 0
+              })
+              .map((question) => question.source.chapter)
+          ),
+        ]
+        const adaptive = selectAdaptiveSession({
+          questions: eligible,
+          exposures,
+          count: target,
+          weakChapters,
+          includeBlind: Boolean(nextConfig.includeBlind),
+          seed: timestamp(),
+        })
+        const exposureByFact = new Map<string, number>()
+        for (const exposure of exposures)
+          exposureByFact.set(
+            exposure.factId,
+            (exposureByFact.get(exposure.factId) ?? 0) + exposure.exposures
+          )
+        selected = adaptive.map((question, index) =>
+          materializeDynamicQuestion(question, {
+            seed: timestamp() + index,
+            exposure:
+              exposureByFact.get(question.factId ?? question.factKey) ?? 0,
+          })
+        )
+        selectionSummary = { strategy: "adaptive" }
+      } else if (subset)
+        selected =
+          nextConfig.strategy === "random-balanced"
+            ? shuffleExactSubset(subset)
+            : subset.slice()
+      else if (nextConfig.strategy === "coverage-cycle") {
+        const poolKey = buildPoolKey(nextConfig)
+        const selection = selectCoverageCycle({
+          pool: eligible,
+          count: target,
+          poolKey,
+          cycle: coverageCycles.get(poolKey),
+          reset: resetCycle,
+        })
+        selected = selection.questions
+        await saveCoverageCycle(selection.cycle)
+        selectionSummary = {
+          strategy: "coverage-cycle",
+          poolKey,
+          cycleId: selection.cycle.cycleId,
+          seen: selection.seen,
+          remaining: selection.remaining,
+          total: selection.total,
+        }
+      } else if (nextConfig.strategy === "random-balanced")
+        selected = selectBalancedRandom(eligible, target)
+      else if (nextConfig.strategy === "sequential-blocks")
+        selected = selectSequentialBlock(
+          eligible,
+          target,
+          nextConfig.sequentialBlock ?? 0
+        ).questions
+      else
+        selected = selectSessionQuestions(
+          roundQuestions,
+          progress,
+          nextConfig,
+          timestamp()
+        )
+      if (selected.length === 0)
+        throw new Error(
+          "No hay preguntas que coincidan con estos filtros. Ajusta la configuración e inténtalo de nuevo."
+        )
 
-    const startedAt = timestamp()
-    const persisted: ActiveRound = {
-      id: "active",
-      startedAt,
-      updatedAt: startedAt,
-      currentIndex: 0,
-      questionKeys: selected.map(
-        (question) => `${question.bankId ?? "local"}:${question.id}`
-      ),
-      questionSnapshots: nextConfig.massive ? selected : undefined,
-      answers: [],
-      config: nextConfig,
-      selectionSummary,
+      const startedAt = timestamp()
+      const persisted: ActiveRound = {
+        id: "active",
+        startedAt,
+        updatedAt: startedAt,
+        currentIndex: 0,
+        questionKeys: selected.map(
+          (question) => `${question.bankId ?? "local"}:${question.id}`
+        ),
+        questionSnapshots: nextConfig.massive ? selected : undefined,
+        answers: [],
+        config: nextConfig,
+        selectionSummary,
+      }
+      await saveActiveRound(persisted)
+      const round: RoundView = {
+        questions: selected,
+        config: nextConfig,
+        persisted,
+      }
+      setActiveRound(round)
+      setResult(null)
+      setNav("practice")
+    } finally {
+      roundStarting.current = false
     }
-    await saveActiveRound(persisted)
-    const round: RoundView = {
-      questions: selected,
-      config: nextConfig,
-      persisted,
-    }
-    setActiveRound(round)
-    setResult(null)
-    setNav("practice")
   }
 
   const finishRound = async (session: Session) => {
@@ -338,14 +354,13 @@ export function App() {
           onExit={exitRound}
         />
       )
-    if (nav === "banks")
-      return <BankManagerPage />
+    if (nav === "banks") return <BankManagerPage />
     if (nav === "practice")
       return (
         <SessionBuilderPage
-          onStart={(config, resetCycle) => {
-            void startRound(config, undefined, resetCycle)
-          }}
+          onStart={(config, resetCycle) =>
+            startRound(config, undefined, resetCycle)
+          }
         />
       )
     if (nav === "stats") return <StatisticsPage />
@@ -358,7 +373,7 @@ export function App() {
           }
         />
       )
-    return <DashboardPage onStartMission={(config) => void startRound(config)} />
+    return <DashboardPage onStartMission={startRound} />
   }
 
   if (activeRound) {

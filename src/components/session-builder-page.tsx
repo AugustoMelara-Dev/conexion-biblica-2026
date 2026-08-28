@@ -1,4 +1,11 @@
-import { useEffect, useId, useMemo, useState, type ReactNode } from "react"
+import {
+  useEffect,
+  useId,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react"
 import { CircleHelp, Shuffle, TimerReset } from "lucide-react"
 import { useApp } from "@/app/app-state"
 import { AdvancedSettings } from "@/components/practice/advanced-settings"
@@ -31,10 +38,7 @@ import {
   getSequentialBlockCount,
 } from "@/domain/session-selection"
 import { SIMULATION_PRESET } from "@/domain/simulation-calibration"
-import {
-  getStudyDay,
-  type StudyDay,
-} from "@/domain/study-plan"
+import { getStudyDay, type StudyDay } from "@/domain/study-plan"
 import {
   type DifficultyBand,
   type QuestionStatus,
@@ -80,15 +84,10 @@ const initialConfig: SessionConfig = {
 export function SessionBuilderPage({
   onStart,
 }: {
-  onStart: (config: SessionConfig, resetCycle?: boolean) => void
+  onStart: (config: SessionConfig, resetCycle?: boolean) => void | Promise<void>
 }) {
-  const {
-    questions,
-    progress,
-    bankSelection,
-    coverageCycles,
-    finalManifest,
-  } = useApp()
+  const { questions, progress, bankSelection, coverageCycles, finalManifest } =
+    useApp()
   const [config, setConfig] = useState<SessionConfig>(() => ({
     ...initialConfig,
     bankSelection,
@@ -99,6 +98,9 @@ export function SessionBuilderPage({
   }))
   const [advancedOpen, setAdvancedOpen] = useState(false)
   const [totalEnabled, setTotalEnabled] = useState(false)
+  const [starting, setStarting] = useState(false)
+  const [startError, setStartError] = useState<string | null>(null)
+  const startingRef = useRef(false)
   const finalChapterCounts = useMemo(() => {
     const counts = new Map<string, number>()
     if (bankSelection !== "final-v7" || !finalManifest) return counts
@@ -230,6 +232,27 @@ export function SessionBuilderPage({
   const resetCycle = Boolean(
     currentCycle && currentCycle.remainingQuestionKeys.length === 0
   )
+  const startRound = async (
+    nextConfig: SessionConfig,
+    shouldResetCycle = false
+  ) => {
+    if (startingRef.current) return
+    startingRef.current = true
+    setStarting(true)
+    setStartError(null)
+    try {
+      await onStart(nextConfig, shouldResetCycle)
+    } catch (error) {
+      setStartError(
+        error instanceof Error
+          ? error.message
+          : "No se pudo preparar la ronda. Inténtalo de nuevo."
+      )
+    } finally {
+      startingRef.current = false
+      setStarting(false)
+    }
+  }
 
   return (
     <div className="flex flex-col gap-7">
@@ -238,7 +261,27 @@ export function SessionBuilderPage({
         title="Configura tu próxima ronda"
         description="Elige cómo quieres estudiar; ajusta los detalles solo si los necesitas."
       />
-      <MassiveTrainingHub onStart={(massiveConfig) => onStart(massiveConfig)} />
+      {starting ? (
+        <p
+          role="status"
+          aria-live="polite"
+          className="rounded-xl border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-muted-foreground"
+        >
+          Preparando la ronda y cargando el banco maestro…
+        </p>
+      ) : null}
+      {startError ? (
+        <p
+          role="alert"
+          className="rounded-xl border border-destructive/30 bg-destructive/5 px-4 py-3 text-sm text-destructive"
+        >
+          {startError}
+        </p>
+      ) : null}
+      <MassiveTrainingHub
+        starting={starting}
+        onStart={(massiveConfig) => startRound(massiveConfig)}
+      />
       <ModePicker value={config.mode} onChange={selectMode} />
       <section className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="grid gap-6">
@@ -373,7 +416,8 @@ export function SessionBuilderPage({
                     Tipos de pregunta
                   </h2>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Activa o desactiva las familias de pregunta del banco maestro.
+                    Activa o desactiva las familias de pregunta del banco
+                    maestro.
                   </p>
                 </div>
                 <div className="grid gap-2 sm:grid-cols-2">
@@ -531,10 +575,13 @@ export function SessionBuilderPage({
             count={config.count}
             mode={config.mode}
             disabled={
-              !estimated || !config.types.length || !config.sourceWorks.length
+              starting ||
+              !estimated ||
+              !config.types.length ||
+              !config.sourceWorks.length
             }
             onStart={() =>
-              onStart(
+              void startRound(
                 {
                   ...config,
                   massive:

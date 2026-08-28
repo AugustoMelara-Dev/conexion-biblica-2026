@@ -313,13 +313,23 @@ describe("estados transversales de App", () => {
   it("mantiene el resumen usable cuando falla una carga histórica", () => {
     renderApp({ masterBankError: "Sin conexión" })
 
-    expect(
-      screen.getByText("Sin conexión")
-    ).toBeVisible()
+    expect(screen.getByText("Sin conexión")).toBeVisible()
     expect(
       screen.getByRole("heading", { name: "PLAN FINAL — GANAR EL 29" })
     ).toBeVisible()
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1)
+  })
+
+  it("explica por qué una misión no puede iniciar en vez de ignorar el clic", async () => {
+    const user = userEvent.setup()
+    renderApp({ loadMassiveQuestions: vi.fn().mockResolvedValue([]) })
+
+    await user.click(
+      screen.getByRole("button", { name: "CONTINUAR MI MISIÓN" })
+    )
+
+    expect(await screen.findByRole("alert")).toBeVisible()
+    expect(screen.getByText(/No hay preguntas que coincidan/)).toBeVisible()
   })
 
   it("inicia desde Revisión una ronda formada por la cola exacta", async () => {
@@ -536,12 +546,12 @@ describe("estados transversales de App", () => {
       previous,
       stored,
       /Sí/,
-      { loadMassiveQuestions },
+      { loadMassiveQuestions }
     )
     const callsBeforeRandom = saveActiveRound.mock.calls.length
 
     await user.click(
-      screen.getByRole("button", { name: "Otra tanda aleatoria" }),
+      screen.getByRole("button", { name: "Otra tanda aleatoria" })
     )
 
     await waitFor(() => expect(loadMassiveQuestions).toHaveBeenCalledTimes(1))
@@ -551,10 +561,10 @@ describe("estados transversales de App", () => {
       .find((round) => round.currentIndex === 0)!
     expect(randomized.questionKeys).toHaveLength(20)
     expect(
-      randomized.questionKeys.every((key) => key.startsWith("final-v7:")),
+      randomized.questionKeys.every((key) => key.startsWith("final-v7:"))
     ).toBe(true)
     expect(new Set(randomized.questionKeys)).not.toEqual(
-      new Set(previous.map(keyOf)),
+      new Set(previous.map(keyOf))
     )
   })
 

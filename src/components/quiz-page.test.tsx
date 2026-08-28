@@ -236,6 +236,27 @@ describe("ronda enfocada", () => {
     )
   })
 
+  it("mantiene la pregunta y permite reintentar si falla el guardado de la respuesta", async () => {
+    const user = userEvent.setup()
+    appState.recordAnswer
+      .mockRejectedValueOnce(new Error("storage denied"))
+      .mockResolvedValueOnce({ timesIncorrect: 0 })
+    renderQuiz()
+
+    await user.click(screen.getByRole("radio", { name: /Respuesta/ }))
+    await user.click(screen.getByRole("button", { name: "Confirmar respuesta" }))
+
+    expect(await screen.findByText(/No se pudo guardar la respuesta/)).toBeVisible()
+    expect(screen.getByRole("button", { name: "Confirmar respuesta" })).toBeEnabled()
+    expect(screen.queryByText("Respuesta correcta")).not.toBeInTheDocument()
+
+    await user.click(screen.getByRole("button", { name: "Confirmar respuesta" }))
+    expect(
+      await screen.findByText("Respuesta correcta", { selector: "div" })
+    ).toBeVisible()
+    expect(appState.recordAnswer).toHaveBeenCalledTimes(2)
+  })
+
   it("presenta metadatos, pregunta y acción dentro de la región de estudio", () => {
     renderQuiz()
 

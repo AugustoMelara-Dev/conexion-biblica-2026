@@ -420,6 +420,7 @@ export function QuizPage({
       )
         return
       isSubmittingRef.current = true
+      setTransitionError(null)
       const transitionGeneration = transitionGenerationRef.current
       const submittedQuestionKey = `${question.bankId ?? "local"}:${question.id}`
       const responseTimeMs = Date.now() - questionStartedAt
@@ -440,23 +441,45 @@ export function QuizPage({
       setAnswers((current) => [...current, sessionAnswer])
       setFeedback(result)
       setSubmitted(true)
-      const nextProgress = await recordAnswer(question, result, value, {
-        favorite,
-        markedDifficult: difficult,
-        context: sessionContextForMode(config.mode),
-        afterFeedback: answers.some((answer) => {
-          const earlier = queue.find((item) => `${item.bankId ?? "local"}:${item.id}` === answer.questionKey)
-          return earlier?.factId === question.factId
-        }),
-        sessionId: `round:${resume?.startedAt ?? questionStartedAt}`,
-        exposureKind: config.trainingPresetId?.includes("blind")
-          ? "blind"
-          : config.trainingPresetId?.includes("night") || config.trainingPresetId?.includes("deferred")
-            ? "deferred"
-            : config.mode === "simulation"
-              ? "cold"
-              : "practice",
-      })
+      let nextProgress
+      try {
+        nextProgress = await recordAnswer(question, result, value, {
+          favorite,
+          markedDifficult: difficult,
+          context: sessionContextForMode(config.mode),
+          afterFeedback: answers.some((answer) => {
+            const earlier = queue.find(
+              (item) =>
+                `${item.bankId ?? "local"}:${item.id}` === answer.questionKey
+            )
+            return earlier?.factId === question.factId
+          }),
+          sessionId: `round:${resume?.startedAt ?? questionStartedAt}`,
+          exposureKind: config.trainingPresetId?.includes("blind")
+            ? "blind"
+            : config.trainingPresetId?.includes("night") ||
+                config.trainingPresetId?.includes("deferred")
+              ? "deferred"
+              : config.mode === "simulation"
+                ? "cold"
+                : "practice",
+        })
+      } catch {
+        if (isCurrentTransition(transitionGeneration, submittedQuestionKey)) {
+          setAnswers((current) =>
+            current.at(-1)?.questionKey === sessionAnswer.questionKey
+              ? current.slice(0, -1)
+              : current
+          )
+          setFeedback(null)
+          setSubmitted(false)
+          isSubmittingRef.current = false
+          setTransitionError(
+            "No se pudo guardar la respuesta. Tu ronda sigue abierta; inténtalo de nuevo."
+          )
+        }
+        return
+      }
       if (!isCurrentTransition(transitionGeneration, submittedQuestionKey))
         return
       if (
@@ -735,8 +758,14 @@ export function QuizPage({
           variant="outline"
           className="size-11"
           onClick={() => {
-            if (document.fullscreenElement) void document.exitFullscreen()
-            else void document.documentElement.requestFullscreen?.()
+            const fullscreen = document.fullscreenElement
+              ? document.exitFullscreen()
+              : document.documentElement.requestFullscreen?.()
+            void fullscreen?.catch(() =>
+              setTransitionError(
+                "El navegador no permitió abrir la pantalla completa. Puedes continuar la ronda normalmente."
+              )
+            )
           }}
         >
           <Maximize2 data-icon="inline-start" />
@@ -857,7 +886,7 @@ export function QuizPage({
               question={question}
               selectedAnswer={value}
               isCorrect={feedback.isCorrect}
-              onUnderstood={() => undefined}
+              onUnderstood={() => advance()}
               onConfused={() => setDifficult(true)}
             />
           ) : null}

@@ -105,6 +105,21 @@ export function BankManagerPage() {
   const [backupImporting, setBackupImporting] = useState(false)
   const [query, setQuery] = useState("")
   const [source, setSource] = useState<"all" | SourceWork>("all")
+  const [actionPending, setActionPending] = useState<string | null>(null)
+  const [actionError, setActionError] = useState<string | null>(null)
+
+  const runAction = async (label: string, action: () => Promise<void>) => {
+    if (actionPending) return
+    setActionPending(label)
+    setActionError(null)
+    try {
+      await action()
+    } catch {
+      setActionError(`No se pudo ${label}. Revisa el almacenamiento e inténtalo de nuevo.`)
+    } finally {
+      setActionPending(null)
+    }
+  }
 
   const selectFiles = (nextReplaceBankId?: string) => {
     setReplaceBankId(nextReplaceBankId)
@@ -181,6 +196,12 @@ export function BankManagerPage() {
           </Button>
         }
       />
+      {actionError ? (
+        <Alert variant="destructive" role="alert">
+          <AlertTitle>La acción no se completó</AlertTitle>
+          <AlertDescription>{actionError}</AlertDescription>
+        </Alert>
+      ) : null}
 
       <Card className="border-dashed shadow-none">
         <CardHeader className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
@@ -300,28 +321,31 @@ export function BankManagerPage() {
           icon={Download}
           title="Exportar bancos"
           detail="Incluye el raw original de cada banco."
-          onClick={async () =>
-            downloadJson("conexion-biblica-bancos.json", await exportBanks())
-          }
+          pending={actionPending === "exportar los bancos"}
+          disabled={actionPending !== null}
+          onClick={() => runAction("exportar los bancos", async () =>
+            downloadJson("conexion-biblica-bancos.json", await exportBanks()))}
         />
         <ActionCard
           icon={Download}
           title="Exportar progreso"
           detail="Solo métricas y evolución de preguntas."
-          onClick={async () =>
+          pending={actionPending === "exportar el progreso"}
+          disabled={actionPending !== null}
+          onClick={() => runAction("exportar el progreso", async () =>
             downloadJson(
               "conexion-biblica-progreso.json",
               await exportProgress()
-            )
-          }
+            ))}
         />
         <ActionCard
           icon={ShieldCheck}
           title="Exportar todo"
           detail="Respaldo versionado para restaurar después."
-          onClick={async () =>
-            downloadJson("conexion-biblica-respaldo.json", await exportBackup())
-          }
+          pending={actionPending === "exportar el respaldo"}
+          disabled={actionPending !== null}
+          onClick={() => runAction("exportar el respaldo", async () =>
+            downloadJson("conexion-biblica-respaldo.json", await exportBackup()))}
         />
       </section>
 
@@ -507,7 +531,9 @@ export function BankManagerPage() {
                                   `¿Eliminar ${bank.name}? El progreso se conserva separado.`
                                 )
                               )
-                                void removeBank(bank.bankId)
+                                void runAction("eliminar el banco", () =>
+                                  removeBank(bank.bankId)
+                                )
                             }}
                           >
                             <Trash2 data-icon="inline-start" />
@@ -589,22 +615,28 @@ function ActionCard({
   title,
   detail,
   onClick,
+  disabled = false,
+  pending = false,
 }: {
   icon: typeof Download
   title: string
   detail: string
-  onClick: () => void
+  onClick: () => void | Promise<void>
+  disabled?: boolean
+  pending?: boolean
 }) {
   return (
     <button
       type="button"
+      disabled={disabled}
+      aria-busy={pending}
       className="rounded-xl border bg-card p-5 text-left transition-colors hover:bg-muted/40"
-      onClick={onClick}
+      onClick={() => void onClick()}
     >
       <div className="flex size-9 items-center justify-center rounded-lg bg-secondary text-primary">
         <Icon />
       </div>
-      <p className="mt-4 font-medium">{title}</p>
+      <p className="mt-4 font-medium">{pending ? "Procesando…" : title}</p>
       <p className="mt-1 text-xs leading-5 text-muted-foreground">{detail}</p>
     </button>
   )
