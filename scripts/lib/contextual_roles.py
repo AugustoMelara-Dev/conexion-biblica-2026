@@ -58,7 +58,12 @@ def contains_normalized_phrase(text: str, phrase: str) -> bool:
 def _answer_span(fact: dict[str, Any]) -> tuple[str, str]:
     context = str(fact["context"])
     answer = str(fact["answer"])
-    matches = list(re.finditer(re.escape(answer), context, flags=re.IGNORECASE))
+    matches = list(
+        re.finditer(
+            rf"(?<!\w){re.escape(answer)}(?!\w)",
+            context,
+        )
+    )
     if len(matches) != 1:
         raise ValueError(f"{fact.get('fact_id', '<sin-id>')}:context_answer_count")
     match = matches[0]
@@ -117,8 +122,14 @@ def derive_contextual_role(fact: dict[str, Any]) -> str:
 
 
 def mask_context_answer(fact: dict[str, Any], marker: str = "[…]") -> str:
-    before, after = _answer_span(fact)
-    result = before + marker + after
+    _answer_span(fact)
+    answer = str(fact["answer"])
+    result = re.sub(
+        rf"(?<!\w){re.escape(answer)}(?!\w)",
+        lambda _: marker,
+        str(fact["context"]),
+        flags=re.IGNORECASE,
+    )
     if contains_normalized_phrase(result, str(fact["answer"])):
         raise ValueError(f"{fact.get('fact_id', '<sin-id>')}:masked_answer_leak")
     return result.strip()
@@ -186,19 +197,21 @@ def render_contextual_question(fact: dict[str, Any]) -> tuple[str, str, str]:
     if role not in ALLOWED_CONTEXTUAL_ROLES:
         raise ValueError(f"{fact.get('fact_id', '<sin-id>')}:invalid_contextual_role")
     evidence = mask_context_answer(fact)
-    if fact.get("relation_prompt"):
-        question = str(fact["relation_prompt"])
+    answer = str(fact["answer"])
+    relation_prompt = str(fact.get("relation_prompt") or "")
+    if relation_prompt and not contains_normalized_phrase(relation_prompt, answer):
+        question = relation_prompt
     else:
         reference = str(fact["reference"])
         source_label = (
             "el pasaje citado"
-            if contains_normalized_phrase(reference, str(fact["answer"]))
+            if contains_normalized_phrase(reference, answer)
             else reference
         )
-        question = (
-            f"Según {source_label}, {_QUESTION_OPENINGS[role]} "
-            f"«{evidence}»?"
-        )
+        opening = _QUESTION_OPENINGS[role]
+        if contains_normalized_phrase(opening, answer):
+            opening = "¿Qué detalle completa correctamente"
+        question = f"Según {source_label}, {opening} «{evidence}»?"
     if contains_normalized_phrase(question, str(fact["answer"])):
         raise ValueError(f"{fact.get('fact_id', '<sin-id>')}:context_question_answer_leak")
     return question, role, evidence

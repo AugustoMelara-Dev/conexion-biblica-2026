@@ -95,9 +95,9 @@ class ContextualRoleTests(unittest.TestCase):
         self.assertEqual(role, "concept")
         self.assertIn("concepto", question.casefold())
 
-    def test_rejects_ambiguous_context_ignoring_case(self):
+    def test_rejects_multiple_exact_answer_occurrences(self):
         with self.assertRaisesRegex(ValueError, "context_answer_count"):
-            mask_context_answer(fact(context="Daniel habló con daniel"))
+            mask_context_answer(fact(context="Daniel habló con Daniel"))
 
 
 if __name__ == "__main__":

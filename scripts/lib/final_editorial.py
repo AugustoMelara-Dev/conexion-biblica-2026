@@ -10,6 +10,7 @@ from collections import Counter, defaultdict
 from typing import Any, Iterable
 
 from scripts.lib.final_bank import BANK_ID, DISPLAY_NAME, QUESTION_FAMILIES, SCHEMA_VERSION
+from scripts.lib.contextual_roles import render_contextual_question
 from scripts.lib.final_relations import extract_relation_candidates
 from scripts.lib.massive_generator import NUMBER_WORDS, STOPWORDS, TOKEN_RE, _candidate_spans
 from scripts.lib.source_inventory import _split_propositions
@@ -1941,15 +1942,17 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
             option_slot_signatures = [*distractor_slot_signatures]
             option_slot_signatures.insert(position, fact.get("_slot_signature"))
             masked_context = _masked(fact["context"], fact["answer"], "________")
+            contextual_role = None
+            context_evidence = None
             if family == "fill_choice":
                 question_text = f"Complete {fact['reference']}: {_display_excerpt(masked_context)}"
                 trap_type = None
             elif family == "single_choice_contextual":
-                question_text = fact.get("relation_prompt") or (
-                    f"Según {fact['reference']}, ¿qué opción "
-                    f"corresponde específicamente a esta escena: "
-                    f"{_display_excerpt(_masked(fact['context'], fact['answer'], '[…]'))}?"
-                )
+                (
+                    question_text,
+                    contextual_role,
+                    context_evidence,
+                ) = render_contextual_question(fact)
                 trap_type = "true_in_other_context"
             else:
                 question_text = (
@@ -1971,6 +1974,8 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
                     ),
                     "why_distractors_fail": why,
                     "trap_type": trap_type,
+                    "contextual_role": contextual_role,
+                    "context_evidence": context_evidence,
                 }
             )
             base["validation_adversarial"] = _review_choice(base)

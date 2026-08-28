@@ -390,6 +390,29 @@ class FinalEditorialTests(unittest.TestCase):
                     question["id"],
                 )
 
+    def test_contextual_questions_use_role_specific_language(self) -> None:
+        contextual_rows = [
+            question
+            for question in self.questions
+            if question["family"] == "single_choice_contextual"
+        ]
+        self.assertEqual(len(contextual_rows), 3000)
+        self.assertFalse(
+            any(
+                "¿qué opción corresponde específicamente a esta escena:"
+                in question["question"].casefold()
+                for question in contextual_rows
+            )
+        )
+        self.assertTrue(all(question.get("contextual_role") for question in contextual_rows))
+        self.assertTrue(all(question.get("context_evidence") for question in contextual_rows))
+        roles = {question["contextual_role"] for question in contextual_rows}
+        self.assertTrue(
+            {"recipient", "destination", "duration", "action", "concept", "formulation"}
+            <= roles,
+            roles,
+        )
+
     def test_true_false_never_uses_focused_answer_reveal_templates(self) -> None:
         """V/F debe evaluar una afirmación completa, no regalar el detalle evaluado."""
         focused = [
