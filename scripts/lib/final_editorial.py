@@ -248,7 +248,7 @@ NON_VERB_FORMS = NON_VERB_IA | {
     "alegria", "aparte", "carrera", "citara", "collar", "cuenta", "cuernos", "firme", "fuerte",
     "ira", "lugar", "manjar", "mar", "mujer", "altar", "poder", "primer",
     "tercer", "caracter", "bienestar", "singular", "mayordomia", "muerte",
-    "parte", "suerte", "supremacia", "triste", "viviente", "varon", "lomos",
+    "parte", "suerte", "supremacia", "triste", "viviente", "concerniente", "varon", "lomos",
 }
 INVARIANT_ADJECTIVE_FORMS = {
     "dificil", "fragil", "fuerte", "grande", "imposible", "inferior",

@@ -508,6 +508,7 @@ class FinalEditorialTests(unittest.TestCase):
             ("les había sido prolongada la vida hasta cierto tiempo", "vida"),
             ("muchachos de buen parecer", "parecer"),
             ("Daniel, siervo del Dios viviente, el Dios tuyo", "viviente"),
+            ("el propósito de Dios concerniente a las naciones", "concerniente"),
             ("llevará la guerra hasta su fortaleza", "guerra"),
             ("Las fuerzas enemigas serán barridas", "fuerzas"),
             ("pero la última venida no será como la primera", "última"),

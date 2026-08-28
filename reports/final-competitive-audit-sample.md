@@ -92,8 +92,8 @@
 | PR41-GOLD-2373-FILL_CHOICE | fill_choice | PR41, p. 42, párrafo 1 | Satanás | — |
 | PR41-GOLD-2215-FILL_CHOICE | fill_choice | PR41, p. 38, párrafo 2 | ensalzarse | — |
 | PR42-GOLD-2506-SINGLE_CHOICE_CONTEXTUAL | single_choice_contextual | PR42, p. 45, párrafo 2 | misericordiosamente | — |
-| PR42-GOLD-2533-SINGLE_CHOICE_CONTEXTUAL | single_choice_contextual | PR42, p. 45, párrafo 6 | despreciados | — |
-| PR42-GOLD-2532-SINGLE_CHOICE_CONTEXTUAL | single_choice_contextual | PR42, p. 45, párrafo 6 | bañaba | — |
+| PR42-GOLD-2533-SINGLE_CHOICE_CONTEXTUAL | single_choice_contextual | PR42, p. 45, párrafo 6 | advertencia | — |
+| PR42-GOLD-2532-SINGLE_CHOICE_CONTEXTUAL | single_choice_contextual | PR42, p. 45, párrafo 6 | despreciados | — |
 | PR42-GOLD-2404-TRUE_FALSE-FALSE | true_false | PR42, p. 43, párrafo 2 | Falso | — |
 | PR42-GOLD-2552-TRUE_FALSE-FALSE | true_false | PR42, p. 46, párrafo 3 | Falso | — |
 | PR42-GOLD-2466-TRUE_FALSE-FALSE | true_false | PR42, p. 44, párrafo 3 | Falso | — |
@@ -110,7 +110,7 @@
 | PR43-GOLD-2751-FILL_CHOICE | fill_choice | PR43, p. 51, párrafo 6 | confiaste | — |
 | PR43-GOLD-2617-FILL_CHOICE | fill_choice | PR43, p. 48, párrafo 2 | Dios | — |
 | PR44-GOLD-2821-SINGLE_CHOICE_CONTEXTUAL | single_choice_contextual | PR44, p. 55, párrafo 4 | treinta | — |
-| PR44-GOLD-2998-SINGLE_CHOICE_CONTEXTUAL | single_choice_contextual | PR44, p. 59, párrafo 2 | propósito | — |
+| PR44-GOLD-2998-SINGLE_CHOICE_CONTEXTUAL | single_choice_contextual | PR44, p. 59, párrafo 2 | estudio | — |
 | PR44-GOLD-2818-SINGLE_CHOICE_CONTEXTUAL | single_choice_contextual | PR44, p. 55, párrafo 4 | consultándose | — |
 | PR44-GOLD-2950-TRUE_FALSE-FALSE | true_false | PR44, p. 58, párrafo 1 | Falso | — |
 | PR44-GOLD-2988-TRUE_FALSE-FALSE | true_false | PR44, p. 59, párrafo 1 | Falso | — |

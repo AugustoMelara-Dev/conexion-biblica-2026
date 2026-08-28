@@ -36269,8 +36269,8 @@
     "question": "Según Daniel 9:20, ¿qué opción completa correctamente «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de ________, mi Dios, por el monte santo de mi Dios»?",
     "options": [
       "Mesías",
-      "Creador",
       "Huésped",
+      "Anciano",
       "Jehová"
     ],
     "option_slot_signatures": [
@@ -36284,8 +36284,8 @@
     "explanation": "Daniel 9:20 declara literalmente «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios». La respuesta pedida es «Jehová».",
     "why_distractors_fail": {
       "Mesías": "Es verdadero en Daniel 9:25, pero no responde al contexto exacto de Daniel 9:20.",
-      "Creador": "Es verdadero en PR42, p. 45, párrafo 6, pero no responde al contexto exacto de Daniel 9:20.",
-      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 9:20."
+      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 9:20.",
+      "Anciano": "Es verdadero en Daniel 7:9, pero no responde al contexto exacto de Daniel 9:20."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -36345,8 +36345,8 @@
     "options": [
       "Jehová",
       "Mesías",
-      "Creador",
-      "Huésped"
+      "Huésped",
+      "Anciano"
     ],
     "option_slot_signatures": [
       "person",
@@ -36359,8 +36359,8 @@
     "explanation": "Daniel 9:20 declara literalmente «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios». La respuesta pedida es «Jehová».",
     "why_distractors_fail": {
       "Mesías": "Es verdadero en Daniel 9:25, pero no responde al contexto exacto de Daniel 9:20.",
-      "Creador": "Es verdadero en PR42, p. 45, párrafo 6, pero no responde al contexto exacto de Daniel 9:20.",
-      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 9:20."
+      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 9:20.",
+      "Anciano": "Es verdadero en Daniel 7:9, pero no responde al contexto exacto de Daniel 9:20."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -36420,8 +36420,8 @@
     "options": [
       "Mesías",
       "Jehová",
-      "Creador",
-      "Huésped"
+      "Huésped",
+      "Anciano"
     ],
     "option_slot_signatures": [
       "person",
@@ -36434,8 +36434,8 @@
     "explanation": "En el contexto exacto de Daniel 9:20, el detalle aplicable es «Jehová»: «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios».",
     "why_distractors_fail": {
       "Mesías": "Es verdadero en Daniel 9:25, pero no responde al contexto exacto de Daniel 9:20.",
-      "Creador": "Es verdadero en PR42, p. 45, párrafo 6, pero no responde al contexto exacto de Daniel 9:20.",
-      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 9:20."
+      "Huésped": "Es verdadero en PR43, p. 48, párrafo 1, pero no responde al contexto exacto de Daniel 9:20.",
+      "Anciano": "Es verdadero en Daniel 7:9, pero no responde al contexto exacto de Daniel 9:20."
     },
     "trap_type": "true_in_other_context",
     "contextual_role": "named_entity",
@@ -56169,6 +56169,83 @@
     "difficulty": "hard"
   },
   {
+    "id": "DAN9-GOLD-1642-TRUE_FALSE-TRUE",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "9.0",
+    "source_unit_id": "DAN9-V009",
+    "fact_id": "DAN9-V009-F01",
+    "variant_id": "DAN9-V009-F01-TRUE_FALSE-TRUE",
+    "template_id": "true-false-safe-editorial-v2",
+    "family": "true_false",
+    "chapter": "DAN9",
+    "reference": "Daniel 9:9",
+    "source_ref": "Daniel 9:9",
+    "verse_or_page": "Daniel 9:9",
+    "source_span": "De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado",
+    "source_quote": "De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado",
+    "context_anchor": "De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado",
+    "topic": "person",
+    "importance": "critical",
+    "relation_type": "person",
+    "option_category": "person",
+    "blind_pool": null,
+    "validation_generator": {
+      "status": "passed",
+      "source_supported": true
+    },
+    "validation_schema": {
+      "status": "passed"
+    },
+    "validation_source": {
+      "status": "passed",
+      "external_knowledge": false
+    },
+    "validation_language": {
+      "status": "passed",
+      "natural_span": true
+    },
+    "final_editorial_status": "GOLD",
+    "accepted_answers": [
+      "Jehová"
+    ],
+    "answer_mode": "option_id",
+    "question": "Verdadero o falso: Según Daniel 9:9, en la escena «De […], nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado», el nombre o designación indicada es «Jehová».",
+    "statement": "Según Daniel 9:9, en la escena «De […], nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado», el nombre o designación indicada es «Jehová».",
+    "asserted_detail": "Jehová",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "corrected_statement": "",
+    "incorrect_detail": null,
+    "correction": null,
+    "false_mutation_kind": null,
+    "focused_true_statement": false,
+    "statement_mode": "contextual_identity",
+    "truth_source_statement": "en la escena «De […], nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado», el nombre o designación indicada es «Jehová».",
+    "contextual_role": "named_entity",
+    "context_evidence": "De […], nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado",
+    "replacement_source_ref": null,
+    "correct_slot_signature": "person",
+    "replacement_slot_signature": null,
+    "explanation": "Es verdadera: la identidad se deriva del contexto literal de Daniel 9:9.",
+    "why_distractors_fail": {
+      "Falso": "La identidad coincide con el papel que muestra el contexto fuente."
+    },
+    "trap_type": null,
+    "validation_adversarial": {
+      "reviewer": "source-blind-v1",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
+      "second_defensible_option": false
+    },
+    "difficulty": "hard"
+  },
+  {
     "id": "DAN9-GOLD-1768-TRUE_FALSE-TRUE",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -63636,6 +63713,83 @@
       "second_defensible_option": false
     },
     "difficulty": "expert"
+  },
+  {
+    "id": "DAN9-GOLD-1642-TRUE_FALSE-FALSE",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "9.0",
+    "source_unit_id": "DAN9-V009",
+    "fact_id": "DAN9-V009-F01",
+    "variant_id": "DAN9-V009-F01-TRUE_FALSE-FALSE",
+    "template_id": "true-false-safe-editorial-v2",
+    "family": "true_false",
+    "chapter": "DAN9",
+    "reference": "Daniel 9:9",
+    "source_ref": "Daniel 9:9",
+    "verse_or_page": "Daniel 9:9",
+    "source_span": "De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado",
+    "source_quote": "De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado",
+    "context_anchor": "De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado",
+    "topic": "person",
+    "importance": "critical",
+    "relation_type": "person",
+    "option_category": "person",
+    "blind_pool": null,
+    "validation_generator": {
+      "status": "passed",
+      "source_supported": true
+    },
+    "validation_schema": {
+      "status": "passed"
+    },
+    "validation_source": {
+      "status": "passed",
+      "external_knowledge": false
+    },
+    "validation_language": {
+      "status": "passed",
+      "natural_span": true
+    },
+    "final_editorial_status": "GOLD",
+    "accepted_answers": [
+      "Jehová"
+    ],
+    "answer_mode": "option_id",
+    "question": "Verdadero o falso: Según Daniel 9:9, Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas.",
+    "statement": "Según Daniel 9:9, Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas.",
+    "asserted_detail": "Mesías",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "corrected_statement": "Según Daniel 9:9, De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado.",
+    "incorrect_detail": "Mesías",
+    "correction": "Jehová",
+    "false_mutation_kind": "cross_reference_statement",
+    "focused_true_statement": false,
+    "statement_mode": "exact_source",
+    "truth_source_statement": "De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado.",
+    "contextual_role": null,
+    "context_evidence": null,
+    "replacement_source_ref": "Daniel 9:25",
+    "correct_slot_signature": "person",
+    "replacement_slot_signature": "person",
+    "explanation": "Es falsa por atribución contextual: el enunciado citado pertenece a Daniel 9:25, no a Daniel 9:9. La fuente correcta declara: «De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado.».",
+    "why_distractors_fail": {
+      "Verdadero": "El enunciado es verdadero en Daniel 9:25, pero no corresponde a Daniel 9:9."
+    },
+    "trap_type": "true_in_other_context",
+    "validation_adversarial": {
+      "reviewer": "source-blind-v1",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "La opción seleccionada es la única sustentada por el fragmento literal de la unidad.",
+      "second_defensible_option": false
+    },
+    "difficulty": "hard"
   },
   {
     "id": "DAN9-GOLD-1768-TRUE_FALSE-FALSE",
