@@ -23,6 +23,7 @@
     "audit:final:deep": "python scripts/audit-final-bank-deep.py",
     "audit:production": "node scripts/audit-live-final-bank.mjs",
     "audit:competitive": "node scripts/audit-competitive-readiness.mjs",
+    "audit:exhaustive": "node scripts/audit-exhaustive-review.mjs",
     "preview": "vite preview",
     "deploy": "vercel --prod --yes"
   },

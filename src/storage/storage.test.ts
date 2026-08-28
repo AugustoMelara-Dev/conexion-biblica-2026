@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it } from "vitest"
 import { openAppDb, createRepositories, deleteAppDb, DB_NAME, DB_VERSION } from "@/storage/db"
+import { createBackupPayload } from "@/domain/backup"
 import type { ActiveRound, Bank, CoverageCycle, Question, Session } from "@/domain/types"
 
 const question: Question = {
@@ -33,6 +34,49 @@ beforeEach(async () => {
 })
 
 describe("repositorios IndexedDB", () => {
+  it("restaura evidencia adaptativa y consumo ciego en la misma transacción", async () => {
+    const repositories = createRepositories(await openAppDb())
+    const exposure = {
+      exposureKey: "fact-1:variant-1",
+      factId: "fact-1",
+      variantId: "variant-1",
+      questionKey: "final-v7:q1",
+      exposures: 1,
+      correct: 1,
+      incorrect: 0,
+      totalResponseTimeMs: 1_000,
+      averageResponseTimeMs: 1_000,
+      lastSeenAt: 10,
+      lastSelectedAnswer: "A",
+      lastErrorType: null,
+    }
+    const blind = {
+      factId: "fact-2",
+      pool: "A" as const,
+      consumedAt: 11,
+      sessionId: "blind-session",
+    }
+    await repositories.restoreBackup(
+      createBackupPayload({
+        banks: [],
+        progress: [],
+        sessions: [],
+        reports: [],
+        preferences: {
+          theme: "system",
+          lastMode: "training",
+          reducedMotion: false,
+          lastBankSelection: "final-v7",
+        },
+        exposures: [exposure],
+        blindUsage: [blind],
+      }),
+    )
+
+    expect(await repositories.exposures.list()).toEqual([exposure])
+    expect(await repositories.blindUsage.list()).toEqual([blind])
+  })
+
   it("crea índices masivos y consulta un subconjunto sin cargar toda la tienda", async () => {
     expect(DB_VERSION).toBeGreaterThanOrEqual(4)
     const db = await openAppDb()

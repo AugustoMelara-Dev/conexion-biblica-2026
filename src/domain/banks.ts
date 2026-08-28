@@ -86,6 +86,9 @@ function questionKeysForSelection(questions: Question[], selection: BankSelectio
 export function filterSessionsForSelection(sessions: Session[], questions: Question[], selection: BankSelection) {
   const allowedKeys = questionKeysForSelection(questions, selection)
   return sessions.flatMap((session) => {
+    const recordedSelection = session.config?.bankSelection
+    if (recordedSelection === selection) return [session]
+    if (recordedSelection && recordedSelection !== "mixed") return []
     const questionKeys = session.questionKeys.filter((key) => allowedKeys.has(key))
     if (questionKeys.length === 0) return []
     if (questionKeys.length === session.questionKeys.length) return [session]

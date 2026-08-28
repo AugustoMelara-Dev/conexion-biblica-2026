@@ -21,10 +21,49 @@ describe("respaldos locales", () => {
     const payload = createBackupPayload({ banks: [], progress: [], sessions: [], reports: [], preferences }, 123)
     expect(payload).toMatchObject({
       backupVersion: "2.0", exportedAt: 123, preferences,
-      coverageCycles: [], activeRound: null,
+      coverageCycles: [], activeRound: null, exposures: [], blindUsage: [],
     })
     expect(validateBackupPayload(payload).valid).toBe(true)
     expect(validateBackupPayload({ ...payload, backupVersion: "0.1" }).valid).toBe(false)
+  })
+
+  it("conserva la evidencia adaptativa y el consumo de la reserva ciega", () => {
+    const exposure = {
+      exposureKey: "fact-1:variant-1",
+      factId: "fact-1",
+      variantId: "variant-1",
+      questionKey: "final-v7:q1",
+      exposures: 1,
+      correct: 0,
+      incorrect: 1,
+      totalResponseTimeMs: 5_000,
+      averageResponseTimeMs: 5_000,
+      lastSeenAt: 123,
+      lastSelectedAnswer: "B",
+      lastErrorType: "incorrect",
+    }
+    const blindUsage = {
+      factId: "fact-2",
+      pool: "A" as const,
+      consumedAt: 124,
+      sessionId: "blind-session",
+    }
+    const payload = createBackupPayload({
+      banks: [],
+      progress: [],
+      sessions: [],
+      reports: [],
+      preferences,
+      exposures: [exposure],
+      blindUsage: [blindUsage],
+    })
+
+    expect(migrateBackupPayload(payload)).toMatchObject({
+      exposures: [exposure],
+      blindUsage: [blindUsage],
+    })
+    expect(validateBackupPayload({ ...payload, exposures: {} }).valid).toBe(false)
+    expect(validateBackupPayload({ ...payload, blindUsage: {} }).valid).toBe(false)
   })
 
   it("migra respaldos 1.0 y agrega namespace a progreso V1 antiguo", () => {
@@ -114,6 +153,20 @@ describe("respaldos locales", () => {
 
     expect(validateBackupPayload(payload).valid).toBe(true)
     expect(migrateBackupPayload(payload).preferences.lastBankSelection).toBe("curated-v4")
+  })
+
+  it("acepta y conserva el banco final canónico", () => {
+    const payload = createBackupPayload({
+      banks: [],
+      progress: [],
+      sessions: [],
+      reports: [],
+      preferences: { ...preferences, lastBankSelection: "final-v7" },
+    })
+
+    expect(migrateBackupPayload(payload).preferences.lastBankSelection).toBe(
+      "final-v7",
+    )
   })
 
   it("mantiene una selección antigua válida", () => {

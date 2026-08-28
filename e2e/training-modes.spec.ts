@@ -62,9 +62,9 @@ async function chooseKnownAnswer(page: Page, correctAnswer: boolean) {
   expect(correct).toBeTruthy()
   const radios = page.getByRole("radio")
   for (let index = 0; index < (await radios.count()); index += 1) {
-    const isCorrect = ((await radios.nth(index).textContent()) ?? "").includes(
-      correct ?? "",
-    )
+    const optionText =
+      (await radios.nth(index).locator("span").nth(1).textContent()) ?? ""
+    const isCorrect = optionText.trim() === correct?.trim()
     if (isCorrect === correctAnswer) {
       await radios.nth(index).click()
       return

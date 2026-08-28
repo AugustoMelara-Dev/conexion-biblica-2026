@@ -55,4 +55,18 @@ describe("selecciones de bancos", () => {
     expect(scopedSessions[0].answers.map((answer) => answer.questionKey)).toEqual(["legacy-v1:legacy-v1", "curated-v4:curated-v4"])
     expect(scopedReports.map((report) => report.questionKey)).toEqual(["curated-v4:curated-v4"])
   })
+
+  it("conserva una sesión restaurada cuando su configuración identifica el banco", () => {
+    const restored = {
+      id: "restored-final-session",
+      config: { bankSelection: "final-v7" },
+      questionKeys: [],
+      answers: [],
+    } as unknown as Session
+
+    expect(filterSessionsForSelection([restored], [], "final-v7")).toEqual([
+      restored,
+    ])
+    expect(filterSessionsForSelection([restored], [], "legacy-v1")).toEqual([])
+  })
 })

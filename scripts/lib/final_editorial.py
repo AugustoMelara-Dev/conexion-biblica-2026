@@ -28,7 +28,11 @@ SAFE_FALSE_ACTION_FORMS = {
     "conditional_plural", "conditional_singular",
     "imperfect_plural", "imperfect_singular",
     "subjunctive_past_plural", "subjunctive_past_singular",
-    "gerund", "infinitive", "imperative", "participle",
+    "future_subjunctive_plural", "future_subjunctive_singular",
+    "future_second_plural", "present_first_plural", "present_second_plural",
+    "gerund", "infinitive", "imperative",
+    "participle_masculine_singular", "participle_feminine_singular",
+    "participle_masculine_plural", "participle_feminine_plural",
 }
 CATEGORY_SHARE_CAPS = {
     "person": 0.18,
@@ -75,7 +79,7 @@ EDITORIALLY_EXCLUDED_SOURCE_UNITS = {
 SAFE_EXACT_NEGATION_ACTION_FORMS = {
     form
     for form in SAFE_FALSE_ACTION_FORMS
-    if form not in {"imperative", "participle"}
+    if form != "imperative" and not form.startswith("participle_")
 } | {
     "present_a",
     "present_e",
@@ -85,6 +89,7 @@ SAFE_EXACT_NEGATION_ACTION_FORMS = {
 EDITORIALLY_EXCLUDED_CANDIDATES = {
     "DAN9-V003": {"asperas"},
     "DAN2-V004": {"cuenta"},
+    "DAN7-V025": {"medio"},
     "PR39-P030-P002-S002": {"santo"},
     "PR40-P033-P006-S002": {"sentencia"},
     # No existen tres distractores de la misma ranura y morfología para
@@ -185,10 +190,10 @@ STOP_ANSWERS = {
     "hizo", "hicieron", "vio", "vino",
     "rey demanda es dificil", "cosa semejante a ningun",
     "tiempo algunos hombres caldeos", "dioses ni tampoco adoraremos",
-    "rey confirmare pueda mudarse", "a los israelitas moises", "nadie",
+    "rey confirmare pueda mudarse", "a los israelitas moises", "nadie", "quien", "quienes",
 }
 DIVINE_NAMES = {
-    "altisimo", "anciano", "cristo", "dios", "eterno", "huesped",
+    "altisimo", "anciano", "creador", "cristo", "dios", "eterno", "huesped",
     "invisible", "juez", "maestro", "jehova", "mesias", "omnipotente", "principe",
     "redentor", "revelador", "salvador", "santo", "senor",
     "todopoderoso", "vigilante",
@@ -196,11 +201,12 @@ DIVINE_NAMES = {
 
 EXTRA_PERSON_NAMES = {
     "abednego", "aspenaz", "ezequiel", "jacob", "jeremias", "moises", "pablo",
-    "satanas", "samuel",
+    "satanas", "samuel", "sadrach", "mesach", "israel",
 }
 
 EXTRA_PLACE_NAMES = {
-    "atenas", "dura", "edom", "eufrates", "medo persia", "sesach", "ufaz",
+    "atenas", "babilonia", "dura", "edom", "eufrates", "jerusalen", "jerusalem",
+    "medo persia", "sesach", "sinar", "ufaz",
 }
 
 # La fuente conserva muchas mayúsculas reverenciales o editoriales. No son
@@ -215,6 +221,7 @@ ADVERB_FORMS = {
     "asi", "ahora", "luego", "despues", "tambien", "solo", "aqui", "debajo",
     "ciertamente", "dondequiera", "entonces", "pronto", "adelante", "delante", "encima", "junto",
     "hoy", "ayer", "manana", "cuan", "cuanto", "como", "ademas", "alli",
+    "siquiera", "nunca", "antes",
 }
 NON_VERB_IA = {
     "abundancia", "angustia", "apariencia", "bestia", "ciencia", "clemencia",
@@ -224,22 +231,34 @@ NON_VERB_IA = {
     "misericordia", "obediencia", "postrimeria", "potencia", "presencia",
     "profecia", "providencia", "provincia", "sabiduria", "sentencia", "todavia",
     "victoria", "vigilancia",
-    "armonia", "idolatria", "mayoria", "mia", "osadia", "simpatia", "vigia",
+    "armonia", "idolatria", "mayoria", "mia", "orgia", "osadia", "simpatia", "vigia",
 }
 DIRECTION_FORMS = {
     "norte", "sur", "oriente", "poniente", "este", "oeste",
     "septentrion", "mediodia",
 }
 NON_VERB_FORMS = NON_VERB_IA | {
-    "alegria", "aparte", "citara", "cuenta", "cuernos", "firme", "fuerte",
+    "alegria", "aparte", "carrera", "citara", "collar", "cuenta", "cuernos", "firme", "fuerte",
     "ira", "lugar", "manjar", "mar", "mujer", "altar", "poder", "primer",
     "tercer", "caracter", "bienestar", "singular", "mayordomia", "muerte",
-    "parte", "suerte", "supremacia", "triste", "viviente",
+    "parte", "suerte", "supremacia", "triste", "viviente", "varon", "lomos",
 }
 INVARIANT_ADJECTIVE_FORMS = {
     "dificil", "fragil", "fuerte", "grande", "imposible", "inferior",
-    "mayor", "menor", "notable", "principal", "semejante", "singular",
+    "mayor", "mejor", "menor", "notable", "principal", "semejante", "singular",
     "terrible", "valiente",
+}
+
+EXPLICIT_ADJECTIVE_FORMS = {
+    "primer", "primero", "primera", "segundo", "segunda", "tercer", "tercero",
+    "tercera", "ultimo", "ultima", "rapido", "rapida", "correcto", "correcta",
+    "idolatra", "terrenal", "mundanal", "mental", "especial", "robusto", "ulterior",
+    "bueno", "buena", "confuso", "confusa", "santo", "santa",
+    "justo", "justa", "digno", "digna", "ancho", "ancha", "limpio", "limpia",
+    "alto", "alta", "halagueno", "halaguena", "seductor", "seductora", "patriota",
+}
+EXPLICIT_NOMINAL_FORMS = {
+    "manera",
 }
 
 FUNCTION_WORDS = {
@@ -248,15 +267,18 @@ FUNCTION_WORDS = {
     "para", "por", "segun", "sin", "sobre", "tras", "un", "una", "y",
     "este", "esta", "estos", "estas", "ese", "esa", "esos", "esas", "mi",
     "mis", "tu", "tus", "nuestro", "nuestra", "nuestros", "nuestras",
+    "vuestro", "vuestra", "vuestros", "vuestras", "su", "sus",
     "mediante", "entonces",
     "yo", "el", "ella", "ellos", "ellas", "nosotros", "vosotros", "usted",
     "ustedes", "me", "te", "se", "nos", "os", "le", "les", "lo", "la",
-    "mucho", "mucha", "muchos", "muchas", "gran", "grandes", "varios",
+    "mucho", "mucha", "muchos", "muchas", "poco", "poca", "pocos", "pocas",
+    "gran", "grandes", "varios",
     "varias", "cierto", "cierta", "ciertos", "ciertas", "todo", "toda",
     "todos", "todas", "otro", "otra", "otros", "otras",
     "cuyo", "cuya", "cuyos", "cuyas", "aquel", "aquella", "aquellos",
     "aquellas", "alguno", "alguna", "algunos", "algunas", "unos", "unas",
-    "ningun", "ninguna", "ningunos", "ningunas",
+    "ningun", "ninguno", "ninguna", "ningunos", "ningunas",
+    "quien", "quienes", "cual", "cuales",
 }
 VERB_FORMS = {
     "dijo", "respondio", "hablo", "vino", "fue", "hizo", "vio", "miraba", "doy",
@@ -272,6 +294,9 @@ VERB_FORMS = {
     "confirmare", "pueda", "ocurrir", "comprender", "declarar", "ensenorear",
     "perdonar", "reemplazar", "sintiera", "puede", "pueden", "dalos", "propuso", "quiso",
     "ha", "has", "han", "he", "hemos", "habeis",
+    "dicho", "hecho", "puesto", "visto",
+    "esfuerzate", "haz", "hazlo", "cierra", "inclina", "presta",
+    "entiende", "reprende", "lleva",
 }
 
 
@@ -289,25 +314,26 @@ def _hash(value: str) -> str:
 
 def _word_role(word: str) -> str:
     normalized = _norm(word)
+    normalized_singular = normalized[:-1] if normalized.endswith("s") else normalized
     if normalized in ADVERB_FORMS or (
         normalized.endswith("mente") and normalized != "mente"
     ):
         return "adverb"
     if normalized in NUMBER_WORDS or normalized.isdigit():
         return "number"
-    if normalized in NON_VERB_FORMS:
+    if normalized in NON_VERB_FORMS or normalized_singular in NON_VERB_FORMS:
         return "content"
     if normalized.endswith(
         ("ancia", "encia", "ismo", "miento", "sion", "cion", "tad", "dad", "ura", "eza")
     ):
         return "content"
-    if re.search(r"(?:rá|rás|rán|ré|réis|remos|áis|éis|ó|é|í|aremos|eremos|iremos)$", word.lower()):
+    if re.search(r"(?:rá|rás|rán|ré|réis|remos|áis|éis|ó|é|í)(?:se)?$|(?:aremos|eremos|iremos)$", word.lower()):
         return "verb"
     if re.search(r"(?:ía|ían)$", word.lower()) and normalized not in NON_VERB_IA:
         return "verb"
     if normalized in VERB_FORMS or re.search(
         r"(?:ando|iendo|andose|iendose|aron|ieron|aste|iste|aba|aban|ara|ira|ase|iese|aran|ieran|asen|iesen|esen|eran|iran|(?:ar|er|ir)(?:me|te|se|lo|la|los|las|le|les|nos)?)$",
-        word.lower(),
+        normalized,
     ):
         return "verb"
     if normalized.endswith("mos") and normalized not in {"ultimos", "ramos", "blasfemos"}:
@@ -321,7 +347,9 @@ def _term_word_class(word: str) -> str:
     """Distinguish high-confidence adjective forms from nominal terms."""
     normalized = _norm(word)
     singular = normalized[:-1] if normalized.endswith("s") else normalized
-    if normalized in INVARIANT_ADJECTIVE_FORMS or singular in {
+    if normalized in EXPLICIT_NOMINAL_FORMS:
+        return "nominal"
+    if normalized in INVARIANT_ADJECTIVE_FORMS or normalized in EXPLICIT_ADJECTIVE_FORMS or singular in {
         "cabrio",
         "vano",
         "vana",
@@ -355,9 +383,13 @@ def _contextual_word_role(text: str, start: int, end: int) -> str:
     normalized_word = _norm(word)
     if word == "Cuenta" and _is_sentence_initial(text, start):
         return "verb"
-    if word[:1].isupper() and (
-        not _is_sentence_initial(text, start)
-        or re.match(r"\s*[,;]", text[end:])
+    if word[:1].isupper() and not _is_sentence_initial(text, start):
+        return "content"
+    if (
+        word[:1].isupper()
+        and _is_sentence_initial(text, start)
+        and re.match(r"\s*[,;]", text[end:])
+        and _action_form(word) == "infinitive"
     ):
         return "content"
     if normalized_word in NON_VERB_FORMS:
@@ -385,9 +417,13 @@ def _contextual_word_role(text: str, start: int, end: int) -> str:
     ambiguous_determiners = {
         "el", "la", "los", "las", "un", "una", "unos", "unas", "su", "sus",
         "este", "esta", "estos", "estas", "aquel", "aquella", "aquellos", "aquellas",
+        "poco", "poca", "pocos", "pocas",
+        "mi", "mis", "tu", "tus", "nuestro", "nuestra", "nuestros", "nuestras",
+        "vuestro", "vuestra", "vuestros", "vuestras",
     }
     plural_determiners = {
         "los", "las", "unos", "unas", "sus", "estos", "estas", "aquellos", "aquellas",
+        "pocos", "pocas",
     }
     noun_followers = {
         "de", "del", "en", "que", "es", "era", "eran", "sera", "seran", "fue", "fueron", "y", "o",
@@ -405,7 +441,7 @@ def _contextual_word_role(text: str, start: int, end: int) -> str:
         and normalized_word == "parecer"
     ):
         return "content"
-    if previous_is_determiner and (
+    if previous_is_determiner and role == "content" and (
         following_norm in noun_followers
         or previous_previous_norm in {
             "a", "al", "ante", "con", "contra", "de", "del", "desde", "en",
@@ -423,16 +459,33 @@ def _contextual_word_role(text: str, start: int, end: int) -> str:
         )
     ):
         return "content"
+    if (
+        previous_norm in {"ha", "has", "han", "he", "hemos", "habia", "habian"}
+        and _action_form(word).startswith("participle_")
+    ):
+        return "verb"
     if role != "content" or not re.search(r"(?:a|e|an|en|as|es)$", word.lower()):
         return role
     subject_or_link = {
         "yo", "tu", "el", "ella", "ellos", "ellas", "nosotros", "vosotros",
         "usted", "ustedes", "que", "quien", "quienes", "se", "me", "te",
         "le", "les", "lo", "la", "los", "las", "no", "ni", "segun",
+        "ha", "has", "han", "he", "hemos", "habia", "habian",
     }
     direct_object_lead = {
         "el", "la", "los", "las", "un", "una", "unos", "unas", "su", "sus",
     }
+    contextual_plural_verb = (
+        role == "content"
+        and normalized_word.endswith(("an", "en"))
+        and previous_norm
+        and previous_norm not in FUNCTION_WORDS
+        and previous_norm not in STOPWORDS
+        and following_norm in (
+            direct_object_lead
+            | {"a", "al", "de", "del", "en", "con", "por", "para", "que", "y", "o"}
+        )
+    )
     coordinated_verb = previous_norm in {"y", "o"} and following_norm in direct_object_lead
     proper_subject = (
         bool(previous[:1].isupper())
@@ -443,13 +496,18 @@ def _contextual_word_role(text: str, start: int, end: int) -> str:
             direct_object_lead | {"a", "al", "de", "del", "en", "con", "por", "para", "que", "y", "o"}
         )
     )
+    vocative_subject = (
+        bool(previous[:1].isupper())
+        and bool(re.fullmatch(r"\s*,\s*", previous_separator))
+        and following_norm in direct_object_lead
+    )
     predicate_before_copula = (
         following_norm in {"es", "era", "sera", "seria"}
         and previous_norm not in ambiguous_determiners
         and previous_norm not in FUNCTION_WORDS
         and previous_norm not in STOPWORDS
     )
-    if previous_norm in subject_or_link or coordinated_verb or proper_subject or predicate_before_copula:
+    if previous_norm in subject_or_link or coordinated_verb or proper_subject or vocative_subject or predicate_before_copula or contextual_plural_verb:
         return "verb"
     return role
 
@@ -481,12 +539,21 @@ def option_signature(value: str, category: str | None = None) -> tuple[Any, ...]
         return (category, (head_shape,))
     if category == "term" and len(words) == 1:
         normalized = _norm(words[0])
+        singular = normalized[:-1] if normalized.endswith("s") else normalized
         role = _word_role(words[0])
         if role == "verb":
             suffix = f"verb_like:{_action_form(words[0])}"
         elif role == "adverb":
             suffix = "adverb"
-        elif normalized in INVARIANT_ADJECTIVE_FORMS or normalized.endswith(("ble", "il")):
+        elif normalized in EXPLICIT_ADJECTIVE_FORMS or singular in EXPLICIT_ADJECTIVE_FORMS:
+            ending = (
+                "feminine_plural" if normalized.endswith("as")
+                else "masculine_plural" if normalized.endswith("os")
+                else "feminine_singular" if normalized.endswith("a")
+                else "masculine_singular"
+            )
+            suffix = f"adjective_explicit:{ending}"
+        elif normalized in INVARIANT_ADJECTIVE_FORMS or singular in INVARIANT_ADJECTIVE_FORMS or normalized.endswith(("ble", "il")):
             suffix = "adjective_invariant"
         elif normalized.endswith(("ivo", "iva", "ivos", "ivas")):
             suffix = f"adjective_ive:{next(ending for ending in ('ivos', 'ivas', 'ivo', 'iva') if normalized.endswith(ending))}"
@@ -502,6 +569,8 @@ def option_signature(value: str, category: str | None = None) -> tuple[Any, ...]
             suffix = "agent_plural"
         elif normalized.endswith(("amiento", "imiento")):
             suffix = "deverbal_noun_miento"
+        elif normalized.endswith(("ada", "ida")):
+            suffix = "feminine_participle_singular"
         elif normalized.endswith(("ado", "ido")):
             suffix = "participle_or_deverbal_noun"
         elif normalized.endswith(("anza", "encia", "ancia")):
@@ -551,10 +620,23 @@ def _action_form(value: str) -> str:
         "fue": "preterite_singular", "fueron": "preterite_plural",
         "ore": "preterite_singular", "mire": "preterite_singular",
         "postre": "preterite_singular", "recobre": "preterite_singular",
+        "dicho": "participle_masculine_singular",
+        "hecho": "participle_masculine_singular",
+        "puesto": "participle_masculine_singular",
+        "visto": "participle_masculine_singular",
+        "decidme": "imperative", "contadme": "imperative",
+        "compara": "imperative",
+        "hareis": "future_second_plural",
+        "podeis": "present_second_plural", "poneis": "present_second_plural",
+        "propuso": "preterite_singular",
+        "haz": "imperative", "hazlo": "imperative",
+        "quiso": "preterite_singular",
+        "hemos": "present_first_plural",
     }
     if lower in irregular:
         return irregular[lower]
     for pattern, label in (
+        (r"(?:réis)$", "future_second_plural"),
         (r"(?:rás)$", "future_second_singular"),
         (r"(?:rán|remos)$", "future_plural"),
         (r"(?:rá|ré)$", "future_singular"),
@@ -565,8 +647,10 @@ def _action_form(value: str) -> str:
         (r"(?:ría)$", "conditional_singular"),
         (r"(?:aban|ían)$", "imperfect_plural"),
         (r"(?:aba|ía)$", "imperfect_singular"),
-        (r"(?:aran|ieran|yeran|asen|iesen)$", "subjunctive_past_plural"),
-        (r"(?:ara|iera|yera|ase|iese)$", "subjunctive_past_singular"),
+        (r"(?:ieren)$", "future_subjunctive_plural"),
+        (r"(?:iere)$", "future_subjunctive_singular"),
+        (r"(?:aran|ieran|yeran|asen|iesen|esen)$", "subjunctive_past_plural"),
+        (r"(?:ara|iera|yera|ase|iese|ese)$", "subjunctive_past_singular"),
     ):
         if re.search(pattern, raw):
             return label
@@ -576,10 +660,18 @@ def _action_form(value: str) -> str:
         return "infinitive"
     if re.search(r"(?:ad|ed|id|ate|ete|ite)$", lower):
         return "imperative"
-    if re.search(r"(?:ado|ada|ados|adas|ido|ida|idos|idas)$", lower):
-        return "participle"
+    if re.search(r"(?:ados|idos)$", lower):
+        return "participle_masculine_plural"
+    if re.search(r"(?:adas|idas)$", lower):
+        return "participle_feminine_plural"
+    if re.search(r"(?:ado|ido)$", lower):
+        return "participle_masculine_singular"
+    if re.search(r"(?:ada|ida)$", lower):
+        return "participle_feminine_singular"
     if lower.endswith(("an", "en")):
         return "present_plural"
+    if lower.endswith("mos"):
+        return "present_first_plural"
     if lower.endswith(("as", "es")):
         return "present_second_singular"
     if lower.endswith("a"):
@@ -616,8 +708,6 @@ def _is_sentence_initial(text: str, start: int) -> bool:
 
 def _broad_category(answer: str, raw_category: str, unit: dict[str, Any]) -> str:
     normalized_answer = _norm(answer)
-    if normalized_answer == "israel":
-        return "term"
     if (
         normalized_answer in DIVINE_NAMES and answer[:1].isupper()
     ) or normalized_answer in EXTRA_PERSON_NAMES:
@@ -958,16 +1048,31 @@ def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any
         for relation in extract_relation_candidates(unit):
             text = _source_text(unit)
             answer = str(relation["answer"])
+            normalized_answer = _norm(answer)
+            if normalized_answer in STOP_ANSWERS or normalized_answer in STOPWORDS:
+                rejected += 1
+                continue
             start = text.index(answer)
+            relation_category = str(relation["category"])
+            contextual_role = _contextual_word_role(
+                text, start, start + len(answer)
+            )
+            if len(answer.split()) == 1:
+                if contextual_role == "verb":
+                    relation_category = "action"
+                elif normalized_answer in EXTRA_PERSON_NAMES:
+                    relation_category = "person"
+                elif normalized_answer in EXTRA_PLACE_NAMES:
+                    relation_category = "place"
             editorial_candidates.append(
                 {
                     "answer": answer,
                     "start": start,
                     "end": start + len(answer),
                     "grammatical_category": _relation_grammatical_category(
-                        answer, str(relation["category"])
+                        answer, relation_category
                     ),
-                    "category": relation["category"],
+                    "category": relation_category,
                     "score": relation["score"],
                     "relation_type": relation["relation_type"],
                     "relation_prompt": relation["question"],
@@ -1046,32 +1151,54 @@ def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any
         rejected += len(candidates) - len(editorial_candidates)
         by_chapter[_chapter_key(unit)].append((unit, editorial_candidates))
 
-    term_slot_candidates: dict[str, list[dict[str, Any]]] = defaultdict(list)
-    for chapter_rows in by_chapter.values():
-        for _, candidates in chapter_rows:
-            for candidate in candidates:
-                if candidate["category"] == "term":
-                    term_slot_candidates[candidate["_slot_signature"]].append(candidate)
-    for chapter, chapter_rows in by_chapter.items():
-        filtered_rows = []
-        for unit, candidates in chapter_rows:
-            competitive = [
-                candidate
-                for candidate in candidates
-                if candidate["category"] != "term"
-                or len({
-                    _norm(row["answer"])
-                    for row in term_slot_candidates[candidate["_slot_signature"]]
-                    if _norm(row["answer"]) != _norm(candidate["answer"])
-                    and _norm(row["answer"]) not in candidate["_normalized_source"]
-                }) >= 3
-            ]
-            if not competitive:
-                raise ValueError(
-                    f"Unidad sin hecho con distractores competitivos: {unit['source_unit_id']}"
-                )
-            filtered_rows.append((unit, competitive))
-        by_chapter[chapter] = filtered_rows
+    def candidate_pool_key(candidate: dict[str, Any]) -> tuple[Any, ...]:
+        category = candidate["category"]
+        grammar = (
+            None
+            if category in {"person", "place", "phrase", "term"}
+            else candidate["grammatical_category"]
+        )
+        return (
+            category,
+            ("all_terms",)
+            if category == "term"
+            else option_signature(candidate["answer"], category),
+            grammar,
+            candidate.get("_slot_signature") if category == "term" else None,
+        )
+
+    # El filtrado debe converger. Una sola pasada permite que candidatos que
+    # luego son eliminados sostengan artificialmente a otros candidatos.
+    while True:
+        pool_candidates: dict[tuple[Any, ...], list[dict[str, Any]]] = defaultdict(list)
+        for chapter_rows in by_chapter.values():
+            for _, candidates in chapter_rows:
+                for candidate in candidates:
+                    pool_candidates[candidate_pool_key(candidate)].append(candidate)
+        removed_this_pass = 0
+        for chapter, chapter_rows in list(by_chapter.items()):
+            filtered_rows = []
+            for unit, candidates in chapter_rows:
+                competitive = [
+                    candidate
+                    for candidate in candidates
+                    if len({
+                        _norm(row["answer"])
+                        for row in pool_candidates[candidate_pool_key(candidate)]
+                        if _norm(row["answer"]) != _norm(candidate["answer"])
+                        and _norm(row["answer"]) not in candidate["_normalized_source"]
+                    }) >= 3
+                ]
+                removed_this_pass += len(candidates) - len(competitive)
+                if not competitive:
+                    raise ValueError(
+                        f"Unidad sin hecho con distractores competitivos: {unit['source_unit_id']}"
+                    )
+                filtered_rows.append((unit, competitive))
+            by_chapter[chapter] = filtered_rows
+        rejected += removed_this_pass
+        if removed_this_pass == 0:
+            break
 
     facts: list[dict[str, Any]] = []
     global_answer_usage: Counter[str] = Counter()
@@ -1101,7 +1228,15 @@ def derive_atomic_facts(units: list[dict[str, Any]]) -> tuple[list[dict[str, Any
             ]
             if not under_global_cap:
                 return None
-            available = under_global_cap
+            under_chapter_cap = [
+                row
+                for row in under_global_cap
+                if chapter_answer_usage[_norm(row[0]["answer"])]
+                < MAX_CHAPTER_FACTS_PER_ANSWER
+            ]
+            if not under_chapter_cap:
+                return None
+            available = under_chapter_cap
             candidate, candidate_index = min(
                 available,
                 key=lambda row: (

@@ -295,8 +295,10 @@ export type BackupPayload = {
   preferences: Preferences
   coverageCycles: CoverageCycle[]
   activeRound: ActiveRound | null
+  exposures?: QuestionExposure[]
   factMastery?: import("@/domain/fact-mastery").FactMastery[]
   legacyEvents?: LegacyHistoryEvent[]
+  blindUsage?: BlindUsage[]
 }
 
 export type LegacyHistoryEvent = {

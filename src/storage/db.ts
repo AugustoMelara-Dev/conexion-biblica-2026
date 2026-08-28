@@ -1,5 +1,6 @@
 import type {
   ActiveRound,
+  BackupPayload,
   Bank,
   CoverageCycle,
   Question,
@@ -167,6 +168,62 @@ function withoutKey(question: StoredQuestion): Question {
 
 export function createRepositories(db: IDBDatabase) {
   return {
+    async restoreBackup(payload: BackupPayload) {
+      const stores = [
+        "banks",
+        "questions",
+        "progress",
+        "sessions",
+        "reports",
+        "settings",
+        "coverageCycles",
+        "activeRound",
+        "exposures",
+        "factMastery",
+        "legacyEvents",
+        "migrationBackups",
+        "missionPlan",
+        "blindUsage",
+      ]
+      const tx = db.transaction(stores, "readwrite")
+      for (const store of stores) tx.objectStore(store).clear()
+
+      const banksStore = tx.objectStore("banks")
+      const questionsStore = tx.objectStore("questions")
+      for (const bank of payload.banks) {
+        banksStore.put({ ...bank, questions: undefined })
+        for (const question of bank.questions)
+          questionsStore.put({
+            ...question,
+            bankId: bank.bankId,
+            questionKey: questionKey({ ...question, bankId: bank.bankId }),
+            blindPoolKey: question.blindFinalPool ? 1 : 0,
+          } satisfies StoredQuestion)
+      }
+      for (const item of payload.progress)
+        tx.objectStore("progress").put(item)
+      for (const item of payload.sessions)
+        tx.objectStore("sessions").put(item)
+      for (const item of payload.reports)
+        tx.objectStore("reports").put(item)
+      for (const item of payload.coverageCycles)
+        tx.objectStore("coverageCycles").put(item)
+      if (payload.activeRound)
+        tx.objectStore("activeRound").put(payload.activeRound)
+      for (const item of payload.exposures ?? [])
+        tx.objectStore("exposures").put(item)
+      for (const item of payload.factMastery ?? [])
+        tx.objectStore("factMastery").put(item)
+      for (const item of payload.legacyEvents ?? [])
+        tx.objectStore("legacyEvents").put(item)
+      for (const item of payload.blindUsage ?? [])
+        tx.objectStore("blindUsage").put(item)
+      tx.objectStore("settings").put({
+        key: "v7-history-backup",
+        value: `restored-${payload.exportedAt}`,
+      } satisfies StoredSetting)
+      await transactionDone(tx)
+    },
     async resetAll() {
       const stores = [
         "banks",

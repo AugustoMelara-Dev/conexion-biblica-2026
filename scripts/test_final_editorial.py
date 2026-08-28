@@ -746,6 +746,7 @@ class FinalEditorialTests(unittest.TestCase):
         forbidden_actions = {
             "alegría",
             "aparte",
+            "carrera",
             "cuernos",
             "firme",
             "fuerte",
@@ -754,11 +755,96 @@ class FinalEditorialTests(unittest.TestCase):
             "parte",
             "suerte",
             "supremacía",
+            "siquiera",
         }
         self.assertFalse(
             any(
                 fact["category"] == "action"
                 and fact["answer"].casefold() in forbidden_actions
+                for fact in self.facts
+            )
+        )
+
+    def test_relation_terms_do_not_hide_verbs_or_named_entities(self) -> None:
+        editorial = self.require_editorial()
+        assert editorial is not None
+        self.assertEqual(editorial._term_word_class("rápida"), "adjective")
+        self.assertEqual(editorial._term_word_class("primer"), "adjective")
+        self.assertNotEqual(
+            editorial.option_signature("rápida", "term"),
+            editorial.option_signature("gracia", "term"),
+        )
+        self.assertNotEqual(
+            editorial.option_signature("Primer", "term"),
+            editorial.option_signature("Israel", "term"),
+        )
+        self.assertEqual(editorial._word_role("orgía"), "content")
+        self.assertEqual(editorial._word_role("días"), "content")
+        self.assertEqual(editorial._word_role("vuestros"), "function")
+        self.assertEqual(editorial._word_role("puesto"), "verb")
+        self.assertEqual(
+            editorial._action_form("puesto"), "participle_masculine_singular"
+        )
+        self.assertEqual(
+            editorial._action_form("morada"), "participle_feminine_singular"
+        )
+        self.assertEqual(editorial._action_form("trajese"), "subjunctive_past_singular")
+        self.assertEqual(editorial._action_form("decidme"), "imperative")
+        self.assertEqual(editorial._action_form("Compara"), "imperative")
+        self.assertEqual(
+            editorial._action_form("pidiere"), "future_subjunctive_singular"
+        )
+        self.assertEqual(editorial._action_form("haréis"), "future_second_plural")
+        self.assertEqual(editorial._action_form("podéis"), "present_second_plural")
+        self.assertEqual(editorial._action_form("propuso"), "preterite_singular")
+        self.assertEqual(editorial._word_role("esfuérzate"), "verb")
+        self.assertEqual(editorial._word_role("nunca"), "adverb")
+        self.assertEqual(editorial._word_role("ninguno"), "function")
+        self.assertEqual(editorial._word_role("hazlo"), "verb")
+        self.assertEqual(editorial._word_role("varón"), "content")
+        self.assertEqual(editorial._word_role("lomos"), "content")
+        self.assertEqual(editorial._action_form("hazlo"), "imperative")
+        self.assertEqual(editorial._action_form("quiso"), "preterite_singular")
+        self.assertEqual(editorial._action_form("hemos"), "present_first_plural")
+        self.assertNotEqual(
+            editorial.option_signature("altos", "term"),
+            editorial.option_signature("gatos", "term"),
+        )
+        self.assertNotEqual(
+            editorial.option_signature("halagüeñas", "term"),
+            editorial.option_signature("influencias", "term"),
+        )
+        self.assertEqual(editorial._word_role("antes"), "adverb")
+        self.assertNotEqual(
+            editorial.option_signature("rechazada", "term"),
+            editorial.option_signature("sabiduría", "term"),
+        )
+        self.assertNotEqual(
+            editorial.option_signature("buena", "term"),
+            editorial.option_signature("forma", "term"),
+        )
+        self.assertEqual(editorial._broad_category("Sadrach", "proper", {}), "person")
+        self.assertEqual(editorial._broad_category("Jerusalem", "proper", {}), "place")
+        self.assertEqual(editorial._broad_category("Israel", "proper", {}), "person")
+        self.assertFalse(
+            any(
+                fact["category"] == "term"
+                and "term:verb_like:" in fact.get("_slot_signature", "")
+                for fact in self.facts
+            )
+        )
+        self.assertFalse(
+            any(
+                fact["category"] == "action"
+                and fact["answer"].casefold()
+                in {"siquiera", "orgía", "días", "varón", "lomos"}
+                for fact in self.facts
+            )
+        )
+        self.assertFalse(
+            any(
+                fact["source_unit_id"] == "DAN7-V025"
+                and fact["answer"].casefold() == "medio"
                 for fact in self.facts
             )
         )

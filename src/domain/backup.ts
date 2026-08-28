@@ -10,8 +10,10 @@ export function createBackupPayload(
     preferences: Preferences
     coverageCycles?: CoverageCycle[]
     activeRound?: ActiveRound | null
+    exposures?: BackupPayload["exposures"]
     factMastery?: BackupPayload["factMastery"]
     legacyEvents?: BackupPayload["legacyEvents"]
+    blindUsage?: BackupPayload["blindUsage"]
   },
   exportedAt = Date.now(),
 ): BackupPayload {
@@ -25,8 +27,10 @@ export function createBackupPayload(
     preferences: structuredClone(data.preferences),
     coverageCycles: structuredClone(data.coverageCycles ?? []),
     activeRound: structuredClone(data.activeRound ?? null),
+    exposures: structuredClone(data.exposures ?? []),
     factMastery: structuredClone(data.factMastery ?? []),
     legacyEvents: structuredClone(data.legacyEvents ?? []),
+    blindUsage: structuredClone(data.blindUsage ?? []),
   }
 }
 
@@ -43,6 +47,9 @@ export function validateBackupPayload(input: unknown): { valid: boolean; errors:
   if (payload.backupVersion === "2.0") {
     if (!Array.isArray(payload.coverageCycles)) errors.push({ code: "INVALID_BACKUP_FIELD", path: "$.coverageCycles", message: "coverageCycles debe ser un arreglo." })
     if (payload.activeRound !== null && (typeof payload.activeRound !== "object" || Array.isArray(payload.activeRound))) errors.push({ code: "INVALID_ACTIVE_ROUND", path: "$.activeRound", message: "activeRound debe ser un objeto o null." })
+    for (const field of ["exposures", "blindUsage"] as const) {
+      if (payload[field] !== undefined && !Array.isArray(payload[field])) errors.push({ code: "INVALID_BACKUP_FIELD", path: `$.${field}`, message: `${field} debe ser un arreglo.` })
+    }
   }
   if (Array.isArray(payload.banks)) payload.banks.forEach((bank, index) => {
     const schema = bank && typeof bank === "object" ? (bank as Record<string, unknown>).schemaVersion : undefined
@@ -57,7 +64,7 @@ function namespaceLegacyKey(value: unknown) {
 }
 
 function isBankSelection(value: unknown): value is BankSelection {
-  return value === "legacy-v1" || value === "master-v2" || value === "prep-v3" || value === "curated-v4" || value === "massive-v5" || value === "consolidation-v5" || value === "mixed"
+  return value === "legacy-v1" || value === "master-v2" || value === "prep-v3" || value === "curated-v4" || value === "massive-v5" || value === "consolidation-v5" || value === "final-v7" || value === "mixed"
 }
 
 function normalizePreferences(preferences: Preferences): Preferences {
@@ -93,12 +100,16 @@ export function migrateBackupPayload(input: unknown): BackupPayload {
     preferences: payload.preferences as Preferences,
     coverageCycles: [],
     activeRound: null,
+    exposures: [],
+    blindUsage: [],
   })
 }
 
 function normalizeContexts(payload: BackupPayload): BackupPayload {
   return {
     ...payload,
+    exposures: payload.exposures ?? [],
+    blindUsage: payload.blindUsage ?? [],
     preferences: normalizePreferences(payload.preferences),
     progress: payload.progress.map((item) => ({
       ...item,

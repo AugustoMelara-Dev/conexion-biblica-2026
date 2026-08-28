@@ -274,8 +274,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
     useState<Preferences>(getPreferences)
   const [repositories, setRepositories] = useState<RepositorySet | null>(null)
 
-  const loadState = useCallback(async () => {
-    setLoading(true)
+  const loadState = useCallback(async (showLoading = true) => {
+    if (showLoading) setLoading(true)
     setError(null)
     setMasterBankError(null)
     setMassiveBankError(null)
@@ -376,7 +376,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
           : "No se pudo abrir el almacenamiento local"
       )
     } finally {
-      setLoading(false)
+      if (showLoading) setLoading(false)
     }
   }, [])
 
@@ -940,9 +940,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
         (question) => question.bankId === bank.bankId
       ),
     }))
-    const legacyEvents = repositories
-      ? await repositories.legacyEvents.list()
-      : []
+    const [legacyEvents, blindUsage] = repositories
+      ? await Promise.all([
+          repositories.legacyEvents.list(),
+          repositories.blindUsage.list(),
+        ])
+      : [[], []]
     return createBackupPayload({
       banks: completeBanks,
       progress: [...progress.values()],
@@ -951,13 +954,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
       preferences,
       coverageCycles: [...coverageCycles.values()],
       activeRound,
+      exposures,
       factMastery,
       legacyEvents,
+      blindUsage,
     })
   }, [
     activeRound,
     banks,
     coverageCycles,
+    exposures,
     factMastery,
     preferences,
     progress,
@@ -996,30 +1002,25 @@ export function AppProvider({ children }: { children: ReactNode }) {
           ],
         }
       try {
-        const parsed = JSON.parse(await file.text()) as unknown
+        const backupText = await new Promise<string>((resolve, reject) => {
+          const reader = new FileReader()
+          reader.onload = () => resolve(String(reader.result ?? ""))
+          reader.onerror = () =>
+            reject(reader.error ?? new Error("No se pudo leer el respaldo."))
+          reader.readAsText(file)
+        })
+        const parsed = JSON.parse(backupText) as unknown
         const validation = validateBackupPayload(parsed)
         if (!validation.valid) return validation
         const payload = migrateBackupPayload(parsed)
-        await repositories.resetAll()
-        for (const bank of payload.banks) await repositories.banks.save(bank)
-        for (const item of payload.progress)
-          await repositories.progress.put(item)
-        for (const item of payload.sessions)
-          await repositories.sessions.add(item)
-        for (const item of payload.reports) await repositories.reports.add(item)
-        for (const cycle of payload.coverageCycles)
-          await repositories.coverage.put(cycle)
-        if (payload.activeRound)
-          await repositories.activeRound.put(payload.activeRound)
-        for (const item of payload.factMastery ?? [])
-          await repositories.factMastery.put(item)
-        await repositories.legacyEvents.putMany(payload.legacyEvents ?? [])
-        setPreferencesState(payload.preferences)
+        await repositories.restoreBackup(payload)
+        const restoredPreferences = normalizePreferences(payload.preferences)
+        setPreferencesState(restoredPreferences)
         localStorage.setItem(
           "conexion-biblica-preferences",
-          JSON.stringify(payload.preferences)
+          JSON.stringify(restoredPreferences)
         )
-        await loadState()
+        await loadState(false)
         return validation
       } catch (importError) {
         return {

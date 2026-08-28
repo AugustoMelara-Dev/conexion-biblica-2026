@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest"
 
 import {
+  buildExhaustiveReviewQueue,
   buildCompetitiveAuditReport,
+  exhaustiveRiskFlags,
   selectStratifiedSample,
   semanticAuditFlags,
 } from "./competitive-audit.mjs"
@@ -107,5 +109,77 @@ describe("competitive audit sampling", () => {
         corrected_statement: "Según Daniel 7:19, tenía uñas de bronce.",
       })
     ).toEqual([])
+  })
+
+  it("enumerates every question once and prioritizes structural findings", () => {
+    const queue = buildExhaustiveReviewQueue([
+      {
+        id: "SAFE",
+        chapter: "DAN7",
+        family: "fill_choice",
+        reference: "Daniel 7:1",
+        question: "Completa: ____.",
+        options: ["sueño", "visión"],
+        correct_option: 0,
+        correct_answer: "sueño",
+        source_quote: "sueño",
+      },
+      {
+        id: "BROKEN",
+        chapter: "PR39",
+        family: "true_false",
+        reference: "PR 39, p. 1",
+        question: "Verdadero o falso",
+        options: ["Verdadero", "Falso"],
+        correct_option: 0,
+        correct_answer: "Falso",
+        source_quote: "la respuesta real",
+      },
+    ])
+
+    expect(queue).toHaveLength(2)
+    expect(new Set(queue.map((row) => row.id)).size).toBe(2)
+    expect(queue[0].id).toBe("BROKEN")
+    expect(queue[0].review_status).toBe("pending_human")
+    expect(queue[0].automatic_flags).toContain("answer_index_mismatch")
+    expect(queue[1].risk_score).toBeLessThan(queue[0].risk_score)
+  })
+
+  it("flags contextual distractors without auditable source references", () => {
+    expect(
+      exhaustiveRiskFlags({
+        id: "CTX",
+        family: "single_choice_contextual",
+        question: "¿Quién aparece aquí?",
+        options: ["Daniel", "Gabriel", "Miguel", "Darío"],
+        correct_option: 0,
+        correct_answer: "Daniel",
+        source_quote: "Daniel respondió",
+        trap_type: "true_in_other_context",
+        why_distractors_fail: {
+          Gabriel: "No corresponde aquí.",
+          Miguel: "No corresponde aquí.",
+          Darío: "No corresponde aquí.",
+        },
+      })
+    ).toContain("contextual_distractor_without_source_reference")
+  })
+
+  it("flags the deprecated generic wording in false statements", () => {
+    expect(
+      exhaustiveRiskFlags({
+        id: "TF",
+        family: "true_false",
+        question: "Verdadero o falso",
+        statement: "Según Daniel 7:1 aparece la expresión visión.",
+        options: ["Verdadero", "Falso"],
+        correct_option: 1,
+        correct_answer: "Falso",
+        source_quote: "sueño",
+        incorrect_detail: "visión",
+        correction: "sueño",
+        corrected_statement: "Según Daniel 7:1 aparece la expresión sueño.",
+      })
+    ).toContain("deprecated_generic_false_wording")
   })
 })

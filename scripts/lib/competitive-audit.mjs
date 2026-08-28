@@ -90,3 +90,120 @@ export function semanticAuditFlags(row) {
   }
   return flags
 }
+
+function normalizeText(value) {
+  return String(value ?? "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase("es")
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+export function exhaustiveRiskFlags(row) {
+  const flags = [...semanticAuditFlags(row)]
+  const options = Array.isArray(row.options) ? row.options : []
+  const normalizedOptions = options.map(normalizeText)
+  if (new Set(normalizedOptions).size !== normalizedOptions.length)
+    flags.push("duplicate_normalized_option")
+  if (normalizedOptions.some((option) => option.length === 0))
+    flags.push("empty_option")
+
+  if (row.family === "single_choice_contextual") {
+    const explanations = Object.values(row.why_distractors_fail ?? {}).map(
+      String
+    )
+    const sourceReferencePattern =
+      /(?:Daniel\s+\d{1,2}:\d{1,2}|(?:PR|Profetas y Reyes)\s*\d{1,2}(?:\s*,?\s*(?:p\.|párrafo)\s*\d+)?)/iu
+    if (
+      explanations.length !== 3 ||
+      explanations.some(
+        (explanation) => !sourceReferencePattern.test(explanation)
+      )
+    )
+      flags.push("contextual_distractor_without_source_reference")
+    if (
+      Array.isArray(row.option_slot_signatures) &&
+      new Set(row.option_slot_signatures).size !== 1
+    )
+      flags.push("contextual_slot_signature_mismatch")
+  }
+
+  if (
+    row.family === "true_false" &&
+    row.correct_answer === "Falso" &&
+    normalizeText(row.statement ?? row.question).includes(
+      "aparece la expresion"
+    )
+  )
+    flags.push("deprecated_generic_false_wording")
+
+  return [...new Set(flags)]
+}
+
+const RISK_WEIGHT = {
+  answer_index_mismatch: 100,
+  answer_not_in_source_quote: 100,
+  invalid_blank_count: 100,
+  missing_incorrect_detail: 100,
+  missing_correction: 100,
+  missing_corrected_statement: 100,
+  correction_not_in_source_quote: 100,
+  duplicate_normalized_option: 100,
+  empty_option: 100,
+  missing_contextual_trap: 80,
+  incomplete_distractor_explanations: 80,
+  contextual_slot_signature_mismatch: 80,
+  deprecated_generic_false_wording: 60,
+  contextual_distractor_without_source_reference: 40,
+}
+
+export function buildExhaustiveReviewQueue(rows) {
+  const seen = new Set()
+  const queue = rows.map((row) => {
+    if (!row?.id || seen.has(row.id))
+      throw new Error(`ID de auditoría inválido o duplicado: ${row?.id}`)
+    seen.add(row.id)
+    const automaticFlags = exhaustiveRiskFlags(row)
+    const contentSha256 = createHash("sha256")
+      .update(
+        JSON.stringify({
+          question: row.question ?? null,
+          statement: row.statement ?? null,
+          options: row.options ?? null,
+          correct_option: row.correct_option ?? null,
+          correct_answer: row.correct_answer ?? null,
+          source_quote: row.source_quote ?? null,
+          why_distractors_fail: row.why_distractors_fail ?? null,
+        })
+      )
+      .digest("hex")
+    const riskScore = automaticFlags.reduce(
+      (sum, flag) => sum + (RISK_WEIGHT[flag] ?? 20),
+      row.family === "single_choice_contextual" ? 15 :
+        row.family === "true_false" && row.correct_answer === "Falso" ? 12 :
+          row.family === "fill_choice" ? 8 : 0
+    )
+    return {
+      id: row.id,
+      fact_id: row.fact_id ?? null,
+      chapter: row.chapter ?? null,
+      family: row.family ?? null,
+      reference: row.reference ?? null,
+      content_sha256: contentSha256,
+      risk_score: riskScore,
+      automatic_flags: automaticFlags,
+      automatic_status:
+        automaticFlags.length === 0 ? "passed" : "requires_attention",
+      review_status: "pending_human",
+      reviewer: null,
+      reviewed_at: null,
+      disposition: null,
+      notes: null,
+    }
+  })
+  return queue.sort(
+    (left, right) =>
+      right.risk_score - left.risk_score || left.id.localeCompare(right.id)
+  )
+}

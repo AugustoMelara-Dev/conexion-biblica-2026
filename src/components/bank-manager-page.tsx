@@ -102,6 +102,7 @@ export function BankManagerPage() {
   const [replaceBankId, setReplaceBankId] = useState<string | undefined>()
   const [outcomes, setOutcomes] = useState<ImportOutcome[]>([])
   const [backupMessage, setBackupMessage] = useState<string | null>(null)
+  const [backupImporting, setBackupImporting] = useState(false)
   const [query, setQuery] = useState("")
   const [source, setSource] = useState<"all" | SourceWork>("all")
 
@@ -136,14 +137,20 @@ export function BankManagerPage() {
   }
 
   const handleBackup = async (file: File) => {
-    const result = await importBackup(file)
-    setBackupMessage(
-      result.valid
-        ? "Respaldo restaurado. Se reemplazaron los datos locales después de validar el archivo."
-        : result.errors
-            .map((error) => `${error.path}: ${error.message}`)
-            .join("\n")
-    )
+    setBackupImporting(true)
+    setBackupMessage("Restaurando respaldo… No cierres esta pestaña.")
+    try {
+      const result = await importBackup(file)
+      setBackupMessage(
+        result.valid
+          ? "Respaldo restaurado. Se reemplazaron los datos locales después de validar el archivo."
+          : result.errors
+              .map((error) => `${error.path}: ${error.message}`)
+              .join("\n")
+      )
+    } finally {
+      setBackupImporting(false)
+    }
   }
 
   const visibleBanks = banks.filter((bank) => {
@@ -321,13 +328,18 @@ export function BankManagerPage() {
       {backupMessage ? (
         <Alert
           variant={
-            backupMessage.startsWith("Respaldo") ? "default" : "destructive"
+            backupMessage.startsWith("Respaldo") ||
+            backupMessage.startsWith("Restaurando")
+              ? "default"
+              : "destructive"
           }
         >
           <AlertTitle>
             {backupMessage.startsWith("Respaldo")
               ? "Restauración completada"
-              : "No se restauró el respaldo"}
+              : backupMessage.startsWith("Restaurando")
+                ? "Restauración en curso"
+                : "No se restauró el respaldo"}
           </AlertTitle>
           <AlertDescription className="whitespace-pre-wrap">
             {backupMessage}
@@ -344,20 +356,22 @@ export function BankManagerPage() {
           </div>
           <Button
             variant="outline"
+            disabled={backupImporting}
             onClick={() => backupInputRef.current?.click()}
           >
             <UploadCloud data-icon="inline-start" />
-            Importar respaldo
+            {backupImporting ? "Restaurando…" : "Importar respaldo"}
           </Button>
           <input
             ref={backupInputRef}
             className="sr-only"
             type="file"
             accept="application/json,.json"
-            onChange={(event) => {
+            onChange={async (event) => {
+              const input = event.currentTarget
               const file = event.target.files?.[0]
-              if (file) void handleBackup(file)
-              event.currentTarget.value = ""
+              if (file) await handleBackup(file)
+              input.value = ""
             }}
           />
         </CardHeader>
