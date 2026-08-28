@@ -1057,7 +1057,15 @@ class FinalEditorialTests(unittest.TestCase):
                     ),
                     question["id"],
                 )
-                self.assertNotIn("[…]", question["statement"], question["id"])
+                if question.get("statement_mode") == "contextual_identity":
+                    self.assertIn("[…]", question["statement"], question["id"])
+                    self.assertNotIn(
+                        question["asserted_detail"],
+                        question["context_evidence"],
+                        question["id"],
+                    )
+                else:
+                    self.assertNotIn("[…]", question["statement"], question["id"])
                 self.assertNotRegex(
                     question["statement"],
                     r"[,;:]\s*$",
