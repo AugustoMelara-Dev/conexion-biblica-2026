@@ -32,9 +32,7 @@ test("la auditoría humana firma por huella y avanza sobre las doce mil", async 
     timeout: 60_000,
   })
   await expect(
-    page.getByText(
-      /Según Daniel 1:1, ¿qué lugar funciona como origen/,
-    ),
+    page.getByText(/Daniel 1:1 · DAN1-GOLD-0001-SINGLE_CHOICE_CONTEXTUAL/),
   ).toBeVisible({ timeout: 30_000 })
   await page.getByLabel("Nombre del revisor").fill("Auditor E2E")
   await page.getByRole("button", { name: "Aprobar pregunta" }).click()
@@ -56,9 +54,7 @@ test("la auditoría humana firma por huella y avanza sobre las doce mil", async 
   await page.getByRole("button", { name: "Deshacer última decisión" }).click()
   await expect(page.getByText("0 de 12000 revisadas")).toBeVisible()
   await expect(
-    page.getByText(
-      /Según Daniel 1:1, ¿qué lugar funciona como origen/,
-    ),
+    page.getByText(/Daniel 1:1 · DAN1-GOLD-0001-SINGLE_CHOICE_CONTEXTUAL/),
   ).toBeVisible()
   expect(
     await page.evaluate(() =>
