@@ -191,7 +191,7 @@
       "Asuero"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:1, ¿qué personaje completa la relación descrita en «En el primer año de Darío hijo de […], de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,»?",
+    "question": "Según Daniel 9:1, ¿qué nombre o designación completa la relación descrita en «En el primer año de Darío hijo de […], de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,»?",
     "options": [
       "Asuero",
       "Moisés",
@@ -416,7 +416,7 @@
       "Darío"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:1, ¿qué personaje completa la relación descrita en «En el primer año de […] hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,»?",
+    "question": "Según Daniel 9:1, ¿qué nombre o designación completa la relación descrita en «En el primer año de […] hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,»?",
     "options": [
       "Moisés",
       "Darío",
@@ -866,7 +866,7 @@
       "primer"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:1, ¿qué cualidad o estado completa la predicación de «En el […] año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,»?",
+    "question": "Según Daniel 9:1, ¿qué dato ordinal completa «En el […] año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,»?",
     "options": [
       "tercer",
       "último",
@@ -888,7 +888,7 @@
       "tercero": "Es verdadero en PR43, p. 48, párrafo 4, pero no responde al contexto exacto de Daniel 9:1."
     },
     "trap_type": "true_in_other_context",
-    "contextual_role": "predicate",
+    "contextual_role": "order",
     "context_evidence": "En el […] año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
@@ -1618,10 +1618,10 @@
     "answer_mode": "option_id",
     "question": "Según Daniel 9:2, ¿qué opción completa correctamente «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de ________»?",
     "options": [
-      "Jerusalem",
-      "Jerusalén",
       "Babilonia",
-      "Eufrates"
+      "Jerusalén",
+      "Eufrates",
+      "Hidekel"
     ],
     "option_slot_signatures": [
       "place",
@@ -1633,9 +1633,9 @@
     "correct_answer": "Jerusalén",
     "explanation": "Daniel 9:2 declara literalmente «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén». La respuesta pedida es «Jerusalén».",
     "why_distractors_fail": {
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 9:2.",
       "Babilonia": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 9:2.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:2."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:2.",
+      "Hidekel": "Es verdadero en Daniel 10:4, pero no responde al contexto exacto de Daniel 9:2."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -1693,10 +1693,10 @@
     "answer_mode": "option_id",
     "question": "Complete Daniel 9:2: «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de ________»",
     "options": [
-      "Jerusalem",
       "Babilonia",
+      "Eufrates",
       "Jerusalén",
-      "Eufrates"
+      "Hidekel"
     ],
     "option_slot_signatures": [
       "place",
@@ -1708,9 +1708,9 @@
     "correct_answer": "Jerusalén",
     "explanation": "Daniel 9:2 declara literalmente «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén». La respuesta pedida es «Jerusalén».",
     "why_distractors_fail": {
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 9:2.",
       "Babilonia": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 9:2.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:2."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:2.",
+      "Hidekel": "Es verdadero en Daniel 10:4, pero no responde al contexto exacto de Daniel 9:2."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -1766,11 +1766,11 @@
       "Jerusalén"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:2, ¿qué lugar funciona como origen en «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de […]»?",
+    "question": "Según Daniel 9:2, ¿qué lugar completa la relación geográfica expresada en «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de […]»?",
     "options": [
-      "Jerusalem",
       "Babilonia",
       "Eufrates",
+      "Hidekel",
       "Jerusalén"
     ],
     "option_slot_signatures": [
@@ -1783,12 +1783,12 @@
     "correct_answer": "Jerusalén",
     "explanation": "En el contexto exacto de Daniel 9:2, el detalle aplicable es «Jerusalén»: «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén».",
     "why_distractors_fail": {
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 9:2.",
       "Babilonia": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 9:2.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:2."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:2.",
+      "Hidekel": "Es verdadero en Daniel 10:4, pero no responde al contexto exacto de Daniel 9:2."
     },
     "trap_type": "true_in_other_context",
-    "contextual_role": "origin",
+    "contextual_role": "geographic_relation",
     "context_evidence": "en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de […]",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
@@ -1991,7 +1991,7 @@
       "Jeremías"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:2, ¿qué personaje completa la relación descrita en «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta […], en los que habían de cumplirse las desolaciones de Jerusalén»?",
+    "question": "Según Daniel 9:2, ¿qué nombre o designación completa la relación descrita en «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta […], en los que habían de cumplirse las desolaciones de Jerusalén»?",
     "options": [
       "Jeremías",
       "Asuero",
@@ -2441,7 +2441,7 @@
       "Daniel"
     ],
     "answer_mode": "option_id",
-    "question": "Según el pasaje citado, ¿qué personaje completa la relación descrita en «en el primer año de su reinado, yo, […], miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén»?",
+    "question": "Según el pasaje citado, ¿qué nombre o designación completa la relación descrita en «en el primer año de su reinado, yo, […], miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén»?",
     "options": [
       "Moisés",
       "Asuero",
@@ -2666,7 +2666,7 @@
       "Jehová"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:2, ¿qué personaje completa la relación descrita en «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló […] al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén»?",
+    "question": "Según Daniel 9:2, ¿qué nombre o designación completa la relación descrita en «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló […] al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén»?",
     "options": [
       "Mesías",
       "Santo",
@@ -2891,7 +2891,7 @@
       "cumplirse"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:2, ¿qué acción completa la secuencia descrita en «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de […] las desolaciones de Jerusalén»?",
+    "question": "Según Daniel 9:2, ¿qué forma verbal completa la secuencia descrita en «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de […] las desolaciones de Jerusalén»?",
     "options": [
       "cumplirse",
       "restaurar",
@@ -3116,7 +3116,7 @@
       "habló"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:2, ¿qué acción completa la secuencia descrita en «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que […] Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén»?",
+    "question": "Según Daniel 9:2, ¿qué forma verbal completa la secuencia descrita en «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que […] Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén»?",
     "options": [
       "trajo",
       "habló",
@@ -3341,7 +3341,7 @@
       "miré"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:2, ¿qué acción completa la secuencia descrita en «en el primer año de su reinado, yo, Daniel, […] atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén»?",
+    "question": "Según Daniel 9:2, ¿qué forma verbal completa la secuencia descrita en «en el primer año de su reinado, yo, Daniel, […] atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén»?",
     "options": [
       "veló",
       "trajo",
@@ -4016,7 +4016,7 @@
       "Volví"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:3, ¿qué acción completa la secuencia descrita en «[…] mi rostro a Dios, el Señor, buscándolo en oración y ruego, en ayuno, ropas ásperas y ceniza.»?",
+    "question": "Según Daniel 9:3, ¿qué forma verbal completa la secuencia descrita en «[…] mi rostro a Dios, el Señor, buscándolo en oración y ruego, en ayuno, ropas ásperas y ceniza.»?",
     "options": [
       "Trajo",
       "Volví",
@@ -5816,7 +5816,7 @@
       "diciendo"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:4, ¿qué acción completa la secuencia descrita en «Oré a Jehová, mi Dios, e hice confesión […]»?",
+    "question": "Según Daniel 9:4, ¿qué forma verbal completa la secuencia descrita en «Oré a Jehová, mi Dios, e hice confesión […]»?",
     "options": [
       "hablando",
       "diciendo",
@@ -6041,7 +6041,7 @@
       "guardas"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:4, ¿qué acción completa la secuencia descrita en «Ahora, Señor, Dios grande, digno de ser temido, que […] el pacto y la misericordia con los que te aman y guardan tus mandamientos,»?",
+    "question": "Según Daniel 9:4, ¿qué forma verbal completa la secuencia descrita en «Ahora, Señor, Dios grande, digno de ser temido, que […] el pacto y la misericordia con los que te aman y guardan tus mandamientos,»?",
     "options": [
       "tardes",
       "tienes",
@@ -6266,7 +6266,7 @@
       "aman"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:4, ¿qué acción completa la secuencia descrita en «Ahora, Señor, Dios grande, digno de ser temido, que guardas el pacto y la misericordia con los que te […] y guardan tus mandamientos,»?",
+    "question": "Según Daniel 9:4, ¿qué forma verbal completa la secuencia descrita en «Ahora, Señor, Dios grande, digno de ser temido, que guardas el pacto y la misericordia con los que te […] y guardan tus mandamientos,»?",
     "options": [
       "iban",
       "unen",
@@ -6491,7 +6491,7 @@
       "Oré"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:4, ¿qué acción completa la secuencia descrita en «[…] a Jehová, mi Dios, e hice confesión diciendo»?",
+    "question": "Según Daniel 9:4, ¿qué forma verbal completa la secuencia descrita en «[…] a Jehová, mi Dios, e hice confesión diciendo»?",
     "options": [
       "Oré",
       "Veló",
@@ -7616,7 +7616,7 @@
       "cometido"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:5, ¿qué acción completa la secuencia descrita en «hemos pecado, hemos […] iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.»?",
+    "question": "Según Daniel 9:5, ¿qué forma verbal completa la secuencia descrita en «hemos pecado, hemos […] iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.»?",
     "options": [
       "rebelado",
       "cometido",
@@ -7841,7 +7841,7 @@
       "apartado"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:5, ¿qué acción completa la secuencia descrita en «hemos pecado, hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos […] de tus mandamientos y de tus ordenanzas.»?",
+    "question": "Según Daniel 9:5, ¿qué forma verbal completa la secuencia descrita en «hemos pecado, hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos […] de tus mandamientos y de tus ordenanzas.»?",
     "options": [
       "rebelado",
       "cumplido",
@@ -8066,7 +8066,7 @@
       "actuado"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:5, ¿qué acción completa la secuencia descrita en «hemos pecado, hemos cometido iniquidad, hemos […] impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.»?",
+    "question": "Según Daniel 9:5, ¿qué forma verbal completa la secuencia descrita en «hemos pecado, hemos cometido iniquidad, hemos […] impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.»?",
     "options": [
       "echado",
       "rebelado",
@@ -8291,7 +8291,7 @@
       "pecado"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:5, ¿qué acción completa la secuencia descrita en «hemos […], hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.»?",
+    "question": "Según Daniel 9:5, ¿qué forma verbal completa la secuencia descrita en «hemos […], hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.»?",
     "options": [
       "pecado",
       "echado",
@@ -9191,7 +9191,7 @@
       "rebeldes"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:5, ¿qué cualidad o estado completa la predicación de «hemos pecado, hemos cometido iniquidad, hemos actuado impíamente, hemos sido […] y nos hemos apartado de tus mandamientos y de tus ordenanzas.»?",
+    "question": "Según Daniel 9:5, ¿qué término completa la construcción gramatical de «hemos pecado, hemos cometido iniquidad, hemos actuado impíamente, hemos sido […] y nos hemos apartado de tus mandamientos y de tus ordenanzas.»?",
     "options": [
       "rebeldes",
       "cervales",
@@ -9416,7 +9416,7 @@
       "obedecido"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:6, ¿qué acción completa la secuencia descrita en «No hemos […] a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.»?",
+    "question": "Según Daniel 9:6, ¿qué forma verbal completa la secuencia descrita en «No hemos […] a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.»?",
     "options": [
       "implorado",
       "obedecido",
@@ -9641,7 +9641,7 @@
       "hablaron"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:6, ¿qué acción completa la secuencia descrita en «No hemos obedecido a tus siervos los profetas, que en tu nombre […] a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.»?",
+    "question": "Según Daniel 9:6, ¿qué forma verbal completa la secuencia descrita en «No hemos obedecido a tus siervos los profetas, que en tu nombre […] a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.»?",
     "options": [
       "rebelaron",
       "gobernaron",
@@ -9866,7 +9866,7 @@
       "hemos"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:6, ¿qué acción completa la secuencia descrita en «No […] obedecido a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.»?",
+    "question": "Según Daniel 9:6, ¿qué forma verbal completa la secuencia descrita en «No […] obedecido a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.»?",
     "options": [
       "pecamos",
       "elevamos",
@@ -11295,8 +11295,8 @@
     "options": [
       "Jerusalén",
       "Babilonia",
-      "Jerusalem",
-      "Eufrates"
+      "Eufrates",
+      "Hidekel"
     ],
     "option_slot_signatures": [
       "place",
@@ -11309,8 +11309,8 @@
     "explanation": "Daniel 9:7 declara literalmente «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.». La respuesta pedida es «Jerusalén».",
     "why_distractors_fail": {
       "Babilonia": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 9:7.",
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 9:7.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:7."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:7.",
+      "Hidekel": "Es verdadero en Daniel 10:4, pero no responde al contexto exacto de Daniel 9:7."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -11370,8 +11370,8 @@
     "options": [
       "Babilonia",
       "Jerusalén",
-      "Jerusalem",
-      "Eufrates"
+      "Eufrates",
+      "Hidekel"
     ],
     "option_slot_signatures": [
       "place",
@@ -11384,8 +11384,8 @@
     "explanation": "Daniel 9:7 declara literalmente «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.». La respuesta pedida es «Jerusalén».",
     "why_distractors_fail": {
       "Babilonia": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 9:7.",
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 9:7.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:7."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:7.",
+      "Hidekel": "Es verdadero en Daniel 10:4, pero no responde al contexto exacto de Daniel 9:7."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -11441,12 +11441,12 @@
       "Jerusalén"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:7, ¿qué lugar funciona como origen en «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de […] y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.»?",
+    "question": "Según Daniel 9:7, ¿qué lugar completa la relación geográfica expresada en «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de […] y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.»?",
     "options": [
       "Babilonia",
-      "Jerusalem",
+      "Eufrates",
       "Jerusalén",
-      "Eufrates"
+      "Hidekel"
     ],
     "option_slot_signatures": [
       "place",
@@ -11459,11 +11459,11 @@
     "explanation": "En el contexto exacto de Daniel 9:7, el detalle aplicable es «Jerusalén»: «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.».",
     "why_distractors_fail": {
       "Babilonia": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 9:7.",
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 9:7.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:7."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:7.",
+      "Hidekel": "Es verdadero en Daniel 10:4, pero no responde al contexto exacto de Daniel 9:7."
     },
     "trap_type": "true_in_other_context",
-    "contextual_role": "origin",
+    "contextual_role": "geographic_relation",
     "context_evidence": "Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de […] y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
@@ -11666,7 +11666,7 @@
       "Israel"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:7, ¿qué personaje completa la relación descrita en «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo […], los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.»?",
+    "question": "Según Daniel 9:7, ¿qué nombre o designación completa la relación descrita en «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo […], los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.»?",
     "options": [
       "Moisés",
       "Asuero",
@@ -11891,7 +11891,7 @@
       "Señor"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:7, ¿qué personaje completa la relación descrita en «Tuya es, […], la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.»?",
+    "question": "Según Daniel 9:7, ¿qué nombre o designación completa la relación descrita en «Tuya es, […], la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.»?",
     "options": [
       "Señor",
       "Santo",
@@ -12116,7 +12116,7 @@
       "Judá"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:7, ¿qué lugar funciona como origen en «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de […], los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.»?",
+    "question": "Según Daniel 9:7, ¿qué lugar completa la relación geográfica expresada en «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de […], los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.»?",
     "options": [
       "Elam",
       "Judá",
@@ -12138,7 +12138,7 @@
       "Ulai": "Es verdadero en Daniel 8:2, pero no responde al contexto exacto de Daniel 9:7."
     },
     "trap_type": "true_in_other_context",
-    "contextual_role": "origin",
+    "contextual_role": "geographic_relation",
     "context_evidence": "Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de […], los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
@@ -12341,7 +12341,7 @@
       "rebelaron"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:7, ¿qué acción completa la secuencia descrita en «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se […] contra ti.»?",
+    "question": "Según Daniel 9:7, ¿qué forma verbal completa la secuencia descrita en «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se […] contra ti.»?",
     "options": [
       "gobernaron",
       "siguieron",
@@ -12566,7 +12566,7 @@
       "lleva"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:7, ¿qué acción completa la secuencia descrita en «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy […] todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.»?",
+    "question": "Según Daniel 9:7, ¿qué forma verbal completa la secuencia descrita en «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy […] todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.»?",
     "options": [
       "venga",
       "presta",
@@ -12791,7 +12791,7 @@
       "Tuya"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:7, ¿qué acción completa la secuencia descrita en «[…] es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.»?",
+    "question": "Según Daniel 9:7, ¿qué forma verbal completa la secuencia descrita en «[…] es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.»?",
     "options": [
       "Tuya",
       "Mira",
@@ -13016,7 +13016,7 @@
       "has"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:7, ¿qué acción completa la secuencia descrita en «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los […] echado a causa de su rebelión con que se rebelaron contra ti.»?",
+    "question": "Según Daniel 9:7, ¿qué forma verbal completa la secuencia descrita en «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los […] echado a causa de su rebelión con que se rebelaron contra ti.»?",
     "options": [
       "tardes",
       "has",
@@ -13691,7 +13691,7 @@
       "Jehová"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:8, ¿qué personaje completa la relación descrita en «Nuestra es, […], la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.»?",
+    "question": "Según Daniel 9:8, ¿qué nombre o designación completa la relación descrita en «Nuestra es, […], la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.»?",
     "options": [
       "Jehová",
       "Mesías",
@@ -13916,7 +13916,7 @@
       "pecamos"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:8, ¿qué acción completa la secuencia descrita en «Nuestra es, Jehová, la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti […].»?",
+    "question": "Según Daniel 9:8, ¿qué forma verbal completa la secuencia descrita en «Nuestra es, Jehová, la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti […].»?",
     "options": [
       "elevamos",
       "pecamos",
@@ -15266,7 +15266,7 @@
       "Jehová"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:9, ¿qué personaje completa la relación descrita en «De […], nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado»?",
+    "question": "Según Daniel 9:9, ¿qué nombre o designación completa la relación descrita en «De […], nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado»?",
     "options": [
       "Mesías",
       "Santo",
@@ -15491,7 +15491,7 @@
       "perdonar"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:9, ¿qué acción completa la secuencia descrita en «De Jehová, nuestro Dios, es el tener misericordia y el […], aunque contra él nos hemos rebelado»?",
+    "question": "Según Daniel 9:9, ¿qué forma verbal completa la secuencia descrita en «De Jehová, nuestro Dios, es el tener misericordia y el […], aunque contra él nos hemos rebelado»?",
     "options": [
       "perdonar",
       "obedecer",
@@ -15716,7 +15716,7 @@
       "rebelado"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:9, ¿qué acción completa la secuencia descrita en «De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos […]»?",
+    "question": "Según Daniel 9:9, ¿qué forma verbal completa la secuencia descrita en «De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos […]»?",
     "options": [
       "cumplido",
       "rebelado",
@@ -15941,7 +15941,7 @@
       "tener"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:9, ¿qué acción completa la secuencia descrita en «De Jehová, nuestro Dios, es el […] misericordia y el perdonar, aunque contra él nos hemos rebelado»?",
+    "question": "Según Daniel 9:9, ¿qué forma verbal completa la secuencia descrita en «De Jehová, nuestro Dios, es el […] misericordia y el perdonar, aunque contra él nos hemos rebelado»?",
     "options": [
       "andar",
       "ungir",
@@ -16166,7 +16166,7 @@
       "hemos"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:9, ¿qué acción completa la secuencia descrita en «De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos […] rebelado»?",
+    "question": "Según Daniel 9:9, ¿qué forma verbal completa la secuencia descrita en «De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos […] rebelado»?",
     "options": [
       "pecamos",
       "elevamos",
@@ -16616,7 +16616,7 @@
       "Jehová"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:10, ¿qué personaje completa la relación descrita en «y no obedecimos a la voz de […], nuestro Dios, para andar en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.»?",
+    "question": "Según Daniel 9:10, ¿qué nombre o designación completa la relación descrita en «y no obedecimos a la voz de […], nuestro Dios, para andar en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.»?",
     "options": [
       "Mesías",
       "Jehová",
@@ -16841,7 +16841,7 @@
       "obedecimos"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:10, ¿qué acción completa la secuencia descrita en «y no […] a la voz de Jehová, nuestro Dios, para andar en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.»?",
+    "question": "Según Daniel 9:10, ¿qué forma verbal completa la secuencia descrita en «y no […] a la voz de Jehová, nuestro Dios, para andar en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.»?",
     "options": [
       "elevamos",
       "pecamos",
@@ -17066,7 +17066,7 @@
       "andar"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:10, ¿qué acción completa la secuencia descrita en «y no obedecimos a la voz de Jehová, nuestro Dios, para […] en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.»?",
+    "question": "Según Daniel 9:10, ¿qué forma verbal completa la secuencia descrita en «y no obedecimos a la voz de Jehová, nuestro Dios, para […] en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.»?",
     "options": [
       "ungir",
       "darte",
@@ -17291,7 +17291,7 @@
       "puso"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:10, ¿qué acción completa la secuencia descrita en «y no obedecimos a la voz de Jehová, nuestro Dios, para andar en sus leyes, que él […] delante de nosotros por medio de sus siervos los profetas.»?",
+    "question": "Según Daniel 9:10, ¿qué forma verbal completa la secuencia descrita en «y no obedecimos a la voz de Jehová, nuestro Dios, para andar en sus leyes, que él […] delante de nosotros por medio de sus siervos los profetas.»?",
     "options": [
       "puso",
       "veló",
@@ -18641,7 +18641,7 @@
       "Israel"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:11, ¿qué personaje completa la relación descrita en «Todo […] traspasó tu Ley, apartándose para no obedecer a tu voz.»?",
+    "question": "Según Daniel 9:11, ¿qué nombre o designación completa la relación descrita en «Todo […] traspasó tu Ley, apartándose para no obedecer a tu voz.»?",
     "options": [
       "Asuero",
       "Jeremías",
@@ -18721,7 +18721,7 @@
       "Asuero",
       "Moisés",
       "Jeremías",
-      "Mesach"
+      "Sadrac"
     ],
     "option_slot_signatures": [
       "person",
@@ -18735,7 +18735,7 @@
     "why_distractors_fail": {
       "Asuero": "Es verdadero en Daniel 9:1, pero no responde al contexto exacto de Daniel 9:11.",
       "Jeremías": "Es verdadero en Daniel 9:2, pero no responde al contexto exacto de Daniel 9:11.",
-      "Mesach": "Es verdadero en PR41, p. 39, párrafo 5, pero no responde al contexto exacto de Daniel 9:11."
+      "Sadrac": "Es verdadero en Daniel 3:13, pero no responde al contexto exacto de Daniel 9:11."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -18796,7 +18796,7 @@
       "Asuero",
       "Jeremías",
       "Moisés",
-      "Mesach"
+      "Sadrac"
     ],
     "option_slot_signatures": [
       "person",
@@ -18810,7 +18810,7 @@
     "why_distractors_fail": {
       "Asuero": "Es verdadero en Daniel 9:1, pero no responde al contexto exacto de Daniel 9:11.",
       "Jeremías": "Es verdadero en Daniel 9:2, pero no responde al contexto exacto de Daniel 9:11.",
-      "Mesach": "Es verdadero en PR41, p. 39, párrafo 5, pero no responde al contexto exacto de Daniel 9:11."
+      "Sadrac": "Es verdadero en Daniel 3:13, pero no responde al contexto exacto de Daniel 9:11."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -18866,11 +18866,11 @@
       "Moisés"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:11, ¿qué personaje completa la relación descrita en «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de […], siervo de Dios, porque contra Dios pecamos.»?",
+    "question": "Según Daniel 9:11, ¿qué nombre o designación completa la relación descrita en «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de […], siervo de Dios, porque contra Dios pecamos.»?",
     "options": [
       "Asuero",
       "Jeremías",
-      "Mesach",
+      "Sadrac",
       "Moisés"
     ],
     "option_slot_signatures": [
@@ -18885,7 +18885,7 @@
     "why_distractors_fail": {
       "Asuero": "Es verdadero en Daniel 9:1, pero no responde al contexto exacto de Daniel 9:11.",
       "Jeremías": "Es verdadero en Daniel 9:2, pero no responde al contexto exacto de Daniel 9:11.",
-      "Mesach": "Es verdadero en PR41, p. 39, párrafo 5, pero no responde al contexto exacto de Daniel 9:11."
+      "Sadrac": "Es verdadero en Daniel 3:13, pero no responde al contexto exacto de Daniel 9:11."
     },
     "trap_type": "true_in_other_context",
     "contextual_role": "named_entity",
@@ -19541,7 +19541,7 @@
       "apartándose"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:11, ¿qué acción completa la secuencia descrita en «Todo Israel traspasó tu Ley, […] para no obedecer a tu voz.»?",
+    "question": "Según Daniel 9:11, ¿qué forma verbal completa la secuencia descrita en «Todo Israel traspasó tu Ley, […] para no obedecer a tu voz.»?",
     "options": [
       "confesando",
       "hablando",
@@ -19766,7 +19766,7 @@
       "traspasó"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:11, ¿qué acción completa la secuencia descrita en «Todo Israel […] tu Ley, apartándose para no obedecer a tu voz.»?",
+    "question": "Según Daniel 9:11, ¿qué forma verbal completa la secuencia descrita en «Todo Israel […] tu Ley, apartándose para no obedecer a tu voz.»?",
     "options": [
       "volví",
       "trajo",
@@ -19991,7 +19991,7 @@
       "obedecer"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:11, ¿qué acción completa la secuencia descrita en «Todo Israel traspasó tu Ley, apartándose para no […] a tu voz.»?",
+    "question": "Según Daniel 9:11, ¿qué forma verbal completa la secuencia descrita en «Todo Israel traspasó tu Ley, apartándose para no […] a tu voz.»?",
     "options": [
       "obedecer",
       "perdonar",
@@ -20216,7 +20216,7 @@
       "pecamos"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:11, ¿qué acción completa la secuencia descrita en «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios […].»?",
+    "question": "Según Daniel 9:11, ¿qué forma verbal completa la secuencia descrita en «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios […].»?",
     "options": [
       "elevamos",
       "pecamos",
@@ -20441,7 +20441,7 @@
       "caído"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:11, ¿qué acción completa la secuencia descrita en «Por lo cual ha […] sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios pecamos.»?",
+    "question": "Según Daniel 9:11, ¿qué forma verbal completa la secuencia descrita en «Por lo cual ha […] sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios pecamos.»?",
     "options": [
       "hecho",
       "pecado",
@@ -20518,10 +20518,10 @@
     "answer_mode": "option_id",
     "question": "Según Daniel 9:12, ¿qué opción completa correctamente «pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra ________.»?",
     "options": [
-      "Jerusalem",
-      "Jerusalén",
       "Babilonia",
-      "Eufrates"
+      "Jerusalén",
+      "Eufrates",
+      "Hidekel"
     ],
     "option_slot_signatures": [
       "place",
@@ -20533,9 +20533,9 @@
     "correct_answer": "Jerusalén",
     "explanation": "Daniel 9:12 declara literalmente «pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Jerusalén.». La respuesta pedida es «Jerusalén».",
     "why_distractors_fail": {
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 9:12.",
       "Babilonia": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 9:12.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:12."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:12.",
+      "Hidekel": "Es verdadero en Daniel 10:4, pero no responde al contexto exacto de Daniel 9:12."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -20593,10 +20593,10 @@
     "answer_mode": "option_id",
     "question": "Complete Daniel 9:12: «pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra ________.»",
     "options": [
-      "Jerusalem",
       "Babilonia",
+      "Eufrates",
       "Jerusalén",
-      "Eufrates"
+      "Hidekel"
     ],
     "option_slot_signatures": [
       "place",
@@ -20608,9 +20608,9 @@
     "correct_answer": "Jerusalén",
     "explanation": "Daniel 9:12 declara literalmente «pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Jerusalén.». La respuesta pedida es «Jerusalén».",
     "why_distractors_fail": {
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 9:12.",
       "Babilonia": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 9:12.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:12."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:12.",
+      "Hidekel": "Es verdadero en Daniel 10:4, pero no responde al contexto exacto de Daniel 9:12."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -20666,11 +20666,11 @@
       "Jerusalén"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:12, ¿qué lugar completa la relación espacial descrita en «pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra […].»?",
+    "question": "Según Daniel 9:12, ¿qué lugar completa el detalle geográfico de «pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra […].»?",
     "options": [
-      "Jerusalem",
       "Babilonia",
       "Eufrates",
+      "Hidekel",
       "Jerusalén"
     ],
     "option_slot_signatures": [
@@ -20683,9 +20683,9 @@
     "correct_answer": "Jerusalén",
     "explanation": "En el contexto exacto de Daniel 9:12, el detalle aplicable es «Jerusalén»: «pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Jerusalén.».",
     "why_distractors_fail": {
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 9:12.",
       "Babilonia": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 9:12.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:12."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:12.",
+      "Hidekel": "Es verdadero en Daniel 10:4, pero no responde al contexto exacto de Daniel 9:12."
     },
     "trap_type": "true_in_other_context",
     "contextual_role": "location",
@@ -20891,7 +20891,7 @@
       "gobernaron"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:12, ¿qué acción completa la secuencia descrita en «Y él ha cumplido la palabra que habló contra nosotros y contra nuestros jefes que nos […], trayendo sobre nosotros tan gran mal»?",
+    "question": "Según Daniel 9:12, ¿qué forma verbal completa la secuencia descrita en «Y él ha cumplido la palabra que habló contra nosotros y contra nuestros jefes que nos […], trayendo sobre nosotros tan gran mal»?",
     "options": [
       "gobernaron",
       "rebelaron",
@@ -21116,7 +21116,7 @@
       "cumplido"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:12, ¿qué acción completa la secuencia descrita en «Y él ha […] la palabra que habló contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal»?",
+    "question": "Según Daniel 9:12, ¿qué forma verbal completa la secuencia descrita en «Y él ha […] la palabra que habló contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal»?",
     "options": [
       "apartado",
       "cumplido",
@@ -21341,7 +21341,7 @@
       "habló"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:12, ¿qué acción completa la secuencia descrita en «Y él ha cumplido la palabra que […] contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal»?",
+    "question": "Según Daniel 9:12, ¿qué forma verbal completa la secuencia descrita en «Y él ha cumplido la palabra que […] contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal»?",
     "options": [
       "trajo",
       "volví",
@@ -22691,7 +22691,7 @@
       "Moisés"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:13, ¿qué personaje completa la relación descrita en «Conforme está escrito en la ley de […], todo este mal vino sobre nosotros»?",
+    "question": "Según Daniel 9:13, ¿qué nombre o designación completa la relación descrita en «Conforme está escrito en la ley de […], todo este mal vino sobre nosotros»?",
     "options": [
       "Moisés",
       "Asuero",
@@ -22916,7 +22916,7 @@
       "Jehová"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:13, ¿qué personaje completa la relación descrita en «pero no hemos implorado el favor de […], nuestro Dios, y no nos hemos convertido de nuestras maldades ni entendido tu verdad.»?",
+    "question": "Según Daniel 9:13, ¿qué nombre o designación completa la relación descrita en «pero no hemos implorado el favor de […], nuestro Dios, y no nos hemos convertido de nuestras maldades ni entendido tu verdad.»?",
     "options": [
       "Mesías",
       "Jehová",
@@ -23141,7 +23141,7 @@
       "convertido"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:13, ¿qué acción completa la secuencia descrita en «pero no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos […] de nuestras maldades ni entendido tu verdad.»?",
+    "question": "Según Daniel 9:13, ¿qué forma verbal completa la secuencia descrita en «pero no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos […] de nuestras maldades ni entendido tu verdad.»?",
     "options": [
       "obedecido",
       "apartado",
@@ -23366,7 +23366,7 @@
       "implorado"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:13, ¿qué acción completa la secuencia descrita en «pero no hemos […] el favor de Jehová, nuestro Dios, y no nos hemos convertido de nuestras maldades ni entendido tu verdad.»?",
+    "question": "Según Daniel 9:13, ¿qué forma verbal completa la secuencia descrita en «pero no hemos […] el favor de Jehová, nuestro Dios, y no nos hemos convertido de nuestras maldades ni entendido tu verdad.»?",
     "options": [
       "obedecido",
       "cometido",
@@ -24941,7 +24941,7 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:14, ¿qué personaje completa la relación descrita en «porque justo es Jehová, nuestro […], en todas sus obras que ha hecho, y nosotros no obedecimos a su voz.»?",
+    "question": "Según Daniel 9:14, ¿qué nombre o designación completa la relación descrita en «porque justo es Jehová, nuestro […], en todas sus obras que ha hecho, y nosotros no obedecimos a su voz.»?",
     "options": [
       "Santo",
       "Mesías",
@@ -25166,7 +25166,7 @@
       "obedecimos"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:14, ¿qué acción completa la secuencia descrita en «porque justo es Jehová, nuestro Dios, en todas sus obras que ha hecho, y nosotros no […] a su voz.»?",
+    "question": "Según Daniel 9:14, ¿qué forma verbal completa la secuencia descrita en «porque justo es Jehová, nuestro Dios, en todas sus obras que ha hecho, y nosotros no […] a su voz.»?",
     "options": [
       "elevamos",
       "pecamos",
@@ -25391,7 +25391,7 @@
       "trajo"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:14, ¿qué acción completa la secuencia descrita en «Por tanto, Jehová veló sobre el mal y lo […] sobre nosotros»?",
+    "question": "Según Daniel 9:14, ¿qué forma verbal completa la secuencia descrita en «Por tanto, Jehová veló sobre el mal y lo […] sobre nosotros»?",
     "options": [
       "trajo",
       "volví",
@@ -25616,7 +25616,7 @@
       "hecho"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:14, ¿qué acción completa la secuencia descrita en «porque justo es Jehová, nuestro Dios, en todas sus obras que ha […], y nosotros no obedecimos a su voz.»?",
+    "question": "Según Daniel 9:14, ¿qué forma verbal completa la secuencia descrita en «porque justo es Jehová, nuestro Dios, en todas sus obras que ha […], y nosotros no obedecimos a su voz.»?",
     "options": [
       "echado",
       "hecho",
@@ -25841,7 +25841,7 @@
       "veló"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:14, ¿qué acción completa la secuencia descrita en «Por tanto, Jehová […] sobre el mal y lo trajo sobre nosotros»?",
+    "question": "Según Daniel 9:14, ¿qué forma verbal completa la secuencia descrita en «Por tanto, Jehová […] sobre el mal y lo trajo sobre nosotros»?",
     "options": [
       "volví",
       "oré",
@@ -26291,7 +26291,7 @@
       "Egipto"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:15, ¿qué lugar funciona como origen en «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de […] con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.»?",
+    "question": "Según Daniel 9:15, ¿qué lugar completa la relación geográfica expresada en «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de […] con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.»?",
     "options": [
       "Egipto",
       "Chebar",
@@ -26313,7 +26313,7 @@
       "Quitim": "Es verdadero en Daniel 11:30, pero no responde al contexto exacto de Daniel 9:15."
     },
     "trap_type": "true_in_other_context",
-    "contextual_role": "origin",
+    "contextual_role": "geographic_relation",
     "context_evidence": "Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de […] con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
@@ -26516,7 +26516,7 @@
       "Señor"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:15, ¿qué personaje completa la relación descrita en «Ahora pues, […], Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.»?",
+    "question": "Según Daniel 9:15, ¿qué nombre o designación completa la relación descrita en «Ahora pues, […], Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.»?",
     "options": [
       "Santo",
       "Señor",
@@ -26741,7 +26741,7 @@
       "sacaste"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:15, ¿qué acción completa la secuencia descrita en «Ahora pues, Señor, Dios nuestro, que […] a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.»?",
+    "question": "Según Daniel 9:15, ¿qué forma verbal completa la secuencia descrita en «Ahora pues, Señor, Dios nuestro, que […] a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.»?",
     "options": [
       "pusiste",
       "pudiste",
@@ -26966,7 +26966,7 @@
       "hiciste"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:15, ¿qué acción completa la secuencia descrita en «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te […] renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.»?",
+    "question": "Según Daniel 9:15, ¿qué forma verbal completa la secuencia descrita en «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te […] renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.»?",
     "options": [
       "supiste",
       "dijiste",
@@ -27191,7 +27191,7 @@
       "actuado"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:15, ¿qué acción completa la secuencia descrita en «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos […] impíamente.»?",
+    "question": "Según Daniel 9:15, ¿qué forma verbal completa la secuencia descrita en «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos […] impíamente.»?",
     "options": [
       "actuado",
       "echado",
@@ -27416,7 +27416,7 @@
       "tienes"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:15, ¿qué acción completa la secuencia descrita en «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo […] hoy, hemos pecado, hemos actuado impíamente.»?",
+    "question": "Según Daniel 9:15, ¿qué forma verbal completa la secuencia descrita en «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo […] hoy, hemos pecado, hemos actuado impíamente.»?",
     "options": [
       "tardes",
       "tienes",
@@ -27641,7 +27641,7 @@
       "pecado"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:15, ¿qué acción completa la secuencia descrita en «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos […], hemos actuado impíamente.»?",
+    "question": "Según Daniel 9:15, ¿qué forma verbal completa la secuencia descrita en «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos […], hemos actuado impíamente.»?",
     "options": [
       "echado",
       "hecho",
@@ -28091,7 +28091,7 @@
       "poderosa"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:15, ¿qué cualidad o estado completa la predicación de «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano […] y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.»?",
+    "question": "Según Daniel 9:15, ¿qué término completa la construcción gramatical de «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano […] y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.»?",
     "options": [
       "poderosa",
       "gloriosa",
@@ -29891,7 +29891,7 @@
       "Señor"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:16, ¿qué personaje completa la relación descrita en «[…], conforme a todos tus actos de justicia, apártese ahora tu ira y tu furor de sobre tu ciudad Jerusalén, tu santo monte»?",
+    "question": "Según Daniel 9:16, ¿qué nombre o designación completa la relación descrita en «[…], conforme a todos tus actos de justicia, apártese ahora tu ira y tu furor de sobre tu ciudad Jerusalén, tu santo monte»?",
     "options": [
       "Señor",
       "Jehová",
@@ -30341,7 +30341,7 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:17, ¿qué personaje completa la relación descrita en «Ahora pues, […] nuestro, oye la oración y los ruegos de tu siervo, y haz que tu rostro resplandezca sobre tu santuario asolado, por amor del Señor.»?",
+    "question": "Según Daniel 9:17, ¿qué nombre o designación completa la relación descrita en «Ahora pues, […] nuestro, oye la oración y los ruegos de tu siervo, y haz que tu rostro resplandezca sobre tu santuario asolado, por amor del Señor.»?",
     "options": [
       "Santo",
       "Jehová",
@@ -30566,7 +30566,7 @@
       "haz"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:17, ¿qué acción completa la secuencia descrita en «Ahora pues, Dios nuestro, oye la oración y los ruegos de tu siervo, y […] que tu rostro resplandezca sobre tu santuario asolado, por amor del Señor.»?",
+    "question": "Según Daniel 9:17, ¿qué forma verbal completa la secuencia descrita en «Ahora pues, Dios nuestro, oye la oración y los ruegos de tu siervo, y […] que tu rostro resplandezca sobre tu santuario asolado, por amor del Señor.»?",
     "options": [
       "hazlo",
       "estáte",
@@ -32141,7 +32141,7 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:18, ¿qué personaje completa la relación descrita en «Inclina, […] mío, tu oído, y oye»?",
+    "question": "Según Daniel 9:18, ¿qué nombre o designación completa la relación descrita en «Inclina, […] mío, tu oído, y oye»?",
     "options": [
       "Santo",
       "Mesías",
@@ -32366,7 +32366,7 @@
       "elevamos"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:18, ¿qué acción completa la secuencia descrita en «porque no […] nuestros ruegos ante ti confiados en nuestras justicias, sino en tus muchas misericordias.»?",
+    "question": "Según Daniel 9:18, ¿qué forma verbal completa la secuencia descrita en «porque no […] nuestros ruegos ante ti confiados en nuestras justicias, sino en tus muchas misericordias.»?",
     "options": [
       "pecamos",
       "obedecimos",
@@ -32591,7 +32591,7 @@
       "Inclina"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:18, ¿qué acción completa la secuencia descrita en «[…], Dios mío, tu oído, y oye»?",
+    "question": "Según Daniel 9:18, ¿qué forma verbal completa la secuencia descrita en «[…], Dios mío, tu oído, y oye»?",
     "options": [
       "Inclina",
       "Presta",
@@ -32816,7 +32816,7 @@
       "mira"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:18, ¿qué acción completa la secuencia descrita en «abre tus ojos y […] nuestras desolaciones y la ciudad sobre la cual es invocado tu nombre»?",
+    "question": "Según Daniel 9:18, ¿qué forma verbal completa la secuencia descrita en «abre tus ojos y […] nuestras desolaciones y la ciudad sobre la cual es invocado tu nombre»?",
     "options": [
       "tuya",
       "mira",
@@ -33941,7 +33941,7 @@
       "invocado"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:18, ¿qué cualidad o estado completa la predicación de «abre tus ojos y mira nuestras desolaciones y la ciudad sobre la cual es […] tu nombre»?",
+    "question": "Según Daniel 9:18, ¿qué término completa la construcción gramatical de «abre tus ojos y mira nuestras desolaciones y la ciudad sobre la cual es […] tu nombre»?",
     "options": [
       "temido",
       "amado",
@@ -34391,7 +34391,7 @@
       "Dios"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:19, ¿qué personaje completa la relación descrita en «No tardes, por amor de ti mismo, […] mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo.»?",
+    "question": "Según Daniel 9:19, ¿qué nombre o designación completa la relación descrita en «No tardes, por amor de ti mismo, […] mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo.»?",
     "options": [
       "Dios",
       "Santo",
@@ -34616,7 +34616,7 @@
       "Presta"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:19, ¿qué acción completa la secuencia descrita en «¡Oye, Señor! ¡Señor, perdona! ¡[…] oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo. Profecía de las setenta semanas»?",
+    "question": "Según Daniel 9:19, ¿qué forma verbal completa la secuencia descrita en «¡Oye, Señor! ¡Señor, perdona! ¡[…] oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo. Profecía de las setenta semanas»?",
     "options": [
       "Lleva",
       "Presta",
@@ -34841,7 +34841,7 @@
       "tardes"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:19, ¿qué acción completa la secuencia descrita en «No […], por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo.»?",
+    "question": "Según Daniel 9:19, ¿qué forma verbal completa la secuencia descrita en «No […], por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo.»?",
     "options": [
       "tienes",
       "guardas",
@@ -35066,7 +35066,7 @@
       "hazlo"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:19, ¿qué acción completa la secuencia descrita en «¡Oye, Señor! ¡Señor, perdona! ¡Presta oído, Señor, y […]! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo. Profecía de las setenta semanas»?",
+    "question": "Según Daniel 9:19, ¿qué forma verbal completa la secuencia descrita en «¡Oye, Señor! ¡Señor, perdona! ¡Presta oído, Señor, y […]! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo. Profecía de las setenta semanas»?",
     "options": [
       "estáte",
       "decidme",
@@ -35291,7 +35291,7 @@
       "invocado"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:19, ¿qué cualidad o estado completa la predicación de «No tardes, por amor de ti mismo, Dios mío, porque tu nombre es […] sobre tu ciudad y sobre tu pueblo.»?",
+    "question": "Según Daniel 9:19, ¿qué término completa la construcción gramatical de «No tardes, por amor de ti mismo, Dios mío, porque tu nombre es […] sobre tu ciudad y sobre tu pueblo.»?",
     "options": [
       "invocado",
       "temido",
@@ -36191,7 +36191,7 @@
       "Israel"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:20, ¿qué personaje completa la relación descrita en «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo […], y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios»?",
+    "question": "Según Daniel 9:20, ¿qué nombre o designación completa la relación descrita en «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo […], y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios»?",
     "options": [
       "Israel",
       "Asuero",
@@ -36416,7 +36416,7 @@
       "Jehová"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:20, ¿qué personaje completa la relación descrita en «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de […], mi Dios, por el monte santo de mi Dios»?",
+    "question": "Según Daniel 9:20, ¿qué nombre o designación completa la relación descrita en «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de […], mi Dios, por el monte santo de mi Dios»?",
     "options": [
       "Mesías",
       "Jehová",
@@ -36641,7 +36641,7 @@
       "confesando"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:20, ¿qué acción completa la secuencia descrita en «Aún estaba hablando, orando y […] mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios»?",
+    "question": "Según Daniel 9:20, ¿qué forma verbal completa la secuencia descrita en «Aún estaba hablando, orando y […] mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios»?",
     "options": [
       "apartándose",
       "volando",
@@ -36866,7 +36866,7 @@
       "derramaba"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:20, ¿qué acción completa la secuencia descrita en «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y […] mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios»?",
+    "question": "Según Daniel 9:20, ¿qué forma verbal completa la secuencia descrita en «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y […] mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios»?",
     "options": [
       "alcanzaba",
       "procuraba",
@@ -37091,7 +37091,7 @@
       "hablando"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:20, ¿qué acción completa la secuencia descrita en «Aún estaba […], orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios»?",
+    "question": "Según Daniel 9:20, ¿qué forma verbal completa la secuencia descrita en «Aún estaba […], orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios»?",
     "options": [
       "hablando",
       "volando",
@@ -37316,7 +37316,7 @@
       "orando"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:20, ¿qué acción completa la secuencia descrita en «Aún estaba hablando, […] y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios»?",
+    "question": "Según Daniel 9:20, ¿qué forma verbal completa la secuencia descrita en «Aún estaba hablando, […] y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios»?",
     "options": [
       "volando",
       "orando",
@@ -38216,7 +38216,7 @@
       "Gabriel"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:21, ¿qué personaje completa la relación descrita en «aún estaba hablando en oración, cuando el varón […], a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.»?",
+    "question": "Según Daniel 9:21, ¿qué nombre o designación completa la relación descrita en «aún estaba hablando en oración, cuando el varón […], a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.»?",
     "options": [
       "Jeremías",
       "Gabriel",
@@ -38441,7 +38441,7 @@
       "hablando"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:21, ¿qué acción completa la secuencia descrita en «aún estaba […] en oración, cuando el varón Gabriel, a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.»?",
+    "question": "Según Daniel 9:21, ¿qué forma verbal completa la secuencia descrita en «aún estaba […] en oración, cuando el varón Gabriel, a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.»?",
     "options": [
       "confesando",
       "orando",
@@ -38666,7 +38666,7 @@
       "volando"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:21, ¿qué acción completa la secuencia descrita en «aún estaba hablando en oración, cuando el varón Gabriel, a quien había visto en la visión, al principio, […] con presteza vino a mí como a la hora del sacrificio de la tarde.»?",
+    "question": "Según Daniel 9:21, ¿qué forma verbal completa la secuencia descrita en «aún estaba hablando en oración, cuando el varón Gabriel, a quien había visto en la visión, al principio, […] con presteza vino a mí como a la hora del sacrificio de la tarde.»?",
     "options": [
       "orando",
       "confesando",
@@ -38891,7 +38891,7 @@
       "visto"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:21, ¿qué acción completa la secuencia descrita en «aún estaba hablando en oración, cuando el varón Gabriel, a quien había […] en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.»?",
+    "question": "Según Daniel 9:21, ¿qué forma verbal completa la secuencia descrita en «aún estaba hablando en oración, cuando el varón Gabriel, a quien había […] en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.»?",
     "options": [
       "visto",
       "hecho",
@@ -40241,7 +40241,7 @@
       "entender"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:22, ¿qué acción completa la secuencia descrita en «Me hizo […], y habló conmigo diciendo»?",
+    "question": "Según Daniel 9:22, ¿qué forma verbal completa la secuencia descrita en «Me hizo […], y habló conmigo diciendo»?",
     "options": [
       "perdonar",
       "obedecer",
@@ -40466,7 +40466,7 @@
       "diciendo"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:22, ¿qué acción completa la secuencia descrita en «Me hizo entender, y habló conmigo […]»?",
+    "question": "Según Daniel 9:22, ¿qué forma verbal completa la secuencia descrita en «Me hizo entender, y habló conmigo […]»?",
     "options": [
       "hablando",
       "volando",
@@ -40691,7 +40691,7 @@
       "salido"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:22, ¿qué acción completa la secuencia descrita en «Daniel, ahora he […] para darte sabiduría y entendimiento.»?",
+    "question": "Según Daniel 9:22, ¿qué forma verbal completa la secuencia descrita en «Daniel, ahora he […] para darte sabiduría y entendimiento.»?",
     "options": [
       "salido",
       "echado",
@@ -40916,7 +40916,7 @@
       "habló"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:22, ¿qué acción completa la secuencia descrita en «Me hizo entender, y […] conmigo diciendo»?",
+    "question": "Según Daniel 9:22, ¿qué forma verbal completa la secuencia descrita en «Me hizo entender, y […] conmigo diciendo»?",
     "options": [
       "trajo",
       "habló",
@@ -41141,7 +41141,7 @@
       "darte"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:22, ¿qué acción completa la secuencia descrita en «Daniel, ahora he salido para […] sabiduría y entendimiento.»?",
+    "question": "Según Daniel 9:22, ¿qué forma verbal completa la secuencia descrita en «Daniel, ahora he salido para […] sabiduría y entendimiento.»?",
     "options": [
       "tener",
       "ungir",
@@ -41816,7 +41816,7 @@
       "Daniel"
     ],
     "answer_mode": "option_id",
-    "question": "Según el pasaje citado, ¿qué personaje completa la relación descrita en «[…], ahora he salido para darte sabiduría y entendimiento.»?",
+    "question": "Según el pasaje citado, ¿qué nombre o designación completa la relación descrita en «[…], ahora he salido para darte sabiduría y entendimiento.»?",
     "options": [
       "Moisés",
       "Daniel",
@@ -42266,7 +42266,7 @@
       "Entiende"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:23, ¿qué acción completa la secuencia descrita en «[…], pues, la orden, y […] la visión.»?",
+    "question": "Según Daniel 9:23, ¿qué forma verbal completa la secuencia descrita en «[…], pues, la orden, y […] la visión.»?",
     "options": [
       "Derrame",
       "Demudóse",
@@ -42491,7 +42491,7 @@
       "venido"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:23, ¿qué acción completa la secuencia descrita en «Al principio de tus ruegos fue dada la orden, y yo he […] para enseñártela, porque tú eres muy amado.»?",
+    "question": "Según Daniel 9:23, ¿qué forma verbal completa la secuencia descrita en «Al principio de tus ruegos fue dada la orden, y yo he […] para enseñártela, porque tú eres muy amado.»?",
     "options": [
       "venido",
       "echado",
@@ -44291,7 +44291,7 @@
       "terminar"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:24, ¿qué acción completa la secuencia descrita en «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para […] la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.»?",
+    "question": "Según Daniel 9:24, ¿qué forma verbal completa la secuencia descrita en «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para […] la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.»?",
     "options": [
       "terminar",
       "obedecer",
@@ -44516,7 +44516,7 @@
       "expiar"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:24, ¿qué acción completa la secuencia descrita en «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y […] la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.»?",
+    "question": "Según Daniel 9:24, ¿qué forma verbal completa la secuencia descrita en «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y […] la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.»?",
     "options": [
       "andar",
       "expiar",
@@ -44741,7 +44741,7 @@
       "sellar"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:24, ¿qué acción completa la secuencia descrita en «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, […] la visión y la profecía y ungir al Santo de los santos.»?",
+    "question": "Según Daniel 9:24, ¿qué forma verbal completa la secuencia descrita en «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, […] la visión y la profecía y ungir al Santo de los santos.»?",
     "options": [
       "tener",
       "andar",
@@ -44966,7 +44966,7 @@
       "determinadas"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:24, ¿qué cualidad o estado completa la predicación de «Setenta semanas están […] sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.»?",
+    "question": "Según Daniel 9:24, ¿qué término completa la construcción gramatical de «Setenta semanas están […] sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.»?",
     "options": [
       "comprendidas",
       "desconocidas",
@@ -45268,9 +45268,9 @@
     "answer_mode": "option_id",
     "question": "Según Daniel 9:25, ¿qué opción completa correctamente «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a ________ hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas»?",
     "options": [
-      "Jerusalem",
       "Babilonia",
       "Eufrates",
+      "Medo-Persia",
       "Jerusalén"
     ],
     "option_slot_signatures": [
@@ -45283,9 +45283,9 @@
     "correct_answer": "Jerusalén",
     "explanation": "Daniel 9:25 declara literalmente «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas». La respuesta pedida es «Jerusalén».",
     "why_distractors_fail": {
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 9:25.",
       "Babilonia": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 9:25.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:25."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:25.",
+      "Medo-Persia": "Es verdadero en PR43, p. 52, párrafo 2, pero no responde al contexto exacto de Daniel 9:25."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -45344,9 +45344,9 @@
     "question": "Complete Daniel 9:25: «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a ________ hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas»",
     "options": [
       "Jerusalén",
-      "Jerusalem",
       "Babilonia",
-      "Eufrates"
+      "Eufrates",
+      "Medo-Persia"
     ],
     "option_slot_signatures": [
       "place",
@@ -45358,9 +45358,9 @@
     "correct_answer": "Jerusalén",
     "explanation": "Daniel 9:25 declara literalmente «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas». La respuesta pedida es «Jerusalén».",
     "why_distractors_fail": {
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 9:25.",
       "Babilonia": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 9:25.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:25."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:25.",
+      "Medo-Persia": "Es verdadero en PR43, p. 52, párrafo 2, pero no responde al contexto exacto de Daniel 9:25."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -45416,12 +45416,12 @@
       "Jerusalén"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:25, ¿qué destino completa el movimiento descrito en «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a […] hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas»?",
+    "question": "Según Daniel 9:25, ¿qué lugar completa la relación geográfica expresada en «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a […] hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas»?",
     "options": [
-      "Jerusalem",
-      "Jerusalén",
       "Babilonia",
-      "Eufrates"
+      "Jerusalén",
+      "Eufrates",
+      "Medo-Persia"
     ],
     "option_slot_signatures": [
       "place",
@@ -45433,12 +45433,12 @@
     "correct_answer": "Jerusalén",
     "explanation": "En el contexto exacto de Daniel 9:25, el detalle aplicable es «Jerusalén»: «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas».",
     "why_distractors_fail": {
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 9:25.",
       "Babilonia": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 9:25.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:25."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 9:25.",
+      "Medo-Persia": "Es verdadero en PR43, p. 52, párrafo 2, pero no responde al contexto exacto de Daniel 9:25."
     },
     "trap_type": "true_in_other_context",
-    "contextual_role": "destination",
+    "contextual_role": "geographic_relation",
     "context_evidence": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a […] hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
@@ -45866,7 +45866,7 @@
       "Mesías"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:25, ¿qué personaje completa la relación descrita en «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el […] Príncipe, habrá siete semanas y sesenta y dos semanas»?",
+    "question": "Según Daniel 9:25, ¿qué nombre o designación completa la relación descrita en «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el […] Príncipe, habrá siete semanas y sesenta y dos semanas»?",
     "options": [
       "Jehová",
       "Santo",
@@ -46541,7 +46541,7 @@
       "restaurar"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:25, ¿qué acción completa la secuencia descrita en «Sabe, pues, y entiende que desde la salida de la orden para […] y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas»?",
+    "question": "Según Daniel 9:25, ¿qué forma verbal completa la secuencia descrita en «Sabe, pues, y entiende que desde la salida de la orden para […] y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas»?",
     "options": [
       "cumplirse",
       "perdonar",
@@ -46766,7 +46766,7 @@
       "volverán"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:25, ¿qué acción completa la secuencia descrita en «se […] a edificar la plaza y el muro en tiempos angustiosos.»?",
+    "question": "Según Daniel 9:25, ¿qué forma verbal completa la secuencia descrita en «se […] a edificar la plaza y el muro en tiempos angustiosos.»?",
     "options": [
       "durarán",
       "servirán",
@@ -46991,7 +46991,7 @@
       "habrá"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:25, ¿qué acción completa la secuencia descrita en «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, […] siete semanas y sesenta y dos semanas»?",
+    "question": "Según Daniel 9:25, ¿qué forma verbal completa la secuencia descrita en «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, […] siete semanas y sesenta y dos semanas»?",
     "options": [
       "habrá",
       "quitará",
@@ -47891,7 +47891,7 @@
       "quitará"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:26, ¿qué acción completa la secuencia descrita en «Después de las sesenta y dos semanas se […] la vida al Mesías, y nada ya le quedará.»?",
+    "question": "Según Daniel 9:26, ¿qué forma verbal completa la secuencia descrita en «Después de las sesenta y dos semanas se […] la vida al Mesías, y nada ya le quedará.»?",
     "options": [
       "quitará",
       "confirmará",
@@ -48116,7 +48116,7 @@
       "llegará"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:26, ¿qué acción completa la secuencia descrita en «El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario, su final […] como una inundación, y hasta el fin de la guerra durarán las devastaciones.»?",
+    "question": "Según Daniel 9:26, ¿qué forma verbal completa la secuencia descrita en «El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario, su final […] como una inundación, y hasta el fin de la guerra durarán las devastaciones.»?",
     "options": [
       "confirmará",
       "llegará",
@@ -48341,7 +48341,7 @@
       "durarán"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:26, ¿qué acción completa la secuencia descrita en «El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario, su final llegará como una inundación, y hasta el fin de la guerra […] las devastaciones.»?",
+    "question": "Según Daniel 9:26, ¿qué forma verbal completa la secuencia descrita en «El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario, su final llegará como una inundación, y hasta el fin de la guerra […] las devastaciones.»?",
     "options": [
       "volverán",
       "obrarán",
@@ -49016,7 +49016,7 @@
       "confirmará"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:27, ¿qué acción completa la secuencia descrita en «Por otra semana más […] el pacto con muchos»?",
+    "question": "Según Daniel 9:27, ¿qué forma verbal completa la secuencia descrita en «Por otra semana más […] el pacto con muchos»?",
     "options": [
       "quitará",
       "confirmará",
@@ -49241,7 +49241,7 @@
       "derrame"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:27, ¿qué acción completa la secuencia descrita en «Después, con la muchedumbre de las abominaciones, vendrá el desolador, hasta que venga la consumación y lo que está determinado se […] sobre el desolador.»?",
+    "question": "Según Daniel 9:27, ¿qué forma verbal completa la secuencia descrita en «Después, con la muchedumbre de las abominaciones, vendrá el desolador, hasta que venga la consumación y lo que está determinado se […] sobre el desolador.»?",
     "options": [
       "declare",
       "estorbe",
@@ -49466,7 +49466,7 @@
       "vendrá"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:27, ¿qué acción completa la secuencia descrita en «Después, con la muchedumbre de las abominaciones, […] el desolador, hasta que venga la consumación y lo que está determinado se derrame sobre el desolador.»?",
+    "question": "Según Daniel 9:27, ¿qué forma verbal completa la secuencia descrita en «Después, con la muchedumbre de las abominaciones, […] el desolador, hasta que venga la consumación y lo que está determinado se derrame sobre el desolador.»?",
     "options": [
       "quitará",
       "pondrá",
@@ -49691,7 +49691,7 @@
       "cesar"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:27, ¿qué acción completa la secuencia descrita en «Por otra semana más confirmará el pacto con muchos; a la mitad de la semana hará […] el sacrificio y la ofrenda.»?",
+    "question": "Según Daniel 9:27, ¿qué forma verbal completa la secuencia descrita en «Por otra semana más confirmará el pacto con muchos; a la mitad de la semana hará […] el sacrificio y la ofrenda.»?",
     "options": [
       "cesar",
       "traer",
@@ -49916,7 +49916,7 @@
       "venga"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:27, ¿qué acción completa la secuencia descrita en «Después, con la muchedumbre de las abominaciones, vendrá el desolador, hasta que […] la consumación y lo que está determinado se derrame sobre el desolador.»?",
+    "question": "Según Daniel 9:27, ¿qué forma verbal completa la secuencia descrita en «Después, con la muchedumbre de las abominaciones, vendrá el desolador, hasta que […] la consumación y lo que está determinado se derrame sobre el desolador.»?",
     "options": [
       "lleva",
       "venga",
@@ -50141,7 +50141,7 @@
       "hará"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 9:27, ¿qué acción completa la secuencia descrita en «Por otra semana más confirmará el pacto con muchos; a la mitad de la semana […] cesar el sacrificio y la ofrenda.»?",
+    "question": "Según Daniel 9:27, ¿qué forma verbal completa la secuencia descrita en «Por otra semana más confirmará el pacto con muchos; a la mitad de la semana […] cesar el sacrificio y la ofrenda.»?",
     "options": [
       "quitará",
       "dará",
@@ -54670,8 +54670,8 @@
       "rebelaron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:7, en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se […] contra ti.», la acción indicada es «rebelaron».",
-    "statement": "Según Daniel 9:7, en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se […] contra ti.», la acción indicada es «rebelaron».",
+    "question": "Verdadero o falso: Según Daniel 9:7, en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se […] contra ti.», la forma verbal indicada es «rebelaron».",
+    "statement": "Según Daniel 9:7, en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se […] contra ti.», la forma verbal indicada es «rebelaron».",
     "asserted_detail": "rebelaron",
     "options": [
       "Verdadero",
@@ -54685,7 +54685,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se […] contra ti.», la acción indicada es «rebelaron».",
+    "truth_source_statement": "en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se […] contra ti.», la forma verbal indicada es «rebelaron».",
     "contextual_role": "action",
     "context_evidence": "Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se […] contra ti.",
     "replacement_source_ref": null,
@@ -54747,8 +54747,8 @@
       "Daniel"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:22, en la escena «[…], ahora he salido para darte sabiduría y entendimiento.», el personaje identificado es «Daniel».",
-    "statement": "Según Daniel 9:22, en la escena «[…], ahora he salido para darte sabiduría y entendimiento.», el personaje identificado es «Daniel».",
+    "question": "Verdadero o falso: Según Daniel 9:22, en la escena «[…], ahora he salido para darte sabiduría y entendimiento.», el nombre o designación indicada es «Daniel».",
+    "statement": "Según Daniel 9:22, en la escena «[…], ahora he salido para darte sabiduría y entendimiento.», el nombre o designación indicada es «Daniel».",
     "asserted_detail": "Daniel",
     "options": [
       "Verdadero",
@@ -54762,7 +54762,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «[…], ahora he salido para darte sabiduría y entendimiento.», el personaje identificado es «Daniel».",
+    "truth_source_statement": "en la escena «[…], ahora he salido para darte sabiduría y entendimiento.», el nombre o designación indicada es «Daniel».",
     "contextual_role": "named_entity",
     "context_evidence": "[…], ahora he salido para darte sabiduría y entendimiento.",
     "replacement_source_ref": null,
@@ -54824,8 +54824,8 @@
       "diciendo"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:22, en la escena «Me hizo entender, y habló conmigo […]», la acción indicada es «diciendo».",
-    "statement": "Según Daniel 9:22, en la escena «Me hizo entender, y habló conmigo […]», la acción indicada es «diciendo».",
+    "question": "Verdadero o falso: Según Daniel 9:22, en la escena «Me hizo entender, y habló conmigo […]», la forma verbal indicada es «diciendo».",
+    "statement": "Según Daniel 9:22, en la escena «Me hizo entender, y habló conmigo […]», la forma verbal indicada es «diciendo».",
     "asserted_detail": "diciendo",
     "options": [
       "Verdadero",
@@ -54839,7 +54839,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Me hizo entender, y habló conmigo […]», la acción indicada es «diciendo».",
+    "truth_source_statement": "en la escena «Me hizo entender, y habló conmigo […]», la forma verbal indicada es «diciendo».",
     "contextual_role": "action",
     "context_evidence": "Me hizo entender, y habló conmigo […]",
     "replacement_source_ref": null,
@@ -54901,8 +54901,8 @@
       "Tuya"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:7, en la escena «[…] es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», la acción indicada es «Tuya».",
-    "statement": "Según Daniel 9:7, en la escena «[…] es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», la acción indicada es «Tuya».",
+    "question": "Verdadero o falso: Según Daniel 9:7, en la escena «[…] es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», la forma verbal indicada es «Tuya».",
+    "statement": "Según Daniel 9:7, en la escena «[…] es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», la forma verbal indicada es «Tuya».",
     "asserted_detail": "Tuya",
     "options": [
       "Verdadero",
@@ -54916,7 +54916,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «[…] es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», la acción indicada es «Tuya».",
+    "truth_source_statement": "en la escena «[…] es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», la forma verbal indicada es «Tuya».",
     "contextual_role": "action",
     "context_evidence": "[…] es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.",
     "replacement_source_ref": null,
@@ -54978,8 +54978,8 @@
       "andar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:10, en la escena «y no obedecimos a la voz de Jehová, nuestro Dios, para […] en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.», la acción indicada es «andar».",
-    "statement": "Según Daniel 9:10, en la escena «y no obedecimos a la voz de Jehová, nuestro Dios, para […] en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.», la acción indicada es «andar».",
+    "question": "Verdadero o falso: Según Daniel 9:10, en la escena «y no obedecimos a la voz de Jehová, nuestro Dios, para […] en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.», la forma verbal indicada es «andar».",
+    "statement": "Según Daniel 9:10, en la escena «y no obedecimos a la voz de Jehová, nuestro Dios, para […] en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.», la forma verbal indicada es «andar».",
     "asserted_detail": "andar",
     "options": [
       "Verdadero",
@@ -54993,7 +54993,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «y no obedecimos a la voz de Jehová, nuestro Dios, para […] en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.», la acción indicada es «andar».",
+    "truth_source_statement": "en la escena «y no obedecimos a la voz de Jehová, nuestro Dios, para […] en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.», la forma verbal indicada es «andar».",
     "contextual_role": "action",
     "context_evidence": "y no obedecimos a la voz de Jehová, nuestro Dios, para […] en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.",
     "replacement_source_ref": null,
@@ -55055,8 +55055,8 @@
       "pecado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:5, en la escena «hemos […], hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.», la acción indicada es «pecado».",
-    "statement": "Según Daniel 9:5, en la escena «hemos […], hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.», la acción indicada es «pecado».",
+    "question": "Verdadero o falso: Según Daniel 9:5, en la escena «hemos […], hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.», la forma verbal indicada es «pecado».",
+    "statement": "Según Daniel 9:5, en la escena «hemos […], hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.», la forma verbal indicada es «pecado».",
     "asserted_detail": "pecado",
     "options": [
       "Verdadero",
@@ -55070,7 +55070,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «hemos […], hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.», la acción indicada es «pecado».",
+    "truth_source_statement": "en la escena «hemos […], hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.», la forma verbal indicada es «pecado».",
     "contextual_role": "action",
     "context_evidence": "hemos […], hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.",
     "replacement_source_ref": null,
@@ -55132,8 +55132,8 @@
       "terminar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:24, en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para […] la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.», la acción indicada es «terminar».",
-    "statement": "Según Daniel 9:24, en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para […] la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.», la acción indicada es «terminar».",
+    "question": "Verdadero o falso: Según Daniel 9:24, en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para […] la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.», la forma verbal indicada es «terminar».",
+    "statement": "Según Daniel 9:24, en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para […] la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.», la forma verbal indicada es «terminar».",
     "asserted_detail": "terminar",
     "options": [
       "Verdadero",
@@ -55147,7 +55147,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para […] la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.», la acción indicada es «terminar».",
+    "truth_source_statement": "en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para […] la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.», la forma verbal indicada es «terminar».",
     "contextual_role": "action",
     "context_evidence": "Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para […] la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.",
     "replacement_source_ref": null,
@@ -55209,8 +55209,8 @@
       "Egipto"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:15, en la escena «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de […] con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.», el lugar de origen es «Egipto».",
-    "statement": "Según Daniel 9:15, en la escena «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de […] con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.», el lugar de origen es «Egipto».",
+    "question": "Verdadero o falso: Según Daniel 9:15, en la escena «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de […] con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.», el lugar asociado en la relación es «Egipto».",
+    "statement": "Según Daniel 9:15, en la escena «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de […] con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.», el lugar asociado en la relación es «Egipto».",
     "asserted_detail": "Egipto",
     "options": [
       "Verdadero",
@@ -55224,8 +55224,8 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de […] con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.», el lugar de origen es «Egipto».",
-    "contextual_role": "origin",
+    "truth_source_statement": "en la escena «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de […] con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.», el lugar asociado en la relación es «Egipto».",
+    "contextual_role": "geographic_relation",
     "context_evidence": "Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de […] con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.",
     "replacement_source_ref": null,
     "correct_slot_signature": "place",
@@ -55286,8 +55286,8 @@
       "sellar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:24, en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, […] la visión y la profecía y ungir al Santo de los santos.», la acción indicada es «sellar».",
-    "statement": "Según Daniel 9:24, en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, […] la visión y la profecía y ungir al Santo de los santos.», la acción indicada es «sellar».",
+    "question": "Verdadero o falso: Según Daniel 9:24, en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, […] la visión y la profecía y ungir al Santo de los santos.», la forma verbal indicada es «sellar».",
+    "statement": "Según Daniel 9:24, en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, […] la visión y la profecía y ungir al Santo de los santos.», la forma verbal indicada es «sellar».",
     "asserted_detail": "sellar",
     "options": [
       "Verdadero",
@@ -55301,7 +55301,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, […] la visión y la profecía y ungir al Santo de los santos.», la acción indicada es «sellar».",
+    "truth_source_statement": "en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, […] la visión y la profecía y ungir al Santo de los santos.», la forma verbal indicada es «sellar».",
     "contextual_role": "action",
     "context_evidence": "Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, […] la visión y la profecía y ungir al Santo de los santos.",
     "replacement_source_ref": null,
@@ -55517,8 +55517,8 @@
       "Jerusalén"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de […]», el lugar de origen es «Jerusalén».",
-    "statement": "Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de […]», el lugar de origen es «Jerusalén».",
+    "question": "Verdadero o falso: Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de […]», el lugar asociado en la relación es «Jerusalén».",
+    "statement": "Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de […]», el lugar asociado en la relación es «Jerusalén».",
     "asserted_detail": "Jerusalén",
     "options": [
       "Verdadero",
@@ -55532,8 +55532,8 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de […]», el lugar de origen es «Jerusalén».",
-    "contextual_role": "origin",
+    "truth_source_statement": "en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de […]», el lugar asociado en la relación es «Jerusalén».",
+    "contextual_role": "geographic_relation",
     "context_evidence": "en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de […]",
     "replacement_source_ref": null,
     "correct_slot_signature": "place",
@@ -55594,8 +55594,8 @@
       "darte"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:22, en la escena «Daniel, ahora he salido para […] sabiduría y entendimiento.», la acción indicada es «darte».",
-    "statement": "Según Daniel 9:22, en la escena «Daniel, ahora he salido para […] sabiduría y entendimiento.», la acción indicada es «darte».",
+    "question": "Verdadero o falso: Según Daniel 9:22, en la escena «Daniel, ahora he salido para […] sabiduría y entendimiento.», la forma verbal indicada es «darte».",
+    "statement": "Según Daniel 9:22, en la escena «Daniel, ahora he salido para […] sabiduría y entendimiento.», la forma verbal indicada es «darte».",
     "asserted_detail": "darte",
     "options": [
       "Verdadero",
@@ -55609,7 +55609,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Daniel, ahora he salido para […] sabiduría y entendimiento.», la acción indicada es «darte».",
+    "truth_source_statement": "en la escena «Daniel, ahora he salido para […] sabiduría y entendimiento.», la forma verbal indicada es «darte».",
     "contextual_role": "action",
     "context_evidence": "Daniel, ahora he salido para […] sabiduría y entendimiento.",
     "replacement_source_ref": null,
@@ -55671,8 +55671,8 @@
       "Señor"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:7, en la escena «Tuya es, […], la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», el personaje identificado es «Señor».",
-    "statement": "Según Daniel 9:7, en la escena «Tuya es, […], la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», el personaje identificado es «Señor».",
+    "question": "Verdadero o falso: Según Daniel 9:7, en la escena «Tuya es, […], la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», el nombre o designación indicada es «Señor».",
+    "statement": "Según Daniel 9:7, en la escena «Tuya es, […], la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», el nombre o designación indicada es «Señor».",
     "asserted_detail": "Señor",
     "options": [
       "Verdadero",
@@ -55686,7 +55686,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Tuya es, […], la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», el personaje identificado es «Señor».",
+    "truth_source_statement": "en la escena «Tuya es, […], la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», el nombre o designación indicada es «Señor».",
     "contextual_role": "named_entity",
     "context_evidence": "Tuya es, […], la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.",
     "replacement_source_ref": null,
@@ -55748,8 +55748,8 @@
       "Jerusalén"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:25, en la escena «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a […] hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas», el destino es «Jerusalén».",
-    "statement": "Según Daniel 9:25, en la escena «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a […] hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas», el destino es «Jerusalén».",
+    "question": "Verdadero o falso: Según Daniel 9:25, en la escena «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a […] hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas», el lugar asociado en la relación es «Jerusalén».",
+    "statement": "Según Daniel 9:25, en la escena «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a […] hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas», el lugar asociado en la relación es «Jerusalén».",
     "asserted_detail": "Jerusalén",
     "options": [
       "Verdadero",
@@ -55763,8 +55763,8 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a […] hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas», el destino es «Jerusalén».",
-    "contextual_role": "destination",
+    "truth_source_statement": "en la escena «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a […] hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas», el lugar asociado en la relación es «Jerusalén».",
+    "contextual_role": "geographic_relation",
     "context_evidence": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a […] hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas",
     "replacement_source_ref": null,
     "correct_slot_signature": "place",
@@ -55825,8 +55825,8 @@
       "Israel"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:20, en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo […], y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», el personaje identificado es «Israel».",
-    "statement": "Según Daniel 9:20, en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo […], y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», el personaje identificado es «Israel».",
+    "question": "Verdadero o falso: Según Daniel 9:20, en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo […], y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», el nombre o designación indicada es «Israel».",
+    "statement": "Según Daniel 9:20, en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo […], y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», el nombre o designación indicada es «Israel».",
     "asserted_detail": "Israel",
     "options": [
       "Verdadero",
@@ -55840,7 +55840,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo […], y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», el personaje identificado es «Israel».",
+    "truth_source_statement": "en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo […], y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», el nombre o designación indicada es «Israel».",
     "contextual_role": "named_entity",
     "context_evidence": "Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo […], y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios",
     "replacement_source_ref": null,
@@ -55902,8 +55902,8 @@
       "Jehová"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:8, en la escena «Nuestra es, […], la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.», el personaje identificado es «Jehová».",
-    "statement": "Según Daniel 9:8, en la escena «Nuestra es, […], la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.», el personaje identificado es «Jehová».",
+    "question": "Verdadero o falso: Según Daniel 9:8, en la escena «Nuestra es, […], la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.», el nombre o designación indicada es «Jehová».",
+    "statement": "Según Daniel 9:8, en la escena «Nuestra es, […], la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.», el nombre o designación indicada es «Jehová».",
     "asserted_detail": "Jehová",
     "options": [
       "Verdadero",
@@ -55917,7 +55917,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Nuestra es, […], la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.», el personaje identificado es «Jehová».",
+    "truth_source_statement": "en la escena «Nuestra es, […], la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.», el nombre o designación indicada es «Jehová».",
     "contextual_role": "named_entity",
     "context_evidence": "Nuestra es, […], la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.",
     "replacement_source_ref": null,
@@ -55979,8 +55979,8 @@
       "derramaba"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:20, en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y […] mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», la acción indicada es «derramaba».",
-    "statement": "Según Daniel 9:20, en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y […] mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», la acción indicada es «derramaba».",
+    "question": "Verdadero o falso: Según Daniel 9:20, en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y […] mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», la forma verbal indicada es «derramaba».",
+    "statement": "Según Daniel 9:20, en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y […] mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», la forma verbal indicada es «derramaba».",
     "asserted_detail": "derramaba",
     "options": [
       "Verdadero",
@@ -55994,7 +55994,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y […] mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», la acción indicada es «derramaba».",
+    "truth_source_statement": "en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y […] mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», la forma verbal indicada es «derramaba».",
     "contextual_role": "action",
     "context_evidence": "Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y […] mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios",
     "replacement_source_ref": null,
@@ -56056,8 +56056,8 @@
       "Moisés"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:11, en la escena «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de […], siervo de Dios, porque contra Dios pecamos.», el personaje identificado es «Moisés».",
-    "statement": "Según Daniel 9:11, en la escena «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de […], siervo de Dios, porque contra Dios pecamos.», el personaje identificado es «Moisés».",
+    "question": "Verdadero o falso: Según Daniel 9:11, en la escena «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de […], siervo de Dios, porque contra Dios pecamos.», el nombre o designación indicada es «Moisés».",
+    "statement": "Según Daniel 9:11, en la escena «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de […], siervo de Dios, porque contra Dios pecamos.», el nombre o designación indicada es «Moisés».",
     "asserted_detail": "Moisés",
     "options": [
       "Verdadero",
@@ -56071,7 +56071,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de […], siervo de Dios, porque contra Dios pecamos.», el personaje identificado es «Moisés».",
+    "truth_source_statement": "en la escena «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de […], siervo de Dios, porque contra Dios pecamos.», el nombre o designación indicada es «Moisés».",
     "contextual_role": "named_entity",
     "context_evidence": "Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de […], siervo de Dios, porque contra Dios pecamos.",
     "replacement_source_ref": null,
@@ -56133,8 +56133,8 @@
       "perdonar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:9, en la escena «De Jehová, nuestro Dios, es el tener misericordia y el […], aunque contra él nos hemos rebelado», la acción indicada es «perdonar».",
-    "statement": "Según Daniel 9:9, en la escena «De Jehová, nuestro Dios, es el tener misericordia y el […], aunque contra él nos hemos rebelado», la acción indicada es «perdonar».",
+    "question": "Verdadero o falso: Según Daniel 9:9, en la escena «De Jehová, nuestro Dios, es el tener misericordia y el […], aunque contra él nos hemos rebelado», la forma verbal indicada es «perdonar».",
+    "statement": "Según Daniel 9:9, en la escena «De Jehová, nuestro Dios, es el tener misericordia y el […], aunque contra él nos hemos rebelado», la forma verbal indicada es «perdonar».",
     "asserted_detail": "perdonar",
     "options": [
       "Verdadero",
@@ -56148,7 +56148,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «De Jehová, nuestro Dios, es el tener misericordia y el […], aunque contra él nos hemos rebelado», la acción indicada es «perdonar».",
+    "truth_source_statement": "en la escena «De Jehová, nuestro Dios, es el tener misericordia y el […], aunque contra él nos hemos rebelado», la forma verbal indicada es «perdonar».",
     "contextual_role": "action",
     "context_evidence": "De Jehová, nuestro Dios, es el tener misericordia y el […], aunque contra él nos hemos rebelado",
     "replacement_source_ref": null,
@@ -56287,8 +56287,8 @@
       "hecho"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:14, en la escena «porque justo es Jehová, nuestro Dios, en todas sus obras que ha […], y nosotros no obedecimos a su voz.», la acción indicada es «hecho».",
-    "statement": "Según Daniel 9:14, en la escena «porque justo es Jehová, nuestro Dios, en todas sus obras que ha […], y nosotros no obedecimos a su voz.», la acción indicada es «hecho».",
+    "question": "Verdadero o falso: Según Daniel 9:14, en la escena «porque justo es Jehová, nuestro Dios, en todas sus obras que ha […], y nosotros no obedecimos a su voz.», la forma verbal indicada es «hecho».",
+    "statement": "Según Daniel 9:14, en la escena «porque justo es Jehová, nuestro Dios, en todas sus obras que ha […], y nosotros no obedecimos a su voz.», la forma verbal indicada es «hecho».",
     "asserted_detail": "hecho",
     "options": [
       "Verdadero",
@@ -56302,7 +56302,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «porque justo es Jehová, nuestro Dios, en todas sus obras que ha […], y nosotros no obedecimos a su voz.», la acción indicada es «hecho».",
+    "truth_source_statement": "en la escena «porque justo es Jehová, nuestro Dios, en todas sus obras que ha […], y nosotros no obedecimos a su voz.», la forma verbal indicada es «hecho».",
     "contextual_role": "action",
     "context_evidence": "porque justo es Jehová, nuestro Dios, en todas sus obras que ha […], y nosotros no obedecimos a su voz.",
     "replacement_source_ref": null,
@@ -56364,8 +56364,8 @@
       "confesando"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:20, en la escena «Aún estaba hablando, orando y […] mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», la acción indicada es «confesando».",
-    "statement": "Según Daniel 9:20, en la escena «Aún estaba hablando, orando y […] mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», la acción indicada es «confesando».",
+    "question": "Verdadero o falso: Según Daniel 9:20, en la escena «Aún estaba hablando, orando y […] mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», la forma verbal indicada es «confesando».",
+    "statement": "Según Daniel 9:20, en la escena «Aún estaba hablando, orando y […] mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», la forma verbal indicada es «confesando».",
     "asserted_detail": "confesando",
     "options": [
       "Verdadero",
@@ -56379,7 +56379,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Aún estaba hablando, orando y […] mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», la acción indicada es «confesando».",
+    "truth_source_statement": "en la escena «Aún estaba hablando, orando y […] mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios», la forma verbal indicada es «confesando».",
     "contextual_role": "action",
     "context_evidence": "Aún estaba hablando, orando y […] mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios",
     "replacement_source_ref": null,
@@ -56441,8 +56441,8 @@
       "Daniel"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, […], miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», el personaje identificado es «Daniel».",
-    "statement": "Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, […], miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», el personaje identificado es «Daniel».",
+    "question": "Verdadero o falso: Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, […], miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», el nombre o designación indicada es «Daniel».",
+    "statement": "Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, […], miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», el nombre o designación indicada es «Daniel».",
     "asserted_detail": "Daniel",
     "options": [
       "Verdadero",
@@ -56456,7 +56456,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «en el primer año de su reinado, yo, […], miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», el personaje identificado es «Daniel».",
+    "truth_source_statement": "en la escena «en el primer año de su reinado, yo, […], miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», el nombre o designación indicada es «Daniel».",
     "contextual_role": "named_entity",
     "context_evidence": "en el primer año de su reinado, yo, […], miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén",
     "replacement_source_ref": null,
@@ -56518,8 +56518,8 @@
       "Jerusalén"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:7, en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de […] y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», el lugar de origen es «Jerusalén».",
-    "statement": "Según Daniel 9:7, en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de […] y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», el lugar de origen es «Jerusalén».",
+    "question": "Verdadero o falso: Según Daniel 9:7, en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de […] y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», el lugar asociado en la relación es «Jerusalén».",
+    "statement": "Según Daniel 9:7, en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de […] y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», el lugar asociado en la relación es «Jerusalén».",
     "asserted_detail": "Jerusalén",
     "options": [
       "Verdadero",
@@ -56533,8 +56533,8 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de […] y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», el lugar de origen es «Jerusalén».",
-    "contextual_role": "origin",
+    "truth_source_statement": "en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de […] y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», el lugar asociado en la relación es «Jerusalén».",
+    "contextual_role": "geographic_relation",
     "context_evidence": "Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de […] y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.",
     "replacement_source_ref": null,
     "correct_slot_signature": "place",
@@ -56595,8 +56595,8 @@
       "restaurar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:25, en la escena «Sabe, pues, y entiende que desde la salida de la orden para […] y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas», la acción indicada es «restaurar».",
-    "statement": "Según Daniel 9:25, en la escena «Sabe, pues, y entiende que desde la salida de la orden para […] y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas», la acción indicada es «restaurar».",
+    "question": "Verdadero o falso: Según Daniel 9:25, en la escena «Sabe, pues, y entiende que desde la salida de la orden para […] y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas», la forma verbal indicada es «restaurar».",
+    "statement": "Según Daniel 9:25, en la escena «Sabe, pues, y entiende que desde la salida de la orden para […] y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas», la forma verbal indicada es «restaurar».",
     "asserted_detail": "restaurar",
     "options": [
       "Verdadero",
@@ -56610,7 +56610,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Sabe, pues, y entiende que desde la salida de la orden para […] y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas», la acción indicada es «restaurar».",
+    "truth_source_statement": "en la escena «Sabe, pues, y entiende que desde la salida de la orden para […] y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas», la forma verbal indicada es «restaurar».",
     "contextual_role": "action",
     "context_evidence": "Sabe, pues, y entiende que desde la salida de la orden para […] y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas",
     "replacement_source_ref": null,
@@ -56672,8 +56672,8 @@
       "obedecido"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:6, en la escena «No hemos […] a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.», la acción indicada es «obedecido».",
-    "statement": "Según Daniel 9:6, en la escena «No hemos […] a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.», la acción indicada es «obedecido».",
+    "question": "Verdadero o falso: Según Daniel 9:6, en la escena «No hemos […] a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.», la forma verbal indicada es «obedecido».",
+    "statement": "Según Daniel 9:6, en la escena «No hemos […] a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.», la forma verbal indicada es «obedecido».",
     "asserted_detail": "obedecido",
     "options": [
       "Verdadero",
@@ -56687,7 +56687,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «No hemos […] a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.», la acción indicada es «obedecido».",
+    "truth_source_statement": "en la escena «No hemos […] a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.», la forma verbal indicada es «obedecido».",
     "contextual_role": "action",
     "context_evidence": "No hemos […] a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.",
     "replacement_source_ref": null,
@@ -56749,8 +56749,8 @@
       "Jehová"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:20, en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de […], mi Dios, por el monte santo de mi Dios», el personaje identificado es «Jehová».",
-    "statement": "Según Daniel 9:20, en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de […], mi Dios, por el monte santo de mi Dios», el personaje identificado es «Jehová».",
+    "question": "Verdadero o falso: Según Daniel 9:20, en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de […], mi Dios, por el monte santo de mi Dios», el nombre o designación indicada es «Jehová».",
+    "statement": "Según Daniel 9:20, en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de […], mi Dios, por el monte santo de mi Dios», el nombre o designación indicada es «Jehová».",
     "asserted_detail": "Jehová",
     "options": [
       "Verdadero",
@@ -56764,7 +56764,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de […], mi Dios, por el monte santo de mi Dios», el personaje identificado es «Jehová».",
+    "truth_source_statement": "en la escena «Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de […], mi Dios, por el monte santo de mi Dios», el nombre o designación indicada es «Jehová».",
     "contextual_role": "named_entity",
     "context_evidence": "Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de […], mi Dios, por el monte santo de mi Dios",
     "replacement_source_ref": null,
@@ -56826,8 +56826,8 @@
       "expiar"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:24, en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y […] la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.», la acción indicada es «expiar».",
-    "statement": "Según Daniel 9:24, en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y […] la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.», la acción indicada es «expiar».",
+    "question": "Verdadero o falso: Según Daniel 9:24, en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y […] la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.», la forma verbal indicada es «expiar».",
+    "statement": "Según Daniel 9:24, en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y […] la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.», la forma verbal indicada es «expiar».",
     "asserted_detail": "expiar",
     "options": [
       "Verdadero",
@@ -56841,7 +56841,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y […] la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.», la acción indicada es «expiar».",
+    "truth_source_statement": "en la escena «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y […] la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.», la forma verbal indicada es «expiar».",
     "contextual_role": "action",
     "context_evidence": "Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y […] la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.",
     "replacement_source_ref": null,
@@ -56903,8 +56903,8 @@
       "Jehová"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló […] al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», el personaje identificado es «Jehová».",
-    "statement": "Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló […] al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», el personaje identificado es «Jehová».",
+    "question": "Verdadero o falso: Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló […] al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», el nombre o designación indicada es «Jehová».",
+    "statement": "Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló […] al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», el nombre o designación indicada es «Jehová».",
     "asserted_detail": "Jehová",
     "options": [
       "Verdadero",
@@ -56918,7 +56918,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló […] al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», el personaje identificado es «Jehová».",
+    "truth_source_statement": "en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló […] al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», el nombre o designación indicada es «Jehová».",
     "contextual_role": "named_entity",
     "context_evidence": "en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló […] al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén",
     "replacement_source_ref": null,
@@ -56980,8 +56980,8 @@
       "rebelado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:9, en la escena «De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos […]», la acción indicada es «rebelado».",
-    "statement": "Según Daniel 9:9, en la escena «De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos […]», la acción indicada es «rebelado».",
+    "question": "Verdadero o falso: Según Daniel 9:9, en la escena «De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos […]», la forma verbal indicada es «rebelado».",
+    "statement": "Según Daniel 9:9, en la escena «De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos […]», la forma verbal indicada es «rebelado».",
     "asserted_detail": "rebelado",
     "options": [
       "Verdadero",
@@ -56995,7 +56995,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos […]», la acción indicada es «rebelado».",
+    "truth_source_statement": "en la escena «De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos […]», la forma verbal indicada es «rebelado».",
     "contextual_role": "action",
     "context_evidence": "De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos […]",
     "replacement_source_ref": null,
@@ -57057,8 +57057,8 @@
       "actuado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:5, en la escena «hemos pecado, hemos cometido iniquidad, hemos […] impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.», la acción indicada es «actuado».",
-    "statement": "Según Daniel 9:5, en la escena «hemos pecado, hemos cometido iniquidad, hemos […] impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.», la acción indicada es «actuado».",
+    "question": "Verdadero o falso: Según Daniel 9:5, en la escena «hemos pecado, hemos cometido iniquidad, hemos […] impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.», la forma verbal indicada es «actuado».",
+    "statement": "Según Daniel 9:5, en la escena «hemos pecado, hemos cometido iniquidad, hemos […] impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.», la forma verbal indicada es «actuado».",
     "asserted_detail": "actuado",
     "options": [
       "Verdadero",
@@ -57072,7 +57072,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «hemos pecado, hemos cometido iniquidad, hemos […] impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.», la acción indicada es «actuado».",
+    "truth_source_statement": "en la escena «hemos pecado, hemos cometido iniquidad, hemos […] impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.», la forma verbal indicada es «actuado».",
     "contextual_role": "action",
     "context_evidence": "hemos pecado, hemos cometido iniquidad, hemos […] impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.",
     "replacement_source_ref": null,
@@ -57134,8 +57134,8 @@
       "Gabriel"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:21, en la escena «aún estaba hablando en oración, cuando el varón […], a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.», el personaje identificado es «Gabriel».",
-    "statement": "Según Daniel 9:21, en la escena «aún estaba hablando en oración, cuando el varón […], a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.», el personaje identificado es «Gabriel».",
+    "question": "Verdadero o falso: Según Daniel 9:21, en la escena «aún estaba hablando en oración, cuando el varón […], a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.», el nombre o designación indicada es «Gabriel».",
+    "statement": "Según Daniel 9:21, en la escena «aún estaba hablando en oración, cuando el varón […], a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.», el nombre o designación indicada es «Gabriel».",
     "asserted_detail": "Gabriel",
     "options": [
       "Verdadero",
@@ -57149,7 +57149,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «aún estaba hablando en oración, cuando el varón […], a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.», el personaje identificado es «Gabriel».",
+    "truth_source_statement": "en la escena «aún estaba hablando en oración, cuando el varón […], a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.», el nombre o designación indicada es «Gabriel».",
     "contextual_role": "named_entity",
     "context_evidence": "aún estaba hablando en oración, cuando el varón […], a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.",
     "replacement_source_ref": null,
@@ -57211,8 +57211,8 @@
       "habló"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que […] Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», la acción indicada es «habló».",
-    "statement": "Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que […] Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», la acción indicada es «habló».",
+    "question": "Verdadero o falso: Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que […] Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», la forma verbal indicada es «habló».",
+    "statement": "Según Daniel 9:2, en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que […] Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», la forma verbal indicada es «habló».",
     "asserted_detail": "habló",
     "options": [
       "Verdadero",
@@ -57226,7 +57226,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que […] Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», la acción indicada es «habló».",
+    "truth_source_statement": "en la escena «en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que […] Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén», la forma verbal indicada es «habló».",
     "contextual_role": "action",
     "context_evidence": "en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que […] Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén",
     "replacement_source_ref": null,
@@ -57288,8 +57288,8 @@
       "Mesías"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:25, en la escena «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el […] Príncipe, habrá siete semanas y sesenta y dos semanas», el personaje identificado es «Mesías».",
-    "statement": "Según Daniel 9:25, en la escena «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el […] Príncipe, habrá siete semanas y sesenta y dos semanas», el personaje identificado es «Mesías».",
+    "question": "Verdadero o falso: Según Daniel 9:25, en la escena «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el […] Príncipe, habrá siete semanas y sesenta y dos semanas», el nombre o designación indicada es «Mesías».",
+    "statement": "Según Daniel 9:25, en la escena «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el […] Príncipe, habrá siete semanas y sesenta y dos semanas», el nombre o designación indicada es «Mesías».",
     "asserted_detail": "Mesías",
     "options": [
       "Verdadero",
@@ -57303,7 +57303,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el […] Príncipe, habrá siete semanas y sesenta y dos semanas», el personaje identificado es «Mesías».",
+    "truth_source_statement": "en la escena «Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el […] Príncipe, habrá siete semanas y sesenta y dos semanas», el nombre o designación indicada es «Mesías».",
     "contextual_role": "named_entity",
     "context_evidence": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el […] Príncipe, habrá siete semanas y sesenta y dos semanas",
     "replacement_source_ref": null,
@@ -57365,8 +57365,8 @@
       "Presta"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:19, en la escena «¡Oye, Señor! ¡Señor, perdona! ¡[…] oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo. Profecía de las setenta semanas», la acción indicada es «Presta».",
-    "statement": "Según Daniel 9:19, en la escena «¡Oye, Señor! ¡Señor, perdona! ¡[…] oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo. Profecía de las setenta semanas», la acción indicada es «Presta».",
+    "question": "Verdadero o falso: Según Daniel 9:19, en la escena «¡Oye, Señor! ¡Señor, perdona! ¡[…] oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo. Profecía de las setenta semanas», la forma verbal indicada es «Presta».",
+    "statement": "Según Daniel 9:19, en la escena «¡Oye, Señor! ¡Señor, perdona! ¡[…] oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo. Profecía de las setenta semanas», la forma verbal indicada es «Presta».",
     "asserted_detail": "Presta",
     "options": [
       "Verdadero",
@@ -57380,7 +57380,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «¡Oye, Señor! ¡Señor, perdona! ¡[…] oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo. Profecía de las setenta semanas», la acción indicada es «Presta».",
+    "truth_source_statement": "en la escena «¡Oye, Señor! ¡Señor, perdona! ¡[…] oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo. Profecía de las setenta semanas», la forma verbal indicada es «Presta».",
     "contextual_role": "action",
     "context_evidence": "¡Oye, Señor! ¡Señor, perdona! ¡[…] oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo. Profecía de las setenta semanas",
     "replacement_source_ref": null,
@@ -57442,8 +57442,8 @@
       "habló"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:12, en la escena «Y él ha cumplido la palabra que […] contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal», la acción indicada es «habló».",
-    "statement": "Según Daniel 9:12, en la escena «Y él ha cumplido la palabra que […] contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal», la acción indicada es «habló».",
+    "question": "Verdadero o falso: Según Daniel 9:12, en la escena «Y él ha cumplido la palabra que […] contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal», la forma verbal indicada es «habló».",
+    "statement": "Según Daniel 9:12, en la escena «Y él ha cumplido la palabra que […] contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal», la forma verbal indicada es «habló».",
     "asserted_detail": "habló",
     "options": [
       "Verdadero",
@@ -57457,7 +57457,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Y él ha cumplido la palabra que […] contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal», la acción indicada es «habló».",
+    "truth_source_statement": "en la escena «Y él ha cumplido la palabra que […] contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal», la forma verbal indicada es «habló».",
     "contextual_role": "action",
     "context_evidence": "Y él ha cumplido la palabra que […] contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal",
     "replacement_source_ref": null,
@@ -57519,8 +57519,8 @@
       "lleva"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:7, en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy […] todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», la acción indicada es «lleva».",
-    "statement": "Según Daniel 9:7, en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy […] todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», la acción indicada es «lleva».",
+    "question": "Verdadero o falso: Según Daniel 9:7, en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy […] todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», la forma verbal indicada es «lleva».",
+    "statement": "Según Daniel 9:7, en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy […] todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», la forma verbal indicada es «lleva».",
     "asserted_detail": "lleva",
     "options": [
       "Verdadero",
@@ -57534,7 +57534,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy […] todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», la acción indicada es «lleva».",
+    "truth_source_statement": "en la escena «Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy […] todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.», la forma verbal indicada es «lleva».",
     "contextual_role": "action",
     "context_evidence": "Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy […] todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.",
     "replacement_source_ref": null,
@@ -57596,8 +57596,8 @@
       "visto"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:21, en la escena «aún estaba hablando en oración, cuando el varón Gabriel, a quien había […] en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.», la acción indicada es «visto».",
-    "statement": "Según Daniel 9:21, en la escena «aún estaba hablando en oración, cuando el varón Gabriel, a quien había […] en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.», la acción indicada es «visto».",
+    "question": "Verdadero o falso: Según Daniel 9:21, en la escena «aún estaba hablando en oración, cuando el varón Gabriel, a quien había […] en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.», la forma verbal indicada es «visto».",
+    "statement": "Según Daniel 9:21, en la escena «aún estaba hablando en oración, cuando el varón Gabriel, a quien había […] en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.», la forma verbal indicada es «visto».",
     "asserted_detail": "visto",
     "options": [
       "Verdadero",
@@ -57611,7 +57611,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «aún estaba hablando en oración, cuando el varón Gabriel, a quien había […] en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.», la acción indicada es «visto».",
+    "truth_source_statement": "en la escena «aún estaba hablando en oración, cuando el varón Gabriel, a quien había […] en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.», la forma verbal indicada es «visto».",
     "contextual_role": "action",
     "context_evidence": "aún estaba hablando en oración, cuando el varón Gabriel, a quien había […] en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.",
     "replacement_source_ref": null,
@@ -57750,8 +57750,8 @@
       "actuado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:15, en la escena «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos […] impíamente.», la acción indicada es «actuado».",
-    "statement": "Según Daniel 9:15, en la escena «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos […] impíamente.», la acción indicada es «actuado».",
+    "question": "Verdadero o falso: Según Daniel 9:15, en la escena «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos […] impíamente.», la forma verbal indicada es «actuado».",
+    "statement": "Según Daniel 9:15, en la escena «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos […] impíamente.», la forma verbal indicada es «actuado».",
     "asserted_detail": "actuado",
     "options": [
       "Verdadero",
@@ -57765,7 +57765,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos […] impíamente.», la acción indicada es «actuado».",
+    "truth_source_statement": "en la escena «Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos […] impíamente.», la forma verbal indicada es «actuado».",
     "contextual_role": "action",
     "context_evidence": "Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos […] impíamente.",
     "replacement_source_ref": null,
@@ -57827,8 +57827,8 @@
       "convertido"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:13, en la escena «pero no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos […] de nuestras maldades ni entendido tu verdad.», la acción indicada es «convertido».",
-    "statement": "Según Daniel 9:13, en la escena «pero no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos […] de nuestras maldades ni entendido tu verdad.», la acción indicada es «convertido».",
+    "question": "Verdadero o falso: Según Daniel 9:13, en la escena «pero no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos […] de nuestras maldades ni entendido tu verdad.», la forma verbal indicada es «convertido».",
+    "statement": "Según Daniel 9:13, en la escena «pero no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos […] de nuestras maldades ni entendido tu verdad.», la forma verbal indicada es «convertido».",
     "asserted_detail": "convertido",
     "options": [
       "Verdadero",
@@ -57842,7 +57842,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «pero no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos […] de nuestras maldades ni entendido tu verdad.», la acción indicada es «convertido».",
+    "truth_source_statement": "en la escena «pero no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos […] de nuestras maldades ni entendido tu verdad.», la forma verbal indicada es «convertido».",
     "contextual_role": "action",
     "context_evidence": "pero no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos […] de nuestras maldades ni entendido tu verdad.",
     "replacement_source_ref": null,
@@ -57904,8 +57904,8 @@
       "Señor"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:15, en la escena «Ahora pues, […], Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.», el personaje identificado es «Señor».",
-    "statement": "Según Daniel 9:15, en la escena «Ahora pues, […], Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.», el personaje identificado es «Señor».",
+    "question": "Verdadero o falso: Según Daniel 9:15, en la escena «Ahora pues, […], Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.», el nombre o designación indicada es «Señor».",
+    "statement": "Según Daniel 9:15, en la escena «Ahora pues, […], Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.», el nombre o designación indicada es «Señor».",
     "asserted_detail": "Señor",
     "options": [
       "Verdadero",
@@ -57919,7 +57919,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Ahora pues, […], Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.», el personaje identificado es «Señor».",
+    "truth_source_statement": "en la escena «Ahora pues, […], Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.», el nombre o designación indicada es «Señor».",
     "contextual_role": "named_entity",
     "context_evidence": "Ahora pues, […], Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.",
     "replacement_source_ref": null,
@@ -57981,8 +57981,8 @@
       "hablaron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:6, en la escena «No hemos obedecido a tus siervos los profetas, que en tu nombre […] a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.», la acción indicada es «hablaron».",
-    "statement": "Según Daniel 9:6, en la escena «No hemos obedecido a tus siervos los profetas, que en tu nombre […] a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.», la acción indicada es «hablaron».",
+    "question": "Verdadero o falso: Según Daniel 9:6, en la escena «No hemos obedecido a tus siervos los profetas, que en tu nombre […] a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.», la forma verbal indicada es «hablaron».",
+    "statement": "Según Daniel 9:6, en la escena «No hemos obedecido a tus siervos los profetas, que en tu nombre […] a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.», la forma verbal indicada es «hablaron».",
     "asserted_detail": "hablaron",
     "options": [
       "Verdadero",
@@ -57996,7 +57996,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «No hemos obedecido a tus siervos los profetas, que en tu nombre […] a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.», la acción indicada es «hablaron».",
+    "truth_source_statement": "en la escena «No hemos obedecido a tus siervos los profetas, que en tu nombre […] a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.», la forma verbal indicada es «hablaron».",
     "contextual_role": "action",
     "context_evidence": "No hemos obedecido a tus siervos los profetas, que en tu nombre […] a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.",
     "replacement_source_ref": null,
@@ -58058,8 +58058,8 @@
       "pecamos"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:11, en la escena «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios […].», la acción indicada es «pecamos».",
-    "statement": "Según Daniel 9:11, en la escena «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios […].», la acción indicada es «pecamos».",
+    "question": "Verdadero o falso: Según Daniel 9:11, en la escena «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios […].», la forma verbal indicada es «pecamos».",
+    "statement": "Según Daniel 9:11, en la escena «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios […].», la forma verbal indicada es «pecamos».",
     "asserted_detail": "pecamos",
     "options": [
       "Verdadero",
@@ -58073,7 +58073,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios […].», la acción indicada es «pecamos».",
+    "truth_source_statement": "en la escena «Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios […].», la forma verbal indicada es «pecamos».",
     "contextual_role": "action",
     "context_evidence": "Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios […].",
     "replacement_source_ref": null,
@@ -58212,9 +58212,9 @@
       "Jerusalén"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:12, pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Jerusalem.",
-    "statement": "Según Daniel 9:12, pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Jerusalem.",
-    "asserted_detail": "Jerusalem",
+    "question": "Verdadero o falso: Según Daniel 9:12, pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Babilonia.",
+    "statement": "Según Daniel 9:12, pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Babilonia.",
+    "asserted_detail": "Babilonia",
     "options": [
       "Verdadero",
       "Falso"
@@ -58222,7 +58222,7 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según Daniel 9:12, pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Jerusalén.",
-    "incorrect_detail": "Jerusalem",
+    "incorrect_detail": "Babilonia",
     "correction": "Jerusalén",
     "false_mutation_kind": "closed_category_substitution",
     "focused_true_statement": false,
@@ -58230,12 +58230,12 @@
     "truth_source_statement": "pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Jerusalén.",
     "contextual_role": null,
     "context_evidence": null,
-    "replacement_source_ref": "PR43, p. 47, párrafo 5",
+    "replacement_source_ref": "Daniel 1:1",
     "correct_slot_signature": "place",
     "replacement_slot_signature": "place",
-    "explanation": "Es falsa: la fuente dice «Jerusalén», no «Jerusalem».",
+    "explanation": "Es falsa: la fuente dice «Jerusalén», no «Babilonia».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jerusalem»; la fuente contiene «Jerusalén»."
+      "Verdadero": "La única alteración es «Babilonia»; la fuente contiene «Jerusalén»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {
@@ -62986,9 +62986,9 @@
       "Jerusalén"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:2, en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalem.",
-    "statement": "Según Daniel 9:2, en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalem.",
-    "asserted_detail": "Jerusalem",
+    "question": "Verdadero o falso: Según Daniel 9:2, en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Babilonia.",
+    "statement": "Según Daniel 9:2, en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Babilonia.",
+    "asserted_detail": "Babilonia",
     "options": [
       "Verdadero",
       "Falso"
@@ -62996,7 +62996,7 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según Daniel 9:2, en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén.",
-    "incorrect_detail": "Jerusalem",
+    "incorrect_detail": "Babilonia",
     "correction": "Jerusalén",
     "false_mutation_kind": "closed_category_substitution",
     "focused_true_statement": false,
@@ -63004,12 +63004,12 @@
     "truth_source_statement": "en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén.",
     "contextual_role": null,
     "context_evidence": null,
-    "replacement_source_ref": "PR43, p. 47, párrafo 5",
+    "replacement_source_ref": "Daniel 1:1",
     "correct_slot_signature": "place",
     "replacement_slot_signature": "place",
-    "explanation": "Es falsa: la fuente dice «Jerusalén», no «Jerusalem».",
+    "explanation": "Es falsa: la fuente dice «Jerusalén», no «Babilonia».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jerusalem»; la fuente contiene «Jerusalén»."
+      "Verdadero": "La única alteración es «Babilonia»; la fuente contiene «Jerusalén»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {
@@ -63217,9 +63217,9 @@
       "Jerusalén"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 9:25, Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalem hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas.",
-    "statement": "Según Daniel 9:25, Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalem hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas.",
-    "asserted_detail": "Jerusalem",
+    "question": "Verdadero o falso: Según Daniel 9:25, Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Babilonia hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas.",
+    "statement": "Según Daniel 9:25, Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Babilonia hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas.",
+    "asserted_detail": "Babilonia",
     "options": [
       "Verdadero",
       "Falso"
@@ -63227,7 +63227,7 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según Daniel 9:25, Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas.",
-    "incorrect_detail": "Jerusalem",
+    "incorrect_detail": "Babilonia",
     "correction": "Jerusalén",
     "false_mutation_kind": "closed_category_substitution",
     "focused_true_statement": false,
@@ -63235,12 +63235,12 @@
     "truth_source_statement": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas.",
     "contextual_role": null,
     "context_evidence": null,
-    "replacement_source_ref": "PR43, p. 47, párrafo 5",
+    "replacement_source_ref": "Daniel 1:1",
     "correct_slot_signature": "place",
     "replacement_slot_signature": "place",
-    "explanation": "Es falsa: la fuente dice «Jerusalén», no «Jerusalem».",
+    "explanation": "Es falsa: la fuente dice «Jerusalén», no «Babilonia».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jerusalem»; la fuente contiene «Jerusalén»."
+      "Verdadero": "La única alteración es «Babilonia»; la fuente contiene «Jerusalén»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {

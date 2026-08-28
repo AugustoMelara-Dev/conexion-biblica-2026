@@ -315,6 +315,28 @@ def _norm(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
 
 
+_SEMANTIC_OPTION_ALIASES = {
+    "jerusalem": "jerusalen",
+    "abed nego": "abednego",
+    "mesach": "mesac",
+    "sadrach": "sadrac",
+}
+
+
+def semantic_option_key(value: str) -> str:
+    """Agrupa variantes que nombran la misma entidad bíblica."""
+    normalized = _norm(value)
+    return _SEMANTIC_OPTION_ALIASES.get(normalized, normalized)
+
+
+def semantic_option_collision_count(questions: list[dict[str, Any]]) -> int:
+    return sum(
+        len({semantic_option_key(str(option)) for option in question["options"]})
+        != len(question["options"])
+        for question in questions
+    )
+
+
 def _hash(value: str) -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()
 
@@ -1507,7 +1529,7 @@ def _distractor_candidates(fact: dict[str, Any], facts: list[dict[str, Any]]) ->
     def eligible(row: dict[str, Any], strict: bool) -> bool:
         if (
             row["fact_id"] == fact["fact_id"]
-            or row["_normalized_answer"] == fact["_normalized_answer"]
+            or semantic_option_key(row["answer"]) == semantic_option_key(fact["answer"])
             or row["_normalized_answer"] in fact["_normalized_source"]
         ):
             return False
@@ -1523,7 +1545,7 @@ def _distractor_candidates(fact: dict[str, Any], facts: list[dict[str, Any]]) ->
     broad_rows = [row for row in facts if eligible(row, False)]
     unique: dict[str, dict[str, Any]] = {}
     for row in strict_rows + broad_rows:
-        unique.setdefault(_norm(row["answer"]), row)
+        unique.setdefault(semantic_option_key(row["answer"]), row)
     answer_words = len(fact["answer"].split())
     answer_length = len(fact["answer"])
     return sorted(
@@ -1595,7 +1617,7 @@ def _named_entity_phrase_replacement(
             for row in facts
             if row["category"] == category
             and len(row["answer"].split()) == 1
-            and _norm(row["answer"]) != original_name
+            and semantic_option_key(row["answer"]) != semantic_option_key(original[index])
             and _norm(row["answer"]) not in fact["_normalized_source"]
             and _norm(row["answer"]) not in DIVINE_NAMES
         },
@@ -1693,7 +1715,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         eligible = [
             row for row in rows
             if row["fact_id"] != fact["fact_id"]
-            and row["_normalized_answer"] != fact["_normalized_answer"]
+            and semantic_option_key(row["answer"]) != semantic_option_key(fact["answer"])
             and row["_normalized_answer"] not in fact["_normalized_source"]
             and (
                 fact["category"] != "term"
@@ -1711,7 +1733,7 @@ def generate_gold_questions(facts: list[dict[str, Any]]) -> tuple[list[dict[str,
         ]
         unique: dict[str, dict[str, Any]] = {}
         for row in eligible:
-            unique.setdefault(row["_normalized_answer"], row)
+            unique.setdefault(semantic_option_key(row["answer"]), row)
         return sorted(
             unique.values(),
             key=lambda row: (
@@ -2540,6 +2562,7 @@ def audit_final_bank(
             for question in questions
         ),
         "source_location_questions": source_location_questions,
+        "semantic_option_collisions": semantic_option_collision_count(questions),
         "duplicate_gold_questions": len(normalized_questions) - len(set(normalized_questions)),
         "lexical_sequence_questions": sum("→" in question["question"] for question in questions),
         "broken_true_false": sum(

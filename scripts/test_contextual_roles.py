@@ -61,6 +61,130 @@ class ContextualRoleTests(unittest.TestCase):
             "consequence",
         )
 
+    def test_distinguishes_territorial_titles_from_movement_origins(self):
+        title_fact = fact(
+            answer="Judá",
+            category="place",
+            context="Joacim, rey de Judá, gobernaba en Jerusalén.",
+            _slot_signature="place:proper",
+        )
+        origin_fact = fact(
+            answer="Babilonia",
+            category="place",
+            context="El mensajero salió de Babilonia rumbo a Jerusalén.",
+            _slot_signature="place:proper",
+        )
+
+        title_question, title_role, _ = render_contextual_question(title_fact)
+        self.assertEqual(title_role, "territorial_title")
+        self.assertIn("título territorial", title_question)
+        self.assertIn("presente en", title_question)
+        self.assertEqual(derive_contextual_role(origin_fact), "origin")
+
+    def test_does_not_treat_every_de_relation_as_an_origin(self):
+        relation_fact = fact(
+            answer="Ufaz",
+            category="place",
+            context="ceñida su cintura con oro de Ufaz",
+            _slot_signature="place:proper",
+        )
+
+        question, role, _ = render_contextual_question(relation_fact)
+        self.assertEqual(role, "geographic_relation")
+        self.assertIn("relación geográfica", question)
+
+    def test_requires_actual_movement_before_calling_a_place_a_destination(self):
+        oriented_place = fact(
+            answer="Jerusalén",
+            category="place",
+            context="las ventanas de su habitación daban a Jerusalén",
+            _slot_signature="place:proper",
+        )
+        moved_place = fact(
+            answer="Babilonia",
+            category="place",
+            context="los cautivos fueron llevados a Babilonia",
+            _slot_signature="place:proper",
+        )
+
+        self.assertEqual(derive_contextual_role(oriented_place), "geographic_relation")
+        self.assertEqual(derive_contextual_role(moved_place), "destination")
+
+    def test_uses_neutral_geographic_copy_for_unmarked_places(self):
+        place_fact = fact(
+            answer="Babilonia",
+            category="place",
+            context="¿No es ésta la gran Babilonia que yo edifiqué?",
+            _slot_signature="place:proper",
+        )
+
+        question, role, _ = render_contextual_question(place_fact)
+        self.assertEqual(role, "location")
+        self.assertIn("detalle geográfico", question)
+        self.assertNotIn("relación espacial", question)
+
+    def test_names_collective_entities_without_calling_them_characters(self):
+        entity_fact = fact(
+            answer="Israel",
+            context="que trajera de los hijos de Israel",
+        )
+
+        question, role, _ = render_contextual_question(entity_fact)
+        self.assertEqual(role, "named_entity")
+        self.assertIn("nombre o designación", question)
+        self.assertNotIn("personaje", question)
+
+    def test_describes_action_answers_as_verbal_forms(self):
+        action_fact = fact(
+            answer="hubiera",
+            category="action",
+            context="muchachos en quienes no hubiera tacha alguna",
+            _slot_signature="action:verb",
+        )
+
+        question, role, _ = render_contextual_question(action_fact)
+        self.assertEqual(role, "action")
+        self.assertIn("forma verbal", question)
+
+    def test_uses_grammatically_safe_copy_for_mixed_predicates(self):
+        predicate_fact = fact(
+            answer="conmigo",
+            category="term",
+            context="los hombres que estaban conmigo",
+            _slot_signature="term:adjective",
+        )
+
+        question, role, _ = render_contextual_question(predicate_fact)
+        self.assertEqual(role, "predicate")
+        self.assertIn("término", question)
+        self.assertNotIn("cualidad o estado", question)
+
+    def test_classifies_ordinal_terms_as_order(self):
+        ordinal_fact = fact(
+            answer="tercer",
+            category="term",
+            context="En el tercer año del reinado",
+            _slot_signature="term:adjective",
+        )
+
+        self.assertEqual(derive_contextual_role(ordinal_fact), "order")
+
+    def test_identity_count_uses_whole_phrases_not_substrings(self):
+        action_fact = fact(
+            answer="ver",
+            category="action",
+            context="Me parecía ver en medio de la tierra un árbol.",
+            _slot_signature="action:verb",
+        )
+
+        try:
+            statement, role, _ = render_contextual_identity(action_fact)
+        except ValueError as error:
+            self.fail(f"la subcadena 'ver' en 'verbal' no debe contar: {error}")
+        self.assertEqual(role, "action")
+        self.assertIn("forma verbal", statement)
+        self.assertTrue(statement.endswith("es «ver»."))
+
     def test_masks_only_the_answer_and_never_leaks_it(self):
         row = fact(answer="Daniel", context="Daniel respondió al rey.")
         self.assertEqual(mask_context_answer(row), "[…] respondió al rey.")

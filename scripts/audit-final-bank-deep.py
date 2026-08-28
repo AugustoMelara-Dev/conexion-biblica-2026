@@ -25,6 +25,7 @@ from scripts.lib.final_editorial import (
     _slot_syntax,
     _word_role,
     option_signature,
+    semantic_option_key,
 )
 from scripts.lib.contextual_roles import (
     GENERIC_CONTEXTUAL_FRAGMENT,
@@ -187,6 +188,8 @@ def main() -> int:
         expected_options = 2 if family == "true_false" else 4
         if len(options) != expected_options or len(set(options)) != expected_options:
             fail(errors, qid, "invalid_options")
+        if len({semantic_option_key(str(option)) for option in options}) != len(options):
+            fail(errors, qid, "semantic_option_collision")
         correct_option = question["correct_option"]
         if not isinstance(correct_option, int) or not 0 <= correct_option < len(options):
             fail(errors, qid, "invalid_correct_option")

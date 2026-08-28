@@ -1298,6 +1298,7 @@ class FinalEditorialTests(unittest.TestCase):
             "external_knowledge_questions",
             "answer_length_leaks",
             "source_location_questions",
+            "semantic_option_collisions",
             "orphan_numeric_source_fragments",
             "family_contract_violations",
             "unsafe_true_false_templates",

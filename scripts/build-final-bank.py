@@ -68,6 +68,7 @@ def main() -> None:
         "external_knowledge_questions",
         "answer_length_leaks",
         "source_location_questions",
+        "semantic_option_collisions",
     )
     if contract_errors or any(audit[key] for key in audit_error_keys):
         raise SystemExit(

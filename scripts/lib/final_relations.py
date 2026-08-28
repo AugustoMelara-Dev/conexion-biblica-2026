@@ -48,6 +48,18 @@ def _candidate(
 # hace que una expresión regular general sea menos segura. Cada respuesta es un
 # tramo literal del PDF y queda cubierta por pruebas de regresión.
 _CURATED: dict[str, list[dict[str, str | float]]] = {
+    "DAN7-V014": [
+        {
+            "answer": "todos los pueblos, naciones y lenguas lo sirvieran",
+            "question": (
+                "Según Daniel 7:14, ¿qué propósito declara el texto para el "
+                "dominio, la gloria y el reino que le fueron dados?"
+            ),
+            "relation_type": "purpose",
+            "category": "phrase",
+            "score": 12.0,
+        }
+    ],
     "DAN9-V011": [
         {
             "answer": "la maldición y el juramento",

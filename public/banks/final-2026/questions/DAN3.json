@@ -43,10 +43,10 @@
     "answer_mode": "option_id",
     "question": "Según Daniel 3:1, ¿qué opción completa correctamente «la levantó en el campo de Dura, en la provincia de ________.»?",
     "options": [
-      "Jerusalem",
-      "Babilonia",
       "Jerusalén",
-      "Eufrates"
+      "Babilonia",
+      "Eufrates",
+      "Medo-Persia"
     ],
     "option_slot_signatures": [
       "place",
@@ -58,9 +58,9 @@
     "correct_answer": "Babilonia",
     "explanation": "Daniel 3:1 declara literalmente «la levantó en el campo de Dura, en la provincia de Babilonia.». La respuesta pedida es «Babilonia».",
     "why_distractors_fail": {
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 3:1.",
       "Jerusalén": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 3:1.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 3:1."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 3:1.",
+      "Medo-Persia": "Es verdadero en PR43, p. 52, párrafo 2, pero no responde al contexto exacto de Daniel 3:1."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -118,10 +118,10 @@
     "answer_mode": "option_id",
     "question": "Complete Daniel 3:1: «la levantó en el campo de Dura, en la provincia de ________.»",
     "options": [
-      "Jerusalem",
       "Jerusalén",
+      "Eufrates",
       "Babilonia",
-      "Eufrates"
+      "Medo-Persia"
     ],
     "option_slot_signatures": [
       "place",
@@ -133,9 +133,9 @@
     "correct_answer": "Babilonia",
     "explanation": "Daniel 3:1 declara literalmente «la levantó en el campo de Dura, en la provincia de Babilonia.». La respuesta pedida es «Babilonia».",
     "why_distractors_fail": {
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 3:1.",
       "Jerusalén": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 3:1.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 3:1."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 3:1.",
+      "Medo-Persia": "Es verdadero en PR43, p. 52, párrafo 2, pero no responde al contexto exacto de Daniel 3:1."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -191,11 +191,11 @@
       "Babilonia"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:1, ¿qué lugar funciona como origen en «la levantó en el campo de Dura, en la provincia de […].»?",
+    "question": "Según Daniel 3:1, ¿qué lugar completa la relación geográfica expresada en «la levantó en el campo de Dura, en la provincia de […].»?",
     "options": [
-      "Jerusalem",
       "Jerusalén",
       "Eufrates",
+      "Medo-Persia",
       "Babilonia"
     ],
     "option_slot_signatures": [
@@ -208,12 +208,12 @@
     "correct_answer": "Babilonia",
     "explanation": "En el contexto exacto de Daniel 3:1, el detalle aplicable es «Babilonia»: «la levantó en el campo de Dura, en la provincia de Babilonia.».",
     "why_distractors_fail": {
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 3:1.",
       "Jerusalén": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 3:1.",
-      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 3:1."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 3:1.",
+      "Medo-Persia": "Es verdadero en PR43, p. 52, párrafo 2, pero no responde al contexto exacto de Daniel 3:1."
     },
     "trap_type": "true_in_other_context",
-    "contextual_role": "origin",
+    "contextual_role": "geographic_relation",
     "context_evidence": "la levantó en el campo de Dura, en la provincia de […].",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
@@ -416,7 +416,7 @@
       "Dura"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:1, ¿qué lugar funciona como origen en «la levantó en el campo de […], en la provincia de Babilonia.»?",
+    "question": "Según Daniel 3:1, ¿qué lugar completa la relación geográfica expresada en «la levantó en el campo de […], en la provincia de Babilonia.»?",
     "options": [
       "Dura",
       "Ulai",
@@ -438,7 +438,7 @@
       "Amón": "Es verdadero en Daniel 11:41, pero no responde al contexto exacto de Daniel 3:1."
     },
     "trap_type": "true_in_other_context",
-    "contextual_role": "origin",
+    "contextual_role": "geographic_relation",
     "context_evidence": "la levantó en el campo de […], en la provincia de Babilonia.",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
@@ -1091,7 +1091,7 @@
       "reunieran"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:2, ¿qué acción completa la secuencia descrita en «Y ordenó el rey Nabucodonosor que se […] los sátrapas, los magistrados, capitanes, oidores, tesoreros, consejeros, jueces y todos los gobernadores de las provincias, para que vinieran a la dedicación de la estatua que el rey Nabucodonosor había levantado.»?",
+    "question": "Según Daniel 3:2, ¿qué forma verbal completa la secuencia descrita en «Y ordenó el rey Nabucodonosor que se […] los sátrapas, los magistrados, capitanes, oidores, tesoreros, consejeros, jueces y todos los gobernadores de las provincias, para que vinieran a la dedicación de la estatua que el rey Nabucodonosor había levantado.»?",
     "options": [
       "ataran",
       "revelasen",
@@ -1316,7 +1316,7 @@
       "vinieran"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:2, ¿qué acción completa la secuencia descrita en «Y ordenó el rey Nabucodonosor que se reunieran los sátrapas, los magistrados, capitanes, oidores, tesoreros, consejeros, jueces y todos los gobernadores de las provincias, para que […] a la dedicación de la estatua que el rey Nabucodonosor había levantado.»?",
+    "question": "Según Daniel 3:2, ¿qué forma verbal completa la secuencia descrita en «Y ordenó el rey Nabucodonosor que se reunieran los sátrapas, los magistrados, capitanes, oidores, tesoreros, consejeros, jueces y todos los gobernadores de las provincias, para que […] a la dedicación de la estatua que el rey Nabucodonosor había levantado.»?",
     "options": [
       "vinieran",
       "ataran",
@@ -1541,7 +1541,7 @@
       "ordenó"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:2, ¿qué acción completa la secuencia descrita en «Y […] el rey Nabucodonosor que se reunieran los sátrapas, los magistrados, capitanes, oidores, tesoreros, consejeros, jueces y todos los gobernadores de las provincias, para que vinieran a la dedicación de la estatua que el rey Nabucodonosor había levantado.»?",
+    "question": "Según Daniel 3:2, ¿qué forma verbal completa la secuencia descrita en «Y […] el rey Nabucodonosor que se reunieran los sátrapas, los magistrados, capitanes, oidores, tesoreros, consejeros, jueces y todos los gobernadores de las provincias, para que vinieran a la dedicación de la estatua que el rey Nabucodonosor había levantado.»?",
     "options": [
       "acercó",
       "ordenó",
@@ -2441,7 +2441,7 @@
       "anunciaba"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:4, ¿qué acción completa la secuencia descrita en «Y el pregonero […] en alta voz»?",
+    "question": "Según Daniel 3:4, ¿qué forma verbal completa la secuencia descrita en «Y el pregonero […] en alta voz»?",
     "options": [
       "imaginaba",
       "anunciaba",
@@ -3116,7 +3116,7 @@
       "Nabucodonosor"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:5, ¿qué personaje completa la relación descrita en «que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os postréis y adoréis la estatua de oro que el rey […] ha levantado»?",
+    "question": "Según Daniel 3:5, ¿qué nombre o designación completa la relación descrita en «que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os postréis y adoréis la estatua de oro que el rey […] ha levantado»?",
     "options": [
       "Nabucodonosor",
       "Sadrac",
@@ -3341,7 +3341,7 @@
       "postréis"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:5, ¿qué acción completa la secuencia descrita en «que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os […] y adoréis la estatua de oro que el rey Nabucodonosor ha levantado»?",
+    "question": "Según Daniel 3:5, ¿qué forma verbal completa la secuencia descrita en «que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os […] y adoréis la estatua de oro que el rey Nabucodonosor ha levantado»?",
     "options": [
       "seréis",
       "postréis",
@@ -3566,7 +3566,7 @@
       "adoréis"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:5, ¿qué acción completa la secuencia descrita en «que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os postréis y […] la estatua de oro que el rey Nabucodonosor ha levantado»?",
+    "question": "Según Daniel 3:5, ¿qué forma verbal completa la secuencia descrita en «que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os postréis y […] la estatua de oro que el rey Nabucodonosor ha levantado»?",
     "options": [
       "seréis",
       "haréis",
@@ -3791,7 +3791,7 @@
       "postre"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:6, ¿qué acción completa la secuencia descrita en «y cualquiera que no se […] y adore, inmediatamente será echado dentro de un horno de fuego ardiente.»?",
+    "question": "Según Daniel 3:6, ¿qué forma verbal completa la secuencia descrita en «y cualquiera que no se […] y adore, inmediatamente será echado dentro de un horno de fuego ardiente.»?",
     "options": [
       "ordenó",
       "cambió",
@@ -4241,7 +4241,7 @@
       "echado"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:6, ¿qué cualidad o estado completa la predicación de «y cualquiera que no se postre y adore, inmediatamente será […] dentro de un horno de fuego ardiente.»?",
+    "question": "Según Daniel 3:6, ¿qué término completa la construcción gramatical de «y cualquiera que no se postre y adore, inmediatamente será […] dentro de un horno de fuego ardiente.»?",
     "options": [
       "acostumbrado",
       "echado",
@@ -4466,7 +4466,7 @@
       "Nabucodonosor"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:7, ¿qué personaje completa la relación descrita en «Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se postraron y adoraron la estatua de oro que el rey […] había levantado.»?",
+    "question": "Según Daniel 3:7, ¿qué nombre o designación completa la relación descrita en «Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se postraron y adoraron la estatua de oro que el rey […] había levantado.»?",
     "options": [
       "Sadrac",
       "Mesac",
@@ -4691,7 +4691,7 @@
       "postraron"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:7, ¿qué acción completa la secuencia descrita en «Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se […] y adoraron la estatua de oro que el rey Nabucodonosor había levantado.»?",
+    "question": "Según Daniel 3:7, ¿qué forma verbal completa la secuencia descrita en «Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se […] y adoraron la estatua de oro que el rey Nabucodonosor había levantado.»?",
     "options": [
       "confiaron",
       "reunieron",
@@ -4916,7 +4916,7 @@
       "adoraron"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:7, ¿qué acción completa la secuencia descrita en «Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se postraron y […] la estatua de oro que el rey Nabucodonosor había levantado.»?",
+    "question": "Según Daniel 3:7, ¿qué forma verbal completa la secuencia descrita en «Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se postraron y […] la estatua de oro que el rey Nabucodonosor había levantado.»?",
     "options": [
       "adoraron",
       "salieron",
@@ -5141,7 +5141,7 @@
       "acusaron"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:8, ¿qué acción completa la secuencia descrita en «Por esto, en aquel tiempo algunos hombres caldeos vinieron y […] maliciosamente a los judíos.»?",
+    "question": "Según Daniel 3:8, ¿qué forma verbal completa la secuencia descrita en «Por esto, en aquel tiempo algunos hombres caldeos vinieron y […] maliciosamente a los judíos.»?",
     "options": [
       "salieron",
       "acusaron",
@@ -5816,7 +5816,7 @@
       "Nabucodonosor"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:9, ¿qué personaje completa la relación descrita en «Hablaron y dijeron al rey […]: —¡Rey, para siempre vive!»?",
+    "question": "Según Daniel 3:9, ¿qué nombre o designación completa la relación descrita en «Hablaron y dijeron al rey […]: —¡Rey, para siempre vive!»?",
     "options": [
       "Nabucodonosor",
       "Sadrac",
@@ -6041,7 +6041,7 @@
       "Hablaron"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:9, ¿qué acción completa la secuencia descrita en «[…] y dijeron al rey Nabucodonosor: —¡Rey, para siempre vive!»?",
+    "question": "Según Daniel 3:9, ¿qué forma verbal completa la secuencia descrita en «[…] y dijeron al rey Nabucodonosor: —¡Rey, para siempre vive!»?",
     "options": [
       "Adoraron",
       "Hablaron",
@@ -6266,7 +6266,7 @@
       "postre"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:10, ¿qué acción completa la secuencia descrita en «Tú, rey, has dado una ley que todo hombre, al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, se […] y adore la estatua de oro»?",
+    "question": "Según Daniel 3:10, ¿qué forma verbal completa la secuencia descrita en «Tú, rey, has dado una ley que todo hombre, al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, se […] y adore la estatua de oro»?",
     "options": [
       "ordenó",
       "acercó",
@@ -6941,7 +6941,7 @@
       "postre"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:11, ¿qué acción completa la secuencia descrita en «y el que no se […] y adore, sea echado dentro de un horno de fuego ardiente.»?",
+    "question": "Según Daniel 3:11, ¿qué forma verbal completa la secuencia descrita en «y el que no se […] y adore, sea echado dentro de un horno de fuego ardiente.»?",
     "options": [
       "ordenó",
       "postre",
@@ -7166,7 +7166,7 @@
       "ardiente"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:11, ¿qué cualidad o estado completa la predicación de «y el que no se postre y adore, sea echado dentro de un horno de fuego […].»?",
+    "question": "Según Daniel 3:11, ¿qué término completa la construcción gramatical de «y el que no se postre y adore, sea echado dentro de un horno de fuego […].»?",
     "options": [
       "viviente",
       "incesante",
@@ -7471,7 +7471,7 @@
       "Dura",
       "Jerusalén",
       "Babilonia",
-      "Jerusalem"
+      "Eufrates"
     ],
     "option_slot_signatures": [
       "place",
@@ -7485,7 +7485,7 @@
     "why_distractors_fail": {
       "Dura": "Es verdadero en Daniel 3:1, pero no responde al contexto exacto de Daniel 3:12.",
       "Jerusalén": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 3:12.",
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 3:12."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 3:12."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -7545,7 +7545,7 @@
     "options": [
       "Dura",
       "Jerusalén",
-      "Jerusalem",
+      "Eufrates",
       "Babilonia"
     ],
     "option_slot_signatures": [
@@ -7560,7 +7560,7 @@
     "why_distractors_fail": {
       "Dura": "Es verdadero en Daniel 3:1, pero no responde al contexto exacto de Daniel 3:12.",
       "Jerusalén": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 3:12.",
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 3:12."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 3:12."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -7616,12 +7616,12 @@
       "Babilonia"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:12, ¿qué lugar funciona como origen en «Hay unos hombres judíos, a los cuales pusiste sobre los negocios de la provincia de […]»?",
+    "question": "Según Daniel 3:12, ¿qué lugar completa la relación geográfica expresada en «Hay unos hombres judíos, a los cuales pusiste sobre los negocios de la provincia de […]»?",
     "options": [
       "Babilonia",
       "Dura",
       "Jerusalén",
-      "Jerusalem"
+      "Eufrates"
     ],
     "option_slot_signatures": [
       "place",
@@ -7635,10 +7635,10 @@
     "why_distractors_fail": {
       "Dura": "Es verdadero en Daniel 3:1, pero no responde al contexto exacto de Daniel 3:12.",
       "Jerusalén": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 3:12.",
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 3:12."
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 3:12."
     },
     "trap_type": "true_in_other_context",
-    "contextual_role": "origin",
+    "contextual_role": "geographic_relation",
     "context_evidence": "Hay unos hombres judíos, a los cuales pusiste sobre los negocios de la provincia de […]",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
@@ -7841,7 +7841,7 @@
       "Abed-nego"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:12, ¿qué personaje completa la relación descrita en «Hay unos hombres judíos, a los cuales pusiste sobre los negocios de la provincia de Babilonia: Sadrac, Mesac y […]»?",
+    "question": "Según Daniel 3:12, ¿qué nombre o designación completa la relación descrita en «Hay unos hombres judíos, a los cuales pusiste sobre los negocios de la provincia de Babilonia: Sadrac, Mesac y […]»?",
     "options": [
       "Beltsasar",
       "Abed-nego",
@@ -8066,7 +8066,7 @@
       "Mesac"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:12, ¿qué personaje completa la relación descrita en «Hay unos hombres judíos, a los cuales pusiste sobre los negocios de la provincia de Babilonia: Sadrac, […] y Abed-nego»?",
+    "question": "Según Daniel 3:12, ¿qué nombre o designación completa la relación descrita en «Hay unos hombres judíos, a los cuales pusiste sobre los negocios de la provincia de Babilonia: Sadrac, […] y Abed-nego»?",
     "options": [
       "Arioc",
       "Darío",
@@ -8516,7 +8516,7 @@
       "traídos"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:13, ¿qué cualidad o estado completa la predicación de «Al instante fueron […] delante del rey.»?",
+    "question": "Según Daniel 3:13, ¿qué término completa la construcción gramatical de «Al instante fueron […] delante del rey.»?",
     "options": [
       "traídos",
       "echados",
@@ -8966,7 +8966,7 @@
       "levantado"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:14, ¿qué acción completa la secuencia descrita en «Habló Nabucodonosor y les dijo: —¿Es verdad, Sadrac, Mesac y Abed-nego, que vosotros no honráis a mi dios ni adoráis la estatua de oro que he […]?»?",
+    "question": "Según Daniel 3:14, ¿qué forma verbal completa la secuencia descrita en «Habló Nabucodonosor y les dijo: —¿Es verdad, Sadrac, Mesac y Abed-nego, que vosotros no honráis a mi dios ni adoráis la estatua de oro que he […]?»?",
     "options": [
       "respetado",
       "calentado",
@@ -9191,7 +9191,7 @@
       "honráis"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:14, ¿qué acción completa la secuencia descrita en «Habló Nabucodonosor y les dijo: —¿Es verdad, Sadrac, Mesac y Abed-nego, que vosotros no […] a mi dios ni adoráis la estatua de oro que he levantado?»?",
+    "question": "Según Daniel 3:14, ¿qué forma verbal completa la secuencia descrita en «Habló Nabucodonosor y les dijo: —¿Es verdad, Sadrac, Mesac y Abed-nego, que vosotros no […] a mi dios ni adoráis la estatua de oro que he levantado?»?",
     "options": [
       "estáis",
       "contáis",
@@ -9416,7 +9416,7 @@
       "adoráis"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:14, ¿qué acción completa la secuencia descrita en «Habló Nabucodonosor y les dijo: —¿Es verdad, Sadrac, Mesac y Abed-nego, que vosotros no honráis a mi dios ni […] la estatua de oro que he levantado?»?",
+    "question": "Según Daniel 3:14, ¿qué forma verbal completa la secuencia descrita en «Habló Nabucodonosor y les dijo: —¿Es verdad, Sadrac, Mesac y Abed-nego, que vosotros no honráis a mi dios ni […] la estatua de oro que he levantado?»?",
     "options": [
       "adoráis",
       "estáis",
@@ -9494,8 +9494,8 @@
     "question": "Según Daniel 3:15, ¿qué opción completa correctamente «Porque ________, en la misma hora seréis echados en medio de un horno de fuego ardiente, ¿y qué dios será el que os libre de mis manos?»?",
     "options": [
       "no hay dios que pueda librar como éste",
-      "todos los pueblos",
       "contra ti pecamos",
+      "los cuatro vientos",
       "si no la adoráis"
     ],
     "option_slot_signatures": [
@@ -9509,8 +9509,8 @@
     "explanation": "Daniel 3:15 declara literalmente «Porque si no la adoráis, en la misma hora seréis echados en medio de un horno de fuego ardiente, ¿y qué dios será el que os libre de mis manos?». La respuesta pedida es «si no la adoráis».",
     "why_distractors_fail": {
       "no hay dios que pueda librar como éste": "Es verdadero en Daniel 3:29, pero no responde al contexto exacto de Daniel 3:15.",
-      "todos los pueblos": "Es verdadero en Daniel 7:14, pero no responde al contexto exacto de Daniel 3:15.",
-      "contra ti pecamos": "Es verdadero en Daniel 9:8, pero no responde al contexto exacto de Daniel 3:15."
+      "contra ti pecamos": "Es verdadero en Daniel 9:8, pero no responde al contexto exacto de Daniel 3:15.",
+      "los cuatro vientos": "Es verdadero en Daniel 7:2, pero no responde al contexto exacto de Daniel 3:15."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -9570,8 +9570,8 @@
     "options": [
       "si no la adoráis",
       "no hay dios que pueda librar como éste",
-      "todos los pueblos",
-      "contra ti pecamos"
+      "contra ti pecamos",
+      "los cuatro vientos"
     ],
     "option_slot_signatures": [
       "phrase",
@@ -9584,8 +9584,8 @@
     "explanation": "Daniel 3:15 declara literalmente «Porque si no la adoráis, en la misma hora seréis echados en medio de un horno de fuego ardiente, ¿y qué dios será el que os libre de mis manos?». La respuesta pedida es «si no la adoráis».",
     "why_distractors_fail": {
       "no hay dios que pueda librar como éste": "Es verdadero en Daniel 3:29, pero no responde al contexto exacto de Daniel 3:15.",
-      "todos los pueblos": "Es verdadero en Daniel 7:14, pero no responde al contexto exacto de Daniel 3:15.",
-      "contra ti pecamos": "Es verdadero en Daniel 9:8, pero no responde al contexto exacto de Daniel 3:15."
+      "contra ti pecamos": "Es verdadero en Daniel 9:8, pero no responde al contexto exacto de Daniel 3:15.",
+      "los cuatro vientos": "Es verdadero en Daniel 7:2, pero no responde al contexto exacto de Daniel 3:15."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -9645,8 +9645,8 @@
     "options": [
       "no hay dios que pueda librar como éste",
       "si no la adoráis",
-      "todos los pueblos",
-      "contra ti pecamos"
+      "contra ti pecamos",
+      "los cuatro vientos"
     ],
     "option_slot_signatures": [
       "phrase",
@@ -9659,8 +9659,8 @@
     "explanation": "En el contexto exacto de Daniel 3:15, el detalle aplicable es «si no la adoráis»: «Porque si no la adoráis, en la misma hora seréis echados en medio de un horno de fuego ardiente, ¿y qué dios será el que os libre de mis manos?».",
     "why_distractors_fail": {
       "no hay dios que pueda librar como éste": "Es verdadero en Daniel 3:29, pero no responde al contexto exacto de Daniel 3:15.",
-      "todos los pueblos": "Es verdadero en Daniel 7:14, pero no responde al contexto exacto de Daniel 3:15.",
-      "contra ti pecamos": "Es verdadero en Daniel 9:8, pero no responde al contexto exacto de Daniel 3:15."
+      "contra ti pecamos": "Es verdadero en Daniel 9:8, pero no responde al contexto exacto de Daniel 3:15.",
+      "los cuatro vientos": "Es verdadero en Daniel 7:2, pero no responde al contexto exacto de Daniel 3:15."
     },
     "trap_type": "true_in_other_context",
     "contextual_role": "cause",
@@ -9866,7 +9866,7 @@
       "estáis"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:15, ¿qué acción completa la secuencia descrita en «Ahora, pues, ¿[…] dispuestos para que, al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os postréis y adoréis la estatua que he hecho?»?",
+    "question": "Según Daniel 3:15, ¿qué forma verbal completa la secuencia descrita en «Ahora, pues, ¿[…] dispuestos para que, al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os postréis y adoréis la estatua que he hecho?»?",
     "options": [
       "honráis",
       "dalos",
@@ -10316,7 +10316,7 @@
       "Abed-nego"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:16, ¿qué personaje completa la relación descrita en «Sadrac, Mesac y […] respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.»?",
+    "question": "Según Daniel 3:16, ¿qué nombre o designación completa la relación descrita en «Sadrac, Mesac y […] respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.»?",
     "options": [
       "Abed-nego",
       "Beltsasar",
@@ -10541,7 +10541,7 @@
       "Mesac"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:16, ¿qué personaje completa la relación descrita en «Sadrac, […] y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.»?",
+    "question": "Según Daniel 3:16, ¿qué nombre o designación completa la relación descrita en «Sadrac, […] y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.»?",
     "options": [
       "Darío",
       "Mesac",
@@ -10766,7 +10766,7 @@
       "respondamos"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:16, ¿qué acción completa la secuencia descrita en «Sadrac, Mesac y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te […] sobre este asunto.»?",
+    "question": "Según Daniel 3:16, ¿qué forma verbal completa la secuencia descrita en «Sadrac, Mesac y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te […] sobre este asunto.»?",
     "options": [
       "servimos",
       "necesitamos",
@@ -10991,7 +10991,7 @@
       "librarnos"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:17, ¿qué acción completa la secuencia descrita en «Nuestro Dios, a quien servimos, puede […] del horno de fuego ardiente»?",
+    "question": "Según Daniel 3:17, ¿qué forma verbal completa la secuencia descrita en «Nuestro Dios, a quien servimos, puede […] del horno de fuego ardiente»?",
     "options": [
       "echarlos",
       "adorar",
@@ -11216,7 +11216,7 @@
       "servimos"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:17, ¿qué acción completa la secuencia descrita en «Nuestro Dios, a quien […], puede librarnos del horno de fuego ardiente»?",
+    "question": "Según Daniel 3:17, ¿qué forma verbal completa la secuencia descrita en «Nuestro Dios, a quien […], puede librarnos del horno de fuego ardiente»?",
     "options": [
       "servimos",
       "respondamos",
@@ -11666,7 +11666,7 @@
       "serviremos"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:18, ¿qué acción completa la secuencia descrita en «Y si no, has de saber, oh rey, que no […] a tus dioses ni tampoco adoraremos la estatua que has levantado.»?",
+    "question": "Según Daniel 3:18, ¿qué forma verbal completa la secuencia descrita en «Y si no, has de saber, oh rey, que no […] a tus dioses ni tampoco adoraremos la estatua que has levantado.»?",
     "options": [
       "protegerán",
       "levantarán",
@@ -12195,7 +12195,7 @@
     "options": [
       "Beltsasar",
       "Ezequiel",
-      "Abednego",
+      "Jeremías",
       "Abed-nego"
     ],
     "option_slot_signatures": [
@@ -12210,7 +12210,7 @@
     "why_distractors_fail": {
       "Beltsasar": "Es verdadero en Daniel 1:7, pero no responde al contexto exacto de Daniel 3:19.",
       "Ezequiel": "Es verdadero en PR42, p. 43, párrafo 1, pero no responde al contexto exacto de Daniel 3:19.",
-      "Abednego": "Es verdadero en PR39, p. 27, párrafo 5, pero no responde al contexto exacto de Daniel 3:19."
+      "Jeremías": "Es verdadero en Daniel 9:2, pero no responde al contexto exacto de Daniel 3:19."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -12271,7 +12271,7 @@
       "Abed-nego",
       "Beltsasar",
       "Ezequiel",
-      "Abednego"
+      "Jeremías"
     ],
     "option_slot_signatures": [
       "person",
@@ -12285,7 +12285,7 @@
     "why_distractors_fail": {
       "Beltsasar": "Es verdadero en Daniel 1:7, pero no responde al contexto exacto de Daniel 3:19.",
       "Ezequiel": "Es verdadero en PR42, p. 43, párrafo 1, pero no responde al contexto exacto de Daniel 3:19.",
-      "Abednego": "Es verdadero en PR39, p. 27, párrafo 5, pero no responde al contexto exacto de Daniel 3:19."
+      "Jeremías": "Es verdadero en Daniel 9:2, pero no responde al contexto exacto de Daniel 3:19."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -12341,12 +12341,12 @@
       "Abed-nego"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:19, ¿qué personaje completa la relación descrita en «Entonces Nabucodonosor se llenó de ira, cambió el aspecto de su rostro contra Sadrac, Mesac y […] y ordenó que el horno se calentara siete veces más de lo acostumbrado.»?",
+    "question": "Según Daniel 3:19, ¿qué nombre o designación completa la relación descrita en «Entonces Nabucodonosor se llenó de ira, cambió el aspecto de su rostro contra Sadrac, Mesac y […] y ordenó que el horno se calentara siete veces más de lo acostumbrado.»?",
     "options": [
       "Beltsasar",
       "Abed-nego",
       "Ezequiel",
-      "Abednego"
+      "Jeremías"
     ],
     "option_slot_signatures": [
       "person",
@@ -12360,7 +12360,7 @@
     "why_distractors_fail": {
       "Beltsasar": "Es verdadero en Daniel 1:7, pero no responde al contexto exacto de Daniel 3:19.",
       "Ezequiel": "Es verdadero en PR42, p. 43, párrafo 1, pero no responde al contexto exacto de Daniel 3:19.",
-      "Abednego": "Es verdadero en PR39, p. 27, párrafo 5, pero no responde al contexto exacto de Daniel 3:19."
+      "Jeremías": "Es verdadero en Daniel 9:2, pero no responde al contexto exacto de Daniel 3:19."
     },
     "trap_type": "true_in_other_context",
     "contextual_role": "named_entity",
@@ -12791,7 +12791,7 @@
       "calentara"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:19, ¿qué acción completa la secuencia descrita en «Entonces Nabucodonosor se llenó de ira, cambió el aspecto de su rostro contra Sadrac, Mesac y Abed-nego y ordenó que el horno se […] siete veces más de lo acostumbrado.»?",
+    "question": "Según Daniel 3:19, ¿qué forma verbal completa la secuencia descrita en «Entonces Nabucodonosor se llenó de ira, cambió el aspecto de su rostro contra Sadrac, Mesac y Abed-nego y ordenó que el horno se […] siete veces más de lo acostumbrado.»?",
     "options": [
       "calentase",
       "recibiese",
@@ -13016,7 +13016,7 @@
       "echarlos"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:20, ¿qué acción completa la secuencia descrita en «Y ordenó a hombres muy vigorosos que tenía en su ejército, que ataran a Sadrac, Mesac y Abed-nego, para […] en el horno de fuego ardiente.»?",
+    "question": "Según Daniel 3:20, ¿qué forma verbal completa la secuencia descrita en «Y ordenó a hombres muy vigorosos que tenía en su ejército, que ataran a Sadrac, Mesac y Abed-nego, para […] en el horno de fuego ardiente.»?",
     "options": [
       "echarlos",
       "librarnos",
@@ -14366,7 +14366,7 @@
       "calentado"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:22, ¿qué acción completa la secuencia descrita en «Y como la orden del rey era apremiante, y habían […] mucho el horno, la llama del fuego mató a aquellos que habían alzado a Sadrac, Mesac y Abed-nego.»?",
+    "question": "Según Daniel 3:22, ¿qué forma verbal completa la secuencia descrita en «Y como la orden del rey era apremiante, y habían […] mucho el horno, la llama del fuego mató a aquellos que habían alzado a Sadrac, Mesac y Abed-nego.»?",
     "options": [
       "levantado",
       "respetado",
@@ -14591,7 +14591,7 @@
       "alzado"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:22, ¿qué acción completa la secuencia descrita en «Y como la orden del rey era apremiante, y habían calentado mucho el horno, la llama del fuego mató a aquellos que habían […] a Sadrac, Mesac y Abed-nego.»?",
+    "question": "Según Daniel 3:22, ¿qué forma verbal completa la secuencia descrita en «Y como la orden del rey era apremiante, y habían calentado mucho el horno, la llama del fuego mató a aquellos que habían […] a Sadrac, Mesac y Abed-nego.»?",
     "options": [
       "quemado",
       "levantado",
@@ -14816,7 +14816,7 @@
       "mató"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:22, ¿qué acción completa la secuencia descrita en «Y como la orden del rey era apremiante, y habían calentado mucho el horno, la llama del fuego […] a aquellos que habían alzado a Sadrac, Mesac y Abed-nego.»?",
+    "question": "Según Daniel 3:22, ¿qué forma verbal completa la secuencia descrita en «Y como la orden del rey era apremiante, y habían calentado mucho el horno, la llama del fuego […] a aquellos que habían alzado a Sadrac, Mesac y Abed-nego.»?",
     "options": [
       "mató",
       "llenó",
@@ -15041,7 +15041,7 @@
       "Sadrac"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:23, ¿qué personaje completa la relación descrita en «Estos tres hombres, […], Mesac y Abed-nego, cayeron atados dentro del horno de fuego ardiente.»?",
+    "question": "Según Daniel 3:23, ¿qué nombre o designación completa la relación descrita en «Estos tres hombres, […], Mesac y Abed-nego, cayeron atados dentro del horno de fuego ardiente.»?",
     "options": [
       "Israel",
       "Sadrac",
@@ -15266,7 +15266,7 @@
       "Mesac"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:23, ¿qué personaje completa la relación descrita en «Estos tres hombres, Sadrac, […] y Abed-nego, cayeron atados dentro del horno de fuego ardiente.»?",
+    "question": "Según Daniel 3:23, ¿qué nombre o designación completa la relación descrita en «Estos tres hombres, Sadrac, […] y Abed-nego, cayeron atados dentro del horno de fuego ardiente.»?",
     "options": [
       "Jacob",
       "Arioc",
@@ -15941,7 +15941,7 @@
       "espantó"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:24, ¿qué acción completa la secuencia descrita en «Entonces el rey Nabucodonosor se […], se levantó apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego?»?",
+    "question": "Según Daniel 3:24, ¿qué forma verbal completa la secuencia descrita en «Entonces el rey Nabucodonosor se […], se levantó apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego?»?",
     "options": [
       "acercó",
       "espantó",
@@ -16166,7 +16166,7 @@
       "levantó"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:24, ¿qué acción completa la secuencia descrita en «Entonces el rey Nabucodonosor se espantó, se […] apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego?»?",
+    "question": "Según Daniel 3:24, ¿qué forma verbal completa la secuencia descrita en «Entonces el rey Nabucodonosor se espantó, se […] apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego?»?",
     "options": [
       "postre",
       "ordenó",
@@ -16616,7 +16616,7 @@
       "semejante"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:25, ¿qué cualidad o estado completa la predicación de «y el aspecto del cuarto es […] a un hijo de los dioses.»?",
+    "question": "Según Daniel 3:25, ¿qué término completa la construcción gramatical de «y el aspecto del cuarto es […] a un hijo de los dioses.»?",
     "options": [
       "semejante",
       "imposible",
@@ -17291,7 +17291,7 @@
       "salieron"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:26, ¿qué acción completa la secuencia descrita en «Sadrac, Mesac y Abed-nego […] de en medio del fuego.»?",
+    "question": "Según Daniel 3:26, ¿qué forma verbal completa la secuencia descrita en «Sadrac, Mesac y Abed-nego […] de en medio del fuego.»?",
     "options": [
       "adoraron",
       "acusaron",
@@ -17516,7 +17516,7 @@
       "acercó"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:26, ¿qué acción completa la secuencia descrita en «Entonces Nabucodonosor se […] a la puerta del horno de fuego ardiente, y dijo: —Sadrac, Mesac y Abed-nego, siervos del Dios Altísimo, salid y venid.»?",
+    "question": "Según Daniel 3:26, ¿qué forma verbal completa la secuencia descrita en «Entonces Nabucodonosor se […] a la puerta del horno de fuego ardiente, y dijo: —Sadrac, Mesac y Abed-nego, siervos del Dios Altísimo, salid y venid.»?",
     "options": [
       "acercó",
       "cambió",
@@ -17741,7 +17741,7 @@
       "juntaron"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:27, ¿qué acción completa la secuencia descrita en «Y se […] los sátrapas, los gobernadores, los capitanes y los consejeros del rey para mirar a estos hombres, cómo el fuego no había tenido poder alguno sobre sus cuerpos y ni aun el cabello de sus cabezas se había quemado»?",
+    "question": "Según Daniel 3:27, ¿qué forma verbal completa la secuencia descrita en «Y se […] los sátrapas, los gobernadores, los capitanes y los consejeros del rey para mirar a estos hombres, cómo el fuego no había tenido poder alguno sobre sus cuerpos y ni aun el cabello de sus cabezas se había quemado»?",
     "options": [
       "acusaron",
       "juntaron",
@@ -18416,7 +18416,7 @@
       "Abed-nego"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:28, ¿qué personaje completa la relación descrita en «Y Nabucodonosor dijo: Bendito sea el Dios de Sadrac, Mesac y […], que envió su ángel y libró a sus siervos que confiaron en él, los cuales no cumplieron el edicto del rey y entregaron sus cuerpos antes que servir y adorar a otro dios que su Dios.»?",
+    "question": "Según Daniel 3:28, ¿qué nombre o designación completa la relación descrita en «Y Nabucodonosor dijo: Bendito sea el Dios de Sadrac, Mesac y […], que envió su ángel y libró a sus siervos que confiaron en él, los cuales no cumplieron el edicto del rey y entregaron sus cuerpos antes que servir y adorar a otro dios que su Dios.»?",
     "options": [
       "Abed-nego",
       "Beltsasar",
@@ -18641,7 +18641,7 @@
       "Sadrac"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:28, ¿qué personaje completa la relación descrita en «Y Nabucodonosor dijo: Bendito sea el Dios de […], Mesac y Abed-nego, que envió su ángel y libró a sus siervos que confiaron en él, los cuales no cumplieron el edicto del rey y entregaron sus cuerpos antes que servir y adorar a otro dios que su Dios.»?",
+    "question": "Según Daniel 3:28, ¿qué nombre o designación completa la relación descrita en «Y Nabucodonosor dijo: Bendito sea el Dios de […], Mesac y Abed-nego, que envió su ángel y libró a sus siervos que confiaron en él, los cuales no cumplieron el edicto del rey y entregaron sus cuerpos antes que servir y adorar a otro dios que su Dios.»?",
     "options": [
       "Melsar",
       "Sadrac",
@@ -18866,7 +18866,7 @@
       "Mesac"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:28, ¿qué personaje completa la relación descrita en «Y Nabucodonosor dijo: Bendito sea el Dios de Sadrac, […] y Abed-nego, que envió su ángel y libró a sus siervos que confiaron en él, los cuales no cumplieron el edicto del rey y entregaron sus cuerpos antes que servir y adorar a otro dios que su Dios.»?",
+    "question": "Según Daniel 3:28, ¿qué nombre o designación completa la relación descrita en «Y Nabucodonosor dijo: Bendito sea el Dios de Sadrac, […] y Abed-nego, que envió su ángel y libró a sus siervos que confiaron en él, los cuales no cumplieron el edicto del rey y entregaron sus cuerpos antes que servir y adorar a otro dios que su Dios.»?",
     "options": [
       "Nadab",
       "Darío",
@@ -19316,7 +19316,7 @@
       "librar"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:29, ¿qué acción completa la secuencia descrita en «por cuanto no hay dios que pueda […] como éste.»?",
+    "question": "Según Daniel 3:29, ¿qué forma verbal completa la secuencia descrita en «por cuanto no hay dios que pueda […] como éste.»?",
     "options": [
       "librar",
       "adorar",
@@ -19541,7 +19541,7 @@
       "pueda"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:29, ¿qué acción completa la secuencia descrita en «por cuanto no hay dios que […] librar como éste.»?",
+    "question": "Según Daniel 3:29, ¿qué forma verbal completa la secuencia descrita en «por cuanto no hay dios que […] librar como éste.»?",
     "options": [
       "lleva",
       "pueda",
@@ -19620,8 +19620,8 @@
     "options": [
       "Babilonia",
       "Dura",
-      "Jerusalem",
-      "Jerusalén"
+      "Jerusalén",
+      "Eufrates"
     ],
     "option_slot_signatures": [
       "place",
@@ -19634,8 +19634,8 @@
     "explanation": "Daniel 3:30 declara literalmente «Entonces el rey engrandeció a Sadrac, Mesac y Abed-nego en la provincia de Babilonia.». La respuesta pedida es «Babilonia».",
     "why_distractors_fail": {
       "Dura": "Es verdadero en Daniel 3:1, pero no responde al contexto exacto de Daniel 3:30.",
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 3:30.",
-      "Jerusalén": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 3:30."
+      "Jerusalén": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 3:30.",
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 3:30."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -19695,8 +19695,8 @@
     "options": [
       "Dura",
       "Babilonia",
-      "Jerusalem",
-      "Jerusalén"
+      "Jerusalén",
+      "Eufrates"
     ],
     "option_slot_signatures": [
       "place",
@@ -19709,8 +19709,8 @@
     "explanation": "Daniel 3:30 declara literalmente «Entonces el rey engrandeció a Sadrac, Mesac y Abed-nego en la provincia de Babilonia.». La respuesta pedida es «Babilonia».",
     "why_distractors_fail": {
       "Dura": "Es verdadero en Daniel 3:1, pero no responde al contexto exacto de Daniel 3:30.",
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 3:30.",
-      "Jerusalén": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 3:30."
+      "Jerusalén": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 3:30.",
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 3:30."
     },
     "trap_type": null,
     "contextual_role": null,
@@ -19766,12 +19766,12 @@
       "Babilonia"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:30, ¿qué lugar funciona como origen en «Entonces el rey engrandeció a Sadrac, Mesac y Abed-nego en la provincia de […].»?",
+    "question": "Según Daniel 3:30, ¿qué lugar completa la relación geográfica expresada en «Entonces el rey engrandeció a Sadrac, Mesac y Abed-nego en la provincia de […].»?",
     "options": [
       "Dura",
-      "Jerusalem",
+      "Jerusalén",
       "Babilonia",
-      "Jerusalén"
+      "Eufrates"
     ],
     "option_slot_signatures": [
       "place",
@@ -19784,11 +19784,11 @@
     "explanation": "En el contexto exacto de Daniel 3:30, el detalle aplicable es «Babilonia»: «Entonces el rey engrandeció a Sadrac, Mesac y Abed-nego en la provincia de Babilonia.».",
     "why_distractors_fail": {
       "Dura": "Es verdadero en Daniel 3:1, pero no responde al contexto exacto de Daniel 3:30.",
-      "Jerusalem": "Es verdadero en PR43, p. 47, párrafo 5, pero no responde al contexto exacto de Daniel 3:30.",
-      "Jerusalén": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 3:30."
+      "Jerusalén": "Es verdadero en Daniel 1:1, pero no responde al contexto exacto de Daniel 3:30.",
+      "Eufrates": "Es verdadero en PR43, p. 47, párrafo 3, pero no responde al contexto exacto de Daniel 3:30."
     },
     "trap_type": "true_in_other_context",
-    "contextual_role": "origin",
+    "contextual_role": "geographic_relation",
     "context_evidence": "Entonces el rey engrandeció a Sadrac, Mesac y Abed-nego en la provincia de […].",
     "validation_adversarial": {
       "reviewer": "source-blind-v1",
@@ -19991,7 +19991,7 @@
       "engrandeció"
     ],
     "answer_mode": "option_id",
-    "question": "Según Daniel 3:30, ¿qué acción completa la secuencia descrita en «Entonces el rey […] a Sadrac, Mesac y Abed-nego en la provincia de Babilonia.»?",
+    "question": "Según Daniel 3:30, ¿qué forma verbal completa la secuencia descrita en «Entonces el rey […] a Sadrac, Mesac y Abed-nego en la provincia de Babilonia.»?",
     "options": [
       "levantó",
       "espantó",
@@ -22832,8 +22832,8 @@
       "postréis"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 3:5, en la escena «que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os […] y adoréis la estatua de oro que el rey Nabucodonosor ha levantado», la acción indicada es «postréis».",
-    "statement": "Según Daniel 3:5, en la escena «que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os […] y adoréis la estatua de oro que el rey Nabucodonosor ha levantado», la acción indicada es «postréis».",
+    "question": "Verdadero o falso: Según Daniel 3:5, en la escena «que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os […] y adoréis la estatua de oro que el rey Nabucodonosor ha levantado», la forma verbal indicada es «postréis».",
+    "statement": "Según Daniel 3:5, en la escena «que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os […] y adoréis la estatua de oro que el rey Nabucodonosor ha levantado», la forma verbal indicada es «postréis».",
     "asserted_detail": "postréis",
     "options": [
       "Verdadero",
@@ -22847,7 +22847,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os […] y adoréis la estatua de oro que el rey Nabucodonosor ha levantado», la acción indicada es «postréis».",
+    "truth_source_statement": "en la escena «que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os […] y adoréis la estatua de oro que el rey Nabucodonosor ha levantado», la forma verbal indicada es «postréis».",
     "contextual_role": "action",
     "context_evidence": "que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os […] y adoréis la estatua de oro que el rey Nabucodonosor ha levantado",
     "replacement_source_ref": null,
@@ -22909,8 +22909,8 @@
       "Sadrac"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 3:28, en la escena «Y Nabucodonosor dijo: Bendito sea el Dios de […], Mesac y Abed-nego, que envió su ángel y libró a sus siervos que confiaron en él, los cuales no cumplieron el edicto del rey y entregaron sus cuerpos antes que servir y adorar a otro dios que su Dios.», el personaje identificado es «Sadrac».",
-    "statement": "Según Daniel 3:28, en la escena «Y Nabucodonosor dijo: Bendito sea el Dios de […], Mesac y Abed-nego, que envió su ángel y libró a sus siervos que confiaron en él, los cuales no cumplieron el edicto del rey y entregaron sus cuerpos antes que servir y adorar a otro dios que su Dios.», el personaje identificado es «Sadrac».",
+    "question": "Verdadero o falso: Según Daniel 3:28, en la escena «Y Nabucodonosor dijo: Bendito sea el Dios de […], Mesac y Abed-nego, que envió su ángel y libró a sus siervos que confiaron en él, los cuales no cumplieron el edicto del rey y entregaron sus cuerpos antes que servir y adorar a otro dios que su Dios.», el nombre o designación indicada es «Sadrac».",
+    "statement": "Según Daniel 3:28, en la escena «Y Nabucodonosor dijo: Bendito sea el Dios de […], Mesac y Abed-nego, que envió su ángel y libró a sus siervos que confiaron en él, los cuales no cumplieron el edicto del rey y entregaron sus cuerpos antes que servir y adorar a otro dios que su Dios.», el nombre o designación indicada es «Sadrac».",
     "asserted_detail": "Sadrac",
     "options": [
       "Verdadero",
@@ -22924,7 +22924,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Y Nabucodonosor dijo: Bendito sea el Dios de […], Mesac y Abed-nego, que envió su ángel y libró a sus siervos que confiaron en él, los cuales no cumplieron el edicto del rey y entregaron sus cuerpos antes que servir y adorar a otro dios que su Dios.», el personaje identificado es «Sadrac».",
+    "truth_source_statement": "en la escena «Y Nabucodonosor dijo: Bendito sea el Dios de […], Mesac y Abed-nego, que envió su ángel y libró a sus siervos que confiaron en él, los cuales no cumplieron el edicto del rey y entregaron sus cuerpos antes que servir y adorar a otro dios que su Dios.», el nombre o designación indicada es «Sadrac».",
     "contextual_role": "named_entity",
     "context_evidence": "Y Nabucodonosor dijo: Bendito sea el Dios de […], Mesac y Abed-nego, que envió su ángel y libró a sus siervos que confiaron en él, los cuales no cumplieron el edicto del rey y entregaron sus cuerpos antes que servir y adorar a otro dios que su Dios.",
     "replacement_source_ref": null,
@@ -22986,8 +22986,8 @@
       "calentado"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 3:22, en la escena «Y como la orden del rey era apremiante, y habían […] mucho el horno, la llama del fuego mató a aquellos que habían alzado a Sadrac, Mesac y Abed-nego.», la acción indicada es «calentado».",
-    "statement": "Según Daniel 3:22, en la escena «Y como la orden del rey era apremiante, y habían […] mucho el horno, la llama del fuego mató a aquellos que habían alzado a Sadrac, Mesac y Abed-nego.», la acción indicada es «calentado».",
+    "question": "Verdadero o falso: Según Daniel 3:22, en la escena «Y como la orden del rey era apremiante, y habían […] mucho el horno, la llama del fuego mató a aquellos que habían alzado a Sadrac, Mesac y Abed-nego.», la forma verbal indicada es «calentado».",
+    "statement": "Según Daniel 3:22, en la escena «Y como la orden del rey era apremiante, y habían […] mucho el horno, la llama del fuego mató a aquellos que habían alzado a Sadrac, Mesac y Abed-nego.», la forma verbal indicada es «calentado».",
     "asserted_detail": "calentado",
     "options": [
       "Verdadero",
@@ -23001,7 +23001,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Y como la orden del rey era apremiante, y habían […] mucho el horno, la llama del fuego mató a aquellos que habían alzado a Sadrac, Mesac y Abed-nego.», la acción indicada es «calentado».",
+    "truth_source_statement": "en la escena «Y como la orden del rey era apremiante, y habían […] mucho el horno, la llama del fuego mató a aquellos que habían alzado a Sadrac, Mesac y Abed-nego.», la forma verbal indicada es «calentado».",
     "contextual_role": "action",
     "context_evidence": "Y como la orden del rey era apremiante, y habían […] mucho el horno, la llama del fuego mató a aquellos que habían alzado a Sadrac, Mesac y Abed-nego.",
     "replacement_source_ref": null,
@@ -23140,8 +23140,8 @@
       "espantó"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 3:24, en la escena «Entonces el rey Nabucodonosor se […], se levantó apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego?», la acción indicada es «espantó».",
-    "statement": "Según Daniel 3:24, en la escena «Entonces el rey Nabucodonosor se […], se levantó apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego?», la acción indicada es «espantó».",
+    "question": "Verdadero o falso: Según Daniel 3:24, en la escena «Entonces el rey Nabucodonosor se […], se levantó apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego?», la forma verbal indicada es «espantó».",
+    "statement": "Según Daniel 3:24, en la escena «Entonces el rey Nabucodonosor se […], se levantó apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego?», la forma verbal indicada es «espantó».",
     "asserted_detail": "espantó",
     "options": [
       "Verdadero",
@@ -23155,7 +23155,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Entonces el rey Nabucodonosor se […], se levantó apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego?», la acción indicada es «espantó».",
+    "truth_source_statement": "en la escena «Entonces el rey Nabucodonosor se […], se levantó apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego?», la forma verbal indicada es «espantó».",
     "contextual_role": "action",
     "context_evidence": "Entonces el rey Nabucodonosor se […], se levantó apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego?",
     "replacement_source_ref": null,
@@ -23217,8 +23217,8 @@
       "Babilonia"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 3:30, en la escena «Entonces el rey engrandeció a Sadrac, Mesac y Abed-nego en la provincia de […].», el lugar de origen es «Babilonia».",
-    "statement": "Según Daniel 3:30, en la escena «Entonces el rey engrandeció a Sadrac, Mesac y Abed-nego en la provincia de […].», el lugar de origen es «Babilonia».",
+    "question": "Verdadero o falso: Según Daniel 3:30, en la escena «Entonces el rey engrandeció a Sadrac, Mesac y Abed-nego en la provincia de […].», el lugar asociado en la relación es «Babilonia».",
+    "statement": "Según Daniel 3:30, en la escena «Entonces el rey engrandeció a Sadrac, Mesac y Abed-nego en la provincia de […].», el lugar asociado en la relación es «Babilonia».",
     "asserted_detail": "Babilonia",
     "options": [
       "Verdadero",
@@ -23232,8 +23232,8 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Entonces el rey engrandeció a Sadrac, Mesac y Abed-nego en la provincia de […].», el lugar de origen es «Babilonia».",
-    "contextual_role": "origin",
+    "truth_source_statement": "en la escena «Entonces el rey engrandeció a Sadrac, Mesac y Abed-nego en la provincia de […].», el lugar asociado en la relación es «Babilonia».",
+    "contextual_role": "geographic_relation",
     "context_evidence": "Entonces el rey engrandeció a Sadrac, Mesac y Abed-nego en la provincia de […].",
     "replacement_source_ref": null,
     "correct_slot_signature": "place",
@@ -23294,8 +23294,8 @@
       "postraron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 3:7, en la escena «Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se […] y adoraron la estatua de oro que el rey Nabucodonosor había levantado.», la acción indicada es «postraron».",
-    "statement": "Según Daniel 3:7, en la escena «Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se […] y adoraron la estatua de oro que el rey Nabucodonosor había levantado.», la acción indicada es «postraron».",
+    "question": "Verdadero o falso: Según Daniel 3:7, en la escena «Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se […] y adoraron la estatua de oro que el rey Nabucodonosor había levantado.», la forma verbal indicada es «postraron».",
+    "statement": "Según Daniel 3:7, en la escena «Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se […] y adoraron la estatua de oro que el rey Nabucodonosor había levantado.», la forma verbal indicada es «postraron».",
     "asserted_detail": "postraron",
     "options": [
       "Verdadero",
@@ -23309,7 +23309,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se […] y adoraron la estatua de oro que el rey Nabucodonosor había levantado.», la acción indicada es «postraron».",
+    "truth_source_statement": "en la escena «Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se […] y adoraron la estatua de oro que el rey Nabucodonosor había levantado.», la forma verbal indicada es «postraron».",
     "contextual_role": "action",
     "context_evidence": "Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se […] y adoraron la estatua de oro que el rey Nabucodonosor había levantado.",
     "replacement_source_ref": null,
@@ -23371,8 +23371,8 @@
       "Mesac"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 3:23, en la escena «Estos tres hombres, Sadrac, […] y Abed-nego, cayeron atados dentro del horno de fuego ardiente.», el personaje identificado es «Mesac».",
-    "statement": "Según Daniel 3:23, en la escena «Estos tres hombres, Sadrac, […] y Abed-nego, cayeron atados dentro del horno de fuego ardiente.», el personaje identificado es «Mesac».",
+    "question": "Verdadero o falso: Según Daniel 3:23, en la escena «Estos tres hombres, Sadrac, […] y Abed-nego, cayeron atados dentro del horno de fuego ardiente.», el nombre o designación indicada es «Mesac».",
+    "statement": "Según Daniel 3:23, en la escena «Estos tres hombres, Sadrac, […] y Abed-nego, cayeron atados dentro del horno de fuego ardiente.», el nombre o designación indicada es «Mesac».",
     "asserted_detail": "Mesac",
     "options": [
       "Verdadero",
@@ -23386,7 +23386,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Estos tres hombres, Sadrac, […] y Abed-nego, cayeron atados dentro del horno de fuego ardiente.», el personaje identificado es «Mesac».",
+    "truth_source_statement": "en la escena «Estos tres hombres, Sadrac, […] y Abed-nego, cayeron atados dentro del horno de fuego ardiente.», el nombre o designación indicada es «Mesac».",
     "contextual_role": "named_entity",
     "context_evidence": "Estos tres hombres, Sadrac, […] y Abed-nego, cayeron atados dentro del horno de fuego ardiente.",
     "replacement_source_ref": null,
@@ -23525,8 +23525,8 @@
       "Hablaron"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 3:9, en la escena «[…] y dijeron al rey Nabucodonosor: —¡Rey, para siempre vive!», la acción indicada es «Hablaron».",
-    "statement": "Según Daniel 3:9, en la escena «[…] y dijeron al rey Nabucodonosor: —¡Rey, para siempre vive!», la acción indicada es «Hablaron».",
+    "question": "Verdadero o falso: Según Daniel 3:9, en la escena «[…] y dijeron al rey Nabucodonosor: —¡Rey, para siempre vive!», la forma verbal indicada es «Hablaron».",
+    "statement": "Según Daniel 3:9, en la escena «[…] y dijeron al rey Nabucodonosor: —¡Rey, para siempre vive!», la forma verbal indicada es «Hablaron».",
     "asserted_detail": "Hablaron",
     "options": [
       "Verdadero",
@@ -23540,7 +23540,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «[…] y dijeron al rey Nabucodonosor: —¡Rey, para siempre vive!», la acción indicada es «Hablaron».",
+    "truth_source_statement": "en la escena «[…] y dijeron al rey Nabucodonosor: —¡Rey, para siempre vive!», la forma verbal indicada es «Hablaron».",
     "contextual_role": "action",
     "context_evidence": "[…] y dijeron al rey Nabucodonosor: —¡Rey, para siempre vive!",
     "replacement_source_ref": null,
@@ -23679,8 +23679,8 @@
       "Abed-nego"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 3:16, en la escena «Sadrac, Mesac y […] respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.», el personaje identificado es «Abed-nego».",
-    "statement": "Según Daniel 3:16, en la escena «Sadrac, Mesac y […] respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.», el personaje identificado es «Abed-nego».",
+    "question": "Verdadero o falso: Según Daniel 3:16, en la escena «Sadrac, Mesac y […] respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.», el nombre o designación indicada es «Abed-nego».",
+    "statement": "Según Daniel 3:16, en la escena «Sadrac, Mesac y […] respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.», el nombre o designación indicada es «Abed-nego».",
     "asserted_detail": "Abed-nego",
     "options": [
       "Verdadero",
@@ -23694,7 +23694,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Sadrac, Mesac y […] respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.», el personaje identificado es «Abed-nego».",
+    "truth_source_statement": "en la escena «Sadrac, Mesac y […] respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.», el nombre o designación indicada es «Abed-nego».",
     "contextual_role": "named_entity",
     "context_evidence": "Sadrac, Mesac y […] respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.",
     "replacement_source_ref": null,
@@ -23756,8 +23756,8 @@
       "respondamos"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 3:16, en la escena «Sadrac, Mesac y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te […] sobre este asunto.», la acción indicada es «respondamos».",
-    "statement": "Según Daniel 3:16, en la escena «Sadrac, Mesac y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te […] sobre este asunto.», la acción indicada es «respondamos».",
+    "question": "Verdadero o falso: Según Daniel 3:16, en la escena «Sadrac, Mesac y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te […] sobre este asunto.», la forma verbal indicada es «respondamos».",
+    "statement": "Según Daniel 3:16, en la escena «Sadrac, Mesac y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te […] sobre este asunto.», la forma verbal indicada es «respondamos».",
     "asserted_detail": "respondamos",
     "options": [
       "Verdadero",
@@ -23771,7 +23771,7 @@
     "false_mutation_kind": null,
     "focused_true_statement": false,
     "statement_mode": "contextual_identity",
-    "truth_source_statement": "en la escena «Sadrac, Mesac y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te […] sobre este asunto.», la acción indicada es «respondamos».",
+    "truth_source_statement": "en la escena «Sadrac, Mesac y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te […] sobre este asunto.», la forma verbal indicada es «respondamos».",
     "contextual_role": "action",
     "context_evidence": "Sadrac, Mesac y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te […] sobre este asunto.",
     "replacement_source_ref": null,
@@ -24988,9 +24988,9 @@
       "Babilonia"
     ],
     "answer_mode": "option_id",
-    "question": "Verdadero o falso: Según Daniel 3:1, la levantó en el campo de Dura, en la provincia de Jerusalem.",
-    "statement": "Según Daniel 3:1, la levantó en el campo de Dura, en la provincia de Jerusalem.",
-    "asserted_detail": "Jerusalem",
+    "question": "Verdadero o falso: Según Daniel 3:1, la levantó en el campo de Dura, en la provincia de Jerusalén.",
+    "statement": "Según Daniel 3:1, la levantó en el campo de Dura, en la provincia de Jerusalén.",
+    "asserted_detail": "Jerusalén",
     "options": [
       "Verdadero",
       "Falso"
@@ -24998,7 +24998,7 @@
     "correct_option": 1,
     "correct_answer": "Falso",
     "corrected_statement": "Según Daniel 3:1, la levantó en el campo de Dura, en la provincia de Babilonia.",
-    "incorrect_detail": "Jerusalem",
+    "incorrect_detail": "Jerusalén",
     "correction": "Babilonia",
     "false_mutation_kind": "closed_category_substitution",
     "focused_true_statement": false,
@@ -25006,12 +25006,12 @@
     "truth_source_statement": "la levantó en el campo de Dura, en la provincia de Babilonia.",
     "contextual_role": null,
     "context_evidence": null,
-    "replacement_source_ref": "PR43, p. 47, párrafo 5",
+    "replacement_source_ref": "Daniel 1:1",
     "correct_slot_signature": "place",
     "replacement_slot_signature": "place",
-    "explanation": "Es falsa: la fuente dice «Babilonia», no «Jerusalem».",
+    "explanation": "Es falsa: la fuente dice «Babilonia», no «Jerusalén».",
     "why_distractors_fail": {
-      "Verdadero": "La única alteración es «Jerusalem»; la fuente contiene «Babilonia»."
+      "Verdadero": "La única alteración es «Jerusalén»; la fuente contiene «Babilonia»."
     },
     "trap_type": "single_plausible_detail",
     "validation_adversarial": {

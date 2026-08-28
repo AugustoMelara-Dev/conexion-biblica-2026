@@ -11,6 +11,8 @@ ALLOWED_CONTEXTUAL_ROLES = {
     "recipient",
     "named_entity",
     "origin",
+    "territorial_title",
+    "geographic_relation",
     "destination",
     "location",
     "direction",
@@ -93,9 +95,25 @@ def derive_contextual_role(fact: dict[str, Any]) -> str:
         return "named_entity"
     if category == "place":
         if re.search(r"\b(?:a|hacia|hasta)$", before_norm):
-            return "destination"
-        if re.search(r"\b(?:de|desde)$", before_norm):
+            if re.search(
+                r"\b(?:vino|vinieron|llego|llegaron|entro|entraron|partio|partieron|"
+                r"marcho|marcharon|regreso|regresaron|volvio|volvieron|subio|subieron|"
+                r"descendio|descendieron|llevo|llevaron|llevara|llevados|llevadas|"
+                r"condujo|condujeron|enviado|enviada|enviados|enviadas)\b.{0,120}"
+                r"\b(?:a|hacia|hasta)$",
+                before_norm,
+            ):
+                return "destination"
+            return "geographic_relation"
+        if re.search(r"\b(?:rey|reina|principe|gobernador)\s+de$", before_norm):
+            return "territorial_title"
+        if re.search(r"\bdesde$", before_norm) or re.search(
+            r"\b(?:salio|salieron|partio|partieron|vino|vinieron|procedia|procedian)\s+de$",
+            before_norm,
+        ):
             return "origin"
+        if re.search(r"\bde$", before_norm):
+            return "geographic_relation"
         if _norm(str(fact["answer"])) in {"norte", "sur", "oriente", "poniente"}:
             return "direction"
         return "location"
@@ -108,6 +126,31 @@ def derive_contextual_role(fact: dict[str, Any]) -> str:
     if category == "action":
         return "action"
     if category == "term":
+        if _norm(str(fact["answer"])) in {
+            "primer",
+            "primero",
+            "primera",
+            "segundo",
+            "segunda",
+            "tercer",
+            "tercero",
+            "tercera",
+            "cuarto",
+            "cuarta",
+            "quinto",
+            "quinta",
+            "sexto",
+            "sexta",
+            "septimo",
+            "septima",
+            "octavo",
+            "octava",
+            "noveno",
+            "novena",
+            "decimo",
+            "decima",
+        }:
+            return "order"
         signature = str(fact.get("_slot_signature") or "")
         if "subject" in signature:
             return "subject"
@@ -153,21 +196,23 @@ def mask_context_answer(fact: dict[str, Any], marker: str = "[…]") -> str:
 _QUESTION_OPENINGS = {
     "actor": "¿quién realiza la acción descrita en",
     "recipient": "¿a quién se dirige la acción u orden expresada en",
-    "named_entity": "¿qué personaje completa la relación descrita en",
+    "named_entity": "¿qué nombre o designación completa la relación descrita en",
     "origin": "¿qué lugar funciona como origen en",
+    "territorial_title": "¿qué territorio completa el título territorial presente en",
+    "geographic_relation": "¿qué lugar completa la relación geográfica expresada en",
     "destination": "¿qué destino completa el movimiento descrito en",
-    "location": "¿qué lugar completa la relación espacial descrita en",
+    "location": "¿qué lugar completa el detalle geográfico de",
     "direction": "¿qué dirección geográfica precisa",
     "quantity": "¿qué dato cuantitativo precisa",
     "duration": "¿qué duración precisa el período descrito en",
     "order": "¿qué dato ordinal completa",
     "measure": "¿qué medida precisa",
-    "action": "¿qué acción completa la secuencia descrita en",
+    "action": "¿qué forma verbal completa la secuencia descrita en",
     "state": "¿qué estado completa la descripción presentada en",
     "change": "¿qué cambio completa la secuencia presentada en",
     "subject": "¿qué sujeto completa la relación literal expresada en",
     "object": "¿qué objeto completa la acción expresada en",
-    "predicate": "¿qué cualidad o estado completa la predicación de",
+    "predicate": "¿qué término completa la construcción gramatical de",
     "modifier": "¿qué modificador precisa la descripción de",
     "connector_object": "¿qué concepto completa la relación introducida por la preposición en",
     "concept": "¿qué concepto completa la relación literal de",
@@ -181,8 +226,10 @@ _QUESTION_OPENINGS = {
 _IDENTITY_LABELS = {
     "actor": "quien realiza la acción",
     "recipient": "el destinatario",
-    "named_entity": "el personaje identificado",
+    "named_entity": "el nombre o designación indicada",
     "origin": "el lugar de origen",
+    "territorial_title": "el territorio asociado al título",
+    "geographic_relation": "el lugar asociado en la relación",
     "destination": "el destino",
     "location": "el lugar indicado",
     "direction": "la dirección indicada",
@@ -190,12 +237,12 @@ _IDENTITY_LABELS = {
     "duration": "la duración",
     "order": "el dato ordinal",
     "measure": "la medida",
-    "action": "la acción indicada",
+    "action": "la forma verbal indicada",
     "state": "el estado descrito",
     "change": "el cambio descrito",
     "subject": "el sujeto de la relación",
     "object": "el objeto de la acción",
-    "predicate": "la cualidad o estado",
+    "predicate": "el término de la construcción",
     "modifier": "el modificador",
     "connector_object": "el término regido por la preposición",
     "concept": "el concepto",
@@ -239,6 +286,12 @@ def render_contextual_identity(fact: dict[str, Any]) -> tuple[str, str, str]:
         f"en la escena «{evidence}», {_IDENTITY_LABELS[role]} "
         f"es «{fact['answer']}»."
     )
-    if statement.count(str(fact["answer"])) != 1:
+    answer_occurrences = len(
+        re.findall(
+            rf"(?<!\w){re.escape(str(fact['answer']))}(?!\w)",
+            statement,
+        )
+    )
+    if answer_occurrences != 1:
         raise ValueError(f"{fact.get('fact_id', '<sin-id>')}:identity_answer_count")
     return statement, role, evidence

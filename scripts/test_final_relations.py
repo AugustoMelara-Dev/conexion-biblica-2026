@@ -51,6 +51,16 @@ class FinalRelationTests(unittest.TestCase):
         self.assertIn("propósito", purpose["question"].casefold())
         self.assertIn(purpose["answer"], purpose["source_quote"])
 
+    def test_preserves_the_complete_purpose_clause_across_an_enumeration(self) -> None:
+        candidates = self.extract("DAN7-V014")
+        purpose = next(row for row in candidates if row["relation_type"] == "purpose")
+
+        self.assertEqual(
+            purpose["answer"],
+            "todos los pueblos, naciones y lenguas lo sirvieran",
+        )
+        self.assertIn("propósito", purpose["question"].casefold())
+
     def test_extracts_explicit_speaker_and_recipient_from_dialogue(self) -> None:
         candidates = self.extract("DAN3-V026")
         by_type = {row["relation_type"]: row for row in candidates}
