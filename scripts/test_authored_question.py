@@ -114,28 +114,54 @@ class AuthoredQuestionContractTests(unittest.TestCase):
 
 
 class AuthoredUnitAcceptanceTests(unittest.TestCase):
-    def test_dan1_pilot_has_351_distinct_competitive_questions(self) -> None:
+    UNIT_QUOTAS = {
+        "DAN1": 351,
+        "DAN2": 482,
+        "DAN3": 366,
+        "DAN4": 433,
+        "DAN5": 366,
+        "DAN6": 364,
+        "DAN7": 833,
+        "DAN8": 871,
+        "DAN9": 879,
+        "DAN10": 543,
+        "DAN11": 1196,
+        "DAN12": 376,
+        "PR39": 868,
+        "PR40": 799,
+        "PR41": 751,
+        "PR42": 732,
+        "PR43": 1001,
+        "PR44": 789,
+    }
+
+    def test_all_18_units_match_exact_quotas_and_are_valid(self) -> None:
         from pathlib import Path
         root = Path(__file__).resolve().parents[1]
-        path = root / "content" / "final-2026-authored" / "questions" / "DAN1.json"
-        rows = load_authored_unit(path)
-        self.assertEqual(len(rows), 351)
-        ids = {r["id"] for r in rows}
-        self.assertEqual(len(ids), 351)
-        subtypes = {r["subtype"] for r in rows}
-        for expected in (
-            "factual_recall",
-            "speaker_addressee",
-            "cause_consequence",
-            "narrative_order",
-            "identification",
-            "relationship",
-            "text_recall",
-        ):
-            self.assertIn(expected, subtypes)
-        for r in rows:
-            errs = validate_authored_question(r)
-            self.assertEqual(errs, [], f"Errores en {r.get('id')}: {errs}")
+        questions_dir = root / "content" / "final-2026-authored" / "questions"
+        total = 0
+        all_ids: set[str] = set()
+
+        for unit, expected_count in self.UNIT_QUOTAS.items():
+            path = questions_dir / f"{unit}.json"
+            self.assertTrue(path.exists(), f"Falta archivo de unidad {unit}: {path}")
+            rows = load_authored_unit(path)
+            self.assertEqual(len(rows), expected_count, f"Unidad {unit} esperaba {expected_count} pero tiene {len(rows)}")
+            total += len(rows)
+
+            ids = {r["id"] for r in rows}
+            self.assertEqual(len(ids), len(rows), f"IDs duplicados en unidad {unit}")
+            self.assertTrue(all_ids.isdisjoint(ids), f"Colisión global de IDs en {unit}")
+            all_ids.update(ids)
+
+            subtypes = {r["subtype"] for r in rows}
+            self.assertGreaterEqual(len(subtypes), 3, f"Unidad {unit} debe tener al menos 3 subtipos diversos")
+
+            for r in rows:
+                errs = validate_authored_question(r)
+                self.assertEqual(errs, [], f"Errores en {r.get('id')}: {errs}")
+
+        self.assertEqual(total, 12000, f"El total de preguntas debe ser exactamente 12,000 pero fue {total}")
 
 
 if __name__ == "__main__":
