@@ -66,14 +66,79 @@ FAMILIES = {
 }
 
 
+
+
 def fail(errors: list[str], question_id: str, code: str) -> None:
     errors.append(f"{question_id}:{code}")
 
 
 def main() -> int:
-    manifest = json.loads((BANK / "manifest.json").read_text(encoding="utf-8"))
-    inventory = json.loads((BANK / "source_inventory.json").read_text(encoding="utf-8"))
-    facts = json.loads((BANK / "fact_inventory.json").read_text(encoding="utf-8"))
+    import argparse
+    from scripts.lib.authored_question import (
+        load_authored_unit,
+        validate_authored_question,
+    )
+    from scripts.lib.authored_bank_audit import (
+        audit_authored_bank,
+    )
+
+    parser = argparse.ArgumentParser(description="Auditoría profunda del banco final.")
+    parser.add_argument("--authored-unit", type=str, help="Audita una unidad autorizada específica.")
+    parser.add_argument("--bank", type=Path, default=BANK, help="Ruta al banco a auditar.")
+    args, unknown = parser.parse_known_args()
+
+    if args.authored_unit:
+        unit_file = ROOT / "content" / "final-2026-authored" / "questions" / f"{args.authored_unit}.json"
+        if not unit_file.exists():
+            print(f"ERROR: No existe {unit_file}", file=sys.stderr)
+            return 1
+        unit_rows = load_authored_unit(unit_file)
+        errors = []
+        for r in unit_rows:
+            errors.extend(validate_authored_question(r))
+        violations = audit_authored_bank(unit_rows)
+        for cat, v_list in violations.items():
+            if cat in ("duplicate_ids", "source_location_prompts", "cross_passage_false_mutations", "missing_evidence"):
+                errors.extend(f"{qid}:{cat}" for qid in v_list)
+        if errors:
+            print(f"ERROR en {args.authored_unit}: {len(errors)} errores:\n" + "\n".join(errors[:20]), file=sys.stderr)
+            return 1
+        print(json.dumps({
+            "unit": args.authored_unit,
+            "questions": len(unit_rows),
+            "errors": 0,
+            "status": "passed",
+        }, indent=2))
+        return 0
+
+    bank_dir = args.bank
+    manifest_file = bank_dir / "manifest.json"
+    if not manifest_file.exists():
+        print(f"ERROR: No se encontró {manifest_file}", file=sys.stderr)
+        return 1
+    manifest = json.loads(manifest_file.read_text(encoding="utf-8"))
+
+    if str(manifest.get("schema_version")) == "10.0":
+        questions = []
+        for shard in manifest["shards"]:
+            shard_path = ROOT / "public" / shard["questions_file"]
+            if not shard_path.exists():
+                shard_path = bank_dir / "questions" / f"{shard['chapter']}.json"
+            questions.extend(json.loads(shard_path.read_text(encoding="utf-8")))
+        violations = audit_authored_bank(questions)
+        active_violations = {k: v for k, v in violations.items() if v}
+        summary = {
+            "schema_version": "10.0",
+            "questions": len(questions),
+            "shards": len(manifest["shards"]),
+            "errors": len(active_violations),
+            "violations": active_violations,
+        }
+        print(json.dumps(summary, ensure_ascii=False, indent=2))
+        return 1 if active_violations else 0
+
+    inventory = json.loads((bank_dir / "source_inventory.json").read_text(encoding="utf-8"))
+    facts = json.loads((bank_dir / "fact_inventory.json").read_text(encoding="utf-8"))
     questions = []
     for shard in manifest["shards"]:
         questions.extend(
