@@ -17,12 +17,13 @@ export type FinalRawQuestion = {
   id: string
   bank_id: typeof FINAL_BANK_ID
   bank_name: typeof FINAL_BANK_DISPLAY_NAME
-  schema_version: typeof FINAL_BANK_SCHEMA_VERSION
+  schema_version: typeof FINAL_BANK_SCHEMA_VERSION | "9.0"
   source_unit_id: string
   fact_id: string
   variant_id: string
   template_id: string
   family: FinalQuestionFamily
+  subtype?: string
   chapter: string
   reference: string
   source_ref: string
@@ -46,7 +47,19 @@ export type FinalRawQuestion = {
   trap_type: string | null
   final_editorial_status: "GOLD"
   difficulty: "easy" | "medium" | "hard" | "expert"
-  validation_adversarial: {
+  evidence_excerpt?: string
+  false_mutation?: {
+    changed_fields: string[]
+    local: boolean
+    original: string
+    replacement: string
+  } | null
+  ai_review?: {
+    status: "passed"
+    reviewer_type: "ai_semantic_audit"
+    reviewer: string
+  }
+  validation_adversarial?: {
     reviewer: string
     status: "passed"
     selected_option: number
@@ -56,7 +69,7 @@ export type FinalRawQuestion = {
 }
 
 export type FinalBankManifest = {
-  schema_version: typeof FINAL_BANK_SCHEMA_VERSION
+  schema_version: typeof FINAL_BANK_SCHEMA_VERSION | "9.0"
   bank_id: typeof FINAL_BANK_ID
   display_name: typeof FINAL_BANK_DISPLAY_NAME
   gold_questions: number
@@ -89,6 +102,7 @@ function typeForFamily(family: FinalQuestionFamily): QuestionType {
 }
 
 function semanticSkill(raw: FinalRawQuestion) {
+  if (raw.subtype) return raw.subtype
   if (raw.family === "single_choice_contextual") return "scene_identification"
   if (/cause|consequence/.test(raw.relation_type)) return "cause_consequence"
   if (/comparison|difference/.test(raw.relation_type)) return "comparison"
@@ -101,12 +115,12 @@ function semanticSkill(raw: FinalRawQuestion) {
 export function adaptFinalQuestion(raw: FinalRawQuestion): Question {
   if (
     raw.bank_id !== FINAL_BANK_ID ||
-    raw.schema_version !== FINAL_BANK_SCHEMA_VERSION ||
+    (raw.schema_version !== FINAL_BANK_SCHEMA_VERSION && raw.schema_version !== "9.0") ||
     raw.final_editorial_status !== "GOLD" ||
-    raw.validation_adversarial.status !== "passed" ||
-    raw.validation_adversarial.second_defensible_option
+    (raw.validation_adversarial && (raw.validation_adversarial.status !== "passed" || raw.validation_adversarial.second_defensible_option)) ||
+    (raw.ai_review && raw.ai_review.status !== "passed")
   )
-    throw new Error(`La pregunta ${raw.id} no cumple las puertas V9`)
+    throw new Error(`La pregunta ${raw.id} no cumple las puertas canónicas`)
   if (raw.correct_option < 0 || raw.correct_option >= raw.options.length)
     throw new Error(`Respuesta fuera de rango en ${raw.id}`)
   const options = raw.options.map((text, index) => ({
@@ -167,7 +181,11 @@ export function adaptFinalQuestion(raw: FinalRawQuestion): Question {
     metadata: {
       sourceUnitId: raw.source_unit_id,
       relationType: raw.relation_type,
-      validationReviewer: raw.validation_adversarial.reviewer,
+      validationReviewer: raw.validation_adversarial?.reviewer ?? raw.ai_review?.reviewer,
+      evidenceExcerpt: raw.evidence_excerpt,
+      aiReviewer: raw.ai_review?.reviewer,
+      aiReviewerType: raw.ai_review?.reviewer_type,
+      falseMutation: raw.false_mutation,
     },
   }
 }
@@ -196,7 +214,8 @@ export async function readFinalManifest(
   const manifest = (await response.json()) as FinalBankManifest
   if (
     manifest.bank_id !== FINAL_BANK_ID ||
-    manifest.schema_version !== FINAL_BANK_SCHEMA_VERSION
+    (manifest.schema_version !== FINAL_BANK_SCHEMA_VERSION &&
+      manifest.schema_version !== "9.0")
   )
     throw new Error("El manifiesto del banco único no es compatible")
   return manifest

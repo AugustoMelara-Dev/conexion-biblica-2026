@@ -10,12 +10,18 @@ describe("contrato del Banco Maestro Único", () => {
     expect(contract?.FINAL_BANK_DISPLAY_NAME).toBe(
       "Banco Maestro Único — Final 2026"
     )
+    expect(contract?.FINAL_BANK_SCHEMA_VERSION).toBe("10.0")
     expect(contract?.FINAL_QUESTION_FAMILIES).toEqual([
       "single_choice_direct",
       "fill_choice",
       "true_false",
       "single_choice_contextual",
     ])
+    expect(contract?.FINAL_QUESTION_SUBTYPES).toHaveLength(12)
+    expect(contract?.FINAL_QUESTION_SUBTYPES).toContain("factual_recall")
+    expect(contract?.FINAL_QUESTION_SUBTYPES).toContain("speaker_addressee")
+    expect(contract?.FINAL_QUESTION_SUBTYPES).toContain("cause_consequence")
+    expect(contract?.FINAL_QUESTION_SUBTYPES).toContain("narrative_order")
   })
 
   it("rechaza familias antiguas y cardinalidades incompatibles", async () => {

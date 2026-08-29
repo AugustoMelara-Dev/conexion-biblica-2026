@@ -2,7 +2,7 @@ import type { QuestionOption } from "@/domain/types"
 
 export const FINAL_BANK_ID = "BANCO_UNICO_CONEXION_BIBLICA_2026" as const
 export const FINAL_BANK_DISPLAY_NAME = "Banco Maestro Único — Final 2026" as const
-export const FINAL_BANK_SCHEMA_VERSION = "9.0" as const
+export const FINAL_BANK_SCHEMA_VERSION = "10.0" as const
 
 export const FINAL_QUESTION_FAMILIES = [
   "single_choice_direct",
@@ -12,6 +12,23 @@ export const FINAL_QUESTION_FAMILIES = [
 ] as const
 
 export type FinalQuestionFamily = (typeof FINAL_QUESTION_FAMILIES)[number]
+
+export const FINAL_QUESTION_SUBTYPES = [
+  "factual_recall",
+  "speaker_addressee",
+  "cause_consequence",
+  "narrative_order",
+  "identification",
+  "relationship",
+  "text_recall",
+  "comparison",
+  "symbol_interpretation",
+  "prophetic_detail",
+  "principle",
+  "cross_source_integration",
+] as const
+
+export type FinalQuestionSubtype = (typeof FINAL_QUESTION_SUBTYPES)[number]
 
 type FinalQuestionCandidate = {
   family: string

@@ -77,6 +77,25 @@ describe("canonical final bank storage", () => {
     expect(question.options).toHaveLength(4)
   })
 
+  it("adapts V10 authored questions preserving subtype, evidence excerpt and ai review", () => {
+    const question = adaptFinalQuestion(
+      raw({
+        schema_version: "10.0",
+        subtype: "speaker_addressee",
+        evidence_excerpt: "declaró el rey a Daniel",
+        ai_review: {
+          status: "passed",
+          reviewer_type: "ai_semantic_audit",
+          reviewer: "reviewer-7",
+        },
+      })
+    )
+    expect(question.semanticSkill).toBe("speaker_addressee")
+    expect(question.metadata?.evidenceExcerpt).toBe("declaró el rey a Daniel")
+    expect(question.metadata?.aiReviewer).toBe("reviewer-7")
+    expect(question.metadata?.aiReviewerType).toBe("ai_semantic_audit")
+  })
+
   it("reads the canonical manifest and loads chapter shards lazily", async () => {
     const manifest: FinalBankManifest = {
       schema_version: "9.0",
