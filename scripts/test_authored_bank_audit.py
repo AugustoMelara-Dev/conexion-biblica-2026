@@ -73,5 +73,41 @@ class AuthoredBankAuditTests(unittest.TestCase):
         self.assertNotEqual(h1, h3)
 
 
+class CrossReviewTests(unittest.TestCase):
+    def test_all_12000_questions_have_independent_cross_review(self) -> None:
+        from pathlib import Path
+        import json
+        from scripts.lib.authored_bank_audit import EXPECTED_UNITS
+        from scripts.lib.authored_question import load_authored_unit
+
+        root = Path(__file__).resolve().parents[1]
+        questions_dir = root / "content" / "final-2026-authored" / "questions"
+        reports_dir = root / "reports" / "authored-bank-review"
+
+        total_reviewed = 0
+        for unit in EXPECTED_UNITS:
+            q_file = questions_dir / f"{unit}.json"
+            r_file = reports_dir / f"{unit}.json"
+            self.assertTrue(r_file.exists(), f"Falta reporte de revisión para {unit}")
+
+            questions = load_authored_unit(q_file)
+            reviews = json.loads(r_file.read_text(encoding="utf-8"))
+            self.assertEqual(len(questions), len(reviews), f"Conteo dispar en {unit}")
+
+            q_by_id = {q["id"]: q for q in questions}
+            for entry in reviews:
+                qid = entry["question_id"]
+                self.assertIn(qid, q_by_id)
+                q = q_by_id[qid]
+                self.assertEqual(entry["content_sha256"], content_hash(q))
+                self.assertIn("author", entry)
+                self.assertIn("cross_reviewer", entry)
+                self.assertNotEqual(entry["author"], entry["cross_reviewer"])
+                self.assertEqual(entry.get("cross_review"), "passed")
+                total_reviewed += 1
+
+        self.assertEqual(total_reviewed, 12000)
+
+
 if __name__ == "__main__":
     unittest.main()
