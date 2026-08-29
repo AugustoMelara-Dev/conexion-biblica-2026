@@ -113,5 +113,30 @@ class AuthoredQuestionContractTests(unittest.TestCase):
         self.assertIn("DAN1-AUTH-0001:human_signature_claim", validate_authored_question(row))
 
 
+class AuthoredUnitAcceptanceTests(unittest.TestCase):
+    def test_dan1_pilot_has_351_distinct_competitive_questions(self) -> None:
+        from pathlib import Path
+        root = Path(__file__).resolve().parents[1]
+        path = root / "content" / "final-2026-authored" / "questions" / "DAN1.json"
+        rows = load_authored_unit(path)
+        self.assertEqual(len(rows), 351)
+        ids = {r["id"] for r in rows}
+        self.assertEqual(len(ids), 351)
+        subtypes = {r["subtype"] for r in rows}
+        for expected in (
+            "factual_recall",
+            "speaker_addressee",
+            "cause_consequence",
+            "narrative_order",
+            "identification",
+            "relationship",
+            "text_recall",
+        ):
+            self.assertIn(expected, subtypes)
+        for r in rows:
+            errs = validate_authored_question(r)
+            self.assertEqual(errs, [], f"Errores en {r.get('id')}: {errs}")
+
+
 if __name__ == "__main__":
     unittest.main()
