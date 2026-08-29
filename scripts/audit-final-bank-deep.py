@@ -121,9 +121,9 @@ def main() -> int:
     if str(manifest.get("schema_version")) == "10.0":
         questions = []
         for shard in manifest["shards"]:
-            shard_path = ROOT / "public" / shard["questions_file"]
+            shard_path = bank_dir / "questions" / f"{shard['chapter']}.json"
             if not shard_path.exists():
-                shard_path = bank_dir / "questions" / f"{shard['chapter']}.json"
+                shard_path = ROOT / "public" / shard["questions_file"]
             questions.extend(json.loads(shard_path.read_text(encoding="utf-8")))
         violations = audit_authored_bank(questions)
         active_violations = {k: v for k, v in violations.items() if v}

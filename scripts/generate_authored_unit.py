@@ -45,7 +45,14 @@ OWNERSHIP_REVIEWERS = {
 }
 
 
-def process_unit(unit_code: str, raw_source_file: Path, output_dir: Path, reports_dir: Path) -> int:
+def process_unit(
+    unit_code: str,
+    raw_source_file: Path,
+    output_dir: Path,
+    reports_dir: Path,
+    seen_prompts: set[str] | None = None,
+    seen_norm_prompts: set[str] | None = None,
+) -> int:
     if not raw_source_file.exists():
         print(f"ERROR: No se encontró archivo fuente para {unit_code}: {raw_source_file}", file=sys.stderr)
         return 1
@@ -53,7 +60,13 @@ def process_unit(unit_code: str, raw_source_file: Path, output_dir: Path, report
     raw_data = json.loads(raw_source_file.read_text(encoding="utf-8"))
     editor, reviewer = OWNERSHIP_REVIEWERS.get(unit_code, ("editor-generic", "reviewer-generic"))
 
-    authored = reauthor_unit_rows(unit_code, raw_data, reviewer_name=reviewer)
+    authored = reauthor_unit_rows(
+        unit_code,
+        raw_data,
+        reviewer_name=reviewer,
+        seen_prompts=seen_prompts,
+        seen_norm_prompts=seen_norm_prompts,
+    )
 
     # Validate each
     all_errors: list[str] = []
@@ -74,7 +87,8 @@ def process_unit(unit_code: str, raw_source_file: Path, output_dir: Path, report
     # Write output
     output_dir.mkdir(parents=True, exist_ok=True)
     out_file = output_dir / f"{unit_code}.json"
-    out_file.write_text(json.dumps(authored, ensure_ascii=False, indent=2), encoding="utf-8")
+    with open(out_file, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(authored, f, ensure_ascii=False, indent=2)
 
     # Write review ledger
     reports_dir.mkdir(parents=True, exist_ok=True)
@@ -90,7 +104,8 @@ def process_unit(unit_code: str, raw_source_file: Path, output_dir: Path, report
             "notes": f"Vetted against {q['source_ref']}",
         })
     review_file = reports_dir / f"{unit_code}.json"
-    review_file.write_text(json.dumps(ledger, ensure_ascii=False, indent=2), encoding="utf-8")
+    with open(review_file, "w", encoding="utf-8", newline="\n") as f:
+        json.dump(ledger, f, ensure_ascii=False, indent=2)
 
     print(f"OK: Unidad {unit_code} generada exitosamente ({len(authored)} preguntas, 0 errores).")
     return 0
@@ -110,9 +125,18 @@ def main() -> int:
         return process_unit(args.unit, raw_file, out_dir, reports_dir)
 
     if args.all:
+        global_seen_prompts: set[str] = set()
+        global_seen_norm: set[str] = set()
         for unit in EXPECTED_UNITS:
             raw_file = ROOT / "public" / "banks" / "final-2026" / "questions" / f"{unit}.json"
-            code = process_unit(unit, raw_file, out_dir, reports_dir)
+            code = process_unit(
+                unit,
+                raw_file,
+                out_dir,
+                reports_dir,
+                seen_prompts=global_seen_prompts,
+                seen_norm_prompts=global_seen_norm,
+            )
             if code != 0:
                 return code
         print("OK: Todas las 18 unidades generadas exitosamente.")

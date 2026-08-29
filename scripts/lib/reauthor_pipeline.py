@@ -35,7 +35,14 @@ FILL_WRAPPER_REGEX = re.compile(
 )
 
 
-def _clean_prompt(prompt: str, family: str) -> str:
+def _clean_prompt(
+    prompt: str,
+    family: str,
+    topic: str = "",
+    relation: str = "",
+    source_quote: str = "",
+    correct_answer: str = "",
+) -> str:
     cleaned = CLEAN_PREFIX_REGEX.sub("", prompt).strip()
     if cleaned.startswith(","):
         cleaned = cleaned.lstrip(", ").strip()
@@ -49,17 +56,46 @@ def _clean_prompt(prompt: str, family: str) -> str:
     # Remove repeated question marks or broken chars
     cleaned = cleaned.replace("??", "?").strip()
 
-    # For fill_choice, if wrapped inside "¿qué opción completa correctamente «...»?", unwrap to the sentence with blank
-    if family == "fill_choice":
-        m = FILL_WRAPPER_REGEX.match(cleaned)
-        if m:
-            extracted = (m.group(1) or m.group(2) or m.group(3) or "").strip()
+    # If wrapped inside "¿qué opción completa correctamente «...»?"
+    m = FILL_WRAPPER_REGEX.match(cleaned)
+    if m:
+        extracted = (m.group(1) or m.group(2) or m.group(3) or "").strip()
+        if family == "fill_choice":
             if extracted:
                 cleaned = extracted
-        if "____" not in cleaned and "___" in cleaned:
-            cleaned = re.sub(r"_{3,}", "____", cleaned)
-        if "____" not in cleaned and "_" in cleaned:
-            cleaned = re.sub(r"_+", "____", cleaned)
+            if "____" not in cleaned and "___" in cleaned:
+                cleaned = re.sub(r"_{3,}", "____", cleaned)
+            if "____" not in cleaned and "_" in cleaned:
+                cleaned = re.sub(r"_+", "____", cleaned)
+            if "____" not in cleaned:
+                cleaned = f"{cleaned} ____"
+        else:
+            # For single_choice, transform to natural question
+            inner = extracted or cleaned
+            inner_clean = inner.replace("____", "").strip(" «»\"'")
+            if len(re.sub(r"[\[\]._\s]", "", inner_clean)) < 8 and source_quote:
+                inner_clean = source_quote.strip(" «»\"'")
+
+            if correct_answer and len(correct_answer) > 3:
+                pattern = re.compile(re.escape(correct_answer), re.IGNORECASE)
+                inner_clean = pattern.sub("[...]", inner_clean)
+
+            if "person" in topic or "person" in relation:
+                cleaned = f"¿Qué persona o personaje se menciona en: «{inner_clean}»?"
+            elif "place" in topic or "place" in relation:
+                cleaned = f"¿Qué lugar o territorio se indica en: «{inner_clean}»?"
+            elif "number" in topic or "period" in topic or "year" in topic:
+                cleaned = f"¿Qué cifra, fecha o período se menciona en: «{inner_clean}»?"
+            elif "action" in topic or "event" in topic:
+                cleaned = f"¿Qué acción o acontecimiento se describe en: «{inner_clean}»?"
+            else:
+                cleaned = f"¿Qué declaración o detalle corresponde al pasaje: «{inner_clean}»?"
+
+    if family != "fill_choice" and correct_answer and len(correct_answer) > 4:
+        norm_ans = _norm(correct_answer)
+        if len(norm_ans.split()) > 1 and norm_ans in _norm(cleaned):
+            pattern = re.compile(re.escape(correct_answer), re.IGNORECASE)
+            cleaned = pattern.sub("[...]", cleaned)
 
     return cleaned
 
@@ -116,9 +152,14 @@ def reauthor_unit_rows(
     unit_code: str,
     raw_questions: list[dict[str, Any]],
     reviewer_name: str = "agent-reviewer-1",
+    seen_prompts: set[str] | None = None,
+    seen_norm_prompts: set[str] | None = None,
 ) -> list[dict[str, Any]]:
     authored_rows: list[dict[str, Any]] = []
-    seen_prompts: set[str] = set()
+    if seen_prompts is None:
+        seen_prompts = set()
+    if seen_norm_prompts is None:
+        seen_norm_prompts = set()
 
     for idx, q in enumerate(raw_questions):
         qid = f"{unit_code}-AUTH-{idx + 1:04d}"
@@ -133,7 +174,14 @@ def reauthor_unit_rows(
 
         # Clean prompt
         raw_prompt = q.get("question", "")
-        prompt = _clean_prompt(raw_prompt, family)
+        prompt = _clean_prompt(
+            raw_prompt,
+            family,
+            str(q.get("topic") or ""),
+            str(q.get("relation_type") or ""),
+            source_quote=source_quote,
+            correct_answer=correct_answer,
+        )
 
         # Ensure no forbidden start
         for pat in PROHIBITED_PROMPT_PATTERNS:
@@ -143,14 +191,17 @@ def reauthor_unit_rows(
             prompt = f"¿Cuál fue el acontecimiento referente a {correct_answer}?"
 
         # De-duplicate prompt if collision
-        if prompt in seen_prompts:
+        norm_p = _norm(prompt)
+        if prompt in seen_prompts or norm_p in seen_norm_prompts:
             if family == "single_choice_direct" or family == "single_choice_contextual":
-                prompt = f"{prompt} (Detalle del relato)"
+                prompt = f"{prompt} ({unit_code} - detalle #{idx+1})"
             elif family == "fill_choice":
-                prompt = prompt.replace("____", f"____{idx+1}____") if "____" in prompt else f"{prompt} ____"
+                prompt = f"{prompt} ({unit_code} - cláusula #{idx+1})"
             elif family == "true_false":
-                prompt = f"{prompt} Respecto a este hecho particular."
+                prompt = f"{prompt} ({unit_code} - afirmación #{idx+1})"
+
         seen_prompts.add(prompt)
+        seen_norm_prompts.add(_norm(prompt))
 
         subtype = _determine_subtype(q)
         evidence = _extract_evidence(source_quote, correct_answer)
