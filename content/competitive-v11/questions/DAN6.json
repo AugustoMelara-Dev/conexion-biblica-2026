@@ -1195,5 +1195,3101 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "ai-authoring-team"
     }
+  },
+  {
+    "id": "DAN6-V11-WAVE-001",
+    "source_unit_id": "DAN6-V001",
+    "fact_id": "DAN6-V001-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Cómo organizó Darío la administración territorial del reino?",
+    "options": [
+      "Estableció ciento veinte sátrapas para administrar todo el reino",
+      "Nombró treinta gobernadores para administrar solamente la capital",
+      "Entregó cada provincia del reino al gobierno de uno de sus hijos",
+      "Puso a todos los magistrados del reino bajo la autoridad de Ciro"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Estableció ciento veinte sátrapas para administrar todo el reino",
+    "accepted_answers": [
+      "Estableció ciento veinte sátrapas para administrar todo el reino"
+    ],
+    "explanation": "Darío distribuyó el gobierno del reino entre ciento veinte sátrapas.",
+    "why_distractors_fail": {
+      "Nombró treinta gobernadores para administrar solamente la capital": "Cambia número, cargo y alcance territorial.",
+      "Entregó cada provincia del reino al gobierno de uno de sus hijos": "No se menciona tal reparto familiar.",
+      "Puso a todos los magistrados del reino bajo la autoridad de Ciro": "Ciro no dirige esta organización administrativa."
+    },
+    "source_ref": "Daniel 6:1",
+    "source_quote": "Pareció bien a Darío constituir sobre el reino ciento veinte sátrapas que gobernaran en todo el reino.",
+    "evidence_excerpt": "Pareció bien a Darío constituir sobre el reino ciento veinte sátrapas que gobernaran en todo el reino.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "darius_satrap_administration",
+    "option_category": "administrative_structure",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-002",
+    "source_unit_id": "DAN6-V002",
+    "fact_id": "DAN6-V002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué función cumplían los tres gobernadores colocados sobre los sátrapas?",
+    "options": [
+      "Dirigir las oraciones para garantizar la obediencia de todo el reino",
+      "Recibir las cuentas para impedir que el rey sufriera algún perjuicio",
+      "Custodiar la entrada del foso y alimentar diariamente a los leones",
+      "Recaudar ofrendas destinadas al Dios servido continuamente por Daniel"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Recibir las cuentas para impedir que el rey sufriera algún perjuicio",
+    "accepted_answers": [
+      "Recibir las cuentas para impedir que el rey sufriera algún perjuicio"
+    ],
+    "explanation": "Los sátrapas rendían cuentas a los tres gobernadores, entre ellos Daniel, para proteger los intereses del rey.",
+    "why_distractors_fail": {
+      "Dirigir las oraciones para garantizar la obediencia de todo el reino": "La administración se estableció antes del edicto y no tenía función religiosa.",
+      "Custodiar la entrada del foso y alimentar diariamente a los leones": "No era una responsabilidad de los gobernadores.",
+      "Recaudar ofrendas destinadas al Dios servido continuamente por Daniel": "No se menciona recaudación religiosa."
+    },
+    "source_ref": "Daniel 6:2",
+    "source_quote": "Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.",
+    "evidence_excerpt": "Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "governors_accountability_purpose",
+    "option_category": "role_purpose",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-003",
+    "source_unit_id": "DAN6-V003",
+    "fact_id": "DAN6-V003-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Por qué consideró el rey colocar a Daniel sobre todo el reino?",
+    "options": [
+      "Porque había redactado el edicto de treinta días junto con los sátrapas",
+      "Porque pertenecía a la familia de Darío y debía heredar todo el reino",
+      "Porque superaba a los funcionarios debido al espíritu superior que poseía",
+      "Porque dominaba personalmente a los leones guardados dentro del foso"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Porque superaba a los funcionarios debido al espíritu superior que poseía",
+    "accepted_answers": [
+      "Porque superaba a los funcionarios debido al espíritu superior que poseía"
+    ],
+    "explanation": "La excelencia de Daniel, atribuida a un espíritu superior, motivó el proyecto de elevarlo sobre el reino.",
+    "why_distractors_fail": {
+      "Porque había redactado el edicto de treinta días junto con los sátrapas": "Los adversarios promovieron el edicto contra él.",
+      "Porque pertenecía a la familia de Darío y debía heredar todo el reino": "Daniel era cautivo de Judá, no heredero de Darío.",
+      "Porque dominaba personalmente a los leones guardados dentro del foso": "El número corresponde a los sátrapas, no a leones."
+    },
+    "source_ref": "Daniel 6:3",
+    "source_quote": "Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en ponerlo sobre todo el reino.",
+    "evidence_excerpt": "Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en ponerlo sobre todo el reino.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "daniel_promotion_basis",
+    "option_category": "promotion_reason",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-004",
+    "source_unit_id": "DAN6-V004",
+    "fact_id": "DAN6-V004-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Por qué fracasó la búsqueda de una acusación administrativa contra Daniel?",
+    "options": [
+      "Porque el rey había prohibido revisar todas sus decisiones oficiales",
+      "Porque los sátrapas abandonaron la investigación durante el primer día",
+      "Porque Daniel ocultó las cuentas reales antes de que fueran examinadas",
+      "Porque era fiel y no encontraron en su gestión ningún error ni falta"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Porque era fiel y no encontraron en su gestión ningún error ni falta",
+    "accepted_answers": [
+      "Porque era fiel y no encontraron en su gestión ningún error ni falta"
+    ],
+    "explanation": "Sus adversarios examinaron su gestión, pero su fidelidad dejó sin base una acusación relacionada con el reino.",
+    "why_distractors_fail": {
+      "Porque el rey había prohibido revisar todas sus decisiones oficiales": "No consta una protección real que impidiera la revisión.",
+      "Porque los sátrapas abandonaron la investigación durante el primer día": "Persistieron y cambiaron de estrategia.",
+      "Porque Daniel ocultó las cuentas reales antes de que fueran examinadas": "Ocultar cuentas contradiría la integridad descrita."
+    },
+    "source_ref": "Daniel 6:4",
+    "source_quote": "Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+    "evidence_excerpt": "Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "administrative_accusation_failure",
+    "option_category": "failure_reason",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-005",
+    "source_unit_id": "DAN6-V007",
+    "fact_id": "DAN6-V007-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué conducta castigaba el edicto propuesto a Darío y durante cuánto tiempo?",
+    "options": [
+      "Pedir a cualquier dios u hombre fuera de Darío durante treinta días",
+      "Dar gracias exclusivamente a Darío fuera del palacio durante siete días",
+      "Orar mirando hacia Jerusalén cada día durante un período de tres años",
+      "Reunirse con los sátrapas después de la puesta del sol durante un mes"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Pedir a cualquier dios u hombre fuera de Darío durante treinta días",
+    "accepted_answers": [
+      "Pedir a cualquier dios u hombre fuera de Darío durante treinta días"
+    ],
+    "explanation": "La prohibición concentraba toda petición en Darío por un período de treinta días.",
+    "why_distractors_fail": {
+      "Dar gracias exclusivamente a Darío fuera del palacio durante siete días": "Cambia acción, destinatario, lugar y duración.",
+      "Orar mirando hacia Jerusalén cada día durante un período de tres años": "La orientación describe la práctica de Daniel, pero no los términos exactos del edicto.",
+      "Reunirse con los sátrapas después de la puesta del sol durante un mes": "No era la conducta regulada."
+    },
+    "source_ref": "Daniel 6:7",
+    "source_quote": "Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "evidence_excerpt": "Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "edict_prohibited_petition_period",
+    "option_category": "law_scope",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-006",
+    "source_unit_id": "DAN6-V010",
+    "fact_id": "DAN6-V010-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Cómo reaccionó Daniel al saber que el edicto ya estaba firmado?",
+    "options": [
+      "Suspendió todas sus oraciones hasta concluir los treinta días del edicto",
+      "Continuó arrodillándose, orando y dando gracias tres veces cada día",
+      "Pidió permiso al rey para cerrar las ventanas y orar una sola vez",
+      "Organizó una rebelión de los cautivos de Judá contra todos los sátrapas"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Continuó arrodillándose, orando y dando gracias tres veces cada día",
+    "accepted_answers": [
+      "Continuó arrodillándose, orando y dando gracias tres veces cada día"
+    ],
+    "explanation": "Daniel mantuvo su práctica habitual con las ventanas hacia Jerusalén, sin alterar frecuencia ni contenido.",
+    "why_distractors_fail": {
+      "Suspendió todas sus oraciones hasta concluir los treinta días del edicto": "El edicto no interrumpió su costumbre.",
+      "Pidió permiso al rey para cerrar las ventanas y orar una sola vez": "No buscó esa autorización ni redujo la frecuencia.",
+      "Organizó una rebelión de los cautivos de Judá contra todos los sátrapas": "Su respuesta fue oración, no rebelión."
+    },
+    "source_ref": "Daniel 6:10",
+    "source_quote": "Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "evidence_excerpt": "Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "daniel_prayer_response_to_edict",
+    "option_category": "faithful_response",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-007",
+    "source_unit_id": "DAN6-V014",
+    "fact_id": "DAN6-V014-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué hizo el rey después de oír la acusación contra Daniel?",
+    "options": [
+      "Se alegró, confirmó otra sentencia y celebró con los funcionarios",
+      "Revocó el edicto firmado y destituyó a todos los sátrapas",
+      "Se afligió, decidió librarlo y trabajó hasta la puesta del sol",
+      "Ordenó llevarlo al foso sin buscar primero ninguna alternativa"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Se afligió, decidió librarlo y trabajó hasta la puesta del sol",
+    "accepted_answers": [
+      "Se afligió, decidió librarlo y trabajó hasta la puesta del sol"
+    ],
+    "explanation": "Darío lamentó el resultado de la intriga y dedicó el resto del día a buscar la liberación de Daniel.",
+    "why_distractors_fail": {
+      "Se alegró, confirmó otra sentencia y celebró con los funcionarios": "La noticia le pesó profundamente.",
+      "Revocó el edicto firmado y destituyó a todos los sátrapas": "La ley confirmada no podía ser abrogada.",
+      "Ordenó llevarlo al foso sin buscar primero ninguna alternativa": "Antes de ejecutar la pena trató de librarlo."
+    },
+    "source_ref": "Daniel 6:14",
+    "source_quote": "Cuando el rey oyó el asunto, le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para librarlo.",
+    "evidence_excerpt": "Cuando el rey oyó el asunto, le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para librarlo.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "king_rescue_effort_sequence",
+    "option_category": "response_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-008",
+    "source_unit_id": "DAN6-V017",
+    "fact_id": "DAN6-V017-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Cómo aseguraron que el acuerdo acerca de Daniel no fuera cambiado?",
+    "options": [
+      "Una puerta de hierro cerró el foso y solamente el anillo del rey la selló",
+      "Una guardia persa rodeó el foso y los sátrapas firmaron la sentencia",
+      "Una cadena de bronce cubrió el foso y Daniel mismo aseguró su entrada",
+      "Una piedra cerró el foso y los anillos del rey y los príncipes la sellaron"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Una piedra cerró el foso y los anillos del rey y los príncipes la sellaron",
+    "accepted_answers": [
+      "Una piedra cerró el foso y los anillos del rey y los príncipes la sellaron"
+    ],
+    "explanation": "La piedra y los sellos del rey y de los príncipes protegían formalmente la decisión tomada.",
+    "why_distractors_fail": {
+      "Una puerta de hierro cerró el foso y solamente el anillo del rey la selló": "El sello se aplicó a la piedra, no a cadenas.",
+      "Una guardia persa rodeó el foso y los sátrapas firmaron la sentencia": "La medida descrita fue física y documental mediante la piedra sellada.",
+      "Una cadena de bronce cubrió el foso y Daniel mismo aseguró su entrada": "No se promulgó otra ley en ese momento."
+    },
+    "source_ref": "Daniel 6:17",
+    "source_quote": "Trajeron una piedra y la pusieron sobre la puerta del foso, la cual selló el rey con su anillo y con el anillo de sus príncipes, para que el acuerdo acerca de Daniel no se cambiara.",
+    "evidence_excerpt": "Trajeron una piedra y la pusieron sobre la puerta del foso, la cual selló el rey con su anillo y con el anillo de sus príncipes, para que el acuerdo acerca de Daniel no se cambiara.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "den_seal_security",
+    "option_category": "security_measure",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-009",
+    "source_unit_id": "DAN6-V022",
+    "fact_id": "DAN6-V022-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Cómo explicó Daniel que los leones no le hubieran hecho daño?",
+    "options": [
+      "Dios envió un ángel, cerró las bocas y confirmó la inocencia de Daniel",
+      "Darío alimentó a los leones, calmó su hambre y protegió luego a Daniel",
+      "Los príncipes retiraron los leones, ocultaron el hecho y salvaron a Daniel",
+      "Daniel ejerció su autoridad, dominó a los leones y salió ileso del foso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Dios envió un ángel, cerró las bocas y confirmó la inocencia de Daniel",
+    "accepted_answers": [
+      "Dios envió un ángel, cerró las bocas y confirmó la inocencia de Daniel"
+    ],
+    "explanation": "Daniel atribuyó la protección al ángel enviado por Dios y afirmó su inocencia ante Dios y ante el rey.",
+    "why_distractors_fail": {
+      "Darío alimentó a los leones, calmó su hambre y protegió luego a Daniel": "No se describe intervención preventiva del rey.",
+      "Los príncipes retiraron los leones, ocultaron el hecho y salvaron a Daniel": "Los leones permanecieron en el foso.",
+      "Daniel ejerció su autoridad, dominó a los leones y salió ileso del foso": "La liberación fue divina, no administrativa."
+    },
+    "source_ref": "Daniel 6:22",
+    "source_quote": "Mi Dios envió su ángel, el cual cerró la boca de los leones para que no me hicieran daño, porque ante él fui hallado inocente; y aun delante de ti, oh rey, yo no he hecho nada malo.",
+    "evidence_excerpt": "Mi Dios envió su ángel, el cual cerró la boca de los leones para que no me hicieran daño, porque ante él fui hallado inocente; y aun delante de ti, oh rey, yo no he hecho nada malo.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "angelic_rescue_innocence_basis",
+    "option_category": "rescue_explanation",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-010",
+    "source_unit_id": "DAN6-V026",
+    "fact_id": "DAN6-V026-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué razones dio Darío para ordenar reverencia al Dios de Daniel?",
+    "options": [
+      "Había nombrado a Darío y garantizaba treinta años de paz al reino",
+      "Es viviente y eterno; su reino es indestructible y su dominio perdura",
+      "Controlaba solamente a los leones y protegía a todos los gobernadores",
+      "Su reino dependía de las leyes irrevocables fijadas por Media y Persia"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Es viviente y eterno; su reino es indestructible y su dominio perdura",
+    "accepted_answers": [
+      "Es viviente y eterno; su reino es indestructible y su dominio perdura"
+    ],
+    "explanation": "La ordenanza se apoya en la vida eterna de Dios y la permanencia invencible de su reino y dominio.",
+    "why_distractors_fail": {
+      "Había nombrado a Darío y garantizaba treinta años de paz al reino": "Esas razones no aparecen en la proclamación.",
+      "Controlaba solamente a los leones y protegía a todos los gobernadores": "La declaración extiende su soberanía mucho más allá del foso.",
+      "Su reino dependía de las leyes irrevocables fijadas por Media y Persia": "El reino divino no depende de legislación humana."
+    },
+    "source_ref": "Daniel 6:26",
+    "source_quote": "De parte mía es promulgada esta ordenanza: “Que en todo el dominio de mi reino, todos teman y tiemblen ante la presencia del Dios de Daniel. »”Porque él es el Dios viviente y permanece por todos los siglos, su reino no será jamás destruido y su dominio perdurará hasta el fin.",
+    "evidence_excerpt": "De parte mía es promulgada esta ordenanza: “Que en todo el dominio de mi reino, todos teman y tiemblen ante la presencia del Dios de Daniel. »”Porque él es el Dios viviente y permanece por todos los siglos, su reino no será jamás destruido y su dominio perdurará hasta el fin.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "darius_reverence_reasons",
+    "option_category": "theological_basis",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-011",
+    "source_unit_id": "DAN6-V002",
+    "fact_id": "DAN6-V002-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "identification",
+    "question": "Daniel era uno de los ____ gobernadores colocados sobre los sátrapas.",
+    "options": [
+      "tres",
+      "dos",
+      "siete",
+      "doce"
+    ],
+    "correct_option": 0,
+    "correct_answer": "tres",
+    "accepted_answers": [
+      "tres",
+      "3",
+      "tres gobernadores"
+    ],
+    "explanation": "Darío estableció tres gobernadores y Daniel formaba parte de ese grupo.",
+    "why_distractors_fail": {
+      "dos": "Reduce en uno la cantidad indicada.",
+      "siete": "No corresponde a la estructura establecida.",
+      "doce": "Tampoco es el número de gobernadores."
+    },
+    "source_ref": "Daniel 6:2",
+    "source_quote": "Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.",
+    "evidence_excerpt": "Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "daniel_among_three_governors",
+    "option_category": "number",
+    "false_mutation": null,
+    "blank_span": "tres",
+    "significance": "Precisa el nivel administrativo inicial de Daniel sobre los sátrapas.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-012",
+    "source_unit_id": "DAN6-V005",
+    "fact_id": "DAN6-V005-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Los adversarios concluyeron que solo hallarían motivo contra Daniel en relación con la ____ de su Dios.",
+    "options": [
+      "casa",
+      "ley",
+      "tierra",
+      "lengua"
+    ],
+    "correct_option": 1,
+    "correct_answer": "ley",
+    "accepted_answers": [
+      "ley",
+      "la ley",
+      "la ley de su Dios"
+    ],
+    "explanation": "Al no encontrar fallas administrativas, dirigieron la conspiración contra la fidelidad religiosa de Daniel.",
+    "why_distractors_fail": {
+      "casa": "No era el ámbito elegido para acusarlo.",
+      "tierra": "Su procedencia no ofrecía la falta buscada.",
+      "lengua": "No se trataba de su idioma."
+    },
+    "source_ref": "Daniel 6:5",
+    "source_quote": "Entonces dijeron aquellos hombres: «No hallaremos contra este Daniel motivo alguno para acusarlo, si no lo hallamos contra él en relación con la ley de su Dios.",
+    "evidence_excerpt": "Entonces dijeron aquellos hombres: «No hallaremos contra este Daniel motivo alguno para acusarlo, si no lo hallamos contra él en relación con la ley de su Dios.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "conspiracy_religious_basis",
+    "option_category": "legal_domain",
+    "false_mutation": null,
+    "blank_span": "ley",
+    "significance": "Identifica el único ámbito que los conspiradores creyeron explotable.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-013",
+    "source_unit_id": "DAN6-V008",
+    "fact_id": "DAN6-V008-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "principle",
+    "question": "La ley de Media y Persia no podía ser ____.",
+    "options": [
+      "publicada",
+      "obedecida",
+      "abrogada",
+      "escrita"
+    ],
+    "correct_option": 2,
+    "correct_answer": "abrogada",
+    "accepted_answers": [
+      "abrogada",
+      "revocada",
+      "ser abrogada"
+    ],
+    "explanation": "La irrevocabilidad de la ley fue la condición usada para asegurar la trampa.",
+    "why_distractors_fail": {
+      "publicada": "El edicto precisamente debía promulgarse.",
+      "obedecida": "La ley exigía obediencia, no la impedía.",
+      "escrita": "Darío la firmó por escrito."
+    },
+    "source_ref": "Daniel 6:8",
+    "source_quote": "Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+    "evidence_excerpt": "Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "medopersian_law_irrevocability",
+    "option_category": "legal_property",
+    "false_mutation": null,
+    "blank_span": "abrogada",
+    "significance": "Fija la restricción jurídica que atrapó al propio rey.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-014",
+    "source_unit_id": "DAN6-V010",
+    "fact_id": "DAN6-V010-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Las ventanas de la habitación de Daniel estaban orientadas hacia ____.",
+    "options": [
+      "Babilonia",
+      "Media",
+      "Persia",
+      "Jerusalén"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Jerusalén",
+    "accepted_answers": [
+      "Jerusalén",
+      "hacia Jerusalén"
+    ],
+    "explanation": "Daniel oraba con las ventanas de su habitación abiertas hacia Jerusalén.",
+    "why_distractors_fail": {
+      "Babilonia": "No era la orientación indicada.",
+      "Media": "La ley era medo-persa, pero la ventana no miraba hacia Media.",
+      "Persia": "Tampoco era el destino de su mirada."
+    },
+    "source_ref": "Daniel 6:10",
+    "source_quote": "Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "evidence_excerpt": "Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "prayer_window_orientation",
+    "option_category": "place",
+    "false_mutation": null,
+    "blank_span": "Jerusalén",
+    "significance": "Precisa la orientación espacial de su práctica habitual.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-015",
+    "source_unit_id": "DAN6-V014",
+    "fact_id": "DAN6-V014-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "El rey trabajó para librar a Daniel hasta la puesta del ____.",
+    "options": [
+      "sol",
+      "edicto",
+      "sello",
+      "reino"
+    ],
+    "correct_option": 0,
+    "correct_answer": "sol",
+    "accepted_answers": [
+      "sol",
+      "la puesta del sol"
+    ],
+    "explanation": "Darío agotó el tiempo del día buscando una salida para Daniel.",
+    "why_distractors_fail": {
+      "edicto": "Un edicto se firma, no se pone.",
+      "sello": "El sello se usó después en el foso.",
+      "reino": "No completa la expresión temporal."
+    },
+    "source_ref": "Daniel 6:14",
+    "source_quote": "Cuando el rey oyó el asunto, le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para librarlo.",
+    "evidence_excerpt": "Cuando el rey oyó el asunto, le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para librarlo.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "rescue_effort_deadline",
+    "option_category": "time_marker",
+    "false_mutation": null,
+    "blank_span": "sol",
+    "significance": "Marca cuánto se prolongó el esfuerzo del rey por evitar la sentencia.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-016",
+    "source_unit_id": "DAN6-V018",
+    "fact_id": "DAN6-V018-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Después de acostarse en ayunas, al rey se le fue el ____.",
+    "options": [
+      "hambre",
+      "sueño",
+      "temor",
+      "recuerdo"
+    ],
+    "correct_option": 1,
+    "correct_answer": "sueño",
+    "accepted_answers": [
+      "sueño",
+      "el sueño"
+    ],
+    "explanation": "La angustia de Darío le impidió dormir aquella noche.",
+    "why_distractors_fail": {
+      "hambre": "El ayuno se menciona, pero el efecto declarado fue insomnio.",
+      "temor": "No es lo que se dice que se le fue.",
+      "recuerdo": "Tampoco completa la escena nocturna."
+    },
+    "source_ref": "Daniel 6:18",
+    "source_quote": "Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "evidence_excerpt": "Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "king_sleepless_night",
+    "option_category": "condition",
+    "false_mutation": null,
+    "blank_span": "sueño",
+    "significance": "Completa la consecuencia personal de la angustia nocturna del rey.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-017",
+    "source_unit_id": "DAN6-V020",
+    "fact_id": "DAN6-V020-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "identification",
+    "question": "Al llegar al foso, Darío llamó a Daniel siervo del Dios ____.",
+    "options": [
+      "desconocido",
+      "medo",
+      "viviente",
+      "silencioso"
+    ],
+    "correct_option": 2,
+    "correct_answer": "viviente",
+    "accepted_answers": [
+      "viviente",
+      "Dios viviente"
+    ],
+    "explanation": "El rey se dirigió a Daniel como siervo del Dios viviente.",
+    "why_distractors_fail": {
+      "desconocido": "Darío identificó explícitamente al Dios de Daniel.",
+      "medo": "No lo definió por la nación de Media.",
+      "silencioso": "El calificativo usado fue viviente."
+    },
+    "source_ref": "Daniel 6:20",
+    "source_quote": "Acercándose al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?",
+    "evidence_excerpt": "Acercándose al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "darius_living_god_title",
+    "option_category": "divine_attribute",
+    "false_mutation": null,
+    "blank_span": "viviente",
+    "significance": "Fija el título divino que anticipa la confesión posterior de Darío.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-018",
+    "source_unit_id": "DAN6-V028",
+    "fact_id": "DAN6-V028-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Daniel prosperó durante los reinados de Darío y de ____ el persa.",
+    "options": [
+      "Belsasar",
+      "Nabucodonosor",
+      "Joacim",
+      "Ciro"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Ciro",
+    "accepted_answers": [
+      "Ciro",
+      "Ciro el persa"
+    ],
+    "explanation": "El capítulo concluye vinculando la prosperidad de Daniel con Darío y Ciro el persa.",
+    "why_distractors_fail": {
+      "Belsasar": "Su reinado terminó antes de esta administración.",
+      "Nabucodonosor": "Pertenece a una etapa anterior de la vida de Daniel.",
+      "Joacim": "Fue rey de Judá, no el gobernante persa mencionado."
+    },
+    "source_ref": "Daniel 6:28",
+    "source_quote": "Daniel prosperó durante los reinados de Darío y de Ciro, el persa.",
+    "evidence_excerpt": "Daniel prosperó durante los reinados de Darío y de Ciro, el persa.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "daniel_prosperity_reigns",
+    "option_category": "ruler",
+    "false_mutation": null,
+    "blank_span": "Ciro",
+    "significance": "Completa la continuidad política bajo la que prosperó Daniel.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-019",
+    "source_unit_id": "DAN6-V006",
+    "fact_id": "DAN6-V006-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "Los gobernadores y sátrapas se presentaron juntos ante Darío antes de proponerle el edicto.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La conspiración tomó forma mediante una comparecencia conjunta ante el rey.",
+    "why_distractors_fail": {
+      "Falso": "El relato sitúa esa reunión inmediatamente antes de la propuesta."
+    },
+    "source_ref": "Daniel 6:6",
+    "source_quote": "Entonces estos gobernadores y sátrapas se juntaron delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!",
+    "evidence_excerpt": "Entonces estos gobernadores y sátrapas se juntaron delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "conspirators_collective_audience",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-020",
+    "source_unit_id": "DAN6-V009",
+    "fact_id": "DAN6-V009-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Darío se negó a firmar la prohibición propuesta por los funcionarios.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Darío sí firmó el edicto y la prohibición.",
+    "why_distractors_fail": {
+      "Verdadero": "Sustituye la firma efectiva por una negativa inexistente."
+    },
+    "source_ref": "Daniel 6:9",
+    "source_quote": "Firmó, pues, el rey Darío el edicto y la prohibición.",
+    "evidence_excerpt": "Firmó, pues, el rey Darío el edicto y la prohibición.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "darius_edict_signature",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "decision"
+      ],
+      "local": true,
+      "original": "firmó el edicto y la prohibición",
+      "replacement": "se negó a firmar la prohibición"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-021",
+    "source_unit_id": "DAN6-V011",
+    "fact_id": "DAN6-V011-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Los conspiradores encontraron a Daniel orando y rogando delante de su Dios.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La vigilancia confirmó precisamente la conducta religiosa que buscaban usar contra él.",
+    "why_distractors_fail": {
+      "Falso": "Daniel fue sorprendido en oración y ruego ante Dios."
+    },
+    "source_ref": "Daniel 6:11",
+    "source_quote": "Se juntaron entonces aquellos hombres, y hallaron a Daniel orando y rogando en presencia de su Dios.",
+    "evidence_excerpt": "Se juntaron entonces aquellos hombres, y hallaron a Daniel orando y rogando en presencia de su Dios.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "daniel_caught_praying",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-022",
+    "source_unit_id": "DAN6-V016",
+    "fact_id": "DAN6-V016-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Al enviar a Daniel al foso, Darío expresó que el Dios servido continuamente por él podía librarlo.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El rey acompañó la sentencia con una esperanza explícita en la liberación divina.",
+    "why_distractors_fail": {
+      "Falso": "Darío mencionó tanto el servicio continuo de Daniel como la posible liberación de su Dios."
+    },
+    "source_ref": "Daniel 6:16",
+    "source_quote": "Entonces el rey ordenó que trajeran a Daniel, y lo echaron al foso de los leones. El rey dijo a Daniel: —El Dios tuyo, a quien tú continuamente sirves, él te libre.",
+    "evidence_excerpt": "Entonces el rey ordenó que trajeran a Daniel, y lo echaron al foso de los leones. El rey dijo a Daniel: —El Dios tuyo, a quien tú continuamente sirves, él te libre.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "king_rescue_hope",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-023",
+    "source_unit_id": "DAN6-V019",
+    "fact_id": "DAN6-V019-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "Darío esperó hasta el mediodía para ir apresuradamente al foso de los leones.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Se levantó muy de mañana y fue apresuradamente al foso.",
+    "why_distractors_fail": {
+      "Verdadero": "Cambia la hora de la visita; el rey acudió muy de mañana."
+    },
+    "source_ref": "Daniel 6:19",
+    "source_quote": "El rey se levantó muy de mañana, y fue apresuradamente al foso de los leones.",
+    "evidence_excerpt": "El rey se levantó muy de mañana, y fue apresuradamente al foso de los leones.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "king_hurries_to_den",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "time"
+      ],
+      "local": true,
+      "original": "muy de mañana",
+      "replacement": "al mediodía"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-024",
+    "source_unit_id": "DAN6-V023",
+    "fact_id": "DAN6-V023-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "No se halló lesión en Daniel porque había confiado en su Dios.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El relato vincula expresamente su integridad física con la confianza depositada en Dios.",
+    "why_distractors_fail": {
+      "Falso": "La ausencia de lesión y su causa aparecen unidas de manera directa."
+    },
+    "source_ref": "Daniel 6:23",
+    "source_quote": "Se alegró el rey en gran manera a causa de él, y mandó sacar a Daniel del foso. Sacaron, pues, del foso a Daniel, pero ninguna lesión se halló en él, porque había confiado en su Dios.",
+    "evidence_excerpt": "Se alegró el rey en gran manera a causa de él, y mandó sacar a Daniel del foso. Sacaron, pues, del foso a Daniel, pero ninguna lesión se halló en él, porque había confiado en su Dios.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "trust_no_injury",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-025",
+    "source_unit_id": "DAN6-V025",
+    "fact_id": "DAN6-V025-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "La proclamación de Darío se dirigió únicamente a los gobernadores de Media.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Darío escribió a todos los pueblos, naciones y lenguas que habitaban en toda la tierra.",
+    "why_distractors_fail": {
+      "Verdadero": "Reduce una audiencia universal a un solo grupo regional."
+    },
+    "source_ref": "Daniel 6:25",
+    "source_quote": "Entonces el rey Darío escribió a todos los pueblos, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.",
+    "evidence_excerpt": "Entonces el rey Darío escribió a todos los pueblos, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "darius_proclamation_audience",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "audience"
+      ],
+      "local": true,
+      "original": "todos los pueblos, naciones y lenguas de toda la tierra",
+      "replacement": "únicamente los gobernadores de Media"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-026",
+    "source_unit_id": "DAN6-V004",
+    "fact_id": "DAN6-V004-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "identification",
+    "question": "¿Quiénes buscaron una ocasión para acusar a Daniel en asuntos del reino?",
+    "options": [
+      "Los magos y los astrólogos encargados de interpretar los misterios",
+      "Los cautivos de Judá que acompañaban a Daniel dentro del reino",
+      "Los gobernadores y los sátrapas responsables de la administración",
+      "Los hijos y las mujeres de quienes presentaron después la acusación"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Los gobernadores y los sátrapas responsables de la administración",
+    "accepted_answers": [
+      "Los gobernadores y los sátrapas responsables de la administración"
+    ],
+    "explanation": "Los funcionarios que investigaron a Daniel fueron los gobernadores y los sátrapas.",
+    "why_distractors_fail": {
+      "Los magos y los astrólogos encargados de interpretar los misterios": "No intervienen en esta investigación.",
+      "Los cautivos de Judá que acompañaban a Daniel dentro del reino": "Daniel pertenecía a ese grupo, pero ellos no lo investigaron.",
+      "Los hijos y las mujeres de quienes presentaron después la acusación": "Aparecen después en el castigo, no en la búsqueda de cargos."
+    },
+    "source_ref": "Daniel 6:4",
+    "source_quote": "Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+    "evidence_excerpt": "Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "administrative_accusers_identity",
+    "option_category": "group",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-027",
+    "source_unit_id": "DAN6-V006",
+    "fact_id": "DAN6-V006-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Con qué saludo colectivo iniciaron los funcionarios su comparecencia ante Darío?",
+    "options": [
+      "¡Paz os sea multiplicada!",
+      "¡Daniel, vive para siempre!",
+      "¡Teman todos al Dios viviente!",
+      "¡Rey Darío, para siempre vive!"
+    ],
+    "correct_option": 3,
+    "correct_answer": "¡Rey Darío, para siempre vive!",
+    "accepted_answers": [
+      "¡Rey Darío, para siempre vive!"
+    ],
+    "explanation": "Los conspiradores comenzaron con la fórmula de lealtad dirigida al rey.",
+    "why_distractors_fail": {
+      "¡Paz os sea multiplicada!": "Ese saludo pertenece a la proclamación posterior de Darío.",
+      "¡Daniel, vive para siempre!": "La fórmula se dirigió al rey, no a Daniel.",
+      "¡Teman todos al Dios viviente!": "Resume una ordenanza posterior, no el saludo inicial."
+    },
+    "source_ref": "Daniel 6:6",
+    "source_quote": "Entonces estos gobernadores y sátrapas se juntaron delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!",
+    "evidence_excerpt": "Entonces estos gobernadores y sátrapas se juntaron delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "conspirators_royal_greeting",
+    "option_category": "quotation",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-028",
+    "source_unit_id": "DAN6-V007",
+    "fact_id": "DAN6-V007-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "identification",
+    "question": "¿Qué conjunto de cargos afirmaron los conspiradores que había acordado el edicto?",
+    "options": [
+      "Gobernadores, magistrados, sátrapas, príncipes y capitanes del reino",
+      "Sacerdotes, levitas, profetas, escribas y ancianos procedentes de Judá",
+      "Magos, astrólogos, caldeos, adivinos y músicos presentes en el palacio",
+      "Reyes, reinas, cautivos, comerciantes y soldados llegados desde Persia"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Gobernadores, magistrados, sátrapas, príncipes y capitanes del reino",
+    "accepted_answers": [
+      "Gobernadores, magistrados, sátrapas, príncipes y capitanes del reino"
+    ],
+    "explanation": "La propuesta fue presentada como consenso de cinco sectores administrativos.",
+    "why_distractors_fail": {
+      "Sacerdotes, levitas, profetas, escribas y ancianos procedentes de Judá": "Son cargos religiosos ajenos a la lista.",
+      "Magos, astrólogos, caldeos, adivinos y músicos presentes en el palacio": "No son los funcionarios citados en la propuesta.",
+      "Reyes, reinas, cautivos, comerciantes y soldados llegados desde Persia": "Mezcla grupos que no forman la enumeración."
+    },
+    "source_ref": "Daniel 6:7",
+    "source_quote": "Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "evidence_excerpt": "Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "claimed_official_consensus",
+    "option_category": "office_list",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-029",
+    "source_unit_id": "DAN6-V007",
+    "fact_id": "DAN6-V007-V11-F04",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué castigo debía recibir quien hiciera una petición prohibida?",
+    "options": [
+      "Ser privado de su cargo durante los treinta días de prohibición",
+      "Ser arrojado al foso donde permanecían encerrados los leones",
+      "Pagar ciento veinte piezas de plata al tesoro del reino",
+      "Ser desterrado de inmediato desde Babilonia hasta Jerusalén"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Ser arrojado al foso donde permanecían encerrados los leones",
+    "accepted_answers": [
+      "Ser arrojado al foso donde permanecían encerrados los leones"
+    ],
+    "explanation": "La sanción propuesta para infringir el edicto era el foso de los leones.",
+    "why_distractors_fail": {
+      "Ser privado de su cargo durante los treinta días de prohibición": "Los treinta días definían la vigencia, no la pena.",
+      "Pagar ciento veinte piezas de plata al tesoro del reino": "La cifra de ciento veinte corresponde a los sátrapas.",
+      "Ser desterrado de inmediato desde Babilonia hasta Jerusalén": "No se contempló destierro."
+    },
+    "source_ref": "Daniel 6:7",
+    "source_quote": "Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "evidence_excerpt": "Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "edict_violation_penalty",
+    "option_category": "penalty",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-030",
+    "source_unit_id": "DAN6-V008",
+    "fact_id": "DAN6-V008-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué dos acciones solicitaron a Darío para formalizar la prohibición?",
+    "options": [
+      "Leer públicamente el edicto y entregarlo después en manos de Daniel",
+      "Sellar de inmediato el foso y reunir alrededor a todos los príncipes",
+      "Confirmar formalmente el edicto y firmarlo delante de los funcionarios",
+      "Consultar primero a Ciro y proclamar luego el edicto en Jerusalén"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Confirmar formalmente el edicto y firmarlo delante de los funcionarios",
+    "accepted_answers": [
+      "Confirmar formalmente el edicto y firmarlo delante de los funcionarios"
+    ],
+    "explanation": "Los funcionarios pidieron confirmación y firma para sujetar el edicto a la ley medo-persa.",
+    "why_distractors_fail": {
+      "Leer públicamente el edicto y entregarlo después en manos de Daniel": "No fueron las acciones de formalización solicitadas.",
+      "Sellar de inmediato el foso y reunir alrededor a todos los príncipes": "El sellado ocurrió después de la condena.",
+      "Consultar primero a Ciro y proclamar luego el edicto en Jerusalén": "Ciro no participó en la aprobación."
+    },
+    "source_ref": "Daniel 6:8",
+    "source_quote": "Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+    "evidence_excerpt": "Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "edict_formalization_actions",
+    "option_category": "action_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-031",
+    "source_unit_id": "DAN6-V010",
+    "fact_id": "DAN6-V010-V11-F04",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Adónde fue Daniel cuando supo que la prohibición había sido firmada?",
+    "options": [
+      "Fue directamente al palacio para solicitar una audiencia con Darío",
+      "Huyó inmediatamente hacia Jerusalén para evitar la prohibición firmada",
+      "Se escondió junto al foso de los leones hasta concluir los treinta días",
+      "Entró directamente en su casa para mantener su práctica habitual"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Entró directamente en su casa para mantener su práctica habitual",
+    "accepted_answers": [
+      "Entró directamente en su casa para mantener su práctica habitual"
+    ],
+    "explanation": "Al conocer la firma, Daniel regresó a su casa y mantuvo allí su práctica de oración.",
+    "why_distractors_fail": {
+      "Fue directamente al palacio para solicitar una audiencia con Darío": "No buscó una audiencia inmediata con Darío.",
+      "Huyó inmediatamente hacia Jerusalén para evitar la prohibición firmada": "Sus ventanas miraban a Jerusalén, pero él no huyó.",
+      "Se escondió junto al foso de los leones hasta concluir los treinta días": "El foso aparece después de la acusación."
+    },
+    "source_ref": "Daniel 6:10",
+    "source_quote": "Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "evidence_excerpt": "Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "daniel_returns_home_after_edict",
+    "option_category": "destination",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-032",
+    "source_unit_id": "DAN6-V012",
+    "fact_id": "DAN6-V012-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué confirmó Darío cuando los funcionarios le recordaron la prohibición?",
+    "options": [
+      "Que el edicto era válido bajo la ley irrevocable de Media y Persia",
+      "Que nunca había firmado el edicto presentado por los funcionarios",
+      "Que Daniel estaba exento del edicto debido a su cargo de gobernador",
+      "Que los treinta días del edicto ya habían terminado esa misma tarde"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Que el edicto era válido bajo la ley irrevocable de Media y Persia",
+    "accepted_answers": [
+      "Que el edicto era válido bajo la ley irrevocable de Media y Persia"
+    ],
+    "explanation": "Darío reconoció la vigencia del edicto y su carácter no abrogable.",
+    "why_distractors_fail": {
+      "Que nunca había firmado el edicto presentado por los funcionarios": "Darío ya lo había firmado.",
+      "Que Daniel estaba exento del edicto debido a su cargo de gobernador": "No existía una excepción para Daniel.",
+      "Que los treinta días del edicto ya habían terminado esa misma tarde": "No se afirma que el plazo hubiera vencido."
+    },
+    "source_ref": "Daniel 6:12",
+    "source_quote": "Fueron luego ante el rey y le hablaron del edicto real: —¿No has confirmado un edicto ordenando que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones? Respondió el rey diciendo: —Verdad es, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+    "evidence_excerpt": "Fueron luego ante el rey y le hablaron del edicto real: —¿No has confirmado un edicto ordenando que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones? Respondió el rey diciendo: —Verdad es, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "king_confirms_edict_validity",
+    "option_category": "legal_response",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-033",
+    "source_unit_id": "DAN6-V013",
+    "fact_id": "DAN6-V013-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "identification",
+    "question": "¿Qué origen de Daniel destacaron sus acusadores al denunciarlo?",
+    "options": [
+      "Era descendiente de los reyes de Media",
+      "Era de los hijos de los cautivos de Judá",
+      "Había nacido entre los príncipes persas",
+      "Pertenecía a los magos de Babilonia"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Era de los hijos de los cautivos de Judá",
+    "accepted_answers": [
+      "Era de los hijos de los cautivos de Judá"
+    ],
+    "explanation": "La denuncia subrayó su condición de cautivo procedente de Judá.",
+    "why_distractors_fail": {
+      "Era descendiente de los reyes de Media": "No era su origen.",
+      "Había nacido entre los príncipes persas": "Daniel no pertenecía a la nobleza persa.",
+      "Pertenecía a los magos de Babilonia": "La acusación lo identificó por Judá, no por los magos."
+    },
+    "source_ref": "Daniel 6:13",
+    "source_quote": "Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.",
+    "evidence_excerpt": "Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "accusers_frame_judean_identity",
+    "option_category": "identity",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-034",
+    "source_unit_id": "DAN6-V013",
+    "fact_id": "DAN6-V013-V11-F04",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué doble desobediencia atribuyeron los acusadores a Daniel?",
+    "options": [
+      "No rendía cuentas al rey ni administraba correctamente a los sátrapas",
+      "No temía a los leones ni aceptaba la autoridad posterior de Ciro",
+      "No respetaba al rey ni obedecía el edicto que había sido confirmado",
+      "No abría las ventanas ni daba gracias cuando oraba delante de Dios"
+    ],
+    "correct_option": 2,
+    "correct_answer": "No respetaba al rey ni obedecía el edicto que había sido confirmado",
+    "accepted_answers": [
+      "No respetaba al rey ni obedecía el edicto que había sido confirmado"
+    ],
+    "explanation": "Los funcionarios presentaron la oración de Daniel como desprecio personal y desacato legal.",
+    "why_distractors_fail": {
+      "No rendía cuentas al rey ni administraba correctamente a los sátrapas": "No hallaron fallas administrativas.",
+      "No temía a los leones ni aceptaba la autoridad posterior de Ciro": "Ciro no intervino en la acusación.",
+      "No abría las ventanas ni daba gracias cuando oraba delante de Dios": "Daniel sí mantenía ambas prácticas."
+    },
+    "source_ref": "Daniel 6:13",
+    "source_quote": "Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.",
+    "evidence_excerpt": "Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "accusation_double_disobedience",
+    "option_category": "charge_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-035",
+    "source_unit_id": "DAN6-V015",
+    "fact_id": "DAN6-V015-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué hicieron los funcionarios cuando Darío intentaba librar a Daniel?",
+    "options": [
+      "Abandonaron el palacio y retiraron formalmente la acusación presentada",
+      "Fueron hasta el foso y prepararon la liberación inmediata de Daniel",
+      "Pidieron a Ciro que anulara el edicto confirmado previamente por Darío",
+      "Rodearon al rey y volvieron a invocar la ley que no podía revocarse"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Rodearon al rey y volvieron a invocar la ley que no podía revocarse",
+    "accepted_answers": [
+      "Rodearon al rey y volvieron a invocar la ley que no podía revocarse"
+    ],
+    "explanation": "Los conspiradores presionaron colectivamente al rey recordándole el límite legal.",
+    "why_distractors_fail": {
+      "Abandonaron el palacio y retiraron formalmente la acusación presentada": "Mantuvieron la presión para ejecutar la pena.",
+      "Fueron hasta el foso y prepararon la liberación inmediata de Daniel": "Buscaban su condena, no su rescate.",
+      "Pidieron a Ciro que anulara el edicto confirmado previamente por Darío": "Ciro no intervino."
+    },
+    "source_ref": "Daniel 6:15",
+    "source_quote": "Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de Media y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.",
+    "evidence_excerpt": "Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de Media y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "officials_pressure_king",
+    "option_category": "pressure_action",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-036",
+    "source_unit_id": "DAN6-V016",
+    "fact_id": "DAN6-V016-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué orden ejecutó el rey una vez agotado su intento de librar a Daniel?",
+    "options": [
+      "Ordenó traer a Daniel y arrojarlo dentro del foso de los leones",
+      "Ordenó destituir a Daniel y enviarlo inmediatamente de vuelta a Judá",
+      "Ordenó soltar a los leones para que recorrieran libremente el palacio",
+      "Ordenó encerrar a los sátrapas antes de celebrar un juicio público"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Ordenó traer a Daniel y arrojarlo dentro del foso de los leones",
+    "accepted_answers": [
+      "Ordenó traer a Daniel y arrojarlo dentro del foso de los leones"
+    ],
+    "explanation": "Darío finalmente ordenó que Daniel fuera llevado y arrojado al foso.",
+    "why_distractors_fail": {
+      "Ordenó destituir a Daniel y enviarlo inmediatamente de vuelta a Judá": "La pena no fue destierro.",
+      "Ordenó soltar a los leones para que recorrieran libremente el palacio": "Daniel fue llevado al foso.",
+      "Ordenó encerrar a los sátrapas antes de celebrar un juicio público": "Los acusadores fueron castigados después del rescate."
+    },
+    "source_ref": "Daniel 6:16",
+    "source_quote": "Entonces el rey ordenó que trajeran a Daniel, y lo echaron al foso de los leones. El rey dijo a Daniel: —El Dios tuyo, a quien tú continuamente sirves, él te libre.",
+    "evidence_excerpt": "Entonces el rey ordenó que trajeran a Daniel, y lo echaron al foso de los leones. El rey dijo a Daniel: —El Dios tuyo, a quien tú continuamente sirves, él te libre.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "daniel_sent_to_den",
+    "option_category": "sentence_action",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-037",
+    "source_unit_id": "DAN6-V018",
+    "fact_id": "DAN6-V018-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué hizo Darío con la comida durante la noche de Daniel en el foso?",
+    "options": [
+      "Celebró un banquete",
+      "Se acostó en ayunas",
+      "Envió alimento al foso",
+      "Comió con los acusadores"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Se acostó en ayunas",
+    "accepted_answers": [
+      "Se acostó en ayunas"
+    ],
+    "explanation": "Darío pasó la noche sin comer como expresión de angustia.",
+    "why_distractors_fail": {
+      "Celebró un banquete": "La noche fue de aflicción, no de fiesta.",
+      "Envió alimento al foso": "No se registra esa acción.",
+      "Comió con los acusadores": "El texto afirma que ayunó."
+    },
+    "source_ref": "Daniel 6:18",
+    "source_quote": "Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "evidence_excerpt": "Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "king_night_fast",
+    "option_category": "night_condition",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-038",
+    "source_unit_id": "DAN6-V018",
+    "fact_id": "DAN6-V018-V11-F04",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué entretenimiento habitual fue excluido de la noche de Darío?",
+    "options": [
+      "Los relatos de los sabios",
+      "Los juegos de los príncipes",
+      "Los instrumentos musicales",
+      "Las danzas de los sátrapas"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Los instrumentos musicales",
+    "accepted_answers": [
+      "Los instrumentos musicales"
+    ],
+    "explanation": "No llevaron instrumentos musicales ante el rey aquella noche.",
+    "why_distractors_fail": {
+      "Los relatos de los sabios": "El texto no menciona narraciones.",
+      "Los juegos de los príncipes": "No aparecen juegos.",
+      "Las danzas de los sátrapas": "No se registra tal entretenimiento."
+    },
+    "source_ref": "Daniel 6:18",
+    "source_quote": "Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "evidence_excerpt": "Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "king_refuses_music",
+    "option_category": "entertainment",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-039",
+    "source_unit_id": "DAN6-V019",
+    "fact_id": "DAN6-V019-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Con qué urgencia fue Darío al foso al comenzar el día?",
+    "options": [
+      "Caminó lentamente y con ceremonia desde el palacio hasta el foso",
+      "Esperó reunir a los sátrapas antes de salir del palacio hacia el foso",
+      "Envió primero un mensajero desde el palacio para revisar el foso",
+      "Acudió personalmente y con gran prisa desde el palacio hasta el foso"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Acudió personalmente y con gran prisa desde el palacio hasta el foso",
+    "accepted_answers": [
+      "Acudió personalmente y con gran prisa desde el palacio hasta el foso"
+    ],
+    "explanation": "Darío acudió con premura al foso muy de mañana.",
+    "why_distractors_fail": {
+      "Caminó lentamente y con ceremonia desde el palacio hasta el foso": "El relato destaca su rapidez.",
+      "Esperó reunir a los sátrapas antes de salir del palacio hacia el foso": "No demoró la visita por una reunión.",
+      "Envió primero un mensajero desde el palacio para revisar el foso": "Fue personalmente."
+    },
+    "source_ref": "Daniel 6:19",
+    "source_quote": "El rey se levantó muy de mañana, y fue apresuradamente al foso de los leones.",
+    "evidence_excerpt": "El rey se levantó muy de mañana, y fue apresuradamente al foso de los leones.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "king_hurries_to_den",
+    "option_category": "manner",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-040",
+    "source_unit_id": "DAN6-V020",
+    "fact_id": "DAN6-V020-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Cómo manifestó Darío su angustia al llamar a Daniel junto al foso?",
+    "options": [
+      "Gritó con voz triste",
+      "Susurró con voz alegre",
+      "Cantó acompañado de músicos",
+      "Guardó silencio y escribió"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Gritó con voz triste",
+    "accepted_answers": [
+      "Gritó con voz triste"
+    ],
+    "explanation": "La intensidad y tristeza de su voz revelaron su preocupación.",
+    "why_distractors_fail": {
+      "Susurró con voz alegre": "Cambia volumen y emoción.",
+      "Cantó acompañado de músicos": "La escena no incluye canto ni música.",
+      "Guardó silencio y escribió": "Darío habló directamente a Daniel."
+    },
+    "source_ref": "Daniel 6:20",
+    "source_quote": "Acercándose al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?",
+    "evidence_excerpt": "Acercándose al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "king_sad_loud_call",
+    "option_category": "speech_manner",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-041",
+    "source_unit_id": "DAN6-V021",
+    "fact_id": "DAN6-V021-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "identification",
+    "question": "¿Cuál fue la primera respuesta audible de Daniel desde el foso?",
+    "options": [
+      "Anunció al rey que el edicto ya había terminado",
+      "Saludó al rey deseándole que viviera para siempre",
+      "Proclamó ante el rey la llegada de Ciro el persa",
+      "Pidió al rey y los príncipes que temieran a los leones"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Saludó al rey deseándole que viviera para siempre",
+    "accepted_answers": [
+      "Saludó al rey deseándole que viviera para siempre"
+    ],
+    "explanation": "Daniel respondió con el saludo real antes de explicar su liberación.",
+    "why_distractors_fail": {
+      "Anunció al rey que el edicto ya había terminado": "El ángel cerró sus bocas; no se dice que los destruyera.",
+      "Proclamó ante el rey la llegada de Ciro el persa": "Daniel no pidió revocación.",
+      "Pidió al rey y los príncipes que temieran a los leones": "No inició con una denuncia de sus adversarios."
+    },
+    "source_ref": "Daniel 6:21",
+    "source_quote": "Entonces Daniel respondió al rey: —¡Rey, vive para siempre!",
+    "evidence_excerpt": "Entonces Daniel respondió al rey: —¡Rey, vive para siempre!",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "daniel_first_reply_from_den",
+    "option_category": "quotation",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-042",
+    "source_unit_id": "DAN6-V023",
+    "fact_id": "DAN6-V023-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Cómo reaccionó Darío al oír la explicación de Daniel?",
+    "options": [
+      "Se enojó profundamente y ordenó dejar a Daniel otra noche en el foso",
+      "Se retiró en silencio y evitó comprobar el estado físico de Daniel",
+      "Se alegró profundamente y ordenó que sacaran a Daniel del foso",
+      "Convocó a los sabios y les pidió interpretar las palabras de Daniel"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Se alegró profundamente y ordenó que sacaran a Daniel del foso",
+    "accepted_answers": [
+      "Se alegró profundamente y ordenó que sacaran a Daniel del foso"
+    ],
+    "explanation": "La alegría del rey produjo la orden inmediata de extracción.",
+    "why_distractors_fail": {
+      "Se enojó profundamente y ordenó dejar a Daniel otra noche en el foso": "La reacción fue alegría y liberación.",
+      "Se retiró en silencio y evitó comprobar el estado físico de Daniel": "Ordenó sacar a Daniel.",
+      "Convocó a los sabios y les pidió interpretar las palabras de Daniel": "Daniel habló con claridad y no se requirieron intérpretes."
+    },
+    "source_ref": "Daniel 6:23",
+    "source_quote": "Se alegró el rey en gran manera a causa de él, y mandó sacar a Daniel del foso. Sacaron, pues, del foso a Daniel, pero ninguna lesión se halló en él, porque había confiado en su Dios.",
+    "evidence_excerpt": "Se alegró el rey en gran manera a causa de él, y mandó sacar a Daniel del foso. Sacaron, pues, del foso a Daniel, pero ninguna lesión se halló en él, porque había confiado en su Dios.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "king_joy_orders_extraction",
+    "option_category": "reaction_consequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-043",
+    "source_unit_id": "DAN6-V024",
+    "fact_id": "DAN6-V024-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "identification",
+    "question": "¿A quiénes alcanzó la orden de echar al foso junto con los acusadores de Daniel?",
+    "options": [
+      "A todos los cautivos de Judá",
+      "A los tres gobernadores",
+      "A los músicos del palacio",
+      "A sus hijos y sus mujeres"
+    ],
+    "correct_option": 3,
+    "correct_answer": "A sus hijos y sus mujeres",
+    "accepted_answers": [
+      "A sus hijos y sus mujeres"
+    ],
+    "explanation": "La sentencia incluyó a los acusadores, sus hijos y sus mujeres.",
+    "why_distractors_fail": {
+      "A todos los cautivos de Judá": "No hubo condena colectiva contra Judá.",
+      "A los tres gobernadores": "Daniel era uno de ellos y había sido liberado.",
+      "A los músicos del palacio": "No participaron en la acusación."
+    },
+    "source_ref": "Daniel 6:24",
+    "source_quote": "Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.",
+    "evidence_excerpt": "Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "accusers_families_punished",
+    "option_category": "affected_group",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-044",
+    "source_unit_id": "DAN6-V024",
+    "fact_id": "DAN6-V024-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué ocurrió antes de que los condenados llegaran al fondo del foso?",
+    "options": [
+      "Los leones los dominaron y quebraron sus huesos antes de tocar el fondo",
+      "Darío revocó la sentencia y ordenó sacarlos antes de tocar el fondo",
+      "Daniel cerró las bocas de los leones antes de que tocaran el fondo",
+      "Una piedra bloqueó su caída y los sostuvo antes de tocar el fondo"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Los leones los dominaron y quebraron sus huesos antes de tocar el fondo",
+    "accepted_answers": [
+      "Los leones los dominaron y quebraron sus huesos antes de tocar el fondo"
+    ],
+    "explanation": "La fuerza de los leones se manifestó antes de que las víctimas tocaran el fondo.",
+    "why_distractors_fail": {
+      "Darío revocó la sentencia y ordenó sacarlos antes de tocar el fondo": "No se narra un segundo sellado.",
+      "Daniel cerró las bocas de los leones antes de que tocaran el fondo": "No aparece tal petición.",
+      "Una piedra bloqueó su caída y los sostuvo antes de tocar el fondo": "La ley no podía ser abrogada."
+    },
+    "source_ref": "Daniel 6:24",
+    "source_quote": "Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.",
+    "evidence_excerpt": "Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "lions_attack_before_bottom",
+    "option_category": "event_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-045",
+    "source_unit_id": "DAN6-V025",
+    "fact_id": "DAN6-V025-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué saludo abrió la comunicación de Darío a su audiencia internacional?",
+    "options": [
+      "Rey, vive para siempre",
+      "Paz os sea multiplicada",
+      "Que el edicto permanezca",
+      "Gloria a los medos y persas"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Paz os sea multiplicada",
+    "accepted_answers": [
+      "Paz os sea multiplicada"
+    ],
+    "explanation": "Darío inició su carta deseando paz multiplicada.",
+    "why_distractors_fail": {
+      "Rey, vive para siempre": "Era un saludo dirigido al monarca, no emitido por él.",
+      "Que el edicto permanezca": "No es la apertura de la comunicación.",
+      "Gloria a los medos y persas": "La proclamación exaltó al Dios de Daniel."
+    },
+    "source_ref": "Daniel 6:25",
+    "source_quote": "Entonces el rey Darío escribió a todos los pueblos, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.",
+    "evidence_excerpt": "Entonces el rey Darío escribió a todos los pueblos, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "darius_letter_greeting",
+    "option_category": "greeting",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-046",
+    "source_unit_id": "DAN6-V026",
+    "fact_id": "DAN6-V026-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué conducta exigió Darío en todo el dominio de su reino?",
+    "options": [
+      "Pedir únicamente a Darío durante otros treinta días completos",
+      "Ofrecer sacrificios a los dioses de Media en todas las provincias",
+      "Temer y temblar ante el Dios de Daniel en todo el dominio real",
+      "Servir a Daniel como nuevo monarca de los medos y los persas"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Temer y temblar ante el Dios de Daniel en todo el dominio real",
+    "accepted_answers": [
+      "Temer y temblar ante el Dios de Daniel en todo el dominio real"
+    ],
+    "explanation": "La nueva ordenanza mandó reverencia universal al Dios de Daniel.",
+    "why_distractors_fail": {
+      "Pedir únicamente a Darío durante otros treinta días completos": "Eso repite la prohibición que causó la crisis.",
+      "Ofrecer sacrificios a los dioses de Media en todas las provincias": "Darío dirigió la reverencia al Dios de Daniel.",
+      "Servir a Daniel como nuevo monarca de los medos y los persas": "Daniel no fue proclamado rey."
+    },
+    "source_ref": "Daniel 6:26",
+    "source_quote": "De parte mía es promulgada esta ordenanza: “Que en todo el dominio de mi reino, todos teman y tiemblen ante la presencia del Dios de Daniel. »”Porque él es el Dios viviente y permanece por todos los siglos, su reino no será jamás destruido y su dominio perdurará hasta el fin.",
+    "evidence_excerpt": "De parte mía es promulgada esta ordenanza: “Que en todo el dominio de mi reino, todos teman y tiemblen ante la presencia del Dios de Daniel. »”Porque él es el Dios viviente y permanece por todos los siglos, su reino no será jamás destruido y su dominio perdurará hasta el fin.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "realm_fears_daniels_god",
+    "option_category": "command",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-047",
+    "source_unit_id": "DAN6-V027",
+    "fact_id": "DAN6-V027-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿En qué ámbitos afirmó Darío que Dios hace señales y maravillas?",
+    "options": [
+      "Solo dentro del foso",
+      "Únicamente en Media y Persia",
+      "En los palacios y los templos",
+      "En el cielo y en la tierra"
+    ],
+    "correct_option": 3,
+    "correct_answer": "En el cielo y en la tierra",
+    "accepted_answers": [
+      "En el cielo y en la tierra"
+    ],
+    "explanation": "La alabanza extiende las obras divinas a cielo y tierra.",
+    "why_distractors_fail": {
+      "Solo dentro del foso": "El alcance declarado es universal.",
+      "Únicamente en Media y Persia": "No se limita a esos territorios.",
+      "En los palacios y los templos": "No es el par de ámbitos citado."
+    },
+    "source_ref": "Daniel 6:27",
+    "source_quote": "Él salva y libra, y hace señales y maravillas en el cielo y en la tierra; él ha librado a Daniel del poder de los leones.”",
+    "evidence_excerpt": "Él salva y libra, y hace señales y maravillas en el cielo y en la tierra; él ha librado a Daniel del poder de los leones.”",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "signs_heaven_earth",
+    "option_category": "domain_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-048",
+    "source_unit_id": "DAN6-V027",
+    "fact_id": "DAN6-V027-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿De qué poder concreto declaró Darío que Dios había librado a Daniel?",
+    "options": [
+      "Del poder de los leones",
+      "Del poder de los sátrapas",
+      "Del poder de Ciro",
+      "Del poder de los magos"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Del poder de los leones",
+    "accepted_answers": [
+      "Del poder de los leones"
+    ],
+    "explanation": "Darío cerró su proclamación aplicando la capacidad salvadora de Dios al rescate del foso.",
+    "why_distractors_fail": {
+      "Del poder de los sátrapas": "Ellos prepararon la trampa, pero la frase menciona a los leones.",
+      "Del poder de Ciro": "Ciro no fue adversario de Daniel aquí.",
+      "Del poder de los magos": "Los magos no intervienen en este episodio."
+    },
+    "source_ref": "Daniel 6:27",
+    "source_quote": "Él salva y libra, y hace señales y maravillas en el cielo y en la tierra; él ha librado a Daniel del poder de los leones.”",
+    "evidence_excerpt": "Él salva y libra, y hace señales y maravillas en el cielo y en la tierra; él ha librado a Daniel del poder de los leones.”",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "daniel_delivered_lions_power",
+    "option_category": "threat",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-049",
+    "source_unit_id": "DAN6-V007",
+    "fact_id": "DAN6-V007-V11-F07",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Los funcionarios afirmaron que habían alcanzado su acuerdo por ____.",
+    "options": [
+      "consejo",
+      "decreto",
+      "temor",
+      "sorteo"
+    ],
+    "correct_option": 0,
+    "correct_answer": "consejo",
+    "accepted_answers": [
+      "consejo",
+      "por consejo"
+    ],
+    "explanation": "Los funcionarios presentaron su acuerdo como resultado de un consejo.",
+    "why_distractors_fail": {
+      "decreto": "El decreto sería el resultado solicitado, no el medio del acuerdo.",
+      "temor": "No atribuyeron el acuerdo al miedo.",
+      "sorteo": "Tampoco dijeron haber decidido por sorteo."
+    },
+    "source_ref": "Daniel 6:7",
+    "source_quote": "Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "evidence_excerpt": "Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "officials_agree_by_counsel",
+    "option_category": "decision_method",
+    "false_mutation": null,
+    "blank_span": "consejo",
+    "significance": "Precisa el medio alegado para alcanzar el acuerdo de los funcionarios.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-050",
+    "source_unit_id": "DAN6-V002",
+    "fact_id": "DAN6-V002-V11-F04",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Los sátrapas debían dar ____ a los gobernadores.",
+    "options": [
+      "ofrendas",
+      "cuenta",
+      "culto",
+      "refugio"
+    ],
+    "correct_option": 1,
+    "correct_answer": "cuenta",
+    "accepted_answers": [
+      "cuenta",
+      "dar cuenta"
+    ],
+    "explanation": "La estructura exigía rendición de cuentas ante los tres gobernadores.",
+    "why_distractors_fail": {
+      "ofrendas": "No era una relación religiosa.",
+      "culto": "Los gobernadores no eran destinatarios de adoración.",
+      "refugio": "No describe la responsabilidad administrativa."
+    },
+    "source_ref": "Daniel 6:2",
+    "source_quote": "Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.",
+    "evidence_excerpt": "Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "satraps_report_to_governors",
+    "option_category": "administrative_duty",
+    "false_mutation": null,
+    "blank_span": "cuenta",
+    "significance": "Fija la obligación concreta dentro de la jerarquía real.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-051",
+    "source_unit_id": "DAN6-V003",
+    "fact_id": "DAN6-V003-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "comparison",
+    "question": "Daniel era ____ a los sátrapas y a los demás gobernadores.",
+    "options": [
+      "inferior",
+      "desconocido",
+      "superior",
+      "subordinado"
+    ],
+    "correct_option": 2,
+    "correct_answer": "superior",
+    "accepted_answers": [
+      "superior"
+    ],
+    "explanation": "Daniel sobresalía sobre ambos grupos administrativos.",
+    "why_distractors_fail": {
+      "inferior": "Invierte la comparación.",
+      "desconocido": "Su excelencia era conocida por el rey.",
+      "subordinado": "No expresa la superioridad declarada."
+    },
+    "source_ref": "Daniel 6:3",
+    "source_quote": "Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en ponerlo sobre todo el reino.",
+    "evidence_excerpt": "Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en ponerlo sobre todo el reino.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "daniel_superior_officials",
+    "option_category": "comparison",
+    "false_mutation": null,
+    "blank_span": "superior",
+    "significance": "Precisa la posición comparativa que motivó su posible ascenso.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-052",
+    "source_unit_id": "DAN6-V004",
+    "fact_id": "DAN6-V004-V11-F04",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "principle",
+    "question": "Los adversarios no hallaron falta porque Daniel era ____.",
+    "options": [
+      "poderoso",
+      "anciano",
+      "persa",
+      "fiel"
+    ],
+    "correct_option": 3,
+    "correct_answer": "fiel",
+    "accepted_answers": [
+      "fiel"
+    ],
+    "explanation": "La fidelidad de Daniel explica la ausencia de error administrativo.",
+    "why_distractors_fail": {
+      "poderoso": "El poder no es la razón ofrecida.",
+      "anciano": "La edad no explica el resultado.",
+      "persa": "Daniel era cautivo de Judá."
+    },
+    "source_ref": "Daniel 6:4",
+    "source_quote": "Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+    "evidence_excerpt": "Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "daniel_faithfulness",
+    "option_category": "character_trait",
+    "false_mutation": null,
+    "blank_span": "fiel",
+    "significance": "Identifica la cualidad moral que sostuvo su integridad pública.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-053",
+    "source_unit_id": "DAN6-V007",
+    "fact_id": "DAN6-V007-V11-F05",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "La prohibición propuesta a Darío se aplicaba a peticiones dirigidas a cualquier dios u ____ fuera del rey.",
+    "options": [
+      "hombre",
+      "ángel",
+      "animal",
+      "sátrapa"
+    ],
+    "correct_option": 0,
+    "correct_answer": "hombre",
+    "accepted_answers": [
+      "hombre",
+      "cualquier hombre"
+    ],
+    "explanation": "El edicto excluía toda petición dirigida a un dios o a un ser humano distinto de Darío.",
+    "why_distractors_fail": {
+      "ángel": "No es el segundo destinatario citado.",
+      "animal": "No se regulaban peticiones a animales.",
+      "sátrapa": "Es un caso particular, no el término general usado."
+    },
+    "source_ref": "Daniel 6:7",
+    "source_quote": "Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "evidence_excerpt": "Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "edict_human_petition_scope",
+    "option_category": "recipient_class",
+    "false_mutation": null,
+    "blank_span": "hombre",
+    "significance": "Completa la segunda clase de destinatarios prohibidos.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-054",
+    "source_unit_id": "DAN6-V010",
+    "fact_id": "DAN6-V010-V11-F05",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Además de orar, Daniel daba ____ delante de su Dios.",
+    "options": [
+      "órdenes",
+      "gracias",
+      "tributos",
+      "explicaciones"
+    ],
+    "correct_option": 1,
+    "correct_answer": "gracias",
+    "accepted_answers": [
+      "gracias",
+      "daba gracias"
+    ],
+    "explanation": "Su práctica incluía gratitud, no solamente petición.",
+    "why_distractors_fail": {
+      "órdenes": "Daniel no daba órdenes a Dios.",
+      "tributos": "No era una gestión fiscal.",
+      "explicaciones": "El texto identifica acción de gracias."
+    },
+    "source_ref": "Daniel 6:10",
+    "source_quote": "Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "evidence_excerpt": "Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "daniel_gives_thanks",
+    "option_category": "prayer_action",
+    "false_mutation": null,
+    "blank_span": "gracias",
+    "significance": "Precisa el componente agradecido de la oración bajo amenaza.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-055",
+    "source_unit_id": "DAN6-V013",
+    "fact_id": "DAN6-V013-V11-F05",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Daniel hacía su petición ____ veces al día.",
+    "options": [
+      "dos",
+      "siete",
+      "tres",
+      "doce"
+    ],
+    "correct_option": 2,
+    "correct_answer": "tres",
+    "accepted_answers": [
+      "tres",
+      "3",
+      "tres veces"
+    ],
+    "explanation": "La denuncia especificó tres momentos diarios de petición.",
+    "why_distractors_fail": {
+      "dos": "Reduce la frecuencia.",
+      "siete": "No es la cifra declarada.",
+      "doce": "Tampoco corresponde."
+    },
+    "source_ref": "Daniel 6:13",
+    "source_quote": "Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.",
+    "evidence_excerpt": "Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "accused_prayer_frequency",
+    "option_category": "frequency",
+    "false_mutation": null,
+    "blank_span": "tres",
+    "significance": "Fija la frecuencia concreta presentada como violación del edicto.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-056",
+    "source_unit_id": "DAN6-V017",
+    "fact_id": "DAN6-V017-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "La piedra fue colocada sobre la ____ del foso.",
+    "options": [
+      "base",
+      "pared",
+      "escalera",
+      "puerta"
+    ],
+    "correct_option": 3,
+    "correct_answer": "puerta",
+    "accepted_answers": [
+      "puerta",
+      "la puerta"
+    ],
+    "explanation": "La piedra cerró el acceso al foso.",
+    "why_distractors_fail": {
+      "base": "No fue puesta debajo del foso.",
+      "pared": "No es el punto de cierre mencionado.",
+      "escalera": "No se registra una escalera."
+    },
+    "source_ref": "Daniel 6:17",
+    "source_quote": "Trajeron una piedra y la pusieron sobre la puerta del foso, la cual selló el rey con su anillo y con el anillo de sus príncipes, para que el acuerdo acerca de Daniel no se cambiara.",
+    "evidence_excerpt": "Trajeron una piedra y la pusieron sobre la puerta del foso, la cual selló el rey con su anillo y con el anillo de sus príncipes, para que el acuerdo acerca de Daniel no se cambiara.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "stone_over_den_door",
+    "option_category": "location",
+    "false_mutation": null,
+    "blank_span": "puerta",
+    "significance": "Precisa el punto físico sellado para impedir cambios.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-057",
+    "source_unit_id": "DAN6-V018",
+    "fact_id": "DAN6-V018-V11-F05",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Tras dejar el foso, Darío regresó a su ____.",
+    "options": [
+      "palacio",
+      "campamento",
+      "provincia",
+      "templo"
+    ],
+    "correct_option": 0,
+    "correct_answer": "palacio",
+    "accepted_answers": [
+      "palacio",
+      "su palacio"
+    ],
+    "explanation": "El rey pasó la noche de angustia en su palacio.",
+    "why_distractors_fail": {
+      "campamento": "No se encontraba en campaña.",
+      "provincia": "No se nombra una provincia concreta.",
+      "templo": "No acudió a un santuario."
+    },
+    "source_ref": "Daniel 6:18",
+    "source_quote": "Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "evidence_excerpt": "Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "king_returns_palace",
+    "option_category": "place",
+    "false_mutation": null,
+    "blank_span": "palacio",
+    "significance": "Fija el lugar de la vigilia posterior al sellado del foso.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-058",
+    "source_unit_id": "DAN6-V012",
+    "fact_id": "DAN6-V012-V11-F05",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "Cuando le preguntaron si había confirmado el edicto, Darío respondió: «____ es».",
+    "options": [
+      "Falso",
+      "Verdad",
+      "Dudoso",
+      "Posible"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Verdad",
+    "accepted_answers": [
+      "Verdad",
+      "Verdad es"
+    ],
+    "explanation": "Darío ratificó verbalmente la existencia del edicto con la expresión «Verdad es».",
+    "why_distractors_fail": {
+      "Falso": "Darío no negó el edicto que había firmado.",
+      "Dudoso": "No expresó incertidumbre acerca de su decisión.",
+      "Posible": "Tampoco dio una respuesta condicional."
+    },
+    "source_ref": "Daniel 6:12",
+    "source_quote": "Fueron luego ante el rey y le hablaron del edicto real: —¿No has confirmado un edicto ordenando que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones? Respondió el rey diciendo: —Verdad es, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+    "evidence_excerpt": "Fueron luego ante el rey y le hablaron del edicto real: —¿No has confirmado un edicto ordenando que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones? Respondió el rey diciendo: —Verdad es, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "darius_truth_is_reply",
+    "option_category": "reply_word",
+    "false_mutation": null,
+    "blank_span": "Verdad",
+    "significance": "Precisa la respuesta verbal con que Darío reconoció el edicto.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-059",
+    "source_unit_id": "DAN6-V022",
+    "fact_id": "DAN6-V022-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "El ángel cerró la ____ de los leones para impedir el daño.",
+    "options": [
+      "puerta",
+      "mirada",
+      "boca",
+      "cueva"
+    ],
+    "correct_option": 2,
+    "correct_answer": "boca",
+    "accepted_answers": [
+      "boca",
+      "la boca"
+    ],
+    "explanation": "La protección angélica neutralizó directamente la mordida de los leones.",
+    "why_distractors_fail": {
+      "puerta": "La puerta fue cubierta con una piedra por personas.",
+      "mirada": "No se alteró la visión de los animales.",
+      "cueva": "El foso no fue cerrado por el ángel."
+    },
+    "source_ref": "Daniel 6:22",
+    "source_quote": "Mi Dios envió su ángel, el cual cerró la boca de los leones para que no me hicieran daño, porque ante él fui hallado inocente; y aun delante de ti, oh rey, yo no he hecho nada malo.",
+    "evidence_excerpt": "Mi Dios envió su ángel, el cual cerró la boca de los leones para que no me hicieran daño, porque ante él fui hallado inocente; y aun delante de ti, oh rey, yo no he hecho nada malo.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "angel_closes_lions_mouths",
+    "option_category": "body_part",
+    "false_mutation": null,
+    "blank_span": "boca",
+    "significance": "Precisa la acción protectora del ángel enviado por Dios.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-060",
+    "source_unit_id": "DAN6-V024",
+    "fact_id": "DAN6-V024-V11-F04",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Los leones quebraron todos los ____ de los acusadores y sus familias.",
+    "options": [
+      "sellos",
+      "anillos",
+      "edictos",
+      "huesos"
+    ],
+    "correct_option": 3,
+    "correct_answer": "huesos",
+    "accepted_answers": [
+      "huesos",
+      "todos sus huesos"
+    ],
+    "explanation": "La violencia de los leones produjo la fractura total descrita.",
+    "why_distractors_fail": {
+      "sellos": "Los sellos aseguraban la piedra.",
+      "anillos": "Los anillos pertenecían al rey y sus príncipes.",
+      "edictos": "Una ley no es una parte corporal."
+    },
+    "source_ref": "Daniel 6:24",
+    "source_quote": "Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.",
+    "evidence_excerpt": "Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "lions_break_bones",
+    "option_category": "body_part",
+    "false_mutation": null,
+    "blank_span": "huesos",
+    "significance": "Completa el resultado físico que confirmó la fuerza de los leones.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-061",
+    "source_unit_id": "DAN6-V027",
+    "fact_id": "DAN6-V027-V11-F04",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "principle",
+    "question": "Darío declaró que Dios salva y ____.",
+    "options": [
+      "libra",
+      "condena",
+      "esconde",
+      "divide"
+    ],
+    "correct_option": 0,
+    "correct_answer": "libra",
+    "accepted_answers": [
+      "libra",
+      "salva y libra"
+    ],
+    "explanation": "La proclamación une las acciones divinas de salvar y librar.",
+    "why_distractors_fail": {
+      "condena": "No completa el par de acciones proclamado.",
+      "esconde": "No es el verbo utilizado.",
+      "divide": "Tampoco corresponde."
+    },
+    "source_ref": "Daniel 6:27",
+    "source_quote": "Él salva y libra, y hace señales y maravillas en el cielo y en la tierra; él ha librado a Daniel del poder de los leones.”",
+    "evidence_excerpt": "Él salva y libra, y hace señales y maravillas en el cielo y en la tierra; él ha librado a Daniel del poder de los leones.”",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "god_saves_delivers",
+    "option_category": "divine_action",
+    "false_mutation": null,
+    "blank_span": "libra",
+    "significance": "Completa la declaración general de la capacidad rescatadora de Dios.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-062",
+    "source_unit_id": "DAN6-V012",
+    "fact_id": "DAN6-V012-V11-F04",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Los funcionarios recordaron primero el contenido del edicto antes de presentar la acusación concreta contra Daniel.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Antes de nombrar a Daniel, los conspiradores hicieron que Darío ratificara verbalmente la prohibición.",
+    "why_distractors_fail": {
+      "Falso": "La secuencia muestra el recordatorio y la ratificación antes de nombrar a Daniel."
+    },
+    "source_ref": "Daniel 6:12",
+    "source_quote": "Fueron luego ante el rey y le hablaron del edicto real: —¿No has confirmado un edicto ordenando que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones? Respondió el rey diciendo: —Verdad es, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+    "evidence_excerpt": "Fueron luego ante el rey y le hablaron del edicto real: —¿No has confirmado un edicto ordenando que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones? Respondió el rey diciendo: —Verdad es, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "edict_recalled_before_specific_charge",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-063",
+    "source_unit_id": "DAN6-V007",
+    "fact_id": "DAN6-V007-V11-F06",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "La prohibición de pedir a otro dios u hombre fuera de Darío duraría siete días.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La duración propuesta fue de treinta días.",
+    "why_distractors_fail": {
+      "Verdadero": "Sustituye treinta días por siete."
+    },
+    "source_ref": "Daniel 6:7",
+    "source_quote": "Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "evidence_excerpt": "Todos los gobernadores del reino, magistrados, sátrapas, príncipes y capitanes han acordado por consejo que promulgues un edicto real, y lo confirmes, ordenando que cualquiera que en el espacio de treinta días demande petición de cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "edict_duration_mutation",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "duration"
+      ],
+      "local": true,
+      "original": "treinta días",
+      "replacement": "siete días"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-064",
+    "source_unit_id": "DAN6-V010",
+    "fact_id": "DAN6-V010-V11-F06",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Las ventanas de la habitación de Daniel estaban cerradas cuando él oraba.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Las ventanas estaban abiertas y daban a Jerusalén.",
+    "why_distractors_fail": {
+      "Verdadero": "Cambia abiertas por cerradas, sin alterar la habitación ni la acción de Daniel."
+    },
+    "source_ref": "Daniel 6:10",
+    "source_quote": "Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "evidence_excerpt": "Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "prayer_windows_open_mutation",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "window_state"
+      ],
+      "local": true,
+      "original": "ventanas abiertas",
+      "replacement": "ventanas cerradas"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-065",
+    "source_unit_id": "DAN6-V020",
+    "fact_id": "DAN6-V020-V11-F06",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Darío preguntó directamente si el Dios de Daniel había podido librarlo de los leones.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La llamada del rey incluyó una pregunta explícita sobre la eficacia del rescate divino.",
+    "why_distractors_fail": {
+      "Falso": "Darío formuló directamente esa pregunta al llegar al foso."
+    },
+    "source_ref": "Daniel 6:20",
+    "source_quote": "Acercándose al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?",
+    "evidence_excerpt": "Acercándose al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "king_asks_about_completed_rescue",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-066",
+    "source_unit_id": "DAN6-V016",
+    "fact_id": "DAN6-V016-V11-F04",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Antes de echar a Daniel al foso, Darío dijo que Daniel servía a Dios ocasionalmente.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Darío afirmó que Daniel servía a Dios continuamente.",
+    "why_distractors_fail": {
+      "Verdadero": "Sustituye la continuidad del servicio por una frecuencia ocasional."
+    },
+    "source_ref": "Daniel 6:16",
+    "source_quote": "Entonces el rey ordenó que trajeran a Daniel, y lo echaron al foso de los leones. El rey dijo a Daniel: —El Dios tuyo, a quien tú continuamente sirves, él te libre.",
+    "evidence_excerpt": "Entonces el rey ordenó que trajeran a Daniel, y lo echaron al foso de los leones. El rey dijo a Daniel: —El Dios tuyo, a quien tú continuamente sirves, él te libre.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "continuous_service_mutation",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "service_frequency"
+      ],
+      "local": true,
+      "original": "continuamente sirves",
+      "replacement": "ocasionalmente sirves"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-067",
+    "source_unit_id": "DAN6-V024",
+    "fact_id": "DAN6-V024-V11-F05",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Después de sacar a Daniel, el rey ordenó que llevaran ante él a quienes lo habían acusado.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La liberación de Daniel fue seguida por una orden real dirigida contra sus acusadores.",
+    "why_distractors_fail": {
+      "Falso": "El rey emitió esa orden después de la extracción de Daniel."
+    },
+    "source_ref": "Daniel 6:24",
+    "source_quote": "Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.",
+    "evidence_excerpt": "Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "king_orders_accusers_brought",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-068",
+    "source_unit_id": "DAN6-V008",
+    "fact_id": "DAN6-V008-V11-F04",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "text_recall",
+    "question": "Los funcionarios introdujeron su petición de confirmar y firmar el edicto con la fórmula «Ahora, pues, oh rey».",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Antes de pedir la confirmación y la firma del edicto, los funcionarios se dirigieron a Darío con la fórmula «Ahora, pues, oh rey».",
+    "why_distractors_fail": {
+      "Falso": "Esa fórmula introduce directamente la petición dirigida a Darío."
+    },
+    "source_ref": "Daniel 6:8",
+    "source_quote": "Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+    "evidence_excerpt": "Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "edict_request_introductory_address",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-069",
+    "source_unit_id": "DAN6-V019",
+    "fact_id": "DAN6-V019-V11-F04",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Darío se levantó personalmente para acudir al foso de los leones.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El rey no delegó la visita: se levantó y fue al foso.",
+    "why_distractors_fail": {
+      "Falso": "El relato presenta al propio Darío levantándose y yendo al foso."
+    },
+    "source_ref": "Daniel 6:19",
+    "source_quote": "El rey se levantó muy de mañana, y fue apresuradamente al foso de los leones.",
+    "evidence_excerpt": "El rey se levantó muy de mañana, y fue apresuradamente al foso de los leones.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "king_personally_goes_to_den",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-070",
+    "source_unit_id": "DAN6-V022",
+    "fact_id": "DAN6-V022-V11-F05",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Daniel afirmó que había hecho algo malo delante de Darío.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Daniel afirmó que no había hecho nada malo delante del rey.",
+    "why_distractors_fail": {
+      "Verdadero": "Elimina la negación de la declaración de Daniel."
+    },
+    "source_ref": "Daniel 6:22",
+    "source_quote": "Mi Dios envió su ángel, el cual cerró la boca de los leones para que no me hicieran daño, porque ante él fui hallado inocente; y aun delante de ti, oh rey, yo no he hecho nada malo.",
+    "evidence_excerpt": "Mi Dios envió su ángel, el cual cerró la boca de los leones para que no me hicieran daño, porque ante él fui hallado inocente; y aun delante de ti, oh rey, yo no he hecho nada malo.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "daniel_no_wrong_to_king_mutation",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "conduct_before_king"
+      ],
+      "local": true,
+      "original": "no había hecho nada malo",
+      "replacement": "había hecho algo malo"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-071",
+    "source_unit_id": "DAN6-V025",
+    "fact_id": "DAN6-V025-V11-F04",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Darío fue quien escribió la proclamación enviada después de la liberación de Daniel.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La comunicación universal tuvo al rey Darío como autor.",
+    "why_distractors_fail": {
+      "Falso": "La comunicación identifica a Darío como quien escribió."
+    },
+    "source_ref": "Daniel 6:25",
+    "source_quote": "Entonces el rey Darío escribió a todos los pueblos, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.",
+    "evidence_excerpt": "Entonces el rey Darío escribió a todos los pueblos, naciones y lenguas que habitan en toda la tierra: «Paz os sea multiplicada.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "darius_authors_proclamation",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN6-V11-WAVE-072",
+    "source_unit_id": "DAN6-V001",
+    "fact_id": "DAN6-V001-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "A Darío le pareció bien constituir sátrapas sobre el reino.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La organización administrativa se presenta como una decisión que pareció bien a Darío.",
+    "why_distractors_fail": {
+      "Falso": "La unidad declara expresamente la aprobación de Darío."
+    },
+    "source_ref": "Daniel 6:1",
+    "source_quote": "Pareció bien a Darío constituir sobre el reino ciento veinte sátrapas que gobernaran en todo el reino.",
+    "evidence_excerpt": "Pareció bien a Darío constituir sobre el reino ciento veinte sátrapas que gobernaran en todo el reino.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "darius_approves_satrap_structure",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]
