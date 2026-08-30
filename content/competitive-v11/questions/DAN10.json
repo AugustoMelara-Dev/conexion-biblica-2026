@@ -3542,5 +3542,610 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
     }
+  },
+  {
+    "id": "DAN10-V11-WAVE-042",
+    "source_unit_id": "DAN10-V003",
+    "fact_id": "DAN10-V003-V11-MOUTH-INGESTION-CARNE-WINE",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Qué dos elementos declaró Daniel que no entraron en su boca durante las tres semanas?",
+    "options": [
+      "Carne y vino",
+      "Manjar delicado y perfume",
+      "Carne y perfume",
+      "Manjar delicado y vino"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Carne y vino",
+    "accepted_answers": [
+      "Carne y vino",
+      "carne ni vino"
+    ],
+    "explanation": "Daniel dijo que no entraron en su boca carne ni vino; el manjar delicado corresponde a «no comí» y el perfume a «no me ungí».",
+    "why_distractors_fail": {
+      "Manjar delicado y perfume": "Ambos pertenecen a otras construcciones del versículo, no a lo que entró en la boca.",
+      "Carne y perfume": "La carne sí pertenece a la expresión, pero el perfume corresponde a la unción omitida.",
+      "Manjar delicado y vino": "El vino sí pertenece a la expresión, pero el manjar delicado está regido por «no comí»."
+    },
+    "source_ref": "Daniel 10:3",
+    "source_quote": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+    "evidence_excerpt": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "mouth_ingestion_object_pair",
+    "option_category": "consumption_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-044",
+    "source_unit_id": "DAN10-V005",
+    "fact_id": "DAN10-V005-V11-GARMENT-WAIST-MATERIAL-MAPPING",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "question": "¿Cómo se distribuyen correctamente los materiales en la apariencia del varón visto por Daniel?",
+    "options": [
+      "Oro de Ufaz en la vestidura y lino ceñido a la cintura",
+      "Lino en la vestidura y oro de Ufaz ceñido a la cintura",
+      "Berilo en la vestidura y bronce ceñido a la cintura",
+      "Púrpura en la vestidura y plata de Persia en la cintura"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Lino en la vestidura y oro de Ufaz ceñido a la cintura",
+    "accepted_answers": [
+      "Lino en la vestidura y oro de Ufaz ceñido a la cintura"
+    ],
+    "explanation": "El varón vestía lino y llevaba la cintura ceñida con oro de Ufaz.",
+    "why_distractors_fail": {
+      "Oro de Ufaz en la vestidura y lino ceñido a la cintura": "Invierte la ubicación de los dos materiales.",
+      "Berilo en la vestidura y bronce ceñido a la cintura": "Traslada comparaciones corporales del versículo siguiente.",
+      "Púrpura en la vestidura y plata de Persia en la cintura": "Ninguno de esos materiales aparece en la descripción."
+    },
+    "source_ref": "Daniel 10:5",
+    "source_quote": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+    "evidence_excerpt": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "appearance_material_location_mapping",
+    "option_category": "material_location_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-045",
+    "source_unit_id": "DAN10-V006",
+    "fact_id": "DAN10-V006-V11-VISUAL-AUDITORY-MODALITY-MAPPING",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "question": "¿Qué emparejamiento separa correctamente el rasgo auditivo de un rasgo visual del varón?",
+    "options": [
+      "Sus palabras sonaban como un relámpago y su rostro parecía una multitud",
+      "Sus palabras sonaban como antorchas de fuego y su rostro parecía bronce bruñido",
+      "Sus palabras sonaban como una multitud y su rostro parecía un relámpago",
+      "Sus palabras sonaban como berilo y su rostro parecía oro de Ufaz"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Sus palabras sonaban como una multitud y su rostro parecía un relámpago",
+    "accepted_answers": [
+      "Sus palabras sonaban como una multitud y su rostro parecía un relámpago"
+    ],
+    "explanation": "El sonido pertenece a las palabras; el relámpago describe visualmente el rostro.",
+    "why_distractors_fail": {
+      "Sus palabras sonaban como un relámpago y su rostro parecía una multitud": "Intercambia los términos comparativos del sonido y del rostro.",
+      "Sus palabras sonaban como antorchas de fuego y su rostro parecía bronce bruñido": "Las antorchas describen los ojos y el bronce los brazos y los pies.",
+      "Sus palabras sonaban como berilo y su rostro parecía oro de Ufaz": "El berilo describe el cuerpo y el oro de Ufaz ciñe la cintura."
+    },
+    "source_ref": "Daniel 10:6",
+    "source_quote": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "evidence_excerpt": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "sensory_modality_feature_mapping",
+    "option_category": "sensory_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-047",
+    "source_unit_id": "DAN10-V008",
+    "fact_id": "DAN10-V008-V11-STRENGTH-DECLINE-PROGRESSION",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "question": "¿Qué progresión expresa con precisión el deterioro físico de Daniel ante la gran visión?",
+    "options": [
+      "Conservó sus fuerzas, venció el desfallecimiento y se levantó sin ayuda",
+      "Perdió la voz, recuperó el aliento y corrió para alcanzar a sus compañeros",
+      "Sintió temor, escondió su rostro y recuperó todas sus fuerzas de inmediato",
+      "No le quedaron fuerzas, estas se cambiaron en desfallecimiento y lo abandonaron totalmente"
+    ],
+    "correct_option": 3,
+    "correct_answer": "No le quedaron fuerzas, estas se cambiaron en desfallecimiento y lo abandonaron totalmente",
+    "accepted_answers": [
+      "No le quedaron fuerzas, estas se cambiaron en desfallecimiento y lo abandonaron totalmente"
+    ],
+    "explanation": "El versículo intensifica la debilidad desde la ausencia de fuerzas hasta el abandono total.",
+    "why_distractors_fail": {
+      "Conservó sus fuerzas, venció el desfallecimiento y se levantó sin ayuda": "Niega la pérdida total descrita.",
+      "Perdió la voz, recuperó el aliento y corrió para alcanzar a sus compañeros": "Introduce acciones de otros momentos o ausentes.",
+      "Sintió temor, escondió su rostro y recuperó todas sus fuerzas de inmediato": "Traslada la reacción de los acompañantes y anticipa la recuperación."
+    },
+    "source_ref": "Daniel 10:8",
+    "source_quote": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+    "evidence_excerpt": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "physical_decline_sequence",
+    "option_category": "state_progression",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-049",
+    "source_unit_id": "DAN10-V011",
+    "fact_id": "DAN10-V011-V11-COMMAND-RESPONSE-SEQUENCE",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Qué secuencia enlaza las instrucciones del mensajero con la respuesta corporal de Daniel?",
+    "options": [
+      "Le mandó estar atento y ponerse en pie; mientras hablaba, Daniel se levantó temblando",
+      "Le mandó estar atento y permanecer sentado; mientras hablaba, Daniel se quedó inmóvil",
+      "Le mandó escuchar y alejarse del lugar; mientras hablaba, Daniel salió sin temblar",
+      "Le mandó ponerse en pie y guardar silencio; mientras hablaba, Daniel volvió a arrodillarse"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Le mandó estar atento y ponerse en pie; mientras hablaba, Daniel se levantó temblando",
+    "accepted_answers": [
+      "Le mandó estar atento y ponerse en pie; mientras hablaba, Daniel se levantó temblando"
+    ],
+    "explanation": "Daniel respondió a las órdenes de atención y levantamiento poniéndose en pie mientras aún temblaba.",
+    "why_distractors_fail": {
+      "Le mandó estar atento y permanecer sentado; mientras hablaba, Daniel se quedó inmóvil": "Conserva la atención, pero cambia la orden de levantarse y la respuesta.",
+      "Le mandó escuchar y alejarse del lugar; mientras hablaba, Daniel salió sin temblar": "Sustituye la orden de ponerse en pie y niega el temblor.",
+      "Le mandó ponerse en pie y guardar silencio; mientras hablaba, Daniel volvió a arrodillarse": "Conserva una orden, pero añade silencio y reemplaza el levantamiento por una postura contraria."
+    },
+    "source_ref": "Daniel 10:11",
+    "source_quote": "Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.",
+    "evidence_excerpt": "Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "instruction_obedience_sequence",
+    "option_category": "command_response_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-050",
+    "source_unit_id": "DAN10-V012",
+    "fact_id": "DAN10-V012-V11-DISPOSITION-HEARING-ARRIVAL-CHAIN",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Cuál es la cadena causal completa que el mensajero expuso a Daniel?",
+    "options": [
+      "Desde el primer día Daniel dispuso su corazón a entender sin humillarse; sus palabras fueron rechazadas y el mensajero no vino",
+      "Desde el primer día Daniel dispuso su corazón a entender y humillarse; sus palabras fueron oídas y por ellas vino el mensajero",
+      "Desde el primer día Daniel dispuso su corazón a humillarse sin entender; sus palabras fueron oídas solo después de llegar el mensajero",
+      "Después de ser oídas sus palabras, Daniel dispuso su corazón a entender y humillarse; por ello el mensajero se marchó"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Desde el primer día Daniel dispuso su corazón a entender y humillarse; sus palabras fueron oídas y por ellas vino el mensajero",
+    "accepted_answers": [
+      "Desde el primer día Daniel dispuso su corazón a entender y humillarse; sus palabras fueron oídas y por ellas vino el mensajero"
+    ],
+    "explanation": "La disposición interior antecede a la recepción de sus palabras y explica la venida del mensajero.",
+    "why_distractors_fail": {
+      "Desde el primer día Daniel dispuso su corazón a entender sin humillarse; sus palabras fueron rechazadas y el mensajero no vino": "Elimina la humildad y niega tanto la recepción de las palabras como la venida.",
+      "Desde el primer día Daniel dispuso su corazón a humillarse sin entender; sus palabras fueron oídas solo después de llegar el mensajero": "Elimina la intención de entender e invierte la relación temporal entre recepción y llegada.",
+      "Después de ser oídas sus palabras, Daniel dispuso su corazón a entender y humillarse; por ello el mensajero se marchó": "Posterga la disposición y sustituye la venida por una partida."
+    },
+    "source_ref": "Daniel 10:12",
+    "source_quote": "Entonces me dijo: “Daniel, no temas, porque desde el primer día que dispusiste tu corazón a entender y a humillarte en la presencia de tu Dios, fueron oídas tus palabras; y a causa de tus palabras yo he venido.",
+    "evidence_excerpt": "Entonces me dijo: “Daniel, no temas, porque desde el primer día que dispusiste tu corazón a entender y a humillarte en la presencia de tu Dios, fueron oídas tus palabras; y a causa de tus palabras yo he venido.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "spiritual_disposition_response_causality",
+    "option_category": "causal_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-051",
+    "source_unit_id": "DAN10-V013",
+    "fact_id": "DAN10-V013-V11-OPPOSITION-HELP-REMAINING-SEQUENCE",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "question": "¿Qué secuencia resume correctamente el conflicto relatado por el mensajero?",
+    "options": [
+      "El príncipe de Persia se opuso veintiún días, Miguel vino a reemplazarlo y el mensajero volvió con Daniel",
+      "El príncipe de Grecia se opuso veintiún días, Miguel vino a ayudar y el mensajero quedó con los reyes de Grecia",
+      "El príncipe de Persia se opuso veintiún días, Miguel vino a ayudar y el mensajero quedó con los reyes de Persia",
+      "Los reyes de Persia se opusieron veintiún días, Miguel vino a ayudar y el mensajero quedó con el príncipe de Persia"
+    ],
+    "correct_option": 2,
+    "correct_answer": "El príncipe de Persia se opuso veintiún días, Miguel vino a ayudar y el mensajero quedó con los reyes de Persia",
+    "accepted_answers": [
+      "El príncipe de Persia se opuso veintiún días, Miguel vino a ayudar y el mensajero quedó con los reyes de Persia"
+    ],
+    "explanation": "La oposición persa, la ayuda de Miguel y la permanencia con los reyes forman la secuencia del versículo.",
+    "why_distractors_fail": {
+      "El príncipe de Persia se opuso veintiún días, Miguel vino a reemplazarlo y el mensajero volvió con Daniel": "Conserva opositor y duración, pero cambia la función de Miguel y la situación final.",
+      "El príncipe de Grecia se opuso veintiún días, Miguel vino a ayudar y el mensajero quedó con los reyes de Grecia": "Sustituye Persia por Grecia en la oposición y en la compañía final.",
+      "Los reyes de Persia se opusieron veintiún días, Miguel vino a ayudar y el mensajero quedó con el príncipe de Persia": "Convierte a los reyes en opositores y cambia con quién quedó el mensajero."
+    },
+    "source_ref": "Daniel 10:13",
+    "source_quote": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+    "evidence_excerpt": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "celestial_conflict_sequence",
+    "option_category": "event_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-052",
+    "source_unit_id": "DAN10-V014",
+    "fact_id": "DAN10-V014-V11-PURPOSE-PEOPLE-HORIZON",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Qué relación estableció el mensajero entre su venida, el pueblo de Daniel y el tiempo de la visión?",
+    "options": [
+      "Vino a revelar lo que ya había sucedido a Persia, porque la visión pertenecía al primer año de Ciro",
+      "Vino a ocultar el futuro del pueblo de Daniel, porque la visión no tenía horizonte temporal",
+      "Vino a explicar la huida de los acompañantes, porque la visión era solo para aquel día",
+      "Vino a comunicar lo que sucedería al pueblo de Daniel en los últimos días, porque la visión correspondía a esos días"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Vino a comunicar lo que sucedería al pueblo de Daniel en los últimos días, porque la visión correspondía a esos días",
+    "accepted_answers": [
+      "Vino a comunicar lo que sucedería al pueblo de Daniel en los últimos días, porque la visión correspondía a esos días"
+    ],
+    "explanation": "Propósito, destinatario colectivo y horizonte temporal aparecen unidos en la declaración.",
+    "why_distractors_fail": {
+      "Vino a revelar lo que ya había sucedido a Persia, porque la visión pertenecía al primer año de Ciro": "Cambia pueblo, orientación temporal y fecha.",
+      "Vino a ocultar el futuro del pueblo de Daniel, porque la visión no tenía horizonte temporal": "Invierte el propósito y niega los últimos días.",
+      "Vino a explicar la huida de los acompañantes, porque la visión era solo para aquel día": "Sustituye el asunto y limita erróneamente el horizonte."
+    },
+    "source_ref": "Daniel 10:14",
+    "source_quote": "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.”",
+    "evidence_excerpt": "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.”",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "mission_recipient_time_horizon",
+    "option_category": "purpose_scope_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-054",
+    "source_unit_id": "DAN10-V016",
+    "fact_id": "DAN10-V016-V11-LIP-TOUCH-SPEECH-PAIN-SEQUENCE",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Qué secuencia siguió al toque de la figura con semejanza de hijo de hombre?",
+    "options": [
+      "Tocó los labios de Daniel; él abrió la boca, habló y declaró que la visión le había causado dolores y falta de fuerzas",
+      "Tocó los ojos de Daniel; él abrió la boca, habló y declaró que la visión le había devuelto la vista y las fuerzas",
+      "Tocó los labios de Daniel; él mantuvo la boca cerrada y declaró que la visión ya no le causaba dolores ni debilidad",
+      "Tocó las manos de Daniel; él abrió la boca, habló y atribuyó sus dolores y su falta de fuerzas a sus compañeros"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Tocó los labios de Daniel; él abrió la boca, habló y declaró que la visión le había causado dolores y falta de fuerzas",
+    "accepted_answers": [
+      "Tocó los labios de Daniel; él abrió la boca, habló y declaró que la visión le había causado dolores y falta de fuerzas"
+    ],
+    "explanation": "El contacto en los labios precedió al habla con la que Daniel describió el efecto debilitante de la visión.",
+    "why_distractors_fail": {
+      "Tocó los ojos de Daniel; él abrió la boca, habló y declaró que la visión le había devuelto la vista y las fuerzas": "Cambia la parte tocada y convierte el efecto debilitante de la visión en restauración.",
+      "Tocó los labios de Daniel; él mantuvo la boca cerrada y declaró que la visión ya no le causaba dolores ni debilidad": "Conserva el contacto, pero contradice la apertura de la boca y el contenido del testimonio.",
+      "Tocó las manos de Daniel; él abrió la boca, habló y atribuyó sus dolores y su falta de fuerzas a sus compañeros": "Cambia la parte tocada y atribuye a los compañeros lo que Daniel atribuyó a la visión."
+    },
+    "source_ref": "Daniel 10:16",
+    "source_quote": "Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
+    "evidence_excerpt": "Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "touch_speech_testimony_sequence",
+    "option_category": "event_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-055",
+    "source_unit_id": "DAN10-V019",
+    "fact_id": "DAN10-V019-V11-EXHORTATION-RECOVERY-REQUEST",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Cómo enlaza el versículo la exhortación del mensajero con la recuperación y la respuesta de Daniel?",
+    "options": [
+      "El mensajero le anunció paz y le mandó descansar y guardar silencio; mientras hablaba, Daniel siguió débil y pidió que esperara",
+      "El mensajero le anunció paz y le mandó esforzarse y cobrar aliento; mientras hablaba, Daniel recobró fuerzas y pidió que continuara",
+      "El mensajero le quitó la paz y le mandó huir y esconderse; mientras hablaba, Daniel perdió fuerzas y pidió que se marchara",
+      "El mensajero le anunció paz y le mandó pelear contra Persia; mientras hablaba, Daniel permaneció mudo y pidió la ayuda de Miguel"
+    ],
+    "correct_option": 1,
+    "correct_answer": "El mensajero le anunció paz y le mandó esforzarse y cobrar aliento; mientras hablaba, Daniel recobró fuerzas y pidió que continuara",
+    "accepted_answers": [
+      "El mensajero le anunció paz y le mandó esforzarse y cobrar aliento; mientras hablaba, Daniel recobró fuerzas y pidió que continuara"
+    ],
+    "explanation": "La palabra de ánimo coincide con la recuperación de Daniel y desemboca en su petición de seguir oyendo.",
+    "why_distractors_fail": {
+      "El mensajero le anunció paz y le mandó descansar y guardar silencio; mientras hablaba, Daniel siguió débil y pidió que esperara": "Conserva la paz, pero sustituye las órdenes, niega la recuperación y cambia la petición.",
+      "El mensajero le quitó la paz y le mandó huir y esconderse; mientras hablaba, Daniel perdió fuerzas y pidió que se marchara": "Invierte la bendición, traslada acciones de los acompañantes y revierte el fortalecimiento.",
+      "El mensajero le anunció paz y le mandó pelear contra Persia; mientras hablaba, Daniel permaneció mudo y pidió la ayuda de Miguel": "Conserva la paz, pero reasigna el combate y niega tanto el habla como la recuperación de Daniel."
+    },
+    "source_ref": "Daniel 10:19",
+    "source_quote": "y me dijo: “Muy amado, no temas; la paz sea contigo; esfuérzate y cobra aliento.” Mientras él me hablaba, recobré las fuerzas y dije: “Hable mi señor, porque me has fortalecido.”",
+    "evidence_excerpt": "y me dijo: “Muy amado, no temas; la paz sea contigo; esfuérzate y cobra aliento.” Mientras él me hablaba, recobré las fuerzas y dije: “Hable mi señor, porque me has fortalecido.”",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "encouragement_recovery_response_chain",
+    "option_category": "speech_effect_response",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-058",
+    "source_unit_id": "DAN10-V005",
+    "fact_id": "DAN10-V005-V11-RAISED-EYES-LOOKED",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "narrative_order",
+    "question": "Daniel narró la acción que precedió a la aparición: «Alcé mis ojos y ____».",
+    "options": [
+      "miré",
+      "huyó",
+      "durmió",
+      "escribió"
+    ],
+    "correct_option": 0,
+    "correct_answer": "miré",
+    "accepted_answers": [
+      "miré"
+    ],
+    "explanation": "Daniel alzó los ojos, miró y entonces vio al varón.",
+    "why_distractors_fail": {
+      "huyó": "Quienes huyeron fueron sus acompañantes.",
+      "durmió": "El sueño ocurrió después de oír las palabras.",
+      "escribió": "No se menciona escritura en esta escena."
+    },
+    "source_ref": "Daniel 10:5",
+    "source_quote": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+    "evidence_excerpt": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "visual_attention_sequence",
+    "option_category": "action",
+    "false_mutation": null,
+    "blank_span": "miré",
+    "significance": "Conserva la secuencia perceptiva que introduce la aparición.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-061",
+    "source_unit_id": "DAN10-V011",
+    "fact_id": "DAN10-V011-V11-SENT-NOW",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "El mensajero explicó a Daniel: «A ti he sido enviado ____».",
+    "options": [
+      "ayer",
+      "ahora",
+      "después",
+      "siempre"
+    ],
+    "correct_option": 1,
+    "correct_answer": "ahora",
+    "accepted_answers": [
+      "ahora"
+    ],
+    "explanation": "La declaración sitúa el envío del mensajero en el momento presente: «ahora».",
+    "why_distractors_fail": {
+      "ayer": "Retrocede el envío sin apoyo textual.",
+      "después": "Lo aplaza, contrario a la declaración.",
+      "siempre": "Convierte un momento concreto en duración indefinida."
+    },
+    "source_ref": "Daniel 10:11",
+    "source_quote": "Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.",
+    "evidence_excerpt": "Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "mission_temporal_marker",
+    "option_category": "time_marker",
+    "false_mutation": null,
+    "blank_span": "ahora",
+    "significance": "Precisa el marcador temporal unido a la misión dirigida a Daniel.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-066",
+    "source_unit_id": "DAN10-V016",
+    "fact_id": "DAN10-V016-V11-DANIEL-ADDRESS-MY-LORD",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "speaker_addressee",
+    "question": "Al volver a hablar, Daniel se dirigió al que estaba delante de él como «____ mío».",
+    "options": [
+      "Hermano",
+      "Siervo",
+      "Señor",
+      "Príncipe"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Señor",
+    "accepted_answers": [
+      "Señor",
+      "Señor mío"
+    ],
+    "explanation": "Daniel abrió la boca y usó la expresión «Señor mío».",
+    "why_distractors_fail": {
+      "Hermano": "No es el tratamiento empleado.",
+      "Siervo": "Daniel se llama siervo en el versículo siguiente.",
+      "Príncipe": "No es la forma de apelación citada."
+    },
+    "source_ref": "Daniel 10:16",
+    "source_quote": "Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
+    "evidence_excerpt": "Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "daniel_respectful_address",
+    "option_category": "address_title",
+    "false_mutation": null,
+    "blank_span": "Señor",
+    "significance": "Distingue cómo Daniel llama al interlocutor de cómo se describe a sí mismo.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-067",
+    "source_unit_id": "DAN10-V017",
+    "fact_id": "DAN10-V017-V11-DANIEL-SELF-DESIGNATION-SERVANT",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "speaker_addressee",
+    "question": "Al preguntar cómo podría hablar, Daniel se llamó a sí mismo el ____ de su señor.",
+    "options": [
+      "príncipe",
+      "maestro",
+      "mensajero",
+      "siervo"
+    ],
+    "correct_option": 3,
+    "correct_answer": "siervo",
+    "accepted_answers": [
+      "siervo",
+      "siervo de mi señor"
+    ],
+    "explanation": "Daniel formuló la pregunta desde la posición de «siervo de mi señor».",
+    "why_distractors_fail": {
+      "príncipe": "Ese título se usa para otros personajes.",
+      "maestro": "Daniel no se atribuye ese papel.",
+      "mensajero": "El interlocutor, no Daniel, había sido enviado."
+    },
+    "source_ref": "Daniel 10:17",
+    "source_quote": "¿Cómo, pues, podrá el siervo de mi señor hablar con mi señor? Porque al instante me faltaron las fuerzas, y no me quedó aliento.”",
+    "evidence_excerpt": "¿Cómo, pues, podrá el siervo de mi señor hablar con mi señor? Porque al instante me faltaron las fuerzas, y no me quedó aliento.”",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "speaker_self_designation",
+    "option_category": "role",
+    "false_mutation": null,
+    "blank_span": "siervo",
+    "significance": "Precisa la relación jerárquica implícita en la pregunta de Daniel.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]
