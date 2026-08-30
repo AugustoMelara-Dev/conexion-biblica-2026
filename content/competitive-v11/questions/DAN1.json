@@ -1981,5 +1981,352 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
     }
+  },
+  {
+    "id": "DAN1-V11-WAVE-028",
+    "source_unit_id": "DAN1-V003",
+    "fact_id": "DAN1-V003-V11-F04",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "identification",
+    "question": "¿Qué cargo ocupaba Aspenaz cuando recibió la orden del rey?",
+    "options": [
+      "Jefe de los eunucos",
+      "Jefe de los astrólogos",
+      "Guardián del tesoro",
+      "Capitán del ejército"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Jefe de los eunucos",
+    "accepted_answers": [
+      "Jefe de los eunucos"
+    ],
+    "explanation": "Aspenaz es presentado como jefe de los eunucos.",
+    "why_distractors_fail": {
+      "Jefe de los astrólogos": "Ese no es el cargo atribuido a Aspenaz.",
+      "Guardián del tesoro": "El versículo no lo vincula con el tesoro.",
+      "Capitán del ejército": "No se le asigna una función militar."
+    },
+    "source_ref": "Daniel 1:3",
+    "source_quote": "Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,",
+    "evidence_excerpt": "Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "aspenaz_office",
+    "option_category": "office",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-032",
+    "source_unit_id": "DAN1-V005",
+    "fact_id": "DAN1-V005-V11-F04",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Quién estableció tanto la ración diaria como el período educativo de los jóvenes?",
+    "options": [
+      "Aspenaz",
+      "El rey",
+      "Melsar",
+      "Daniel"
+    ],
+    "correct_option": 1,
+    "correct_answer": "El rey",
+    "accepted_answers": [
+      "El rey"
+    ],
+    "explanation": "El rey señaló la porción diaria y dispuso que fueran educados durante tres años.",
+    "why_distractors_fail": {
+      "Aspenaz": "Ejecutaba órdenes, pero el plan se atribuye al rey.",
+      "Melsar": "Melsar intervino después en la prueba alimentaria.",
+      "Daniel": "Daniel no diseñó el programa oficial."
+    },
+    "source_ref": "Daniel 1:5",
+    "source_quote": "Y les señaló el rey una porción diaria de la comida del rey y del vino que él bebía; y que los educara durante tres años, para que al fin de ellos se presentaran delante del rey.",
+    "evidence_excerpt": "Y les señaló el rey una porción diaria de la comida del rey y del vino que él bebía; y que los educara durante tres años, para que al fin de ellos se presentaran delante del rey.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "training_program_authority",
+    "option_category": "agent",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-036",
+    "source_unit_id": "DAN1-V010",
+    "fact_id": "DAN1-V010-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿A quién reconocía como «mi señor» el jefe de los eunucos al explicar su temor?",
+    "options": [
+      "A Daniel",
+      "A Melsar",
+      "Al rey",
+      "A Joacim"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Al rey",
+    "accepted_answers": [
+      "Al rey"
+    ],
+    "explanation": "El funcionario temía a su señor, el rey que había fijado las raciones.",
+    "why_distractors_fail": {
+      "A Daniel": "Daniel era quien presentaba la petición, no su señor.",
+      "A Melsar": "Melsar estaba bajo la estructura del jefe de los eunucos.",
+      "A Joacim": "El soberano temido era quien controlaba el programa babilónico."
+    },
+    "source_ref": "Daniel 1:10",
+    "source_quote": "y el jefe de los eunucos dijo a Daniel: —Temo a mi señor el rey, que asignó vuestra comida y vuestra bebida; pues luego que él vea vuestros rostros más pálidos que los de los muchachos que son semejantes a vosotros, haréis que el rey me condene a muerte.",
+    "evidence_excerpt": "y el jefe de los eunucos dijo a Daniel: —Temo a mi señor el rey, que asignó vuestra comida y vuestra bebida; pues luego que él vea vuestros rostros más pálidos que los de los muchachos que son semejantes a vosotros, haréis que el rey me condene a muerte.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "official_fealty_target",
+    "option_category": "person",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-037",
+    "source_unit_id": "DAN1-V010",
+    "fact_id": "DAN1-V010-V11-F04",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Con quiénes temía el jefe de los eunucos que el rey comparara el aspecto de Daniel y sus compañeros?",
+    "options": [
+      "Con soldados de su edad",
+      "Con príncipes de su edad",
+      "Con magos semejantes a ellos",
+      "Con muchachos semejantes a ellos"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Con muchachos semejantes a ellos",
+    "accepted_answers": [
+      "Con muchachos semejantes a ellos",
+      "Con los muchachos semejantes a ellos"
+    ],
+    "explanation": "El temor se basaba en que sus rostros parecieran más pálidos que los de jóvenes comparables.",
+    "why_distractors_fail": {
+      "Con soldados de su edad": "Los soldados no forman el grupo de comparación.",
+      "Con príncipes de su edad": "El rango social no define aquí el contraste visible.",
+      "Con magos semejantes a ellos": "Los magos aparecen en una evaluación intelectual posterior."
+    },
+    "source_ref": "Daniel 1:10",
+    "source_quote": "y el jefe de los eunucos dijo a Daniel: —Temo a mi señor el rey, que asignó vuestra comida y vuestra bebida; pues luego que él vea vuestros rostros más pálidos que los de los muchachos que son semejantes a vosotros, haréis que el rey me condene a muerte.",
+    "evidence_excerpt": "y el jefe de los eunucos dijo a Daniel: —Temo a mi señor el rey, que asignó vuestra comida y vuestra bebida; pues luego que él vea vuestros rostros más pálidos que los de los muchachos que son semejantes a vosotros, haréis que el rey me condene a muerte.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "feared_peer_comparison",
+    "option_category": "comparison_group",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-045",
+    "source_unit_id": "DAN1-V017",
+    "fact_id": "DAN1-V017-V11-F04",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Hasta qué alcance académico se extendieron el conocimiento y la inteligencia dados a Daniel y sus tres compañeros?",
+    "options": [
+      "A todas las letras y ciencias",
+      "Solo a la lengua hebrea",
+      "Únicamente a las visiones",
+      "Solo a los asuntos militares"
+    ],
+    "correct_option": 0,
+    "correct_answer": "A todas las letras y ciencias",
+    "accepted_answers": [
+      "A todas las letras y ciencias"
+    ],
+    "explanation": "El don común abarcó todas las letras y ciencias.",
+    "why_distractors_fail": {
+      "Solo a la lengua hebrea": "El alcance no se restringe a una lengua.",
+      "Únicamente a las visiones": "Las visiones se vinculan de modo particular con Daniel.",
+      "Solo a los asuntos militares": "No se menciona conocimiento militar."
+    },
+    "source_ref": "Daniel 1:17",
+    "source_quote": "A estos cuatro muchachos, Dios les dio conocimiento e inteligencia en todas las letras y ciencias; y Daniel tuvo entendimiento en toda visión y sueños.",
+    "evidence_excerpt": "A estos cuatro muchachos, Dios les dio conocimiento e inteligencia en todas las letras y ciencias; y Daniel tuvo entendimiento en toda visión y sueños.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "shared_knowledge_scope",
+    "option_category": "knowledge_domain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-049",
+    "source_unit_id": "DAN1-V020",
+    "fact_id": "DAN1-V020-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿En qué clase de consultas comprobó el rey la superioridad de Daniel y sus compañeros?",
+    "options": [
+      "En toda cuestión de comercio y agricultura",
+      "En todo asunto de sabiduría e inteligencia",
+      "En toda decisión de guerra y tributos",
+      "En toda disputa entre sacerdotes y príncipes"
+    ],
+    "correct_option": 1,
+    "correct_answer": "En todo asunto de sabiduría e inteligencia",
+    "accepted_answers": [
+      "En todo asunto de sabiduría e inteligencia"
+    ],
+    "explanation": "La evaluación abarcó todos los asuntos de sabiduría e inteligencia consultados por el rey.",
+    "why_distractors_fail": {
+      "En toda cuestión de comercio y agricultura": "Esos campos no delimitan la consulta.",
+      "En toda decisión de guerra y tributos": "No fue una evaluación militar ni fiscal.",
+      "En toda disputa entre sacerdotes y príncipes": "El versículo no define ese ámbito."
+    },
+    "source_ref": "Daniel 1:20",
+    "source_quote": "En todo asunto de sabiduría e inteligencia que el rey los consultó, los halló diez veces mejores que todos los magos y astrólogos que había en todo su reino.",
+    "evidence_excerpt": "En todo asunto de sabiduría e inteligencia que el rey los consultó, los halló diez veces mejores que todos los magos y astrólogos que había en todo su reino.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "royal_consultation_scope",
+    "option_category": "domain_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-051",
+    "source_unit_id": "DAN1-V001",
+    "fact_id": "DAN1-V001-V11-F05",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "identification",
+    "question": "Nabucodonosor llegó a Jerusalén en calidad de ____.",
+    "options": [
+      "rey de Babilonia",
+      "rey de Jerusalén",
+      "rey de los medos",
+      "rey de los egipcios"
+    ],
+    "correct_option": 0,
+    "correct_answer": "rey de Babilonia",
+    "accepted_answers": [
+      "Babilonia",
+      "rey de Babilonia"
+    ],
+    "explanation": "Nabucodonosor es identificado como rey de Babilonia.",
+    "why_distractors_fail": {
+      "rey de Jerusalén": "Jerusalén fue la ciudad sitiada, no el reino atribuido a Nabucodonosor.",
+      "rey de los medos": "El versículo no lo vincula con los medos.",
+      "rey de los egipcios": "Tampoco lo vincula con los egipcios."
+    },
+    "source_ref": "Daniel 1:1",
+    "source_quote": "En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.",
+    "evidence_excerpt": "En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "nebuchadnezzar_kingdom",
+    "option_category": "kingdom",
+    "false_mutation": null,
+    "blank_span": "rey de Babilonia",
+    "significance": "Fija la identidad política del atacante que abre la narración.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-055",
+    "source_unit_id": "DAN1-V005",
+    "fact_id": "DAN1-V005-V11-F06",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "El vino asignado a los jóvenes era el mismo que el rey ____.",
+    "options": [
+      "vendía",
+      "bebía",
+      "guardaba",
+      "rechazaba"
+    ],
+    "correct_option": 1,
+    "correct_answer": "bebía",
+    "accepted_answers": [
+      "bebía",
+      "él bebía"
+    ],
+    "explanation": "La ración incluía vino del que bebía el propio rey.",
+    "why_distractors_fail": {
+      "vendía": "No se describe una venta.",
+      "guardaba": "El énfasis está en su consumo, no en almacenamiento.",
+      "rechazaba": "El rey no rechazaba ese vino."
+    },
+    "source_ref": "Daniel 1:5",
+    "source_quote": "Y les señaló el rey una porción diaria de la comida del rey y del vino que él bebía; y que los educara durante tres años, para que al fin de ellos se presentaran delante del rey.",
+    "evidence_excerpt": "Y les señaló el rey una porción diaria de la comida del rey y del vino que él bebía; y que los educara durante tres años, para que al fin de ellos se presentaran delante del rey.",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "royal_wine_consumption_relation",
+    "option_category": "action",
+    "false_mutation": null,
+    "blank_span": "bebía",
+    "significance": "Vincula la bebida asignada con el consumo personal del rey.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]

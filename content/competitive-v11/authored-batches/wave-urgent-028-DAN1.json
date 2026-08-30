@@ -1,0 +1,232 @@
+[
+  {
+    "id": "DAN1-V11-WAVE-028",
+    "source_unit_id": "DAN1-V003",
+    "fact_id": "DAN1-V003-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "identification",
+    "question": "¿Qué cargo ocupaba Aspenaz cuando recibió la orden del rey?",
+    "options": [
+      "Jefe de los eunucos",
+      "Jefe de los astrólogos",
+      "Guardián del tesoro",
+      "Capitán del ejército"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["Jefe de los eunucos"],
+    "explanation": "Aspenaz es presentado como jefe de los eunucos.",
+    "why_distractors_fail": {
+      "Jefe de los astrólogos": "Ese no es el cargo atribuido a Aspenaz.",
+      "Guardián del tesoro": "El versículo no lo vincula con el tesoro.",
+      "Capitán del ejército": "No se le asigna una función militar."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "aspenaz_office",
+    "option_category": "office",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Aísla el cargo del receptor de la orden, distinto de recordar su nombre."
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-032",
+    "source_unit_id": "DAN1-V005",
+    "fact_id": "DAN1-V005-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Quién estableció tanto la ración diaria como el período educativo de los jóvenes?",
+    "options": ["Aspenaz", "El rey", "Melsar", "Daniel"],
+    "correct_option": 1,
+    "accepted_answers": ["El rey"],
+    "explanation": "El rey señaló la porción diaria y dispuso que fueran educados durante tres años.",
+    "why_distractors_fail": {
+      "Aspenaz": "Ejecutaba órdenes, pero el plan se atribuye al rey.",
+      "Melsar": "Melsar intervino después en la prueba alimentaria.",
+      "Daniel": "Daniel no diseñó el programa oficial."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "training_program_authority",
+    "option_category": "agent",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Identifica la autoridad común detrás de las dos medidas del programa."
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-036",
+    "source_unit_id": "DAN1-V010",
+    "fact_id": "DAN1-V010-V11-F03",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿A quién reconocía como «mi señor» el jefe de los eunucos al explicar su temor?",
+    "options": ["A Daniel", "A Melsar", "Al rey", "A Joacim"],
+    "correct_option": 2,
+    "accepted_answers": ["Al rey"],
+    "explanation": "El funcionario temía a su señor, el rey que había fijado las raciones.",
+    "why_distractors_fail": {
+      "A Daniel": "Daniel era quien presentaba la petición, no su señor.",
+      "A Melsar": "Melsar estaba bajo la estructura del jefe de los eunucos.",
+      "A Joacim": "El soberano temido era quien controlaba el programa babilónico."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "official_fealty_target",
+    "option_category": "person",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa la relación jerárquica expresada por el funcionario."
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-037",
+    "source_unit_id": "DAN1-V010",
+    "fact_id": "DAN1-V010-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Con quiénes temía el jefe de los eunucos que el rey comparara el aspecto de Daniel y sus compañeros?",
+    "options": [
+      "Con soldados de su edad",
+      "Con muchachos semejantes a ellos",
+      "Con príncipes de su edad",
+      "Con magos semejantes a ellos"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Con muchachos semejantes a ellos",
+      "Con los muchachos semejantes a ellos"
+    ],
+    "explanation": "El temor se basaba en que sus rostros parecieran más pálidos que los de jóvenes comparables.",
+    "why_distractors_fail": {
+      "Con soldados de su edad": "Los soldados no forman el grupo de comparación.",
+      "Con príncipes de su edad": "El rango social no define aquí el contraste visible.",
+      "Con magos semejantes a ellos": "Los magos aparecen en una evaluación intelectual posterior."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "feared_peer_comparison",
+    "option_category": "comparison_group",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Identifica el grupo de control implícito en el riesgo, no la pena temida."
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-045",
+    "source_unit_id": "DAN1-V017",
+    "fact_id": "DAN1-V017-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Hasta qué alcance académico se extendieron el conocimiento y la inteligencia dados a Daniel y sus tres compañeros?",
+    "options": [
+      "Solo a la lengua hebrea",
+      "Únicamente a las visiones",
+      "A todas las letras y ciencias",
+      "Solo a los asuntos militares"
+    ],
+    "correct_option": 2,
+    "accepted_answers": ["A todas las letras y ciencias"],
+    "explanation": "El don común abarcó todas las letras y ciencias.",
+    "why_distractors_fail": {
+      "Solo a la lengua hebrea": "El alcance no se restringe a una lengua.",
+      "Únicamente a las visiones": "Las visiones se vinculan de modo particular con Daniel.",
+      "Solo a los asuntos militares": "No se menciona conocimiento militar."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "shared_knowledge_scope",
+    "option_category": "knowledge_domain",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa la amplitud del don común, no su agente ni el don especial de Daniel."
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-049",
+    "source_unit_id": "DAN1-V020",
+    "fact_id": "DAN1-V020-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿En qué clase de consultas comprobó el rey la superioridad de Daniel y sus compañeros?",
+    "options": [
+      "En toda cuestión de comercio y agricultura",
+      "En toda decisión de guerra y tributos",
+      "En toda disputa entre sacerdotes y príncipes",
+      "En todo asunto de sabiduría e inteligencia"
+    ],
+    "correct_option": 3,
+    "accepted_answers": ["En todo asunto de sabiduría e inteligencia"],
+    "explanation": "La evaluación abarcó todos los asuntos de sabiduría e inteligencia consultados por el rey.",
+    "why_distractors_fail": {
+      "En toda cuestión de comercio y agricultura": "Esos campos no delimitan la consulta.",
+      "En toda decisión de guerra y tributos": "No fue una evaluación militar ni fiscal.",
+      "En toda disputa entre sacerdotes y príncipes": "El versículo no define ese ámbito."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "royal_consultation_scope",
+    "option_category": "domain_pair",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Aísla los dominios y el alcance universal de la consulta."
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-051",
+    "source_unit_id": "DAN1-V001",
+    "fact_id": "DAN1-V001-V11-F05",
+    "family": "fill_choice",
+    "subtype": "identification",
+    "question": "Nabucodonosor llegó a Jerusalén en calidad de ____.",
+    "options": [
+      "rey de Babilonia",
+      "rey de Jerusalén",
+      "rey de los medos",
+      "rey de los egipcios"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["Babilonia", "rey de Babilonia"],
+    "explanation": "Nabucodonosor es identificado como rey de Babilonia.",
+    "why_distractors_fail": {
+      "rey de Jerusalén": "Jerusalén fue la ciudad sitiada, no el reino atribuido a Nabucodonosor.",
+      "rey de los medos": "El versículo no lo vincula con los medos.",
+      "rey de los egipcios": "Tampoco lo vincula con los egipcios."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "nebuchadnezzar_kingdom",
+    "option_category": "kingdom",
+    "significance": "Fija la identidad política del atacante que abre la narración.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Completa el título de Nabucodonosor sin volver a preguntar el año o la acción militar."
+    }
+  },
+  {
+    "id": "DAN1-V11-WAVE-055",
+    "source_unit_id": "DAN1-V005",
+    "fact_id": "DAN1-V005-V11-F06",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "El vino asignado a los jóvenes era el mismo que el rey ____.",
+    "options": ["vendía", "bebía", "guardaba", "rechazaba"],
+    "correct_option": 1,
+    "accepted_answers": ["bebía", "él bebía"],
+    "explanation": "La ración incluía vino del que bebía el propio rey.",
+    "why_distractors_fail": {
+      "vendía": "No se describe una venta.",
+      "guardaba": "El énfasis está en su consumo, no en almacenamiento.",
+      "rechazaba": "El rey no rechazaba ese vino."
+    },
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "royal_wine_consumption_relation",
+    "option_category": "action",
+    "significance": "Vincula la bebida asignada con el consumo personal del rey.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa la relación específica entre el rey y el vino, no la frecuencia de la ración."
+    }
+  }
+]
