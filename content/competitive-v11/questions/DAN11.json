@@ -4959,5 +4959,1081 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
     }
+  },
+  {
+    "id": "DAN11-V11-WAVE-026",
+    "source_unit_id": "DAN11-V001",
+    "fact_id": "DAN11-V001-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿A qué gobernante medo animó y fortaleció el mensajero?",
+    "options": [
+      "Darío",
+      "Ciro",
+      "Nabucodonosor",
+      "Belsasar"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Darío",
+    "accepted_answers": [
+      "Darío",
+      "Darío el medo"
+    ],
+    "explanation": "El mensajero estuvo para animar y fortalecer a Darío el medo.",
+    "why_distractors_fail": {
+      "Ciro": "Ciro fecha la visión anterior, no es el medo de esta declaración.",
+      "Nabucodonosor": "Fue un rey babilónico de relatos anteriores.",
+      "Belsasar": "No es el gobernante fortalecido aquí."
+    },
+    "source_ref": "Daniel 11:1",
+    "source_quote": "También yo en el primer año de Darío, el medo, estuve para animarlo y fortalecerlo.",
+    "evidence_excerpt": "También yo en el primer año de Darío, el medo, estuve para animarlo y fortalecerlo.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "supported_ruler",
+    "option_category": "person",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-027",
+    "source_unit_id": "DAN11-V004",
+    "fact_id": "DAN11-V004-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Cómo sería el dominio de los nuevos poseedores frente al poder que había ejercido el rey valiente?",
+    "options": [
+      "Sería exactamente el mismo",
+      "No igualaría el dominio anterior",
+      "Permanecería unido en un solo heredero",
+      "Superaría eternamente todo poder"
+    ],
+    "correct_option": 1,
+    "correct_answer": "No igualaría el dominio anterior",
+    "accepted_answers": [
+      "No igualaría el dominio anterior",
+      "no según el dominio con que él dominó"
+    ],
+    "explanation": "La repartición no conservaría el dominio que había ejercido el rey.",
+    "why_distractors_fail": {
+      "Sería exactamente el mismo": "El texto niega esa continuidad.",
+      "Permanecería unido en un solo heredero": "El reino sería repartido y no quedaría para sus descendientes.",
+      "Superaría eternamente todo poder": "No se promete un dominio eterno a esos poseedores."
+    },
+    "source_ref": "Daniel 11:4",
+    "source_quote": "Pero cuando se haya levantado, su reino será quebrantado y repartido hacia los cuatro vientos del cielo; pero no será para sus descendientes, ni según el dominio con que él dominó, porque su reino quedará deshecho y será para otros aparte de ellos.",
+    "evidence_excerpt": "Pero cuando se haya levantado, su reino será quebrantado y repartido hacia los cuatro vientos del cielo; pero no será para sus descendientes, ni según el dominio con que él dominó, porque su reino quedará deshecho y será para otros aparte de ellos.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "dominion_comparison",
+    "option_category": "comparison",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-028",
+    "source_unit_id": "DAN11-V007",
+    "fact_id": "DAN11-V007-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿De dónde procedería el personaje que ocuparía el trono y atacaría al rey del norte?",
+    "options": [
+      "De los hijos del rey del norte",
+      "De las tropas escogidas del sur",
+      "De un renuevo de las raíces de la mujer entregada",
+      "De los violadores del pacto"
+    ],
+    "correct_option": 2,
+    "correct_answer": "De un renuevo de las raíces de la mujer entregada",
+    "accepted_answers": [
+      "De un renuevo de las raíces de la mujer entregada",
+      "un renuevo de sus raíces"
+    ],
+    "explanation": "Se levantaría un renuevo de las raíces de aquella mujer.",
+    "why_distractors_fail": {
+      "De los hijos del rey del norte": "Esos hijos protagonizan una movilización posterior.",
+      "De las tropas escogidas del sur": "Son fuerzas militares, no la línea de origen indicada.",
+      "De los violadores del pacto": "Aparecen mucho después en la secuencia."
+    },
+    "source_ref": "Daniel 11:7",
+    "source_quote": "Pero un renuevo de sus raíces se levantará sobre su trono, vendrá con un ejército contra el rey del norte, entrará en la fortaleza y hará con ellos a su arbitrio, y predominará.",
+    "evidence_excerpt": "Pero un renuevo de sus raíces se levantará sobre su trono, vendrá con un ejército contra el rey del norte, entrará en la fortaleza y hará con ellos a su arbitrio, y predominará.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "lineage_origin",
+    "option_category": "origin",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-029",
+    "source_unit_id": "DAN11-V013",
+    "fact_id": "DAN11-V013-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Cómo se compararía la nueva multitud del rey del norte con la primera?",
+    "options": [
+      "Sería menor y sin riquezas",
+      "Tendría exactamente el mismo tamaño",
+      "Estaría formada solo por caballería",
+      "Sería mayor que la primera"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Sería mayor que la primera",
+    "accepted_answers": [
+      "Sería mayor que la primera",
+      "mayor que la primera"
+    ],
+    "explanation": "La nueva multitud sería mayor que la primera.",
+    "why_distractors_fail": {
+      "Sería menor y sin riquezas": "El avance incluiría mayor multitud y muchas riquezas.",
+      "Tendría exactamente el mismo tamaño": "La fuente establece una comparación de superioridad.",
+      "Estaría formada solo por caballería": "No limita el ejército a esa fuerza."
+    },
+    "source_ref": "Daniel 11:13",
+    "source_quote": "El rey del norte volverá a poner en campaña una multitud, mayor que la primera, y al cabo de algunos años vendrá rápidamente, con un gran ejército y muchas riquezas.",
+    "evidence_excerpt": "El rey del norte volverá a poner en campaña una multitud, mayor que la primera, y al cabo de algunos años vendrá rápidamente, con un gran ejército y muchas riquezas.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "army_comparison",
+    "option_category": "comparison",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-030",
+    "source_unit_id": "DAN11-V014",
+    "fact_id": "DAN11-V014-V11-F03",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "prophetic_detail",
+    "question": "¿Contra qué gobernante se levantarían muchos en aquellos tiempos?",
+    "options": [
+      "El rey del sur",
+      "El rey del norte",
+      "Darío el medo",
+      "El cuarto rey de Persia"
+    ],
+    "correct_option": 0,
+    "correct_answer": "El rey del sur",
+    "accepted_answers": [
+      "El rey del sur"
+    ],
+    "explanation": "Muchos se levantarían contra el rey del sur.",
+    "why_distractors_fail": {
+      "El rey del norte": "No es el objetivo indicado en esa frase.",
+      "Darío el medo": "Pertenece a la introducción del mensaje.",
+      "El cuarto rey de Persia": "Aparece en una etapa anterior."
+    },
+    "source_ref": "Daniel 11:14",
+    "source_quote": "En aquellos tiempos se levantarán muchos contra el rey del sur. Hombres turbulentos de tu pueblo se levantarán, para que se cumpla la visión, pero caerán.",
+    "evidence_excerpt": "En aquellos tiempos se levantarán muchos contra el rey del sur. Hombres turbulentos de tu pueblo se levantarán, para que se cumpla la visión, pero caerán.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "uprising_target",
+    "option_category": "person",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-031",
+    "source_unit_id": "DAN11-V017",
+    "fact_id": "DAN11-V017-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Con qué alcance de poder se propondría avanzar el gobernante antes de hacer convenios?",
+    "options": [
+      "Con una pequeña escolta sin recursos",
+      "Con el poder de todo su reino",
+      "Solo con las tropas de la ciudad fuerte",
+      "Con el apoyo exclusivo del rey del sur"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Con el poder de todo su reino",
+    "accepted_answers": [
+      "Con el poder de todo su reino"
+    ],
+    "explanation": "Afirmaría su rostro para venir con el poder de todo su reino.",
+    "why_distractors_fail": {
+      "Con una pequeña escolta sin recursos": "No corresponde a la escala anunciada.",
+      "Solo con las tropas de la ciudad fuerte": "La fuente habla de todo su reino.",
+      "Con el apoyo exclusivo del rey del sur": "El rey del sur es el rival del plan."
+    },
+    "source_ref": "Daniel 11:17",
+    "source_quote": "Afirmará luego su rostro para venir con el poder de todo su reino. Hará convenios con aquél, y le dará una hija por mujer, para destruirlo; pero no permanecerá ni tendrá éxito.",
+    "evidence_excerpt": "Afirmará luego su rostro para venir con el poder de todo su reino. Hará convenios con aquél, y le dará una hija por mujer, para destruirlo; pero no permanecerá ni tendrá éxito.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "power_scope",
+    "option_category": "force_scale",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-032",
+    "source_unit_id": "DAN11-V024",
+    "fact_id": "DAN11-V024-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿En qué condiciones hallaría la provincia antes de realizar acciones sin precedente entre sus antepasados?",
+    "options": [
+      "En guerra y hambre",
+      "Desierta y sin riquezas",
+      "En paz y abundancia",
+      "Sitiada por el rey del sur"
+    ],
+    "correct_option": 2,
+    "correct_answer": "En paz y abundancia",
+    "accepted_answers": [
+      "En paz y abundancia",
+      "paz y abundancia"
+    ],
+    "explanation": "Entraría cuando la provincia estuviera en paz y abundancia.",
+    "why_distractors_fail": {
+      "En guerra y hambre": "Invierte ambas condiciones.",
+      "Desierta y sin riquezas": "Contradice la abundancia descrita.",
+      "Sitiada por el rey del sur": "No es la condición mencionada."
+    },
+    "source_ref": "Daniel 11:24",
+    "source_quote": "Estando la provincia en paz y en abundancia, entrará y hará lo que no hicieron sus padres ni los padres de sus padres; botín, despojos y riquezas repartirá entre sus soldados, y contra las fortalezas formará sus designios. Esto durará un tiempo.",
+    "evidence_excerpt": "Estando la provincia en paz y en abundancia, entrará y hará lo que no hicieron sus padres ni los padres de sus padres; botín, despojos y riquezas repartirá entre sus soldados, y contra las fortalezas formará sus designios. Esto durará un tiempo.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "entry_conditions",
+    "option_category": "condition_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-033",
+    "source_unit_id": "DAN11-V031",
+    "fact_id": "DAN11-V031-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué dos ámbitos profanarían las tropas antes de quitar el sacrificio continuo?",
+    "options": [
+      "El palacio y el río",
+      "La tierra gloriosa y Egipto",
+      "Las costas y las naves",
+      "El santuario y la fortaleza"
+    ],
+    "correct_option": 3,
+    "correct_answer": "El santuario y la fortaleza",
+    "accepted_answers": [
+      "El santuario y la fortaleza",
+      "santuario y fortaleza"
+    ],
+    "explanation": "Las tropas profanarían el santuario y la fortaleza.",
+    "why_distractors_fail": {
+      "El palacio y el río": "No forman el par profanado.",
+      "La tierra gloriosa y Egipto": "Son escenarios de campañas posteriores.",
+      "Las costas y las naves": "No son los ámbitos sagrados de esta acción."
+    },
+    "source_ref": "Daniel 11:31",
+    "source_quote": "Se levantarán sus tropas, que profanarán el santuario y la fortaleza, quitarán el sacrificio continuo y pondrán la abominación desoladora.",
+    "evidence_excerpt": "Se levantarán sus tropas, que profanarán el santuario y la fortaleza, quitarán el sacrificio continuo y pondrán la abominación desoladora.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "profaned_places",
+    "option_category": "place_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-034",
+    "source_unit_id": "DAN11-V032",
+    "fact_id": "DAN11-V032-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿A quiénes seduciría el gobernante mediante lisonjas?",
+    "options": [
+      "A los violadores del pacto",
+      "A los sabios que instruyen",
+      "A los hijos de Amón",
+      "A los reyes de Persia"
+    ],
+    "correct_option": 0,
+    "correct_answer": "A los violadores del pacto",
+    "accepted_answers": [
+      "A los violadores del pacto",
+      "los violadores del pacto"
+    ],
+    "explanation": "Las lisonjas serían usadas para seducir a los violadores del pacto.",
+    "why_distractors_fail": {
+      "A los sabios que instruyen": "Los sabios aparecen como fieles bajo persecución.",
+      "A los hijos de Amón": "Son parte de los territorios que escapan después.",
+      "A los reyes de Persia": "No son el grupo seducido en esta escena."
+    },
+    "source_ref": "Daniel 11:32",
+    "source_quote": "Con lisonjas seducirá a los violadores del pacto; pero el pueblo que conoce a su Dios se esforzará y actuará.",
+    "evidence_excerpt": "Con lisonjas seducirá a los violadores del pacto; pero el pueblo que conoce a su Dios se esforzará y actuará.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "seduced_group",
+    "option_category": "group",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-035",
+    "source_unit_id": "DAN11-V033",
+    "fact_id": "DAN11-V033-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué conjunto reúne las formas de persecución que sufrirían los sabios?",
+    "options": [
+      "Hambre, enfermedad, naufragio y destierro",
+      "Espada, fuego, cautividad y despojo",
+      "Tributo, engaño, riqueza y halagos",
+      "Carros, caballos, naves y fortalezas"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Espada, fuego, cautividad y despojo",
+    "accepted_answers": [
+      "Espada, fuego, cautividad y despojo"
+    ],
+    "explanation": "Los sabios caerían a espada y fuego, en cautividad y despojo.",
+    "why_distractors_fail": {
+      "Hambre, enfermedad, naufragio y destierro": "No es la enumeración del pasaje.",
+      "Tributo, engaño, riqueza y halagos": "Mezcla métodos políticos de otras escenas.",
+      "Carros, caballos, naves y fortalezas": "Enumera recursos militares, no sufrimientos de los sabios."
+    },
+    "source_ref": "Daniel 11:33",
+    "source_quote": "Los sabios del pueblo instruirán a muchos; pero durante algunos días caerán a espada y a fuego, en cautividad y despojo.",
+    "evidence_excerpt": "Los sabios del pueblo instruirán a muchos; pero durante algunos días caerán a espada y a fuego, en cautividad y despojo.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "persecution_set",
+    "option_category": "event_set",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-036",
+    "source_unit_id": "DAN11-V033",
+    "fact_id": "DAN11-V033-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "La persecución de los sabios se extendería durante algunos ____.",
+    "options": [
+      "días",
+      "años",
+      "reinados",
+      "siglos"
+    ],
+    "correct_option": 0,
+    "correct_answer": "días",
+    "accepted_answers": [
+      "días",
+      "algunos días"
+    ],
+    "explanation": "La caída bajo persecución duraría algunos días.",
+    "why_distractors_fail": {
+      "años": "No es la unidad expresada.",
+      "reinados": "No funciona como duración en esta frase.",
+      "siglos": "Excede el plazo indicado."
+    },
+    "source_ref": "Daniel 11:33",
+    "source_quote": "Los sabios del pueblo instruirán a muchos; pero durante algunos días caerán a espada y a fuego, en cautividad y despojo.",
+    "evidence_excerpt": "Los sabios del pueblo instruirán a muchos; pero durante algunos días caerán a espada y a fuego, en cautividad y despojo.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "persecution_duration",
+    "option_category": "time_unit",
+    "false_mutation": null,
+    "blank_span": "días",
+    "significance": "Fija la duración declarada de la persecución que sigue a la instrucción.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-037",
+    "source_unit_id": "DAN11-V034",
+    "fact_id": "DAN11-V034-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Muchos se juntarían a los perseguidos mediante ____.",
+    "options": [
+      "tributos",
+      "lisonjas",
+      "batallas",
+      "decretos"
+    ],
+    "correct_option": 1,
+    "correct_answer": "lisonjas",
+    "accepted_answers": [
+      "lisonjas",
+      "con lisonjas"
+    ],
+    "explanation": "Muchos se unirían a ellos con lisonjas.",
+    "why_distractors_fail": {
+      "tributos": "No es el medio de adhesión descrito.",
+      "batallas": "No se unirían por combate.",
+      "decretos": "No aparece una orden legal en esta frase."
+    },
+    "source_ref": "Daniel 11:34",
+    "source_quote": "En su caída serán ayudados con un pequeño socorro, y muchos se juntarán a ellos con lisonjas.",
+    "evidence_excerpt": "En su caída serán ayudados con un pequeño socorro, y muchos se juntarán a ellos con lisonjas.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "insincere_joining",
+    "option_category": "method",
+    "false_mutation": null,
+    "blank_span": "lisonjas",
+    "significance": "Distingue la ayuda pequeña de las adhesiones motivadas por lisonjas.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-038",
+    "source_unit_id": "DAN11-V035",
+    "fact_id": "DAN11-V035-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "La depuración de algunos sabios continuaría hasta el tiempo ____.",
+    "options": [
+      "olvidado",
+      "inmediato",
+      "determinado",
+      "pasado"
+    ],
+    "correct_option": 2,
+    "correct_answer": "determinado",
+    "accepted_answers": [
+      "determinado",
+      "tiempo determinado"
+    ],
+    "explanation": "La caída purificadora tendría límite en el tiempo determinado.",
+    "why_distractors_fail": {
+      "olvidado": "No es la expresión profética.",
+      "inmediato": "No describe el plazo señalado.",
+      "pasado": "El horizonte era todavía futuro."
+    },
+    "source_ref": "Daniel 11:35",
+    "source_quote": "También algunos de los sabios caerán para ser depurados, limpiados y emblanquecidos, hasta el tiempo determinado; porque aun para esto hay plazo.",
+    "evidence_excerpt": "También algunos de los sabios caerán para ser depurados, limpiados y emblanquecidos, hasta el tiempo determinado; porque aun para esto hay plazo.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "purification_deadline",
+    "option_category": "time_descriptor",
+    "false_mutation": null,
+    "blank_span": "determinado",
+    "significance": "Fija el límite del proceso de depuración de los sabios.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-039",
+    "source_unit_id": "DAN11-V036",
+    "fact_id": "DAN11-V036-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "speaker_addressee",
+    "question": "Contra el Dios de los dioses, el rey hablaría ____.",
+    "options": [
+      "oraciones",
+      "proverbios",
+      "confesiones",
+      "maravillas"
+    ],
+    "correct_option": 3,
+    "correct_answer": "maravillas",
+    "accepted_answers": [
+      "maravillas"
+    ],
+    "explanation": "El rey hablaría maravillas contra el Dios de los dioses.",
+    "why_distractors_fail": {
+      "oraciones": "No se describe una plegaria.",
+      "proverbios": "No es el contenido mencionado.",
+      "confesiones": "Su discurso es de oposición, no de confesión."
+    },
+    "source_ref": "Daniel 11:36",
+    "source_quote": "El rey hará su voluntad, se ensoberbecerá y se engrandecerá sobre todo dios; contra el Dios de los dioses hablará maravillas, y prosperará hasta que sea consumada la ira, porque lo determinado se cumplirá.",
+    "evidence_excerpt": "El rey hará su voluntad, se ensoberbecerá y se engrandecerá sobre todo dios; contra el Dios de los dioses hablará maravillas, y prosperará hasta que sea consumada la ira, porque lo determinado se cumplirá.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "blasphemous_speech",
+    "option_category": "speech",
+    "false_mutation": null,
+    "blank_span": "maravillas",
+    "significance": "Identifica la forma verbal de la arrogancia dirigida contra Dios.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-040",
+    "source_unit_id": "DAN11-V037",
+    "fact_id": "DAN11-V037-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "El rey no haría caso del Dios de sus padres ni del amor de las ____.",
+    "options": [
+      "mujeres",
+      "naciones",
+      "riquezas",
+      "provincias"
+    ],
+    "correct_option": 0,
+    "correct_answer": "mujeres",
+    "accepted_answers": [
+      "mujeres",
+      "las mujeres"
+    ],
+    "explanation": "Entre lo que despreciaría se menciona el amor de las mujeres.",
+    "why_distractors_fail": {
+      "naciones": "No completa la enumeración.",
+      "riquezas": "Las riquezas aparecen como instrumentos de otros gobernantes.",
+      "provincias": "No es el objeto de amor mencionado."
+    },
+    "source_ref": "Daniel 11:37",
+    "source_quote": "Del Dios de sus padres no hará caso, ni del amor de las mujeres, ni respetará a dios alguno, porque sobre todo se engrandecerá.",
+    "evidence_excerpt": "Del Dios de sus padres no hará caso, ni del amor de las mujeres, ni respetará a dios alguno, porque sobre todo se engrandecerá.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "disregarded_object",
+    "option_category": "group",
+    "false_mutation": null,
+    "blank_span": "mujeres",
+    "significance": "Recupera uno de los elementos exactos despreciados por el rey.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-041",
+    "source_unit_id": "DAN11-V038",
+    "fact_id": "DAN11-V038-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "El dios de las fortalezas era desconocido para los ____ del rey.",
+    "options": [
+      "soldados",
+      "padres",
+      "enemigos",
+      "hijos"
+    ],
+    "correct_option": 1,
+    "correct_answer": "padres",
+    "accepted_answers": [
+      "padres",
+      "sus padres"
+    ],
+    "explanation": "Era un dios que sus padres no habían conocido.",
+    "why_distractors_fail": {
+      "soldados": "No es la relación generacional indicada.",
+      "enemigos": "El desconocimiento se atribuye a sus antepasados.",
+      "hijos": "Invierte la dirección de la relación familiar."
+    },
+    "source_ref": "Daniel 11:38",
+    "source_quote": "Pero honrará en su lugar al dios de las fortalezas, un dios que sus padres no conocieron; lo honrará con oro y plata, con piedras preciosas y cosas de gran precio.",
+    "evidence_excerpt": "Pero honrará en su lugar al dios de las fortalezas, un dios que sus padres no conocieron; lo honrará con oro y plata, con piedras preciosas y cosas de gran precio.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "ancestral_novelty",
+    "option_category": "family_group",
+    "false_mutation": null,
+    "blank_span": "padres",
+    "significance": "Distingue el carácter novedoso de este culto respecto de sus antepasados.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-042",
+    "source_unit_id": "DAN11-V038",
+    "fact_id": "DAN11-V038-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Además de oro, piedras preciosas y cosas costosas, el rey honraría a ese dios con ____.",
+    "options": [
+      "hierro",
+      "trigo",
+      "plata",
+      "incienso"
+    ],
+    "correct_option": 2,
+    "correct_answer": "plata",
+    "accepted_answers": [
+      "plata"
+    ],
+    "explanation": "El homenaje incluiría oro, plata, piedras preciosas y objetos costosos.",
+    "why_distractors_fail": {
+      "hierro": "No forma parte de la lista.",
+      "trigo": "No se menciona como ofrenda aquí.",
+      "incienso": "Tampoco integra la enumeración."
+    },
+    "source_ref": "Daniel 11:38",
+    "source_quote": "Pero honrará en su lugar al dios de las fortalezas, un dios que sus padres no conocieron; lo honrará con oro y plata, con piedras preciosas y cosas de gran precio.",
+    "evidence_excerpt": "Pero honrará en su lugar al dios de las fortalezas, un dios que sus padres no conocieron; lo honrará con oro y plata, con piedras preciosas y cosas de gran precio.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "honor_material",
+    "option_category": "material",
+    "false_mutation": null,
+    "blank_span": "plata",
+    "significance": "Precisa los recursos dedicados al culto del dios de las fortalezas.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-043",
+    "source_unit_id": "DAN11-V039",
+    "fact_id": "DAN11-V039-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "El gobernante repartiría tierras como recompensa a quienes reconocieran al dios ajeno.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Las tierras serían repartidas como recompensa dentro de su sistema de honores.",
+    "why_distractors_fail": {
+      "Falso": "La recompensa territorial está expresamente indicada."
+    },
+    "source_ref": "Daniel 11:39",
+    "source_quote": "Con un dios ajeno se hará de las fortalezas más inexpugnables, colmará de honores a los que lo reconozcan, los hará gobernar sobre muchos y repartirá tierras como recompensa.",
+    "evidence_excerpt": "Con un dios ajeno se hará de las fortalezas más inexpugnables, colmará de honores a los que lo reconozcan, los hará gobernar sobre muchos y repartirá tierras como recompensa.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "land_reward",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-044",
+    "source_unit_id": "DAN11-V040",
+    "fact_id": "DAN11-V040-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "Después de levantarse como tempestad, el rey del norte entraría por las tierras, las invadiría y pasaría.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La secuencia del avance es entrar, invadir y pasar.",
+    "why_distractors_fail": {
+      "Falso": "Las tres acciones conservan su orden profético."
+    },
+    "source_ref": "Daniel 11:40",
+    "source_quote": "Al cabo del tiempo, el rey del sur contenderá con él; y el rey del norte se levantará contra él como una tempestad, con carros y gente de a caballo y muchas naves; y entrará por las tierras, las invadirá y pasará.",
+    "evidence_excerpt": "Al cabo del tiempo, el rey del sur contenderá con él; y el rey del norte se levantará contra él como una tempestad, con carros y gente de a caballo y muchas naves; y entrará por las tierras, las invadirá y pasará.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "invasion_sequence",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-045",
+    "source_unit_id": "DAN11-V043",
+    "fact_id": "DAN11-V043-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "El conquistador se apoderaría del oro, la plata y todas las cosas preciosas de Egipto.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Esos tesoros egipcios quedarían bajo su poder.",
+    "why_distractors_fail": {
+      "Falso": "La enumeración coincide con el botín anunciado."
+    },
+    "source_ref": "Daniel 11:43",
+    "source_quote": "Se apoderará de los tesoros de oro y plata, y de todas las cosas preciosas de Egipto. Los de Libia y de Etiopía lo seguirán.",
+    "evidence_excerpt": "Se apoderará de los tesoros de oro y plata, y de todas las cosas preciosas de Egipto. Los de Libia y de Etiopía lo seguirán.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "egyptian_treasures",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-046",
+    "source_unit_id": "DAN11-V044",
+    "fact_id": "DAN11-V044-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Las noticias que lo atemorizarían provocarían una salida con gran ira para destruir y matar a muchos.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El temor causado por las noticias desembocaría en una campaña de gran ira.",
+    "why_distractors_fail": {
+      "Falso": "Causa, emoción y acción coinciden con el anuncio."
+    },
+    "source_ref": "Daniel 11:44",
+    "source_quote": "Pero noticias del oriente y del norte lo atemorizarán, y saldrá con gran ira para destruir y matar a muchos.",
+    "evidence_excerpt": "Pero noticias del oriente y del norte lo atemorizarán, y saldrá con gran ira para destruir y matar a muchos.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "news_reaction",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-047",
+    "source_unit_id": "DAN11-V036",
+    "fact_id": "DAN11-V036-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "El rey se humillaría por debajo de todo dios.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "El rey se ensoberbecería y se engrandecería sobre todo dios.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación sustituye la exaltación por humillación."
+    },
+    "source_ref": "Daniel 11:36",
+    "source_quote": "El rey hará su voluntad, se ensoberbecerá y se engrandecerá sobre todo dios; contra el Dios de los dioses hablará maravillas, y prosperará hasta que sea consumada la ira, porque lo determinado se cumplirá.",
+    "evidence_excerpt": "El rey hará su voluntad, se ensoberbecerá y se engrandecerá sobre todo dios; contra el Dios de los dioses hablará maravillas, y prosperará hasta que sea consumada la ira, porque lo determinado se cumplirá.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "self_exaltation",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "attitude"
+      ],
+      "local": true,
+      "original": "se ensoberbecerá y se engrandecerá sobre todo dios",
+      "replacement": "se humillaría por debajo de todo dios"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-048",
+    "source_unit_id": "DAN11-V038",
+    "fact_id": "DAN11-V038-V11-F04",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "identification",
+    "question": "En lugar de los dioses de sus padres, el rey honraría al dios de la sabiduría.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Honraría al dios de las fortalezas.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación cambia la identidad local del dios honrado."
+    },
+    "source_ref": "Daniel 11:38",
+    "source_quote": "Pero honrará en su lugar al dios de las fortalezas, un dios que sus padres no conocieron; lo honrará con oro y plata, con piedras preciosas y cosas de gran precio.",
+    "evidence_excerpt": "Pero honrará en su lugar al dios de las fortalezas, un dios que sus padres no conocieron; lo honrará con oro y plata, con piedras preciosas y cosas de gran precio.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "honored_deity",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "deity_identity"
+      ],
+      "local": true,
+      "original": "dios de las fortalezas",
+      "replacement": "dios de la sabiduría"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-049",
+    "source_unit_id": "DAN11-V041",
+    "fact_id": "DAN11-V041-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "prophetic_detail",
+    "question": "Edom caería bajo la mano del invasor junto con muchas otras provincias.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Edom figura entre los territorios que escaparían de sus manos.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación cambia el desenlace de Edom de escape a caída."
+    },
+    "source_ref": "Daniel 11:41",
+    "source_quote": "Entrará en la tierra gloriosa, y muchas provincias caerán; pero escaparán de sus manos Edom, Moab y la mayoría de los hijos de Amón.",
+    "evidence_excerpt": "Entrará en la tierra gloriosa, y muchas provincias caerán; pero escaparán de sus manos Edom, Moab y la mayoría de los hijos de Amón.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "territory_outcome",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "outcome"
+      ],
+      "local": true,
+      "original": "escaparán de sus manos Edom",
+      "replacement": "Edom caería bajo la mano del invasor"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-050",
+    "source_unit_id": "DAN11-V039",
+    "fact_id": "DAN11-V039-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Quienes reconocieran al dios ajeno serían puestos a gobernar sobre muchos.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Además de honrarlos, el gobernante les daría autoridad sobre muchos.",
+    "why_distractors_fail": {
+      "Falso": "La concesión de gobierno está expresamente anunciada."
+    },
+    "source_ref": "Daniel 11:39",
+    "source_quote": "Con un dios ajeno se hará de las fortalezas más inexpugnables, colmará de honores a los que lo reconozcan, los hará gobernar sobre muchos y repartirá tierras como recompensa.",
+    "evidence_excerpt": "Con un dios ajeno se hará de las fortalezas más inexpugnables, colmará de honores a los que lo reconozcan, los hará gobernar sobre muchos y repartirá tierras como recompensa.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "delegated_rule",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]
