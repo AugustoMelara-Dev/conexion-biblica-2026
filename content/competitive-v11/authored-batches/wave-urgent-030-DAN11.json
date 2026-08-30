@@ -1,0 +1,206 @@
+[
+  {
+    "id": "DAN11-V11-WAVE-051",
+    "source_unit_id": "DAN11-V006",
+    "fact_id": "DAN11-V006-V11-F03",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Al cabo de unos ____ los reyes del norte y del sur harían alianza.",
+    "options": [
+      "días",
+      "años",
+      "meses",
+      "siglos"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "años",
+      "unos años"
+    ],
+    "explanation": "La alianza entre ambos reinos se produciría al cabo de unos años.",
+    "why_distractors_fail": {
+      "días": "La fuente expresa el lapso en años.",
+      "meses": "No es la unidad temporal indicada.",
+      "siglos": "El plazo descrito es de unos años, no de siglos."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "north_south_alliance_delay",
+    "option_category": "time_unit",
+    "significance": "Fija el lapso previo a la alianza matrimonial entre ambos reinos.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Añade el dato cronológico sin repetir el propósito ni el fracaso de la alianza."
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-052",
+    "source_unit_id": "DAN11-V010",
+    "fact_id": "DAN11-V010-V11-F03",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Luego el atacante volvería y llevaría la guerra hasta su ____.",
+    "options": [
+      "tierra",
+      "fortaleza",
+      "palacio",
+      "campamento"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "fortaleza",
+      "su fortaleza"
+    ],
+    "explanation": "Después de inundar y pasar adelante, volvería y llevaría la guerra hasta la fortaleza.",
+    "why_distractors_fail": {
+      "tierra": "La meta concreta de la guerra se identifica como una fortaleza.",
+      "palacio": "La fuente no menciona un palacio como destino de esta campaña.",
+      "campamento": "El avance no termina en un campamento."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "return_campaign_destination",
+    "option_category": "military_location",
+    "significance": "Completa el destino del avance posterior al regreso del atacante.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa el destino de la guerra, distinto del regreso ya cubierto."
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-053",
+    "source_unit_id": "DAN11-V013",
+    "fact_id": "DAN11-V013-V11-F03",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Tras qué lapso volvería rápidamente el rey del norte con un gran ejército y muchas riquezas?",
+    "options": [
+      "Al cabo de algunos años",
+      "Al cabo de pocos días",
+      "Después de una sola noche",
+      "Después de varios siglos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Al cabo de algunos años",
+      "algunos años"
+    ],
+    "explanation": "El nuevo avance del rey del norte ocurriría al cabo de algunos años.",
+    "why_distractors_fail": {
+      "Al cabo de pocos días": "La fuente fija el lapso en algunos años.",
+      "Después de una sola noche": "No se describe un retorno inmediato de una noche.",
+      "Después de varios siglos": "Ese plazo excede el señalado."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "northern_return_delay",
+    "option_category": "time_span",
+    "significance": "Distingue el plazo del nuevo avance de la magnitud de su ejército.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Pregunta por la cronología todavía no evaluada en esa unidad fuente."
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-054",
+    "source_unit_id": "DAN11-V025",
+    "fact_id": "DAN11-V025-V11-F03",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿Contra quién despertaría el gobernante sus fuerzas y su ardor con un gran ejército?",
+    "options": [
+      "Contra el rey del sur",
+      "Contra el rey del norte",
+      "Contra el príncipe del pacto",
+      "Contra el pueblo que conoce a Dios"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Contra el rey del sur",
+      "el rey del sur"
+    ],
+    "explanation": "El gran ejército movilizaría sus fuerzas y su ardor contra el rey del sur.",
+    "why_distractors_fail": {
+      "Contra el rey del norte": "El rey del norte no es el blanco de la ofensiva descrita.",
+      "Contra el príncipe del pacto": "Ese personaje aparece en otro enfrentamiento.",
+      "Contra el pueblo que conoce a Dios": "La unidad presenta una guerra entre los reyes del norte y del sur."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "southern_campaign_target",
+    "option_category": "opponent",
+    "significance": "Identifica el blanco de la movilización que precede a la respuesta militar del sur.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa el objetivo de la ofensiva y no repite la traición que impediría prevalecer al sur."
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-055",
+    "source_unit_id": "DAN11-V039",
+    "fact_id": "DAN11-V039-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿De qué posiciones se haría el gobernante con la ayuda de un dios ajeno?",
+    "options": [
+      "De las fortalezas más inexpugnables",
+      "De los puertos mejor defendidos",
+      "De las ciudades mejor amuralladas",
+      "De los pasos fronterizos más estratégicos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "De las fortalezas más inexpugnables",
+      "las fortalezas más inexpugnables"
+    ],
+    "explanation": "El gobernante se haría de las fortalezas más inexpugnables con un dios ajeno.",
+    "why_distractors_fail": {
+      "De los puertos mejor defendidos": "La fuente no identifica puertos como el objetivo obtenido con ese dios.",
+      "De las ciudades mejor amuralladas": "La acción se refiere a fortalezas inexpugnables, no específicamente a ciudades.",
+      "De los pasos fronterizos más estratégicos": "No se mencionan pasos fronterizos como resultado de esa ayuda."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "foreign_god_fortress_gain",
+    "option_category": "military_position",
+    "significance": "Separa la conquista atribuida al dios ajeno de las recompensas dadas a sus partidarios.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa el logro militar inicial, distinto de honores, gobiernos y tierras ya cubiertos."
+    }
+  },
+  {
+    "id": "DAN11-V11-WAVE-056",
+    "source_unit_id": "DAN11-V040",
+    "fact_id": "DAN11-V040-V11-F03",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué fuerzas acompañarían la embestida del rey del norte, semejante a una tempestad?",
+    "options": [
+      "Carros, gente de a caballo y muchas naves",
+      "Infantería, arqueros y numerosas máquinas de guerra",
+      "Caballería, lanceros y una gran flota de transporte",
+      "Tropas de asedio, honderos y muchos carros de guerra"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Carros, gente de a caballo y muchas naves",
+      "carros, gente de a caballo y muchas naves"
+    ],
+    "explanation": "La ofensiva del norte reuniría carros, gente de a caballo y muchas naves.",
+    "why_distractors_fail": {
+      "Infantería, arqueros y numerosas máquinas de guerra": "Esa combinación militar no es la enumerada en la fuente.",
+      "Caballería, lanceros y una gran flota de transporte": "Aunque es una fuerza plausible, sustituye los carros y las muchas naves del anuncio.",
+      "Tropas de asedio, honderos y muchos carros de guerra": "La fuente no enumera tropas de asedio ni honderos en esta embestida."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "northern_tempest_force_composition",
+    "option_category": "military_force_set",
+    "significance": "Precisa los tres componentes del avance con que el norte invadiría las tierras.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Añade la composición de la fuerza, sin repetir quién inició la contienda ni el recorrido posterior."
+    }
+  }
+]

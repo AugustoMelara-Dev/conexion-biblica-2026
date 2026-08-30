@@ -4260,5 +4260,137 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
     }
+  },
+  {
+    "id": "DAN2-V11-WAVE-051",
+    "source_unit_id": "DAN2-V007",
+    "fact_id": "DAN2-V007-V11-F04",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Con qué ordinal presenta el relato la reiteración en que los sabios pidieron al rey que contara el sueño?",
+    "options": [
+      "Por segunda vez",
+      "Por primera vez",
+      "Por tercera vez",
+      "Por cuarta vez"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Por segunda vez",
+    "accepted_answers": [
+      "Por segunda vez",
+      "segunda vez"
+    ],
+    "explanation": "El relato presenta esta reiteración como la segunda respuesta de los sabios.",
+    "why_distractors_fail": {
+      "Por primera vez": "La fuente identifica esta intervención como la segunda respuesta.",
+      "Por tercera vez": "No es el ordinal indicado en esta intervención.",
+      "Por cuarta vez": "La fuente no presenta esta petición como una cuarta respuesta."
+    },
+    "source_ref": "Daniel 2:7",
+    "source_quote": "Respondieron por segunda vez, y dijeron: —Cuente el rey el sueño a sus siervos, y le daremos la interpretación.",
+    "evidence_excerpt": "Respondieron por segunda vez, y dijeron: —Cuente el rey el sueño a sus siervos, y le daremos la interpretación.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "repeated_request_ordinal",
+    "option_category": "ordinal",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-052",
+    "source_unit_id": "DAN2-V011",
+    "fact_id": "DAN2-V011-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "Según los caldeos, ¿dónde no estaba la morada de los dioses capaces de declarar el difícil asunto del rey?",
+    "options": [
+      "Entre los sabios de Babilonia",
+      "Entre los hombres",
+      "En la corte del rey",
+      "En las casas de los caldeos"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Entre los hombres",
+    "accepted_answers": [
+      "Entre los hombres",
+      "no estaba entre los hombres"
+    ],
+    "explanation": "Los caldeos afirmaron que la morada de esos dioses no estaba entre los hombres.",
+    "why_distractors_fail": {
+      "Entre los sabios de Babilonia": "La declaración contrapone a los dioses con los seres humanos, no con un gremio concreto.",
+      "En la corte del rey": "La corte no aparece como morada de los dioses.",
+      "En las casas de los caldeos": "La fuente no sitúa allí su morada."
+    },
+    "source_ref": "Daniel 2:11",
+    "source_quote": "Porque el asunto que el rey demanda es difícil, y no hay quien lo pueda declarar al rey, salvo los dioses cuya morada no está entre los hombres.",
+    "evidence_excerpt": "Porque el asunto que el rey demanda es difícil, y no hay quien lo pueda declarar al rey, salvo los dioses cuya morada no está entre los hombres.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "divine_dwelling_contrast",
+    "option_category": "location",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-053",
+    "source_unit_id": "DAN2-V013",
+    "fact_id": "DAN2-V013-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué ordenaba el edicto que también puso en peligro a Daniel y a sus compañeros?",
+    "options": [
+      "Que los sabios fueran expulsados de la provincia",
+      "Que los sabios entregaran sus bienes al rey",
+      "Que los sabios fueran llevados a la muerte",
+      "Que los sabios permanecieran encerrados en sus casas"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Que los sabios fueran llevados a la muerte",
+    "accepted_answers": [
+      "Que los sabios fueran llevados a la muerte",
+      "los sabios fueran llevados a la muerte"
+    ],
+    "explanation": "El edicto disponía que los sabios fueran llevados a la muerte, por lo que buscaron también a Daniel y a sus compañeros.",
+    "why_distractors_fail": {
+      "Que los sabios fueran expulsados de la provincia": "El edicto imponía la muerte, no el destierro.",
+      "Que los sabios entregaran sus bienes al rey": "No se trataba de una confiscación de bienes.",
+      "Que los sabios permanecieran encerrados en sus casas": "La orden no era arresto domiciliario."
+    },
+    "source_ref": "Daniel 2:13",
+    "source_quote": "Se publicó, pues, el edicto de que los sabios fueran llevados a la muerte; y buscaron también a Daniel y a sus compañeros para matarlos.",
+    "evidence_excerpt": "Se publicó, pues, el edicto de que los sabios fueran llevados a la muerte; y buscaron también a Daniel y a sus compañeros para matarlos.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "published_edict_penalty",
+    "option_category": "legal_order",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]

@@ -1,0 +1,104 @@
+[
+  {
+    "id": "DAN2-V11-WAVE-051",
+    "source_unit_id": "DAN2-V007",
+    "fact_id": "DAN2-V007-V11-F04",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Con qué ordinal presenta el relato la reiteración en que los sabios pidieron al rey que contara el sueño?",
+    "options": [
+      "Por primera vez",
+      "Por segunda vez",
+      "Por tercera vez",
+      "Por cuarta vez"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Por segunda vez",
+      "segunda vez"
+    ],
+    "explanation": "El relato presenta esta reiteración como la segunda respuesta de los sabios.",
+    "why_distractors_fail": {
+      "Por primera vez": "La fuente identifica esta intervención como la segunda respuesta.",
+      "Por tercera vez": "No es el ordinal indicado en esta intervención.",
+      "Por cuarta vez": "La fuente no presenta esta petición como una cuarta respuesta."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "repeated_request_ordinal",
+    "option_category": "ordinal",
+    "significance": "Distingue la reiteración de los sabios de su primera petición al rey.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa el ordinal narrativo explícito de la reiteración, sin confundirlo con el número total de peticiones."
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-052",
+    "source_unit_id": "DAN2-V011",
+    "fact_id": "DAN2-V011-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "Según los caldeos, ¿dónde no estaba la morada de los dioses capaces de declarar el difícil asunto del rey?",
+    "options": [
+      "Entre los hombres",
+      "Entre los sabios de Babilonia",
+      "En la corte del rey",
+      "En las casas de los caldeos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Entre los hombres",
+      "no estaba entre los hombres"
+    ],
+    "explanation": "Los caldeos afirmaron que la morada de esos dioses no estaba entre los hombres.",
+    "why_distractors_fail": {
+      "Entre los sabios de Babilonia": "La declaración contrapone a los dioses con los seres humanos, no con un gremio concreto.",
+      "En la corte del rey": "La corte no aparece como morada de los dioses.",
+      "En las casas de los caldeos": "La fuente no sitúa allí su morada."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "divine_dwelling_contrast",
+    "option_category": "location",
+    "significance": "Recoge la razón con que los caldeos separaron la capacidad divina de la humana.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Pregunta por la morada atribuida a los dioses, distinta de quién podía revelar el misterio."
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-053",
+    "source_unit_id": "DAN2-V013",
+    "fact_id": "DAN2-V013-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué ordenaba el edicto que también puso en peligro a Daniel y a sus compañeros?",
+    "options": [
+      "Que los sabios fueran llevados a la muerte",
+      "Que los sabios fueran expulsados de la provincia",
+      "Que los sabios entregaran sus bienes al rey",
+      "Que los sabios permanecieran encerrados en sus casas"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Que los sabios fueran llevados a la muerte",
+      "los sabios fueran llevados a la muerte"
+    ],
+    "explanation": "El edicto disponía que los sabios fueran llevados a la muerte, por lo que buscaron también a Daniel y a sus compañeros.",
+    "why_distractors_fail": {
+      "Que los sabios fueran expulsados de la provincia": "El edicto imponía la muerte, no el destierro.",
+      "Que los sabios entregaran sus bienes al rey": "No se trataba de una confiscación de bienes.",
+      "Que los sabios permanecieran encerrados en sus casas": "La orden no era arresto domiciliario."
+    },
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "published_edict_penalty",
+    "option_category": "legal_order",
+    "significance": "Define la amenaza concreta que alcanzó a Daniel y a sus compañeros.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa el contenido del edicto y no vuelve a preguntar a quiénes buscaron los ejecutores."
+    }
+  }
+]
