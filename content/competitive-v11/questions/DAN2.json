@@ -2099,5 +2099,1090 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "ai-authoring-team"
     }
+  },
+  {
+    "id": "DAN2-V11-WAVE-001",
+    "source_unit_id": "DAN2-V001",
+    "fact_id": "DAN2-V001-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Cuándo comenzaron los sueños que perturbaron a Nabucodonosor?",
+    "options": [
+      "En el segundo año de su reinado",
+      "En el tercer año de Joacim",
+      "En el primer año de Ciro",
+      "En el último año de Belsasar"
+    ],
+    "correct_option": 0,
+    "correct_answer": "En el segundo año de su reinado",
+    "accepted_answers": [
+      "En el segundo año de su reinado",
+      "En el segundo año del reinado de Nabucodonosor"
+    ],
+    "explanation": "El episodio se sitúa en el segundo año del reinado de Nabucodonosor.",
+    "why_distractors_fail": {
+      "En el tercer año de Joacim": "Ese dato enmarca el sitio de Jerusalén en el capítulo anterior.",
+      "En el primer año de Ciro": "Ciro pertenece a un período posterior.",
+      "En el último año de Belsasar": "Belsasar no es el rey de este episodio."
+    },
+    "source_ref": "Daniel 2:1",
+    "source_quote": "En el segundo año del reinado de Nabucodonosor, tuvo Nabucodonosor sueños, y se turbó su espíritu y se le fue el sueño.",
+    "evidence_excerpt": "En el segundo año del reinado de Nabucodonosor, tuvo Nabucodonosor sueños, y se turbó su espíritu y se le fue el sueño.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "dream_timing",
+    "option_category": "regnal_time",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-002",
+    "source_unit_id": "DAN2-V002",
+    "fact_id": "DAN2-V002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "identification",
+    "question": "¿Qué cuatro grupos fueron convocados para explicar los sueños del rey?",
+    "options": [
+      "Sacerdotes, profetas, escribas y soldados",
+      "Magos, astrólogos, encantadores y caldeos",
+      "Príncipes, jueces, gobernadores y capitanes",
+      "Medos, persas, egipcios y griegos"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Magos, astrólogos, encantadores y caldeos",
+    "accepted_answers": [
+      "Magos, astrólogos, encantadores y caldeos"
+    ],
+    "explanation": "Nabucodonosor reunió cuatro clases de especialistas de su corte.",
+    "why_distractors_fail": {
+      "Sacerdotes, profetas, escribas y soldados": "No es la lista convocada por el rey.",
+      "Príncipes, jueces, gobernadores y capitanes": "Son cargos políticos y militares ajenos a esta enumeración.",
+      "Medos, persas, egipcios y griegos": "Son pueblos, no los especialistas llamados."
+    },
+    "source_ref": "Daniel 2:2",
+    "source_quote": "Hizo llamar el rey a magos, astrólogos, encantadores y caldeos, para que le explicaran sus sueños. Vinieron, pues, y se presentaron delante del rey.",
+    "evidence_excerpt": "Hizo llamar el rey a magos, astrólogos, encantadores y caldeos, para que le explicaran sus sueños. Vinieron, pues, y se presentaron delante del rey.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "royal_specialists_list",
+    "option_category": "group_set",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-003",
+    "source_unit_id": "DAN2-V004",
+    "fact_id": "DAN2-V004-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "speaker_addressee",
+    "question": "¿Cómo iniciaron los caldeos su respuesta al rey antes de pedirle que contara el sueño?",
+    "options": [
+      "Hablaron en hebreo y acusaron al rey de injusticia",
+      "Guardaron silencio hasta que Arioc interviniera",
+      "Hablaron en arameo y dijeron: «¡Rey, para siempre vive!»",
+      "Respondieron en persa y solicitaron diez días"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Hablaron en arameo y dijeron: «¡Rey, para siempre vive!»",
+    "accepted_answers": [
+      "Hablaron en arameo y dijeron: «¡Rey, para siempre vive!»"
+    ],
+    "explanation": "La respuesta especifica tanto la lengua usada como la salutación dirigida al monarca.",
+    "why_distractors_fail": {
+      "Hablaron en hebreo y acusaron al rey de injusticia": "La lengua fue aramea y el tono inicial fue honorífico.",
+      "Guardaron silencio hasta que Arioc interviniera": "Los caldeos respondieron directamente.",
+      "Respondieron en persa y solicitaron diez días": "Ni la lengua ni el plazo corresponden a esta escena."
+    },
+    "source_ref": "Daniel 2:4",
+    "source_quote": "Entonces hablaron los caldeos al rey en lengua aramea: —¡Rey, para siempre vive! Cuenta el sueño a tus siervos, y te daremos la interpretación.",
+    "evidence_excerpt": "Entonces hablaron los caldeos al rey en lengua aramea: —¡Rey, para siempre vive! Cuenta el sueño a tus siervos, y te daremos la interpretación.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "chaldean_reply_opening",
+    "option_category": "speech_opening",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-004",
+    "source_unit_id": "DAN2-V005",
+    "fact_id": "DAN2-V005-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué castigo doble anunció el rey si no le revelaban tanto el sueño como su interpretación?",
+    "options": [
+      "Los desterrarían y entregarían sus bienes al templo",
+      "Los encarcelarían y derribarían las murallas de la ciudad",
+      "Los enviarían a Egipto y quemarían únicamente sus libros",
+      "Los harían pedazos y convertirían sus casas en estercoleros"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Los harían pedazos y convertirían sus casas en estercoleros",
+    "accepted_answers": [
+      "Los harían pedazos y convertirían sus casas en estercoleros"
+    ],
+    "explanation": "La amenaza alcanzaba directamente a los sabios y también a sus casas.",
+    "why_distractors_fail": {
+      "Los desterrarían y entregarían sus bienes al templo": "No fue el castigo anunciado.",
+      "Los encarcelarían y derribarían las murallas de la ciudad": "Cambia personas, pena y objeto afectado.",
+      "Los enviarían a Egipto y quemarían únicamente sus libros": "No se menciona destierro ni destrucción de libros."
+    },
+    "source_ref": "Daniel 2:5",
+    "source_quote": "Respondió el rey y dijo a los caldeos: —El asunto lo olvidé; pero si no me decís el sueño y su interpretación, seréis hechos pedazos y vuestras casas serán convertidas en estercoleros.",
+    "evidence_excerpt": "Respondió el rey y dijo a los caldeos: —El asunto lo olvidé; pero si no me decís el sueño y su interpretación, seréis hechos pedazos y vuestras casas serán convertidas en estercoleros.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "failure_double_penalty",
+    "option_category": "penalty_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-005",
+    "source_unit_id": "DAN2-V008",
+    "fact_id": "DAN2-V008-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Por qué interpretó Nabucodonosor la insistencia de los sabios como una maniobra para ganar tiempo?",
+    "options": [
+      "Porque sabían que el asunto se le había ido",
+      "Porque Arioc les había revelado el sueño",
+      "Porque esperaban que Daniel abandonara Babilonia",
+      "Porque ya habían recibido la recompensa prometida"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Porque sabían que el asunto se le había ido",
+    "accepted_answers": [
+      "Porque sabían que el asunto se le había ido",
+      "Porque veían que el asunto se le había ido"
+    ],
+    "explanation": "El rey vinculó las dilaciones con el conocimiento de que él no podía proporcionarles el sueño.",
+    "why_distractors_fail": {
+      "Porque Arioc les había revelado el sueño": "Arioc no conocía ni comunicó el contenido.",
+      "Porque esperaban que Daniel abandonara Babilonia": "Daniel aún no había intervenido ante ellos.",
+      "Porque ya habían recibido la recompensa prometida": "Las recompensas dependían de resolver el asunto."
+    },
+    "source_ref": "Daniel 2:8",
+    "source_quote": "El rey respondió y dijo: —Yo conozco ciertamente que vosotros ponéis dilaciones, porque veis que el asunto se me ha ido.",
+    "evidence_excerpt": "El rey respondió y dijo: —Yo conozco ciertamente que vosotros ponéis dilaciones, porque veis que el asunto se me ha ido.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "delay_suspicion_reason",
+    "option_category": "motive_inference",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-006",
+    "source_unit_id": "DAN2-V009",
+    "fact_id": "DAN2-V009-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué sospechaba el rey que preparaban los sabios mientras dejaban pasar el tiempo?",
+    "options": [
+      "Una ceremonia para devolverle el sueño",
+      "Una respuesta mentirosa y perversa",
+      "Una rebelión encabezada por los caldeos",
+      "Una interpretación escrita por Daniel"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Una respuesta mentirosa y perversa",
+    "accepted_answers": [
+      "Una respuesta mentirosa y perversa"
+    ],
+    "explanation": "Nabucodonosor creyó que pretendían fabricar una respuesta falsa hasta que cambiara la situación.",
+    "why_distractors_fail": {
+      "Una ceremonia para devolverle el sueño": "No es la maniobra que denunció.",
+      "Una rebelión encabezada por los caldeos": "La acusación fue de engaño verbal, no de rebelión.",
+      "Una interpretación escrita por Daniel": "Daniel no participaba en su estrategia."
+    },
+    "source_ref": "Daniel 2:9",
+    "source_quote": "Si no me contáis el sueño, una sola sentencia hay para vosotros. Ciertamente preparáis una respuesta mentirosa y perversa que decir delante de mí, entre tanto que pasa el tiempo. Contadme, pues, el sueño, para que yo sepa que me podéis dar su interpretación.",
+    "evidence_excerpt": "Si no me contáis el sueño, una sola sentencia hay para vosotros. Ciertamente preparáis una respuesta mentirosa y perversa que decir delante de mí, entre tanto que pasa el tiempo. Contadme, pues, el sueño, para que yo sepa que me podéis dar su interpretación.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "wise_men_alleged_deception",
+    "option_category": "alleged_plan",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-007",
+    "source_unit_id": "DAN2-V010",
+    "fact_id": "DAN2-V010-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué dos argumentos presentaron los caldeos para mostrar que la exigencia era extraordinaria?",
+    "options": [
+      "Solo Daniel podía cumplirla y todos los reyes anteriores ya lo habían intentado",
+      "Los dioses desconocían el sueño y el rey había prohibido interpretarlo",
+      "Ningún hombre podía cumplirla y ningún gobernante había pedido algo semejante",
+      "La respuesta requería riquezas y el tesoro real estaba vacío"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Ningún hombre podía cumplirla y ningún gobernante había pedido algo semejante",
+    "accepted_answers": [
+      "Ningún hombre podía cumplirla y ningún gobernante había pedido algo semejante"
+    ],
+    "explanation": "Los caldeos apelaron tanto al límite humano como a la ausencia de precedente político.",
+    "why_distractors_fail": {
+      "Solo Daniel podía cumplirla y todos los reyes anteriores ya lo habían intentado": "Ellos no mencionaron a Daniel y negaron que existiera precedente.",
+      "Los dioses desconocían el sueño y el rey había prohibido interpretarlo": "Su argumento posterior atribuyó conocimiento a los dioses.",
+      "La respuesta requería riquezas y el tesoro real estaba vacío": "No plantearon una dificultad económica."
+    },
+    "source_ref": "Daniel 2:10",
+    "source_quote": "Los caldeos respondieron delante del rey y dijeron: —No hay hombre sobre la tierra que pueda declarar el asunto del rey. Además, ningún rey, príncipe ni señor preguntó cosa semejante a ningún mago ni astrólogo ni caldeo.",
+    "evidence_excerpt": "Los caldeos respondieron delante del rey y dijeron: —No hay hombre sobre la tierra que pueda declarar el asunto del rey. Además, ningún rey, príncipe ni señor preguntó cosa semejante a ningún mago ni astrólogo ni caldeo.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "impossible_demand_arguments",
+    "option_category": "argument_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-008",
+    "source_unit_id": "DAN2-V014",
+    "fact_id": "DAN2-V014-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "identification",
+    "question": "¿Quién era Arioc y qué misión estaba ejecutando cuando Daniel le habló?",
+    "options": [
+      "Era jefe de los eunucos y buscaba nuevos estudiantes",
+      "Era príncipe de Persia y llevaba regalos al rey",
+      "Era caldeo y trataba de interpretar el sueño",
+      "Era capitán de la guardia y había salido para matar a los sabios"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Era capitán de la guardia y había salido para matar a los sabios",
+    "accepted_answers": [
+      "Era capitán de la guardia y había salido para matar a los sabios"
+    ],
+    "explanation": "Arioc aparece con un cargo militar y como ejecutor de la sentencia contra los sabios.",
+    "why_distractors_fail": {
+      "Era jefe de los eunucos y buscaba nuevos estudiantes": "Ese cargo corresponde a otro funcionario del capítulo anterior.",
+      "Era príncipe de Persia y llevaba regalos al rey": "No era un gobernante extranjero.",
+      "Era caldeo y trataba de interpretar el sueño": "Su función era ejecutar el edicto."
+    },
+    "source_ref": "Daniel 2:14",
+    "source_quote": "Entonces Daniel habló sabia y prudentemente a Arioc, capitán de la guardia del rey, que había salido para matar a los sabios de Babilonia.",
+    "evidence_excerpt": "Entonces Daniel habló sabia y prudentemente a Arioc, capitán de la guardia del rey, que había salido para matar a los sabios de Babilonia.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "arioc_role_mission",
+    "option_category": "person_role",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-009",
+    "source_unit_id": "DAN2-V016",
+    "fact_id": "DAN2-V016-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué pidió Daniel al rey y qué se comprometió a hacer a cambio?",
+    "options": [
+      "Pidió tiempo y prometió darle la interpretación",
+      "Pidió riquezas y prometió abandonar Babilonia",
+      "Pidió el sueño y prometió consultar a los caldeos",
+      "Pidió la libertad de los sabios y prometió servir a Arioc"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Pidió tiempo y prometió darle la interpretación",
+    "accepted_answers": [
+      "Pidió tiempo y prometió darle la interpretación"
+    ],
+    "explanation": "Daniel solicitó una oportunidad temporal con la certeza de que presentaría la interpretación.",
+    "why_distractors_fail": {
+      "Pidió riquezas y prometió abandonar Babilonia": "No buscó recompensa ni salida del reino.",
+      "Pidió el sueño y prometió consultar a los caldeos": "Su recurso sería Dios, no los sabios condenados.",
+      "Pidió la libertad de los sabios y prometió servir a Arioc": "La solicitud inmediata fue tiempo ante el rey."
+    },
+    "source_ref": "Daniel 2:16",
+    "source_quote": "y Daniel entró y pidió al rey que le concediera tiempo, que él daría al rey la interpretación.",
+    "evidence_excerpt": "y Daniel entró y pidió al rey que le concediera tiempo, que él daría al rey la interpretación.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "daniel_request_commitment",
+    "option_category": "request_promise_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-010",
+    "source_unit_id": "DAN2-V018",
+    "fact_id": "DAN2-V018-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué objetivo completo tenía la oración conjunta acerca del misterio?",
+    "options": [
+      "Obtener honores para reemplazar inmediatamente a todos los caldeos",
+      "Recibir misericordia para que Daniel y sus compañeros no murieran con los demás sabios",
+      "Convencer al rey de olvidar para siempre el sueño",
+      "Descubrir una ruta para huir de Babilonia antes del edicto"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Recibir misericordia para que Daniel y sus compañeros no murieran con los demás sabios",
+    "accepted_answers": [
+      "Recibir misericordia para que Daniel y sus compañeros no murieran con los demás sabios"
+    ],
+    "explanation": "La petición vinculaba la revelación del misterio con la preservación de sus vidas frente al edicto.",
+    "why_distractors_fail": {
+      "Obtener honores para reemplazar inmediatamente a todos los caldeos": "La prioridad era misericordia y supervivencia, no ascenso.",
+      "Convencer al rey de olvidar para siempre el sueño": "Necesitaban que Dios revelara el misterio.",
+      "Descubrir una ruta para huir de Babilonia antes del edicto": "Daniel buscó respuesta divina, no escape."
+    },
+    "source_ref": "Daniel 2:18",
+    "source_quote": "para que pidieran misericordias del Dios del cielo sobre este misterio, a fin de que Daniel y sus compañeros no perecieran con los otros sabios de Babilonia.",
+    "evidence_excerpt": "para que pidieran misericordias del Dios del cielo sobre este misterio, a fin de que Daniel y sus compañeros no perecieran con los otros sabios de Babilonia.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "prayer_survival_purpose",
+    "option_category": "prayer_goal",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-011",
+    "source_unit_id": "DAN2-V001",
+    "fact_id": "DAN2-V001-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Nabucodonosor tuvo aquellos sueños en el ____ año de su reinado.",
+    "options": [
+      "segundo",
+      "primer",
+      "tercer",
+      "séptimo"
+    ],
+    "correct_option": 0,
+    "correct_answer": "segundo",
+    "accepted_answers": [
+      "segundo",
+      "segundo año",
+      "2"
+    ],
+    "explanation": "La crisis del sueño ocurrió durante su segundo año como rey.",
+    "why_distractors_fail": {
+      "primer": "No es el ordinal indicado.",
+      "tercer": "Ese número corresponde a otro marco histórico.",
+      "séptimo": "No aparece como fecha de este sueño."
+    },
+    "source_ref": "Daniel 2:1",
+    "source_quote": "En el segundo año del reinado de Nabucodonosor, tuvo Nabucodonosor sueños, y se turbó su espíritu y se le fue el sueño.",
+    "evidence_excerpt": "En el segundo año del reinado de Nabucodonosor, tuvo Nabucodonosor sueños, y se turbó su espíritu y se le fue el sueño.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "dream_regnal_year",
+    "option_category": "ordinal",
+    "false_mutation": null,
+    "blank_span": "segundo",
+    "significance": "Fija la fecha precisa del episodio.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-012",
+    "source_unit_id": "DAN2-V004",
+    "fact_id": "DAN2-V004-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Los caldeos hablaron al rey en lengua ____.",
+    "options": [
+      "hebrea",
+      "aramea",
+      "griega",
+      "egipcia"
+    ],
+    "correct_option": 1,
+    "correct_answer": "aramea",
+    "accepted_answers": [
+      "aramea",
+      "lengua aramea"
+    ],
+    "explanation": "El idioma señalado al comenzar su respuesta fue el arameo.",
+    "why_distractors_fail": {
+      "hebrea": "No es la lengua identificada en el versículo.",
+      "griega": "Grecia no determina el idioma de esta audiencia.",
+      "egipcia": "Tampoco corresponde a los caldeos."
+    },
+    "source_ref": "Daniel 2:4",
+    "source_quote": "Entonces hablaron los caldeos al rey en lengua aramea: —¡Rey, para siempre vive! Cuenta el sueño a tus siervos, y te daremos la interpretación.",
+    "evidence_excerpt": "Entonces hablaron los caldeos al rey en lengua aramea: —¡Rey, para siempre vive! Cuenta el sueño a tus siervos, y te daremos la interpretación.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "chaldean_language",
+    "option_category": "language",
+    "false_mutation": null,
+    "blank_span": "aramea",
+    "significance": "Identifica el cambio lingüístico explícito del relato.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-013",
+    "source_unit_id": "DAN2-V005",
+    "fact_id": "DAN2-V005-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Los sabios serían hechos ____ si no declaraban el sueño y su interpretación.",
+    "options": [
+      "prisioneros",
+      "gobernadores",
+      "pedazos",
+      "extranjeros"
+    ],
+    "correct_option": 2,
+    "correct_answer": "pedazos",
+    "accepted_answers": [
+      "pedazos",
+      "hechos pedazos"
+    ],
+    "explanation": "La amenaza personal consistía en hacerlos pedazos.",
+    "why_distractors_fail": {
+      "prisioneros": "El castigo anunciado era más severo.",
+      "gobernadores": "No era una recompensa política.",
+      "extranjeros": "No se trataba de cambiar su nacionalidad."
+    },
+    "source_ref": "Daniel 2:5",
+    "source_quote": "Respondió el rey y dijo a los caldeos: —El asunto lo olvidé; pero si no me decís el sueño y su interpretación, seréis hechos pedazos y vuestras casas serán convertidas en estercoleros.",
+    "evidence_excerpt": "Respondió el rey y dijo a los caldeos: —El asunto lo olvidé; pero si no me decís el sueño y su interpretación, seréis hechos pedazos y vuestras casas serán convertidas en estercoleros.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "wise_men_personal_penalty",
+    "option_category": "punishment",
+    "false_mutation": null,
+    "blank_span": "pedazos",
+    "significance": "Completa la pena aplicada a las personas, mientras la heredada cubre sus casas.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-014",
+    "source_unit_id": "DAN2-V008",
+    "fact_id": "DAN2-V008-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "El rey acusó a los sabios de poner ____.",
+    "options": [
+      "condiciones",
+      "guardias",
+      "sacrificios",
+      "dilaciones"
+    ],
+    "correct_option": 3,
+    "correct_answer": "dilaciones",
+    "accepted_answers": [
+      "dilaciones",
+      "poner dilaciones"
+    ],
+    "explanation": "Nabucodonosor interpretó su repetición como una táctica para retrasar la respuesta.",
+    "why_distractors_fail": {
+      "condiciones": "La palabra específica se refiere a demoras.",
+      "guardias": "No estaban organizando la vigilancia.",
+      "sacrificios": "No propusieron un rito religioso."
+    },
+    "source_ref": "Daniel 2:8",
+    "source_quote": "El rey respondió y dijo: —Yo conozco ciertamente que vosotros ponéis dilaciones, porque veis que el asunto se me ha ido.",
+    "evidence_excerpt": "El rey respondió y dijo: —Yo conozco ciertamente que vosotros ponéis dilaciones, porque veis que el asunto se me ha ido.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "delay_accusation_term",
+    "option_category": "tactic",
+    "false_mutation": null,
+    "blank_span": "dilaciones",
+    "significance": "Fija el término con que el rey caracterizó la maniobra.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-015",
+    "source_unit_id": "DAN2-V009",
+    "fact_id": "DAN2-V009-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "La respuesta que supuestamente preparaban sería mentirosa y ____.",
+    "options": [
+      "perversa",
+      "breve",
+      "sabia",
+      "prudente"
+    ],
+    "correct_option": 0,
+    "correct_answer": "perversa",
+    "accepted_answers": [
+      "perversa",
+      "mentirosa y perversa"
+    ],
+    "explanation": "El rey calificó la posible respuesta con ambos términos negativos.",
+    "why_distractors_fail": {
+      "breve": "La duración no era el defecto denunciado.",
+      "sabia": "Contradice la acusación de engaño.",
+      "prudente": "Describe la conducta posterior de Daniel, no la respuesta sospechada."
+    },
+    "source_ref": "Daniel 2:9",
+    "source_quote": "Si no me contáis el sueño, una sola sentencia hay para vosotros. Ciertamente preparáis una respuesta mentirosa y perversa que decir delante de mí, entre tanto que pasa el tiempo. Contadme, pues, el sueño, para que yo sepa que me podéis dar su interpretación.",
+    "evidence_excerpt": "Si no me contáis el sueño, una sola sentencia hay para vosotros. Ciertamente preparáis una respuesta mentirosa y perversa que decir delante de mí, entre tanto que pasa el tiempo. Contadme, pues, el sueño, para que yo sepa que me podéis dar su interpretación.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "fabricated_answer_quality",
+    "option_category": "description",
+    "false_mutation": null,
+    "blank_span": "perversa",
+    "significance": "Completa el segundo calificativo de la acusación real.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-016",
+    "source_unit_id": "DAN2-V014",
+    "fact_id": "DAN2-V014-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "identification",
+    "question": "El capitán de la guardia encargado de ejecutar el edicto se llamaba ____.",
+    "options": [
+      "Aspenaz",
+      "Arioc",
+      "Melsar",
+      "Ario"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Arioc",
+    "accepted_answers": [
+      "Arioc"
+    ],
+    "explanation": "Daniel habló con Arioc, capitán de la guardia real.",
+    "why_distractors_fail": {
+      "Aspenaz": "Era el jefe de los eunucos en Daniel 1.",
+      "Melsar": "Supervisó la prueba alimentaria.",
+      "Ario": "No es el nombre dado al capitán."
+    },
+    "source_ref": "Daniel 2:14",
+    "source_quote": "Entonces Daniel habló sabia y prudentemente a Arioc, capitán de la guardia del rey, que había salido para matar a los sabios de Babilonia.",
+    "evidence_excerpt": "Entonces Daniel habló sabia y prudentemente a Arioc, capitán de la guardia del rey, que había salido para matar a los sabios de Babilonia.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "execution_captain_name",
+    "option_category": "person",
+    "false_mutation": null,
+    "blank_span": "Arioc",
+    "significance": "Asocia el nombre del funcionario con la ejecución de la sentencia.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-017",
+    "source_unit_id": "DAN2-V019",
+    "fact_id": "DAN2-V019-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "El secreto fue revelado a Daniel en una visión de ____.",
+    "options": [
+      "mediodía",
+      "amanecer",
+      "noche",
+      "sábado"
+    ],
+    "correct_option": 2,
+    "correct_answer": "noche",
+    "accepted_answers": [
+      "noche",
+      "visión de noche"
+    ],
+    "explanation": "La revelación llegó mediante una visión nocturna.",
+    "why_distractors_fail": {
+      "mediodía": "No fue una visión diurna.",
+      "amanecer": "El texto no fija ese momento.",
+      "sábado": "No identifica el día de la revelación."
+    },
+    "source_ref": "Daniel 2:19",
+    "source_quote": "El secreto le fue revelado a Daniel en visión de noche, por lo cual bendijo Daniel al Dios del cielo.",
+    "evidence_excerpt": "El secreto le fue revelado a Daniel en visión de noche, por lo cual bendijo Daniel al Dios del cielo.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "mystery_revelation_time",
+    "option_category": "time",
+    "false_mutation": null,
+    "blank_span": "noche",
+    "significance": "Fija la forma temporal de la revelación antes de la alabanza.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-018",
+    "source_unit_id": "DAN2-V022",
+    "fact_id": "DAN2-V022-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "principle",
+    "question": "Dios conoce lo que está en ____.",
+    "options": [
+      "Babilonia",
+      "los sueños",
+      "el palacio",
+      "tinieblas"
+    ],
+    "correct_option": 3,
+    "correct_answer": "tinieblas",
+    "accepted_answers": [
+      "tinieblas",
+      "las tinieblas"
+    ],
+    "explanation": "La alabanza afirma que Dios conoce aun aquello que permanece en tinieblas.",
+    "why_distractors_fail": {
+      "Babilonia": "La afirmación tiene alcance mayor que una ciudad.",
+      "los sueños": "Es cierto en el contexto, pero no completa la frase.",
+      "el palacio": "No es el término usado en la alabanza."
+    },
+    "source_ref": "Daniel 2:22",
+    "source_quote": "Él revela lo profundo y lo escondido, conoce lo que está en tinieblas y con él mora la luz.",
+    "evidence_excerpt": "Él revela lo profundo y lo escondido, conoce lo que está en tinieblas y con él mora la luz.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "divine_darkness_knowledge",
+    "option_category": "realm",
+    "false_mutation": null,
+    "blank_span": "tinieblas",
+    "significance": "Completa el contraste con la luz que mora con Dios.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-019",
+    "source_unit_id": "DAN2-V017",
+    "fact_id": "DAN2-V017-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "Después de solicitar tiempo al rey, Daniel fue a su casa y comunicó la crisis a Ananías, Misael y Azarías.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Daniel convirtió la oportunidad recibida en una convocatoria inmediata a sus compañeros.",
+    "why_distractors_fail": {
+      "Falso": "La secuencia y los tres destinatarios corresponden al relato."
+    },
+    "source_ref": "Daniel 2:17",
+    "source_quote": "Luego se fue Daniel a su casa e hizo saber a Ananías, Misael y Azarías, sus compañeros, lo que sucedía",
+    "evidence_excerpt": "Luego se fue Daniel a su casa e hizo saber a Ananías, Misael y Azarías, sus compañeros, lo que sucedía",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "request_to_fellowship_sequence",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-020",
+    "source_unit_id": "DAN2-V018",
+    "fact_id": "DAN2-V018-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Daniel y sus compañeros pidieron misericordia para evitar perecer junto con los demás sabios de Babilonia.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La amenaza común explica la urgencia de la oración acerca del misterio.",
+    "why_distractors_fail": {
+      "Falso": "La preservación frente al edicto era una finalidad expresa de la petición."
+    },
+    "source_ref": "Daniel 2:18",
+    "source_quote": "para que pidieran misericordias del Dios del cielo sobre este misterio, a fin de que Daniel y sus compañeros no perecieran con los otros sabios de Babilonia.",
+    "evidence_excerpt": "para que pidieran misericordias del Dios del cielo sobre este misterio, a fin de que Daniel y sus compañeros no perecieran con los otros sabios de Babilonia.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "shared_death_risk_prayer",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-021",
+    "source_unit_id": "DAN2-V019",
+    "fact_id": "DAN2-V019-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "El secreto fue revelado a Daniel mediante una visión al mediodía.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La revelación ocurrió en una visión de noche.",
+    "why_distractors_fail": {
+      "Verdadero": "Cambia únicamente el momento de la visión."
+    },
+    "source_ref": "Daniel 2:19",
+    "source_quote": "El secreto le fue revelado a Daniel en visión de noche, por lo cual bendijo Daniel al Dios del cielo.",
+    "evidence_excerpt": "El secreto le fue revelado a Daniel en visión de noche, por lo cual bendijo Daniel al Dios del cielo.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "night_vision_timing",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "time"
+      ],
+      "local": true,
+      "original": "en visión de noche",
+      "replacement": "mediante una visión al mediodía"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-022",
+    "source_unit_id": "DAN2-V020",
+    "fact_id": "DAN2-V020-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Daniel declaró que el nombre de Dios debía ser bendecido de siglos en siglos.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Su alabanza comienza reconociendo la dignidad permanente del nombre de Dios.",
+    "why_distractors_fail": {
+      "Falso": "La duración de la bendición se expresa de manera directa."
+    },
+    "source_ref": "Daniel 2:20",
+    "source_quote": "Habló Daniel y dijo: «Sea bendito el nombre de Dios de siglos en siglos, porque suyos son el poder y la sabiduría.",
+    "evidence_excerpt": "Habló Daniel y dijo: «Sea bendito el nombre de Dios de siglos en siglos, porque suyos son el poder y la sabiduría.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "divine_name_eternal_praise",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-023",
+    "source_unit_id": "DAN2-V021",
+    "fact_id": "DAN2-V021-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Dios puede mudar tiempos y edades, pero no interviene en la caída o establecimiento de reyes.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Daniel afirmó que Dios quita reyes y pone reyes además de gobernar los tiempos.",
+    "why_distractors_fail": {
+      "Verdadero": "Niega una de las acciones históricas atribuidas expresamente a Dios."
+    },
+    "source_ref": "Daniel 2:21",
+    "source_quote": "Él muda los tiempos y las edades, quita reyes y pone reyes; da la sabiduría a los sabios y la ciencia a los entendidos.",
+    "evidence_excerpt": "Él muda los tiempos y las edades, quita reyes y pone reyes; da la sabiduría a los sabios y la ciencia a los entendidos.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "divine_rule_over_kings",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "divine_scope"
+      ],
+      "local": true,
+      "original": "quita reyes y pone reyes",
+      "replacement": "no interviene en la caída o establecimiento de reyes"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-024",
+    "source_unit_id": "DAN2-V022",
+    "fact_id": "DAN2-V022-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Lo profundo y escondido permanece fuera del alcance de Dios.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Dios revela lo profundo y escondido y conoce lo que está en tinieblas.",
+    "why_distractors_fail": {
+      "Verdadero": "Invierte la capacidad reveladora atribuida a Dios."
+    },
+    "source_ref": "Daniel 2:22",
+    "source_quote": "Él revela lo profundo y lo escondido, conoce lo que está en tinieblas y con él mora la luz.",
+    "evidence_excerpt": "Él revela lo profundo y lo escondido, conoce lo que está en tinieblas y con él mora la luz.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "divine_hidden_revelation",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "knowledge_access"
+      ],
+      "local": true,
+      "original": "Él revela lo profundo y lo escondido",
+      "replacement": "lo profundo y escondido permanece fuera del alcance de Dios"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-025",
+    "source_unit_id": "DAN2-V023",
+    "fact_id": "DAN2-V023-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "relationship",
+    "question": "Daniel agradeció una respuesta exclusivamente a su petición personal, sin reconocer la oración de sus compañeros.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Daniel dijo que Dios había revelado «lo que te pedimos», reconociendo la petición compartida.",
+    "why_distractors_fail": {
+      "Verdadero": "Cambia una oración plural por una solicitud individual aislada."
+    },
+    "source_ref": "Daniel 2:23",
+    "source_quote": "A ti, Dios de mis padres, te doy gracias y te alabo, porque me has dado sabiduría y fuerza, y ahora me has revelado lo que te pedimos, pues nos has dado a conocer el asunto del rey.",
+    "evidence_excerpt": "A ti, Dios de mis padres, te doy gracias y te alabo, porque me has dado sabiduría y fuerza, y ahora me has revelado lo que te pedimos, pues nos has dado a conocer el asunto del rey.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "corporate_prayer_acknowledgment",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "request_scope"
+      ],
+      "local": true,
+      "original": "me has revelado lo que te pedimos",
+      "replacement": "respuesta exclusivamente a su petición personal, sin reconocer a sus compañeros"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]
