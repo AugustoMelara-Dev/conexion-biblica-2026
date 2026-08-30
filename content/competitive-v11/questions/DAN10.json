@@ -2887,5 +2887,660 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
     }
+  },
+  {
+    "id": "DAN10-V11-WAVE-026",
+    "source_unit_id": "DAN10-V001",
+    "fact_id": "DAN10-V001-V11-F04",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué capacidad mostró Daniel frente a la revelación, pese a la magnitud del conflicto?",
+    "options": [
+      "Comprendió la palabra y tuvo inteligencia en la visión",
+      "Olvidó la palabra y pidió una nueva visión",
+      "Entendió al rey, pero no el mensaje",
+      "Anotó la visión sin comprenderla"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Comprendió la palabra y tuvo inteligencia en la visión",
+    "accepted_answers": [
+      "Comprendió la palabra y tuvo inteligencia en la visión"
+    ],
+    "explanation": "Daniel comprendió la palabra y tuvo inteligencia en la visión.",
+    "why_distractors_fail": {
+      "Olvidó la palabra y pidió una nueva visión": "El relato afirma comprensión, no olvido.",
+      "Entendió al rey, pero no el mensaje": "La comprensión se refiere a la palabra revelada.",
+      "Anotó la visión sin comprenderla": "Contradice la inteligencia que recibió."
+    },
+    "source_ref": "Daniel 10:1",
+    "source_quote": "En el tercer año de Ciro, rey de Persia, fue revelada palabra a Daniel, llamado Beltsasar. La palabra era verdadera y el conflicto grande, pero él comprendió la palabra y tuvo inteligencia en la visión.",
+    "evidence_excerpt": "En el tercer año de Ciro, rey de Persia, fue revelada palabra a Daniel, llamado Beltsasar. La palabra era verdadera y el conflicto grande, pero él comprendió la palabra y tuvo inteligencia en la visión.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "understanding",
+    "option_category": "response",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-027",
+    "source_unit_id": "DAN10-V003",
+    "fact_id": "DAN10-V003-V11-F03",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "question": "¿Hasta qué momento mantuvo Daniel sus privaciones?",
+    "options": [
+      "Hasta el final del año de Ciro",
+      "Hasta que se cumplieron las tres semanas",
+      "Hasta que sus compañeros regresaron",
+      "Hasta la llegada del príncipe de Grecia"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Hasta que se cumplieron las tres semanas",
+    "accepted_answers": [
+      "Hasta que se cumplieron las tres semanas"
+    ],
+    "explanation": "Las privaciones se mantuvieron hasta cumplirse las tres semanas.",
+    "why_distractors_fail": {
+      "Hasta el final del año de Ciro": "El año de Ciro fecha la revelación, no el límite de las privaciones.",
+      "Hasta que sus compañeros regresaron": "El regreso de los compañeros no fija el período.",
+      "Hasta la llegada del príncipe de Grecia": "Ese anuncio pertenece al conflicto posterior."
+    },
+    "source_ref": "Daniel 10:3",
+    "source_quote": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+    "evidence_excerpt": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "duration_boundary",
+    "option_category": "time_boundary",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-028",
+    "source_unit_id": "DAN10-V008",
+    "fact_id": "DAN10-V008-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué intensidad alcanzó el debilitamiento de Daniel ante la gran visión?",
+    "options": [
+      "Solo sintió un cansancio pasajero",
+      "Conservó fuerzas suficientes para caminar",
+      "Sus fuerzas lo abandonaron totalmente",
+      "Únicamente perdió la voz"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Sus fuerzas lo abandonaron totalmente",
+    "accepted_answers": [
+      "Sus fuerzas lo abandonaron totalmente"
+    ],
+    "explanation": "Daniel declara que sus fuerzas lo abandonaron totalmente.",
+    "why_distractors_fail": {
+      "Solo sintió un cansancio pasajero": "El texto describe una pérdida total de fuerzas.",
+      "Conservó fuerzas suficientes para caminar": "No permaneció con capacidad física normal.",
+      "Únicamente perdió la voz": "El enmudecimiento se menciona después y no resume este estado."
+    },
+    "source_ref": "Daniel 10:8",
+    "source_quote": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+    "evidence_excerpt": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "intensity",
+    "option_category": "physical_state",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-029",
+    "source_unit_id": "DAN10-V011",
+    "fact_id": "DAN10-V011-V11-F04",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿Con qué título afectuoso se dirigió el mensajero a Daniel?",
+    "options": [
+      "Siervo desconocido",
+      "Príncipe de Persia",
+      "Hijo del reino",
+      "Varón muy amado"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Varón muy amado",
+    "accepted_answers": [
+      "Varón muy amado",
+      "muy amado"
+    ],
+    "explanation": "El mensajero llamó a Daniel «varón muy amado».",
+    "why_distractors_fail": {
+      "Siervo desconocido": "No es el trato utilizado.",
+      "Príncipe de Persia": "Designa al opositor celestial.",
+      "Hijo del reino": "No es un título dado a Daniel."
+    },
+    "source_ref": "Daniel 10:11",
+    "source_quote": "Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.",
+    "evidence_excerpt": "Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "title",
+    "option_category": "title",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-030",
+    "source_unit_id": "DAN10-V012",
+    "fact_id": "DAN10-V012-V11-F04",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Desde cuándo habían sido oídas las palabras de Daniel?",
+    "options": [
+      "Desde el primer día que dispuso su corazón a entender y humillarse",
+      "Desde el día en que vio al varón junto al río",
+      "Desde que Miguel llegó a ayudar al mensajero",
+      "Desde el final de las tres semanas de conflicto"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Desde el primer día que dispuso su corazón a entender y humillarse",
+    "accepted_answers": [
+      "Desde el primer día que dispuso su corazón a entender y humillarse",
+      "desde el primer día"
+    ],
+    "explanation": "Sus palabras fueron oídas desde el primer día de aquella disposición interior.",
+    "why_distractors_fail": {
+      "Desde el día en que vio al varón junto al río": "La respuesta precedió a esa escena.",
+      "Desde que Miguel llegó a ayudar al mensajero": "Miguel intervino durante la oposición posterior.",
+      "Desde el final de las tres semanas de conflicto": "El texto remonta la respuesta al primer día."
+    },
+    "source_ref": "Daniel 10:12",
+    "source_quote": "Entonces me dijo: “Daniel, no temas, porque desde el primer día que dispusiste tu corazón a entender y a humillarte en la presencia de tu Dios, fueron oídas tus palabras; y a causa de tus palabras yo he venido.",
+    "evidence_excerpt": "Entonces me dijo: “Daniel, no temas, porque desde el primer día que dispusiste tu corazón a entender y a humillarte en la presencia de tu Dios, fueron oídas tus palabras; y a causa de tus palabras yo he venido.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "response_timing",
+    "option_category": "time_marker",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-031",
+    "source_unit_id": "DAN10-V013",
+    "fact_id": "DAN10-V013-V11-F04",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿Quién se opuso al mensajero durante veintiún días?",
+    "options": [
+      "El príncipe de Grecia",
+      "El príncipe del reino de Persia",
+      "El rey Ciro",
+      "Uno de los compañeros de Daniel"
+    ],
+    "correct_option": 1,
+    "correct_answer": "El príncipe del reino de Persia",
+    "accepted_answers": [
+      "El príncipe del reino de Persia",
+      "el príncipe de Persia"
+    ],
+    "explanation": "La oposición procedió del príncipe del reino de Persia.",
+    "why_distractors_fail": {
+      "El príncipe de Grecia": "Su llegada se anuncia para después.",
+      "El rey Ciro": "Ciro fecha la visión, pero no es identificado como el opositor.",
+      "Uno de los compañeros de Daniel": "Los compañeros huyeron; no sostuvieron el conflicto."
+    },
+    "source_ref": "Daniel 10:13",
+    "source_quote": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+    "evidence_excerpt": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "opponent_identity",
+    "option_category": "person",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-032",
+    "source_unit_id": "DAN10-V013",
+    "fact_id": "DAN10-V013-V11-F05",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Con quiénes quedó el mensajero después de que Miguel vino a ayudarlo?",
+    "options": [
+      "Con los sabios de Babilonia",
+      "Con los príncipes de Grecia",
+      "Con los reyes de Persia",
+      "Con los compañeros de Daniel"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Con los reyes de Persia",
+    "accepted_answers": [
+      "Con los reyes de Persia",
+      "los reyes de Persia"
+    ],
+    "explanation": "El mensajero quedó allí con los reyes de Persia.",
+    "why_distractors_fail": {
+      "Con los sabios de Babilonia": "No participan en este conflicto.",
+      "Con los príncipes de Grecia": "Grecia se menciona como acontecimiento posterior.",
+      "Con los compañeros de Daniel": "Ellos habían huido de la escena."
+    },
+    "source_ref": "Daniel 10:13",
+    "source_quote": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+    "evidence_excerpt": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "remaining_company",
+    "option_category": "group",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-033",
+    "source_unit_id": "DAN10-V014",
+    "fact_id": "DAN10-V014-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "speaker_addressee",
+    "question": "¿A quién afectarían los acontecimientos que el mensajero vino a explicar?",
+    "options": [
+      "Solo a los reyes de Persia",
+      "A los hombres que huyeron",
+      "Únicamente al príncipe de Grecia",
+      "Al pueblo de Daniel"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Al pueblo de Daniel",
+    "accepted_answers": [
+      "Al pueblo de Daniel",
+      "a tu pueblo"
+    ],
+    "explanation": "El mensajero vino a revelar lo que sucedería al pueblo de Daniel.",
+    "why_distractors_fail": {
+      "Solo a los reyes de Persia": "El destinatario de los acontecimientos es el pueblo de Daniel.",
+      "A los hombres que huyeron": "Los acompañantes no son el pueblo profético señalado.",
+      "Únicamente al príncipe de Grecia": "Grecia forma parte del conflicto, no es el único afectado."
+    },
+    "source_ref": "Daniel 10:14",
+    "source_quote": "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.”",
+    "evidence_excerpt": "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.”",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "affected_group",
+    "option_category": "group",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-034",
+    "source_unit_id": "DAN10-V016",
+    "fact_id": "DAN10-V016-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "identification",
+    "question": "Quien tocó los labios de Daniel tenía semejanza de hijo de ____.",
+    "options": [
+      "hombre",
+      "rey",
+      "ángel",
+      "profeta"
+    ],
+    "correct_option": 0,
+    "correct_answer": "hombre",
+    "accepted_answers": [
+      "hombre",
+      "hijo de hombre"
+    ],
+    "explanation": "La figura tenía semejanza de hijo de hombre.",
+    "why_distractors_fail": {
+      "rey": "El texto no usa esa semejanza.",
+      "ángel": "No completa la expresión citada.",
+      "profeta": "Tampoco es la comparación empleada."
+    },
+    "source_ref": "Daniel 10:16",
+    "source_quote": "Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
+    "evidence_excerpt": "Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "likeness",
+    "option_category": "identity_term",
+    "false_mutation": null,
+    "blank_span": "hombre",
+    "significance": "Identifica la apariencia de la figura que permitió a Daniel volver a hablar.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-035",
+    "source_unit_id": "DAN10-V016",
+    "fact_id": "DAN10-V016-V11-F04",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Después de que tocaron sus labios, Daniel abrió la boca y ____.",
+    "options": [
+      "huyó",
+      "habló",
+      "durmió",
+      "escribió"
+    ],
+    "correct_option": 1,
+    "correct_answer": "habló",
+    "accepted_answers": [
+      "habló",
+      "hable"
+    ],
+    "explanation": "El toque en los labios fue seguido por la apertura de la boca y el habla.",
+    "why_distractors_fail": {
+      "huyó": "Quienes huyeron fueron sus acompañantes.",
+      "durmió": "El profundo sueño había ocurrido antes.",
+      "escribió": "No se narra que escribiera en ese momento."
+    },
+    "source_ref": "Daniel 10:16",
+    "source_quote": "Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
+    "evidence_excerpt": "Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "touch_effect",
+    "option_category": "action",
+    "false_mutation": null,
+    "blank_span": "habló",
+    "significance": "Conecta el toque con la recuperación inmediata del habla.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-036",
+    "source_unit_id": "DAN10-V017",
+    "fact_id": "DAN10-V017-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Además de faltarle las fuerzas, a Daniel no le quedó ____.",
+    "options": [
+      "memoria",
+      "visión",
+      "aliento",
+      "temor"
+    ],
+    "correct_option": 2,
+    "correct_answer": "aliento",
+    "accepted_answers": [
+      "aliento"
+    ],
+    "explanation": "Daniel dijo que no le quedó aliento.",
+    "why_distractors_fail": {
+      "memoria": "No afirmó haber perdido la memoria.",
+      "visión": "La visión continuaba siendo el contexto de su debilidad.",
+      "temor": "El texto menciona falta de aliento, no ausencia de temor."
+    },
+    "source_ref": "Daniel 10:17",
+    "source_quote": "¿Cómo, pues, podrá el siervo de mi señor hablar con mi señor? Porque al instante me faltaron las fuerzas, y no me quedó aliento.”",
+    "evidence_excerpt": "¿Cómo, pues, podrá el siervo de mi señor hablar con mi señor? Porque al instante me faltaron las fuerzas, y no me quedó aliento.”",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "physical_deficit",
+    "option_category": "physical_capacity",
+    "false_mutation": null,
+    "blank_span": "aliento",
+    "significance": "Precisa el segundo impedimento físico que acompañó la falta de fuerzas.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-037",
+    "source_unit_id": "DAN10-V018",
+    "fact_id": "DAN10-V018-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "narrative_order",
+    "question": "La figura semejante a hombre tocó a Daniel otra ____ y lo fortaleció.",
+    "options": [
+      "persona",
+      "mano",
+      "visión",
+      "vez"
+    ],
+    "correct_option": 3,
+    "correct_answer": "vez",
+    "accepted_answers": [
+      "vez",
+      "otra vez"
+    ],
+    "explanation": "Daniel fue tocado otra vez antes de ser fortalecido.",
+    "why_distractors_fail": {
+      "persona": "No completa la secuencia del contacto.",
+      "mano": "El pasaje no dice «otra mano».",
+      "visión": "No recibió «otra visión» en esa frase."
+    },
+    "source_ref": "Daniel 10:18",
+    "source_quote": "Aquel que tenía semejanza de hombre me tocó otra vez, me fortaleció",
+    "evidence_excerpt": "Aquel que tenía semejanza de hombre me tocó otra vez, me fortaleció",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "repeated_action",
+    "option_category": "sequence_term",
+    "false_mutation": null,
+    "blank_span": "vez",
+    "significance": "Marca que el fortalecimiento vino mediante un nuevo contacto.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-038",
+    "source_unit_id": "DAN10-V019",
+    "fact_id": "DAN10-V019-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "Daniel recobró las fuerzas antes de que el mensajero comenzara a hablarle.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Daniel recobró las fuerzas mientras el mensajero le hablaba, no antes.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación adelanta la recuperación respecto del discurso."
+    },
+    "source_ref": "Daniel 10:19",
+    "source_quote": "y me dijo: “Muy amado, no temas; la paz sea contigo; esfuérzate y cobra aliento.” Mientras él me hablaba, recobré las fuerzas y dije: “Hable mi señor, porque me has fortalecido.”",
+    "evidence_excerpt": "y me dijo: “Muy amado, no temas; la paz sea contigo; esfuérzate y cobra aliento.” Mientras él me hablaba, recobré las fuerzas y dije: “Hable mi señor, porque me has fortalecido.”",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "recovery_timing",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "sequence"
+      ],
+      "local": true,
+      "original": "Mientras él me hablaba, recobré las fuerzas",
+      "replacement": "recobró las fuerzas antes de que comenzara a hablarle"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-039",
+    "source_unit_id": "DAN10-V021",
+    "fact_id": "DAN10-V021-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "prophetic_detail",
+    "question": "El mensajero declararía lo escrito en el libro de los sueños.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Declararía lo escrito en el libro de la verdad.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación cambia el nombre del libro."
+    },
+    "source_ref": "Daniel 10:21",
+    "source_quote": "Pero yo te declararé lo que está escrito en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe.”",
+    "evidence_excerpt": "Pero yo te declararé lo que está escrito en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe.”",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "book_identity",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "book_identity"
+      ],
+      "local": true,
+      "original": "libro de la verdad",
+      "replacement": "libro de los sueños"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN10-V11-WAVE-040",
+    "source_unit_id": "DAN10-V021",
+    "fact_id": "DAN10-V021-V11-F04",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "identification",
+    "question": "Miguel es presentado como el príncipe del pueblo de Daniel y el único que ayudaba al mensajero contra sus adversarios.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Miguel es llamado «vuestro príncipe» y señalado como el único ayudador en ese conflicto.",
+    "why_distractors_fail": {
+      "Falso": "La identidad y la función coinciden con la declaración recibida."
+    },
+    "source_ref": "Daniel 10:21",
+    "source_quote": "Pero yo te declararé lo que está escrito en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe.”",
+    "evidence_excerpt": "Pero yo te declararé lo que está escrito en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe.”",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "role_pair",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]
