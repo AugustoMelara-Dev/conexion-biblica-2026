@@ -6,7 +6,7 @@ import re
 import unicodedata
 import hashlib
 import json
-from collections import defaultdict
+from collections import Counter, defaultdict
 from collections.abc import Mapping, Sequence
 from typing import Any
 
@@ -71,6 +71,20 @@ ALLOWED_SUBTYPES = {
 ALLOWED_DIFFICULTIES = {"easy", "medium", "hard", "expert"}
 ALLOWED_ROLES = {"central", "variant"}
 ALLOWED_BLIND_POOLS = {None, "A", "B", "emergency"}
+RELEASE_BLIND_REQUIREMENTS = {
+    "A": {
+        "fact_count": 100,
+        "families": {"selection": 45, "fill_choice": 30, "true_false": 25},
+    },
+    "B": {
+        "fact_count": 100,
+        "families": {"selection": 45, "fill_choice": 30, "true_false": 25},
+    },
+    "emergency": {
+        "fact_count": 50,
+        "families": {"selection": 23, "fill_choice": 15, "true_false": 12},
+    },
+}
 TRIVIAL_BLANKS = {
     "a",
     "al",
@@ -209,6 +223,8 @@ def validate_question(
         errors.append("invalid_difficulty")
     if row.get("blind_pool") not in ALLOWED_BLIND_POOLS:
         errors.append("invalid_blind_pool")
+    if row.get("blind_pool") is not None and row.get("role") != "central":
+        errors.append("blind_variant_not_allowed")
 
     options = row.get("options")
     if not isinstance(options, list) or not all(
@@ -344,7 +360,15 @@ def validate_question(
     return errors
 
 
-def audit_corpus(rows: Sequence[Mapping[str, Any]]) -> dict[str, list[str]]:
+def blind_family(family: object) -> str:
+    value = str(family or "")
+    return "selection" if value.startswith("single_choice") else value
+
+
+def audit_corpus(
+    rows: Sequence[Mapping[str, Any]],
+    blind_requirements: Mapping[str, Mapping[str, Any]] | None = None,
+) -> dict[str, list[str]]:
     duplicate_ids: list[str] = []
     duplicate_prompts: list[str] = []
     normalized_duplicate_prompts: list[str] = []
@@ -372,9 +396,49 @@ def audit_corpus(rows: Sequence[Mapping[str, Any]]) -> dict[str, list[str]]:
         for row in fact_rows[2:]
         if not str(row.get("variant_justification") or "").strip()
     ]
+    ownership_by_fact = {
+        fact_id: {
+            str(row.get("blind_pool")) if row.get("blind_pool") else "training"
+            for row in fact_rows
+        }
+        for fact_id, fact_rows in by_fact.items()
+    }
+    mixed_fact_ownership = sorted(
+        fact_id for fact_id, domains in ownership_by_fact.items() if len(domains) > 1
+    )
+    blind_pool_fact_collisions = sorted(
+        fact_id
+        for fact_id, domains in ownership_by_fact.items()
+        if len(domains - {"training"}) > 1
+    )
+    blind_facts_with_multiple_presentations = sorted(
+        fact_id
+        for fact_id, fact_rows in by_fact.items()
+        if any(row.get("blind_pool") for row in fact_rows) and len(fact_rows) != 1
+    )
+    requirement_violations: list[str] = []
+    for pool, requirement in (blind_requirements or {}).items():
+        pool_rows = [row for row in rows if row.get("blind_pool") == pool]
+        actual_fact_count = len({str(row.get("fact_id") or "") for row in pool_rows})
+        expected_fact_count = int(requirement.get("fact_count", 0))
+        if actual_fact_count != expected_fact_count:
+            requirement_violations.append(
+                f"{pool}:fact_count:expected={expected_fact_count}:actual={actual_fact_count}"
+            )
+        actual_families = Counter(blind_family(row.get("family")) for row in pool_rows)
+        for family, expected in requirement.get("families", {}).items():
+            actual = actual_families[family]
+            if actual != int(expected):
+                requirement_violations.append(
+                    f"{pool}:family:{family}:expected={expected}:actual={actual}"
+                )
     return {
         "duplicate_ids": duplicate_ids,
         "duplicate_prompts": duplicate_prompts,
         "normalized_duplicate_prompts": normalized_duplicate_prompts,
         "unjustified_third_variants": unjustified,
+        "mixed_fact_ownership": mixed_fact_ownership,
+        "blind_pool_fact_collisions": blind_pool_fact_collisions,
+        "blind_facts_with_multiple_presentations": blind_facts_with_multiple_presentations,
+        "blind_pool_requirement_violations": requirement_violations,
     }

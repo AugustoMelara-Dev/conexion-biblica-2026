@@ -3,16 +3,31 @@
 from __future__ import annotations
 
 import json
+import importlib.util
+import hashlib
+import io
+import os
 import re
+import shutil
 import unittest
 from collections import Counter
 from pathlib import Path
+from unittest.mock import patch
 
 from scripts.lib.production_snapshot_v11 import import_production_snapshot
 from scripts.lib.source_packets_v11 import build_source_packets
 from scripts.lib.competitive_v11 import audit_corpus, content_hash, validate_question
 from scripts.lib.import_seed_v11 import import_seed
 from scripts.lib.author_batch_v11 import compile_authored_batch
+
+
+COMPILE_SCRIPT = Path(__file__).resolve().with_name("compile-competitive-v11.py")
+COMPILE_SPEC = importlib.util.spec_from_file_location(
+    "compile_competitive_v11", COMPILE_SCRIPT
+)
+assert COMPILE_SPEC and COMPILE_SPEC.loader
+compile_competitive_v11 = importlib.util.module_from_spec(COMPILE_SPEC)
+COMPILE_SPEC.loader.exec_module(compile_competitive_v11)
 
 
 def valid_v11_question(**overrides):
@@ -703,6 +718,716 @@ class CompetitiveV11ContractTests(unittest.TestCase):
 
         self.assertIn("missing_key_option_category", validate_question(missing, v11_sources()))
         self.assertIn("answer_leaked_in_prompt", validate_question(leaked, v11_sources()))
+
+
+class BlindPoolContractTests(unittest.TestCase):
+    """Impide que una reserva ciega se filtre o reutilice hechos de práctica."""
+
+    def distinct_question(self, *, suffix: str, fact_id: str, blind_pool):
+        return valid_v11_question(
+            id=f"DAN1-V11-BLIND-{suffix}",
+            fact_id=fact_id,
+            question=f"¿Qué participante corresponde al detalle competitivo {suffix}?",
+            blind_pool=blind_pool,
+        )
+
+    def write_compile_fixture(self, root: Path, rows: list[dict]) -> None:
+        questions = root / "questions"
+        packets = root / "source-packets"
+        questions.mkdir(parents=True, exist_ok=True)
+        packets.mkdir(parents=True, exist_ok=True)
+        for unit in compile_competitive_v11.EXPECTED_UNITS:
+            payload = rows if unit == "DAN1" else []
+            (questions / f"{unit}.json").write_text(
+                json.dumps(payload, ensure_ascii=False), encoding="utf-8"
+            )
+        source = {
+            "source_unit_id": "DAN1-V001",
+            **v11_sources()["DAN1-V001"],
+        }
+        (packets / "DAN1.json").write_text(
+            json.dumps({"units": [source]}, ensure_ascii=False), encoding="utf-8"
+        )
+
+    def workspace_fixture(self, name: str) -> Path:
+        root = Path("tmp/competitive-v11-tests") / f"{name}-{os.getpid()}"
+        shutil.rmtree(root, ignore_errors=True)
+        root.mkdir(parents=True, exist_ok=True)
+        self.addCleanup(shutil.rmtree, root, True)
+        return root
+
+    def test_rejects_a_fact_shared_between_training_and_blind_domains(self) -> None:
+        rows = [
+            self.distinct_question(suffix="TRAIN", fact_id="F-SHARED", blind_pool=None),
+            self.distinct_question(suffix="A", fact_id="F-SHARED", blind_pool="A"),
+        ]
+
+        audit = audit_corpus(rows)
+
+        self.assertEqual(audit["mixed_fact_ownership"], ["F-SHARED"])
+
+    def test_rejects_a_fact_shared_by_two_blind_pools(self) -> None:
+        rows = [
+            self.distinct_question(suffix="A", fact_id="F-SHARED", blind_pool="A"),
+            self.distinct_question(suffix="B", fact_id="F-SHARED", blind_pool="B"),
+        ]
+
+        audit = audit_corpus(rows)
+
+        self.assertEqual(audit["blind_pool_fact_collisions"], ["F-SHARED"])
+
+    def test_blind_facts_have_exactly_one_presentation(self) -> None:
+        rows = [
+            self.distinct_question(suffix="A1", fact_id="F-A", blind_pool="A"),
+            self.distinct_question(suffix="A2", fact_id="F-A", blind_pool="A"),
+        ]
+
+        audit = audit_corpus(rows)
+
+        self.assertEqual(audit["blind_facts_with_multiple_presentations"], ["F-A"])
+
+    def test_rejects_every_blind_variant_even_when_it_is_orphaned(self) -> None:
+        blind_variant = self.distinct_question(
+            suffix="VARIANT", fact_id="F-VARIANT", blind_pool="A"
+        )
+        blind_variant["role"] = "variant"
+        blind_variant["variant_justification"] = "Presentación alternativa."
+
+        self.assertIn(
+            "blind_variant_not_allowed",
+            validate_question(blind_variant, v11_sources()),
+        )
+
+    def test_release_requirements_validate_parametric_fact_and_family_counts(self) -> None:
+        rows = [
+            self.distinct_question(suffix="A", fact_id="F-A", blind_pool="A"),
+        ]
+        requirements = {
+            "A": {"fact_count": 2, "families": {"selection": 2}},
+            "B": {"fact_count": 1, "families": {"selection": 1}},
+        }
+
+        audit = audit_corpus(rows, blind_requirements=requirements)
+
+        self.assertEqual(
+            audit["blind_pool_requirement_violations"],
+            [
+                "A:fact_count:expected=2:actual=1",
+                "A:family:selection:expected=2:actual=1",
+                "B:fact_count:expected=1:actual=0",
+                "B:family:selection:expected=1:actual=0",
+            ],
+        )
+
+    def test_rejects_invalid_custom_requirement_schemas(self) -> None:
+        valid = {
+            "A": {"fact_count": 1, "families": {"selection": 1, "fill_choice": 0, "true_false": 0}},
+            "B": {"fact_count": 0, "families": {"selection": 0, "fill_choice": 0, "true_false": 0}},
+            "emergency": {"fact_count": 0, "families": {"selection": 0, "fill_choice": 0, "true_false": 0}},
+        }
+        invalid = [
+            {key: value for key, value in valid.items() if key != "emergency"},
+            {**valid, "C": valid["B"]},
+            {**valid, "A": {**valid["A"], "fact_count": -1}},
+            {**valid, "A": {**valid["A"], "fact_count": True}},
+            {**valid, "A": {**valid["A"], "families": {"selection": 1}}},
+            {**valid, "A": {**valid["A"], "families": {**valid["A"]["families"], "other": 0}}},
+            {**valid, "A": {**valid["A"], "families": {**valid["A"]["families"], "selection": "1"}}},
+            {**valid, "A": {**valid["A"], "fact_count": 2}},
+        ]
+
+        self.assertEqual(compile_competitive_v11.validate_blind_requirements(valid), valid)
+        for requirements in invalid:
+            with self.subTest(requirements=requirements):
+                with self.assertRaises(ValueError):
+                    compile_competitive_v11.validate_blind_requirements(requirements)
+
+    def test_compiler_separates_public_training_from_private_blind_artifact(self) -> None:
+        rows = [
+            self.distinct_question(suffix="TRAIN", fact_id="F-TRAIN", blind_pool=None),
+            self.distinct_question(suffix="A", fact_id="F-A", blind_pool="A"),
+            self.distinct_question(suffix="B", fact_id="F-B", blind_pool="B"),
+        ]
+        directory = self.workspace_fixture("blind-compiler-partition")
+        root = directory / "source"
+        output = directory / "public-bank"
+        blind_output = directory / "private-blind"
+        self.write_compile_fixture(root, rows)
+
+        manifest = compile_competitive_v11.compile_bank(
+            root, output, blind_output=blind_output
+        )
+
+        training = json.loads(
+            (output / "questions" / "DAN1.json").read_text(encoding="utf-8")
+        )
+        blind_a = json.loads(
+            (blind_output / "questions" / "A" / "DAN1.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        blind_b = json.loads(
+            (blind_output / "questions" / "B" / "DAN1.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        private_manifest = json.loads(
+            (blind_output / "manifest.json").read_text(encoding="utf-8")
+        )
+        public_reviews = json.loads(
+            (output / "review-index.json").read_text(encoding="utf-8")
+        )
+        private_reviews = json.loads(
+            (blind_output / "review-index.json").read_text(encoding="utf-8")
+        )
+
+        self.assertFalse((output / "blind").exists())
+        self.assertEqual([row["fact_id"] for row in training], ["F-TRAIN"])
+        self.assertEqual([row["fact_id"] for row in blind_a], ["F-A"])
+        self.assertEqual([row["fact_id"] for row in blind_b], ["F-B"])
+        self.assertEqual(training[0]["role"], "central")
+        self.assertEqual(blind_a[0]["role"], "central")
+        self.assertEqual(manifest["gold_questions"], 1)
+        self.assertEqual(manifest["unique_facts"], 1)
+        self.assertEqual(manifest["training_presentation_count"], 1)
+        self.assertEqual(manifest["total_presentation_count"], 3)
+        self.assertEqual(manifest["total_fact_count"], 3)
+        self.assertEqual(manifest["blind_presentation_count"], 2)
+        self.assertEqual(
+            manifest["blind_pools"]["A"],
+            {
+                "fact_count": 1,
+                "presentation_count": 1,
+                "families": {"selection": 1, "fill_choice": 0, "true_false": 0},
+            },
+        )
+        self.assertEqual(manifest["blind_delivery"]["contract"], "private-blind-artifact-v1")
+        self.assertEqual(manifest["blind_delivery"]["artifact_id"], "competitive-v11-blind")
+        self.assertRegex(manifest["blind_delivery"]["artifact_revision"], r"^[0-9a-f]{64}$")
+        self.assertNotIn("questions_file", json.dumps(manifest["blind_pools"]))
+        self.assertNotIn("F-A", json.dumps(manifest))
+        self.assertEqual(
+            [entry["question_id"] for entry in public_reviews["entries"]],
+            ["DAN1-V11-BLIND-TRAIN"],
+        )
+        self.assertEqual(
+            {entry["question_id"] for entry in private_reviews["entries"]},
+            {"DAN1-V11-BLIND-A", "DAN1-V11-BLIND-B"},
+        )
+        self.assertEqual(private_manifest["contract"], "private-blind-artifact-v1")
+        self.assertEqual(
+            private_manifest["artifact_revision"],
+            manifest["blind_delivery"]["artifact_revision"],
+        )
+        self.assertEqual(private_manifest["build_id"], manifest["build_id"])
+        self.assertEqual(
+            compile_competitive_v11.validate_artifact_pair(manifest, private_manifest),
+            manifest["build_id"],
+        )
+        self.assertEqual(
+            compile_competitive_v11.validate_artifact_pair(
+                manifest, private_manifest, output, blind_output
+            ),
+            manifest["build_id"],
+        )
+        self.assertEqual(
+            compile_competitive_v11.validate_emitted_pair(output, blind_output),
+            manifest["build_id"],
+        )
+        with patch(
+            "sys.argv",
+            ["compile-competitive-v11.py", "--validate-pair", str(output), str(blind_output)],
+        ), patch("sys.stdout", new_callable=io.StringIO) as stdout:
+            self.assertEqual(compile_competitive_v11.main(), 0)
+            self.assertIn(manifest["build_id"], stdout.getvalue())
+        self.assertEqual(
+            private_manifest["pools"]["A"]["shards"][0]["questions_file"],
+            "questions/A/DAN1.json",
+        )
+
+        for artifact_root, shard in [
+            (output, manifest["shards"][0]),
+            (blind_output, private_manifest["pools"]["A"]["shards"][0]),
+        ]:
+            relative = (
+                shard["questions_file"].removeprefix("banks/final-2026/")
+                if artifact_root == output
+                else shard["questions_file"]
+            )
+            payload = (artifact_root / relative).read_bytes()
+            self.assertEqual(shard["bytes"], len(payload))
+            self.assertEqual(shard["sha256"], hashlib.sha256(payload).hexdigest())
+
+        tampered_manifest = json.loads(json.dumps(manifest))
+        tampered_manifest["blind_pools"]["A"]["fact_count"] = 9
+        with self.assertRaisesRegex(ValueError, "mismatch"):
+            compile_competitive_v11.validate_artifact_pair(
+                tampered_manifest, private_manifest
+            )
+
+        tampered_totals_public = json.loads(json.dumps(manifest))
+        tampered_totals_private = json.loads(json.dumps(private_manifest))
+        tampered_totals_public["blind_fact_count"] = 9
+        tampered_totals_private["total_fact_count"] = 9
+        with self.assertRaisesRegex(ValueError, "blind totals"):
+            compile_competitive_v11.validate_artifact_pair(
+                tampered_totals_public, tampered_totals_private
+            )
+
+        invalid_build_public = json.loads(json.dumps(manifest))
+        invalid_build_private = json.loads(json.dumps(private_manifest))
+        for target in (
+            invalid_build_public,
+            invalid_build_public["blind_delivery"],
+            invalid_build_private,
+        ):
+            if "build_id" in target:
+                target["build_id"] = "A" * 64
+            if "artifact_revision" in target:
+                target["artifact_revision"] = "A" * 64
+        with self.assertRaisesRegex(ValueError, "build_id"):
+            compile_competitive_v11.validate_artifact_pair(
+                invalid_build_public, invalid_build_private
+            )
+
+        invalid_roles = json.loads(json.dumps(manifest))
+        invalid_roles["central_question_count"] = 0
+        invalid_roles["presentation_variant_count"] = 1
+        with self.assertRaisesRegex(ValueError, "role totals"):
+            compile_competitive_v11.validate_artifact_pair(
+                invalid_roles, private_manifest
+            )
+
+        original_blind_a = blind_output / "questions" / "A" / "DAN1.json"
+        original_blind_a_payload = original_blind_a.read_bytes()
+        tampered_private = json.loads(json.dumps(private_manifest))
+        tampered_rows = json.loads(original_blind_a_payload)
+        tampered_rows[0]["role"] = "variant"
+        integrity = compile_competitive_v11.write_json(original_blind_a, tampered_rows)
+        tampered_private["pools"]["A"]["shards"][0].update(integrity)
+        with self.assertRaisesRegex(ValueError, "private shard role"):
+            compile_competitive_v11.validate_artifact_pair(
+                manifest, tampered_private, output, blind_output
+            )
+        original_blind_a.write_bytes(original_blind_a_payload)
+
+        original_blind_b = blind_output / "questions" / "B" / "DAN1.json"
+        original_blind_b_payload = original_blind_b.read_bytes()
+        duplicate_fact_private = json.loads(json.dumps(private_manifest))
+        duplicate_fact_rows = json.loads(original_blind_b_payload)
+        duplicate_fact_rows[0]["fact_id"] = "F-A"
+        duplicate_fact_rows[0]["row_content_sha256"] = (
+            compile_competitive_v11.emitted_row_hash(duplicate_fact_rows[0])
+        )
+        integrity = compile_competitive_v11.write_json(
+            original_blind_b, duplicate_fact_rows
+        )
+        duplicate_fact_private["pools"]["B"]["shards"][0].update(integrity)
+        with self.assertRaisesRegex(ValueError, "blind facts"):
+            compile_competitive_v11.validate_artifact_pair(
+                manifest, duplicate_fact_private, output, blind_output
+            )
+        original_blind_b.write_bytes(original_blind_b_payload)
+
+        cross_domain_private = json.loads(json.dumps(private_manifest))
+        cross_domain_rows = json.loads(original_blind_b_payload)
+        cross_domain_rows[0]["fact_id"] = "F-TRAIN"
+        cross_domain_rows[0]["row_content_sha256"] = (
+            compile_competitive_v11.emitted_row_hash(cross_domain_rows[0])
+        )
+        integrity = compile_competitive_v11.write_json(
+            original_blind_b, cross_domain_rows
+        )
+        cross_domain_private["pools"]["B"]["shards"][0].update(integrity)
+        with self.assertRaisesRegex(ValueError, "fact ownership"):
+            compile_competitive_v11.validate_artifact_pair(
+                manifest, cross_domain_private, output, blind_output
+            )
+        original_blind_b.write_bytes(original_blind_b_payload)
+
+        blind_path = blind_output / "questions" / "A" / "DAN1.json"
+        blind_path.write_bytes(blind_path.read_bytes() + b" ")
+        with self.assertRaisesRegex(ValueError, "integrity mismatch"):
+            compile_competitive_v11.validate_artifact_pair(
+                manifest, private_manifest, output, blind_output
+            )
+
+    def test_output_path_guards_reject_source_and_artifact_overlap(self) -> None:
+        directory = self.workspace_fixture("blind-output-guards").resolve()
+        source = directory / "source"
+        public = directory / "public"
+        private = directory / "private"
+        source.mkdir()
+        invalid = [
+            (source, private),
+            (source / "generated", private),
+            (source.parent, private),
+            (public, public),
+            (public, public / "blind"),
+            (public / "nested", public),
+            (public, public.parent / f".{public.name}.tmp"),
+        ]
+
+        for output, blind_output in invalid:
+            with self.subTest(output=output, blind_output=blind_output):
+                with self.assertRaises(ValueError):
+                    compile_competitive_v11.validate_output_paths(
+                        source, output, blind_output
+                    )
+
+        self.assertEqual(
+            compile_competitive_v11.validate_output_paths(source, public, private),
+            (source, public, private),
+        )
+        with self.assertRaisesRegex(ValueError, "web root"):
+            compile_competitive_v11.validate_output_paths(
+                source,
+                public,
+                compile_competitive_v11.ROOT / "public" / "private-blind",
+            )
+        with self.assertRaisesRegex(ValueError, "web root"):
+            compile_competitive_v11.validate_output_paths(
+                Path("C:/external-source"),
+                Path("C:/external-public"),
+                compile_competitive_v11.ROOT,
+            )
+
+    def test_emitted_build_id_detects_shard_and_descriptor_tampering(self) -> None:
+        directory = self.workspace_fixture("blind-build-descriptor-tamper")
+        root = directory / "source"
+        output = directory / "public-bank"
+        blind_output = directory / "private-blind"
+        self.write_compile_fixture(
+            root,
+            [
+                self.distinct_question(
+                    suffix="TRAIN", fact_id="F-TRAIN", blind_pool=None
+                ),
+                self.distinct_question(suffix="A", fact_id="F-A", blind_pool="A"),
+            ],
+        )
+        compile_competitive_v11.compile_bank(root, output, blind_output=blind_output)
+        public_manifest = json.loads(
+            (output / "manifest.json").read_text(encoding="utf-8")
+        )
+        private_manifest = json.loads(
+            (blind_output / "manifest.json").read_text(encoding="utf-8")
+        )
+        shard_path = blind_output / "questions" / "A" / "DAN1.json"
+        rows = json.loads(shard_path.read_text(encoding="utf-8"))
+        payload = json.dumps(
+            rows, ensure_ascii=False, separators=(",", ":")
+        ).encode("utf-8")
+        shard_path.write_bytes(payload)
+        integrity = {
+            "sha256": hashlib.sha256(payload).hexdigest(),
+            "bytes": len(payload),
+        }
+        private_manifest["pools"]["A"]["shards"][0].update(integrity)
+
+        with self.assertRaisesRegex(ValueError, "build_id"):
+            compile_competitive_v11.validate_artifact_pair(
+                public_manifest, private_manifest, output, blind_output
+            )
+
+    def test_review_ledgers_are_exact_and_cannot_cross_domains(self) -> None:
+        directory = self.workspace_fixture("blind-review-ledger-attacks")
+        root = directory / "source"
+        output = directory / "public-bank"
+        blind_output = directory / "private-blind"
+        self.write_compile_fixture(
+            root,
+            [
+                self.distinct_question(
+                    suffix="TRAIN-1", fact_id="F-TRAIN-1", blind_pool=None
+                ),
+                self.distinct_question(
+                    suffix="TRAIN-2", fact_id="F-TRAIN-2", blind_pool=None
+                ),
+                self.distinct_question(suffix="A", fact_id="F-A", blind_pool="A"),
+            ],
+        )
+        compile_competitive_v11.compile_bank(root, output, blind_output=blind_output)
+        public_manifest = json.loads(
+            (output / "manifest.json").read_text(encoding="utf-8")
+        )
+        private_manifest = json.loads(
+            (blind_output / "manifest.json").read_text(encoding="utf-8")
+        )
+        review_path = output / "review-index.json"
+        original_review = json.loads(review_path.read_text(encoding="utf-8"))
+
+        attacks = []
+        crossed = json.loads(json.dumps(original_review))
+        crossed["entries"][0]["question_id"] = "DAN1-V11-BLIND-A"
+        attacks.append(crossed)
+        duplicated = json.loads(json.dumps(original_review))
+        duplicated["entries"][1]["question_id"] = duplicated["entries"][0][
+            "question_id"
+        ]
+        attacks.append(duplicated)
+        missing = json.loads(json.dumps(original_review))
+        missing["entries"].pop()
+        missing["total_reviewed"] = 1
+        attacks.append(missing)
+        wrong_hash = json.loads(json.dumps(original_review))
+        wrong_hash["entries"][0]["content_sha256"] = "0" * 64
+        attacks.append(wrong_hash)
+
+        for review in attacks:
+            tampered_manifest = json.loads(json.dumps(public_manifest))
+            integrity = compile_competitive_v11.write_json(review_path, review)
+            tampered_manifest["review_index"].update(integrity)
+            with self.subTest(review=review["entries"]):
+                with self.assertRaisesRegex(ValueError, "review ledger"):
+                    compile_competitive_v11.validate_artifact_pair(
+                        tampered_manifest,
+                        private_manifest,
+                        output,
+                        blind_output,
+                    )
+
+    def test_windows_path_guards_reject_aliases_and_reserved_components(self) -> None:
+        base = Path("C:/safe-contract-root")
+        source = base / "source"
+        public = base / "public-artifact"
+        invalid_private = [
+            base / "private.",
+            base / "private ",
+            base / "private:stream",
+            base / "CON",
+            base / "prn.json",
+            base / "AuX",
+            base / "NUL.txt",
+            base / "COM1",
+            base / "lpt9.data",
+        ]
+        for private in invalid_private:
+            with self.subTest(private=private):
+                with self.assertRaises(ValueError):
+                    compile_competitive_v11.validate_output_paths(
+                        source, public, private
+                    )
+
+        with self.assertRaises(ValueError):
+            compile_competitive_v11.validate_output_paths(
+                source, base / "CaseAlias", base / "casealias"
+            )
+
+    def test_pair_swap_rolls_back_when_private_replacement_fails(self) -> None:
+        directory = self.workspace_fixture("blind-pair-rollback")
+        public = directory / "public"
+        private = directory / "private"
+        public_stage = directory / ".public.tmp"
+        private_stage = directory / ".private.tmp"
+        for path, marker in [
+            (public, "old-public"),
+            (private, "old-private"),
+            (public_stage, "new-public"),
+            (private_stage, "new-private"),
+        ]:
+            path.mkdir()
+            (path / "marker.txt").write_text(marker, encoding="utf-8")
+        original_rename = Path.rename
+
+        def fail_private_stage(path: Path, target: Path):
+            if path == private_stage:
+                raise PermissionError("simulated private swap failure")
+            return original_rename(path, target)
+
+        with patch.object(Path, "rename", fail_private_stage), patch(
+            "time.sleep", return_value=None
+        ):
+            with self.assertRaises(PermissionError):
+                compile_competitive_v11.replace_artifact_pair(
+                    public_stage, public, private_stage, private
+                )
+
+        self.assertEqual((public / "marker.txt").read_text(), "old-public")
+        self.assertEqual((private / "marker.txt").read_text(), "old-private")
+
+    def test_pair_swap_failure_without_previous_pair_leaves_both_absent(self) -> None:
+        directory = self.workspace_fixture("blind-pair-first-failure")
+        public = directory / "public"
+        private = directory / "private"
+        public_stage = directory / ".public.tmp"
+        private_stage = directory / ".private.tmp"
+        public_stage.mkdir()
+        private_stage.mkdir()
+        original_rename = Path.rename
+
+        def fail_private_stage(path: Path, target: Path):
+            if path == private_stage:
+                raise PermissionError("simulated private swap failure")
+            return original_rename(path, target)
+
+        with patch.object(Path, "rename", fail_private_stage), patch(
+            "time.sleep", return_value=None
+        ):
+            with self.assertRaises(PermissionError):
+                compile_competitive_v11.replace_artifact_pair(
+                    public_stage, public, private_stage, private
+                )
+
+        self.assertFalse(public.exists())
+        self.assertFalse(private.exists())
+
+    def test_pair_swap_keeps_old_pair_when_first_backup_move_fails(self) -> None:
+        directory = self.workspace_fixture("blind-pair-backup-failure")
+        public = directory / "public"
+        private = directory / "private"
+        public_stage = directory / ".public.tmp"
+        private_stage = directory / ".private.tmp"
+        for path, marker in [
+            (public, "old-public"),
+            (private, "old-private"),
+            (public_stage, "new-public"),
+            (private_stage, "new-private"),
+        ]:
+            path.mkdir()
+            (path / "marker.txt").write_text(marker, encoding="utf-8")
+        original_rename = Path.rename
+
+        def fail_public_backup(path: Path, target: Path):
+            if path == public:
+                raise PermissionError("simulated backup failure")
+            return original_rename(path, target)
+
+        with patch.object(Path, "rename", fail_public_backup), patch(
+            "time.sleep", return_value=None
+        ):
+            with self.assertRaises(PermissionError):
+                compile_competitive_v11.replace_artifact_pair(
+                    public_stage, public, private_stage, private
+                )
+
+        self.assertEqual((public / "marker.txt").read_text(), "old-public")
+        self.assertEqual((private / "marker.txt").read_text(), "old-private")
+
+    def test_pair_swap_recovers_stale_backup_before_attempting_new_pair(self) -> None:
+        directory = self.workspace_fixture("blind-pair-stale-backup")
+        public = directory / "public"
+        private = directory / "private"
+        public_backup = directory / ".public.backup"
+        public_stage = directory / ".public.tmp"
+        private_stage = directory / ".private.tmp"
+        for path, marker in [
+            (public_backup, "old-public"),
+            (private, "old-private"),
+            (public_stage, "new-public"),
+            (private_stage, "new-private"),
+        ]:
+            path.mkdir()
+            (path / "marker.txt").write_text(marker, encoding="utf-8")
+        original_rename = Path.rename
+
+        def fail_private_stage(path: Path, target: Path):
+            if path == private_stage:
+                raise PermissionError("simulated private swap failure")
+            return original_rename(path, target)
+
+        with patch.object(Path, "rename", fail_private_stage), patch(
+            "time.sleep", return_value=None
+        ):
+            with self.assertRaises(PermissionError):
+                compile_competitive_v11.replace_artifact_pair(
+                    public_stage, public, private_stage, private
+                )
+
+        self.assertEqual((public / "marker.txt").read_text(), "old-public")
+        self.assertEqual((private / "marker.txt").read_text(), "old-private")
+
+    def test_public_and_private_manifests_expose_detectable_build_mismatch(self) -> None:
+        public = {
+            "blind_delivery": {
+                "contract": "private-blind-artifact-v1",
+                "artifact_id": "competitive-v11-blind",
+                "artifact_revision": "a" * 64,
+            },
+            "build_id": "a" * 64,
+        }
+        private = {
+            "contract": "private-blind-artifact-v1",
+            "artifact_id": "competitive-v11-blind",
+            "artifact_revision": "b" * 64,
+            "build_id": "b" * 64,
+        }
+
+        with self.assertRaisesRegex(ValueError, "mismatch"):
+            compile_competitive_v11.validate_artifact_pair(public, private)
+
+    def test_recompile_removes_stale_public_and_private_shards(self) -> None:
+        directory = self.workspace_fixture("blind-stale-cleanup")
+        root = directory / "source"
+        output = directory / "public-bank"
+        blind_output = directory / "private-blind"
+        self.write_compile_fixture(
+            root,
+            [
+                self.distinct_question(suffix="TRAIN", fact_id="F-TRAIN", blind_pool=None),
+                self.distinct_question(suffix="A", fact_id="F-A", blind_pool="A"),
+            ],
+        )
+        compile_competitive_v11.compile_bank(root, output, blind_output=blind_output)
+        (output / "blind" / "stale").mkdir(parents=True)
+        (output / "blind" / "stale" / "leak.json").write_text("secret", encoding="utf-8")
+        self.assertTrue((blind_output / "questions" / "A" / "DAN1.json").exists())
+
+        self.write_compile_fixture(
+            root,
+            [self.distinct_question(suffix="TRAIN", fact_id="F-TRAIN", blind_pool=None)],
+        )
+        compile_competitive_v11.compile_bank(root, output, blind_output=blind_output)
+
+        self.assertFalse((output / "blind").exists())
+        self.assertFalse((blind_output / "questions" / "A" / "DAN1.json").exists())
+        private_manifest = json.loads(
+            (blind_output / "manifest.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(
+            private_manifest["pools"],
+            {
+                pool: {
+                    "fact_count": 0,
+                    "presentation_count": 0,
+                    "families": {"selection": 0, "fill_choice": 0, "true_false": 0},
+                    "shards": [],
+                }
+                for pool in ("A", "B", "emergency")
+            },
+        )
+
+    def test_release_gate_is_optional_but_fails_closed_when_requested(self) -> None:
+        rows = [
+            self.distinct_question(suffix="TRAIN", fact_id="F-TRAIN", blind_pool=None),
+        ]
+        requirements = {
+            "A": {"fact_count": 1, "families": {"selection": 1, "fill_choice": 0, "true_false": 0}},
+            "B": {"fact_count": 0, "families": {"selection": 0, "fill_choice": 0, "true_false": 0}},
+            "emergency": {"fact_count": 0, "families": {"selection": 0, "fill_choice": 0, "true_false": 0}},
+        }
+        directory = self.workspace_fixture("blind-compiler-gate")
+        root = directory / "source"
+        output = directory / "public-bank"
+        self.write_compile_fixture(root, rows)
+
+        manifest = compile_competitive_v11.compile_bank(root, output)
+        self.assertEqual(manifest["blind_presentation_count"], 0)
+
+        with self.assertRaisesRegex(ValueError, "blind_output"):
+            compile_competitive_v11.compile_bank(
+                root,
+                output,
+                blind_requirements=requirements,
+            )
+
+        with self.assertRaisesRegex(ValueError, "blind_pool_requirement_violations"):
+            compile_competitive_v11.compile_bank(
+                root,
+                output,
+                blind_output=directory / "private-blind",
+                blind_requirements=requirements,
+            )
 
 
 class SeedImportTests(unittest.TestCase):
