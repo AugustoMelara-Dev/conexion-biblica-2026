@@ -14,30 +14,28 @@ import {
 import { Input } from "@/components/ui/input"
 import {
   buildHumanReviewDecision,
+  parseHumanReviewIndex,
+  parseHumanReviewQuestionShard,
   reconcileHumanReview,
   selectNextHumanReview,
+  type HumanReviewIndex,
+  type IndexedHumanReviewEntry,
+  type HumanReviewQuestion,
   type HumanReviewDecision,
   type HumanReviewDisposition,
-  type HumanReviewEntry,
 } from "@/domain/editorial-review"
 import { downloadJson } from "@/lib/format"
 
-type IndexedReviewEntry = HumanReviewEntry & { questions_file: string }
-type ReviewIndex = {
-  bank_questions: number
-  entries: IndexedReviewEntry[]
-}
-type ReviewQuestion = {
-  id: string
-  question: string
-  options: string[]
-  correct_answer: string
-  source_quote: string
-  why_distractors_fail: Record<string, string>
-}
-
 const DECISIONS_KEY = "conexion-biblica-human-review-v1"
 const REVIEWER_KEY = "conexion-biblica-human-reviewer-v1"
+
+type ActionError = {
+  title:
+    | "No se guardó la decisión"
+    | "No se importaron las decisiones"
+    | "No se deshizo la decisión"
+  message: string
+}
 
 function readDecisions(): HumanReviewDecision[] {
   try {
@@ -49,34 +47,37 @@ function readDecisions(): HumanReviewDecision[] {
 }
 
 export function EditorialAuditPanel() {
-  const [index, setIndex] = useState<ReviewIndex | null>(null)
-  const [decisions, setDecisions] = useState<HumanReviewDecision[]>(readDecisions)
+  const [index, setIndex] = useState<HumanReviewIndex | null>(null)
+  const [decisions, setDecisions] =
+    useState<HumanReviewDecision[]>(readDecisions)
   const [reviewer, setReviewer] = useState(
-    () => localStorage.getItem(REVIEWER_KEY) ?? "",
+    () => localStorage.getItem(REVIEWER_KEY) ?? ""
   )
   const [family, setFamily] = useState("")
   const [chapter, setChapter] = useState("")
   const [notes, setNotes] = useState("")
-  const [question, setQuestion] = useState<ReviewQuestion | null>(null)
-  const [error, setError] = useState<string | null>(null)
-  const shardCache = useRef(new Map<string, Promise<ReviewQuestion[]>>())
+  const [question, setQuestion] = useState<HumanReviewQuestion | null>(null)
+  const [loadError, setLoadError] = useState<string | null>(null)
+  const [actionError, setActionError] = useState<ActionError | null>(null)
+  const shardCache = useRef(new Map<string, Promise<HumanReviewQuestion[]>>())
 
   useEffect(() => {
     let active = true
     void fetch("/banks/final-2026/review-index.json")
       .then((response) => {
-        if (!response.ok) throw new Error("No se pudo cargar el índice editorial.")
-        return response.json() as Promise<ReviewIndex>
+        if (!response.ok)
+          throw new Error("No se pudo cargar el índice editorial.")
+        return response.json() as Promise<unknown>
       })
       .then((payload) => {
-        if (active) setIndex(payload)
+        if (active) setIndex(parseHumanReviewIndex(payload))
       })
       .catch((loadError: unknown) => {
         if (active)
-          setError(
+          setLoadError(
             loadError instanceof Error
               ? loadError.message
-              : "No se pudo cargar la auditoría editorial.",
+              : "No se pudo cargar la auditoría editorial."
           )
       })
     return () => {
@@ -86,23 +87,29 @@ export function EditorialAuditPanel() {
 
   const reconciliation = useMemo(
     () => reconcileHumanReview(index?.entries ?? [], decisions),
-    [decisions, index?.entries],
+    [decisions, index?.entries]
   )
   const current = useMemo(
     () =>
       selectNextHumanReview(index?.entries ?? [], decisions, {
         family: family || undefined,
         chapter: chapter || undefined,
-      }) as IndexedReviewEntry | undefined,
-    [chapter, decisions, family, index?.entries],
+      }) as IndexedHumanReviewEntry | undefined,
+    [chapter, decisions, family, index?.entries]
   )
   const families = useMemo(
-    () => [...new Set((index?.entries ?? []).map((entry) => entry.family))].sort(),
-    [index?.entries],
+    () =>
+      [
+        ...new Set(
+          (index?.entries ?? []).map((entry) => entry.family).filter(Boolean)
+        ),
+      ].sort(),
+    [index?.entries]
   )
   const chapters = useMemo(
-    () => [...new Set((index?.entries ?? []).map((entry) => entry.chapter))].sort(),
-    [index?.entries],
+    () =>
+      [...new Set((index?.entries ?? []).map((entry) => entry.chapter))].sort(),
+    [index?.entries]
   )
 
   useEffect(() => {
@@ -113,10 +120,14 @@ export function EditorialAuditPanel() {
     let active = true
     let shard = shardCache.current.get(current.questions_file)
     if (!shard) {
-      shard = fetch(`/${current.questions_file}`).then((response) => {
-        if (!response.ok) throw new Error("No se pudo cargar el capítulo.")
-        return response.json() as Promise<ReviewQuestion[]>
-      })
+      shard = fetch(`/${current.questions_file}`)
+        .then((response) => {
+          if (!response.ok) throw new Error("No se pudo cargar el capítulo.")
+          return response.json() as Promise<unknown>
+        })
+        .then((payload) =>
+          parseHumanReviewQuestionShard(payload, current.chapter)
+        )
       shardCache.current.set(current.questions_file, shard)
     }
     setQuestion(null)
@@ -128,10 +139,10 @@ export function EditorialAuditPanel() {
       })
       .catch((loadError: unknown) => {
         if (active)
-          setError(
+          setLoadError(
             loadError instanceof Error
               ? loadError.message
-              : "No se pudo cargar la pregunta.",
+              : "No se pudo cargar la pregunta."
           )
       })
     return () => {
@@ -142,7 +153,10 @@ export function EditorialAuditPanel() {
   const decide = (disposition: HumanReviewDisposition) => {
     if (!current) return
     if (disposition === "rejected" && !notes.trim()) {
-      setError("Explica el motivo antes de rechazar la pregunta.")
+      setActionError({
+        title: "No se guardó la decisión",
+        message: "Explica el motivo antes de rechazar la pregunta.",
+      })
       return
     }
     try {
@@ -160,15 +174,17 @@ export function EditorialAuditPanel() {
       setDecisions(updated)
       setReviewer(next.reviewer)
       setNotes("")
-      setError(null)
+      setActionError(null)
     } catch (decisionError) {
-      setError(
-        decisionError &&
+      setActionError({
+        title: "No se guardó la decisión",
+        message:
+          decisionError &&
           typeof decisionError === "object" &&
           "message" in decisionError
-          ? String(decisionError.message)
-          : "No se pudo guardar la decisión.",
-      )
+            ? String(decisionError.message)
+            : "No se pudo guardar la decisión.",
+      })
     }
   }
 
@@ -191,22 +207,27 @@ export function EditorialAuditPanel() {
             typeof item.content_sha256 !== "string" ||
             typeof item.reviewer !== "string" ||
             typeof item.reviewed_at !== "string" ||
-            !["approved", "corrected", "rejected"].includes(item.disposition),
+            !["approved", "corrected", "rejected"].includes(item.disposition)
         )
       )
-        throw new Error("El archivo no contiene decisiones editoriales válidas.")
+        throw new Error(
+          "El archivo no contiene decisiones editoriales válidas."
+        )
       const merged = new Map(decisions.map((item) => [item.id, item]))
-      for (const item of parsed as HumanReviewDecision[]) merged.set(item.id, item)
+      for (const item of parsed as HumanReviewDecision[])
+        merged.set(item.id, item)
       const updated = [...merged.values()]
       localStorage.setItem(DECISIONS_KEY, JSON.stringify(updated))
       setDecisions(updated)
-      setError(null)
+      setActionError(null)
     } catch (importError) {
-      setError(
-        importError instanceof Error
-          ? importError.message
-          : "No se pudieron importar las decisiones.",
-      )
+      setActionError({
+        title: "No se importaron las decisiones",
+        message:
+          importError instanceof Error
+            ? importError.message
+            : "No se pudieron importar las decisiones.",
+      })
     }
   }
 
@@ -216,13 +237,15 @@ export function EditorialAuditPanel() {
       const updated = decisions.slice(0, -1)
       localStorage.setItem(DECISIONS_KEY, JSON.stringify(updated))
       setDecisions(updated)
-      setError(null)
+      setActionError(null)
     } catch (undoError) {
-      setError(
-        undoError instanceof Error
-          ? undoError.message
-          : "No se pudo deshacer la decisión.",
-      )
+      setActionError({
+        title: "No se deshizo la decisión",
+        message:
+          undoError instanceof Error
+            ? undoError.message
+            : "No se pudo deshacer la decisión.",
+      })
     }
   }
 
@@ -234,7 +257,7 @@ export function EditorialAuditPanel() {
             <div>
               <h2
                 id="human-audit-title"
-                className="flex items-center gap-2 text-2xl font-semibold leading-none tracking-tight"
+                className="flex items-center gap-2 text-2xl leading-none font-semibold tracking-tight"
               >
                 <ShieldCheck className="size-5" aria-hidden="true" />
                 Auditoría humana final
@@ -287,13 +310,16 @@ export function EditorialAuditPanel() {
         <CardContent className="space-y-5">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="secondary">
-              {reconciliation.reviewed.length} de {index?.bank_questions ?? "…"} revisadas
+              {reconciliation.reviewed.length} de {index?.bank_questions ?? "…"}{" "}
+              revisadas
             </Badge>
             <Badge variant="outline">
               {reconciliation.accepted.length} aprobadas o corregidas
             </Badge>
             <Badge
-              variant={reconciliation.rejected.length > 0 ? "destructive" : "outline"}
+              variant={
+                reconciliation.rejected.length > 0 ? "destructive" : "outline"
+              }
             >
               {reconciliation.rejected.length}{" "}
               {reconciliation.rejected.length === 1
@@ -313,10 +339,16 @@ export function EditorialAuditPanel() {
               </AlertDescription>
             </Alert>
           ) : null}
-          {error ? (
+          {loadError ? (
             <Alert variant="destructive">
-              <AlertTitle>No se guardó la decisión</AlertTitle>
-              <AlertDescription>{error}</AlertDescription>
+              <AlertTitle>Auditoría no disponible</AlertTitle>
+              <AlertDescription>{loadError}</AlertDescription>
+            </Alert>
+          ) : null}
+          {actionError ? (
+            <Alert variant="destructive">
+              <AlertTitle>{actionError.title}</AlertTitle>
+              <AlertDescription>{actionError.message}</AlertDescription>
             </Alert>
           ) : null}
           <div className="grid gap-4 md:grid-cols-3">
@@ -337,7 +369,9 @@ export function EditorialAuditPanel() {
               >
                 <option value="">Todas</option>
                 {families.map((item) => (
-                  <option key={item} value={item}>{item}</option>
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
                 ))}
               </select>
             </label>
@@ -350,7 +384,9 @@ export function EditorialAuditPanel() {
               >
                 <option value="">Todos</option>
                 {chapters.map((item) => (
-                  <option key={item} value={item}>{item}</option>
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
                 ))}
               </select>
             </label>
@@ -362,15 +398,22 @@ export function EditorialAuditPanel() {
         <Card className="shadow-none">
           <CardHeader>
             <div className="flex flex-wrap gap-2">
-              <Badge>{current.family}</Badge>
-              <Badge variant="outline">{current.chapter}</Badge>
+              <Badge>
+                {question.family || current.family || "Sin familia"}
+              </Badge>
+              <Badge variant="outline">
+                {question.chapter || current.chapter}
+              </Badge>
               <Badge variant="outline">Riesgo {current.risk_score}</Badge>
             </div>
             <CardTitle className="text-xl leading-relaxed">
               {question.question}
             </CardTitle>
             <CardDescription>
-              {current.reference} · {current.id}
+              {question.reference ||
+                current.reference ||
+                "Referencia no registrada"}{" "}
+              · {current.id}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-5">
@@ -408,8 +451,12 @@ export function EditorialAuditPanel() {
               />
             </label>
             <div className="flex flex-wrap gap-3">
-              <Button onClick={() => decide("approved")}>Aprobar pregunta</Button>
-              <Button variant="destructive" onClick={() => decide("rejected")}>Rechazar pregunta</Button>
+              <Button onClick={() => decide("approved")}>
+                Aprobar pregunta
+              </Button>
+              <Button variant="destructive" onClick={() => decide("rejected")}>
+                Rechazar pregunta
+              </Button>
             </div>
           </CardContent>
         </Card>
@@ -420,7 +467,7 @@ export function EditorialAuditPanel() {
             No quedan preguntas pendientes con estos filtros.
           </AlertDescription>
         </Alert>
-      ) : !error ? (
+      ) : !loadError ? (
         <p role="status" className="text-sm text-muted-foreground">
           Cargando cola editorial…
         </p>
