@@ -7082,5 +7082,1248 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
     }
+  },
+  {
+    "id": "PR40-V11-WAVE-052",
+    "source_unit_id": "PR40-P033-P006-S003",
+    "fact_id": "PR40-P033-P006-S003-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Cómo caracterizó el rey la respuesta que sospechaba que sus sabios estaban preparando mientras ganaban tiempo?",
+    "options": [
+      "Mentirosa y perversa",
+      "Incompleta pero sincera",
+      "Sabia y prudente",
+      "Humilde y reverente"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Mentirosa y perversa",
+    "accepted_answers": [
+      "Mentirosa y perversa"
+    ],
+    "explanation": "Nabucodonosor los acusó de preparar una respuesta mentirosa y perversa.",
+    "why_distractors_fail": {
+      "Incompleta pero sincera": "El rey no les concedió sinceridad.",
+      "Sabia y prudente": "Invierte el juicio del monarca.",
+      "Humilde y reverente": "No describe la respuesta sospechada."
+    },
+    "source_ref": "PR40, p. 33, párrafo 6",
+    "source_quote": "Ciertamente preparáis respuesta mentirosa y perversa que decir delante de mí, entre tanto que se muda el tiempo: por tanto, decidme el sueño, para que yo entienda que me podéis mostrar su declaración.”",
+    "evidence_excerpt": "Ciertamente preparáis respuesta mentirosa y perversa que decir delante de mí, entre tanto que se muda el tiempo: por tanto, decidme el sueño, para que yo entienda que me podéis mostrar su declaración.”",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "suspected_response",
+    "option_category": "description",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-053",
+    "source_unit_id": "PR40-P033-P007-S002",
+    "fact_id": "PR40-P033-P007-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Qué tres rangos mencionaron los caldeos al afirmar que ningún gobernante había pedido algo semejante?",
+    "options": [
+      "Rey, sacerdote y profeta",
+      "Rey, príncipe y señor",
+      "Príncipe, capitán y juez",
+      "Señor, gobernador y escriba"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Rey, príncipe y señor",
+    "accepted_answers": [
+      "Rey, príncipe y señor"
+    ],
+    "explanation": "Su defensa abarcó a rey, príncipe y señor como rangos que nunca habían formulado tal petición.",
+    "why_distractors_fail": {
+      "Rey, sacerdote y profeta": "Sacerdote y profeta no integran la enumeración.",
+      "Príncipe, capitán y juez": "Capitán y juez no aparecen en ella.",
+      "Señor, gobernador y escriba": "Gobernador y escriba son añadidos."
+    },
+    "source_ref": "PR40, p. 33, párrafo 7",
+    "source_quote": "Dijeron: “No hay hombre sobre la tierra que pueda declarar el negocio del rey: demás de esto, ningún rey, príncipe, ni señor, preguntó cosa semejante a ningún mago, ni astrólogo, ni Caldeo.",
+    "evidence_excerpt": "Dijeron: “No hay hombre sobre la tierra que pueda declarar el negocio del rey: demás de esto, ningún rey, príncipe, ni señor, preguntó cosa semejante a ningún mago, ni astrólogo, ni Caldeo.",
+    "difficulty": "hard",
+    "importance": "medium",
+    "relation_type": "unprecedented_request_ranks",
+    "option_category": "rank_set",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-055",
+    "source_unit_id": "PR40-P034-P003-S002",
+    "fact_id": "PR40-P034-P003-S002-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué dones concede Dios respectivamente a los sabios y a los entendidos?",
+    "options": [
+      "Fortaleza a los sabios y reinos a los entendidos",
+      "Luz a los sabios y riquezas a los entendidos",
+      "Sabiduría a los sabios y ciencia a los entendidos",
+      "Misterios a los sabios y tiempos a los entendidos"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Sabiduría a los sabios y ciencia a los entendidos",
+    "accepted_answers": [
+      "Sabiduría a los sabios y ciencia a los entendidos"
+    ],
+    "explanation": "La alabanza de Daniel asigna sabiduría a los sabios y ciencia a los entendidos.",
+    "why_distractors_fail": {
+      "Fortaleza a los sabios y reinos a los entendidos": "Combina acciones divinas sin la correspondencia citada.",
+      "Luz a los sabios y riquezas a los entendidos": "No es el reparto expresado.",
+      "Misterios a los sabios y tiempos a los entendidos": "Confunde otros elementos de la alabanza."
+    },
+    "source_ref": "PR40, p. 34, párrafo 3",
+    "source_quote": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+    "evidence_excerpt": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "divine_gift_recipients",
+    "option_category": "mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-056",
+    "source_unit_id": "PR40-P034-P003-S002",
+    "fact_id": "PR40-P034-P003-S002-V11-F04",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué combinación expresa el alcance del conocimiento de Dios en la alabanza de Daniel?",
+    "options": [
+      "Muda los tiempos y las oportunidades, y quita y pone reyes",
+      "Da sabiduría a los sabios y ciencia a los entendidos",
+      "Posee sabiduría y fortaleza, y la luz mora con él",
+      "Revela lo profundo y escondido, y conoce lo que está en tinieblas"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Revela lo profundo y escondido, y conoce lo que está en tinieblas",
+    "accepted_answers": [
+      "Revela lo profundo y escondido, y conoce lo que está en tinieblas"
+    ],
+    "explanation": "Daniel afirmó que Dios revela lo profundo y escondido y conoce lo que está en tinieblas.",
+    "why_distractors_fail": {
+      "Muda los tiempos y las oportunidades, y quita y pone reyes": "Describe su autoridad sobre la historia, no el alcance de su conocimiento.",
+      "Da sabiduría a los sabios y ciencia a los entendidos": "Describe dones concedidos, no lo que Dios conoce y revela.",
+      "Posee sabiduría y fortaleza, y la luz mora con él": "Enumera atributos y la relación con la luz, no el alcance preguntado."
+    },
+    "source_ref": "PR40, p. 34, párrafo 3",
+    "source_quote": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+    "evidence_excerpt": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "divine_knowledge_scope",
+    "option_category": "claim_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-058",
+    "source_unit_id": "PR40-P034-P005-S003",
+    "fact_id": "PR40-P034-P005-S003-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Qué capacidad quiso confirmar Nabucodonosor al preguntar directamente a Daniel?",
+    "options": [
+      "Hacerle entender el sueño y su interpretación",
+      "Conseguir que recordara solo el nombre del sueño",
+      "Explicar únicamente la amenaza contra los sabios",
+      "Revelar quién había redactado el decreto"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Hacerle entender el sueño y su interpretación",
+    "accepted_answers": [
+      "Hacerle entender el sueño y su interpretación"
+    ],
+    "explanation": "El rey preguntó si Daniel podía hacerle entender tanto el sueño como su interpretación.",
+    "why_distractors_fail": {
+      "Conseguir que recordara solo el nombre del sueño": "La petición abarcaba sueño e interpretación.",
+      "Explicar únicamente la amenaza contra los sabios": "Ese no era el misterio demandado.",
+      "Revelar quién había redactado el decreto": "El decreto no era el objeto de la pregunta."
+    },
+    "source_ref": "PR40, p. 34, párrafo 5",
+    "source_quote": "A la ansiosa pregunta del rey: “¿Podrás tú hacerme entender el sueño que vi, y su declaración? contestó: “El misterio que el rey demanda, ni sabios, ni astrólogos, ni magos, ni adivinos lo pueden enseñar al rey.",
+    "evidence_excerpt": "A la ansiosa pregunta del rey: “¿Podrás tú hacerme entender el sueño que vi, y su declaración? contestó: “El misterio que el rey demanda, ni sabios, ni astrólogos, ni magos, ni adivinos lo pueden enseñar al rey.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "royal_question_scope",
+    "option_category": "requested_capability",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-059",
+    "source_unit_id": "PR40-P034-P005-S004",
+    "fact_id": "PR40-P034-P005-S004-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "prophetic_detail",
+    "question": "¿A qué horizonte temporal se refería el misterio que Dios había comunicado a Nabucodonosor?",
+    "options": [
+      "A lo ocurrido antes de su nacimiento",
+      "A lo que acontecería al cabo de los días",
+      "Solo a la jornada en que despertó",
+      "Únicamente al regreso de Daniel a Judá"
+    ],
+    "correct_option": 1,
+    "correct_answer": "A lo que acontecería al cabo de los días",
+    "accepted_answers": [
+      "A lo que acontecería al cabo de los días",
+      "Lo que ha de acontecer a cabo de días"
+    ],
+    "explanation": "Daniel situó la revelación en lo que habría de acontecer al cabo de los días.",
+    "why_distractors_fail": {
+      "A lo ocurrido antes de su nacimiento": "La revelación miraba hacia adelante.",
+      "Solo a la jornada en que despertó": "Su alcance no se limitaba a ese día.",
+      "Únicamente al regreso de Daniel a Judá": "Ese acontecimiento no define el horizonte anunciado."
+    },
+    "source_ref": "PR40, p. 34, párrafo 5",
+    "source_quote": "Mas hay un Dios en los cielos, el cual revela los misterios, y él ha hecho saber al rey Nabucodonosor lo que ha de acontecer a cabo de días.",
+    "evidence_excerpt": "Mas hay un Dios en los cielos, el cual revela los misterios, y él ha hecho saber al rey Nabucodonosor lo que ha de acontecer a cabo de días.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "future_horizon",
+    "option_category": "time_scope",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-060",
+    "source_unit_id": "PR40-P034-P006-S001",
+    "fact_id": "PR40-P034-P006-S001-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "identification",
+    "question": "¿Quién mostró al rey lo que habría de ser en el futuro?",
+    "options": [
+      "El capitán de la guardia",
+      "El jefe de los magos",
+      "El que revela los misterios",
+      "El príncipe de Babilonia"
+    ],
+    "correct_option": 2,
+    "correct_answer": "El que revela los misterios",
+    "accepted_answers": [
+      "El que revela los misterios",
+      "Dios, el que revela los misterios"
+    ],
+    "explanation": "Daniel atribuyó la visión al que revela los misterios.",
+    "why_distractors_fail": {
+      "El capitán de la guardia": "Arioc no originó la visión.",
+      "El jefe de los magos": "Los magos no pudieron revelar el secreto.",
+      "El príncipe de Babilonia": "Ningún príncipe aparece como revelador."
+    },
+    "source_ref": "PR40, p. 34, párrafo 6",
+    "source_quote": "“Tu sueño—declaró Daniel—y las visiones de tu cabeza sobre tu cama, es esto: Tú, oh rey, en tu cama subieron tus pensamientos por saber lo que había de ser en lo por venir; y el que revela los misterios te mostró lo que ha de ser.",
+    "evidence_excerpt": "“Tu sueño—declaró Daniel—y las visiones de tu cabeza sobre tu cama, es esto: Tú, oh rey, en tu cama subieron tus pensamientos por saber lo que había de ser en lo por venir; y el que revela los misterios te mostró lo que ha de ser.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "future_revealer",
+    "option_category": "agent",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-061",
+    "source_unit_id": "PR40-P035-P001-S002",
+    "fact_id": "PR40-P035-P001-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Cómo estaba situada la gran imagen respecto del rey en la visión?",
+    "options": [
+      "Yacía detrás del trono",
+      "Flotaba sobre la ciudad",
+      "Permanecía oculta dentro del monte",
+      "Estaba en pie delante de él"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Estaba en pie delante de él",
+    "accepted_answers": [
+      "Estaba en pie delante de él",
+      "En pie delante de ti"
+    ],
+    "explanation": "La imagen estaba en pie delante del monarca.",
+    "why_distractors_fail": {
+      "Yacía detrás del trono": "Cambia postura y ubicación.",
+      "Flotaba sobre la ciudad": "La escena no la sitúa allí.",
+      "Permanecía oculta dentro del monte": "La imagen era visible ante el rey."
+    },
+    "source_ref": "PR40, p. 35, párrafo 1",
+    "source_quote": "Esta imagen, que era muy grande, y cuya gloria era muy sublime, estaba en pie delante de ti, y su aspecto era terrible.",
+    "evidence_excerpt": "Esta imagen, que era muy grande, y cuya gloria era muy sublime, estaba en pie delante de ti, y su aspecto era terrible.",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "image_position",
+    "option_category": "spatial_relation",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-062",
+    "source_unit_id": "PR40-P035-P002-S002",
+    "fact_id": "PR40-P035-P002-S002-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué conjunto completo de materiales fue desmenuzado después de que la piedra hirió la imagen?",
+    "options": [
+      "Hierro, barro cocido, metal, plata y oro",
+      "Hierro, piedra, madera, plata y oro",
+      "Barro, bronce, lino, cobre y oro",
+      "Plata, oro, mármol, vidrio y hierro"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Hierro, barro cocido, metal, plata y oro",
+    "accepted_answers": [
+      "Hierro, barro cocido, metal, plata y oro"
+    ],
+    "explanation": "Los cinco materiales de la imagen fueron desmenuzados juntos.",
+    "why_distractors_fail": {
+      "Hierro, piedra, madera, plata y oro": "La piedra golpeó; no integraba la imagen, y no había madera.",
+      "Barro, bronce, lino, cobre y oro": "Lino y cobre no aparecen en la enumeración.",
+      "Plata, oro, mármol, vidrio y hierro": "Mármol y vidrio son añadidos."
+    },
+    "source_ref": "PR40, p. 35, párrafo 2",
+    "source_quote": "Entonces fué también desmenuzado el hierro, el barro cocido, el metal, la plata y el oro, y se tornaron como tamo de las eras del verano; y levantólos el viento, y nunca más se les halló lugar.",
+    "evidence_excerpt": "Entonces fué también desmenuzado el hierro, el barro cocido, el metal, la plata y el oro, y se tornaron como tamo de las eras del verano; y levantólos el viento, y nunca más se les halló lugar.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "destroyed_materials",
+    "option_category": "material_set",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-064",
+    "source_unit_id": "PR40-P035-P004-S002",
+    "fact_id": "PR40-P035-P004-S002-V11-F03",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Qué seres habían sido entregados en la mano de Nabucodonosor para que ejerciera señorío?",
+    "options": [
+      "Hijos de hombres, peces del mar y reptiles de la tierra",
+      "Hijos de hombres, bestias del campo y aves del cielo",
+      "Sabios de la corte, ejércitos del reino y sacerdotes de los templos",
+      "Reyes de las naciones, mercaderes de las ciudades y labradores del campo"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Hijos de hombres, bestias del campo y aves del cielo",
+    "accepted_answers": [
+      "Hijos de hombres, bestias del campo y aves del cielo"
+    ],
+    "explanation": "El dominio descrito abarcaba seres humanos, bestias del campo y aves del cielo.",
+    "why_distractors_fail": {
+      "Hijos de hombres, peces del mar y reptiles de la tierra": "Conserva la categoría humana, pero sustituye bestias y aves.",
+      "Sabios de la corte, ejércitos del reino y sacerdotes de los templos": "Reemplaza las tres categorías por grupos institucionales.",
+      "Reyes de las naciones, mercaderes de las ciudades y labradores del campo": "Propone grupos humanos, pero omite bestias y aves."
+    },
+    "source_ref": "PR40, p. 35, párrafo 4",
+    "source_quote": "Y todo lo que habitan hijos de hombres, bestias del campo, y aves del cielo, él ha entregado en tu mano, y te ha hecho enseñorear sobre todo ello: tú eres aquella cabeza de oro.",
+    "evidence_excerpt": "Y todo lo que habitan hijos de hombres, bestias del campo, y aves del cielo, él ha entregado en tu mano, y te ha hecho enseñorear sobre todo ello: tú eres aquella cabeza de oro.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "royal_domain",
+    "option_category": "being_set",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-065",
+    "source_unit_id": "PR40-P037-P002-S002",
+    "fact_id": "PR40-P037-P002-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué doble actitud de sus gobernantes explica la desaparición de Babilonia durante su prosperidad?",
+    "options": [
+      "Buscaron a Dios y atribuyeron a él toda su gloria",
+      "Renunciaron al poder y entregaron el reino a los pobres",
+      "Se consideraron independientes de Dios y atribuyeron la gloria del reino a hazañas humanas",
+      "Desconfiaron de sus recursos y rechazaron toda grandeza humana"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Se consideraron independientes de Dios y atribuyeron la gloria del reino a hazañas humanas",
+    "accepted_answers": [
+      "Se consideraron independientes de Dios y atribuyeron la gloria del reino a hazañas humanas"
+    ],
+    "explanation": "La ruina se vincula con independencia de Dios y autoatribución humana de la gloria.",
+    "why_distractors_fail": {
+      "Buscaron a Dios y atribuyeron a él toda su gloria": "Invierte ambas actitudes.",
+      "Renunciaron al poder y entregaron el reino a los pobres": "No es la causa indicada.",
+      "Desconfiaron de sus recursos y rechazaron toda grandeza humana": "Contradice su autosuficiencia."
+    },
+    "source_ref": "PR40, p. 37, párrafo 2",
+    "source_quote": "Babilonia, al fin quebrantada, desapareció porque, en tiempos de prosperidad, sus gobernantes se habían considerado independientes de Dios y habían atribuído la gloria de su reino a las hazañas humanas.",
+    "evidence_excerpt": "Babilonia, al fin quebrantada, desapareció porque, en tiempos de prosperidad, sus gobernantes se habían considerado independientes de Dios y habían atribuído la gloria de su reino a las hazañas humanas.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "babylon_fall_causes",
+    "option_category": "cause_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-066",
+    "source_unit_id": "PR40-P036-P002-S002",
+    "fact_id": "PR40-P036-P002-S002-V11-F04",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Cómo sitúa la Palabra de Dios la acción de los agentes del Misericordioso frente al juego de intereses, poder y pasiones humanas?",
+    "options": [
+      "Solo al margen de los acontecimientos",
+      "Únicamente después de terminar la historia",
+      "Debajo y fuera de toda decisión humana",
+      "Encima, detrás y a través de todo ese juego"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Encima, detrás y a través de todo ese juego",
+    "accepted_answers": [
+      "Encima, detrás y a través de todo ese juego",
+      "Encima, detrás y a través"
+    ],
+    "explanation": "La Palabra permite contemplar esa acción encima, detrás y a través del juego humano.",
+    "why_distractors_fail": {
+      "Solo al margen de los acontecimientos": "Limita una acción presentada como penetrante.",
+      "Únicamente después de terminar la historia": "No restringe la percepción al final.",
+      "Debajo y fuera de toda decisión humana": "Sustituye las relaciones expresadas."
+    },
+    "source_ref": "PR40, p. 36, párrafo 2",
+    "source_quote": "Pero en la Palabra de Dios se descorre el velo, y encima, detrás y a través de todo el juego y contrajuego de los humanos intereses, poder y pasiones, contemplamos a los agentes del que es todo misericordioso, que cumplen silenciosa y pacientemente los designios y la voluntad de él.",
+    "evidence_excerpt": "Pero en la Palabra de Dios se descorre el velo, y encima, detrás y a través de todo el juego y contrajuego de los humanos intereses, poder y pasiones, contemplamos a los agentes del que es todo misericordioso, que cumplen silenciosa y pacientemente los designios y la voluntad de él.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "providential_scope",
+    "option_category": "spatial_scope",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-067",
+    "source_unit_id": "PR40-P037-P003-S003",
+    "fact_id": "PR40-P037-P003-S003-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué correspondencia entre faltas y remedios constituye una lección para todo gobernante?",
+    "options": [
+      "Pecados con justicia e iniquidades con misericordia hacia los pobres",
+      "Pecados con poder e iniquidades con riquezas",
+      "Pecados con silencio e iniquidades con aislamiento",
+      "Pecados con conquista e iniquidades con honores"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Pecados con justicia e iniquidades con misericordia hacia los pobres",
+    "accepted_answers": [
+      "Pecados con justicia e iniquidades con misericordia hacia los pobres"
+    ],
+    "explanation": "La exhortación une la redención de pecados con justicia y la de iniquidades con misericordia hacia los pobres.",
+    "why_distractors_fail": {
+      "Pecados con poder e iniquidades con riquezas": "Poder y riquezas no son los remedios.",
+      "Pecados con silencio e iniquidades con aislamiento": "No corresponde a la exhortación.",
+      "Pecados con conquista e iniquidades con honores": "Sustituye las virtudes por ambiciones políticas."
+    },
+    "source_ref": "PR40, p. 37, párrafo 3",
+    "source_quote": "Y para cada uno constituyen la lección de la vida las palabras dirigidas a Nabucodonosor: “Redime tus pecados con justicia, y tus iniquidades con misericordias para con los pobres; que tal vez será eso una prolongación de tu tranquilidad.",
+    "evidence_excerpt": "Y para cada uno constituyen la lección de la vida las palabras dirigidas a Nabucodonosor: “Redime tus pecados con justicia, y tus iniquidades con misericordias para con los pobres; que tal vez será eso una prolongación de tu tranquilidad.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "ethical_correction",
+    "option_category": "mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-068",
+    "source_unit_id": "PR40-P033-P004-S003",
+    "fact_id": "PR40-P033-P004-S003-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "Además de dones y grande honra, el rey prometió ____ a quienes mostraran el sueño y su interpretación.",
+    "options": [
+      "mercedes",
+      "destierro",
+      "silencio",
+      "servidumbre"
+    ],
+    "correct_option": 0,
+    "correct_answer": "mercedes",
+    "accepted_answers": [
+      "mercedes"
+    ],
+    "explanation": "La recompensa anunciada incluía dones, mercedes y grande honra.",
+    "why_distractors_fail": {
+      "destierro": "Es un castigo, no una recompensa.",
+      "silencio": "No integra la promesa.",
+      "servidumbre": "No fue ofrecida como premio."
+    },
+    "source_ref": "PR40, p. 33, párrafo 4",
+    "source_quote": "Y si mostrareis el sueño y su declaración, recibiréis de mí dones y mercedes y grande honra.”",
+    "evidence_excerpt": "Y si mostrareis el sueño y su declaración, recibiréis de mí dones y mercedes y grande honra.”",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "promised_reward",
+    "option_category": "noun",
+    "false_mutation": null,
+    "blank_span": "mercedes",
+    "significance": "Completa un componente de la recompensa que no había sido aislado.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-069",
+    "source_unit_id": "PR40-P033-P007-S003",
+    "fact_id": "PR40-P033-P007-S003-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "Los sabios exceptuaron a los dioses, cuya morada no es con la ____.",
+    "options": [
+      "corte",
+      "carne",
+      "tierra",
+      "noche"
+    ],
+    "correct_option": 1,
+    "correct_answer": "carne",
+    "accepted_answers": [
+      "carne"
+    ],
+    "explanation": "Declararon que la morada de los dioses no era con la carne.",
+    "why_distractors_fail": {
+      "corte": "No es el término de la declaración.",
+      "tierra": "La limitación se expresa respecto de la carne.",
+      "noche": "No describe la morada mencionada."
+    },
+    "source_ref": "PR40, p. 33, párrafo 7",
+    "source_quote": "Finalmente, el negocio que el rey demanda, es singular, ni hay quien lo pueda declarar delante del rey, salvo los dioses cuya morada no es con la carne.",
+    "evidence_excerpt": "Finalmente, el negocio que el rey demanda, es singular, ni hay quien lo pueda declarar delante del rey, salvo los dioses cuya morada no es con la carne.",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "divine_dwelling_claim",
+    "option_category": "noun",
+    "false_mutation": null,
+    "blank_span": "carne",
+    "significance": "Distingue la razón añadida a la excepción de los dioses.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-070",
+    "source_unit_id": "PR40-P034-P002-S009",
+    "fact_id": "PR40-P034-P002-S009-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "Antes de mencionar la visión nocturna, se afirma que el Espíritu del ____ descansó sobre los jóvenes.",
+    "options": [
+      "Altísimo",
+      "Creador",
+      "Señor",
+      "Omnisciente"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Señor",
+    "accepted_answers": [
+      "Señor",
+      "del Señor"
+    ],
+    "explanation": "El Espíritu del Señor descansó sobre ellos.",
+    "why_distractors_fail": {
+      "Altísimo": "Es un título divino plausible, pero no completa la expresión citada.",
+      "Creador": "Es un título divino, pero no es la palabra empleada aquí.",
+      "Omnisciente": "Aparece como título divino en otro contexto, no en esta designación del Espíritu."
+    },
+    "source_ref": "PR40, p. 34, párrafo 2",
+    "source_quote": "El Espíritu del Señor descansó sobre ellos, y a Daniel, “en visión de noche,” fueron revelados el sueño del rey y su significado.",
+    "evidence_excerpt": "El Espíritu del Señor descansó sobre ellos, y a Daniel, “en visión de noche,” fueron revelados el sueño del rey y su significado.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "spirit_source",
+    "option_category": "title",
+    "false_mutation": null,
+    "blank_span": "Señor",
+    "significance": "Recupera la presencia divina que acompañó la revelación.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-071",
+    "source_unit_id": "PR40-P034-P003-S002",
+    "fact_id": "PR40-P034-P003-S002-V11-F05",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "Daniel proclamó que Dios conoce lo que está en tinieblas y que la luz ____ con él.",
+    "options": [
+      "lucha",
+      "huye",
+      "termina",
+      "mora"
+    ],
+    "correct_option": 3,
+    "correct_answer": "mora",
+    "accepted_answers": [
+      "mora"
+    ],
+    "explanation": "La alabanza concluye esa idea declarando que la luz mora con Dios.",
+    "why_distractors_fail": {
+      "lucha": "No expresa la relación afirmada.",
+      "huye": "Invierte la cercanía de la luz.",
+      "termina": "No completa la proposición."
+    },
+    "source_ref": "PR40, p. 34, párrafo 3",
+    "source_quote": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+    "evidence_excerpt": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "light_relation",
+    "option_category": "verb",
+    "false_mutation": null,
+    "blank_span": "mora",
+    "significance": "Aísla la relación entre Dios y la luz.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-072",
+    "source_unit_id": "PR40-P034-P003-S003",
+    "fact_id": "PR40-P034-P003-S003-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "Daniel agradeció a Dios: «nos has enseñado el negocio del ____».",
+    "options": [
+      "rey",
+      "templo",
+      "pueblo",
+      "ejército"
+    ],
+    "correct_option": 0,
+    "correct_answer": "rey",
+    "accepted_answers": [
+      "rey",
+      "del rey"
+    ],
+    "explanation": "Dios les había enseñado el negocio del rey que pidieron conocer.",
+    "why_distractors_fail": {
+      "templo": "No era el asunto revelado.",
+      "pueblo": "La petición se relacionaba con el monarca.",
+      "ejército": "La crisis no trataba del ejército."
+    },
+    "source_ref": "PR40, p. 34, párrafo 3",
+    "source_quote": "A ti, oh Dios de mis padres, confieso y te alabo, que me diste sabiduría y fortaleza, y ahora me enseñaste lo que te pedimos; pues nos has enseñado el negocio del rey.”",
+    "evidence_excerpt": "A ti, oh Dios de mis padres, confieso y te alabo, que me diste sabiduría y fortaleza, y ahora me enseñaste lo que te pedimos; pues nos has enseñado el negocio del rey.”",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "revealed_matter",
+    "option_category": "person_role",
+    "false_mutation": null,
+    "blank_span": "rey",
+    "significance": "Identifica el asunto concreto respondido por Dios.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-075",
+    "source_unit_id": "PR40-P035-P006-S001",
+    "fact_id": "PR40-P035-P006-S001-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "La fuerza del cuarto reino se compara con el hierro, que desmenuza y ____ todas las cosas.",
+    "options": [
+      "protege",
+      "doma",
+      "adorna",
+      "oculta"
+    ],
+    "correct_option": 1,
+    "correct_answer": "doma",
+    "accepted_answers": [
+      "doma"
+    ],
+    "explanation": "La comparación declara que el hierro desmenuza y doma todas las cosas.",
+    "why_distractors_fail": {
+      "protege": "No es la acción usada en la comparación.",
+      "adorna": "No expresa fuerza destructiva.",
+      "oculta": "No completa el paralelismo."
+    },
+    "source_ref": "PR40, p. 35, párrafo 6",
+    "source_quote": "“Y el reino cuarto será fuerte como hierro; y como el hierro desmenuza y doma todas las cosas, y como el hierro que quebranta todas estas cosas, desmenuzará y quebrantará.",
+    "evidence_excerpt": "“Y el reino cuarto será fuerte como hierro; y como el hierro desmenuza y doma todas las cosas, y como el hierro que quebranta todas estas cosas, desmenuzará y quebrantará.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "iron_action",
+    "option_category": "verb",
+    "false_mutation": null,
+    "blank_span": "doma",
+    "significance": "Completa una acción del hierro distinta del resultado aplicado al reino.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-077",
+    "source_unit_id": "PR40-P036-P002-S002",
+    "fact_id": "PR40-P036-P002-S002-V11-F05",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "En la Palabra de Dios se descorre el ____ que oculta la acción providencial en la historia.",
+    "options": [
+      "trono",
+      "tiempo",
+      "velo",
+      "monte"
+    ],
+    "correct_option": 2,
+    "correct_answer": "velo",
+    "accepted_answers": [
+      "velo",
+      "el velo"
+    ],
+    "explanation": "La metáfora afirma que en la Palabra de Dios se descorre el velo.",
+    "why_distractors_fail": {
+      "trono": "No es lo que se descorre.",
+      "tiempo": "Los tiempos se mudan, no se descorren aquí.",
+      "monte": "El monte pertenece a la visión de la piedra."
+    },
+    "source_ref": "PR40, p. 36, párrafo 2",
+    "source_quote": "Pero en la Palabra de Dios se descorre el velo, y encima, detrás y a través de todo el juego y contrajuego de los humanos intereses, poder y pasiones, contemplamos a los agentes del que es todo misericordioso, que cumplen silenciosa y pacientemente los designios y la voluntad de él.",
+    "evidence_excerpt": "Pero en la Palabra de Dios se descorre el velo, y encima, detrás y a través de todo el juego y contrajuego de los humanos intereses, poder y pasiones, contemplamos a los agentes del que es todo misericordioso, que cumplen silenciosa y pacientemente los designios y la voluntad de él.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "providential_revelation_metaphor",
+    "option_category": "noun",
+    "false_mutation": null,
+    "blank_span": "velo",
+    "significance": "Identifica la imagen verbal que introduce la perspectiva providencial.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-078",
+    "source_unit_id": "PR40-P036-P003-S001",
+    "fact_id": "PR40-P036-P003-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "Pablo presentó el propósito divino con palabras de incomparable belleza y ____.",
+    "options": [
+      "severidad",
+      "ironía",
+      "brevedad",
+      "ternura"
+    ],
+    "correct_option": 3,
+    "correct_answer": "ternura",
+    "accepted_answers": [
+      "ternura"
+    ],
+    "explanation": "La exposición de Pablo se caracteriza por belleza y ternura incomparables.",
+    "why_distractors_fail": {
+      "severidad": "No es la cualidad emparejada con belleza.",
+      "ironía": "No describe el tono señalado.",
+      "brevedad": "No es el atributo citado."
+    },
+    "source_ref": "PR40, p. 36, párrafo 3",
+    "source_quote": "En palabras de incomparable belleza y ternura, el apóstol Pablo presentó a los sabios de Atenas el propósito que Dios había tenido en la creación y distribución de las razas y naciones.",
+    "evidence_excerpt": "En palabras de incomparable belleza y ternura, el apóstol Pablo presentó a los sabios de Atenas el propósito que Dios había tenido en la creación y distribución de las razas y naciones.",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "presentation_tone",
+    "option_category": "noun",
+    "false_mutation": null,
+    "blank_span": "ternura",
+    "significance": "Evalúa el tono de la presentación, no su audiencia.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-079",
+    "source_unit_id": "PR40-P033-P004-S003",
+    "fact_id": "PR40-P033-P004-S003-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "El rey prometió dones, mercedes y grande honra aunque los sabios dieran solamente la interpretación sin mostrar el sueño.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La recompensa estaba condicionada a mostrar tanto el sueño como su interpretación.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación elimina una de las dos condiciones exigidas."
+    },
+    "source_ref": "PR40, p. 33, párrafo 4",
+    "source_quote": "Y si mostrareis el sueño y su declaración, recibiréis de mí dones y mercedes y grande honra.”",
+    "evidence_excerpt": "Y si mostrareis el sueño y su declaración, recibiréis de mí dones y mercedes y grande honra.”",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "reward_condition",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "condition"
+      ],
+      "local": true,
+      "original": "si mostrareis el sueño y su declaración, recibiréis de mí dones y mercedes y grande honra",
+      "replacement": "aunque dieran solamente la interpretación sin mostrar el sueño"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-080",
+    "source_unit_id": "PR40-P034-P001-S001",
+    "fact_id": "PR40-P034-P001-S001-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Daniel y sus amigos se contaban entre las personas buscadas por los oficiales para ejecutar el decreto real.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Los oficiales buscaban a Daniel y a sus amigos entre los afectados por el decreto.",
+    "why_distractors_fail": {
+      "Falso": "La inclusión de Daniel y sus amigos es explícita."
+    },
+    "source_ref": "PR40, p. 34, párrafo 1",
+    "source_quote": "Entre aquellos a quienes buscaban los oficiales que se aprestaban a cumplir lo ordenado por el decreto real, se contaban Daniel y sus amigos.",
+    "evidence_excerpt": "Entre aquellos a quienes buscaban los oficiales que se aprestaban a cumplir lo ordenado por el decreto real, se contaban Daniel y sus amigos.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "decree_targets",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-081",
+    "source_unit_id": "PR40-P034-P003-S002",
+    "fact_id": "PR40-P034-P003-S002-V11-F06",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Daniel proclamó que Dios muda los tiempos y las oportunidades.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Esa acción forma parte de la alabanza de Daniel.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación reproduce la acción atribuida a Dios."
+    },
+    "source_ref": "PR40, p. 34, párrafo 3",
+    "source_quote": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+    "evidence_excerpt": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "time_authority",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-082",
+    "source_unit_id": "PR40-P034-P004-S002",
+    "fact_id": "PR40-P034-P004-S002-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "Arioc llevó lentamente a Daniel a la presencia del rey.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Arioc llevó prestamente a Daniel a la presencia del rey.",
+    "why_distractors_fail": {
+      "Verdadero": "Sustituye el adverbio de rapidez por su contrario."
+    },
+    "source_ref": "PR40, p. 34, párrafo 4",
+    "source_quote": "Prestamente, el oficial llevó a Daniel a la presencia del rey diciendo: “Un varón de los trasportados de Judá he hallado, el cual declarará al rey la interpretación.”",
+    "evidence_excerpt": "Prestamente, el oficial llevó a Daniel a la presencia del rey diciendo: “Un varón de los trasportados de Judá he hallado, el cual declarará al rey la interpretación.”",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "presentation_speed",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "speed"
+      ],
+      "local": true,
+      "original": "Prestamente",
+      "replacement": "lentamente"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-084",
+    "source_unit_id": "PR40-P036-P006-S003",
+    "fact_id": "PR40-P036-P006-S003-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "El segundo reino que sucedería a Babilonia vería marchitarse su gloria por no ensalzar al Dios verdadero, y un tercer reino ocuparía su lugar.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El segundo reino tendría su período de prueba; al no ensalzar al Dios verdadero, su gloria se marchitaría y un tercer reino lo reemplazaría.",
+    "why_distractors_fail": {
+      "Falso": "La sucesión indicada es explícita."
+    },
+    "source_ref": "PR40, p. 36, párrafo 6",
+    "source_quote": "Al no ensalzar al Dios verdadero, su gloria iba a marchitarse y un tercer reino ocuparía su lugar.",
+    "evidence_excerpt": "Al no ensalzar al Dios verdadero, su gloria iba a marchitarse y un tercer reino ocuparía su lugar.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "kingdom_replacement",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-085",
+    "source_unit_id": "PR40-P036-P007-S003",
+    "fact_id": "PR40-P036-P007-S003-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "relationship",
+    "question": "Los babilonios sabían que hombres como Daniel honraban al Dios viviente y eran honrados por él.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Ese reconocimiento explica por qué buscaban ayuda en hombres como Daniel.",
+    "why_distractors_fail": {
+      "Falso": "La doble relación de honra se declara expresamente."
+    },
+    "source_ref": "PR40, p. 36, párrafo 7",
+    "source_quote": "En tales ocasiones, al no hallar ayuda en sus grandes hombres, la buscaban en hombres como Daniel, hombres acerca de quienes sabían que honraban al Dios viviente y eran honrados por él.",
+    "evidence_excerpt": "En tales ocasiones, al no hallar ayuda en sus grandes hombres, la buscaban en hombres como Daniel, hombres acerca de quienes sabían que honraban al Dios viviente y eran honrados por él.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "mutual_honor",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-086",
+    "source_unit_id": "PR40-P037-P002-S006",
+    "fact_id": "PR40-P037-P002-S006-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Los reinos posteriores se hundieron cada vez más en su falta de valor moral.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La trayectoria descrita es de deterioro moral creciente.",
+    "why_distractors_fail": {
+      "Falso": "El descenso progresivo en valor moral está afirmado."
+    },
+    "source_ref": "PR40, p. 37, párrafo 2",
+    "source_quote": "Los reinos que siguieron fueron aun más viles y corruptos; y se fueron hundiendo cada vez más en su falta de valor moral.",
+    "evidence_excerpt": "Los reinos que siguieron fueron aun más viles y corruptos; y se fueron hundiendo cada vez más en su falta de valor moral.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "progressive_decline",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR40-V11-WAVE-088",
+    "source_unit_id": "PR40-P037-P005-S002",
+    "fact_id": "PR40-P037-P005-S002-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "La fuerza de las naciones y de los individuos se halla en su jactanciosa grandeza.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La fuerza no se halla en la grandeza jactanciosa, aunque esta produzca apariencia de invencibilidad.",
+    "why_distractors_fail": {
+      "Verdadero": "Elimina la negación explícita y convierte una falsa base de fuerza en su fundamento."
+    },
+    "source_ref": "PR40, p. 37, párrafo 5",
+    "source_quote": "En ella se revela que la fuerza tanto de las naciones como de los individuos no se halla en las oportunidades o los recursos que parecen hacerlos invencibles; no se halla en su jactanciosa grandeza.",
+    "evidence_excerpt": "En ella se revela que la fuerza tanto de las naciones como de los individuos no se halla en las oportunidades o los recursos que parecen hacerlos invencibles; no se halla en su jactanciosa grandeza.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "false_strength_basis",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "negation"
+      ],
+      "local": true,
+      "original": "no se halla en su jactanciosa grandeza",
+      "replacement": "se halla en su jactanciosa grandeza"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]
