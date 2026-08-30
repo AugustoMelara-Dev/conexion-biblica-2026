@@ -1992,5 +1992,95 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
     }
+  },
+  {
+    "id": "DAN12-V11-W037-035",
+    "source_unit_id": "DAN12-V003",
+    "fact_id": "DAN12-V003-V11-W037-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "Quienes enseñan la justicia la comunican a la ____.",
+    "options": [
+      "multitud",
+      "familia",
+      "guardia",
+      "corte"
+    ],
+    "correct_option": 0,
+    "correct_answer": "multitud",
+    "accepted_answers": [
+      "multitud",
+      "la multitud"
+    ],
+    "explanation": "La justicia es enseñada a la multitud.",
+    "why_distractors_fail": {
+      "familia": "La fuente no limita la enseñanza a una familia.",
+      "guardia": "No es el grupo receptor.",
+      "corte": "Tampoco es la audiencia indicada."
+    },
+    "source_ref": "Daniel 12:3",
+    "source_quote": "Los entendidos resplandecerán como el resplandor del firmamento; y los que enseñan la justicia a la multitud, como las estrellas, a perpetua eternidad.",
+    "evidence_excerpt": "Los entendidos resplandecerán como el resplandor del firmamento; y los que enseñan la justicia a la multitud, como las estrellas, a perpetua eternidad.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "justice_teaching_audience",
+    "option_category": "audience",
+    "false_mutation": null,
+    "blank_span": "multitud",
+    "significance": "Identifica la audiencia de la enseñanza de justicia.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-W037-059",
+    "source_unit_id": "DAN12-V006",
+    "fact_id": "DAN12-V006-V11-W037-F05",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "speaker_addressee",
+    "question": "En la escena junto al río, el varón vestido de lino fue quien preguntó cuándo sería el fin de las maravillas.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Una de las dos figuras junto al río hizo la pregunta al varón vestido de lino.",
+    "why_distractors_fail": {
+      "Verdadero": "Intercambia al hablante con el destinatario de la misma pregunta."
+    },
+    "source_ref": "Daniel 12:6",
+    "source_quote": "Y dijo uno al varón vestido de lino que estaba sobre las aguas del río: “¿Cuándo será el fin de estas maravillas?”",
+    "evidence_excerpt": "Y dijo uno al varón vestido de lino que estaba sobre las aguas del río: “¿Cuándo será el fin de estas maravillas?”",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "marvels_speaker_mutation",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "speaker"
+      ],
+      "local": true,
+      "original": "dijo uno al varón vestido de lino",
+      "replacement": "el varón vestido de lino preguntó"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]

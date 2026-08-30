@@ -1,0 +1,57 @@
+[
+  {
+    "id": "DAN12-V11-W037-035",
+    "source_unit_id": "DAN12-V003",
+    "fact_id": "DAN12-V003-V11-W037-F03",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "Quienes enseñan la justicia la comunican a la ____.",
+    "options": ["familia", "multitud", "guardia", "corte"],
+    "correct_option": 1,
+    "accepted_answers": ["multitud", "la multitud"],
+    "explanation": "La justicia es enseñada a la multitud.",
+    "why_distractors_fail": {
+      "familia": "La fuente no limita la enseñanza a una familia.",
+      "guardia": "No es el grupo receptor.",
+      "corte": "Tampoco es la audiencia indicada."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "justice_teaching_audience",
+    "option_category": "audience",
+    "significance": "Identifica la audiencia de la enseñanza de justicia.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Completa el receptor colectivo de la enseñanza."
+    }
+  },
+  {
+    "id": "DAN12-V11-W037-059",
+    "source_unit_id": "DAN12-V006",
+    "fact_id": "DAN12-V006-V11-W037-F05",
+    "family": "true_false",
+    "subtype": "speaker_addressee",
+    "question": "En la escena junto al río, el varón vestido de lino fue quien preguntó cuándo sería el fin de las maravillas.",
+    "options": ["Verdadero", "Falso"],
+    "correct_option": 1,
+    "accepted_answers": ["Falso"],
+    "explanation": "Una de las dos figuras junto al río hizo la pregunta al varón vestido de lino.",
+    "why_distractors_fail": {
+      "Verdadero": "Intercambia al hablante con el destinatario de la misma pregunta."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "marvels_speaker_mutation",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": ["speaker"],
+      "local": true,
+      "original": "dijo uno al varón vestido de lino",
+      "replacement": "el varón vestido de lino preguntó"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Muta únicamente el rol del hablante dentro de la misma escena."
+    }
+  }
+]
