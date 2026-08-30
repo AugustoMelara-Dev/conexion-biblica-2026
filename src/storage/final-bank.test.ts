@@ -2,11 +2,18 @@ import { describe, expect, it, vi } from "vitest"
 
 import {
   adaptFinalQuestion,
+  finalManifestFingerprint,
   loadFinalQuestionPool,
   readFinalManifest,
+  resolveFinalMigrationSignatures,
   type FinalBankManifest,
   type FinalRawQuestion,
 } from "@/storage/final-bank"
+import { createEmptyProgress } from "@/domain/mastery"
+import {
+  mapLegacyProgressFromSignatureIndex,
+  migrationSignature,
+} from "@/storage/history-migration"
 
 const raw = (overrides: Partial<FinalRawQuestion> = {}): FinalRawQuestion => ({
   id: "DAN7-GOLD-0001-SINGLE_CHOICE_CONTEXTUAL",
@@ -59,6 +66,31 @@ const raw = (overrides: Partial<FinalRawQuestion> = {}): FinalRawQuestion => ({
 })
 
 describe("canonical final bank storage", () => {
+  it("fingerprint distingue builds con el mismo schema y es estable", async () => {
+    const base: FinalBankManifest = {
+      schema_version: "9.0",
+      bank_id: "BANCO_UNICO_CONEXION_BIBLICA_2026",
+      display_name: "Banco Maestro Único — Final 2026",
+      build_id: "build-a",
+      gold_questions: 1,
+      unique_facts: 1,
+      shards: [
+        {
+          chapter: "DAN7",
+          question_count: 1,
+          questions_file: "banks/final-2026/questions/DAN7.json",
+        },
+      ],
+    }
+
+    expect(await finalManifestFingerprint(base)).toBe(
+      await finalManifestFingerprint(structuredClone(base))
+    )
+    expect(await finalManifestFingerprint(base)).not.toBe(
+      await finalManifestFingerprint({ ...base, build_id: "build-b" })
+    )
+  })
+
   it("adapts V8 without exposing a versioned bank name", () => {
     const question = adaptFinalQuestion(raw())
     expect(question.bankId).toBe("BANCO_UNICO_CONEXION_BIBLICA_2026")
@@ -317,6 +349,126 @@ describe("canonical final bank storage", () => {
     expect(selected.map((question) => question.factId).sort()).toEqual([
       "F-FAILED",
       "F-SLOW",
+    ])
+  })
+
+  it("rescata firmas legacy preferidas antes de aplicar factFilter", async () => {
+    const manifest: FinalBankManifest = {
+      schema_version: "9.0",
+      bank_id: "BANCO_UNICO_CONEXION_BIBLICA_2026",
+      display_name: "Banco Maestro Único — Final 2026",
+      gold_questions: 2,
+      unique_facts: 2,
+      shards: [
+        {
+          chapter: "DAN7",
+          question_count: 2,
+          questions_file: "banks/final-2026/questions/DAN7.json",
+        },
+      ],
+    }
+    const known = raw({ id: "KNOWN", fact_id: "F-KNOWN", variant_id: "V-KNOWN" })
+    const legacy = raw({
+      id: "LEGACY",
+      fact_id: "F-LEGACY",
+      variant_id: "V-LEGACY",
+      reference: "Daniel 7:20",
+    })
+    const fetcher = vi.fn(async () => ({
+      ok: true,
+      json: async () => [known, legacy],
+    })) as unknown as typeof fetch
+
+    const selected = await loadFinalQuestionPool({
+      manifest,
+      chapters: [7],
+      count: 2,
+      seed: 1,
+      factFilter: (factId) => factId === "F-KNOWN",
+      preferredMigrationSignatures: new Set([
+        migrationSignature(adaptFinalQuestion(legacy)),
+      ]),
+      fetcher,
+    })
+
+    expect(selected.map((question) => question.factId).sort()).toEqual([
+      "F-KNOWN",
+      "F-LEGACY",
+    ])
+  })
+
+  it("indexa sólo firmas legacy contra todos los shards sin adaptar el universo", async () => {
+    const target = raw({ id: "TARGET-1", fact_id: "FACT-1" })
+    const duplicateFact = raw({ id: "TARGET-2", fact_id: "FACT-2" })
+    const ignored = raw({
+      id: "IGNORED",
+      fact_id: "FACT-IGNORED",
+      reference: "Daniel 7:99",
+    })
+    const multiShardManifest: FinalBankManifest = {
+      schema_version: "9.0",
+      bank_id: "BANCO_UNICO_CONEXION_BIBLICA_2026",
+      display_name: "Banco Maestro Único — Final 2026",
+      gold_questions: 3,
+      unique_facts: 3,
+      shards: [
+        {
+          chapter: "DAN7",
+          question_count: 1,
+          questions_file: "banks/final-2026/questions/DAN7.json",
+        },
+        {
+          chapter: "DAN8",
+          question_count: 2,
+          questions_file: "banks/final-2026/questions/DAN8.json",
+        },
+      ],
+    }
+    const fetcher = vi.fn(async (input: RequestInfo | URL) => ({
+      ok: true,
+      json: async () =>
+        String(input).endsWith("DAN8.json")
+          ? [duplicateFact, ignored]
+          : [target],
+    })) as unknown as typeof fetch
+    const signature = migrationSignature(adaptFinalQuestion(target))
+
+    const index = await resolveFinalMigrationSignatures({
+      manifest: multiShardManifest,
+      signatures: new Set([signature]),
+      fetcher,
+    })
+
+    expect(fetcher).toHaveBeenCalledTimes(2)
+    expect(index.size).toBe(1)
+    expect([...index.get(signature)!].sort()).toEqual(["FACT-1", "FACT-2"])
+    const filtered = await loadFinalQuestionPool({
+      manifest: multiShardManifest,
+      chapters: [7],
+      count: 1,
+      seed: 1,
+      fetcher,
+    })
+    expect(filtered.map((question) => question.factId)).toEqual(["FACT-1"])
+    const legacy = {
+      ...adaptFinalQuestion(target),
+      id: "legacy-target",
+      bankId: "curated-v4",
+      bankProfileId: "curated-v4" as const,
+    }
+    const migration = mapLegacyProgressFromSignatureIndex(
+      [legacy],
+      [
+        {
+          ...createEmptyProgress("curated-v4:legacy-target"),
+          timesSeen: 1,
+        },
+      ],
+      index
+    )
+    expect(migration.mapped).toEqual([])
+    expect(migration.legacy).toEqual([
+      expect.objectContaining({ reason: "ambiguous_match" }),
     ])
   })
 })

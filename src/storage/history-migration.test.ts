@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest"
 
-import { mapLegacyProgressToFacts } from "@/storage/history-migration"
+import {
+  mapLegacyProgressFromSignatureIndex,
+  mapLegacyProgressToFacts,
+  migrationSignature,
+} from "@/storage/history-migration"
 import type { Question, QuestionProgress } from "@/domain/types"
 
 const gold: Question = {
@@ -53,5 +57,35 @@ describe("legacy history migration", () => {
     const result = mapLegacyProgressToFacts([old], [progress], [gold, duplicate])
     expect(result.mapped).toHaveLength(0)
     expect(result.legacy[0]).toMatchObject({ reason: "ambiguous_match" })
+  })
+
+  it("clasifica no_match como terminal contra el índice completo", () => {
+    const old = { ...gold, id: "old-1", bankId: "curated-v4", bankProfileId: "curated-v4" as const }
+    const result = mapLegacyProgressFromSignatureIndex(
+      [old],
+      [progress],
+      new Map()
+    )
+
+    expect(result.mapped).toEqual([])
+    expect(result.legacy).toEqual([
+      expect.objectContaining({ reason: "no_match" }),
+    ])
+  })
+
+  it("clasifica dos facts con la misma firma como ambiguous", () => {
+    const old = { ...gold, id: "old-1", bankId: "curated-v4", bankProfileId: "curated-v4" as const }
+    const result = mapLegacyProgressFromSignatureIndex(
+      [old],
+      [progress],
+      new Map([
+        [migrationSignature(old), new Set(["FACT-1", "FACT-2"])],
+      ])
+    )
+
+    expect(result.mapped).toEqual([])
+    expect(result.legacy).toEqual([
+      expect.objectContaining({ reason: "ambiguous_match" }),
+    ])
   })
 })

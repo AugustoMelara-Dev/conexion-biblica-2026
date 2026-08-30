@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest"
-import { selectNextFamilyVariant, selectSessionQuestions } from "@/domain/session-selector"
+import { filterEligibleQuestions, selectNextFamilyVariant, selectSessionQuestions } from "@/domain/session-selector"
 import type { Question, SessionConfig } from "@/domain/types"
 
 function question(id: string, factKey: string, chapter = 1): Question {
@@ -39,5 +39,18 @@ describe("selección por familias", () => {
     expect(selected).toHaveLength(2)
     expect(selected).toContain(prep)
     expect(selected).not.toContain(master)
+  })
+
+  it("deja los estados masivos al selector por factId", () => {
+    const alternateVariant = question("alternate", "failed-fact")
+
+    expect(
+      filterEligibleQuestions([alternateVariant], new Map(), {
+        ...config,
+        statuses: ["failed"],
+        massive: true,
+        trainingPresetId: "previous-errors",
+      })
+    ).toEqual([alternateVariant])
   })
 })

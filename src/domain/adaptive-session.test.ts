@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest"
 import { selectAdaptiveSession } from "@/domain/adaptive-session"
+import { emptyFactMastery } from "@/domain/fact-mastery"
 import type { Question, QuestionExposure } from "@/domain/types"
 
 function makeQuestion(index: number, overrides: Partial<Question> = {}): Question {
@@ -72,5 +73,131 @@ describe("selector adaptativo anti-memorización", () => {
     expect(selected.filter((item) => Number(item.id.slice(2)) >= 200 && Number(item.id.slice(2)) < 300)).toHaveLength(10)
     expect(selected.filter((item) => Number(item.id.slice(2)) >= 300)).toHaveLength(10)
     expect(selected.filter((item) => Number(item.id.slice(2)) < 100)).toHaveLength(60)
+  })
+
+  it("incluye en repaso espaciado solo hechos cuyo nextDueAt ya venció", () => {
+    const now = Date.UTC(2026, 7, 30, 12)
+    const due = {
+      ...emptyFactMastery("fact-1"),
+      state: "due" as const,
+      nextDueAt: now - 1,
+    }
+    const future = {
+      ...emptyFactMastery("fact-2"),
+      state: "stable" as const,
+      nextDueAt: now + 1,
+    }
+
+    const selected = selectAdaptiveSession({
+      questions: [makeQuestion(1), makeQuestion(2)],
+      exposures: [exposure(1, {}), exposure(2, {})],
+      factMastery: [due, future],
+      presetId: "spaced-review",
+      now,
+      count: 2,
+      weakChapters: [],
+      includeBlind: false,
+      seed: 3,
+    })
+
+    expect(selected.map((question) => question.factId)).toEqual(["fact-1"])
+  })
+
+  it("trata como visto todo el hecho aunque la variante concreta sea nueva", () => {
+    const seenFact = {
+      ...emptyFactMastery("fact-1"),
+      state: "learning" as const,
+      attempts: 1,
+      variantIds: ["different-variant"],
+    }
+
+    const selected = selectAdaptiveSession({
+      questions: [makeQuestion(1), makeQuestion(2)],
+      exposures: [],
+      factMastery: [seenFact],
+      presetId: "unseen-only",
+      count: 2,
+      weakChapters: [],
+      includeBlind: false,
+      seed: 4,
+    })
+
+    expect(selected.map((question) => question.factId)).toEqual(["fact-2"])
+  })
+
+  it("limita correctas lentas a hechos frágiles", () => {
+    const fragile = {
+      ...emptyFactMastery("fact-1"),
+      state: "fragile" as const,
+      attempts: 1,
+    }
+    const stable = {
+      ...emptyFactMastery("fact-2"),
+      state: "stable" as const,
+      attempts: 2,
+    }
+
+    const selected = selectAdaptiveSession({
+      questions: [makeQuestion(1), makeQuestion(2)],
+      exposures: [
+        exposure(1, { averageResponseTimeMs: 12_000 }),
+        exposure(2, { averageResponseTimeMs: 2_000 }),
+      ],
+      factMastery: [fragile, stable],
+      presetId: "slow-correct",
+      count: 2,
+      weakChapters: [],
+      includeBlind: false,
+      seed: 5,
+    })
+
+    expect(selected.map((question) => question.factId)).toEqual(["fact-1"])
+  })
+
+  it("recupera errores por factId aunque se seleccione otra variante", () => {
+    const failedFact = {
+      ...emptyFactMastery("fact-1"),
+      state: "due" as const,
+      attempts: 1,
+      failures: 1,
+      variantIds: ["different-variant"],
+    }
+
+    const selected = selectAdaptiveSession({
+      questions: [makeQuestion(1), makeQuestion(2)],
+      exposures: [],
+      factMastery: [failedFact],
+      presetId: "previous-errors",
+      count: 2,
+      weakChapters: [],
+      includeBlind: false,
+      seed: 6,
+    })
+
+    expect(selected.map((question) => question.factId)).toEqual(["fact-1"])
+  })
+
+  it("mantiene la simulación ciega en hechos no vistos al omitir el filtro legado", () => {
+    const seenFact = {
+      ...emptyFactMastery("fact-1"),
+      state: "stable" as const,
+      attempts: 2,
+    }
+
+    const selected = selectAdaptiveSession({
+      questions: [
+        makeQuestion(1, { blindFinalPool: true }),
+        makeQuestion(2, { blindFinalPool: true }),
+      ],
+      exposures: [],
+      factMastery: [seenFact],
+      presetId: "blind-simulation",
+      count: 2,
+      weakChapters: [],
+      includeBlind: true,
+      seed: 7,
+    })
+
+    expect(selected.map((question) => question.factId)).toEqual(["fact-2"])
   })
 })

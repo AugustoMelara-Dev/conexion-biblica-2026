@@ -58,12 +58,18 @@ import {
 } from "@/storage/massive-bank"
 import {
   loadConsolidationQuestionPool,
+  resolveConsolidationMigrationSignatures,
   type ConsolidationManifest,
 } from "@/storage/consolidation-bank"
-import { mapLegacyProgressToFacts } from "@/storage/history-migration"
 import {
+  mapLegacyProgressFromSignatureIndex,
+  migrationSignature,
+} from "@/storage/history-migration"
+import {
+  finalManifestFingerprint,
   loadFinalQuestionPool,
   readFinalManifest,
+  resolveFinalMigrationSignatures,
   type FinalBankManifest,
 } from "@/storage/final-bank"
 
@@ -163,6 +169,155 @@ const defaultPreferences: Preferences = {
 }
 const AppContext = createContext<AppContextValue | undefined>(undefined)
 const PREFERENCES_STORAGE_KEY = "conexion-biblica-preferences"
+const FACT_MASTERY_PRESETS = new Set([
+  "spaced-review",
+  "previous-errors",
+  "slow-correct",
+  "unseen-only",
+  "blind-simulation",
+])
+
+function requiresFactMasteryPool(presetId: string | undefined) {
+  return Boolean(presetId && FACT_MASTERY_PRESETS.has(presetId))
+}
+
+function factFilterForPreset(
+  presetId: string | undefined,
+  mastery: FactMastery[],
+  now: number
+) {
+  if (!requiresFactMasteryPool(presetId)) return undefined
+  const byFact = new Map(mastery.map((item) => [item.factId, item]))
+  if (presetId === "unseen-only" || presetId === "blind-simulation")
+    return (factId: string) => {
+      const item = byFact.get(factId)
+      return !item || item.state === "unseen"
+    }
+  if (mastery.length === 0) return undefined
+  if (presetId === "spaced-review")
+    return (factId: string) => {
+      const dueAt = byFact.get(factId)?.nextDueAt
+      return dueAt !== null && dueAt !== undefined && dueAt <= now
+    }
+  if (presetId === "previous-errors")
+    return (factId: string) => Boolean(byFact.get(factId)?.failures)
+  if (presetId === "slow-correct")
+    return (factId: string) => byFact.get(factId)?.state === "fragile"
+  return undefined
+}
+
+function historyMigrationComplete(value: unknown, profileVersion?: string) {
+  if (!value) return false
+  if (typeof value !== "object") return !profileVersion
+  const summary = value as { status?: string; profileVersion?: string }
+  return (
+    summary.status !== "pending" &&
+    (!profileVersion || summary.profileVersion === profileVersion)
+  )
+}
+
+export async function loadLegacyMigrationSnapshot(
+  repositories: RepositorySet,
+  summaryKey: string,
+  profileVersion?: string
+) {
+  const summary = await repositories.settings.get(summaryKey, null)
+  const complete = historyMigrationComplete(summary, profileVersion)
+  if (complete)
+    return {
+      complete,
+      questions: [] as Question[],
+      progress: [] as QuestionProgress[],
+    }
+  const [questions, progress] = await Promise.all([
+    repositories.questions.list(),
+    repositories.progress.list(),
+  ])
+  return { complete, questions, progress }
+}
+
+export async function resolveLegacyMigration(input: {
+  repositories: RepositorySet
+  snapshot: Awaited<ReturnType<typeof loadLegacyMigrationSnapshot>>
+  bankProfileId: BankProfileId
+  summaryKey: string
+  profileVersion: string
+  resolveSignatures: (
+    signatures: ReadonlySet<string>
+  ) => Promise<ReadonlyMap<string, ReadonlySet<string>>>
+}) {
+  if (input.snapshot.complete) return [] as FactMastery[]
+  const legacyQuestions = input.snapshot.questions.filter(
+    (question) => question.bankProfileId !== input.bankProfileId
+  )
+  const currentProfileKeys = new Set(
+    input.snapshot.questions
+      .filter((question) => question.bankProfileId === input.bankProfileId)
+      .map((question) => `${question.bankId ?? "local"}:${question.id}`)
+  )
+  const legacyProgress = input.snapshot.progress.filter(
+    (item) => !currentProfileKeys.has(item.questionKey)
+  )
+  const progressKeys = new Set(
+    legacyProgress
+      .filter((item) => item.timesSeen > 0)
+      .map((item) => item.questionKey)
+  )
+  const signatures = new Set(
+    legacyQuestions
+      .filter((question) =>
+        progressKeys.has(`${question.bankId ?? "local"}:${question.id}`)
+      )
+      .map(migrationSignature)
+  )
+  const factsBySignature = await input.resolveSignatures(signatures)
+  const migration = mapLegacyProgressFromSignatureIndex(
+    legacyQuestions,
+    legacyProgress,
+    factsBySignature
+  )
+  const migratedMastery: FactMastery[] = []
+  for (const item of migration.mapped) {
+    const existing = await input.repositories.factMastery.get(item.factId)
+    if (existing) continue
+    const prior = emptyFactMastery(item.factId)
+    const migrated: FactMastery = {
+      ...prior,
+      state:
+        item.progress.timesIncorrect > 0
+          ? "due"
+          : item.progress.timesCorrect > 0
+            ? "exposed"
+            : "unseen",
+      attempts: item.progress.timesSeen,
+      failures: item.progress.timesIncorrect,
+      firstSeenAt:
+        item.progress.history.at(0)?.timestamp ?? item.progress.lastSeenAt,
+      lastSeenAt: item.progress.lastSeenAt,
+    }
+    await input.repositories.factMastery.put(migrated)
+    migratedMastery.push(migrated)
+  }
+  await input.repositories.legacyEvents.putMany(migration.legacy)
+  await input.repositories.settings.put(input.summaryKey, {
+    status: "complete",
+    unresolved: 0,
+    profileVersion: input.profileVersion,
+    signatures: signatures.size,
+    mapped: migration.mapped.length,
+    preservedLegacy: migration.legacy.length,
+    ambiguous: migration.legacy.filter(
+      (event) => event.reason === "ambiguous_match"
+    ).length,
+    noMatch: migration.legacy.filter((event) => event.reason === "no_match")
+      .length,
+    missingQuestion: migration.legacy.filter(
+      (event) => event.reason === "missing_question"
+    ).length,
+    updatedAt: Date.now(),
+  })
+  return migratedMastery
+}
 
 function emptyQuestionProgress(questionKey: string): QuestionProgress {
   return {
@@ -391,6 +546,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
       if (!repositories)
         throw new Error("El almacenamiento todavía no está disponible")
       const desiredCount = config.count === "all" ? 200 : config.count
+      const adaptivePoolCount = requiresFactMasteryPool(
+        config.trainingPresetId
+      )
+        ? Math.max(desiredCount, desiredCount * 4)
+        : desiredCount
+      const factFilter = factFilterForPreset(
+        config.trainingPresetId,
+        factMastery,
+        Date.now()
+      )
       if (config.bankSelection === "final-v7") {
         if (!finalManifest)
           throw new Error("El Banco Maestro Único todavía no está disponible")
@@ -414,10 +579,51 @@ export function AppProvider({ children }: { children: ReactNode }) {
             : config.trainingPresetId === "blind-simulation"
               ? ("A" as const)
               : undefined
+        const profileVersion = await finalManifestFingerprint(finalManifest)
+        const migrationSnapshot = await loadLegacyMigrationSnapshot(
+          repositories,
+          "v7-history-migration-summary",
+          profileVersion
+        )
+        const migratedMastery = await resolveLegacyMigration({
+          repositories,
+          snapshot: migrationSnapshot,
+          bankProfileId: "final-v7",
+          summaryKey: "v7-history-migration-summary",
+          profileVersion,
+          resolveSignatures: (signatures) =>
+            resolveFinalMigrationSignatures({
+              manifest: finalManifest,
+              signatures,
+            }),
+        })
+        if (migratedMastery.length)
+          setFactMastery((current) => [
+            ...migratedMastery,
+            ...current.filter(
+              (item) =>
+                !migratedMastery.some(
+                  (migrated) => migrated.factId === item.factId
+                )
+            ),
+          ])
+        const effectiveFactFilter = factFilterForPreset(
+          config.trainingPresetId,
+          [
+            ...migratedMastery,
+            ...factMastery.filter(
+              (item) =>
+                !migratedMastery.some(
+                  (migrated) => migrated.factId === item.factId
+                )
+            ),
+          ],
+          Date.now()
+        )
         const gold = await loadFinalQuestionPool({
           manifest: finalManifest,
           chapters,
-          count: desiredCount,
+          count: Math.min(adaptivePoolCount, finalManifest.gold_questions),
           blindPool,
           difficultyBands: config.difficultyBands,
           types: config.types,
@@ -434,47 +640,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
                     : undefined,
           seenFactIds: new Set(exposures.map((exposure) => exposure.factId)),
           exposures,
+          factFilter: effectiveFactFilter,
           seed: Date.now(),
         })
         await repositories.questions.putMany(gold)
-        const [storedQuestions, storedProgress] = await Promise.all([
-          repositories.questions.list(),
-          repositories.progress.list(),
-        ])
-        const legacyQuestions = storedQuestions.filter(
-          (question) => question.bankProfileId !== "final-v7"
-        )
-        const migration = mapLegacyProgressToFacts(
-          legacyQuestions,
-          storedProgress,
-          gold
-        )
-        for (const item of migration.mapped) {
-          const existing = await repositories.factMastery.get(item.factId)
-          if (existing) continue
-          const prior = emptyFactMastery(item.factId)
-          await repositories.factMastery.put({
-            ...prior,
-            state:
-              item.progress.timesIncorrect > 0
-                ? "due"
-                : item.progress.timesCorrect > 0
-                  ? "exposed"
-                  : "unseen",
-            attempts: item.progress.timesSeen,
-            failures: item.progress.timesIncorrect,
-            firstSeenAt:
-              item.progress.history.at(0)?.timestamp ??
-              item.progress.lastSeenAt,
-            lastSeenAt: item.progress.lastSeenAt,
-          })
-        }
-        await repositories.legacyEvents.putMany(migration.legacy)
-        await repositories.settings.put("v7-history-migration-summary", {
-          mapped: migration.mapped.length,
-          preservedLegacy: migration.legacy.length,
-          updatedAt: Date.now(),
-        })
         setQuestions((current) => {
           const byKey = new Map(
             current.map((question) => [
@@ -510,56 +679,63 @@ export function AppProvider({ children }: { children: ReactNode }) {
             : config.trainingPresetId === "28-blind-b"
               ? ("B" as const)
               : config.trainingPresetId === "blind-simulation"
-                ? ("A" as const)
+              ? ("A" as const)
                 : undefined
+        const profileVersion = `${consolidationManifest.profile_id}:${consolidationManifest.version}`
+        const migrationSnapshot = await loadLegacyMigrationSnapshot(
+          repositories,
+          "v5-history-migration-summary",
+          profileVersion
+        )
+        const migratedMastery = await resolveLegacyMigration({
+          repositories,
+          snapshot: migrationSnapshot,
+          bankProfileId: "consolidation-v5",
+          summaryKey: "v5-history-migration-summary",
+          profileVersion,
+          resolveSignatures: (signatures) =>
+            resolveConsolidationMigrationSignatures({
+              manifest: consolidationManifest,
+              signatures,
+            }),
+        })
+        if (migratedMastery.length)
+          setFactMastery((current) => [
+            ...migratedMastery,
+            ...current.filter(
+              (item) =>
+                !migratedMastery.some(
+                  (migrated) => migrated.factId === item.factId
+                )
+            ),
+          ])
+        const effectiveFactFilter = factFilterForPreset(
+          config.trainingPresetId,
+          [
+            ...migratedMastery,
+            ...factMastery.filter(
+              (item) =>
+                !migratedMastery.some(
+                  (migrated) => migrated.factId === item.factId
+                )
+            ),
+          ],
+          Date.now()
+        )
         const gold = await loadConsolidationQuestionPool({
           manifest: consolidationManifest,
           chapters,
-          count: desiredCount,
+          count: Math.min(
+            adaptivePoolCount,
+            consolidationManifest.gold_questions
+          ),
           blindPool,
           difficultyBands: config.difficultyBands,
           types: config.types,
+          factFilter: effectiveFactFilter,
           seed: Date.now(),
         })
         await repositories.questions.putMany(gold)
-        const [storedQuestions, storedProgress] = await Promise.all([
-          repositories.questions.list(),
-          repositories.progress.list(),
-        ])
-        const legacyQuestions = storedQuestions.filter(
-          (question) => question.bankProfileId !== "consolidation-v5"
-        )
-        const migration = mapLegacyProgressToFacts(
-          legacyQuestions,
-          storedProgress,
-          gold
-        )
-        for (const item of migration.mapped) {
-          const existing = await repositories.factMastery.get(item.factId)
-          if (existing) continue
-          const prior = emptyFactMastery(item.factId)
-          await repositories.factMastery.put({
-            ...prior,
-            state:
-              item.progress.timesIncorrect > 0
-                ? "due"
-                : item.progress.timesCorrect > 0
-                  ? "exposed"
-                  : "unseen",
-            attempts: item.progress.timesSeen,
-            failures: item.progress.timesIncorrect,
-            firstSeenAt:
-              item.progress.history.at(0)?.timestamp ??
-              item.progress.lastSeenAt,
-            lastSeenAt: item.progress.lastSeenAt,
-          })
-        }
-        await repositories.legacyEvents.putMany(migration.legacy)
-        await repositories.settings.put("v5-history-migration-summary", {
-          mapped: migration.mapped.length,
-          preservedLegacy: migration.legacy.length,
-          updatedAt: Date.now(),
-        })
         setQuestions((current) => {
           const byKey = new Map(
             current.map((question) => [
@@ -592,11 +768,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
       const questions = await loadMassiveQuestionPool({
         manifest: massiveManifest,
         chapters,
-        count: desiredCount,
+        count: Math.min(desiredCount, massiveManifest.totals.questions),
         includeBlind: Boolean(config.includeBlind),
         blindOnly: config.trainingPresetId === "blind-simulation",
         contextualOnly: config.trainingPresetId === "contextual-traps",
         sequenceOnly: config.trainingPresetId === "order-sequence",
+        factFilter,
         types: config.types,
         difficultyBands: config.difficultyBands,
         seed: Date.now(),
@@ -618,6 +795,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     [
       consolidationManifest,
       exposures,
+      factMastery,
       finalManifest,
       massiveManifest,
       repositories,
@@ -771,6 +949,19 @@ export function AppProvider({ children }: { children: ReactNode }) {
       })
       setProgress((current) => new Map(current).set(key, next))
       if (question.factId && question.variantId) {
+        const previousFactExposures = await repositories.exposures.listForFact(
+          question.factId
+        )
+        const previousFactAttempts = previousFactExposures.reduce(
+          (total, item) => total + item.exposures,
+          0
+        )
+        const median = previousFactAttempts
+          ? previousFactExposures.reduce(
+              (total, item) => total + item.totalResponseTimeMs,
+              0
+            ) / previousFactAttempts
+          : 5_000
         const selectedAnswer =
           typeof answer === "string"
             ? (question.options.find((option) => option.id === answer)?.text ??
@@ -806,7 +997,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
         const existingMastery = await repositories.factMastery.get(
           question.factId
         )
-        const median = exposure.averageResponseTimeMs || 5_000
         const evidence = applyFactEvidence(
           existingMastery ?? emptyFactMastery(question.factId),
           {

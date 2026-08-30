@@ -1,4 +1,5 @@
 import type { Question, QuestionExposure } from "@/domain/types"
+import type { FactMastery } from "@/domain/fact-mastery"
 
 function seededRandom(seed: number) {
   let state = seed >>> 0
@@ -49,6 +50,9 @@ export function selectAdaptiveSession({
   weakChapters,
   includeBlind,
   seed,
+  factMastery = [],
+  presetId,
+  now = Date.now(),
 }: {
   questions: Question[]
   exposures: QuestionExposure[]
@@ -56,6 +60,9 @@ export function selectAdaptiveSession({
   weakChapters: number[]
   includeBlind: boolean
   seed: number
+  factMastery?: FactMastery[]
+  presetId?: string
+  now?: number
 }) {
   const random = seededRandom(seed)
   const exposureByVariant = new Map(
@@ -67,9 +74,21 @@ export function selectAdaptiveSession({
     if (!current || exposure.lastSeenAt > current.lastSeenAt)
       exposureByFact.set(exposure.factId, exposure)
   }
-  const eligible = questions.filter(
-    (question) => includeBlind || !question.blindFinalPool
+  const masteryByFact = new Map(
+    factMastery.map((mastery) => [mastery.factId, mastery])
   )
+  const eligible = questions.filter((question) => {
+    if (!includeBlind && question.blindFinalPool) return false
+    const mastery = masteryByFact.get(factId(question))
+    if (presetId === "unseen-only" || presetId === "blind-simulation")
+      return !mastery || mastery.state === "unseen"
+    if (presetId === "slow-correct") return mastery?.state === "fragile"
+    if (presetId === "previous-errors") return Boolean(mastery?.failures)
+    if (presetId !== "spaced-review") return true
+    return mastery?.nextDueAt !== null &&
+      mastery?.nextDueAt !== undefined &&
+      mastery.nextDueAt <= now
+  })
   const novel: Question[] = []
   const errors: Question[] = []
   const slow: Question[] = []

@@ -386,6 +386,14 @@ export function createRepositories(db: IDBDatabase) {
         await transactionDone(tx)
         return rows as QuestionExposure[]
       },
+      async listForFact(factId: string): Promise<QuestionExposure[]> {
+        const tx = db.transaction("exposures", "readonly")
+        const rows = await requestResult(
+          tx.objectStore("exposures").index("factId").getAll(factId)
+        )
+        await transactionDone(tx)
+        return rows as QuestionExposure[]
+      },
       async record(attempt: ExposureAttempt): Promise<QuestionExposure> {
         const exposureKey = `${attempt.factId}:${attempt.variantId}`
         const tx = db.transaction("exposures", "readwrite")

@@ -182,6 +182,7 @@ export async function loadMassiveQuestionPool({
   contextualOnly = false,
   blindOnly = false,
   sequenceOnly = false,
+  factFilter,
 }: {
   manifest: MassiveBankManifest
   chapters: number[]
@@ -194,6 +195,7 @@ export async function loadMassiveQuestionPool({
   contextualOnly?: boolean
   blindOnly?: boolean
   sequenceOnly?: boolean
+  factFilter?: (factId: string) => boolean
 }): Promise<Question[]> {
   const allowed = new Set(chapters)
   const shards = manifest.shards.filter((shard) =>
@@ -208,8 +210,23 @@ export async function loadMassiveQuestionPool({
     const response = await fetcher(`/${shard.questions_file}`)
     if (!response.ok) throw new Error(`No se pudo leer ${shard.chapter}`)
     const raw = (await response.json()) as MassiveRawQuestion[]
-    const eligible = raw
+    const eligibleRaw = raw
       .filter((question) => (blindOnly ? question.blind_final_pool : includeBlind || !question.blind_final_pool))
+      .filter((question) => !factFilter || factFilter(question.fact_id))
+      .filter(
+        (question) =>
+          (!types?.length || types.includes(questionType(question.type))) &&
+          (!difficultyBands?.length ||
+            difficultyBands.includes(DIFFICULTY[question.difficulty].band)) &&
+          (!contextualOnly || question.trap_type === "true_elsewhere") &&
+          (!sequenceOnly || question.trap_type === "order_sequence")
+      )
+    const uniqueRaw = [
+      ...new Map(
+        eligibleRaw.map((question) => [question.fact_id, question])
+      ).values(),
+    ]
+    const eligible = sample(uniqueRaw, perShardLimit, random)
       .map(adaptMassiveQuestion)
       .filter(
         (question) =>
@@ -220,7 +237,12 @@ export async function loadMassiveQuestionPool({
           (!contextualOnly || question.trapType === "true_elsewhere")
           && (!sequenceOnly || question.trapType === "order_sequence")
       )
-    candidates.push(...sample(eligible, perShardLimit, random))
+    candidates.push(...eligible)
   }
-  return sample(candidates, candidateLimit, random)
+  const uniqueCandidates = [
+    ...new Map(
+      candidates.map((question) => [question.factId ?? question.factKey, question])
+    ).values(),
+  ]
+  return sample(uniqueCandidates, candidateLimit, random)
 }

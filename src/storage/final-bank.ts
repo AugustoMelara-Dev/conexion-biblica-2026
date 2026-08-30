@@ -1,4 +1,5 @@
 import { selectMandatoryRound } from "@/domain/final-mission-selection"
+import { buildMigrationSignature } from "@/storage/history-migration"
 import {
   FINAL_BANK_ID,
   FINAL_BANK_DISPLAY_NAME,
@@ -72,6 +73,8 @@ export type FinalBankManifest = {
   schema_version: typeof FINAL_BANK_SCHEMA_VERSION | "9.0"
   bank_id: typeof FINAL_BANK_ID
   display_name: typeof FINAL_BANK_DISPLAY_NAME
+  build_id?: string
+  artifact_revision?: string
   gold_questions: number
   unique_facts: number
   shards: Array<{
@@ -79,7 +82,40 @@ export type FinalBankManifest = {
     question_count: number
     training_question_count?: number
     questions_file: string
+    sha256?: string
   }>
+}
+
+export async function finalManifestFingerprint(manifest: FinalBankManifest) {
+  const declaredRevision = manifest.artifact_revision ?? manifest.build_id
+  if (declaredRevision)
+    return `${manifest.bank_id}:${manifest.schema_version}:build:${declaredRevision}`
+  const descriptors = manifest.shards
+    .map((shard) => ({
+      chapter: shard.chapter,
+      questionCount: shard.question_count,
+      trainingQuestionCount: shard.training_question_count ?? null,
+      questionsFile: shard.questions_file,
+      sha256: shard.sha256 ?? null,
+    }))
+    .sort((left, right) =>
+      `${left.chapter}:${left.questionsFile}`.localeCompare(
+        `${right.chapter}:${right.questionsFile}`
+      )
+    )
+  const bytes = new TextEncoder().encode(
+    JSON.stringify({
+      bankId: manifest.bank_id,
+      schemaVersion: manifest.schema_version,
+      goldQuestions: manifest.gold_questions,
+      uniqueFacts: manifest.unique_facts,
+      descriptors,
+    })
+  )
+  const digest = await crypto.subtle.digest("SHA-256", bytes)
+  return `${manifest.bank_id}:${manifest.schema_version}:sha256:${[...new Uint8Array(digest)]
+    .map((value) => value.toString(16).padStart(2, "0"))
+    .join("")}`
 }
 
 const difficulty: Record<
@@ -112,17 +148,58 @@ function semanticSkill(raw: FinalRawQuestion) {
   return "contextual_precision"
 }
 
-export function adaptFinalQuestion(raw: FinalRawQuestion): Question {
-  if (
-    raw.bank_id !== FINAL_BANK_ID ||
-    (raw.schema_version !== FINAL_BANK_SCHEMA_VERSION && raw.schema_version !== "9.0") ||
-    raw.final_editorial_status !== "GOLD" ||
-    (raw.validation_adversarial && (raw.validation_adversarial.status !== "passed" || raw.validation_adversarial.second_defensible_option)) ||
-    (raw.ai_review && raw.ai_review.status !== "passed")
+function rawMigrationSignature(raw: FinalRawQuestion) {
+  return buildMigrationSignature({
+    work: raw.chapter.startsWith("DAN") ? "Daniel" : "Profetas y Reyes",
+    chapter: chapterNumber(raw.chapter),
+    reference: raw.reference,
+    answer: raw.correct_answer,
+    sourceText: raw.source_quote ?? raw.source_span,
+  })
+}
+
+function isCanonicalFinalRaw(raw: FinalRawQuestion) {
+  return (
+    raw.bank_id === FINAL_BANK_ID &&
+    (raw.schema_version === FINAL_BANK_SCHEMA_VERSION ||
+      raw.schema_version === "9.0") &&
+    raw.final_editorial_status === "GOLD" &&
+    (!raw.validation_adversarial ||
+      (raw.validation_adversarial.status === "passed" &&
+        !raw.validation_adversarial.second_defensible_option)) &&
+    (!raw.ai_review || raw.ai_review.status === "passed") &&
+    raw.correct_option >= 0 &&
+    raw.correct_option < raw.options.length
   )
+}
+
+export async function resolveFinalMigrationSignatures(input: {
+  manifest: FinalBankManifest
+  signatures: ReadonlySet<string>
+  fetcher?: typeof fetch
+}) {
+  const matches = new Map<string, Set<string>>()
+  if (input.signatures.size === 0) return matches
+  const fetcher = input.fetcher ?? fetch
+  for (const shard of input.manifest.shards) {
+    const response = await fetcher(`/${shard.questions_file}`)
+    if (!response.ok) throw new Error(`No se pudo leer ${shard.chapter}`)
+    const rows = (await response.json()) as FinalRawQuestion[]
+    for (const row of rows) {
+      if (!isCanonicalFinalRaw(row)) continue
+      const signature = rawMigrationSignature(row)
+      if (!input.signatures.has(signature)) continue
+      const facts = matches.get(signature) ?? new Set<string>()
+      facts.add(row.fact_id)
+      matches.set(signature, facts)
+    }
+  }
+  return matches
+}
+
+export function adaptFinalQuestion(raw: FinalRawQuestion): Question {
+  if (!isCanonicalFinalRaw(raw))
     throw new Error(`La pregunta ${raw.id} no cumple las puertas canónicas`)
-  if (raw.correct_option < 0 || raw.correct_option >= raw.options.length)
-    throw new Error(`Respuesta fuera de rango en ${raw.id}`)
   const options = raw.options.map((text, index) => ({
     id: String.fromCharCode(65 + index),
     text,
@@ -232,6 +309,8 @@ export async function loadFinalQuestionPool(input: {
   family?: FinalQuestionFamily
   seenFactIds?: Set<string>
   exposures?: QuestionExposure[]
+  factFilter?: (factId: string) => boolean
+  preferredMigrationSignatures?: ReadonlySet<string>
   fetcher?: typeof fetch
 }) {
   const fetcher = input.fetcher ?? fetch
@@ -248,6 +327,59 @@ export async function loadFinalQuestionPool(input: {
       return (await response.json()) as FinalRawQuestion[]
     })
   )
+  if (input.factFilter || input.preferredMigrationSignatures?.size) {
+    const rawCandidates = shardRows
+      .flat()
+      .filter((row) =>
+        input.blindPool
+          ? row.blind_pool === input.blindPool
+          : row.blind_pool === null
+      )
+      .filter(
+        (row) =>
+          input.preferredMigrationSignatures?.has(
+            rawMigrationSignature(row)
+          ) ||
+          !input.factFilter ||
+          input.factFilter(row.fact_id)
+      )
+      .filter((row) => {
+        const level = difficulty[row.difficulty]
+        return (
+          (!input.difficultyBands?.length ||
+            input.difficultyBands.includes(level.band)) &&
+          (!input.family || row.family === input.family) &&
+          (!input.types?.length || input.types.includes(typeForFamily(row.family)))
+        )
+      })
+    const shuffledCandidates = shuffle(rawCandidates, input.seed)
+    const preferred = input.preferredMigrationSignatures
+      ? shuffledCandidates.filter((row) =>
+          input.preferredMigrationSignatures?.has(rawMigrationSignature(row))
+        )
+      : []
+    const preferredIds = new Set(preferred.map((row) => row.id))
+    const seenFacts = new Set<string>()
+    const selectedRows = [...preferred, ...shuffledCandidates.filter((row) => !preferredIds.has(row.id))]
+      .filter((row) => {
+        if (seenFacts.has(row.fact_id)) return false
+        seenFacts.add(row.fact_id)
+        return true
+      })
+      .slice(0, input.count)
+    const selectedFacts = new Set(selectedRows.map((row) => row.fact_id))
+    const selected = selectedRows.map(adaptFinalQuestion)
+    const retryRows = shardRows
+      .flat()
+      .filter((row) => selectedFacts.has(row.fact_id))
+      .filter((row) =>
+        input.blindPool
+          ? row.blind_pool === input.blindPool
+          : row.blind_pool === null
+      )
+      .map(adaptFinalQuestion)
+    return attachRetryVariants(selected, retryRows)
+  }
   for (const rows of shardRows) {
     const eligibleRows = rows
       .filter((row) =>
@@ -255,6 +387,7 @@ export async function loadFinalQuestionPool(input: {
           ? row.blind_pool === input.blindPool
           : row.blind_pool === null
       )
+      .filter((row) => !input.factFilter || input.factFilter(row.fact_id))
       .map(adaptFinalQuestion)
       .filter(
         (question) =>

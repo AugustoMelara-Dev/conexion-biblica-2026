@@ -144,7 +144,7 @@ export function filterEligibleQuestions(
     if (config.difficulties.length && !config.difficulties.includes(question.difficulty)) return false
     if (config.difficultyBands?.length && question.difficultyBand && !config.difficultyBands.includes(question.difficultyBand)) return false
     if (config.types.length && !config.types.includes(question.type)) return false
-    if (!statusMatches(question, itemProgress, config.statuses)) return false
+    if (!config.massive && !statusMatches(question, itemProgress, config.statuses)) return false
     if (config.mode === "errors" && !(itemProgress && (itemProgress.timesIncorrect > 0 || itemProgress.markedDifficult))) return false
     if (config.mode === "difficult" && question.difficulty < 4) return false
     if (config.mode === "new" && !isQuestionNew(itemProgress)) return false

@@ -1,5 +1,6 @@
 import type { DifficultyBand, Question, QuestionType, SourceWork } from "@/domain/types"
 import { selectMandatoryHundred } from "@/domain/final-mission-selection"
+import { buildMigrationSignature } from "@/storage/history-migration"
 
 export type GoldRawQuestion = {
   id: string
@@ -52,11 +53,63 @@ const difficulty: Record<GoldRawQuestion["difficulty"], { value: Question["diffi
 const chapterNumber = (chapter: string) => Number(chapter.match(/\d+/)?.[0] ?? 0)
 const questionType = (type: GoldRawQuestion["type"]): QuestionType => type === "multiple_choice" ? "single_choice" : type
 
+function canonicalGoldFailure(raw: GoldRawQuestion) {
+  if (
+    raw.editorial_status !== "gold" ||
+    raw.validation_status !== "gold_audited" ||
+    raw.quality_score < 85
+  )
+    return "editorial" as const
+  if (
+    !Number.isInteger(raw.correct_option) ||
+    raw.correct_option < 0 ||
+    raw.correct_option >= raw.options.length
+  )
+    return "answer" as const
+  return null
+}
+
+function rawMigrationSignature(raw: GoldRawQuestion) {
+  return buildMigrationSignature({
+    work: raw.bank === "DANIEL1-12" ? "Daniel" : "Profetas y Reyes",
+    chapter: chapterNumber(raw.chapter),
+    reference: raw.verse_or_page,
+    answer: raw.correct_answer,
+    sourceText: raw.source_quote ?? raw.source_span,
+  })
+}
+
+export async function resolveConsolidationMigrationSignatures(input: {
+  manifest: ConsolidationManifest
+  signatures: ReadonlySet<string>
+  fetcher?: typeof fetch
+}) {
+  const matches = new Map<string, Set<string>>()
+  if (input.signatures.size === 0) return matches
+  const fetcher = input.fetcher ?? fetch
+  for (const shard of input.manifest.shards) {
+    const response = await fetcher(`/${shard.questions_file}`)
+    if (!response.ok) throw new Error(`No se pudo leer ${shard.chapter}`)
+    const rows = (await response.json()) as GoldRawQuestion[]
+    for (const row of rows) {
+      if (canonicalGoldFailure(row)) continue
+      const signature = rawMigrationSignature(row)
+      if (!input.signatures.has(signature)) continue
+      const facts = matches.get(signature) ?? new Set<string>()
+      facts.add(row.fact_id)
+      matches.set(signature, facts)
+    }
+  }
+  return matches
+}
+
 export function adaptGoldQuestion(raw: GoldRawQuestion): Question {
-  if (raw.editorial_status !== "gold" || raw.validation_status !== "gold_audited" || raw.quality_score < 85)
+  const failure = canonicalGoldFailure(raw)
+  if (failure === "editorial")
     throw new Error(`La pregunta ${raw.id} no cumple la puerta GOLD`)
+  if (failure === "answer")
+    throw new Error(`Respuesta fuera de rango en ${raw.id}`)
   const options = raw.options.map((text, index) => ({ id: String.fromCharCode(65 + index), text }))
-  if (!options[raw.correct_option]) throw new Error(`Respuesta fuera de rango en ${raw.id}`)
   const work: SourceWork = raw.bank === "DANIEL1-12" ? "Daniel" : "Profetas y Reyes"
   return {
     id: raw.id,
@@ -128,23 +181,57 @@ export async function loadConsolidationQuestionPool(input: {
   blindPool?: "A" | "B" | "emergency"
   difficultyBands?: DifficultyBand[]
   types?: QuestionType[]
+  factFilter?: (factId: string) => boolean
+  preferredMigrationSignatures?: ReadonlySet<string>
   fetcher?: typeof fetch
 }): Promise<Question[]> {
   const fetcher = input.fetcher ?? fetch
   const allowed = new Set(input.chapters)
   const shards = input.manifest.shards.filter((shard) => allowed.has(chapterNumber(shard.chapter)))
   const candidates: Question[] = []
+  const rawCandidates: GoldRawQuestion[] = []
   for (const shard of shards) {
     const response = await fetcher(`/${shard.questions_file}`)
     if (!response.ok) throw new Error(`No se pudo leer ${shard.chapter}`)
     const raw = (await response.json()) as GoldRawQuestion[]
-    candidates.push(...raw
+    const eligibleRaw = raw
       .filter((question) => input.blindPool ? question.blind_pool === input.blindPool : question.blind_pool === null)
+      .filter((question) =>
+        input.preferredMigrationSignatures?.has(rawMigrationSignature(question)) ||
+        !input.factFilter ||
+        input.factFilter(question.fact_id)
+      )
+    if (input.factFilter || input.preferredMigrationSignatures?.size) {
+      rawCandidates.push(...eligibleRaw)
+      continue
+    }
+    candidates.push(...eligibleRaw
       .map(adaptGoldQuestion)
       .filter((question) => !input.difficultyBands?.length || (
         question.difficultyBand !== undefined && input.difficultyBands.includes(question.difficultyBand)
       ))
       .filter((question) => !input.types?.length || input.types.includes(question.type)))
+  }
+  if (input.factFilter || input.preferredMigrationSignatures?.size) {
+    const eligible = rawCandidates
+      .filter((question) => !input.difficultyBands?.length || input.difficultyBands.includes(difficulty[question.difficulty].band))
+      .filter((question) => !input.types?.length || input.types.includes(questionType(question.type)))
+    const ordered = sample(eligible, eligible.length, input.seed)
+    const preferred = input.preferredMigrationSignatures
+      ? ordered.filter((question) =>
+          input.preferredMigrationSignatures?.has(rawMigrationSignature(question))
+        )
+      : []
+    const preferredIds = new Set(preferred.map((question) => question.id))
+    const usedFacts = new Set<string>()
+    return [...preferred, ...ordered.filter((question) => !preferredIds.has(question.id))]
+      .filter((question) => {
+        if (usedFacts.has(question.fact_id)) return false
+        usedFacts.add(question.fact_id)
+        return true
+      })
+      .slice(0, input.count)
+      .map(adaptGoldQuestion)
   }
   const ordered = sample(candidates, candidates.length, input.seed)
   const supportsMandatoryMix = !input.types?.length || (

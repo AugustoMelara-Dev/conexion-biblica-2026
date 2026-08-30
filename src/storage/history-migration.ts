@@ -29,16 +29,26 @@ function answerText(question: Question) {
     .join("|")
 }
 
-function signature(question: Question) {
-  return [
-    question.source.work,
-    question.source.chapter,
-    question.source.reference,
-    answerText(question),
-    question.sourceQuote ?? question.sourceSpan ?? "",
-  ]
+export function buildMigrationSignature(parts: {
+  work: string
+  chapter: number
+  reference: string
+  answer: string
+  sourceText: string
+}) {
+  return [parts.work, parts.chapter, parts.reference, parts.answer, parts.sourceText]
     .map(normalize)
     .join("|")
+}
+
+export function migrationSignature(question: Question) {
+  return buildMigrationSignature({
+    work: question.source.work,
+    chapter: question.source.chapter,
+    reference: question.source.reference,
+    answer: answerText(question),
+    sourceText: question.sourceQuote ?? question.sourceSpan ?? "",
+  })
 }
 
 export function mapLegacyProgressToFacts(
@@ -47,12 +57,33 @@ export function mapLegacyProgressToFacts(
   goldQuestions: Question[],
   preservedAt = Date.now(),
 ): { mapped: MappedLegacyProgress[]; legacy: LegacyHistoryEvent[] } {
-  const oldByKey = new Map(legacyQuestions.map((question) => [questionKey(question), question]))
   const goldBySignature = new Map<string, Question[]>()
   for (const question of goldQuestions) {
-    const key = signature(question)
+    const key = migrationSignature(question)
     goldBySignature.set(key, [...(goldBySignature.get(key) ?? []), question])
   }
+  return mapLegacyProgressFromSignatureIndex(
+    legacyQuestions,
+    progress,
+    new Map(
+      [...goldBySignature].map(([key, questions]) => [
+        key,
+        new Set(
+          questions.map((question) => question.factId).filter(Boolean) as string[]
+        ),
+      ])
+    ),
+    preservedAt
+  )
+}
+
+export function mapLegacyProgressFromSignatureIndex(
+  legacyQuestions: Question[],
+  progress: QuestionProgress[],
+  factsBySignature: ReadonlyMap<string, ReadonlySet<string>>,
+  preservedAt = Date.now()
+): { mapped: MappedLegacyProgress[]; legacy: LegacyHistoryEvent[] } {
+  const oldByKey = new Map(legacyQuestions.map((question) => [questionKey(question), question]))
   const mapped: MappedLegacyProgress[] = []
   const legacy: LegacyHistoryEvent[] = []
   for (const item of progress) {
@@ -61,8 +92,7 @@ export function mapLegacyProgressToFacts(
       legacy.push({ id: `legacy:${item.questionKey}`, sourceQuestionKey: item.questionKey, reason: "missing_question", progress: item, preservedAt })
       continue
     }
-    const matches = goldBySignature.get(signature(question)) ?? []
-    const facts = [...new Set(matches.map((match) => match.factId).filter(Boolean))] as string[]
+    const facts = [...(factsBySignature.get(migrationSignature(question)) ?? [])]
     if (facts.length === 1) mapped.push({ factId: facts[0], sourceQuestionKey: item.questionKey, progress: item })
     else legacy.push({
       id: `legacy:${item.questionKey}`,

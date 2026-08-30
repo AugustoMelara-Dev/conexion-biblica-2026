@@ -104,6 +104,7 @@ export function App() {
     allQuestions,
     progress,
     exposures,
+    factMastery,
     loadMassiveQuestions,
     saveSession,
     coverageCycles,
@@ -112,6 +113,7 @@ export function App() {
     saveActiveRound,
     clearActiveRound,
     bankSelection,
+    repositories,
   } = useApp()
   const [activeRound, setActiveRound] = useState<RoundView | null>(null)
   const [result, setResult] = useState<Session | null>(null)
@@ -162,6 +164,20 @@ export function App() {
             allQuestions,
             nextConfig.bankSelection ?? bankSelection
           )
+      const roundFactMastery =
+        nextConfig.massive && repositories
+          ? (
+              await Promise.all(
+                [
+                  ...new Set(
+                    roundQuestions.map(
+                      (question) => question.factId ?? question.factKey
+                    )
+                  ),
+                ].map((factId) => repositories.factMastery.get(factId))
+              )
+            ).filter((item): item is NonNullable<typeof item> => Boolean(item))
+          : factMastery
       const eligible =
         subset ?? filterEligibleQuestions(roundQuestions, progress, nextConfig)
       const target =
@@ -186,6 +202,8 @@ export function App() {
         const adaptive = selectAdaptiveSession({
           questions: eligible,
           exposures,
+          factMastery: roundFactMastery,
+          presetId: nextConfig.trainingPresetId,
           count: target,
           weakChapters,
           includeBlind: Boolean(nextConfig.includeBlind),
