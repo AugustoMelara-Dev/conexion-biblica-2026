@@ -9,6 +9,57 @@ from pathlib import Path
 
 from scripts.lib.production_snapshot_v11 import import_production_snapshot
 from scripts.lib.source_packets_v11 import build_source_packets
+from scripts.lib.competitive_v11 import audit_corpus, content_hash, validate_question
+
+
+def valid_v11_question(**overrides):
+    row = {
+        "id": "DAN1-V11-0001",
+        "source_unit_id": "DAN1-V001",
+        "fact_id": "DAN1-V001-F01",
+        "role": "central",
+        "family": "single_choice_direct",
+        "subtype": "factual_recall",
+        "question": "¿Quién sitió Jerusalén durante el tercer año del reinado de Joacim?",
+        "options": ["Nabucodonosor", "Ciro", "Darío", "Belsasar"],
+        "correct_option": 0,
+        "correct_answer": "Nabucodonosor",
+        "accepted_answers": ["Nabucodonosor"],
+        "explanation": "Nabucodonosor llegó a Jerusalén y la sitió.",
+        "why_distractors_fail": {
+            "Ciro": "Gobernó en una etapa posterior.",
+            "Darío": "Gobernó después de la caída de Babilonia.",
+            "Belsasar": "Reinó hacia el final del dominio babilónico.",
+        },
+        "source_ref": "Daniel 1:1",
+        "source_quote": "En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.",
+        "evidence_excerpt": "vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió",
+        "difficulty": "medium",
+        "importance": "high",
+        "relation_type": "event_participant",
+        "option_category": "person",
+        "false_mutation": None,
+        "blank_span": None,
+        "significance": None,
+        "variant_justification": None,
+        "blind_pool": None,
+        "ai_review": {
+            "status": "passed",
+            "reviewer_type": "ai_semantic_audit",
+            "reviewer": "v11-test-reviewer",
+        },
+    }
+    row.update(overrides)
+    return row
+
+
+def v11_sources():
+    return {
+        "DAN1-V001": {
+            "source_ref": "Daniel 1:1",
+            "source_quote": "En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.",
+        }
+    }
 
 
 class ProductionSnapshotTests(unittest.TestCase):
@@ -258,6 +309,149 @@ class SourcePacketTests(unittest.TestCase):
             packets["PR39"][0].get("parent_context"),
             "Párrafo completo con el sujeto y su explicación.",
         )
+
+
+class CompetitiveV11ContractTests(unittest.TestCase):
+    """Bloquea los defectos editoriales que inflaron bancos anteriores."""
+
+    def test_rejects_location_crutches_and_cross_passage_falsehoods(self) -> None:
+        located = valid_v11_question(
+            question="Según el párrafo 4, ¿quién sitió Jerusalén?"
+        )
+        transplanted = valid_v11_question(
+            id="DAN1-V11-0002",
+            family="true_false",
+            question="Ciro sitió Jerusalén durante el tercer año de Joacim.",
+            options=["Verdadero", "Falso"],
+            correct_option=1,
+            correct_answer="Falso",
+            accepted_answers=["Falso"],
+            why_distractors_fail={},
+            option_category="truth_value",
+            false_mutation={
+                "changed_fields": ["source_ref"],
+                "local": False,
+                "original": "Daniel 1:1",
+                "replacement": "Daniel 2:1",
+            },
+        )
+
+        self.assertIn("source_location_prompt", validate_question(located, v11_sources()))
+        self.assertIn(
+            "cross_passage_falsehood",
+            validate_question(transplanted, v11_sources()),
+        )
+
+    def test_rejects_a_third_variant_without_an_editorial_justification(self) -> None:
+        rows = [
+            valid_v11_question(
+                id=f"DAN1-V11-000{index}",
+                question=f"Pregunta competitiva única número {index}.",
+            )
+            for index in range(1, 4)
+        ]
+
+        self.assertEqual(
+            audit_corpus(rows)["unjustified_third_variants"],
+            ["DAN1-V11-0003"],
+        )
+
+    def test_accepts_a_complete_source_grounded_question(self) -> None:
+        self.assertEqual(validate_question(valid_v11_question(), v11_sources()), [])
+
+    def test_rejects_source_and_evidence_that_do_not_match_the_packet(self) -> None:
+        unknown = valid_v11_question(source_unit_id="DAN1-V999")
+        wrong_reference = valid_v11_question(source_ref="Daniel 1:2")
+        wrong_quote = valid_v11_question(source_quote="Texto ajeno a la unidad.")
+        unsupported_evidence = valid_v11_question(evidence_excerpt="Ciro emitió un decreto")
+
+        self.assertIn("unknown_source_unit", validate_question(unknown, v11_sources()))
+        self.assertIn(
+            "source_reference_mismatch",
+            validate_question(wrong_reference, v11_sources()),
+        )
+        self.assertIn("source_quote_mismatch", validate_question(wrong_quote, v11_sources()))
+        self.assertIn(
+            "evidence_not_in_source",
+            validate_question(unsupported_evidence, v11_sources()),
+        )
+
+    def test_rejects_broken_options_answers_and_distractor_ledgers(self) -> None:
+        duplicate_options = valid_v11_question(
+            options=["Nabucodonosor", "Nabucodonosor", "Darío", "Belsasar"]
+        )
+        wrong_index = valid_v11_question(correct_option=1)
+        incomplete_ledger = valid_v11_question(
+            why_distractors_fail={"Ciro": "Gobernó después."}
+        )
+
+        self.assertIn(
+            "duplicate_options",
+            validate_question(duplicate_options, v11_sources()),
+        )
+        self.assertIn("answer_index_mismatch", validate_question(wrong_index, v11_sources()))
+        self.assertIn(
+            "incomplete_distractor_ledger",
+            validate_question(incomplete_ledger, v11_sources()),
+        )
+
+    def test_false_statement_must_change_exactly_one_local_supported_value(self) -> None:
+        false_row = valid_v11_question(
+            family="true_false",
+            question="Ciro sitió Jerusalén durante el tercer año de Joacim.",
+            options=["Verdadero", "Falso"],
+            correct_option=1,
+            correct_answer="Falso",
+            accepted_answers=["Falso"],
+            why_distractors_fail={},
+            option_category="truth_value",
+            false_mutation={
+                "changed_fields": ["person", "place"],
+                "local": True,
+                "original": "Alejandro",
+                "replacement": "Ciro",
+            },
+        )
+
+        errors = validate_question(false_row, v11_sources())
+
+        self.assertIn("false_mutation_must_change_one_field", errors)
+        self.assertIn("false_mutation_original_not_in_source", errors)
+
+    def test_completion_requires_a_significant_supported_blank(self) -> None:
+        completion = valid_v11_question(
+            family="fill_choice",
+            question="____ sitió Jerusalén durante el tercer año de Joacim.",
+            blank_span="el",
+            significance="",
+        )
+
+        errors = validate_question(completion, v11_sources())
+
+        self.assertIn("blank_span_answer_mismatch", errors)
+        self.assertIn("trivial_completion_blank", errors)
+
+    def test_corpus_audit_detects_duplicate_ids_and_normalized_prompts(self) -> None:
+        first = valid_v11_question()
+        duplicate = valid_v11_question(question="¿Quién sitió Jerusalén durante el tercer año del reinado de Joacim?!")
+
+        audit = audit_corpus([first, duplicate])
+
+        self.assertEqual(audit["duplicate_ids"], [duplicate["id"]])
+        self.assertEqual(audit["normalized_duplicate_prompts"], [duplicate["id"]])
+        original_hash = content_hash(first)
+        first["explanation"] = "Explicación editorial modificada."
+        self.assertNotEqual(content_hash(first), original_hash)
+
+    def test_rejects_missing_contract_fields_and_a_leaked_choice_answer(self) -> None:
+        missing = valid_v11_question()
+        del missing["option_category"]
+        leaked = valid_v11_question(
+            question="Nabucodonosor sitió Jerusalén; ¿quién fue el responsable?"
+        )
+
+        self.assertIn("missing_key_option_category", validate_question(missing, v11_sources()))
+        self.assertIn("answer_leaked_in_prompt", validate_question(leaked, v11_sources()))
 
 
 if __name__ == "__main__":
