@@ -1,0 +1,908 @@
+[
+  {
+    "id": "Q-DAN1-0001",
+    "source_unit_id": "DAN1-V001",
+    "fact_id": "DAN1-V001-F04",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "question": "¿Qué hizo Nabucodonosor al llegar a Jerusalén durante el reinado de Joacim?",
+    "options": [
+      "la sitió",
+      "la coronó",
+      "la abandonó",
+      "la reconstruyó"
+    ],
+    "correct_option": 0,
+    "correct_answer": "la sitió",
+    "accepted_answers": [
+      "la sitió",
+      "sitió"
+    ],
+    "explanation": "Nabucodonosor llegó a Jerusalén y la sitió.",
+    "why_distractors_fail": {
+      "la coronó": "El relato no describe una coronación en Jerusalén.",
+      "la abandonó": "Nabucodonosor avanzó contra la ciudad; no la abandonó.",
+      "la reconstruyó": "La acción narrada es el sitio, no la reconstrucción de la ciudad."
+    },
+    "source_ref": "Daniel 1:1",
+    "source_quote": "En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.",
+    "evidence_excerpt": "vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "event_action",
+    "option_category": "action",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0002",
+    "source_unit_id": "DAN1-V002",
+    "fact_id": "DAN1-V002-F01",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "identification",
+    "question": "¿A qué tierra llevó Nabucodonosor los utensilios tomados de la casa de Dios?",
+    "options": [
+      "Judá",
+      "Sinar",
+      "Egipto",
+      "Persia"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Sinar",
+    "accepted_answers": [
+      "Sinar",
+      "tierra de Sinar"
+    ],
+    "explanation": "Los utensilios fueron llevados a la tierra de Sinar y colocados en el tesoro del dios de Nabucodonosor.",
+    "why_distractors_fail": {
+      "Judá": "Judá era el reino de Joacim, no el destino de los utensilios.",
+      "Egipto": "Egipto no aparece como destino en este traslado.",
+      "Persia": "El relato sitúa los utensilios en Sinar, no en Persia."
+    },
+    "source_ref": "Daniel 1:2",
+    "source_quote": "El Señor entregó en sus manos a Joacim, rey de Judá, y parte de los utensilios de la casa de Dios; los trajo a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.",
+    "evidence_excerpt": "los trajo a tierra de Sinar",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "destination",
+    "option_category": "place",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0003",
+    "source_unit_id": "DAN1-V003",
+    "fact_id": "DAN1-V003-F01",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "speaker_addressee",
+    "question": "El rey ordenó a ____ que trajera jóvenes del linaje real de Israel.",
+    "options": [
+      "Melsar",
+      "Daniel",
+      "Aspenaz",
+      "Ciro"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Aspenaz",
+    "accepted_answers": [
+      "Aspenaz"
+    ],
+    "explanation": "El rey dio esa orden a Aspenaz, jefe de sus eunucos.",
+    "why_distractors_fail": {
+      "Melsar": "Melsar supervisó después a los cuatro jóvenes, pero no recibió esta orden del rey.",
+      "Daniel": "Daniel formaba parte de los jóvenes llevados; no era el jefe encargado de traerlos.",
+      "Ciro": "Ciro no interviene en la selección de los jóvenes."
+    },
+    "source_ref": "Daniel 1:3",
+    "source_quote": "Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,",
+    "evidence_excerpt": "dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "royal_command_recipient",
+    "option_category": "person",
+    "false_mutation": null,
+    "blank_span": "Aspenaz",
+    "significance": "Expresión relevante conservada desde el banco competitivo de producción.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0004",
+    "source_unit_id": "DAN1-V004",
+    "fact_id": "DAN1-V004-F01",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Cuál era el encargo respecto a las letras y la lengua de los caldeos?",
+    "options": [
+      "que les ocultara ese saber",
+      "que lo tradujera al hebreo",
+      "que les prohibiera estudiarlo",
+      "que les enseñara"
+    ],
+    "correct_option": 3,
+    "correct_answer": "que les enseñara",
+    "accepted_answers": [
+      "que les enseñara",
+      "enseñarlas"
+    ],
+    "explanation": "La formación prevista incluía enseñarles las letras y la lengua de los caldeos.",
+    "why_distractors_fail": {
+      "que les ocultara ese saber": "Las letras y la lengua debían ser comunicadas a los jóvenes, no ocultadas.",
+      "que lo tradujera al hebreo": "El encargo era enseñar el saber caldeo, no traducirlo al hebreo.",
+      "que les prohibiera estudiarlo": "La instrucción buscaba formar a los jóvenes, no impedirles aprender."
+    },
+    "source_ref": "Daniel 1:4",
+    "source_quote": "muchachos en quienes no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey; y que les enseñara las letras y la lengua de los caldeos.",
+    "evidence_excerpt": "y que les enseñara las letras y la lengua de los caldeos.",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "assigned_training",
+    "option_category": "action",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0005",
+    "source_unit_id": "DAN1-V005",
+    "fact_id": "DAN1-V005-F01",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Los jóvenes serían educados durante ____ años antes de presentarse ante el rey.",
+    "options": [
+      "tres",
+      "siete",
+      "diez",
+      "doce"
+    ],
+    "correct_option": 0,
+    "correct_answer": "tres",
+    "accepted_answers": [
+      "tres",
+      "3"
+    ],
+    "explanation": "El período de educación señalado por el rey fue de tres años.",
+    "why_distractors_fail": {
+      "siete": "Siete años no es el plazo establecido para esta formación.",
+      "diez": "Diez días corresponde a la prueba alimentaria posterior, no a los años de educación.",
+      "doce": "El rey no fijó un período de doce años."
+    },
+    "source_ref": "Daniel 1:5",
+    "source_quote": "Y les señaló el rey una porción diaria de la comida del rey y del vino que él bebía; y que los educara durante tres años, para que al fin de ellos se presentaran delante del rey.",
+    "evidence_excerpt": "que los educara durante tres años",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "training_period",
+    "option_category": "duration",
+    "false_mutation": null,
+    "blank_span": "tres",
+    "significance": "Expresión relevante conservada desde el banco competitivo de producción.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0006",
+    "source_unit_id": "DAN1-V006",
+    "fact_id": "DAN1-V006-F01",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿Quién aparece junto a Daniel, Misael y Azarías entre los jóvenes de Judá?",
+    "options": [
+      "Beltsasar",
+      "Ananías",
+      "Aspenaz",
+      "Melsar"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Ananías",
+    "accepted_answers": [
+      "Ananías"
+    ],
+    "explanation": "Ananías es nombrado junto a Daniel, Misael y Azarías entre los hijos de Judá.",
+    "why_distractors_fail": {
+      "Beltsasar": "Beltsasar fue el nombre dado después a Daniel, no otro integrante del grupo hebreo.",
+      "Aspenaz": "Aspenaz era el jefe de los eunucos encargado de los jóvenes.",
+      "Melsar": "Melsar fue el supervisor que atendió la petición de Daniel."
+    },
+    "source_ref": "Daniel 1:6",
+    "source_quote": "Entre ellos estaban Daniel, Ananías, Misael y Azarías, de los hijos de Judá.",
+    "evidence_excerpt": "Daniel, Ananías, Misael y Azarías",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "group_member",
+    "option_category": "person",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0007",
+    "source_unit_id": "DAN1-V007",
+    "fact_id": "DAN1-V007-F01",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "El jefe de los eunucos llamó ____ a Daniel.",
+    "options": [
+      "Sadrac",
+      "Mesac",
+      "Beltsasar",
+      "Abednego"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Beltsasar",
+    "accepted_answers": [
+      "Beltsasar"
+    ],
+    "explanation": "El nuevo nombre asignado a Daniel fue Beltsasar.",
+    "why_distractors_fail": {
+      "Sadrac": "Sadrac fue el nombre asignado a Ananías.",
+      "Mesac": "Mesac fue el nombre asignado a Misael.",
+      "Abednego": "Abed-nego fue el nombre asignado a Azarías."
+    },
+    "source_ref": "Daniel 1:7",
+    "source_quote": "A estos el jefe de los eunucos puso nombres: a Daniel, Beltsasar; a Ananías, Sadrac; a Misael, Mesac; y a Azarías, Abed-nego.",
+    "evidence_excerpt": "a Daniel, Beltsasar",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "name_assignment",
+    "option_category": "person_name",
+    "false_mutation": null,
+    "blank_span": "Beltsasar",
+    "significance": "Expresión relevante conservada desde el banco competitivo de producción.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0008",
+    "source_unit_id": "DAN1-V008",
+    "fact_id": "DAN1-V008-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué resolvió Daniel respecto a la comida y el vino del rey?",
+    "options": [
+      "comerlos en secreto",
+      "pedir una ración doble",
+      "guardarlos para el viaje",
+      "no contaminarse"
+    ],
+    "correct_option": 3,
+    "correct_answer": "no contaminarse",
+    "accepted_answers": [
+      "no contaminarse"
+    ],
+    "explanation": "Daniel decidió no contaminarse con la porción de la comida del rey ni con su vino.",
+    "why_distractors_fail": {
+      "comerlos en secreto": "Daniel no buscó ocultar su consumo; decidió abstenerse.",
+      "pedir una ración doble": "Su petición no pretendía aumentar la porción real.",
+      "guardarlos para el viaje": "El texto no menciona un viaje ni la conservación de esos alimentos."
+    },
+    "source_ref": "Daniel 1:8",
+    "source_quote": "Daniel propuso en su corazón no contaminarse con la porción de la comida del rey ni con el vino que él bebía; pidió, por tanto, al jefe de los eunucos que no se le obligara a contaminarse.",
+    "evidence_excerpt": "Daniel propuso en su corazón no contaminarse con la porción de la comida del rey ni con el vino que él bebía",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "personal_resolution",
+    "option_category": "decision",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0009",
+    "source_unit_id": "DAN1-V009",
+    "fact_id": "DAN1-V009-F04",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "relationship",
+    "question": "Dios puso a Daniel en gracia y buena voluntad con el jefe de los eunucos.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La buena disposición del jefe hacia Daniel se atribuye expresamente a Dios.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación reproduce la relación declarada: Dios puso a Daniel en gracia y buena voluntad con el jefe."
+    },
+    "source_ref": "Daniel 1:9",
+    "source_quote": "Puso Dios a Daniel en gracia y en buena voluntad con el jefe de los eunucos;",
+    "evidence_excerpt": "Puso Dios a Daniel en gracia y en buena voluntad con el jefe de los eunucos",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "divine_favor",
+    "option_category": "truth_value",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0010",
+    "source_unit_id": "DAN1-V010",
+    "fact_id": "DAN1-V010-F01",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "Al explicar su temor a Daniel, ¿qué consecuencia mencionó el jefe de los eunucos?",
+    "options": [
+      "que el rey me condene a muerte",
+      "que los jóvenes sean devueltos a Judá",
+      "que Melsar pierda su cargo",
+      "que la prueba dure más tiempo"
+    ],
+    "correct_option": 0,
+    "correct_answer": "que el rey me condene a muerte",
+    "accepted_answers": [
+      "que el rey me condene a muerte",
+      "ser condenado a muerte"
+    ],
+    "explanation": "El jefe temía que la apariencia pálida de los jóvenes hiciera que el rey lo condenara a muerte.",
+    "why_distractors_fail": {
+      "que los jóvenes sean devueltos a Judá": "Su temor se refería a su propia condena, no al regreso de los jóvenes.",
+      "que Melsar pierda su cargo": "Melsar no es el objeto de la consecuencia temida en esta declaración.",
+      "que la prueba dure más tiempo": "El jefe todavía no estaba respondiendo a la propuesta de una prueba."
+    },
+    "source_ref": "Daniel 1:10",
+    "source_quote": "y el jefe de los eunucos dijo a Daniel: —Temo a mi señor el rey, que asignó vuestra comida y vuestra bebida; pues luego que él vea vuestros rostros más pálidos que los de los muchachos que son semejantes a vosotros, haréis que el rey me condene a muerte.",
+    "evidence_excerpt": "haréis que el rey me condene a muerte.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "feared_consequence",
+    "option_category": "consequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0011",
+    "source_unit_id": "DAN1-V011",
+    "fact_id": "DAN1-V011-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "Melsar había sido puesto sobre Daniel, Ananías, Misael y Azarías por ____.",
+    "options": [
+      "el capitán de la guardia",
+      "el jefe de los eunucos",
+      "el rey Ciro",
+      "el joven Ananías"
+    ],
+    "correct_option": 1,
+    "correct_answer": "el jefe de los eunucos",
+    "accepted_answers": [
+      "el jefe de los eunucos",
+      "jefe de los eunucos"
+    ],
+    "explanation": "Melsar estaba a cargo de los cuatro jóvenes por designación del jefe de los eunucos.",
+    "why_distractors_fail": {
+      "el capitán de la guardia": "No se atribuye al capitán de la guardia el nombramiento de Melsar.",
+      "el rey Ciro": "Ciro no participa en la supervisión de los jóvenes en esta escena.",
+      "el joven Ananías": "Ananías era uno de los jóvenes puestos bajo la responsabilidad de Melsar."
+    },
+    "source_ref": "Daniel 1:11",
+    "source_quote": "Entonces dijo Daniel a Melsar, a quien el jefe de los eunucos había puesto sobre Daniel, Ananías, Misael y Azarías:",
+    "evidence_excerpt": "a Melsar, a quien el jefe de los eunucos había puesto sobre Daniel, Ananías, Misael y Azarías",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "appointed_supervisor",
+    "option_category": "person_role",
+    "false_mutation": null,
+    "blank_span": "el jefe de los eunucos",
+    "significance": "Expresión relevante conservada desde el banco competitivo de producción.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0012",
+    "source_unit_id": "DAN1-V012",
+    "fact_id": "DAN1-V012-F01",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Daniel pidió que la prueba con sus siervos durara siete días.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Daniel pidió una prueba de diez días, no de siete.",
+    "why_distractors_fail": {
+      "Verdadero": "La duración solicitada fue de diez días; la afirmación la reduce erróneamente a siete."
+    },
+    "source_ref": "Daniel 1:12",
+    "source_quote": "—Te ruego que hagas la prueba con tus siervos durante diez días: que nos den legumbres para comer y agua para beber.",
+    "evidence_excerpt": "hagas la prueba con tus siervos durante diez días",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "test_duration",
+    "option_category": "truth_value",
+    "false_mutation": {
+      "changed_fields": [
+        "duration_days"
+      ],
+      "local": true,
+      "original": "diez",
+      "replacement": "siete"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0013",
+    "source_unit_id": "DAN1-V013",
+    "fact_id": "DAN1-V013-F01",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "question": "¿Qué pidió Daniel que Melsar comparara al terminar la prueba?",
+    "options": [
+      "la comida de los siervos con la comida del rey",
+      "el conocimiento de Daniel con el de los magos",
+      "nuestros rostros con los rostros de los muchachos",
+      "los nombres hebreos con los nombres babilónicos"
+    ],
+    "correct_option": 2,
+    "correct_answer": "nuestros rostros con los rostros de los muchachos",
+    "accepted_answers": [
+      "nuestros rostros con los rostros de los muchachos",
+      "los rostros de ambos grupos"
+    ],
+    "explanation": "Daniel pidió que compararan sus rostros con los de quienes comían la porción real.",
+    "why_distractors_fail": {
+      "la comida de los siervos con la comida del rey": "La comida ya era distinta; lo que debía evaluarse visualmente eran los rostros.",
+      "el conocimiento de Daniel con el de los magos": "Esa comparación de sabiduría ocurre más adelante y no forma parte de la prueba alimentaria.",
+      "los nombres hebreos con los nombres babilónicos": "Los cambios de nombre no fueron el criterio para decidir el resultado de la prueba."
+    },
+    "source_ref": "Daniel 1:13",
+    "source_quote": "Compara luego nuestros rostros con los rostros de los muchachos que comen de la porción de la comida del rey, y haz después con tus siervos según veas.",
+    "evidence_excerpt": "Compara luego nuestros rostros con los rostros de los muchachos",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "requested_comparison",
+    "option_category": "comparison_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0014",
+    "source_unit_id": "DAN1-V014",
+    "fact_id": "DAN1-V014-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "Melsar consintió en la propuesta y probó con los jóvenes durante diez días.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Melsar aceptó la propuesta y llevó a cabo la prueba durante los diez días acordados.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación conserva las dos acciones narradas: consintió y los probó durante diez días."
+    },
+    "source_ref": "Daniel 1:14",
+    "source_quote": "Consintió, pues, con ellos en esto, y probó con ellos durante diez días.",
+    "evidence_excerpt": "Consintió, pues, con ellos en esto, y probó con ellos durante diez días.",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "proposal_acceptance",
+    "option_category": "truth_value",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0015",
+    "source_unit_id": "DAN1-V015",
+    "fact_id": "DAN1-V015-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "comparison",
+    "question": "Al cabo de los diez días, el rostro de los jóvenes parecía mejor y más robusto que el de quienes comían la porción del rey.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La comparación final favoreció a los jóvenes que participaron en la prueba.",
+    "why_distractors_fail": {
+      "Falso": "El resultado citado sí describe sus rostros como mejores y más robustos que los de los otros jóvenes."
+    },
+    "source_ref": "Daniel 1:15",
+    "source_quote": "Y al cabo de los diez días pareció el rostro de ellos mejor y más robusto que el de los otros muchachos que comían de la porción de la comida del rey.",
+    "evidence_excerpt": "pareció el rostro de ellos mejor y más robusto que el de los otros muchachos",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "test_result_comparison",
+    "option_category": "truth_value",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0016",
+    "source_unit_id": "DAN1-V016",
+    "fact_id": "DAN1-V016-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Después de la prueba, Melsar retiraba la comida y el vino del rey, y les daba ____.",
+    "options": [
+      "pan",
+      "carne",
+      "fruta",
+      "legumbres"
+    ],
+    "correct_option": 3,
+    "correct_answer": "legumbres",
+    "accepted_answers": [
+      "legumbres"
+    ],
+    "explanation": "Melsar dejó de darles la porción real y el vino, y los sustituyó por legumbres.",
+    "why_distractors_fail": {
+      "pan": "No se menciona pan como sustituto de la porción real.",
+      "carne": "La carne de la comida real no fue la alternativa aceptada.",
+      "fruta": "El alimento alternativo nombrado no fue fruta."
+    },
+    "source_ref": "Daniel 1:16",
+    "source_quote": "Así, pues, Melsar se llevaba la porción de la comida de ellos y el vino que habían de beber, y les daba legumbres.",
+    "evidence_excerpt": "Melsar se llevaba la porción de la comida de ellos y el vino que habían de beber, y les daba legumbres.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "food_substitution",
+    "option_category": "food",
+    "false_mutation": null,
+    "blank_span": "legumbres",
+    "significance": "Expresión relevante conservada desde el banco competitivo de producción.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0017",
+    "source_unit_id": "DAN1-V017",
+    "fact_id": "DAN1-V017-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué les dio Dios a los cuatro jóvenes?",
+    "options": [
+      "conocimiento e inteligencia",
+      "riquezas y cargos",
+      "armas y autoridad",
+      "tierras y siervos"
+    ],
+    "correct_option": 0,
+    "correct_answer": "conocimiento e inteligencia",
+    "accepted_answers": [
+      "conocimiento e inteligencia"
+    ],
+    "explanation": "Dios les concedió conocimiento e inteligencia en las letras y ciencias; Daniel recibió además entendimiento en visiones y sueños.",
+    "why_distractors_fail": {
+      "riquezas y cargos": "La dádiva divina descrita fue intelectual, no económica ni administrativa.",
+      "armas y autoridad": "El pasaje no atribuye poder militar o político a los jóvenes.",
+      "tierras y siervos": "No recibieron posesiones ni servidores como parte de su formación."
+    },
+    "source_ref": "Daniel 1:17",
+    "source_quote": "A estos cuatro muchachos, Dios les dio conocimiento e inteligencia en todas las letras y ciencias; y Daniel tuvo entendimiento en toda visión y sueños.",
+    "evidence_excerpt": "A estos cuatro muchachos, Dios les dio conocimiento e inteligencia",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "divine_gift",
+    "option_category": "ability_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0018",
+    "source_unit_id": "DAN1-V018",
+    "fact_id": "DAN1-V018-F04",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "Al concluir el período fijado, el jefe de los eunucos llevó a los jóvenes delante de Ciro.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "El jefe de los eunucos presentó a los jóvenes delante de Nabucodonosor, no delante de Ciro.",
+    "why_distractors_fail": {
+      "Verdadero": "La persona ante quien fueron presentados era Nabucodonosor; sustituirlo por Ciro altera el destinatario de la presentación."
+    },
+    "source_ref": "Daniel 1:18",
+    "source_quote": "Pasados, pues, los días al fin de los cuales había dicho el rey que los llevaran, el jefe de los eunucos los llevó delante de Nabucodonosor.",
+    "evidence_excerpt": "el jefe de los eunucos los llevó delante de Nabucodonosor.",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "presentation_recipient",
+    "option_category": "truth_value",
+    "false_mutation": {
+      "changed_fields": [
+        "presentation_recipient"
+      ],
+      "local": true,
+      "original": "Nabucodonosor",
+      "replacement": "Ciro"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0019",
+    "source_unit_id": "DAN1-V019",
+    "fact_id": "DAN1-V019-F01",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "Tras hablar con los cuatro jóvenes, ¿qué ocurrió con ellos?",
+    "options": [
+      "regresaron a Judá",
+      "permanecieron al servicio del rey",
+      "fueron enviados a Sinar",
+      "quedaron bajo custodia de Melsar"
+    ],
+    "correct_option": 1,
+    "correct_answer": "permanecieron al servicio del rey",
+    "accepted_answers": [
+      "permanecieron al servicio del rey",
+      "al servicio del rey"
+    ],
+    "explanation": "Como no se hallaron otros semejantes a ellos, Daniel y sus compañeros permanecieron al servicio del rey.",
+    "why_distractors_fail": {
+      "regresaron a Judá": "La evaluación no terminó con el regreso de los jóvenes a Judá.",
+      "fueron enviados a Sinar": "Ya se encontraban en el ámbito babilónico; el resultado fue su servicio al rey.",
+      "quedaron bajo custodia de Melsar": "Melsar los supervisó durante la prueba, pero el desenlace los coloca al servicio real."
+    },
+    "source_ref": "Daniel 1:19",
+    "source_quote": "El rey habló con ellos, y no se hallaron entre todos ellos otros como Daniel, Ananías, Misael y Azarías; así, pues, permanecieron al servicio del rey.",
+    "evidence_excerpt": "permanecieron al servicio del rey.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "evaluation_outcome",
+    "option_category": "outcome",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0020",
+    "source_unit_id": "DAN1-V020",
+    "fact_id": "DAN1-V020-F01",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Cómo evaluó el rey a los jóvenes frente a los magos y astrólogos de su reino?",
+    "options": [
+      "iguales a ellos",
+      "dos veces mejores",
+      "diez veces mejores",
+      "menos preparados"
+    ],
+    "correct_option": 2,
+    "correct_answer": "diez veces mejores",
+    "accepted_answers": [
+      "diez veces mejores",
+      "10 veces mejores"
+    ],
+    "explanation": "En asuntos de sabiduría e inteligencia, el rey los halló diez veces mejores que sus magos y astrólogos.",
+    "why_distractors_fail": {
+      "iguales a ellos": "La evaluación estableció una superioridad marcada, no igualdad.",
+      "dos veces mejores": "La magnitud indicada no fue el doble, sino diez veces.",
+      "menos preparados": "El resultado de la consulta favoreció a los jóvenes frente a los sabios del reino."
+    },
+    "source_ref": "Daniel 1:20",
+    "source_quote": "En todo asunto de sabiduría e inteligencia que el rey los consultó, los halló diez veces mejores que todos los magos y astrólogos que había en todo su reino.",
+    "evidence_excerpt": "los halló diez veces mejores que todos los magos y astrólogos",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "comparative_evaluation",
+    "option_category": "comparison",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  },
+  {
+    "id": "Q-DAN1-0021",
+    "source_unit_id": "DAN1-V021",
+    "fact_id": "DAN1-V021-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Daniel continuó hasta el año primero del rey ____.",
+    "options": [
+      "Nabucodonosor",
+      "Darío",
+      "Belsasar",
+      "Ciro"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Ciro",
+    "accepted_answers": [
+      "Ciro"
+    ],
+    "explanation": "Daniel continuó en su labor hasta el primer año del rey Ciro.",
+    "why_distractors_fail": {
+      "Nabucodonosor": "Nabucodonosor era el rey al comienzo de la formación, no el gobernante que marca este cierre.",
+      "Darío": "Darío no es el rey nombrado en la conclusión del capítulo.",
+      "Belsasar": "Belsasar aparece después en la historia de Daniel, pero no completa esta referencia temporal."
+    },
+    "source_ref": "Daniel 1:21",
+    "source_quote": "Así continuó Daniel hasta el año primero del rey Ciro.",
+    "evidence_excerpt": "Así continuó Daniel hasta el año primero del rey Ciro.",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "service_horizon",
+    "option_category": "person",
+    "false_mutation": null,
+    "blank_span": "Ciro",
+    "significance": "Expresión relevante conservada desde el banco competitivo de producción.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "ai-authoring-team"
+    }
+  }
+]

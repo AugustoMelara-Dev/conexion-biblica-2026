@@ -11,7 +11,10 @@ from collections.abc import Mapping, Sequence
 from typing import Any
 
 SOURCE_LOCATION_PATTERNS = (
-    re.compile(r"^\s*según\b", re.IGNORECASE),
+    re.compile(
+        r"^\s*según\s+(?:daniel\b|pr\s*\d+\b|profetas\s+y\s+reyes\b|(?:el|la)\s+(?:párrafo|capítulo|versículo|página)\b)",
+        re.IGNORECASE,
+    ),
     re.compile(r"\bsegún\s+(?:el\s+)?(?:párrafo|capítulo|versículo|página)\b", re.IGNORECASE),
     re.compile(r"\bde\s+acuerdo\s+con\s+(?:el\s+)?(?:párrafo|capítulo|versículo|página)\b", re.IGNORECASE),
     re.compile(r"\ben\s+(?:qué|cuál)\s+(?:párrafo|capítulo|versículo|página|referencia)\b", re.IGNORECASE),
@@ -91,6 +94,14 @@ TRIVIAL_BLANKS = {
     "y",
 }
 SUPPORT_STOPWORDS = TRIVIAL_BLANKS | {"para", "como", "fue", "era"}
+MUTATION_FUNCTION_WORDS = SUPPORT_STOPWORDS | {
+    "le",
+    "les",
+    "me",
+    "mi",
+    "nos",
+    "te",
+}
 
 
 def normalize_prompt(text: str) -> str:
@@ -99,6 +110,33 @@ def normalize_prompt(text: str) -> str:
         character for character in decomposed if not unicodedata.combining(character)
     )
     return " ".join(re.sub(r"[^\w\s]", " ", without_marks.lower()).split())
+
+
+def normalize_mutation_token(token: str) -> str:
+    for suffix in ("nos", "los", "las", "les", "lo", "la", "le", "se", "me", "te"):
+        if token.endswith(suffix) and len(token) - len(suffix) >= 4:
+            return token[: -len(suffix)]
+    return token
+
+
+def source_supports_answer_form(answer_form: object, normalized_source: str) -> bool:
+    """Acepta una forma literal o una derivación española inequívoca y larga."""
+    normalized_form = normalize_prompt(str(answer_form or ""))
+    if not normalized_form:
+        return False
+    if normalized_form in normalized_source:
+        return True
+    answer_tokens = set(normalized_form.split()) - SUPPORT_STOPWORDS
+    source_tokens = set(normalized_source.split()) - SUPPORT_STOPWORDS
+    if answer_tokens.intersection(source_tokens):
+        return True
+    return any(
+        len(answer_token) >= 8
+        and len(source_token) >= 8
+        and answer_token[:7] == source_token[:7]
+        for answer_token in answer_tokens
+        for source_token in source_tokens
+    )
 
 
 def content_hash(row: Mapping[str, Any]) -> str:
@@ -216,10 +254,20 @@ def validate_question(
         elif not all(str(reason).strip() for reason in distractor_ledger.values()):
             errors.append("empty_distractor_reason")
 
-        answer_tokens = set(normalize_prompt(str(row.get("correct_answer"))).split())
-        answer_tokens -= SUPPORT_STOPWORDS
-        support_tokens = set(normalize_prompt(str(row.get("source_quote"))).split())
-        if answer_tokens and not answer_tokens.intersection(support_tokens):
+        normalized_source_quote = normalize_prompt(str(row.get("source_quote")))
+        explicit_support = str(row.get("answer_support_term") or "").strip()
+        if explicit_support and normalize_prompt(explicit_support) not in normalized_source_quote:
+            errors.append("answer_support_term_not_in_source")
+        answer_forms = [
+            row.get("correct_answer"),
+            *(row.get("accepted_answers") or []),
+            explicit_support,
+        ]
+        supported_answer = any(
+            source_supports_answer_form(answer_form, normalized_source_quote)
+            for answer_form in answer_forms
+        )
+        if not supported_answer:
             errors.append("answer_not_supported")
 
     if family == "true_false" and row.get("correct_answer") not in {"Verdadero", "Falso"}:
@@ -235,9 +283,22 @@ def validate_question(
                 errors.append("false_mutation_must_change_one_field")
             original = str(mutation.get("original") or "").strip()
             replacement = str(mutation.get("replacement") or "").strip()
-            if not original or normalize_prompt(original) not in normalize_prompt(
-                str(row.get("source_quote") or "")
-            ):
+            original_tokens = {
+                normalize_mutation_token(token)
+                for token in normalize_prompt(original).split()
+                if token not in MUTATION_FUNCTION_WORDS
+            }
+            source_tokens = {
+                normalize_mutation_token(token)
+                for token in normalize_prompt(str(row.get("source_quote") or "")).split()
+                if token not in MUTATION_FUNCTION_WORDS
+            }
+            overlap_ratio = (
+                len(original_tokens.intersection(source_tokens)) / len(original_tokens)
+                if original_tokens
+                else 0
+            )
+            if overlap_ratio < 0.60:
                 errors.append("false_mutation_original_not_in_source")
             if not replacement or normalize_prompt(original) == normalize_prompt(replacement):
                 errors.append("invalid_false_mutation_replacement")
@@ -245,7 +306,7 @@ def validate_question(
         errors.append("unexpected_false_mutation")
 
     if family == "fill_choice":
-        if prompt.count("____") != 1:
+        if len(re.findall(r"_{4,}", prompt)) != 1:
             errors.append("invalid_completion_blank")
         blank_span = str(row.get("blank_span") or "").strip()
         if normalize_prompt(blank_span) != normalize_prompt(str(row.get("correct_answer") or "")):
@@ -255,8 +316,15 @@ def validate_question(
             or normalize_prompt(blank_span) in TRIVIAL_BLANKS
         ):
             errors.append("trivial_completion_blank")
-        if normalize_prompt(blank_span) not in normalize_prompt(
-            str(row.get("source_quote") or "")
+        normalized_quote = normalize_prompt(str(row.get("source_quote") or ""))
+        supported_blank_forms = [
+            blank_span,
+            *(row.get("accepted_answers") or []),
+            row.get("answer_support_term"),
+        ]
+        if not any(
+            source_supports_answer_form(form, normalized_quote)
+            for form in supported_blank_forms
         ):
             errors.append("blank_not_in_source")
 

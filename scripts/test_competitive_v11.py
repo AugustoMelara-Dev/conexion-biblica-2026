@@ -10,6 +10,7 @@ from pathlib import Path
 from scripts.lib.production_snapshot_v11 import import_production_snapshot
 from scripts.lib.source_packets_v11 import build_source_packets
 from scripts.lib.competitive_v11 import audit_corpus, content_hash, validate_question
+from scripts.lib.import_seed_v11 import import_seed
 
 
 def valid_v11_question(**overrides):
@@ -342,6 +343,19 @@ class CompetitiveV11ContractTests(unittest.TestCase):
             validate_question(transplanted, v11_sources()),
         )
 
+    def test_allows_natural_attribution_to_a_speakers_conclusion(self) -> None:
+        attributed = valid_v11_question(
+            question=(
+                "Según la conclusión de Nabucodonosor, ¿qué hizo el rey de Babilonia "
+                "al llegar a Jerusalén?"
+            )
+        )
+
+        self.assertNotIn(
+            "source_location_prompt",
+            validate_question(attributed, v11_sources()),
+        )
+
     def test_rejects_a_third_variant_without_an_editorial_justification(self) -> None:
         rows = [
             valid_v11_question(
@@ -395,6 +409,31 @@ class CompetitiveV11ContractTests(unittest.TestCase):
             validate_question(incomplete_ledger, v11_sources()),
         )
 
+    def test_choice_accepts_inflection_when_an_accepted_answer_matches_source(self) -> None:
+        source_quote = "Aquel que tenía semejanza de hombre me fortaleció."
+        sources = {
+            "DAN1-V001": {
+                "source_ref": "Daniel 1:1",
+                "source_quote": source_quote,
+            }
+        }
+        choice = valid_v11_question(
+            question="¿Cómo terminó Daniel después del nuevo toque?",
+            options=["fortalecido", "paralizado", "escondido", "desorientado"],
+            correct_answer="fortalecido",
+            accepted_answers=["fortalecido", "me fortaleció"],
+            why_distractors_fail={
+                "paralizado": "Recuperó fuerza.",
+                "escondido": "No se ocultó.",
+                "desorientado": "La consecuencia fue fortalecimiento.",
+            },
+            source_quote=source_quote,
+            evidence_excerpt=source_quote,
+            option_category="effect",
+        )
+
+        self.assertNotIn("answer_not_supported", validate_question(choice, sources))
+
     def test_false_statement_must_change_exactly_one_local_supported_value(self) -> None:
         false_row = valid_v11_question(
             family="true_false",
@@ -418,6 +457,102 @@ class CompetitiveV11ContractTests(unittest.TestCase):
         self.assertIn("false_mutation_must_change_one_field", errors)
         self.assertIn("false_mutation_original_not_in_source", errors)
 
+    def test_false_mutation_allows_a_pronominal_shift_when_content_word_is_local(self) -> None:
+        source_quote = "Las visiones de mi cabeza me asombraron."
+        sources = {
+            "DAN1-V001": {
+                "source_ref": "Daniel 1:1",
+                "source_quote": source_quote,
+            }
+        }
+        false_row = valid_v11_question(
+            family="true_false",
+            question="Las visiones dejaron indiferente a Daniel.",
+            options=["Verdadero", "Falso"],
+            correct_option=1,
+            correct_answer="Falso",
+            accepted_answers=["Falso"],
+            why_distractors_fail={},
+            source_quote=source_quote,
+            evidence_excerpt=source_quote,
+            option_category="truth_value",
+            false_mutation={
+                "changed_fields": ["response"],
+                "local": True,
+                "original": "lo asombraron",
+                "replacement": "lo dejaron indiferente",
+            },
+        )
+
+        self.assertNotIn(
+            "false_mutation_original_not_in_source",
+            validate_question(false_row, sources),
+        )
+
+    def test_false_mutation_matches_an_enclitic_pronoun_to_its_local_verb(self) -> None:
+        source_quote = "Ninguna bestia podía parar delante de él."
+        sources = {
+            "DAN1-V001": {
+                "source_ref": "Daniel 1:1",
+                "source_quote": source_quote,
+            }
+        }
+        false_row = valid_v11_question(
+            family="true_false",
+            question="Una bestia podía detener al carnero.",
+            options=["Verdadero", "Falso"],
+            correct_option=1,
+            correct_answer="Falso",
+            accepted_answers=["Falso"],
+            why_distractors_fail={},
+            source_quote=source_quote,
+            evidence_excerpt=source_quote,
+            option_category="truth_value",
+            false_mutation={
+                "changed_fields": ["ability"],
+                "local": True,
+                "original": "ninguna bestia podía pararlo",
+                "replacement": "una bestia podía detenerlo",
+            },
+        )
+
+        self.assertNotIn(
+            "false_mutation_original_not_in_source",
+            validate_question(false_row, sources),
+        )
+
+    def test_false_mutation_accepts_a_high_overlap_conceptual_restatement(self) -> None:
+        source_quote = "Tuya es, Señor, la justicia, y nuestra la confusión de rostro."
+        sources = {
+            "DAN1-V001": {
+                "source_ref": "Daniel 1:1",
+                "source_quote": source_quote,
+            }
+        }
+        false_row = valid_v11_question(
+            family="true_false",
+            question="La confusión pertenece al Señor y la justicia al pueblo.",
+            options=["Verdadero", "Falso"],
+            correct_option=1,
+            correct_answer="Falso",
+            accepted_answers=["Falso"],
+            why_distractors_fail={},
+            source_quote=source_quote,
+            evidence_excerpt=source_quote,
+            option_category="truth_value",
+            false_mutation={
+                "changed_fields": ["attribution"],
+                "local": True,
+                "original": "La justicia pertenece al Señor y la confusión de rostro al pueblo",
+                "replacement": "La confusión pertenece al Señor y la justicia al pueblo",
+            },
+        )
+
+        self.assertNotIn(
+            "false_mutation_original_not_in_source",
+            validate_question(false_row, sources),
+        )
+
     def test_completion_requires_a_significant_supported_blank(self) -> None:
         completion = valid_v11_question(
             family="fill_choice",
@@ -430,6 +565,120 @@ class CompetitiveV11ContractTests(unittest.TestCase):
 
         self.assertIn("blank_span_answer_mismatch", errors)
         self.assertIn("trivial_completion_blank", errors)
+
+    def test_completion_accepts_one_blank_run_longer_than_four_underscores(self) -> None:
+        completion = valid_v11_question(
+            family="fill_choice",
+            question="________ llegó a Jerusalén y la sitió.",
+            blank_span="Nabucodonosor",
+            significance="Identifica al responsable directo del sitio.",
+        )
+
+        self.assertNotIn(
+            "invalid_completion_blank",
+            validate_question(completion, v11_sources()),
+        )
+
+    def test_completion_accepts_adapted_grammar_when_an_accepted_answer_is_literal(self) -> None:
+        source_quote = "Guardé el asunto en mi corazón."
+        sources = {
+            "DAN1-V001": {
+                "source_ref": "Daniel 1:1",
+                "source_quote": source_quote,
+            }
+        }
+        completion = valid_v11_question(
+            family="fill_choice",
+            question="Al cerrar el relato, Daniel ____.",
+            options=[
+                "guardó el asunto en su corazón",
+                "rechazó lo que había visto",
+                "entregó el asunto a otros",
+                "proclamó la visión en público",
+            ],
+            correct_answer="guardó el asunto en su corazón",
+            accepted_answers=[
+                "guardó el asunto en su corazón",
+                "Guardé el asunto en mi corazón",
+            ],
+            why_distractors_fail={
+                "rechazó lo que había visto": "No rechazó la visión.",
+                "entregó el asunto a otros": "La guardó consigo.",
+                "proclamó la visión en público": "El cierre describe reserva interior.",
+            },
+            source_quote=source_quote,
+            evidence_excerpt=source_quote,
+            blank_span="guardó el asunto en su corazón",
+            significance="Evalúa la acción final de Daniel.",
+            option_category="action",
+        )
+
+        self.assertNotIn("blank_not_in_source", validate_question(completion, sources))
+
+    def test_completion_accepts_a_supported_derivational_form(self) -> None:
+        source_quote = "El rey se contristará y retrocederá."
+        sources = {
+            "DAN1-V001": {
+                "source_ref": "Daniel 1:1",
+                "source_quote": source_quote,
+            }
+        }
+        completion = valid_v11_question(
+            family="fill_choice",
+            question="El encuentro provocará en el rey ____ antes del retroceso.",
+            options=["euforia", "aflicción", "indiferencia", "audacia"],
+            correct_option=1,
+            correct_answer="aflicción",
+            accepted_answers=["aflicción", "contristación", "tristeza"],
+            why_distractors_fail={
+                "euforia": "Invierte la reacción.",
+                "indiferencia": "El encuentro sí lo afecta.",
+                "audacia": "El texto describe abatimiento.",
+            },
+            source_quote=source_quote,
+            evidence_excerpt=source_quote,
+            blank_span="aflicción",
+            significance="Evalúa la reacción emocional del rey.",
+            option_category="emotion",
+        )
+
+        errors = validate_question(completion, sources)
+
+        self.assertNotIn("answer_not_supported", errors)
+        self.assertNotIn("blank_not_in_source", errors)
+
+    def test_completion_accepts_an_explicit_literal_support_term(self) -> None:
+        source_quote = "Nunca compele Dios a los hombres a obedecer."
+        sources = {
+            "DAN1-V001": {
+                "source_ref": "Daniel 1:1",
+                "source_quote": source_quote,
+            }
+        }
+        completion = valid_v11_question(
+            family="fill_choice",
+            question="Dios deja la obediencia libre de ____.",
+            options=["instrucción", "convicción", "responsabilidad", "compulsión"],
+            correct_option=3,
+            correct_answer="compulsión",
+            accepted_answers=["compulsión", "coacción"],
+            why_distractors_fail={
+                "instrucción": "No equivale a compeler.",
+                "convicción": "No equivale a compeler.",
+                "responsabilidad": "No equivale a compeler.",
+            },
+            source_quote=source_quote,
+            evidence_excerpt=source_quote,
+            blank_span="compulsión",
+            significance="Evalúa la libertad de la obediencia.",
+            option_category="principle",
+            answer_support_term="compele",
+        )
+
+        errors = validate_question(completion, sources)
+
+        self.assertNotIn("answer_not_supported", errors)
+        self.assertNotIn("blank_not_in_source", errors)
 
     def test_corpus_audit_detects_duplicate_ids_and_normalized_prompts(self) -> None:
         first = valid_v11_question()
@@ -452,6 +701,292 @@ class CompetitiveV11ContractTests(unittest.TestCase):
 
         self.assertIn("missing_key_option_category", validate_question(missing, v11_sources()))
         self.assertIn("answer_leaked_in_prompt", validate_question(leaked, v11_sources()))
+
+
+class SeedImportTests(unittest.TestCase):
+    """Preserva el banco bueno y declara honestamente su revisión heredada."""
+
+    def test_flattens_a_verified_presentation_variant_without_rewriting_prose(self) -> None:
+        central = valid_v11_question()
+        for key in ("role", "blank_span", "significance", "variant_justification"):
+            central.pop(key)
+        central["content_sha256"] = "production-central-hash"
+        central["validation_adversarial"] = {
+            "reviewer": "production-cross-reviewer",
+            "status": "passed",
+            "selected_option": 0,
+            "second_defensible_option": False,
+            "content_sha256": "production-central-hash",
+        }
+        central["presentation_variants"] = [
+            {
+                "id": "PV-DAN1-0001",
+                "question": "____ llegó a Jerusalén y la sitió.",
+                "options": ["Nabucodonosor", "Ciro", "Darío", "Belsasar"],
+                "correct_option": 0,
+                "correct_answer": "Nabucodonosor",
+                "accepted_answers": ["Nabucodonosor"],
+                "explanation": "Nabucodonosor llegó a Jerusalén y la sitió.",
+                "why_distractors_fail": central["why_distractors_fail"],
+                "content_sha256": "production-variant-hash",
+                "review": {
+                    "status": "passed",
+                    "reviewer_type": "ai_semantic_audit",
+                    "reviewer": "production-variant-reviewer",
+                    "content_sha256": "production-variant-hash",
+                    "selected_option": 0,
+                    "second_defensible_option": False,
+                },
+            }
+        ]
+
+        authored, reviews = import_seed("DAN1", [central], v11_sources())
+
+        self.assertEqual(len(authored), 2)
+        self.assertEqual(authored[0]["role"], "central")
+        self.assertEqual(authored[0]["question"], central["question"])
+        self.assertEqual(authored[1]["role"], "variant")
+        self.assertEqual(authored[1]["family"], "fill_choice")
+        self.assertEqual(authored[1]["question"], "____ llegó a Jerusalén y la sitió.")
+        self.assertTrue(
+            all("human" not in row["ai_review"]["reviewer_type"] for row in authored)
+        )
+        self.assertEqual(
+            [review["source_content_sha256"] for review in reviews],
+            ["production-central-hash", "production-variant-hash"],
+        )
+        self.assertEqual(
+            [review["content_sha256"] for review in reviews],
+            [content_hash(row) for row in authored],
+        )
+
+    def test_checked_in_seed_contains_the_verified_production_baseline(self) -> None:
+        question_root = Path("content/competitive-v11/questions")
+        review_root = Path("content/competitive-v11/reviews")
+        self.assertTrue(question_root.exists(), "debe importarse el corpus inicial V11")
+        question_files = sorted(question_root.glob("*.json"))
+        review_files = sorted(review_root.glob("*.json"))
+        self.assertEqual(len(question_files), 18)
+        self.assertEqual(len(review_files), 18)
+
+        questions = [
+            row
+            for path in question_files
+            for row in json.loads(path.read_text(encoding="utf-8"))
+        ]
+        reviews = [
+            row
+            for path in review_files
+            for row in json.loads(path.read_text(encoding="utf-8"))
+        ]
+        self.assertEqual(len([row for row in questions if row["role"] == "central"]), 1024)
+        self.assertEqual(len([row for row in questions if row["role"] == "variant"]), 251)
+        self.assertEqual(len(questions), 1275)
+        self.assertEqual(len(reviews), 1275)
+        self.assertEqual(
+            {row["question_id"]: row["content_sha256"] for row in reviews},
+            {row["id"]: content_hash(row) for row in questions},
+        )
+
+    def test_recognizes_true_false_variant_when_option_order_is_reversed(self) -> None:
+        central = valid_v11_question()
+        central["false_mutation"] = {
+            "changed_fields": ["person"],
+            "local": True,
+            "original": "Nabucodonosor",
+            "replacement": "Ciro",
+        }
+        for key in ("role", "blank_span", "significance", "variant_justification"):
+            central.pop(key)
+        central["content_sha256"] = "production-central-hash"
+        central["validation_adversarial"] = {
+            "reviewer": "production-cross-reviewer",
+            "status": "passed",
+            "selected_option": 0,
+            "second_defensible_option": False,
+        }
+        central["presentation_variants"] = [
+            {
+                "id": "PV-DAN1-TF-0001",
+                "question": "Nabucodonosor llegó a Jerusalén y la sitió.",
+                "options": ["Falso", "Verdadero"],
+                "correct_option": 1,
+                "correct_answer": "Verdadero",
+                "accepted_answers": ["Verdadero"],
+                "explanation": "La afirmación reproduce la acción narrada.",
+                "why_distractors_fail": {
+                    "Falso": "El sitio de Jerusalén sí aparece en la fuente."
+                },
+                "content_sha256": "production-tf-variant-hash",
+                "review": {
+                    "status": "passed",
+                    "reviewer_type": "ai_semantic_audit",
+                    "reviewer": "production-variant-reviewer",
+                    "content_sha256": "production-tf-variant-hash",
+                    "selected_option": 1,
+                    "second_defensible_option": False,
+                },
+            }
+        ]
+
+        try:
+            authored, _ = import_seed("DAN1", [central], v11_sources())
+        except ValueError as exc:
+            self.fail(f"la variante V/F invertida debe importarse: {exc}")
+
+        self.assertEqual(authored[1]["family"], "true_false")
+        self.assertIsNone(authored[1]["false_mutation"])
+
+    def test_applies_an_explicit_editorial_mutation_to_a_false_variant(self) -> None:
+        central = valid_v11_question()
+        for key in ("role", "blank_span", "significance", "variant_justification"):
+            central.pop(key)
+        central["content_sha256"] = "production-central-hash"
+        central["validation_adversarial"] = {
+            "reviewer": "production-cross-reviewer",
+            "status": "passed",
+            "selected_option": 0,
+            "second_defensible_option": False,
+        }
+        central["presentation_variants"] = [
+            {
+                "id": "PV-DAN1-FALSE-0001",
+                "question": "Ciro llegó a Jerusalén y la sitió.",
+                "options": ["Verdadero", "Falso"],
+                "correct_option": 1,
+                "correct_answer": "Falso",
+                "accepted_answers": ["Falso"],
+                "explanation": "La fuente identifica a Nabucodonosor, no a Ciro.",
+                "why_distractors_fail": {
+                    "Verdadero": "La identidad del sitiador fue alterada."
+                },
+                "content_sha256": "production-false-variant-hash",
+                "review": {
+                    "status": "passed",
+                    "reviewer_type": "ai_semantic_audit",
+                    "reviewer": "production-variant-reviewer",
+                    "content_sha256": "production-false-variant-hash",
+                    "selected_option": 1,
+                    "second_defensible_option": False,
+                },
+            }
+        ]
+        override = {
+            "PV-DAN1-FALSE-0001": {
+                "changed_fields": ["person"],
+                "local": True,
+                "original": "Nabucodonosor",
+                "replacement": "Ciro",
+            }
+        }
+
+        try:
+            authored, _ = import_seed(
+                "DAN1",
+                [central],
+                v11_sources(),
+                false_mutation_overrides=override,
+            )
+        except (TypeError, ValueError) as exc:
+            self.fail(f"la mutación editorial explícita debe aplicarse: {exc}")
+
+        self.assertEqual(authored[1]["false_mutation"], override["PV-DAN1-FALSE-0001"])
+
+    def test_explicit_editorial_mutation_can_correct_existing_central_metadata(self) -> None:
+        central = valid_v11_question(
+            family="true_false",
+            question="Ciro llegó a Jerusalén y la sitió.",
+            options=["Verdadero", "Falso"],
+            correct_option=1,
+            correct_answer="Falso",
+            accepted_answers=["Falso"],
+            false_mutation={
+                "changed_fields": ["person"],
+                "local": True,
+                "original": "el monarca babilónico",
+                "replacement": "Ciro",
+            },
+        )
+        for key in ("role", "blank_span", "significance", "variant_justification"):
+            central.pop(key)
+        central["content_sha256"] = "production-central-hash"
+        central["validation_adversarial"] = {
+            "reviewer": "production-cross-reviewer",
+            "status": "passed",
+            "selected_option": 1,
+            "second_defensible_option": False,
+        }
+        override = {
+            central["id"]: {
+                "changed_fields": ["person"],
+                "local": True,
+                "original": "Nabucodonosor",
+                "replacement": "Ciro",
+            }
+        }
+
+        authored, _ = import_seed(
+            "DAN1",
+            [central],
+            v11_sources(),
+            false_mutation_overrides=override,
+        )
+
+        self.assertEqual(authored[0]["false_mutation"], override[central["id"]])
+
+    def test_explicit_question_correction_removes_a_seed_answer_leak(self) -> None:
+        central = valid_v11_question()
+        for key in ("role", "blank_span", "significance", "variant_justification"):
+            central.pop(key)
+        central["content_sha256"] = "production-central-hash"
+        central["validation_adversarial"] = {
+            "reviewer": "production-cross-reviewer",
+            "status": "passed",
+            "selected_option": 0,
+            "second_defensible_option": False,
+        }
+        central["presentation_variants"] = [
+            {
+                "id": "PV-DAN1-LEAK-0001",
+                "question": "Además de Nabucodonosor, ¿quién sitió Jerusalén?",
+                "options": ["Ciro", "Darío", "Belsasar", "Nabucodonosor"],
+                "correct_option": 3,
+                "correct_answer": "Nabucodonosor",
+                "accepted_answers": ["Nabucodonosor"],
+                "explanation": "La fuente identifica a Nabucodonosor.",
+                "why_distractors_fail": {
+                    "Ciro": "No aparece en el episodio.",
+                    "Darío": "No aparece en el episodio.",
+                    "Belsasar": "No aparece en el episodio.",
+                },
+                "content_sha256": "production-variant-hash",
+                "review": {
+                    "status": "passed",
+                    "reviewer_type": "ai_semantic_audit",
+                    "reviewer": "production-variant-reviewer",
+                    "content_sha256": "production-variant-hash",
+                    "selected_option": 3,
+                    "second_defensible_option": False,
+                },
+            }
+        ]
+        correction = {
+            "PV-DAN1-LEAK-0001": {
+                "question": "¿Quién llegó a Jerusalén y la sitió?",
+                "reviewer": "gpt-5.6-sol-v11-import-review",
+                "reason": "Elimina la respuesta incluida en el enunciado.",
+            }
+        }
+
+        authored, reviews = import_seed(
+            "DAN1",
+            [central],
+            v11_sources(),
+            editorial_overrides=correction,
+        )
+
+        self.assertEqual(authored[1]["question"], correction[authored[1]["id"]]["question"])
+        self.assertEqual(reviews[1]["decision"], "corrected_during_v11_import")
 
 
 if __name__ == "__main__":
