@@ -5986,5 +5986,1075 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
     }
+  },
+  {
+    "id": "PR44-V11-WAVE-026",
+    "source_unit_id": "PR44-P056-P002-S003",
+    "fact_id": "PR44-P056-P002-S003-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "symbol_interpretation",
+    "question": "¿Con qué imagen se describe el efecto de la firmeza de Daniel dentro de la corte pagana?",
+    "options": [
+      "Como una luz en medio de las tinieblas morales",
+      "Como un muro que aislaba a los gobernantes",
+      "Como una espada contra el poder del rey",
+      "Como una corona reservada para los príncipes"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Como una luz en medio de las tinieblas morales",
+    "accepted_answers": [
+      "Como una luz en medio de las tinieblas morales"
+    ],
+    "explanation": "Su adhesión indómita a lo recto iluminó el ambiente moralmente oscuro de la corte.",
+    "why_distractors_fail": {
+      "Como un muro que aislaba a los gobernantes": "La figura usada no es aislamiento, sino iluminación.",
+      "Como una espada contra el poder del rey": "Daniel no atacó la autoridad política.",
+      "Como una corona reservada para los príncipes": "La comparación no se relaciona con rango ni recompensa."
+    },
+    "source_ref": "PR44, p. 56, párrafo 2",
+    "source_quote": "Su adhesión indómita a lo recto fué una luz que brilló en las tinieblas morales de aquella corte pagana.",
+    "evidence_excerpt": "Su adhesión indómita a lo recto fué una luz que brilló en las tinieblas morales de aquella corte pagana.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "faithfulness_light_metaphor",
+    "option_category": "image",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-027",
+    "source_unit_id": "PR44-P056-P002-S004",
+    "fact_id": "PR44-P056-P002-S004-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué combinación de cualidades convierte a Daniel en un ejemplo vigente para los cristianos?",
+    "options": [
+      "Elocuencia y riqueza",
+      "Intrepidez y fidelidad",
+      "Autoridad y severidad",
+      "Prudencia y silencio"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Intrepidez y fidelidad",
+    "accepted_answers": [
+      "Intrepidez y fidelidad",
+      "Intrepidez y fidelidad cristianas"
+    ],
+    "explanation": "Daniel es presentado como ejemplo de intrepidez y fidelidad cristianas.",
+    "why_distractors_fail": {
+      "Elocuencia y riqueza": "El pasaje no fundamenta su ejemplo en bienes ni retórica.",
+      "Autoridad y severidad": "Su cargo no es la pareja de virtudes destacada.",
+      "Prudencia y silencio": "Daniel no guardó silencio ante la prueba."
+    },
+    "source_ref": "PR44, p. 56, párrafo 2",
+    "source_quote": "Daniel se destaca hoy ante el mundo como digno ejemplo de intrepidez y fidelidad cristianas.",
+    "evidence_excerpt": "Daniel se destaca hoy ante el mundo como digno ejemplo de intrepidez y fidelidad cristianas.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "christian_example_traits",
+    "option_category": "trait_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-028",
+    "source_unit_id": "PR44-P056-P003-S002",
+    "fact_id": "PR44-P056-P003-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué observaron y oyeron los príncipes mientras vigilaban a Daniel?",
+    "options": [
+      "Lo vieron huir del palacio y pedir refugio al ejército",
+      "Lo oyeron negociar una excepción secreta con Darío",
+      "Lo vieron entrar tres veces en su cámara y oyeron su ferviente intercesión",
+      "Lo vieron cerrar sus ventanas y suspender toda oración"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Lo vieron entrar tres veces en su cámara y oyeron su ferviente intercesión",
+    "accepted_answers": [
+      "Lo vieron entrar tres veces en su cámara y oyeron su ferviente intercesión"
+    ],
+    "explanation": "La vigilancia confirmó tres visitas a su cámara y tres momentos de intercesión audible.",
+    "why_distractors_fail": {
+      "Lo vieron huir del palacio y pedir refugio al ejército": "Daniel permaneció en su puesto.",
+      "Lo oyeron negociar una excepción secreta con Darío": "No buscó una dispensa.",
+      "Lo vieron cerrar sus ventanas y suspender toda oración": "Mantuvo abierta y visible su práctica habitual."
+    },
+    "source_ref": "PR44, p. 56, párrafo 3",
+    "source_quote": "Tres veces le vieron ir a su cámara, y tres veces oyeron su voz elevarse en ferviente intercesión para con Dios.",
+    "evidence_excerpt": "Tres veces le vieron ir a su cámara, y tres veces oyeron su voz elevarse en ferviente intercesión para con Dios.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "surveillance_observation",
+    "option_category": "observed_action_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-029",
+    "source_unit_id": "PR44-P056-P003-S004",
+    "fact_id": "PR44-P056-P003-S004-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué contraste hacía especialmente grave la acusación presentada contra Daniel?",
+    "options": [
+      "El funcionario más joven era acusado de abandonar el reino",
+      "El enemigo declarado del rey pedía ocupar la presidencia",
+      "El autor del decreto afirmaba desconocer su contenido",
+      "El estadista más honrado y fiel era acusado de desafiar el decreto"
+    ],
+    "correct_option": 3,
+    "correct_answer": "El estadista más honrado y fiel era acusado de desafiar el decreto",
+    "accepted_answers": [
+      "El estadista más honrado y fiel era acusado de desafiar el decreto"
+    ],
+    "explanation": "Los conspiradores denunciaron precisamente al servidor que Darío tenía por más honrado y fiel.",
+    "why_distractors_fail": {
+      "El funcionario más joven era acusado de abandonar el reino": "Ni la edad ni una huida forman el contraste.",
+      "El enemigo declarado del rey pedía ocupar la presidencia": "Daniel era un servidor confiable, no un enemigo declarado.",
+      "El autor del decreto afirmaba desconocer su contenido": "Daniel no redactó el decreto."
+    },
+    "source_ref": "PR44, p. 56, párrafo 3",
+    "source_quote": "Daniel, su estadista más honrado y fiel, había desafiado el decreto real.",
+    "evidence_excerpt": "Daniel, su estadista más honrado y fiel, había desafiado el decreto real.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "trusted_statesman_accusation",
+    "option_category": "contrast",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-030",
+    "source_unit_id": "PR44-P056-P006-S002",
+    "fact_id": "PR44-P056-P006-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué comprendió Darío sobre el verdadero motivo de quienes propusieron el decreto?",
+    "options": [
+      "Los movían los celos contra Daniel, no el celo por honrar al rey",
+      "Buscaban proteger a Daniel de una rebelión popular",
+      "Querían fortalecer la libertad de oración en el reino",
+      "Intentaban corregir una pérdida causada por los gobernadores"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Los movían los celos contra Daniel, no el celo por honrar al rey",
+    "accepted_answers": [
+      "Los movían los celos contra Daniel, no el celo por honrar al rey"
+    ],
+    "explanation": "Darío descubrió que la aparente defensa de su gloria encubría celos contra Daniel.",
+    "why_distractors_fail": {
+      "Buscaban proteger a Daniel de una rebelión popular": "El decreto fue diseñado para destruirlo.",
+      "Querían fortalecer la libertad de oración en el reino": "La norma prohibía toda petición excepto al rey.",
+      "Intentaban corregir una pérdida causada por los gobernadores": "Ese no fue el motivo de la propuesta."
+    },
+    "source_ref": "PR44, p. 56, párrafo 6",
+    "source_quote": "Vió que no era el celo por la gloria ni el honor del rey, sino los celos contra Daniel, lo que había motivado aquella propuesta de promulgar un decreto real.",
+    "evidence_excerpt": "Vió que no era el celo por la gloria ni el honor del rey, sino los celos contra Daniel, lo que había motivado aquella propuesta de promulgar un decreto real.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "decree_hidden_motive",
+    "option_category": "motive",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-031",
+    "source_unit_id": "PR44-P056-P006-S003",
+    "fact_id": "PR44-P056-P006-S003-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Cómo reaccionó Darío al reconocer su participación en la injusticia contra Daniel?",
+    "options": [
+      "Celebró el éxito del decreto y adelantó la ejecución",
+      "Se afligió profundamente y trabajó hasta la puesta del sol para librarlo",
+      "Renunció al trono y entregó el gobierno a los príncipes",
+      "Ordenó que Daniel abandonara el reino esa misma tarde"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Se afligió profundamente y trabajó hasta la puesta del sol para librarlo",
+    "accepted_answers": [
+      "Se afligió profundamente y trabajó hasta la puesta del sol para librarlo"
+    ],
+    "explanation": "El rey lamentó su papel en el mal proceder e intentó salvar a Daniel hasta el límite del día.",
+    "why_distractors_fail": {
+      "Celebró el éxito del decreto y adelantó la ejecución": "La trampa le causó pesar.",
+      "Renunció al trono y entregó el gobierno a los príncipes": "No respondió mediante abdicación.",
+      "Ordenó que Daniel abandonara el reino esa misma tarde": "Buscó librarlo de la sentencia, no desterrarlo."
+    },
+    "source_ref": "PR44, p. 56, párrafo 6",
+    "source_quote": "“Pesóle en gran manera,” por la parte que había tenido en este mal proceder, y “hasta puestas del sol trabajó para librarle.",
+    "evidence_excerpt": "“Pesóle en gran manera,” por la parte que había tenido en este mal proceder, y “hasta puestas del sol trabajó para librarle.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "king_remorse_rescue_effort",
+    "option_category": "response",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-032",
+    "source_unit_id": "PR44-P056-P007-S003",
+    "fact_id": "PR44-P056-P007-S003-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Cómo aseguraron que el acuerdo acerca de Daniel no pudiera modificarse?",
+    "options": [
+      "Dejaron únicamente soldados medos frente al foso",
+      "Escondieron el decreto dentro del palacio",
+      "Sellaron la piedra con el anillo del rey y los anillos de sus príncipes",
+      "Encadenaron a Daniel antes de cerrar la entrada"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Sellaron la piedra con el anillo del rey y los anillos de sus príncipes",
+    "accepted_answers": [
+      "Sellaron la piedra con el anillo del rey y los anillos de sus príncipes"
+    ],
+    "explanation": "El doble respaldo de los sellos protegía la piedra y hacía inalterable el acuerdo.",
+    "why_distractors_fail": {
+      "Dejaron únicamente soldados medos frente al foso": "La garantía descrita fueron los sellos.",
+      "Escondieron el decreto dentro del palacio": "Ocultar el documento no aseguraba la entrada.",
+      "Encadenaron a Daniel antes de cerrar la entrada": "El relato no presenta cadenas como garantía."
+    },
+    "source_ref": "PR44, p. 56, párrafo 7",
+    "source_quote": "Se puso una piedra a la entrada del foso, y el rey mismo la selló “con su anillo, y con el anillo de sus príncipes, porque el acuerdo acerca de Daniel no se mudase.",
+    "evidence_excerpt": "Se puso una piedra a la entrada del foso, y el rey mismo la selló “con su anillo, y con el anillo de sus príncipes, porque el acuerdo acerca de Daniel no se mudase.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "den_sealing_purpose",
+    "option_category": "procedure",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-033",
+    "source_unit_id": "PR44-P056-P007-S004",
+    "fact_id": "PR44-P056-P007-S004-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué conjunto describe la noche de Darío después de enviar a Daniel al foso?",
+    "options": [
+      "Celebró con un banquete, música y descanso",
+      "Convocó al ejército y salió de la ciudad",
+      "Recibió a los acusadores y nombró nuevos presidentes",
+      "Ayunó, rechazó la música y no pudo dormir"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Ayunó, rechazó la música y no pudo dormir",
+    "accepted_answers": [
+      "Ayunó, rechazó la música y no pudo dormir"
+    ],
+    "explanation": "El ayuno, la ausencia de música y el insomnio manifestaron su angustia.",
+    "why_distractors_fail": {
+      "Celebró con un banquete, música y descanso": "Invierte cada detalle de la escena.",
+      "Convocó al ejército y salió de la ciudad": "No es la reacción narrada.",
+      "Recibió a los acusadores y nombró nuevos presidentes": "La noche se describe por su aflicción personal."
+    },
+    "source_ref": "PR44, p. 56, párrafo 7",
+    "source_quote": "Fuése luego el rey a su palacio, y acostóse ayuno; ni instrumentos de música fueron traídos delante de él, y se le fué el sueño.”",
+    "evidence_excerpt": "Fuése luego el rey a su palacio, y acostóse ayuno; ni instrumentos de música fueron traídos delante de él, y se le fué el sueño.”",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "king_distress_signs",
+    "option_category": "action_set",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-034",
+    "source_unit_id": "PR44-P056-P008-S002",
+    "fact_id": "PR44-P056-P008-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Con qué propósito permitió Dios que la conspiración avanzara hasta el foso?",
+    "options": [
+      "Para destacar más la liberación de Daniel y hacer completa la derrota de sus enemigos",
+      "Para enseñar a Daniel a someterse a cualquier decreto humano",
+      "Para entregar el reino definitivamente a los príncipes",
+      "Para ocultar su poder ante la corte pagana"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Para destacar más la liberación de Daniel y hacer completa la derrota de sus enemigos",
+    "accepted_answers": [
+      "Para destacar más la liberación de Daniel y hacer completa la derrota de sus enemigos"
+    ],
+    "explanation": "La permisión llegó hasta el punto que haría más visible la liberación y más total la derrota del mal.",
+    "why_distractors_fail": {
+      "Para enseñar a Daniel a someterse a cualquier decreto humano": "Daniel debía mantener su lealtad superior a Dios.",
+      "Para entregar el reino definitivamente a los príncipes": "La oposición de ellos terminó quebrada.",
+      "Para ocultar su poder ante la corte pagana": "El desenlace manifestó públicamente ese poder."
+    },
+    "source_ref": "PR44, p. 56, párrafo 8",
+    "source_quote": "Permitió que hasta allí cumpliesen su propósito los malos ángeles y los hombres impíos; pero lo hizo para recalcar tanto más la liberación de su siervo y para que la derrota de los enemigos de la verdad y de la justicia fuese más completa.",
+    "evidence_excerpt": "Permitió que hasta allí cumpliesen su propósito los malos ángeles y los hombres impíos; pero lo hizo para recalcar tanto más la liberación de su siervo y para que la derrota de los enemigos de la verdad y de la justicia fuese más completa.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "divine_permission_purpose",
+    "option_category": "purpose",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-035",
+    "source_unit_id": "PR44-P056-P008-S004",
+    "fact_id": "PR44-P056-P008-S004-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué decisión individual condujo a la derrota de Satanás y a la exaltación del nombre de Dios?",
+    "options": [
+      "Aceptar el decreto para conservar la vida",
+      "Preferir la justicia antes que la conveniencia",
+      "Ocultar la oración para evitar el conflicto",
+      "Renunciar al cargo antes de ser acusado"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Preferir la justicia antes que la conveniencia",
+    "accepted_answers": [
+      "Preferir la justicia antes que la conveniencia"
+    ],
+    "explanation": "El valor de un solo hombre que escogió lo justo sobre lo conveniente produjo ese resultado.",
+    "why_distractors_fail": {
+      "Aceptar el decreto para conservar la vida": "Daniel no subordinó su fidelidad a la supervivencia.",
+      "Ocultar la oración para evitar el conflicto": "Mantuvo su práctica visible.",
+      "Renunciar al cargo antes de ser acusado": "No abandonó sus responsabilidades."
+    },
+    "source_ref": "PR44, p. 56, párrafo 8",
+    "source_quote": "Mediante el valor de un solo hombre que prefirió seguir la justicia antes que las conveniencias, Satanás iba a quedar derrotado y el nombre de Dios iba a ser ensalzado y honrado.",
+    "evidence_excerpt": "Mediante el valor de un solo hombre que prefirió seguir la justicia antes que las conveniencias, Satanás iba a quedar derrotado y el nombre de Dios iba a ser ensalzado y honrado.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "justice_over_convenience",
+    "option_category": "decision",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-036",
+    "source_unit_id": "PR44-P056-P003-S001",
+    "fact_id": "PR44-P056-P003-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Los príncipes vigilaron a Daniel durante todo un ____.",
+    "options": [
+      "día",
+      "mes",
+      "año",
+      "sábado"
+    ],
+    "correct_option": 0,
+    "correct_answer": "día",
+    "accepted_answers": [
+      "día",
+      "un día"
+    ],
+    "explanation": "La vigilancia directa se extendió durante todo un día.",
+    "why_distractors_fail": {
+      "mes": "Excede el tiempo señalado.",
+      "año": "No corresponde a la duración narrada.",
+      "sábado": "El texto no limita la vigilancia a ese día religioso."
+    },
+    "source_ref": "PR44, p. 56, párrafo 3",
+    "source_quote": "Durante todo un día los príncipes vigilaron a Daniel.",
+    "evidence_excerpt": "Durante todo un día los príncipes vigilaron a Daniel.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "surveillance_duration",
+    "option_category": "time_unit",
+    "false_mutation": null,
+    "blank_span": "día",
+    "significance": "Fija la duración concreta de la vigilancia previa a la denuncia.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-037",
+    "source_unit_id": "PR44-P056-P003-S003",
+    "fact_id": "PR44-P056-P003-S003-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "narrative_order",
+    "question": "A la ____ siguiente, los príncipes presentaron su queja al rey.",
+    "options": [
+      "noche",
+      "mañana",
+      "semana",
+      "hora"
+    ],
+    "correct_option": 1,
+    "correct_answer": "mañana",
+    "accepted_answers": [
+      "mañana",
+      "mañana siguiente"
+    ],
+    "explanation": "La denuncia fue presentada a la mañana siguiente de la vigilancia.",
+    "why_distractors_fail": {
+      "noche": "La queja no se presentó esa misma noche.",
+      "semana": "La secuencia fue más inmediata.",
+      "hora": "El texto usa una parte del día, no una hora."
+    },
+    "source_ref": "PR44, p. 56, párrafo 3",
+    "source_quote": "A la mañana siguiente, presentaron su queja al rey.",
+    "evidence_excerpt": "A la mañana siguiente, presentaron su queja al rey.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "complaint_timing",
+    "option_category": "time",
+    "false_mutation": null,
+    "blank_span": "mañana",
+    "significance": "Ubica la acusación después de la jornada de vigilancia.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-038",
+    "source_unit_id": "PR44-P056-P004-S001",
+    "fact_id": "PR44-P056-P004-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "El rey confirmó que el decreto se regía por la ley de Media y de ____.",
+    "options": [
+      "Grecia",
+      "Babilonia",
+      "Persia",
+      "Egipto"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Persia",
+    "accepted_answers": [
+      "Persia",
+      "Media y Persia"
+    ],
+    "explanation": "Darío invocó la ley de Media y de Persia, la cual no se abrogaba.",
+    "why_distractors_fail": {
+      "Grecia": "No integra la fórmula legal citada.",
+      "Babilonia": "Era el poder anterior, no el segundo nombre de la ley.",
+      "Egipto": "No participa en este marco jurídico."
+    },
+    "source_ref": "PR44, p. 56, párrafo 4",
+    "source_quote": "“Verdad es—contestó el rey,—conforme a la ley de Media y de Persia, la cual no se abroga.”",
+    "evidence_excerpt": "“Verdad es—contestó el rey,—conforme a la ley de Media y de Persia, la cual no se abroga.”",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "medopersian_law",
+    "option_category": "kingdom",
+    "false_mutation": null,
+    "blank_span": "Persia",
+    "significance": "Precisa el sistema legal que impedía revocar el decreto.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-039",
+    "source_unit_id": "PR44-P056-P006-S003",
+    "fact_id": "PR44-P056-P006-S003-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Darío trabajó para librar a Daniel hasta la puesta del ____.",
+    "options": [
+      "decreto",
+      "reino",
+      "sello",
+      "sol"
+    ],
+    "correct_option": 3,
+    "correct_answer": "sol",
+    "accepted_answers": [
+      "sol",
+      "puesta del sol"
+    ],
+    "explanation": "El intento de rescate se prolongó hasta la puesta del sol.",
+    "why_distractors_fail": {
+      "decreto": "No es una expresión temporal válida.",
+      "reino": "No completa el límite horario.",
+      "sello": "El sellado ocurrió después, en el foso."
+    },
+    "source_ref": "PR44, p. 56, párrafo 6",
+    "source_quote": "“Pesóle en gran manera,” por la parte que había tenido en este mal proceder, y “hasta puestas del sol trabajó para librarle.",
+    "evidence_excerpt": "“Pesóle en gran manera,” por la parte que había tenido en este mal proceder, y “hasta puestas del sol trabajó para librarle.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "rescue_deadline",
+    "option_category": "time_marker",
+    "false_mutation": null,
+    "blank_span": "sol",
+    "significance": "Fija hasta cuándo persistió el esfuerzo del rey por salvarlo.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-040",
+    "source_unit_id": "PR44-P056-P007-S003",
+    "fact_id": "PR44-P056-P007-S003-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "La entrada del foso fue cerrada con una ____.",
+    "options": [
+      "piedra",
+      "puerta",
+      "cortina",
+      "muralla"
+    ],
+    "correct_option": 0,
+    "correct_answer": "piedra",
+    "accepted_answers": [
+      "piedra",
+      "una piedra"
+    ],
+    "explanation": "Una piedra fue colocada en la entrada y luego sellada.",
+    "why_distractors_fail": {
+      "puerta": "No es el objeto mencionado.",
+      "cortina": "No habría asegurado el foso.",
+      "muralla": "La entrada recibió una piedra, no una nueva construcción."
+    },
+    "source_ref": "PR44, p. 56, párrafo 7",
+    "source_quote": "Se puso una piedra a la entrada del foso, y el rey mismo la selló “con su anillo, y con el anillo de sus príncipes, porque el acuerdo acerca de Daniel no se mudase.",
+    "evidence_excerpt": "Se puso una piedra a la entrada del foso, y el rey mismo la selló “con su anillo, y con el anillo de sus príncipes, porque el acuerdo acerca de Daniel no se mudase.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "den_entrance_object",
+    "option_category": "object",
+    "false_mutation": null,
+    "blank_span": "piedra",
+    "significance": "Identifica el objeto sobre el que se aplicaron los sellos oficiales.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-041",
+    "source_unit_id": "PR44-P057-P001-S001",
+    "fact_id": "PR44-P057-P001-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Al llegar apresuradamente al foso, Darío llamó a Daniel con voz ____.",
+    "options": [
+      "triunfante",
+      "triste",
+      "irónica",
+      "indiferente"
+    ],
+    "correct_option": 1,
+    "correct_answer": "triste",
+    "accepted_answers": [
+      "triste",
+      "voz triste"
+    ],
+    "explanation": "La voz triste del rey reveló que aún temía por Daniel.",
+    "why_distractors_fail": {
+      "triunfante": "Todavía no conocía el resultado.",
+      "irónica": "Su llamado era angustiado y sincero.",
+      "indiferente": "Había pasado la noche sin dormir por preocupación."
+    },
+    "source_ref": "PR44, p. 57, párrafo 1",
+    "source_quote": "Temprano por la mañana siguiente, el rey Darío se dirigió apresuradamente al foso, “llamó a voces a Daniel con voz triste: y ... dijo: ...",
+    "evidence_excerpt": "Temprano por la mañana siguiente, el rey Darío se dirigió apresuradamente al foso, “llamó a voces a Daniel con voz triste: y ... dijo: ...",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "king_call_tone",
+    "option_category": "tone",
+    "false_mutation": null,
+    "blank_span": "triste",
+    "significance": "Conserva el tono emocional de la pregunta de Darío.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-042",
+    "source_unit_id": "PR44-P057-P002-S002",
+    "fact_id": "PR44-P057-P002-S002-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Dios envió su ____ para cerrar la boca de los leones.",
+    "options": [
+      "profeta",
+      "ejército",
+      "ángel",
+      "príncipe"
+    ],
+    "correct_option": 2,
+    "correct_answer": "ángel",
+    "accepted_answers": [
+      "ángel",
+      "su ángel"
+    ],
+    "explanation": "Daniel atribuyó directamente su protección al ángel enviado por Dios.",
+    "why_distractors_fail": {
+      "profeta": "Daniel era el profeta protegido, no el agente enviado.",
+      "ejército": "La liberación no fue militar.",
+      "príncipe": "No es el mensajero identificado en su respuesta."
+    },
+    "source_ref": "PR44, p. 57, párrafo 2",
+    "source_quote": "El Dios mío envió su ángel, el cual cerró la boca de los leones, para que no me hiciesen mal: porque delante de él se halló en mí justicia: y aun delante de ti, oh rey, yo no he hecho lo que no debiese.",
+    "evidence_excerpt": "El Dios mío envió su ángel, el cual cerró la boca de los leones, para que no me hiciesen mal: porque delante de él se halló en mí justicia: y aun delante de ti, oh rey, yo no he hecho lo que no debiese.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "divine_rescue_agent",
+    "option_category": "agent",
+    "false_mutation": null,
+    "blank_span": "ángel",
+    "significance": "Identifica al agente de la intervención divina dentro del foso.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-043",
+    "source_unit_id": "PR44-P057-P003-S001",
+    "fact_id": "PR44-P057-P003-S001-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Al sacar a Daniel del foso, no se halló en él ninguna ____.",
+    "options": [
+      "respuesta",
+      "duda",
+      "autoridad",
+      "lesión"
+    ],
+    "correct_option": 3,
+    "correct_answer": "lesión",
+    "accepted_answers": [
+      "lesión",
+      "ninguna lesión"
+    ],
+    "explanation": "Daniel salió sin lesión porque había creído en su Dios.",
+    "why_distractors_fail": {
+      "respuesta": "Daniel ya había respondido al rey.",
+      "duda": "El resultado físico se expresa con «lesión».",
+      "autoridad": "Su autoridad no era una herida corporal."
+    },
+    "source_ref": "PR44, p. 57, párrafo 3",
+    "source_quote": "“Entonces se alegró el rey en gran manera a causa de él, y mandó sacar a Daniel del foso: y fué Daniel sacado del foso, y ninguna lesión se halló en él, porque creyó en su Dios.",
+    "evidence_excerpt": "“Entonces se alegró el rey en gran manera a causa de él, y mandó sacar a Daniel del foso: y fué Daniel sacado del foso, y ninguna lesión se halló en él, porque creyó en su Dios.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "rescue_physical_outcome",
+    "option_category": "condition",
+    "false_mutation": null,
+    "blank_span": "lesión",
+    "significance": "Fija el resultado corporal comprobable de la liberación.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-044",
+    "source_unit_id": "PR44-P056-P006-S005",
+    "fact_id": "PR44-P056-P006-S005-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Aunque Darío había promulgado el decreto precipitadamente, este era inalterable y debía cumplirse.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La precipitación de la firma no anuló la fuerza legal del decreto.",
+    "why_distractors_fail": {
+      "Falso": "El pasaje afirma tanto su carácter inalterable como la obligación de cumplirlo."
+    },
+    "source_ref": "PR44, p. 56, párrafo 6",
+    "source_quote": "Aunque promulgado con precipitación, el decreto era inalterable y debía cumplirse.",
+    "evidence_excerpt": "Aunque promulgado con precipitación, el decreto era inalterable y debía cumplirse.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "hasty_immutable_decree",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-045",
+    "source_unit_id": "PR44-P056-P008-S001",
+    "fact_id": "PR44-P056-P008-S001-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Dios impidió que los enemigos de Daniel llegaran a echarlo al foso de los leones.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Dios no evitó que Daniel fuera arrojado; intervino en el desenlace dentro del foso.",
+    "why_distractors_fail": {
+      "Verdadero": "Cambia la permisión de la prueba por prevención del acto."
+    },
+    "source_ref": "PR44, p. 56, párrafo 8",
+    "source_quote": "Dios no impidió a los enemigos de Daniel que le echasen al foso de los leones.",
+    "evidence_excerpt": "Dios no impidió a los enemigos de Daniel que le echasen al foso de los leones.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "trial_not_prevented",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "divine_action"
+      ],
+      "local": true,
+      "original": "Dios no impidió que lo echasen al foso",
+      "replacement": "Dios impidió que lo echaran al foso"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-046",
+    "source_unit_id": "PR44-P057-P002-S002",
+    "fact_id": "PR44-P057-P002-S002-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Daniel explicó que fue protegido porque se halló justicia en él delante de Dios y no había obrado indebidamente contra el rey.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Su respuesta unió integridad ante Dios e inocencia frente a Darío.",
+    "why_distractors_fail": {
+      "Falso": "Ambas razones aparecen en la explicación dada por Daniel."
+    },
+    "source_ref": "PR44, p. 57, párrafo 2",
+    "source_quote": "El Dios mío envió su ángel, el cual cerró la boca de los leones, para que no me hiciesen mal: porque delante de él se halló en mí justicia: y aun delante de ti, oh rey, yo no he hecho lo que no debiese.",
+    "evidence_excerpt": "El Dios mío envió su ángel, el cual cerró la boca de los leones, para que no me hiciesen mal: porque delante de él se halló en mí justicia: y aun delante de ti, oh rey, yo no he hecho lo que no debiese.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "rescue_integrity_basis",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-047",
+    "source_unit_id": "PR44-P057-P004-S001",
+    "fact_id": "PR44-P057-P004-S001-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "El rey castigó únicamente a los acusadores de Daniel y ordenó que sus familias quedaran fuera del foso.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Los acusadores fueron arrojados junto con sus hijos y sus mujeres.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación excluye a familiares que el relato incluye expresamente."
+    },
+    "source_ref": "PR44, p. 57, párrafo 4",
+    "source_quote": "“Y mandándolo el rey fueron traídos aquellos hombres que habían acusado a Daniel, y fueron echados en el foso de los leones, ellos, sus hijos, y sus mujeres; y aun no habían llegado al suelo del foso, cuando los leones se apoderaron de ellos, y quebrantaron todos sus huesos.”",
+    "evidence_excerpt": "“Y mandándolo el rey fueron traídos aquellos hombres que habían acusado a Daniel, y fueron echados en el foso de los leones, ellos, sus hijos, y sus mujeres; y aun no habían llegado al suelo del foso, cuando los leones se apoderaron de ellos, y quebrantaron todos sus huesos.”",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "accusers_punishment_scope",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "affected_group"
+      ],
+      "local": true,
+      "original": "fueron echados ellos, sus hijos y sus mujeres",
+      "replacement": "únicamente los acusadores; sus familias quedaron fuera"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-048",
+    "source_unit_id": "PR44-P057-P005-S002",
+    "fact_id": "PR44-P057-P005-S002-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Darío proclamó que el Dios de Daniel es viviente y permanente, que su reino no será destruido y que su dominio llega hasta el fin.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La ordenanza real reunió la permanencia de Dios, de su reino y de su señorío.",
+    "why_distractors_fail": {
+      "Falso": "Los tres elementos pertenecen a la proclamación de Darío."
+    },
+    "source_ref": "PR44, p. 57, párrafo 5",
+    "source_quote": "“El rey Darío escribió a todos los pueblos, naciones, y lenguas, que habitan en toda la tierra: Paz os sea multiplicada: De parte mía es puesta ordenanza, que en todo el señorío de mi reino todos teman y tiemblen de la presencia del Dios de Daniel: porque él es el Dios viviente y permanente por todos los siglos, y su reino tal que no será deshecho, y su señorío hasta el fin.",
+    "evidence_excerpt": "“El rey Darío escribió a todos los pueblos, naciones, y lenguas, que habitan en toda la tierra: Paz os sea multiplicada: De parte mía es puesta ordenanza, que en todo el señorío de mi reino todos teman y tiemblen de la presencia del Dios de Daniel: porque él es el Dios viviente y permanente por todos los siglos, y su reino tal que no será deshecho, y su señorío hasta el fin.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "darius_divine_kingship_proclamation",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-049",
+    "source_unit_id": "PR44-P057-P005-S003",
+    "fact_id": "PR44-P057-P005-S003-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "La proclamación de Darío atribuyó a Dios salvación, liberación, señales y maravillas tanto en el cielo como en la tierra.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Darío describió a Dios como quien salva, libra y obra señales y maravillas en ambos ámbitos.",
+    "why_distractors_fail": {
+      "Falso": "La enumeración reproduce las acciones y los ámbitos de la proclamación."
+    },
+    "source_ref": "PR44, p. 57, párrafo 5",
+    "source_quote": "Que salva y libra, y hace señales y maravillas en el cielo y en la tierra; el cual libró a Daniel del poder de los leones.”",
+    "evidence_excerpt": "Que salva y libra, y hace señales y maravillas en el cielo y en la tierra; el cual libró a Daniel del poder de los leones.”",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "divine_actions_proclamation",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-WAVE-050",
+    "source_unit_id": "PR44-P057-P006-S002",
+    "fact_id": "PR44-P057-P006-S002-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Daniel prosperó durante los reinados de Darío y de Ciro el Persa.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El cierre registra su prosperidad bajo ambos gobernantes.",
+    "why_distractors_fail": {
+      "Falso": "Darío y Ciro son los dos reinados mencionados."
+    },
+    "source_ref": "PR44, p. 57, párrafo 6",
+    "source_quote": "“Daniel fué prosperado durante el reinado de Darío, y durante el reinado de Ciro, Persa.",
+    "evidence_excerpt": "“Daniel fué prosperado durante el reinado de Darío, y durante el reinado de Ciro, Persa.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "daniel_prosperity_reigns",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]
