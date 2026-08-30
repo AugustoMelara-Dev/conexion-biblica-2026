@@ -3184,5 +3184,1081 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
     }
+  },
+  {
+    "id": "DAN2-V11-WAVE-026",
+    "source_unit_id": "DAN2-V024",
+    "fact_id": "DAN2-V024-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué instrucciones dio Daniel a Arioc después de recibir la revelación?",
+    "options": [
+      "Que no matara a los sabios, lo llevara ante el rey y le permitiera presentar la interpretación",
+      "Que reuniera a los magos, cancelara la audiencia y ocultara el sueño",
+      "Que ejecutara primero a los caldeos y luego buscara a sus compañeros",
+      "Que abandonara Babilonia y entregara el edicto a Nabucodonosor"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Que no matara a los sabios, lo llevara ante el rey y le permitiera presentar la interpretación",
+    "accepted_answers": [
+      "Que no matara a los sabios, lo llevara ante el rey y le permitiera presentar la interpretación"
+    ],
+    "explanation": "Daniel buscó detener la matanza y comparecer ante el rey para resolver la crisis.",
+    "why_distractors_fail": {
+      "Que reuniera a los magos, cancelara la audiencia y ocultara el sueño": "Su objetivo era presentarse ante el rey, no cancelar la respuesta.",
+      "Que ejecutara primero a los caldeos y luego buscara a sus compañeros": "Daniel pidió que no matara a los sabios.",
+      "Que abandonara Babilonia y entregara el edicto a Nabucodonosor": "No propuso huida ni una simple entrega documental."
+    },
+    "source_ref": "Daniel 2:24",
+    "source_quote": "Después de esto fue Daniel a Arioc, al cual el rey había puesto para matar a los sabios de Babilonia, y le dijo: —No mates a los sabios de Babilonia; llévame a la presencia del rey, y yo le daré la interpretación.",
+    "evidence_excerpt": "Después de esto fue Daniel a Arioc, al cual el rey había puesto para matar a los sabios de Babilonia, y le dijo: —No mates a los sabios de Babilonia; llévame a la presencia del rey, y yo le daré la interpretación.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "revelation_to_arioc_instructions",
+    "option_category": "instruction_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-027",
+    "source_unit_id": "DAN2-V025",
+    "fact_id": "DAN2-V025-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "speaker_addressee",
+    "question": "¿Cómo presentó Arioc su intervención cuando llevó rápidamente a Daniel ante Nabucodonosor?",
+    "options": [
+      "Reconoció que Daniel lo había buscado y que Dios le reveló el misterio",
+      "Afirmó haber hallado entre los deportados de Judá a quien daría la interpretación",
+      "Dijo que los caldeos habían elegido a Daniel como portavoz",
+      "Anunció que había recordado personalmente el sueño del rey"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Afirmó haber hallado entre los deportados de Judá a quien daría la interpretación",
+    "accepted_answers": [
+      "Afirmó haber hallado entre los deportados de Judá a quien daría la interpretación"
+    ],
+    "explanation": "Arioc describió a Daniel por su origen y presentó el hallazgo como propio.",
+    "why_distractors_fail": {
+      "Reconoció que Daniel lo había buscado y que Dios le reveló el misterio": "No fue así como formuló su anuncio.",
+      "Dijo que los caldeos habían elegido a Daniel como portavoz": "Los caldeos no lo designaron.",
+      "Anunció que había recordado personalmente el sueño del rey": "Arioc no afirmó conocer el sueño."
+    },
+    "source_ref": "Daniel 2:25",
+    "source_quote": "Entonces Arioc llevó prontamente a Daniel ante el rey, y le dijo así: —He hallado un hombre de los deportados de Judá, el cual dará al rey la interpretación.",
+    "evidence_excerpt": "Entonces Arioc llevó prontamente a Daniel ante el rey, y le dijo así: —He hallado un hombre de los deportados de Judá, el cual dará al rey la interpretación.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "arioc_discovery_claim",
+    "option_category": "presentation_claim",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-028",
+    "source_unit_id": "DAN2-V026",
+    "fact_id": "DAN2-V026-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué doble capacidad quiso confirmar el rey al interrogar a Daniel?",
+    "options": [
+      "Que pudiera leer arameo y dirigir la guardia",
+      "Que pudiera identificar a los caldeos y revocar el edicto",
+      "Que pudiera revelar tanto el sueño visto como su interpretación",
+      "Que pudiera explicar únicamente la imagen sin conocer el sueño"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Que pudiera revelar tanto el sueño visto como su interpretación",
+    "accepted_answers": [
+      "Que pudiera revelar tanto el sueño visto como su interpretación"
+    ],
+    "explanation": "La pregunta de Nabucodonosor conservó las dos exigencias que los sabios no habían podido satisfacer.",
+    "why_distractors_fail": {
+      "Que pudiera leer arameo y dirigir la guardia": "No eran las capacidades sometidas a prueba.",
+      "Que pudiera identificar a los caldeos y revocar el edicto": "Eso no resolvía el misterio.",
+      "Que pudiera explicar únicamente la imagen sin conocer el sueño": "El rey exigía sueño e interpretación."
+    },
+    "source_ref": "Daniel 2:26",
+    "source_quote": "Respondió el rey y dijo a Daniel, al cual llamaban Beltsasar: —¿Podrás tú hacerme conocer el sueño que vi, y su interpretación?",
+    "evidence_excerpt": "Respondió el rey y dijo a Daniel, al cual llamaban Beltsasar: —¿Podrás tú hacerme conocer el sueño que vi, y su interpretación?",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "king_double_demand_to_daniel",
+    "option_category": "capability_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-029",
+    "source_unit_id": "DAN2-V030",
+    "fact_id": "DAN2-V030-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué dos propósitos atribuyó Daniel a la revelación recibida?",
+    "options": [
+      "Demostrar que Daniel era más sabio y asegurarle riquezas",
+      "Salvar únicamente a Arioc y reemplazar a los caldeos",
+      "Revelar el futuro a Daniel y ocultarlo para siempre al rey",
+      "Dar al rey la interpretación y hacerle entender los pensamientos de su corazón"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Dar al rey la interpretación y hacerle entender los pensamientos de su corazón",
+    "accepted_answers": [
+      "Dar al rey la interpretación y hacerle entender los pensamientos de su corazón"
+    ],
+    "explanation": "Daniel negó superioridad personal y orientó la revelación hacia la comprensión del rey.",
+    "why_distractors_fail": {
+      "Demostrar que Daniel era más sabio y asegurarle riquezas": "Daniel rechazó explícitamente esa explicación personal.",
+      "Salvar únicamente a Arioc y reemplazar a los caldeos": "La revelación no tenía ese propósito limitado.",
+      "Revelar el futuro a Daniel y ocultarlo para siempre al rey": "Debía comunicarse precisamente a Nabucodonosor."
+    },
+    "source_ref": "Daniel 2:30",
+    "source_quote": "Y a mí me ha sido revelado este misterio, no porque en mí haya más sabiduría que en los demás vivientes, sino para que se dé a conocer al rey la interpretación y para que entiendas los pensamientos de tu corazón.",
+    "evidence_excerpt": "Y a mí me ha sido revelado este misterio, no porque en mí haya más sabiduría que en los demás vivientes, sino para que se dé a conocer al rey la interpretación y para que entiendas los pensamientos de tu corazón.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "revelation_double_purpose",
+    "option_category": "purpose_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-030",
+    "source_unit_id": "DAN2-V031",
+    "fact_id": "DAN2-V031-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué descripción completa recibió la imagen que estaba delante del rey?",
+    "options": [
+      "Era grande, de gloria sublime, estaba en pie y tenía aspecto terrible",
+      "Era pequeña, opaca, estaba sentada y parecía inofensiva",
+      "Era de piedra uniforme y yacía quebrada desde el inicio",
+      "Era invisible para el rey y solo Daniel pudo contemplarla"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Era grande, de gloria sublime, estaba en pie y tenía aspecto terrible",
+    "accepted_answers": [
+      "Era grande, de gloria sublime, estaba en pie y tenía aspecto terrible"
+    ],
+    "explanation": "Tamaño, gloria, postura y aspecto intensificaban la impresión de la imagen.",
+    "why_distractors_fail": {
+      "Era pequeña, opaca, estaba sentada y parecía inofensiva": "Invierte los cuatro rasgos descritos.",
+      "Era de piedra uniforme y yacía quebrada desde el inicio": "La composición era metálica y la destrucción ocurrió después.",
+      "Era invisible para el rey y solo Daniel pudo contemplarla": "Nabucodonosor la vio en su sueño."
+    },
+    "source_ref": "Daniel 2:31",
+    "source_quote": "Tú, rey, veías en tu sueño una gran imagen. Esta imagen era muy grande y su gloria, muy sublime. Estaba en pie delante de ti y su aspecto era terrible.",
+    "evidence_excerpt": "Tú, rey, veías en tu sueño una gran imagen. Esta imagen era muy grande y su gloria, muy sublime. Estaba en pie delante de ti y su aspecto era terrible.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "statue_full_appearance",
+    "option_category": "description_set",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-031",
+    "source_unit_id": "DAN2-V032",
+    "fact_id": "DAN2-V032-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué correspondencia describe correctamente las tres secciones superiores de la imagen?",
+    "options": [
+      "Cabeza de plata; pecho de oro; brazos y muslos de hierro",
+      "Cabeza de oro; pecho y brazos de plata; vientre y muslos de bronce",
+      "Cabeza de bronce; pecho y brazos de barro; vientre de oro",
+      "Cabeza de hierro; pecho y brazos de bronce; vientre de plata"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Cabeza de oro; pecho y brazos de plata; vientre y muslos de bronce",
+    "accepted_answers": [
+      "Cabeza de oro; pecho y brazos de plata; vientre y muslos de bronce"
+    ],
+    "explanation": "Los metales descienden de oro a plata y bronce en esas partes del cuerpo.",
+    "why_distractors_fail": {
+      "Cabeza de plata; pecho de oro; brazos y muslos de hierro": "Intercambia materiales y partes.",
+      "Cabeza de bronce; pecho y brazos de barro; vientre de oro": "El barro aparece en los pies, no en el pecho.",
+      "Cabeza de hierro; pecho y brazos de bronce; vientre de plata": "Ninguna de las tres correspondencias es correcta."
+    },
+    "source_ref": "Daniel 2:32",
+    "source_quote": "La cabeza de esta imagen era de oro fino; su pecho y sus brazos, de plata; su vientre y sus muslos, de bronce;",
+    "evidence_excerpt": "La cabeza de esta imagen era de oro fino; su pecho y sus brazos, de plata; su vientre y sus muslos, de bronce;",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "upper_statue_material_mapping",
+    "option_category": "body_material_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-032",
+    "source_unit_id": "DAN2-V034",
+    "fact_id": "DAN2-V034-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Dónde golpeó la piedra a la imagen y qué produjo inicialmente?",
+    "options": [
+      "Golpeó la cabeza de oro y la convirtió en plata",
+      "Golpeó el pecho y dejó intactos todos los metales",
+      "Golpeó los pies de hierro y barro y los desmenuzó",
+      "Golpeó las piernas y se deshizo sin causar daño"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Golpeó los pies de hierro y barro y los desmenuzó",
+    "accepted_answers": [
+      "Golpeó los pies de hierro y barro y los desmenuzó"
+    ],
+    "explanation": "El impacto comenzó en los pies mezclados y provocó su trituración.",
+    "why_distractors_fail": {
+      "Golpeó la cabeza de oro y la convirtió en plata": "El blanco fueron los pies y no hubo transformación metálica.",
+      "Golpeó el pecho y dejó intactos todos los metales": "La imagen terminó completamente destruida.",
+      "Golpeó las piernas y se deshizo sin causar daño": "La piedra permaneció y creció."
+    },
+    "source_ref": "Daniel 2:34",
+    "source_quote": "Estabas mirando, hasta que una piedra se desprendió sin que la cortara mano alguna, e hirió a la imagen en sus pies de hierro y de barro cocido, y los desmenuzó.",
+    "evidence_excerpt": "Estabas mirando, hasta que una piedra se desprendió sin que la cortara mano alguna, e hirió a la imagen en sus pies de hierro y de barro cocido, y los desmenuzó.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "stone_impact_target_effect",
+    "option_category": "impact_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-033",
+    "source_unit_id": "DAN2-V035",
+    "fact_id": "DAN2-V035-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué sucedió con los materiales desmenuzados antes de que la piedra llenara la tierra?",
+    "options": [
+      "Se fundieron y formaron una segunda imagen",
+      "Fueron recogidos por el rey y guardados en el tesoro",
+      "Se hundieron bajo el monte y reaparecieron intactos",
+      "Quedaron como tamo, el viento se los llevó y no quedó rastro"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Quedaron como tamo, el viento se los llevó y no quedó rastro",
+    "accepted_answers": [
+      "Quedaron como tamo, el viento se los llevó y no quedó rastro"
+    ],
+    "explanation": "La desaparición total de los materiales precede al crecimiento de la piedra en gran monte.",
+    "why_distractors_fail": {
+      "Se fundieron y formaron una segunda imagen": "No hubo reconstrucción de la estatua.",
+      "Fueron recogidos por el rey y guardados en el tesoro": "El viento eliminó todo rastro.",
+      "Se hundieron bajo el monte y reaparecieron intactos": "La destrucción fue definitiva."
+    },
+    "source_ref": "Daniel 2:35",
+    "source_quote": "Entonces fueron desmenuzados también el hierro, el barro cocido, el bronce, la plata y el oro, y fueron como tamo de las eras del verano, y se los llevó el viento sin que de ellos quedara rastro alguno. Pero la piedra que hirió a la imagen se hizo un gran monte que llenó toda la tierra.",
+    "evidence_excerpt": "Entonces fueron desmenuzados también el hierro, el barro cocido, el bronce, la plata y el oro, y fueron como tamo de las eras del verano, y se los llevó el viento sin que de ellos quedara rastro alguno. Pero la piedra que hirió a la imagen se hizo un gran monte que llenó toda la tierra.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "statue_debris_sequence",
+    "option_category": "destruction_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-034",
+    "source_unit_id": "DAN2-V037",
+    "fact_id": "DAN2-V037-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿En qué se basaba el título «rey de reyes» aplicado a Nabucodonosor?",
+    "options": [
+      "Dios le había dado reino, poder, fuerza y majestad",
+      "Había vencido a Dios y obtenido autoridad independiente",
+      "Los magos le entregaron sus conocimientos y sus riquezas",
+      "Daniel lo declaró dueño eterno de todos los reinos"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Dios le había dado reino, poder, fuerza y majestad",
+    "accepted_answers": [
+      "Dios le había dado reino, poder, fuerza y majestad"
+    ],
+    "explanation": "La autoridad real se presenta como recibida del Dios del cielo, no como autónoma.",
+    "why_distractors_fail": {
+      "Había vencido a Dios y obtenido autoridad independiente": "El poder procede de Dios.",
+      "Los magos le entregaron sus conocimientos y sus riquezas": "No fundamentan su soberanía.",
+      "Daniel lo declaró dueño eterno de todos los reinos": "Su reino formaba parte de una sucesión, no era eterno."
+    },
+    "source_ref": "Daniel 2:37",
+    "source_quote": "Tú, rey, eres rey de reyes; porque el Dios del cielo te ha dado reino, poder, fuerza y majestad.",
+    "evidence_excerpt": "Tú, rey, eres rey de reyes; porque el Dios del cielo te ha dado reino, poder, fuerza y majestad.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "king_of_kings_basis",
+    "option_category": "authority_basis",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-035",
+    "source_unit_id": "DAN2-V038",
+    "fact_id": "DAN2-V038-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué alcance tenía el dominio entregado al rey antes de identificarlo como la cabeza de oro?",
+    "options": [
+      "Se limitaba a los habitantes de la ciudad de Babilonia",
+      "Incluía seres humanos, bestias del campo y aves del cielo dondequiera que habitaran",
+      "Incluía únicamente a los ejércitos y a los magos reales",
+      "Abarcaba solo a Judá y los utensilios del templo"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Incluía seres humanos, bestias del campo y aves del cielo dondequiera que habitaran",
+    "accepted_answers": [
+      "Incluía seres humanos, bestias del campo y aves del cielo dondequiera que habitaran"
+    ],
+    "explanation": "Daniel describió un dominio amplio sobre personas y criaturas antes de aplicar el símbolo.",
+    "why_distractors_fail": {
+      "Se limitaba a los habitantes de la ciudad de Babilonia": "El alcance se formula de manera universal.",
+      "Incluía únicamente a los ejércitos y a los magos reales": "No se restringe a grupos oficiales.",
+      "Abarcaba solo a Judá y los utensilios del templo": "El dominio era mucho mayor."
+    },
+    "source_ref": "Daniel 2:38",
+    "source_quote": "Dondequiera que habitan hijos de hombres, bestias del campo y aves del cielo, él los ha entregado en tus manos, y te ha dado el dominio sobre todo. Tú eres aquella cabeza de oro.",
+    "evidence_excerpt": "Dondequiera que habitan hijos de hombres, bestias del campo y aves del cielo, él los ha entregado en tus manos, y te ha dado el dominio sobre todo. Tú eres aquella cabeza de oro.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "nebuchadnezzar_domain_scope",
+    "option_category": "dominion_scope",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-036",
+    "source_unit_id": "DAN2-V025",
+    "fact_id": "DAN2-V025-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "narrative_order",
+    "question": "Arioc llevó ____ a Daniel ante el rey.",
+    "options": [
+      "prontamente",
+      "secretamente",
+      "tardíamente",
+      "forzosamente"
+    ],
+    "correct_option": 0,
+    "correct_answer": "prontamente",
+    "accepted_answers": [
+      "prontamente",
+      "rápidamente"
+    ],
+    "explanation": "Arioc actuó sin demora cuando Daniel afirmó tener la interpretación.",
+    "why_distractors_fail": {
+      "secretamente": "La audiencia fue oficial, no clandestina.",
+      "tardíamente": "Contradice la rapidez indicada.",
+      "forzosamente": "El texto destaca prontitud, no coerción."
+    },
+    "source_ref": "Daniel 2:25",
+    "source_quote": "Entonces Arioc llevó prontamente a Daniel ante el rey, y le dijo así: —He hallado un hombre de los deportados de Judá, el cual dará al rey la interpretación.",
+    "evidence_excerpt": "Entonces Arioc llevó prontamente a Daniel ante el rey, y le dijo así: —He hallado un hombre de los deportados de Judá, el cual dará al rey la interpretación.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "arioc_response_speed",
+    "option_category": "manner",
+    "false_mutation": null,
+    "blank_span": "prontamente",
+    "significance": "Fija la rapidez con que la solución llegó ante Nabucodonosor.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-037",
+    "source_unit_id": "DAN2-V029",
+    "fact_id": "DAN2-V029-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Los pensamientos sobre el futuro llegaron al rey mientras estaba en su ____.",
+    "options": [
+      "trono",
+      "cama",
+      "jardín",
+      "templo"
+    ],
+    "correct_option": 1,
+    "correct_answer": "cama",
+    "accepted_answers": [
+      "cama",
+      "su cama"
+    ],
+    "explanation": "Nabucodonosor pensaba en lo por venir mientras estaba acostado.",
+    "why_distractors_fail": {
+      "trono": "La escena se sitúa en el lugar de descanso.",
+      "jardín": "No aparece en este sueño.",
+      "templo": "No fue el escenario de sus pensamientos."
+    },
+    "source_ref": "Daniel 2:29",
+    "source_quote": "Estando tú, rey, en tu cama, te vinieron pensamientos por saber lo que había de suceder en lo por venir; y el que revela los misterios te mostró lo que ha de ser.",
+    "evidence_excerpt": "Estando tú, rey, en tu cama, te vinieron pensamientos por saber lo que había de suceder en lo por venir; y el que revela los misterios te mostró lo que ha de ser.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "future_thoughts_setting",
+    "option_category": "place",
+    "false_mutation": null,
+    "blank_span": "cama",
+    "significance": "Ubica el momento privado que precedió a la visión.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-038",
+    "source_unit_id": "DAN2-V031",
+    "fact_id": "DAN2-V031-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "La gloria de la gran imagen era muy ____.",
+    "options": [
+      "secreta",
+      "limitada",
+      "sublime",
+      "oscura"
+    ],
+    "correct_option": 2,
+    "correct_answer": "sublime",
+    "accepted_answers": [
+      "sublime",
+      "muy sublime"
+    ],
+    "explanation": "La gloria sublime formaba parte de la impresión imponente de la estatua.",
+    "why_distractors_fail": {
+      "secreta": "La visión era misteriosa, pero no es el calificativo de su gloria.",
+      "limitada": "Contradice su grandeza.",
+      "oscura": "No es el término usado."
+    },
+    "source_ref": "Daniel 2:31",
+    "source_quote": "Tú, rey, veías en tu sueño una gran imagen. Esta imagen era muy grande y su gloria, muy sublime. Estaba en pie delante de ti y su aspecto era terrible.",
+    "evidence_excerpt": "Tú, rey, veías en tu sueño una gran imagen. Esta imagen era muy grande y su gloria, muy sublime. Estaba en pie delante de ti y su aspecto era terrible.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "statue_glory_quality",
+    "option_category": "quality",
+    "false_mutation": null,
+    "blank_span": "sublime",
+    "significance": "Recupera un calificativo preciso de la apariencia de la imagen.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-039",
+    "source_unit_id": "DAN2-V033",
+    "fact_id": "DAN2-V033-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "Las piernas de la imagen eran de ____.",
+    "options": [
+      "bronce",
+      "plata",
+      "barro",
+      "hierro"
+    ],
+    "correct_option": 3,
+    "correct_answer": "hierro",
+    "accepted_answers": [
+      "hierro",
+      "de hierro"
+    ],
+    "explanation": "El hierro componía las piernas antes de mezclarse con barro en los pies.",
+    "why_distractors_fail": {
+      "bronce": "Correspondía al vientre y los muslos.",
+      "plata": "Formaba el pecho y los brazos.",
+      "barro": "Aparecía mezclado con hierro en los pies."
+    },
+    "source_ref": "Daniel 2:33",
+    "source_quote": "sus piernas, de hierro; sus pies, en parte de hierro y en parte de barro cocido.",
+    "evidence_excerpt": "sus piernas, de hierro; sus pies, en parte de hierro y en parte de barro cocido.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "statue_legs_material",
+    "option_category": "material",
+    "false_mutation": null,
+    "blank_span": "hierro",
+    "significance": "Completa una parte no cubierta por la pregunta heredada sobre los pies.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-040",
+    "source_unit_id": "DAN2-V035",
+    "fact_id": "DAN2-V035-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "symbol_interpretation",
+    "question": "Los materiales desmenuzados quedaron como ____ de las eras del verano.",
+    "options": [
+      "tamo",
+      "piedra",
+      "ceniza",
+      "polvo"
+    ],
+    "correct_option": 0,
+    "correct_answer": "tamo",
+    "accepted_answers": [
+      "tamo",
+      "como tamo"
+    ],
+    "explanation": "La comparación con el tamo comunica ligereza y desaparición bajo el viento.",
+    "why_distractors_fail": {
+      "piedra": "La piedra fue el agente del golpe.",
+      "ceniza": "No es la imagen agrícola utilizada.",
+      "polvo": "Aunque sugiere destrucción, no es la comparación textual."
+    },
+    "source_ref": "Daniel 2:35",
+    "source_quote": "Entonces fueron desmenuzados también el hierro, el barro cocido, el bronce, la plata y el oro, y fueron como tamo de las eras del verano, y se los llevó el viento sin que de ellos quedara rastro alguno. Pero la piedra que hirió a la imagen se hizo un gran monte que llenó toda la tierra.",
+    "evidence_excerpt": "Entonces fueron desmenuzados también el hierro, el barro cocido, el bronce, la plata y el oro, y fueron como tamo de las eras del verano, y se los llevó el viento sin que de ellos quedara rastro alguno. Pero la piedra que hirió a la imagen se hizo un gran monte que llenó toda la tierra.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "kingdoms_chaff_image",
+    "option_category": "image",
+    "false_mutation": null,
+    "blank_span": "tamo",
+    "significance": "Identifica la comparación que explica la dispersión total de la estatua.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-041",
+    "source_unit_id": "DAN2-V045",
+    "fact_id": "DAN2-V045-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "La piedra desmenuzó el hierro, el bronce, el barro, la plata y el ____.",
+    "options": [
+      "cobre",
+      "oro",
+      "estaño",
+      "mármol"
+    ],
+    "correct_option": 1,
+    "correct_answer": "oro",
+    "accepted_answers": [
+      "oro",
+      "el oro"
+    ],
+    "explanation": "La recapitulación menciona los cinco materiales destruidos por la piedra.",
+    "why_distractors_fail": {
+      "cobre": "No completa la enumeración de Daniel.",
+      "estaño": "No forma parte de la estatua descrita.",
+      "mármol": "La imagen no contenía ese material."
+    },
+    "source_ref": "Daniel 2:45",
+    "source_quote": "de la manera que viste que del monte se desprendió una piedra sin que la cortara mano alguna, la cual desmenuzó el hierro, el bronce, el barro, la plata y el oro. El gran Dios ha mostrado al rey lo que ha de acontecer en lo por venir; y el sueño es verdadero, y fiel su interpretación.",
+    "evidence_excerpt": "de la manera que viste que del monte se desprendió una piedra sin que la cortara mano alguna, la cual desmenuzó el hierro, el bronce, el barro, la plata y el oro. El gran Dios ha mostrado al rey lo que ha de acontecer en lo por venir; y el sueño es verdadero, y fiel su interpretación.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "stone_crushed_materials",
+    "option_category": "material",
+    "false_mutation": null,
+    "blank_span": "oro",
+    "significance": "Completa la enumeración final que reúne todas las partes de la imagen destruidas.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-042",
+    "source_unit_id": "DAN2-V043",
+    "fact_id": "DAN2-V043-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "El hierro y el barro representarían intentos de mezcla mediante alianzas ____.",
+    "options": [
+      "militares",
+      "celestiales",
+      "humanas",
+      "comerciales"
+    ],
+    "correct_option": 2,
+    "correct_answer": "humanas",
+    "accepted_answers": [
+      "humanas",
+      "alianzas humanas"
+    ],
+    "explanation": "Las alianzas humanas intentarían producir una unión que no llegaría a consolidarse.",
+    "why_distractors_fail": {
+      "militares": "El texto no limita la mezcla a pactos bélicos.",
+      "celestiales": "La iniciativa descrita es humana.",
+      "comerciales": "Tampoco es el calificativo utilizado."
+    },
+    "source_ref": "Daniel 2:43",
+    "source_quote": "Así como viste el hierro mezclado con barro, así se mezclarán por medio de alianzas humanas; pero no se unirán el uno con el otro, como el hierro no se mezcla con el barro.",
+    "evidence_excerpt": "Así como viste el hierro mezclado con barro, así se mezclarán por medio de alianzas humanas; pero no se unirán el uno con el otro, como el hierro no se mezcla con el barro.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "iron_clay_alliance_type",
+    "option_category": "alliance_type",
+    "false_mutation": null,
+    "blank_span": "humanas",
+    "significance": "Precisa el mecanismo de unión fallida.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-043",
+    "source_unit_id": "DAN2-V046",
+    "fact_id": "DAN2-V046-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Además de presentes, Nabucodonosor mandó ofrecer a Daniel ____.",
+    "options": [
+      "vino",
+      "armas",
+      "tributos",
+      "incienso"
+    ],
+    "correct_option": 3,
+    "correct_answer": "incienso",
+    "accepted_answers": [
+      "incienso",
+      "presentes e incienso"
+    ],
+    "explanation": "La reacción del rey incluyó humillación, presentes e incienso.",
+    "why_distractors_fail": {
+      "vino": "No forma parte de la orden posterior a la interpretación.",
+      "armas": "No se ofreció equipo militar.",
+      "tributos": "Daniel recibió honores, pero aquí se nombra incienso."
+    },
+    "source_ref": "Daniel 2:46",
+    "source_quote": "Entonces el rey Nabucodonosor se postró sobre su rostro, se humilló ante Daniel, y mandó que le ofrecieran presentes e incienso.",
+    "evidence_excerpt": "Entonces el rey Nabucodonosor se postró sobre su rostro, se humilló ante Daniel, y mandó que le ofrecieran presentes e incienso.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "king_offering_to_daniel",
+    "option_category": "offering",
+    "false_mutation": null,
+    "blank_span": "incienso",
+    "significance": "Añade la segunda acción ordenada tras la postración del rey.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-044",
+    "source_unit_id": "DAN2-V039",
+    "fact_id": "DAN2-V039-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "comparison",
+    "question": "El reino que seguiría a Nabucodonosor sería superior al suyo.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Daniel describió al segundo reino como inferior al de Nabucodonosor.",
+    "why_distractors_fail": {
+      "Verdadero": "Cambia únicamente la relación de inferioridad por superioridad."
+    },
+    "source_ref": "Daniel 2:39",
+    "source_quote": "Después de ti se levantará otro reino, inferior al tuyo; y luego un tercer reino de bronce, el cual dominará sobre toda la tierra.",
+    "evidence_excerpt": "Después de ti se levantará otro reino, inferior al tuyo; y luego un tercer reino de bronce, el cual dominará sobre toda la tierra.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "second_kingdom_relative_rank",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "relative_status"
+      ],
+      "local": true,
+      "original": "otro reino, inferior al tuyo",
+      "replacement": "sería superior al suyo"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-045",
+    "source_unit_id": "DAN2-V041",
+    "fact_id": "DAN2-V041-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "comparison",
+    "question": "El reino dividido perdería por completo toda característica de la fuerza representada por el hierro.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Aunque dividido, conservaría algo de la fuerza del hierro.",
+    "why_distractors_fail": {
+      "Verdadero": "Elimina la fuerza residual que el texto mantiene dentro de la mezcla."
+    },
+    "source_ref": "Daniel 2:41",
+    "source_quote": "Lo que viste de los pies y los dedos, en parte de barro cocido de alfarero y en parte de hierro, será un reino dividido; pero habrá en él algo de la fuerza del hierro, así como viste el hierro mezclado con barro cocido.",
+    "evidence_excerpt": "Lo que viste de los pies y los dedos, en parte de barro cocido de alfarero y en parte de hierro, será un reino dividido; pero habrá en él algo de la fuerza del hierro, así como viste el hierro mezclado con barro cocido.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "divided_kingdom_retained_strength",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "retained_strength"
+      ],
+      "local": true,
+      "original": "habrá en él algo de la fuerza del hierro",
+      "replacement": "perdería por completo toda característica de la fuerza del hierro"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-046",
+    "source_unit_id": "DAN2-V044",
+    "fact_id": "DAN2-V044-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "El reino levantado por Dios sería finalmente entregado a otro pueblo.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Ese reino no sería dejado a otro pueblo y permanecería para siempre.",
+    "why_distractors_fail": {
+      "Verdadero": "Invierte una característica explícita del reino divino."
+    },
+    "source_ref": "Daniel 2:44",
+    "source_quote": "En los días de estos reyes, el Dios del cielo levantará un reino que no será jamás destruido, ni será el reino dejado a otro pueblo; desmenuzará y consumirá a todos estos reinos, pero él permanecerá para siempre,",
+    "evidence_excerpt": "En los días de estos reyes, el Dios del cielo levantará un reino que no será jamás destruido, ni será el reino dejado a otro pueblo; desmenuzará y consumirá a todos estos reinos, pero él permanecerá para siempre,",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "divine_kingdom_nontransfer",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "transferability"
+      ],
+      "local": true,
+      "original": "ni será el reino dejado a otro pueblo",
+      "replacement": "sería finalmente entregado a otro pueblo"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-047",
+    "source_unit_id": "DAN2-V046",
+    "fact_id": "DAN2-V046-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Además de postrarse y humillarse, Nabucodonosor ordenó que ofrecieran a Daniel presentes e incienso.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La reacción real combinó gestos personales y una orden de ofrendas.",
+    "why_distractors_fail": {
+      "Falso": "Las cuatro acciones pertenecen al desenlace de la interpretación."
+    },
+    "source_ref": "Daniel 2:46",
+    "source_quote": "Entonces el rey Nabucodonosor se postró sobre su rostro, se humilló ante Daniel, y mandó que le ofrecieran presentes e incienso.",
+    "evidence_excerpt": "Entonces el rey Nabucodonosor se postró sobre su rostro, se humilló ante Daniel, y mandó que le ofrecieran presentes e incienso.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "king_full_response_to_daniel",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-048",
+    "source_unit_id": "DAN2-V047",
+    "fact_id": "DAN2-V047-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Nabucodonosor reconoció al Dios de Daniel como revelador de misterios porque Daniel había podido revelar el sueño.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El reconocimiento del rey relacionó el título divino con la revelación comprobada del misterio.",
+    "why_distractors_fail": {
+      "Falso": "La capacidad demostrada por Daniel fue la razón declarada del reconocimiento."
+    },
+    "source_ref": "Daniel 2:47",
+    "source_quote": "El rey habló a Daniel, y dijo: —Ciertamente el Dios vuestro es Dios de dioses, Señor de los reyes y el que revela los misterios, pues pudiste revelar este misterio.",
+    "evidence_excerpt": "El rey habló a Daniel, y dijo: —Ciertamente el Dios vuestro es Dios de dioses, Señor de los reyes y el que revela los misterios, pues pudiste revelar este misterio.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "king_confession_evidence",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-049",
+    "source_unit_id": "DAN2-V048",
+    "fact_id": "DAN2-V048-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "relationship",
+    "question": "Daniel fue nombrado gobernador de toda la provincia de Babilonia y jefe supremo de todos sus sabios.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El ascenso de Daniel incluyó autoridad territorial y liderazgo sobre los sabios.",
+    "why_distractors_fail": {
+      "Falso": "Ambos cargos fueron concedidos por el rey."
+    },
+    "source_ref": "Daniel 2:48",
+    "source_quote": "Entonces el rey engrandeció a Daniel, le dio muchos honores y grandes dones, y lo hizo gobernador de toda la provincia de Babilonia y jefe supremo de todos los sabios de Babilonia.",
+    "evidence_excerpt": "Entonces el rey engrandeció a Daniel, le dio muchos honores y grandes dones, y lo hizo gobernador de toda la provincia de Babilonia y jefe supremo de todos los sabios de Babilonia.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "daniel_dual_appointment",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN2-V11-WAVE-050",
+    "source_unit_id": "DAN2-V049",
+    "fact_id": "DAN2-V049-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "comparison",
+    "question": "Sadrac, Mesac y Abed-nego quedaron sobre los negocios provinciales, mientras Daniel permaneció en la corte del rey.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La petición de Daniel produjo una distribución distinta de responsabilidades entre él y sus compañeros.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación conserva tanto el cargo provincial de los tres como la ubicación cortesana de Daniel."
+    },
+    "source_ref": "Daniel 2:49",
+    "source_quote": "Daniel solicitó y obtuvo del rey que pusiera sobre los negocios de la provincia de Babilonia a Sadrac, Mesac y Abed-nego; y Daniel estaba en la corte del rey.",
+    "evidence_excerpt": "Daniel solicitó y obtuvo del rey que pusiera sobre los negocios de la provincia de Babilonia a Sadrac, Mesac y Abed-nego; y Daniel estaba en la corte del rey.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "companions_daniel_role_distribution",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]
