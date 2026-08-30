@@ -8,6 +8,7 @@ import unittest
 from pathlib import Path
 
 from scripts.lib.production_snapshot_v11 import import_production_snapshot
+from scripts.lib.source_packets_v11 import build_source_packets
 
 
 class ProductionSnapshotTests(unittest.TestCase):
@@ -152,6 +153,110 @@ class ProductionSnapshotTests(unittest.TestCase):
 
         self.assertIsNotNone(
             re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z", snapshot["fetched_at"])
+        )
+
+
+class SourcePacketTests(unittest.TestCase):
+    """Mantiene completa y contextual la fuente que leerá el autor."""
+
+    def test_builds_packets_for_useful_units_and_keeps_exclusions_separate(self) -> None:
+        inventory = {
+            "source_units": 3,
+            "units": [
+                {
+                    "source_unit_id": "DAN1-V001",
+                    "work": "Daniel",
+                    "chapter": 1,
+                    "reference": "Daniel 1:1",
+                    "full_text": "Primera unidad.",
+                    "characters": ["Daniel"],
+                    "actions": ["propuso"],
+                },
+                {
+                    "source_unit_id": "DAN1-V002",
+                    "work": "Daniel",
+                    "chapter": 1,
+                    "reference": "Daniel 1:2",
+                    "full_text": "Unidad sin valor autónomo.",
+                },
+                {
+                    "source_unit_id": "DAN1-V003",
+                    "work": "Daniel",
+                    "chapter": 1,
+                    "reference": "Daniel 1:3",
+                    "full_text": "Tercera unidad.",
+                },
+            ],
+        }
+        exclusions = {"DAN1-V002": "No contiene conocimiento evaluable."}
+
+        packets, excluded = build_source_packets(inventory, exclusions)
+
+        self.assertEqual(list(packets), ["DAN1"])
+        self.assertEqual(
+            [row["source_unit_id"] for row in packets["DAN1"]],
+            ["DAN1-V001", "DAN1-V003"],
+        )
+        self.assertEqual(packets["DAN1"][0]["context_after"], "Unidad sin valor autónomo.")
+        self.assertEqual(packets["DAN1"][1]["context_before"], "Unidad sin valor autónomo.")
+        self.assertIn("semantic_hints", packets["DAN1"][0])
+        self.assertEqual(
+            packets["DAN1"][0].get("semantic_hints"),
+            {"characters": ["Daniel"], "actions": ["propuso"]},
+        )
+        self.assertEqual(
+            excluded,
+            [
+                {
+                    "source_unit_id": "DAN1-V002",
+                    "source_ref": "Daniel 1:2",
+                    "reason": "No contiene conocimiento evaluable.",
+                }
+            ],
+        )
+
+    def test_checked_in_packets_cover_all_1024_useful_source_units(self) -> None:
+        packet_root = Path("content/competitive-v11/source-packets")
+        self.assertTrue(packet_root.exists(), "deben generarse los paquetes V11")
+        packet_files = sorted(packet_root.glob("*.json"))
+        unit_files = [path for path in packet_files if path.name != "excluded-units.json"]
+        self.assertEqual(len(unit_files), 18)
+
+        rows = [
+            row
+            for path in unit_files
+            for row in json.loads(path.read_text(encoding="utf-8"))["units"]
+        ]
+        self.assertEqual(len(rows), 1024)
+        self.assertEqual(len({row["source_unit_id"] for row in rows}), 1024)
+        self.assertTrue(all(row["source_quote"].strip() for row in rows))
+
+        excluded = json.loads(
+            (packet_root / "excluded-units.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(len(excluded["units"]), 7)
+
+    def test_preserves_the_parent_paragraph_for_a_pr_proposition(self) -> None:
+        inventory = {
+            "source_units": 1,
+            "units": [
+                {
+                    "source_unit_id": "PR39-P001-P001-S001",
+                    "work": "Profetas y Reyes",
+                    "chapter": 39,
+                    "reference": "PR39, p. 1, párrafo 1",
+                    "parent_text": "Párrafo completo con el sujeto y su explicación.",
+                    "exact_text": "Su explicación.",
+                }
+            ],
+        }
+
+        packets, _ = build_source_packets(inventory, {})
+
+        self.assertIn("parent_context", packets["PR39"][0])
+        self.assertEqual(
+            packets["PR39"][0].get("parent_context"),
+            "Párrafo completo con el sujeto y su explicación.",
         )
 
 
