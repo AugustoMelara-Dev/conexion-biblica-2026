@@ -1,0 +1,1484 @@
+[
+  {
+    "id": "DAN3-V11-WAVE2-001",
+    "source_unit_id": "DAN3-V001",
+    "fact_id": "DAN3-V001-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "Al comparar sesenta codos de altura con seis de anchura, ¿qué proporción tenía la estatua?",
+    "options": [
+      "Era diez veces más ancha que alta",
+      "Era diez veces más alta que ancha",
+      "Era seis veces más alta que ancha",
+      "Tenía iguales altura y anchura"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Era diez veces más alta que ancha",
+      "sesenta codos",
+      "seis codos"
+    ],
+    "explanation": "Dividir sesenta codos de altura entre seis de anchura da una proporción de diez a uno.",
+    "why_distractors_fail": {
+      "Era diez veces más ancha que alta": "Invierte los términos de la proporción.",
+      "Era seis veces más alta que ancha": "Confunde la anchura con el factor de proporción.",
+      "Tenía iguales altura y anchura": "Las medidas eran muy diferentes."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "statue_height_width_ratio",
+    "option_category": "dimension_ratio",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Exige calcular la relación entre medidas; no repite la recuperación literal de la descripción compuesta."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-002",
+    "source_unit_id": "DAN3-V002",
+    "fact_id": "DAN3-V002-V11-F04",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿Quién ordenó reunir a las autoridades provinciales para la dedicación de la estatua?",
+    "options": [
+      "El pregonero",
+      "Los caldeos",
+      "Nabucodonosor",
+      "Los consejeros"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Nabucodonosor",
+      "El rey Nabucodonosor"
+    ],
+    "explanation": "La convocatoria procedió directamente del rey Nabucodonosor.",
+    "why_distractors_fail": {
+      "El pregonero": "El pregonero anunció la orden de adoración, no emitió esta convocatoria.",
+      "Los caldeos": "Los caldeos aparecen después como acusadores.",
+      "Los consejeros": "Formaban parte del entorno real, pero no originaron la orden."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "dedication_convener",
+    "option_category": "person",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Aísla al autor de la convocatoria, distinto de la lista de convocados."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-003",
+    "source_unit_id": "DAN3-V003",
+    "fact_id": "DAN3-V003-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué hicieron las autoridades antes de permanecer delante de la estatua?",
+    "options": [
+      "Se retiraron de las provincias",
+      "Acusaron a los judíos",
+      "Calentaron el horno",
+      "Se reunieron para la dedicación"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Se reunieron para la dedicación"
+    ],
+    "explanation": "Primero se reunieron para la dedicación y luego quedaron delante de la estatua.",
+    "why_distractors_fail": {
+      "Se retiraron de las provincias": "El movimiento fue hacia la reunión, no lejos de ella.",
+      "Acusaron a los judíos": "Esa acción corresponde a algunos caldeos posteriormente.",
+      "Calentaron el horno": "El horno pertenece a una escena posterior."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "officials_gathering_before_stance",
+    "option_category": "prior_action",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa el paso previo a la postura ya cubierta."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-004",
+    "source_unit_id": "DAN3-V004",
+    "fact_id": "DAN3-V004-V11-F04",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿De qué manera hizo el pregonero el anuncio dirigido a pueblos, naciones y lenguas?",
+    "options": [
+      "En secreto",
+      "Por escrito",
+      "En alta voz",
+      "Mediante los consejeros"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "En alta voz",
+      "Alta voz"
+    ],
+    "explanation": "El pregonero comunicó públicamente la orden en alta voz.",
+    "why_distractors_fail": {
+      "En secreto": "El anuncio fue audible y público.",
+      "Por escrito": "La unidad describe una proclamación oral.",
+      "Mediante los consejeros": "El pregonero mismo anunciaba."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "proclamation_volume",
+    "option_category": "delivery_mode",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Aísla el modo del anuncio, no al pregonero ni a su audiencia."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-005",
+    "source_unit_id": "DAN3-V005",
+    "fact_id": "DAN3-V005-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "text_recall",
+    "question": "Después de nombrar seis instrumentos, ¿qué expresión impide entender la señal como una lista cerrada?",
+    "options": [
+      "La estatua de oro",
+      "El rey Nabucodonosor",
+      "Todo instrumento de música",
+      "Os postréis y adoréis"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Todo instrumento de música",
+      "y todo instrumento de música"
+    ],
+    "explanation": "La cláusula «todo instrumento de música» amplía la señal más allá de los seis instrumentos nombrados.",
+    "why_distractors_fail": {
+      "La estatua de oro": "Identifica el objeto de adoración, no amplía la lista musical.",
+      "El rey Nabucodonosor": "Identifica al autor de la estatua, no el alcance instrumental.",
+      "Os postréis y adoréis": "Expresa la respuesta ordenada, no la extensión de la señal."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "open_ended_instrument_clause",
+    "option_category": "textual_scope_marker",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Interpreta la función expansiva de la cláusula final, no solicita enumerar los instrumentos."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-006",
+    "source_unit_id": "DAN3-V007",
+    "fact_id": "DAN3-V007-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué correspondencia muestra que la reacción colectiva conservó el alcance universal de la señal?",
+    "options": [
+      "Solo los funcionarios oyeron, pero todos los pueblos adoraron",
+      "Todos los pueblos oyeron, y pueblos, naciones y lenguas adoraron",
+      "Todos los pueblos oyeron, pero únicamente los músicos adoraron",
+      "Pueblos, naciones y lenguas adoraron antes de oír la música"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Todos los pueblos oyeron, y pueblos, naciones y lenguas adoraron",
+      "todos los pueblos",
+      "todos los pueblos, naciones y lenguas"
+    ],
+    "explanation": "La señal alcanzó a todos los pueblos y la respuesta se atribuye al conjunto de pueblos, naciones y lenguas.",
+    "why_distractors_fail": {
+      "Solo los funcionarios oyeron, pero todos los pueblos adoraron": "La audición no se restringió a funcionarios.",
+      "Todos los pueblos oyeron, pero únicamente los músicos adoraron": "La adoración se atribuye a pueblos, naciones y lenguas, no solo a músicos.",
+      "Pueblos, naciones y lenguas adoraron antes de oír la música": "Invierte la secuencia entre señal y respuesta."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "universal_signal_response_correspondence",
+    "option_category": "scope_sequence_relation",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Compara el alcance de quienes oyeron con el de quienes respondieron, en vez de repetir la obediencia aislada."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-007",
+    "source_unit_id": "DAN3-V008",
+    "fact_id": "DAN3-V008-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué formulación conserva el alcance exacto del grupo que presentó la acusación maliciosa?",
+    "options": [
+      "Todos los habitantes de Babilonia",
+      "Los tres gobernadores principales",
+      "Una delegación de todos los pueblos",
+      "Algunos hombres caldeos"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Algunos hombres caldeos"
+    ],
+    "explanation": "El relato limita la acción a algunos hombres caldeos y no generaliza a todo el pueblo.",
+    "why_distractors_fail": {
+      "Todos los habitantes de Babilonia": "Amplía indebidamente el grupo a toda la ciudad.",
+      "Los tres gobernadores principales": "Cambia identidad, número y cargo.",
+      "Una delegación de todos los pueblos": "La acusación no se atribuye a una representación universal."
+    },
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "accusers_limited_quantifier",
+    "option_category": "quantified_group",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa el cuantificador que limita la acusación, no su carácter malicioso ni la identidad general caldea."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-008",
+    "source_unit_id": "DAN3-V010",
+    "fact_id": "DAN3-V010-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué dos elementos convierten el recordatorio de los caldeos en una premisa jurídica general?",
+    "options": [
+      "Que los consejeros habían dado una ley provincial de homenaje",
+      "Que los músicos habían dado una ley para excluir a los jueces",
+      "Que el propio rey había dado una ley general de adoración al sonar la música",
+      "Que cada gobernador había dictado una señal distinta de adoración"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Que el propio rey había dado una ley general de adoración al sonar la música",
+      "Tú, rey, has dado una ley",
+      "todo hombre"
+    ],
+    "explanation": "El recordatorio combina la autoría del rey con una obligación dirigida a todo hombre al sonar la música.",
+    "why_distractors_fail": {
+      "Que los consejeros habían dado una ley provincial de homenaje": "Cambia al legislador, reduce el alcance y altera la conducta exigida.",
+      "Que los músicos habían dado una ley para excluir a los jueces": "Los músicos daban la señal; no legislaron ni excluyeron a los jueces.",
+      "Que cada gobernador había dictado una señal distinta de adoración": "La ley procedía del rey y establecía una señal común."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "accusers_legal_premise",
+    "option_category": "argument_premise",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Relaciona autoría real y alcance general dentro de una sola unidad, no recupera un dato aislado."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-009",
+    "source_unit_id": "DAN3-V011",
+    "fact_id": "DAN3-V011-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué combinación de omisiones activaba la pena del horno?",
+    "options": [
+      "No reunirse ni escuchar",
+      "No tocar ni cantar",
+      "No acusar ni declarar",
+      "No postrarse ni adorar"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "No postrarse ni adorar"
+    ],
+    "explanation": "La sanción recaía sobre quien no se postrara y no adorara.",
+    "why_distractors_fail": {
+      "No reunirse ni escuchar": "La pena no se formula con esas omisiones.",
+      "No tocar ni cantar": "No todos tenían que ejecutar música.",
+      "No acusar ni declarar": "La acusación no era una obligación general."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "furnace_penalty_trigger",
+    "option_category": "omission_pair",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Aísla la condición doble de la sanción, mientras la pregunta heredada cubre el destino."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-010",
+    "source_unit_id": "DAN3-V012",
+    "fact_id": "DAN3-V012-V11-F04",
+    "family": "single_choice_direct",
+    "subtype": "relationship",
+    "question": "¿Sobre qué ámbito había puesto el rey a Sadrac, Mesac y Abed-nego?",
+    "options": [
+      "Los negocios de la provincia de Babilonia",
+      "La música de la ceremonia en Babilonia",
+      "La construcción de los hornos provinciales",
+      "Los ejércitos de las provincias del reino"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Los negocios de la provincia de Babilonia",
+      "Negocios de la provincia de Babilonia"
+    ],
+    "explanation": "Los tres habían recibido responsabilidad sobre los negocios de la provincia de Babilonia.",
+    "why_distractors_fail": {
+      "La música de la ceremonia en Babilonia": "No se les asignó función musical.",
+      "La construcción de los hornos provinciales": "No se vincula su cargo con la construcción de hornos.",
+      "Los ejércitos de las provincias del reino": "No eran jefes militares de las provincias."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "three_jews_administrative_domain",
+    "option_category": "responsibility_domain",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Precisa el ámbito del nombramiento, distinto del contraste acusatorio de la primera ola."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-011",
+    "source_unit_id": "DAN3-V013",
+    "fact_id": "DAN3-V013-V11-F04",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Con qué dos emociones mandó Nabucodonosor traer a los tres acusados?",
+    "options": [
+      "Temor y duda",
+      "Ira y enojo",
+      "Gozo y alivio",
+      "Tristeza y compasión"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Ira y enojo"
+    ],
+    "explanation": "La orden de comparecencia fue dada con ira y enojo.",
+    "why_distractors_fail": {
+      "Temor y duda": "Esas emociones no describen esta orden.",
+      "Gozo y alivio": "Contradice la reacción hostil del rey.",
+      "Tristeza y compasión": "El rey no mostró compasión en ese momento."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "king_emotions_at_summons",
+    "option_category": "emotion_pair",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Aísla el estado emocional, no la orden ni su ejecución inmediata."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-012",
+    "source_unit_id": "DAN3-V014",
+    "fact_id": "DAN3-V014-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "speaker_addressee",
+    "question": "¿A quiénes nombró individualmente Nabucodonosor al preguntar si la acusación era verdadera?",
+    "options": [
+      "Daniel, Hananías y Misael",
+      "Ciro, Darío y Belsasar",
+      "Sadrac, Mesac y Abed-nego",
+      "Ezequiel, Esdras y Nehemías"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Sadrac, Mesac y Abed-nego"
+    ],
+    "explanation": "El rey dirigió la pregunta por nombre a Sadrac, Mesac y Abed-nego.",
+    "why_distractors_fail": {
+      "Daniel, Hananías y Misael": "No es la tríada de nombres pronunciada por el rey.",
+      "Ciro, Darío y Belsasar": "Son otros nombres reales y no los tres acusados.",
+      "Ezequiel, Esdras y Nehemías": "Esos personajes no fueron los destinatarios del interrogatorio."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "king_charge_named_addressees",
+    "option_category": "person_group",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa los destinatarios directos de la pregunta, no la identidad previa de los acusados."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-013",
+    "source_unit_id": "DAN3-V015",
+    "fact_id": "DAN3-V015-V11-F04",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿En qué parte del horno amenazó el rey con echar a quienes no adoraran?",
+    "options": [
+      "Junto a la puerta",
+      "Sobre el horno",
+      "Detrás del horno",
+      "En medio del horno"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "En medio del horno",
+      "En medio de un horno de fuego ardiente"
+    ],
+    "explanation": "La amenaza especificó que serían echados en medio del horno.",
+    "why_distractors_fail": {
+      "Junto a la puerta": "La puerta aparece después cuando el rey se acerca.",
+      "Sobre el horno": "No es la ubicación indicada.",
+      "Detrás del horno": "Tampoco corresponde a la amenaza."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "ultimatum_furnace_position",
+    "option_category": "location_within_object",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Precisa la ubicación del castigo dentro del horno, distinta de su inmediatez y del desafío divino."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-014",
+    "source_unit_id": "DAN3-V016",
+    "fact_id": "DAN3-V016-V11-F04",
+    "family": "single_choice_direct",
+    "subtype": "speaker_addressee",
+    "question": "¿A quién dirigieron Sadrac, Mesac y Abed-nego su respuesta sobre no necesitar defenderse?",
+    "options": [
+      "Al pregonero",
+      "A los caldeos",
+      "A los hombres del ejército",
+      "A Nabucodonosor"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "A Nabucodonosor",
+      "Al rey Nabucodonosor"
+    ],
+    "explanation": "Los tres respondieron directamente al rey Nabucodonosor.",
+    "why_distractors_fail": {
+      "Al pregonero": "El pregonero no participa en esta confrontación.",
+      "A los caldeos": "Aunque los habían acusado, la respuesta fue al rey.",
+      "A los hombres del ejército": "Los ejecutores aparecen después."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "three_jews_reply_addressee",
+    "option_category": "addressee",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Aísla el destinatario de la respuesta, no su contenido ya cubierto."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-015",
+    "source_unit_id": "DAN3-V017",
+    "fact_id": "DAN3-V017-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Cómo describieron los tres su relación con el Dios capaz de librarlos?",
+    "options": [
+      "Como el Dios a quien servían",
+      "Como un dios que apenas conocían",
+      "Como el dios personal del rey",
+      "Como el dios de los músicos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Como el Dios a quien servían",
+      "El Dios a quien servían"
+    ],
+    "explanation": "Su confianza se refería al Dios a quien ellos servían.",
+    "why_distractors_fail": {
+      "Como un dios que apenas conocían": "La expresión denota servicio comprometido, no desconocimiento.",
+      "Como el dios personal del rey": "Lo identificaron por su propio servicio, no como deidad del rey.",
+      "Como el dios de los músicos": "La música no define aquí la relación con Dios."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "servants_relationship_to_deliverer",
+    "option_category": "relationship",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa la relación de servicio, distinta de los dos ámbitos de liberación."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-016",
+    "source_unit_id": "DAN3-V028",
+    "fact_id": "DAN3-V028-V11-F05",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "Gramaticalmente, ¿a quién atribuyó Nabucodonosor las dos acciones de enviar al ángel y librar a los siervos?",
+    "options": [
+      "A los tres siervos fieles",
+      "Al Dios de Sadrac, Mesac y Abed-nego",
+      "Al ángel que fue enviado",
+      "Al rey que presenció el resultado"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Al Dios de Sadrac, Mesac y Abed-nego",
+      "Dios de Sadrac, Mesac y Abed-nego",
+      "envió su ángel y libró a sus siervos"
+    ],
+    "explanation": "El sujeto de «envió» y «libró» es el Dios bendecido; el ángel funciona como objeto del envío.",
+    "why_distractors_fail": {
+      "A los tres siervos fieles": "Ellos son quienes fueron librados, no el sujeto de ambos verbos.",
+      "Al ángel que fue enviado": "El ángel es enviado por Dios; no es el sujeto gramatical de «envió».",
+      "Al rey que presenció el resultado": "Nabucodonosor reconoce la acción divina, no se atribuye la liberación."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "divine_subject_of_sending_and_delivering",
+    "option_category": "grammatical_agent",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Corrige el sujeto gramatical: Dios realiza ambas acciones y el ángel es el enviado."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-017",
+    "source_unit_id": "DAN3-V019",
+    "fact_id": "DAN3-V019-V11-F04",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "question": "¿Respecto de qué referencia debía calentarse siete veces más el horno?",
+    "options": [
+      "Respecto de lo acostumbrado",
+      "Respecto del horno del palacio",
+      "Respecto de la señal musical",
+      "Respecto de la temperatura del amanecer"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Respecto de lo acostumbrado",
+      "Lo acostumbrado"
+    ],
+    "explanation": "La intensidad se comparó con la forma acostumbrada de calentarlo.",
+    "why_distractors_fail": {
+      "Respecto del horno del palacio": "No se compara con otro horno.",
+      "Respecto de la señal musical": "La música no sirve como medida térmica.",
+      "Respecto de la temperatura del amanecer": "No se menciona esa referencia."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "furnace_heat_baseline",
+    "option_category": "comparison_baseline",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Aísla el punto de comparación, distinto del multiplicador y de la secuencia emocional."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-018",
+    "source_unit_id": "DAN3-V021",
+    "fact_id": "DAN3-V021-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué prenda aparece entre los mantos y los turbantes de los hombres atados?",
+    "options": [
+      "Calzados",
+      "Cinturones",
+      "Coronas",
+      "Armaduras"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Calzados",
+      "Sus calzados"
+    ],
+    "explanation": "La enumeración coloca los calzados después de los mantos y antes de los turbantes.",
+    "why_distractors_fail": {
+      "Cinturones": "No figura en la lista de prendas.",
+      "Coronas": "Los condenados no llevaban coronas en la enumeración.",
+      "Armaduras": "No se mencionan armaduras."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "bound_clothing_calzados",
+    "option_category": "garment",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa una prenda distinta del turbante cubierto por la primera ola."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-019",
+    "source_unit_id": "DAN3-V022",
+    "fact_id": "DAN3-V022-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué dos circunstancias explican que la llama alcanzara mortalmente a quienes alzaron a los tres jóvenes?",
+    "options": [
+      "La orden era apremiante y el horno estaba muy caliente",
+      "Los soldados eran vigorosos y los jóvenes estaban atados",
+      "Los jóvenes vestían sus prendas y cayeron dentro del horno",
+      "El rey estaba airado y los ejecutores alzaban a los jóvenes"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "La orden era apremiante y el horno estaba muy caliente"
+    ],
+    "explanation": "La urgencia de la orden y el calor extremo preceden a la muerte de los ejecutores.",
+    "why_distractors_fail": {
+      "Los soldados eran vigorosos y los jóvenes estaban atados": "Ambos detalles pertenecen a la ejecución, pero no son las causas locales que preceden a la llama mortal.",
+      "Los jóvenes vestían sus prendas y cayeron dentro del horno": "Describe a los condenados, no las condiciones que expusieron a los ejecutores.",
+      "El rey estaba airado y los ejecutores alzaban a los jóvenes": "La ira explica la orden y alzar identifica a las víctimas de la llama, pero falta el calor extremo y la urgencia."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "executioner_death_conditions",
+    "option_category": "cause_pair",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa las circunstancias causales, no la identidad de las víctimas."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-020",
+    "source_unit_id": "DAN3-V024",
+    "fact_id": "DAN3-V024-V11-F04",
+    "family": "single_choice_direct",
+    "subtype": "speaker_addressee",
+    "question": "¿A quién pidió Nabucodonosor confirmar cuántos hombres habían sido echados al fuego?",
+    "options": [
+      "A los músicos",
+      "A los tres judíos",
+      "A los pregoneros",
+      "A los de su consejo"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "A los de su consejo",
+      "A su consejo"
+    ],
+    "explanation": "El rey formuló la pregunta a los miembros de su consejo.",
+    "why_distractors_fail": {
+      "A los músicos": "Los músicos no contestan la pregunta.",
+      "A los tres judíos": "Ellos estaban dentro del horno.",
+      "A los pregoneros": "No son los interlocutores de esta escena."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "king_verification_addressees",
+    "option_category": "addressee",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Aísla a quienes confirmaron el dato, distinto de la reacción del rey y el número mismo."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-021",
+    "source_unit_id": "DAN3-V025",
+    "fact_id": "DAN3-V025-V11-F04",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Qué hacían los cuatro hombres que el rey veía sueltos dentro del fuego?",
+    "options": [
+      "Permanecían inmóviles",
+      "Caminaban libremente",
+      "Intentaban apagarlo",
+      "Pedían auxilio"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Caminaban libremente",
+      "Se paseaban",
+      "Paseaban en medio del fuego"
+    ],
+    "explanation": "El rey observó que los cuatro se paseaban en medio del fuego.",
+    "answer_support_term": "se pasean",
+    "why_distractors_fail": {
+      "Permanecían inmóviles": "La observación incluye movimiento.",
+      "Intentaban apagarlo": "No se describe ningún intento de apagar el fuego.",
+      "Pedían auxilio": "No se registra petición de ayuda; caminaban sin daño."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "four_men_activity_in_fire",
+    "option_category": "action",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa la actividad dentro del horno, distinta del número, libertad, daño o aspecto del cuarto."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-022",
+    "source_unit_id": "DAN3-V002",
+    "fact_id": "DAN3-V002-V11-F05",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Las autoridades provinciales fueron convocadas para la ____ de la estatua.",
+    "options": [
+      "destrucción",
+      "dedicación",
+      "venta",
+      "medición"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "dedicación",
+      "la dedicación"
+    ],
+    "explanation": "El propósito de la reunión era asistir a la dedicación de la estatua.",
+    "why_distractors_fail": {
+      "destrucción": "La estatua iba a ser dedicada, no destruida.",
+      "venta": "No se organizó una transacción.",
+      "medición": "Las medidas aparecen al describir la estatua, no como fin de la reunión."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "officials_meeting_purpose",
+    "option_category": "ceremony",
+    "significance": "Fija el propósito ceremonial que unificó la convocatoria de numerosos cargos.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Completa la finalidad de la convocatoria, no quién la ordenó ni quiénes asistieron."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-023",
+    "source_unit_id": "DAN3-V012",
+    "fact_id": "DAN3-V012-V11-F07",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "La acusación construye dos reproches religiosos paralelos al repetir el verbo ____ ante «tus dioses» y «la estatua de oro».",
+    "options": [
+      "adoran",
+      "respetan",
+      "honran",
+      "levantan"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "adoran",
+      "no adoran"
+    ],
+    "explanation": "«No adoran» aparece tanto ante los dioses del rey como ante la estatua, dando estructura paralela a los dos reproches.",
+    "why_distractors_fail": {
+      "respetan": "Ese verbo se aplica al rey una sola vez y no enlaza los dos objetos religiosos.",
+      "honran": "La acusación de esta unidad no emplea ese verbo para los dos objetos.",
+      "levantan": "Solo el rey aparece como quien levantó la estatua; no es el reproche repetido."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "parallel_religious_charge_repeated_verb",
+    "option_category": "parallel_clause_verb",
+    "significance": "Reconoce la repetición verbal que vincula dos objetos religiosos sin confundirla con el reproche político.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa una relación paralela local entre dos cláusulas, no quién inspeccionó ni el propósito de la inspección."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-024",
+    "source_unit_id": "DAN3-V014",
+    "fact_id": "DAN3-V014-V11-F05",
+    "family": "fill_choice",
+    "subtype": "speaker_addressee",
+    "question": "Nabucodonosor preguntó si los tres no honraban a su ____.",
+    "options": [
+      "ángel",
+      "rey",
+      "dios",
+      "ídolo"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "dios",
+      "mi dios"
+    ],
+    "explanation": "La pregunta real contrapuso la falta de honra a su dios con la falta de adoración a la estatua.",
+    "why_distractors_fail": {
+      "ángel": "El rey habló de su dios, no de un mensajero celestial.",
+      "rey": "Aunque era quien interrogaba, no se nombró a sí mismo como objeto del verbo honrar.",
+      "ídolo": "La estatua aparece como objeto de adoración en la segunda parte, no como posesivo de «su»."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "king_charge_deity_object",
+    "option_category": "object_of_honor",
+    "significance": "Identifica el objeto personal de la primera parte de la acusación formulada por el rey.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Completa el objeto del verbo heredado, sin repetir ese verbo ni la estatua."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-025",
+    "source_unit_id": "DAN3-V009",
+    "fact_id": "DAN3-V009-V11-F04",
+    "family": "fill_choice",
+    "subtype": "speaker_addressee",
+    "question": "La fórmula «¡Rey, para siempre vive!» cumple la función de una ____ honorífica.",
+    "options": [
+      "amenaza",
+      "confesión",
+      "sentencia",
+      "salutación"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "salutación",
+      "¡Rey, para siempre vive!"
+    ],
+    "explanation": "La fórmula expresa al rey un deseo honorífico de vida prolongada.",
+    "why_distractors_fail": {
+      "amenaza": "La fórmula desea larga vida; no intimida al rey.",
+      "confesión": "Los caldeos no admiten una falta propia.",
+      "sentencia": "Quien pronuncia la frase no está dictando un fallo."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "royal_salutation_discourse_function",
+    "option_category": "speech_act",
+    "significance": "Reconoce la función pragmática de la fórmula dirigida al rey.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Reautoriza el hecho como función discursiva de la fórmula, no como repetición de quién murió por la llama."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-026",
+    "source_unit_id": "DAN3-V016",
+    "fact_id": "DAN3-V016-V11-F05",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "Los tres dijeron que no era necesario responder al rey sobre aquel ____.",
+    "options": [
+      "banquete",
+      "asunto",
+      "sueño",
+      "viaje"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "asunto",
+      "este asunto"
+    ],
+    "explanation": "Su respuesta cerró la necesidad de defenderse sobre ese asunto.",
+    "why_distractors_fail": {
+      "banquete": "No había un banquete en la confrontación.",
+      "sueño": "La disputa no era una interpretación de sueños.",
+      "viaje": "No se discutía un traslado."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "reply_subject_matter",
+    "option_category": "topic_noun",
+    "significance": "Conserva el objeto exacto de la afirmación de que no necesitaban responder.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Completa el asunto referido, no la idea principal de que no necesitaban responder."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-027",
+    "source_unit_id": "DAN3-V029",
+    "fact_id": "DAN3-V029-V11-F07",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Además de afectar su casa, el decreto ordenaba que el blasfemo fuera ____.",
+    "options": [
+      "descuartizado",
+      "desterrado",
+      "encarcelado",
+      "multado"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "descuartizado",
+      "sea descuartizado"
+    ],
+    "explanation": "La sanción personal establecida era el descuartizamiento.",
+    "why_distractors_fail": {
+      "desterrado": "El decreto no prescribe destierro.",
+      "encarcelado": "No establece encarcelamiento.",
+      "multado": "No aparece una sanción económica."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "blasphemer_personal_penalty",
+    "option_category": "personal_penalty",
+    "significance": "Diferencia la sanción corporal aplicada a la persona de la sanción aplicada a su propiedad.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Completa la pena personal dentro de una estructura de dos objetos sancionados."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-028",
+    "source_unit_id": "DAN3-V018",
+    "fact_id": "DAN3-V018-V11-F05",
+    "family": "fill_choice",
+    "subtype": "speaker_addressee",
+    "question": "Antes de reiterar su negativa, los tres dijeron al rey: «Has de ____».",
+    "options": [
+      "esperar",
+      "callar",
+      "saber",
+      "partir"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "saber",
+      "has de saber"
+    ],
+    "explanation": "La fórmula introduce la declaración firme de lo que no harían.",
+    "why_distractors_fail": {
+      "esperar": "No solicitaron demora.",
+      "callar": "No ordenaron silencio al rey.",
+      "partir": "No le pidieron que abandonara el lugar."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "defiant_notice_formula",
+    "option_category": "speech_verb",
+    "significance": "Identifica la fórmula con la que hicieron explícita e inequívoca su decisión.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Completa el aviso al rey, no las dos acciones que rechazaron."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-029",
+    "source_unit_id": "DAN3-V029",
+    "fact_id": "DAN3-V029-V11-F06",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "La expresión ____ introduce el decreto como consecuencia del reconocimiento de la liberación divina.",
+    "options": [
+      "Sin embargo",
+      "En aquel tiempo",
+      "Ahora, pues",
+      "Por lo tanto"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Por lo tanto"
+    ],
+    "explanation": "«Por lo tanto» presenta el decreto como consecuencia de la conclusión sobre el poder incomparable de Dios.",
+    "why_distractors_fail": {
+      "Sin embargo": "Introduciría contraste, no consecuencia.",
+      "En aquel tiempo": "Sitúa temporalmente, pero no enlaza una conclusión.",
+      "Ahora, pues": "No es el conector que abre este decreto."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "decree_consequence_connector",
+    "option_category": "discourse_connector",
+    "significance": "Reconoce el vínculo discursivo entre la conclusión teológica y la disposición legal.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Reautoriza el ítem como relación causal marcada por el conector, no como atomización del resumen de fidelidad."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-030",
+    "source_unit_id": "DAN3-V026",
+    "fact_id": "DAN3-V026-V11-F06",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "El mandato «salid y venid» tuvo cumplimiento observable cuando los tres ____.",
+    "options": [
+      "respondieron desde el fuego",
+      "salieron de en medio del fuego",
+      "esperaron junto a la puerta",
+      "se postraron ante el rey"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "salieron",
+      "salieron de en medio del fuego"
+    ],
+    "explanation": "La salida inmediata de los tres cumplió la orden pronunciada desde la puerta.",
+    "why_distractors_fail": {
+      "respondieron desde el fuego": "No se registra una contestación verbal dentro del horno.",
+      "esperaron junto a la puerta": "El relato afirma que salieron de en medio del fuego.",
+      "se postraron ante el rey": "El cumplimiento fue salir, no realizar un gesto de adoración."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "exit_command_fulfillment",
+    "option_category": "result_verb",
+    "significance": "Conecta la orden real con su cumplimiento observable y prepara la inspección pública.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Reautoriza el ítem como relación orden-resultado, no como repetición de la caída al horno."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-031",
+    "source_unit_id": "DAN3-V029",
+    "fact_id": "DAN3-V029-V11-F08",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "La sanción patrimonial no confiscaba la casa: ordenaba convertirla en ____.",
+    "options": [
+      "estercolero",
+      "tesorería",
+      "cuartel",
+      "santuario"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "estercolero",
+      "convertida en estercolero"
+    ],
+    "explanation": "El decreto fijaba como destino de la casa su conversión en estercolero.",
+    "why_distractors_fail": {
+      "tesorería": "No se destinaba la propiedad al tesoro.",
+      "cuartel": "No pasaba a uso militar.",
+      "santuario": "La casa no sería consagrada."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "blasphemer_property_destination",
+    "option_category": "property_destination",
+    "significance": "Distingue la transformación ordenada de otras formas plausibles de sanción patrimonial.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Reautoriza la consecuencia sobre la propiedad y elimina la atomización de la respuesta del consejo."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-032",
+    "source_unit_id": "DAN3-V026",
+    "fact_id": "DAN3-V026-V11-F04",
+    "family": "fill_choice",
+    "subtype": "narrative_order",
+    "question": "Antes de llamar a los tres para que salieran, Nabucodonosor se acercó a la ____ del horno.",
+    "options": [
+      "base",
+      "chimenea",
+      "puerta",
+      "pared"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "puerta",
+      "la puerta"
+    ],
+    "explanation": "El rey se acercó a la puerta y desde allí ordenó que salieran.",
+    "why_distractors_fail": {
+      "base": "No se especifica la base como punto de aproximación.",
+      "chimenea": "La narración no menciona una chimenea.",
+      "pared": "El lugar exacto indicado es la puerta."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "king_approached_furnace_door",
+    "option_category": "object_part",
+    "significance": "Sitúa la aproximación del rey inmediatamente antes de la orden de salida.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Completa el punto de aproximación, no el título divino ni la salida misma."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-033",
+    "source_unit_id": "DAN3-V015",
+    "fact_id": "DAN3-V015-V11-F06",
+    "family": "fill_choice",
+    "subtype": "narrative_order",
+    "question": "Antes de repetir la señal musical y la amenaza, Nabucodonosor preguntó si los tres estaban ____ para obedecer.",
+    "options": [
+      "renuentes",
+      "indecisos",
+      "incapaces",
+      "dispuestos"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "dispuestos",
+      "estáis dispuestos"
+    ],
+    "explanation": "El rey abrió el ultimátum preguntando por su disposición antes de exponer señal y pena.",
+    "why_distractors_fail": {
+      "renuentes": "Describe oposición, pero no es el término con que el rey formuló su pregunta.",
+      "indecisos": "El rey preguntó por disposición para actuar, no por vacilación.",
+      "incapaces": "La pregunta trataba de voluntad para obedecer, no de capacidad."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "ultimatum_readiness_question",
+    "option_category": "readiness_state",
+    "significance": "Ubica la pregunta de disposición como apertura de la última oportunidad ofrecida.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Reautoriza la secuencia retórica del ultimátum, no una palabra tomada del resumen de fidelidad."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-034",
+    "source_unit_id": "DAN3-V029",
+    "fact_id": "DAN3-V029-V11-F04",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "El nuevo decreto castigaba a quien dijera ____ contra el Dios de los tres jóvenes.",
+    "options": [
+      "alabanza",
+      "blasfemia",
+      "oración",
+      "testimonio"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "blasfemia",
+      "diga blasfemia"
+    ],
+    "explanation": "La conducta que activaba el castigo era pronunciar blasfemia contra su Dios.",
+    "why_distractors_fail": {
+      "alabanza": "El decreto no castigaba elogiar a Dios.",
+      "oración": "No se prohibía orar.",
+      "testimonio": "La disposición se dirigía específicamente a la blasfemia."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "anti_blasphemy_decree_trigger",
+    "option_category": "speech_act",
+    "significance": "Distingue la conducta prohibida del alcance y de las sanciones del decreto.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Completa el acto que activa la pena, no su fundamento ni su alcance."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-035",
+    "source_unit_id": "DAN3-V001",
+    "fact_id": "DAN3-V001-V11-F05",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Nabucodonosor no solo levantó la estatua, sino que también fue quien la hizo.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La descripción atribuye al rey tanto la fabricación como la colocación de la estatua.",
+    "why_distractors_fail": {
+      "Falso": "La unidad declara que Nabucodonosor hizo la estatua y la levantó."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "king_made_and_raised_statue",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa la doble agencia del rey, no el material, las medidas ni el lugar."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-036",
+    "source_unit_id": "DAN3-V029",
+    "fact_id": "DAN3-V029-V11-F09",
+    "family": "true_false",
+    "subtype": "relationship",
+    "question": "Aunque el decreto se dirige colectivamente a pueblo, nación o lengua, formula en singular la sanción del infractor y de su casa.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El alcance comienza con grupos colectivos, pero «sea descuartizado» y «su casa» individualizan a quien blasfeme.",
+    "why_distractors_fail": {
+      "Falso": "La construcción pasa explícitamente del alcance colectivo a las consecuencias singulares del infractor."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "collective_scope_individual_sanction",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Relaciona el alcance colectivo de la norma con la individualización gramatical de sus dos sanciones."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-037",
+    "source_unit_id": "DAN3-V025",
+    "fact_id": "DAN3-V025-V11-F06",
+    "family": "true_false",
+    "subtype": "comparison",
+    "question": "La expresión «sin embargo» introduce una observación que reúne número, libertad, movimiento, ausencia de daño y aspecto del cuarto hombre.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Después del conector, el rey enumera que ve cuatro, sueltos, paseando sin daño y con un cuarto de aspecto extraordinario.",
+    "why_distractors_fail": {
+      "Falso": "La observación posterior al conector contiene todos esos componentes."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "however_introduces_multifeature_observation",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa cómo el conector introduce una observación de cinco rasgos sostenida íntegramente por la unidad."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-038",
+    "source_unit_id": "DAN3-V002",
+    "fact_id": "DAN3-V002-V11-F06",
+    "family": "true_false",
+    "subtype": "relationship",
+    "question": "Todos los cargos convocados para la dedicación pertenecían exclusivamente al ámbito judicial.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La convocatoria mezcló funciones territoriales, militares, fiscales, consultivas y judiciales.",
+    "why_distractors_fail": {
+      "Verdadero": "Reduce indebidamente una lista administrativa diversa a una sola función."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "dedication_offices_functional_diversity",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "functional_scope"
+      ],
+      "local": true,
+      "original": "sátrapas, magistrados, capitanes, oidores, tesoreros, consejeros, jueces y todos los gobernadores",
+      "replacement": "cargos exclusivamente judiciales"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Muta solo la clasificación funcional del conjunto, no la identidad de los cargos enumerados."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-039",
+    "source_unit_id": "DAN3-V014",
+    "fact_id": "DAN3-V014-V11-F06",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "En su interrogatorio, Nabucodonosor identificó la estatua como la que él mismo había levantado.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El rey habló de «la estatua de oro que he levantado».",
+    "why_distractors_fail": {
+      "Falso": "Nabucodonosor se atribuyó expresamente haber levantado esa estatua."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "king_claims_statue_construction",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa la autorreferencia del rey respecto de la estatua, no las conductas imputadas a los tres."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-040",
+    "source_unit_id": "DAN3-V026",
+    "fact_id": "DAN3-V026-V11-F05",
+    "family": "true_false",
+    "subtype": "text_recall",
+    "question": "Desde la puerta del horno, Nabucodonosor dio a los tres dos órdenes consecutivas: salir y venir.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El llamado real empleó los imperativos «salid y venid».",
+    "why_distractors_fail": {
+      "Falso": "Ambas órdenes aparecen juntas en el llamado dirigido a los tres."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "king_double_exit_command",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Evalúa los dos imperativos, no la aproximación a la puerta, el título divino ni el resultado."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-041",
+    "source_unit_id": "DAN3-V006",
+    "fact_id": "DAN3-V006-V11-F04",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "La amenaza del horno estaba reservada únicamente para las autoridades provinciales que desobedecieran.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La fórmula «cualquiera que no se postre y adore» no restringía la pena a un cargo.",
+    "why_distractors_fail": {
+      "Verdadero": "Sustituye únicamente el alcance indefinido de «cualquiera» por un grupo administrativo limitado."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "furnace_penalty_unrestricted_scope",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "scope"
+      ],
+      "local": true,
+      "original": "cualquiera que no se postre y adore",
+      "replacement": "únicamente las autoridades provinciales que no se postraran y adoraran"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Muta solo el alcance personal de la amenaza y abandona la procedencia militar ya cubierta."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-042",
+    "source_unit_id": "DAN3-V021",
+    "fact_id": "DAN3-V021-V11-F05",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Los tres jóvenes fueron despojados de sus prendas antes de ser atados y arrojados al horno.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Fueron atados con sus mantos, calzados, turbantes y vestidos todavía puestos.",
+    "why_distractors_fail": {
+      "Verdadero": "Muta únicamente la condición de sus prendas al afirmar que habían sido retiradas."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "clothing_retained_when_bound",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "clothing_condition"
+      ],
+      "local": true,
+      "original": "fueron atados con sus mantos, sus calzados, sus turbantes y sus vestidos",
+      "replacement": "fueron despojados de sus prendas antes de ser atados"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Altera solo si conservaron o perdieron la ropa antes de entrar al horno."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-043",
+    "source_unit_id": "DAN3-V017",
+    "fact_id": "DAN3-V017-V11-F06",
+    "family": "true_false",
+    "subtype": "relationship",
+    "question": "La declaración de los jóvenes combina capacidad divina —«puede librarnos»— con expectativa de resultado —«nos librará»—.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "«Puede» afirma la capacidad de Dios y «nos librará» expresa la expectativa concreta de los jóvenes.",
+    "why_distractors_fail": {
+      "Falso": "La misma oración contiene explícitamente ambas modalidades."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "divine_ability_expected_outcome_modality",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Reautoriza el hecho como distinción modal entre capacidad y resultado esperado, no como otra pregunta sobre la liberación consumada."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-044",
+    "source_unit_id": "DAN3-V029",
+    "fact_id": "DAN3-V029-V11-F10",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "El decreto explica primero que ningún dios puede librar así y solo después enumera las sanciones.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "El texto presenta primero las sanciones y coloca al final la razón sobre la liberación incomparable.",
+    "why_distractors_fail": {
+      "Verdadero": "Invierte únicamente el orden entre la disposición penal y su fundamento final."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "decree_penalty_reason_order",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "sequence"
+      ],
+      "local": true,
+      "original": "sea descuartizado, y su casa convertida en estercolero; por cuanto no hay dios que pueda librar como éste",
+      "replacement": "primero explica que ningún dios puede librar así y después enumera las sanciones"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Muta solo la secuencia entre las sanciones y la cláusula que las fundamenta."
+    }
+  },
+  {
+    "id": "DAN3-V11-WAVE2-045",
+    "source_unit_id": "DAN3-V004",
+    "fact_id": "DAN3-V004-V11-F05",
+    "family": "true_false",
+    "subtype": "speaker_addressee",
+    "question": "Al proclamar la orden, el pregonero se incluyó entre los destinatarios mediante la fórmula «se nos ordena».",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "El pregonero dijo «se os ordena a vosotros», dirigiendo la orden a su audiencia.",
+    "why_distractors_fail": {
+      "Verdadero": "Cambia únicamente los destinatarios gramaticales al sustituir «os... vosotros» por «nos»."
+    },
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "proclamation_grammatical_addressee",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "grammatical_addressee"
+      ],
+      "local": true,
+      "original": "Se os ordena a vosotros",
+      "replacement": "Se nos ordena"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-wave-review",
+      "rationale": "Muta solo la inclusión del pregonero entre los destinatarios y elimina la duplicación sobre la casa sancionada."
+    }
+  }
+]
