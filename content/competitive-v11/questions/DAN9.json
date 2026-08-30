@@ -2323,5 +2323,1093 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-author-variants-dan7-9"
     }
+  },
+  {
+    "id": "DAN9-V11-WAVE-001",
+    "source_unit_id": "DAN9-V001",
+    "fact_id": "DAN9-V001-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿De quién era hijo Darío?",
+    "options": [
+      "Asuero",
+      "Nabucodonosor",
+      "Ciro",
+      "Belsasar"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Asuero",
+    "accepted_answers": [
+      "Asuero",
+      "hijo de Asuero"
+    ],
+    "explanation": "Darío es presentado como hijo de Asuero.",
+    "why_distractors_fail": {
+      "Nabucodonosor": "No se atribuye esa paternidad.",
+      "Ciro": "Ciro no aparece como su padre.",
+      "Belsasar": "Belsasar fue rey de Babilonia, no padre de Darío."
+    },
+    "source_ref": "Daniel 9:1",
+    "source_quote": "«En el primer año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,",
+    "evidence_excerpt": "«En el primer año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "kinship",
+    "option_category": "person",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-002",
+    "source_unit_id": "DAN9-V001",
+    "fact_id": "DAN9-V001-V11-F03",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿A qué nación pertenecía Darío?",
+    "options": [
+      "Caldeos",
+      "Medos",
+      "Griegos",
+      "Judíos"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Medos",
+    "accepted_answers": [
+      "Medos",
+      "la nación de los medos"
+    ],
+    "explanation": "Darío pertenecía a la nación de los medos.",
+    "why_distractors_fail": {
+      "Caldeos": "Gobernó su reino, pero no era de esa nación.",
+      "Griegos": "Grecia pertenece a otra etapa profética.",
+      "Judíos": "Darío no es identificado como judío."
+    },
+    "source_ref": "Daniel 9:1",
+    "source_quote": "«En el primer año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,",
+    "evidence_excerpt": "«En el primer año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "nationality",
+    "option_category": "people",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-003",
+    "source_unit_id": "DAN9-V002",
+    "fact_id": "DAN9-V002-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿Qué profeta había anunciado la duración de las desolaciones de Jerusalén?",
+    "options": [
+      "Isaías",
+      "Ezequiel",
+      "Jeremías",
+      "Habacuc"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Jeremías",
+    "accepted_answers": [
+      "Jeremías",
+      "el profeta Jeremías"
+    ],
+    "explanation": "Daniel reconoció en los libros lo anunciado por Jeremías.",
+    "why_distractors_fail": {
+      "Isaías": "No es el profeta nombrado en esta lectura.",
+      "Ezequiel": "No se le atribuye aquí el período.",
+      "Habacuc": "Tampoco es citado en la escena."
+    },
+    "source_ref": "Daniel 9:2",
+    "source_quote": "en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén: setenta años.",
+    "evidence_excerpt": "en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén: setenta años.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "speaker",
+    "option_category": "prophet",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-004",
+    "source_unit_id": "DAN9-V002",
+    "fact_id": "DAN9-V002-V11-F03",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué hizo Daniel para comprender el número de años anunciado?",
+    "options": [
+      "Consultó a los magos",
+      "Esperó un sueño del rey",
+      "Viajó a Jerusalén",
+      "Miró atentamente en los libros"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Miró atentamente en los libros",
+    "accepted_answers": [
+      "Miró atentamente en los libros",
+      "miré atentamente en los libros"
+    ],
+    "explanation": "Daniel estudió atentamente los libros proféticos.",
+    "why_distractors_fail": {
+      "Consultó a los magos": "No recurrió a los sabios paganos.",
+      "Esperó un sueño del rey": "La comprensión nació del estudio.",
+      "Viajó a Jerusalén": "No se narra ese viaje."
+    },
+    "source_ref": "Daniel 9:2",
+    "source_quote": "en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén: setenta años.",
+    "evidence_excerpt": "en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén: setenta años.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "study_method",
+    "option_category": "action",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-005",
+    "source_unit_id": "DAN9-V003",
+    "fact_id": "DAN9-V003-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué conjunto describe la forma en que Daniel buscó a Dios?",
+    "options": [
+      "Oración, ruego, ayuno, ropas ásperas y ceniza",
+      "Cánticos, sacrificios y perfume",
+      "Viaje, ofrenda y banquete",
+      "Silencio, sueño y aislamiento"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Oración, ruego, ayuno, ropas ásperas y ceniza",
+    "accepted_answers": [
+      "Oración, ruego, ayuno, ropas ásperas y ceniza"
+    ],
+    "explanation": "Daniel unió oración y ruego con ayuno, ropas ásperas y ceniza.",
+    "why_distractors_fail": {
+      "Cánticos, sacrificios y perfume": "No es el conjunto narrado.",
+      "Viaje, ofrenda y banquete": "La escena no incluye esos actos.",
+      "Silencio, sueño y aislamiento": "Daniel habló en confesión y ruego."
+    },
+    "source_ref": "Daniel 9:3",
+    "source_quote": "Volví mi rostro a Dios, el Señor, buscándolo en oración y ruego, en ayuno, ropas ásperas y ceniza.",
+    "evidence_excerpt": "Volví mi rostro a Dios, el Señor, buscándolo en oración y ruego, en ayuno, ropas ásperas y ceniza.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "practice_set",
+    "option_category": "practice_set",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-006",
+    "source_unit_id": "DAN9-V004",
+    "fact_id": "DAN9-V004-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "principle",
+    "question": "¿Cómo describe Daniel a Dios al comenzar su confesión?",
+    "options": [
+      "Distante e indiferente",
+      "Grande y digno de ser temido",
+      "Imprevisible y olvidadizo",
+      "Débil ante los reyes"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Grande y digno de ser temido",
+    "accepted_answers": [
+      "Grande y digno de ser temido",
+      "Dios grande, digno de ser temido"
+    ],
+    "explanation": "Daniel se dirige al Dios grande y digno de ser temido.",
+    "why_distractors_fail": {
+      "Distante e indiferente": "La oración apela a su pacto y misericordia.",
+      "Imprevisible y olvidadizo": "Dios guarda el pacto.",
+      "Débil ante los reyes": "La confesión reconoce su grandeza."
+    },
+    "source_ref": "Daniel 9:4",
+    "source_quote": "Oré a Jehová, mi Dios, e hice confesión diciendo: “Ahora, Señor, Dios grande, digno de ser temido, que guardas el pacto y la misericordia con los que te aman y guardan tus mandamientos,",
+    "evidence_excerpt": "Oré a Jehová, mi Dios, e hice confesión diciendo: “Ahora, Señor, Dios grande, digno de ser temido, que guardas el pacto y la misericordia con los que te aman y guardan tus mandamientos,",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "divine_attribute",
+    "option_category": "attribute_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-007",
+    "source_unit_id": "DAN9-V005",
+    "fact_id": "DAN9-V005-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué serie resume la confesión colectiva de Daniel?",
+    "options": [
+      "Ignorancia, pobreza y enfermedad",
+      "Temor, duda y cansancio",
+      "Pecado, iniquidad, impiedad y rebelión",
+      "Derrota, exilio y hambre"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Pecado, iniquidad, impiedad y rebelión",
+    "accepted_answers": [
+      "Pecado, iniquidad, impiedad y rebelión"
+    ],
+    "explanation": "Daniel confiesa pecado, iniquidad, impiedad y rebelión.",
+    "why_distractors_fail": {
+      "Ignorancia, pobreza y enfermedad": "No son las categorías confesadas.",
+      "Temor, duda y cansancio": "La confesión se centra en culpa moral.",
+      "Derrota, exilio y hambre": "Son posibles consecuencias, no la serie de pecados."
+    },
+    "source_ref": "Daniel 9:5",
+    "source_quote": "hemos pecado, hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.",
+    "evidence_excerpt": "hemos pecado, hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "confession_set",
+    "option_category": "fault_set",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-008",
+    "source_unit_id": "DAN9-V006",
+    "fact_id": "DAN9-V006-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "speaker_addressee",
+    "question": "¿A qué grupos habían hablado los profetas en nombre de Dios?",
+    "options": [
+      "Solo sacerdotes y levitas",
+      "Únicamente los cautivos jóvenes",
+      "Magos, astrólogos y caldeos",
+      "Reyes, príncipes, padres y todo el pueblo"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Reyes, príncipes, padres y todo el pueblo",
+    "accepted_answers": [
+      "Reyes, príncipes, padres y todo el pueblo"
+    ],
+    "explanation": "Los profetas hablaron a gobernantes, antepasados y al pueblo entero.",
+    "why_distractors_fail": {
+      "Solo sacerdotes y levitas": "El alcance fue mucho mayor.",
+      "Únicamente los cautivos jóvenes": "No se limita a una generación.",
+      "Magos, astrólogos y caldeos": "No son los destinatarios enumerados."
+    },
+    "source_ref": "Daniel 9:6",
+    "source_quote": "No hemos obedecido a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.",
+    "evidence_excerpt": "No hemos obedecido a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "audience_set",
+    "option_category": "audience_set",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-009",
+    "source_unit_id": "DAN9-V007",
+    "fact_id": "DAN9-V007-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué alcance tenía la confusión de rostro atribuida al pueblo?",
+    "options": [
+      "Judá, Jerusalén y todo Israel, cerca y lejos",
+      "Solo los habitantes de Jerusalén",
+      "Únicamente los reyes cautivos",
+      "Solo quienes vivían cerca"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Judá, Jerusalén y todo Israel, cerca y lejos",
+    "accepted_answers": [
+      "Judá, Jerusalén y todo Israel, cerca y lejos",
+      "los de cerca y los de lejos"
+    ],
+    "explanation": "La confesión abarca a Judá, Jerusalén y todo Israel disperso.",
+    "why_distractors_fail": {
+      "Solo los habitantes de Jerusalén": "El alcance incluye más grupos.",
+      "Únicamente los reyes cautivos": "No se limita a gobernantes.",
+      "Solo quienes vivían cerca": "También incluye a los de lejos."
+    },
+    "source_ref": "Daniel 9:7",
+    "source_quote": "Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.",
+    "evidence_excerpt": "Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "scope",
+    "option_category": "population_scope",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-010",
+    "source_unit_id": "DAN9-V009",
+    "fact_id": "DAN9-V009-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué contraste establece Daniel entre Dios y el pueblo rebelde?",
+    "options": [
+      "Dios se rebela mientras el pueblo perdona",
+      "Dios conserva misericordia y perdón pese a la rebelión",
+      "El pueblo posee misericordia y Dios confusión",
+      "Ambos carecen de perdón"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Dios conserva misericordia y perdón pese a la rebelión",
+    "accepted_answers": [
+      "Dios conserva misericordia y perdón pese a la rebelión",
+      "misericordia y perdonar"
+    ],
+    "explanation": "La misericordia y el perdón pertenecen a Dios aunque el pueblo se rebeló.",
+    "why_distractors_fail": {
+      "Dios se rebela mientras el pueblo perdona": "Invierte los papeles.",
+      "El pueblo posee misericordia y Dios confusión": "No es la atribución de la oración.",
+      "Ambos carecen de perdón": "Daniel afirma lo contrario respecto de Dios."
+    },
+    "source_ref": "Daniel 9:9",
+    "source_quote": "De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado",
+    "evidence_excerpt": "De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "contrast",
+    "option_category": "moral_contrast",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-011",
+    "source_unit_id": "DAN9-V010",
+    "fact_id": "DAN9-V010-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Por medio de quién puso Dios sus leyes delante del pueblo?",
+    "options": [
+      "Los reyes caldeos",
+      "Los ejércitos medos",
+      "Sus siervos los profetas",
+      "Los sabios de Babilonia"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Sus siervos los profetas",
+    "accepted_answers": [
+      "Sus siervos los profetas",
+      "por medio de sus siervos los profetas"
+    ],
+    "explanation": "Dios presentó sus leyes mediante sus siervos los profetas.",
+    "why_distractors_fail": {
+      "Los reyes caldeos": "No transmitieron esas leyes.",
+      "Los ejércitos medos": "No fueron el medio de revelación.",
+      "Los sabios de Babilonia": "La oración atribuye esa función a los profetas."
+    },
+    "source_ref": "Daniel 9:10",
+    "source_quote": "y no obedecimos a la voz de Jehová, nuestro Dios, para andar en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.",
+    "evidence_excerpt": "y no obedecimos a la voz de Jehová, nuestro Dios, para andar en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "means",
+    "option_category": "messenger_group",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-012",
+    "source_unit_id": "DAN9-V017",
+    "fact_id": "DAN9-V017-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "principle",
+    "question": "Daniel pidió a Dios que su rostro ____ sobre el santuario asolado.",
+    "options": [
+      "resplandeciera",
+      "se ocultara",
+      "se apartara",
+      "se endureciera"
+    ],
+    "correct_option": 0,
+    "correct_answer": "resplandeciera",
+    "accepted_answers": [
+      "resplandeciera",
+      "resplandezca"
+    ],
+    "explanation": "Daniel pidió que el rostro de Dios resplandeciera sobre el santuario.",
+    "why_distractors_fail": {
+      "se ocultara": "La petición busca presencia favorable.",
+      "se apartara": "Daniel no pide alejamiento.",
+      "se endureciera": "No es la acción solicitada."
+    },
+    "source_ref": "Daniel 9:17",
+    "source_quote": "Ahora pues, Dios nuestro, oye la oración y los ruegos de tu siervo, y haz que tu rostro resplandezca sobre tu santuario asolado, por amor del Señor.",
+    "evidence_excerpt": "Ahora pues, Dios nuestro, oye la oración y los ruegos de tu siervo, y haz que tu rostro resplandezca sobre tu santuario asolado, por amor del Señor.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "request",
+    "option_category": "action",
+    "false_mutation": null,
+    "blank_span": "resplandeciera",
+    "significance": "Recupera la acción divina solicitada para el santuario asolado.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-013",
+    "source_unit_id": "DAN9-V018",
+    "fact_id": "DAN9-V018-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "Daniel recordó que el ____ de Dios era invocado sobre la ciudad.",
+    "options": [
+      "juicio",
+      "nombre",
+      "pacto",
+      "trono"
+    ],
+    "correct_option": 1,
+    "correct_answer": "nombre",
+    "accepted_answers": [
+      "nombre",
+      "tu nombre"
+    ],
+    "explanation": "La ciudad era aquella sobre la cual se invocaba el nombre de Dios.",
+    "why_distractors_fail": {
+      "juicio": "No completa la identificación de la ciudad.",
+      "pacto": "La oración menciona el pacto antes, pero aquí dice nombre.",
+      "trono": "No es lo invocado sobre la ciudad."
+    },
+    "source_ref": "Daniel 9:18",
+    "source_quote": "Inclina, Dios mío, tu oído, y oye; abre tus ojos y mira nuestras desolaciones y la ciudad sobre la cual es invocado tu nombre; porque no elevamos nuestros ruegos ante ti confiados en nuestras justicias, sino en tus muchas misericordias.",
+    "evidence_excerpt": "Inclina, Dios mío, tu oído, y oye; abre tus ojos y mira nuestras desolaciones y la ciudad sobre la cual es invocado tu nombre; porque no elevamos nuestros ruegos ante ti confiados en nuestras justicias, sino en tus muchas misericordias.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "divine_claim",
+    "option_category": "concept",
+    "false_mutation": null,
+    "blank_span": "nombre",
+    "significance": "Expresa la relación entre la ciudad desolada y el nombre divino.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-014",
+    "source_unit_id": "DAN9-V021",
+    "fact_id": "DAN9-V021-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Gabriel vino volando con ____ mientras Daniel oraba.",
+    "options": [
+      "temor",
+      "silencio",
+      "presteza",
+      "dificultad"
+    ],
+    "correct_option": 2,
+    "correct_answer": "presteza",
+    "accepted_answers": [
+      "presteza",
+      "con presteza"
+    ],
+    "explanation": "Gabriel llegó volando con presteza.",
+    "why_distractors_fail": {
+      "temor": "No se describe así su llegada.",
+      "silencio": "La rapidez, no el silencio, caracteriza el vuelo.",
+      "dificultad": "La llegada fue pronta."
+    },
+    "source_ref": "Daniel 9:21",
+    "source_quote": "aún estaba hablando en oración, cuando el varón Gabriel, a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.",
+    "evidence_excerpt": "aún estaba hablando en oración, cuando el varón Gabriel, a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "manner",
+    "option_category": "manner",
+    "false_mutation": null,
+    "blank_span": "presteza",
+    "significance": "Recupera la rapidez de la respuesta mientras la oración seguía en curso.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-015",
+    "source_unit_id": "DAN9-V004",
+    "fact_id": "DAN9-V004-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "principle",
+    "question": "Dios guarda el ____ y la misericordia con quienes lo aman.",
+    "options": [
+      "trono",
+      "secreto",
+      "juicio",
+      "pacto"
+    ],
+    "correct_option": 3,
+    "correct_answer": "pacto",
+    "accepted_answers": [
+      "pacto",
+      "el pacto"
+    ],
+    "explanation": "Daniel reconoce que Dios guarda el pacto y la misericordia.",
+    "why_distractors_fail": {
+      "trono": "No completa el par de la oración.",
+      "secreto": "No es el compromiso que Dios guarda.",
+      "juicio": "La frase une pacto y misericordia."
+    },
+    "source_ref": "Daniel 9:4",
+    "source_quote": "Oré a Jehová, mi Dios, e hice confesión diciendo: “Ahora, Señor, Dios grande, digno de ser temido, que guardas el pacto y la misericordia con los que te aman y guardan tus mandamientos,",
+    "evidence_excerpt": "Oré a Jehová, mi Dios, e hice confesión diciendo: “Ahora, Señor, Dios grande, digno de ser temido, que guardas el pacto y la misericordia con los que te aman y guardan tus mandamientos,",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "divine_faithfulness",
+    "option_category": "concept",
+    "false_mutation": null,
+    "blank_span": "pacto",
+    "significance": "Identifica la base relacional de la misericordia invocada por Daniel.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-016",
+    "source_unit_id": "DAN9-V021",
+    "fact_id": "DAN9-V021-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Gabriel llegó como a la hora del sacrificio de la ____.",
+    "options": [
+      "tarde",
+      "mañana",
+      "noche",
+      "medianoche"
+    ],
+    "correct_option": 0,
+    "correct_answer": "tarde",
+    "accepted_answers": [
+      "tarde",
+      "sacrificio de la tarde"
+    ],
+    "explanation": "La llegada ocurrió cerca de la hora del sacrificio vespertino.",
+    "why_distractors_fail": {
+      "mañana": "No es la hora indicada.",
+      "noche": "La referencia es el sacrificio de la tarde.",
+      "medianoche": "No se sitúa a medianoche."
+    },
+    "source_ref": "Daniel 9:21",
+    "source_quote": "aún estaba hablando en oración, cuando el varón Gabriel, a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.",
+    "evidence_excerpt": "aún estaba hablando en oración, cuando el varón Gabriel, a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "time",
+    "option_category": "time_of_day",
+    "false_mutation": null,
+    "blank_span": "tarde",
+    "significance": "Sitúa cronológicamente la llegada del mensajero durante la oración.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-017",
+    "source_unit_id": "DAN9-V023",
+    "fact_id": "DAN9-V023-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "Gabriel explicó que Daniel era muy ____.",
+    "options": [
+      "temido",
+      "amado",
+      "poderoso",
+      "anciano"
+    ],
+    "correct_option": 1,
+    "correct_answer": "amado",
+    "accepted_answers": [
+      "amado",
+      "muy amado"
+    ],
+    "explanation": "El mensajero dio como razón que Daniel era muy amado.",
+    "why_distractors_fail": {
+      "temido": "No es la valoración expresada.",
+      "poderoso": "El texto no atribuye la visita a poder humano.",
+      "anciano": "La edad no es la razón indicada."
+    },
+    "source_ref": "Daniel 9:23",
+    "source_quote": "Al principio de tus ruegos fue dada la orden, y yo he venido para enseñártela, porque tú eres muy amado. Entiende, pues, la orden, y entiende la visión.",
+    "evidence_excerpt": "Al principio de tus ruegos fue dada la orden, y yo he venido para enseñártela, porque tú eres muy amado. Entiende, pues, la orden, y entiende la visión.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "divine_regard",
+    "option_category": "quality",
+    "false_mutation": null,
+    "blank_span": "amado",
+    "significance": "Expresa la valoración personal que acompaña la respuesta a la oración.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-018",
+    "source_unit_id": "DAN9-V024",
+    "fact_id": "DAN9-V024-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "Entre los propósitos de las setenta semanas estaba traer la justicia ____.",
+    "options": [
+      "temporal",
+      "caldea",
+      "perdurable",
+      "secreta"
+    ],
+    "correct_option": 2,
+    "correct_answer": "perdurable",
+    "accepted_answers": [
+      "perdurable",
+      "justicia perdurable"
+    ],
+    "explanation": "El período determinado incluía traer la justicia perdurable.",
+    "why_distractors_fail": {
+      "temporal": "La justicia se caracteriza por permanencia.",
+      "caldea": "No pertenece al reino caldeo.",
+      "secreta": "No es el calificativo usado."
+    },
+    "source_ref": "Daniel 9:24",
+    "source_quote": "”Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.",
+    "evidence_excerpt": "”Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "purpose",
+    "option_category": "quality",
+    "false_mutation": null,
+    "blank_span": "perdurable",
+    "significance": "Recupera uno de los objetivos centrales del período profético.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-019",
+    "source_unit_id": "DAN9-V008",
+    "fact_id": "DAN9-V008-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "La confusión de rostro correspondía al pueblo porque contra Dios ____.",
+    "options": [
+      "dudaron",
+      "viajaron",
+      "clamaron",
+      "pecaron"
+    ],
+    "correct_option": 3,
+    "correct_answer": "pecaron",
+    "accepted_answers": [
+      "pecaron",
+      "pecamos"
+    ],
+    "explanation": "Daniel explica la vergüenza colectiva por el pecado contra Dios.",
+    "why_distractors_fail": {
+      "dudaron": "La causa nombrada es pecado.",
+      "viajaron": "El desplazamiento no explica la culpa.",
+      "clamaron": "Clamar pertenece a la oración, no a la causa de la vergüenza."
+    },
+    "source_ref": "Daniel 9:8",
+    "source_quote": "Nuestra es, Jehová, la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.",
+    "evidence_excerpt": "Nuestra es, Jehová, la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "cause",
+    "option_category": "action",
+    "false_mutation": null,
+    "blank_span": "pecaron",
+    "significance": "Relaciona la consecuencia pública con su causa moral explícita.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-020",
+    "source_unit_id": "DAN9-V011",
+    "fact_id": "DAN9-V011-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Todo Israel traspasó la Ley y se apartó para no obedecer la voz de Dios.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Daniel atribuye a todo Israel la transgresión y el apartamiento.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación reproduce el alcance y la conducta confesados."
+    },
+    "source_ref": "Daniel 9:11",
+    "source_quote": "Todo Israel traspasó tu Ley, apartándose para no obedecer a tu voz. Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios pecamos.",
+    "evidence_excerpt": "Todo Israel traspasó tu Ley, apartándose para no obedecer a tu voz. Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios pecamos.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "scope",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-021",
+    "source_unit_id": "DAN9-V012",
+    "fact_id": "DAN9-V012-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "comparison",
+    "question": "Daniel afirmó que ya había ocurrido debajo del cielo un mal semejante al de Jerusalén.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La oración sostiene que nunca se había hecho nada semejante.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación convierte un mal incomparable en uno con precedentes."
+    },
+    "source_ref": "Daniel 9:12",
+    "source_quote": "Y él ha cumplido la palabra que habló contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal; pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Jerusalén.",
+    "evidence_excerpt": "Y él ha cumplido la palabra que habló contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal; pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Jerusalén.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "uniqueness",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "precedent"
+      ],
+      "local": true,
+      "original": "nunca fue hecho debajo del cielo nada semejante",
+      "replacement": "ya había ocurrido un mal semejante"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-022",
+    "source_unit_id": "DAN9-V013",
+    "fact_id": "DAN9-V013-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Después de recibir el mal anunciado, el pueblo se convirtió de sus maldades.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Daniel confiesa que no se habían convertido de sus maldades.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación elimina la falta de conversión confesada."
+    },
+    "source_ref": "Daniel 9:13",
+    "source_quote": "Conforme está escrito en la ley de Moisés, todo este mal vino sobre nosotros; pero no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos convertido de nuestras maldades ni entendido tu verdad.",
+    "evidence_excerpt": "Conforme está escrito en la ley de Moisés, todo este mal vino sobre nosotros; pero no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos convertido de nuestras maldades ni entendido tu verdad.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "response",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "response"
+      ],
+      "local": true,
+      "original": "no nos hemos convertido de nuestras maldades",
+      "replacement": "se convirtió de sus maldades"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-023",
+    "source_unit_id": "DAN9-V014",
+    "fact_id": "DAN9-V014-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Daniel declaró que Jehová había sido injusto al traer el mal sobre el pueblo.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Daniel afirma que Jehová es justo en todas sus obras.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación sustituye la justicia divina por injusticia."
+    },
+    "source_ref": "Daniel 9:14",
+    "source_quote": "Por tanto, Jehová veló sobre el mal y lo trajo sobre nosotros; porque justo es Jehová, nuestro Dios, en todas sus obras que ha hecho, y nosotros no obedecimos a su voz.",
+    "evidence_excerpt": "Por tanto, Jehová veló sobre el mal y lo trajo sobre nosotros; porque justo es Jehová, nuestro Dios, en todas sus obras que ha hecho, y nosotros no obedecimos a su voz.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "divine_character",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "character"
+      ],
+      "local": true,
+      "original": "justo es Jehová",
+      "replacement": "Jehová había sido injusto"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-024",
+    "source_unit_id": "DAN9-V015",
+    "fact_id": "DAN9-V015-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Dios había sacado a su pueblo de Egipto con mano poderosa.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Daniel recuerda la liberación de Egipto realizada con mano poderosa.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación conserva lugar y medio de la liberación."
+    },
+    "source_ref": "Daniel 9:15",
+    "source_quote": "”Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.",
+    "evidence_excerpt": "”Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "deliverance",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-WAVE-025",
+    "source_unit_id": "DAN9-V016",
+    "fact_id": "DAN9-V016-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Jerusalén y el pueblo eran oprobio por sus pecados y por la maldad de sus padres.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Daniel relaciona el oprobio con los pecados presentes y la maldad de los padres.",
+    "why_distractors_fail": {
+      "Falso": "La doble causa aparece expresamente en la súplica."
+    },
+    "source_ref": "Daniel 9:16",
+    "source_quote": "Señor, conforme a todos tus actos de justicia, apártese ahora tu ira y tu furor de sobre tu ciudad Jerusalén, tu santo monte; porque a causa de nuestros pecados y por la maldad de nuestros padres, Jerusalén y tu pueblo son el oprobio de todos los que nos rodean.",
+    "evidence_excerpt": "Señor, conforme a todos tus actos de justicia, apártese ahora tu ira y tu furor de sobre tu ciudad Jerusalén, tu santo monte; porque a causa de nuestros pecados y por la maldad de nuestros padres, Jerusalén y tu pueblo son el oprobio de todos los que nos rodean.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "cause",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]
