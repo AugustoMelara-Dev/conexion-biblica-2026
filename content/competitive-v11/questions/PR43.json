@@ -10030,5 +10030,1084 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-pilot-review"
     }
+  },
+  {
+    "id": "PR43-V11-WAVE-061",
+    "source_unit_id": "PR43-P050-P005-S002",
+    "fact_id": "PR43-P050-P005-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué dos efectos militares acompañarían la llegada del destruidor contra Babilonia?",
+    "options": [
+      "Sus valientes serían apresados y sus arcos quebrados",
+      "Sus capitanes escaparían y sus armas serían reforzadas",
+      "Sus soldados ocuparían Persia y conservarían sus murallas",
+      "Sus nobles firmarían la paz y entregarían únicamente el tesoro"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Sus valientes serían apresados y sus arcos quebrados",
+    "accepted_answers": [
+      "Sus valientes serían apresados y sus arcos quebrados"
+    ],
+    "explanation": "La profecía une la captura de los valientes con el quebrantamiento de sus arcos.",
+    "why_distractors_fail": {
+      "Sus capitanes escaparían y sus armas serían reforzadas": "Invierte tanto la captura como la destrucción de las armas.",
+      "Sus soldados ocuparían Persia y conservarían sus murallas": "Babilonia sería la ciudad atacada.",
+      "Sus nobles firmarían la paz y entregarían únicamente el tesoro": "El pasaje anuncia derrota militar, no una capitulación limitada."
+    },
+    "source_ref": "PR43, p. 50, párrafo 5",
+    "source_quote": "“Porque vino destruidor contra ella, contra Babilonia, y sus valientes fueron presos, el arco de ellos fué quebrado: porque Jehová, Dios de retribuciones, dará la paga.",
+    "evidence_excerpt": "“Porque vino destruidor contra ella, contra Babilonia, y sus valientes fueron presos, el arco de ellos fué quebrado: porque Jehová, Dios de retribuciones, dará la paga.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "babylon_military_defeat_pair",
+    "option_category": "outcome_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-062",
+    "source_unit_id": "PR43-P050-P006-S001",
+    "fact_id": "PR43-P050-P006-S001-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué conducta de sus captores prolongó la opresión de Israel y Judá?",
+    "options": [
+      "Los enviaron inmediatamente de regreso",
+      "Los retuvieron y se negaron a soltarlos",
+      "Les permitieron elegir un nuevo territorio",
+      "Los liberaron a cambio de los vasos del templo"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Los retuvieron y se negaron a soltarlos",
+    "accepted_answers": [
+      "Los retuvieron y se negaron a soltarlos"
+    ],
+    "explanation": "La opresión persistió porque quienes los habían cautivado los retuvieron y no quisieron liberarlos.",
+    "why_distractors_fail": {
+      "Los enviaron inmediatamente de regreso": "La profecía denuncia precisamente que no los soltaron.",
+      "Les permitieron elegir un nuevo territorio": "No se presenta esa concesión.",
+      "Los liberaron a cambio de los vasos del templo": "No hubo tal intercambio."
+    },
+    "source_ref": "PR43, p. 50, párrafo 6",
+    "source_quote": "“Así ha dicho Jehová de los ejércitos: Oprimidos fueron los hijos de Israel y los hijos de Judá juntamente: y todos los que los tomaron cautivos, se los retuvieron; no los quisieron soltar.",
+    "evidence_excerpt": "“Así ha dicho Jehová de los ejércitos: Oprimidos fueron los hijos de Israel y los hijos de Judá juntamente: y todos los que los tomaron cautivos, se los retuvieron; no los quisieron soltar.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "captivity_oppression_cause",
+    "option_category": "captor_action",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-063",
+    "source_unit_id": "PR43-P050-P006-S003",
+    "fact_id": "PR43-P050-P006-S003-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué efectos opuestos produciría Jehová al defender la causa de los cautivos?",
+    "options": [
+      "Turbaría a Judá y daría descanso permanente a Babilonia",
+      "Destruiría la tierra y coronaría a los captores",
+      "Haría descansar la tierra y turbaría a los habitantes de Babilonia",
+      "Callaría ante la opresión y fortalecería a los caldeos"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Haría descansar la tierra y turbaría a los habitantes de Babilonia",
+    "accepted_answers": [
+      "Haría descansar la tierra y turbaría a los habitantes de Babilonia"
+    ],
+    "explanation": "La intervención del Redentor trae quietud a la tierra y perturbación a quienes oprimían en Babilonia.",
+    "why_distractors_fail": {
+      "Turbaría a Judá y daría descanso permanente a Babilonia": "Invierte los destinatarios de ambos efectos.",
+      "Destruiría la tierra y coronaría a los captores": "No describe la defensa de la causa de los cautivos.",
+      "Callaría ante la opresión y fortalecería a los caldeos": "Jehová promete abogar activamente por ellos."
+    },
+    "source_ref": "PR43, p. 50, párrafo 6",
+    "source_quote": "Jehová de los ejércitos es su nombre: de cierto abogará la causa de ellos, para hacer quietar la tierra, y turbar los moradores de Babilonia.",
+    "evidence_excerpt": "Jehová de los ejércitos es su nombre: de cierto abogará la causa de ellos, para hacer quietar la tierra, y turbar los moradores de Babilonia.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "redemption_contrasting_effects",
+    "option_category": "effect_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-064",
+    "source_unit_id": "PR43-P050-P007-S001",
+    "fact_id": "PR43-P050-P007-S001-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué destino diferente recibieron el muro ancho y las altas puertas de Babilonia?",
+    "options": [
+      "El muro fue quemado y las puertas trasladadas a Persia",
+      "El muro quedó intacto y las puertas fueron cerradas",
+      "El muro fue ampliado y las puertas cubiertas de oro",
+      "El muro fue derribado por completo y las puertas fueron quemadas"
+    ],
+    "correct_option": 3,
+    "correct_answer": "El muro fue derribado por completo y las puertas fueron quemadas",
+    "accepted_answers": [
+      "El muro fue derribado por completo y las puertas fueron quemadas"
+    ],
+    "explanation": "La profecía distingue la demolición total del muro y la quema de las puertas.",
+    "why_distractors_fail": {
+      "El muro fue quemado y las puertas trasladadas a Persia": "Intercambia el tratamiento del muro e inventa el traslado.",
+      "El muro quedó intacto y las puertas fueron cerradas": "Ambas defensas fueron destruidas.",
+      "El muro fue ampliado y las puertas cubiertas de oro": "Describe fortalecimiento, no caída."
+    },
+    "source_ref": "PR43, p. 50, párrafo 7",
+    "source_quote": "Así el “muro ancho de Babilonia” quedó “derribado enteramente, y sus altas puertas” fueron “quemadas a fuego.",
+    "evidence_excerpt": "Así el “muro ancho de Babilonia” quedó “derribado enteramente, y sus altas puertas” fueron “quemadas a fuego.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "babylon_defenses_fate",
+    "option_category": "structure_outcome_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-065",
+    "source_unit_id": "PR43-P051-P001-S001",
+    "fact_id": "PR43-P051-P001-S001-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "prophetic_detail",
+    "question": "¿Qué cuadro muestra que la desolación de Babilonia alcanzaría tanto a viajeros como a pastores?",
+    "options": [
+      "Ningún árabe levantaría allí su tienda ni los pastores establecerían majada",
+      "Los mercaderes abrirían rutas y los pastores ampliarían sus rebaños",
+      "Los viajeros reconstruirían los palacios para alojarse",
+      "Los pastores ocuparían las casas mientras las fieras huían"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Ningún árabe levantaría allí su tienda ni los pastores establecerían majada",
+    "accepted_answers": [
+      "Ningún árabe levantaría allí su tienda ni los pastores establecerían majada"
+    ],
+    "explanation": "La ausencia de tiendas y majadas comunica una desolación que ni siquiera permitiría estancias temporales.",
+    "why_distractors_fail": {
+      "Los mercaderes abrirían rutas y los pastores ampliarían sus rebaños": "Contradice la falta de habitación y pastoreo.",
+      "Los viajeros reconstruirían los palacios para alojarse": "La profecía presenta abandono, no reconstrucción.",
+      "Los pastores ocuparían las casas mientras las fieras huían": "Las fieras ocuparían el lugar y los pastores no tendrían majada."
+    },
+    "source_ref": "PR43, p. 51, párrafo 1",
+    "source_quote": "La Inspiración había declarado: “Nunca más será habitada, ni se morará en ella de generación en generación; ni hincará allí tienda el Arabe, ni pastores tendrán allí majada: sino que dormirán allí bestias fieras, y sus casas se llenarán de hurones; allí habitarán hijas del buho, y allí saltarán peludos.",
+    "evidence_excerpt": "La Inspiración había declarado: “Nunca más será habitada, ni se morará en ella de generación en generación; ni hincará allí tienda el Arabe, ni pastores tendrán allí majada: sino que dormirán allí bestias fieras, y sus casas se llenarán de hurones; allí habitarán hijas del buho, y allí saltarán peludos.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "permanent_desolation_signs",
+    "option_category": "prophetic_scene",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-066",
+    "source_unit_id": "PR43-P051-P006-S002",
+    "fact_id": "PR43-P051-P006-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué dos calamidades llegarían en un mismo día a causa de las muchas adivinaciones y agüeros?",
+    "options": [
+      "Hambre y cautiverio",
+      "Orfandad y viudez",
+      "Guerra y terremoto",
+      "Sequía y enfermedad"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Orfandad y viudez",
+    "accepted_answers": [
+      "Orfandad y viudez",
+      "Viudez y orfandad"
+    ],
+    "explanation": "La profecía anuncia la llegada repentina y completa de orfandad y viudez pese a las artes ocultas.",
+    "why_distractors_fail": {
+      "Hambre y cautiverio": "No es la pareja nombrada en esta sentencia.",
+      "Guerra y terremoto": "Son calamidades posibles, pero no las dos especificadas.",
+      "Sequía y enfermedad": "Tampoco forman el par profético."
+    },
+    "source_ref": "PR43, p. 51, párrafo 6",
+    "source_quote": "“Estas dos cosas te vendrán de repente en un mismo día, orfandad y viudez: en toda su perfección vendrán sobre ti, por la multitud de tus adivinanzas, y ... de tus muchos agüeros.",
+    "evidence_excerpt": "“Estas dos cosas te vendrán de repente en un mismo día, orfandad y viudez: en toda su perfección vendrán sobre ti, por la multitud de tus adivinanzas, y ... de tus muchos agüeros.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "same_day_double_calamity",
+    "option_category": "calamity_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-067",
+    "source_unit_id": "PR43-P051-P007-S001",
+    "fact_id": "PR43-P051-P007-S001-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué afirmación orgullosa evidenciaba que la sabiduría y la ciencia de Babilonia la habían engañado?",
+    "options": [
+      "«Jehová es mi esperanza»",
+      "«El reino es traspasado de mí»",
+      "«Yo, y no más»",
+      "«No puedo leer la escritura»"
+    ],
+    "correct_option": 2,
+    "correct_answer": "«Yo, y no más»",
+    "accepted_answers": [
+      "Yo, y no más",
+      "«Yo, y no más»"
+    ],
+    "explanation": "La pretensión de exclusividad y autosuficiencia revelaba el engaño producido por su propia sabiduría.",
+    "why_distractors_fail": {
+      "«Jehová es mi esperanza»": "Expresa confianza en Dios, no autosuficiencia babilónica.",
+      "«El reino es traspasado de mí»": "Es una sentencia de pérdida, no una jactancia.",
+      "«No puedo leer la escritura»": "Reconoce incapacidad en vez de superioridad."
+    },
+    "source_ref": "PR43, p. 51, párrafo 7",
+    "source_quote": "“Tu sabiduría y tu misma ciencia te engañaron, y dijiste en tu corazón: Yo, y no más.",
+    "evidence_excerpt": "“Tu sabiduría y tu misma ciencia te engañaron, y dijiste en tu corazón: Yo, y no más.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "knowledge_pride_claim",
+    "option_category": "claim",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-068",
+    "source_unit_id": "PR43-P051-P007-S002",
+    "fact_id": "PR43-P051-P007-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "prophetic_detail",
+    "question": "¿Cómo presenta la sentencia la incapacidad de Babilonia para anticipar o detener su ruina?",
+    "options": [
+      "La amenaza sería anunciada con años de anticipación y podría comprarse una salida",
+      "El daño sería leve, conocido y reversible mediante sus consejeros",
+      "La destrucción afectaría solo sus campos y respetaría el trono",
+      "El mal tendría origen desconocido, el quebrantamiento sería irremediable y la destrucción llegaría de repente"
+    ],
+    "correct_option": 3,
+    "correct_answer": "El mal tendría origen desconocido, el quebrantamiento sería irremediable y la destrucción llegaría de repente",
+    "accepted_answers": [
+      "El mal tendría origen desconocido, el quebrantamiento sería irremediable y la destrucción llegaría de repente"
+    ],
+    "explanation": "La profecía acumula desconocimiento, falta de remedio y sorpresa para mostrar una ruina inevitable.",
+    "why_distractors_fail": {
+      "La amenaza sería anunciada con años de anticipación y podría comprarse una salida": "La sentencia recalca sorpresa e imposibilidad de remedio.",
+      "El daño sería leve, conocido y reversible mediante sus consejeros": "Invierte los tres rasgos del anuncio.",
+      "La destrucción afectaría solo sus campos y respetaría el trono": "No se establece esa limitación."
+    },
+    "source_ref": "PR43, p. 51, párrafo 7",
+    "source_quote": "Vendrá pues sobre ti mal, cuyo nacimiento no sabrás: caerá sobre ti quebrantamiento, el cual no podrás remediar: y destrucción que no sabrás, vendrá de repente sobre ti.",
+    "evidence_excerpt": "Vendrá pues sobre ti mal, cuyo nacimiento no sabrás: caerá sobre ti quebrantamiento, el cual no podrás remediar: y destrucción que no sabrás, vendrá de repente sobre ti.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "ruin_inevitability_sequence",
+    "option_category": "prophetic_outcome_set",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-069",
+    "source_unit_id": "PR43-P052-P002-S001",
+    "fact_id": "PR43-P052-P002-S001-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Para qué se permitió a cada nación ocupar su lugar en el escenario de la historia?",
+    "options": [
+      "Para revelar si cumpliría los propósitos del Vigilante y Santo",
+      "Para garantizar que conservaría su poder indefinidamente",
+      "Para comparar únicamente su riqueza con la de Babilonia",
+      "Para impedir que sus gobernantes tomaran decisiones propias"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Para revelar si cumpliría los propósitos del Vigilante y Santo",
+    "accepted_answers": [
+      "Para revelar si cumpliría los propósitos del Vigilante y Santo"
+    ],
+    "explanation": "El lugar histórico de cada nación funcionaba como una prueba de su relación con el propósito divino.",
+    "why_distractors_fail": {
+      "Para garantizar que conservaría su poder indefinidamente": "Cada nación tuvo un plazo y podía fracasar.",
+      "Para comparar únicamente su riqueza con la de Babilonia": "La evaluación era moral y providencial, no económica.",
+      "Para impedir que sus gobernantes tomaran decisiones propias": "El capítulo mantiene la responsabilidad de la elección."
+    },
+    "source_ref": "PR43, p. 52, párrafo 2",
+    "source_quote": "A cada nación que subió al escenario de acción se le permitió ocupar su lugar en la tierra, para que pudiese determinarse si iba a cumplir los propósitos del Vigilante y Santo.",
+    "evidence_excerpt": "A cada nación que subió al escenario de acción se le permitió ocupar su lugar en la tierra, para que pudiese determinarse si iba a cumplir los propósitos del Vigilante y Santo.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "nations_probation_purpose",
+    "option_category": "purpose",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-070",
+    "source_unit_id": "PR43-P052-P004-S007",
+    "fact_id": "PR43-P052-P004-S007-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "symbol_interpretation",
+    "question": "¿Qué elemento alrededor del trono representaba la misericordia divina?",
+    "options": [
+      "Las ruedas entrelazadas",
+      "El arco iris",
+      "La piedra de zafiro",
+      "El fuego envolvente"
+    ],
+    "correct_option": 1,
+    "correct_answer": "El arco iris",
+    "accepted_answers": [
+      "El arco iris",
+      "Arco iris"
+    ],
+    "explanation": "El arco iris que rodeaba el trono se identifica expresamente como emblema de la misericordia divina.",
+    "why_distractors_fail": {
+      "Las ruedas entrelazadas": "Representan la complejidad dirigida de los acontecimientos.",
+      "La piedra de zafiro": "Describe la apariencia del trono.",
+      "El fuego envolvente": "Forma parte de la visión inicial, pero no recibe ese significado."
+    },
+    "source_ref": "PR43, p. 52, párrafo 4",
+    "source_quote": "Seres celestiales, sostenidos y guiados por la mano que había debajo de las alas de los querubines, impelían aquellas ruedas; sobre ellos, en el trono de zafiro, estaba el Eterno; y en derredor del trono, había un arco iris, emblema de la misericordia divina.",
+    "evidence_excerpt": "Seres celestiales, sostenidos y guiados por la mano que había debajo de las alas de los querubines, impelían aquellas ruedas; sobre ellos, en el trono de zafiro, estaba el Eterno; y en derredor del trono, había un arco iris, emblema de la misericordia divina.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "rainbow_mercy_symbol",
+    "option_category": "symbol",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-071",
+    "source_unit_id": "PR43-P050-P005-S001",
+    "fact_id": "PR43-P050-P005-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "La caída de Babilonia ocurrió en un solo ____.",
+    "options": [
+      "momento",
+      "siglo",
+      "reinado",
+      "asedio"
+    ],
+    "correct_option": 0,
+    "correct_answer": "momento",
+    "accepted_answers": [
+      "momento",
+      "un momento"
+    ],
+    "explanation": "La expresión profética destaca la rapidez de la caída: «En un momento cayó Babilonia».",
+    "why_distractors_fail": {
+      "siglo": "El contraste es con una caída repentina.",
+      "reinado": "No completa la medida temporal citada.",
+      "asedio": "Describe una operación militar, no la rapidez del desenlace."
+    },
+    "source_ref": "PR43, p. 50, párrafo 5",
+    "source_quote": "“En un momento cayó Babilonia.",
+    "evidence_excerpt": "“En un momento cayó Babilonia.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "babylon_fall_speed",
+    "option_category": "time_unit",
+    "false_mutation": null,
+    "blank_span": "momento",
+    "significance": "Fija la brevedad extrema con que se consumó la caída.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-072",
+    "source_unit_id": "PR43-P050-P005-S004",
+    "fact_id": "PR43-P050-P005-S004-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "Babilonia fue tomada sin saberlo después de que Jehová le pusiera ____.",
+    "options": [
+      "coronas",
+      "lazos",
+      "guardias",
+      "murallas"
+    ],
+    "correct_option": 1,
+    "correct_answer": "lazos",
+    "accepted_answers": [
+      "lazos",
+      "los lazos"
+    ],
+    "explanation": "La imagen profética presenta la captura inesperada como resultado de lazos puestos por Jehová.",
+    "why_distractors_fail": {
+      "coronas": "La sentencia no le concede realeza.",
+      "guardias": "La seguridad humana no es la imagen usada.",
+      "murallas": "Sus defensas serían derribadas, no colocadas por Jehová."
+    },
+    "source_ref": "PR43, p. 50, párrafo 5",
+    "source_quote": "“Púsete lazos, y aun fuiste tomada, oh Babilonia, y tú no lo supiste: fuiste hallada, y aun presa, porque provocaste a Jehová.",
+    "evidence_excerpt": "“Púsete lazos, y aun fuiste tomada, oh Babilonia, y tú no lo supiste: fuiste hallada, y aun presa, porque provocaste a Jehová.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "babylon_trap_image",
+    "option_category": "object",
+    "false_mutation": null,
+    "blank_span": "lazos",
+    "significance": "Identifica la figura que explica por qué la ciudad fue apresada sin advertirlo.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-073",
+    "source_unit_id": "PR43-P050-P007-S001",
+    "fact_id": "PR43-P050-P007-S001-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "Las altas puertas de Babilonia fueron quemadas a ____.",
+    "options": [
+      "sol",
+      "medianoche",
+      "fuego",
+      "polvo"
+    ],
+    "correct_option": 2,
+    "correct_answer": "fuego",
+    "accepted_answers": [
+      "fuego",
+      "a fuego"
+    ],
+    "explanation": "Mientras el muro quedó derribado, las puertas altas fueron quemadas a fuego.",
+    "why_distractors_fail": {
+      "sol": "No es el agente de destrucción indicado.",
+      "medianoche": "Es un momento, no el medio de quema.",
+      "polvo": "La profecía habla de fuego."
+    },
+    "source_ref": "PR43, p. 50, párrafo 7",
+    "source_quote": "Así el “muro ancho de Babilonia” quedó “derribado enteramente, y sus altas puertas” fueron “quemadas a fuego.",
+    "evidence_excerpt": "Así el “muro ancho de Babilonia” quedó “derribado enteramente, y sus altas puertas” fueron “quemadas a fuego.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "high_gates_destruction",
+    "option_category": "destructive_agent",
+    "false_mutation": null,
+    "blank_span": "fuego",
+    "significance": "Precisa el destino de las puertas, diferente del derribo del muro.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-074",
+    "source_unit_id": "PR43-P051-P001-S003",
+    "fact_id": "PR43-P051-P001-S003-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "Jehová convertiría a Babilonia en lagunas de ____.",
+    "options": [
+      "arena",
+      "fuego",
+      "aceite",
+      "agua"
+    ],
+    "correct_option": 3,
+    "correct_answer": "agua",
+    "accepted_answers": [
+      "agua",
+      "lagunas de agua"
+    ],
+    "explanation": "La desolación incluye la transformación del lugar en lagunas de agua.",
+    "why_distractors_fail": {
+      "arena": "No completa la imagen profética.",
+      "fuego": "El fuego se relaciona con las puertas, no con las lagunas.",
+      "aceite": "No aparece en esta descripción."
+    },
+    "source_ref": "PR43, p. 51, párrafo 1",
+    "source_quote": "“Y convertiréla en posesión de erizos, y en lagunas de agua: y la barreré con escobas de destrucción, dice Jehová de los ejércitos.",
+    "evidence_excerpt": "“Y convertiréla en posesión de erizos, y en lagunas de agua: y la barreré con escobas de destrucción, dice Jehová de los ejércitos.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "babylon_water_desolation",
+    "option_category": "substance",
+    "false_mutation": null,
+    "blank_span": "agua",
+    "significance": "Conserva una transformación física específica del territorio desolado.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-075",
+    "source_unit_id": "PR43-P051-P003-S001",
+    "fact_id": "PR43-P051-P003-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "La virgen hija de Babilonia debía descender y sentarse en el ____.",
+    "options": [
+      "polvo",
+      "trono",
+      "templo",
+      "río"
+    ],
+    "correct_option": 0,
+    "correct_answer": "polvo",
+    "accepted_answers": [
+      "polvo",
+      "el polvo"
+    ],
+    "explanation": "La orden de sentarse en el polvo representa su humillación y pérdida del trono.",
+    "why_distractors_fail": {
+      "trono": "La sentencia declara que quedaría sin trono.",
+      "templo": "No es el lugar de su humillación.",
+      "río": "El río intervino en la conquista, pero no completa esta imagen."
+    },
+    "source_ref": "PR43, p. 51, párrafo 3",
+    "source_quote": "“Desciende, y siéntate en el polvo, virgen hija de Babilonia, siéntate en la tierra sin trono, ... siéntate, calla, y entra en tinieblas, hija de los Caldeos: porque nunca más te llamarán señora de reinos.",
+    "evidence_excerpt": "“Desciende, y siéntate en el polvo, virgen hija de Babilonia, siéntate en la tierra sin trono, ... siéntate, calla, y entra en tinieblas, hija de los Caldeos: porque nunca más te llamarán señora de reinos.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "babylon_humiliation_posture",
+    "option_category": "place",
+    "false_mutation": null,
+    "blank_span": "polvo",
+    "significance": "Fija la postura simbólica que contrasta con su antigua condición real.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-076",
+    "source_unit_id": "PR43-P051-P007-S002",
+    "fact_id": "PR43-P051-P007-S002-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "La destrucción que Babilonia no conocería vendría de ____.",
+    "options": [
+      "lejos",
+      "repente",
+      "Egipto",
+      "noche"
+    ],
+    "correct_option": 1,
+    "correct_answer": "repente",
+    "accepted_answers": [
+      "repente",
+      "de repente"
+    ],
+    "explanation": "La sentencia recalca que la destrucción llegaría de repente.",
+    "why_distractors_fail": {
+      "lejos": "No expresa la súbita llegada anunciada.",
+      "Egipto": "No se identifica ese origen.",
+      "noche": "Aunque la ciudad cayó durante una noche, la frase pide la manera repentina."
+    },
+    "source_ref": "PR43, p. 51, párrafo 7",
+    "source_quote": "Vendrá pues sobre ti mal, cuyo nacimiento no sabrás: caerá sobre ti quebrantamiento, el cual no podrás remediar: y destrucción que no sabrás, vendrá de repente sobre ti.",
+    "evidence_excerpt": "Vendrá pues sobre ti mal, cuyo nacimiento no sabrás: caerá sobre ti quebrantamiento, el cual no podrás remediar: y destrucción que no sabrás, vendrá de repente sobre ti.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "sudden_destruction",
+    "option_category": "manner",
+    "false_mutation": null,
+    "blank_span": "repente",
+    "significance": "Fija la forma inesperada en que llegaría la destrucción.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-077",
+    "source_unit_id": "PR43-P052-P004-S001",
+    "fact_id": "PR43-P052-P004-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Ezequiel contempló la visión a orillas del río ____.",
+    "options": [
+      "Éufrates",
+      "Jordán",
+      "Chebar",
+      "Tigris"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Chebar",
+    "accepted_answers": [
+      "Chebar",
+      "río Chebar"
+    ],
+    "explanation": "El escenario de la visión fue la ribera del río Chebar.",
+    "why_distractors_fail": {
+      "Éufrates": "No es el río nombrado en esta escena.",
+      "Jordán": "Se encuentra en la tierra de Israel, no en el lugar del destierro descrito.",
+      "Tigris": "Tampoco es la ubicación indicada."
+    },
+    "source_ref": "PR43, p. 52, párrafo 4",
+    "source_quote": "A orillas del río Chebar, Ezequiel contempló un torbellino que parecía venir del norte, “una gran nube, con un fuego envolvente, y en derredor suyo un resplandor, y en medio del fuego una cosa que parecía como de ámbar.",
+    "evidence_excerpt": "A orillas del río Chebar, Ezequiel contempló un torbellino que parecía venir del norte, “una gran nube, con un fuego envolvente, y en derredor suyo un resplandor, y en medio del fuego una cosa que parecía como de ámbar.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "ezekiel_vision_location",
+    "option_category": "river",
+    "false_mutation": null,
+    "blank_span": "Chebar",
+    "significance": "Identifica el lugar geográfico de la visión del gobierno divino.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-078",
+    "source_unit_id": "PR43-P052-P004-S006",
+    "fact_id": "PR43-P052-P004-S006-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "symbol_interpretation",
+    "question": "Aunque parecían confusas por su complejidad, las ruedas se movían en perfecta ____.",
+    "options": [
+      "lentitud",
+      "oscuridad",
+      "independencia",
+      "armonía"
+    ],
+    "correct_option": 3,
+    "correct_answer": "armonía",
+    "accepted_answers": [
+      "armonía",
+      "perfecta armonía"
+    ],
+    "explanation": "La complejidad aparente no impedía un movimiento perfectamente armonioso.",
+    "why_distractors_fail": {
+      "lentitud": "El pasaje no contrasta complejidad con velocidad.",
+      "oscuridad": "No describe el orden del movimiento.",
+      "independencia": "Las ruedas eran dirigidas, no autónomas."
+    },
+    "source_ref": "PR43, p. 52, párrafo 4",
+    "source_quote": "Las ruedas eran tan complicadas en su ordenamiento, que a primera vista parecían confusas; y sin embargo se movían en armonía perfecta.",
+    "evidence_excerpt": "Las ruedas eran tan complicadas en su ordenamiento, que a primera vista parecían confusas; y sin embargo se movían en armonía perfecta.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "wheels_harmony",
+    "option_category": "movement_quality",
+    "false_mutation": null,
+    "blank_span": "armonía",
+    "significance": "Completa el contraste entre confusión aparente y coordinación real.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-079",
+    "source_unit_id": "PR43-P050-P005-S003",
+    "fact_id": "PR43-P050-P005-S003-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "prophetic_detail",
+    "question": "Después de dormir el sueño anunciado, los príncipes, sabios y valientes de Babilonia despertarían para reorganizar el reino.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La profecía dice que dormirían sueño eterno y no despertarían.",
+    "why_distractors_fail": {
+      "Verdadero": "Cambia la imposibilidad de despertar por una recuperación política."
+    },
+    "source_ref": "PR43, p. 50, párrafo 5",
+    "source_quote": "Y embriagaré sus príncipes y sus sabios, sus capitanes y sus nobles y sus fuertes; y dormirán sueño eterno y no despertarán, dice el Rey, cuyo nombre es Jehová de los ejércitos.",
+    "evidence_excerpt": "Y embriagaré sus príncipes y sus sabios, sus capitanes y sus nobles y sus fuertes; y dormirán sueño eterno y no despertarán, dice el Rey, cuyo nombre es Jehová de los ejércitos.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "eternal_sleep_finality",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "awakening_outcome"
+      ],
+      "local": true,
+      "original": "dormirán sueño eterno y no despertarán",
+      "replacement": "despertarían para reorganizar el reino"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-080",
+    "source_unit_id": "PR43-P050-P007-S002",
+    "fact_id": "PR43-P050-P007-S002-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Jehová hizo cesar la arrogancia de los soberbios y abatió la altivez de los fuertes.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La caída de Babilonia se presenta también como humillación de su orgullo.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación conserva los dos grupos y las dos acciones declaradas."
+    },
+    "source_ref": "PR43, p. 50, párrafo 7",
+    "source_quote": "Así hizo cesar Jehová de los ejércitos “la arrogancia de los soberbios” y abatió “la altivez de los fuertes.",
+    "evidence_excerpt": "Así hizo cesar Jehová de los ejércitos “la arrogancia de los soberbios” y abatió “la altivez de los fuertes.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "pride_humbled",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-081",
+    "source_unit_id": "PR43-P051-P002-S001",
+    "fact_id": "PR43-P051-P002-S001-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "comparison",
+    "question": "La sentencia que alcanzó al último gobernante de Babilonia ya había llegado en figura al primero.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El capítulo conecta el juicio del último gobernante con la advertencia figurada al primero.",
+    "why_distractors_fail": {
+      "Falso": "La relación entre ambos extremos del gobierno babilónico se declara expresamente."
+    },
+    "source_ref": "PR43, p. 51, párrafo 2",
+    "source_quote": "Al último gobernante de Babilonia llegó la sentencia del Vigía divino, como había llegado en figura al primero: “A ti dicen, ... el reino es traspasado de ti.",
+    "evidence_excerpt": "Al último gobernante de Babilonia llegó la sentencia del Vigía divino, como había llegado en figura al primero: “A ti dicen, ... el reino es traspasado de ti.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "first_last_ruler_judgment",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-082",
+    "source_unit_id": "PR43-P051-P008-S001",
+    "fact_id": "PR43-P051-P008-S001-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "La multitud de encantamientos y agüeros garantizaba que Babilonia podría fortalecerse y evitar la sentencia.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La exhortación es irónica y solo plantea un «quizá»; esas prácticas no podían asegurar salvación.",
+    "why_distractors_fail": {
+      "Verdadero": "Transforma una posibilidad irónica e impotente en garantía de protección."
+    },
+    "source_ref": "PR43, p. 51, párrafo 8",
+    "source_quote": "“Estáte ahora en tus encantamentos, y con la multitud de tus agüeros, en los cuales te fatigaste desde tu niñez; quizá podrás mejorarte, quizá te fortificarás.",
+    "evidence_excerpt": "“Estáte ahora en tus encantamentos, y con la multitud de tus agüeros, en los cuales te fatigaste desde tu niñez; quizá podrás mejorarte, quizá te fortificarás.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "occult_security_failure",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "certainty"
+      ],
+      "local": true,
+      "original": "quizá podrás mejorarte, quizá te fortificarás",
+      "replacement": "garantizaba que podría fortalecerse y evitar la sentencia"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-083",
+    "source_unit_id": "PR43-P052-P002-S003",
+    "fact_id": "PR43-P052-P002-S003-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "El mismo patrón histórico se repitió tanto en los grandes imperios como en las naciones de menor potencia.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La repetición de la historia se aplica a imperios mayores y naciones menores.",
+    "why_distractors_fail": {
+      "Falso": "El alcance incluye expresamente a ambos grupos de naciones."
+    },
+    "source_ref": "PR43, p. 52, párrafo 2",
+    "source_quote": "Con cada uno de ellos, como con las naciones de menos potencia, la historia se repitió.",
+    "evidence_excerpt": "Con cada uno de ellos, como con las naciones de menos potencia, la historia se repitió.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "national_history_pattern",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-084",
+    "source_unit_id": "PR43-P052-P005-S002",
+    "fact_id": "PR43-P052-P005-S002-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "En medio de las disensiones y el tumulto de las naciones, el que está sobre los querubines dejó de dirigir los asuntos de la tierra.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Precisamente en medio del tumulto, Dios continúa guiando los asuntos terrenales.",
+    "why_distractors_fail": {
+      "Verdadero": "Invierte la continuidad de la dirección divina."
+    },
+    "source_ref": "PR43, p. 52, párrafo 5",
+    "source_quote": "En medio de las disensiones y el tumulto de las naciones, el que está sentado más arriba que los querubines sigue guiando los asuntos de esta tierra.",
+    "evidence_excerpt": "En medio de las disensiones y el tumulto de las naciones, el que está sentado más arriba que los querubines sigue guiando los asuntos de esta tierra.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "divine_guidance_continuity",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "divine_activity"
+      ],
+      "local": true,
+      "original": "sigue guiando los asuntos de esta tierra",
+      "replacement": "dejó de dirigir los asuntos de la tierra"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR43-V11-WAVE-085",
+    "source_unit_id": "PR43-P052-P007-S002",
+    "fact_id": "PR43-P052-P007-S002-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "prophetic_detail",
+    "question": "El cumplimiento registrado en la historia permite confiar en que lo que aún falta se realizará en su orden.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Lo ya cumplido fundamenta la seguridad acerca del desarrollo ordenado de lo pendiente.",
+    "why_distractors_fail": {
+      "Falso": "La conclusión une explícitamente evidencia histórica y confianza futura."
+    },
+    "source_ref": "PR43, p. 52, párrafo 7",
+    "source_quote": "Todo lo que la profecía predijo como habiendo de acontecer hasta el momento actual, se lee cumplido en las páginas de la historia, y podemos tener la seguridad de que todo lo que falta por cumplir se realizará en su orden.",
+    "evidence_excerpt": "Todo lo que la profecía predijo como habiendo de acontecer hasta el momento actual, se lee cumplido en las páginas de la historia, y podemos tener la seguridad de que todo lo que falta por cumplir se realizará en su orden.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "fulfilled_prophecy_confidence",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]
