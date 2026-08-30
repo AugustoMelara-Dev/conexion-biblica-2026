@@ -1120,5 +1120,877 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol:/root/author_variants_dan10_12:correction-1bf7af0:2026-08-29"
     }
+  },
+  {
+    "id": "DAN12-V11-WAVE-001",
+    "source_unit_id": "DAN12-V001",
+    "fact_id": "DAN12-V001-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué distinguiría al tiempo de angustia anunciado?",
+    "options": [
+      "No habría existido otro igual desde que hubo gente",
+      "Sería menor que todas las crisis anteriores",
+      "Duraría únicamente una noche",
+      "Afectaría solo a los reyes de Persia"
+    ],
+    "correct_option": 0,
+    "correct_answer": "No habría existido otro igual desde que hubo gente",
+    "accepted_answers": [
+      "No habría existido otro igual desde que hubo gente"
+    ],
+    "explanation": "Sería un tiempo de angustia sin precedente desde que hubo gente.",
+    "why_distractors_fail": {
+      "Sería menor que todas las crisis anteriores": "Invierte la comparación del pasaje.",
+      "Duraría únicamente una noche": "No se fija esa duración.",
+      "Afectaría solo a los reyes de Persia": "El anuncio se relaciona con el pueblo de Daniel."
+    },
+    "source_ref": "Daniel 12:1",
+    "source_quote": "En aquel tiempo se levantará Miguel, el gran príncipe que está de parte de los hijos de tu pueblo. »Será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen inscritos en el libro.",
+    "evidence_excerpt": "En aquel tiempo se levantará Miguel, el gran príncipe que está de parte de los hijos de tu pueblo. »Será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen inscritos en el libro.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "unprecedented_distress",
+    "option_category": "comparison",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-002",
+    "source_unit_id": "DAN12-V001",
+    "fact_id": "DAN12-V001-V11-F03",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Qué condición identifica a quienes serían libertados en aquel tiempo?",
+    "options": [
+      "Pertenecer al ejército persa",
+      "Estar inscritos en el libro",
+      "Vivir junto al río",
+      "Conocer el número de los días"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Estar inscritos en el libro",
+    "accepted_answers": [
+      "Estar inscritos en el libro",
+      "hallarse inscritos en el libro"
+    ],
+    "explanation": "Serían libertados todos los que se hallaran inscritos en el libro.",
+    "why_distractors_fail": {
+      "Pertenecer al ejército persa": "No es el criterio de liberación.",
+      "Vivir junto al río": "La ubicación no determina el desenlace.",
+      "Conocer el número de los días": "La inscripción, no el cálculo, identifica a los libertados."
+    },
+    "source_ref": "Daniel 12:1",
+    "source_quote": "En aquel tiempo se levantará Miguel, el gran príncipe que está de parte de los hijos de tu pueblo. »Será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen inscritos en el libro.",
+    "evidence_excerpt": "En aquel tiempo se levantará Miguel, el gran príncipe que está de parte de los hijos de tu pueblo. »Será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen inscritos en el libro.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "deliverance_criterion",
+    "option_category": "condition",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-003",
+    "source_unit_id": "DAN12-V003",
+    "fact_id": "DAN12-V003-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Con qué se compara a quienes enseñan la justicia a la multitud?",
+    "options": [
+      "Con el polvo que cubre la tierra",
+      "Con las aguas del río",
+      "Con las estrellas a perpetua eternidad",
+      "Con un libro cerrado"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Con las estrellas a perpetua eternidad",
+    "accepted_answers": [
+      "Con las estrellas a perpetua eternidad",
+      "como las estrellas"
+    ],
+    "explanation": "Quienes enseñan justicia resplandecerán como las estrellas para siempre.",
+    "why_distractors_fail": {
+      "Con el polvo que cubre la tierra": "El polvo describe el lugar de quienes duermen.",
+      "Con las aguas del río": "No es la imagen de su resplandor.",
+      "Con un libro cerrado": "El libro pertenece a la orden dada a Daniel."
+    },
+    "source_ref": "Daniel 12:3",
+    "source_quote": "Los entendidos resplandecerán como el resplandor del firmamento; y los que enseñan la justicia a la multitud, como las estrellas, a perpetua eternidad.",
+    "evidence_excerpt": "Los entendidos resplandecerán como el resplandor del firmamento; y los que enseñan la justicia a la multitud, como las estrellas, a perpetua eternidad.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "teacher_simile",
+    "option_category": "comparison_object",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-004",
+    "source_unit_id": "DAN12-V004",
+    "fact_id": "DAN12-V004-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "prophetic_detail",
+    "question": "¿Qué movimiento realizarían muchos cerca del tiempo del fin?",
+    "options": [
+      "Permanecerían inmóviles junto al río",
+      "Huirían únicamente hacia Egipto",
+      "Subirían todos al monte santo",
+      "Correrían de aquí para allá"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Correrían de aquí para allá",
+    "accepted_answers": [
+      "Correrían de aquí para allá",
+      "muchos correrán de aquí para allá"
+    ],
+    "explanation": "Muchos correrían de aquí para allá.",
+    "why_distractors_fail": {
+      "Permanecerían inmóviles junto al río": "Contradice el movimiento descrito.",
+      "Huirían únicamente hacia Egipto": "No se limita a ese destino.",
+      "Subirían todos al monte santo": "No es la acción anunciada."
+    },
+    "source_ref": "Daniel 12:4",
+    "source_quote": "“Pero tú, Daniel, cierra las palabras y sella el libro hasta el tiempo del fin. Muchos correrán de aquí para allá, y la ciencia aumentará.”",
+    "evidence_excerpt": "“Pero tú, Daniel, cierra las palabras y sella el libro hasta el tiempo del fin. Muchos correrán de aquí para allá, y la ciencia aumentará.”",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "human_movement",
+    "option_category": "action",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-005",
+    "source_unit_id": "DAN12-V004",
+    "fact_id": "DAN12-V004-V11-F03",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Qué aumentaría mientras muchos corrieran de aquí para allá?",
+    "options": [
+      "La ciencia",
+      "La angustia",
+      "La dispersión",
+      "La riqueza de Persia"
+    ],
+    "correct_option": 0,
+    "correct_answer": "La ciencia",
+    "accepted_answers": [
+      "La ciencia",
+      "la ciencia aumentará"
+    ],
+    "explanation": "El anuncio concluye que la ciencia aumentaría.",
+    "why_distractors_fail": {
+      "La angustia": "La angustia se anuncia en otro versículo, no como objeto de este aumento.",
+      "La dispersión": "Su final marca el cumplimiento posterior.",
+      "La riqueza de Persia": "Pertenece a la sucesión del capítulo anterior."
+    },
+    "source_ref": "Daniel 12:4",
+    "source_quote": "“Pero tú, Daniel, cierra las palabras y sella el libro hasta el tiempo del fin. Muchos correrán de aquí para allá, y la ciencia aumentará.”",
+    "evidence_excerpt": "“Pero tú, Daniel, cierra las palabras y sella el libro hasta el tiempo del fin. Muchos correrán de aquí para allá, y la ciencia aumentará.”",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "increase",
+    "option_category": "concept",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-006",
+    "source_unit_id": "DAN12-V005",
+    "fact_id": "DAN12-V005-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Cómo estaban distribuidas las dos figuras adicionales que vio Daniel?",
+    "options": [
+      "Ambas sobre las aguas",
+      "Una a cada lado del río",
+      "Las dos en la misma orilla",
+      "Una en el monte y otra en Egipto"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Una a cada lado del río",
+    "accepted_answers": [
+      "Una a cada lado del río",
+      "uno a este lado del río y el otro al otro lado"
+    ],
+    "explanation": "Cada figura estaba en una orilla distinta.",
+    "why_distractors_fail": {
+      "Ambas sobre las aguas": "Sobre las aguas estaba el varón vestido de lino.",
+      "Las dos en la misma orilla": "El texto las sitúa en lados opuestos.",
+      "Una en el monte y otra en Egipto": "No son las ubicaciones mencionadas."
+    },
+    "source_ref": "Daniel 12:5",
+    "source_quote": "Yo, Daniel, miré y vi a otros dos que estaban en pie, uno a este lado del río y el otro al otro lado.",
+    "evidence_excerpt": "Yo, Daniel, miré y vi a otros dos que estaban en pie, uno a este lado del río y el otro al otro lado.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "river_positions",
+    "option_category": "spatial_relation",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-007",
+    "source_unit_id": "DAN12-V006",
+    "fact_id": "DAN12-V006-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "text_recall",
+    "question": "¿Qué quiso saber una de las figuras acerca de las maravillas?",
+    "options": [
+      "Quién las había escrito",
+      "Dónde debían esconderse",
+      "Cuándo sería su fin",
+      "Cuántas personas las entenderían"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Cuándo sería su fin",
+    "accepted_answers": [
+      "Cuándo sería su fin",
+      "¿Cuándo será el fin de estas maravillas?"
+    ],
+    "explanation": "La pregunta fue cuándo terminarían aquellas maravillas.",
+    "why_distractors_fail": {
+      "Quién las había escrito": "No preguntó por autoría.",
+      "Dónde debían esconderse": "No solicitó un lugar.",
+      "Cuántas personas las entenderían": "No pidió una cantidad de entendidos."
+    },
+    "source_ref": "Daniel 12:6",
+    "source_quote": "Y dijo uno al varón vestido de lino que estaba sobre las aguas del río: “¿Cuándo será el fin de estas maravillas?”",
+    "evidence_excerpt": "Y dijo uno al varón vestido de lino que estaba sobre las aguas del río: “¿Cuándo será el fin de estas maravillas?”",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "asked_information",
+    "option_category": "question_content",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-008",
+    "source_unit_id": "DAN12-V007",
+    "fact_id": "DAN12-V007-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿Qué gesto acompañó el juramento del varón vestido de lino?",
+    "options": [
+      "Puso una mano sobre el libro",
+      "Se arrodilló en una orilla",
+      "Extendió una vara sobre el río",
+      "Alzó ambas manos al cielo"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Alzó ambas manos al cielo",
+    "accepted_answers": [
+      "Alzó ambas manos al cielo",
+      "alzó su mano derecha y su mano izquierda al cielo"
+    ],
+    "explanation": "Alzó la mano derecha y la izquierda al cielo.",
+    "why_distractors_fail": {
+      "Puso una mano sobre el libro": "No es el gesto narrado.",
+      "Se arrodilló en una orilla": "El varón estaba sobre las aguas.",
+      "Extendió una vara sobre el río": "No aparece una vara."
+    },
+    "source_ref": "Daniel 12:7",
+    "source_quote": "Oí al varón vestido de lino, que estaba sobre las aguas del río, el cual alzó su mano derecha y su mano izquierda al cielo y juró por el que vive por los siglos, que será por tiempo, tiempos y la mitad de un tiempo. Y cuando se acabe la dispersión del poder del pueblo santo, todas estas cosas se cumplirán.",
+    "evidence_excerpt": "Oí al varón vestido de lino, que estaba sobre las aguas del río, el cual alzó su mano derecha y su mano izquierda al cielo y juró por el que vive por los siglos, que será por tiempo, tiempos y la mitad de un tiempo. Y cuando se acabe la dispersión del poder del pueblo santo, todas estas cosas se cumplirán.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "oath_gesture",
+    "option_category": "gesture",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-009",
+    "source_unit_id": "DAN12-V007",
+    "fact_id": "DAN12-V007-V11-F03",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "speaker_addressee",
+    "question": "¿Por quién juró el varón que estaba sobre las aguas?",
+    "options": [
+      "Por el que vive por los siglos",
+      "Por Miguel, el gran príncipe",
+      "Por el rey de Persia",
+      "Por los entendidos del pueblo"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Por el que vive por los siglos",
+    "accepted_answers": [
+      "Por el que vive por los siglos",
+      "el que vive por los siglos"
+    ],
+    "explanation": "El juramento invocó al que vive por los siglos.",
+    "why_distractors_fail": {
+      "Por Miguel, el gran príncipe": "Miguel se levantaría por el pueblo, pero no es la fórmula del juramento.",
+      "Por el rey de Persia": "No interviene en esta escena.",
+      "Por los entendidos del pueblo": "Ellos reciben una promesa, no el juramento."
+    },
+    "source_ref": "Daniel 12:7",
+    "source_quote": "Oí al varón vestido de lino, que estaba sobre las aguas del río, el cual alzó su mano derecha y su mano izquierda al cielo y juró por el que vive por los siglos, que será por tiempo, tiempos y la mitad de un tiempo. Y cuando se acabe la dispersión del poder del pueblo santo, todas estas cosas se cumplirán.",
+    "evidence_excerpt": "Oí al varón vestido de lino, que estaba sobre las aguas del río, el cual alzó su mano derecha y su mano izquierda al cielo y juró por el que vive por los siglos, que será por tiempo, tiempos y la mitad de un tiempo. Y cuando se acabe la dispersión del poder del pueblo santo, todas estas cosas se cumplirán.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "oath_authority",
+    "option_category": "authority",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-010",
+    "source_unit_id": "DAN12-V007",
+    "fact_id": "DAN12-V007-V11-F04",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "prophetic_detail",
+    "question": "¿Qué duración anunció el juramento?",
+    "options": [
+      "Setenta semanas completas",
+      "Tiempo, tiempos y la mitad de un tiempo",
+      "Mil trescientos treinta y cinco años",
+      "Tres días y medio"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Tiempo, tiempos y la mitad de un tiempo",
+    "accepted_answers": [
+      "Tiempo, tiempos y la mitad de un tiempo"
+    ],
+    "explanation": "La duración se expresó como tiempo, tiempos y la mitad de un tiempo.",
+    "why_distractors_fail": {
+      "Setenta semanas completas": "Esa expresión pertenece a la profecía anterior.",
+      "Mil trescientos treinta y cinco años": "El pasaje posterior habla de días y otra cifra.",
+      "Tres días y medio": "No es la fórmula utilizada."
+    },
+    "source_ref": "Daniel 12:7",
+    "source_quote": "Oí al varón vestido de lino, que estaba sobre las aguas del río, el cual alzó su mano derecha y su mano izquierda al cielo y juró por el que vive por los siglos, que será por tiempo, tiempos y la mitad de un tiempo. Y cuando se acabe la dispersión del poder del pueblo santo, todas estas cosas se cumplirán.",
+    "evidence_excerpt": "Oí al varón vestido de lino, que estaba sobre las aguas del río, el cual alzó su mano derecha y su mano izquierda al cielo y juró por el que vive por los siglos, que será por tiempo, tiempos y la mitad de un tiempo. Y cuando se acabe la dispersión del poder del pueblo santo, todas estas cosas se cumplirán.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "prophetic_duration",
+    "option_category": "duration",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-011",
+    "source_unit_id": "DAN12-V008",
+    "fact_id": "DAN12-V008-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "Al no entender, Daniel preguntó cuál sería el ____ de aquellas cosas.",
+    "options": [
+      "fin",
+      "principio",
+      "autor",
+      "lugar"
+    ],
+    "correct_option": 0,
+    "correct_answer": "fin",
+    "accepted_answers": [
+      "fin",
+      "el fin"
+    ],
+    "explanation": "Daniel preguntó por el fin de aquellas cosas.",
+    "why_distractors_fail": {
+      "principio": "Su pregunta miraba al desenlace.",
+      "autor": "No preguntó quién había dado el mensaje.",
+      "lugar": "Tampoco solicitó una ubicación."
+    },
+    "source_ref": "Daniel 12:8",
+    "source_quote": "Yo oí, pero no entendí. Dije entonces: “Señor mío, ¿cuál será el fin de estas cosas?”",
+    "evidence_excerpt": "Yo oí, pero no entendí. Dije entonces: “Señor mío, ¿cuál será el fin de estas cosas?”",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "followup_question",
+    "option_category": "question_term",
+    "false_mutation": null,
+    "blank_span": "fin",
+    "significance": "Identifica la inquietud que permaneció después de oír sin comprender.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-012",
+    "source_unit_id": "DAN12-V009",
+    "fact_id": "DAN12-V009-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "speaker_addressee",
+    "question": "La respuesta comenzó con la orden: «____, Daniel». ",
+    "options": [
+      "Escribe",
+      "Anda",
+      "Espera",
+      "Pregunta"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Anda",
+    "accepted_answers": [
+      "Anda",
+      "anda"
+    ],
+    "explanation": "Daniel recibió la orden de seguir adelante: «Anda, Daniel».",
+    "why_distractors_fail": {
+      "Escribe": "No es el verbo inicial de la respuesta.",
+      "Espera": "La espera aparece en la bienaventuranza posterior.",
+      "Pregunta": "Daniel ya había formulado su duda."
+    },
+    "source_ref": "Daniel 12:9",
+    "source_quote": "Él respondió: “Anda, Daniel, pues estas palabras están cerradas y selladas hasta el tiempo del fin.",
+    "evidence_excerpt": "Él respondió: “Anda, Daniel, pues estas palabras están cerradas y selladas hasta el tiempo del fin.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "departure_command",
+    "option_category": "command",
+    "false_mutation": null,
+    "blank_span": "Anda",
+    "significance": "Recupera la instrucción personal que acompaña el sellamiento de las palabras.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-013",
+    "source_unit_id": "DAN12-V010",
+    "fact_id": "DAN12-V010-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Muchos serían limpios, emblanquecidos y ____.",
+    "options": [
+      "escondidos",
+      "dispersados",
+      "purificados",
+      "inscritos"
+    ],
+    "correct_option": 2,
+    "correct_answer": "purificados",
+    "accepted_answers": [
+      "purificados"
+    ],
+    "explanation": "El proceso incluye limpieza, emblanquecimiento y purificación.",
+    "why_distractors_fail": {
+      "escondidos": "No forma parte del proceso descrito.",
+      "dispersados": "La dispersión se menciona en otro contexto.",
+      "inscritos": "La inscripción identifica a los libertados, no esta transformación."
+    },
+    "source_ref": "Daniel 12:10",
+    "source_quote": "Muchos serán limpios, emblanquecidos y purificados; los impíos procederán impíamente, y ninguno de los impíos entenderá; pero los entendidos comprenderán.",
+    "evidence_excerpt": "Muchos serán limpios, emblanquecidos y purificados; los impíos procederán impíamente, y ninguno de los impíos entenderá; pero los entendidos comprenderán.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "purification_process",
+    "option_category": "state",
+    "false_mutation": null,
+    "blank_span": "purificados",
+    "significance": "Completa la triple descripción de la transformación de muchos.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-014",
+    "source_unit_id": "DAN12-V011",
+    "fact_id": "DAN12-V011-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "Entre la supresión del sacrificio continuo y la abominación desoladora habría ____ días.",
+    "options": [
+      "mil doscientos sesenta",
+      "mil trescientos treinta y cinco",
+      "dos mil trescientos",
+      "mil doscientos noventa"
+    ],
+    "correct_option": 3,
+    "correct_answer": "mil doscientos noventa",
+    "accepted_answers": [
+      "mil doscientos noventa",
+      "1290"
+    ],
+    "explanation": "El intervalo anunciado es de mil doscientos noventa días.",
+    "why_distractors_fail": {
+      "mil doscientos sesenta": "No es la cifra de este intervalo.",
+      "mil trescientos treinta y cinco": "Es la cifra de la bienaventuranza posterior.",
+      "dos mil trescientos": "Corresponde a otra visión."
+    },
+    "source_ref": "Daniel 12:11",
+    "source_quote": "Desde el tiempo en que sea quitado el sacrificio continuo hasta la abominación desoladora, habrá mil doscientos noventa días.",
+    "evidence_excerpt": "Desde el tiempo en que sea quitado el sacrificio continuo hasta la abominación desoladora, habrá mil doscientos noventa días.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "interval_length",
+    "option_category": "number",
+    "false_mutation": null,
+    "blank_span": "mil doscientos noventa",
+    "significance": "Fija la duración exacta entre los dos acontecimientos proféticos.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-015",
+    "source_unit_id": "DAN12-V012",
+    "fact_id": "DAN12-V012-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "principle",
+    "question": "Es bienaventurado quien ____ y llega al plazo anunciado.",
+    "options": [
+      "espera",
+      "huye",
+      "discute",
+      "retrocede"
+    ],
+    "correct_option": 0,
+    "correct_answer": "espera",
+    "accepted_answers": [
+      "espera",
+      "espere"
+    ],
+    "explanation": "La bienaventuranza se concede al que espera y llega.",
+    "why_distractors_fail": {
+      "huye": "No es la actitud elogiada.",
+      "discute": "No expresa perseverancia.",
+      "retrocede": "Se opone a llegar al plazo."
+    },
+    "source_ref": "Daniel 12:12",
+    "source_quote": "Bienaventurado el que espere, y llegue a mil trescientos treinta y cinco días.",
+    "evidence_excerpt": "Bienaventurado el que espere, y llegue a mil trescientos treinta y cinco días.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "blessed_attitude",
+    "option_category": "attitude",
+    "false_mutation": null,
+    "blank_span": "espera",
+    "significance": "Identifica la perseverancia asociada con la bienaventuranza.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-016",
+    "source_unit_id": "DAN12-V013",
+    "fact_id": "DAN12-V013-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "narrative_order",
+    "question": "Antes de levantarse para recibir su heredad, Daniel ____.",
+    "options": [
+      "reinaría",
+      "reposaría",
+      "huiría",
+      "profetizaría"
+    ],
+    "correct_option": 1,
+    "correct_answer": "reposaría",
+    "accepted_answers": [
+      "reposaría",
+      "reposaras",
+      "reposarás"
+    ],
+    "explanation": "Daniel iría hasta el fin, reposaría y después se levantaría.",
+    "why_distractors_fail": {
+      "reinaría": "No es la etapa intermedia anunciada.",
+      "huiría": "No se describe una fuga.",
+      "profetizaría": "El mensaje señala reposo antes del levantamiento."
+    },
+    "source_ref": "Daniel 12:13",
+    "source_quote": "En cuanto a ti, tú irás hasta el fin, y reposarás, y te levantarás para recibir tu heredad al fin de los días.”",
+    "evidence_excerpt": "En cuanto a ti, tú irás hasta el fin, y reposarás, y te levantarás para recibir tu heredad al fin de los días.”",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "personal_sequence",
+    "option_category": "action",
+    "false_mutation": null,
+    "blank_span": "reposaría",
+    "significance": "Fija la etapa que precede al levantamiento final de Daniel.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-017",
+    "source_unit_id": "DAN12-V002",
+    "fact_id": "DAN12-V002-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "La profecía habla de muchos que duermen en el polvo de la tierra y serían despertados.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La imagen del despertar se aplica a muchos que duermen en el polvo.",
+    "why_distractors_fail": {
+      "Falso": "Cantidad, estado y ubicación coinciden con la fuente."
+    },
+    "source_ref": "Daniel 12:2",
+    "source_quote": "Muchos de los que duermen en el polvo de la tierra serán despertados: unos para vida eterna, otros para vergüenza y confusión perpetua.",
+    "evidence_excerpt": "Muchos de los que duermen en el polvo de la tierra serán despertados: unos para vida eterna, otros para vergüenza y confusión perpetua.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "awakening_subjects",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-018",
+    "source_unit_id": "DAN12-V006",
+    "fact_id": "DAN12-V006-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "relationship",
+    "question": "El varón vestido de lino estaba sobre las aguas del río cuando recibió la pregunta.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La pregunta fue dirigida al varón situado sobre las aguas.",
+    "why_distractors_fail": {
+      "Falso": "Su vestidura y posición coinciden con la escena."
+    },
+    "source_ref": "Daniel 12:6",
+    "source_quote": "Y dijo uno al varón vestido de lino que estaba sobre las aguas del río: “¿Cuándo será el fin de estas maravillas?”",
+    "evidence_excerpt": "Y dijo uno al varón vestido de lino que estaba sobre las aguas del río: “¿Cuándo será el fin de estas maravillas?”",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "speaker_location",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-019",
+    "source_unit_id": "DAN12-V010",
+    "fact_id": "DAN12-V010-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Aunque procedieran impíamente, algunos impíos llegarían a entender el mensaje.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Ninguno de los impíos entendería; los entendidos sí comprenderían.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación cambia de ninguno a algunos."
+    },
+    "source_ref": "Daniel 12:10",
+    "source_quote": "Muchos serán limpios, emblanquecidos y purificados; los impíos procederán impíamente, y ninguno de los impíos entenderá; pero los entendidos comprenderán.",
+    "evidence_excerpt": "Muchos serán limpios, emblanquecidos y purificados; los impíos procederán impíamente, y ninguno de los impíos entenderá; pero los entendidos comprenderán.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "wicked_understanding",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "quantity"
+      ],
+      "local": true,
+      "original": "ninguno de los impíos entenderá",
+      "replacement": "algunos impíos llegarían a entender"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-WAVE-020",
+    "source_unit_id": "DAN12-V013",
+    "fact_id": "DAN12-V013-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "Daniel recibiría su heredad antes de reposar.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Primero reposaría y al fin de los días se levantaría para recibir su heredad.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación invierte el orden de reposo y heredad."
+    },
+    "source_ref": "Daniel 12:13",
+    "source_quote": "En cuanto a ti, tú irás hasta el fin, y reposarás, y te levantarás para recibir tu heredad al fin de los días.”",
+    "evidence_excerpt": "En cuanto a ti, tú irás hasta el fin, y reposarás, y te levantarás para recibir tu heredad al fin de los días.”",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "inheritance_sequence",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "sequence"
+      ],
+      "local": true,
+      "original": "reposarás, y te levantarás para recibir tu heredad",
+      "replacement": "recibiría su heredad antes de reposar"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
   }
 ]
