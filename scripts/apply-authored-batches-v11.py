@@ -61,6 +61,27 @@ def main() -> int:
     batch_paths = sorted(args.batch_dir.glob(args.pattern))
     for path in batch_paths:
         authored_inputs.extend(read_json(path))
+    position_counters = Counter()
+    for authored in authored_inputs:
+        if authored["family"] == "true_false":
+            continue
+        family_group = (
+            "selection"
+            if authored["family"].startswith("single_choice")
+            else "fill_choice"
+        )
+        target_position = position_counters[family_group] % 4
+        position_counters[family_group] += 1
+        current_position = authored["correct_option"]
+        correct_answer = authored["options"][current_position]
+        distractors = [
+            option
+            for index, option in enumerate(authored["options"])
+            if index != current_position
+        ]
+        distractors.insert(target_position, correct_answer)
+        authored["options"] = distractors
+        authored["correct_option"] = target_position
     questions, reviews = compile_authored_batch(authored_inputs, source_units)
 
     existing_by_unit = {}
