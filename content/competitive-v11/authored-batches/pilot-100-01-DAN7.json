@@ -1,0 +1,656 @@
+[
+  {
+    "id": "DAN7-V11-PILOT-001",
+    "source_unit_id": "DAN7-V001",
+    "fact_id": "DAN7-V001-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Durante qué año del reinado de Belsasar recibió Daniel el sueño que dejó por escrito?",
+    "options": [
+      "El primero",
+      "El tercero",
+      "El séptimo",
+      "El último"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "El primero",
+      "primer año"
+    ],
+    "explanation": "Daniel recibió el sueño en el primer año de Belsasar.",
+    "why_distractors_fail": {
+      "El tercero": "El relato lo fecha en el primer año.",
+      "El séptimo": "Ese número no fecha la visión.",
+      "El último": "El texto no la ubica en el último año."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "time",
+    "option_category": "time",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La fecha aparece de forma inequívoca y las alternativas son del mismo tipo."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-002",
+    "source_unit_id": "DAN7-V004",
+    "fact_id": "DAN7-V004-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "symbol_interpretation",
+    "question": "¿A qué animal se parecía la primera bestia de la visión?",
+    "options": [
+      "Oso",
+      "León",
+      "Leopardo",
+      "Águila"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "León",
+      "un león"
+    ],
+    "explanation": "La primera bestia era semejante a un león y tenía alas de águila.",
+    "why_distractors_fail": {
+      "Oso": "El oso corresponde a la segunda bestia.",
+      "Leopardo": "El leopardo aparece después.",
+      "Águila": "El águila describe sus alas, no la bestia."
+    },
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "symbol",
+    "option_category": "animal",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Distingue la identidad de la bestia de la descripción de sus alas."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-003",
+    "source_unit_id": "DAN7-V004",
+    "fact_id": "DAN7-V004-V11-F03",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué transformación ocurrió después de que a la primera bestia le arrancaran las alas?",
+    "options": [
+      "Volvió a hundirse en el mar",
+      "Le brotaron tres cuernos",
+      "Fue puesta en pie como un hombre",
+      "Recibió cuatro cabezas"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Fue puesta en pie como un hombre",
+      "se puso enhiesta sobre los pies"
+    ],
+    "explanation": "Después de perder las alas, fue levantada y puesta sobre los pies a manera de hombre.",
+    "why_distractors_fail": {
+      "Volvió a hundirse en el mar": "No se describe ese regreso al mar.",
+      "Le brotaron tres cuernos": "Los cuernos pertenecen a otra escena.",
+      "Recibió cuatro cabezas": "Las cuatro cabezas caracterizan al leopardo."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "sequence",
+    "option_category": "event",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Evalúa la secuencia interna del símbolo sin pedir la ubicación del versículo."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-004",
+    "source_unit_id": "DAN7-V005",
+    "fact_id": "DAN7-V005-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Qué postura distinguía a la bestia semejante a un oso?",
+    "options": [
+      "Estaba apoyada sobre cuatro alas",
+      "Permanecía echada sin levantarse",
+      "Tenía la cabeza inclinada hacia el mar",
+      "Un costado estaba más alzado que el otro"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Un costado estaba más alzado que el otro",
+      "se alzaba de un costado"
+    ],
+    "explanation": "El oso se alzaba de un costado más que del otro.",
+    "why_distractors_fail": {
+      "Estaba apoyada sobre cuatro alas": "Las alas pertenecen a otras bestias.",
+      "Permanecía echada sin levantarse": "Se la describe alzada de un costado.",
+      "Tenía la cabeza inclinada hacia el mar": "Esa postura no aparece."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "description",
+    "option_category": "posture",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Las cuatro opciones describen posturas y solo una reproduce el detalle visual."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-005",
+    "source_unit_id": "DAN7-V005",
+    "fact_id": "DAN7-V005-V11-F03",
+    "family": "single_choice_direct",
+    "subtype": "speaker_addressee",
+    "question": "¿Qué orden recibió la bestia que tenía costillas entre los dientes?",
+    "options": [
+      "Devora mucha carne",
+      "Guarda silencio",
+      "Regresa al mar",
+      "Entrega tu dominio"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Devora mucha carne",
+      "Levántate y devora mucha carne"
+    ],
+    "explanation": "A la bestia se le ordenó levantarse y devorar mucha carne.",
+    "why_distractors_fail": {
+      "Guarda silencio": "La orden no trata de su voz.",
+      "Regresa al mar": "No se le manda regresar.",
+      "Entrega tu dominio": "No se le ordena ceder poder."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "command",
+    "option_category": "command",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Pregunta por una orden concreta y usa mandatos plausibles como distractores."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-006",
+    "source_unit_id": "DAN7-V006",
+    "fact_id": "DAN7-V006-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Cuántas alas de ave tenía sobre la espalda la bestia semejante a un leopardo?",
+    "options": [
+      "Dos",
+      "Cuatro",
+      "Seis",
+      "Diez"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Cuatro",
+      "4"
+    ],
+    "explanation": "El leopardo tenía cuatro alas de ave en sus espaldas.",
+    "why_distractors_fail": {
+      "Dos": "La visión especifica cuatro.",
+      "Seis": "Seis no es la cantidad indicada.",
+      "Diez": "Diez se asocia con los cuernos de otra bestia."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "quantity",
+    "option_category": "number",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La cantidad es explícita y los distractores permanecen en la misma categoría."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-007",
+    "source_unit_id": "DAN7-V007",
+    "fact_id": "DAN7-V007-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "Después de devorar y desmenuzar, ¿qué hacía la cuarta bestia con las sobras?",
+    "options": [
+      "Las escondía",
+      "Las repartía",
+      "Las pisoteaba",
+      "Las arrojaba al mar"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Las pisoteaba",
+      "las hollaba con sus patas"
+    ],
+    "explanation": "La cuarta bestia hollaba las sobras con sus patas.",
+    "why_distractors_fail": {
+      "Las escondía": "No se describe ocultamiento.",
+      "Las repartía": "No se describe reparto.",
+      "Las arrojaba al mar": "El texto dice que las hollaba."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "action",
+    "option_category": "action",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Aísla la tercera acción de una secuencia fácil de confundir."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-008",
+    "source_unit_id": "DAN7-V008",
+    "fact_id": "DAN7-V008-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "symbol_interpretation",
+    "question": "¿Qué rasgo humano tenía el cuerno pequeño además de una boca?",
+    "options": [
+      "Manos",
+      "Pies",
+      "Cabello",
+      "Ojos"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Ojos",
+      "ojos como de hombre"
+    ],
+    "explanation": "El cuerno pequeño tenía ojos como de hombre.",
+    "why_distractors_fail": {
+      "Manos": "No se mencionan manos en el cuerno.",
+      "Pies": "No se mencionan pies.",
+      "Cabello": "El cabello se describe en el Anciano de días."
+    },
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "attribute",
+    "option_category": "body_part",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Separa dos atributos del mismo símbolo sin filtrar la respuesta."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-009",
+    "source_unit_id": "DAN7-V009",
+    "fact_id": "DAN7-V009-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "question": "¿Con qué se compara el cabello del Anciano de días?",
+    "options": [
+      "Lana limpia",
+      "Nieve",
+      "Llama de fuego",
+      "Bronce bruñido"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Lana limpia",
+      "como lana limpia"
+    ],
+    "explanation": "Su cabello se compara con lana limpia; su vestido, con la nieve.",
+    "why_distractors_fail": {
+      "Nieve": "La nieve describe el vestido.",
+      "Llama de fuego": "La llama describe el trono.",
+      "Bronce bruñido": "Ese símil no aparece en esta escena."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "comparison",
+    "option_category": "comparison_object",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Los distractores proceden de descripciones proféticas cercanas y exigen precisión."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-010",
+    "source_unit_id": "DAN7-V009",
+    "fact_id": "DAN7-V009-V11-F03",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Cómo se describen el trono y sus ruedas en la escena del juicio?",
+    "options": [
+      "Como zafiro y cristal",
+      "Como llama y fuego ardiente",
+      "Como hierro y bronce",
+      "Como nieve y lana"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Como llama y fuego ardiente",
+      "llama de fuego y fuego ardiente"
+    ],
+    "explanation": "El trono era llama de fuego y sus ruedas fuego ardiente.",
+    "why_distractors_fail": {
+      "Como zafiro y cristal": "Esos materiales no describen aquí el trono y las ruedas.",
+      "Como hierro y bronce": "Hierro y bronce describen otros símbolos.",
+      "Como nieve y lana": "Nieve y lana describen vestido y cabello."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "paired_description",
+    "option_category": "description_pair",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Exige emparejar correctamente dos elementos de la misma escena."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-011",
+    "source_unit_id": "DAN7-V001",
+    "fact_id": "DAN7-V001-V11-F03",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Daniel recibió las visiones de su cabeza mientras estaba en su ____.",
+    "options": [
+      "lecho",
+      "palacio",
+      "templo",
+      "camino"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "lecho",
+      "su lecho"
+    ],
+    "explanation": "La visión ocurrió mientras Daniel estaba en su lecho.",
+    "why_distractors_fail": {
+      "palacio": "El lugar indicado es su lecho.",
+      "templo": "No se sitúa la visión en el templo.",
+      "camino": "No ocurre durante un viaje."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "setting",
+    "option_category": "place",
+    "significance": "Fija el marco inmediato en que Daniel recibió la visión.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El hueco recupera un sustantivo concreto, no una partícula trivial."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-012",
+    "source_unit_id": "DAN7-V002",
+    "fact_id": "DAN7-V002-V11-F02",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Los cuatro vientos del cielo combatían en el gran ____.",
+    "options": [
+      "río",
+      "mar",
+      "abismo",
+      "desierto"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "mar",
+      "gran mar"
+    ],
+    "explanation": "Los vientos combatían en el gran mar.",
+    "why_distractors_fail": {
+      "río": "La visión menciona el gran mar.",
+      "abismo": "No usa la palabra abismo.",
+      "desierto": "La acción no ocurre en tierra seca."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "setting",
+    "option_category": "place",
+    "significance": "Evalúa el escenario del que surgen los símbolos posteriores.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El escenario es explícito y las alternativas son lugares plausibles."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-013",
+    "source_unit_id": "DAN7-V004",
+    "fact_id": "DAN7-V004-V11-F04",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "A la primera bestia le fue dado un corazón de ____.",
+    "options": [
+      "león",
+      "águila",
+      "hombre",
+      "piedra"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "hombre",
+      "un hombre"
+    ],
+    "explanation": "Después de ser puesta en pie, recibió corazón de hombre.",
+    "why_distractors_fail": {
+      "león": "León describe su forma inicial.",
+      "águila": "Águila describe las alas.",
+      "piedra": "No se menciona un corazón de piedra."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "transformation",
+    "option_category": "being",
+    "significance": "Recupera el cambio final que completa la transformación de la primera bestia.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El enunciado exige recordar el resultado de la transformación."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-014",
+    "source_unit_id": "DAN7-V005",
+    "fact_id": "DAN7-V005-V11-F04",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "La bestia semejante a un oso se alzaba más de un ____ que del otro.",
+    "options": [
+      "colmillo",
+      "hombro",
+      "pie",
+      "costado"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "costado",
+      "un costado"
+    ],
+    "explanation": "Se alzaba de un costado más que del otro.",
+    "why_distractors_fail": {
+      "colmillo": "El desnivel no se atribuye a los dientes.",
+      "hombro": "La palabra empleada es costado.",
+      "pie": "No se comparan sus pies."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "description",
+    "option_category": "body_part",
+    "significance": "Fija un detalle visual característico de la segunda bestia.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El hueco no repite la pregunta existente sobre las costillas."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-015",
+    "source_unit_id": "DAN7-V006",
+    "fact_id": "DAN7-V006-V11-F03",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Además de cuatro alas, el leopardo tenía cuatro ____.",
+    "options": [
+      "cabezas",
+      "cuernos",
+      "costillas",
+      "colas"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "cabezas",
+      "cuatro cabezas"
+    ],
+    "explanation": "La tercera bestia tenía cuatro cabezas.",
+    "why_distractors_fail": {
+      "cuernos": "Los cuernos dominan la descripción de la cuarta bestia.",
+      "costillas": "Las costillas pertenecen al oso.",
+      "colas": "No se mencionan cuatro colas."
+    },
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "quantity",
+    "option_category": "body_part",
+    "significance": "Distingue las cabezas del leopardo de otros rasgos numéricos de la visión.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Los distractores usan rasgos de bestias vecinas y exigen discriminación."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-016",
+    "source_unit_id": "DAN7-V007",
+    "fact_id": "DAN7-V007-V11-F03",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "La cuarta bestia despedazaba con grandes dientes de ____.",
+    "options": [
+      "bronce",
+      "hierro",
+      "plata",
+      "oro"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "hierro",
+      "dientes de hierro"
+    ],
+    "explanation": "Sus grandes dientes eran de hierro.",
+    "why_distractors_fail": {
+      "bronce": "El bronce aparece después en las uñas.",
+      "plata": "No se describen dientes de plata.",
+      "oro": "No se describen dientes de oro."
+    },
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "material",
+    "option_category": "material",
+    "significance": "Evalúa el material asociado con la fuerza destructiva de la cuarta bestia.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Las opciones son materiales y solo hierro corresponde a los dientes."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-017",
+    "source_unit_id": "DAN7-V004",
+    "fact_id": "DAN7-V004-V11-F05",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "A la primera bestia le fue dado un corazón de hombre.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La transformación concluyó con la entrega de un corazón de hombre.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación reproduce el detalle final del pasaje."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "transformation",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La proposición es local y no depende de atribuirla a otro capítulo."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-018",
+    "source_unit_id": "DAN7-V005",
+    "fact_id": "DAN7-V005-V11-F05",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "La bestia semejante a un oso se alzaba de un costado más que del otro.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Un costado estaba más alzado que el otro.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación reproduce la asimetría descrita."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "description",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La proposición reproduce un detalle local y visual de la bestia."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-019",
+    "source_unit_id": "DAN7-V009",
+    "fact_id": "DAN7-V009-V11-F04",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "El trono del Anciano de días era llama de fuego.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El trono se describe como llama de fuego.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación coincide con la descripción del trono."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "material",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La proposición conserva el atributo material exacto de la escena."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-020",
+    "source_unit_id": "DAN7-V012",
+    "fact_id": "DAN7-V012-V11-F02",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "A las otras bestias se les quitó la vida, aunque conservaron su dominio.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Se les quitó el dominio, pero se les prolongó la vida.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación intercambia lo quitado con lo prolongado."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "contrast",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "outcome"
+      ],
+      "local": true,
+      "original": "quitado su dominio",
+      "replacement": "quitó la vida"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La falsedad invierte un contraste local y verificable sin traer otro pasaje."
+    }
+  }
+]

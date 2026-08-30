@@ -5,12 +5,14 @@ from __future__ import annotations
 import json
 import re
 import unittest
+from collections import Counter
 from pathlib import Path
 
 from scripts.lib.production_snapshot_v11 import import_production_snapshot
 from scripts.lib.source_packets_v11 import build_source_packets
 from scripts.lib.competitive_v11 import audit_corpus, content_hash, validate_question
 from scripts.lib.import_seed_v11 import import_seed
+from scripts.lib.author_batch_v11 import compile_authored_batch
 
 
 def valid_v11_question(**overrides):
@@ -779,13 +781,23 @@ class SeedImportTests(unittest.TestCase):
             for path in review_files
             for row in json.loads(path.read_text(encoding="utf-8"))
         ]
-        self.assertEqual(len([row for row in questions if row["role"] == "central"]), 1024)
-        self.assertEqual(len([row for row in questions if row["role"] == "variant"]), 251)
-        self.assertEqual(len(questions), 1275)
-        self.assertEqual(len(reviews), 1275)
+        baseline_questions = [row for row in questions if "-V11-" not in row["id"]]
+        baseline_reviews = [
+            row for row in reviews if "-V11-" not in row["question_id"]
+        ]
         self.assertEqual(
-            {row["question_id"]: row["content_sha256"] for row in reviews},
-            {row["id"]: content_hash(row) for row in questions},
+            len([row for row in baseline_questions if row["role"] == "central"]),
+            1024,
+        )
+        self.assertEqual(
+            len([row for row in baseline_questions if row["role"] == "variant"]),
+            251,
+        )
+        self.assertEqual(len(baseline_questions), 1275)
+        self.assertEqual(len(baseline_reviews), 1275)
+        self.assertEqual(
+            {row["question_id"]: row["content_sha256"] for row in baseline_reviews},
+            {row["id"]: content_hash(row) for row in baseline_questions},
         )
 
     def test_recognizes_true_false_variant_when_option_order_is_reversed(self) -> None:
@@ -987,6 +999,95 @@ class SeedImportTests(unittest.TestCase):
 
         self.assertEqual(authored[1]["question"], correction[authored[1]["id"]]["question"])
         self.assertEqual(reviews[1]["decision"], "corrected_during_v11_import")
+
+
+class AuthoredBatchTests(unittest.TestCase):
+    def test_compiles_authored_prose_without_generating_it(self) -> None:
+        authored_input = {
+            "id": "DAN1-V11-PILOT-001",
+            "source_unit_id": "DAN1-V001",
+            "fact_id": "DAN1-V001-V11-F02",
+            "family": "single_choice_direct",
+            "subtype": "factual_recall",
+            "question": "¿Durante qué reinado llegó Nabucodonosor a Jerusalén?",
+            "options": ["Joacim", "Ciro", "Darío", "Belsasar"],
+            "correct_option": 0,
+            "accepted_answers": ["Joacim"],
+            "explanation": "El episodio se ubica en el reinado de Joacim.",
+            "why_distractors_fail": {
+                "Ciro": "Pertenece a otro período.",
+                "Darío": "Pertenece a otro período.",
+                "Belsasar": "Pertenece a otro período.",
+            },
+            "difficulty": "medium",
+            "importance": "high",
+            "relation_type": "time",
+            "option_category": "person",
+            "review": {
+                "reviewer": "gpt-5.6-sol-v11-pilot-review",
+                "rationale": "Joacim es la única respuesta respaldada.",
+            },
+        }
+
+        questions, reviews = compile_authored_batch([authored_input], v11_sources())
+
+        self.assertEqual(questions[0]["question"], authored_input["question"])
+        self.assertEqual(questions[0]["source_quote"], v11_sources()["DAN1-V001"]["source_quote"])
+        self.assertEqual(questions[0]["correct_answer"], "Joacim")
+        self.assertEqual(reviews[0]["content_sha256"], content_hash(questions[0]))
+        self.assertEqual(validate_question(questions[0], v11_sources()), [])
+
+    def test_checked_in_pilot_has_exactly_100_reviewed_questions(self) -> None:
+        question_paths = [
+            Path("content/competitive-v11/questions/DAN7.json"),
+            Path("content/competitive-v11/questions/PR43.json"),
+        ]
+        review_paths = [
+            Path("content/competitive-v11/reviews/DAN7.json"),
+            Path("content/competitive-v11/reviews/PR43.json"),
+        ]
+        questions = [
+            row
+            for path in question_paths
+            for row in json.loads(path.read_text(encoding="utf-8"))
+            if "-V11-PILOT-" in row["id"]
+        ]
+        reviews = [
+            row
+            for path in review_paths
+            for row in json.loads(path.read_text(encoding="utf-8"))
+            if "-V11-PILOT-" in row["question_id"]
+        ]
+
+        families = Counter(
+            "selection" if row["family"].startswith("single_choice") else row["family"]
+            for row in questions
+        )
+        units = Counter(row["id"].split("-V11-PILOT-")[0] for row in questions)
+
+        self.assertEqual(len(questions), 100)
+        self.assertEqual(families, {"selection": 45, "fill_choice": 30, "true_false": 25})
+        self.assertEqual(units, {"DAN7": 40, "PR43": 60})
+        selection_positions = Counter(
+            row["correct_option"]
+            for row in questions
+            if row["family"].startswith("single_choice")
+        )
+        fill_positions = Counter(
+            row["correct_option"] for row in questions if row["family"] == "fill_choice"
+        )
+        truth_balance = Counter(
+            row["correct_answer"] for row in questions if row["family"] == "true_false"
+        )
+        self.assertLessEqual(max(selection_positions.values()) - min(selection_positions.values()), 1)
+        self.assertLessEqual(max(fill_positions.values()) - min(fill_positions.values()), 1)
+        self.assertEqual(truth_balance, {"Verdadero": 12, "Falso": 13})
+        self.assertEqual(len(reviews), 100)
+        self.assertEqual(
+            {row["question_id"]: row["content_sha256"] for row in reviews},
+            {row["id"]: content_hash(row) for row in questions},
+        )
+        self.assertFalse(any(audit_corpus(questions).values()))
 
 
 if __name__ == "__main__":

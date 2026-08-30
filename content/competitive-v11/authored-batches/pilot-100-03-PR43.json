@@ -1,0 +1,655 @@
+[
+  {
+    "id": "PR43-V11-PILOT-001",
+    "source_unit_id": "PR43-P047-P001-S001",
+    "fact_id": "PR43-P047-P001-S001-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿En qué etapa de la vida de Daniel comenzaron los grandes cambios descritos en la tierra de su cautiverio?",
+    "options": [
+      "Durante su niñez",
+      "Al comenzar su cautiverio",
+      "Hacia el final de su vida",
+      "Después de regresar a Jerusalén"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Hacia el final de su vida",
+      "al fin de la vida de Daniel"
+    ],
+    "explanation": "Los cambios comenzaron hacia el fin de la vida de Daniel.",
+    "why_distractors_fail": {
+      "Durante su niñez": "El relato lo presenta ya anciano.",
+      "Al comenzar su cautiverio": "Habían pasado más de sesenta años.",
+      "Después de regresar a Jerusalén": "La escena sigue en la tierra del cautiverio."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "time",
+    "option_category": "life_stage",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Evalúa el marco biográfico, distinto del dato de los sesenta años ya preguntado."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-002",
+    "source_unit_id": "PR43-P047-P001-S002",
+    "fact_id": "PR43-P047-P001-S002-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué condujo a Babilonia a una disolución gradual pero segura tras la muerte de Nabucodonosor?",
+    "options": [
+      "La falta de murallas",
+      "El regreso de Daniel",
+      "Una escasez repentina de agua",
+      "El gobierno de sucesores imprudentes"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "El gobierno de sucesores imprudentes",
+      "sus sucesores imprudentes"
+    ],
+    "explanation": "La imprudencia de los sucesores produjo el deterioro gradual de Babilonia.",
+    "why_distractors_fail": {
+      "La falta de murallas": "Babilonia poseía murallas macizas.",
+      "El regreso de Daniel": "Daniel no es presentado como causa del deterioro.",
+      "Una escasez repentina de agua": "La disolución se atribuye al gobierno imprudente."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "cause",
+    "option_category": "cause",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Vincula gobernantes y deterioro sin pedir una página o un párrafo."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-003",
+    "source_unit_id": "PR43-P047-P002-S001",
+    "fact_id": "PR43-P047-P002-S001-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Qué dos defectos de Belsasar anticipaban la pronta caída de Babilonia?",
+    "options": [
+      "Insensatez y debilidad",
+      "Crueldad y cobardía",
+      "Ignorancia y pobreza",
+      "Enfermedad y vejez"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Insensatez y debilidad",
+      "la insensatez y debilidad de Belsasar"
+    ],
+    "explanation": "La caída próxima se relaciona con la insensatez y debilidad de Belsasar.",
+    "why_distractors_fail": {
+      "Crueldad y cobardía": "No es el par empleado.",
+      "Ignorancia y pobreza": "El texto no atribuye la caída a pobreza.",
+      "Enfermedad y vejez": "Belsasar no es descrito así."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "cause",
+    "option_category": "trait_pair",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Pregunta por la causa explícita y no repite la relación familiar con Nabucodonosor."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-004",
+    "source_unit_id": "PR43-P047-P002-S002",
+    "fact_id": "PR43-P047-P002-S002-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Cuándo fue admitido Belsasar a compartir la autoridad real?",
+    "options": [
+      "Después de la caída de Babilonia",
+      "En su juventud",
+      "Durante su destierro",
+      "Al final de su vejez"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "En su juventud",
+      "durante su juventud"
+    ],
+    "explanation": "Belsasar fue admitido en su juventud a compartir la autoridad real.",
+    "why_distractors_fail": {
+      "Después de la caída de Babilonia": "La autoridad precedió a la caída.",
+      "Durante su destierro": "No se describe un destierro suyo.",
+      "Al final de su vejez": "El texto especifica su juventud."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "time",
+    "option_category": "life_stage",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La respuesta es temporal e inequívoca; no repite la pregunta sobre quién se enorgulleció."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-005",
+    "source_unit_id": "PR43-P047-P002-S003",
+    "fact_id": "PR43-P047-P002-S003-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Para qué se le habían dado a Belsasar muchas oportunidades?",
+    "options": [
+      "Para ampliar las murallas de Babilonia",
+      "Para reemplazar a Ciro como general",
+      "Para conocer la voluntad divina y obedecerla",
+      "Para interpretar los sueños de Nabucodonosor"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Para conocer la voluntad divina y obedecerla",
+      "conocer la voluntad divina"
+    ],
+    "explanation": "Las oportunidades debían llevarlo a conocer la voluntad divina y reconocer su deber de obedecer.",
+    "why_distractors_fail": {
+      "Para ampliar las murallas de Babilonia": "Las oportunidades eran espirituales, no arquitectónicas.",
+      "Para reemplazar a Ciro como general": "No se relacionan con el mando militar.",
+      "Para interpretar los sueños de Nabucodonosor": "Esa función correspondió a Daniel."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "purpose",
+    "option_category": "purpose",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Integra conocimiento y responsabilidad como finalidad de las oportunidades."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-006",
+    "source_unit_id": "PR43-P047-P002-S004",
+    "fact_id": "PR43-P047-P002-S004-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "Además del destierro de su abuelo, ¿qué desenlace conocía Belsasar?",
+    "options": [
+      "Su muerte en el campo de batalla",
+      "Su regreso definitivo a Judá",
+      "Su renuncia voluntaria al trono",
+      "Su conversión y curación milagrosa"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Su conversión y curación milagrosa",
+      "conversión y curación milagrosa"
+    ],
+    "explanation": "Belsasar conocía tanto el destierro como la conversión y curación milagrosa de su abuelo.",
+    "why_distractors_fail": {
+      "Su muerte en el campo de batalla": "No fue el desenlace mencionado.",
+      "Su regreso definitivo a Judá": "Nabucodonosor no regresó a Judá.",
+      "Su renuncia voluntaria al trono": "El texto no habla de una renuncia."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "knowledge",
+    "option_category": "event_pair",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Amplía el hecho existente del destierro hacia la restauración que Belsasar también conocía."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-007",
+    "source_unit_id": "PR43-P047-P002-S006",
+    "fact_id": "PR43-P047-P002-S006-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué recurso para conocer mejor la verdad dejó Belsasar sin aprovechar?",
+    "options": [
+      "Los medios que tenía a su alcance",
+      "Los ejércitos de los medos",
+      "Los tesoros del palacio",
+      "Las provisiones de la ciudad"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Los medios que tenía a su alcance",
+      "los medios a su alcance"
+    ],
+    "explanation": "No aprovechó los medios disponibles para conocer mejor la verdad.",
+    "why_distractors_fail": {
+      "Los ejércitos de los medos": "No eran un medio de instrucción espiritual.",
+      "Los tesoros del palacio": "La riqueza no es el recurso señalado.",
+      "Las provisiones de la ciudad": "Las provisiones sostenían el sitio, no el conocimiento de la verdad."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "missed_opportunity",
+    "option_category": "resource",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Distingue malgastar oportunidades de ignorar los medios concretos disponibles."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-008",
+    "source_unit_id": "PR43-P047-P002-S007",
+    "fact_id": "PR43-P047-P002-S007-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Cómo contrastó la actitud de Belsasar con lo que Nabucodonosor había aprendido?",
+    "options": [
+      "Lo estudió con humildad",
+      "Lo pasó por alto con indiferencia",
+      "Lo proclamó ante sus príncipes",
+      "Lo convirtió en ley del reino"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Lo pasó por alto con indiferencia",
+      "lo pasaba por alto"
+    ],
+    "explanation": "Belsasar ignoró con indiferencia lo que su abuelo obtuvo mediante sufrimiento y humillación.",
+    "why_distractors_fail": {
+      "Lo estudió con humildad": "Su conducta mostró lo contrario.",
+      "Lo proclamó ante sus príncipes": "No transmitió esa lección.",
+      "Lo convirtió en ley del reino": "No se registra tal decreto."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "contrast",
+    "option_category": "response",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Exige comprender el contraste moral entre ambos gobernantes."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-009",
+    "source_unit_id": "PR43-P047-P003-S002",
+    "fact_id": "PR43-P047-P003-S002-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿Qué doble relación se atribuye a Ciro durante el sitio de Babilonia?",
+    "options": [
+      "Hijo de Belsasar y rey de Judá",
+      "Hermano de Daniel y jefe de los caldeos",
+      "Sobrino de Darío y general de medos y persas",
+      "Nieto de Nabucodonosor y príncipe de Babilonia"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Sobrino de Darío y general de medos y persas",
+      "sobrino de Darío el Medo y general"
+    ],
+    "explanation": "Ciro era sobrino de Darío el Medo y general de los ejércitos combinados.",
+    "why_distractors_fail": {
+      "Hijo de Belsasar y rey de Judá": "Ninguna de esas relaciones corresponde a Ciro.",
+      "Hermano de Daniel y jefe de los caldeos": "Ciro no era pariente de Daniel.",
+      "Nieto de Nabucodonosor y príncipe de Babilonia": "Esa genealogía no se le atribuye."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "identity_roles",
+    "option_category": "relationship_pair",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La pregunta combina parentesco y función militar sin repetir simplemente quién sitió la ciudad."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-010",
+    "source_unit_id": "PR43-P047-P003-S003",
+    "fact_id": "PR43-P047-P003-S003-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿De qué material eran las puertas de la fortaleza que parecía inexpugnable?",
+    "options": [
+      "Hierro",
+      "Madera",
+      "Plata",
+      "Bronce"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Bronce",
+      "de bronce"
+    ],
+    "explanation": "La fortaleza tenía macizas murallas y puertas de bronce.",
+    "why_distractors_fail": {
+      "Hierro": "El texto especifica bronce.",
+      "Madera": "No se describen puertas de madera.",
+      "Plata": "La plata aparece en otros objetos, no en las puertas."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "material",
+    "option_category": "material",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Evalúa otra defensa de la fortaleza, distinta del río ya preguntado."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-011",
+    "source_unit_id": "PR43-P047-P004-S001",
+    "fact_id": "PR43-P047-P004-S001-V11-F02",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Belsasar celebró el gran banquete para ____ de sus príncipes.",
+    "options": [
+      "mil",
+      "cien",
+      "quinientos",
+      "diez mil"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "mil",
+      "1,000",
+      "1000"
+    ],
+    "explanation": "El banquete reunió a mil de sus príncipes.",
+    "why_distractors_fail": {
+      "cien": "La cantidad fue mayor.",
+      "quinientos": "El texto señala mil.",
+      "diez mil": "Excede la cifra indicada."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "quantity",
+    "option_category": "number",
+    "significance": "Fija la escala del banquete en que culminó el desafío de Belsasar.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La cifra es sustantiva para dimensionar la escena y no una partícula trivial."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-012",
+    "source_unit_id": "PR43-P047-P004-S005",
+    "fact_id": "PR43-P047-P004-S005-V11-F02",
+    "family": "fill_choice",
+    "subtype": "comparison",
+    "question": "Los príncipes y estadistas bebían vino como si fuera ____.",
+    "options": [
+      "aceite",
+      "agua",
+      "leche",
+      "sangre"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "agua"
+    ],
+    "explanation": "Bebían vino como agua antes de entregarse a la orgía.",
+    "why_distractors_fail": {
+      "aceite": "No es la comparación usada.",
+      "leche": "El vino no se compara con leche.",
+      "sangre": "El texto dice agua."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "comparison",
+    "option_category": "substance",
+    "significance": "Recupera la comparación que muestra el exceso del banquete.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El hueco evalúa una imagen concreta y no repite la consecuencia de la embriaguez."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-013",
+    "source_unit_id": "PR43-P047-P005-S001",
+    "fact_id": "PR43-P047-P005-S001-V11-F02",
+    "family": "fill_choice",
+    "subtype": "identification",
+    "question": "Con la razón destronada, el propio ____ dirigía la ruidosa orgía.",
+    "options": [
+      "profeta",
+      "general",
+      "rey",
+      "astrólogo"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "rey",
+      "el rey"
+    ],
+    "explanation": "El rey mismo dirigía la orgía cuando dominaron los impulsos inferiores.",
+    "why_distractors_fail": {
+      "profeta": "Daniel no dirigía el festín.",
+      "general": "No se atribuye la dirección a un militar.",
+      "astrólogo": "Los astrólogos serían llamados después."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "leadership",
+    "option_category": "role",
+    "significance": "Identifica al responsable directo de conducir la orgía.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El hueco fija responsabilidad personal y no solo el estado de embriaguez."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-014",
+    "source_unit_id": "PR43-P047-P005-S002",
+    "fact_id": "PR43-P047-P005-S002-V11-F02",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Belsasar mandó traer los vasos de oro y de ____ del templo de Jerusalén.",
+    "options": [
+      "hierro",
+      "bronce",
+      "barro",
+      "plata"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "plata"
+    ],
+    "explanation": "La orden incluyó los vasos de oro y de plata.",
+    "why_distractors_fail": {
+      "hierro": "No forma el par de los vasos.",
+      "bronce": "Las puertas, no estos vasos, se describen de bronce.",
+      "barro": "No se mencionan vasos de barro."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "material",
+    "option_category": "material",
+    "significance": "Precisa los materiales de los objetos sagrados profanados.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Las opciones son materiales y la respuesta aparece literalmente."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-015",
+    "source_unit_id": "PR43-P047-P005-S004",
+    "fact_id": "PR43-P047-P005-S004-V11-F02",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Además del rey, los príncipes y las mujeres, bebieron en los vasos las ____.",
+    "options": [
+      "concubinas",
+      "siervas",
+      "profetisas",
+      "cautivas"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "concubinas",
+      "sus concubinas"
+    ],
+    "explanation": "La lista incluye al rey, sus príncipes, sus mujeres y sus concubinas.",
+    "why_distractors_fail": {
+      "siervas": "No es el grupo nombrado.",
+      "profetisas": "No se mencionan profetisas.",
+      "cautivas": "El texto dice concubinas."
+    },
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "participant",
+    "option_category": "group",
+    "significance": "Completa la lista de participantes en la profanación de los vasos.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El dato exige recordar quiénes participaron, no solo qué hicieron."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-016",
+    "source_unit_id": "PR43-P047-P006-S001",
+    "fact_id": "PR43-P047-P006-S001-V11-F02",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "El Vigía divino miraba la profanación y oía la alegría ____.",
+    "options": [
+      "solemne",
+      "sacrilega",
+      "silenciosa",
+      "inocente"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "sacrilega",
+      "alegría sacrílega"
+    ],
+    "explanation": "El Vigía oía la alegría sacrílega de los adoradores de ídolos.",
+    "why_distractors_fail": {
+      "solemne": "La celebración era profana, no solemne.",
+      "silenciosa": "La escena era ruidosa.",
+      "inocente": "El relato la califica de sacrílega."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "moral_description",
+    "option_category": "quality",
+    "significance": "Recupera la valoración moral de la celebración observada desde el cielo.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El adjetivo es doctrinalmente significativo y está unido a una acción concreta."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-017",
+    "source_unit_id": "PR43-P047-P003-S003",
+    "fact_id": "PR43-P047-P003-S003-V11-F03",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "La fortaleza disponía de abundantes provisiones durante el sitio.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Babilonia estaba abastecida con abundantes provisiones.",
+    "why_distractors_fail": {
+      "Falso": "La abundancia de provisiones forma parte de su aparente seguridad."
+    },
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "defense",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Comprueba un recurso defensivo distinto del Eufrates y las puertas."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-018",
+    "source_unit_id": "PR43-P047-P005-S003",
+    "fact_id": "PR43-P047-P005-S003-V11-F02",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Belsasar quería demostrar que nada era demasiado sagrado para sus manos.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Ese era precisamente el desafío expresado al usar los vasos sagrados.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación reproduce la intención atribuida al rey."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "intention",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Evalúa la intención moral del acto y no una referencia de ubicación."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-019",
+    "source_unit_id": "PR43-P047-P005-S005",
+    "fact_id": "PR43-P047-P005-S005-V11-F02",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Durante el banquete alabaron a dioses hechos de diversos materiales.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Alabaron dioses de oro, plata, metal, hierro, madera y piedra.",
+    "why_distractors_fail": {
+      "Falso": "La lista enumera varios materiales de los ídolos."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "worship",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Sintetiza la diversidad material sin preguntar otra vez por un material aislado."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-020",
+    "source_unit_id": "PR43-P047-P005-S001",
+    "fact_id": "PR43-P047-P005-S001-V11-F03",
+    "family": "true_false",
+    "subtype": "identification",
+    "question": "El rey se limitó a observar la orgía mientras otros la dirigían.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "El rey mismo dirigía la ruidosa orgía.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación cambia al director por un observador pasivo."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "leadership",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "role"
+      ],
+      "local": true,
+      "original": "el rey mismo dirigía",
+      "replacement": "se limitó a observar"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La falsedad altera solo el papel del rey dentro de la misma escena."
+    }
+  }
+]

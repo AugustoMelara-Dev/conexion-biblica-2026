@@ -1,0 +1,668 @@
+[
+  {
+    "id": "DAN7-V11-PILOT-021",
+    "source_unit_id": "DAN7-V010",
+    "fact_id": "DAN7-V010-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Quiénes estaban delante del Juez, a diferencia de quienes lo servían?",
+    "options": [
+      "Miles de miles",
+      "Los diez reyes",
+      "Millones de millones",
+      "Las cuatro bestias"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Millones de millones"
+    ],
+    "explanation": "Miles de miles lo servían, mientras millones de millones estaban delante de él.",
+    "why_distractors_fail": {
+      "Miles de miles": "Ese grupo lo servía.",
+      "Los diez reyes": "No constituyen la multitud ante el Juez.",
+      "Las cuatro bestias": "No son el grupo numeroso descrito."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "role_comparison",
+    "option_category": "group",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Obliga a distinguir dos cantidades y sus funciones, no solo a reconocer un número."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-022",
+    "source_unit_id": "DAN7-V011",
+    "fact_id": "DAN7-V011-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué atrajo la atención de Daniel inmediatamente antes de la destrucción de la bestia?",
+    "options": [
+      "El ruido de los ejércitos",
+      "El cierre de los libros",
+      "El clamor de los santos",
+      "Las insolencias del cuerno"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Las insolencias del cuerno",
+      "el sonido de las grandes insolencias"
+    ],
+    "explanation": "Daniel miraba a causa del sonido de las grandes insolencias del cuerno.",
+    "why_distractors_fail": {
+      "El ruido de los ejércitos": "No se mencionan ejércitos en la escena.",
+      "El cierre de los libros": "Los libros habían sido abiertos.",
+      "El clamor de los santos": "El texto atribuye el sonido al cuerno."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "cause",
+    "option_category": "sound_source",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Conecta el habla del cuerno con la atención del profeta y la secuencia judicial."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-023",
+    "source_unit_id": "DAN7-V013",
+    "fact_id": "DAN7-V013-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "question": "¿Ante quién hicieron acercarse al que venía con las nubes?",
+    "options": [
+      "El Anciano de días",
+      "El cuerno pequeño",
+      "Los cuatro reyes",
+      "Los santos del Altísimo"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "El Anciano de días",
+      "Anciano de días"
+    ],
+    "explanation": "El hijo de hombre vino hasta el Anciano de días y fue acercado ante él.",
+    "why_distractors_fail": {
+      "El cuerno pequeño": "El cuerno comparece en otra función.",
+      "Los cuatro reyes": "Los reyes son interpretaciones de las bestias.",
+      "Los santos del Altísimo": "Los santos reciben después el reino."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "approach",
+    "option_category": "person_or_group",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La respuesta está respaldada por la secuencia explícita de aproximación."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-024",
+    "source_unit_id": "DAN7-V014",
+    "fact_id": "DAN7-V014-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Para qué recibió dominio, gloria y reino el hijo de hombre?",
+    "options": [
+      "Para entregar el reino a las bestias",
+      "Para que todos los pueblos lo sirvieran",
+      "Para cambiar los tiempos y la Ley",
+      "Para prolongar la vida de los reyes"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Para que todos los pueblos lo sirvieran",
+      "para que todos los pueblos, naciones y lenguas lo sirvieran"
+    ],
+    "explanation": "Los recibió para ser servido por todos los pueblos, naciones y lenguas.",
+    "why_distractors_fail": {
+      "Para entregar el reino a las bestias": "El reino no vuelve a las bestias.",
+      "Para cambiar los tiempos y la Ley": "Esa intención pertenece al cuerno perseguidor.",
+      "Para prolongar la vida de los reyes": "No es el propósito del dominio recibido."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "purpose",
+    "option_category": "purpose",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Evalúa el propósito del otorgamiento y distingue funciones de otros símbolos."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-025",
+    "source_unit_id": "DAN7-V020",
+    "fact_id": "DAN7-V020-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Cuántos cuernos cayeron delante del que tenía ojos y boca insolente?",
+    "options": [
+      "Cuatro",
+      "Siete",
+      "Tres",
+      "Diez"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Tres",
+      "3"
+    ],
+    "explanation": "Delante de ese cuerno habían caído tres.",
+    "why_distractors_fail": {
+      "Cuatro": "Cuatro caracteriza otras partes de la visión.",
+      "Siete": "No es la cantidad de cuernos caídos.",
+      "Diez": "Diez es el número inicial de cuernos."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "quantity",
+    "option_category": "number",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Distingue la cantidad derribada del total inicial."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-026",
+    "source_unit_id": "DAN7-V023",
+    "fact_id": "DAN7-V023-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "prophetic_detail",
+    "question": "¿Cuál sería el alcance de la acción destructiva del cuarto reino?",
+    "options": [
+      "Solo Babilonia",
+      "Únicamente el norte",
+      "Las costas del gran mar",
+      "Toda la tierra"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Toda la tierra",
+      "a toda la tierra"
+    ],
+    "explanation": "El cuarto reino devoraría, trillaría y despedazaría toda la tierra.",
+    "why_distractors_fail": {
+      "Solo Babilonia": "El alcance declarado es mayor.",
+      "Únicamente el norte": "No se limita a una dirección.",
+      "Las costas del gran mar": "No se restringe a las costas."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "scope",
+    "option_category": "geographic_scope",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Pregunta por alcance y no repite la identificación del cuarto reino."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-027",
+    "source_unit_id": "DAN7-V025",
+    "fact_id": "DAN7-V025-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "prophetic_detail",
+    "question": "¿Qué dos cosas pensaría cambiar el poder que hablaría contra el Altísimo?",
+    "options": [
+      "Los tiempos y la Ley",
+      "Los reinos y las lenguas",
+      "Los tronos y los libros",
+      "Las nubes y el mar"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Los tiempos y la Ley",
+      "tiempos y Ley"
+    ],
+    "explanation": "Ese poder pensaría cambiar los tiempos y la Ley.",
+    "why_distractors_fail": {
+      "Los reinos y las lenguas": "No forman el par que intentaría cambiar.",
+      "Los tronos y los libros": "Pertenecen a la escena del juicio.",
+      "Las nubes y el mar": "Son elementos de la visión, no el objeto del cambio."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "intention",
+    "option_category": "concept_pair",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Evalúa un detalle profético central con pares homogéneos."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-028",
+    "source_unit_id": "DAN7-V027",
+    "fact_id": "DAN7-V027-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Cómo responderían todos los dominios al reino eterno de los santos del Altísimo?",
+    "options": [
+      "Lo combatirían hasta el fin",
+      "Lo servirían y obedecerían",
+      "Dividirían su majestad",
+      "Le quitarían el dominio"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Lo servirían y obedecerían",
+      "lo servirán y obedecerán"
+    ],
+    "explanation": "Todos los dominios servirán y obedecerán al reino eterno.",
+    "why_distractors_fail": {
+      "Lo combatirían hasta el fin": "La escena concluye con servicio y obediencia.",
+      "Dividirían su majestad": "La majestad es entregada al pueblo santo.",
+      "Le quitarían el dominio": "El dominio del reino eterno no es quitado."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "response",
+    "option_category": "response",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Combina las dos respuestas finales sin confundirlas con la sentencia del cuerno."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-029",
+    "source_unit_id": "DAN7-V008",
+    "fact_id": "DAN7-V008-V11-F03",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "Delante del cuerno pequeño fueron arrancados ____ de los primeros cuernos.",
+    "options": [
+      "dos",
+      "cuatro",
+      "tres",
+      "siete"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "tres",
+      "3"
+    ],
+    "explanation": "Tres de los primeros cuernos fueron arrancados delante del pequeño.",
+    "why_distractors_fail": {
+      "dos": "La cantidad indicada es tres.",
+      "cuatro": "Cuatro no es la cantidad arrancada.",
+      "siete": "Siete tampoco corresponde al detalle."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "quantity",
+    "option_category": "number",
+    "significance": "Fija la relación numérica entre el cuerno pequeño y los primeros cuernos.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El número es proféticamente relevante y no una palabra de relleno."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-030",
+    "source_unit_id": "DAN7-V010",
+    "fact_id": "DAN7-V010-V11-F03",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Un río de ____ salía de delante del Juez.",
+    "options": [
+      "agua",
+      "luz",
+      "sangre",
+      "fuego"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "fuego",
+      "un río de fuego"
+    ],
+    "explanation": "De delante de él procedía un río de fuego.",
+    "why_distractors_fail": {
+      "agua": "El río no se describe como agua.",
+      "luz": "La palabra usada es fuego.",
+      "sangre": "No aparece sangre en la descripción."
+    },
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "vision_detail",
+    "option_category": "substance",
+    "significance": "Recupera una imagen central de la escena judicial.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El hueco corresponde a una imagen sustantiva y memorable."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-031",
+    "source_unit_id": "DAN7-V011",
+    "fact_id": "DAN7-V011-V11-F03",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Después de matar a la bestia, su cuerpo fue ____ y entregado al fuego.",
+    "options": [
+      "destrozado",
+      "coronado",
+      "ocultado",
+      "restaurado"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "destrozado"
+    ],
+    "explanation": "El cuerpo fue destrozado antes de ser entregado para quemarlo.",
+    "why_distractors_fail": {
+      "coronado": "La escena dicta destrucción, no coronación.",
+      "ocultado": "No fue escondido.",
+      "restaurado": "No se describe restauración."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "sequence",
+    "option_category": "action",
+    "significance": "Evalúa el orden de la sentencia ejecutada contra la bestia.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La acción es explícita y precede a la entrega al fuego."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-032",
+    "source_unit_id": "DAN7-V013",
+    "fact_id": "DAN7-V013-V11-F03",
+    "family": "fill_choice",
+    "subtype": "symbol_interpretation",
+    "question": "El que era como hijo de hombre venía con las ____ del cielo.",
+    "options": [
+      "estrellas",
+      "nubes",
+      "aves",
+      "huestes"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "nubes",
+      "nubes del cielo"
+    ],
+    "explanation": "El hijo de hombre venía con las nubes del cielo.",
+    "why_distractors_fail": {
+      "estrellas": "No se dice que viniera con estrellas.",
+      "aves": "Las aves no acompañan esta llegada.",
+      "huestes": "El pasaje especifica nubes."
+    },
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "arrival",
+    "option_category": "sky_element",
+    "significance": "Fija el modo distintivo de la llegada del hijo de hombre.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El término es una imagen profética principal y está literalmente respaldado."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-033",
+    "source_unit_id": "DAN7-V020",
+    "fact_id": "DAN7-V020-V11-F03",
+    "family": "fill_choice",
+    "subtype": "comparison",
+    "question": "El cuerno con ojos y boca parecía más ____ que sus compañeros.",
+    "options": [
+      "débil",
+      "pequeño",
+      "grande",
+      "antiguo"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "grande",
+      "más grande"
+    ],
+    "explanation": "Su aspecto parecía más grande que el de sus compañeros.",
+    "why_distractors_fail": {
+      "débil": "No se describe como más débil.",
+      "pequeño": "Aunque surgió como cuerno pequeño, aquí su aspecto parece mayor.",
+      "antiguo": "No se compara su antigüedad."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "comparison",
+    "option_category": "size",
+    "significance": "Evalúa el contraste entre el origen pequeño del cuerno y su aspecto posterior.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El distractor «pequeño» es plausible, pero la frase preguntada exige recordar la comparación posterior."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-034",
+    "source_unit_id": "DAN7-V028",
+    "fact_id": "DAN7-V028-V11-F02",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Los pensamientos de Daniel lo turbaron y su rostro se ____.",
+    "options": [
+      "iluminó",
+      "ocultó",
+      "endureció",
+      "demudó"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "demudó",
+      "se demudó"
+    ],
+    "explanation": "La turbación de Daniel se manifestó en el cambio de su rostro.",
+    "why_distractors_fail": {
+      "iluminó": "No se describe alegría o brillo.",
+      "ocultó": "Daniel no ocultó físicamente el rostro.",
+      "endureció": "El verbo empleado es demudó."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "reaction",
+    "option_category": "action",
+    "significance": "Relaciona la reacción interior de Daniel con su manifestación visible.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La palabra expresa una consecuencia corporal relevante del impacto de la visión."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-035",
+    "source_unit_id": "DAN7-V002",
+    "fact_id": "DAN7-V002-V11-F03",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Los cuatro vientos del cielo combatían en el gran mar.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Los cuatro vientos combatían en el gran mar.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación coincide con el escenario de la visión."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "setting",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La proposición conserva cantidad, acción y escenario del pasaje."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-036",
+    "source_unit_id": "DAN7-V010",
+    "fact_id": "DAN7-V010-V11-F04",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Miles de miles servían al Juez.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La visión presenta miles de miles que lo servían.",
+    "why_distractors_fail": {
+      "Falso": "La cantidad y la acción coinciden con la escena."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "service",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Comprueba la función de una multitud sin confundirla con quienes estaban delante."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-037",
+    "source_unit_id": "DAN7-V014",
+    "fact_id": "DAN7-V014-V11-F03",
+    "family": "true_false",
+    "subtype": "prophetic_detail",
+    "question": "El reino recibido por el hijo de hombre terminará cuando concluyan los reinos terrenales.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Su dominio es eterno, no pasará y su reino nunca será destruido.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación reemplaza la eternidad por un final temporal."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "duration",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "duration"
+      ],
+      "local": true,
+      "original": "dominio eterno, que nunca pasará",
+      "replacement": "terminará"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Altera únicamente la duración del reino y la fuente lo refuta de manera directa."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-038",
+    "source_unit_id": "DAN7-V016",
+    "fact_id": "DAN7-V016-V11-F02",
+    "family": "true_false",
+    "subtype": "speaker_addressee",
+    "question": "Daniel obtuvo la interpretación sin preguntar a nadie de los que estaban allí.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Daniel se acercó a uno de los presentes, preguntó y recibió la interpretación.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación elimina la consulta explícita de Daniel."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "information_source",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "information_source"
+      ],
+      "local": true,
+      "original": "Me acerqué a uno de los que allí estaban y le pregunté",
+      "replacement": "sin preguntar a nadie"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La mutación cambia solo el medio por el cual obtuvo la explicación."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-039",
+    "source_unit_id": "DAN7-V024",
+    "fact_id": "DAN7-V024-V11-F02",
+    "family": "true_false",
+    "subtype": "prophetic_detail",
+    "question": "Los diez reyes representados por los cuernos se levantarían de diez reinos diferentes.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Los diez reyes se levantarían de aquel mismo reino.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación cambia un origen común por diez orígenes distintos."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "origin",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "origin"
+      ],
+      "local": true,
+      "original": "de aquel reino",
+      "replacement": "de diez reinos diferentes"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La falsedad modifica solamente el origen de los diez reyes."
+    }
+  },
+  {
+    "id": "DAN7-V11-PILOT-040",
+    "source_unit_id": "DAN7-V028",
+    "fact_id": "DAN7-V028-V11-F03",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Aunque sus pensamientos lo turbaron, el rostro de Daniel permaneció sin cambio.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "El rostro de Daniel se demudó a causa de la turbación.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación niega la reacción visible registrada."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "reaction",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "physical_reaction"
+      ],
+      "local": true,
+      "original": "mi rostro se demudó",
+      "replacement": "permaneció sin cambio"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Cambia únicamente el efecto visible de la turbación y se comprueba localmente."
+    }
+  }
+]

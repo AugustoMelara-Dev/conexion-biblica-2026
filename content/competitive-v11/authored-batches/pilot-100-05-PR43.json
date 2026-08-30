@@ -1,0 +1,660 @@
+[
+  {
+    "id": "PR43-V11-PILOT-041",
+    "source_unit_id": "PR43-P049-P001-S001",
+    "fact_id": "PR43-P049-P001-S001-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué actitud distinguió a Daniel frente a la multitud aterrorizada y la promesa del rey?",
+    "options": [
+      "La ansiedad de quien buscaba una recompensa",
+      "La tranquila dignidad de un siervo del Altísimo",
+      "El temor de un consejero culpable",
+      "La arrogancia de quien quería el trono"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "La tranquila dignidad de un siervo del Altísimo",
+      "tranquila dignidad"
+    ],
+    "explanation": "Daniel permaneció imperturbable con la tranquila dignidad de un siervo del Altísimo.",
+    "why_distractors_fail": {
+      "La ansiedad de quien buscaba una recompensa": "Daniel no estaba movido por la promesa.",
+      "El temor de un consejero culpable": "Se mantuvo imperturbable.",
+      "La arrogancia de quien quería el trono": "Su actitud fue la de un siervo, no un aspirante al poder."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "attitude",
+    "option_category": "attitude",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Evalúa el carácter mostrado por Daniel, distinto de la finalidad de su discurso ya preguntada."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-042",
+    "source_unit_id": "PR43-P049-P002-S002",
+    "fact_id": "PR43-P049-P002-S002-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué reconocimiento siguió al castigo que recibió Nabucodonosor por su orgullo?",
+    "options": [
+      "La superioridad de los dioses de Babilonia",
+      "La inocencia de Belsasar",
+      "El poder y la misericordia del Dios de Israel",
+      "El derecho de los sabios a gobernar"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "El poder y la misericordia del Dios de Israel",
+      "poder y misericordia"
+    ],
+    "explanation": "Después del castigo, Nabucodonosor reconoció el poder y la misericordia del Dios de Israel.",
+    "why_distractors_fail": {
+      "La superioridad de los dioses de Babilonia": "Su experiencia lo llevó a reconocer al Dios de Israel.",
+      "La inocencia de Belsasar": "Belsasar no forma parte de ese reconocimiento.",
+      "El derecho de los sabios a gobernar": "No es la conclusión de la experiencia."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "sequence",
+    "option_category": "recognition",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Requiere reconstruir el desenlace espiritual de la experiencia de Nabucodonosor."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-043",
+    "source_unit_id": "PR43-P049-P002-S006",
+    "fact_id": "PR43-P049-P002-S006-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué estaba a punto de cosechar Belsasar por no atender su oportunidad de conocer y obedecer a Dios?",
+    "options": [
+      "La restauración de su reino",
+      "La aprobación de Daniel",
+      "La victoria sobre los persas",
+      "Las consecuencias de su rebelión"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Las consecuencias de su rebelión",
+      "consecuencias de su rebelión"
+    ],
+    "explanation": "La oportunidad desatendida dejaría a Belsasar cosechar las consecuencias de su rebelión.",
+    "why_distractors_fail": {
+      "La restauración de su reino": "La sentencia anunciaba su pérdida.",
+      "La aprobación de Daniel": "Daniel lo reprendió.",
+      "La victoria sobre los persas": "La ciudad estaba por caer ante ellos."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "consequence",
+    "option_category": "outcome",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Conecta oportunidad, desatención y consecuencia moral en una sola relación causal."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-044",
+    "source_unit_id": "PR43-P049-P003-S002",
+    "fact_id": "PR43-P049-P003-S002-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Cómo describe Daniel la relación de Dios con la vida y los caminos de Belsasar?",
+    "options": [
+      "Su vida estaba en la mano de Dios y todos sus caminos le pertenecían",
+      "Dios conocía sus caminos pero no sostenía su vida",
+      "Su vida dependía de los dioses que había alabado",
+      "Solo sus victorias militares pertenecían a Dios"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Su vida estaba en la mano de Dios y todos sus caminos le pertenecían",
+      "en cuya mano está tu vida"
+    ],
+    "explanation": "Daniel señaló al Dios en cuya mano estaba la vida del rey y a quien pertenecían todos sus caminos.",
+    "why_distractors_fail": {
+      "Dios conocía sus caminos pero no sostenía su vida": "La reprensión incluye expresamente su vida.",
+      "Su vida dependía de los dioses que había alabado": "Esos dioses ni veían, ni oían, ni sabían.",
+      "Solo sus victorias militares pertenecían a Dios": "La declaración abarca todos sus caminos."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "divine_sovereignty",
+    "option_category": "relationship",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Evalúa el argumento central de la reprensión y no solo la lista de pecados."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-045",
+    "source_unit_id": "PR43-P049-P004-S002",
+    "fact_id": "PR43-P049-P004-S002-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "Cuando la mano dejó de verse, ¿qué continuó visible ante la gente?",
+    "options": [
+      "El rostro del Vigía",
+      "Cuatro palabras resplandecientes",
+      "Una balanza de oro",
+      "El ejército detrás de la pared"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Cuatro palabras resplandecientes",
+      "aquellas cuatro palabras"
+    ],
+    "explanation": "La mano desapareció, pero las cuatro palabras siguieron resplandeciendo.",
+    "why_distractors_fail": {
+      "El rostro del Vigía": "El Vigía no se hizo visible a la multitud.",
+      "Una balanza de oro": "La balanza aparece en la interpretación, no como objeto visible.",
+      "El ejército detrás de la pared": "La señal visible eran las palabras."
+    },
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "persistence",
+    "option_category": "visible_object",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Distingue la desaparición de la mano de la permanencia del mensaje."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-046",
+    "source_unit_id": "PR43-P049-P005-S001",
+    "fact_id": "PR43-P049-P005-S001-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "symbol_interpretation",
+    "question": "¿Qué dos acciones divinas resume la palabra MENE?",
+    "options": [
+      "Pesar al rey y hallarlo falto",
+      "Dividir el reino entre medos y persas",
+      "Contar el reino y darlo por terminado",
+      "Perdonar al rey y prolongar su gobierno"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Contar el reino y darlo por terminado",
+      "Contó Dios tu reino, y halo rematado"
+    ],
+    "explanation": "MENE declara que Dios contó el reino y lo remató.",
+    "why_distractors_fail": {
+      "Pesar al rey y hallarlo falto": "Esa es la sentencia de TEKEL.",
+      "Dividir el reino entre medos y persas": "Esa es la declaración de PERES.",
+      "Perdonar al rey y prolongar su gobierno": "La palabra anuncia el fin, no una extensión."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "interpretation",
+    "option_category": "meaning_pair",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Los distractores son interpretaciones vecinas plausibles y exigen asociar correctamente cada término."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-047",
+    "source_unit_id": "PR43-P049-P005-S003",
+    "fact_id": "PR43-P049-P005-S003-V11-F02",
+    "family": "single_choice_direct",
+    "subtype": "prophetic_detail",
+    "question": "¿A qué dos pueblos sería entregado el reino dividido de Belsasar?",
+    "options": [
+      "Griegos y romanos",
+      "Egipcios y asirios",
+      "Judíos y caldeos",
+      "Medos y persas"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Medos y persas",
+      "a Medos y Persas"
+    ],
+    "explanation": "PERES anunciaba que el reino sería dado a medos y persas.",
+    "why_distractors_fail": {
+      "Griegos y romanos": "Corresponden a etapas posteriores.",
+      "Egipcios y asirios": "No son los receptores de esta sentencia.",
+      "Judíos y caldeos": "El reino caldeo no sería entregado a ese par."
+    },
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "recipient",
+    "option_category": "people_pair",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Pregunta por los receptores concretos, distinto del hecho general de que el reino sería dividido."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-048",
+    "source_unit_id": "PR43-P050-P002-S002",
+    "fact_id": "PR43-P050-P002-S002-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué maniobra permitió a medos y persas penetrar en el corazón de Babilonia?",
+    "options": [
+      "Desviaron el curso del Eufrates",
+      "Incendiaron las puertas del templo",
+      "Escalaron las murallas con torres",
+      "Fingieron retirarse del sitio"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Desviaron el curso del Eufrates",
+      "habiendo desviado el curso del Eufrates"
+    ],
+    "explanation": "La desviación del Eufrates abrió el camino hacia la ciudad desprevenida.",
+    "why_distractors_fail": {
+      "Incendiaron las puertas del templo": "La entrada se relaciona con el río, no con el templo.",
+      "Escalaron las murallas con torres": "No es la maniobra descrita.",
+      "Fingieron retirarse del sitio": "No se menciona una retirada fingida."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "military_tactic",
+    "option_category": "tactic",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Evalúa la relación entre la maniobra hidráulica y la entrada a la ciudad."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-049",
+    "source_unit_id": "PR43-P049-P002-S003",
+    "fact_id": "PR43-P049-P002-S003-V11-F02",
+    "family": "fill_choice",
+    "subtype": "principle",
+    "question": "Daniel reprendió a Belsasar por su gran ____.",
+    "options": [
+      "impiedad",
+      "debilidad",
+      "ignorancia",
+      "pobreza"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "impiedad",
+      "gran impiedad"
+    ],
+    "explanation": "La reprensión fue audaz y señaló la gran impiedad del rey.",
+    "why_distractors_fail": {
+      "debilidad": "La reprensión moral se centra en la impiedad.",
+      "ignorancia": "Belsasar conocía las lecciones previas.",
+      "pobreza": "Su riqueza no era el problema señalado."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "moral_judgment",
+    "option_category": "fault",
+    "significance": "Identifica la evaluación moral central del discurso de Daniel.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El sustantivo resume la acusación profética y está respaldado literalmente."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-050",
+    "source_unit_id": "PR43-P049-P002-S004",
+    "fact_id": "PR43-P049-P002-S004-V11-F02",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Daniel señaló las ____ que Belsasar pudo haber aprendido, pero ignoró.",
+    "options": [
+      "riquezas",
+      "lecciones",
+      "alianzas",
+      "profecías"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "lecciones",
+      "las lecciones"
+    ],
+    "explanation": "El profeta destacó lecciones disponibles que Belsasar no aprendió.",
+    "why_distractors_fail": {
+      "riquezas": "No eran bienes materiales.",
+      "alianzas": "No se trataba de pactos políticos.",
+      "profecías": "La frase usa el término lecciones."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "missed_learning",
+    "option_category": "knowledge_object",
+    "significance": "Resume la responsabilidad de aprender de la experiencia ajena.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La palabra enlaza oportunidad y responsabilidad moral."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-051",
+    "source_unit_id": "PR43-P049-P003-S002",
+    "fact_id": "PR43-P049-P003-S002-V11-F03",
+    "family": "fill_choice",
+    "subtype": "comparison",
+    "question": "Los dioses alabados por Belsasar ni ven, ni oyen, ni ____.",
+    "options": [
+      "reinan",
+      "hablan",
+      "saben",
+      "juzgan"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "saben"
+    ],
+    "explanation": "Daniel contrastó esos ídolos incapaces con el Dios que sostenía la vida del rey.",
+    "why_distractors_fail": {
+      "reinan": "No es el tercer verbo de la enumeración.",
+      "hablan": "La frase concluye con saber.",
+      "juzgan": "El texto dice que no saben."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "ability",
+    "option_category": "verb",
+    "significance": "Completa la triple incapacidad usada para desenmascarar la idolatría.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El verbo completa una enumeración doctrinalmente significativa."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-052",
+    "source_unit_id": "PR43-P049-P004-S001",
+    "fact_id": "PR43-P049-P004-S001-V11-F02",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "El mensaje comenzaba: «MENE, MENE, TEKEL, ____».",
+    "options": [
+      "PERES",
+      "SELA",
+      "MARANATA",
+      "UPHARSIN"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "UPHARSIN"
+    ],
+    "explanation": "Las cuatro palabras leídas fueron MENE, MENE, TEKEL, UPHARSIN.",
+    "why_distractors_fail": {
+      "PERES": "PERES aparece en la explicación relacionada, no como la cuarta forma escrita aquí.",
+      "SELA": "No pertenece al mensaje.",
+      "MARANATA": "No pertenece a esta escritura."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "sequence",
+    "option_category": "word",
+    "significance": "Exige recordar la secuencia exacta de la inscripción central del relato.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La dificultad proviene del recuerdo exacto, no de una referencia artificial."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-053",
+    "source_unit_id": "PR43-P050-P002-S003",
+    "fact_id": "PR43-P050-P002-S003-V11-F02",
+    "family": "fill_choice",
+    "subtype": "comparison",
+    "question": "La ciudad se había llenado de soldados enemigos como de ____.",
+    "options": [
+      "langostas",
+      "leones",
+      "águilas",
+      "olas"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "langostas",
+      "como de langostas"
+    ],
+    "explanation": "Los soldados llenaban la ciudad como langostas.",
+    "why_distractors_fail": {
+      "leones": "No es la comparación usada.",
+      "águilas": "Las águilas no describen aquí al ejército.",
+      "olas": "La imagen expresa multitud mediante langostas."
+    },
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "comparison",
+    "option_category": "comparison_object",
+    "significance": "Recupera la imagen que comunica la magnitud de la invasión.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La comparación es concreta y ayuda a visualizar la ocupación de la ciudad."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-054",
+    "source_unit_id": "PR43-P050-P003-S001",
+    "fact_id": "PR43-P050-P003-S001-V11-F02",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Tras la muerte de Belsasar, un monarca ____ se sentó en el trono.",
+    "options": [
+      "hebreo",
+      "extranjero",
+      "caldeo",
+      "sacerdotal"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "extranjero",
+      "un monarca extranjero"
+    ],
+    "explanation": "La misma noche murió Belsasar y un monarca extranjero ocupó el trono.",
+    "why_distractors_fail": {
+      "hebreo": "El nuevo monarca no es identificado como hebreo.",
+      "caldeo": "El cambio de poder puso a un extranjero en el trono.",
+      "sacerdotal": "No se le describe por una función sacerdotal."
+    },
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "succession",
+    "option_category": "origin",
+    "significance": "Marca el cambio de dominio que cumplió la sentencia anunciada.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "El adjetivo expresa la transferencia política inmediata."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-055",
+    "source_unit_id": "PR43-P049-P006-S003",
+    "fact_id": "PR43-P049-P006-S003-V11-F02",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Dios había usado múltiples providencias para enseñar a Babilonia a reverenciar su ley.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Las providencias divinas procuraban enseñar reverencia por la ley de Dios.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación reproduce el propósito declarado de esas providencias."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "divine_purpose",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Evalúa el propósito pedagógico de la historia y no solo la ciudad involucrada."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-056",
+    "source_unit_id": "PR43-P049-P006-S005",
+    "fact_id": "PR43-P049-P006-S005-V11-F02",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "La sentencia dictada contra Babilonia todavía podía revocarse.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La perversidad humana hizo necesaria una sentencia irrevocable.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación cambia el carácter irrevocable de la sentencia."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "finality",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "revocability"
+      ],
+      "local": true,
+      "original": "sentencia irrevocable",
+      "replacement": "podía revocarse"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La mutación altera únicamente la posibilidad de revocar el juicio."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-057",
+    "source_unit_id": "PR43-P049-P007-S001",
+    "fact_id": "PR43-P049-P007-S001-V11-F02",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Después de interpretar la escritura, Daniel recibió los honores que Belsasar había prometido.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El rey ordenó vestirlo de púrpura, colocarle el collar y proclamarlo tercero.",
+    "why_distractors_fail": {
+      "Falso": "Aunque Daniel había rechazado los dones como motivo, el rey ordenó cumplir los honores."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "outcome",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Distingue el rechazo previo de Daniel de la decisión posterior del rey de honrarlo."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-058",
+    "source_unit_id": "PR43-P050-P001-S002",
+    "fact_id": "PR43-P050-P001-S002-V11-F02",
+    "family": "true_false",
+    "subtype": "prophetic_detail",
+    "question": "Los acontecimientos de la caída correspondieron exactamente a lo descrito antes en las Escrituras.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Los sucesos se produjeron en rápida sucesión conforme a la descripción previa.",
+    "why_distractors_fail": {
+      "Falso": "La correspondencia exacta es el punto explícito del pasaje."
+    },
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "fulfillment",
+    "option_category": "statement",
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "Evalúa el vínculo entre profecía e historia, no una referencia bibliográfica."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-059",
+    "source_unit_id": "PR43-P050-P002-S002",
+    "fact_id": "PR43-P050-P002-S002-V11-F03",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "Los medos y persas entraron en la ciudad después de que terminó el banquete.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Penetraban en la ciudad mientras Belsasar y sus nobles todavía bebían.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación retrasa la entrada, pero ambas acciones eran simultáneas."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "simultaneity",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "timing"
+      ],
+      "local": true,
+      "original": "Aun mientras él y sus nobles bebían",
+      "replacement": "después de que terminó el banquete"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La falsedad cambia solo la relación temporal entre el banquete y la invasión."
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-060",
+    "source_unit_id": "PR43-P050-P003-S001",
+    "fact_id": "PR43-P050-P003-S001-V11-F03",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Belsasar sobrevivió aquella noche y entregó voluntariamente el trono al monarca extranjero.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Belsasar fue muerto esa misma noche; no entregó voluntariamente el trono.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación sustituye su muerte por una transferencia voluntaria."
+    },
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "outcome",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "fate"
+      ],
+      "local": true,
+      "original": "La misma noche fué muerto Belsasar",
+      "replacement": "sobrevivió aquella noche"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-v11-pilot-review",
+      "rationale": "La mutación altera únicamente el destino de Belsasar en la misma noche."
+    }
+  }
+]

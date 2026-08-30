@@ -7414,5 +7414,2621 @@
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-correction-pr43-pr44-pv-2026-08-29"
     }
+  },
+  {
+    "id": "PR43-V11-PILOT-001",
+    "source_unit_id": "PR43-P047-P001-S001",
+    "fact_id": "PR43-P047-P001-S001-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "¿En qué etapa de la vida de Daniel comenzaron los grandes cambios descritos en la tierra de su cautiverio?",
+    "options": [
+      "Durante su niñez",
+      "Al comenzar su cautiverio",
+      "Hacia el final de su vida",
+      "Después de regresar a Jerusalén"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Hacia el final de su vida",
+    "accepted_answers": [
+      "Hacia el final de su vida",
+      "al fin de la vida de Daniel"
+    ],
+    "explanation": "Los cambios comenzaron hacia el fin de la vida de Daniel.",
+    "why_distractors_fail": {
+      "Durante su niñez": "El relato lo presenta ya anciano.",
+      "Al comenzar su cautiverio": "Habían pasado más de sesenta años.",
+      "Después de regresar a Jerusalén": "La escena sigue en la tierra del cautiverio."
+    },
+    "source_ref": "PR43, p. 47, párrafo 1",
+    "source_quote": "Hacia el fin de la vida de Daniel, se estaban produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos.",
+    "evidence_excerpt": "Hacia el fin de la vida de Daniel, se estaban produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "time",
+    "option_category": "life_stage",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-002",
+    "source_unit_id": "PR43-P047-P001-S002",
+    "fact_id": "PR43-P047-P001-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué condujo a Babilonia a una disolución gradual pero segura tras la muerte de Nabucodonosor?",
+    "options": [
+      "La falta de murallas",
+      "El regreso de Daniel",
+      "Una escasez repentina de agua",
+      "El gobierno de sucesores imprudentes"
+    ],
+    "correct_option": 3,
+    "correct_answer": "El gobierno de sucesores imprudentes",
+    "accepted_answers": [
+      "El gobierno de sucesores imprudentes",
+      "sus sucesores imprudentes"
+    ],
+    "explanation": "La imprudencia de los sucesores produjo el deterioro gradual de Babilonia.",
+    "why_distractors_fail": {
+      "La falta de murallas": "Babilonia poseía murallas macizas.",
+      "El regreso de Daniel": "Daniel no es presentado como causa del deterioro.",
+      "Una escasez repentina de agua": "La disolución se atribuye al gobierno imprudente."
+    },
+    "source_ref": "PR43, p. 47, párrafo 1",
+    "source_quote": "Nabucodonosor había muerto, y Babilonia, antes “alabada por toda la tierra,” había pasado a ser gobernada por sus sucesores imprudentes; y el resultado era una disolución gradual pero segura.",
+    "evidence_excerpt": "Nabucodonosor había muerto, y Babilonia, antes “alabada por toda la tierra,” había pasado a ser gobernada por sus sucesores imprudentes; y el resultado era una disolución gradual pero segura.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "cause",
+    "option_category": "cause",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-003",
+    "source_unit_id": "PR43-P047-P002-S001",
+    "fact_id": "PR43-P047-P002-S001-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Qué dos defectos de Belsasar anticipaban la pronta caída de Babilonia?",
+    "options": [
+      "Insensatez y debilidad",
+      "Crueldad y cobardía",
+      "Ignorancia y pobreza",
+      "Enfermedad y vejez"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Insensatez y debilidad",
+    "accepted_answers": [
+      "Insensatez y debilidad",
+      "la insensatez y debilidad de Belsasar"
+    ],
+    "explanation": "La caída próxima se relaciona con la insensatez y debilidad de Belsasar.",
+    "why_distractors_fail": {
+      "Crueldad y cobardía": "No es el par empleado.",
+      "Ignorancia y pobreza": "El texto no atribuye la caída a pobreza.",
+      "Enfermedad y vejez": "Belsasar no es descrito así."
+    },
+    "source_ref": "PR43, p. 47, párrafo 2",
+    "source_quote": "Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
+    "evidence_excerpt": "Debido a la insensatez y debilidad de Belsasar, nieto de Nabucodonosor, la orgullosa Babilonia iba a caer pronto.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "cause",
+    "option_category": "trait_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-004",
+    "source_unit_id": "PR43-P047-P002-S002",
+    "fact_id": "PR43-P047-P002-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Cuándo fue admitido Belsasar a compartir la autoridad real?",
+    "options": [
+      "Después de la caída de Babilonia",
+      "En su juventud",
+      "Durante su destierro",
+      "Al final de su vejez"
+    ],
+    "correct_option": 1,
+    "correct_answer": "En su juventud",
+    "accepted_answers": [
+      "En su juventud",
+      "durante su juventud"
+    ],
+    "explanation": "Belsasar fue admitido en su juventud a compartir la autoridad real.",
+    "why_distractors_fail": {
+      "Después de la caída de Babilonia": "La autoridad precedió a la caída.",
+      "Durante su destierro": "No se describe un destierro suyo.",
+      "Al final de su vejez": "El texto especifica su juventud."
+    },
+    "source_ref": "PR43, p. 47, párrafo 2",
+    "source_quote": "Admitido en su juventud a compartir la autoridad real, Belsasar se gloriaba en su poder, y ensalzó su corazón contra el Dios del cielo.",
+    "evidence_excerpt": "Admitido en su juventud a compartir la autoridad real, Belsasar se gloriaba en su poder, y ensalzó su corazón contra el Dios del cielo.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "time",
+    "option_category": "life_stage",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-005",
+    "source_unit_id": "PR43-P047-P002-S003",
+    "fact_id": "PR43-P047-P002-S003-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Para qué se le habían dado a Belsasar muchas oportunidades?",
+    "options": [
+      "Para ampliar las murallas de Babilonia",
+      "Para reemplazar a Ciro como general",
+      "Para conocer la voluntad divina y obedecerla",
+      "Para interpretar los sueños de Nabucodonosor"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Para conocer la voluntad divina y obedecerla",
+    "accepted_answers": [
+      "Para conocer la voluntad divina y obedecerla",
+      "conocer la voluntad divina"
+    ],
+    "explanation": "Las oportunidades debían llevarlo a conocer la voluntad divina y reconocer su deber de obedecer.",
+    "why_distractors_fail": {
+      "Para ampliar las murallas de Babilonia": "Las oportunidades eran espirituales, no arquitectónicas.",
+      "Para reemplazar a Ciro como general": "No se relacionan con el mando militar.",
+      "Para interpretar los sueños de Nabucodonosor": "Esa función correspondió a Daniel."
+    },
+    "source_ref": "PR43, p. 47, párrafo 2",
+    "source_quote": "Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
+    "evidence_excerpt": "Muchas habían sido sus oportunidades para conocer la voluntad divina, y para comprender que era su responsabilidad prestarle obediencia.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "purpose",
+    "option_category": "purpose",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-006",
+    "source_unit_id": "PR43-P047-P002-S004",
+    "fact_id": "PR43-P047-P002-S004-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "Además del destierro de su abuelo, ¿qué desenlace conocía Belsasar?",
+    "options": [
+      "Su muerte en el campo de batalla",
+      "Su regreso definitivo a Judá",
+      "Su renuncia voluntaria al trono",
+      "Su conversión y curación milagrosa"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Su conversión y curación milagrosa",
+    "accepted_answers": [
+      "Su conversión y curación milagrosa",
+      "conversión y curación milagrosa"
+    ],
+    "explanation": "Belsasar conocía tanto el destierro como la conversión y curación milagrosa de su abuelo.",
+    "why_distractors_fail": {
+      "Su muerte en el campo de batalla": "No fue el desenlace mencionado.",
+      "Su regreso definitivo a Judá": "Nabucodonosor no regresó a Judá.",
+      "Su renuncia voluntaria al trono": "El texto no habla de una renuncia."
+    },
+    "source_ref": "PR43, p. 47, párrafo 2",
+    "source_quote": "Sabía que, por decreto divino, su abuelo había sido desterrado de la sociedad de los hombres; y sabía también de su conversión y curación milagrosa.",
+    "evidence_excerpt": "Sabía que, por decreto divino, su abuelo había sido desterrado de la sociedad de los hombres; y sabía también de su conversión y curación milagrosa.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "knowledge",
+    "option_category": "event_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-007",
+    "source_unit_id": "PR43-P047-P002-S006",
+    "fact_id": "PR43-P047-P002-S006-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué recurso para conocer mejor la verdad dejó Belsasar sin aprovechar?",
+    "options": [
+      "Los medios que tenía a su alcance",
+      "Los ejércitos de los medos",
+      "Los tesoros del palacio",
+      "Las provisiones de la ciudad"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Los medios que tenía a su alcance",
+    "accepted_answers": [
+      "Los medios que tenía a su alcance",
+      "los medios a su alcance"
+    ],
+    "explanation": "No aprovechó los medios disponibles para conocer mejor la verdad.",
+    "why_distractors_fail": {
+      "Los ejércitos de los medos": "No eran un medio de instrucción espiritual.",
+      "Los tesoros del palacio": "La riqueza no es el recurso señalado.",
+      "Las provisiones de la ciudad": "Las provisiones sostenían el sitio, no el conocimiento de la verdad."
+    },
+    "source_ref": "PR43, p. 47, párrafo 2",
+    "source_quote": "Malgastó las oportunidades que se le habían concedido misericordiosamente, y no aprovechó los medios que tenía a su alcance para conocer mejor la verdad.",
+    "evidence_excerpt": "Malgastó las oportunidades que se le habían concedido misericordiosamente, y no aprovechó los medios que tenía a su alcance para conocer mejor la verdad.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "missed_opportunity",
+    "option_category": "resource",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-008",
+    "source_unit_id": "PR43-P047-P002-S007",
+    "fact_id": "PR43-P047-P002-S007-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Cómo contrastó la actitud de Belsasar con lo que Nabucodonosor había aprendido?",
+    "options": [
+      "Lo estudió con humildad",
+      "Lo pasó por alto con indiferencia",
+      "Lo proclamó ante sus príncipes",
+      "Lo convirtió en ley del reino"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Lo pasó por alto con indiferencia",
+    "accepted_answers": [
+      "Lo pasó por alto con indiferencia",
+      "lo pasaba por alto"
+    ],
+    "explanation": "Belsasar ignoró con indiferencia lo que su abuelo obtuvo mediante sufrimiento y humillación.",
+    "why_distractors_fail": {
+      "Lo estudió con humildad": "Su conducta mostró lo contrario.",
+      "Lo proclamó ante sus príncipes": "No transmitió esa lección.",
+      "Lo convirtió en ley del reino": "No se registra tal decreto."
+    },
+    "source_ref": "PR43, p. 47, párrafo 2",
+    "source_quote": "Lo que Nabucodonosor había adquirido finalmente a costo de indecibles sufrimientos y humillaciones, Belsasar lo pasaba por alto con indiferencia.",
+    "evidence_excerpt": "Lo que Nabucodonosor había adquirido finalmente a costo de indecibles sufrimientos y humillaciones, Belsasar lo pasaba por alto con indiferencia.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "contrast",
+    "option_category": "response",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-009",
+    "source_unit_id": "PR43-P047-P003-S002",
+    "fact_id": "PR43-P047-P003-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿Qué doble relación se atribuye a Ciro durante el sitio de Babilonia?",
+    "options": [
+      "Hijo de Belsasar y rey de Judá",
+      "Hermano de Daniel y jefe de los caldeos",
+      "Sobrino de Darío y general de medos y persas",
+      "Nieto de Nabucodonosor y príncipe de Babilonia"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Sobrino de Darío y general de medos y persas",
+    "accepted_answers": [
+      "Sobrino de Darío y general de medos y persas",
+      "sobrino de Darío el Medo y general"
+    ],
+    "explanation": "Ciro era sobrino de Darío el Medo y general de los ejércitos combinados.",
+    "why_distractors_fail": {
+      "Hijo de Belsasar y rey de Judá": "Ninguna de esas relaciones corresponde a Ciro.",
+      "Hermano de Daniel y jefe de los caldeos": "Ciro no era pariente de Daniel.",
+      "Nieto de Nabucodonosor y príncipe de Babilonia": "Esa genealogía no se le atribuye."
+    },
+    "source_ref": "PR43, p. 47, párrafo 3",
+    "source_quote": "Babilonia fué sitiada por Ciro, sobrino de Darío el Medo y general de los ejércitos combinados de los medos y persas.",
+    "evidence_excerpt": "Babilonia fué sitiada por Ciro, sobrino de Darío el Medo y general de los ejércitos combinados de los medos y persas.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "identity_roles",
+    "option_category": "relationship_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-010",
+    "source_unit_id": "PR43-P047-P003-S003",
+    "fact_id": "PR43-P047-P003-S003-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿De qué material eran las puertas de la fortaleza que parecía inexpugnable?",
+    "options": [
+      "Hierro",
+      "Madera",
+      "Plata",
+      "Bronce"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Bronce",
+    "accepted_answers": [
+      "Bronce",
+      "de bronce"
+    ],
+    "explanation": "La fortaleza tenía macizas murallas y puertas de bronce.",
+    "why_distractors_fail": {
+      "Hierro": "El texto especifica bronce.",
+      "Madera": "No se describen puertas de madera.",
+      "Plata": "La plata aparece en otros objetos, no en las puertas."
+    },
+    "source_ref": "PR43, p. 47, párrafo 3",
+    "source_quote": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "evidence_excerpt": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "material",
+    "option_category": "material",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-011",
+    "source_unit_id": "PR43-P047-P004-S001",
+    "fact_id": "PR43-P047-P004-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Belsasar celebró el gran banquete para ____ de sus príncipes.",
+    "options": [
+      "mil",
+      "cien",
+      "quinientos",
+      "diez mil"
+    ],
+    "correct_option": 0,
+    "correct_answer": "mil",
+    "accepted_answers": [
+      "mil",
+      "1,000",
+      "1000"
+    ],
+    "explanation": "El banquete reunió a mil de sus príncipes.",
+    "why_distractors_fail": {
+      "cien": "La cantidad fue mayor.",
+      "quinientos": "El texto señala mil.",
+      "diez mil": "Excede la cifra indicada."
+    },
+    "source_ref": "PR43, p. 47, párrafo 4",
+    "source_quote": "En su orgullo y arrogancia, con temerario sentimiento de seguridad, “Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.",
+    "evidence_excerpt": "En su orgullo y arrogancia, con temerario sentimiento de seguridad, “Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "quantity",
+    "option_category": "number",
+    "false_mutation": null,
+    "blank_span": "mil",
+    "significance": "Fija la escala del banquete en que culminó el desafío de Belsasar.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-012",
+    "source_unit_id": "PR43-P047-P004-S005",
+    "fact_id": "PR43-P047-P004-S005-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "comparison",
+    "question": "Los príncipes y estadistas bebían vino como si fuera ____.",
+    "options": [
+      "aceite",
+      "agua",
+      "leche",
+      "sangre"
+    ],
+    "correct_option": 1,
+    "correct_answer": "agua",
+    "accepted_answers": [
+      "agua"
+    ],
+    "explanation": "Bebían vino como agua antes de entregarse a la orgía.",
+    "why_distractors_fail": {
+      "aceite": "No es la comparación usada.",
+      "leche": "El vino no se compara con leche.",
+      "sangre": "El texto dice agua."
+    },
+    "source_ref": "PR43, p. 47, párrafo 4",
+    "source_quote": "Los príncipes y los estadistas bebían vino como agua, y bajo su influencia enloquecedora se entregaban a la orgía.",
+    "evidence_excerpt": "Los príncipes y los estadistas bebían vino como agua, y bajo su influencia enloquecedora se entregaban a la orgía.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "comparison",
+    "option_category": "substance",
+    "false_mutation": null,
+    "blank_span": "agua",
+    "significance": "Recupera la comparación que muestra el exceso del banquete.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-013",
+    "source_unit_id": "PR43-P047-P005-S001",
+    "fact_id": "PR43-P047-P005-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "identification",
+    "question": "Con la razón destronada, el propio ____ dirigía la ruidosa orgía.",
+    "options": [
+      "profeta",
+      "general",
+      "rey",
+      "astrólogo"
+    ],
+    "correct_option": 2,
+    "correct_answer": "rey",
+    "accepted_answers": [
+      "rey",
+      "el rey"
+    ],
+    "explanation": "El rey mismo dirigía la orgía cuando dominaron los impulsos inferiores.",
+    "why_distractors_fail": {
+      "profeta": "Daniel no dirigía el festín.",
+      "general": "No se atribuye la dirección a un militar.",
+      "astrólogo": "Los astrólogos serían llamados después."
+    },
+    "source_ref": "PR43, p. 47, párrafo 5",
+    "source_quote": "Habiendo quedado la razón destronada por una embriaguez desvergonzada, y habiendo cobrado ascendiente los impulsos y las pasiones inferiores, el rey mismo dirigía la ruidosa orgía.",
+    "evidence_excerpt": "Habiendo quedado la razón destronada por una embriaguez desvergonzada, y habiendo cobrado ascendiente los impulsos y las pasiones inferiores, el rey mismo dirigía la ruidosa orgía.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "leadership",
+    "option_category": "role",
+    "false_mutation": null,
+    "blank_span": "rey",
+    "significance": "Identifica al responsable directo de conducir la orgía.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-014",
+    "source_unit_id": "PR43-P047-P005-S002",
+    "fact_id": "PR43-P047-P005-S002-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Belsasar mandó traer los vasos de oro y de ____ del templo de Jerusalén.",
+    "options": [
+      "hierro",
+      "bronce",
+      "barro",
+      "plata"
+    ],
+    "correct_option": 3,
+    "correct_answer": "plata",
+    "accepted_answers": [
+      "plata"
+    ],
+    "explanation": "La orden incluyó los vasos de oro y de plata.",
+    "why_distractors_fail": {
+      "hierro": "No forma el par de los vasos.",
+      "bronce": "Las puertas, no estos vasos, se describen de bronce.",
+      "barro": "No se mencionan vasos de barro."
+    },
+    "source_ref": "PR43, p. 47, párrafo 5",
+    "source_quote": "En el transcurso del festín, ordenó “que trajesen los vasos de oro y de plata que Nabucodonosor ... había traído del templo de Jerusalem; para que bebiesen con ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
+    "evidence_excerpt": "En el transcurso del festín, ordenó “que trajesen los vasos de oro y de plata que Nabucodonosor ... había traído del templo de Jerusalem; para que bebiesen con ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "material",
+    "option_category": "material",
+    "false_mutation": null,
+    "blank_span": "plata",
+    "significance": "Precisa los materiales de los objetos sagrados profanados.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-015",
+    "source_unit_id": "PR43-P047-P005-S004",
+    "fact_id": "PR43-P047-P005-S004-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Además del rey, los príncipes y las mujeres, bebieron en los vasos las ____.",
+    "options": [
+      "concubinas",
+      "siervas",
+      "profetisas",
+      "cautivas"
+    ],
+    "correct_option": 0,
+    "correct_answer": "concubinas",
+    "accepted_answers": [
+      "concubinas",
+      "sus concubinas"
+    ],
+    "explanation": "La lista incluye al rey, sus príncipes, sus mujeres y sus concubinas.",
+    "why_distractors_fail": {
+      "siervas": "No es el grupo nombrado.",
+      "profetisas": "No se mencionan profetisas.",
+      "cautivas": "El texto dice concubinas."
+    },
+    "source_ref": "PR43, p. 47, párrafo 5",
+    "source_quote": "“Entonces fueron traídos los vasos de oro, ... y bebieron con ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
+    "evidence_excerpt": "“Entonces fueron traídos los vasos de oro, ... y bebieron con ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "participant",
+    "option_category": "group",
+    "false_mutation": null,
+    "blank_span": "concubinas",
+    "significance": "Completa la lista de participantes en la profanación de los vasos.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-016",
+    "source_unit_id": "PR43-P047-P006-S001",
+    "fact_id": "PR43-P047-P006-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "El Vigía divino miraba la profanación y oía la alegría ____.",
+    "options": [
+      "solemne",
+      "sacrilega",
+      "silenciosa",
+      "inocente"
+    ],
+    "correct_option": 1,
+    "correct_answer": "sacrilega",
+    "accepted_answers": [
+      "sacrilega",
+      "alegría sacrílega"
+    ],
+    "explanation": "El Vigía oía la alegría sacrílega de los adoradores de ídolos.",
+    "why_distractors_fail": {
+      "solemne": "La celebración era profana, no solemne.",
+      "silenciosa": "La escena era ruidosa.",
+      "inocente": "El relato la califica de sacrílega."
+    },
+    "source_ref": "PR43, p. 47, párrafo 6",
+    "source_quote": "Poco se imaginaba Belsasar que un Testigo celestial presenciaba su desenfreno idólatra; pero un Vigía divino, aunque no reconocido, miraba la escena de profanación y oía la alegría sacrílega.",
+    "evidence_excerpt": "Poco se imaginaba Belsasar que un Testigo celestial presenciaba su desenfreno idólatra; pero un Vigía divino, aunque no reconocido, miraba la escena de profanación y oía la alegría sacrílega.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "moral_description",
+    "option_category": "quality",
+    "false_mutation": null,
+    "blank_span": "sacrilega",
+    "significance": "Recupera la valoración moral de la celebración observada desde el cielo.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-017",
+    "source_unit_id": "PR43-P047-P003-S003",
+    "fact_id": "PR43-P047-P003-S003-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "La fortaleza disponía de abundantes provisiones durante el sitio.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Babilonia estaba abastecida con abundantes provisiones.",
+    "why_distractors_fail": {
+      "Falso": "La abundancia de provisiones forma parte de su aparente seguridad."
+    },
+    "source_ref": "PR43, p. 47, párrafo 3",
+    "source_quote": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "evidence_excerpt": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "defense",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-018",
+    "source_unit_id": "PR43-P047-P005-S003",
+    "fact_id": "PR43-P047-P005-S003-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Belsasar quería demostrar que nada era demasiado sagrado para sus manos.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Ese era precisamente el desafío expresado al usar los vasos sagrados.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación reproduce la intención atribuida al rey."
+    },
+    "source_ref": "PR43, p. 47, párrafo 5",
+    "source_quote": "El rey quería probar que nada era demasiado sagrado para sus manos.",
+    "evidence_excerpt": "El rey quería probar que nada era demasiado sagrado para sus manos.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "intention",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-019",
+    "source_unit_id": "PR43-P047-P005-S005",
+    "fact_id": "PR43-P047-P005-S005-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Durante el banquete alabaron a dioses hechos de diversos materiales.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Alabaron dioses de oro, plata, metal, hierro, madera y piedra.",
+    "why_distractors_fail": {
+      "Falso": "La lista enumera varios materiales de los ídolos."
+    },
+    "source_ref": "PR43, p. 47, párrafo 5",
+    "source_quote": "Bebieron vino, y alabaron a los dioses de oro y de plata, de metal, de hierro, de madera, y de piedra.”",
+    "evidence_excerpt": "Bebieron vino, y alabaron a los dioses de oro y de plata, de metal, de hierro, de madera, y de piedra.”",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "worship",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-020",
+    "source_unit_id": "PR43-P047-P005-S001",
+    "fact_id": "PR43-P047-P005-S001-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "identification",
+    "question": "El rey se limitó a observar la orgía mientras otros la dirigían.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "El rey mismo dirigía la ruidosa orgía.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación cambia al director por un observador pasivo."
+    },
+    "source_ref": "PR43, p. 47, párrafo 5",
+    "source_quote": "Habiendo quedado la razón destronada por una embriaguez desvergonzada, y habiendo cobrado ascendiente los impulsos y las pasiones inferiores, el rey mismo dirigía la ruidosa orgía.",
+    "evidence_excerpt": "Habiendo quedado la razón destronada por una embriaguez desvergonzada, y habiendo cobrado ascendiente los impulsos y las pasiones inferiores, el rey mismo dirigía la ruidosa orgía.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "leadership",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "role"
+      ],
+      "local": true,
+      "original": "el rey mismo dirigía",
+      "replacement": "se limitó a observar"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-021",
+    "source_unit_id": "PR43-P048-P001-S002",
+    "fact_id": "PR43-P048-P001-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Dónde trazó la mano las palabras que resplandecían como fuego?",
+    "options": [
+      "En las paredes del palacio",
+      "Sobre los vasos de oro",
+      "En las puertas de bronce",
+      "En el suelo del salón"
+    ],
+    "correct_option": 0,
+    "correct_answer": "En las paredes del palacio",
+    "accepted_answers": [
+      "En las paredes del palacio",
+      "las paredes del palacio"
+    ],
+    "explanation": "La mano escribió en las paredes del palacio.",
+    "why_distractors_fail": {
+      "Sobre los vasos de oro": "Los vasos fueron profanados, pero no recibieron la escritura.",
+      "En las puertas de bronce": "Las puertas pertenecen a las defensas de la ciudad.",
+      "En el suelo del salón": "La escritura apareció en la pared."
+    },
+    "source_ref": "PR43, p. 48, párrafo 1",
+    "source_quote": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "evidence_excerpt": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "place",
+    "option_category": "place",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-022",
+    "source_unit_id": "PR43-P048-P002-S001",
+    "fact_id": "PR43-P048-P002-S001-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué ocurrió con la alegría del banquete cuando los asistentes vieron escribir a la mano?",
+    "options": [
+      "Se volvió más ruidosa",
+      "Quedó acallada",
+      "Se trasladó al patio",
+      "Continuó sin interrupción"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Quedó acallada",
+    "accepted_answers": [
+      "Quedó acallada",
+      "fue acallada"
+    ],
+    "explanation": "La ruidosa alegría quedó acallada por un terror sin nombre.",
+    "why_distractors_fail": {
+      "Se volvió más ruidosa": "El terror sustituyó a la alegría.",
+      "Se trasladó al patio": "No se describe un traslado.",
+      "Continuó sin interrupción": "La aparición interrumpió el ambiente festivo."
+    },
+    "source_ref": "PR43, p. 48, párrafo 2",
+    "source_quote": "Acallada quedó la ruidosa alegría, mientras que hombres y mujeres, dominados por un terror sin nombre, miraban cómo la mano trazaba lentamente los caracteres misteriosos.",
+    "evidence_excerpt": "Acallada quedó la ruidosa alegría, mientras que hombres y mujeres, dominados por un terror sin nombre, miraban cómo la mano trazaba lentamente los caracteres misteriosos.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "reaction",
+    "option_category": "outcome",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-023",
+    "source_unit_id": "PR43-P048-P002-S002",
+    "fact_id": "PR43-P048-P002-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué desfiló ante los ojos de los participantes como en una visión panorámica?",
+    "options": [
+      "Los ejércitos de Ciro",
+      "Las riquezas del reino",
+      "Los actos de su vida impía",
+      "Las victorias de Nabucodonosor"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Los actos de su vida impía",
+    "accepted_answers": [
+      "Los actos de su vida impía",
+      "sus actos impíos"
+    ],
+    "explanation": "La señal hizo desfilar ante ellos los actos de su vida impía.",
+    "why_distractors_fail": {
+      "Los ejércitos de Ciro": "La reflexión fue moral, no militar.",
+      "Las riquezas del reino": "No contemplaron un inventario de riquezas.",
+      "Las victorias de Nabucodonosor": "Recordaron sus propios actos."
+    },
+    "source_ref": "PR43, p. 48, párrafo 2",
+    "source_quote": "Como en visión panorámica desfilaron ante sus ojos los actos de su vida impía; les pareció estar emplazados ante el tribunal del Dios eterno, cuyo poder acababan de desafiar.",
+    "evidence_excerpt": "Como en visión panorámica desfilaron ante sus ojos los actos de su vida impía; les pareció estar emplazados ante el tribunal del Dios eterno, cuyo poder acababan de desafiar.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "memory",
+    "option_category": "object_of_vision",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-024",
+    "source_unit_id": "PR43-P048-P003-S002",
+    "fact_id": "PR43-P048-P003-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Por qué recaía sobre Belsasar la mayor responsabilidad aquella noche?",
+    "options": [
+      "Había abierto las puertas de la ciudad",
+      "Había llamado a Daniel demasiado tarde",
+      "Había perdido las provisiones del palacio",
+      "Había encabezado la rebelión que llegó a su apogeo"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Había encabezado la rebelión que llegó a su apogeo",
+    "accepted_answers": [
+      "Había encabezado la rebelión que llegó a su apogeo",
+      "llevaba la mayor responsabilidad por la rebelión"
+    ],
+    "explanation": "La rebelión contra Dios culminó bajo su responsabilidad.",
+    "why_distractors_fail": {
+      "Había abierto las puertas de la ciudad": "No se le atribuye abrirlas.",
+      "Había llamado a Daniel demasiado tarde": "Eso no define la mayor responsabilidad señalada.",
+      "Había perdido las provisiones del palacio": "La culpa era moral, no logística."
+    },
+    "source_ref": "PR43, p. 48, párrafo 3",
+    "source_quote": "El era quien llevaba la mayor responsabilidad por la rebelión contra Dios que había llegado esa noche a su apogeo en el reino babilónico.",
+    "evidence_excerpt": "El era quien llevaba la mayor responsabilidad por la rebelión contra Dios que había llegado esa noche a su apogeo en el reino babilónico.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "responsibility",
+    "option_category": "cause",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-025",
+    "source_unit_id": "PR43-P048-P003-S003",
+    "fact_id": "PR43-P048-P003-S003-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿A quién representaba el Vigía invisible ante el cual Belsasar quedó paralizado?",
+    "options": [
+      "A Aquel cuyo poder había desafiado",
+      "A Ciro, que sitiaba la ciudad",
+      "A Nabucodonosor, su abuelo",
+      "A los sabios que no podían leer"
+    ],
+    "correct_option": 0,
+    "correct_answer": "A Aquel cuyo poder había desafiado",
+    "accepted_answers": [
+      "A Aquel cuyo poder había desafiado",
+      "Aquel cuyo poder había sido desafiado"
+    ],
+    "explanation": "El Vigía representaba a Aquel cuyo poder y nombre habían sido desafiados.",
+    "why_distractors_fail": {
+      "A Ciro, que sitiaba la ciudad": "El Vigía es una figura celestial.",
+      "A Nabucodonosor, su abuelo": "No representa al antiguo rey.",
+      "A los sabios que no podían leer": "Los sabios eran incapaces de interpretar la señal."
+    },
+    "source_ref": "PR43, p. 48, párrafo 3",
+    "source_quote": "En presencia del Vigía invisible, representante de Aquel cuyo poder había sido desafiado y cuyo nombre había sido blasfemado, el rey se quedó paralizado de miedo.",
+    "evidence_excerpt": "En presencia del Vigía invisible, representante de Aquel cuyo poder había sido desafiado y cuyo nombre había sido blasfemado, el rey se quedó paralizado de miedo.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "representation",
+    "option_category": "represented_authority",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-026",
+    "source_unit_id": "PR43-P048-P003-S006",
+    "fact_id": "PR43-P048-P003-S006-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "principle",
+    "question": "¿En qué había confiado Belsasar al levantarse contra el Dios del cielo?",
+    "options": [
+      "En la misericordia divina",
+      "En su propio poder",
+      "En el consejo de Daniel",
+      "En la fidelidad de sus príncipes"
+    ],
+    "correct_option": 1,
+    "correct_answer": "En su propio poder",
+    "accepted_answers": [
+      "En su propio poder",
+      "su propio poder"
+    ],
+    "explanation": "Belsasar había confiado en su propio poder.",
+    "why_distractors_fail": {
+      "En la misericordia divina": "Su actitud fue desafiante, no confiada en Dios.",
+      "En el consejo de Daniel": "No había atendido las lecciones disponibles.",
+      "En la fidelidad de sus príncipes": "El texto identifica expresamente su propio poder."
+    },
+    "source_ref": "PR43, p. 48, párrafo 3",
+    "source_quote": "Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle: ¿Por qué obras así?",
+    "evidence_excerpt": "Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle: ¿Por qué obras así?",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "trust",
+    "option_category": "object_of_trust",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-027",
+    "source_unit_id": "PR43-P048-P004-S002",
+    "fact_id": "PR43-P048-P004-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué dos límites encontró Belsasar ante el secreto de los caracteres?",
+    "options": [
+      "No podía verlos ni recordar el idioma",
+      "No podía llamar a sus sabios ni ofrecer premios",
+      "No podía comprender su poder ni contradecirlo",
+      "No podía entrar al salón ni acercarse a la pared"
+    ],
+    "correct_option": 2,
+    "correct_answer": "No podía comprender su poder ni contradecirlo",
+    "accepted_answers": [
+      "No podía comprender su poder ni contradecirlo",
+      "comprender o contradecir"
+    ],
+    "explanation": "El secreto encerraba un poder imposible de comprender o contradecir para el rey.",
+    "why_distractors_fail": {
+      "No podía verlos ni recordar el idioma": "Veía las letras, pero no sondeaba su secreto.",
+      "No podía llamar a sus sabios ni ofrecer premios": "Hizo ambas cosas.",
+      "No podía entrar al salón ni acercarse a la pared": "Ya estaba en el salón."
+    },
+    "source_ref": "PR43, p. 48, párrafo 4",
+    "source_quote": "Encerraban un secreto que él no podía sondear, un poder que le era imposible comprender o contradecir.",
+    "evidence_excerpt": "Encerraban un secreto que él no podía sondear, un poder que le era imposible comprender o contradecir.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "limitation_pair",
+    "option_category": "limitation_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-028",
+    "source_unit_id": "PR43-P048-P004-S004",
+    "fact_id": "PR43-P048-P004-S004-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿Qué tres grupos convocó Belsasar para que leyeran la escritura?",
+    "options": [
+      "Profetas, sacerdotes y levitas",
+      "Medos, persas y caldeos",
+      "Príncipes, capitanes y soldados",
+      "Astrólogos, caldeos y adivinos"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Astrólogos, caldeos y adivinos",
+    "accepted_answers": [
+      "Astrólogos, caldeos y adivinos"
+    ],
+    "explanation": "El rey invitó a astrólogos, caldeos y adivinos.",
+    "why_distractors_fail": {
+      "Profetas, sacerdotes y levitas": "No fue la convocatoria real.",
+      "Medos, persas y caldeos": "Mezcla pueblos con un grupo de sabios.",
+      "Príncipes, capitanes y soldados": "No eran los intérpretes convocados."
+    },
+    "source_ref": "PR43, p. 48, párrafo 4",
+    "source_quote": "Su grito frenético repercutió en la asamblea, cuando invitó a los astrólogos, caldeos y adivinos a que leyesen la escritura.",
+    "evidence_excerpt": "Su grito frenético repercutió en la asamblea, cuando invitó a los astrólogos, caldeos y adivinos a que leyesen la escritura.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "group_list",
+    "option_category": "group_triplet",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-029",
+    "source_unit_id": "PR43-P048-P004-S005",
+    "fact_id": "PR43-P048-P004-S005-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Qué posición en el reino prometió Belsasar al intérprete de la escritura?",
+    "options": [
+      "Tercer señor",
+      "Segundo señor",
+      "General principal",
+      "Gobernador de Judá"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Tercer señor",
+    "accepted_answers": [
+      "Tercer señor",
+      "el tercero"
+    ],
+    "explanation": "El intérprete sería proclamado tercer señor del reino.",
+    "why_distractors_fail": {
+      "Segundo señor": "La promesa especificaba el tercer puesto.",
+      "General principal": "No ofreció un cargo militar.",
+      "Gobernador de Judá": "El cargo prometido pertenecía al reino babilónico."
+    },
+    "source_ref": "PR43, p. 48, párrafo 4",
+    "source_quote": "Prometió: “Cualquiera que leyere esta escritura, y me mostrare su declaración, será vestido de púrpura, y tendrá collar de oro a su cuello; y en el reino se enseñoreará el tercero.",
+    "evidence_excerpt": "Prometió: “Cualquiera que leyere esta escritura, y me mostrare su declaración, será vestido de púrpura, y tendrá collar de oro a su cuello; y en el reino se enseñoreará el tercero.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "reward",
+    "option_category": "rank",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-030",
+    "source_unit_id": "PR43-P048-P002-S003",
+    "fact_id": "PR43-P048-P002-S003-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "comparison",
+    "question": "Antes del terror habían prevalecido la hilaridad y los chistes ____.",
+    "options": [
+      "ingeniosos",
+      "solemnes",
+      "blasfemos",
+      "prudentes"
+    ],
+    "correct_option": 2,
+    "correct_answer": "blasfemos",
+    "accepted_answers": [
+      "blasfemos",
+      "chistes blasfemos"
+    ],
+    "explanation": "Los chistes blasfemos precedieron a los rostros pálidos y gritos de miedo.",
+    "why_distractors_fail": {
+      "ingeniosos": "El texto los califica moralmente, no por su ingenio.",
+      "solemnes": "El ambiente era irreverente.",
+      "prudentes": "La conducta fue blasfema."
+    },
+    "source_ref": "PR43, p. 48, párrafo 2",
+    "source_quote": "Donde tan sólo unos momentos antes habían prevalecido la hilaridad y los chistes blasfemos, se veían rostros pálidos y se oían gritos de miedo.",
+    "evidence_excerpt": "Donde tan sólo unos momentos antes habían prevalecido la hilaridad y los chistes blasfemos, se veían rostros pálidos y se oían gritos de miedo.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "moral_description",
+    "option_category": "quality",
+    "false_mutation": null,
+    "blank_span": "blasfemos",
+    "significance": "Contrasta la irreverencia previa con el terror que siguió.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-031",
+    "source_unit_id": "PR43-P048-P003-S004",
+    "fact_id": "PR43-P048-P003-S004-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Al quedar paralizado de miedo, la ____ de Belsasar se despertó.",
+    "options": [
+      "ambición",
+      "memoria",
+      "curiosidad",
+      "conciencia"
+    ],
+    "correct_option": 3,
+    "correct_answer": "conciencia",
+    "accepted_answers": [
+      "conciencia",
+      "su conciencia"
+    ],
+    "explanation": "La aparición de la señal despertó su conciencia.",
+    "why_distractors_fail": {
+      "ambición": "No es la facultad que despertó.",
+      "memoria": "El texto nombra la conciencia.",
+      "curiosidad": "Su reacción fue moral y temerosa."
+    },
+    "source_ref": "PR43, p. 48, párrafo 3",
+    "source_quote": "Su conciencia se despertó.",
+    "evidence_excerpt": "Su conciencia se despertó.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "reaction",
+    "option_category": "faculty",
+    "false_mutation": null,
+    "blank_span": "conciencia",
+    "significance": "Fija la reacción moral interna que acompañó al terror del rey.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-032",
+    "source_unit_id": "PR43-P048-P004-S001",
+    "fact_id": "PR43-P048-P004-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "En vano trató el rey de leer las letras ____.",
+    "options": [
+      "ardientes",
+      "doradas",
+      "ocultas",
+      "borrosas"
+    ],
+    "correct_option": 0,
+    "correct_answer": "ardientes",
+    "accepted_answers": [
+      "ardientes",
+      "letras ardientes"
+    ],
+    "explanation": "Belsasar intentó sin éxito leer las letras ardientes.",
+    "why_distractors_fail": {
+      "doradas": "El oro corresponde a los vasos y al collar.",
+      "ocultas": "Las letras eran visibles.",
+      "borrosas": "Resplandecían con claridad."
+    },
+    "source_ref": "PR43, p. 48, párrafo 4",
+    "source_quote": "En vano trató el rey de leer las letras ardientes.",
+    "evidence_excerpt": "En vano trató el rey de leer las letras ardientes.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "description",
+    "option_category": "quality",
+    "false_mutation": null,
+    "blank_span": "ardientes",
+    "significance": "Recupera la apariencia de la escritura que el rey no pudo leer.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-033",
+    "source_unit_id": "PR43-P048-P004-S005",
+    "fact_id": "PR43-P048-P004-S005-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Además del vestido de púrpura, el intérprete recibiría un collar de ____.",
+    "options": [
+      "plata",
+      "oro",
+      "bronce",
+      "hierro"
+    ],
+    "correct_option": 1,
+    "correct_answer": "oro",
+    "accepted_answers": [
+      "oro",
+      "collar de oro"
+    ],
+    "explanation": "La recompensa incluía un collar de oro al cuello.",
+    "why_distractors_fail": {
+      "plata": "La promesa especifica oro.",
+      "bronce": "No era un collar de bronce.",
+      "hierro": "No era un collar de hierro."
+    },
+    "source_ref": "PR43, p. 48, párrafo 4",
+    "source_quote": "Prometió: “Cualquiera que leyere esta escritura, y me mostrare su declaración, será vestido de púrpura, y tendrá collar de oro a su cuello; y en el reino se enseñoreará el tercero.",
+    "evidence_excerpt": "Prometió: “Cualquiera que leyere esta escritura, y me mostrare su declaración, será vestido de púrpura, y tendrá collar de oro a su cuello; y en el reino se enseñoreará el tercero.",
+    "difficulty": "easy",
+    "importance": "medium",
+    "relation_type": "reward",
+    "option_category": "material",
+    "false_mutation": null,
+    "blank_span": "oro",
+    "significance": "Completa los componentes materiales y políticos de la recompensa ofrecida.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-034",
+    "source_unit_id": "PR43-P048-P004-S002",
+    "fact_id": "PR43-P048-P004-S002-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "El poder encerrado en los caracteres era imposible de comprender o ____.",
+    "options": [
+      "copiar",
+      "vender",
+      "contradecir",
+      "recordar"
+    ],
+    "correct_option": 2,
+    "correct_answer": "contradecir",
+    "accepted_answers": [
+      "contradecir"
+    ],
+    "explanation": "Belsasar no podía comprender ni contradecir aquel poder.",
+    "why_distractors_fail": {
+      "copiar": "No se habla de copiar los caracteres.",
+      "vender": "La compraventa se menciona respecto de la sabiduría.",
+      "recordar": "El problema no era un olvido."
+    },
+    "source_ref": "PR43, p. 48, párrafo 4",
+    "source_quote": "Encerraban un secreto que él no podía sondear, un poder que le era imposible comprender o contradecir.",
+    "evidence_excerpt": "Encerraban un secreto que él no podía sondear, un poder que le era imposible comprender o contradecir.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "limitation",
+    "option_category": "action",
+    "false_mutation": null,
+    "blank_span": "contradecir",
+    "significance": "Expresa el límite del poder real frente al mensaje divino.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-035",
+    "source_unit_id": "PR43-P048-P005-S001",
+    "fact_id": "PR43-P048-P005-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "question": "Daniel había explicado a Nabucodonosor la gran imagen más de medio ____ antes.",
+    "options": [
+      "año",
+      "mes",
+      "milenio",
+      "siglo"
+    ],
+    "correct_option": 3,
+    "correct_answer": "siglo",
+    "accepted_answers": [
+      "siglo",
+      "medio siglo"
+    ],
+    "explanation": "La reina madre recordó lo que Daniel había hecho más de medio siglo antes.",
+    "why_distractors_fail": {
+      "año": "El intervalo fue mucho mayor.",
+      "mes": "No se trató de unos meses.",
+      "milenio": "Excede ampliamente el tiempo indicado."
+    },
+    "source_ref": "PR43, p. 48, párrafo 5",
+    "source_quote": "Entonces la reina madre recordó a Daniel, quien, más de medio siglo antes, había dado a conocer al rey Nabucodonosor el sueño de la gran imagen y su interpretación.",
+    "evidence_excerpt": "Entonces la reina madre recordó a Daniel, quien, más de medio siglo antes, había dado a conocer al rey Nabucodonosor el sueño de la gran imagen y su interpretación.",
+    "difficulty": "medium",
+    "importance": "medium",
+    "relation_type": "duration",
+    "option_category": "time_unit",
+    "false_mutation": null,
+    "blank_span": "siglo",
+    "significance": "Sitúa la larga trayectoria de Daniel antes de su comparecencia ante Belsasar.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-036",
+    "source_unit_id": "PR43-P048-P001-S002",
+    "fact_id": "PR43-P048-P001-S002-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "comparison",
+    "question": "Los caracteres trazados por la mano resplandecían como fuego.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Las palabras aparecieron con caracteres que resplandecían como fuego.",
+    "why_distractors_fail": {
+      "Falso": "La comparación con el fuego pertenece a la descripción directa."
+    },
+    "source_ref": "PR43, p. 48, párrafo 1",
+    "source_quote": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "evidence_excerpt": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "comparison",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-037",
+    "source_unit_id": "PR43-P048-P002-S004",
+    "fact_id": "PR43-P048-P002-S004-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Cuando Dios infunde miedo, los hombres pueden ocultar por completo la intensidad de su terror.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "El texto afirma que no pueden ocultar la intensidad de su terror.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación elimina la negación del principio expresado."
+    },
+    "source_ref": "PR43, p. 48, párrafo 2",
+    "source_quote": "Cuando Dios infunde miedo en los hombres, no pueden ocultar la intensidad de su terror.",
+    "evidence_excerpt": "Cuando Dios infunde miedo en los hombres, no pueden ocultar la intensidad de su terror.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "principle",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "ability"
+      ],
+      "local": true,
+      "original": "no pueden ocultar",
+      "replacement": "pueden ocultar por completo"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-038",
+    "source_unit_id": "PR43-P048-P003-S003",
+    "fact_id": "PR43-P048-P003-S003-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Ante el Vigía invisible, Belsasar conservó la calma y siguió celebrando.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "El rey quedó paralizado de miedo.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación sustituye la parálisis por calma festiva."
+    },
+    "source_ref": "PR43, p. 48, párrafo 3",
+    "source_quote": "En presencia del Vigía invisible, representante de Aquel cuyo poder había sido desafiado y cuyo nombre había sido blasfemado, el rey se quedó paralizado de miedo.",
+    "evidence_excerpt": "En presencia del Vigía invisible, representante de Aquel cuyo poder había sido desafiado y cuyo nombre había sido blasfemado, el rey se quedó paralizado de miedo.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "reaction",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "reaction"
+      ],
+      "local": true,
+      "original": "se quedó paralizado de miedo",
+      "replacement": "conservó la calma"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-039",
+    "source_unit_id": "PR43-P048-P004-S005",
+    "fact_id": "PR43-P048-P004-S005-V11-F04",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "Belsasar prometió que el intérprete sería el segundo señor del reino.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La posición prometida era la de tercer señor.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación cambia únicamente el rango ofrecido."
+    },
+    "source_ref": "PR43, p. 48, párrafo 4",
+    "source_quote": "Prometió: “Cualquiera que leyere esta escritura, y me mostrare su declaración, será vestido de púrpura, y tendrá collar de oro a su cuello; y en el reino se enseñoreará el tercero.",
+    "evidence_excerpt": "Prometió: “Cualquiera que leyere esta escritura, y me mostrare su declaración, será vestido de púrpura, y tendrá collar de oro a su cuello; y en el reino se enseñoreará el tercero.",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "rank",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "rank"
+      ],
+      "local": true,
+      "original": "el tercero",
+      "replacement": "el segundo"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-040",
+    "source_unit_id": "PR43-P049-P001-S002",
+    "fact_id": "PR43-P049-P001-S002-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Daniel aceptó los dones de Belsasar como condición para interpretar la escritura.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Daniel dijo que los dones quedaran con el rey o fueran dados a otro.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación convierte el rechazo explícito en aceptación condicionada."
+    },
+    "source_ref": "PR43, p. 49, párrafo 1",
+    "source_quote": "Dijo entonces: “Tus dones sean para ti, y tus presentes dalos a otro.",
+    "evidence_excerpt": "Dijo entonces: “Tus dones sean para ti, y tus presentes dalos a otro.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "integrity",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "response_to_gifts"
+      ],
+      "local": true,
+      "original": "Tus dones sean para ti",
+      "replacement": "aceptó los dones"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-041",
+    "source_unit_id": "PR43-P049-P001-S001",
+    "fact_id": "PR43-P049-P001-S001-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué actitud distinguió a Daniel frente a la multitud aterrorizada y la promesa del rey?",
+    "options": [
+      "La ansiedad de quien buscaba una recompensa",
+      "La tranquila dignidad de un siervo del Altísimo",
+      "El temor de un consejero culpable",
+      "La arrogancia de quien quería el trono"
+    ],
+    "correct_option": 1,
+    "correct_answer": "La tranquila dignidad de un siervo del Altísimo",
+    "accepted_answers": [
+      "La tranquila dignidad de un siervo del Altísimo",
+      "tranquila dignidad"
+    ],
+    "explanation": "Daniel permaneció imperturbable con la tranquila dignidad de un siervo del Altísimo.",
+    "why_distractors_fail": {
+      "La ansiedad de quien buscaba una recompensa": "Daniel no estaba movido por la promesa.",
+      "El temor de un consejero culpable": "Se mantuvo imperturbable.",
+      "La arrogancia de quien quería el trono": "Su actitud fue la de un siervo, no un aspirante al poder."
+    },
+    "source_ref": "PR43, p. 49, párrafo 1",
+    "source_quote": "Ante aquella muchedumbre aterrorizada, estaba Daniel en pie, imperturbable frente a la promesa del rey, con la tranquila dignidad de un siervo del Altísimo, no para hablar palabras de adulación, sino para interpretar un mensaje de condenación.",
+    "evidence_excerpt": "Ante aquella muchedumbre aterrorizada, estaba Daniel en pie, imperturbable frente a la promesa del rey, con la tranquila dignidad de un siervo del Altísimo, no para hablar palabras de adulación, sino para interpretar un mensaje de condenación.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "attitude",
+    "option_category": "attitude",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-042",
+    "source_unit_id": "PR43-P049-P002-S002",
+    "fact_id": "PR43-P049-P002-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué reconocimiento siguió al castigo que recibió Nabucodonosor por su orgullo?",
+    "options": [
+      "La superioridad de los dioses de Babilonia",
+      "La inocencia de Belsasar",
+      "El poder y la misericordia del Dios de Israel",
+      "El derecho de los sabios a gobernar"
+    ],
+    "correct_option": 2,
+    "correct_answer": "El poder y la misericordia del Dios de Israel",
+    "accepted_answers": [
+      "El poder y la misericordia del Dios de Israel",
+      "poder y misericordia"
+    ],
+    "explanation": "Después del castigo, Nabucodonosor reconoció el poder y la misericordia del Dios de Israel.",
+    "why_distractors_fail": {
+      "La superioridad de los dioses de Babilonia": "Su experiencia lo llevó a reconocer al Dios de Israel.",
+      "La inocencia de Belsasar": "Belsasar no forma parte de ese reconocimiento.",
+      "El derecho de los sabios a gobernar": "No es la conclusión de la experiencia."
+    },
+    "source_ref": "PR43, p. 49, párrafo 2",
+    "source_quote": "Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció su orgullo y del subsiguiente reconocimiento que había expresado acerca del poder y la misericordia del Dios de Israel.",
+    "evidence_excerpt": "Habló del pecado de Nabucodonosor, de su caída y de como el Señor había obrado con él, del dominio y la gloria que se le habían concedido, así como del castigo divino que mereció su orgullo y del subsiguiente reconocimiento que había expresado acerca del poder y la misericordia del Dios de Israel.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "sequence",
+    "option_category": "recognition",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-043",
+    "source_unit_id": "PR43-P049-P002-S006",
+    "fact_id": "PR43-P049-P002-S006-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué estaba a punto de cosechar Belsasar por no atender su oportunidad de conocer y obedecer a Dios?",
+    "options": [
+      "La restauración de su reino",
+      "La aprobación de Daniel",
+      "La victoria sobre los persas",
+      "Las consecuencias de su rebelión"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Las consecuencias de su rebelión",
+    "accepted_answers": [
+      "Las consecuencias de su rebelión",
+      "consecuencias de su rebelión"
+    ],
+    "explanation": "La oportunidad desatendida dejaría a Belsasar cosechar las consecuencias de su rebelión.",
+    "why_distractors_fail": {
+      "La restauración de su reino": "La sentencia anunciaba su pérdida.",
+      "La aprobación de Daniel": "Daniel lo reprendió.",
+      "La victoria sobre los persas": "La ciudad estaba por caer ante ellos."
+    },
+    "source_ref": "PR43, p. 49, párrafo 2",
+    "source_quote": "Se le había concedido la oportunidad de conocer al verdadero Dios y de obedecerle, pero no le había prestado atención, y estaba por cosechar las consecuencias de su rebelión.",
+    "evidence_excerpt": "Se le había concedido la oportunidad de conocer al verdadero Dios y de obedecerle, pero no le había prestado atención, y estaba por cosechar las consecuencias de su rebelión.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "consequence",
+    "option_category": "outcome",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-044",
+    "source_unit_id": "PR43-P049-P003-S002",
+    "fact_id": "PR43-P049-P003-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Cómo describe Daniel la relación de Dios con la vida y los caminos de Belsasar?",
+    "options": [
+      "Su vida estaba en la mano de Dios y todos sus caminos le pertenecían",
+      "Dios conocía sus caminos pero no sostenía su vida",
+      "Su vida dependía de los dioses que había alabado",
+      "Solo sus victorias militares pertenecían a Dios"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Su vida estaba en la mano de Dios y todos sus caminos le pertenecían",
+    "accepted_answers": [
+      "Su vida estaba en la mano de Dios y todos sus caminos le pertenecían",
+      "en cuya mano está tu vida"
+    ],
+    "explanation": "Daniel señaló al Dios en cuya mano estaba la vida del rey y a quien pertenecían todos sus caminos.",
+    "why_distractors_fail": {
+      "Dios conocía sus caminos pero no sostenía su vida": "La reprensión incluye expresamente su vida.",
+      "Su vida dependía de los dioses que había alabado": "Esos dioses ni veían, ni oían, ni sabían.",
+      "Solo sus victorias militares pertenecían a Dios": "La declaración abarca todos sus caminos."
+    },
+    "source_ref": "PR43, p. 49, párrafo 3",
+    "source_quote": "Belsasar, no has humillado tu corazón, sabiendo todo esto: antes contra el Señor del cielo te has ensoberbecido, e hiciste traer delante de ti los vasos de su casa, y tú y tus príncipes, tus mujeres y tus concubinas, bebisteis vino en ellos: demás de esto, a dioses de plata y de oro, de metal, de hierro, de madera, y de piedra, que ni ven, ni oyen, ni saben, diste alabanza: y al Dios en cuya mano está tu vida, y cuyos son todos tus caminos, nunca honraste.",
+    "evidence_excerpt": "Belsasar, no has humillado tu corazón, sabiendo todo esto: antes contra el Señor del cielo te has ensoberbecido, e hiciste traer delante de ti los vasos de su casa, y tú y tus príncipes, tus mujeres y tus concubinas, bebisteis vino en ellos: demás de esto, a dioses de plata y de oro, de metal, de hierro, de madera, y de piedra, que ni ven, ni oyen, ni saben, diste alabanza: y al Dios en cuya mano está tu vida, y cuyos son todos tus caminos, nunca honraste.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "divine_sovereignty",
+    "option_category": "relationship",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-045",
+    "source_unit_id": "PR43-P049-P004-S002",
+    "fact_id": "PR43-P049-P004-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "factual_recall",
+    "question": "Cuando la mano dejó de verse, ¿qué continuó visible ante la gente?",
+    "options": [
+      "El rostro del Vigía",
+      "Cuatro palabras resplandecientes",
+      "Una balanza de oro",
+      "El ejército detrás de la pared"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Cuatro palabras resplandecientes",
+    "accepted_answers": [
+      "Cuatro palabras resplandecientes",
+      "aquellas cuatro palabras"
+    ],
+    "explanation": "La mano desapareció, pero las cuatro palabras siguieron resplandeciendo.",
+    "why_distractors_fail": {
+      "El rostro del Vigía": "El Vigía no se hizo visible a la multitud.",
+      "Una balanza de oro": "La balanza aparece en la interpretación, no como objeto visible.",
+      "El ejército detrás de la pared": "La señal visible eran las palabras."
+    },
+    "source_ref": "PR43, p. 49, párrafo 4",
+    "source_quote": "La mano que había trazado los caracteres ya no era visible, pero aquellas cuatro palabras seguían resplandeciendo con terrible claridad; y ahora la gente escuchó con el aliento en suspenso mientras el anciano profeta explicaba:",
+    "evidence_excerpt": "La mano que había trazado los caracteres ya no era visible, pero aquellas cuatro palabras seguían resplandeciendo con terrible claridad; y ahora la gente escuchó con el aliento en suspenso mientras el anciano profeta explicaba:",
+    "difficulty": "medium",
+    "importance": "high",
+    "relation_type": "persistence",
+    "option_category": "visible_object",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-046",
+    "source_unit_id": "PR43-P049-P005-S001",
+    "fact_id": "PR43-P049-P005-S001-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "symbol_interpretation",
+    "question": "¿Qué dos acciones divinas resume la palabra MENE?",
+    "options": [
+      "Pesar al rey y hallarlo falto",
+      "Dividir el reino entre medos y persas",
+      "Contar el reino y darlo por terminado",
+      "Perdonar al rey y prolongar su gobierno"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Contar el reino y darlo por terminado",
+    "accepted_answers": [
+      "Contar el reino y darlo por terminado",
+      "Contó Dios tu reino, y halo rematado"
+    ],
+    "explanation": "MENE declara que Dios contó el reino y lo remató.",
+    "why_distractors_fail": {
+      "Pesar al rey y hallarlo falto": "Esa es la sentencia de TEKEL.",
+      "Dividir el reino entre medos y persas": "Esa es la declaración de PERES.",
+      "Perdonar al rey y prolongar su gobierno": "La palabra anuncia el fin, no una extensión."
+    },
+    "source_ref": "PR43, p. 49, párrafo 5",
+    "source_quote": "“La declaración del negocio es: MENE: Contó Dios tu reino, y halo rematado.",
+    "evidence_excerpt": "“La declaración del negocio es: MENE: Contó Dios tu reino, y halo rematado.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "interpretation",
+    "option_category": "meaning_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-047",
+    "source_unit_id": "PR43-P049-P005-S003",
+    "fact_id": "PR43-P049-P005-S003-V11-F02",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "prophetic_detail",
+    "question": "¿A qué dos pueblos sería entregado el reino dividido de Belsasar?",
+    "options": [
+      "Griegos y romanos",
+      "Egipcios y asirios",
+      "Judíos y caldeos",
+      "Medos y persas"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Medos y persas",
+    "accepted_answers": [
+      "Medos y persas",
+      "a Medos y Persas"
+    ],
+    "explanation": "PERES anunciaba que el reino sería dado a medos y persas.",
+    "why_distractors_fail": {
+      "Griegos y romanos": "Corresponden a etapas posteriores.",
+      "Egipcios y asirios": "No son los receptores de esta sentencia.",
+      "Judíos y caldeos": "El reino caldeo no sería entregado a ese par."
+    },
+    "source_ref": "PR43, p. 49, párrafo 5",
+    "source_quote": "PERES: Tu reino fué rompido, y es dado a Medos y Persas.”",
+    "evidence_excerpt": "PERES: Tu reino fué rompido, y es dado a Medos y Persas.”",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "recipient",
+    "option_category": "people_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-048",
+    "source_unit_id": "PR43-P050-P002-S002",
+    "fact_id": "PR43-P050-P002-S002-V11-F02",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué maniobra permitió a medos y persas penetrar en el corazón de Babilonia?",
+    "options": [
+      "Desviaron el curso del Eufrates",
+      "Incendiaron las puertas del templo",
+      "Escalaron las murallas con torres",
+      "Fingieron retirarse del sitio"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Desviaron el curso del Eufrates",
+    "accepted_answers": [
+      "Desviaron el curso del Eufrates",
+      "habiendo desviado el curso del Eufrates"
+    ],
+    "explanation": "La desviación del Eufrates abrió el camino hacia la ciudad desprevenida.",
+    "why_distractors_fail": {
+      "Incendiaron las puertas del templo": "La entrada se relaciona con el río, no con el templo.",
+      "Escalaron las murallas con torres": "No es la maniobra descrita.",
+      "Fingieron retirarse del sitio": "No se menciona una retirada fingida."
+    },
+    "source_ref": "PR43, p. 50, párrafo 2",
+    "source_quote": "Aun mientras él y sus nobles bebían de los vasos sagrados de Jehová, y alababan a sus dioses de plata y de oro, los medos y persas, habiendo desviado el curso del Eufrates, penetraban en el corazón de la ciudad desprevenida.",
+    "evidence_excerpt": "Aun mientras él y sus nobles bebían de los vasos sagrados de Jehová, y alababan a sus dioses de plata y de oro, los medos y persas, habiendo desviado el curso del Eufrates, penetraban en el corazón de la ciudad desprevenida.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "military_tactic",
+    "option_category": "tactic",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-049",
+    "source_unit_id": "PR43-P049-P002-S003",
+    "fact_id": "PR43-P049-P002-S003-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "principle",
+    "question": "Daniel reprendió a Belsasar por su gran ____.",
+    "options": [
+      "impiedad",
+      "debilidad",
+      "ignorancia",
+      "pobreza"
+    ],
+    "correct_option": 0,
+    "correct_answer": "impiedad",
+    "accepted_answers": [
+      "impiedad",
+      "gran impiedad"
+    ],
+    "explanation": "La reprensión fue audaz y señaló la gran impiedad del rey.",
+    "why_distractors_fail": {
+      "debilidad": "La reprensión moral se centra en la impiedad.",
+      "ignorancia": "Belsasar conocía las lecciones previas.",
+      "pobreza": "Su riqueza no era el problema señalado."
+    },
+    "source_ref": "PR43, p. 49, párrafo 2",
+    "source_quote": "Después, en palabras audaces y enfáticas, reprendió a Belsasar por su gran impiedad.",
+    "evidence_excerpt": "Después, en palabras audaces y enfáticas, reprendió a Belsasar por su gran impiedad.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "moral_judgment",
+    "option_category": "fault",
+    "false_mutation": null,
+    "blank_span": "impiedad",
+    "significance": "Identifica la evaluación moral central del discurso de Daniel.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-050",
+    "source_unit_id": "PR43-P049-P002-S004",
+    "fact_id": "PR43-P049-P002-S004-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Daniel señaló las ____ que Belsasar pudo haber aprendido, pero ignoró.",
+    "options": [
+      "riquezas",
+      "lecciones",
+      "alianzas",
+      "profecías"
+    ],
+    "correct_option": 1,
+    "correct_answer": "lecciones",
+    "accepted_answers": [
+      "lecciones",
+      "las lecciones"
+    ],
+    "explanation": "El profeta destacó lecciones disponibles que Belsasar no aprendió.",
+    "why_distractors_fail": {
+      "riquezas": "No eran bienes materiales.",
+      "alianzas": "No se trataba de pactos políticos.",
+      "profecías": "La frase usa el término lecciones."
+    },
+    "source_ref": "PR43, p. 49, párrafo 2",
+    "source_quote": "Hizo resaltar el pecado del rey y le señaló las lecciones que podría haber aprendido, pero que no aprendió.",
+    "evidence_excerpt": "Hizo resaltar el pecado del rey y le señaló las lecciones que podría haber aprendido, pero que no aprendió.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "missed_learning",
+    "option_category": "knowledge_object",
+    "false_mutation": null,
+    "blank_span": "lecciones",
+    "significance": "Resume la responsabilidad de aprender de la experiencia ajena.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-051",
+    "source_unit_id": "PR43-P049-P003-S002",
+    "fact_id": "PR43-P049-P003-S002-V11-F03",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "comparison",
+    "question": "Los dioses alabados por Belsasar ni ven, ni oyen, ni ____.",
+    "options": [
+      "reinan",
+      "hablan",
+      "saben",
+      "juzgan"
+    ],
+    "correct_option": 2,
+    "correct_answer": "saben",
+    "accepted_answers": [
+      "saben"
+    ],
+    "explanation": "Daniel contrastó esos ídolos incapaces con el Dios que sostenía la vida del rey.",
+    "why_distractors_fail": {
+      "reinan": "No es el tercer verbo de la enumeración.",
+      "hablan": "La frase concluye con saber.",
+      "juzgan": "El texto dice que no saben."
+    },
+    "source_ref": "PR43, p. 49, párrafo 3",
+    "source_quote": "Belsasar, no has humillado tu corazón, sabiendo todo esto: antes contra el Señor del cielo te has ensoberbecido, e hiciste traer delante de ti los vasos de su casa, y tú y tus príncipes, tus mujeres y tus concubinas, bebisteis vino en ellos: demás de esto, a dioses de plata y de oro, de metal, de hierro, de madera, y de piedra, que ni ven, ni oyen, ni saben, diste alabanza: y al Dios en cuya mano está tu vida, y cuyos son todos tus caminos, nunca honraste.",
+    "evidence_excerpt": "Belsasar, no has humillado tu corazón, sabiendo todo esto: antes contra el Señor del cielo te has ensoberbecido, e hiciste traer delante de ti los vasos de su casa, y tú y tus príncipes, tus mujeres y tus concubinas, bebisteis vino en ellos: demás de esto, a dioses de plata y de oro, de metal, de hierro, de madera, y de piedra, que ni ven, ni oyen, ni saben, diste alabanza: y al Dios en cuya mano está tu vida, y cuyos son todos tus caminos, nunca honraste.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "ability",
+    "option_category": "verb",
+    "false_mutation": null,
+    "blank_span": "saben",
+    "significance": "Completa la triple incapacidad usada para desenmascarar la idolatría.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-052",
+    "source_unit_id": "PR43-P049-P004-S001",
+    "fact_id": "PR43-P049-P004-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "El mensaje comenzaba: «MENE, MENE, TEKEL, ____».",
+    "options": [
+      "PERES",
+      "SELA",
+      "MARANATA",
+      "UPHARSIN"
+    ],
+    "correct_option": 3,
+    "correct_answer": "UPHARSIN",
+    "accepted_answers": [
+      "UPHARSIN"
+    ],
+    "explanation": "Las cuatro palabras leídas fueron MENE, MENE, TEKEL, UPHARSIN.",
+    "why_distractors_fail": {
+      "PERES": "PERES aparece en la explicación relacionada, no como la cuarta forma escrita aquí.",
+      "SELA": "No pertenece al mensaje.",
+      "MARANATA": "No pertenece a esta escritura."
+    },
+    "source_ref": "PR43, p. 49, párrafo 4",
+    "source_quote": "Volviéndose hacia el mensaje enviado por el Cielo, el profeta leyó en la pared: “MENE, MENE, TEKEL, UPHARSIN.",
+    "evidence_excerpt": "Volviéndose hacia el mensaje enviado por el Cielo, el profeta leyó en la pared: “MENE, MENE, TEKEL, UPHARSIN.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "sequence",
+    "option_category": "word",
+    "false_mutation": null,
+    "blank_span": "UPHARSIN",
+    "significance": "Exige recordar la secuencia exacta de la inscripción central del relato.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-053",
+    "source_unit_id": "PR43-P050-P002-S003",
+    "fact_id": "PR43-P050-P002-S003-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "comparison",
+    "question": "La ciudad se había llenado de soldados enemigos como de ____.",
+    "options": [
+      "langostas",
+      "leones",
+      "águilas",
+      "olas"
+    ],
+    "correct_option": 0,
+    "correct_answer": "langostas",
+    "accepted_answers": [
+      "langostas",
+      "como de langostas"
+    ],
+    "explanation": "Los soldados llenaban la ciudad como langostas.",
+    "why_distractors_fail": {
+      "leones": "No es la comparación usada.",
+      "águilas": "Las águilas no describen aquí al ejército.",
+      "olas": "La imagen expresa multitud mediante langostas."
+    },
+    "source_ref": "PR43, p. 50, párrafo 2",
+    "source_quote": "El ejército de Ciro estaba ya al pie de las murallas del palacio; la ciudad se había llenado de soldados enemigos “como de langostas” (Vers. 14), y sus gritos de triunfo podían oírse sobre los clamores desesperados de los asombrados disolutos.",
+    "evidence_excerpt": "El ejército de Ciro estaba ya al pie de las murallas del palacio; la ciudad se había llenado de soldados enemigos “como de langostas” (Vers. 14), y sus gritos de triunfo podían oírse sobre los clamores desesperados de los asombrados disolutos.",
+    "difficulty": "easy",
+    "importance": "high",
+    "relation_type": "comparison",
+    "option_category": "comparison_object",
+    "false_mutation": null,
+    "blank_span": "langostas",
+    "significance": "Recupera la imagen que comunica la magnitud de la invasión.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-054",
+    "source_unit_id": "PR43-P050-P003-S001",
+    "fact_id": "PR43-P050-P003-S001-V11-F02",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Tras la muerte de Belsasar, un monarca ____ se sentó en el trono.",
+    "options": [
+      "hebreo",
+      "extranjero",
+      "caldeo",
+      "sacerdotal"
+    ],
+    "correct_option": 1,
+    "correct_answer": "extranjero",
+    "accepted_answers": [
+      "extranjero",
+      "un monarca extranjero"
+    ],
+    "explanation": "La misma noche murió Belsasar y un monarca extranjero ocupó el trono.",
+    "why_distractors_fail": {
+      "hebreo": "El nuevo monarca no es identificado como hebreo.",
+      "caldeo": "El cambio de poder puso a un extranjero en el trono.",
+      "sacerdotal": "No se le describe por una función sacerdotal."
+    },
+    "source_ref": "PR43, p. 50, párrafo 3",
+    "source_quote": "“La misma noche fué muerto Belsasar, rey de los Caldeos,” y un monarca extranjero se sentó en el trono.",
+    "evidence_excerpt": "“La misma noche fué muerto Belsasar, rey de los Caldeos,” y un monarca extranjero se sentó en el trono.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "succession",
+    "option_category": "origin",
+    "false_mutation": null,
+    "blank_span": "extranjero",
+    "significance": "Marca el cambio de dominio que cumplió la sentencia anunciada.",
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-055",
+    "source_unit_id": "PR43-P049-P006-S003",
+    "fact_id": "PR43-P049-P006-S003-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "principle",
+    "question": "Dios había usado múltiples providencias para enseñar a Babilonia a reverenciar su ley.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Las providencias divinas procuraban enseñar reverencia por la ley de Dios.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación reproduce el propósito declarado de esas providencias."
+    },
+    "source_ref": "PR43, p. 49, párrafo 6",
+    "source_quote": "Mediante múltiples providencias, Dios había procurado enseñarles a reverenciar su ley.",
+    "evidence_excerpt": "Mediante múltiples providencias, Dios había procurado enseñarles a reverenciar su ley.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "divine_purpose",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-056",
+    "source_unit_id": "PR43-P049-P006-S005",
+    "fact_id": "PR43-P049-P006-S005-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "La sentencia dictada contra Babilonia todavía podía revocarse.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La perversidad humana hizo necesaria una sentencia irrevocable.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación cambia el carácter irrevocable de la sentencia."
+    },
+    "source_ref": "PR43, p. 49, párrafo 6",
+    "source_quote": "A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
+    "evidence_excerpt": "A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "finality",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "revocability"
+      ],
+      "local": true,
+      "original": "sentencia irrevocable",
+      "replacement": "podía revocarse"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-057",
+    "source_unit_id": "PR43-P049-P007-S001",
+    "fact_id": "PR43-P049-P007-S001-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Después de interpretar la escritura, Daniel recibió los honores que Belsasar había prometido.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El rey ordenó vestirlo de púrpura, colocarle el collar y proclamarlo tercero.",
+    "why_distractors_fail": {
+      "Falso": "Aunque Daniel había rechazado los dones como motivo, el rey ordenó cumplir los honores."
+    },
+    "source_ref": "PR43, p. 49, párrafo 7",
+    "source_quote": "Cuando el profeta dejó de hablar, el rey ordenó que se le recompensase con los honores prometidos; y en consecuencia “vistieron a Daniel de púrpura, y en su cuello fué puesto un collar de oro, y pregonaron de él que fuese el tercer señor en el reino.”",
+    "evidence_excerpt": "Cuando el profeta dejó de hablar, el rey ordenó que se le recompensase con los honores prometidos; y en consecuencia “vistieron a Daniel de púrpura, y en su cuello fué puesto un collar de oro, y pregonaron de él que fuese el tercer señor en el reino.”",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "outcome",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-058",
+    "source_unit_id": "PR43-P050-P001-S002",
+    "fact_id": "PR43-P050-P001-S002-V11-F02",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "prophetic_detail",
+    "question": "Los acontecimientos de la caída correspondieron exactamente a lo descrito antes en las Escrituras.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Los sucesos se produjeron en rápida sucesión conforme a la descripción previa.",
+    "why_distractors_fail": {
+      "Falso": "La correspondencia exacta es el punto explícito del pasaje."
+    },
+    "source_ref": "PR43, p. 50, párrafo 1",
+    "source_quote": "Y ahora, en rápida sucesión, se produjeron uno tras otro acontecimientos portentosos que correspondían exactamente a lo descrito en las Sagradas Escrituras antes que hubiesen nacido los protagonistas del drama.",
+    "evidence_excerpt": "Y ahora, en rápida sucesión, se produjeron uno tras otro acontecimientos portentosos que correspondían exactamente a lo descrito en las Sagradas Escrituras antes que hubiesen nacido los protagonistas del drama.",
+    "difficulty": "medium",
+    "importance": "critical",
+    "relation_type": "fulfillment",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-059",
+    "source_unit_id": "PR43-P050-P002-S002",
+    "fact_id": "PR43-P050-P002-S002-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "Los medos y persas entraron en la ciudad después de que terminó el banquete.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Penetraban en la ciudad mientras Belsasar y sus nobles todavía bebían.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación retrasa la entrada, pero ambas acciones eran simultáneas."
+    },
+    "source_ref": "PR43, p. 50, párrafo 2",
+    "source_quote": "Aun mientras él y sus nobles bebían de los vasos sagrados de Jehová, y alababan a sus dioses de plata y de oro, los medos y persas, habiendo desviado el curso del Eufrates, penetraban en el corazón de la ciudad desprevenida.",
+    "evidence_excerpt": "Aun mientras él y sus nobles bebían de los vasos sagrados de Jehová, y alababan a sus dioses de plata y de oro, los medos y persas, habiendo desviado el curso del Eufrates, penetraban en el corazón de la ciudad desprevenida.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "simultaneity",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "timing"
+      ],
+      "local": true,
+      "original": "Aun mientras él y sus nobles bebían",
+      "replacement": "después de que terminó el banquete"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
+  },
+  {
+    "id": "PR43-V11-PILOT-060",
+    "source_unit_id": "PR43-P050-P003-S001",
+    "fact_id": "PR43-P050-P003-S001-V11-F03",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Belsasar sobrevivió aquella noche y entregó voluntariamente el trono al monarca extranjero.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Belsasar fue muerto esa misma noche; no entregó voluntariamente el trono.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación sustituye su muerte por una transferencia voluntaria."
+    },
+    "source_ref": "PR43, p. 50, párrafo 3",
+    "source_quote": "“La misma noche fué muerto Belsasar, rey de los Caldeos,” y un monarca extranjero se sentó en el trono.",
+    "evidence_excerpt": "“La misma noche fué muerto Belsasar, rey de los Caldeos,” y un monarca extranjero se sentó en el trono.",
+    "difficulty": "easy",
+    "importance": "critical",
+    "relation_type": "outcome",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "fate"
+      ],
+      "local": true,
+      "original": "La misma noche fué muerto Belsasar",
+      "replacement": "sobrevivió aquella noche"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-pilot-review"
+    }
   }
 ]
