@@ -132,6 +132,46 @@ class PromotionFixture:
             for path in sorted(self.content_root.rglob("*.json"))
         }
 
+    def install_pending_transaction(self, replaced_count: int) -> dict[str, bytes]:
+        before = self.snapshot_bytes()
+        promote(self.content_root, self.assignment, self.registry)
+        promoted = self.snapshot_bytes()
+        for path in self.content_root.rglob("*.json"):
+            path.unlink()
+        for relative, payload in before.items():
+            path = self.content_root / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(payload)
+
+        entries = []
+        for index, relative in enumerate(sorted(promoted)):
+            path = self.content_root / relative
+            temporary = path.with_suffix(path.suffix + ".promotion.tmp")
+            backup = path.with_suffix(path.suffix + ".promotion.bak")
+            existed = relative in before
+            temporary.write_bytes(promoted[relative])
+            if existed:
+                backup.write_bytes(before[relative])
+            entries.append(
+                {
+                    "path": str(path.resolve()),
+                    "temporary": str(temporary.resolve()),
+                    "backup": str(backup.resolve()),
+                    "existed": existed,
+                }
+            )
+            if index < replaced_count:
+                os.replace(temporary, path)
+        write_json(
+            self.content_root / ".blind-promotion-transaction.json",
+            {
+                "contract": "competitive-v11-promotion-transaction-v1",
+                "phase": "replacing",
+                "entries": entries,
+            },
+        )
+        return promoted
+
 
 def load_questions(path: Path) -> list[dict]:
     return [row for file in sorted(path.glob("*.json")) for row in read_json(file)]
@@ -194,6 +234,32 @@ class PromoteBlindTrainingTests(unittest.TestCase):
 
             self.assertEqual(fixture.snapshot_bytes(), before)
             self.assertEqual(list(fixture.content_root.rglob("*.promotion.*")), [])
+
+    def test_next_invocation_recovers_partial_journal_then_reapplies_completely(self) -> None:
+        with temporary_directory() as temporary:
+            fixture = PromotionFixture(temporary)
+            promoted = fixture.install_pending_transaction(replaced_count=1)
+
+            report = promote(fixture.content_root, fixture.assignment, fixture.registry)
+
+            self.assertEqual(report["promoted_presentations"], 3)
+            self.assertEqual(fixture.snapshot_bytes(), promoted)
+            self.assertEqual(list(fixture.content_root.rglob("*promotion*")), [])
+            promote(fixture.content_root, fixture.assignment, fixture.registry)
+            self.assertEqual(fixture.snapshot_bytes(), promoted)
+
+    def test_next_invocation_recovers_fully_replaced_journal_before_noop(self) -> None:
+        with temporary_directory() as temporary:
+            fixture = PromotionFixture(temporary)
+            promoted = fixture.install_pending_transaction(replaced_count=4)
+
+            report = promote(fixture.content_root, fixture.assignment, fixture.registry)
+
+            self.assertEqual(report["promoted_presentations"], 3)
+            self.assertEqual(fixture.snapshot_bytes(), promoted)
+            self.assertEqual(list(fixture.content_root.rglob("*promotion*")), [])
+            promote(fixture.content_root, fixture.assignment, fixture.registry)
+            self.assertEqual(fixture.snapshot_bytes(), promoted)
 
     def test_checked_in_promotion_exposes_all_v10_facts(self) -> None:
         rows = load_questions(ROOT / "content" / "competitive-v11" / "questions")

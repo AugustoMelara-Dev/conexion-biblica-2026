@@ -232,15 +232,22 @@ def recover_transaction(journal_path: Path) -> None:
             restore.unlink(missing_ok=True)
 
 
-def write_all_atomically(plan: Mapping[Path, bytes]) -> None:
-    changed = {path: payload for path, payload in plan.items() if not path.exists() or path.read_bytes() != payload}
-    if not changed:
-        return
-    transaction_root = Path(os.path.commonpath([str(path.parent.resolve()) for path in changed]))
-    journal_path = transaction_root / ".blind-promotion-transaction.json"
+def recover_pending_transaction(transaction_root: Path) -> None:
+    journal_path = transaction_root.resolve() / ".blind-promotion-transaction.json"
     if journal_path.exists():
         recover_transaction(journal_path)
 
+
+def write_all_atomically(plan: Mapping[Path, bytes], transaction_root: Path | None = None) -> None:
+    if transaction_root is None:
+        if not plan:
+            return
+        transaction_root = Path(os.path.commonpath([str(path.parent.resolve()) for path in plan]))
+    recover_pending_transaction(transaction_root)
+    changed = {path: payload for path, payload in plan.items() if not path.exists() or path.read_bytes() != payload}
+    if not changed:
+        return
+    journal_path = transaction_root.resolve() / ".blind-promotion-transaction.json"
     entries: list[dict[str, Any]] = []
     journal_installed = False
     try:
@@ -292,6 +299,7 @@ def write_all_atomically(plan: Mapping[Path, bytes]) -> None:
 
 
 def promote(content_root: Path, assignment_path: Path, registry_path: Path) -> dict[str, Any]:
+    recover_pending_transaction(content_root)
     assignment = read_json(assignment_path)
     expected = assignment_index(assignment)
     questions, question_docs = load_documents(content_root / "questions", "id")
@@ -339,7 +347,7 @@ def promote(content_root: Path, assignment_path: Path, registry_path: Path) -> d
         **{path: encode_json(review_docs[path]) for path in touched_reviews},
         registry_path: encode_json(registry),
     }
-    write_all_atomically(plan)
+    write_all_atomically(plan, content_root)
     all_questions = [row for rows in question_docs.values() for row in rows]
     return {
         "promoted_presentations": len(expected),
