@@ -10,6 +10,7 @@ import os
 import shutil
 import tempfile
 import unittest
+from unittest.mock import patch
 import uuid
 from pathlib import Path
 
@@ -171,6 +172,28 @@ class PromoteBlindTrainingTests(unittest.TestCase):
             promote(fixture.content_root, fixture.assignment, fixture.registry)
 
             self.assertEqual(fixture.snapshot_bytes(), first)
+
+    def test_replace_failure_rolls_back_every_file_byte_identically(self) -> None:
+        with temporary_directory() as temporary:
+            fixture = PromotionFixture(temporary)
+            before = fixture.snapshot_bytes()
+            real_replace = os.replace
+            payload_replacements = 0
+
+            def fail_second_payload_replace(source, destination):
+                nonlocal payload_replacements
+                if str(source).endswith(".promotion.tmp"):
+                    payload_replacements += 1
+                    if payload_replacements == 2:
+                        raise OSError("injected replacement failure")
+                return real_replace(source, destination)
+
+            with patch.object(module.os, "replace", side_effect=fail_second_payload_replace):
+                with self.assertRaisesRegex(OSError, "injected replacement failure"):
+                    promote(fixture.content_root, fixture.assignment, fixture.registry)
+
+            self.assertEqual(fixture.snapshot_bytes(), before)
+            self.assertEqual(list(fixture.content_root.rglob("*.promotion.*")), [])
 
     def test_checked_in_promotion_exposes_all_v10_facts(self) -> None:
         rows = load_questions(ROOT / "content" / "competitive-v11" / "questions")

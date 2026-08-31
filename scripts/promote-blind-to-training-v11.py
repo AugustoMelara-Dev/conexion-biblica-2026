@@ -197,20 +197,98 @@ def registry_row(row: Mapping[str, Any], original_pool: str, sources: Mapping[st
     }
 
 
+def durable_write(path: Path, payload: bytes) -> None:
+    with path.open("wb") as stream:
+        stream.write(payload)
+        stream.flush()
+        os.fsync(stream.fileno())
+
+
+def recover_transaction(journal_path: Path) -> None:
+    journal = read_json(journal_path)
+    entries = journal.get("entries")
+    if journal.get("contract") != "competitive-v11-promotion-transaction-v1" or not isinstance(entries, list):
+        raise ValueError(f"journal de promoción inválido: {journal_path}")
+    restore_temporaries: list[Path] = []
+    try:
+        for entry in entries:
+            path = Path(entry["path"])
+            backup = Path(entry["backup"])
+            if entry["existed"]:
+                if not backup.is_file():
+                    raise OSError(f"backup de recuperación ausente: {backup}")
+                restore = path.with_suffix(path.suffix + ".promotion.restore.tmp")
+                durable_write(restore, backup.read_bytes())
+                restore_temporaries.append(restore)
+                os.replace(restore, path)
+            else:
+                path.unlink(missing_ok=True)
+        journal_path.unlink()
+        for entry in entries:
+            Path(entry["backup"]).unlink(missing_ok=True)
+            Path(entry["temporary"]).unlink(missing_ok=True)
+    finally:
+        for restore in restore_temporaries:
+            restore.unlink(missing_ok=True)
+
+
 def write_all_atomically(plan: Mapping[Path, bytes]) -> None:
     changed = {path: payload for path, payload in plan.items() if not path.exists() or path.read_bytes() != payload}
-    temporary_paths: list[Path] = []
+    if not changed:
+        return
+    transaction_root = Path(os.path.commonpath([str(path.parent.resolve()) for path in changed]))
+    journal_path = transaction_root / ".blind-promotion-transaction.json"
+    if journal_path.exists():
+        recover_transaction(journal_path)
+
+    entries: list[dict[str, Any]] = []
+    journal_installed = False
     try:
         for path, payload in changed.items():
             path.parent.mkdir(parents=True, exist_ok=True)
             temporary = path.with_suffix(path.suffix + ".promotion.tmp")
-            temporary.write_bytes(payload)
-            temporary_paths.append(temporary)
-        for path in changed:
-            os.replace(path.with_suffix(path.suffix + ".promotion.tmp"), path)
-    finally:
-        for temporary in temporary_paths:
+            backup = path.with_suffix(path.suffix + ".promotion.bak")
             temporary.unlink(missing_ok=True)
+            backup.unlink(missing_ok=True)
+            durable_write(temporary, payload)
+            existed = path.exists()
+            if existed:
+                durable_write(backup, path.read_bytes())
+            entries.append(
+                {
+                    "path": str(path.resolve()),
+                    "temporary": str(temporary.resolve()),
+                    "backup": str(backup.resolve()),
+                    "existed": existed,
+                }
+            )
+        journal_temporary = journal_path.with_suffix(journal_path.suffix + ".tmp")
+        durable_write(
+            journal_temporary,
+            encode_json(
+                {
+                    "contract": "competitive-v11-promotion-transaction-v1",
+                    "phase": "replacing",
+                    "entries": entries,
+                }
+            ),
+        )
+        os.replace(journal_temporary, journal_path)
+        journal_installed = True
+        for entry in entries:
+            os.replace(entry["temporary"], entry["path"])
+        journal_path.unlink()
+        journal_installed = False
+        for entry in entries:
+            Path(entry["backup"]).unlink(missing_ok=True)
+    finally:
+        if journal_installed:
+            recover_transaction(journal_path)
+        else:
+            journal_path.with_suffix(journal_path.suffix + ".tmp").unlink(missing_ok=True)
+            for entry in entries:
+                Path(entry["temporary"]).unlink(missing_ok=True)
+                Path(entry["backup"]).unlink(missing_ok=True)
 
 
 def promote(content_root: Path, assignment_path: Path, registry_path: Path) -> dict[str, Any]:
