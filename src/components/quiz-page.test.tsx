@@ -189,6 +189,360 @@ function renderQuiz() {
 }
 
 describe("ronda enfocada", () => {
+  it("explica de forma accesible cuando el navegador no ofrece pantalla completa", async () => {
+    const user = userEvent.setup()
+    const requestDescriptor = Object.getOwnPropertyDescriptor(
+      document.documentElement,
+      "requestFullscreen"
+    )
+    Object.defineProperty(document.documentElement, "requestFullscreen", {
+      value: undefined,
+      configurable: true,
+    })
+
+    try {
+      renderQuiz()
+      const fullscreenButton = screen.getByRole("button", {
+        name: "Pantalla completa",
+      })
+
+      await user.click(fullscreenButton)
+
+      const alert = await screen.findByRole("alert")
+      expect(within(alert).getByText("Pantalla completa")).toBeVisible()
+      expect(alert).toHaveTextContent(
+        "La pantalla completa no está disponible en este navegador. Puedes continuar la ronda normalmente."
+      )
+      expect(fullscreenButton).toBeDisabled()
+    } finally {
+      if (requestDescriptor) {
+        Object.defineProperty(
+          document.documentElement,
+          "requestFullscreen",
+          requestDescriptor
+        )
+      } else {
+        delete document.documentElement.requestFullscreen
+      }
+    }
+  })
+
+  it("muestra el rechazo de pantalla completa y permite reintentarlo", async () => {
+    const user = userEvent.setup()
+    const request = deferred<void>()
+    const requestDescriptor = Object.getOwnPropertyDescriptor(
+      document.documentElement,
+      "requestFullscreen"
+    )
+    Object.defineProperty(document.documentElement, "requestFullscreen", {
+      value: vi.fn().mockReturnValue(request.promise),
+      configurable: true,
+    })
+
+    try {
+      renderQuiz()
+      const fullscreenButton = screen.getByRole("button", {
+        name: "Pantalla completa",
+      })
+
+      await user.click(fullscreenButton)
+      expect(fullscreenButton).toBeDisabled()
+      await act(async () => request.reject(new Error("fullscreen denied")))
+
+      const alert = await screen.findByRole("alert")
+      expect(within(alert).getByText("Pantalla completa")).toBeVisible()
+      expect(alert).toHaveTextContent(
+        "El navegador no permitió abrir la pantalla completa. Puedes continuar la ronda normalmente."
+      )
+      expect(fullscreenButton).toBeEnabled()
+    } finally {
+      if (requestDescriptor) {
+        Object.defineProperty(
+          document.documentElement,
+          "requestFullscreen",
+          requestDescriptor
+        )
+      } else {
+        delete document.documentElement.requestFullscreen
+      }
+    }
+  })
+
+  it("conserva la entrada y la salida de pantalla completa", async () => {
+    const user = userEvent.setup()
+    const fullscreenElementDescriptor = Object.getOwnPropertyDescriptor(
+      document,
+      "fullscreenElement"
+    )
+    const exitDescriptor = Object.getOwnPropertyDescriptor(
+      document,
+      "exitFullscreen"
+    )
+    const requestDescriptor = Object.getOwnPropertyDescriptor(
+      document.documentElement,
+      "requestFullscreen"
+    )
+    const requestFullscreen = vi.fn().mockResolvedValue(undefined)
+    const exitFullscreen = vi.fn().mockResolvedValue(undefined)
+    Object.defineProperty(document.documentElement, "requestFullscreen", {
+      value: requestFullscreen,
+      configurable: true,
+    })
+    Object.defineProperty(document, "exitFullscreen", {
+      value: exitFullscreen,
+      configurable: true,
+    })
+    Object.defineProperty(document, "fullscreenElement", {
+      value: null,
+      configurable: true,
+    })
+
+    try {
+      renderQuiz()
+      const fullscreenButton = screen.getByRole("button", {
+        name: "Pantalla completa",
+      })
+
+      await user.click(fullscreenButton)
+      await waitFor(() => expect(fullscreenButton).toBeEnabled())
+      Object.defineProperty(document, "fullscreenElement", {
+        value: document.documentElement,
+        configurable: true,
+      })
+      await user.click(fullscreenButton)
+      await waitFor(() => expect(fullscreenButton).toBeEnabled())
+
+      expect(requestFullscreen).toHaveBeenCalledOnce()
+      expect(exitFullscreen).toHaveBeenCalledOnce()
+      expect(screen.queryByRole("alert")).not.toBeInTheDocument()
+    } finally {
+      if (requestDescriptor) {
+        Object.defineProperty(
+          document.documentElement,
+          "requestFullscreen",
+          requestDescriptor
+        )
+      } else {
+        delete document.documentElement.requestFullscreen
+      }
+      if (exitDescriptor) {
+        Object.defineProperty(document, "exitFullscreen", exitDescriptor)
+      } else {
+        delete document.exitFullscreen
+      }
+      if (fullscreenElementDescriptor) {
+        Object.defineProperty(
+          document,
+          "fullscreenElement",
+          fullscreenElementDescriptor
+        )
+      } else {
+        delete (document as Document & { fullscreenElement?: Element | null })
+          .fullscreenElement
+      }
+    }
+  })
+
+  it("captura un lanzamiento síncrono al solicitar pantalla completa", async () => {
+    const user = userEvent.setup()
+    const requestDescriptor = Object.getOwnPropertyDescriptor(
+      document.documentElement,
+      "requestFullscreen"
+    )
+    Object.defineProperty(document.documentElement, "requestFullscreen", {
+      value: vi.fn(() => {
+        throw new Error("fullscreen sync denied")
+      }),
+      configurable: true,
+    })
+
+    try {
+      renderQuiz()
+      await user.click(
+        screen.getByRole("button", { name: "Pantalla completa" })
+      )
+
+      expect(await screen.findByRole("alert")).toHaveTextContent(
+        "El navegador no permitió abrir la pantalla completa. Puedes continuar la ronda normalmente."
+      )
+    } finally {
+      if (requestDescriptor) {
+        Object.defineProperty(
+          document.documentElement,
+          "requestFullscreen",
+          requestDescriptor
+        )
+      } else {
+        delete document.documentElement.requestFullscreen
+      }
+    }
+  })
+
+  it("ignora clics adicionales mientras la solicitud está pendiente", async () => {
+    const request = deferred<void>()
+    const requestFullscreen = vi.fn().mockReturnValue(request.promise)
+    const requestDescriptor = Object.getOwnPropertyDescriptor(
+      document.documentElement,
+      "requestFullscreen"
+    )
+    Object.defineProperty(document.documentElement, "requestFullscreen", {
+      value: requestFullscreen,
+      configurable: true,
+    })
+
+    try {
+      renderQuiz()
+      const fullscreenButton = screen.getByRole("button", {
+        name: "Pantalla completa",
+      })
+
+      fireEvent.click(fullscreenButton)
+      fireEvent.click(fullscreenButton)
+
+      expect(fullscreenButton).toBeDisabled()
+      expect(requestFullscreen).toHaveBeenCalledOnce()
+      await act(async () => request.resolve())
+    } finally {
+      if (requestDescriptor) {
+        Object.defineProperty(
+          document.documentElement,
+          "requestFullscreen",
+          requestDescriptor
+        )
+      } else {
+        delete document.documentElement.requestFullscreen
+      }
+    }
+  })
+
+  it("limpia el aviso cuando el reintento de pantalla completa funciona", async () => {
+    const user = userEvent.setup()
+    const requestFullscreen = vi
+      .fn()
+      .mockRejectedValueOnce(new Error("fullscreen denied"))
+      .mockResolvedValueOnce(undefined)
+    const requestDescriptor = Object.getOwnPropertyDescriptor(
+      document.documentElement,
+      "requestFullscreen"
+    )
+    Object.defineProperty(document.documentElement, "requestFullscreen", {
+      value: requestFullscreen,
+      configurable: true,
+    })
+
+    try {
+      renderQuiz()
+      const fullscreenButton = screen.getByRole("button", {
+        name: "Pantalla completa",
+      })
+
+      await user.click(fullscreenButton)
+      expect(await screen.findByRole("alert")).toBeVisible()
+      await user.click(fullscreenButton)
+
+      await waitFor(() =>
+        expect(screen.queryByRole("alert")).not.toBeInTheDocument()
+      )
+      expect(requestFullscreen).toHaveBeenCalledTimes(2)
+    } finally {
+      if (requestDescriptor) {
+        Object.defineProperty(
+          document.documentElement,
+          "requestFullscreen",
+          requestDescriptor
+        )
+      } else {
+        delete document.documentElement.requestFullscreen
+      }
+    }
+  })
+
+  it("describe correctamente el rechazo al cerrar pantalla completa", async () => {
+    const user = userEvent.setup()
+    const fullscreenElementDescriptor = Object.getOwnPropertyDescriptor(
+      document,
+      "fullscreenElement"
+    )
+    const exitDescriptor = Object.getOwnPropertyDescriptor(
+      document,
+      "exitFullscreen"
+    )
+    Object.defineProperty(document, "fullscreenElement", {
+      value: document.documentElement,
+      configurable: true,
+    })
+    Object.defineProperty(document, "exitFullscreen", {
+      value: vi.fn().mockRejectedValue(new Error("exit denied")),
+      configurable: true,
+    })
+
+    try {
+      renderQuiz()
+      await user.click(
+        screen.getByRole("button", { name: "Pantalla completa" })
+      )
+
+      expect(await screen.findByRole("alert")).toHaveTextContent(
+        "El navegador no permitió cerrar la pantalla completa. Puedes continuar la ronda normalmente."
+      )
+    } finally {
+      if (exitDescriptor) {
+        Object.defineProperty(document, "exitFullscreen", exitDescriptor)
+      } else {
+        delete document.exitFullscreen
+      }
+      if (fullscreenElementDescriptor) {
+        Object.defineProperty(
+          document,
+          "fullscreenElement",
+          fullscreenElementDescriptor
+        )
+      } else {
+        delete (document as Document & { fullscreenElement?: Element | null })
+          .fullscreenElement
+      }
+    }
+  })
+
+  it("reserva Escape al navegador mientras pantalla completa está activa", () => {
+    const fullscreenElementDescriptor = Object.getOwnPropertyDescriptor(
+      document,
+      "fullscreenElement"
+    )
+    const onExit = vi.fn().mockResolvedValue(undefined)
+    Object.defineProperty(document, "fullscreenElement", {
+      value: document.documentElement,
+      configurable: true,
+    })
+
+    try {
+      render(
+        <QuizPage
+          questions={[studyQuestion]}
+          config={studyConfig}
+          onFinish={vi.fn().mockResolvedValue(undefined)}
+          onExit={onExit}
+        />
+      )
+
+      fireEvent.keyDown(window, { key: "Escape" })
+
+      expect(onExit).not.toHaveBeenCalled()
+      expect(screen.getByText(studyQuestion.question)).toBeVisible()
+    } finally {
+      if (fullscreenElementDescriptor) {
+        Object.defineProperty(
+          document,
+          "fullscreenElement",
+          fullscreenElementDescriptor
+        )
+      } else {
+        delete (document as Document & { fullscreenElement?: Element | null })
+          .fullscreenElement
+      }
+    }
+  })
+
   it("cambia la posición de las opciones entre sesiones y la conserva al recargar", () => {
     const question = {
       ...studyQuestion,
@@ -234,6 +588,53 @@ describe("ronda enfocada", () => {
       "data-bank-profile",
       "massive-v5"
     )
+  })
+
+  it("reintroduce un fallo después del queueGap único de doce preguntas", async () => {
+    const user = userEvent.setup()
+    const onStateChange = vi.fn().mockResolvedValue(undefined)
+    appState.recordAnswer.mockResolvedValue({ timesIncorrect: 1, timesSeen: 1 })
+    const failedQuestion: Question = {
+      ...twoChoiceQuestion,
+      id: "retry-after-twelve",
+      factId: "fact-retry-after-twelve",
+      variantId: "variant-retry-after-twelve",
+    }
+    const questions = [
+      failedQuestion,
+      ...Array.from({ length: 12 }, (_, index) => ({
+        ...twoChoiceQuestion,
+        id: `intervening-${index + 1}`,
+        factKey: `fact-intervening-${index + 1}`,
+      })),
+    ]
+
+    render(
+      <QuizPage
+        questions={questions}
+        config={{ ...studyConfig, count: 13 }}
+        onStateChange={onStateChange}
+        onFinish={vi.fn()}
+        onExit={vi.fn()}
+      />
+    )
+    await user.click(screen.getByRole("radio", { name: /Segunda/ }))
+    await user.click(screen.getByRole("button", { name: "Confirmar respuesta" }))
+
+    await waitFor(() =>
+      expect(
+        onStateChange.mock.calls
+          .map(([round]) => round)
+          .find((round) => round.questionKeys.length === 14)
+      ).toBeDefined()
+    )
+    const persisted = onStateChange.mock.calls
+      .map(([round]) => round)
+      .find((round) => round.questionKeys.length === 14)
+    expect(persisted.questionKeys.slice(1, 13)).not.toContain(
+      "local:retry-after-twelve"
+    )
+    expect(persisted.questionKeys[13]).toBe("local:retry-after-twelve")
   })
 
   it("mantiene la pregunta y permite reintentar si falla el guardado de la respuesta", async () => {

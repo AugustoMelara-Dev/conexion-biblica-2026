@@ -14,6 +14,7 @@ import {
 import { useApp } from "@/app/app-state"
 import { materializeDynamicQuestion } from "@/domain/dynamic-question"
 import { evaluateAnswer } from "@/domain/evaluation"
+import { scheduleNextRetrieval } from "@/domain/compressed-scheduler"
 import { scheduleTrainingRetry } from "@/domain/session-selector"
 import {
   sessionContextForMode,
@@ -93,6 +94,9 @@ export function QuizPage({
   >(null)
   const [transitionError, setTransitionError] = useState<string | null>(null)
   const [autosaveError, setAutosaveError] = useState<string | null>(null)
+  const [fullscreenPending, setFullscreenPending] = useState(false)
+  const [fullscreenUnsupported, setFullscreenUnsupported] = useState(false)
+  const [fullscreenError, setFullscreenError] = useState<string | null>(null)
   const questionHeadingRef = useRef<HTMLHeadingElement>(null)
   const focusedQuestionKeyRef = useRef<string | null>(null)
   const isSubmittingRef = useRef(false)
@@ -186,6 +190,37 @@ export function QuizPage({
       )
     }
   }, [invalidateTransition, onExit])
+
+  const toggleFullscreen = useCallback(async () => {
+    const isExitingFullscreen = Boolean(document.fullscreenElement)
+    const action = isExitingFullscreen
+      ? document.exitFullscreen?.bind(document)
+      : document.documentElement.requestFullscreen?.bind(
+          document.documentElement
+        )
+    if (!action) {
+      setFullscreenUnsupported(true)
+      setFullscreenError(
+        "La pantalla completa no está disponible en este navegador. Puedes continuar la ronda normalmente."
+      )
+      return
+    }
+
+    setFullscreenError(null)
+    setFullscreenPending(true)
+    try {
+      await action()
+    } catch {
+      if (!isMountedRef.current) return
+      setFullscreenError(
+        isExitingFullscreen
+          ? "El navegador no permitió cerrar la pantalla completa. Puedes continuar la ronda normalmente."
+          : "El navegador no permitió abrir la pantalla completa. Puedes continuar la ronda normalmente."
+      )
+    } finally {
+      if (isMountedRef.current) setFullscreenPending(false)
+    }
+  }, [])
 
   useEffect(() => {
     isMountedRef.current = true
@@ -488,10 +523,11 @@ export function QuizPage({
           config.mode === "learn" ||
           config.mode === "smart-review")
       ) {
-        const retryGap = Math.min(
-          8 + Math.max(0, nextProgress.timesIncorrect - 1) * 4,
-          15
-        )
+        const retryGap = scheduleNextRetrieval({
+          outcome: "incorrect",
+          now: Date.now(),
+          tier: "A",
+        }).queueGap
         const retryVariants = Array.isArray(question.metadata?.retryVariants)
           ? (question.metadata.retryVariants as Question[])
           : []
@@ -508,7 +544,7 @@ export function QuizPage({
             })
           : question
         setQueue((current) =>
-          scheduleTrainingRetry(current, retryQuestion, index, retryGap)
+          scheduleTrainingRetry(current, retryQuestion, index, retryGap ?? 0)
         )
       }
       if (finishRoundOnSubmit) {
@@ -541,7 +577,7 @@ export function QuizPage({
       questionStartedAt,
       queue,
       recordAnswer,
-      resume?.startedAt,
+      resume,
       scheduleDeferredTransition,
       isCurrentTransition,
       submitted,
@@ -658,7 +694,12 @@ export function QuizPage({
 
   useEffect(() => {
     const handleExitKey = (event: KeyboardEvent) => {
-      if (event.key !== "Escape" || event.defaultPrevented || referenceOpen)
+      if (
+        event.key !== "Escape" ||
+        event.defaultPrevented ||
+        referenceOpen ||
+        document.fullscreenElement
+      )
         return
       event.preventDefault()
       void exitSafely()
@@ -754,19 +795,11 @@ export function QuizPage({
         </p>
         <Button
           aria-label="Pantalla completa"
+          disabled={fullscreenPending || fullscreenUnsupported}
           size="icon"
           variant="outline"
           className="size-11"
-          onClick={() => {
-            const fullscreen = document.fullscreenElement
-              ? document.exitFullscreen()
-              : document.documentElement.requestFullscreen?.()
-            void fullscreen?.catch(() =>
-              setTransitionError(
-                "El navegador no permitió abrir la pantalla completa. Puedes continuar la ronda normalmente."
-              )
-            )
-          }}
+          onClick={() => void toggleFullscreen()}
         >
           <Maximize2 data-icon="inline-start" />
         </Button>
@@ -776,6 +809,12 @@ export function QuizPage({
         aria-labelledby="question-title"
         className="my-auto py-8 sm:py-12"
       >
+        {fullscreenError ? (
+          <Alert variant="destructive" className="mb-5">
+            <AlertTitle>Pantalla completa</AlertTitle>
+            <AlertDescription>{fullscreenError}</AlertDescription>
+          </Alert>
+        ) : null}
         {transitionError ? (
           <Alert variant="destructive" className="mb-5">
             <AlertTitle>Persistencia de la ronda</AlertTitle>
