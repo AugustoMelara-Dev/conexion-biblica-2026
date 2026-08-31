@@ -40,7 +40,7 @@ describe("auditoría editorial humana", () => {
         human_signatures: 0,
         entries: [
           {
-            question_id: "DAN1-AUTH-0001",
+            question_id: "Q-DAN1-0001",
             content_sha256: "hash-real",
             decision: "passed",
             reviewer_type: "ai_semantic_audit",
@@ -52,7 +52,7 @@ describe("auditoría editorial humana", () => {
       bank_questions: 1,
       entries: [
         {
-          id: "DAN1-AUTH-0001",
+          id: "Q-DAN1-0001",
           fact_id: "",
           chapter: "DAN1",
           family: "",
@@ -84,6 +84,46 @@ describe("auditoría editorial humana", () => {
       id: "PR39-AUTH-0001",
       chapter: "PR39",
       questions_file: "banks/final-2026/questions/PR39.json",
+    })
+  })
+
+  it("acepta el prefijo de variantes competitivas publicado", () => {
+    expect(
+      parseHumanReviewIndex({
+        schema_version: "10.0",
+        total_reviewed: 1,
+        entries: [
+          {
+            question_id: "PV-DAN7-0001",
+            content_sha256: "hash-variante",
+            decision: "passed",
+          },
+        ],
+      }).entries[0]
+    ).toMatchObject({
+      id: "PV-DAN7-0001",
+      chapter: "DAN7",
+      questions_file: "banks/final-2026/questions/DAN7.json",
+    })
+  })
+
+  it("acepta los identificadores explícitos de variantes de presentación", () => {
+    expect(
+      parseHumanReviewIndex({
+        schema_version: "10.0",
+        total_reviewed: 1,
+        entries: [
+          {
+            question_id: "Q-DAN10-CENTRAL-0001::PRESENTATION-01",
+            content_sha256: "hash-presentación",
+            decision: "passed",
+          },
+        ],
+      }).entries[0]
+    ).toMatchObject({
+      id: "Q-DAN10-CENTRAL-0001::PRESENTATION-01",
+      chapter: "DAN10",
+      questions_file: "banks/final-2026/questions/DAN10.json",
     })
   })
 

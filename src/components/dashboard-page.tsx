@@ -170,7 +170,9 @@ export function DashboardPage({
             </p>
           </div>
           <Badge variant="outline" className="w-fit bg-background/70">
-            {finalManifest?.gold_questions ?? 12000} preguntas GOLD
+            {finalManifest
+              ? `${finalManifest.gold_questions.toLocaleString("es-HN")} preguntas GOLD`
+              : "Cargando banco GOLD…"}
           </Badge>
         </div>
       </section>

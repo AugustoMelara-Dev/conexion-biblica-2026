@@ -7,14 +7,23 @@ import type { SessionConfig } from "@/domain/types"
 describe("centro de entrenamiento masivo", () => {
   it("muestra una sola acción recomendada y oculta los veinte modos hasta pedirlos", async () => {
     const onStart = vi.fn<(config: SessionConfig) => void>()
-    render(<MassiveTrainingHub onStart={onStart} />)
-    expect(screen.getByText("12,000 preguntas GOLD")).toBeVisible()
-    expect(screen.getByText("3,000 hechos")).toBeVisible()
+    render(
+      <MassiveTrainingHub
+        onStart={onStart}
+        questionCount={2218}
+        factCount={1967}
+      />
+    )
+    expect(screen.getByText("2,218 preguntas GOLD")).toBeVisible()
+    expect(screen.getByText("1,967 hechos")).toBeVisible()
     expect(screen.getByText("Ronda recomendada")).toBeVisible()
     expect(screen.queryByRole("combobox", { name: "Modo avanzado" })).not.toBeInTheDocument()
     await userEvent.click(screen.getByRole("button", { name: "Ver plan y modos" }))
     const select = screen.getByRole("combobox", { name: "Modo avanzado" })
-    expect(screen.getAllByRole("option")).toHaveLength(20)
+    expect(screen.getAllByRole("option")).toHaveLength(19)
+    expect(
+      screen.queryByRole("option", { name: /Simulación ciega/ })
+    ).not.toBeInTheDocument()
     await userEvent.selectOptions(select, "extreme-championship")
     await userEvent.click(screen.getByRole("button", { name: "Iniciar modo avanzado" }))
     expect(onStart).toHaveBeenCalledWith(
@@ -31,7 +40,7 @@ describe("centro de entrenamiento masivo", () => {
 
   it("expone el plan de 48 horas e inicia la simulación ciega final", async () => {
     const onStart = vi.fn<(config: SessionConfig) => void>()
-    render(<MassiveTrainingHub onStart={onStart} />)
+    render(<MassiveTrainingHub onStart={onStart} blindAvailable />)
     await userEvent.click(screen.getByRole("button", { name: "Ver plan y modos" }))
     expect(screen.getByText("PLAN FINAL — 48 HORAS")).toBeVisible()
     await userEvent.click(

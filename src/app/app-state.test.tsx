@@ -459,7 +459,6 @@ describe("persistencia concurrente de progreso", () => {
       variant_id: "V-FILTERED-LEGACY",
       reference: "Daniel 7:99",
       family: "true_false",
-      type: "true_false",
       options: ["Verdadero", "Falso"],
     })
     const overflowRaws = Array.from({ length: 5 }, (_, index) =>

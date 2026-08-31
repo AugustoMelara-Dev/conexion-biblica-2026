@@ -60,8 +60,8 @@ export const BANK_DEFINITIONS: Record<BankProfileId, BankDefinition> = {
     label: "Banco Maestro Único — Final 2026",
     description: "Entrenamiento canónico con cobertura completa del PDF",
     readOnly: true,
-    version: "9.0",
-    expectedQuestionCount: 12000,
+    version: "10.0",
+    expectedQuestionCount: 2218,
   },
 }
 

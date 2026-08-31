@@ -7,10 +7,10 @@ function question(bankProfileId: string) {
 }
 
 describe("selecciones de bancos", () => {
-  it("declara el banco final V9 de doce mil preguntas sin cambiar el perfil histórico", () => {
+  it("declara el banco competitivo V10 sin cambiar el perfil histórico", () => {
     expect(BANK_DEFINITIONS["final-v7"]).toMatchObject({
-      version: "9.0",
-      expectedQuestionCount: 12000,
+      version: "10.0",
+      expectedQuestionCount: 2218,
     })
   })
 

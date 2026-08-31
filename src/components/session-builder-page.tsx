@@ -280,6 +280,8 @@ export function SessionBuilderPage({
       ) : null}
       <MassiveTrainingHub
         starting={starting}
+        questionCount={finalManifest?.gold_questions}
+        factCount={finalManifest?.unique_facts}
         onStart={(massiveConfig) => startRound(massiveConfig)}
       />
       <ModePicker value={config.mode} onChange={selectMode} />

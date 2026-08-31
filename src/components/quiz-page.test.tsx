@@ -222,7 +222,7 @@ describe("ronda enfocada", () => {
           requestDescriptor
         )
       } else {
-        delete document.documentElement.requestFullscreen
+        Reflect.deleteProperty(document.documentElement, "requestFullscreen")
       }
     }
   })
@@ -263,7 +263,7 @@ describe("ronda enfocada", () => {
           requestDescriptor
         )
       } else {
-        delete document.documentElement.requestFullscreen
+        Reflect.deleteProperty(document.documentElement, "requestFullscreen")
       }
     }
   })
@@ -323,12 +323,12 @@ describe("ronda enfocada", () => {
           requestDescriptor
         )
       } else {
-        delete document.documentElement.requestFullscreen
+        Reflect.deleteProperty(document.documentElement, "requestFullscreen")
       }
       if (exitDescriptor) {
         Object.defineProperty(document, "exitFullscreen", exitDescriptor)
       } else {
-        delete document.exitFullscreen
+        Reflect.deleteProperty(document, "exitFullscreen")
       }
       if (fullscreenElementDescriptor) {
         Object.defineProperty(
@@ -337,8 +337,7 @@ describe("ronda enfocada", () => {
           fullscreenElementDescriptor
         )
       } else {
-        delete (document as Document & { fullscreenElement?: Element | null })
-          .fullscreenElement
+        Reflect.deleteProperty(document, "fullscreenElement")
       }
     }
   })
@@ -373,7 +372,7 @@ describe("ronda enfocada", () => {
           requestDescriptor
         )
       } else {
-        delete document.documentElement.requestFullscreen
+        Reflect.deleteProperty(document.documentElement, "requestFullscreen")
       }
     }
   })
@@ -410,7 +409,7 @@ describe("ronda enfocada", () => {
           requestDescriptor
         )
       } else {
-        delete document.documentElement.requestFullscreen
+        Reflect.deleteProperty(document.documentElement, "requestFullscreen")
       }
     }
   })
@@ -452,7 +451,7 @@ describe("ronda enfocada", () => {
           requestDescriptor
         )
       } else {
-        delete document.documentElement.requestFullscreen
+        Reflect.deleteProperty(document.documentElement, "requestFullscreen")
       }
     }
   })
@@ -489,7 +488,7 @@ describe("ronda enfocada", () => {
       if (exitDescriptor) {
         Object.defineProperty(document, "exitFullscreen", exitDescriptor)
       } else {
-        delete document.exitFullscreen
+        Reflect.deleteProperty(document, "exitFullscreen")
       }
       if (fullscreenElementDescriptor) {
         Object.defineProperty(
@@ -498,8 +497,7 @@ describe("ronda enfocada", () => {
           fullscreenElementDescriptor
         )
       } else {
-        delete (document as Document & { fullscreenElement?: Element | null })
-          .fullscreenElement
+        Reflect.deleteProperty(document, "fullscreenElement")
       }
     }
   })
@@ -537,8 +535,7 @@ describe("ronda enfocada", () => {
           fullscreenElementDescriptor
         )
       } else {
-        delete (document as Document & { fullscreenElement?: Element | null })
-          .fullscreenElement
+        Reflect.deleteProperty(document, "fullscreenElement")
       }
     }
   })

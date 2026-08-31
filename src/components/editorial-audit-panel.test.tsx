@@ -62,7 +62,7 @@ const schema10ReviewIndex = {
   human_signatures: 0,
   entries: [
     {
-      question_id: "DAN1-AUTH-0001",
+      question_id: "Q-DAN1-0001",
       content_sha256: "hash-real",
       decision: "passed",
       reviewer_type: "ai_semantic_audit",
@@ -72,7 +72,7 @@ const schema10ReviewIndex = {
 }
 
 const schema10Question = {
-  id: "DAN1-AUTH-0001",
+  id: "Q-DAN1-0001",
   family: "single_choice_direct",
   chapter: "DAN1",
   reference: "Daniel 1:1",
@@ -108,7 +108,7 @@ it("abre la auditoría con el review-index 10 publicado", async () => {
   expect(screen.getByLabelText("Familia").children).toHaveLength(1)
   expect(screen.getByText("single_choice_direct")).toBeVisible()
   expect(screen.getByText("DAN1", { selector: "span" })).toBeVisible()
-  expect(screen.getByText(/Daniel 1:1 · DAN1-AUTH-0001/)).toBeVisible()
+  expect(screen.getByText(/Daniel 1:1 · Q-DAN1-0001/)).toBeVisible()
   expect(screen.getByText("Riesgo 0")).toBeVisible()
   expect(fetchMock).toHaveBeenNthCalledWith(
     2,

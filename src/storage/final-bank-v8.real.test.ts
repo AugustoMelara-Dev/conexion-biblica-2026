@@ -7,6 +7,7 @@ import {
   selectMissionQuestions,
 } from "@/domain/final-mission-selection"
 import { materializeDynamicQuestion } from "@/domain/dynamic-question"
+import { parseHumanReviewIndex } from "@/domain/editorial-review"
 import {
   adaptFinalQuestion,
   type FinalBankManifest,
@@ -18,6 +19,9 @@ const bankRoot = resolve(root, "public/banks/final-2026")
 const manifest = JSON.parse(
   readFileSync(resolve(bankRoot, "manifest.json"), "utf8")
 ) as FinalBankManifest
+const reviewIndex = JSON.parse(
+  readFileSync(resolve(bankRoot, "review-index.json"), "utf8")
+) as unknown
 const questions = manifest.shards.flatMap((shard) => {
   const rows = JSON.parse(
     readFileSync(resolve(root, "public", shard.questions_file), "utf8")
@@ -25,13 +29,48 @@ const questions = manifest.shards.flatMap((shard) => {
   return rows.filter((row) => row.blind_pool === null).map(adaptFinalQuestion)
 })
 
-describe("real V9 final bank rounds", () => {
-  it("loads exactly twelve thousand GOLD variants over three thousand facts", () => {
-    expect(manifest.gold_questions).toBe(12000)
-    expect(manifest.unique_facts).toBe(3000)
+describe("real V10 competitive bank rounds", () => {
+  it("loads every emitted entry into the human review queue", () => {
+    expect(parseHumanReviewIndex(reviewIndex).bank_questions).toBe(2218)
+  })
+
+  it("loads the exact public training artifact without leaking blind pools", () => {
+    expect(manifest.gold_questions).toBe(2218)
+    expect(manifest.unique_facts).toBe(1967)
     expect(
       manifest.shards.reduce((sum, shard) => sum + shard.question_count, 0)
-    ).toBe(12000)
+    ).toBe(2218)
+    expect(questions.every((question) => !question.blindPool)).toBe(true)
+  })
+
+  it("sustains the national-final contract across 1,000 hard/expert seeds", () => {
+    const nationalFinal = questions.filter(
+      (question) =>
+        question.difficultyBand === "HARD" ||
+        question.difficultyBand === "EXPERT"
+    )
+    const signatures = new Set<string>()
+
+    for (let seed = 0; seed < 1000; seed += 1) {
+      const selected = selectMandatoryHundred(nationalFinal, seed)
+      const facts = selected.map((question) => question.factId)
+      expect(selected).toHaveLength(100)
+      expect(new Set(facts).size).toBe(100)
+      expect(selected.filter((question) => question.type === "single_choice")).toHaveLength(45)
+      expect(selected.filter((question) => question.type === "fill_blank")).toHaveLength(30)
+      expect(selected.filter((question) => question.type === "true_false")).toHaveLength(25)
+      expect(
+        selected.every(
+          (question) =>
+            !question.blindPool &&
+            (question.difficultyBand === "HARD" ||
+              question.difficultyBand === "EXPERT")
+        )
+      ).toBe(true)
+      signatures.add(facts.slice().sort().join("|"))
+    }
+
+    expect(signatures.size).toBeGreaterThan(900)
   })
 
   it("selects 100 distinct facts with the required competitive mix", () => {
@@ -116,17 +155,17 @@ describe("real V9 final bank rounds", () => {
     expect(positions).toEqual(new Set(["A", "B", "C", "D"]))
   })
 
-  it("provides different prompts and alternative distractor sets for the same fact", () => {
+  it("keeps authored variants genuinely different when a fact has more than one", () => {
     const byFact = new Map<string, typeof questions>()
     for (const question of questions) {
       const fact = question.factId!
       byFact.set(fact, [...(byFact.get(fact) ?? []), question])
     }
-    const variants = [...byFact.values()].find((rows) => rows.length >= 3)!
+    const variants = [...byFact.values()].find((rows) => rows.length >= 2)!
 
     expect(
       new Set(variants.map((question) => question.question)).size
-    ).toBeGreaterThanOrEqual(3)
+    ).toBe(variants.length)
     expect(
       new Set(
         variants.map((question) =>

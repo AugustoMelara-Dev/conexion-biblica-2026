@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test"
 
-test("la auditoría humana firma por huella y avanza sobre las doce mil", async ({
+test("la auditoría humana firma por huella y avanza sobre el artefacto V10", async ({
   page,
 }, testInfo) => {
   test.skip(
@@ -28,16 +28,27 @@ test("la auditoría humana firma por huella y avanza sobre las doce mil", async 
   await expect(
     page.getByRole("heading", { name: "Auditoría humana final" }),
   ).toBeVisible()
-  await expect(page.getByText("0 de 12000 revisadas")).toBeVisible({
+  await expect(page.getByText("0 de 2218 revisadas")).toBeVisible({
     timeout: 60_000,
   })
-  await expect(
-    page.getByText(/Daniel 1:1 · DAN1-GOLD-0001-SINGLE_CHOICE_CONTEXTUAL/),
-  ).toBeVisible({ timeout: 30_000 })
+  const approveButton = page.getByRole("button", { name: "Aprobar pregunta" })
+  await expect(approveButton).toBeVisible({ timeout: 30_000 })
+  const reviewCard = approveButton.locator(
+    "xpath=ancestor::div[@data-slot='card']",
+  )
+  const questionText = (
+    await reviewCard.locator('[data-slot="card-title"]').textContent()
+  )?.trim()
+  const descriptor = (
+    await reviewCard.locator('[data-slot="card-description"]').textContent()
+  )?.trim()
+  const reviewedId = descriptor?.split(" · ").at(-1)?.trim()
+  expect(questionText).toBeTruthy()
+  expect(reviewedId).toBeTruthy()
   await page.getByLabel("Nombre del revisor").fill("Auditor E2E")
-  await page.getByRole("button", { name: "Aprobar pregunta" }).click()
+  await approveButton.click()
 
-  await expect(page.getByText("1 de 12000 revisadas")).toBeVisible()
+  await expect(page.getByText("1 de 2218 revisadas")).toBeVisible()
   const stored = await page.evaluate(() =>
     JSON.parse(
       localStorage.getItem("conexion-biblica-human-review-v1") ?? "[]",
@@ -45,17 +56,15 @@ test("la auditoría humana firma por huella y avanza sobre las doce mil", async 
   )
   expect(stored).toHaveLength(1)
   expect(stored[0]).toMatchObject({
-    id: "DAN1-GOLD-0001-SINGLE_CHOICE_CONTEXTUAL",
+    id: reviewedId,
     reviewer: "Auditor E2E",
     disposition: "approved",
   })
   expect(stored[0].content_sha256).toMatch(/^[a-f0-9]{64}$/)
 
   await page.getByRole("button", { name: "Deshacer última decisión" }).click()
-  await expect(page.getByText("0 de 12000 revisadas")).toBeVisible()
-  await expect(
-    page.getByText(/Daniel 1:1 · DAN1-GOLD-0001-SINGLE_CHOICE_CONTEXTUAL/),
-  ).toBeVisible()
+  await expect(page.getByText("0 de 2218 revisadas")).toBeVisible()
+  await expect(page.getByText(questionText!, { exact: true })).toBeVisible()
   expect(
     await page.evaluate(() =>
       JSON.parse(

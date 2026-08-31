@@ -579,6 +579,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
             : config.trainingPresetId === "blind-simulation"
               ? ("A" as const)
               : undefined
+        if (blindPool)
+          throw new Error(
+            "La reserva ciega está protegida y no se entrega desde el cliente público."
+          )
         const profileVersion = await finalManifestFingerprint(finalManifest)
         const migrationSnapshot = await loadLegacyMigrationSnapshot(
           repositories,
@@ -631,9 +635,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
             config.trainingPresetId === "27-context" ||
             config.trainingPresetId === "contextual-traps"
               ? "single_choice_contextual"
-              : config.trainingPresetId === "expert-multiple-choice"
-                ? "single_choice_direct"
-                : config.trainingPresetId === "27-fill"
+              : config.trainingPresetId === "27-fill"
                   ? "fill_choice"
                   : config.trainingPresetId === "27-true-false"
                     ? "true_false"

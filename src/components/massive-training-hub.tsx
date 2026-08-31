@@ -74,10 +74,16 @@ export function MassiveTrainingHub({
   onStart,
   signals = [],
   starting = false,
+  questionCount,
+  factCount,
+  blindAvailable = false,
 }: {
   onStart: (config: SessionConfig) => void | Promise<void>
   signals?: ChapterSignal[]
   starting?: boolean
+  questionCount?: number
+  factCount?: number
+  blindAvailable?: boolean
 }) {
   const [selectedId, setSelectedId] =
     useState<MassiveTrainingModeId>("national-final")
@@ -85,6 +91,12 @@ export function MassiveTrainingHub({
   const selected = getMassiveTrainingMode(selectedId)
   const recommended = getMassiveTrainingMode("national-final")
   const plan = buildFinal48HourPlan(signals)
+  const visibleModes = MASSIVE_TRAINING_MODES.filter(
+    (mode) => mode.id !== "blind-simulation" || blindAvailable
+  )
+  const visiblePlan = plan.filter(
+    (block) => block.modeId !== "blind-simulation" || blindAvailable
+  )
 
   return (
     <section className="grid gap-4" aria-label="Modos avanzados">
@@ -106,8 +118,16 @@ export function MassiveTrainingHub({
               y 45 de selección. Sin repetir hechos.
             </CardDescription>
             <div className="mt-4 flex flex-wrap gap-2">
-              <Badge variant="secondary">12,000 preguntas GOLD</Badge>
-              <Badge variant="outline">3,000 hechos</Badge>
+              {questionCount !== undefined ? (
+                <Badge variant="secondary">
+                  {questionCount.toLocaleString("es-HN")} preguntas GOLD
+                </Badge>
+              ) : null}
+              {factCount !== undefined ? (
+                <Badge variant="outline">
+                  {factCount.toLocaleString("es-HN")} hechos
+                </Badge>
+              ) : null}
               <Badge variant="outline">Reserva ciega protegida</Badge>
             </div>
           </div>
@@ -157,7 +177,7 @@ export function MassiveTrainingHub({
                     setSelectedId(event.target.value as MassiveTrainingModeId)
                   }
                 >
-                  {MASSIVE_TRAINING_MODES.map((mode) => (
+                  {visibleModes.map((mode) => (
                     <option key={mode.id} value={mode.id}>
                       {mode.label} · {mode.count}
                     </option>
@@ -189,13 +209,14 @@ export function MassiveTrainingHub({
                     PLAN FINAL — 48 HORAS
                   </CardTitle>
                   <CardDescription className="mt-1">
-                    Diez bloques adaptativos: diagnóstico, corrección, velocidad
-                    y cierre ciego.
+                    {blindAvailable
+                      ? "Diez bloques adaptativos: diagnóstico, corrección, velocidad y cierre ciego."
+                      : "Nueve bloques adaptativos de diagnóstico, corrección y velocidad; la reserva ciega permanece fuera del cliente público."}
                   </CardDescription>
                 </div>
                 <Badge className="gap-1">
                   <ShieldCheck className="size-3.5" aria-hidden="true" />
-                  1,100 preguntas
+                  {blindAvailable ? "1,100" : "1,000"} preguntas
                 </Badge>
               </div>
             </CardHeader>
@@ -213,7 +234,7 @@ export function MassiveTrainingHub({
                     Día {day}
                   </h3>
                   <div className="grid gap-2">
-                    {plan
+                    {visiblePlan
                       .filter((block) => block.day === day)
                       .map((block, index) => {
                         const mode = getMassiveTrainingMode(block.modeId)

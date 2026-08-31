@@ -3,116 +3,214 @@
   "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
   "display_name": "Banco Maestro Único — Final 2026",
   "source": "MaterialConexionBiblica (1).pdf",
-  "gold_questions": 12000,
-  "unique_facts": 3000,
+  "unique_facts": 1967,
+  "gold_questions": 2218,
+  "central_question_count": 1967,
+  "presentation_variant_count": 251,
+  "training_fact_count": 1967,
+  "training_presentation_count": 2218,
+  "total_fact_count": 2217,
+  "total_presentation_count": 2468,
+  "total_central_question_count": 2217,
+  "total_presentation_variant_count": 251,
+  "blind_fact_count": 250,
+  "blind_presentation_count": 250,
+  "blind_pools": {
+    "A": {
+      "fact_count": 100,
+      "presentation_count": 100,
+      "families": {
+        "selection": 45,
+        "fill_choice": 30,
+        "true_false": 25
+      }
+    },
+    "B": {
+      "fact_count": 100,
+      "presentation_count": 100,
+      "families": {
+        "selection": 45,
+        "fill_choice": 30,
+        "true_false": 25
+      }
+    },
+    "emergency": {
+      "fact_count": 50,
+      "presentation_count": 50,
+      "families": {
+        "selection": 23,
+        "fill_choice": 15,
+        "true_false": 12
+      }
+    }
+  },
+  "blind_delivery": {
+    "contract": "private-blind-artifact-v1",
+    "artifact_id": "competitive-v11-blind",
+    "artifact_revision": "2172a863601b4f6ada95b4d740c74e2adeaf85c38524a65d474e4f43395e5c3f"
+  },
+  "families": {
+    "single_choice_direct": 347,
+    "single_choice_contextual": 659,
+    "fill_choice": 666,
+    "true_false": 546
+  },
+  "total_families": {
+    "single_choice_direct": 415,
+    "single_choice_contextual": 704,
+    "fill_choice": 741,
+    "true_false": 608
+  },
+  "review_index": {
+    "file": "banks/final-2026/review-index.json",
+    "sha256": "15d5735b613ca0ef14115bfac8eae426bff751c783adb96af59fced9944dbd0c",
+    "bytes": 803678
+  },
   "shards": [
     {
       "chapter": "DAN1",
-      "question_count": 351,
-      "training_question_count": 291,
-      "questions_file": "banks/final-2026/questions/DAN1.json"
+      "question_count": 44,
+      "training_question_count": 44,
+      "questions_file": "banks/final-2026/questions/DAN1.json",
+      "sha256": "70c761fdc429532cf3fc308f6d9c49e9d3e757547d2704cdc186180fc5205662",
+      "bytes": 121164
     },
     {
       "chapter": "DAN2",
-      "question_count": 482,
-      "training_question_count": 436,
-      "questions_file": "banks/final-2026/questions/DAN2.json"
+      "question_count": 93,
+      "training_question_count": 93,
+      "questions_file": "banks/final-2026/questions/DAN2.json",
+      "sha256": "f25fdfcb44de3ac018b78e4ac16f242b41c426bedced686439d774aee8cb6f6e",
+      "bytes": 275372
     },
     {
       "chapter": "DAN3",
-      "question_count": 366,
-      "training_question_count": 308,
-      "questions_file": "banks/final-2026/questions/DAN3.json"
+      "question_count": 89,
+      "training_question_count": 89,
+      "questions_file": "banks/final-2026/questions/DAN3.json",
+      "sha256": "55de5491f5c9f84ea9d47995bb0a9d046a7027af424806f9ea8c9d8d291b4f1f",
+      "bytes": 274659
     },
     {
       "chapter": "DAN4",
-      "question_count": 433,
-      "training_question_count": 372,
-      "questions_file": "banks/final-2026/questions/DAN4.json"
+      "question_count": 90,
+      "training_question_count": 90,
+      "questions_file": "banks/final-2026/questions/DAN4.json",
+      "sha256": "48f49a16e2283599fc80690cdcc98487c1c9f325e2c79c177135983e38aa5584",
+      "bytes": 265149
     },
     {
       "chapter": "DAN5",
-      "question_count": 366,
-      "training_question_count": 348,
-      "questions_file": "banks/final-2026/questions/DAN5.json"
+      "question_count": 90,
+      "training_question_count": 90,
+      "questions_file": "banks/final-2026/questions/DAN5.json",
+      "sha256": "eb934531808ad09aef895b7ced327fa9a131f3f5abcc74c9f27b59c7b4628a98",
+      "bytes": 251863
     },
     {
       "chapter": "DAN6",
-      "question_count": 364,
-      "training_question_count": 276,
-      "questions_file": "banks/final-2026/questions/DAN6.json"
+      "question_count": 90,
+      "training_question_count": 90,
+      "questions_file": "banks/final-2026/questions/DAN6.json",
+      "sha256": "dc225879bdf6bda9bd08705fcdb7cca2525a7f7607c88be312a922cee0121586",
+      "bytes": 264960
     },
     {
       "chapter": "DAN7",
-      "question_count": 833,
-      "training_question_count": 684,
-      "questions_file": "banks/final-2026/questions/DAN7.json"
+      "question_count": 96,
+      "training_question_count": 96,
+      "questions_file": "banks/final-2026/questions/DAN7.json",
+      "sha256": "c3b555d561be253c9d28239bcb18e0164c9cb15a514695ccd7ec54acb32181b6",
+      "bytes": 267991
     },
     {
       "chapter": "DAN8",
-      "question_count": 871,
-      "training_question_count": 738,
-      "questions_file": "banks/final-2026/questions/DAN8.json"
+      "question_count": 110,
+      "training_question_count": 110,
+      "questions_file": "banks/final-2026/questions/DAN8.json",
+      "sha256": "99fa8c1872281d84677976b8c3431d03dc349649e9592e6fce4829c0fbb56cb0",
+      "bytes": 304033
     },
     {
       "chapter": "DAN9",
-      "question_count": 879,
-      "training_question_count": 763,
-      "questions_file": "banks/final-2026/questions/DAN9.json"
+      "question_count": 104,
+      "training_question_count": 104,
+      "questions_file": "banks/final-2026/questions/DAN9.json",
+      "sha256": "71d6e864fa7242b941ddb605632f39480c818439be49dd2929624bab645ce023",
+      "bytes": 317614
     },
     {
       "chapter": "DAN10",
-      "question_count": 543,
-      "training_question_count": 474,
-      "questions_file": "banks/final-2026/questions/DAN10.json"
+      "question_count": 86,
+      "training_question_count": 86,
+      "questions_file": "banks/final-2026/questions/DAN10.json",
+      "sha256": "2adf0d22552c6353ef903a7c4f312c9d6cc1d53012f584f9ef27764505fe863e",
+      "bytes": 253149
     },
     {
       "chapter": "DAN11",
-      "question_count": 1196,
-      "training_question_count": 1060,
-      "questions_file": "banks/final-2026/questions/DAN11.json"
+      "question_count": 136,
+      "training_question_count": 136,
+      "questions_file": "banks/final-2026/questions/DAN11.json",
+      "sha256": "9d85e0165a5a52151964627943458693b60d1d781234afce49efdb401d3882db",
+      "bytes": 379043
     },
     {
       "chapter": "DAN12",
-      "question_count": 376,
-      "training_question_count": 287,
-      "questions_file": "banks/final-2026/questions/DAN12.json"
+      "question_count": 38,
+      "training_question_count": 38,
+      "questions_file": "banks/final-2026/questions/DAN12.json",
+      "sha256": "cc3446bbf402c92f2bb1fd7c4f931edcd85f02c7c25113644f32684e42059e52",
+      "bytes": 104546
     },
     {
       "chapter": "PR39",
-      "question_count": 868,
-      "training_question_count": 754,
-      "questions_file": "banks/final-2026/questions/PR39.json"
+      "question_count": 220,
+      "training_question_count": 220,
+      "questions_file": "banks/final-2026/questions/PR39.json",
+      "sha256": "07aaf16130cf1888477bfb261e8bd988b3e784a2b2998190d1ba75bfaa5fb1d8",
+      "bytes": 680549
     },
     {
       "chapter": "PR40",
-      "question_count": 799,
-      "training_question_count": 694,
-      "questions_file": "banks/final-2026/questions/PR40.json"
+      "question_count": 177,
+      "training_question_count": 177,
+      "questions_file": "banks/final-2026/questions/PR40.json",
+      "sha256": "d0675065aa46ead0ccc14f8b38bd36384da6c1be42afd8795fdbb41a9e5de128",
+      "bytes": 550288
     },
     {
       "chapter": "PR41",
-      "question_count": 751,
-      "training_question_count": 619,
-      "questions_file": "banks/final-2026/questions/PR41.json"
+      "question_count": 187,
+      "training_question_count": 187,
+      "questions_file": "banks/final-2026/questions/PR41.json",
+      "sha256": "457a7759645f9efd0f04e6370cfffe0b7e89dafc55c928a84606d138ed7fd0d3",
+      "bytes": 570190
     },
     {
       "chapter": "PR42",
-      "question_count": 732,
-      "training_question_count": 622,
-      "questions_file": "banks/final-2026/questions/PR42.json"
+      "question_count": 136,
+      "training_question_count": 136,
+      "questions_file": "banks/final-2026/questions/PR42.json",
+      "sha256": "a54844a25f7609436aec31287cdddd17ebe18fc6954e51afafc9c1ac3def6cca",
+      "bytes": 454101
     },
     {
       "chapter": "PR43",
-      "question_count": 1001,
-      "training_question_count": 866,
-      "questions_file": "banks/final-2026/questions/PR43.json"
+      "question_count": 267,
+      "training_question_count": 267,
+      "questions_file": "banks/final-2026/questions/PR43.json",
+      "sha256": "928ac28a1239bcf1b6074313ba6fcc31c37b86555438f8f98a013a71ab27897b",
+      "bytes": 750113
     },
     {
       "chapter": "PR44",
-      "question_count": 789,
-      "training_question_count": 614,
-      "questions_file": "banks/final-2026/questions/PR44.json"
+      "question_count": 165,
+      "training_question_count": 165,
+      "questions_file": "banks/final-2026/questions/PR44.json",
+      "sha256": "076a13b2b61342d308ef5baaed5b6e7f893b4e19046bb4594d730db1fb75a7ab",
+      "bytes": 468909
     }
-  ]
+  ],
+  "build_id": "94cd0f331b9c2304c479fee08047c54d997a0288eb8d0a3eedd628ed72585170"
 }
