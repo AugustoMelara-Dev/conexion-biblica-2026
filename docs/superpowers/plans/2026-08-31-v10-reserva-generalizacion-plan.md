@@ -400,7 +400,7 @@ Run: `python scripts/build-blind-generalization-manifest-v11.py --promoted conte
 
 Run: `python -m unittest scripts.test_build_blind_generalization_manifest_v11 -v`
 
-Expected: PASS with 250 unique facts, exact pool/family/batch totals, 18 source units represented according to the promoted registry, and every assignment carrying risk metadata.
+Expected: PASS with 250 unique facts, exact pool/family/batch totals, all 18 chapters represented according to the promoted registry, and every assignment carrying risk metadata.
 
 - [ ] **Step 6: Commit the locked assignment**
 
@@ -899,7 +899,7 @@ def validate_comparisons(private_rows, comparisons):
 The final audit reads these exact upstream reports and fails closed if absent, stale, non-PASS or built from a different public/private build ID:
 
 - `content/competitive-v11/reconciliation/fact-ledger-v10.json` — ledger canónico con 2,606/2,606 decisiones históricas;
-- `reports/competitive-v11/fact-reconciliation-summary.json` — resumen PASS y cobertura pública de todos los FACT aceptados;
+- `reports/competitive-v11/fact-reconciliation.json` — resumen PASS y cobertura pública de todos los FACT aceptados;
 - `reports/competitive-v11/national-simulations-1000.json` — 1,000 valid national simulations;
 - `reports/competitive-v11/private-build-leak-audit.json` — no private IDs, stems, options, fingerprints, paths or pool metadata in public output;
 - `reports/competitive-v11/e2e-release.json` — public study and simulator flows PASS.
