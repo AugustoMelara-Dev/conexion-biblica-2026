@@ -1289,7 +1289,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -1421,7 +1421,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -1509,7 +1509,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -1552,7 +1552,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -1640,7 +1640,7 @@
     "blank_span": "Anda",
     "significance": "Recupera la instrucción personal que acompaña el sellamiento de las palabras.",
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -1683,7 +1683,7 @@
     "blank_span": "purificados",
     "significance": "Completa la triple descripción de la transformación de muchos.",
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -1727,7 +1727,7 @@
     "blank_span": "mil doscientos noventa",
     "significance": "Fija la duración exacta entre los dos acontecimientos proféticos.",
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -1771,7 +1771,7 @@
     "blank_span": "espera",
     "significance": "Identifica la perseverancia asociada con la bienaventuranza.",
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -1855,7 +1855,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "emergency",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -2030,7 +2030,7 @@
     "blank_span": "multitud",
     "significance": "Identifica la audiencia de la enseñanza de justicia.",
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "emergency",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -2081,6 +2081,49 @@
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN12-V11-BLINDB-034",
+    "source_unit_id": "DAN12-V008",
+    "fact_id": "DAN12-V008-V11-B-DANIEL-ADDRESS",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "speaker_addressee",
+    "question": "Al admitir que no entendía y preguntar por el fin, Daniel se dirigió a su interlocutor como «____».",
+    "options": [
+      "Príncipe mío",
+      "Rey mío",
+      "Señor mío",
+      "Hermano mío"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Señor mío",
+    "accepted_answers": [
+      "Señor mío"
+    ],
+    "explanation": "Daniel introdujo su pregunta con la expresión «Señor mío».",
+    "why_distractors_fail": {
+      "Príncipe mío": "No fue el tratamiento usado.",
+      "Rey mío": "Daniel no empleó ese título aquí.",
+      "Hermano mío": "No corresponde a sus palabras."
+    },
+    "source_ref": "Daniel 12:8",
+    "source_quote": "Yo oí, pero no entendí. Dije entonces: “Señor mío, ¿cuál será el fin de estas cosas?”",
+    "evidence_excerpt": "Yo oí, pero no entendí. Dije entonces: “Señor mío, ¿cuál será el fin de estas cosas?”",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "question_address_title",
+    "option_category": "form_of_address",
+    "false_mutation": null,
+    "blank_span": "Señor mío",
+    "significance": "Recupera el tratamiento que enmarca la pregunta de Daniel.",
+    "variant_justification": null,
+    "blind_pool": "B",
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-blind-b-author"
     }
   }
 ]

@@ -2361,7 +2361,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -2405,7 +2405,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -2449,7 +2449,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -2580,7 +2580,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -3018,7 +3018,7 @@
     "blank_span": "tarde",
     "significance": "Sitúa cronológicamente la llegada del mensajero durante la oración.",
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "emergency",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -3106,7 +3106,7 @@
     "blank_span": "perdurable",
     "significance": "Recupera uno de los objetivos centrales del período profético.",
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -3884,7 +3884,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -4015,7 +4015,7 @@
     "blank_span": "hazlo",
     "significance": "Expresa la transición de escuchar a actuar en la culminación de la oración.",
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "emergency",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -4146,7 +4146,7 @@
     "blank_span": "principio",
     "significance": "Fija la prontitud con que se emitió la respuesta divina.",
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -4889,6 +4889,96 @@
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN9-V11-BLINDB-017",
+    "source_unit_id": "DAN9-V026",
+    "fact_id": "DAN9-V026-V11-B-DESTRUCTION-ACTOR-MUTATION",
+    "role": "central",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "La destrucción de la ciudad y del santuario se atribuye al ejército de un príncipe que había de venir.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La destrucción se atribuye al pueblo del príncipe venidero, no a su ejército.",
+    "why_distractors_fail": {
+      "Verdadero": "Sustituye por «ejército» al actor local expresamente identificado como «pueblo»."
+    },
+    "source_ref": "Daniel 9:26",
+    "source_quote": "Después de las sesenta y dos semanas se quitará la vida al Mesías, y nada ya le quedará. El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario, su final llegará como una inundación, y hasta el fin de la guerra durarán las devastaciones.",
+    "evidence_excerpt": "Después de las sesenta y dos semanas se quitará la vida al Mesías, y nada ya le quedará. El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario, su final llegará como una inundación, y hasta el fin de la guerra durarán las devastaciones.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "destruction_actor_local_mutation",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "actor"
+      ],
+      "local": true,
+      "original": "El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario",
+      "replacement": "El ejército de un príncipe que ha de venir destruirá la ciudad y el santuario"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": "B",
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-blind-b-author"
+    }
+  },
+  {
+    "id": "DAN9-V11-BLINDB-032",
+    "source_unit_id": "DAN9-V017",
+    "fact_id": "DAN9-V017-V11-B-PRAYER-PLEA-PAIR",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "Daniel pidió a Dios que oyera la oración y los ____ de su siervo.",
+    "options": [
+      "decretos",
+      "ruegos",
+      "sueños",
+      "juicios"
+    ],
+    "correct_option": 1,
+    "correct_answer": "ruegos",
+    "accepted_answers": [
+      "ruegos",
+      "los ruegos"
+    ],
+    "explanation": "La petición une la oración con los ruegos del siervo.",
+    "why_distractors_fail": {
+      "decretos": "No son el objeto que Dios debía oír.",
+      "sueños": "La súplica no menciona sueños.",
+      "juicios": "No completa el par devocional."
+    },
+    "source_ref": "Daniel 9:17",
+    "source_quote": "Ahora pues, Dios nuestro, oye la oración y los ruegos de tu siervo, y haz que tu rostro resplandezca sobre tu santuario asolado, por amor del Señor.",
+    "evidence_excerpt": "Ahora pues, Dios nuestro, oye la oración y los ruegos de tu siervo, y haz que tu rostro resplandezca sobre tu santuario asolado, por amor del Señor.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "prayer_plea_pair",
+    "option_category": "devotional_expression",
+    "false_mutation": null,
+    "blank_span": "ruegos",
+    "significance": "Conserva el doble objeto de la petición de escucha.",
+    "variant_justification": null,
+    "blind_pool": "B",
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-blind-b-author"
     }
   }
 ]

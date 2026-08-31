@@ -72,7 +72,8 @@
     "explanation": "El rey preguntó si Daniel podía hacerle entender tanto el sueño como su interpretación.",
     "why_distractors_fail": {"Conseguir que recordara solo el nombre del sueño": "La petición abarcaba sueño e interpretación.", "Explicar únicamente la amenaza contra los sabios": "Ese no era el misterio demandado.", "Revelar quién había redactado el decreto": "El decreto no era el objeto de la pregunta."},
     "difficulty": "medium", "importance": "high", "relation_type": "royal_question_scope", "option_category": "requested_capability",
-    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "Evalúa el alcance de la pregunta real, no la lista de especialistas incapaces."}
+    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "Evalúa el alcance de la pregunta real, no la lista de especialistas incapaces."},
+    "blind_pool": "emergency"
   },
   {
     "id": "PR40-V11-WAVE-059",
@@ -117,7 +118,8 @@
     "explanation": "La imagen estaba en pie delante del monarca.",
     "why_distractors_fail": {"Yacía detrás del trono": "Cambia postura y ubicación.", "Flotaba sobre la ciudad": "La escena no la sitúa allí.", "Permanecía oculta dentro del monte": "La imagen era visible ante el rey."},
     "difficulty": "medium", "importance": "medium", "relation_type": "image_position", "option_category": "spatial_relation",
-    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "Evalúa posición y postura, no el aspecto terrible ya cubierto."}
+    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "Evalúa posición y postura, no el aspecto terrible ya cubierto."},
+    "blind_pool": "emergency"
   },
   {
     "id": "PR40-V11-WAVE-062",
@@ -147,7 +149,8 @@
     "explanation": "El dominio descrito abarcaba seres humanos, bestias del campo y aves del cielo.",
     "why_distractors_fail": {"Hijos de hombres, peces del mar y reptiles de la tierra": "Conserva la categoría humana, pero sustituye bestias y aves.", "Sabios de la corte, ejércitos del reino y sacerdotes de los templos": "Reemplaza las tres categorías por grupos institucionales.", "Reyes de las naciones, mercaderes de las ciudades y labradores del campo": "Propone grupos humanos, pero omite bestias y aves."},
     "difficulty": "hard", "importance": "high", "relation_type": "royal_domain", "option_category": "being_set",
-    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "Recupera las tres categorías entregadas, no la identificación de la cabeza de oro."}
+    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "Recupera las tres categorías entregadas, no la identificación de la cabeza de oro."},
+    "blind_pool": "emergency"
   },
   {
     "id": "PR40-V11-WAVE-065",
@@ -224,7 +227,8 @@
     "why_distractors_fail": {"corte": "No es el término de la declaración.", "tierra": "La limitación se expresa respecto de la carne.", "noche": "No describe la morada mencionada."},
     "difficulty": "medium", "importance": "medium", "relation_type": "divine_dwelling_claim", "option_category": "noun",
     "significance": "Distingue la razón añadida a la excepción de los dioses.",
-    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "Evalúa un componente diferente de quién podía declarar el misterio."}
+    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "Evalúa un componente diferente de quién podía declarar el misterio."},
+    "blind_pool": "A"
   },
   {
     "id": "PR40-V11-WAVE-070",
@@ -256,7 +260,8 @@
     "why_distractors_fail": {"lucha": "No expresa la relación afirmada.", "huye": "Invierte la cercanía de la luz.", "termina": "No completa la proposición."},
     "difficulty": "medium", "importance": "high", "relation_type": "light_relation", "option_category": "verb",
     "significance": "Aísla la relación entre Dios y la luz.",
-    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "La sintaxis y el sentido ofrecen una única respuesta."}
+    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "La sintaxis y el sentido ofrecen una única respuesta."},
+    "blind_pool": "B"
   },
   {
     "id": "PR40-V11-WAVE-072",
@@ -272,7 +277,8 @@
     "why_distractors_fail": {"templo": "No era el asunto revelado.", "pueblo": "La petición se relacionaba con el monarca.", "ejército": "La crisis no trataba del ejército."},
     "difficulty": "medium", "importance": "high", "relation_type": "revealed_matter", "option_category": "person_role",
     "significance": "Identifica el asunto concreto respondido por Dios.",
-    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "Difiere de los dones de sabiduría y fortaleza ya preguntados."}
+    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "Difiere de los dones de sabiduría y fortaleza ya preguntados."},
+    "blind_pool": "A"
   },
   {
     "id": "PR40-V11-WAVE-075",
@@ -288,7 +294,8 @@
     "why_distractors_fail": {"protege": "No es la acción usada en la comparación.", "adorna": "No expresa fuerza destructiva.", "oculta": "No completa el paralelismo."},
     "difficulty": "hard", "importance": "high", "relation_type": "iron_action", "option_category": "verb",
     "significance": "Completa una acción del hierro distinta del resultado aplicado al reino.",
-    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "Diferencia la propiedad comparativa del hierro de la mera identificación del material."}
+    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "Diferencia la propiedad comparativa del hierro de la mera identificación del material."},
+    "blind_pool": "A"
   },
   {
     "id": "PR40-V11-WAVE-077",
@@ -304,7 +311,8 @@
     "why_distractors_fail": {"trono": "No es lo que se descorre.", "tiempo": "Los tiempos se mudan, no se descorren aquí.", "monte": "El monte pertenece a la visión de la piedra."},
     "difficulty": "medium", "importance": "high", "relation_type": "providential_revelation_metaphor", "option_category": "noun",
     "significance": "Identifica la imagen verbal que introduce la perspectiva providencial.",
-    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "No repite el modo silencioso y paciente de los agentes."}
+    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "No repite el modo silencioso y paciente de los agentes."},
+    "blind_pool": "B"
   },
   {
     "id": "PR40-V11-WAVE-078",
@@ -320,7 +328,8 @@
     "why_distractors_fail": {"severidad": "No es la cualidad emparejada con belleza.", "ironía": "No describe el tono señalado.", "brevedad": "No es el atributo citado."},
     "difficulty": "medium", "importance": "medium", "relation_type": "presentation_tone", "option_category": "noun",
     "significance": "Evalúa el tono de la presentación, no su audiencia.",
-    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "La pareja retórica hace inequívoca la respuesta."}
+    "review": {"reviewer": "gpt-5.6-sol-v11-wave-review", "rationale": "La pareja retórica hace inequívoca la respuesta."},
+    "blind_pool": "A"
   },
   {
     "id": "PR40-V11-WAVE-079",

@@ -3914,7 +3914,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -4352,7 +4352,7 @@
     "blank_span": "éxito",
     "significance": "Fija el fracaso del convenio matrimonial usado como arma política.",
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "emergency",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -4396,7 +4396,7 @@
     "blank_span": "príncipe",
     "significance": "Identifica al actor que revierte la afrenta del conquistador.",
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "emergency",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -4527,7 +4527,7 @@
     "blank_span": "halagos",
     "significance": "Identifica el método con que obtiene el poder sin recibir la honra real.",
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -4615,7 +4615,7 @@
     "blank_span": "pacto",
     "significance": "Sitúa el engaño y la victoria dentro de la secuencia política.",
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "emergency",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -4997,7 +4997,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -5172,7 +5172,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -5347,7 +5347,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -6161,7 +6161,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -6205,7 +6205,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -6298,6 +6298,92 @@
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN11-V11-BLINDB-021",
+    "source_unit_id": "DAN11-V006",
+    "fact_id": "DAN11-V006-V11-B-ALLIANCE-CASUALTY-SET",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué grupo completo quedaría entregado tras fracasar la alianza matrimonial?",
+    "options": [
+      "La hija, el rey del norte, el rey del sur y quienes habían hecho la paz",
+      "Los mensajeros, los soldados, los príncipes y los padres de la hija",
+      "La hija, quienes la habían traído, su hijo y quienes estaban de parte de ella",
+      "El rey del norte, sus hijos, sus consejeros y quienes estaban de parte de él"
+    ],
+    "correct_option": 2,
+    "correct_answer": "La hija, quienes la habían traído, su hijo y quienes estaban de parte de ella",
+    "accepted_answers": [
+      "La hija, quienes la habían traído, su hijo y quienes estaban de parte de ella"
+    ],
+    "explanation": "La caída alcanzaría a la hija, a quienes la llevaron, a su hijo y a sus partidarios.",
+    "why_distractors_fail": {
+      "La hija, el rey del norte, el rey del sur y quienes habían hecho la paz": "Conserva a la hija, pero reemplaza los otros tres grupos enumerados.",
+      "Los mensajeros, los soldados, los príncipes y los padres de la hija": "Sustituye las cuatro funciones personales del grupo entregado.",
+      "El rey del norte, sus hijos, sus consejeros y quienes estaban de parte de él": "Traslada la entrega al rey del norte y a su círculo."
+    },
+    "source_ref": "Daniel 11:6",
+    "source_quote": "Al cabo de unos años harán alianza, y la hija del rey del sur vendrá al rey del norte para hacer la paz. Pero ella no podrá retener la fuerza de su brazo, y ni él ni su brazo permanecerán; porque ella será entregada a la muerte, y también los que la habían traído, y su hijo y los que estaban de parte de ella en aquel tiempo.",
+    "evidence_excerpt": "Al cabo de unos años harán alianza, y la hija del rey del sur vendrá al rey del norte para hacer la paz. Pero ella no podrá retener la fuerza de su brazo, y ni él ni su brazo permanecerán; porque ella será entregada a la muerte, y también los que la habían traído, y su hijo y los que estaban de parte de ella en aquel tiempo.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "failed_alliance_casualty_set",
+    "option_category": "four_person_role_set",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": "B",
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-blind-b-author"
+    }
+  },
+  {
+    "id": "DAN11-V11-BLINDB-026",
+    "source_unit_id": "DAN11-V024",
+    "fact_id": "DAN11-V024-V11-B-ANCESTRAL-CONTRAST",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "question": "¿Qué dos generaciones de antepasados forman el contraste con las acciones sin precedente del gobernante?",
+    "options": [
+      "Sus padres y los hijos de sus padres",
+      "Sus soldados y los padres de sus soldados",
+      "Sus aliados y los padres de sus aliados",
+      "Sus padres y los padres de sus padres"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Sus padres y los padres de sus padres",
+    "accepted_answers": [
+      "Sus padres y los padres de sus padres"
+    ],
+    "explanation": "La comparación abarca a sus padres y a la generación anterior a ellos.",
+    "why_distractors_fail": {
+      "Sus padres y los hijos de sus padres": "La segunda referencia retrocede a los padres de sus padres, no a sus hijos.",
+      "Sus soldados y los padres de sus soldados": "Cambia el linaje del gobernante por el de sus soldados.",
+      "Sus aliados y los padres de sus aliados": "Cambia el linaje del gobernante por el de sus aliados."
+    },
+    "source_ref": "Daniel 11:24",
+    "source_quote": "Estando la provincia en paz y en abundancia, entrará y hará lo que no hicieron sus padres ni los padres de sus padres; botín, despojos y riquezas repartirá entre sus soldados, y contra las fortalezas formará sus designios. Esto durará un tiempo.",
+    "evidence_excerpt": "Estando la provincia en paz y en abundancia, entrará y hará lo que no hicieron sus padres ni los padres de sus padres; botín, despojos y riquezas repartirá entre sus soldados, y contra las fortalezas formará sus designios. Esto durará un tiempo.",
+    "difficulty": "hard",
+    "importance": "medium",
+    "relation_type": "two_generation_ancestral_contrast",
+    "option_category": "parallel_two_generation_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": "B",
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-blind-b-author"
     }
   }
 ]

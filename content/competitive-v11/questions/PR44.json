@@ -5205,7 +5205,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -5771,7 +5771,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -5810,7 +5810,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "emergency",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -5895,7 +5895,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -6196,7 +6196,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -6239,7 +6239,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -6282,7 +6282,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -6325,7 +6325,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -6848,7 +6848,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -6887,7 +6887,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "emergency",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -6972,7 +6972,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "emergency",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -7011,7 +7011,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "emergency",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -7228,7 +7228,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -7489,7 +7489,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -7670,6 +7670,138 @@
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "PR44-V11-BLIND-B-044",
+    "source_unit_id": "PR44-P056-P008-S003",
+    "fact_id": "PR44-P056-P008-S003-V11-BB01",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué resultado atribuyó el salmista a la ira del hombre?",
+    "options": [
+      "Acarrear alabanza a Dios",
+      "Manifestar inmediatamente la justicia divina",
+      "Asegurar la victoria temporal de los fieles",
+      "Revelar la debilidad de los reinos humanos"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Acarrear alabanza a Dios",
+    "accepted_answers": [
+      "Acarrear alabanza a Dios",
+      "La ira del hombre acarrea alabanza"
+    ],
+    "explanation": "El salmista testificó que la ira del hombre acarrearía alabanza a Dios.",
+    "why_distractors_fail": {
+      "Manifestar inmediatamente la justicia divina": "El resultado atribuido en la cita es acarrear alabanza, no manifestar inmediatamente la justicia.",
+      "Asegurar la victoria temporal de los fieles": "La declaración no promete una victoria temporal a los fieles.",
+      "Revelar la debilidad de los reinos humanos": "La frase citada no identifica ese resultado para la ira humana."
+    },
+    "source_ref": "PR44, p. 56, párrafo 8",
+    "source_quote": "“Ciertamente la ira del hombre te acarreará alabanza” (Salmos 76:10), había testificado el salmista.",
+    "evidence_excerpt": "“Ciertamente la ira del hombre te acarreará alabanza” (Salmos 76:10), había testificado el salmista.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "human_wrath_divine_praise",
+    "option_category": "providential_result",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": "B",
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-blind-b-author"
+    }
+  },
+  {
+    "id": "PR44-V11-BLIND-B-047",
+    "source_unit_id": "PR44-P057-P006-S003",
+    "fact_id": "PR44-P057-P006-S003-V11-BB01",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué experiencia llevó a Darío y Ciro a reconocer que el Dios de Daniel permanece y que el reino de ese Dios no será deshecho?",
+    "options": [
+      "La lectura de los decretos religiosos de Nabucodonosor",
+      "El trato personal que tuvieron con Daniel",
+      "La consulta conjunta a los sabios de Babilonia",
+      "El estudio privado de las profecías sobre los imperios"
+    ],
+    "correct_option": 1,
+    "correct_answer": "El trato personal que tuvieron con Daniel",
+    "accepted_answers": [
+      "El trato personal que tuvieron con Daniel",
+      "Su trato con Daniel",
+      "Haberle tratado"
+    ],
+    "explanation": "El trato personal con Daniel llevó a esos monarcas paganos a reconocer la permanencia de Dios y de su reino.",
+    "why_distractors_fail": {
+      "La lectura de los decretos religiosos de Nabucodonosor": "La fuente atribuye el reconocimiento al trato que los monarcas tuvieron con Daniel.",
+      "La consulta conjunta a los sabios de Babilonia": "No se menciona una consulta conjunta como causa del reconocimiento.",
+      "El estudio privado de las profecías sobre los imperios": "El reconocimiento se vincula con haber tratado a Daniel, no con un estudio profético privado."
+    },
+    "source_ref": "PR44, p. 57, párrafo 6",
+    "source_quote": "Y por haberle tratado, esos monarcas paganos se vieron obligados a reconocer que su Dios era “el Dios viviente y permanente por todos los siglos, y su reino tal que no será deshecho.”",
+    "evidence_excerpt": "Y por haberle tratado, esos monarcas paganos se vieron obligados a reconocer que su Dios era “el Dios viviente y permanente por todos los siglos, y su reino tal que no será deshecho.”",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "contact_with_daniel_forced_recognition",
+    "option_category": "recognition_cause",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": "B",
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-blind-b-author"
+    }
+  },
+  {
+    "id": "PR44-V11-BLIND-B-049",
+    "source_unit_id": "PR44-P058-P003-S002",
+    "fact_id": "PR44-P058-P003-S002-V11-BB01",
+    "role": "central",
+    "family": "single_choice_contextual",
+    "subtype": "prophetic_detail",
+    "question": "¿Qué promesa recibió Daniel antes de terminar las labores de su vida respecto del tiempo del fin?",
+    "options": [
+      "Comprendería de inmediato cada detalle profético",
+      "Reinaría sobre todos los imperios futuros",
+      "Se le permitiría ocupar otra vez su lugar",
+      "Abriría personalmente cada sello en Babilonia"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Se le permitiría ocupar otra vez su lugar",
+    "accepted_answers": [
+      "Se le permitiría ocupar otra vez su lugar"
+    ],
+    "explanation": "Aunque ni Daniel comprendió plenamente sus profecías, recibió la promesa de volver a ocupar su lugar en el plazo final.",
+    "why_distractors_fail": {
+      "Comprendería de inmediato cada detalle profético": "Las profecías no fueron comprendidas plenamente ni por él.",
+      "Reinaría sobre todos los imperios futuros": "La promesa no es de gobierno político universal.",
+      "Abriría personalmente cada sello en Babilonia": "Los escritos debían quedar sellados hasta el tiempo del fin."
+    },
+    "source_ref": "PR44, p. 58, párrafo 3",
+    "source_quote": "Sus admirables profecías, como las registradas en los capítulos siete a doce del libro que lleva su nombre, no fueron comprendidas plenamente ni siquiera por el profeta mismo; pero antes que terminaran las labores de su vida, recibió la bienaventurada promesa de que “hasta el tiempo del fin”—en el plazo final de la historia de este mundo—se le permitiría ocupar otra vez su lugar.",
+    "evidence_excerpt": "Sus admirables profecías, como las registradas en los capítulos siete a doce del libro que lleva su nombre, no fueron comprendidas plenamente ni siquiera por el profeta mismo; pero antes que terminaran las labores de su vida, recibió la bienaventurada promesa de que “hasta el tiempo del fin”—en el plazo final de la historia de este mundo—se le permitiría ocupar otra vez su lugar.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "daniel_future_place_promise",
+    "option_category": "promise",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": "B",
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v11-blind-b-author"
     }
   }
 ]

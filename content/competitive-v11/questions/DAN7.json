@@ -2441,7 +2441,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -2573,7 +2573,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -2617,7 +2617,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "emergency",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -2793,7 +2793,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -2837,7 +2837,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -3395,7 +3395,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -3483,7 +3483,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "A",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -3571,7 +3571,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "B",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -4269,7 +4269,7 @@
     "blank_span": null,
     "significance": null,
     "variant_justification": null,
-    "blind_pool": null,
+    "blind_pool": "emergency",
     "ai_review": {
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
@@ -4542,6 +4542,94 @@
       "status": "passed",
       "reviewer_type": "ai_semantic_audit",
       "reviewer": "gpt-5.6-sol-v11-wave-review"
+    }
+  },
+  {
+    "id": "DAN7-V11-BLINDB-002",
+    "source_unit_id": "DAN7-V004",
+    "fact_id": "DAN7-V004-V11-B-WINGS-SPECIES",
+    "role": "central",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿De qué ave eran las alas de la primera bestia, semejante a un león?",
+    "options": [
+      "Cuervo",
+      "Águila",
+      "Paloma",
+      "Halcón"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Águila",
+    "accepted_answers": [
+      "Águila",
+      "De águila"
+    ],
+    "explanation": "La primera bestia tenía alas de águila.",
+    "why_distractors_fail": {
+      "Cuervo": "No es el ave mencionada.",
+      "Paloma": "No corresponde a las alas descritas.",
+      "Halcón": "La fuente identifica al águila."
+    },
+    "source_ref": "Daniel 7:4",
+    "source_quote": "La primera era como un león, y tenía alas de águila. Yo estaba mirando hasta que sus alas le fueron arrancadas; fue levantada del suelo y se puso enhiesta sobre los pies, a manera de hombre, y se le dio corazón de hombre.",
+    "evidence_excerpt": "La primera era como un león, y tenía alas de águila. Yo estaba mirando hasta que sus alas le fueron arrancadas; fue levantada del suelo y se puso enhiesta sobre los pies, a manera de hombre, y se le dio corazón de hombre.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "beast_wing_species",
+    "option_category": "bird",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": null,
+    "blind_pool": "B",
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-blind-b-author"
+    }
+  },
+  {
+    "id": "DAN7-V11-BLINDB-031",
+    "source_unit_id": "DAN7-V027",
+    "fact_id": "DAN7-V027-V11-B-KINGDOM-SCOPE",
+    "role": "central",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "El pueblo de los santos recibiría la majestad de los reinos debajo de todo el ____.",
+    "options": [
+      "cielo",
+      "mar",
+      "desierto",
+      "santuario"
+    ],
+    "correct_option": 0,
+    "correct_answer": "cielo",
+    "accepted_answers": [
+      "cielo",
+      "todo el cielo"
+    ],
+    "explanation": "La entrega comprende los reinos debajo de todo el cielo.",
+    "why_distractors_fail": {
+      "mar": "No define el alcance del reino.",
+      "desierto": "Reduciría el ámbito anunciado.",
+      "santuario": "No es la expresión territorial usada."
+    },
+    "source_ref": "Daniel 7:27",
+    "source_quote": "y que el reino, el dominio y la majestad de los reinos debajo de todo el cielo sean dados al pueblo de los santos del Altísimo, cuyo reino es reino eterno, y todos los dominios lo servirán y obedecerán.”",
+    "evidence_excerpt": "y que el reino, el dominio y la majestad de los reinos debajo de todo el cielo sean dados al pueblo de los santos del Altísimo, cuyo reino es reino eterno, y todos los dominios lo servirán y obedecerán.”",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "saints_kingdom_scope",
+    "option_category": "cosmic_scope",
+    "false_mutation": null,
+    "blank_span": "cielo",
+    "significance": "Fija el alcance universal de la herencia de los santos.",
+    "variant_justification": null,
+    "blind_pool": "B",
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-blind-b-author"
     }
   }
 ]

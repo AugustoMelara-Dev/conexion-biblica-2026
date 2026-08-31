@@ -1,0 +1,243 @@
+[
+  {
+    "id": "DAN7-V11-BLINDB-002",
+    "source_unit_id": "DAN7-V004",
+    "fact_id": "DAN7-V004-V11-B-WINGS-SPECIES",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿De qué ave eran las alas de la primera bestia, semejante a un león?",
+    "options": [
+      "Águila",
+      "Cuervo",
+      "Paloma",
+      "Halcón"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Águila",
+      "De águila"
+    ],
+    "explanation": "La primera bestia tenía alas de águila.",
+    "why_distractors_fail": {
+      "Cuervo": "No es el ave mencionada.",
+      "Paloma": "No corresponde a las alas descritas.",
+      "Halcón": "La fuente identifica al águila."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "beast_wing_species",
+    "option_category": "bird",
+    "review": {
+      "reviewer": "gpt-5.6-sol-blind-b-author",
+      "rationale": "Recupera el tipo de alas, detalle distinto del animal al que se parecía la bestia."
+    },
+    "blind_pool": "B"
+  },
+  {
+    "id": "DAN9-V11-BLINDB-017",
+    "source_unit_id": "DAN9-V026",
+    "fact_id": "DAN9-V026-V11-B-DESTRUCTION-ACTOR-MUTATION",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "question": "La destrucción de la ciudad y del santuario se atribuye al ejército de un príncipe que había de venir.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La destrucción se atribuye al pueblo del príncipe venidero, no a su ejército.",
+    "why_distractors_fail": {
+      "Verdadero": "Sustituye por «ejército» al actor local expresamente identificado como «pueblo»."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "destruction_actor_local_mutation",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "actor"
+      ],
+      "local": true,
+      "original": "El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario",
+      "replacement": "El ejército de un príncipe que ha de venir destruirá la ciudad y el santuario"
+    },
+    "review": {
+      "reviewer": "gpt-5.6-sol-blind-b-author",
+      "rationale": "Muta únicamente el actor pueblo por ejército dentro de la misma afirmación factual."
+    },
+    "blind_pool": "B"
+  },
+  {
+    "id": "DAN11-V11-BLINDB-021",
+    "source_unit_id": "DAN11-V006",
+    "fact_id": "DAN11-V006-V11-B-ALLIANCE-CASUALTY-SET",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué grupo completo quedaría entregado tras fracasar la alianza matrimonial?",
+    "options": [
+      "La hija, quienes la habían traído, su hijo y quienes estaban de parte de ella",
+      "La hija, el rey del norte, el rey del sur y quienes habían hecho la paz",
+      "Los mensajeros, los soldados, los príncipes y los padres de la hija",
+      "El rey del norte, sus hijos, sus consejeros y quienes estaban de parte de él"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "La hija, quienes la habían traído, su hijo y quienes estaban de parte de ella"
+    ],
+    "explanation": "La caída alcanzaría a la hija, a quienes la llevaron, a su hijo y a sus partidarios.",
+    "why_distractors_fail": {
+      "La hija, el rey del norte, el rey del sur y quienes habían hecho la paz": "Conserva a la hija, pero reemplaza los otros tres grupos enumerados.",
+      "Los mensajeros, los soldados, los príncipes y los padres de la hija": "Sustituye las cuatro funciones personales del grupo entregado.",
+      "El rey del norte, sus hijos, sus consejeros y quienes estaban de parte de él": "Traslada la entrega al rey del norte y a su círculo."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "failed_alliance_casualty_set",
+    "option_category": "four_person_role_set",
+    "review": {
+      "reviewer": "gpt-5.6-sol-blind-b-author",
+      "rationale": "Las cuatro opciones presentan listas paralelas de cuatro personas o roles; solo una reproduce el grupo completo."
+    },
+    "blind_pool": "B"
+  },
+  {
+    "id": "DAN11-V11-BLINDB-026",
+    "source_unit_id": "DAN11-V024",
+    "fact_id": "DAN11-V024-V11-B-ANCESTRAL-CONTRAST",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "question": "¿Qué dos generaciones de antepasados forman el contraste con las acciones sin precedente del gobernante?",
+    "options": [
+      "Sus padres y los padres de sus padres",
+      "Sus padres y los hijos de sus padres",
+      "Sus soldados y los padres de sus soldados",
+      "Sus aliados y los padres de sus aliados"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Sus padres y los padres de sus padres"
+    ],
+    "explanation": "La comparación abarca a sus padres y a la generación anterior a ellos.",
+    "why_distractors_fail": {
+      "Sus padres y los hijos de sus padres": "La segunda referencia retrocede a los padres de sus padres, no a sus hijos.",
+      "Sus soldados y los padres de sus soldados": "Cambia el linaje del gobernante por el de sus soldados.",
+      "Sus aliados y los padres de sus aliados": "Cambia el linaje del gobernante por el de sus aliados."
+    },
+    "difficulty": "hard",
+    "importance": "medium",
+    "relation_type": "two_generation_ancestral_contrast",
+    "option_category": "parallel_two_generation_pair",
+    "review": {
+      "reviewer": "gpt-5.6-sol-blind-b-author",
+      "rationale": "El enunciado pide las dos generaciones y los distractores conservan una estructura genealógica paralela."
+    },
+    "blind_pool": "B"
+  },
+  {
+    "id": "DAN7-V11-BLINDB-031",
+    "source_unit_id": "DAN7-V027",
+    "fact_id": "DAN7-V027-V11-B-KINGDOM-SCOPE",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "question": "El pueblo de los santos recibiría la majestad de los reinos debajo de todo el ____.",
+    "options": [
+      "mar",
+      "cielo",
+      "desierto",
+      "santuario"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "cielo",
+      "todo el cielo"
+    ],
+    "explanation": "La entrega comprende los reinos debajo de todo el cielo.",
+    "why_distractors_fail": {
+      "mar": "No define el alcance del reino.",
+      "desierto": "Reduciría el ámbito anunciado.",
+      "santuario": "No es la expresión territorial usada."
+    },
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "saints_kingdom_scope",
+    "option_category": "cosmic_scope",
+    "significance": "Fija el alcance universal de la herencia de los santos.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-blind-b-author",
+      "rationale": "Evalúa la extensión de la entrega, no sus receptores ni la obediencia posterior."
+    },
+    "blind_pool": "B"
+  },
+  {
+    "id": "DAN9-V11-BLINDB-032",
+    "source_unit_id": "DAN9-V017",
+    "fact_id": "DAN9-V017-V11-B-PRAYER-PLEA-PAIR",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "question": "Daniel pidió a Dios que oyera la oración y los ____ de su siervo.",
+    "options": [
+      "decretos",
+      "ruegos",
+      "sueños",
+      "juicios"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "ruegos",
+      "los ruegos"
+    ],
+    "explanation": "La petición une la oración con los ruegos del siervo.",
+    "why_distractors_fail": {
+      "decretos": "No son el objeto que Dios debía oír.",
+      "sueños": "La súplica no menciona sueños.",
+      "juicios": "No completa el par devocional."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "prayer_plea_pair",
+    "option_category": "devotional_expression",
+    "significance": "Conserva el doble objeto de la petición de escucha.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-blind-b-author",
+      "rationale": "Añade el par oración-ruegos, distinto de la petición sobre el santuario."
+    },
+    "blind_pool": "B"
+  },
+  {
+    "id": "DAN12-V11-BLINDB-034",
+    "source_unit_id": "DAN12-V008",
+    "fact_id": "DAN12-V008-V11-B-DANIEL-ADDRESS",
+    "family": "fill_choice",
+    "subtype": "speaker_addressee",
+    "question": "Al admitir que no entendía y preguntar por el fin, Daniel se dirigió a su interlocutor como «____».",
+    "options": [
+      "Príncipe mío",
+      "Señor mío",
+      "Rey mío",
+      "Hermano mío"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Señor mío"
+    ],
+    "explanation": "Daniel introdujo su pregunta con la expresión «Señor mío».",
+    "why_distractors_fail": {
+      "Príncipe mío": "No fue el tratamiento usado.",
+      "Rey mío": "Daniel no empleó ese título aquí.",
+      "Hermano mío": "No corresponde a sus palabras."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "question_address_title",
+    "option_category": "form_of_address",
+    "significance": "Recupera el tratamiento que enmarca la pregunta de Daniel.",
+    "review": {
+      "reviewer": "gpt-5.6-sol-blind-b-author",
+      "rationale": "Evalúa el modo de dirigirse al interlocutor, detalle no cubierto por la falta de comprensión ni por la pregunta."
+    },
+    "blind_pool": "B"
+  }
+]
