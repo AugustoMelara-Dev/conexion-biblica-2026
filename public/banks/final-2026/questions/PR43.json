@@ -11324,6 +11324,70 @@
     "row_content_sha256": "b0b0e052854805da94cb10dbf63a80eec95fd803dba53dcf61b972d0203b0cf4"
   },
   {
+    "id": "PR43-V11-PILOT-008",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P047-P002-S007",
+    "fact_id": "PR43-P047-P002-S007-V11-F02",
+    "variant_id": "PR43-V11-PILOT-008",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "chapter": "PR43",
+    "reference": "PR43, p. 47, párrafo 2",
+    "source_ref": "PR43, p. 47, párrafo 2",
+    "verse_or_page": "PR43, p. 47, párrafo 2",
+    "source_span": "Lo que Nabucodonosor había adquirido finalmente a costo de indecibles sufrimientos y humillaciones, Belsasar lo pasaba por alto con indiferencia.",
+    "source_quote": "Lo que Nabucodonosor había adquirido finalmente a costo de indecibles sufrimientos y humillaciones, Belsasar lo pasaba por alto con indiferencia.",
+    "context_anchor": "Lo que Nabucodonosor había adquirido finalmente a costo de indecibles sufrimientos y humillaciones, Belsasar lo pasaba por alto con indiferencia.",
+    "evidence_excerpt": "Lo que Nabucodonosor había adquirido finalmente a costo de indecibles sufrimientos y humillaciones, Belsasar lo pasaba por alto con indiferencia.",
+    "topic": "comparison",
+    "importance": "critical",
+    "relation_type": "contrast",
+    "option_category": "response",
+    "blind_pool": null,
+    "question": "¿Cómo contrastó la actitud de Belsasar con lo que Nabucodonosor había aprendido?",
+    "options": [
+      "Lo estudió con humildad",
+      "Lo pasó por alto con indiferencia",
+      "Lo proclamó ante sus príncipes",
+      "Lo convirtió en ley del reino"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Lo pasó por alto con indiferencia",
+    "accepted_answers": [
+      "Lo pasó por alto con indiferencia",
+      "lo pasaba por alto"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Belsasar ignoró con indiferencia lo que su abuelo obtuvo mediante sufrimiento y humillación.",
+    "why_distractors_fail": {
+      "Lo estudió con humildad": "Su conducta mostró lo contrario.",
+      "Lo proclamó ante sus príncipes": "No transmitió esa lección.",
+      "Lo convirtió en ley del reino": "No se registra tal decreto."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "Belsasar ignoró con indiferencia lo que su abuelo obtuvo mediante sufrimiento y humillación.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "c1e86f3b951b9a89d4e2ddfe7ac76d98314f98b2dfda06798420be44e273794a",
+    "row_content_sha256": "db9734834bc914c3aeda8dcbdbf87d1c68c471d9c5014969f48576f92124951a"
+  },
+  {
     "id": "PR43-V11-PILOT-009",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -11894,6 +11958,124 @@
     "row_content_sha256": "adad63e7548b3da1b60ff360566caf7b83085099b1d9cee675b4a3ce847f19e9"
   },
   {
+    "id": "PR43-V11-PILOT-018",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P047-P005-S003",
+    "fact_id": "PR43-P047-P005-S003-V11-F02",
+    "variant_id": "PR43-V11-PILOT-018",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "principle",
+    "chapter": "PR43",
+    "reference": "PR43, p. 47, párrafo 5",
+    "source_ref": "PR43, p. 47, párrafo 5",
+    "verse_or_page": "PR43, p. 47, párrafo 5",
+    "source_span": "El rey quería probar que nada era demasiado sagrado para sus manos.",
+    "source_quote": "El rey quería probar que nada era demasiado sagrado para sus manos.",
+    "context_anchor": "El rey quería probar que nada era demasiado sagrado para sus manos.",
+    "evidence_excerpt": "El rey quería probar que nada era demasiado sagrado para sus manos.",
+    "topic": "principle",
+    "importance": "critical",
+    "relation_type": "intention",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "Belsasar quería demostrar que nada era demasiado sagrado para sus manos.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Ese era precisamente el desafío expresado al usar los vasos sagrados.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación reproduce la intención atribuida al rey."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "Ese era precisamente el desafío expresado al usar los vasos sagrados.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "e73405fc89887b74a9ccb176dd986675ea97ea7c6352d2fb11a204958b558b82",
+    "row_content_sha256": "bb0d6c0462688e65c17050d3d5ef6a6afc9df674add16d7fb9a38f43adf0e423"
+  },
+  {
+    "id": "PR43-V11-PILOT-019",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P047-P005-S005",
+    "fact_id": "PR43-P047-P005-S005-V11-F02",
+    "variant_id": "PR43-V11-PILOT-019",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "chapter": "PR43",
+    "reference": "PR43, p. 47, párrafo 5",
+    "source_ref": "PR43, p. 47, párrafo 5",
+    "verse_or_page": "PR43, p. 47, párrafo 5",
+    "source_span": "Bebieron vino, y alabaron a los dioses de oro y de plata, de metal, de hierro, de madera, y de piedra.”",
+    "source_quote": "Bebieron vino, y alabaron a los dioses de oro y de plata, de metal, de hierro, de madera, y de piedra.”",
+    "context_anchor": "Bebieron vino, y alabaron a los dioses de oro y de plata, de metal, de hierro, de madera, y de piedra.”",
+    "evidence_excerpt": "Bebieron vino, y alabaron a los dioses de oro y de plata, de metal, de hierro, de madera, y de piedra.”",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "worship",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "Durante el banquete alabaron a dioses hechos de diversos materiales.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Alabaron dioses de oro, plata, metal, hierro, madera y piedra.",
+    "why_distractors_fail": {
+      "Falso": "La lista enumera varios materiales de los ídolos."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "easy",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "Alabaron dioses de oro, plata, metal, hierro, madera y piedra.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "ae5193dbba0668ba9320df54cf8ee9f7310c950e74e3fed4763f1e34fa030852",
+    "row_content_sha256": "68e21563513fadbce9896e6e53b00cdf569477de93262b6fee87d99bd1658bcb"
+  },
+  {
     "id": "PR43-V11-PILOT-020",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -12150,6 +12332,70 @@
     },
     "content_sha256": "cb9ba35f7339dfe2aedf0acdda4bdcd38add4382d73e309fca0c342b4749b00a",
     "row_content_sha256": "4b4ba8adbaca19d261a9a3788d254bd1005f38e2b1935fc5957088136d7d9e4f"
+  },
+  {
+    "id": "PR43-V11-PILOT-024",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P048-P003-S002",
+    "fact_id": "PR43-P048-P003-S002-V11-F02",
+    "variant_id": "PR43-V11-PILOT-024",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "chapter": "PR43",
+    "reference": "PR43, p. 48, párrafo 3",
+    "source_ref": "PR43, p. 48, párrafo 3",
+    "verse_or_page": "PR43, p. 48, párrafo 3",
+    "source_span": "El era quien llevaba la mayor responsabilidad por la rebelión contra Dios que había llegado esa noche a su apogeo en el reino babilónico.",
+    "source_quote": "El era quien llevaba la mayor responsabilidad por la rebelión contra Dios que había llegado esa noche a su apogeo en el reino babilónico.",
+    "context_anchor": "El era quien llevaba la mayor responsabilidad por la rebelión contra Dios que había llegado esa noche a su apogeo en el reino babilónico.",
+    "evidence_excerpt": "El era quien llevaba la mayor responsabilidad por la rebelión contra Dios que había llegado esa noche a su apogeo en el reino babilónico.",
+    "topic": "cause_consequence",
+    "importance": "critical",
+    "relation_type": "responsibility",
+    "option_category": "cause",
+    "blind_pool": null,
+    "question": "¿Por qué recaía sobre Belsasar la mayor responsabilidad aquella noche?",
+    "options": [
+      "Había abierto las puertas de la ciudad",
+      "Había llamado a Daniel demasiado tarde",
+      "Había perdido las provisiones del palacio",
+      "Había encabezado la rebelión que llegó a su apogeo"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Había encabezado la rebelión que llegó a su apogeo",
+    "accepted_answers": [
+      "Había encabezado la rebelión que llegó a su apogeo",
+      "llevaba la mayor responsabilidad por la rebelión"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La rebelión contra Dios culminó bajo su responsabilidad.",
+    "why_distractors_fail": {
+      "Había abierto las puertas de la ciudad": "No se le atribuye abrirlas.",
+      "Había llamado a Daniel demasiado tarde": "Eso no define la mayor responsabilidad señalada.",
+      "Había perdido las provisiones del palacio": "La culpa era moral, no logística."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 3,
+      "rationale": "La rebelión contra Dios culminó bajo su responsabilidad.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "e75b263f1906b8576d911bb17ae4346b567b61b753bcbde80408f8de31857a9e",
+    "row_content_sha256": "406bb8b8322394726cafcc8fabea7b4491b087a8e7b2914b02d86bdbce6dae18"
   },
   {
     "id": "PR43-V11-PILOT-025",
@@ -12911,6 +13157,270 @@
     },
     "content_sha256": "d796904eb0defa45b7ac13519091ce2c095c1c0076be3c807265a725668d5154",
     "row_content_sha256": "c3ea9362a69ba318d308032fc25dc0db30791dd2b4b0a609d5f20dd11e29245b"
+  },
+  {
+    "id": "PR43-V11-PILOT-037",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P048-P002-S004",
+    "fact_id": "PR43-P048-P002-S004-V11-F02",
+    "variant_id": "PR43-V11-PILOT-037",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "principle",
+    "chapter": "PR43",
+    "reference": "PR43, p. 48, párrafo 2",
+    "source_ref": "PR43, p. 48, párrafo 2",
+    "verse_or_page": "PR43, p. 48, párrafo 2",
+    "source_span": "Cuando Dios infunde miedo en los hombres, no pueden ocultar la intensidad de su terror.",
+    "source_quote": "Cuando Dios infunde miedo en los hombres, no pueden ocultar la intensidad de su terror.",
+    "context_anchor": "Cuando Dios infunde miedo en los hombres, no pueden ocultar la intensidad de su terror.",
+    "evidence_excerpt": "Cuando Dios infunde miedo en los hombres, no pueden ocultar la intensidad de su terror.",
+    "topic": "principle",
+    "importance": "high",
+    "relation_type": "principle",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "Cuando Dios infunde miedo, los hombres pueden ocultar por completo la intensidad de su terror.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El texto afirma que no pueden ocultar la intensidad de su terror.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación elimina la negación del principio expresado."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": {
+      "changed_fields": [
+        "ability"
+      ],
+      "local": true,
+      "original": "no pueden ocultar",
+      "replacement": "pueden ocultar por completo"
+    },
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "El texto afirma que no pueden ocultar la intensidad de su terror.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "b6f43f630d0f93814600f3fed487bbe2810043685324eb8e125637c234b1561f",
+    "row_content_sha256": "94531c1ab42c4572244caf7cf0d60a52067b9c79dd904b6a12d22f834b7e3961"
+  },
+  {
+    "id": "PR43-V11-PILOT-038",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P048-P003-S003",
+    "fact_id": "PR43-P048-P003-S003-V11-F03",
+    "variant_id": "PR43-V11-PILOT-038",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "chapter": "PR43",
+    "reference": "PR43, p. 48, párrafo 3",
+    "source_ref": "PR43, p. 48, párrafo 3",
+    "verse_or_page": "PR43, p. 48, párrafo 3",
+    "source_span": "En presencia del Vigía invisible, representante de Aquel cuyo poder había sido desafiado y cuyo nombre había sido blasfemado, el rey se quedó paralizado de miedo.",
+    "source_quote": "En presencia del Vigía invisible, representante de Aquel cuyo poder había sido desafiado y cuyo nombre había sido blasfemado, el rey se quedó paralizado de miedo.",
+    "context_anchor": "En presencia del Vigía invisible, representante de Aquel cuyo poder había sido desafiado y cuyo nombre había sido blasfemado, el rey se quedó paralizado de miedo.",
+    "evidence_excerpt": "En presencia del Vigía invisible, representante de Aquel cuyo poder había sido desafiado y cuyo nombre había sido blasfemado, el rey se quedó paralizado de miedo.",
+    "topic": "cause_consequence",
+    "importance": "critical",
+    "relation_type": "reaction",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "Ante el Vigía invisible, Belsasar conservó la calma y siguió celebrando.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El rey quedó paralizado de miedo.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación sustituye la parálisis por calma festiva."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "easy",
+    "false_mutation": {
+      "changed_fields": [
+        "reaction"
+      ],
+      "local": true,
+      "original": "se quedó paralizado de miedo",
+      "replacement": "conservó la calma"
+    },
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "El rey quedó paralizado de miedo.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "ac0829775342748ca867db82cd42ac6b1f065d119ab33fe84db7d924a96fc336",
+    "row_content_sha256": "f61e0586c391c2b67a844e34dd139e41f8045c3a72dae08d6726d906d08f0e58"
+  },
+  {
+    "id": "PR43-V11-PILOT-039",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P048-P004-S005",
+    "fact_id": "PR43-P048-P004-S005-V11-F04",
+    "variant_id": "PR43-V11-PILOT-039",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "chapter": "PR43",
+    "reference": "PR43, p. 48, párrafo 4",
+    "source_ref": "PR43, p. 48, párrafo 4",
+    "verse_or_page": "PR43, p. 48, párrafo 4",
+    "source_span": "Prometió: “Cualquiera que leyere esta escritura, y me mostrare su declaración, será vestido de púrpura, y tendrá collar de oro a su cuello; y en el reino se enseñoreará el tercero.",
+    "source_quote": "Prometió: “Cualquiera que leyere esta escritura, y me mostrare su declaración, será vestido de púrpura, y tendrá collar de oro a su cuello; y en el reino se enseñoreará el tercero.",
+    "context_anchor": "Prometió: “Cualquiera que leyere esta escritura, y me mostrare su declaración, será vestido de púrpura, y tendrá collar de oro a su cuello; y en el reino se enseñoreará el tercero.",
+    "evidence_excerpt": "Prometió: “Cualquiera que leyere esta escritura, y me mostrare su declaración, será vestido de púrpura, y tendrá collar de oro a su cuello; y en el reino se enseñoreará el tercero.",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "rank",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "Belsasar prometió que el intérprete sería el segundo señor del reino.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La posición prometida era la de tercer señor.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación cambia únicamente el rango ofrecido."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": {
+      "changed_fields": [
+        "rank"
+      ],
+      "local": true,
+      "original": "el tercero",
+      "replacement": "el segundo"
+    },
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "La posición prometida era la de tercer señor.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "b1c053a46a4d03f3056ed33cc79bd4bca85e136c66eed87a5354153d575849cc",
+    "row_content_sha256": "b15c3acd9bd512b11abb53664a85e96ab5d0e9fc846299033ab7ef42949bc067"
+  },
+  {
+    "id": "PR43-V11-PILOT-040",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P049-P001-S002",
+    "fact_id": "PR43-P049-P001-S002-V11-F02",
+    "variant_id": "PR43-V11-PILOT-040",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "principle",
+    "chapter": "PR43",
+    "reference": "PR43, p. 49, párrafo 1",
+    "source_ref": "PR43, p. 49, párrafo 1",
+    "verse_or_page": "PR43, p. 49, párrafo 1",
+    "source_span": "Dijo entonces: “Tus dones sean para ti, y tus presentes dalos a otro.",
+    "source_quote": "Dijo entonces: “Tus dones sean para ti, y tus presentes dalos a otro.",
+    "context_anchor": "Dijo entonces: “Tus dones sean para ti, y tus presentes dalos a otro.",
+    "evidence_excerpt": "Dijo entonces: “Tus dones sean para ti, y tus presentes dalos a otro.",
+    "topic": "principle",
+    "importance": "critical",
+    "relation_type": "integrity",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "Daniel aceptó los dones de Belsasar como condición para interpretar la escritura.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Daniel dijo que los dones quedaran con el rey o fueran dados a otro.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación convierte el rechazo explícito en aceptación condicionada."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": {
+      "changed_fields": [
+        "response_to_gifts"
+      ],
+      "local": true,
+      "original": "Tus dones sean para ti",
+      "replacement": "aceptó los dones"
+    },
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "Daniel dijo que los dones quedaran con el rey o fueran dados a otro.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "74cf375f318089daa454e3b65c1614b0b3cb2942ab934c6962f955ca0ab94fe8",
+    "row_content_sha256": "edbe444e4792c92ff1516d19c8e95c7c05569dad110b5252bc38f2edc5562833"
   },
   {
     "id": "PR43-V11-PILOT-041",
@@ -13807,6 +14317,190 @@
     "row_content_sha256": "7762a9e8d172b78534ddfbbfd0db2bc14d8f244ab82ae2b257f0a04c14ca1e18"
   },
   {
+    "id": "PR43-V11-PILOT-055",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P049-P006-S003",
+    "fact_id": "PR43-P049-P006-S003-V11-F02",
+    "variant_id": "PR43-V11-PILOT-055",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "principle",
+    "chapter": "PR43",
+    "reference": "PR43, p. 49, párrafo 6",
+    "source_ref": "PR43, p. 49, párrafo 6",
+    "verse_or_page": "PR43, p. 49, párrafo 6",
+    "source_span": "Mediante múltiples providencias, Dios había procurado enseñarles a reverenciar su ley.",
+    "source_quote": "Mediante múltiples providencias, Dios había procurado enseñarles a reverenciar su ley.",
+    "context_anchor": "Mediante múltiples providencias, Dios había procurado enseñarles a reverenciar su ley.",
+    "evidence_excerpt": "Mediante múltiples providencias, Dios había procurado enseñarles a reverenciar su ley.",
+    "topic": "principle",
+    "importance": "critical",
+    "relation_type": "divine_purpose",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "Dios había usado múltiples providencias para enseñar a Babilonia a reverenciar su ley.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Las providencias divinas procuraban enseñar reverencia por la ley de Dios.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación reproduce el propósito declarado de esas providencias."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "Las providencias divinas procuraban enseñar reverencia por la ley de Dios.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "b2dc33e640de6c15641c12215866398ca37dea5598fb63ecbb34cc44da6cefed",
+    "row_content_sha256": "977c3a46a4dfc7474c5ad61081d82bd424d6b0fae8218396eb7c5a6d0f29f0f2"
+  },
+  {
+    "id": "PR43-V11-PILOT-056",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P049-P006-S005",
+    "fact_id": "PR43-P049-P006-S005-V11-F02",
+    "variant_id": "PR43-V11-PILOT-056",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "chapter": "PR43",
+    "reference": "PR43, p. 49, párrafo 6",
+    "source_ref": "PR43, p. 49, párrafo 6",
+    "verse_or_page": "PR43, p. 49, párrafo 6",
+    "source_span": "A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
+    "source_quote": "A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
+    "context_anchor": "A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
+    "evidence_excerpt": "A causa de la extraña perversidad del corazón humano, Dios encontraba por fin necesario dictar la sentencia irrevocable.",
+    "topic": "cause_consequence",
+    "importance": "critical",
+    "relation_type": "finality",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "La sentencia dictada contra Babilonia todavía podía revocarse.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La perversidad humana hizo necesaria una sentencia irrevocable.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación cambia el carácter irrevocable de la sentencia."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": {
+      "changed_fields": [
+        "revocability"
+      ],
+      "local": true,
+      "original": "sentencia irrevocable",
+      "replacement": "podía revocarse"
+    },
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "La perversidad humana hizo necesaria una sentencia irrevocable.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "a23354f63bc3b67e94bf68ce2dc39fa6b0a7191498cf79c9fe166cd75a2e81db",
+    "row_content_sha256": "0932f24de6fb3b8cc44ff441ff407cd21b0e9a27c7e0093007f18974019a95fa"
+  },
+  {
+    "id": "PR43-V11-PILOT-057",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P049-P007-S001",
+    "fact_id": "PR43-P049-P007-S001-V11-F02",
+    "variant_id": "PR43-V11-PILOT-057",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "chapter": "PR43",
+    "reference": "PR43, p. 49, párrafo 7",
+    "source_ref": "PR43, p. 49, párrafo 7",
+    "verse_or_page": "PR43, p. 49, párrafo 7",
+    "source_span": "Cuando el profeta dejó de hablar, el rey ordenó que se le recompensase con los honores prometidos; y en consecuencia “vistieron a Daniel de púrpura, y en su cuello fué puesto un collar de oro, y pregonaron de él que fuese el tercer señor en el reino.”",
+    "source_quote": "Cuando el profeta dejó de hablar, el rey ordenó que se le recompensase con los honores prometidos; y en consecuencia “vistieron a Daniel de púrpura, y en su cuello fué puesto un collar de oro, y pregonaron de él que fuese el tercer señor en el reino.”",
+    "context_anchor": "Cuando el profeta dejó de hablar, el rey ordenó que se le recompensase con los honores prometidos; y en consecuencia “vistieron a Daniel de púrpura, y en su cuello fué puesto un collar de oro, y pregonaron de él que fuese el tercer señor en el reino.”",
+    "evidence_excerpt": "Cuando el profeta dejó de hablar, el rey ordenó que se le recompensase con los honores prometidos; y en consecuencia “vistieron a Daniel de púrpura, y en su cuello fué puesto un collar de oro, y pregonaron de él que fuese el tercer señor en el reino.”",
+    "topic": "cause_consequence",
+    "importance": "high",
+    "relation_type": "outcome",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "Después de interpretar la escritura, Daniel recibió los honores que Belsasar había prometido.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El rey ordenó vestirlo de púrpura, colocarle el collar y proclamarlo tercero.",
+    "why_distractors_fail": {
+      "Falso": "Aunque Daniel había rechazado los dones como motivo, el rey ordenó cumplir los honores."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "El rey ordenó vestirlo de púrpura, colocarle el collar y proclamarlo tercero.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "0c778b3cdbe0f3501982187131612c291a07604cc2ac0a211e86bfdbd6a0b114",
+    "row_content_sha256": "4242a8100e1868a88951bda1490d5ed3bf1c05d234ec3971fecbcc481ca48a91"
+  },
+  {
     "id": "PR43-V11-PILOT-058",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -13930,6 +14624,72 @@
     },
     "content_sha256": "32d196b1236ce624ac1aa0b56d103e573eb1aac2aefc4783e740482fb3745551",
     "row_content_sha256": "767f726048421519a505f39a53d93a8b5bc6f1e8ceeb2dc3f958edcfa66877ca"
+  },
+  {
+    "id": "PR43-V11-PILOT-060",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P050-P003-S001",
+    "fact_id": "PR43-P050-P003-S001-V11-F03",
+    "variant_id": "PR43-V11-PILOT-060",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "chapter": "PR43",
+    "reference": "PR43, p. 50, párrafo 3",
+    "source_ref": "PR43, p. 50, párrafo 3",
+    "verse_or_page": "PR43, p. 50, párrafo 3",
+    "source_span": "“La misma noche fué muerto Belsasar, rey de los Caldeos,” y un monarca extranjero se sentó en el trono.",
+    "source_quote": "“La misma noche fué muerto Belsasar, rey de los Caldeos,” y un monarca extranjero se sentó en el trono.",
+    "context_anchor": "“La misma noche fué muerto Belsasar, rey de los Caldeos,” y un monarca extranjero se sentó en el trono.",
+    "evidence_excerpt": "“La misma noche fué muerto Belsasar, rey de los Caldeos,” y un monarca extranjero se sentó en el trono.",
+    "topic": "cause_consequence",
+    "importance": "critical",
+    "relation_type": "outcome",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "Belsasar sobrevivió aquella noche y entregó voluntariamente el trono al monarca extranjero.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Belsasar fue muerto esa misma noche; no entregó voluntariamente el trono.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación sustituye su muerte por una transferencia voluntaria."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "easy",
+    "false_mutation": {
+      "changed_fields": [
+        "fate"
+      ],
+      "local": true,
+      "original": "La misma noche fué muerto Belsasar",
+      "replacement": "sobrevivió aquella noche"
+    },
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "Belsasar fue muerto esa misma noche; no entregó voluntariamente el trono.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "19a035e7f7770e98c7d7e64f40e2ce949199f6a1451bc6a8eb80e774760248ad",
+    "row_content_sha256": "076259cf453935c3d9fba343b316d07c709cc624464c3fde31848850d97bc6b0"
   },
   {
     "id": "PR43-V11-WAVE-061",
@@ -14373,6 +15133,69 @@
     },
     "content_sha256": "63f8cfdbb6041eb8e515598db6831bb8178bde56296bbefc84652bffa442b618",
     "row_content_sha256": "6f95e76017ae84d553d18b5ae6b3aef9706e453fbea052a7093892b7d7d26913"
+  },
+  {
+    "id": "PR43-V11-WAVE-068",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P051-P007-S002",
+    "fact_id": "PR43-P051-P007-S002-V11-F02",
+    "variant_id": "PR43-V11-WAVE-068",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_contextual",
+    "subtype": "prophetic_detail",
+    "chapter": "PR43",
+    "reference": "PR43, p. 51, párrafo 7",
+    "source_ref": "PR43, p. 51, párrafo 7",
+    "verse_or_page": "PR43, p. 51, párrafo 7",
+    "source_span": "Vendrá pues sobre ti mal, cuyo nacimiento no sabrás: caerá sobre ti quebrantamiento, el cual no podrás remediar: y destrucción que no sabrás, vendrá de repente sobre ti.",
+    "source_quote": "Vendrá pues sobre ti mal, cuyo nacimiento no sabrás: caerá sobre ti quebrantamiento, el cual no podrás remediar: y destrucción que no sabrás, vendrá de repente sobre ti.",
+    "context_anchor": "Vendrá pues sobre ti mal, cuyo nacimiento no sabrás: caerá sobre ti quebrantamiento, el cual no podrás remediar: y destrucción que no sabrás, vendrá de repente sobre ti.",
+    "evidence_excerpt": "Vendrá pues sobre ti mal, cuyo nacimiento no sabrás: caerá sobre ti quebrantamiento, el cual no podrás remediar: y destrucción que no sabrás, vendrá de repente sobre ti.",
+    "topic": "prophetic_detail",
+    "importance": "critical",
+    "relation_type": "ruin_inevitability_sequence",
+    "option_category": "prophetic_outcome_set",
+    "blind_pool": null,
+    "question": "¿Cómo presenta la sentencia la incapacidad de Babilonia para anticipar o detener su ruina?",
+    "options": [
+      "La amenaza sería anunciada con años de anticipación y podría comprarse una salida",
+      "El daño sería leve, conocido y reversible mediante sus consejeros",
+      "La destrucción afectaría solo sus campos y respetaría el trono",
+      "El mal tendría origen desconocido, el quebrantamiento sería irremediable y la destrucción llegaría de repente"
+    ],
+    "correct_option": 3,
+    "correct_answer": "El mal tendría origen desconocido, el quebrantamiento sería irremediable y la destrucción llegaría de repente",
+    "accepted_answers": [
+      "El mal tendría origen desconocido, el quebrantamiento sería irremediable y la destrucción llegaría de repente"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La profecía acumula desconocimiento, falta de remedio y sorpresa para mostrar una ruina inevitable.",
+    "why_distractors_fail": {
+      "La amenaza sería anunciada con años de anticipación y podría comprarse una salida": "La sentencia recalca sorpresa e imposibilidad de remedio.",
+      "El daño sería leve, conocido y reversible mediante sus consejeros": "Invierte los tres rasgos del anuncio.",
+      "La destrucción afectaría solo sus campos y respetaría el trono": "No se establece esa limitación."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "expert",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 3,
+      "rationale": "La profecía acumula desconocimiento, falta de remedio y sorpresa para mostrar una ruina inevitable.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "5ae11d3ccd19769aa015921f98837d345d286c17e17fd8c44f070ba0e8e9d061",
+    "row_content_sha256": "77aa989faa5bc9d7acd147e1ee51265d5c22b321211239b24d3ea201f27d8c95"
   },
   {
     "id": "PR43-V11-WAVE-069",
@@ -15080,6 +15903,124 @@
     "row_content_sha256": "437e37e4b2910d36ad4e6f011cc59f76ce656d0fde13a69dedb3c4b108371504"
   },
   {
+    "id": "PR43-V11-WAVE-080",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P050-P007-S002",
+    "fact_id": "PR43-P050-P007-S002-V11-F02",
+    "variant_id": "PR43-V11-WAVE-080",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "chapter": "PR43",
+    "reference": "PR43, p. 50, párrafo 7",
+    "source_ref": "PR43, p. 50, párrafo 7",
+    "verse_or_page": "PR43, p. 50, párrafo 7",
+    "source_span": "Así hizo cesar Jehová de los ejércitos “la arrogancia de los soberbios” y abatió “la altivez de los fuertes.",
+    "source_quote": "Así hizo cesar Jehová de los ejércitos “la arrogancia de los soberbios” y abatió “la altivez de los fuertes.",
+    "context_anchor": "Así hizo cesar Jehová de los ejércitos “la arrogancia de los soberbios” y abatió “la altivez de los fuertes.",
+    "evidence_excerpt": "Así hizo cesar Jehová de los ejércitos “la arrogancia de los soberbios” y abatió “la altivez de los fuertes.",
+    "topic": "cause_consequence",
+    "importance": "critical",
+    "relation_type": "pride_humbled",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "Jehová hizo cesar la arrogancia de los soberbios y abatió la altivez de los fuertes.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La caída de Babilonia se presenta también como humillación de su orgullo.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación conserva los dos grupos y las dos acciones declaradas."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "La caída de Babilonia se presenta también como humillación de su orgullo.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "8f8ef1925a38bf5eb0c3e51e2e900f3d173547b90864b0b456053bc7d618aa76",
+    "row_content_sha256": "20584bdfe9a85217b2e5512607f4438a598f2673f68a8dc66a60988244ab4cb5"
+  },
+  {
+    "id": "PR43-V11-WAVE-081",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P051-P002-S001",
+    "fact_id": "PR43-P051-P002-S001-V11-F02",
+    "variant_id": "PR43-V11-WAVE-081",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "comparison",
+    "chapter": "PR43",
+    "reference": "PR43, p. 51, párrafo 2",
+    "source_ref": "PR43, p. 51, párrafo 2",
+    "verse_or_page": "PR43, p. 51, párrafo 2",
+    "source_span": "Al último gobernante de Babilonia llegó la sentencia del Vigía divino, como había llegado en figura al primero: “A ti dicen, ... el reino es traspasado de ti.",
+    "source_quote": "Al último gobernante de Babilonia llegó la sentencia del Vigía divino, como había llegado en figura al primero: “A ti dicen, ... el reino es traspasado de ti.",
+    "context_anchor": "Al último gobernante de Babilonia llegó la sentencia del Vigía divino, como había llegado en figura al primero: “A ti dicen, ... el reino es traspasado de ti.",
+    "evidence_excerpt": "Al último gobernante de Babilonia llegó la sentencia del Vigía divino, como había llegado en figura al primero: “A ti dicen, ... el reino es traspasado de ti.",
+    "topic": "comparison",
+    "importance": "high",
+    "relation_type": "first_last_ruler_judgment",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "La sentencia que alcanzó al último gobernante de Babilonia ya había llegado en figura al primero.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El capítulo conecta el juicio del último gobernante con la advertencia figurada al primero.",
+    "why_distractors_fail": {
+      "Falso": "La relación entre ambos extremos del gobierno babilónico se declara expresamente."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "El capítulo conecta el juicio del último gobernante con la advertencia figurada al primero.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "dd12943da94ea1739885227f6c00a05fe57be3e04019c78507ba5c1be5b239a7",
+    "row_content_sha256": "3ecd2a676888d53a589c2d397fb2b867fa70312756e848a60a072dc8d29ee458"
+  },
+  {
     "id": "PR43-V11-WAVE-082",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -15144,6 +16085,190 @@
     },
     "content_sha256": "c284b3956a274c5f16fbeb38cce84612814af7b8f5626ebbb95efc98a371f534",
     "row_content_sha256": "f752f79adef6900b430fd8cc6bd92b0d39014d046ea7343b348147f875789321"
+  },
+  {
+    "id": "PR43-V11-WAVE-083",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P052-P002-S003",
+    "fact_id": "PR43-P052-P002-S003-V11-F02",
+    "variant_id": "PR43-V11-WAVE-083",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "principle",
+    "chapter": "PR43",
+    "reference": "PR43, p. 52, párrafo 2",
+    "source_ref": "PR43, p. 52, párrafo 2",
+    "verse_or_page": "PR43, p. 52, párrafo 2",
+    "source_span": "Con cada uno de ellos, como con las naciones de menos potencia, la historia se repitió.",
+    "source_quote": "Con cada uno de ellos, como con las naciones de menos potencia, la historia se repitió.",
+    "context_anchor": "Con cada uno de ellos, como con las naciones de menos potencia, la historia se repitió.",
+    "evidence_excerpt": "Con cada uno de ellos, como con las naciones de menos potencia, la historia se repitió.",
+    "topic": "principle",
+    "importance": "critical",
+    "relation_type": "national_history_pattern",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "El mismo patrón histórico se repitió tanto en los grandes imperios como en las naciones de menor potencia.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La repetición de la historia se aplica a imperios mayores y naciones menores.",
+    "why_distractors_fail": {
+      "Falso": "El alcance incluye expresamente a ambos grupos de naciones."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "La repetición de la historia se aplica a imperios mayores y naciones menores.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "0d4a99a51214a5324162fcaf0a0777ab736546a0b4efa92848de72e521a2e77f",
+    "row_content_sha256": "63be8bae840376a2b8a5a69782b9cd315cba4589eafd948af56e2c5e5a9b00b7"
+  },
+  {
+    "id": "PR43-V11-WAVE-084",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P052-P005-S002",
+    "fact_id": "PR43-P052-P005-S002-V11-F02",
+    "variant_id": "PR43-V11-WAVE-084",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "principle",
+    "chapter": "PR43",
+    "reference": "PR43, p. 52, párrafo 5",
+    "source_ref": "PR43, p. 52, párrafo 5",
+    "verse_or_page": "PR43, p. 52, párrafo 5",
+    "source_span": "En medio de las disensiones y el tumulto de las naciones, el que está sentado más arriba que los querubines sigue guiando los asuntos de esta tierra.",
+    "source_quote": "En medio de las disensiones y el tumulto de las naciones, el que está sentado más arriba que los querubines sigue guiando los asuntos de esta tierra.",
+    "context_anchor": "En medio de las disensiones y el tumulto de las naciones, el que está sentado más arriba que los querubines sigue guiando los asuntos de esta tierra.",
+    "evidence_excerpt": "En medio de las disensiones y el tumulto de las naciones, el que está sentado más arriba que los querubines sigue guiando los asuntos de esta tierra.",
+    "topic": "principle",
+    "importance": "critical",
+    "relation_type": "divine_guidance_continuity",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "En medio de las disensiones y el tumulto de las naciones, el que está sobre los querubines dejó de dirigir los asuntos de la tierra.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Precisamente en medio del tumulto, Dios continúa guiando los asuntos terrenales.",
+    "why_distractors_fail": {
+      "Verdadero": "Invierte la continuidad de la dirección divina."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": {
+      "changed_fields": [
+        "divine_activity"
+      ],
+      "local": true,
+      "original": "sigue guiando los asuntos de esta tierra",
+      "replacement": "dejó de dirigir los asuntos de la tierra"
+    },
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "Precisamente en medio del tumulto, Dios continúa guiando los asuntos terrenales.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "6ac8b3c9b696256746eb3b7652cf5526076e69162366cbd639650ba95fd3175a",
+    "row_content_sha256": "c84dc441108a7d58a5b85ac7b501a220107f0ee68ec7444ea0ab425565694610"
+  },
+  {
+    "id": "PR43-V11-WAVE-085",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P052-P007-S002",
+    "fact_id": "PR43-P052-P007-S002-V11-F02",
+    "variant_id": "PR43-V11-WAVE-085",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "prophetic_detail",
+    "chapter": "PR43",
+    "reference": "PR43, p. 52, párrafo 7",
+    "source_ref": "PR43, p. 52, párrafo 7",
+    "verse_or_page": "PR43, p. 52, párrafo 7",
+    "source_span": "Todo lo que la profecía predijo como habiendo de acontecer hasta el momento actual, se lee cumplido en las páginas de la historia, y podemos tener la seguridad de que todo lo que falta por cumplir se realizará en su orden.",
+    "source_quote": "Todo lo que la profecía predijo como habiendo de acontecer hasta el momento actual, se lee cumplido en las páginas de la historia, y podemos tener la seguridad de que todo lo que falta por cumplir se realizará en su orden.",
+    "context_anchor": "Todo lo que la profecía predijo como habiendo de acontecer hasta el momento actual, se lee cumplido en las páginas de la historia, y podemos tener la seguridad de que todo lo que falta por cumplir se realizará en su orden.",
+    "evidence_excerpt": "Todo lo que la profecía predijo como habiendo de acontecer hasta el momento actual, se lee cumplido en las páginas de la historia, y podemos tener la seguridad de que todo lo que falta por cumplir se realizará en su orden.",
+    "topic": "prophetic_detail",
+    "importance": "critical",
+    "relation_type": "fulfilled_prophecy_confidence",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "El cumplimiento registrado en la historia permite confiar en que lo que aún falta se realizará en su orden.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Lo ya cumplido fundamenta la seguridad acerca del desarrollo ordenado de lo pendiente.",
+    "why_distractors_fail": {
+      "Falso": "La conclusión une explícitamente evidencia histórica y confianza futura."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "Lo ya cumplido fundamenta la seguridad acerca del desarrollo ordenado de lo pendiente.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "6565daede15c5220b48242215f7a19864c0c7afde3f67c68806c95dc98eb06d4",
+    "row_content_sha256": "46ea4a7dc9ee08cffe08cf0991aab8294afb20ddb1ae8694fd6d179bae4c0b0a"
   },
   {
     "id": "PR43-V11-W042-001",
@@ -16740,6 +17865,190 @@
     "row_content_sha256": "e46f79f7f64f318f95fd83df3f22aaacb93bae3cc337a807b6c2f93b29038228"
   },
   {
+    "id": "PR43-V11-W042-032",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P048-P003-S006",
+    "fact_id": "PR43-P048-P003-S006-V11-W042-F03",
+    "variant_id": "PR43-V11-W042-032",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "chapter": "PR43",
+    "reference": "PR43, p. 48, párrafo 3",
+    "source_ref": "PR43, p. 48, párrafo 3",
+    "verse_or_page": "PR43, p. 48, párrafo 3",
+    "source_span": "Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle: ¿Por qué obras así?",
+    "source_quote": "Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle: ¿Por qué obras así?",
+    "context_anchor": "Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle: ¿Por qué obras así?",
+    "evidence_excerpt": "Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle: ¿Por qué obras así?",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "unchallenged_power_assumption",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "Belsasar ni siquiera suponía que alguien pudiera atreverse a cuestionar su manera de obrar.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Su confianza en el propio poder llegaba al punto de no imaginar que alguien le preguntara por qué actuaba así.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación conserva la seguridad arrogante descrita."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "Su confianza en el propio poder llegaba al punto de no imaginar que alguien le preguntara por qué actuaba así.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "3c84c2dd1c67ff1fcd2acd910ccdf1c0420b7d93ec87b37cfda1807c4d5f6202",
+    "row_content_sha256": "c1f81f894481741f50ce13b8563b81e25077cf77070032cacde807c6cf5716b2"
+  },
+  {
+    "id": "PR43-V11-W042-033",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P051-P003-S001",
+    "fact_id": "PR43-P051-P003-S001-V11-W042-F03",
+    "variant_id": "PR43-V11-W042-033",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "prophetic_detail",
+    "chapter": "PR43",
+    "reference": "PR43, p. 51, párrafo 3",
+    "source_ref": "PR43, p. 51, párrafo 3",
+    "verse_or_page": "PR43, p. 51, párrafo 3",
+    "source_span": "“Desciende, y siéntate en el polvo, virgen hija de Babilonia, siéntate en la tierra sin trono, ... siéntate, calla, y entra en tinieblas, hija de los Caldeos: porque nunca más te llamarán señora de reinos.",
+    "source_quote": "“Desciende, y siéntate en el polvo, virgen hija de Babilonia, siéntate en la tierra sin trono, ... siéntate, calla, y entra en tinieblas, hija de los Caldeos: porque nunca más te llamarán señora de reinos.",
+    "context_anchor": "“Desciende, y siéntate en el polvo, virgen hija de Babilonia, siéntate en la tierra sin trono, ... siéntate, calla, y entra en tinieblas, hija de los Caldeos: porque nunca más te llamarán señora de reinos.",
+    "evidence_excerpt": "“Desciende, y siéntate en el polvo, virgen hija de Babilonia, siéntate en la tierra sin trono, ... siéntate, calla, y entra en tinieblas, hija de los Caldeos: porque nunca más te llamarán señora de reinos.",
+    "topic": "prophetic_detail",
+    "importance": "critical",
+    "relation_type": "caldean_daughter_commands",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "La hija de los caldeos recibió la orden de hablar y entrar en tinieblas.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La sentencia le ordena callar, no hablar, antes de entrar en tinieblas.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación sustituye la orden de callar por la de hablar."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": {
+      "changed_fields": [
+        "speech_command"
+      ],
+      "local": true,
+      "original": "calla, y entra en tinieblas",
+      "replacement": "habla y entra en tinieblas"
+    },
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "La sentencia le ordena callar, no hablar, antes de entrar en tinieblas.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "c6215968757c25b9ab8ac20ba938a5f95b6b8ebc52b42275aa09e2abb5add0ef",
+    "row_content_sha256": "7571e73c90cc248067196d0390aa3bf79ac5d1b09184372bc06530c400921d18"
+  },
+  {
+    "id": "PR43-V11-W042-034",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P049-P004-S002",
+    "fact_id": "PR43-P049-P004-S002-V11-W042-F03",
+    "variant_id": "PR43-V11-W042-034",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "factual_recall",
+    "chapter": "PR43",
+    "reference": "PR43, p. 49, párrafo 4",
+    "source_ref": "PR43, p. 49, párrafo 4",
+    "verse_or_page": "PR43, p. 49, párrafo 4",
+    "source_span": "La mano que había trazado los caracteres ya no era visible, pero aquellas cuatro palabras seguían resplandeciendo con terrible claridad; y ahora la gente escuchó con el aliento en suspenso mientras el anciano profeta explicaba:",
+    "source_quote": "La mano que había trazado los caracteres ya no era visible, pero aquellas cuatro palabras seguían resplandeciendo con terrible claridad; y ahora la gente escuchó con el aliento en suspenso mientras el anciano profeta explicaba:",
+    "context_anchor": "La mano que había trazado los caracteres ya no era visible, pero aquellas cuatro palabras seguían resplandeciendo con terrible claridad; y ahora la gente escuchó con el aliento en suspenso mientras el anciano profeta explicaba:",
+    "evidence_excerpt": "La mano que había trazado los caracteres ya no era visible, pero aquellas cuatro palabras seguían resplandeciendo con terrible claridad; y ahora la gente escuchó con el aliento en suspenso mientras el anciano profeta explicaba:",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "audience_suspended_attention",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "La gente escuchó con el aliento en suspenso mientras el anciano profeta explicaba la escritura.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Verdadero",
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La audiencia quedó en suspenso mientras el anciano profeta comenzó la explicación.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación mantiene tanto la reacción de la gente como la acción del profeta."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "La audiencia quedó en suspenso mientras el anciano profeta comenzó la explicación.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "9bf59f39d0430418136d94f90b2980de5d6041f30214510192a6080050d83a3e",
+    "row_content_sha256": "9365f12aac62545fa62d1028939a60a655519e2be0c2bad96ca087fe6eb1b632"
+  },
+  {
     "id": "PR43-V11-W042-036",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -16863,5 +18172,578 @@
     },
     "content_sha256": "733923aa836a73cbba13f3bfbb434cbd7c675d1e77a2dc9f1ef0a737e1640963",
     "row_content_sha256": "5be23b69ab0af5582cb71d686eed4fd3cc6b6d1db33e58c2309bde7f926d2b4e"
+  },
+  {
+    "id": "PR43-V11-BLIND-B-003",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P047-P003-S003",
+    "fact_id": "PR43-P047-P003-S003-V11-BB01",
+    "variant_id": "PR43-V11-BLIND-B-003",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "chapter": "PR43",
+    "reference": "PR43, p. 47, párrafo 3",
+    "source_ref": "PR43, p. 47, párrafo 3",
+    "verse_or_page": "PR43, p. 47, párrafo 3",
+    "source_span": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "source_quote": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "context_anchor": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "evidence_excerpt": "Pero dentro de la fortaleza al parecer inexpugnable, con sus macizas murallas y sus puertas de bronce, protegida por el río Eufrates, y abastecida con abundantes provisiones, el voluptuoso monarca se sentía seguro y dedicaba su tiempo a la alegría y las orgías.",
+    "topic": "cause_consequence",
+    "importance": "high",
+    "relation_type": "fortifications_false_security",
+    "option_category": "cause_effect_pair",
+    "blind_pool": null,
+    "question": "¿Qué efecto produjo en Belsasar la combinación de murallas, puertas, río y provisiones que protegía Babilonia?",
+    "options": [
+      "Se sintió seguro y dedicó su tiempo a la alegría y las orgías",
+      "Se sintió seguro y dedicó su tiempo a inspeccionar las defensas con sus generales",
+      "Se sintió seguro y dedicó su tiempo a preparar provisiones para un sitio prolongado",
+      "Se sintió seguro y dedicó su tiempo a consultar a Daniel sobre el enemigo"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Se sintió seguro y dedicó su tiempo a la alegría y las orgías",
+    "accepted_answers": [
+      "Se sintió seguro y dedicó su tiempo a la alegría y las orgías"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Las defensas que parecían inexpugnables alimentaron la seguridad del monarca, quien dedicó su tiempo a la alegría y las orgías.",
+    "why_distractors_fail": {
+      "Se sintió seguro y dedicó su tiempo a inspeccionar las defensas con sus generales": "La fuente lo presenta entregado a la alegría y las orgías, no a una inspección militar.",
+      "Se sintió seguro y dedicó su tiempo a preparar provisiones para un sitio prolongado": "La fortaleza ya estaba abastecida con abundantes provisiones y el rey se dedicó a la fiesta.",
+      "Se sintió seguro y dedicó su tiempo a consultar a Daniel sobre el enemigo": "Daniel no fue consultado sobre el enemigo; fue llamado después para interpretar la escritura."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "Las defensas que parecían inexpugnables alimentaron la seguridad del monarca, quien dedicó su tiempo a la alegría y las orgías.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "91dfa632c4fe4705e6f609b1c20b57772511de501a47f4a8e6a39c60b7751a55",
+    "row_content_sha256": "9e4622a82c807e5e42daa2ec959e57ae2c658912f19cd39953e1b510a6c21130"
+  },
+  {
+    "id": "PR43-V11-BLIND-B-005",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P048-P001-S002",
+    "fact_id": "PR43-P048-P001-S002-V11-BB01",
+    "variant_id": "PR43-V11-BLIND-B-005",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "chapter": "PR43",
+    "reference": "PR43, p. 48, párrafo 1",
+    "source_ref": "PR43, p. 48, párrafo 1",
+    "verse_or_page": "PR43, p. 48, párrafo 1",
+    "source_span": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "source_quote": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "context_anchor": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "evidence_excerpt": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "topic": "prophetic_detail",
+    "importance": "high",
+    "relation_type": "bloodless_hand_detail",
+    "option_category": "physical_detail",
+    "blind_pool": null,
+    "question": "La mano que apareció para escribir en la pared se describe como una mano sin ____.",
+    "options": [
+      "dedos",
+      "movimiento",
+      "luz",
+      "sangre"
+    ],
+    "correct_option": 3,
+    "correct_answer": "sangre",
+    "accepted_answers": [
+      "sangre"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La aparición sobrenatural fue una mano sin sangre que trazó caracteres resplandecientes.",
+    "why_distractors_fail": {
+      "dedos": "La mano pudo trazar los caracteres; no se afirma que careciera de dedos.",
+      "movimiento": "La mano escribió, por lo que sí tuvo movimiento.",
+      "luz": "Los caracteres resplandecían como fuego."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 3,
+      "rationale": "La aparición sobrenatural fue una mano sin sangre que trazó caracteres resplandecientes.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "ca3ca9884a4381d22ff18cb16715da0d33dd72c7dd749aac39b73f1ae86d14c5",
+    "row_content_sha256": "e5ca1351f87e3d6014a2da4dd68090dbd557f17c97c6c76c1078c5217b220231"
+  },
+  {
+    "id": "PR43-V11-BLIND-B-006",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P048-P001-S002",
+    "fact_id": "PR43-P048-P001-S002-V11-BB02",
+    "variant_id": "PR43-V11-BLIND-B-006",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "chapter": "PR43",
+    "reference": "PR43, p. 48, párrafo 1",
+    "source_ref": "PR43, p. 48, párrafo 1",
+    "verse_or_page": "PR43, p. 48, párrafo 1",
+    "source_span": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "source_quote": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "context_anchor": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "evidence_excerpt": "Al llegar el desenfreno a su apogeo, apareció una mano sin sangre y trazó en las paredes del palacio, con caracteres que resplandecían como fuego, palabras que, aunque desconocidas para la vasta muchedumbre, eran un presagio de condenación para el rey y sus huéspedes, ahora atormentados por su conciencia.",
+    "topic": "comparison",
+    "importance": "critical",
+    "relation_type": "unknown_words_condemnation_effect",
+    "option_category": "comprehension_effect_contrast",
+    "blind_pool": null,
+    "question": "¿Qué contraste hubo entre la comprensión literal de los caracteres y su efecto moral en el banquete?",
+    "options": [
+      "Eran conocidos por la muchedumbre, pero hicieron esperar victoria al rey y sus huéspedes",
+      "Eran desconocidos para la muchedumbre, pero hicieron presentir condenación al rey y sus huéspedes",
+      "Eran desconocidos para los soldados, pero hicieron celebrar al rey y sus huéspedes",
+      "Eran conocidos solo por los músicos, pero dejaron indiferentes al rey y sus huéspedes"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Eran desconocidos para la muchedumbre, pero hicieron presentir condenación al rey y sus huéspedes",
+    "accepted_answers": [
+      "Eran desconocidos para la muchedumbre, pero hicieron presentir condenación al rey y sus huéspedes"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Aunque la vasta muchedumbre desconocía las palabras, estas fueron un presagio de condenación para el rey y sus huéspedes atormentados por la conciencia.",
+    "why_distractors_fail": {
+      "Eran conocidos por la muchedumbre, pero hicieron esperar victoria al rey y sus huéspedes": "La muchedumbre no conocía las palabras y estas anunciaban condenación, no victoria.",
+      "Eran desconocidos para los soldados, pero hicieron celebrar al rey y sus huéspedes": "El contraste se refiere a la vasta muchedumbre y el efecto fue terror moral, no celebración.",
+      "Eran conocidos solo por los músicos, pero dejaron indiferentes al rey y sus huéspedes": "No se atribuye comprensión a los músicos y el rey y sus huéspedes quedaron atormentados por la conciencia."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "Aunque la vasta muchedumbre desconocía las palabras, estas fueron un presagio de condenación para el rey y sus huéspedes atormentados por la conciencia.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "ba24c41f1b1b124c2de615c0451ca80055963608efeedced3ee56cb55b73c789",
+    "row_content_sha256": "813d44d84b5bf3edbe7119303e7d2618d1227a293af6886908ffefdc12cd3df5"
+  },
+  {
+    "id": "PR43-V11-BLIND-B-015",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P050-P001-S001",
+    "fact_id": "PR43-P050-P001-S001-V11-BB01",
+    "variant_id": "PR43-V11-BLIND-B-015",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "chapter": "PR43",
+    "reference": "PR43, p. 50, párrafo 1",
+    "source_ref": "PR43, p. 50, párrafo 1",
+    "verse_or_page": "PR43, p. 50, párrafo 1",
+    "source_span": "Más de un siglo antes, la Inspiración había predicho que “la noche de ... placer” durante la cual el rey y sus consejeros rivalizarían unos con otros para blasfemar contra Dios, se vería de repente trocada en ocasión de miedo y destrucción.",
+    "source_quote": "Más de un siglo antes, la Inspiración había predicho que “la noche de ... placer” durante la cual el rey y sus consejeros rivalizarían unos con otros para blasfemar contra Dios, se vería de repente trocada en ocasión de miedo y destrucción.",
+    "context_anchor": "Más de un siglo antes, la Inspiración había predicho que “la noche de ... placer” durante la cual el rey y sus consejeros rivalizarían unos con otros para blasfemar contra Dios, se vería de repente trocada en ocasión de miedo y destrucción.",
+    "evidence_excerpt": "Más de un siglo antes, la Inspiración había predicho que “la noche de ... placer” durante la cual el rey y sus consejeros rivalizarían unos con otros para blasfemar contra Dios, se vería de repente trocada en ocasión de miedo y destrucción.",
+    "topic": "prophetic_detail",
+    "importance": "high",
+    "relation_type": "belshazzar_night_century_foreknown",
+    "option_category": "time_span",
+    "blind_pool": null,
+    "question": "La noche de placer de Belsasar había sido predicha más de un ____ antes.",
+    "options": [
+      "siglo",
+      "mes",
+      "lustro",
+      "milenio"
+    ],
+    "correct_option": 0,
+    "correct_answer": "siglo",
+    "accepted_answers": [
+      "siglo",
+      "un siglo"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La Inspiración había anunciado aquella noche más de cien años antes.",
+    "why_distractors_fail": {
+      "mes": "La predicción precedió ampliamente a la generación de Belsasar.",
+      "lustro": "Cinco años no corresponde al intervalo indicado.",
+      "milenio": "La fuente habla de más de un siglo, no de mil años."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "La Inspiración había anunciado aquella noche más de cien años antes.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "c0bf8442e426f05865befdeb832b3c2506957846d76e8f08f384ceb359d37589",
+    "row_content_sha256": "3e5f4ba28c6bb0afe18576e5fd6e0f4735504da453508293510336000466c07b"
+  },
+  {
+    "id": "PR43-V11-BLIND-B-018",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P050-P002-S001",
+    "fact_id": "PR43-P050-P002-S001-V11-BB02",
+    "variant_id": "PR43-V11-BLIND-B-018",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "chapter": "PR43",
+    "reference": "PR43, p. 50, párrafo 2",
+    "source_ref": "PR43, p. 50, párrafo 2",
+    "verse_or_page": "PR43, p. 50, párrafo 2",
+    "source_span": "Mientras estaba todavía en el salón de fiestas, rodeado por aquellos cuya suerte estaba sellada, el rey recibió de un mensajero la información de “que su ciudad” era “tomada” por el enemigo contra cuyos planes se había sentido tan seguro; “los vados fueron tomados, ... y consternáronse los hombres de guerra.",
+    "source_quote": "Mientras estaba todavía en el salón de fiestas, rodeado por aquellos cuya suerte estaba sellada, el rey recibió de un mensajero la información de “que su ciudad” era “tomada” por el enemigo contra cuyos planes se había sentido tan seguro; “los vados fueron tomados, ... y consternáronse los hombres de guerra.",
+    "context_anchor": "Mientras estaba todavía en el salón de fiestas, rodeado por aquellos cuya suerte estaba sellada, el rey recibió de un mensajero la información de “que su ciudad” era “tomada” por el enemigo contra cuyos planes se había sentido tan seguro; “los vados fueron tomados, ... y consternáronse los hombres de guerra.",
+    "evidence_excerpt": "Mientras estaba todavía en el salón de fiestas, rodeado por aquellos cuya suerte estaba sellada, el rey recibió de un mensajero la información de “que su ciudad” era “tomada” por el enemigo contra cuyos planes se había sentido tan seguro; “los vados fueron tomados, ... y consternáronse los hombres de guerra.",
+    "topic": "cause_consequence",
+    "importance": "high",
+    "relation_type": "captured_fords_warrior_consternation",
+    "option_category": "statement",
+    "blind_pool": null,
+    "question": "Al saber que los vados habían sido tomados, los hombres de guerra conservaron la confianza.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Falso",
+    "accepted_answers": [
+      "Falso"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El informe declaró que los hombres de guerra quedaron consternados.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación sustituye la consternación por confianza."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": {
+      "changed_fields": [
+        "warrior_reaction"
+      ],
+      "local": true,
+      "original": "consternáronse los hombres de guerra",
+      "replacement": "los hombres de guerra conservaron la confianza"
+    },
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "El informe declaró que los hombres de guerra quedaron consternados.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "c422a787d311581acc431609c21939e9162aef459e85db5a6c085b9eb49f7749",
+    "row_content_sha256": "3aa0680a19eb553611da586b529977944cb31c76ecb848b4ecc24384c7cd5306"
+  },
+  {
+    "id": "PR43-V11-BLIND-B-021",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P050-P005-S002",
+    "fact_id": "PR43-P050-P005-S002-V11-BB01",
+    "variant_id": "PR43-V11-BLIND-B-021",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "chapter": "PR43",
+    "reference": "PR43, p. 50, párrafo 5",
+    "source_ref": "PR43, p. 50, párrafo 5",
+    "verse_or_page": "PR43, p. 50, párrafo 5",
+    "source_span": "“Porque vino destruidor contra ella, contra Babilonia, y sus valientes fueron presos, el arco de ellos fué quebrado: porque Jehová, Dios de retribuciones, dará la paga.",
+    "source_quote": "“Porque vino destruidor contra ella, contra Babilonia, y sus valientes fueron presos, el arco de ellos fué quebrado: porque Jehová, Dios de retribuciones, dará la paga.",
+    "context_anchor": "“Porque vino destruidor contra ella, contra Babilonia, y sus valientes fueron presos, el arco de ellos fué quebrado: porque Jehová, Dios de retribuciones, dará la paga.",
+    "evidence_excerpt": "“Porque vino destruidor contra ella, contra Babilonia, y sus valientes fueron presos, el arco de ellos fué quebrado: porque Jehová, Dios de retribuciones, dará la paga.",
+    "topic": "identification",
+    "importance": "high",
+    "relation_type": "god_of_retributions_title",
+    "option_category": "divine_title",
+    "blind_pool": null,
+    "question": "¿Cómo se identifica a Jehová al explicar que dará la paga a Babilonia?",
+    "options": [
+      "Dios de justicia",
+      "Dios de misericordias",
+      "Dios de retribuciones",
+      "Dios de los ejércitos"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Dios de retribuciones",
+    "accepted_answers": [
+      "Dios de retribuciones",
+      "Jehová, Dios de retribuciones"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La caída militar se vincula con la justicia retributiva de Jehová, quien daría la paga.",
+    "why_distractors_fail": {
+      "Dios de justicia": "La idea es compatible con el pasaje, pero el título exacto empleado aquí es Dios de retribuciones.",
+      "Dios de misericordias": "La frase no usa este título al anunciar la paga de Babilonia.",
+      "Dios de los ejércitos": "Jehová de los ejércitos aparece en el contexto profético, pero no es el título unido a la frase «dará la paga»."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 2,
+      "rationale": "La caída militar se vincula con la justicia retributiva de Jehová, quien daría la paga.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "b3c91377eb110280f5a36eaa655d1fc09b687c7d675066ad2ae528af1fa3ff80",
+    "row_content_sha256": "a036ac439bd03a8164a362e03a865d22b113af8daa22f9929394d15465d4e813"
+  },
+  {
+    "id": "PR43-V11-BLIND-B-024",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P050-P005-S005",
+    "fact_id": "PR43-P050-P005-S005-V11-BB01",
+    "variant_id": "PR43-V11-BLIND-B-024",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "chapter": "PR43",
+    "reference": "PR43, p. 50, párrafo 5",
+    "source_ref": "PR43, p. 50, párrafo 5",
+    "verse_or_page": "PR43, p. 50, párrafo 5",
+    "source_span": "Abrió Jehová tu tesoro, y sacó los vasos de su furor: porque ésta es obra de Jehová, Dios de los ejércitos, en la tierra de los Caldeos.”",
+    "source_quote": "Abrió Jehová tu tesoro, y sacó los vasos de su furor: porque ésta es obra de Jehová, Dios de los ejércitos, en la tierra de los Caldeos.”",
+    "context_anchor": "Abrió Jehová tu tesoro, y sacó los vasos de su furor: porque ésta es obra de Jehová, Dios de los ejércitos, en la tierra de los Caldeos.”",
+    "evidence_excerpt": "Abrió Jehová tu tesoro, y sacó los vasos de su furor: porque ésta es obra de Jehová, Dios de los ejércitos, en la tierra de los Caldeos.”",
+    "topic": "prophetic_detail",
+    "importance": "high",
+    "relation_type": "divine_fury_vessels",
+    "option_category": "divine_attribute",
+    "blind_pool": null,
+    "question": "Jehová abrió su tesoro y sacó los vasos de su ____.",
+    "options": [
+      "misericordia",
+      "furor",
+      "justicia",
+      "paciencia"
+    ],
+    "correct_option": 1,
+    "correct_answer": "furor",
+    "accepted_answers": [
+      "furor",
+      "su furor"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Los vasos de furor representan la ejecución del juicio divino en la tierra de los caldeos.",
+    "why_distractors_fail": {
+      "misericordia": "La imagen citada expresa la ejecución del juicio, no vasos de misericordia.",
+      "justicia": "La justicia explica el juicio, pero la expresión textual es vasos de furor.",
+      "paciencia": "La paciencia divina precedió al juicio; no completa esta imagen profética."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "Los vasos de furor representan la ejecución del juicio divino en la tierra de los caldeos.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "166a523a11a2d649053debb548f29bf7bafe91258e099825d89c5923142f719e",
+    "row_content_sha256": "5cd5a261d7e565eb0db6e28dcde4bac1549a427a2f477df5a0e2dc3de16ee130"
+  },
+  {
+    "id": "PR43-V11-BLIND-B-028",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P051-P001-S003",
+    "fact_id": "PR43-P051-P001-S003-V11-BB01",
+    "variant_id": "PR43-V11-BLIND-B-028",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "chapter": "PR43",
+    "reference": "PR43, p. 51, párrafo 1",
+    "source_ref": "PR43, p. 51, párrafo 1",
+    "verse_or_page": "PR43, p. 51, párrafo 1",
+    "source_span": "“Y convertiréla en posesión de erizos, y en lagunas de agua: y la barreré con escobas de destrucción, dice Jehová de los ejércitos.",
+    "source_quote": "“Y convertiréla en posesión de erizos, y en lagunas de agua: y la barreré con escobas de destrucción, dice Jehová de los ejércitos.",
+    "context_anchor": "“Y convertiréla en posesión de erizos, y en lagunas de agua: y la barreré con escobas de destrucción, dice Jehová de los ejércitos.",
+    "evidence_excerpt": "“Y convertiréla en posesión de erizos, y en lagunas de agua: y la barreré con escobas de destrucción, dice Jehová de los ejércitos.",
+    "topic": "prophetic_detail",
+    "importance": "high",
+    "relation_type": "destruction_brooms_image",
+    "option_category": "judgment_result",
+    "blind_pool": null,
+    "question": "Jehová anunció que barrería a Babilonia con escobas de ____.",
+    "options": [
+      "juicio",
+      "desolación",
+      "destrucción",
+      "purificación"
+    ],
+    "correct_option": 2,
+    "correct_answer": "destrucción",
+    "accepted_answers": [
+      "destrucción"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La imagen de las escobas comunica la eliminación completa de la ciudad condenada.",
+    "why_distractors_fail": {
+      "juicio": "El barrido constituye juicio, pero la expresión exacta es escobas de destrucción.",
+      "desolación": "La desolación es el resultado, no la palabra que completa la imagen.",
+      "purificación": "Barrer podría sugerir purificación, pero la profecía especifica destrucción."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 2,
+      "rationale": "La imagen de las escobas comunica la eliminación completa de la ciudad condenada.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "196840b135dd78f0d24a6279df6aa8c3be73ee4d0b1dee01db98ba235bb2c9dd",
+    "row_content_sha256": "e4d398cc2f1566268fe8950c8c6038531511353a5f11882e4b88f548083e8786"
+  },
+  {
+    "id": "PR43-V11-BLIND-B-033",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR43-P052-P004-S007",
+    "fact_id": "PR43-P052-P004-S007-V11-BB01",
+    "variant_id": "PR43-V11-BLIND-B-033",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "chapter": "PR43",
+    "reference": "PR43, p. 52, párrafo 4",
+    "source_ref": "PR43, p. 52, párrafo 4",
+    "verse_or_page": "PR43, p. 52, párrafo 4",
+    "source_span": "Seres celestiales, sostenidos y guiados por la mano que había debajo de las alas de los querubines, impelían aquellas ruedas; sobre ellos, en el trono de zafiro, estaba el Eterno; y en derredor del trono, había un arco iris, emblema de la misericordia divina.",
+    "source_quote": "Seres celestiales, sostenidos y guiados por la mano que había debajo de las alas de los querubines, impelían aquellas ruedas; sobre ellos, en el trono de zafiro, estaba el Eterno; y en derredor del trono, había un arco iris, emblema de la misericordia divina.",
+    "context_anchor": "Seres celestiales, sostenidos y guiados por la mano que había debajo de las alas de los querubines, impelían aquellas ruedas; sobre ellos, en el trono de zafiro, estaba el Eterno; y en derredor del trono, había un arco iris, emblema de la misericordia divina.",
+    "evidence_excerpt": "Seres celestiales, sostenidos y guiados por la mano que había debajo de las alas de los querubines, impelían aquellas ruedas; sobre ellos, en el trono de zafiro, estaba el Eterno; y en derredor del trono, había un arco iris, emblema de la misericordia divina.",
+    "topic": "cause_consequence",
+    "importance": "critical",
+    "relation_type": "celestial_beings_guided_wheel_motion",
+    "option_category": "movement_cause",
+    "blind_pool": null,
+    "question": "¿Cómo se movían las ruedas de la visión bajo el gobierno representado por la mano?",
+    "options": [
+      "Giraban al azar sin dirección alguna",
+      "Los gobernantes terrenales las empujaban desde el trono",
+      "El torbellino las separaba de los seres vivientes",
+      "Seres celestiales, sostenidos y guiados por la mano, las impulsaban"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Seres celestiales, sostenidos y guiados por la mano, las impulsaban",
+    "accepted_answers": [
+      "Seres celestiales, sostenidos y guiados por la mano, las impulsaban"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La mano bajo las alas sostenía y guiaba a los seres celestiales que impulsaban las ruedas.",
+    "why_distractors_fail": {
+      "Giraban al azar sin dirección alguna": "La visión recalca dirección y armonía.",
+      "Los gobernantes terrenales las empujaban desde el trono": "El movimiento procede de seres celestiales bajo guía divina.",
+      "El torbellino las separaba de los seres vivientes": "Las ruedas estaban vinculadas a los seres vivientes."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "expert",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 3,
+      "rationale": "La mano bajo las alas sostenía y guiaba a los seres celestiales que impulsaban las ruedas.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "e5eaeea5d04ac7a19b2c69cfd89e1c315af6395ff4ea374e5f7bfa3b8343065c",
+    "row_content_sha256": "fe0e0eca6a92563420f032886b301a55e796e2eed1072693b6af6a0b763497df"
   }
 ]

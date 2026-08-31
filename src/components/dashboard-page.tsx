@@ -28,6 +28,10 @@ import type { FinalMission } from "@/domain/final-mission-plan"
 import { formatElapsedMs } from "@/lib/format"
 
 function missionConfig(mission: FinalMission): SessionConfig {
+  const isNew = mission.kind === "new" || mission.kind === "adversarial"
+  const isHardExpert = mission.kind === "hard-expert"
+  const isReview = mission.kind === "review"
+  const isWarmUp = mission.kind === "warm-up"
   const types =
     mission.id === "27-fill"
       ? ["fill_blank" as const]
@@ -41,14 +45,28 @@ function missionConfig(mission: FinalMission): SessionConfig {
               "true_false" as const,
             ]
   return {
-    mode: mission.mode,
+    mode: isNew
+      ? "new"
+      : isHardExpert
+        ? "difficult"
+        : isReview
+          ? "smart-review"
+          : mission.mode,
     count: mission.count,
     sourceWorks: ["Daniel", "Profetas y Reyes"],
     chapters: mission.chapters,
-    difficulties: [1, 2, 3, 4, 5],
-    difficultyBands: ["BASIC", "MEDIUM", "HARD", "EXPERT"],
+    difficulties: isHardExpert ? [4, 5] : [1, 2, 3, 4, 5],
+    difficultyBands: isHardExpert
+      ? ["HARD", "EXPERT"]
+      : ["BASIC", "MEDIUM", "HARD", "EXPERT"],
     types,
-    statuses: ["all"],
+    statuses: isNew
+      ? ["new"]
+      : isReview
+        ? ["all"]
+        : isWarmUp
+          ? ["mastered"]
+          : ["all"],
     shuffleQuestions: true,
     shuffleOptions: true,
     perQuestionSeconds: mission.mode === "simulation" ? 25 : null,
@@ -57,7 +75,7 @@ function missionConfig(mission: FinalMission): SessionConfig {
     strategy: "adaptive",
     trainingPresetId: mission.id,
     includeBlind: mission.blindPool !== null,
-    massive: true,
+    massive: !isWarmUp,
   }
 }
 

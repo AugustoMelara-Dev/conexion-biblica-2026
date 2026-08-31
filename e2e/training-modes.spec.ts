@@ -5,7 +5,7 @@ import { canonicalAnswerForPrompt } from "./canonical-answer"
 async function waitForHome(page: Page) {
   await page.goto("/")
   await expect(
-    page.getByRole("heading", { level: 1, name: "PLAN FINAL — GANAR EL 29" }),
+    page.getByRole("heading", { level: 1, name: "RUTA DEL DÍA" })
   ).toBeVisible({ timeout: 30_000 })
 }
 
@@ -18,7 +18,9 @@ async function openPractice(page: Page) {
   const desktop = page.getByRole("navigation", { name: "Navegación principal" })
   const mobile = page.getByRole("navigation", { name: "Navegación móvil" })
   if ((page.viewportSize()?.width ?? 0) >= 1024)
-    await desktop.getByRole("button", { name: "Practicar", exact: true }).click()
+    await desktop
+      .getByRole("button", { name: "Practicar", exact: true })
+      .click()
   else
     await mobile.getByRole("button", { name: "Practicar", exact: true }).click()
   await expect(heading).toBeVisible()
@@ -31,7 +33,9 @@ async function startAdvanced(page: Page, id: string, count: number) {
   const hub = page.getByRole("region", { name: "Modos avanzados" })
   await hub.getByRole("combobox", { name: "Modo avanzado" }).selectOption(id)
   await hub.getByRole("button", { name: "Iniciar modo avanzado" }).click()
-  await expect(page.getByText(`Pregunta 1 de ${count}`, { exact: true })).toBeVisible({
+  await expect(
+    page.getByText(`Pregunta 1 de ${count}`, { exact: true })
+  ).toBeVisible({
     timeout: 30_000,
   })
 }
@@ -44,7 +48,8 @@ async function answerAndAdvance(page: Page) {
 }
 
 async function chooseKnownAnswer(page: Page, correctAnswer: boolean) {
-  const prompt = (await page.getByRole("heading", { level: 1 }).textContent()) ?? ""
+  const prompt =
+    (await page.getByRole("heading", { level: 1 }).textContent()) ?? ""
   const correct = await canonicalAnswerForPrompt(page, prompt)
   expect(correct).toBeTruthy()
   const radios = page.getByRole("radio")
@@ -60,15 +65,21 @@ async function chooseKnownAnswer(page: Page, correctAnswer: boolean) {
   throw new Error("No se encontró la opción solicitada")
 }
 
-test("una instalación nueva expone un solo banco y una sola misión primaria", async ({ page }) => {
+test("una instalación nueva expone un solo banco y una sola misión primaria", async ({
+  page,
+}) => {
   await waitForHome(page)
   await expect(page.getByText("Banco Maestro Único — Final 2026")).toBeVisible()
-  await expect(page.getByRole("button", { name: "CONTINUAR MI MISIÓN" })).toHaveCount(1)
+  await expect(
+    page.getByRole("button", { name: "CONTINUAR MI RUTA" })
+  ).toHaveCount(1)
   await expect(page.getByRole("combobox", { name: /banco/i })).toHaveCount(0)
   await expect(page.getByText(/\bV[1-6]\b/)).toHaveCount(0)
 })
 
-test("la carga canónica y una pregunta no producen errores de consola", async ({ page }) => {
+test("la carga canónica y una pregunta no producen errores de consola", async ({
+  page,
+}) => {
   const errors: string[] = []
   page.on("console", (message) => {
     if (message.type() === "error") errors.push(message.text())
@@ -80,7 +91,9 @@ test("la carga canónica y una pregunta no producen errores de consola", async (
   expect(errors).toEqual([])
 })
 
-test("las cuatro familias canónicas usan solamente botones de selección", async ({ page }) => {
+test("las cuatro familias canónicas usan solamente botones de selección", async ({
+  page,
+}) => {
   const families = [
     ["expert-multiple-choice", "Selección única", 4],
     ["fill-text", "Completar con opciones", 4],
@@ -108,17 +121,23 @@ test("una recarga conserva pregunta, opciones y posición", async ({ page }) => 
 
   await page.reload()
 
-  await expect(page.getByText("Pregunta 1 de 100", { exact: true })).toBeVisible({
+  await expect(
+    page.getByText("Pregunta 1 de 100", { exact: true })
+  ).toBeVisible({
     timeout: 30_000,
   })
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(prompt ?? "")
   await expect(page.getByRole("radio")).toHaveText(options)
 })
 
-test("el aprendizaje muestra fuente y repara un fallo después de separación", async ({ page }) => {
+test("el aprendizaje muestra fuente y repara un fallo después de separación", async ({
+  page,
+}) => {
   await waitForHome(page)
   await startAdvanced(page, "fill-text", 100)
-  const firstPrompt = await page.getByRole("heading", { level: 1 }).textContent()
+  const firstPrompt = await page
+    .getByRole("heading", { level: 1 })
+    .textContent()
   const firstReference = await page
     .locator("section[aria-labelledby='question-title']")
     .locator(".text-muted-foreground")
@@ -131,25 +150,41 @@ test("el aprendizaje muestra fuente y repara un fallo después de separación", 
   await expect(page.getByText("Referencia")).toBeVisible()
   await page.getByRole("button", { name: "Siguiente" }).click()
 
-  for (let answered = 0; answered < 8; answered += 1) await answerAndAdvance(page)
+  for (let answered = 0; answered < 8; answered += 1)
+    await answerAndAdvance(page)
 
-  await expect(page.getByText("Pregunta 10 de 101", { exact: true })).toBeVisible()
-  await expect(page.getByRole("heading", { level: 1 })).not.toHaveText(firstPrompt ?? "")
-  await expect(page.getByText("Completar con opciones", { exact: true })).toHaveCount(0)
+  await expect(
+    page.getByText("Pregunta 10 de 101", { exact: true })
+  ).toBeVisible()
+  await expect(page.getByRole("heading", { level: 1 })).not.toHaveText(
+    firstPrompt ?? ""
+  )
+  await expect(
+    page.getByText("Completar con opciones", { exact: true })
+  ).toHaveCount(0)
   expect(firstReference).toBeTruthy()
 })
 
-test("resumen, estadísticas e historial conservan la identidad canónica", async ({ page }, testInfo) => {
-  test.skip(!testInfo.project.name.startsWith("desktop-"), "La navegación móvil se valida por separado")
+test("resumen, estadísticas e historial conservan la identidad canónica", async ({
+  page,
+}, testInfo) => {
+  test.skip(
+    !testInfo.project.name.startsWith("desktop-"),
+    "La navegación móvil se valida por separado"
+  )
   await waitForHome(page)
   const desktop = page.getByRole("navigation", { name: "Navegación principal" })
   for (const [destination, heading] of [
     ["Estadísticas", "Progreso"],
     ["Historial", "Historial"],
-    ["Resumen", "PLAN FINAL — GANAR EL 29"],
+    ["Resumen", "RUTA DEL DÍA"],
   ] as const) {
-    await desktop.getByRole("button", { name: destination, exact: true }).click()
-    await expect(page.getByRole("heading", { level: 1, name: heading })).toBeVisible()
+    await desktop
+      .getByRole("button", { name: destination, exact: true })
+      .click()
+    await expect(
+      page.getByRole("heading", { level: 1, name: heading })
+    ).toBeVisible()
     await expect(page.getByText(/\bV[1-6]\b/)).toHaveCount(0)
   }
 })

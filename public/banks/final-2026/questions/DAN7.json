@@ -3525,6 +3525,70 @@
     "row_content_sha256": "5cbe8f89dc2d9b6e575e2005bc2939f39ecf365629756ec2cc10e04ab18ddf40"
   },
   {
+    "id": "DAN7-V11-PILOT-001",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN7-V001",
+    "fact_id": "DAN7-V001-V11-F02",
+    "variant_id": "DAN7-V11-PILOT-001",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "chapter": "DAN7",
+    "reference": "Daniel 7:1",
+    "source_ref": "Daniel 7:1",
+    "verse_or_page": "Daniel 7:1",
+    "source_span": "En el primer año de Belsasar, rey de Babilonia, tuvo Daniel un sueño y visiones de su cabeza mientras estaba en su lecho; luego escribió el sueño y relató lo principal del asunto.",
+    "source_quote": "En el primer año de Belsasar, rey de Babilonia, tuvo Daniel un sueño y visiones de su cabeza mientras estaba en su lecho; luego escribió el sueño y relató lo principal del asunto.",
+    "context_anchor": "En el primer año de Belsasar, rey de Babilonia, tuvo Daniel un sueño y visiones de su cabeza mientras estaba en su lecho; luego escribió el sueño y relató lo principal del asunto.",
+    "evidence_excerpt": "En el primer año de Belsasar, rey de Babilonia, tuvo Daniel un sueño y visiones de su cabeza mientras estaba en su lecho; luego escribió el sueño y relató lo principal del asunto.",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "time",
+    "option_category": "time",
+    "blind_pool": null,
+    "question": "¿Durante qué año del reinado de Belsasar recibió Daniel el sueño que dejó por escrito?",
+    "options": [
+      "El primero",
+      "El tercero",
+      "El séptimo",
+      "El último"
+    ],
+    "correct_option": 0,
+    "correct_answer": "El primero",
+    "accepted_answers": [
+      "El primero",
+      "primer año"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Daniel recibió el sueño en el primer año de Belsasar.",
+    "why_distractors_fail": {
+      "El tercero": "El relato lo fecha en el primer año.",
+      "El séptimo": "Ese número no fecha la visión.",
+      "El último": "El texto no la ubica en el último año."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "Daniel recibió el sueño en el primer año de Belsasar.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "2bcd9202895ab6aad2dc57d807b1c53f6a0f5eeda87a0184d30bc9b605a98595",
+    "row_content_sha256": "ee969c591d7eaafc5161ad0776654b1601d58d735e4ad16567f028ba4599a2c6"
+  },
+  {
     "id": "DAN7-V11-PILOT-002",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -3651,6 +3715,134 @@
     },
     "content_sha256": "e7aff11cd74c5e37c2e003ee39235d6f2301b829738707994fe7f871296036ea",
     "row_content_sha256": "766c21ff9a8baaf6c3f8b6e09ef68070ad79631cd3b9a6298b983f5d27d2a6a2"
+  },
+  {
+    "id": "DAN7-V11-PILOT-004",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN7-V005",
+    "fact_id": "DAN7-V005-V11-F02",
+    "variant_id": "DAN7-V11-PILOT-004",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "chapter": "DAN7",
+    "reference": "Daniel 7:5",
+    "source_ref": "Daniel 7:5",
+    "verse_or_page": "Daniel 7:5",
+    "source_span": "Vi luego una segunda bestia, semejante a un oso, la cual se alzaba de un costado más que del otro. En su boca, entre los dientes, tenía tres costillas; y se le dijo: “Levántate y devora mucha carne.”",
+    "source_quote": "Vi luego una segunda bestia, semejante a un oso, la cual se alzaba de un costado más que del otro. En su boca, entre los dientes, tenía tres costillas; y se le dijo: “Levántate y devora mucha carne.”",
+    "context_anchor": "Vi luego una segunda bestia, semejante a un oso, la cual se alzaba de un costado más que del otro. En su boca, entre los dientes, tenía tres costillas; y se le dijo: “Levántate y devora mucha carne.”",
+    "evidence_excerpt": "Vi luego una segunda bestia, semejante a un oso, la cual se alzaba de un costado más que del otro. En su boca, entre los dientes, tenía tres costillas; y se le dijo: “Levántate y devora mucha carne.”",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "description",
+    "option_category": "posture",
+    "blind_pool": null,
+    "question": "¿Qué postura distinguía a la bestia semejante a un oso?",
+    "options": [
+      "Estaba apoyada sobre cuatro alas",
+      "Permanecía echada sin levantarse",
+      "Tenía la cabeza inclinada hacia el mar",
+      "Un costado estaba más alzado que el otro"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Un costado estaba más alzado que el otro",
+    "accepted_answers": [
+      "Un costado estaba más alzado que el otro",
+      "se alzaba de un costado"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El oso se alzaba de un costado más que del otro.",
+    "why_distractors_fail": {
+      "Estaba apoyada sobre cuatro alas": "Las alas pertenecen a otras bestias.",
+      "Permanecía echada sin levantarse": "Se la describe alzada de un costado.",
+      "Tenía la cabeza inclinada hacia el mar": "Esa postura no aparece."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 3,
+      "rationale": "El oso se alzaba de un costado más que del otro.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "09a1c197e2495e9f7a063e9a5d6cf2aa3af83bedcf48bb878fc61033a0cda37d",
+    "row_content_sha256": "2eda00e266c30bb1098b8f8ea30d47290f982d528c81822b2f7376f3bf591cba"
+  },
+  {
+    "id": "DAN7-V11-PILOT-005",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN7-V005",
+    "fact_id": "DAN7-V005-V11-F03",
+    "variant_id": "DAN7-V11-PILOT-005",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "speaker_addressee",
+    "chapter": "DAN7",
+    "reference": "Daniel 7:5",
+    "source_ref": "Daniel 7:5",
+    "verse_or_page": "Daniel 7:5",
+    "source_span": "Vi luego una segunda bestia, semejante a un oso, la cual se alzaba de un costado más que del otro. En su boca, entre los dientes, tenía tres costillas; y se le dijo: “Levántate y devora mucha carne.”",
+    "source_quote": "Vi luego una segunda bestia, semejante a un oso, la cual se alzaba de un costado más que del otro. En su boca, entre los dientes, tenía tres costillas; y se le dijo: “Levántate y devora mucha carne.”",
+    "context_anchor": "Vi luego una segunda bestia, semejante a un oso, la cual se alzaba de un costado más que del otro. En su boca, entre los dientes, tenía tres costillas; y se le dijo: “Levántate y devora mucha carne.”",
+    "evidence_excerpt": "Vi luego una segunda bestia, semejante a un oso, la cual se alzaba de un costado más que del otro. En su boca, entre los dientes, tenía tres costillas; y se le dijo: “Levántate y devora mucha carne.”",
+    "topic": "speaker_addressee",
+    "importance": "high",
+    "relation_type": "command",
+    "option_category": "command",
+    "blind_pool": null,
+    "question": "¿Qué orden recibió la bestia que tenía costillas entre los dientes?",
+    "options": [
+      "Devora mucha carne",
+      "Guarda silencio",
+      "Regresa al mar",
+      "Entrega tu dominio"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Devora mucha carne",
+    "accepted_answers": [
+      "Devora mucha carne",
+      "Levántate y devora mucha carne"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "A la bestia se le ordenó levantarse y devorar mucha carne.",
+    "why_distractors_fail": {
+      "Guarda silencio": "La orden no trata de su voz.",
+      "Regresa al mar": "No se le manda regresar.",
+      "Entrega tu dominio": "No se le ordena ceder poder."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "A la bestia se le ordenó levantarse y devorar mucha carne.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "e036f7e07b47ff46f9e2cc97a7dbc00269c6c911af2ed65be0c5400b43d7e6b1",
+    "row_content_sha256": "9b36aa73850b8eaed512d970fc93f6a2ea58a8ee4b0e8412a9842164c4e4de6d"
   },
   {
     "id": "DAN7-V11-PILOT-006",
@@ -3843,6 +4035,134 @@
     },
     "content_sha256": "6c9bddee867a693444860d242fcd149c42519412e0636fcc42c2fd2ed64d3e33",
     "row_content_sha256": "9ea00ac9bbfafdaea6de1f51fe5ef3b8c569885864483e8398b1554f4ef8981a"
+  },
+  {
+    "id": "DAN7-V11-PILOT-009",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN7-V009",
+    "fact_id": "DAN7-V009-V11-F02",
+    "variant_id": "DAN7-V11-PILOT-009",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "chapter": "DAN7",
+    "reference": "Daniel 7:9",
+    "source_ref": "Daniel 7:9",
+    "verse_or_page": "Daniel 7:9",
+    "source_span": "Estuve mirando hasta que fueron puestos unos tronos y se sentó un Anciano de días. Su vestido era blanco como la nieve; el pelo de su cabeza, como lana limpia; su trono, llama de fuego, y fuego ardiente las ruedas del mismo.",
+    "source_quote": "Estuve mirando hasta que fueron puestos unos tronos y se sentó un Anciano de días. Su vestido era blanco como la nieve; el pelo de su cabeza, como lana limpia; su trono, llama de fuego, y fuego ardiente las ruedas del mismo.",
+    "context_anchor": "Estuve mirando hasta que fueron puestos unos tronos y se sentó un Anciano de días. Su vestido era blanco como la nieve; el pelo de su cabeza, como lana limpia; su trono, llama de fuego, y fuego ardiente las ruedas del mismo.",
+    "evidence_excerpt": "Estuve mirando hasta que fueron puestos unos tronos y se sentó un Anciano de días. Su vestido era blanco como la nieve; el pelo de su cabeza, como lana limpia; su trono, llama de fuego, y fuego ardiente las ruedas del mismo.",
+    "topic": "comparison",
+    "importance": "high",
+    "relation_type": "comparison",
+    "option_category": "comparison_object",
+    "blind_pool": null,
+    "question": "¿Con qué se compara el cabello del Anciano de días?",
+    "options": [
+      "Lana limpia",
+      "Nieve",
+      "Llama de fuego",
+      "Bronce bruñido"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Lana limpia",
+    "accepted_answers": [
+      "Lana limpia",
+      "como lana limpia"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Su cabello se compara con lana limpia; su vestido, con la nieve.",
+    "why_distractors_fail": {
+      "Nieve": "La nieve describe el vestido.",
+      "Llama de fuego": "La llama describe el trono.",
+      "Bronce bruñido": "Ese símil no aparece en esta escena."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "Su cabello se compara con lana limpia; su vestido, con la nieve.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "f242f28a138d23645007ee118b064764347baea4e529e8d53c4825759d8c5fe1",
+    "row_content_sha256": "c985b762edebb56f900d1c30a5cc17ecea82328ffc3295ae575e0ee64d281283"
+  },
+  {
+    "id": "DAN7-V11-PILOT-010",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN7-V009",
+    "fact_id": "DAN7-V009-V11-F03",
+    "variant_id": "DAN7-V11-PILOT-010",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "chapter": "DAN7",
+    "reference": "Daniel 7:9",
+    "source_ref": "Daniel 7:9",
+    "verse_or_page": "Daniel 7:9",
+    "source_span": "Estuve mirando hasta que fueron puestos unos tronos y se sentó un Anciano de días. Su vestido era blanco como la nieve; el pelo de su cabeza, como lana limpia; su trono, llama de fuego, y fuego ardiente las ruedas del mismo.",
+    "source_quote": "Estuve mirando hasta que fueron puestos unos tronos y se sentó un Anciano de días. Su vestido era blanco como la nieve; el pelo de su cabeza, como lana limpia; su trono, llama de fuego, y fuego ardiente las ruedas del mismo.",
+    "context_anchor": "Estuve mirando hasta que fueron puestos unos tronos y se sentó un Anciano de días. Su vestido era blanco como la nieve; el pelo de su cabeza, como lana limpia; su trono, llama de fuego, y fuego ardiente las ruedas del mismo.",
+    "evidence_excerpt": "Estuve mirando hasta que fueron puestos unos tronos y se sentó un Anciano de días. Su vestido era blanco como la nieve; el pelo de su cabeza, como lana limpia; su trono, llama de fuego, y fuego ardiente las ruedas del mismo.",
+    "topic": "factual_recall",
+    "importance": "critical",
+    "relation_type": "paired_description",
+    "option_category": "description_pair",
+    "blind_pool": null,
+    "question": "¿Cómo se describen el trono y sus ruedas en la escena del juicio?",
+    "options": [
+      "Como zafiro y cristal",
+      "Como llama y fuego ardiente",
+      "Como hierro y bronce",
+      "Como nieve y lana"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Como llama y fuego ardiente",
+    "accepted_answers": [
+      "Como llama y fuego ardiente",
+      "llama de fuego y fuego ardiente"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El trono era llama de fuego y sus ruedas fuego ardiente.",
+    "why_distractors_fail": {
+      "Como zafiro y cristal": "Esos materiales no describen aquí el trono y las ruedas.",
+      "Como hierro y bronce": "Hierro y bronce describen otros símbolos.",
+      "Como nieve y lana": "Nieve y lana describen vestido y cabello."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "El trono era llama de fuego y sus ruedas fuego ardiente.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "365e30ae29e88c5bca5d4be7b2e1eeb7be29e791efaacf81e475d02b82b3db38",
+    "row_content_sha256": "bf0db0de710cf04ca3ce626b963b74c692874fca3ef6f0425a9e52635a6194da"
   },
   {
     "id": "DAN7-V11-PILOT-011",
@@ -4599,6 +4919,70 @@
     "row_content_sha256": "d19f3a3993b59f31bbb79a9813469e04b5b8ca1302ac3eb7484f70de2d26cb5d"
   },
   {
+    "id": "DAN7-V11-PILOT-023",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN7-V013",
+    "fact_id": "DAN7-V013-V11-F02",
+    "variant_id": "DAN7-V11-PILOT-023",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "chapter": "DAN7",
+    "reference": "Daniel 7:13",
+    "source_ref": "Daniel 7:13",
+    "verse_or_page": "Daniel 7:13",
+    "source_span": "Miraba yo en la visión de la noche, y vi que con las nubes del cielo venía uno como un hijo de hombre; vino hasta el Anciano de días, y lo hicieron acercarse delante de él.",
+    "source_quote": "Miraba yo en la visión de la noche, y vi que con las nubes del cielo venía uno como un hijo de hombre; vino hasta el Anciano de días, y lo hicieron acercarse delante de él.",
+    "context_anchor": "Miraba yo en la visión de la noche, y vi que con las nubes del cielo venía uno como un hijo de hombre; vino hasta el Anciano de días, y lo hicieron acercarse delante de él.",
+    "evidence_excerpt": "Miraba yo en la visión de la noche, y vi que con las nubes del cielo venía uno como un hijo de hombre; vino hasta el Anciano de días, y lo hicieron acercarse delante de él.",
+    "topic": "narrative_order",
+    "importance": "critical",
+    "relation_type": "approach",
+    "option_category": "person_or_group",
+    "blind_pool": null,
+    "question": "¿Ante quién hicieron acercarse al que venía con las nubes?",
+    "options": [
+      "El Anciano de días",
+      "El cuerno pequeño",
+      "Los cuatro reyes",
+      "Los santos del Altísimo"
+    ],
+    "correct_option": 0,
+    "correct_answer": "El Anciano de días",
+    "accepted_answers": [
+      "El Anciano de días",
+      "Anciano de días"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El hijo de hombre vino hasta el Anciano de días y fue acercado ante él.",
+    "why_distractors_fail": {
+      "El cuerno pequeño": "El cuerno comparece en otra función.",
+      "Los cuatro reyes": "Los reyes son interpretaciones de las bestias.",
+      "Los santos del Altísimo": "Los santos reciben después el reino."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "El hijo de hombre vino hasta el Anciano de días y fue acercado ante él.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "4c85f179a4392de20f108d4dcfc9ac460bbde85e000bbbb56e7dfbf5a6edcf36",
+    "row_content_sha256": "b0513908592e9394e661245af4b38cfa37eceaa91b60f96d1e111a6dff23498c"
+  },
+  {
     "id": "DAN7-V11-PILOT-024",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -4663,6 +5047,70 @@
     "row_content_sha256": "f31a736afab1883b41fed5e734f168df5205618a13dfcffc89bf8e52ea6e7a00"
   },
   {
+    "id": "DAN7-V11-PILOT-025",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN7-V020",
+    "fact_id": "DAN7-V020-V11-F02",
+    "variant_id": "DAN7-V11-PILOT-025",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "chapter": "DAN7",
+    "reference": "Daniel 7:20",
+    "source_ref": "Daniel 7:20",
+    "verse_or_page": "Daniel 7:20",
+    "source_span": "asimismo acerca de los diez cuernos que tenía en su cabeza, y del otro que le había salido, ante el cual habían caído tres. Este mismo cuerno tenía ojos y una boca que hablaba con gran insolencia, y parecía más grande que sus compañeros.",
+    "source_quote": "asimismo acerca de los diez cuernos que tenía en su cabeza, y del otro que le había salido, ante el cual habían caído tres. Este mismo cuerno tenía ojos y una boca que hablaba con gran insolencia, y parecía más grande que sus compañeros.",
+    "context_anchor": "asimismo acerca de los diez cuernos que tenía en su cabeza, y del otro que le había salido, ante el cual habían caído tres. Este mismo cuerno tenía ojos y una boca que hablaba con gran insolencia, y parecía más grande que sus compañeros.",
+    "evidence_excerpt": "asimismo acerca de los diez cuernos que tenía en su cabeza, y del otro que le había salido, ante el cual habían caído tres. Este mismo cuerno tenía ojos y una boca que hablaba con gran insolencia, y parecía más grande que sus compañeros.",
+    "topic": "factual_recall",
+    "importance": "critical",
+    "relation_type": "quantity",
+    "option_category": "number",
+    "blind_pool": null,
+    "question": "¿Cuántos cuernos cayeron delante del que tenía ojos y boca insolente?",
+    "options": [
+      "Cuatro",
+      "Siete",
+      "Tres",
+      "Diez"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Tres",
+    "accepted_answers": [
+      "Tres",
+      "3"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Delante de ese cuerno habían caído tres.",
+    "why_distractors_fail": {
+      "Cuatro": "Cuatro caracteriza otras partes de la visión.",
+      "Siete": "No es la cantidad de cuernos caídos.",
+      "Diez": "Diez es el número inicial de cuernos."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 2,
+      "rationale": "Delante de ese cuerno habían caído tres.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "ea71f6c92fcceea3f08964e3f434d394741068eec5db6eb4788abe0ed1e165f1",
+    "row_content_sha256": "7c4556f88e1ddc44b700b0c74b68b115a908a43e6ae35f760df126268d5da7aa"
+  },
+  {
     "id": "DAN7-V11-PILOT-026",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -4725,6 +5173,70 @@
     },
     "content_sha256": "2499c907a880c8a45eb499b16cf13669a73a947e8ec3611e118dfeecf0518e99",
     "row_content_sha256": "2b38d3d5c6f6eec3c91629f1cbfe2338af4fe9439ec27696183af3013827afe3"
+  },
+  {
+    "id": "DAN7-V11-PILOT-027",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN7-V025",
+    "fact_id": "DAN7-V025-V11-F02",
+    "variant_id": "DAN7-V11-PILOT-027",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "prophetic_detail",
+    "chapter": "DAN7",
+    "reference": "Daniel 7:25",
+    "source_ref": "Daniel 7:25",
+    "verse_or_page": "Daniel 7:25",
+    "source_span": "Hablará palabras contra el Altísimo, a los santos del Altísimo quebrantará y pensará en cambiar los tiempos y la Ley; y serán entregados en sus manos hasta tiempo, tiempos y medio tiempo.",
+    "source_quote": "Hablará palabras contra el Altísimo, a los santos del Altísimo quebrantará y pensará en cambiar los tiempos y la Ley; y serán entregados en sus manos hasta tiempo, tiempos y medio tiempo.",
+    "context_anchor": "Hablará palabras contra el Altísimo, a los santos del Altísimo quebrantará y pensará en cambiar los tiempos y la Ley; y serán entregados en sus manos hasta tiempo, tiempos y medio tiempo.",
+    "evidence_excerpt": "Hablará palabras contra el Altísimo, a los santos del Altísimo quebrantará y pensará en cambiar los tiempos y la Ley; y serán entregados en sus manos hasta tiempo, tiempos y medio tiempo.",
+    "topic": "prophetic_detail",
+    "importance": "critical",
+    "relation_type": "intention",
+    "option_category": "concept_pair",
+    "blind_pool": null,
+    "question": "¿Qué dos cosas pensaría cambiar el poder que hablaría contra el Altísimo?",
+    "options": [
+      "Los tiempos y la Ley",
+      "Los reinos y las lenguas",
+      "Los tronos y los libros",
+      "Las nubes y el mar"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Los tiempos y la Ley",
+    "accepted_answers": [
+      "Los tiempos y la Ley",
+      "tiempos y Ley"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Ese poder pensaría cambiar los tiempos y la Ley.",
+    "why_distractors_fail": {
+      "Los reinos y las lenguas": "No forman el par que intentaría cambiar.",
+      "Los tronos y los libros": "Pertenecen a la escena del juicio.",
+      "Las nubes y el mar": "Son elementos de la visión, no el objeto del cambio."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "Ese poder pensaría cambiar los tiempos y la Ley.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "d152af34eed090bf9d92b7e8ddfa507b0338bd7b9740a63f13f5a74c5b97939a",
+    "row_content_sha256": "2dc81d3223f1616f8df11b104737c4875f665022deb3cc7f6599ef188ea772be"
   },
   {
     "id": "DAN7-V11-PILOT-028",
@@ -5682,6 +6194,69 @@
     "row_content_sha256": "8fba44f64e31c4c06c014cb33f3316b955a2c19d32b97b7fa072847fcd1fa303"
   },
   {
+    "id": "DAN7-V11-WAVE-015",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN7-V025",
+    "fact_id": "DAN7-V025-V11-F20",
+    "variant_id": "DAN7-V11-WAVE-015",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "relationship",
+    "chapter": "DAN7",
+    "reference": "Daniel 7:25",
+    "source_ref": "Daniel 7:25",
+    "verse_or_page": "Daniel 7:25",
+    "source_span": "Hablará palabras contra el Altísimo, a los santos del Altísimo quebrantará y pensará en cambiar los tiempos y la Ley; y serán entregados en sus manos hasta tiempo, tiempos y medio tiempo.",
+    "source_quote": "Hablará palabras contra el Altísimo, a los santos del Altísimo quebrantará y pensará en cambiar los tiempos y la Ley; y serán entregados en sus manos hasta tiempo, tiempos y medio tiempo.",
+    "context_anchor": "Hablará palabras contra el Altísimo, a los santos del Altísimo quebrantará y pensará en cambiar los tiempos y la Ley; y serán entregados en sus manos hasta tiempo, tiempos y medio tiempo.",
+    "evidence_excerpt": "Hablará palabras contra el Altísimo, a los santos del Altísimo quebrantará y pensará en cambiar los tiempos y la Ley; y serán entregados en sus manos hasta tiempo, tiempos y medio tiempo.",
+    "topic": "relationship",
+    "importance": "critical",
+    "relation_type": "hostile_king_opposition_profile",
+    "option_category": "hostile_action_profile",
+    "blind_pool": null,
+    "question": "¿Qué perfil de oposición caracteriza al rey diferente antes de indicarse cuánto duraría su poder sobre los santos?",
+    "options": [
+      "Servirá al Altísimo, protegerá a sus santos y conservará sin cambios los tiempos y la Ley",
+      "Callará ante el Altísimo, reunirá a los reyes y abrirá los libros del juicio",
+      "Hablará contra el Altísimo, quebrantará a sus santos y pensará cambiar los tiempos y la Ley",
+      "Hablará a favor de los santos, destruirá al Juez y establecerá un dominio eterno"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Hablará contra el Altísimo, quebrantará a sus santos y pensará cambiar los tiempos y la Ley",
+    "accepted_answers": [
+      "Hablará contra el Altísimo, quebrantará a sus santos y pensará cambiar los tiempos y la Ley"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La interpretación enumera oposición verbal, persecución y pretensión de alterar tiempos y Ley.",
+    "why_distractors_fail": {
+      "Servirá al Altísimo, protegerá a sus santos y conservará sin cambios los tiempos y la Ley": "Invierte las tres líneas de oposición descritas.",
+      "Callará ante el Altísimo, reunirá a los reyes y abrirá los libros del juicio": "Esas acciones no definen al rey diferente.",
+      "Hablará a favor de los santos, destruirá al Juez y establecerá un dominio eterno": "Contradice su hostilidad y le atribuye resultados no narrados."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 2,
+      "rationale": "La interpretación enumera oposición verbal, persecución y pretensión de alterar tiempos y Ley.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "c1db72ab1ee6e899848f2c5ee9d41b9cebd955b9be718766778e5bea4c58d44e",
+    "row_content_sha256": "b638ecd88a481e57885c16bbbd20fb2bc010b2a2db0a43b8b7ad9d1cb3cd4094"
+  },
+  {
     "id": "DAN7-V11-WAVE-018",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -6068,5 +6643,133 @@
     },
     "content_sha256": "b6bcf0d003476a75cfed2590890dfaa4aa8ea400c991e57550651fbc319079c1",
     "row_content_sha256": "b2c0d269badee1edee6cd8bed686e44eecb97f8c99518514050e833df4444420"
+  },
+  {
+    "id": "DAN7-V11-BLINDB-002",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN7-V004",
+    "fact_id": "DAN7-V004-V11-B-WINGS-SPECIES",
+    "variant_id": "DAN7-V11-BLINDB-002",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "chapter": "DAN7",
+    "reference": "Daniel 7:4",
+    "source_ref": "Daniel 7:4",
+    "verse_or_page": "Daniel 7:4",
+    "source_span": "La primera era como un león, y tenía alas de águila. Yo estaba mirando hasta que sus alas le fueron arrancadas; fue levantada del suelo y se puso enhiesta sobre los pies, a manera de hombre, y se le dio corazón de hombre.",
+    "source_quote": "La primera era como un león, y tenía alas de águila. Yo estaba mirando hasta que sus alas le fueron arrancadas; fue levantada del suelo y se puso enhiesta sobre los pies, a manera de hombre, y se le dio corazón de hombre.",
+    "context_anchor": "La primera era como un león, y tenía alas de águila. Yo estaba mirando hasta que sus alas le fueron arrancadas; fue levantada del suelo y se puso enhiesta sobre los pies, a manera de hombre, y se le dio corazón de hombre.",
+    "evidence_excerpt": "La primera era como un león, y tenía alas de águila. Yo estaba mirando hasta que sus alas le fueron arrancadas; fue levantada del suelo y se puso enhiesta sobre los pies, a manera de hombre, y se le dio corazón de hombre.",
+    "topic": "identification",
+    "importance": "high",
+    "relation_type": "beast_wing_species",
+    "option_category": "bird",
+    "blind_pool": null,
+    "question": "¿De qué ave eran las alas de la primera bestia, semejante a un león?",
+    "options": [
+      "Cuervo",
+      "Águila",
+      "Paloma",
+      "Halcón"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Águila",
+    "accepted_answers": [
+      "Águila",
+      "De águila"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La primera bestia tenía alas de águila.",
+    "why_distractors_fail": {
+      "Cuervo": "No es el ave mencionada.",
+      "Paloma": "No corresponde a las alas descritas.",
+      "Halcón": "La fuente identifica al águila."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "La primera bestia tenía alas de águila.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "8ded8acee58efb60bde656bfe10bca63e6068cdf9c221293cff707b4bce7f7bc",
+    "row_content_sha256": "7eb9ad9c9a0988b89f2df95e9754c7365ebdc7265878e0486a46ff5b04c526c0"
+  },
+  {
+    "id": "DAN7-V11-BLINDB-031",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN7-V027",
+    "fact_id": "DAN7-V027-V11-B-KINGDOM-SCOPE",
+    "variant_id": "DAN7-V11-BLINDB-031",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "prophetic_detail",
+    "chapter": "DAN7",
+    "reference": "Daniel 7:27",
+    "source_ref": "Daniel 7:27",
+    "verse_or_page": "Daniel 7:27",
+    "source_span": "y que el reino, el dominio y la majestad de los reinos debajo de todo el cielo sean dados al pueblo de los santos del Altísimo, cuyo reino es reino eterno, y todos los dominios lo servirán y obedecerán.”",
+    "source_quote": "y que el reino, el dominio y la majestad de los reinos debajo de todo el cielo sean dados al pueblo de los santos del Altísimo, cuyo reino es reino eterno, y todos los dominios lo servirán y obedecerán.”",
+    "context_anchor": "y que el reino, el dominio y la majestad de los reinos debajo de todo el cielo sean dados al pueblo de los santos del Altísimo, cuyo reino es reino eterno, y todos los dominios lo servirán y obedecerán.”",
+    "evidence_excerpt": "y que el reino, el dominio y la majestad de los reinos debajo de todo el cielo sean dados al pueblo de los santos del Altísimo, cuyo reino es reino eterno, y todos los dominios lo servirán y obedecerán.”",
+    "topic": "prophetic_detail",
+    "importance": "critical",
+    "relation_type": "saints_kingdom_scope",
+    "option_category": "cosmic_scope",
+    "blind_pool": null,
+    "question": "El pueblo de los santos recibiría la majestad de los reinos debajo de todo el ____.",
+    "options": [
+      "cielo",
+      "mar",
+      "desierto",
+      "santuario"
+    ],
+    "correct_option": 0,
+    "correct_answer": "cielo",
+    "accepted_answers": [
+      "cielo",
+      "todo el cielo"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La entrega comprende los reinos debajo de todo el cielo.",
+    "why_distractors_fail": {
+      "mar": "No define el alcance del reino.",
+      "desierto": "Reduciría el ámbito anunciado.",
+      "santuario": "No es la expresión territorial usada."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "La entrega comprende los reinos debajo de todo el cielo.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "b820cd8932e80642dc831582142b6f3c03c6eeb913f319350f73111d369e0f20",
+    "row_content_sha256": "75283d143795e2fdadee9dc64d4579459341ea03badb89e4423bd727e6e701f2"
   }
 ]

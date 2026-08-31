@@ -23,23 +23,47 @@ export function FinalMissionDashboard({
 }) {
   const [starting, setStarting] = useState(false)
   const [startError, setStartError] = useState<string | null>(null)
-  const plan = buildFinalMissionPlan(now)
+  const plan = buildFinalMissionPlan(now, { completedMissionIds })
   const completed = new Set(completedMissionIds)
   const next = getNextMission(plan, completed, now)
-  const competition = new Date("2026-08-29T09:00:00-06:00").getTime()
-  const remainingHours = Math.max(
-    0,
-    Math.ceil((competition - now.getTime()) / 3_600_000)
+  const reading = plan.find((mission) => mission.kind === "reading")
+  const totalQuestions = plan.reduce(
+    (total, mission) => total + mission.count,
+    0
   )
-  const progress = plan.length
+  const actionablePlan = plan.filter((mission) => mission.kind !== "reading")
+  const progress = actionablePlan.length
     ? Math.round(
-        (plan.filter((mission) => completed.has(mission.id)).length /
-          plan.length) *
+        (actionablePlan.filter((mission) => completed.has(mission.id)).length /
+          actionablePlan.length) *
           100
       )
     : 0
 
-  if (!next) return null
+  if (!next) {
+    return (
+      <section
+        className="rounded-3xl border border-primary/20 bg-card p-6 shadow-sm"
+        aria-labelledby="final-mission-complete-title"
+      >
+        <h1
+          id="final-mission-complete-title"
+          className="text-3xl font-semibold tracking-tight"
+        >
+          RUTA DEL DÍA COMPLETADA
+        </h1>
+        <p className="mt-3 text-muted-foreground">
+          Terminaste todos los bloques accionables de hoy. Descansa y vuelve
+          para la siguiente ruta.
+        </p>
+        <Progress
+          aria-label="Progreso de la ruta de hoy"
+          className="mt-5"
+          value={100}
+        />
+      </section>
+    )
+  }
   const handleContinue = async () => {
     if (starting) return
     setStarting(true)
@@ -68,31 +92,47 @@ export function FinalMissionDashboard({
               <Flag className="size-3.5" aria-hidden="true" /> Banco Maestro
               Único
             </Badge>
-            <Badge variant="outline">{remainingHours} h para competir</Badge>
+            <Badge variant="outline">
+              {totalQuestions.toLocaleString("es-HN")} preguntas programadas
+            </Badge>
           </div>
           <h1
             id="final-mission-title"
             className="mt-5 max-w-3xl text-3xl font-semibold tracking-tight text-balance sm:text-4xl"
           >
-            PLAN FINAL — GANAR EL 29
+            RUTA DEL DÍA
           </h1>
           <p className="mt-3 max-w-2xl text-base leading-7 text-muted-foreground">
-            Una misión a la vez. La prioridad es recordar hechos GOLD después de
-            un intervalo, no recorrer variantes.
+            Sigue los bloques en orden. Las preguntas nuevas vencidas pasan al
+            siguiente día, excepto el viernes, que nunca supera 500.
           </p>
 
           <div className="mt-7 rounded-2xl border border-border/70 bg-background/80 p-5 sm:p-6">
             <p className="text-xs font-semibold tracking-[0.14em] text-primary uppercase">
-              Próxima misión
+              Próximo bloque
             </p>
             <h2 className="mt-2 text-xl font-semibold">{next.label}</h2>
             <p className="mt-2 max-w-xl text-sm leading-6 text-muted-foreground">
               {next.description}
             </p>
+            {reading?.reading ? (
+              <div
+                className="mt-4 flex flex-wrap gap-2"
+                aria-label="Lectura de hoy"
+              >
+                {reading.reading.map((item) => (
+                  <Badge key={item} variant="outline">
+                    {item}
+                  </Badge>
+                ))}
+              </div>
+            ) : null}
             <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
               <span className="inline-flex items-center gap-2">
                 <Target className="size-4 text-primary" aria-hidden="true" />
-                {next.count} preguntas
+                {next.kind === "reading"
+                  ? "Bloque de lectura"
+                  : `${next.count} preguntas${next.familiarity === "known" ? " conocidas" : ""}`}
               </span>
               <span className="inline-flex items-center gap-2">
                 <Clock3 className="size-4 text-primary" aria-hidden="true" />~
@@ -103,7 +143,11 @@ export function FinalMissionDashboard({
                   className="size-4 text-primary"
                   aria-hidden="true"
                 />
-                {next.blindPool ? `Ciega ${next.blindPool}` : "Solo GOLD"}
+                {next.optional
+                  ? "Opcional"
+                  : next.blindPool
+                    ? `Ciega ${next.blindPool}`
+                    : "Solo GOLD"}
               </span>
             </div>
           </div>
@@ -121,7 +165,7 @@ export function FinalMissionDashboard({
                 PREPARANDO RONDA…
               </>
             ) : (
-              "CONTINUAR MI MISIÓN"
+              "CONTINUAR MI RUTA"
             )}
           </Button>
           {starting ? (
@@ -130,8 +174,8 @@ export function FinalMissionDashboard({
               role="status"
               aria-live="polite"
             >
-              Preparando {next.count} preguntas del banco maestro. Puede tardar
-              unos segundos.
+              Preparando el bloque {next.label.toLocaleLowerCase("es-HN")} del
+              banco maestro. Puede tardar unos segundos.
             </p>
           ) : null}
           {startError ? (
@@ -159,14 +203,17 @@ export function FinalMissionDashboard({
             <div>
               <p className="text-sm font-medium">Progreso de hoy</p>
               <p className="mt-1 text-xs text-muted-foreground">
-                {plan.filter((mission) => completed.has(mission.id)).length} de{" "}
-                {plan.length} misiones
+                {
+                  actionablePlan.filter((mission) => completed.has(mission.id))
+                    .length
+                }{" "}
+                de {actionablePlan.length} bloques
               </p>
             </div>
             <strong className="text-3xl tabular-nums">{progress}%</strong>
           </div>
           <Progress
-            aria-label="Progreso de la misión de hoy"
+            aria-label="Progreso de la ruta de hoy"
             className="mt-4"
             value={progress}
           />

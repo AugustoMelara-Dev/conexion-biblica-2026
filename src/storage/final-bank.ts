@@ -113,7 +113,9 @@ export async function finalManifestFingerprint(manifest: FinalBankManifest) {
     })
   )
   const digest = await crypto.subtle.digest("SHA-256", bytes)
-  return `${manifest.bank_id}:${manifest.schema_version}:sha256:${[...new Uint8Array(digest)]
+  return `${manifest.bank_id}:${manifest.schema_version}:sha256:${[
+    ...new Uint8Array(digest),
+  ]
     .map((value) => value.toString(16).padStart(2, "0"))
     .join("")}`
 }
@@ -258,7 +260,8 @@ export function adaptFinalQuestion(raw: FinalRawQuestion): Question {
     metadata: {
       sourceUnitId: raw.source_unit_id,
       relationType: raw.relation_type,
-      validationReviewer: raw.validation_adversarial?.reviewer ?? raw.ai_review?.reviewer,
+      validationReviewer:
+        raw.validation_adversarial?.reviewer ?? raw.ai_review?.reviewer,
       evidenceExcerpt: raw.evidence_excerpt,
       aiReviewer: raw.ai_review?.reviewer,
       aiReviewerType: raw.ai_review?.reviewer_type,
@@ -337,9 +340,7 @@ export async function loadFinalQuestionPool(input: {
       )
       .filter(
         (row) =>
-          input.preferredMigrationSignatures?.has(
-            rawMigrationSignature(row)
-          ) ||
+          input.preferredMigrationSignatures?.has(rawMigrationSignature(row)) ||
           !input.factFilter ||
           input.factFilter(row.fact_id)
       )
@@ -349,7 +350,8 @@ export async function loadFinalQuestionPool(input: {
           (!input.difficultyBands?.length ||
             input.difficultyBands.includes(level.band)) &&
           (!input.family || row.family === input.family) &&
-          (!input.types?.length || input.types.includes(typeForFamily(row.family)))
+          (!input.types?.length ||
+            input.types.includes(typeForFamily(row.family)))
         )
       })
     const shuffledCandidates = shuffle(rawCandidates, input.seed)
@@ -360,7 +362,10 @@ export async function loadFinalQuestionPool(input: {
       : []
     const preferredIds = new Set(preferred.map((row) => row.id))
     const seenFacts = new Set<string>()
-    const selectedRows = [...preferred, ...shuffledCandidates.filter((row) => !preferredIds.has(row.id))]
+    const selectedRows = [
+      ...preferred,
+      ...shuffledCandidates.filter((row) => !preferredIds.has(row.id)),
+    ]
       .filter((row) => {
         if (seenFacts.has(row.fact_id)) return false
         seenFacts.add(row.fact_id)
@@ -437,7 +442,7 @@ export async function loadFinalQuestionPool(input: {
     const slow = Boolean(
       exposure &&
       exposure.attempts > 0 &&
-      exposure.totalMs / exposure.attempts >= 8_000
+      exposure.totalMs / exposure.attempts > 6_000
     )
     priorityByFact.set(
       fact,

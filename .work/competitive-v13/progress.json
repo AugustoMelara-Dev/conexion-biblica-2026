@@ -1,0 +1,51 @@
+{
+  "mission": "competitive-v13",
+  "updated_at": "2026-08-31T14:57:30-06:00",
+  "timezone": "America/Tegucigalpa",
+  "deadline": "2026-09-05",
+  "base_commit": "24c542fa3d2936c8fd98db706a9db930ba8338a3",
+  "branch": "codex/emergencia-competitiva-unica-v13",
+  "worktree": "C:\\Users\\melar\\OneDrive\\Desktop\\Conexion biblica\\.worktrees\\emergencia-competitiva-unica-v13",
+  "canonical_pdf": {
+    "path": "MaterialConexionBiblica (1).pdf",
+    "sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+    "pages": 60,
+    "verified_material": [
+      "Daniel 1-12, Reina-Valera 1995",
+      "Profetas y Reyes 39-44"
+    ]
+  },
+  "wip_backup": {
+    "branch": "codex/reconciliacion-historica-wip-20260831",
+    "commit": "35765b09a7fadd2333258323432e476c6a6fbf15",
+    "status": "preserved",
+    "resume_from": "codex/expansion-competitiva-v11@004e6f5612bebb3a08fa86f2d6b54319b4be8103"
+  },
+  "phase": "phase_1_release_1_ready_to_deploy",
+  "release": 1,
+  "public_questions": 2468,
+  "public_facts": 2217,
+  "public_shards": 18,
+  "new_ai_authored_accepted": 0,
+  "new_ai_authored_rejected": 0,
+  "new_ai_authored_rewritten": 0,
+  "translation_noise": 0,
+  "blind_private": {
+    "A": 0,
+    "B": 0,
+    "emergency": 0,
+    "status": "new pools not started; historical 250 promoted to public"
+  },
+  "tests": {
+    "competitive_audit": "pass: 2468 questions, 2217 facts, zero violations",
+    "release_contract": "pass: 12/12 with real-schema normalization and base collision detection",
+    "vitest": "pass: 433/433",
+    "typecheck": "pass",
+    "lint": "pass",
+    "build": "pass with non-fatal 609.67 kB chunk warning",
+    "e2e": "pass: 24 Chromium desktop/mobile, 12 intentionally skipped by project"
+  },
+  "last_commit": "24c542fa3d2936c8fd98db706a9db930ba8338a3",
+  "last_deployment": null,
+  "next_action": "Commit Release 1, deploy that exact clean commit to production, verify the immutable deployment, then start AI-authored Release 2 batches."
+}

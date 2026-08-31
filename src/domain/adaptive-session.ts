@@ -26,6 +26,16 @@ function variantId(question: Question) {
   return question.variantId ?? question.id
 }
 
+function isRouteNewPreset(presetId: string | undefined) {
+  return Boolean(
+    presetId && /^\d{4}-\d{2}-\d{2}-(new|adversarial)$/.test(presetId)
+  )
+}
+
+function isRouteReviewPreset(presetId: string | undefined) {
+  return Boolean(presetId && /^\d{4}-\d{2}-\d{2}-review$/.test(presetId))
+}
+
 function takeUniqueFacts(
   candidates: Question[],
   count: number,
@@ -80,14 +90,22 @@ export function selectAdaptiveSession({
   const eligible = questions.filter((question) => {
     if (!includeBlind && question.blindFinalPool) return false
     const mastery = masteryByFact.get(factId(question))
-    if (presetId === "unseen-only" || presetId === "blind-simulation")
+    if (
+      presetId === "unseen-only" ||
+      presetId === "blind-simulation" ||
+      isRouteNewPreset(presetId)
+    )
       return !mastery || mastery.state === "unseen"
     if (presetId === "slow-correct") return mastery?.state === "fragile"
     if (presetId === "previous-errors") return Boolean(mastery?.failures)
+    if (isRouteReviewPreset(presetId))
+      return Boolean(mastery?.failures || mastery?.state === "fragile")
     if (presetId !== "spaced-review") return true
-    return mastery?.nextDueAt !== null &&
+    return (
+      mastery?.nextDueAt !== null &&
       mastery?.nextDueAt !== undefined &&
       mastery.nextDueAt <= now
+    )
   })
   const novel: Question[] = []
   const errors: Question[] = []
@@ -108,7 +126,7 @@ export function selectAdaptiveSession({
       errors.push(question)
       continue
     }
-    if (exposure.averageResponseTimeMs >= 8000) {
+    if (exposure.averageResponseTimeMs > 6000) {
       slow.push(question)
       continue
     }
@@ -137,13 +155,7 @@ export function selectAdaptiveSession({
   selected.push(...takeUniqueFacts(traps, trapQuota, usedFacts, random))
 
   if (selected.length < count) {
-    const remaining = [
-      ...novel,
-      ...errors,
-      ...slow,
-      ...traps,
-      ...ordinary,
-    ]
+    const remaining = [...novel, ...errors, ...slow, ...traps, ...ordinary]
     selected.push(
       ...takeUniqueFacts(remaining, count - selected.length, usedFacts, random)
     )

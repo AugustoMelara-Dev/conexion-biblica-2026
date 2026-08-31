@@ -15,6 +15,7 @@ import {
   type FactMastery,
 } from "@/domain/fact-mastery"
 import { scheduleNextRetrieval } from "@/domain/compressed-scheduler"
+import { classifyResponse } from "@/domain/response-classification"
 import {
   createBackupPayload,
   migrateBackupPayload,
@@ -177,8 +178,23 @@ const FACT_MASTERY_PRESETS = new Set([
   "blind-simulation",
 ])
 
+function isRouteNewPreset(presetId: string | undefined) {
+  return Boolean(
+    presetId && /^\d{4}-\d{2}-\d{2}-(new|adversarial)$/.test(presetId)
+  )
+}
+
+function isRouteReviewPreset(presetId: string | undefined) {
+  return Boolean(presetId && /^\d{4}-\d{2}-\d{2}-review$/.test(presetId))
+}
+
 function requiresFactMasteryPool(presetId: string | undefined) {
-  return Boolean(presetId && FACT_MASTERY_PRESETS.has(presetId))
+  return Boolean(
+    presetId &&
+    (FACT_MASTERY_PRESETS.has(presetId) ||
+      isRouteNewPreset(presetId) ||
+      isRouteReviewPreset(presetId))
+  )
 }
 
 function factFilterForPreset(
@@ -188,7 +204,11 @@ function factFilterForPreset(
 ) {
   if (!requiresFactMasteryPool(presetId)) return undefined
   const byFact = new Map(mastery.map((item) => [item.factId, item]))
-  if (presetId === "unseen-only" || presetId === "blind-simulation")
+  if (
+    presetId === "unseen-only" ||
+    presetId === "blind-simulation" ||
+    isRouteNewPreset(presetId)
+  )
     return (factId: string) => {
       const item = byFact.get(factId)
       return !item || item.state === "unseen"
@@ -201,6 +221,11 @@ function factFilterForPreset(
     }
   if (presetId === "previous-errors")
     return (factId: string) => Boolean(byFact.get(factId)?.failures)
+  if (isRouteReviewPreset(presetId))
+    return (factId: string) => {
+      const item = byFact.get(factId)
+      return Boolean(item?.failures || item?.state === "fragile")
+    }
   if (presetId === "slow-correct")
     return (factId: string) => byFact.get(factId)?.state === "fragile"
   return undefined
@@ -546,9 +571,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       if (!repositories)
         throw new Error("El almacenamiento todavía no está disponible")
       const desiredCount = config.count === "all" ? 200 : config.count
-      const adaptivePoolCount = requiresFactMasteryPool(
-        config.trainingPresetId
-      )
+      const adaptivePoolCount = requiresFactMasteryPool(config.trainingPresetId)
         ? Math.max(desiredCount, desiredCount * 4)
         : desiredCount
       const factFilter = factFilterForPreset(
@@ -636,10 +659,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
             config.trainingPresetId === "contextual-traps"
               ? "single_choice_contextual"
               : config.trainingPresetId === "27-fill"
-                  ? "fill_choice"
-                  : config.trainingPresetId === "27-true-false"
-                    ? "true_false"
-                    : undefined,
+                ? "fill_choice"
+                : config.trainingPresetId === "27-true-false"
+                  ? "true_false"
+                  : undefined,
           seenFactIds: new Set(exposures.map((exposure) => exposure.factId)),
           exposures,
           factFilter: effectiveFactFilter,
@@ -681,7 +704,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
             : config.trainingPresetId === "28-blind-b"
               ? ("B" as const)
               : config.trainingPresetId === "blind-simulation"
-              ? ("A" as const)
+                ? ("A" as const)
                 : undefined
         const profileVersion = `${consolidationManifest.profile_id}:${consolidationManifest.version}`
         const migrationSnapshot = await loadLegacyMigrationSnapshot(
@@ -1020,14 +1043,23 @@ export function AppProvider({ children }: { children: ReactNode }) {
               (flags.context === "simulation" ? "cold" : "practice"),
           }
         )
+        const responseClassification = classifyResponse({
+          wasAnswered: result.wasAnswered,
+          isCorrect: result.isCorrect,
+          responseTimeMs: result.responseTimeMs,
+          wasDoubted: false,
+        })
         const schedule = scheduleNextRetrieval({
-          outcome: !result.isCorrect
-            ? "incorrect"
-            : flags.afterFeedback
-              ? "repaired"
-              : result.responseTimeMs > median * 1.4
-                ? "slow_correct"
-                : "fast_correct",
+          outcome:
+            responseClassification === "incorrect" ||
+            responseClassification === "unanswered"
+              ? "incorrect"
+              : flags.afterFeedback
+                ? "repaired"
+                : responseClassification === "correct_slow" ||
+                    responseClassification === "correct_doubted"
+                  ? "slow_correct"
+                  : "fast_correct",
           now: Date.now(),
           tier: [43, 44, 7, 8, 9, 11].includes(question.source.chapter)
             ? "A"

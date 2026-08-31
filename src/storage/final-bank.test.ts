@@ -322,7 +322,7 @@ describe("canonical final bank storage", () => {
           exposures: 2,
           correct: 0,
           incorrect: 2,
-          totalResponseTimeMs: 8_000,
+          totalResponseTimeMs: 6_001,
           averageResponseTimeMs: 4_000,
           lastSeenAt: 2,
           lastSelectedAnswer: "B",
@@ -367,7 +367,11 @@ describe("canonical final bank storage", () => {
         },
       ],
     }
-    const known = raw({ id: "KNOWN", fact_id: "F-KNOWN", variant_id: "V-KNOWN" })
+    const known = raw({
+      id: "KNOWN",
+      fact_id: "F-KNOWN",
+      variant_id: "V-KNOWN",
+    })
     const legacy = raw({
       id: "LEGACY",
       fact_id: "F-LEGACY",

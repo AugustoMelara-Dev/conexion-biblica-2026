@@ -2855,6 +2855,70 @@
     "row_content_sha256": "430caaaa9007fced9c8a760f1d2d9c0c7c96cfff01e503d1ea40de1098d170d2"
   },
   {
+    "id": "DAN10-V11-WAVE-004",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN10-V004",
+    "fact_id": "DAN10-V004-V11-F02",
+    "variant_id": "DAN10-V11-WAVE-004",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "chapter": "DAN10",
+    "reference": "Daniel 10:4",
+    "source_ref": "Daniel 10:4",
+    "verse_or_page": "Daniel 10:4",
+    "source_span": "El día veinticuatro del primer mes estaba yo a la orilla del gran río Hidekel.",
+    "source_quote": "El día veinticuatro del primer mes estaba yo a la orilla del gran río Hidekel.",
+    "context_anchor": "El día veinticuatro del primer mes estaba yo a la orilla del gran río Hidekel.",
+    "evidence_excerpt": "El día veinticuatro del primer mes estaba yo a la orilla del gran río Hidekel.",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "date",
+    "option_category": "date",
+    "blind_pool": null,
+    "question": "¿En qué fecha estaba Daniel junto al Hidekel?",
+    "options": [
+      "Día primero del tercer mes",
+      "Día veintiuno del séptimo mes",
+      "Día catorce del primer mes",
+      "Día veinticuatro del primer mes"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Día veinticuatro del primer mes",
+    "accepted_answers": [
+      "Día veinticuatro del primer mes",
+      "el día veinticuatro del primer mes"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La escena junto al río se fecha el día veinticuatro del primer mes.",
+    "why_distractors_fail": {
+      "Día primero del tercer mes": "Intercambia ordinales y día.",
+      "Día veintiuno del séptimo mes": "Usa la duración del conflicto como fecha.",
+      "Día catorce del primer mes": "No es el día indicado."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 3,
+      "rationale": "La escena junto al río se fecha el día veinticuatro del primer mes.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "ca74db2a7a227e6d0a06467c1134a298512055f99f4f7224c81dfe6605f3e853",
+    "row_content_sha256": "89bb4cd29bbad67f7bd45f03b8ebe311ca3b953ceb62473fd687e00601a176a0"
+  },
+  {
     "id": "DAN10-V11-WAVE-005",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -2919,6 +2983,134 @@
     "row_content_sha256": "fda8f6a5692c3f8b90d6dc7a3253c339e45c824d784d857d1d771a4b6586d11b"
   },
   {
+    "id": "DAN10-V11-WAVE-006",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN10-V006",
+    "fact_id": "DAN10-V006-V11-F02",
+    "variant_id": "DAN10-V11-WAVE-006",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "chapter": "DAN10",
+    "reference": "Daniel 10:6",
+    "source_ref": "Daniel 10:6",
+    "verse_or_page": "Daniel 10:6",
+    "source_span": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "source_quote": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "context_anchor": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "evidence_excerpt": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "topic": "comparison",
+    "importance": "critical",
+    "relation_type": "comparison",
+    "option_category": "comparison_object",
+    "blind_pool": null,
+    "question": "¿Con qué se comparaba el rostro del varón?",
+    "options": [
+      "Una antorcha",
+      "Un relámpago",
+      "El berilo",
+      "Bronce bruñido"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Un relámpago",
+    "accepted_answers": [
+      "Un relámpago",
+      "relámpago"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Su rostro parecía un relámpago.",
+    "why_distractors_fail": {
+      "Una antorcha": "Las antorchas describen sus ojos.",
+      "El berilo": "El berilo describe el cuerpo.",
+      "Bronce bruñido": "Ese color describe brazos y pies."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "Su rostro parecía un relámpago.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "03db1b498e362104dfb31304626dbd76af0901feae9de7b159d59efc6f800505",
+    "row_content_sha256": "2ae057688f985555d8a6a6bb78de92e9921127d3e2fb071d548a4a30fc19d88c"
+  },
+  {
+    "id": "DAN10-V11-WAVE-007",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN10-V006",
+    "fact_id": "DAN10-V006-V11-F03",
+    "variant_id": "DAN10-V11-WAVE-007",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "chapter": "DAN10",
+    "reference": "Daniel 10:6",
+    "source_ref": "Daniel 10:6",
+    "verse_or_page": "Daniel 10:6",
+    "source_span": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "source_quote": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "context_anchor": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "evidence_excerpt": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "topic": "comparison",
+    "importance": "critical",
+    "relation_type": "comparison",
+    "option_category": "comparison_object",
+    "blind_pool": null,
+    "question": "¿A qué se parecían los ojos del varón?",
+    "options": [
+      "Lana limpia",
+      "Una multitud",
+      "Antorchas de fuego",
+      "Oro de Ufaz"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Antorchas de fuego",
+    "accepted_answers": [
+      "Antorchas de fuego",
+      "como antorchas de fuego"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Sus ojos eran como antorchas de fuego.",
+    "why_distractors_fail": {
+      "Lana limpia": "Describe el cabello del Anciano de días.",
+      "Una multitud": "Describe el sonido de sus palabras.",
+      "Oro de Ufaz": "Ceñía su cintura."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 2,
+      "rationale": "Sus ojos eran como antorchas de fuego.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "4c7e567353a31c06642b34909347fc74ba1c9978d49bf05fbe0447f2a644519c",
+    "row_content_sha256": "1cb04d60e78171e47d3f74c1c033a850021c1f2ad4c3746610e9cc158758646a"
+  },
+  {
     "id": "DAN10-V11-WAVE-008",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -2981,6 +3173,70 @@
     },
     "content_sha256": "2fb22fc17af79d793e119d564330681226282ddbc1864c857a93df2982930bfe",
     "row_content_sha256": "aaeb10752d40916036374847cd1145dbb1cef2e8ffeb6867bccbb11e65dceace"
+  },
+  {
+    "id": "DAN10-V11-WAVE-009",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN10-V006",
+    "fact_id": "DAN10-V006-V11-F05",
+    "variant_id": "DAN10-V11-WAVE-009",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "chapter": "DAN10",
+    "reference": "Daniel 10:6",
+    "source_ref": "Daniel 10:6",
+    "verse_or_page": "Daniel 10:6",
+    "source_span": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "source_quote": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "context_anchor": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "evidence_excerpt": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "topic": "comparison",
+    "importance": "critical",
+    "relation_type": "sound_comparison",
+    "option_category": "sound",
+    "blind_pool": null,
+    "question": "¿Cómo sonaba la voz del varón?",
+    "options": [
+      "Como el estruendo de una multitud",
+      "Como una brisa silenciosa",
+      "Como agua de un río pequeño",
+      "Como una sola trompeta lejana"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Como el estruendo de una multitud",
+    "accepted_answers": [
+      "Como el estruendo de una multitud",
+      "estruendo de una multitud"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El sonido de sus palabras era como el estruendo de una multitud.",
+    "why_distractors_fail": {
+      "Como una brisa silenciosa": "No expresa el estruendo descrito.",
+      "Como agua de un río pequeño": "No es la comparación usada.",
+      "Como una sola trompeta lejana": "La voz se compara con una multitud."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "El sonido de sus palabras era como el estruendo de una multitud.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "087d909cf573d8904c2a996a86ae42cc34b1e0cf2fb79b90c48a4d66b43ac89c",
+    "row_content_sha256": "effdb4344e51ea1d26ea7bc9076c73c8a19e28e01b2d326836039641f0b56a0d"
   },
   {
     "id": "DAN10-V11-WAVE-010",
@@ -4036,6 +4292,69 @@
     "row_content_sha256": "34b82bf8b4bb1c062893d57ec7e18c5a7f01f0fb5af380ab3952a51fdb547a17"
   },
   {
+    "id": "DAN10-V11-WAVE-027",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN10-V003",
+    "fact_id": "DAN10-V003-V11-F03",
+    "variant_id": "DAN10-V11-WAVE-027",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "chapter": "DAN10",
+    "reference": "Daniel 10:3",
+    "source_ref": "Daniel 10:3",
+    "verse_or_page": "Daniel 10:3",
+    "source_span": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+    "source_quote": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+    "context_anchor": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+    "evidence_excerpt": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+    "topic": "narrative_order",
+    "importance": "high",
+    "relation_type": "duration_boundary",
+    "option_category": "time_boundary",
+    "blind_pool": null,
+    "question": "¿Hasta qué momento mantuvo Daniel sus privaciones?",
+    "options": [
+      "Hasta el final del año de Ciro",
+      "Hasta que se cumplieron las tres semanas",
+      "Hasta que sus compañeros regresaron",
+      "Hasta la llegada del príncipe de Grecia"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Hasta que se cumplieron las tres semanas",
+    "accepted_answers": [
+      "Hasta que se cumplieron las tres semanas"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Las privaciones se mantuvieron hasta cumplirse las tres semanas.",
+    "why_distractors_fail": {
+      "Hasta el final del año de Ciro": "El año de Ciro fecha la revelación, no el límite de las privaciones.",
+      "Hasta que sus compañeros regresaron": "El regreso de los compañeros no fija el período.",
+      "Hasta la llegada del príncipe de Grecia": "Ese anuncio pertenece al conflicto posterior."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "Las privaciones se mantuvieron hasta cumplirse las tres semanas.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "27904e4ac9159476c1442adb33fddbcd5e0525805ccdbace5d5beacab3f1caf1",
+    "row_content_sha256": "42e84185a2bc1b1d3ef68b3d966f9b5acd3633c84fbe6f773bc4430f620a86a4"
+  },
+  {
     "id": "DAN10-V11-WAVE-028",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -4865,6 +5184,259 @@
     "row_content_sha256": "d32ffa3c49aad1b0840ba79f4f28f3839f74f05e7319e29b5916f9f4bd2600a4"
   },
   {
+    "id": "DAN10-V11-WAVE-042",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN10-V003",
+    "fact_id": "DAN10-V003-V11-MOUTH-INGESTION-CARNE-WINE",
+    "variant_id": "DAN10-V11-WAVE-042",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "chapter": "DAN10",
+    "reference": "Daniel 10:3",
+    "source_ref": "Daniel 10:3",
+    "verse_or_page": "Daniel 10:3",
+    "source_span": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+    "source_quote": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+    "context_anchor": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+    "evidence_excerpt": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "mouth_ingestion_object_pair",
+    "option_category": "consumption_pair",
+    "blind_pool": null,
+    "question": "¿Qué dos elementos declaró Daniel que no entraron en su boca durante las tres semanas?",
+    "options": [
+      "Carne y vino",
+      "Manjar delicado y perfume",
+      "Carne y perfume",
+      "Manjar delicado y vino"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Carne y vino",
+    "accepted_answers": [
+      "Carne y vino",
+      "carne ni vino"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Daniel dijo que no entraron en su boca carne ni vino; el manjar delicado corresponde a «no comí» y el perfume a «no me ungí».",
+    "why_distractors_fail": {
+      "Manjar delicado y perfume": "Ambos pertenecen a otras construcciones del versículo, no a lo que entró en la boca.",
+      "Carne y perfume": "La carne sí pertenece a la expresión, pero el perfume corresponde a la unción omitida.",
+      "Manjar delicado y vino": "El vino sí pertenece a la expresión, pero el manjar delicado está regido por «no comí»."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "Daniel dijo que no entraron en su boca carne ni vino; el manjar delicado corresponde a «no comí» y el perfume a «no me ungí».",
+      "second_defensible_option": false
+    },
+    "content_sha256": "54b001ece30228d2194787e0dc04f372df15e8355f32e00eae879ccac4ac4706",
+    "row_content_sha256": "5879bdbfbf0acf4f6eb223fb2d34b86d408be1c85eb5844fe4ac85c87d49c6be"
+  },
+  {
+    "id": "DAN10-V11-WAVE-044",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN10-V005",
+    "fact_id": "DAN10-V005-V11-GARMENT-WAIST-MATERIAL-MAPPING",
+    "variant_id": "DAN10-V11-WAVE-044",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "chapter": "DAN10",
+    "reference": "Daniel 10:5",
+    "source_ref": "Daniel 10:5",
+    "verse_or_page": "Daniel 10:5",
+    "source_span": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+    "source_quote": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+    "context_anchor": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+    "evidence_excerpt": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+    "topic": "comparison",
+    "importance": "high",
+    "relation_type": "appearance_material_location_mapping",
+    "option_category": "material_location_pair",
+    "blind_pool": null,
+    "question": "¿Cómo se distribuyen correctamente los materiales en la apariencia del varón visto por Daniel?",
+    "options": [
+      "Oro de Ufaz en la vestidura y lino ceñido a la cintura",
+      "Lino en la vestidura y oro de Ufaz ceñido a la cintura",
+      "Berilo en la vestidura y bronce ceñido a la cintura",
+      "Púrpura en la vestidura y plata de Persia en la cintura"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Lino en la vestidura y oro de Ufaz ceñido a la cintura",
+    "accepted_answers": [
+      "Lino en la vestidura y oro de Ufaz ceñido a la cintura"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El varón vestía lino y llevaba la cintura ceñida con oro de Ufaz.",
+    "why_distractors_fail": {
+      "Oro de Ufaz en la vestidura y lino ceñido a la cintura": "Invierte la ubicación de los dos materiales.",
+      "Berilo en la vestidura y bronce ceñido a la cintura": "Traslada comparaciones corporales del versículo siguiente.",
+      "Púrpura en la vestidura y plata de Persia en la cintura": "Ninguno de esos materiales aparece en la descripción."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "El varón vestía lino y llevaba la cintura ceñida con oro de Ufaz.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "c514286eae4c2d7b33967c05f5dcd6c5ba11fe01665859e84444428db99cc2bf",
+    "row_content_sha256": "a9c7ba270765fbab134adcb87bff7a6b7203c9d0127c4941e542315a6a12c13f"
+  },
+  {
+    "id": "DAN10-V11-WAVE-045",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN10-V006",
+    "fact_id": "DAN10-V006-V11-VISUAL-AUDITORY-MODALITY-MAPPING",
+    "variant_id": "DAN10-V11-WAVE-045",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "chapter": "DAN10",
+    "reference": "Daniel 10:6",
+    "source_ref": "Daniel 10:6",
+    "verse_or_page": "Daniel 10:6",
+    "source_span": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "source_quote": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "context_anchor": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "evidence_excerpt": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "topic": "comparison",
+    "importance": "critical",
+    "relation_type": "sensory_modality_feature_mapping",
+    "option_category": "sensory_mapping",
+    "blind_pool": null,
+    "question": "¿Qué emparejamiento separa correctamente el rasgo auditivo de un rasgo visual del varón?",
+    "options": [
+      "Sus palabras sonaban como un relámpago y su rostro parecía una multitud",
+      "Sus palabras sonaban como antorchas de fuego y su rostro parecía bronce bruñido",
+      "Sus palabras sonaban como una multitud y su rostro parecía un relámpago",
+      "Sus palabras sonaban como berilo y su rostro parecía oro de Ufaz"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Sus palabras sonaban como una multitud y su rostro parecía un relámpago",
+    "accepted_answers": [
+      "Sus palabras sonaban como una multitud y su rostro parecía un relámpago"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El sonido pertenece a las palabras; el relámpago describe visualmente el rostro.",
+    "why_distractors_fail": {
+      "Sus palabras sonaban como un relámpago y su rostro parecía una multitud": "Intercambia los términos comparativos del sonido y del rostro.",
+      "Sus palabras sonaban como antorchas de fuego y su rostro parecía bronce bruñido": "Las antorchas describen los ojos y el bronce los brazos y los pies.",
+      "Sus palabras sonaban como berilo y su rostro parecía oro de Ufaz": "El berilo describe el cuerpo y el oro de Ufaz ciñe la cintura."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "expert",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 2,
+      "rationale": "El sonido pertenece a las palabras; el relámpago describe visualmente el rostro.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "c2513c297e540c1123bcc87fb3b3189bcbef934e251222a69fae7bdd08c96581",
+    "row_content_sha256": "7bf8271d3c05684917b45ba99320080c9dabc6e185e1a8b64cb7491c92f4af89"
+  },
+  {
+    "id": "DAN10-V11-WAVE-047",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN10-V008",
+    "fact_id": "DAN10-V008-V11-STRENGTH-DECLINE-PROGRESSION",
+    "variant_id": "DAN10-V11-WAVE-047",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "chapter": "DAN10",
+    "reference": "Daniel 10:8",
+    "source_ref": "Daniel 10:8",
+    "verse_or_page": "Daniel 10:8",
+    "source_span": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+    "source_quote": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+    "context_anchor": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+    "evidence_excerpt": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+    "topic": "narrative_order",
+    "importance": "high",
+    "relation_type": "physical_decline_sequence",
+    "option_category": "state_progression",
+    "blind_pool": null,
+    "question": "¿Qué progresión expresa con precisión el deterioro físico de Daniel ante la gran visión?",
+    "options": [
+      "Conservó sus fuerzas, venció el desfallecimiento y se levantó sin ayuda",
+      "Perdió la voz, recuperó el aliento y corrió para alcanzar a sus compañeros",
+      "Sintió temor, escondió su rostro y recuperó todas sus fuerzas de inmediato",
+      "No le quedaron fuerzas, estas se cambiaron en desfallecimiento y lo abandonaron totalmente"
+    ],
+    "correct_option": 3,
+    "correct_answer": "No le quedaron fuerzas, estas se cambiaron en desfallecimiento y lo abandonaron totalmente",
+    "accepted_answers": [
+      "No le quedaron fuerzas, estas se cambiaron en desfallecimiento y lo abandonaron totalmente"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El versículo intensifica la debilidad desde la ausencia de fuerzas hasta el abandono total.",
+    "why_distractors_fail": {
+      "Conservó sus fuerzas, venció el desfallecimiento y se levantó sin ayuda": "Niega la pérdida total descrita.",
+      "Perdió la voz, recuperó el aliento y corrió para alcanzar a sus compañeros": "Introduce acciones de otros momentos o ausentes.",
+      "Sintió temor, escondió su rostro y recuperó todas sus fuerzas de inmediato": "Traslada la reacción de los acompañantes y anticipa la recuperación."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 3,
+      "rationale": "El versículo intensifica la debilidad desde la ausencia de fuerzas hasta el abandono total.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "21dd960647d2173ed6807a82ace7d4a3c35aecd18412646da00677bbf5290306",
+    "row_content_sha256": "6031e91e34f7ea98a91c83e482edc12497caf04f3e42482c1bd6b2e6117198cb"
+  },
+  {
     "id": "DAN10-V11-WAVE-049",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -4989,6 +5561,69 @@
     },
     "content_sha256": "342a3809a37e95ba8b476f29454c49e9442e6cb05a3d40b6d630c04f95c12fc2",
     "row_content_sha256": "9d016f9a9aa8c3f2c6b2302ec0f01b84f4c12ea24495d72e6f3b9300c23a9fe0"
+  },
+  {
+    "id": "DAN10-V11-WAVE-051",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN10-V013",
+    "fact_id": "DAN10-V013-V11-OPPOSITION-HELP-REMAINING-SEQUENCE",
+    "variant_id": "DAN10-V11-WAVE-051",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "chapter": "DAN10",
+    "reference": "Daniel 10:13",
+    "source_ref": "Daniel 10:13",
+    "verse_or_page": "Daniel 10:13",
+    "source_span": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+    "source_quote": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+    "context_anchor": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+    "evidence_excerpt": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+    "topic": "narrative_order",
+    "importance": "critical",
+    "relation_type": "celestial_conflict_sequence",
+    "option_category": "event_sequence",
+    "blind_pool": null,
+    "question": "¿Qué secuencia resume correctamente el conflicto relatado por el mensajero?",
+    "options": [
+      "El príncipe de Persia se opuso veintiún días, Miguel vino a reemplazarlo y el mensajero volvió con Daniel",
+      "El príncipe de Grecia se opuso veintiún días, Miguel vino a ayudar y el mensajero quedó con los reyes de Grecia",
+      "El príncipe de Persia se opuso veintiún días, Miguel vino a ayudar y el mensajero quedó con los reyes de Persia",
+      "Los reyes de Persia se opusieron veintiún días, Miguel vino a ayudar y el mensajero quedó con el príncipe de Persia"
+    ],
+    "correct_option": 2,
+    "correct_answer": "El príncipe de Persia se opuso veintiún días, Miguel vino a ayudar y el mensajero quedó con los reyes de Persia",
+    "accepted_answers": [
+      "El príncipe de Persia se opuso veintiún días, Miguel vino a ayudar y el mensajero quedó con los reyes de Persia"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La oposición persa, la ayuda de Miguel y la permanencia con los reyes forman la secuencia del versículo.",
+    "why_distractors_fail": {
+      "El príncipe de Persia se opuso veintiún días, Miguel vino a reemplazarlo y el mensajero volvió con Daniel": "Conserva opositor y duración, pero cambia la función de Miguel y la situación final.",
+      "El príncipe de Grecia se opuso veintiún días, Miguel vino a ayudar y el mensajero quedó con los reyes de Grecia": "Sustituye Persia por Grecia en la oposición y en la compañía final.",
+      "Los reyes de Persia se opusieron veintiún días, Miguel vino a ayudar y el mensajero quedó con el príncipe de Persia": "Convierte a los reyes en opositores y cambia con quién quedó el mensajero."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "expert",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 2,
+      "rationale": "La oposición persa, la ayuda de Miguel y la permanencia con los reyes forman la secuencia del versículo.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "f2e828980c42f82050f03bf5104be5fca011e739c76a07baf328020d07ddc68b",
+    "row_content_sha256": "4cd13252e68610d869a10d394741d62c26867aebfb07bd2f1fd8bb569b62a524"
   },
   {
     "id": "DAN10-V11-WAVE-052",

@@ -83,6 +83,16 @@ describe("fact mastery evidence", () => {
     expect(next.evidencePoints).toBe(10)
   })
 
+  it("keeps a correct response at exactly six seconds out of the fragile queue", () => {
+    const next = applyFactEvidence(emptyFactMastery(base.factId), {
+      ...base,
+      responseTimeMs: 6_000,
+      personalMedianMs: 2_000,
+    })
+    expect(next.state).toBe("learning")
+    expect(next.evidencePoints).toBe(24)
+  })
+
   it("requires semantic and temporal separation before mastered", () => {
     let mastery = emptyFactMastery(base.factId)
     mastery = applyFactEvidence(mastery, base)

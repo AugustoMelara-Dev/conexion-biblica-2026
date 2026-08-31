@@ -14,10 +14,7 @@ import { emptyFactMastery } from "@/domain/fact-mastery"
 import { createEmptyProgress } from "@/domain/mastery"
 import type { Question, SessionConfig } from "@/domain/types"
 import { createRepositories, deleteAppDb, openAppDb } from "@/storage/db"
-import type {
-  FinalBankManifest,
-  FinalRawQuestion,
-} from "@/storage/final-bank"
+import type { FinalBankManifest, FinalRawQuestion } from "@/storage/final-bank"
 import {
   adaptFinalQuestion,
   finalManifestFingerprint,
@@ -246,7 +243,7 @@ describe("persistencia concurrente de progreso", () => {
     }
   })
 
-  it("clasifica la velocidad contra el baseline previo al intento actual", async () => {
+  it("clasifica 6000 ms como correcta segura aunque el baseline personal sea menor", async () => {
     let context: ReturnType<typeof useApp> | undefined
     function Probe() {
       const value = useApp()
@@ -312,8 +309,8 @@ describe("persistencia concurrente de progreso", () => {
     expect(
       await context!.repositories!.factMastery.get(question.factId!)
     ).toMatchObject({
-      state: "fragile",
-      nextDueAt: now + 4 * 3_600_000,
+      state: "learning",
+      nextDueAt: now + 6 * 3_600_000,
     })
   })
 
@@ -689,16 +686,16 @@ describe("persistencia concurrente de progreso", () => {
         ])
       )
       const unseen = selectAdaptiveSession({
-          questions: pool,
-          exposures: context!.exposures ?? [],
-          factMastery: context!.factMastery ?? [],
-          presetId: "unseen-only",
-          now,
-          count: 1,
-          weakChapters: [],
-          includeBlind: false,
-          seed: 10,
-        })
+        questions: pool,
+        exposures: context!.exposures ?? [],
+        factMastery: context!.factMastery ?? [],
+        presetId: "unseen-only",
+        now,
+        count: 1,
+        weakChapters: [],
+        includeBlind: false,
+        seed: 10,
+      })
       const migratedFacts = new Set(
         context!.factMastery?.map((item) => item.factId) ?? []
       )

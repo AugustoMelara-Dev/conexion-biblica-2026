@@ -31,15 +31,16 @@ const questions = manifest.shards.flatMap((shard) => {
 
 describe("real V10 competitive bank rounds", () => {
   it("loads every emitted entry into the human review queue", () => {
-    expect(parseHumanReviewIndex(reviewIndex).bank_questions).toBe(2218)
+    expect(parseHumanReviewIndex(reviewIndex).bank_questions).toBe(2468)
   })
 
   it("loads the exact public training artifact without leaking blind pools", () => {
-    expect(manifest.gold_questions).toBe(2218)
-    expect(manifest.unique_facts).toBe(1967)
+    expect(manifest.gold_questions).toBe(2468)
+    expect(manifest.unique_facts).toBe(2217)
+    expect(manifest.shards).toHaveLength(18)
     expect(
       manifest.shards.reduce((sum, shard) => sum + shard.question_count, 0)
-    ).toBe(2218)
+    ).toBe(2468)
     expect(questions.every((question) => !question.blindPool)).toBe(true)
   })
 
@@ -56,9 +57,15 @@ describe("real V10 competitive bank rounds", () => {
       const facts = selected.map((question) => question.factId)
       expect(selected).toHaveLength(100)
       expect(new Set(facts).size).toBe(100)
-      expect(selected.filter((question) => question.type === "single_choice")).toHaveLength(45)
-      expect(selected.filter((question) => question.type === "fill_blank")).toHaveLength(30)
-      expect(selected.filter((question) => question.type === "true_false")).toHaveLength(25)
+      expect(
+        selected.filter((question) => question.type === "single_choice")
+      ).toHaveLength(45)
+      expect(
+        selected.filter((question) => question.type === "fill_blank")
+      ).toHaveLength(30)
+      expect(
+        selected.filter((question) => question.type === "true_false")
+      ).toHaveLength(25)
       expect(
         selected.every(
           (question) =>
@@ -163,9 +170,9 @@ describe("real V10 competitive bank rounds", () => {
     }
     const variants = [...byFact.values()].find((rows) => rows.length >= 2)!
 
-    expect(
-      new Set(variants.map((question) => question.question)).size
-    ).toBe(variants.length)
+    expect(new Set(variants.map((question) => question.question)).size).toBe(
+      variants.length
+    )
     expect(
       new Set(
         variants.map((question) =>

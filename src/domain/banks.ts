@@ -1,4 +1,11 @@
-import type { BankProfileId, BankSelection, DifficultyBand, Question, QuestionReport, Session } from "@/domain/types"
+import type {
+  BankProfileId,
+  BankSelection,
+  DifficultyBand,
+  Question,
+  QuestionReport,
+  Session,
+} from "@/domain/types"
 
 export type BankDefinition = {
   id: BankProfileId
@@ -50,7 +57,8 @@ export const BANK_DEFINITIONS: Record<BankProfileId, BankDefinition> = {
   "consolidation-v5": {
     id: "consolidation-v5",
     label: "V6 — Aprendizaje competitivo",
-    description: "5,000 preguntas GOLD, mezcla obligatoria y recuperación espaciada",
+    description:
+      "5,000 preguntas GOLD, mezcla obligatoria y recuperación espaciada",
     readOnly: true,
     version: "V6-MEZCLA-APRENDIZAJE-2026-08-26",
     expectedQuestionCount: 5000,
@@ -61,7 +69,7 @@ export const BANK_DEFINITIONS: Record<BankProfileId, BankDefinition> = {
     description: "Entrenamiento canónico con cobertura completa del PDF",
     readOnly: true,
     version: "10.0",
-    expectedQuestionCount: 2218,
+    expectedQuestionCount: 2468,
   },
 }
 
@@ -69,38 +77,65 @@ export function getQuestionKey(question: Pick<Question, "bankId" | "id">) {
   return `${question.bankId ?? "local"}:${question.id}`
 }
 
-export function questionBelongsToSelection(question: Question, selection: BankSelection) {
+export function questionBelongsToSelection(
+  question: Question,
+  selection: BankSelection
+) {
   if (selection === "mixed") return question.bankProfileId !== "master-v2"
   if (selection === "prep-v3") return question.bankProfileId === "prep-v3"
   return (question.bankProfileId ?? "legacy-v1") === selection
 }
 
-export function filterQuestionsForSelection(questions: Question[], selection: BankSelection) {
-  return questions.filter((question) => questionBelongsToSelection(question, selection))
+export function filterQuestionsForSelection(
+  questions: Question[],
+  selection: BankSelection
+) {
+  return questions.filter((question) =>
+    questionBelongsToSelection(question, selection)
+  )
 }
 
-function questionKeysForSelection(questions: Question[], selection: BankSelection) {
-  return new Set(filterQuestionsForSelection(questions, selection).map(getQuestionKey))
+function questionKeysForSelection(
+  questions: Question[],
+  selection: BankSelection
+) {
+  return new Set(
+    filterQuestionsForSelection(questions, selection).map(getQuestionKey)
+  )
 }
 
-export function filterSessionsForSelection(sessions: Session[], questions: Question[], selection: BankSelection) {
+export function filterSessionsForSelection(
+  sessions: Session[],
+  questions: Question[],
+  selection: BankSelection
+) {
   const allowedKeys = questionKeysForSelection(questions, selection)
   return sessions.flatMap((session) => {
     const recordedSelection = session.config?.bankSelection
     if (recordedSelection === selection) return [session]
     if (recordedSelection && recordedSelection !== "mixed") return []
-    const questionKeys = session.questionKeys.filter((key) => allowedKeys.has(key))
+    const questionKeys = session.questionKeys.filter((key) =>
+      allowedKeys.has(key)
+    )
     if (questionKeys.length === 0) return []
     if (questionKeys.length === session.questionKeys.length) return [session]
-    return [{
-      ...session,
-      questionKeys,
-      answers: session.answers.filter((answer) => allowedKeys.has(answer.questionKey)),
-    }]
+    return [
+      {
+        ...session,
+        questionKeys,
+        answers: session.answers.filter((answer) =>
+          allowedKeys.has(answer.questionKey)
+        ),
+      },
+    ]
   })
 }
 
-export function filterReportsForSelection(reports: QuestionReport[], questions: Question[], selection: BankSelection) {
+export function filterReportsForSelection(
+  reports: QuestionReport[],
+  questions: Question[],
+  selection: BankSelection
+) {
   const allowedKeys = questionKeysForSelection(questions, selection)
   return reports.filter((report) => allowedKeys.has(report.questionKey))
 }
@@ -113,8 +148,15 @@ export function normalizedDifficulty(question: Question): DifficultyBand {
   return "EXPERT"
 }
 
-export function questionsShareFacts(left: Question | undefined, right: Question | undefined) {
+export function questionsShareFacts(
+  left: Question | undefined,
+  right: Question | undefined
+) {
   if (!left || !right) return false
-  const leftFacts = new Set(left.factKeys?.length ? left.factKeys : [left.factKey])
-  return (right.factKeys?.length ? right.factKeys : [right.factKey]).some((fact) => leftFacts.has(fact))
+  const leftFacts = new Set(
+    left.factKeys?.length ? left.factKeys : [left.factKey]
+  )
+  return (right.factKeys?.length ? right.factKeys : [right.factKey]).some(
+    (fact) => leftFacts.has(fact)
+  )
 }

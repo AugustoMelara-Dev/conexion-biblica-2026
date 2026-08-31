@@ -7549,6 +7549,69 @@
     "row_content_sha256": "f364c4983439317959dd28eeec838f75aa91ce5e6af00250f38557eed3d40a58"
   },
   {
+    "id": "PR40-V11-WAVE-006",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P034-P002-S002",
+    "fact_id": "PR40-P034-P002-S002-V11-F02",
+    "variant_id": "PR40-V11-WAVE-006",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "chapter": "PR40",
+    "reference": "PR40, p. 34, párrafo 2",
+    "source_ref": "PR40, p. 34, párrafo 2",
+    "verse_or_page": "PR40, p. 34, párrafo 2",
+    "source_span": "“Fuése luego Daniel a su casa, y declaró el negocio a Ananías, Misael, y Azarías, sus compañeros.",
+    "source_quote": "“Fuése luego Daniel a su casa, y declaró el negocio a Ananías, Misael, y Azarías, sus compañeros.",
+    "context_anchor": "“Fuése luego Daniel a su casa, y declaró el negocio a Ananías, Misael, y Azarías, sus compañeros.",
+    "evidence_excerpt": "“Fuése luego Daniel a su casa, y declaró el negocio a Ananías, Misael, y Azarías, sus compañeros.",
+    "topic": "identification",
+    "importance": "high",
+    "relation_type": "prayer_companions",
+    "option_category": "person_set",
+    "blind_pool": null,
+    "question": "¿A qué tres compañeros comunicó Daniel el problema del rey?",
+    "options": [
+      "Arioc, Aspenaz y Melsar",
+      "Ananías, Misael y Azarías",
+      "Ciro, Darío y Belsasar",
+      "Sadoc, Esdras y Nehemías"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Ananías, Misael y Azarías",
+    "accepted_answers": [
+      "Ananías, Misael y Azarías"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Daniel compartió la crisis con Ananías, Misael y Azarías.",
+    "why_distractors_fail": {
+      "Arioc, Aspenaz y Melsar": "Eran funcionarios, no sus tres compañeros de oración.",
+      "Ciro, Darío y Belsasar": "Son gobernantes de otras escenas.",
+      "Sadoc, Esdras y Nehemías": "No pertenecen a este relato."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "easy",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "Daniel compartió la crisis con Ananías, Misael y Azarías.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "19564cd112c249680131b678727dadebef5d112aa45e4c05a6eaa8cd8518e239",
+    "row_content_sha256": "b27e4b3e8ccd2f1d9afe07d18b8d2b73087ec9aa687a9bfc6cafb17b05a89d0d"
+  },
+  {
     "id": "PR40-V11-WAVE-007",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -7802,6 +7865,261 @@
     "row_content_sha256": "26be2993ae2edfcd21fe7311af578a2e3013f1e5bc88075ff3d83a1c029f5fd3"
   },
   {
+    "id": "PR40-V11-WAVE-011",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P034-P003-S003",
+    "fact_id": "PR40-P034-P003-S003-V11-F02",
+    "variant_id": "PR40-V11-WAVE-011",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "chapter": "PR40",
+    "reference": "PR40, p. 34, párrafo 3",
+    "source_ref": "PR40, p. 34, párrafo 3",
+    "verse_or_page": "PR40, p. 34, párrafo 3",
+    "source_span": "A ti, oh Dios de mis padres, confieso y te alabo, que me diste sabiduría y fortaleza, y ahora me enseñaste lo que te pedimos; pues nos has enseñado el negocio del rey.”",
+    "source_quote": "A ti, oh Dios de mis padres, confieso y te alabo, que me diste sabiduría y fortaleza, y ahora me enseñaste lo que te pedimos; pues nos has enseñado el negocio del rey.”",
+    "context_anchor": "A ti, oh Dios de mis padres, confieso y te alabo, que me diste sabiduría y fortaleza, y ahora me enseñaste lo que te pedimos; pues nos has enseñado el negocio del rey.”",
+    "evidence_excerpt": "A ti, oh Dios de mis padres, confieso y te alabo, que me diste sabiduría y fortaleza, y ahora me enseñaste lo que te pedimos; pues nos has enseñado el negocio del rey.”",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "received_gift",
+    "option_category": "attribute",
+    "blind_pool": null,
+    "question": "Daniel confesó que Dios le había dado sabiduría y ____.",
+    "options": [
+      "fortaleza",
+      "riqueza",
+      "realeza",
+      "influencia"
+    ],
+    "correct_option": 0,
+    "correct_answer": "fortaleza",
+    "accepted_answers": [
+      "fortaleza",
+      "sabiduría y fortaleza"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Daniel agradeció específicamente sabiduría y fortaleza.",
+    "why_distractors_fail": {
+      "riqueza": "No fue el don agradecido en esa frase.",
+      "realeza": "Daniel no recibió el trono.",
+      "influencia": "No completa la expresión de alabanza."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "easy",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "Daniel agradeció específicamente sabiduría y fortaleza.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "451b05c643c325de16b4c6f3d882086fddbdbb547671cede24fb0ccb0738fa93",
+    "row_content_sha256": "42a373a7be3929cdabc4f13f552dfb0d02f75c3b03b9f3efb720cb65dda8e019"
+  },
+  {
+    "id": "PR40-V11-WAVE-012",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P034-P004-S001",
+    "fact_id": "PR40-P034-P004-S001-V11-F02",
+    "variant_id": "PR40-V11-WAVE-012",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "identification",
+    "chapter": "PR40",
+    "reference": "PR40, p. 34, párrafo 4",
+    "source_ref": "PR40, p. 34, párrafo 4",
+    "verse_or_page": "PR40, p. 34, párrafo 4",
+    "source_span": "Presentándose inmediatamente a Arioc, a quien el rey había ordenado que destruyese los sabios, Daniel dijo: “No mates a los sabios de Babilonia: llévame delante del rey, que yo mostraré al rey la declaración.",
+    "source_quote": "Presentándose inmediatamente a Arioc, a quien el rey había ordenado que destruyese los sabios, Daniel dijo: “No mates a los sabios de Babilonia: llévame delante del rey, que yo mostraré al rey la declaración.",
+    "context_anchor": "Presentándose inmediatamente a Arioc, a quien el rey había ordenado que destruyese los sabios, Daniel dijo: “No mates a los sabios de Babilonia: llévame delante del rey, que yo mostraré al rey la declaración.",
+    "evidence_excerpt": "Presentándose inmediatamente a Arioc, a quien el rey había ordenado que destruyese los sabios, Daniel dijo: “No mates a los sabios de Babilonia: llévame delante del rey, que yo mostraré al rey la declaración.",
+    "topic": "identification",
+    "importance": "high",
+    "relation_type": "intermediary_identity",
+    "option_category": "person",
+    "blind_pool": null,
+    "question": "Daniel pidió a ____ que no matara a los sabios y lo llevara ante el rey.",
+    "options": [
+      "Melsar",
+      "Arioc",
+      "Aspenaz",
+      "Ciro"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Arioc",
+    "accepted_answers": [
+      "Arioc"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Daniel se presentó ante Arioc, encargado de ejecutar el decreto.",
+    "why_distractors_fail": {
+      "Melsar": "Fue el encargado de la prueba alimentaria.",
+      "Aspenaz": "Supervisó la educación inicial de los cautivos.",
+      "Ciro": "No participa en esta crisis."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "easy",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "Daniel se presentó ante Arioc, encargado de ejecutar el decreto.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "d07ebf127807cedf14fdf5b876503c15f13e5ef75f3478666549c5473f361918",
+    "row_content_sha256": "22d9947f0d1d64024e4dade95efc393ef9ffb29889b32c4ed845c9307f87b611"
+  },
+  {
+    "id": "PR40-V11-WAVE-013",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P034-P004-S002",
+    "fact_id": "PR40-P034-P004-S002-V11-F02",
+    "variant_id": "PR40-V11-WAVE-013",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "identification",
+    "chapter": "PR40",
+    "reference": "PR40, p. 34, párrafo 4",
+    "source_ref": "PR40, p. 34, párrafo 4",
+    "verse_or_page": "PR40, p. 34, párrafo 4",
+    "source_span": "Prestamente, el oficial llevó a Daniel a la presencia del rey diciendo: “Un varón de los trasportados de Judá he hallado, el cual declarará al rey la interpretación.”",
+    "source_quote": "Prestamente, el oficial llevó a Daniel a la presencia del rey diciendo: “Un varón de los trasportados de Judá he hallado, el cual declarará al rey la interpretación.”",
+    "context_anchor": "Prestamente, el oficial llevó a Daniel a la presencia del rey diciendo: “Un varón de los trasportados de Judá he hallado, el cual declarará al rey la interpretación.”",
+    "evidence_excerpt": "Prestamente, el oficial llevó a Daniel a la presencia del rey diciendo: “Un varón de los trasportados de Judá he hallado, el cual declarará al rey la interpretación.”",
+    "topic": "identification",
+    "importance": "high",
+    "relation_type": "captive_origin",
+    "option_category": "place",
+    "blind_pool": null,
+    "question": "Arioc presentó a Daniel como un varón de los transportados de ____.",
+    "options": [
+      "Persia",
+      "Egipto",
+      "Judá",
+      "Grecia"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Judá",
+    "accepted_answers": [
+      "Judá",
+      "los transportados de Judá"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El oficial identificó a Daniel como uno de los cautivos de Judá.",
+    "why_distractors_fail": {
+      "Persia": "No era su tierra de procedencia.",
+      "Egipto": "No pertenecía a ese grupo.",
+      "Grecia": "Grecia no es el origen mencionado."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "easy",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 2,
+      "rationale": "El oficial identificó a Daniel como uno de los cautivos de Judá.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "f281874624c0561c50b6528ef5c0fdca38d263e14a064d3c3538a5ffd7c410c5",
+    "row_content_sha256": "08f23fe8c62e96356d06f511714ba179fb8ab246a883cb7edc6ab7e4ced6be32"
+  },
+  {
+    "id": "PR40-V11-WAVE-014",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P034-P005-S001",
+    "fact_id": "PR40-P034-P005-S001-V11-F02",
+    "variant_id": "PR40-V11-WAVE-014",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "chapter": "PR40",
+    "reference": "PR40, p. 34, párrafo 5",
+    "source_ref": "PR40, p. 34, párrafo 5",
+    "verse_or_page": "PR40, p. 34, párrafo 5",
+    "source_span": "He aquí al cautivo judío, sereno y dueño de sí mismo, en presencia del monarca del más poderoso imperio del mundo.",
+    "source_quote": "He aquí al cautivo judío, sereno y dueño de sí mismo, en presencia del monarca del más poderoso imperio del mundo.",
+    "context_anchor": "He aquí al cautivo judío, sereno y dueño de sí mismo, en presencia del monarca del más poderoso imperio del mundo.",
+    "evidence_excerpt": "He aquí al cautivo judío, sereno y dueño de sí mismo, en presencia del monarca del más poderoso imperio del mundo.",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "self_control",
+    "option_category": "state",
+    "blind_pool": null,
+    "question": "Ante el monarca, Daniel estaba sereno y dueño de sí ____.",
+    "options": [
+      "solo",
+      "entonces",
+      "siempre",
+      "mismo"
+    ],
+    "correct_option": 3,
+    "correct_answer": "mismo",
+    "accepted_answers": [
+      "mismo",
+      "sí mismo"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El cautivo compareció sereno y con dominio propio.",
+    "why_distractors_fail": {
+      "solo": "No completa la descripción de autocontrol.",
+      "entonces": "No expresa una cualidad personal.",
+      "siempre": "Tampoco completa la frase."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "easy",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 3,
+      "rationale": "El cautivo compareció sereno y con dominio propio.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "cf6a241a2db8d45396ddd4d70ce125d31320506018999bc36f0db1d1c17e1030",
+    "row_content_sha256": "345f37b2f85024c840a7b53ce5f1d716532de24edf1739caf1a90c97b27dc9f3"
+  },
+  {
     "id": "PR40-V11-WAVE-015",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -7928,6 +8246,134 @@
     },
     "content_sha256": "faae3191a0e22fb3bdb326ea62a55ec1b1f0050593616f4a883f7b70d11d08b0",
     "row_content_sha256": "921b74f930735e6811476ac3a02ede9bfb3e9af71be539b0586411151c2757d1"
+  },
+  {
+    "id": "PR40-V11-WAVE-017",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P034-P006-S002",
+    "fact_id": "PR40-P034-P006-S002-V11-F02",
+    "variant_id": "PR40-V11-WAVE-017",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "chapter": "PR40",
+    "reference": "PR40, p. 34, párrafo 6",
+    "source_ref": "PR40, p. 34, párrafo 6",
+    "verse_or_page": "PR40, p. 34, párrafo 6",
+    "source_span": "Y a mí ha sido revelado este misterio, no por sabiduría que en mí haya más que en todos los vivientes, sino para que yo notifique al rey la declaración, y que entendieses los pensamientos de tu corazón.",
+    "source_quote": "Y a mí ha sido revelado este misterio, no por sabiduría que en mí haya más que en todos los vivientes, sino para que yo notifique al rey la declaración, y que entendieses los pensamientos de tu corazón.",
+    "context_anchor": "Y a mí ha sido revelado este misterio, no por sabiduría que en mí haya más que en todos los vivientes, sino para que yo notifique al rey la declaración, y que entendieses los pensamientos de tu corazón.",
+    "evidence_excerpt": "Y a mí ha sido revelado este misterio, no por sabiduría que en mí haya más que en todos los vivientes, sino para que yo notifique al rey la declaración, y que entendieses los pensamientos de tu corazón.",
+    "topic": "cause_consequence",
+    "importance": "critical",
+    "relation_type": "revealed_inner_thoughts",
+    "option_category": "inner_faculty",
+    "blind_pool": null,
+    "question": "La revelación permitiría al rey entender los pensamientos de su ____.",
+    "options": [
+      "reino",
+      "consejo",
+      "corazón",
+      "ejército"
+    ],
+    "correct_option": 2,
+    "correct_answer": "corazón",
+    "accepted_answers": [
+      "corazón",
+      "tu corazón"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El propósito incluía que el rey comprendiera los pensamientos de su corazón.",
+    "why_distractors_fail": {
+      "reino": "La visión trataba reinos, pero la frase señala su interior.",
+      "consejo": "No atribuye esos pensamientos a sus asesores.",
+      "ejército": "No es el lugar figurado de los pensamientos."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 2,
+      "rationale": "El propósito incluía que el rey comprendiera los pensamientos de su corazón.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "4d63fb617e36312b1e117bb847586254acd668f96d0f3161b68fb2822cd63545",
+    "row_content_sha256": "7e86b51eb4df44534ea363e518726db89a3b0bb08c8373e281a86b51261ea640"
+  },
+  {
+    "id": "PR40-V11-WAVE-018",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P035-P001-S003",
+    "fact_id": "PR40-P035-P001-S003-V11-F02",
+    "variant_id": "PR40-V11-WAVE-018",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "factual_recall",
+    "chapter": "PR40",
+    "reference": "PR40, p. 35, párrafo 1",
+    "source_ref": "PR40, p. 35, párrafo 1",
+    "verse_or_page": "PR40, p. 35, párrafo 1",
+    "source_span": "La cabeza de esta imagen era de fino oro; sus pechos y sus brazos, de plata; su vientre y sus muslos, de metal; sus piernas de hierro; sus pies, en parte de hierro, y en parte de barro cocido.",
+    "source_quote": "La cabeza de esta imagen era de fino oro; sus pechos y sus brazos, de plata; su vientre y sus muslos, de metal; sus piernas de hierro; sus pies, en parte de hierro, y en parte de barro cocido.",
+    "context_anchor": "La cabeza de esta imagen era de fino oro; sus pechos y sus brazos, de plata; su vientre y sus muslos, de metal; sus piernas de hierro; sus pies, en parte de hierro, y en parte de barro cocido.",
+    "evidence_excerpt": "La cabeza de esta imagen era de fino oro; sus pechos y sus brazos, de plata; su vientre y sus muslos, de metal; sus piernas de hierro; sus pies, en parte de hierro, y en parte de barro cocido.",
+    "topic": "factual_recall",
+    "importance": "critical",
+    "relation_type": "image_material",
+    "option_category": "material",
+    "blind_pool": null,
+    "question": "El vientre y los muslos de la imagen eran de ____.",
+    "options": [
+      "plata",
+      "hierro",
+      "barro",
+      "metal"
+    ],
+    "correct_option": 3,
+    "correct_answer": "metal",
+    "accepted_answers": [
+      "metal",
+      "bronce"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Después de la plata, el vientre y los muslos eran de metal.",
+    "why_distractors_fail": {
+      "plata": "La plata correspondía al pecho y los brazos.",
+      "hierro": "El hierro describía las piernas.",
+      "barro": "El barro aparecía mezclado en los pies."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 3,
+      "rationale": "Después de la plata, el vientre y los muslos eran de metal.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "51f4ccedae9eb3933225d0f3818e1a1734ce58367b2edae9906b7bd958d8067f",
+    "row_content_sha256": "1fd09d459afb7d0ca2bb5b0d536cebe38736f9eca8ea55af6bf02bc6cded4d63"
   },
   {
     "id": "PR40-V11-WAVE-019",
@@ -9506,6 +9952,70 @@
     "row_content_sha256": "97b29398c688a8479abe59d0b9c71e1744abe459f62b2f0c9ebfe561fa3a345b"
   },
   {
+    "id": "PR40-V11-WAVE-044",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P036-P006-S003",
+    "fact_id": "PR40-P036-P006-S003-V11-F02",
+    "variant_id": "PR40-V11-WAVE-044",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "chapter": "PR40",
+    "reference": "PR40, p. 36, párrafo 6",
+    "source_ref": "PR40, p. 36, párrafo 6",
+    "verse_or_page": "PR40, p. 36, párrafo 6",
+    "source_span": "Al no ensalzar al Dios verdadero, su gloria iba a marchitarse y un tercer reino ocuparía su lugar.",
+    "source_quote": "Al no ensalzar al Dios verdadero, su gloria iba a marchitarse y un tercer reino ocuparía su lugar.",
+    "context_anchor": "Al no ensalzar al Dios verdadero, su gloria iba a marchitarse y un tercer reino ocuparía su lugar.",
+    "evidence_excerpt": "Al no ensalzar al Dios verdadero, su gloria iba a marchitarse y un tercer reino ocuparía su lugar.",
+    "topic": "cause_consequence",
+    "importance": "critical",
+    "relation_type": "dishonor_outcome",
+    "option_category": "outcome",
+    "blind_pool": null,
+    "question": "Al no ensalzar al Dios verdadero, la ____ del segundo reino se marchitaría.",
+    "options": [
+      "gloria",
+      "ley",
+      "población",
+      "frontera"
+    ],
+    "correct_option": 0,
+    "correct_answer": "gloria",
+    "accepted_answers": [
+      "gloria",
+      "su gloria"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La falta de honra a Dios llevaría al marchitamiento de su gloria.",
+    "why_distractors_fail": {
+      "ley": "No es lo que se marchitaría.",
+      "población": "La frase no señala esa consecuencia.",
+      "frontera": "Tampoco es el objeto del deterioro."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "La falta de honra a Dios llevaría al marchitamiento de su gloria.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "e7c7e4a84ec4b6b5b1afbd0e78d2e63973711fded72f47231205f6043279dfdf",
+    "row_content_sha256": "b8214d5fa113b3767ac32fae02a27823a4c676540fa321359161701a9d69299d"
+  },
+  {
     "id": "PR40-V11-WAVE-045",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -10126,6 +10636,69 @@
     "row_content_sha256": "24280af13dc6d606008a26c4c39f7f223cc1b22182af83bc3939e89242dbf0a8"
   },
   {
+    "id": "PR40-V11-WAVE-058",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P034-P005-S003",
+    "fact_id": "PR40-P034-P005-S003-V11-F02",
+    "variant_id": "PR40-V11-WAVE-058",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "chapter": "PR40",
+    "reference": "PR40, p. 34, párrafo 5",
+    "source_ref": "PR40, p. 34, párrafo 5",
+    "verse_or_page": "PR40, p. 34, párrafo 5",
+    "source_span": "A la ansiosa pregunta del rey: “¿Podrás tú hacerme entender el sueño que vi, y su declaración? contestó: “El misterio que el rey demanda, ni sabios, ni astrólogos, ni magos, ni adivinos lo pueden enseñar al rey.",
+    "source_quote": "A la ansiosa pregunta del rey: “¿Podrás tú hacerme entender el sueño que vi, y su declaración? contestó: “El misterio que el rey demanda, ni sabios, ni astrólogos, ni magos, ni adivinos lo pueden enseñar al rey.",
+    "context_anchor": "A la ansiosa pregunta del rey: “¿Podrás tú hacerme entender el sueño que vi, y su declaración? contestó: “El misterio que el rey demanda, ni sabios, ni astrólogos, ni magos, ni adivinos lo pueden enseñar al rey.",
+    "evidence_excerpt": "A la ansiosa pregunta del rey: “¿Podrás tú hacerme entender el sueño que vi, y su declaración? contestó: “El misterio que el rey demanda, ni sabios, ni astrólogos, ni magos, ni adivinos lo pueden enseñar al rey.",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "royal_question_scope",
+    "option_category": "requested_capability",
+    "blind_pool": null,
+    "question": "¿Qué capacidad quiso confirmar Nabucodonosor al preguntar directamente a Daniel?",
+    "options": [
+      "Hacerle entender el sueño y su interpretación",
+      "Conseguir que recordara solo el nombre del sueño",
+      "Explicar únicamente la amenaza contra los sabios",
+      "Revelar quién había redactado el decreto"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Hacerle entender el sueño y su interpretación",
+    "accepted_answers": [
+      "Hacerle entender el sueño y su interpretación"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El rey preguntó si Daniel podía hacerle entender tanto el sueño como su interpretación.",
+    "why_distractors_fail": {
+      "Conseguir que recordara solo el nombre del sueño": "La petición abarcaba sueño e interpretación.",
+      "Explicar únicamente la amenaza contra los sabios": "Ese no era el misterio demandado.",
+      "Revelar quién había redactado el decreto": "El decreto no era el objeto de la pregunta."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "El rey preguntó si Daniel podía hacerle entender tanto el sueño como su interpretación.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "ba5a07fd27f96ad88db104a0f4d49dd5558af603906bd9f11b5655528738e29b",
+    "row_content_sha256": "96e1253c7c9fdc4cf27f44cbbf05657ed9271715e9071d028969e25542320eb9"
+  },
+  {
     "id": "PR40-V11-WAVE-059",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -10254,6 +10827,70 @@
     "row_content_sha256": "91f5a1f500b3f99d2b99a9ab078147fb664232b41c02b7ad972dda26ed3ff386"
   },
   {
+    "id": "PR40-V11-WAVE-061",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P035-P001-S002",
+    "fact_id": "PR40-P035-P001-S002-V11-F02",
+    "variant_id": "PR40-V11-WAVE-061",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "chapter": "PR40",
+    "reference": "PR40, p. 35, párrafo 1",
+    "source_ref": "PR40, p. 35, párrafo 1",
+    "verse_or_page": "PR40, p. 35, párrafo 1",
+    "source_span": "Esta imagen, que era muy grande, y cuya gloria era muy sublime, estaba en pie delante de ti, y su aspecto era terrible.",
+    "source_quote": "Esta imagen, que era muy grande, y cuya gloria era muy sublime, estaba en pie delante de ti, y su aspecto era terrible.",
+    "context_anchor": "Esta imagen, que era muy grande, y cuya gloria era muy sublime, estaba en pie delante de ti, y su aspecto era terrible.",
+    "evidence_excerpt": "Esta imagen, que era muy grande, y cuya gloria era muy sublime, estaba en pie delante de ti, y su aspecto era terrible.",
+    "topic": "factual_recall",
+    "importance": "medium",
+    "relation_type": "image_position",
+    "option_category": "spatial_relation",
+    "blind_pool": null,
+    "question": "¿Cómo estaba situada la gran imagen respecto del rey en la visión?",
+    "options": [
+      "Yacía detrás del trono",
+      "Flotaba sobre la ciudad",
+      "Permanecía oculta dentro del monte",
+      "Estaba en pie delante de él"
+    ],
+    "correct_option": 3,
+    "correct_answer": "Estaba en pie delante de él",
+    "accepted_answers": [
+      "Estaba en pie delante de él",
+      "En pie delante de ti"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La imagen estaba en pie delante del monarca.",
+    "why_distractors_fail": {
+      "Yacía detrás del trono": "Cambia postura y ubicación.",
+      "Flotaba sobre la ciudad": "La escena no la sitúa allí.",
+      "Permanecía oculta dentro del monte": "La imagen era visible ante el rey."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 3,
+      "rationale": "La imagen estaba en pie delante del monarca.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "2c66baf5eeef748681cfcc0742851b73d593f8c052af3d425873d0c25e27602c",
+    "row_content_sha256": "75d6c4c0076d8814023d9094c2acecc6dea37ffd37f7d5e92398c6497af0aa65"
+  },
+  {
     "id": "PR40-V11-WAVE-062",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -10315,6 +10952,69 @@
     },
     "content_sha256": "7371a9eca9a1119927c56f8a39209f465a1c4eb8d0747c7b68e6b56349d753dc",
     "row_content_sha256": "f5b1b8976364348ea08958074c84bdf9219327fbafaeec2b705c458b6c6176d7"
+  },
+  {
+    "id": "PR40-V11-WAVE-064",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P035-P004-S002",
+    "fact_id": "PR40-P035-P004-S002-V11-F03",
+    "variant_id": "PR40-V11-WAVE-064",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "chapter": "PR40",
+    "reference": "PR40, p. 35, párrafo 4",
+    "source_ref": "PR40, p. 35, párrafo 4",
+    "verse_or_page": "PR40, p. 35, párrafo 4",
+    "source_span": "Y todo lo que habitan hijos de hombres, bestias del campo, y aves del cielo, él ha entregado en tu mano, y te ha hecho enseñorear sobre todo ello: tú eres aquella cabeza de oro.",
+    "source_quote": "Y todo lo que habitan hijos de hombres, bestias del campo, y aves del cielo, él ha entregado en tu mano, y te ha hecho enseñorear sobre todo ello: tú eres aquella cabeza de oro.",
+    "context_anchor": "Y todo lo que habitan hijos de hombres, bestias del campo, y aves del cielo, él ha entregado en tu mano, y te ha hecho enseñorear sobre todo ello: tú eres aquella cabeza de oro.",
+    "evidence_excerpt": "Y todo lo que habitan hijos de hombres, bestias del campo, y aves del cielo, él ha entregado en tu mano, y te ha hecho enseñorear sobre todo ello: tú eres aquella cabeza de oro.",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "royal_domain",
+    "option_category": "being_set",
+    "blind_pool": null,
+    "question": "¿Qué seres habían sido entregados en la mano de Nabucodonosor para que ejerciera señorío?",
+    "options": [
+      "Hijos de hombres, peces del mar y reptiles de la tierra",
+      "Hijos de hombres, bestias del campo y aves del cielo",
+      "Sabios de la corte, ejércitos del reino y sacerdotes de los templos",
+      "Reyes de las naciones, mercaderes de las ciudades y labradores del campo"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Hijos de hombres, bestias del campo y aves del cielo",
+    "accepted_answers": [
+      "Hijos de hombres, bestias del campo y aves del cielo"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El dominio descrito abarcaba seres humanos, bestias del campo y aves del cielo.",
+    "why_distractors_fail": {
+      "Hijos de hombres, peces del mar y reptiles de la tierra": "Conserva la categoría humana, pero sustituye bestias y aves.",
+      "Sabios de la corte, ejércitos del reino y sacerdotes de los templos": "Reemplaza las tres categorías por grupos institucionales.",
+      "Reyes de las naciones, mercaderes de las ciudades y labradores del campo": "Propone grupos humanos, pero omite bestias y aves."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "El dominio descrito abarcaba seres humanos, bestias del campo y aves del cielo.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "c0ae21e733825b671b54c2cf076affe392efdd36c8196f58d2a75b69ef214af4",
+    "row_content_sha256": "cc0768664c8643bc3993d1f432787dd6a7faa179cf41c3a270a56e9a032f437e"
   },
   {
     "id": "PR40-V11-WAVE-065",
@@ -10570,6 +11270,69 @@
     "row_content_sha256": "8c9d06ca3976e966858ee77a7e27b76115c4994fc3aa67b50ac405929aef85bf"
   },
   {
+    "id": "PR40-V11-WAVE-069",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P033-P007-S003",
+    "fact_id": "PR40-P033-P007-S003-V11-F02",
+    "variant_id": "PR40-V11-WAVE-069",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "chapter": "PR40",
+    "reference": "PR40, p. 33, párrafo 7",
+    "source_ref": "PR40, p. 33, párrafo 7",
+    "verse_or_page": "PR40, p. 33, párrafo 7",
+    "source_span": "Finalmente, el negocio que el rey demanda, es singular, ni hay quien lo pueda declarar delante del rey, salvo los dioses cuya morada no es con la carne.",
+    "source_quote": "Finalmente, el negocio que el rey demanda, es singular, ni hay quien lo pueda declarar delante del rey, salvo los dioses cuya morada no es con la carne.",
+    "context_anchor": "Finalmente, el negocio que el rey demanda, es singular, ni hay quien lo pueda declarar delante del rey, salvo los dioses cuya morada no es con la carne.",
+    "evidence_excerpt": "Finalmente, el negocio que el rey demanda, es singular, ni hay quien lo pueda declarar delante del rey, salvo los dioses cuya morada no es con la carne.",
+    "topic": "text_recall",
+    "importance": "medium",
+    "relation_type": "divine_dwelling_claim",
+    "option_category": "noun",
+    "blind_pool": null,
+    "question": "Los sabios exceptuaron a los dioses, cuya morada no es con la ____.",
+    "options": [
+      "corte",
+      "carne",
+      "tierra",
+      "noche"
+    ],
+    "correct_option": 1,
+    "correct_answer": "carne",
+    "accepted_answers": [
+      "carne"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Declararon que la morada de los dioses no era con la carne.",
+    "why_distractors_fail": {
+      "corte": "No es el término de la declaración.",
+      "tierra": "La limitación se expresa respecto de la carne.",
+      "noche": "No describe la morada mencionada."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "Declararon que la morada de los dioses no era con la carne.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "4513738211b52302eaee161d3d495a3a295faa4635d292f6547f3e1cb7fe3908",
+    "row_content_sha256": "5c9f8c41af6a416473677690b8e3a80ea4252ec0727cc807cc3369979a071fdc"
+  },
+  {
     "id": "PR40-V11-WAVE-070",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -10632,6 +11395,323 @@
     },
     "content_sha256": "842bebfec7bca47d61b20df6f42cd390ea12e59ebba2cedfd61d921348272bd1",
     "row_content_sha256": "461822023363cc6fdb3d027a959c6f702cfd73227308e770c66fc5dfa2f0dec8"
+  },
+  {
+    "id": "PR40-V11-WAVE-071",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P034-P003-S002",
+    "fact_id": "PR40-P034-P003-S002-V11-F05",
+    "variant_id": "PR40-V11-WAVE-071",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "chapter": "PR40",
+    "reference": "PR40, p. 34, párrafo 3",
+    "source_ref": "PR40, p. 34, párrafo 3",
+    "verse_or_page": "PR40, p. 34, párrafo 3",
+    "source_span": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+    "source_quote": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+    "context_anchor": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+    "evidence_excerpt": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+    "topic": "text_recall",
+    "importance": "high",
+    "relation_type": "light_relation",
+    "option_category": "verb",
+    "blind_pool": null,
+    "question": "Daniel proclamó que Dios conoce lo que está en tinieblas y que la luz ____ con él.",
+    "options": [
+      "lucha",
+      "huye",
+      "termina",
+      "mora"
+    ],
+    "correct_option": 3,
+    "correct_answer": "mora",
+    "accepted_answers": [
+      "mora"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La alabanza concluye esa idea declarando que la luz mora con Dios.",
+    "why_distractors_fail": {
+      "lucha": "No expresa la relación afirmada.",
+      "huye": "Invierte la cercanía de la luz.",
+      "termina": "No completa la proposición."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 3,
+      "rationale": "La alabanza concluye esa idea declarando que la luz mora con Dios.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "30ba3403544b5b6136cfa2798cff2715e7a300d448dc5a9d2f56820540d646b6",
+    "row_content_sha256": "19d67acaf89a204b3b26bbdf81de99a63133f8c339b2d2927dd45de979d814f5"
+  },
+  {
+    "id": "PR40-V11-WAVE-072",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P034-P003-S003",
+    "fact_id": "PR40-P034-P003-S003-V11-F03",
+    "variant_id": "PR40-V11-WAVE-072",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "chapter": "PR40",
+    "reference": "PR40, p. 34, párrafo 3",
+    "source_ref": "PR40, p. 34, párrafo 3",
+    "verse_or_page": "PR40, p. 34, párrafo 3",
+    "source_span": "A ti, oh Dios de mis padres, confieso y te alabo, que me diste sabiduría y fortaleza, y ahora me enseñaste lo que te pedimos; pues nos has enseñado el negocio del rey.”",
+    "source_quote": "A ti, oh Dios de mis padres, confieso y te alabo, que me diste sabiduría y fortaleza, y ahora me enseñaste lo que te pedimos; pues nos has enseñado el negocio del rey.”",
+    "context_anchor": "A ti, oh Dios de mis padres, confieso y te alabo, que me diste sabiduría y fortaleza, y ahora me enseñaste lo que te pedimos; pues nos has enseñado el negocio del rey.”",
+    "evidence_excerpt": "A ti, oh Dios de mis padres, confieso y te alabo, que me diste sabiduría y fortaleza, y ahora me enseñaste lo que te pedimos; pues nos has enseñado el negocio del rey.”",
+    "topic": "text_recall",
+    "importance": "high",
+    "relation_type": "revealed_matter",
+    "option_category": "person_role",
+    "blind_pool": null,
+    "question": "Daniel agradeció a Dios: «nos has enseñado el negocio del ____».",
+    "options": [
+      "rey",
+      "templo",
+      "pueblo",
+      "ejército"
+    ],
+    "correct_option": 0,
+    "correct_answer": "rey",
+    "accepted_answers": [
+      "rey",
+      "del rey"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Dios les había enseñado el negocio del rey que pidieron conocer.",
+    "why_distractors_fail": {
+      "templo": "No era el asunto revelado.",
+      "pueblo": "La petición se relacionaba con el monarca.",
+      "ejército": "La crisis no trataba del ejército."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "Dios les había enseñado el negocio del rey que pidieron conocer.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "4451630fe95038d8595932e62e82c7d69bf4d57bece721c11f0c5c1d6254c068",
+    "row_content_sha256": "fd4c7c73a8185a79e0ffd40fd3b3e4c0bf2220b63cdb3a19dffeb6e0f443d00e"
+  },
+  {
+    "id": "PR40-V11-WAVE-075",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P035-P006-S001",
+    "fact_id": "PR40-P035-P006-S001-V11-F03",
+    "variant_id": "PR40-V11-WAVE-075",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "chapter": "PR40",
+    "reference": "PR40, p. 35, párrafo 6",
+    "source_ref": "PR40, p. 35, párrafo 6",
+    "verse_or_page": "PR40, p. 35, párrafo 6",
+    "source_span": "“Y el reino cuarto será fuerte como hierro; y como el hierro desmenuza y doma todas las cosas, y como el hierro que quebranta todas estas cosas, desmenuzará y quebrantará.",
+    "source_quote": "“Y el reino cuarto será fuerte como hierro; y como el hierro desmenuza y doma todas las cosas, y como el hierro que quebranta todas estas cosas, desmenuzará y quebrantará.",
+    "context_anchor": "“Y el reino cuarto será fuerte como hierro; y como el hierro desmenuza y doma todas las cosas, y como el hierro que quebranta todas estas cosas, desmenuzará y quebrantará.",
+    "evidence_excerpt": "“Y el reino cuarto será fuerte como hierro; y como el hierro desmenuza y doma todas las cosas, y como el hierro que quebranta todas estas cosas, desmenuzará y quebrantará.",
+    "topic": "text_recall",
+    "importance": "high",
+    "relation_type": "iron_action",
+    "option_category": "verb",
+    "blind_pool": null,
+    "question": "La fuerza del cuarto reino se compara con el hierro, que desmenuza y ____ todas las cosas.",
+    "options": [
+      "protege",
+      "doma",
+      "adorna",
+      "oculta"
+    ],
+    "correct_option": 1,
+    "correct_answer": "doma",
+    "accepted_answers": [
+      "doma"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La comparación declara que el hierro desmenuza y doma todas las cosas.",
+    "why_distractors_fail": {
+      "protege": "No es la acción usada en la comparación.",
+      "adorna": "No expresa fuerza destructiva.",
+      "oculta": "No completa el paralelismo."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "La comparación declara que el hierro desmenuza y doma todas las cosas.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "1a25254604091b370b1d2a2ded98e10ac4aacc8f0e04b3ecdce110339200d49f",
+    "row_content_sha256": "dfff7fd814839335b25331c094c289f13211e8234606d47b8d46b602122a7dc9"
+  },
+  {
+    "id": "PR40-V11-WAVE-077",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P036-P002-S002",
+    "fact_id": "PR40-P036-P002-S002-V11-F05",
+    "variant_id": "PR40-V11-WAVE-077",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "chapter": "PR40",
+    "reference": "PR40, p. 36, párrafo 2",
+    "source_ref": "PR40, p. 36, párrafo 2",
+    "verse_or_page": "PR40, p. 36, párrafo 2",
+    "source_span": "Pero en la Palabra de Dios se descorre el velo, y encima, detrás y a través de todo el juego y contrajuego de los humanos intereses, poder y pasiones, contemplamos a los agentes del que es todo misericordioso, que cumplen silenciosa y pacientemente los designios y la voluntad de él.",
+    "source_quote": "Pero en la Palabra de Dios se descorre el velo, y encima, detrás y a través de todo el juego y contrajuego de los humanos intereses, poder y pasiones, contemplamos a los agentes del que es todo misericordioso, que cumplen silenciosa y pacientemente los designios y la voluntad de él.",
+    "context_anchor": "Pero en la Palabra de Dios se descorre el velo, y encima, detrás y a través de todo el juego y contrajuego de los humanos intereses, poder y pasiones, contemplamos a los agentes del que es todo misericordioso, que cumplen silenciosa y pacientemente los designios y la voluntad de él.",
+    "evidence_excerpt": "Pero en la Palabra de Dios se descorre el velo, y encima, detrás y a través de todo el juego y contrajuego de los humanos intereses, poder y pasiones, contemplamos a los agentes del que es todo misericordioso, que cumplen silenciosa y pacientemente los designios y la voluntad de él.",
+    "topic": "text_recall",
+    "importance": "high",
+    "relation_type": "providential_revelation_metaphor",
+    "option_category": "noun",
+    "blind_pool": null,
+    "question": "En la Palabra de Dios se descorre el ____ que oculta la acción providencial en la historia.",
+    "options": [
+      "trono",
+      "tiempo",
+      "velo",
+      "monte"
+    ],
+    "correct_option": 2,
+    "correct_answer": "velo",
+    "accepted_answers": [
+      "velo",
+      "el velo"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La metáfora afirma que en la Palabra de Dios se descorre el velo.",
+    "why_distractors_fail": {
+      "trono": "No es lo que se descorre.",
+      "tiempo": "Los tiempos se mudan, no se descorren aquí.",
+      "monte": "El monte pertenece a la visión de la piedra."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 2,
+      "rationale": "La metáfora afirma que en la Palabra de Dios se descorre el velo.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "de34b6fa70eb28f7daa31c49716b5159f9ef33234de6fe25a7944ecb93f6d428",
+    "row_content_sha256": "a06e816555a93cdd45b1404060d1062ac84f7855546d8d21fff9f7f22028e66a"
+  },
+  {
+    "id": "PR40-V11-WAVE-078",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "PR40-P036-P003-S001",
+    "fact_id": "PR40-P036-P003-S001-V11-F02",
+    "variant_id": "PR40-V11-WAVE-078",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "fill_choice",
+    "subtype": "text_recall",
+    "chapter": "PR40",
+    "reference": "PR40, p. 36, párrafo 3",
+    "source_ref": "PR40, p. 36, párrafo 3",
+    "verse_or_page": "PR40, p. 36, párrafo 3",
+    "source_span": "En palabras de incomparable belleza y ternura, el apóstol Pablo presentó a los sabios de Atenas el propósito que Dios había tenido en la creación y distribución de las razas y naciones.",
+    "source_quote": "En palabras de incomparable belleza y ternura, el apóstol Pablo presentó a los sabios de Atenas el propósito que Dios había tenido en la creación y distribución de las razas y naciones.",
+    "context_anchor": "En palabras de incomparable belleza y ternura, el apóstol Pablo presentó a los sabios de Atenas el propósito que Dios había tenido en la creación y distribución de las razas y naciones.",
+    "evidence_excerpt": "En palabras de incomparable belleza y ternura, el apóstol Pablo presentó a los sabios de Atenas el propósito que Dios había tenido en la creación y distribución de las razas y naciones.",
+    "topic": "text_recall",
+    "importance": "medium",
+    "relation_type": "presentation_tone",
+    "option_category": "noun",
+    "blind_pool": null,
+    "question": "Pablo presentó el propósito divino con palabras de incomparable belleza y ____.",
+    "options": [
+      "severidad",
+      "ironía",
+      "brevedad",
+      "ternura"
+    ],
+    "correct_option": 3,
+    "correct_answer": "ternura",
+    "accepted_answers": [
+      "ternura"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "La exposición de Pablo se caracteriza por belleza y ternura incomparables.",
+    "why_distractors_fail": {
+      "severidad": "No es la cualidad emparejada con belleza.",
+      "ironía": "No describe el tono señalado.",
+      "brevedad": "No es el atributo citado."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 3,
+      "rationale": "La exposición de Pablo se caracteriza por belleza y ternura incomparables.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "4609b717de97d35272c7af1e4ceb7456aac5420adc03a0c0e0d9516749e0a6fe",
+    "row_content_sha256": "44200c7a37a9945bf7ceba3edd3add1a487f607d2bccfe3ca2b0a77c5a6e0fa3"
   },
   {
     "id": "PR40-V11-WAVE-079",

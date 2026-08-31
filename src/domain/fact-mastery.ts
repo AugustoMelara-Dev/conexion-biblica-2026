@@ -106,20 +106,32 @@ function pointsFor(event: FactEvidenceEvent, interval: number | null) {
   if (interval !== null && interval >= 24 * HOUR) points = 25
   else if (interval !== null && interval >= 6 * HOUR) points = 20
   else if (interval !== null && interval >= 45 * 60_000) points = 15
-  if (event.responseTimeMs > event.personalMedianMs * 1.4) points = Math.min(points, 10)
+  if (event.responseTimeMs > 6_000) points = Math.min(points, 10)
   return points
 }
 
-export function applyFactEvidence(previous: FactMastery, event: FactEvidenceEvent): FactMastery {
-  const interval = previous.lastQualifyingAt === null ? null : event.occurredAt - previous.lastQualifyingAt
-  const slow = event.responseTimeMs > event.personalMedianMs * 1.4
-  const validFirstAttempt = event.firstAttempt && !event.hintUsed && !event.afterFeedback
-  const contextual = /context|scene|comparison|difference|sequence|cause|consequence/.test(event.semanticSkill)
-  const sixHourRetrieval = validFirstAttempt && interval !== null && interval >= 6 * HOUR
+export function applyFactEvidence(
+  previous: FactMastery,
+  event: FactEvidenceEvent
+): FactMastery {
+  const interval =
+    previous.lastQualifyingAt === null
+      ? null
+      : event.occurredAt - previous.lastQualifyingAt
+  const slow = event.responseTimeMs > 6_000
+  const validFirstAttempt =
+    event.firstAttempt && !event.hintUsed && !event.afterFeedback
+  const contextual =
+    /context|scene|comparison|difference|sequence|cause|consequence/.test(
+      event.semanticSkill
+    )
+  const sixHourRetrieval =
+    validFirstAttempt && interval !== null && interval >= 6 * HOUR
   const nextDayRetrieval =
     validFirstAttempt &&
     previous.lastQualifyingAt !== null &&
-    tegucigalpaDay(previous.lastQualifyingAt) !== tegucigalpaDay(event.occurredAt)
+    tegucigalpaDay(previous.lastQualifyingAt) !==
+      tegucigalpaDay(event.occurredAt)
   const base: FactMastery = {
     ...previous,
     attempts: previous.attempts + 1,
@@ -128,14 +140,25 @@ export function applyFactEvidence(previous: FactMastery, event: FactEvidenceEven
     sessionIds: appendUnique(previous.sessionIds, event.sessionId),
     firstSeenAt: previous.firstSeenAt ?? event.occurredAt,
     lastSeenAt: event.occurredAt,
-    firstAttemptAttempts: (previous.firstAttemptAttempts ?? 0) + Number(validFirstAttempt),
-    firstAttemptCorrect: (previous.firstAttemptCorrect ?? 0) + Number(validFirstAttempt && event.isCorrect),
-    contextualAttempts: (previous.contextualAttempts ?? 0) + Number(validFirstAttempt && contextual),
-    contextualCorrect: (previous.contextualCorrect ?? 0) + Number(validFirstAttempt && contextual && event.isCorrect),
+    firstAttemptAttempts:
+      (previous.firstAttemptAttempts ?? 0) + Number(validFirstAttempt),
+    firstAttemptCorrect:
+      (previous.firstAttemptCorrect ?? 0) +
+      Number(validFirstAttempt && event.isCorrect),
+    contextualAttempts:
+      (previous.contextualAttempts ?? 0) +
+      Number(validFirstAttempt && contextual),
+    contextualCorrect:
+      (previous.contextualCorrect ?? 0) +
+      Number(validFirstAttempt && contextual && event.isCorrect),
     sixHourAttempts: (previous.sixHourAttempts ?? 0) + Number(sixHourRetrieval),
-    sixHourCorrect: (previous.sixHourCorrect ?? 0) + Number(sixHourRetrieval && event.isCorrect),
+    sixHourCorrect:
+      (previous.sixHourCorrect ?? 0) +
+      Number(sixHourRetrieval && event.isCorrect),
     nextDayAttempts: (previous.nextDayAttempts ?? 0) + Number(nextDayRetrieval),
-    nextDayCorrect: (previous.nextDayCorrect ?? 0) + Number(nextDayRetrieval && event.isCorrect),
+    nextDayCorrect:
+      (previous.nextDayCorrect ?? 0) +
+      Number(nextDayRetrieval && event.isCorrect),
   }
 
   if (!event.isCorrect) {
@@ -143,21 +166,28 @@ export function applyFactEvidence(previous: FactMastery, event: FactEvidenceEven
       ...base,
       state: previous.state === "mastered" ? "lapsed" : "due",
       failures: previous.failures + 1,
-      evidencePoints: Math.max(0, previous.evidencePoints - (previous.failures ? 35 : 25)),
+      evidencePoints: Math.max(
+        0,
+        previous.evidencePoints - (previous.failures ? 35 : 25)
+      ),
       nextDueAt: null,
     }
   }
 
-  if (event.afterFeedback) return { ...base, state: "repaired", nextDueAt: event.occurredAt + HOUR }
-  if (event.hintUsed || !event.firstAttempt) return { ...base, state: "exposed" }
+  if (event.afterFeedback)
+    return { ...base, state: "repaired", nextDueAt: event.occurredAt + HOUR }
+  if (event.hintUsed || !event.firstAttempt)
+    return { ...base, state: "exposed" }
 
   const points = pointsFor(event, interval)
   const qualifyingFirstAttempts = previous.qualifyingFirstAttempts + 1
-  const hasSixHourRetrieval = previous.hasSixHourRetrieval || (interval !== null && interval >= 6 * HOUR)
+  const hasSixHourRetrieval =
+    previous.hasSixHourRetrieval || (interval !== null && interval >= 6 * HOUR)
   const hasNextDayRetrieval =
     previous.hasNextDayRetrieval ||
     (previous.lastQualifyingAt !== null &&
-      tegucigalpaDay(previous.lastQualifyingAt) !== tegucigalpaDay(event.occurredAt))
+      tegucigalpaDay(previous.lastQualifyingAt) !==
+        tegucigalpaDay(event.occurredAt))
   const hasHardRetrieval = previous.hasHardRetrieval || event.difficulty >= 4
   const candidate = {
     ...base,

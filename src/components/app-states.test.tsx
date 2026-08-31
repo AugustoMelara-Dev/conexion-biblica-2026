@@ -314,9 +314,7 @@ describe("estados transversales de App", () => {
     renderApp({ masterBankError: "Sin conexión" })
 
     expect(screen.getByText("Sin conexión")).toBeVisible()
-    expect(
-      screen.getByRole("heading", { name: "PLAN FINAL — GANAR EL 29" })
-    ).toBeVisible()
+    expect(screen.getByRole("heading", { name: "RUTA DEL DÍA" })).toBeVisible()
     expect(screen.getAllByRole("heading", { level: 1 })).toHaveLength(1)
   })
 
@@ -324,9 +322,7 @@ describe("estados transversales de App", () => {
     const user = userEvent.setup()
     renderApp({ loadMassiveQuestions: vi.fn().mockResolvedValue([]) })
 
-    await user.click(
-      screen.getByRole("button", { name: "CONTINUAR MI MISIÓN" })
-    )
+    await user.click(screen.getByRole("button", { name: "CONTINUAR MI RUTA" }))
 
     expect(await screen.findByRole("alert")).toBeVisible()
     expect(screen.getByText(/No hay preguntas que coincidan/)).toBeVisible()

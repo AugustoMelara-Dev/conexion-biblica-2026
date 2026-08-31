@@ -3450,6 +3450,134 @@
     "row_content_sha256": "236f0ef8eea31f6c4e5a5961eaa0bbfbd791f6ab6e4f30bd88097273429b8843"
   },
   {
+    "id": "DAN8-V11-WAVE-002",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN8-V002",
+    "fact_id": "DAN8-V002-V11-F02",
+    "variant_id": "DAN8-V11-WAVE-002",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "chapter": "DAN8",
+    "reference": "Daniel 8:2",
+    "source_ref": "Daniel 8:2",
+    "verse_or_page": "Daniel 8:2",
+    "source_span": "Miraba yo la visión, y en ella yo estaba en Susa, que es la capital del reino, en la provincia de Elam. En la visión, pues, me veía junto al río Ulai.",
+    "source_quote": "Miraba yo la visión, y en ella yo estaba en Susa, que es la capital del reino, en la provincia de Elam. En la visión, pues, me veía junto al río Ulai.",
+    "context_anchor": "Miraba yo la visión, y en ella yo estaba en Susa, que es la capital del reino, en la provincia de Elam. En la visión, pues, me veía junto al río Ulai.",
+    "evidence_excerpt": "Miraba yo la visión, y en ella yo estaba en Susa, que es la capital del reino, en la provincia de Elam. En la visión, pues, me veía junto al río Ulai.",
+    "topic": "identification",
+    "importance": "medium",
+    "relation_type": "place_role",
+    "option_category": "place_role",
+    "blind_pool": null,
+    "question": "¿Qué función tenía Susa en el territorio donde Daniel se veía?",
+    "options": [
+      "Era una aldea fronteriza",
+      "Era la capital del reino",
+      "Era el santuario principal",
+      "Era un campamento militar"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Era la capital del reino",
+    "accepted_answers": [
+      "Era la capital del reino",
+      "capital del reino"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Susa es identificada como la capital del reino.",
+    "why_distractors_fail": {
+      "Era una aldea fronteriza": "El texto la llama capital.",
+      "Era el santuario principal": "No se la identifica como santuario.",
+      "Era un campamento militar": "No es la función indicada."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "easy",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "Susa es identificada como la capital del reino.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "3ddfd431336a4f72238750cfc1001e0b35026d16c05422c90a2cbcf3352d7764",
+    "row_content_sha256": "f53fc0496309fbc39dcf3e93033c1fb33d6ce486d35575673c7b9529de7b24f0"
+  },
+  {
+    "id": "DAN8-V11-WAVE-003",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN8-V002",
+    "fact_id": "DAN8-V002-V11-F03",
+    "variant_id": "DAN8-V11-WAVE-003",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "chapter": "DAN8",
+    "reference": "Daniel 8:2",
+    "source_ref": "Daniel 8:2",
+    "verse_or_page": "Daniel 8:2",
+    "source_span": "Miraba yo la visión, y en ella yo estaba en Susa, que es la capital del reino, en la provincia de Elam. En la visión, pues, me veía junto al río Ulai.",
+    "source_quote": "Miraba yo la visión, y en ella yo estaba en Susa, que es la capital del reino, en la provincia de Elam. En la visión, pues, me veía junto al río Ulai.",
+    "context_anchor": "Miraba yo la visión, y en ella yo estaba en Susa, que es la capital del reino, en la provincia de Elam. En la visión, pues, me veía junto al río Ulai.",
+    "evidence_excerpt": "Miraba yo la visión, y en ella yo estaba en Susa, que es la capital del reino, en la provincia de Elam. En la visión, pues, me veía junto al río Ulai.",
+    "topic": "factual_recall",
+    "importance": "medium",
+    "relation_type": "location",
+    "option_category": "province",
+    "blind_pool": null,
+    "question": "¿En qué provincia estaba Susa?",
+    "options": [
+      "Media",
+      "Persia",
+      "Elam",
+      "Judea"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Elam",
+    "accepted_answers": [
+      "Elam",
+      "provincia de Elam"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Susa se encontraba en la provincia de Elam.",
+    "why_distractors_fail": {
+      "Media": "Media aparece en la interpretación del carnero.",
+      "Persia": "Persia no es la provincia nombrada.",
+      "Judea": "La visión sitúa a Daniel en Elam."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "easy",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 2,
+      "rationale": "Susa se encontraba en la provincia de Elam.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "43b29414b6d36d8b58d9f612e170e1fae4e61cb7e4233763bc331de629530544",
+    "row_content_sha256": "2a6e2400485cb776681c0d49055b0ed406d5527fc027e650255b7340039ca53f"
+  },
+  {
     "id": "DAN8-V11-WAVE-004",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -3512,6 +3640,197 @@
     },
     "content_sha256": "0417373594b527271fdf1152287526190d68f89e04d1eced83c3c4ab3fdc141c",
     "row_content_sha256": "fe8e2e5d3fa66208008256a2473247c18357365ddc6c69bf08844ce50e04ad6b"
+  },
+  {
+    "id": "DAN8-V11-WAVE-005",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN8-V004",
+    "fact_id": "DAN8-V004-V11-F02",
+    "variant_id": "DAN8-V11-WAVE-005",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "chapter": "DAN8",
+    "reference": "Daniel 8:4",
+    "source_ref": "Daniel 8:4",
+    "verse_or_page": "Daniel 8:4",
+    "source_span": "Vi que el carnero hería con los cuernos al poniente, al norte y al sur, y que ninguna bestia podía parar delante de él, ni había quien escapara de su poder. Hacía conforme a su voluntad, y se engrandecía.",
+    "source_quote": "Vi que el carnero hería con los cuernos al poniente, al norte y al sur, y que ninguna bestia podía parar delante de él, ni había quien escapara de su poder. Hacía conforme a su voluntad, y se engrandecía.",
+    "context_anchor": "Vi que el carnero hería con los cuernos al poniente, al norte y al sur, y que ninguna bestia podía parar delante de él, ni había quien escapara de su poder. Hacía conforme a su voluntad, y se engrandecía.",
+    "evidence_excerpt": "Vi que el carnero hería con los cuernos al poniente, al norte y al sur, y que ninguna bestia podía parar delante de él, ni había quien escapara de su poder. Hacía conforme a su voluntad, y se engrandecía.",
+    "topic": "factual_recall",
+    "importance": "critical",
+    "relation_type": "direction_set",
+    "option_category": "direction_triplet",
+    "blind_pool": null,
+    "question": "¿Hacia qué tres direcciones hería el carnero con sus cuernos?",
+    "options": [
+      "Poniente, norte y sur",
+      "Oriente, norte y sur",
+      "Poniente, oriente y norte",
+      "Sur, oriente y tierra gloriosa"
+    ],
+    "correct_option": 0,
+    "correct_answer": "Poniente, norte y sur",
+    "accepted_answers": [
+      "Poniente, norte y sur",
+      "al poniente, al norte y al sur"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El carnero hería al poniente, al norte y al sur.",
+    "why_distractors_fail": {
+      "Oriente, norte y sur": "Sustituye el poniente por el oriente.",
+      "Poniente, oriente y norte": "Incluye oriente y omite sur.",
+      "Sur, oriente y tierra gloriosa": "Esas direcciones se asocian al cuerno pequeño."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "El carnero hería al poniente, al norte y al sur.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "4c6f279d8ecf16428ac8201ecf91b6575bced5b9f6807101d753d3f209faa2b2",
+    "row_content_sha256": "11e9923d1e1aaa29cccd2b02cfc8728905cee2a8ce2283860b8ae42955e07034"
+  },
+  {
+    "id": "DAN8-V11-WAVE-006",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN8-V005",
+    "fact_id": "DAN8-V005-V11-F02",
+    "variant_id": "DAN8-V11-WAVE-006",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "chapter": "DAN8",
+    "reference": "Daniel 8:5",
+    "source_ref": "Daniel 8:5",
+    "verse_or_page": "Daniel 8:5",
+    "source_span": "Mientras yo consideraba esto, un macho cabrío venía del lado del poniente sobre la faz de toda la tierra, sin tocar tierra; y aquel macho cabrío tenía un cuerno notable entre sus ojos.",
+    "source_quote": "Mientras yo consideraba esto, un macho cabrío venía del lado del poniente sobre la faz de toda la tierra, sin tocar tierra; y aquel macho cabrío tenía un cuerno notable entre sus ojos.",
+    "context_anchor": "Mientras yo consideraba esto, un macho cabrío venía del lado del poniente sobre la faz de toda la tierra, sin tocar tierra; y aquel macho cabrío tenía un cuerno notable entre sus ojos.",
+    "evidence_excerpt": "Mientras yo consideraba esto, un macho cabrío venía del lado del poniente sobre la faz de toda la tierra, sin tocar tierra; y aquel macho cabrío tenía un cuerno notable entre sus ojos.",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "direction",
+    "option_category": "direction",
+    "blind_pool": null,
+    "question": "¿Desde qué dirección venía el macho cabrío?",
+    "options": [
+      "Oriente",
+      "Poniente",
+      "Norte",
+      "Sur"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Poniente",
+    "accepted_answers": [
+      "Poniente",
+      "del lado del poniente"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El macho cabrío venía del lado del poniente.",
+    "why_distractors_fail": {
+      "Oriente": "No es su dirección de procedencia.",
+      "Norte": "El texto no lo hace venir del norte.",
+      "Sur": "Tampoco procede del sur."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "easy",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "El macho cabrío venía del lado del poniente.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "c39d2f665da5da0af527b71aee4efaa5d4f5c8ce3c8826157b3ea09a112b9e03",
+    "row_content_sha256": "e2350c4fa4ad88ec35e39573bf6398b2daa4da33bf767c827494c2dc644b371f"
+  },
+  {
+    "id": "DAN8-V11-WAVE-007",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN8-V005",
+    "fact_id": "DAN8-V005-V11-F03",
+    "variant_id": "DAN8-V11-WAVE-007",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "symbol_interpretation",
+    "chapter": "DAN8",
+    "reference": "Daniel 8:5",
+    "source_ref": "Daniel 8:5",
+    "verse_or_page": "Daniel 8:5",
+    "source_span": "Mientras yo consideraba esto, un macho cabrío venía del lado del poniente sobre la faz de toda la tierra, sin tocar tierra; y aquel macho cabrío tenía un cuerno notable entre sus ojos.",
+    "source_quote": "Mientras yo consideraba esto, un macho cabrío venía del lado del poniente sobre la faz de toda la tierra, sin tocar tierra; y aquel macho cabrío tenía un cuerno notable entre sus ojos.",
+    "context_anchor": "Mientras yo consideraba esto, un macho cabrío venía del lado del poniente sobre la faz de toda la tierra, sin tocar tierra; y aquel macho cabrío tenía un cuerno notable entre sus ojos.",
+    "evidence_excerpt": "Mientras yo consideraba esto, un macho cabrío venía del lado del poniente sobre la faz de toda la tierra, sin tocar tierra; y aquel macho cabrío tenía un cuerno notable entre sus ojos.",
+    "topic": "symbol_interpretation",
+    "importance": "critical",
+    "relation_type": "position",
+    "option_category": "body_location",
+    "blind_pool": null,
+    "question": "¿Dónde estaba situado el cuerno notable del macho cabrío?",
+    "options": [
+      "Sobre su espalda",
+      "En uno de sus costados",
+      "Entre sus ojos",
+      "Debajo de su boca"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Entre sus ojos",
+    "accepted_answers": [
+      "Entre sus ojos"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El cuerno notable estaba entre los ojos del macho cabrío.",
+    "why_distractors_fail": {
+      "Sobre su espalda": "Las espaldas aparecen en la descripción de otra bestia.",
+      "En uno de sus costados": "El costado caracteriza al oso de otra visión.",
+      "Debajo de su boca": "No es la ubicación indicada."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "easy",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 2,
+      "rationale": "El cuerno notable estaba entre los ojos del macho cabrío.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "75c291c576d497aced3e3049b8c6f425f2ff77721872cc01f93ca98af798397b",
+    "row_content_sha256": "eae62232f1b6734ca21ec2e3ae0f7b1503107b34d30554f204db942f5f98fc07"
   },
   {
     "id": "DAN8-V11-WAVE-008",
@@ -3704,6 +4023,70 @@
     },
     "content_sha256": "8b1c803bf7357557d86cd8494f694c153ac7e40f0fc63172570c0750e361302f",
     "row_content_sha256": "5f327fcf9c20b600170ed9b71c7e919a5bb388a92198ee00b6a4e10412e83c0a"
+  },
+  {
+    "id": "DAN8-V11-WAVE-011",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN8-V009",
+    "fact_id": "DAN8-V009-V11-F02",
+    "variant_id": "DAN8-V11-WAVE-011",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "prophetic_detail",
+    "chapter": "DAN8",
+    "reference": "Daniel 8:9",
+    "source_ref": "Daniel 8:9",
+    "verse_or_page": "Daniel 8:9",
+    "source_span": "De uno de ellos salió un cuerno pequeño, que creció mucho hacia el sur y el oriente, y hacia la tierra gloriosa.",
+    "source_quote": "De uno de ellos salió un cuerno pequeño, que creció mucho hacia el sur y el oriente, y hacia la tierra gloriosa.",
+    "context_anchor": "De uno de ellos salió un cuerno pequeño, que creció mucho hacia el sur y el oriente, y hacia la tierra gloriosa.",
+    "evidence_excerpt": "De uno de ellos salió un cuerno pequeño, que creció mucho hacia el sur y el oriente, y hacia la tierra gloriosa.",
+    "topic": "prophetic_detail",
+    "importance": "critical",
+    "relation_type": "direction_set",
+    "option_category": "destination_triplet",
+    "blind_pool": null,
+    "question": "¿Cuál es el conjunto completo de destinos hacia los que creció el cuerno pequeño?",
+    "options": [
+      "Poniente, norte y sur",
+      "Oriente, poniente y mar",
+      "Sur, oriente y tierra gloriosa",
+      "Norte, Susa y Elam"
+    ],
+    "correct_option": 2,
+    "correct_answer": "Sur, oriente y tierra gloriosa",
+    "accepted_answers": [
+      "Sur, oriente y tierra gloriosa",
+      "hacia el sur y el oriente, y hacia la tierra gloriosa"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El cuerno creció hacia el sur, el oriente y la tierra gloriosa.",
+    "why_distractors_fail": {
+      "Poniente, norte y sur": "Ese conjunto corresponde al carnero.",
+      "Oriente, poniente y mar": "Incluye destinos no dados.",
+      "Norte, Susa y Elam": "Mezcla una dirección con lugares de la escena inicial."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "hard",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 2,
+      "rationale": "El cuerno creció hacia el sur, el oriente y la tierra gloriosa.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "44453a3497274496bd09089b6c9198678c8a7ec415404793de29685e83c08772",
+    "row_content_sha256": "c9b391bbb12e71fbbf77d621b071192dbb254eb74483b549b275effabe1e4568"
   },
   {
     "id": "DAN8-V11-WAVE-012",
@@ -4590,6 +4973,132 @@
     "row_content_sha256": "e5fffd3a1139377eec1db48eccad8fbb111cc6786f4b042cc257412b8b762c0a"
   },
   {
+    "id": "DAN8-V11-WAVE-026",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN8-V010",
+    "fact_id": "DAN8-V010-V11-F03",
+    "variant_id": "DAN8-V11-WAVE-026",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "prophetic_detail",
+    "chapter": "DAN8",
+    "reference": "Daniel 8:10",
+    "source_ref": "Daniel 8:10",
+    "verse_or_page": "Daniel 8:10",
+    "source_span": "Creció hasta llegar al ejército del cielo; y parte del ejército y de las estrellas echó por tierra, y las pisoteó.",
+    "source_quote": "Creció hasta llegar al ejército del cielo; y parte del ejército y de las estrellas echó por tierra, y las pisoteó.",
+    "context_anchor": "Creció hasta llegar al ejército del cielo; y parte del ejército y de las estrellas echó por tierra, y las pisoteó.",
+    "evidence_excerpt": "Creció hasta llegar al ejército del cielo; y parte del ejército y de las estrellas echó por tierra, y las pisoteó.",
+    "topic": "prophetic_detail",
+    "importance": "critical",
+    "relation_type": "scope",
+    "option_category": "realm",
+    "blind_pool": null,
+    "question": "¿Hasta qué ámbito llegó el crecimiento del cuerno?",
+    "options": [
+      "El ejército del cielo",
+      "La ribera del Ulai",
+      "Las puertas de Susa",
+      "Los cuatro vientos"
+    ],
+    "correct_option": 0,
+    "correct_answer": "El ejército del cielo",
+    "accepted_answers": [
+      "El ejército del cielo"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El cuerno creció hasta alcanzar el ejército del cielo.",
+    "why_distractors_fail": {
+      "La ribera del Ulai": "La ribera es el escenario inicial.",
+      "Las puertas de Susa": "No marcan el alcance de su crecimiento.",
+      "Los cuatro vientos": "Describen la dirección de otros cuernos."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 0,
+      "rationale": "El cuerno creció hasta alcanzar el ejército del cielo.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "b9f17a77095de61f2c0306055fe9f9bf18c2f3147c4b4093275849938f868e2b",
+    "row_content_sha256": "898b72730f74f32d0276101d436d0e42c60e7a4d3259a48edcc6169c53f8e4de"
+  },
+  {
+    "id": "DAN8-V11-WAVE-027",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN8-V011",
+    "fact_id": "DAN8-V011-V11-F03",
+    "variant_id": "DAN8-V11-WAVE-027",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "relationship",
+    "chapter": "DAN8",
+    "reference": "Daniel 8:11",
+    "source_ref": "Daniel 8:11",
+    "verse_or_page": "Daniel 8:11",
+    "source_span": "Aun se engrandeció frente al príncipe de los ejércitos; por él fue quitado el sacrificio continuo, y el lugar de su santuario fue echado por tierra.",
+    "source_quote": "Aun se engrandeció frente al príncipe de los ejércitos; por él fue quitado el sacrificio continuo, y el lugar de su santuario fue echado por tierra.",
+    "context_anchor": "Aun se engrandeció frente al príncipe de los ejércitos; por él fue quitado el sacrificio continuo, y el lugar de su santuario fue echado por tierra.",
+    "evidence_excerpt": "Aun se engrandeció frente al príncipe de los ejércitos; por él fue quitado el sacrificio continuo, y el lugar de su santuario fue echado por tierra.",
+    "topic": "relationship",
+    "importance": "critical",
+    "relation_type": "opposition",
+    "option_category": "person_or_title",
+    "blind_pool": null,
+    "question": "¿Frente a quién llegó a engrandecerse el cuerno?",
+    "options": [
+      "El rey de Grecia",
+      "El príncipe de los ejércitos",
+      "El santo que preguntaba",
+      "Daniel"
+    ],
+    "correct_option": 1,
+    "correct_answer": "El príncipe de los ejércitos",
+    "accepted_answers": [
+      "El príncipe de los ejércitos"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El cuerno se engrandeció frente al príncipe de los ejércitos.",
+    "why_distractors_fail": {
+      "El rey de Grecia": "Ese título interpreta al macho cabrío.",
+      "El santo que preguntaba": "No es el adversario señalado.",
+      "Daniel": "Daniel contempla la visión, pero no ocupa ese título."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "El cuerno se engrandeció frente al príncipe de los ejércitos.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "d0e1ddd48c2b6c7427cbd6146e7bc91a7e2881ffdbf3fa9f85f4a1a1ada48123",
+    "row_content_sha256": "4f3c8dc9a16d5b1776cd89a89eabb45bab37dc3148b0d37087825d14349ae4fb"
+  },
+  {
     "id": "DAN8-V11-WAVE-028",
     "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
     "bank_name": "Banco Maestro Único — Final 2026",
@@ -4779,6 +5288,70 @@
     },
     "content_sha256": "7397e0328f3b1e576443f73698e554690e847eec20bfed99e20ebb9cb000149f",
     "row_content_sha256": "f41cf11b34426474029666da11d61c674c693cce2d37a8de6cc36fff9e2d45cf"
+  },
+  {
+    "id": "DAN8-V11-WAVE-031",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN8-V016",
+    "fact_id": "DAN8-V016-V11-F02",
+    "variant_id": "DAN8-V11-WAVE-031",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "chapter": "DAN8",
+    "reference": "Daniel 8:16",
+    "source_ref": "Daniel 8:16",
+    "verse_or_page": "Daniel 8:16",
+    "source_span": "Y oí una voz de hombre entre las riberas del Ulai, que gritó y dijo: “Gabriel, enseña a éste la visión.”",
+    "source_quote": "Y oí una voz de hombre entre las riberas del Ulai, que gritó y dijo: “Gabriel, enseña a éste la visión.”",
+    "context_anchor": "Y oí una voz de hombre entre las riberas del Ulai, que gritó y dijo: “Gabriel, enseña a éste la visión.”",
+    "evidence_excerpt": "Y oí una voz de hombre entre las riberas del Ulai, que gritó y dijo: “Gabriel, enseña a éste la visión.”",
+    "topic": "factual_recall",
+    "importance": "high",
+    "relation_type": "voice_location",
+    "option_category": "place",
+    "blind_pool": null,
+    "question": "¿Desde dónde procedía la voz que ordenó explicar la visión?",
+    "options": [
+      "Desde el santuario purificado",
+      "Entre las riberas del Ulai",
+      "Desde la capital de Media",
+      "Detrás del macho cabrío"
+    ],
+    "correct_option": 1,
+    "correct_answer": "Entre las riberas del Ulai",
+    "accepted_answers": [
+      "Entre las riberas del Ulai",
+      "entre las riberas"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "Daniel oyó la voz de hombre entre las riberas del Ulai.",
+    "why_distractors_fail": {
+      "Desde el santuario purificado": "No es el origen descrito.",
+      "Desde la capital de Media": "La escena se ubica en Susa.",
+      "Detrás del macho cabrío": "El animal no es la fuente de la voz."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "Daniel oyó la voz de hombre entre las riberas del Ulai.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "b4b5bcf560611e103406dcf8b3aa59eddc5d85f435cb49a980cd017c7204143e",
+    "row_content_sha256": "3279fce157844af13a844b3b6551e7cdf316574ff719035aacc77a7d3c2c0859"
   },
   {
     "id": "DAN8-V11-WAVE-032",
@@ -4971,6 +5544,70 @@
     },
     "content_sha256": "b754f7e32992614f6d758c3ca58a3461163bd9f52e8a1ae402c4883b7d74c231",
     "row_content_sha256": "613fed11774ef89870eaf5053d8d3018b4980f5800460ae7981ed367444e25e2"
+  },
+  {
+    "id": "DAN8-V11-WAVE-035",
+    "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
+    "bank_name": "Banco Maestro Único — Final 2026",
+    "schema_version": "10.0",
+    "source_unit_id": "DAN8-V025",
+    "fact_id": "DAN8-V025-V11-F02",
+    "variant_id": "DAN8-V11-WAVE-035",
+    "role": "central",
+    "template_id": "ai-authored-v11",
+    "family": "single_choice_direct",
+    "subtype": "relationship",
+    "chapter": "DAN8",
+    "reference": "Daniel 8:25",
+    "source_ref": "Daniel 8:25",
+    "verse_or_page": "Daniel 8:25",
+    "source_span": "Con su sagacidad hará prosperar el engaño en su mano; en su corazón se engrandecerá y, sin aviso, destruirá a muchos. Se levantará contra el Príncipe de los príncipes, pero será quebrantado, aunque no por mano humana.",
+    "source_quote": "Con su sagacidad hará prosperar el engaño en su mano; en su corazón se engrandecerá y, sin aviso, destruirá a muchos. Se levantará contra el Príncipe de los príncipes, pero será quebrantado, aunque no por mano humana.",
+    "context_anchor": "Con su sagacidad hará prosperar el engaño en su mano; en su corazón se engrandecerá y, sin aviso, destruirá a muchos. Se levantará contra el Príncipe de los príncipes, pero será quebrantado, aunque no por mano humana.",
+    "evidence_excerpt": "Con su sagacidad hará prosperar el engaño en su mano; en su corazón se engrandecerá y, sin aviso, destruirá a muchos. Se levantará contra el Príncipe de los príncipes, pero será quebrantado, aunque no por mano humana.",
+    "topic": "relationship",
+    "importance": "critical",
+    "relation_type": "opposition",
+    "option_category": "title",
+    "blind_pool": null,
+    "question": "¿Contra qué autoridad suprema se levantaría el rey sagaz?",
+    "options": [
+      "El rey primero de Grecia",
+      "El Príncipe de los príncipes",
+      "El príncipe de Persia",
+      "El santo que habló"
+    ],
+    "correct_option": 1,
+    "correct_answer": "El Príncipe de los príncipes",
+    "accepted_answers": [
+      "El Príncipe de los príncipes",
+      "Príncipe de los príncipes"
+    ],
+    "answer_mode": "option_id",
+    "explanation": "El rey se levantaría contra el Príncipe de los príncipes.",
+    "why_distractors_fail": {
+      "El rey primero de Grecia": "Ese título interpreta otro símbolo.",
+      "El príncipe de Persia": "No es el título usado aquí.",
+      "El santo que habló": "No es el blanco final de su rebelión."
+    },
+    "trap_type": null,
+    "final_editorial_status": "GOLD",
+    "difficulty": "medium",
+    "false_mutation": null,
+    "ai_review": {
+      "status": "passed",
+      "reviewer_type": "ai_semantic_audit",
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion"
+    },
+    "validation_adversarial": {
+      "reviewer": "gpt-5.6-sol-v10-blind-promotion",
+      "status": "passed",
+      "selected_option": 1,
+      "rationale": "El rey se levantaría contra el Príncipe de los príncipes.",
+      "second_defensible_option": false
+    },
+    "content_sha256": "592b945aabfe22932362d93adae2e862929db9defe7df3e3fd4d20e89c221a54",
+    "row_content_sha256": "9d345268cafda4456e974ab293db098f65127ef7b705d54421b62e7d631fe948"
   },
   {
     "id": "DAN8-V11-WAVE-036",
