@@ -183,11 +183,13 @@ def validate_checkpoint(
     checkpoint: Mapping[str, Any] | object,
     *,
     base_fact_ids: Iterable[str] | None = None,
+    base_fact_sources: Mapping[str, str] | None = None,
 ) -> list[str]:
     """Validate one metadata checkpoint as a quota and fact-identity gate.
 
-    ``base_fact_ids`` optionally detects identities already shipped in an
-    earlier release without coupling this pure gate to filesystem layout.
+    ``base_fact_ids`` optionally enforces the identity relationship with the
+    central public base: Release 2 must reuse it exactly once; Release 3 must
+    select only a subset. Reuse is intentional and is not a collision.
     """
 
     if not isinstance(checkpoint, Mapping):
@@ -219,6 +221,11 @@ def validate_checkpoint(
             errors.append(f"{prefix}.fact_id: missing at row {index}")
         else:
             fact_ids.append(fact_id)
+            if base_fact_sources is not None and fact_id in base_fact_sources:
+                if row.get("source_unit_id") != base_fact_sources[fact_id]:
+                    errors.append(
+                        f"{prefix}.fact_source: mismatch {fact_id} at row {index}"
+                    )
         family = normalize_family(row.get("family"))
         if family is not None:
             families[family] += 1
@@ -234,11 +241,18 @@ def validate_checkpoint(
     )
     errors.extend(f"{prefix}.fact_id: duplicate {fact_id}" for fact_id in duplicates)
 
-    base_ids = set(base_fact_ids or ())
-    collisions = sorted(set(fact_ids) & base_ids)
-    errors.extend(
-        f"{prefix}.fact_id: collides with base {fact_id}" for fact_id in collisions
-    )
+    if base_fact_ids is not None or base_fact_sources is not None:
+        base_ids = set(base_fact_ids or ()) | set((base_fact_sources or {}).keys())
+        release_ids = set(fact_ids)
+        if release == 2:
+            errors.extend(
+                f"{prefix}.fact_ids: missing base {fact_id}"
+                for fact_id in sorted(base_ids - release_ids)
+            )
+        errors.extend(
+            f"{prefix}.fact_ids: not in base {fact_id}"
+            for fact_id in sorted(release_ids - base_ids)
+        )
 
     for family, count in spec["families"].items():
         _compare(f"{prefix}.families.{family}", families[family], count, errors)

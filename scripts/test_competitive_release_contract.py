@@ -156,18 +156,77 @@ class CompetitiveReleaseCheckpointTests(unittest.TestCase):
             ],
         )
 
-    def test_checkpoint_rejects_fact_ids_already_present_in_the_public_base(self) -> None:
+    def test_release_2_requires_exactly_the_public_base_fact_ids(self) -> None:
         rows = release_rows(
             2,
             {"selection": 998, "fill_choice": 665, "true_false": 554},
         )
 
+    def test_release_2_rejects_fact_id_swapped_to_another_source_unit(self) -> None:
+        rows = release_rows(
+            2,
+            {"selection": 998, "fill_choice": 665, "true_false": 554},
+        )
+        for index, row in enumerate(rows):
+            row["source_unit_id"] = f"SOURCE-{index:04d}"
+        mapping = {row["fact_id"]: row["source_unit_id"] for row in rows}
+        rows[0]["source_unit_id"], rows[1]["source_unit_id"] = (
+            rows[1]["source_unit_id"],
+            rows[0]["source_unit_id"],
+        )
+
+        errors = contract.validate_checkpoint(
+            {"release": 2, "rows": rows}, base_fact_sources=mapping
+        )
+
+        self.assertEqual(
+            errors[:2],
+            [
+                "checkpoint.release_2.fact_source: mismatch R2-F0001 at row 0",
+                "checkpoint.release_2.fact_source: mismatch R2-F0002 at row 1",
+            ],
+        )
+
         self.assertEqual(
             contract.validate_checkpoint(
                 {"release": 2, "rows": rows},
-                base_fact_ids={"R2-F0001", "PUBLIC-EXISTING"},
+                base_fact_ids={row["fact_id"] for row in rows},
             ),
-            ["checkpoint.release_2.fact_id: collides with base R2-F0001"],
+            [],
+        )
+        rows[0]["fact_id"] = "NOT-IN-BASE"
+
+        self.assertEqual(
+            contract.validate_checkpoint(
+                {"release": 2, "rows": rows},
+                base_fact_ids={f"R2-F{index:04d}" for index in range(1, 2218)},
+            ),
+            [
+                "checkpoint.release_2.fact_ids: missing base R2-F0001",
+                "checkpoint.release_2.fact_ids: not in base NOT-IN-BASE",
+            ],
+        )
+
+    def test_release_3_fact_ids_must_be_a_subset_of_the_public_base(self) -> None:
+        rows = release_rows(
+            3,
+            {"selection": 592, "fill_choice": 394, "true_false": 329},
+            material_counts={"DAN7-12": 592, "PR39-44": 395, "DAN1-6": 328},
+            translation_noise=198,
+        )
+        base_ids = {row["fact_id"] for row in rows} | {"UNUSED-BASE"}
+        self.assertEqual(
+            contract.validate_checkpoint(
+                {"release": 3, "rows": rows}, base_fact_ids=base_ids
+            ),
+            [],
+        )
+        rows[-1]["fact_id"] = "FOREIGN"
+        self.assertIn(
+            "checkpoint.release_3.fact_ids: not in base FOREIGN",
+            contract.validate_checkpoint(
+                {"release": 3, "rows": rows}, base_fact_ids=base_ids
+            ),
         )
 
     def test_release_3_accepts_exact_family_material_and_noise_counts(self) -> None:
