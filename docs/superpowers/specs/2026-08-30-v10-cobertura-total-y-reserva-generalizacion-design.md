@@ -17,7 +17,7 @@ El resultado mínimo antes de auditar los hechos históricos será:
 - A, B y emergencia medirán generalización frente a nuevas formulaciones;
 - el banco combinado crecerá de 2,468 a 2,718 presentaciones antes de cualquier reincorporación derivada de la auditoría histórica.
 
-La segunda meta es reconciliar exhaustivamente los 2,606 FACT del inventario maestro anterior contra los 2,217 hechos competitivos V10. Cada uno de los 389 no representados deberá terminar como reincorporado o como exclusión individualmente justificada. La rareza, dificultad o ausencia histórica no son motivos válidos de exclusión.
+La segunda meta es reconciliar exhaustivamente los 2,606 FACT del inventario maestro anterior contra los 2,217 hechos competitivos V10. El ledger principal tendrá 2,606 filas, una por cada FACT histórico. La diferencia aritmética de 389 entre ambos inventarios es solo un delta nominal: no se asumirá que representa el número real de omisiones porque los espacios de identificadores y las granularidades difieren. Las cantidades de hechos representados, fusionados, reincorporados y excluidos serán resultados de la reconciliación. La rareza, dificultad o ausencia histórica no son motivos válidos de exclusión.
 
 ## Evidencia canónica
 
@@ -49,7 +49,7 @@ Ofrecería máxima separación editorial, pero reemplazaría contenido público 
 
 Las 250 filas actualmente asignadas a `blind_pool` se publicarán como preguntas normales de entrenamiento. No se borrará ninguna de las 2,218 presentaciones públicas existentes. Después de la migración, las 2,468 presentaciones actuales serán públicas y cubrirán los 2,217 hechos V10.
 
-Cada hecho aceptado que se recupere de los 389 históricos añadirá como mínimo una presentación pública nueva y conservará su identidad histórica en el ledger de reconciliación. El total final podrá superar 2,718 presentaciones combinadas y 2,217 hechos; nunca disminuirá.
+Cada FACT histórico explícito y preguntable que no tenga una presentación pública capaz de exigir específicamente ese detalle añadirá como mínimo una presentación pública nueva y conservará su identidad histórica en el ledger de reconciliación. El total final podrá superar 2,718 presentaciones combinadas y 2,217 hechos; nunca disminuirá.
 
 ### Reserva privada
 
@@ -59,7 +59,7 @@ Se redactarán 250 preguntas completamente nuevas para los mismos 250 hechos sel
 - B: 100 preguntas, 45 selección, 30 completar, 25 verdadero/falso;
 - emergencia: 50 preguntas, 23 selección, 15 completar, 12 verdadero/falso.
 
-Todas tendrán dificultad HARD o EXPERT. Dentro de cada simulación habrá una sola pregunta por `fact_id`. La distribución por capítulos, material, habilidades y dificultad mantendrá el balance competitivo de V10.
+Todas tendrán dificultad HARD o EXPERT. Los tres pools serán particiones disjuntas también por hecho: se seleccionarán 250 `fact_id` únicos, 100 para A, 100 para B y 50 para emergencia, sin reutilizar un hecho entre pools. Dentro de cada simulación habrá una sola pregunta por `fact_id`. La distribución por material, capítulo, habilidad, riesgo y dificultad mantendrá el balance competitivo de V10. Así, usar A no expone hechos blind de B y usar A+B no expone los de emergencia.
 
 ### Contrato de ineditud
 
@@ -68,12 +68,14 @@ La separación ya no se validará por hechos disjuntos. El nuevo contrato será:
 - todo `fact_id` blind debe existir en el entrenamiento público;
 - ningún ID o `variant_id` blind puede aparecer en el banco público;
 - ningún enunciado blind normalizado puede coincidir con un enunciado público;
-- ninguna huella de contenido blind puede coincidir con una pública;
+- ningún fingerprint editorial de presentación blind puede coincidir con uno público;
 - para selección y completar, el conjunto o patrón reconocible de distractores no puede reutilizar el público correspondiente;
 - las formulaciones no podrán ser paráfrasis mecánicas que preserven la misma estructura sintáctica;
 - la respuesta correcta no podrá sobresalir por longitud, concordancia, precisión o nivel de detalle;
 - los distractores se tomarán de hechos cercanos del mismo material y de la misma categoría semántica, sin crear una segunda respuesta defendible;
 - la fuente exacta, el fragmento probatorio y el `fact_id` permanecerán trazables en el artefacto privado.
+
+El fingerprint editorial de presentación incluirá la formulación, estructura sintáctica, opciones, distractores y patrones editoriales. Excluirá deliberadamente `fact_id`, respuesta canónica, referencia y fragmento probatorio, porque esos campos deben coincidir entre el entrenamiento y la reserva cuando describen el mismo conocimiento. La coincidencia legítima de una respuesta factual aislada, como un nombre propio, no constituirá filtración.
 
 Además de las comprobaciones exactas, una revisión adversarial evaluará semejanza semántica entre cada variante blind y todas las presentaciones públicas del mismo hecho.
 
@@ -89,15 +91,16 @@ Se construirá un ledger con una fila por FACT histórico. La correspondencia co
 4. respuesta o dato objetivo;
 5. relación semántica: persona, acción, lugar, cantidad, tiempo, causa, consecuencia, secuencia, hablante, destinatario, símbolo o enseñanza explícita.
 
-Un mismo hecho puede haber sido renombrado, fusionado o expresado con otra granularidad. Esos casos se marcarán como `represented_rekeyed` o `represented_merged`; no se contarán como exclusiones.
+Un mismo hecho puede haber sido renombrado, fusionado o expresado con otra granularidad. Solo podrá marcarse como `represented_rekeyed` o `represented_merged` si la proposición objetiva histórica está íntegramente preservada y existe al menos una presentación pública que pueda exigir específicamente ese detalle. Que el dato esté implícito en un hecho V10 más amplio no basta. Si el entrenamiento público no prueba ese conocimiento concreto, el FACT se marcará `reincorporated` y se generará al menos una pregunta pública.
 
 ### Decisión individual
 
-Cada FACT inicialmente no representado recibirá exactamente uno de estos resultados:
+Cada uno de los 2,606 FACT recibirá exactamente uno de estos resultados:
 
+- `represented_exact`: la misma proposición está preservada y una presentación pública exige específicamente el detalle;
 - `reincorporated`: detalle explícito, verificable y razonablemente preguntable; se añade al entrenamiento público;
-- `represented_rekeyed`: ya cubierto por V10 bajo otra identidad;
-- `represented_merged`: su contenido íntegro está cubierto por un hecho V10 más amplio o equivalente;
+- `represented_rekeyed`: ya cubierto bajo otra identidad, con proposición íntegra y una presentación pública que exige ese detalle;
+- `represented_merged`: integrado en otro hecho V10 sin pérdida de la proposición y con una presentación pública que exige específicamente el detalle histórico;
 - `excluded_non_atomic`: fragmento sin proposición independiente o dependiente de anáfora irresoluble;
 - `excluded_reference_only`: lista de referencias sin afirmación examinable;
 - `excluded_ambiguous`: no admite una sola respuesta aun con el contexto oficial;
@@ -112,8 +115,9 @@ No se permitirá una razón genérica por lote. Cada exclusión tendrá explicac
 Se producirán:
 
 - un ledger JSON exhaustivo y validable por máquinas;
-- un CSV filtrable con las 389 decisiones;
+- un CSV filtrable con las 2,606 decisiones;
 - un informe Markdown legible con resumen por capítulo, material y razón;
+- una sección derivada de casos especiales —reincorporaciones, fusiones, reidentificaciones y exclusiones— cuyo tamaño no se decidirá de antemano;
 - una sección separada con todos los hechos reincorporados y sus nuevas preguntas públicas.
 
 Cada fila incluirá como mínimo: FACT histórico, material, capítulo, fuente, texto o soporte, respuesta, hecho V10 relacionado, estado, código de razón, explicación individual, evidencia y pregunta reincorporada cuando corresponda.
@@ -128,9 +132,9 @@ Los artefactos A, B y emergencia:
 - no serán importados por código cliente;
 - no aparecerán en manifiestos públicos, estadísticas, paneles de cobertura, service workers, source maps ni bundles;
 - no serán servidos por rutas o APIs públicas;
-- se verificarán mediante búsqueda de IDs, textos, respuestas, hashes y nombres de pool en el artefacto de producción.
+- se verificarán mediante búsqueda de IDs de presentación, `variant_id`, stems, opciones, distractores, fingerprints editoriales y nombres de pool en el artefacto de producción.
 
-La aplicación pública solo conocerá la cobertura entrenable. La información privada se mantendrá en artefactos de entrega separados y excluidos del despliegue público.
+La aplicación pública solo conocerá la cobertura entrenable. La información privada se mantendrá en artefactos de entrega separados y excluidos del despliegue público. No se considerará filtración que `fact_id`, respuesta canónica, fuente o soporte textual coincidan legítimamente con el conocimiento público.
 
 ## QC y criterios de aceptación
 
@@ -140,12 +144,13 @@ La compilación fallará si ocurre cualquiera de estos casos:
 - un hecho blind no está entrenado públicamente;
 - se pierde una pregunta pública preexistente;
 - se repite un hecho dentro de una simulación;
+- se repite un `fact_id` entre A, B y emergencia;
 - una pregunta blind no es HARD/EXPERT;
 - se altera la mezcla 45/30/25 o los tamaños A/B/emergencia;
-- existe reutilización exacta de enunciado, opciones, distractores o huella;
+- existe reutilización exacta o reconocible de enunciado, estructura sintáctica, opciones, distractores, patrón de distractores o fingerprint editorial;
 - una pregunta tiene más de una respuesta defendible o carece de soporte exacto;
 - un dato blind aparece en el frontend, bundle, API, estadísticas o archivos públicos;
-- alguno de los 389 FACT carece de decisión y razón individual;
+- alguno de los 2,606 FACT carece de decisión, evidencia y razón individual;
 - un FACT explícito, verificable y preguntable queda excluido por rareza, dificultad o historial.
 
 La verificación final incluirá:
@@ -153,7 +158,7 @@ La verificación final incluirá:
 1. auditoría estructural y de hashes;
 2. auditoría factual contra la fuente exacta;
 3. auditoría semántica y adversarial de preguntas y distractores;
-4. revisión de los 389 casos y de todas las reincorporaciones;
+4. revisión de las 2,606 decisiones, del subconjunto derivado de casos especiales y de todas las reincorporaciones;
 5. 1,000 simulaciones nacionales con invariantes de tamaño, mezcla, dificultad, unicidad y cobertura;
 6. pruebas de repetición espaciada, dominio y errores recurrentes;
 7. pruebas unitarias, integración y E2E del sitio;
@@ -174,6 +179,6 @@ El resultado base será:
 - 2,217/2,217 hechos V10 entrenables;
 - 250 preguntas privadas nuevas sobre hechos entrenables;
 - 2,718 presentaciones combinadas antes de reincorporaciones;
-- 389 decisiones históricas individualizadas;
+- 2,606 decisiones históricas individualizadas y un subconjunto de casos especiales derivado de la evidencia;
 - todas las reincorporaciones necesarias añadidas al entrenamiento;
 - V10 preservado con su dificultad, mezcla, simuladores, QC y experiencia pública.
