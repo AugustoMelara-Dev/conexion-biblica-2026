@@ -1,7 +1,7 @@
 # V10: cobertura pública total y reserva privada de generalización
 
 Fecha: 2026-08-30  
-Estado: diseño aprobado en principio; pendiente revisión de esta especificación  
+Estado: aprobado con las cuatro correcciones competitivas del 2026-08-31  
 Alcance: banco V10, compilación, QC, simuladores y despliegue
 
 ## Objetivo

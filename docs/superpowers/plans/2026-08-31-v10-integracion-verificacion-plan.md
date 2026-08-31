@@ -734,7 +734,7 @@ Expected: 250/250 factual PASS, 250/250 semantic PASS, 250/250 adversarial PASS,
 - [ ] **Step 2: Run the aggregate release gate with every real report**
 
 ```powershell
-python scripts/verify-v10-release.py --public-root public/banks/final-2026 --private-root output/private/competitive-v11-blind --ledger content/competitive-v11/reconciliation/fact-ledger-v10.json --promotion-registry content/competitive-v11/promoted-blind-v10.json --content-report reports/competitive-v11/blind-generalization-audit.json --reconciliation-report reports/competitive-v11/fact-reconciliation-summary.json --public-simulation-report reports/competitive-v11/national-simulations-1000.json --private-simulation-report output/release-v10/private-simulation-report.json --privacy-report output/release-v10/privacy-after-e2e.json --output-root reports/competitive-v11
+python scripts/verify-v10-release.py --public-root public/banks/final-2026 --private-root output/private/competitive-v11-blind --ledger content/competitive-v11/reconciliation/fact-ledger-v10.json --promotion-registry content/competitive-v11/promoted-blind-v10.json --content-report reports/competitive-v11/blind-generalization-audit.json --reconciliation-report reports/competitive-v11/fact-reconciliation.json --public-simulation-report reports/competitive-v11/national-simulations-1000.json --private-simulation-report output/release-v10/private-simulation-report.json --privacy-report output/release-v10/privacy-after-e2e.json --output-root reports/competitive-v11
 ```
 
 Expected: `status: PASS`; ledger rows=2,606; public V10 coverage=2,217/2,217; public presentations≥2,468; private presentations/facts=250/250; every gate PASS; no private text in either report.
