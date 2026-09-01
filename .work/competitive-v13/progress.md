@@ -37,4 +37,6 @@
 
 Release 1 quedó fijado en `7dc70deb08345a9ecfdfdfd2e6a87c0a26c7df35` y desplegado como `dpl_7vbxgG65gXet5pGBp4rVa78ZyLFR`; el alias público pasó 13 pruebas Chromium aplicables.
 
+El incremento estable R2 quedó fijado en `b83cf26fdd363a8717b40de7492ab06c8a6e0109` y desplegado como `dpl_C5VMbaN79tjzAbba1GkZ3iiGDUh8`. El alias público pasó la auditoría remota de 20 recursos/18 shards/2,730 preguntas/2,217 hechos sin fallos y 25 flujos Chromium; 11 se omitieron por diseño de proyecto.
+
 Release 2 tiene 393 variantes candidatas revisadas a ciegas: 262 aprobadas, 131 rechazadas y cero pendientes de revisión. Las 262 aprobadas ya fueron compiladas como incremento público estable, elevando el banco a 2,730 preguntas; quedan 1,955 hechos por cubrir para la meta R2 de 4,685. Los paquetes ocultan autor, respuesta y explicaciones y usan una clave HMAC fuera del repositorio; como los subagentes comparten filesystem, la independencia demostrable es procedural, no aislamiento criptográfico contra un revisor malicioso. La acción inmediata es publicar este checkpoint y reanudar autoría/revisión paralela.

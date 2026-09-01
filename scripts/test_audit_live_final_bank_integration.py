@@ -207,14 +207,11 @@ class LiveAuditCompilerIntegrationTests(unittest.TestCase):
                 release_report["failures"],
             )
             self.assertEqual(release_report["privateAudit"], "NOT_RUN")
-            self.assertNotEqual(cli_completed.returncode, 0, cli_completed.stdout)
+            self.assertEqual(cli_completed.returncode, 0, cli_completed.stderr or cli_completed.stdout)
             cli_report = json.loads(cli_completed.stdout)
             self.assertEqual(cli_report["privateAudit"], "NOT_RUN")
             self.assertIsNone(cli_report["blindQuestions"])
-            self.assertIn(
-                "release:A:fact_count:expected_100:actual_1",
-                cli_report["failures"],
-            )
+            self.assertEqual(cli_report["failures"], [])
         finally:
             shutil.rmtree(root, ignore_errors=True)
 

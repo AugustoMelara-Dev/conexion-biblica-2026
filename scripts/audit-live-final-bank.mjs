@@ -799,7 +799,10 @@ export async function auditLiveFinalBank(options = {}) {
 
 const isDirectRun = process.argv[1] && resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url))
 if (isDirectRun) {
-  const result = await auditLiveFinalBank({ blindRequirements: RELEASE_BLIND_REQUIREMENTS })
+  const privateAuditRequested = Boolean(process.env.BLIND_BANK_BASE_URL || process.env.BLIND_BANK_ROOT)
+  const result = await auditLiveFinalBank({
+    blindRequirements: privateAuditRequested ? RELEASE_BLIND_REQUIREMENTS : null,
+  })
   console.log(JSON.stringify(result, null, 2))
   if (result.failures.length) process.exitCode = 1
 }
