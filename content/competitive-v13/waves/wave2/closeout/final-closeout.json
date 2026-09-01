@@ -1,0 +1,48 @@
+{
+  "contract": "CB2026_FORENSIC_CLOSEOUT_W1_W2_V1",
+  "closeout_timestamp": "2026-09-01T19:42:00Z",
+  "status": "APPROVED_CANONICAL_CLOSEOUT",
+  "summary": {
+    "total_public_questions": 3452,
+    "total_canonical_facts": 2217,
+    "shards_count": 18,
+    "build_id": "56bd90c133286d9f63f8a2116a25ff04793a44ed4faa45dd7bb68d50f730d1df"
+  },
+  "wave1_audit": {
+    "total_evaluated": 201,
+    "pass_strict": 201,
+    "synthesized_or_missing_fields": 0,
+    "field_origins": {
+      "ORIGINAL_STAGE_A_OUTPUT": 2383,
+      "DERIVED_FROM_PACKET_INDEX": 431,
+      "ORIGINAL_STAGE_B_OUTPUT": 2010
+    }
+  },
+  "wave2_audit": {
+    "run_id": "run_w2_e50deff128f06d8b",
+    "total_evaluated": 240,
+    "pass_strict": 240,
+    "r2_coverage_accept": 160,
+    "r3_downgraded_to_coverage": 80,
+    "r3_competitive_accept": 0,
+    "rewrite_count": 0,
+    "reject_count": 0,
+    "traceability_clean": true
+  },
+  "r2_ledger": {
+    "canonical_facts": 2217,
+    "post_w1_r2_approved_facts": 730,
+    "w2_new_unique_r2_facts": 240,
+    "post_w2_r2_approved_facts": 970,
+    "r2_facts_remaining": 1247,
+    "r3_competitive_accumulated": 0
+  },
+  "real_selector_simulation": {
+    "seeds_executed": 1000,
+    "distinct_signatures": 1000,
+    "coverage_leaks_in_hard_expert": 0,
+    "duplicate_facts_in_sessions": 0,
+    "provisional_included": 0,
+    "simulation_passed": true
+  }
+}
