@@ -1,0 +1,293 @@
+[
+  {
+    "id": "R2-F-PR41-C7-001",
+    "source_unit_id": "PR41-P038-P004-S001",
+    "fact_id": "PR41-P038-P004-S001-F01",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "La sugestión halagadora no quedó en idea: agradó al rey, éste resolvió ejecutarla y decidió llevarla todavía más lejos.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Agrado, resolución, ejecución y ampliación forman la progresión descrita.",
+    "why_distractors_fail": {
+      "Falso": "La afirmación conserva los cuatro eslabones del pasaje."
+    },
+    "evidence_excerpt": "Agradándole la halagadora sugestión, resolvió llevarla a ejecución, e ir aun más lejos.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "flattery_decision_escalation",
+    "option_category": "truth_value",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Expone cómo la adulación escala a acción extrema.",
+    "variant_justification": "Evalúa una cadena causal completa, no el verbo local «resolvió».",
+    "author": {
+      "id": "r2_regen_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-F-PR41-C7-002",
+    "source_unit_id": "PR41-P038-P002-S004",
+    "fact_id": "PR41-P038-P002-S004-F01",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "El abandono progresivo del honor a Dios desembocó en que el rey retomara la adoración idolátrica con más celo y fanatismo que antes.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "El texto conecta dejar de honrar a Dios con reanudar e intensificar la idolatría.",
+    "why_distractors_fail": {
+      "Falso": "La dirección y la intensificación de la conducta son explícitas."
+    },
+    "evidence_excerpt": "dejó de honrar a Dios, y resumió su adoración de los ídolos con mayor celo y fanatismo que antes.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "apostasy_intensification",
+    "option_category": "truth_value",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue recaída de intensificación.",
+    "variant_justification": "Verifica transición y grado comparativo; no invierte una palabra aislada.",
+    "author": {
+      "id": "r2_regen_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-F-PR41-C7-003",
+    "source_unit_id": "PR41-P038-P001-S002",
+    "fact_id": "PR41-P038-P001-S002-F02",
+    "family": "single_choice_direct",
+    "subtype": "principle",
+    "question": "¿Qué relación enseñanza–objeto había recibido el rey por medio de la interpretación del sueño?",
+    "options": [
+      "Instrucción clara—establecimiento del reino eterno de Dios",
+      "Advertencia vaga—duración eterna de Babilonia",
+      "Orden política—establecimiento del culto real",
+      "Cálculo secreto—fin del reino persa"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Instrucción clara—establecimiento del reino eterno de Dios",
+      "establecimiento"
+    ],
+    "explanation": "La interpretación instruyó claramente sobre el establecimiento del reino eterno de Dios.",
+    "why_distractors_fail": {
+      "Advertencia vaga—duración eterna de Babilonia": "Cambia claridad y reino anunciado.",
+      "Orden política—establecimiento del culto real": "No era una orden de idolatría.",
+      "Cálculo secreto—fin del reino persa": "No corresponde al contenido del sueño."
+    },
+    "evidence_excerpt": "se le había instruído claramente acerca del establecimiento del reino eterno de Dios.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "instruction_kingdom_establishment",
+    "option_category": "paired_claim",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Exige emparejar grado de claridad, acción y reino frente a relaciones paralelas.",
+    "author": {
+      "id": "r2_regen_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-F-PR41-C7-004",
+    "source_unit_id": "PR41-P038-P001-S004",
+    "fact_id": "PR41-P038-P001-S004-F01",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué doble garantía acompaña la conclusión de la interpretación, distinguiendo el contenido visto de su explicación?",
+    "options": [
+      "Sueño verdadero—declaración fiel",
+      "Sueño simbólico—declaración dudosa",
+      "Sueño falso—declaración literal",
+      "Sueño incompleto—declaración secreta"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Sueño verdadero—declaración fiel",
+      "El sueño es verdadero"
+    ],
+    "explanation": "La fórmula certifica como verdadero el sueño y como fiel su declaración.",
+    "why_distractors_fail": {
+      "Sueño simbólico—declaración dudosa": "La segunda cualidad contradice el texto.",
+      "Sueño falso—declaración literal": "Invierte la certificación.",
+      "Sueño incompleto—declaración secreta": "Ninguna cualidad aparece en la fórmula."
+    },
+    "evidence_excerpt": "El sueño es verdadero, y fiel su declaración.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "vision_interpretation_certainty",
+    "option_category": "paired_attribute",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Evalúa dos referentes y dos cualidades, no la frase como reconocimiento literal.",
+    "author": {
+      "id": "r2_regen_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-F-PR41-C7-005",
+    "source_unit_id": "PR41-P038-P002-S001",
+    "fact_id": "PR41-P038-P002-S001-F01",
+    "family": "single_choice_contextual",
+    "subtype": "speaker_addressee",
+    "question": "¿Ante quién formuló el rey el reconocimiento que une supremacía divina y capacidad para descubrir misterios?",
+    "options": [
+      "Daniel",
+      "Los sabios caldeos",
+      "Los sacerdotes de Bel",
+      "La multitud de Dura"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Daniel"
+    ],
+    "explanation": "El rey habló a Daniel cuando reconoció al Dios de dioses como descubridor de misterios.",
+    "why_distractors_fail": {
+      "Los sabios caldeos": "Habían fracasado ante el misterio.",
+      "Los sacerdotes de Bel": "No reciben esta confesión.",
+      "La multitud de Dura": "Pertenece al episodio posterior de la imagen."
+    },
+    "evidence_excerpt": "El rey había reconocido el poder de Dios al decir a Daniel: “Ciertamente que el Dios vuestro es Dios de dioses, ... y el descubridor de los misterios.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "confession_addressee_content",
+    "option_category": "person",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Identifica al destinatario mediante el contenido doble de una confesión previa.",
+    "author": {
+      "id": "r2_regen_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-F-PR41-C7-006",
+    "source_unit_id": "PR41-P038-P002-S003",
+    "fact_id": "PR41-P038-P002-S003-F02",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "La prosperidad no quedó como circunstancia externa: acompañaba el reinado y le ____ de orgullo.",
+    "options": [
+      "llenaba",
+      "libraba",
+      "advertía",
+      "vaciaba"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "llenaba"
+    ],
+    "explanation": "La prosperidad del reinado produjo en el monarca una plenitud de orgullo.",
+    "why_distractors_fail": {
+      "libraba": "El efecto fue aumentar, no quitar, orgullo.",
+      "advertía": "La prosperidad no actúa como advertencia en la frase.",
+      "vaciaba": "Expresa el resultado contrario."
+    },
+    "evidence_excerpt": "La prosperidad que acompañaba su reinado le llenaba de orgullo.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "prosperity_pride_effect",
+    "option_category": "verb",
+    "false_mutation": null,
+    "blank_span": "llenaba",
+    "significance": "Conecta éxito externo y deterioro interior.",
+    "variant_justification": "El verbo depende de causa, sujeto afectado y estado resultante.",
+    "author": {
+      "id": "r2_regen_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-F-PR41-C7-007",
+    "source_unit_id": "PR41-P038-P003-S001",
+    "fact_id": "PR41-P038-P003-S001-F02",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Qué relación cita–efecto produjo en el gobernante la frase «Tú eres aquella cabeza de oro»?",
+    "options": [
+      "Cabeza de oro—impresión profunda",
+      "Reino eterno—rechazo inmediato",
+      "Pies de barro—humildad duradera",
+      "Piedra cortada—olvido completo"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Cabeza de oro—impresión profunda",
+      "profunda"
+    ],
+    "explanation": "La identificación personal con la cabeza de oro dejó una impresión profunda en la mente del rey.",
+    "why_distractors_fail": {
+      "Reino eterno—rechazo inmediato": "No es la cita ni el efecto señalado aquí.",
+      "Pies de barro—humildad duradera": "Cambia símbolo y reacción.",
+      "Piedra cortada—olvido completo": "No corresponde a la frase destacada."
+    },
+    "evidence_excerpt": "Las palabras: “Tú eres aquella cabeza de oro” (Vers. 38), habían hecho una profunda impresión en la mente del gobernante.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "symbol_psychological_effect",
+    "option_category": "paired_claim",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Vincula símbolo, cita y efecto mental mediante opciones homogéneas.",
+    "author": {
+      "id": "r2_regen_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-F-PR41-C7-008",
+    "source_unit_id": "PR41-P038-P003-S002",
+    "fact_id": "PR41-P038-P003-S002-F01",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Valiéndose de la impresión de la cabeza de oro y del regreso a la idolatría, los sabios le ____ fabricar y exhibir una imagen similar.",
+    "options": [
+      "propusieron",
+      "prohibieron",
+      "ocultaron",
+      "lamentaron"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "propusieron"
+    ],
+    "explanation": "Los sabios aprovecharon ambos antecedentes para proponer una imagen visible para todos.",
+    "why_distractors_fail": {
+      "prohibieron": "La acción fue impulsar, no impedir.",
+      "ocultaron": "La imagen debía levantarse donde todos la contemplaran.",
+      "lamentaron": "No expresa la iniciativa atribuida a los sabios."
+    },
+    "evidence_excerpt": "valiéndose de esto y de su regreso a la idolatría, le propusieron que hiciera una imagen similar",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "premise_proposal_result",
+    "option_category": "verb",
+    "false_mutation": null,
+    "blank_span": "propusieron",
+    "significance": "Une dos premisas con una propuesta pública.",
+    "variant_justification": "El verbo se resuelve por agentes, dos causas y finalidad, no por cloze local.",
+    "author": {
+      "id": "r2_regen_f",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

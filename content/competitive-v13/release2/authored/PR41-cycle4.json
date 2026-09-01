@@ -1,0 +1,348 @@
+{
+  "schema_version": "competitive-v13-authored/v1",
+  "release": 2,
+  "batch_id": "PR41-cycle4",
+  "author": {
+    "id": "r2_blind_review_01",
+    "model": "gpt-5.6-sol"
+  },
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-C4-PR41-P038-P004-S003-F01",
+      "source_unit_id": "PR41-P038-P004-S003",
+      "fact_id": "PR41-P038-P004-S003-F01",
+      "role": "variant",
+      "family": "single_choice_direct",
+      "subtype": "symbol_interpretation",
+      "question": "El oro uniforme eliminaba el descenso de valores de la imagen original. ¿Qué lectura política reunía la identidad representada con el destino que el rey reclamaba?",
+      "options": [
+        "Babilonia como reino eterno, indestructible y todopoderoso",
+        "Medo-Persia como reino transitorio, divisible y subordinado",
+        "Grecia como alianza temporal, limitada y defensiva",
+        "Roma como república mutable, frágil y dependiente"
+      ],
+      "correct_option": 0,
+      "accepted_answers": [
+        "Babilonia como reino eterno, indestructible y todopoderoso"
+      ],
+      "explanation": "El oro total debía identificar a Babilonia y expresar la pretensión de que fuese eterna, indestructible y todopoderosa.",
+      "why_distractors_fail": {
+        "Medo-Persia como reino transitorio, divisible y subordinado": "La imagen proyectaba la supremacía de Babilonia, no la de Medo-Persia.",
+        "Grecia como alianza temporal, limitada y defensiva": "La fuente no atribuye a Grecia ni temporalidad defensiva al símbolo.",
+        "Roma como república mutable, frágil y dependiente": "Roma y esas cualidades no forman parte de la interpretación pretendida."
+      },
+      "evidence_excerpt": "En su imagen no habría descenso de valores desde la cabeza hasta los pies, sino que se la haría por completo de oro, para que toda ella simbolizara a Babilonia como reino eterno, indestructible y todopoderoso que quebrantaría y desmenuzaría todos los demás reinos, y perduraría para siempre.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "symbol_claim",
+      "option_category": "kingdom_profile",
+      "false_mutation": null,
+      "blank_span": null,
+      "significance": null,
+      "variant_justification": "Integra material, reino representado y pretensión histórica; no repite la identificación aislada de Babilonia."
+    },
+    {
+      "id": "V13-R2-C4-PR41-P038-P005-S001-F01",
+      "source_unit_id": "PR41-P038-P005-S001",
+      "fact_id": "PR41-P038-P005-S001-F01",
+      "role": "variant",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "Las naciones no habían resistido las armas del gobernante. ¿Qué proyecto convertía esa superioridad presente en una pretensión de permanencia?",
+      "options": [
+        "Afirmar el imperio y establecer una dinastía que perdurase para siempre",
+        "Disolver el imperio y repartir una dinastía entre las naciones vencidas",
+        "Abandonar el poder y someter la sucesión a los reinos vecinos",
+        "Limitar las conquistas y renunciar a toda continuidad dinástica"
+      ],
+      "correct_option": 0,
+      "accepted_answers": [
+        "Afirmar el imperio y establecer una dinastía que perdurase para siempre"
+      ],
+      "explanation": "El éxito militar alimentó la atracción de afirmar el imperio y perpetuar una dinastía.",
+      "why_distractors_fail": {
+        "Disolver el imperio y repartir una dinastía entre las naciones vencidas": "La ambición buscaba consolidación, no reparto.",
+        "Abandonar el poder y someter la sucesión a los reinos vecinos": "El gobernante perseguía supremacía propia.",
+        "Limitar las conquistas y renunciar a toda continuidad dinástica": "La permanencia dinástica era precisamente el atractivo descrito."
+      },
+      "evidence_excerpt": "El pensamiento de afirmar el imperio y establecer una dinastía que perdurase para siempre, tenía mucha atracción para el poderoso gobernante ante cuyas armas no habían podido resistir las naciones de la tierra.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "military_success_to_dynasty",
+      "option_category": "imperial_project",
+      "false_mutation": null,
+      "blank_span": null,
+      "significance": null,
+      "variant_justification": "Relaciona la invencibilidad militar con la ambición dinástica en vez de completar el verbo ya preguntado."
+    },
+    {
+      "id": "V13-R2-C4-PR41-P038-P005-S003-F02",
+      "source_unit_id": "PR41-P038-P005-S003",
+      "fact_id": "PR41-P038-P005-S003-F02",
+      "role": "variant",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "Al reconstruir lo que el rey decidió olvidar, ¿qué cadena identifica correctamente al agente divino, su mediador y el resultado comunicado?",
+      "options": [
+        "El Dios de Israel — Daniel — el significado de la imagen",
+        "Los dioses caldeos — los consejeros — el material de la estatua",
+        "El poder babilónico — Nabucodonosor — la derrota de Jerusalén",
+        "Las naciones vencidas — los grandes — la sucesión del imperio"
+      ],
+      "correct_option": 0,
+      "accepted_answers": [
+        "El Dios de Israel — Daniel — el significado de la imagen"
+      ],
+      "explanation": "La fuente enlaza al Dios de Israel, a Daniel como siervo mediador y la aclaración del significado de la imagen.",
+      "why_distractors_fail": {
+        "Los dioses caldeos — los consejeros — el material de la estatua": "No fueron los dioses caldeos quienes aclararon la visión.",
+        "El poder babilónico — Nabucodonosor — la derrota de Jerusalén": "La cadena trata la interpretación, no una campaña militar.",
+        "Las naciones vencidas — los grandes — la sucesión del imperio": "Los grandes fueron salvados, no mediadores de la explicación."
+      },
+      "evidence_excerpt": "Olvidando las providencias notables relacionadas con el sueño de la gran imagen, y olvidando también que por medio de su siervo Daniel el Dios de Israel había aclarado el significado de la imagen, y que en relación con esta interpretación los grandes del reino habían sido salvados de una muerte ignominiosa",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "agent_mediator_result",
+      "option_category": "causal_chain",
+      "false_mutation": null,
+      "blank_span": null,
+      "significance": null,
+      "variant_justification": "Exige coordinar tres funciones de la misma cláusula y evita preguntar aisladamente qué Dios intervino."
+    },
+    {
+      "id": "V13-R2-C4-PR41-P038-P006-S001-F02",
+      "source_unit_id": "PR41-P038-P006-S001",
+      "fact_id": "PR41-P038-P006-S001-F02",
+      "role": "variant",
+      "family": "single_choice_direct",
+      "subtype": "comparison",
+      "question": "¿Qué contraste describe el cambio de función sufrido por la representación simbólica?",
+      "options": [
+        "Revelar el propósito de Dios para las naciones → glorificar el poder humano",
+        "Glorificar al rey ante Babilonia → revelar la igualdad de todos los reinos",
+        "Ocultar acontecimientos futuros → defender el propósito de Dios",
+        "Exaltar el poder humano → renunciar públicamente a la idolatría"
+      ],
+      "correct_option": 0,
+      "accepted_answers": [
+        "Revelar el propósito de Dios para las naciones → glorificar el poder humano"
+      ],
+      "explanation": "El símbolo dado para revelar un propósito divino sería reutilizado para glorificar poder humano.",
+      "why_distractors_fail": {
+        "Glorificar al rey ante Babilonia → revelar la igualdad de todos los reinos": "Invierte el origen divino y añade una igualdad no enseñada.",
+        "Ocultar acontecimientos futuros → defender el propósito de Dios": "El símbolo revelaba y luego fue mal usado; no nació para ocultar.",
+        "Exaltar el poder humano → renunciar públicamente a la idolatría": "La secuencia no termina en renuncia idolátrica."
+      },
+      "evidence_excerpt": "La representación simbólica por medio de la cual Dios había revelado al rey y al pueblo su propósito para con las naciones de la tierra, iba a emplearse para glorificar el poder humano.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "purpose_misuse",
+      "option_category": "function_transition",
+      "false_mutation": null,
+      "blank_span": null,
+      "significance": null,
+      "variant_justification": "Evalúa origen, finalidad y apropiación del símbolo como transición funcional de dos cláusulas."
+    },
+    {
+      "id": "V13-R2-C4-PR41-P039-P001-S003-F01",
+      "source_unit_id": "PR41-P039-P001-S003",
+      "fact_id": "PR41-P039-P001-S003-F01",
+      "role": "variant",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué cadena de agencia explica cómo una ambición humana operaba contra el beneficio que Dios destinaba a la familia humana?",
+      "options": [
+        "Satanás — maquinaciones de hombres ambiciosos — estorbar el propósito divino",
+        "Daniel — fidelidad de los cautivos — reemplazar el propósito divino",
+        "Nabucodonosor — humildad de los sabios — difundir el propósito divino",
+        "Los caldeos — obediencia universal — completar el propósito divino"
+      ],
+      "correct_option": 0,
+      "accepted_answers": [
+        "Satanás — maquinaciones de hombres ambiciosos — estorbar el propósito divino"
+      ],
+      "explanation": "Satanás procuraba estorbar el propósito divino mediante las maquinaciones de hombres ambiciosos.",
+      "why_distractors_fail": {
+        "Daniel — fidelidad de los cautivos — reemplazar el propósito divino": "Daniel no aparece como adversario del propósito divino.",
+        "Nabucodonosor — humildad de los sabios — difundir el propósito divino": "La fuente describe ambición, no humildad ni difusión.",
+        "Los caldeos — obediencia universal — completar el propósito divino": "La obediencia a la imagen no completaba el designio de Dios."
+      },
+      "evidence_excerpt": "En esta forma, mediante las maquinaciones de hombres ambiciosos, Satanás estaba procurando estorbar el propósito divino en favor de la familia humana.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "adversarial_agency",
+      "option_category": "agent_means_goal",
+      "false_mutation": null,
+      "blank_span": null,
+      "significance": null,
+      "variant_justification": "Amplía la identificación aislada del agente a una relación agente-medio-objetivo."
+    },
+    {
+      "id": "V13-R2-C4-PR41-P039-P001-S004-F01",
+      "source_unit_id": "PR41-P039-P001-S004",
+      "fact_id": "PR41-P039-P001-S004-F01",
+      "role": "variant",
+      "family": "single_choice_direct",
+      "subtype": "principle",
+      "question": "La verdad conserva poder salvador sin mezcla de error. ¿Qué doble uso la convierte, en cambio, en poder para el mal?",
+      "options": [
+        "Exaltar al yo y favorecer los proyectos de los hombres",
+        "Humillar al yo y someter los proyectos humanos a Dios",
+        "Corregir el error y abandonar los proyectos egoístas",
+        "Difundir conocimiento y servir a la familia humana"
+      ],
+      "correct_option": 0,
+      "accepted_answers": [
+        "Exaltar al yo y favorecer los proyectos de los hombres"
+      ],
+      "explanation": "El cambio moral ocurre cuando la verdad sirve simultáneamente a la exaltación propia y a proyectos humanos.",
+      "why_distractors_fail": {
+        "Humillar al yo y someter los proyectos humanos a Dios": "Describe la dirección opuesta a la denunciada.",
+        "Corregir el error y abandonar los proyectos egoístas": "Esas acciones no convierten la verdad en poder para el mal.",
+        "Difundir conocimiento y servir a la familia humana": "La fuente contrapone ese beneficio con el uso egocéntrico."
+      },
+      "evidence_excerpt": "El enemigo de la humanidad sabía que la verdad sin mezcla de error es un gran poder para salvar; pero que cuando se usa para exaltar al yo y favorecer los proyectos de los hombres, llega a ser un poder para el mal.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "dual_condition",
+      "option_category": "paired_use",
+      "false_mutation": null,
+      "blank_span": null,
+      "significance": null,
+      "variant_justification": "Cambia el resultado ya preguntado por las dos condiciones concurrentes que producen ese resultado."
+    },
+    {
+      "id": "V13-R2-C4-PR41-P039-P002-S002-F01",
+      "source_unit_id": "PR41-P039-P002-S002",
+      "fact_id": "PR41-P039-P002-S002-F01",
+      "role": "variant",
+      "family": "true_false",
+      "subtype": "comparison",
+      "question": "Aunque los caldeos conocían representaciones paganas magníficas, consideraron sin precedente la estatua cuya altura era de sesenta codos y cuya anchura era de seis.",
+      "options": [
+        "Falso",
+        "Verdadero"
+      ],
+      "correct_option": 1,
+      "accepted_answers": [
+        "Verdadero"
+      ],
+      "explanation": "La fuente combina el carácter sin precedente de la obra con las medidas sesenta por seis.",
+      "why_distractors_fail": {
+        "Falso": "Negaría tanto la comparación con obras anteriores como las dimensiones expresas."
+      },
+      "evidence_excerpt": "Aunque acostumbrados a magníficas representaciones de sus divinidades paganas, los caldeos no habían producido antes cosa alguna tan imponente ni majestuosa como esta estatua resplandeciente, de sesenta codos de altura y seis codos de anchura.",
+      "difficulty": "expert",
+      "importance": "medium",
+      "relation_type": "precedent_and_dimensions",
+      "option_category": "compound_statement",
+      "false_mutation": null,
+      "blank_span": null,
+      "significance": null,
+      "variant_justification": "La proposición verdadera exige comprobar simultáneamente comparación histórica y orientación exacta de dos medidas."
+    },
+    {
+      "id": "V13-R2-C4-PR41-P040-P003-S003-F02",
+      "source_unit_id": "PR41-P040-P003-S003",
+      "fact_id": "PR41-P040-P003-S003-F02",
+      "role": "variant",
+      "family": "single_choice_contextual",
+      "subtype": "principle",
+      "question": "La historia de sus padres ofrecía una consecuencia negativa y un fundamento positivo. ¿Qué emparejamiento conserva ambos?",
+      "options": [
+        "Desobediencia: deshonor, desastre y muerte; temor de Jehová: sabiduría y prosperidad verdadera",
+        "Desobediencia: prosperidad y honra; temor de Jehová: desastre y muerte",
+        "Desobediencia: libertad política; temor de Jehová: aislamiento y pobreza",
+        "Desobediencia: sabiduría práctica; temor de Jehová: pérdida de toda prosperidad"
+      ],
+      "correct_option": 0,
+      "accepted_answers": [
+        "Desobediencia: deshonor, desastre y muerte; temor de Jehová: sabiduría y prosperidad verdadera"
+      ],
+      "explanation": "La enseñanza heredada contrasta los frutos de la desobediencia con el temor de Jehová como principio y fundamento.",
+      "why_distractors_fail": {
+        "Desobediencia: prosperidad y honra; temor de Jehová: desastre y muerte": "Invierte las dos relaciones morales.",
+        "Desobediencia: libertad política; temor de Jehová: aislamiento y pobreza": "Introduce resultados políticos y económicos ausentes.",
+        "Desobediencia: sabiduría práctica; temor de Jehová: pérdida de toda prosperidad": "Atribuye a cada causa el efecto contrario al texto."
+      },
+      "evidence_excerpt": "De la historia de sus padres habían aprendido que la desobediencia a Dios resulta en deshonor, desastre y muerte; y que el temor de Jehová es el principio de la sabiduría, el fundamento de toda prosperidad verdadera.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "paired_moral_consequence",
+      "option_category": "cause_effect_pair",
+      "false_mutation": null,
+      "blank_span": null,
+      "significance": null,
+      "variant_justification": "Exige conservar dos relaciones causales opuestas dentro de una sola oración compleja."
+    },
+    {
+      "id": "V13-R2-C4-PR41-P040-P007-S005-F01",
+      "source_unit_id": "PR41-P040-P007-S005",
+      "fact_id": "PR41-P040-P007-S005-F01",
+      "role": "variant",
+      "family": "single_choice_direct",
+      "subtype": "comparison",
+      "question": "El rey esperaba destrucción completa. ¿Qué observación acumuló número, condición, movimiento y apariencia para desmentir esa expectativa?",
+      "options": [
+        "Cuatro varones sueltos, sin daño; el cuarto semejante a hijo de los dioses",
+        "Tres varones atados, inmóviles; el tercero semejante a un soldado",
+        "Cuatro varones heridos, arrodillados; el primero semejante al rey",
+        "Tres varones sueltos, quemados; el cuarto semejante a un sacerdote"
+      ],
+      "correct_option": 0,
+      "accepted_answers": [
+        "Cuatro varones sueltos, sin daño; el cuarto semejante a hijo de los dioses"
+      ],
+      "explanation": "La visión reúne cuatro hombres, libertad de ligaduras, movimiento sin daño y una apariencia singular del cuarto.",
+      "why_distractors_fail": {
+        "Tres varones atados, inmóviles; el tercero semejante a un soldado": "Conserva la cantidad inicial y contradice lo observado.",
+        "Cuatro varones heridos, arrodillados; el primero semejante al rey": "Número aparte, altera condición, movimiento e identidad destacada.",
+        "Tres varones sueltos, quemados; el cuarto semejante a un sacerdote": "Contradice cantidad, ausencia de daño y descripción del cuarto."
+      },
+      "evidence_excerpt": "He aquí que yo veo cuatro varones sueltos, que se pasean en medio del fuego, y ningún daño hay en ellos: y el parecer del cuarto es semejante a hijo de los dioses.”",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "expectation_reversal",
+      "option_category": "observation_profile",
+      "false_mutation": null,
+      "blank_span": null,
+      "significance": null,
+      "variant_justification": "Amplía la cantidad ya preguntada a cuatro rasgos simultáneos de la observación que revierte la expectativa real."
+    },
+    {
+      "id": "V13-R2-C4-PR41-P041-P003-S003-F01",
+      "source_unit_id": "PR41-P041-P003-S003",
+      "fact_id": "PR41-P041-P003-S003-F01",
+      "role": "variant",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "La humillación del rey culminó en una confesión. ¿Qué secuencia enlazó intervención divina, rescate y la lealtad corporal de los tres siervos?",
+      "options": [
+        "Envió su ángel; libró sus siervos; entregaron sus cuerpos antes que sirviesen ni adorasen otro dios",
+        "Envió su ejército; castigó sus siervos; entregaron sus cuerpos para adorar la imagen",
+        "Retiró su ángel; abandonó sus siervos; preservaron sus cuerpos obedeciendo al rey",
+        "Envió consejeros; ocultó sus siervos; reservaron sus cuerpos para servir a Babilonia"
+      ],
+      "correct_option": 0,
+      "accepted_answers": [
+        "Envió su ángel; libró sus siervos; entregaron sus cuerpos antes que sirviesen ni adorasen otro dios"
+      ],
+      "explanation": "La confesión real une el envío del ángel, la liberación de quienes esperaron en Dios y su disposición a entregar el cuerpo antes que adorar a otro.",
+      "why_distractors_fail": {
+        "Envió su ejército; castigó sus siervos; entregaron sus cuerpos para adorar la imagen": "Sustituye al ángel y convierte fidelidad en idolatría.",
+        "Retiró su ángel; abandonó sus siervos; preservaron sus cuerpos obedeciendo al rey": "Invierte la intervención y el motivo de su preservación.",
+        "Envió consejeros; ocultó sus siervos; reservaron sus cuerpos para servir a Babilonia": "Ninguna de esas acciones forma parte de la confesión."
+      },
+      "evidence_excerpt": "El rey humillado se vió obligado a reconocer: “Bendito el Dios de ellos, de Sadrach, Mesach, y Abed-nego, que envió su ángel, y libró sus siervos que esperaron en él, y el mandamiento del rey mudaron, y entregaron sus cuerpos antes que sirviesen ni adorasen otro dios que su Dios.”",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "intervention_rescue_loyalty",
+      "option_category": "three_step_sequence",
+      "false_mutation": null,
+      "blank_span": null,
+      "significance": null,
+      "variant_justification": "Integra tres cláusulas de la confesión y no se limita a preguntar qué hizo el ángel."
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+[
+  {
+    "id": "V13-R2-DAN11-C9-V004-F08",
+    "source_unit_id": "DAN11-V004",
+    "fact_id": "DAN11-V004-F08",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué correspondencia conserva momento del quiebre, dirección del reparto, exclusión dinástica, pérdida de escala y destinatarios finales?",
+    "options": [
+      "Tras levantarse → cuatro vientos → no sus descendientes → dominio menor al suyo → otros aparte de ellos",
+      "Antes de levantarse → dos vientos → sólo sus descendientes → dominio igual al suyo → sus generales",
+      "Durante su ascenso → tierra de Sinar → no los príncipes → dominio mayor al suyo → el rey del sur",
+      "Después de su muerte → costas del norte → sólo sus hijos → dominio perpetuo → los sabios del pueblo"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["Tras levantarse → cuatro vientos → no sus descendientes → dominio menor al suyo → otros aparte de ellos"],
+    "explanation": "El reino se quiebra tras su ascenso, se reparte a los cuatro vientos, no pasa a sus descendientes ni conserva su dominio y queda para otros.",
+    "evidence_excerpt": "cuando se haya levantado, su reino será quebrantado y repartido hacia los cuatro vientos del cielo; pero no será para sus descendientes, ni según el dominio con que él dominó, porque su reino quedará deshecho y será para otros aparte de ellos.",
+    "why_distractors_fail": {
+      "Antes de levantarse → dos vientos → sólo sus descendientes → dominio igual al suyo → sus generales": "Invierte momento, número, herencia, escala y receptores.",
+      "Durante su ascenso → tierra de Sinar → no los príncipes → dominio mayor al suyo → el rey del sur": "Sustituye todas las funciones del reparto.",
+      "Después de su muerte → costas del norte → sólo sus hijos → dominio perpetuo → los sabios del pueblo": "Introduce tiempo, dirección, herederos y destinatarios ajenos."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "breakup_direction_dynasty_scale_recipients",
+    "option_category": "five_part_kingdom_distribution",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige cinco restricciones simultáneas del reparto.",
+    "variant_justification": "El banco sólo verifica descendencia o número de vientos; aquí se reconstruye toda la distribución.",
+    "author": {"id": "r2_regen_e", "model": "gpt-5.6-sol"}
+  },
+  {
+    "id": "V13-R2-DAN11-C9-V006-F08",
+    "source_unit_id": "DAN11-V006",
+    "fact_id": "DAN11-V006-F08",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué cadena conserva paso diplomático, finalidad, incapacidad posterior, doble pérdida de poder y conjunto alcanzado por la entrega?",
+    "options": [
+      "Hija del sur va al rey del norte → hacer la paz → no retiene la fuerza → ni él ni su brazo permanecen → ella, acompañantes, hijo y partidarios son entregados",
+      "Hija del norte va al rey del sur → iniciar guerra → conserva la fuerza → ambos brazos permanecen → sólo los soldados son premiados",
+      "Príncipe del sur va a Persia → reunir riquezas → pierde el trono → el ejército permanece → ella y su padre vuelven a Egipto",
+      "Hija de Judá va al rey medo → sellar la visión → retiene el brazo → el reino se fortalece → los partidarios reciben tierras"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["Hija del sur va al rey del norte → hacer la paz → no retiene la fuerza → ni él ni su brazo permanecen → ella, acompañantes, hijo y partidarios son entregados"],
+    "explanation": "La alianza matrimonial busca paz, pero fracasa: ella no conserva fuerza, el poder no permanece y la entrega alcanza a todo su círculo.",
+    "evidence_excerpt": "la hija del rey del sur vendrá al rey del norte para hacer la paz. Pero ella no podrá retener la fuerza de su brazo, y ni él ni su brazo permanecerán; porque ella será entregada a la muerte, y también los que la habían traído, y su hijo y los que estaban de parte de ella en aquel tiempo.",
+    "why_distractors_fail": {
+      "Hija del norte va al rey del sur → iniciar guerra → conserva la fuerza → ambos brazos permanecen → sólo los soldados son premiados": "Invierte origen, propósito, resultado y alcance.",
+      "Príncipe del sur va a Persia → reunir riquezas → pierde el trono → el ejército permanece → ella y su padre vuelven a Egipto": "Cambia agente, misión y desenlace.",
+      "Hija de Judá va al rey medo → sellar la visión → retiene el brazo → el reino se fortalece → los partidarios reciben tierras": "No coincide ninguno de los cinco eslabones."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "diplomacy_purpose_failure_power_casualties",
+    "option_category": "five_stage_failed_alliance",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Integra diplomacia, poder y alcance humano del fracaso.",
+    "variant_justification": "El banco pregunta sólo la finalidad de la visita; esta variante exige la cadena completa y su desenlace.",
+    "author": {"id": "r2_regen_e", "model": "gpt-5.6-sol"}
+  },
+  {
+    "id": "V13-R2-DAN11-C9-V011-F06",
+    "source_unit_id": "DAN11-V011",
+    "fact_id": "DAN11-V011-F06",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué reparto preserva emoción y movimiento del rey del sur, adversario, movilización enemiga y destino de esa fuerza?",
+    "options": [
+      "El sur se enfurece → sale a pelear contra el norte → el norte pone una gran multitud → queda entregada al sur",
+      "El norte se entristece → retrocede ante el sur → el sur reúne poca gente → queda entregada a los magos",
+      "El sur se ensoberbece → entra en Egipto → los sabios ponen baluartes → quedan entregados al príncipe del pacto",
+      "El norte se fortalece → sale contra Grecia → el sur reúne naves → quedan entregadas al rey de Persia"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["El sur se enfurece → sale a pelear contra el norte → el norte pone una gran multitud → queda entregada al sur"],
+    "explanation": "La ira mueve al rey del sur contra el norte; la multitud desplegada por el norte termina en manos de su adversario.",
+    "evidence_excerpt": "se enfurecerá el rey del sur, y saldrá y peleará contra el rey del norte; éste pondrá en campaña una gran multitud, pero toda esa multitud será entregada en manos de aquél.",
+    "why_distractors_fail": {
+      "El norte se entristece → retrocede ante el sur → el sur reúne poca gente → queda entregada a los magos": "Cambia emoción, actor, escala y destinatario.",
+      "El sur se ensoberbece → entra en Egipto → los sabios ponen baluartes → quedan entregados al príncipe del pacto": "Mezcla escenas posteriores y rompe el reparto.",
+      "El norte se fortalece → sale contra Grecia → el sur reúne naves → quedan entregadas al rey de Persia": "Sustituye adversarios, medios y resultado."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "emotion_attack_enemy_force_outcome",
+    "option_category": "four_stage_battle_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Evita invertir quién moviliza la fuerza y quién la recibe.",
+    "variant_justification": "El banco sólo discrimina el dueño de la multitud; aquí se reconstruye emoción, ataque y transferencia.",
+    "author": {"id": "r2_regen_e", "model": "gpt-5.6-sol"}
+  },
+  {
+    "id": "V13-R2-DAN11-C9-V012-F05",
+    "source_unit_id": "DAN11-V012",
+    "fact_id": "DAN11-V012-F05",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué secuencia conserva victoria inicial, reacción interior, magnitud destructiva y límite final del vencedor?",
+    "options": [
+      "Se lleva la multitud → eleva su corazón → derriba muchos millares → no prevalece",
+      "Pierde la multitud → humilla su corazón → salva muchos millares → prevalece sin límite",
+      "Reúne la multitud → afirma su rostro → levanta cuatro reinos → permanece en la tierra gloriosa",
+      "Entrega la multitud → contrista su corazón → distribuye riquezas → gobierna hasta Ciro"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["Se lleva la multitud → eleva su corazón → derriba muchos millares → no prevalece"],
+    "explanation": "El triunfo produce exaltación y muchas bajas, pero el texto niega que esa ventaja culmine en prevalecer.",
+    "evidence_excerpt": "Al llevarse él la multitud, se elevará su corazón y derribará a muchos millares; pero no prevalecerá.",
+    "why_distractors_fail": {
+      "Pierde la multitud → humilla su corazón → salva muchos millares → prevalece sin límite": "Invierte los cuatro movimientos.",
+      "Reúne la multitud → afirma su rostro → levanta cuatro reinos → permanece en la tierra gloriosa": "Traslada elementos de otros gobernantes.",
+      "Entrega la multitud → contrista su corazón → distribuye riquezas → gobierna hasta Ciro": "Sustituye causa, emoción, acción y límite."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "victory_pride_destruction_limit",
+    "option_category": "four_stage_reversal",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconocer que el éxito táctico no equivale a prevalencia final.",
+    "variant_justification": "El banco pregunta sólo por la exaltación; esta variante evalúa la reversión completa.",
+    "author": {"id": "r2_regen_e", "model": "gpt-5.6-sol"}
+  },
+  {
+    "id": "V13-R2-DAN11-C9-V016-F01",
+    "source_unit_id": "DAN11-V016",
+    "fact_id": "DAN11-V016-F01",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué cadena conserva autonomía del invasor, ausencia de oposición, lugar de permanencia y efecto de su poder sobre ese lugar?",
+    "options": [
+      "Hace su voluntad → nadie se enfrenta → permanece en la tierra gloriosa → queda consumida bajo su poder",
+      "Cumple la voluntad del sur → muchos se enfrentan → permanece en Egipto → queda enriquecido bajo su pacto",
+      "Hace la voluntad de los sabios → el norte lo derrota → permanece en las costas → quedan repartidas entre soldados",
+      "Cumple la voluntad de Darío → nadie lo ayuda → permanece en Persia → queda limpiada hasta el plazo"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["Hace su voluntad → nadie se enfrenta → permanece en la tierra gloriosa → queda consumida bajo su poder"],
+    "explanation": "Su voluntad no encuentra resistencia; se establece en la tierra gloriosa, que su poder consume.",
+    "evidence_excerpt": "El que vendrá contra él hará su propia voluntad, y no habrá quien se le pueda enfrentar; y permanecerá en la tierra gloriosa, que será consumida bajo su poder.",
+    "why_distractors_fail": {
+      "Cumple la voluntad del sur → muchos se enfrentan → permanece en Egipto → queda enriquecido bajo su pacto": "Invierte autonomía y oposición y cambia lugar y efecto.",
+      "Hace la voluntad de los sabios → el norte lo derrota → permanece en las costas → quedan repartidas entre soldados": "Mezcla episodios y altera cada relación.",
+      "Cumple la voluntad de Darío → nadie lo ayuda → permanece en Persia → queda limpiada hasta el plazo": "Sustituye autoridad, marco y consecuencia."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "autonomy_resistance_location_effect",
+    "option_category": "four_stage_conquest_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Conecta dominio personal, resistencia, geografía y consecuencia.",
+    "variant_justification": "El banco pide sólo la permanencia; aquí se evalúan su causa y efecto territorial.",
+    "author": {"id": "r2_regen_e", "model": "gpt-5.6-sol"}
+  },
+  {
+    "id": "V13-R2-DAN11-C9-V021-F06",
+    "source_unit_id": "DAN11-V021",
+    "fact_id": "DAN11-V021-F06",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué mapeo conserva valoración del sucesor, negativa institucional, modo de llegada y método de apropiación del reino?",
+    "options": [
+      "Hombre despreciable → no recibe la honra del reino → llega sin aviso → toma el reino con halagos",
+      "Príncipe honorable → recibe toda la honra → llega con un gran ejército → toma el reino en batalla",
+      "Sabio depurado → rechaza la honra → llega al tiempo determinado → recibe el reino por pacto",
+      "Cobrador temido → recibe poca honra → llega con naves → reparte el reino entre sus hijos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["Hombre despreciable → no recibe la honra del reino → llega sin aviso → toma el reino con halagos"],
+    "explanation": "El sucesor es despreciable y no recibe legitimidad honorífica, pero entra inesperadamente y obtiene el reino mediante halagos.",
+    "evidence_excerpt": "Ocupará su lugar un hombre despreciable, al cual no darán la honra del reino. Vendrá sin aviso y tomará el reino con halagos.",
+    "why_distractors_fail": {
+      "Príncipe honorable → recibe toda la honra → llega con un gran ejército → toma el reino en batalla": "Invierte valoración, legitimidad, llegada y método.",
+      "Sabio depurado → rechaza la honra → llega al tiempo determinado → recibe el reino por pacto": "Traslada categorías de otros pasajes.",
+      "Cobrador temido → recibe poca honra → llega con naves → reparte el reino entre sus hijos": "Confunde al sucesor con otras figuras y altera la apropiación."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "successor_status_legitimacy_arrival_method",
+    "option_category": "four_part_accession_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue falta de legitimidad y eficacia política indirecta.",
+    "variant_justification": "La presentación pública pide sólo la honra negada; esta variante reconstruye la paradoja completa de acceso.",
+    "author": {"id": "r2_regen_e", "model": "gpt-5.6-sol"}
+  },
+  {
+    "id": "V13-R2-DAN11-C9-V024-F03",
+    "source_unit_id": "DAN11-V024",
+    "fact_id": "DAN11-V024-F03",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué secuencia conserva condición de entrada, contraste ancestral, política de reparto, objetivo militar y límite temporal?",
+    "options": [
+      "Provincia en paz y abundancia → hace lo no hecho por sus antepasados → reparte botín, despojos y riquezas → diseña contra fortalezas → dura un tiempo",
+      "Provincia en guerra y escasez → imita a sus antepasados → reserva todo el tesoro → abandona las fortalezas → dura para siempre",
+      "Tierra gloriosa consumida → honra al dios de sus padres → reparte ciudades y templos → diseña contra Egipto → dura diez días",
+      "Reino quebrantado → supera a sus descendientes → reparte visiones y sueños → diseña contra el pacto → dura tres años"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["Provincia en paz y abundancia → hace lo no hecho por sus antepasados → reparte botín, despojos y riquezas → diseña contra fortalezas → dura un tiempo"],
+    "explanation": "Entra durante paz y abundancia, innova frente a sus antepasados repartiendo riquezas, trama contra fortalezas y opera por un tiempo limitado.",
+    "evidence_excerpt": "Estando la provincia en paz y en abundancia, entrará y hará lo que no hicieron sus padres ni los padres de sus padres; botín, despojos y riquezas repartirá entre sus soldados, y contra las fortalezas formará sus designios. Esto durará un tiempo.",
+    "why_distractors_fail": {
+      "Provincia en guerra y escasez → imita a sus antepasados → reserva todo el tesoro → abandona las fortalezas → dura para siempre": "Invierte los cinco componentes.",
+      "Tierra gloriosa consumida → honra al dios de sus padres → reparte ciudades y templos → diseña contra Egipto → dura diez días": "Mezcla escenas y sustituye condición, contraste, reparto y plazo.",
+      "Reino quebrantado → supera a sus descendientes → reparte visiones y sueños → diseña contra el pacto → dura tres años": "No conserva ninguna función del versículo."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "entry_ancestral_contrast_distribution_design_duration",
+    "option_category": "five_stage_policy_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Integra economía, innovación política, estrategia y plazo.",
+    "variant_justification": "El banco pregunta sólo qué reparte; aquí se evalúa el programa completo y sus límites.",
+    "author": {"id": "r2_regen_e", "model": "gpt-5.6-sol"}
+  },
+  {
+    "id": "V13-R2-DAN11-C9-V030-F02",
+    "source_unit_id": "DAN11-V030",
+    "fact_id": "DAN11-V030-F02",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué cadena conserva causa externa, reacción emocional y militar, nuevo objeto de hostilidad y alianza posterior?",
+    "options": [
+      "Naves de Quitim llegan → se contrista y retrocede → se enoja contra el pacto santo → se entiende con quienes lo abandonan",
+      "Ejército del sur llega → se alegra y avanza → honra el pacto santo → se entiende con quienes lo guardan",
+      "Noticias del oriente llegan → se engrandece y permanece → se enoja contra Egipto → se entiende con los sabios",
+      "Carros del norte llegan → se humilla y negocia → honra al Dios de sus padres → se entiende con el príncipe del pacto"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["Naves de Quitim llegan → se contrista y retrocede → se enoja contra el pacto santo → se entiende con quienes lo abandonan"],
+    "explanation": "La oposición naval causa aflicción y retirada; luego su ira se dirige al pacto y culmina en cooperación con sus desertores.",
+    "evidence_excerpt": "vendrán contra él naves de Quitim, y él se contristará y retrocederá, se enojará contra el pacto santo y hará según su voluntad; volverá, pues, y se entenderá con los que abandonen el santo pacto.",
+    "why_distractors_fail": {
+      "Ejército del sur llega → se alegra y avanza → honra el pacto santo → se entiende con quienes lo guardan": "Invierte causa, reacción, postura y aliados.",
+      "Noticias del oriente llegan → se engrandece y permanece → se enoja contra Egipto → se entiende con los sabios": "Confunde un episodio posterior y cambia la alianza.",
+      "Carros del norte llegan → se humilla y negocia → honra al Dios de sus padres → se entiende con el príncipe del pacto": "Sustituye los cuatro eslabones causales."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "external_cause_reaction_hostility_alliance",
+    "option_category": "four_stage_reaction_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Conecta derrota externa con reorientación política y religiosa.",
+    "variant_justification": "El banco pide sólo la emoción; esta variante exige causa, retirada, hostilidad y alianza.",
+    "author": {"id": "r2_regen_e", "model": "gpt-5.6-sol"}
+  },
+  {
+    "id": "V13-R2-DAN11-C9-V040-F01",
+    "source_unit_id": "DAN11-V040",
+    "fact_id": "DAN11-V040-F01",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué secuencia conserva iniciador, respuesta del rival, comparación de intensidad, medios militares y avance territorial?",
+    "options": [
+      "El sur contiende → el norte se levanta contra él → como tempestad → carros, caballería y muchas naves → invade tierras y pasa",
+      "El norte contiende → el sur huye de él → como inundación → baluartes, tributos y poca gente → abandona tierras y vuelve",
+      "Egipto contiende → Grecia se alía con él → como fuego → espadas, riquezas y fortalezas → reparte provincias y descansa",
+      "El príncipe contiende → los sabios caen ante él → como viento → imágenes, oro y plata → entra al santuario y permanece"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["El sur contiende → el norte se levanta contra él → como tempestad → carros, caballería y muchas naves → invade tierras y pasa"],
+    "explanation": "El sur inicia la contienda; el norte responde como tempestad con fuerzas terrestres y navales e invade sucesivas tierras.",
+    "evidence_excerpt": "el rey del sur contenderá con él; y el rey del norte se levantará contra él como una tempestad, con carros y gente de a caballo y muchas naves; y entrará por las tierras, las invadirá y pasará.",
+    "why_distractors_fail": {
+      "El norte contiende → el sur huye de él → como inundación → baluartes, tributos y poca gente → abandona tierras y vuelve": "Invierte iniciador y respuesta, y cambia imagen, medios y avance.",
+      "Egipto contiende → Grecia se alía con él → como fuego → espadas, riquezas y fortalezas → reparte provincias y descansa": "Sustituye actores, intensidad, fuerzas y resultado.",
+      "El príncipe contiende → los sabios caen ante él → como viento → imágenes, oro y plata → entra al santuario y permanece": "Mezcla elementos de varios pasajes sin conservar la secuencia."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "initiator_response_intensity_forces_advance",
+    "option_category": "five_part_invasion_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue iniciativa, contraataque, medios y progresión geográfica.",
+    "variant_justification": "El banco pregunta sólo la primera iniciativa; esta variante reconstruye toda la respuesta militar.",
+    "author": {"id": "r2_regen_e", "model": "gpt-5.6-sol"}
+  },
+  {
+    "id": "V13-R2-DAN11-C9-V045-F04",
+    "source_unit_id": "DAN11-V045",
+    "fact_id": "DAN11-V045-F04",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué mapeo conserva instalación real, posición entre dos hitos geográficos, desenlace personal y ausencia final de auxilio?",
+    "options": [
+      "Tiendas del palacio → entre los mares y el monte glorioso y santo → llega a su fin → nadie lo ayuda",
+      "Baluartes del ejército → entre Egipto y Grecia → toma el reino → todos sus aliados lo ayudan",
+      "Casa del tesoro → entre Sinar y Jerusalén → vuelve a su tierra → los sabios lo fortalecen",
+      "Santuario fortificado → entre Edom y Moab → prevalece hasta Ciro → el príncipe del pacto lo ayuda"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["Tiendas del palacio → entre los mares y el monte glorioso y santo → llega a su fin → nadie lo ayuda"],
+    "explanation": "Instala las tiendas palaciegas entre los mares y el monte santo, pero esa posición precede a un final sin ayuda.",
+    "evidence_excerpt": "Plantará las tiendas de su palacio entre los mares y el monte glorioso y santo; pero llegará a su fin, y no tendrá quien lo ayude.",
+    "why_distractors_fail": {
+      "Baluartes del ejército → entre Egipto y Grecia → toma el reino → todos sus aliados lo ayudan": "Cambia instalación, geografía y desenlace.",
+      "Casa del tesoro → entre Sinar y Jerusalén → vuelve a su tierra → los sabios lo fortalecen": "Traslada lugares y acciones ajenos.",
+      "Santuario fortificado → entre Edom y Moab → prevalece hasta Ciro → el príncipe del pacto lo ayuda": "Invierte el final y sustituye todos los hitos."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "installation_geography_end_help",
+    "option_category": "four_part_terminal_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Relaciona la posición de poder con el desenlace sin auxilio.",
+    "variant_justification": "El banco pregunta sólo quién falta al final; aquí se evalúa instalación, geografía y desenlace.",
+    "author": {"id": "r2_regen_e", "model": "gpt-5.6-sol"}
+  }
+]

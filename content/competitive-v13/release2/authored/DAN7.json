@@ -1,0 +1,193 @@
+[
+  {
+    "id": "V13-R2-DAN7-V003-F01",
+    "source_unit_id": "DAN7-V003",
+    "fact_id": "DAN7-V003-F01",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "question": "¿Qué combinación numérica y relacional describe exactamente a las criaturas que emergían del mar?",
+    "options": [
+      "Cuatro, diferentes una de otra",
+      "Tres, iguales entre sí",
+      "Diez, subordinadas al cuerno pequeño",
+      "Cuatro, semejantes una a otra"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Cuatro, diferentes una de otra"
+    ],
+    "explanation": "Eran cuatro bestias grandes, diferentes la una de la otra.",
+    "evidence_excerpt": "cuatro bestias grandes, diferentes la una de la otra, subían del mar.",
+    "why_distractors_fail": {
+      "Tres, iguales entre sí": "Falla número y diferencia.",
+      "Diez, subordinadas al cuerno pequeño": "Confunde bestias con cuernos.",
+      "Cuatro, semejantes una a otra": "Conserva el número pero invierte la relación."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "count_and_contrast",
+    "option_category": "number_description",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Une dos detalles que suelen confundirse.",
+    "variant_justification": "Prueba simultáneamente cantidad y diferencia sin copiar la pregunta base.",
+    "author": {
+      "id": "r2_author_e",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN7-V004-F04",
+    "source_unit_id": "DAN7-V004",
+    "fact_id": "DAN7-V004-F04",
+    "family": "true_false",
+    "subtype": "narrative_order",
+    "question": "Mientras Daniel observaba, la primera bestia fue puesta en pie como hombre antes de que le arrancaran las alas.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "Primero le arrancaron las alas; después fue levantada y puesta en pie como hombre.",
+    "evidence_excerpt": "sus alas le fueron arrancadas; fue levantada del suelo y se puso enhiesta sobre los pies, a manera de hombre",
+    "why_distractors_fail": {
+      "Verdadero": "Invierte el orden explícito de la transformación."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "event_sequence",
+    "option_category": "truth_value",
+    "false_mutation": {
+      "local": true,
+      "changed_fields": [
+        "event_order"
+      ],
+      "original": "sus alas le fueron arrancadas; fue levantada del suelo y se puso enhiesta",
+      "replacement": "fue puesta en pie antes de que le arrancaran las alas"
+    },
+    "blank_span": null,
+    "significance": "Evalúa el orden interno de una escena simbólica compleja.",
+    "variant_justification": "La falsedad depende de una inversión temporal verificable.",
+    "author": {
+      "id": "r2_author_e",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN7-V016-F05",
+    "source_unit_id": "DAN7-V016",
+    "fact_id": "DAN7-V016-F05",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué secuencia conserva tanto la iniciativa de Daniel como la manera en que obtuvo el conocimiento que buscaba?",
+    "options": [
+      "Se acercó, preguntó y uno de los presentes le hizo conocer la interpretación",
+      "Esperó en silencio hasta que una voz celestial interpretó la visión",
+      "Convocó a los sabios y comparó sus respuestas",
+      "Escribió la visión y decidió no consultar a nadie"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Se acercó, preguntó y uno de los presentes le hizo conocer la interpretación"
+    ],
+    "explanation": "Daniel se acercó a uno de los presentes, preguntó por la verdad y recibió de él la interpretación.",
+    "evidence_excerpt": "Me acerqué a uno de los que allí estaban y le pregunté la verdad acerca de todo aquello. Me habló y me hizo conocer la interpretación de las cosas",
+    "why_distractors_fail": {
+      "Esperó en silencio hasta que una voz celestial interpretó la visión": "Su pregunta fue explícita y respondió uno de los presentes.",
+      "Convocó a los sabios y comparó sus respuestas": "La escena no incluye convocatoria ni comparación.",
+      "Escribió la visión y decidió no consultar a nadie": "Contradice que se acercó y preguntó."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "question_and_disclosure",
+    "option_category": "event_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconocer al mediador humano de la interpretación y el orden de la consulta.",
+    "variant_justification": "Transforma la pregunta central sobre el conocimiento en una secuencia causal de tres pasos.",
+    "author": {
+      "id": "r2_author_e",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN7-V024-F04",
+    "source_unit_id": "DAN7-V024",
+    "fact_id": "DAN7-V024-F04",
+    "family": "single_choice_contextual",
+    "subtype": "prophetic_detail",
+    "question": "¿Qué opción reúne sin mezclar cantidades la posición y la acción del rey distinto anunciado después de los diez?",
+    "options": [
+      "Se levantaría tras ellos y derribaría a tres reyes",
+      "Sería uno de los tres y derribaría a diez reyes",
+      "Aparecería antes de ellos y preservaría a los diez",
+      "Se levantaría de otro reino sin afectar a los primeros"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Se levantaría tras ellos y derribaría a tres reyes"
+    ],
+    "explanation": "Después de los diez se levantaría otro rey, diferente de los primeros, que derribaría a tres.",
+    "evidence_excerpt": "tras ellos se levantará otro, el cual será diferente de los primeros, y derribará a tres reyes.",
+    "why_distractors_fail": {
+      "Sería uno de los tres y derribaría a diez reyes": "Invierte las cantidades y la relación.",
+      "Aparecería antes de ellos y preservaría a los diez": "Invierte tanto el orden como la acción.",
+      "Se levantaría de otro reino sin afectar a los primeros": "El texto lo vincula con aquel reino y con la caída de tres."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "succession_and_displacement",
+    "option_category": "prophetic_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Integra orden, diferencia y cantidad desplazada en una sola discriminación.",
+    "variant_justification": "Eleva el hecho central al exigir la relación completa entre diez, otro y tres.",
+    "author": {
+      "id": "r2_author_e",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN7-V009-V11-F04",
+    "source_unit_id": "DAN7-V009",
+    "fact_id": "DAN7-V009-V11-F04",
+    "family": "true_false",
+    "subtype": "relationship",
+    "question": "El fuego ardiente se atribuye únicamente a las ruedas; el trono mismo no recibe una imagen de fuego.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "El trono era llama de fuego y sus ruedas también eran fuego ardiente.",
+    "evidence_excerpt": "su trono, llama de fuego, y fuego ardiente las ruedas del mismo.",
+    "why_distractors_fail": {
+      "Verdadero": "Niega la imagen de llama aplicada directamente al trono."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "shared_fire_imagery",
+    "option_category": "truth_value",
+    "false_mutation": {
+      "local": true,
+      "changed_fields": [
+        "throne_description"
+      ],
+      "original": "su trono, llama de fuego",
+      "replacement": "el trono mismo no recibe una imagen de fuego"
+    },
+    "blank_span": null,
+    "significance": "Exige distribuir correctamente la imaginería ígnea entre trono y ruedas.",
+    "variant_justification": "Niega sólo una de las dos atribuciones contiguas para probar el mapeo exacto.",
+    "author": {
+      "id": "r2_author_e",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

@@ -1,0 +1,609 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-f24cd1d52cd98baefcea",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN5-C9-001",
+      "source_unit_id": "DAN5-V022",
+      "fact_id": "DAN5-V022-V11-F02",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete la progresión que convierte el antecedente de Nabucodonosor en agravante del juicio contra Belsasar: ____.",
+      "options": [
+        "Nabucodonosor fue humillado y reconoció el dominio divino → Belsasar, su hijo, conocía ese antecedente → debía humillar su corazón → no lo hizo y se ensoberbeció contra el Señor",
+        "Nabucodonosor ocultó el antecedente → Belsasar lo ignoraba → debía engrandecerse → honró al Señor",
+        "Belsasar fue humillado primero → Nabucodonosor conoció el caso → debía endurecerse → entregó el reino",
+        "Darío reconoció el dominio divino → Belsasar era su padre → desconocía el antecedente → humilló su corazón"
+      ],
+      "evidence_excerpt": "Pero tú, su hijo Belsasar, no has humillado tu corazón sabiendo todo esto,",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "known_precedent_moral_failure",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "La presentación existente identifica la omisión; ésta exige enlazar antecedente conocido, parentesco, deber moral y conducta posterior.",
+      "authored_content_sha256": "00d174d2a711b96e46a5f9bdcb77483d7b4e0ac0872c64950d3e1fb3402983af",
+      "source_ref": "Daniel 5:22",
+      "source_quote": "Pero tú, su hijo Belsasar, no has humillado tu corazón sabiendo todo esto,",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Belsasar humilló su corazón aunque sabía lo ocurrido a Nabucodonosor.",
+          "family": "true_false",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-002",
+      "source_unit_id": "DAN5-V013",
+      "fact_id": "DAN5-V013-V11-F03",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete la cadena por la que la recomendación de la reina desemboca en la comparecencia y autenticación de Daniel: ____.",
+      "options": [
+        "la reina atribuye capacidades y recomienda llamarlo → Daniel es llevado ante el rey → se confirma su identidad entre los cautivos de Judá y su traslado desde Judea → el rey declara haber oído de su dotación",
+        "la reina recomienda a Darío → los sabios llevan a Belsasar → se confirma origen medo → el rey niega haber oído de él",
+        "Daniel se presenta sin convocatoria → la reina lo identifica como caldeo → Nabucodonosor es llevado ante él → se le atribuye sólo fuerza",
+        "los príncipes recomiendan a los magos → Daniel permanece fuera → Belsasar procede de Judea → la reina interpreta la escritura"
+      ],
+      "evidence_excerpt": "Entonces trajeron a Daniel ante el rey. Y dijo el rey a Daniel: —¿Eres tú aquel Daniel de los hijos de la cautividad de Judá, que mi padre trajo de Judea?",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "recommendation_audience_authentication",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "La central pregunta un dato geográfico; esta variante reconstruye el proceso completo de validación del intérprete.",
+      "authored_content_sha256": "e86e0190428e53631e7a40ed223fd38061c684a5ba101347af5ae45d1d280ce3",
+      "source_ref": "Daniel 5:13",
+      "source_quote": "Entonces trajeron a Daniel ante el rey. Y dijo el rey a Daniel: —¿Eres tú aquel Daniel de los hijos de la cautividad de Judá, que mi padre trajo de Judea?",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Daniel pertenecía a los cautivos de ____.",
+          "family": "fill_choice",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-003",
+      "source_unit_id": "DAN5-V014",
+      "fact_id": "DAN5-V014-V11-F02",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete el contraste probatorio que prepara la intervención de Daniel: ____.",
+      "options": [
+        "el rey ha oído de la presencia espiritual y de tres cualidades intelectuales en Daniel → los sabios y astrólogos ya comparecieron → no pudieron interpretar el asunto",
+        "el rey vio a Daniel escribir → los sabios poseían luz y entendimiento → interpretaron antes que él",
+        "la reina oyó de los medos → Daniel carecía de sabiduría → los astrólogos resolvieron el asunto",
+        "el rey atribuyó temor y palidez a Daniel → no convocó especialistas → la escritura quedó sin lectura"
+      ],
+      "evidence_excerpt": "Yo he oído de ti que el espíritu de los dioses santos está en ti, y que en ti se halló luz, entendimiento y mayor sabiduría.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "reputation_vs_failed_specialists",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "La presentación existente inventaría cualidades; ésta exige usarlas dentro del contraste que justifica el relevo de intérprete.",
+      "authored_content_sha256": "51123ce9a8fc1a8a757314736dbf20862f18aeb129ed650352e50469497fcc3f",
+      "source_ref": "Daniel 5:14",
+      "source_quote": "Yo he oído de ti que el espíritu de los dioses santos está en ti, y que en ti se halló luz, entendimiento y mayor sabiduría.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué había oído Belsasar acerca de la dimensión espiritual de Daniel?",
+          "family": "single_choice_contextual",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-004",
+      "source_unit_id": "DAN5-V005",
+      "fact_id": "DAN5-V005-V11-F03",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete la secuencia narrativa que une el culto del banquete con la crisis del rey: ____.",
+      "options": [
+        "bebieron y alabaron dioses materiales → en la misma hora aparecieron dedos que escribían en la pared ante el rey → el rey palideció, se turbó y perdió estabilidad corporal",
+        "alabaron al Altísimo → al día siguiente Daniel escribió en un libro → el rey recuperó firmeza",
+        "rompieron los vasos → una mano apagó el candelabro → los príncipes interpretaron la señal",
+        "bebieron sin culto → Darío escribió sobre el trono → Belsasar fue fortalecido"
+      ],
+      "evidence_excerpt": "En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del candelabro, sobre lo encalado de la pared del palacio real; y el rey veía la mano que escribía.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "idolatry_sign_fear_sequence",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "Las presentaciones existentes describen la aparición aislada; ésta evalúa la transición causal y narrativa entre tres escenas.",
+      "authored_content_sha256": "0032cfd9bd961c030c8dfdb6628865e889b2011f2c730b7762e1ddbed5e14425",
+      "source_ref": "Daniel 5:5",
+      "source_quote": "En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del candelabro, sobre lo encalado de la pared del palacio real; y el rey veía la mano que escribía.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Quién observaba directamente la mano mientras escribía?",
+          "family": "single_choice_contextual",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-005",
+      "source_unit_id": "DAN5-V012",
+      "fact_id": "DAN5-V012-V11-F04",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete la cadena de credenciales que va del nombramiento anterior a la solución inmediata de la crisis: ____.",
+      "options": [
+        "Nabucodonosor hizo a Daniel jefe de cuatro gremios → en él se hallaron cualidades para tres clases de problemas → Daniel también era llamado Beltsasar → debía ser convocado porque daría la interpretación",
+        "Belsasar hizo a Daniel rey de cuatro pueblos → sólo podía leer números → su nombre era Darío → debía recibir el reino",
+        "la reina nombró a Beltsasar jefe de los medos → resolvía banquetes → también era Nabucodonosor → debía sellar la escritura",
+        "los astrólogos nombraron a Daniel príncipe → carecía de entendimiento → su nombre era Ciro → debía guardar silencio"
+      ],
+      "evidence_excerpt": "por cuanto en él se halló más espíritu, ciencia y entendimiento para interpretar sueños, descifrar enigmas y resolver dudas; esto es, en Daniel, al cual el rey puso por nombre Beltsasar. Llámese, pues, ahora a Daniel, y él te dará la interpretación.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "appointment_capability_identity_solution",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "La presentación previa reúne cualidades internas; ésta las conecta con cargo anterior, identidad y función inmediata.",
+      "authored_content_sha256": "dce71c2acc5a09fd5e3216fddb01dc0aa651c4082574fe6019bcd14e0491b9d9",
+      "source_ref": "Daniel 5:12",
+      "source_quote": "por cuanto en él se halló más espíritu, ciencia y entendimiento para interpretar sueños, descifrar enigmas y resolver dudas; esto es, en Daniel, al cual el rey puso por nombre Beltsasar. Llámese, pues, ahora a Daniel, y él te dará la interpretación.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Daniel podía descifrar enigmas y resolver ____.",
+          "family": "fill_choice",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-006",
+      "source_unit_id": "DAN5-V002",
+      "fact_id": "DAN5-V002-V11-F04",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete la progresión entre marco público, mandato y ejecución del uso de los vasos: ____.",
+      "options": [
+        "Belsasar bebe ante mil príncipes → bajo el efecto del vino ordena traer vasos de oro y plata llevados por Nabucodonosor desde Jerusalén → el rey y tres grupos deben beber → finalmente se traen vasos de oro y los cuatro grupos beben",
+        "Belsasar ayuna ante mil sabios → ordena devolver vasos de bronce a Media → sólo Daniel debe beber → nadie los usa",
+        "Nabucodonosor bebe ante Darío → manda fabricar vasos de piedra en Jerusalén → los magos deben leerlos → la reina los rompe",
+        "Darío celebra ante sesenta y dos medos → ordena traer un collar de oro → sólo los príncipes beben → Daniel toma el reino"
+      ],
+      "evidence_excerpt": "Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de Jerusalén, para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "public_feast_order_execution",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "Las presentaciones existentes fijan procedencia y usuarios; ésta exige comparar intención y ejecución dentro de la progresión de tres versículos.",
+      "authored_content_sha256": "f15781ebb91bd79035fa75e697cc57ac6d8df63305536f56fa40ab1f9ae1afd0",
+      "source_ref": "Daniel 5:2",
+      "source_quote": "Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de Jerusalén, para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Belsasar mandó traer vasos de oro y de plata.",
+          "family": "true_false",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-007",
+      "source_unit_id": "DAN5-V025",
+      "fact_id": "DAN5-V025-V11-F02",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete el mapa que pasa de la inscripción a sus tres sentencias interpretativas: ____.",
+      "options": [
+        "Mene se repite en la inscripción y abre la interpretación con el cómputo y fin del reino → Tekel evalúa al rey en balanza y lo halla falto → Peres declara el reino roto y entregado a medos y persas",
+        "Mene pesa al rey y lo halla justo → Tekel entrega el reino a Daniel → Peres cuenta los días del banquete",
+        "Mene proclama a Daniel tercero → Tekel restaura a Belsasar → Peres sella la escritura hasta el fin",
+        "Mene nombra a los sabios → Tekel divide a Media → Peres concede vida y gloria al rey"
+      ],
+      "evidence_excerpt": "Y la escritura que trazó es: “Mene, Mene, Tekel, Uparsin.”",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "inscription_three_verdict_map",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "La central recupera las palabras de la inscripción; esta variante exige asignar a cada término su sujeto, operación y resultado.",
+      "authored_content_sha256": "0f2078172c192f40ac8008100e846f87c27c8d055193d982c4ce56ac45fba05a",
+      "source_ref": "Daniel 5:25",
+      "source_quote": "Y la escritura que trazó es: “Mene, Mene, Tekel, Uparsin.”",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "La inscripción trazada comenzaba con la palabra «Tekel» repetida dos veces.",
+          "family": "true_false",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-008",
+      "source_unit_id": "DAN5-V028",
+      "fact_id": "DAN5-V028-V11-F03",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete la arquitectura del último término en relación con los dos anteriores: ____.",
+      "options": [
+        "tras el cómputo terminal de Mene y la evaluación personal de Tekel, Peres cambia al objeto reino, afirma su ruptura y nombra a medos y persas como receptores",
+        "tras la restauración de Mene y el premio de Tekel, Peres cambia al objeto Daniel, afirma su coronación y nombra a Judá como receptor",
+        "tras la lectura de Mene y el sello de Tekel, Peres cambia al objeto templo, afirma su construcción y nombra a Babilonia",
+        "tras la muerte de Mene y el banquete de Tekel, Peres cambia al objeto vasos, afirma su alabanza y nombra a los magos"
+      ],
+      "evidence_excerpt": "“Peres”: Tu reino ha sido roto y dado a los medos y a los persas.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "verdict_progression_object_recipient",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "La presentación rechazada invertía directamente la entrega; ésta exige situar Peres dentro de la progresión lógica completa de los tres dictámenes.",
+      "authored_content_sha256": "8f20ef8651f7c9eb2276c210a76480ca9dcdeb03cfdbb2d628c8d642f731ee4a",
+      "source_ref": "Daniel 5:28",
+      "source_quote": "“Peres”: Tu reino ha sido roto y dado a los medos y a los persas.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Quiénes recibirían el reino roto de Belsasar?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-009",
+      "source_unit_id": "DAN5-V006",
+      "fact_id": "DAN5-V006-V11-F03",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete la secuencia percepción–reacción–respuesta con todos sus cambios de nivel: ____.",
+      "options": [
+        "el rey ve la mano que escribe → pensamientos, color, caderas y rodillas muestran una crisis creciente → grita para convocar especialistas y formula una oferta condicionada",
+        "la reina ve el collar → los príncipes recuperan el color → Daniel convoca a los medos sin recompensa",
+        "los sabios ven a Darío → las rodillas del rey se fortalecen → el candelabro interpreta la escritura",
+        "Daniel ve los vasos → el rey se duerme → los astrólogos toman el reino"
+      ],
+      "evidence_excerpt": "Entonces el rey palideció y sus pensamientos lo turbaron, se debilitaron sus caderas y sus rodillas daban la una contra la otra.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "perception_crisis_response",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "Las presentaciones existentes ordenan síntomas; ésta exige relacionar percepción anterior, deterioro y respuesta institucional posterior.",
+      "authored_content_sha256": "86ed588261bb24225fc7623269840fab9895ec0870beef49bb6ae85eac8cfbb4",
+      "source_ref": "Daniel 5:6",
+      "source_quote": "Entonces el rey palideció y sus pensamientos lo turbaron, se debilitaron sus caderas y sus rodillas daban la una contra la otra.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué conjunto describe la reacción de Belsasar ante la escritura?",
+          "family": "single_choice_contextual",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-010",
+      "source_unit_id": "DAN5-V010",
+      "fact_id": "DAN5-V010-V11-F04",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete la intervención que transforma una crisis sin solución en una recomendación concreta: ____.",
+      "options": [
+        "Belsasar queda extremadamente turbado y los príncipes perplejos → la reina entra por esas palabras, pide que cesen turbación y palidez → identifica en el reino a un hombre acreditado por Nabucodonosor",
+        "los sabios resuelven la escritura → la reina sale por alegría → recomienda a Darío por su edad",
+        "Daniel palidece y los príncipes celebran → la reina entra por el vino → identifica a los medos como intérpretes",
+        "Belsasar toma el reino → la reina ordena silencio → desacredita al hombre nombrado por Nabucodonosor"
+      ],
+      "evidence_excerpt": "La reina, por las palabras del rey y de sus príncipes, entró a la sala del banquete, y dijo: —¡Rey, vive para siempre! No te turben tus pensamientos ni palidezca tu rostro.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "crisis_queen_recommendation",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "Las presentaciones existentes describen entrada y exhortación; ésta exige explicar su función de puente hacia el candidato acreditado.",
+      "authored_content_sha256": "de00fb996a0fe25f1b3670a6ced46ef9b8d8cc178d9b518fb4bf0c65f2433126",
+      "source_ref": "Daniel 5:10",
+      "source_quote": "La reina, por las palabras del rey y de sus príncipes, entró a la sala del banquete, y dijo: —¡Rey, vive para siempre! No te turben tus pensamientos ni palidezca tu rostro.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Al entrar en la sala del banquete, la reina saludó a Belsasar diciendo: «Rey, vive para siempre».",
+          "family": "true_false",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-011",
+      "source_unit_id": "DAN5-V029",
+      "fact_id": "DAN5-V029-V11-F05",
+      "family": "true_false",
+      "subtype": "relationship",
+      "question": "Daniel rechazó conservar los dones pero aceptó interpretar; después Belsasar ejecutó los tres honores prometidos y, pese a esa proclamación, murió esa misma noche.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Entonces Belsasar mandó vestir a Daniel de púrpura, poner en su cuello un collar de oro y proclamar que él era el tercer señor del reino.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "reward_rejection_honor_death",
+      "option_category": "multi_clause_assertion",
+      "variant_justification": "La presentación existente ordena los honores; ésta los contrasta con la postura previa de Daniel y con el desenlace del rey.",
+      "authored_content_sha256": "f828203cfa7872009528a9be85cb3add2563b9c683f8a75998ee31cc0c6e18ea",
+      "source_ref": "Daniel 5:29",
+      "source_quote": "Entonces Belsasar mandó vestir a Daniel de púrpura, poner en su cuello un collar de oro y proclamar que él era el tercer señor del reino.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Daniel fue proclamado segundo señor del reino.",
+          "family": "true_false",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-012",
+      "source_unit_id": "DAN5-V031",
+      "fact_id": "DAN5-V031-V11-F04",
+      "family": "true_false",
+      "subtype": "relationship",
+      "question": "Después de la muerte nocturna de Belsasar, Darío de Persia, a los sesenta y dos años, tomó el reino.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Y Darío, de Media, cuando tenía sesenta y dos años, tomó el reino.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "death_successor_origin_age",
+      "option_category": "multi_clause_assertion",
+      "variant_justification": "La presentación existente reúne la ficha de Darío; ésta obliga a verificarla contra el enlace temporal con la muerte anterior.",
+      "authored_content_sha256": "fecd821a7a6afcb13b352d519f01246a7a3644218bca9c2d5fd45d98d080d1fa",
+      "source_ref": "Daniel 5:31",
+      "source_quote": "Y Darío, de Media, cuando tenía sesenta y dos años, tomó el reino.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Darío era de Media cuando tomó el reino.",
+          "family": "true_false",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-013",
+      "source_unit_id": "DAN5-V021",
+      "fact_id": "DAN5-V021-V11-F02",
+      "family": "true_false",
+      "subtype": "relationship",
+      "question": "El orgullo endurecido produjo pérdida de trono y gloria; siguieron expulsión, mente bestial, vida con asnos, hierba y rocío, hasta el reconocimiento del dominio y la elección soberana del Altísimo.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Fue echado de entre los hijos de los hombres, su mente se hizo semejante a la de las bestias y con los asnos monteses fue su habitación. Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el Altísimo Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "pride_loss_degradation_recognition",
+      "option_category": "multi_clause_assertion",
+      "variant_justification": "La presentación existente resume degradación y límite; ésta exige integrar también la causa doble y las pérdidas que abren la secuencia.",
+      "authored_content_sha256": "dc8248efc29ce533c81e92f47b4c5df674d6b3e471787b9f8a3f2540270752fa",
+      "source_ref": "Daniel 5:21",
+      "source_quote": "Fue echado de entre los hijos de los hombres, su mente se hizo semejante a la de las bestias y con los asnos monteses fue su habitación. Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el Altísimo Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Durante su humillación, la habitación de Nabucodonosor estuvo con los asnos ____.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-014",
+      "source_unit_id": "DAN5-V019",
+      "fact_id": "DAN5-V019-V11-F02",
+      "family": "true_false",
+      "subtype": "relationship",
+      "question": "La grandeza concedida hizo que pueblos, naciones y lenguas temieran; luego Nabucodonosor, según lo que le ordenaba el Altísimo, mataba o daba vida y engrandecía o humillaba.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Y por la grandeza que le dio, todos los pueblos, naciones y lenguas temblaban y temían delante de él. A quien le placía, mataba, y a quien le placía, daba vida; engrandecía a quien le placía, y a quien le placía, humillaba.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "granted_greatness_audience_royal_discretion",
+      "option_category": "multi_clause_assertion",
+      "variant_justification": "La central separa los pares de acciones; ésta exige conservar además donante, audiencia y agente humano de esas acciones.",
+      "authored_content_sha256": "1a0b2357e61019387223fffe6dd0c3016aaed7db9c821a19e2df511a23984d75",
+      "source_ref": "Daniel 5:19",
+      "source_quote": "Y por la grandeza que le dio, todos los pueblos, naciones y lenguas temblaban y temían delante de él. A quien le placía, mataba, y a quien le placía, daba vida; engrandecía a quien le placía, y a quien le placía, humillaba.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "La grandeza concedida a Nabucodonosor hizo que pueblos, naciones y lenguas temblaran y temieran delante de él.",
+          "family": "true_false",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-015",
+      "source_unit_id": "DAN5-V007",
+      "fact_id": "DAN5-V007-V11-F04",
+      "family": "true_false",
+      "subtype": "relationship",
+      "question": "El temor corporal llevó al rey a convocar tres grupos; ofreció púrpura, collar y tercer rango por leer e interpretar, pero la comparecencia de todos los sabios terminó sin lectura ni interpretación y agravó la crisis.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "El rey gritó en alta voz que hicieran venir magos, caldeos y adivinos; y dijo el rey a los sabios de Babilonia: «Cualquiera que lea esta escritura y me dé su interpretación, será vestido de púrpura, llevará en su cuello un collar de oro y será el tercer señor en el reino.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "fear_offer_failure_escalation",
+      "option_category": "multi_clause_assertion",
+      "variant_justification": "Las presentaciones existentes cubren convocatoria y oferta; ésta exige seguir la secuencia hasta el fracaso colectivo y su efecto.",
+      "authored_content_sha256": "6b60aea928484878105c41c4176ea191a2494626eb8a396d9b39a108129c63ed",
+      "source_ref": "Daniel 5:7",
+      "source_quote": "El rey gritó en alta voz que hicieran venir magos, caldeos y adivinos; y dijo el rey a los sabios de Babilonia: «Cualquiera que lea esta escritura y me dé su interpretación, será vestido de púrpura, llevará en su cuello un collar de oro y será el tercer señor en el reino.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Belsasar ofreció que el intérprete de la escritura sería el ____ señor del reino.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-016",
+      "source_unit_id": "DAN5-V023",
+      "fact_id": "DAN5-V023-V11-F04",
+      "family": "true_false",
+      "subtype": "relationship",
+      "question": "Aunque conocía la humillación de su padre, Belsasar profanó los vasos, alabó ídolos que no ven, oyen ni saben y no honró al Dios en cuya mano estaban los vasos y de quien eran todos sus caminos.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "sino que contra el Señor del cielo te has ensoberbecido; hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus concubinas bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "known_history_inverted_worship_judgment",
+      "option_category": "multi_clause_assertion",
+      "variant_justification": "La presentación existente distribuye objetos de culto; ésta exige verificar toda la cadena desde conocimiento culpable hasta juicio escrito.",
+      "authored_content_sha256": "710bd699a1356d32d46fc03a5cda3b3cbea7d341c12a4b455e98cbdd173bbf07",
+      "source_ref": "Daniel 5:23",
+      "source_quote": "sino que contra el Señor del cielo te has ensoberbecido; hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus concubinas bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Los ídolos alabados ni ven, ni oyen, ni ____.",
+          "family": "fill_choice",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-017",
+      "source_unit_id": "DAN5-V011",
+      "fact_id": "DAN5-V011-V11-F02",
+      "family": "true_false",
+      "subtype": "relationship",
+      "question": "La reina pasó de calmar al rey a presentar un antecedente verificable: Daniel poseía dotación reconocida en tiempos de Nabucodonosor, había sido puesto sobre cuatro gremios y reunía capacidades que justificaban convocarlo.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "En tu reino hay un hombre en el que mora el espíritu de los dioses santos, y en los días de tu padre se halló en él luz, inteligencia y sabiduría, como la sabiduría de los dioses. El rey Nabucodonosor, tu padre, oh rey, lo constituyó jefe sobre todos los magos, astrólogos, caldeos y adivinos,",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "queen_argument_appointment_capability",
+      "option_category": "multi_clause_assertion",
+      "variant_justification": "La presentación existente enumera credenciales; ésta evalúa cómo la reina las organiza como argumento para resolver la crisis.",
+      "authored_content_sha256": "0776af0970b14fa30fed33c2be6ab666ef7d24e29c113978fd0be09b4eedf114",
+      "source_ref": "Daniel 5:11",
+      "source_quote": "En tu reino hay un hombre en el que mora el espíritu de los dioses santos, y en los días de tu padre se halló en él luz, inteligencia y sabiduría, como la sabiduría de los dioses. El rey Nabucodonosor, tu padre, oh rey, lo constituyó jefe sobre todos los magos, astrólogos, caldeos y adivinos,",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué cualidades dijo la reina que se habían hallado en Daniel?",
+          "family": "single_choice_contextual",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-018",
+      "source_unit_id": "DAN5-V016",
+      "fact_id": "DAN5-V016-V11-F02",
+      "family": "true_false",
+      "subtype": "relationship",
+      "question": "Tras el fracaso de sabios y astrólogos, Belsasar ofreció que Daniel sería despojado de púrpura, recibiría collar y tercer rango por leer e interpretar; Daniel luego rechazó los dones, pero aceptó ambas tareas.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Yo, pues, he oído de ti que puedes interpretar y resolver dificultades. Si ahora puedes leer esta escritura y darme su interpretación, serás vestido de púrpura, llevarás en tu cuello un collar de oro y serás el tercer señor en el reino.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "failed_experts_offer_daniel_response",
+      "option_category": "multi_clause_assertion",
+      "variant_justification": "La presentación existente formula el contrato; ésta exige contrastarlo con la respuesta real de Daniel en el versículo siguiente.",
+      "authored_content_sha256": "8c74d1bd54318d920b3512cb2bd6a026fd656d0801b2bcb075933ac322f52dd3",
+      "source_ref": "Daniel 5:16",
+      "source_quote": "Yo, pues, he oído de ti que puedes interpretar y resolver dificultades. Si ahora puedes leer esta escritura y darme su interpretación, serás vestido de púrpura, llevarás en tu cuello un collar de oro y serás el tercer señor en el reino.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué condición debía cumplir Daniel para recibir los honores prometidos?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-019",
+      "source_unit_id": "DAN5-V020",
+      "fact_id": "DAN5-V020-V11-F03",
+      "family": "true_false",
+      "subtype": "relationship",
+      "question": "El poder discrecional precedió al orgullo; el corazón ensoberbecido y el espíritu endurecido precedieron a la pérdida de trono y gloria, y ésta abrió la etapa de expulsión y degradación bestial.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Pero cuando su corazón se ensoberbeció y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y despojado de su gloria.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "power_pride_loss_degradation",
+      "option_category": "multi_clause_assertion",
+      "variant_justification": "Las presentaciones existentes emparejan causas y pérdidas; ésta exige ubicar ese emparejamiento entre el poder anterior y la degradación posterior.",
+      "authored_content_sha256": "4bc9132219b55f7000454f5e883fab94170388aef3c5eac43bfba987d4cc1d05",
+      "source_ref": "Daniel 5:20",
+      "source_quote": "Pero cuando su corazón se ensoberbeció y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y despojado de su gloria.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Nabucodonosor fue despojado de su ____.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C9-020",
+      "source_unit_id": "DAN5-V003",
+      "fact_id": "DAN5-V003-F03",
+      "family": "true_false",
+      "subtype": "relationship",
+      "question": "La orden incluía vasos de oro y plata para cuatro grupos, pero la ejecución menciona vasos de plata procedentes del templo de Jerusalén; después, beber de ellos desembocó en alabanza a seis clases de dioses.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Entonces trajeron los vasos de oro que habían traído del templo de la casa de Dios, que estaba en Jerusalén, y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "order_execution_material_idolatry",
+      "option_category": "multi_clause_assertion",
+      "variant_justification": "La central identifica participantes; ésta exige distinguir mandato y ejecución material antes de relacionarlos con el culto posterior.",
+      "authored_content_sha256": "19131a04801ff393703093b694f750bab8224304d9efc1b8e207b3dab833ad95",
+      "source_ref": "Daniel 5:3",
+      "source_quote": "Entonces trajeron los vasos de oro que habían traído del templo de la casa de Dios, que estaba en Jerusalén, y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Los vasos del templo fueron usados para beber por el rey, sus príncipes, sus mujeres y sus ________.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "13449466f5f248f639ead775697268ced00dcf88b21e34ae95f77f18f3fad31a"
+}

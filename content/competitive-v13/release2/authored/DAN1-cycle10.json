@@ -1,0 +1,39 @@
+[
+  {
+    "id": "V13-R2-DAN1-C10-V002-V11-F04",
+    "source_unit_id": "DAN1-V002",
+    "fact_id": "DAN1-V002-V11-F04",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "question": "¿Qué cadena conserva sin intercambios la entrega inicial, el traslado territorial y los dos destinos religiosos de los utensilios?",
+    "options": [
+      "El Señor entrega a Joacim y parte de los utensilios → Nabucodonosor los lleva a Sinar → casa de su dios → casa del tesoro de su dios",
+      "Joacim entrega a Nabucodonosor y todos los utensilios → Daniel los lleva a Judá → casa de Jehová → palacio del rey",
+      "El Señor entrega sólo a Joacim → Aspenaz lo lleva a Babilonia → casa del rey → escuela de los caldeos",
+      "Nabucodonosor entrega los utensilios a Ciro → Melsar los lleva a Persia → templo de Jerusalén → tesoro real"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "El Señor entrega a Joacim y parte de los utensilios → Nabucodonosor los lleva a Sinar → casa de su dios → casa del tesoro de su dios"
+    ],
+    "explanation": "El Señor entregó a Joacim y parte de los utensilios; Nabucodonosor llevó estos a Sinar, a la casa de su dios, y los depositó en su tesoro.",
+    "evidence_excerpt": "El Señor entregó en sus manos a Joacim, rey de Judá, y parte de los utensilios de la casa de Dios; los trajo a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.",
+    "why_distractors_fail": {
+      "Joacim entrega a Nabucodonosor y todos los utensilios → Daniel los lleva a Judá → casa de Jehová → palacio del rey": "Altera al menos el agente, lo entregado, el transportista, el destino territorial o el depósito final.",
+      "El Señor entrega sólo a Joacim → Aspenaz lo lleva a Babilonia → casa del rey → escuela de los caldeos": "Altera al menos el agente, lo entregado, el transportista, el destino territorial o el depósito final.",
+      "Nabucodonosor entrega los utensilios a Ciro → Melsar los lleva a Persia → templo de Jerusalén → tesoro real": "Altera al menos el agente, lo entregado, el transportista, el destino territorial o el depósito final."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "delivery_transport_religious_deposit",
+    "option_category": "five_stage_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige distinguir entrega, transportista, territorio, edificio y depósito.",
+    "variant_justification": "La presentación pública sólo pide el tesoro; esta variante reconstruye toda la cadena causal y espacial.",
+    "author": {
+      "id": "r2_pipeline_review",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

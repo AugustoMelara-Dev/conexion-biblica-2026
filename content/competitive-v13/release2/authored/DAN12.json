@@ -1,0 +1,264 @@
+[
+  {
+    "id": "R2-B-DAN12-002",
+    "source_unit_id": "DAN12-V002",
+    "fact_id": "DAN12-V002-F06",
+    "family": "true_false",
+    "subtype": "comparison",
+    "question": "Quienes despierten para vergüenza y confusión las padecerán sólo por un período temporal.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "El segundo destino no es temporal: la vergüenza y la confusión se califican como perpetuas.",
+    "why_distractors_fail": {
+      "Verdadero": "Sustituye «perpetua» por «temporal» y elimina el contraste duradero con la vida eterna."
+    },
+    "evidence_excerpt": "otros para vergüenza y confusión perpetua",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "comparison",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "duration"
+      ],
+      "local": true,
+      "original": "confusión perpetua",
+      "replacement": "confusión temporal"
+    },
+    "blank_span": null,
+    "significance": "Evalúa el calificativo que hace simétrico el contraste entre los dos destinos.",
+    "variant_justification": "La central recupera ambos destinos; aquí se adjudica una mutación mínima de la duración del segundo.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B-DAN12-005",
+    "source_unit_id": "DAN12-V005",
+    "fact_id": "DAN12-V005-F02",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Qué inventario conserva simultáneamente el número y la disposición de las figuras que Daniel vio además de sí mismo?",
+    "options": [
+      "Dos, una a cada lado del río",
+      "Dos, ambas sobre las aguas",
+      "Tres, reunidas en una misma orilla",
+      "Una, situada detrás de Daniel"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Dos, una a cada lado del río"
+    ],
+    "explanation": "Daniel vio a otros dos: uno estaba a este lado del río y el otro al lado opuesto.",
+    "why_distractors_fail": {
+      "Dos, ambas sobre las aguas": "Conserva el número, pero cambia la ubicación de ambas figuras.",
+      "Tres, reunidas en una misma orilla": "Altera tanto el número como la distribución.",
+      "Una, situada detrás de Daniel": "Reduce el grupo y añade una ubicación ausente."
+    },
+    "evidence_excerpt": "vi a otros dos que estaban en pie, uno a este lado del río y el otro al otro lado",
+    "difficulty": "expert",
+    "importance": "medium",
+    "relation_type": "relationship",
+    "option_category": "number_location_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Evita acertar por recordar sólo el número sin dominar la escena.",
+    "variant_justification": "La central pregunta sólo cuántas figuras había; la variante exige emparejar cantidad y distribución espacial.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B-DAN12-006",
+    "source_unit_id": "DAN12-V006",
+    "fact_id": "DAN12-V006-F01",
+    "family": "single_choice_contextual",
+    "subtype": "speaker_addressee",
+    "question": "¿Cuál reconstrucción respeta quién habla, a quién se dirige y dónde se encuentra el destinatario cuando se pregunta por el fin de las maravillas?",
+    "options": [
+      "Uno de los dos habla al varón vestido de lino, situado sobre las aguas",
+      "Daniel habla a uno de los dos, situado en la orilla",
+      "El varón vestido de lino habla a Daniel desde una orilla",
+      "Miguel habla al varón vestido de lino desde el cielo"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Uno de los dos habla al varón vestido de lino, situado sobre las aguas"
+    ],
+    "explanation": "Uno de los dos personajes dirige la pregunta al varón vestido de lino, cuya posición se fija sobre las aguas del río.",
+    "why_distractors_fail": {
+      "Daniel habla a uno de los dos, situado en la orilla": "Intercambia al hablante y al destinatario, y cambia la ubicación.",
+      "El varón vestido de lino habla a Daniel desde una orilla": "Invierte la dirección del diálogo y desplaza al destinatario.",
+      "Miguel habla al varón vestido de lino desde el cielo": "Introduce un hablante y una procedencia ajenos a esta escena."
+    },
+    "evidence_excerpt": "dijo uno al varón vestido de lino que estaba sobre las aguas del río",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "speaker_addressee",
+    "option_category": "speaker_addressee_location",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "La cadena completa distingue personajes que suelen confundirse en la escena del río.",
+    "variant_justification": "La central recupera sólo el destinatario; esta variante obliga a resolver hablante, destinatario y ubicación.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B-DAN12-010",
+    "source_unit_id": "DAN12-V010",
+    "fact_id": "DAN12-V010-F02",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué distribución de conducta y comprensión conserva el contraste completo entre los dos grupos?",
+    "options": [
+      "Los impíos obran impíamente y no entienden; los entendidos comprenden",
+      "Los impíos son purificados y comprenden; los entendidos obran impíamente",
+      "Ambos grupos comprenden, aunque sólo los impíos son emblanquecidos",
+      "Ningún grupo comprende hasta que todos hayan sido purificados"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Los impíos obran impíamente y no entienden; los entendidos comprenden"
+    ],
+    "explanation": "El texto vincula a los impíos con conducta impía y ausencia de entendimiento, y reserva la comprensión para los entendidos.",
+    "why_distractors_fail": {
+      "Los impíos son purificados y comprenden; los entendidos obran impíamente": "Invierte las propiedades de los grupos.",
+      "Ambos grupos comprenden, aunque sólo los impíos son emblanquecidos": "Universaliza la comprensión sin base.",
+      "Ningún grupo comprende hasta que todos hayan sido purificados": "Niega que los entendidos comprenderán."
+    },
+    "evidence_excerpt": "los impíos procederán impíamente, y ninguno de los impíos entenderá; pero los entendidos comprenderán",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "comparison",
+    "option_category": "group_trait_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige mantener dos propiedades y dos grupos sin invertirlos.",
+    "variant_justification": "La central pide verbalizar el contraste; esta variante evalúa el mapeo simultáneo de conducta y comprensión.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B-DAN12-011",
+    "source_unit_id": "DAN12-V011",
+    "fact_id": "DAN12-V011-F01",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué secuencia delimita correctamente el intervalo de mil doscientos noventa días?",
+    "options": [
+      "Quitar el sacrificio continuo → abominación desoladora",
+      "Levantar la abominación → restaurar el sacrificio continuo",
+      "Sellar el libro → despertar a los entendidos",
+      "Dispersar al pueblo santo → recibir la heredad"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Quitar el sacrificio continuo → abominación desoladora"
+    ],
+    "explanation": "El intervalo comienza al quitarse el sacrificio continuo y llega hasta la abominación desoladora.",
+    "why_distractors_fail": {
+      "Levantar la abominación → restaurar el sacrificio continuo": "Invierte los extremos y añade una restauración.",
+      "Sellar el libro → despertar a los entendidos": "Combina hechos que no delimitan este plazo.",
+      "Dispersar al pueblo santo → recibir la heredad": "Une dos escenas sin relación con los 1,290 días."
+    },
+    "evidence_excerpt": "Desde el tiempo en que sea quitado el sacrificio continuo hasta la abominación desoladora",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "narrative_order",
+    "option_category": "event_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue los dos hitos y su orden, no sólo la cifra.",
+    "variant_justification": "La central recupera el acontecimiento final; esta variante reconstruye ambos límites cronológicos.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B-DAN12-012",
+    "source_unit_id": "DAN12-V012",
+    "fact_id": "DAN12-V012-F01",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "Al distinguir este plazo del intervalo anterior, ¿qué combinación define a la persona declarada bienaventurada?",
+    "options": [
+      "Espera y alcanza mil trescientos treinta y cinco días",
+      "Comprende y alcanza mil doscientos noventa días",
+      "Sella el libro durante mil trescientos días",
+      "Reposa hasta completar tiempo, tiempos y medio tiempo"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Espera y alcanza mil trescientos treinta y cinco días"
+    ],
+    "explanation": "La bienaventuranza une la espera con llegar a mil trescientos treinta y cinco días.",
+    "why_distractors_fail": {
+      "Comprende y alcanza mil doscientos noventa días": "Toma la cifra anterior y sustituye la espera.",
+      "Sella el libro durante mil trescientos días": "No existe ese plazo ni esa relación.",
+      "Reposa hasta completar tiempo, tiempos y medio tiempo": "Combina otra promesa con otra duración."
+    },
+    "evidence_excerpt": "Bienaventurado el que espere, y llegue a mil trescientos treinta y cinco días.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "relationship",
+    "option_category": "action_duration_pair",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Evita confundir los dos números consecutivos y conserva la condición.",
+    "variant_justification": "La central solicita la cifra; la variante exige discriminar cifra y condición frente al plazo precedente.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B-DAN12-013",
+    "source_unit_id": "DAN12-V013",
+    "fact_id": "DAN12-V013-F05",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué cadena conserva el orden completo de la promesa personal que cierra el mensaje a Daniel?",
+    "options": [
+      "Ir hasta el fin → reposar → levantarse → recibir la heredad",
+      "Recibir la heredad → reposar → ir hasta el fin → levantarse",
+      "Levantarse → ir hasta el fin → sellar el libro → reposar",
+      "Reposar → recibir la heredad → volver al río → ir hasta el fin"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Ir hasta el fin → reposar → levantarse → recibir la heredad"
+    ],
+    "explanation": "La promesa encadena cuatro momentos: Daniel irá hasta el fin, reposará, se levantará y recibirá su heredad.",
+    "why_distractors_fail": {
+      "Recibir la heredad → reposar → ir hasta el fin → levantarse": "Coloca la recepción antes del reposo.",
+      "Levantarse → ir hasta el fin → sellar el libro → reposar": "Desordena los actos e introduce una orden anterior.",
+      "Reposar → recibir la heredad → volver al río → ir hasta el fin": "Añade un regreso y adelanta la heredad."
+    },
+    "evidence_excerpt": "tú irás hasta el fin, y reposarás, y te levantarás para recibir tu heredad al fin de los días",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "narrative_order",
+    "option_category": "event_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "La heredad sólo se interpreta dentro de la secuencia final completa.",
+    "variant_justification": "La central pregunta qué recibirá Daniel; esta presentación reconstruye la progresión que culmina en esa recepción.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

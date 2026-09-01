@@ -1,0 +1,479 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-e5bd9f4935d7809f3cb7",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-PR43-P052-P003-S001-F01",
+      "source_unit_id": "PR43-P052-P003-S001",
+      "fact_id": "PR43-P052-P003-S001-F01",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué reconstrucción mantiene juntas la decisión de las naciones, su efecto y la acción persistente que el texto contrapone?",
+      "options": [
+        "Aceptaron principios divinos → evitaron ruina → cesó el propósito divino",
+        "Rechazaron principios divinos → labraron su ruina → siguió obrando un propósito divino predominante",
+        "Rechazaron a sus reyes → heredaron paz → dominó la casualidad",
+        "Aceptaron principios humanos → evitaron ruina → desapareció la providencia"
+      ],
+      "evidence_excerpt": "Aunque las naciones rechazaron los principios divinos y con ello labraron su propia ruina, un propósito divino predominante ha estado obrando manifiestamente a través de los siglos.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "rejection_ruin_divine_purpose",
+      "option_category": "causal_chain",
+      "variant_justification": "Amplía la presentación central a una cadena multicláusula con una sola reconstrucción íntegra.",
+      "authored_content_sha256": "76a31f3b4bb7c7139d25301c0146581624c064f955f44beae5534981732f5a40",
+      "source_ref": "PR43, p. 52, párrafo 3",
+      "source_quote": "Aunque las naciones rechazaron los principios divinos y con ello labraron su propia ruina, un propósito divino predominante ha estado obrando manifiestamente a través de los siglos.",
+      "parent_context": "Aunque las naciones rechazaron los principios divinos y con ello labraron su propia ruina, un propósito divino predominante ha estado obrando manifiestamente a través de los siglos. Fué esto lo que vió el profeta Ezequiel en la maravillosa representación que se le dió durante su destierro en la tierra de los caldeos, cuando se desplegaron ante su mirada atónita los símbolos que revelaban un poder señoreador que rige los asuntos de los gobernantes terrenales.",
+      "existing_presentations": [
+        {
+          "question": "Aunque las naciones labraran su propia ruina, ¿qué seguía obrando a través de los siglos?",
+          "family": "single_choice_direct",
+          "subtype": "principle"
+        },
+        {
+          "question": "¿Qué realidad siguió manifestándose a través de la historia, incluso mientras las naciones labraban su propia ruina?",
+          "family": "single_choice_direct",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P047-P001-S001-F01",
+      "source_unit_id": "PR43-P047-P001-S001",
+      "fact_id": "PR43-P047-P001-S001-F01",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué combinación sitúa correctamente la etapa vital de Daniel, el cambio histórico y la distancia desde el cautiverio?",
+      "options": [
+        "Juventud de Daniel — estabilidad — treinta años",
+        "Fin de su vida — grandes cambios — más de sesenta años",
+        "Reinado inicial — regreso a Judá — siete años",
+        "Fin de su vida — ningún cambio — setenta días"
+      ],
+      "evidence_excerpt": "Hacia el fin de la vida de Daniel, se estaban produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "life_stage_time_change",
+      "option_category": "triple_correspondence",
+      "variant_justification": "Amplía la presentación central a una cadena multicláusula con una sola reconstrucción íntegra.",
+      "authored_content_sha256": "72840cd9b1ad90543926a148b7cd79f306d2d9a1ec9d8bc9d8d00af6d3c8d550",
+      "source_ref": "PR43, p. 47, párrafo 1",
+      "source_quote": "Hacia el fin de la vida de Daniel, se estaban produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos.",
+      "parent_context": "Hacia el fin de la vida de Daniel, se estaban produciendo grandes cambios en la tierra a la cual, más de sesenta años antes, él y sus compañeros hebreos habían sido llevados cautivos. Nabucodonosor había muerto, y Babilonia, antes “alabada por toda la tierra,” había pasado a ser gobernada por sus sucesores imprudentes; y el resultado era una disolución gradual pero segura.",
+      "existing_presentations": [
+        {
+          "question": "Daniel y sus compañeros hebreos habían sido llevados cautivos más de ____ años antes.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P047-P004-S001-F01",
+      "source_unit_id": "PR43-P047-P004-S001",
+      "fact_id": "PR43-P047-P004-S001-F01",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué secuencia enlaza la disposición interior de Belsasar con la escala y publicidad del banquete?",
+      "options": [
+        "Humildad y cautela → cena privada → abstinencia",
+        "Orgullo, arrogancia y falsa seguridad → banquete a mil príncipes → vino ante los mil",
+        "Temor y arrepentimiento → reunión de sabios → ayuno",
+        "Prudencia militar → consejo secreto → agua ante pocos"
+      ],
+      "evidence_excerpt": "En su orgullo y arrogancia, con temerario sentimiento de seguridad, “Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "inner_state_public_feast",
+      "option_category": "causal_sequence",
+      "variant_justification": "Amplía la presentación central a una cadena multicláusula con una sola reconstrucción íntegra.",
+      "authored_content_sha256": "d12f1e2d9b6a43a9483596fa48827792ec2277227945ec80d5a676f84e23e377",
+      "source_ref": "PR43, p. 47, párrafo 4",
+      "source_quote": "En su orgullo y arrogancia, con temerario sentimiento de seguridad, “Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.",
+      "parent_context": "En su orgullo y arrogancia, con temerario sentimiento de seguridad, “Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.” Todos los atractivos ofrecidos por la riqueza y el poder aumentaban el esplendor de la escena. Entre los huéspedes que asistían al banquete real había hermosas mujeres que desplegaban sus encantos. Había hombres de genio y educación. Los príncipes y los estadistas bebían vino como agua, y bajo su influencia enloquecedora se entregaban a la orgía.",
+      "existing_presentations": [
+        {
+          "question": "¿Quién hizo el gran banquete para mil de sus príncipes?",
+          "family": "single_choice_direct",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P047-P005-S001-F02",
+      "source_unit_id": "PR43-P047-P005-S001",
+      "fact_id": "PR43-P047-P005-S001-F02",
+      "family": "single_choice_direct",
+      "subtype": "cause_consequence",
+      "question": "¿Qué cadena explica que el propio rey terminara dirigiendo la orgía?",
+      "options": [
+        "Embriaguez desvergonzada → razón destronada → dominio de impulsos inferiores → dirección real de la orgía",
+        "Moderación → razón fortalecida → dominio propio → fin del banquete",
+        "Temor → razón destronada → consejo de Daniel → huida",
+        "Vino ceremonial → impulsos contenidos → gobierno prudente"
+      ],
+      "evidence_excerpt": "Habiendo quedado la razón destronada por una embriaguez desvergonzada, y habiendo cobrado ascendiente los impulsos y las pasiones inferiores, el rey mismo dirigía la ruidosa orgía.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "intoxication_reason_passions",
+      "option_category": "causal_chain",
+      "variant_justification": "Amplía la presentación central a una cadena multicláusula con una sola reconstrucción íntegra.",
+      "authored_content_sha256": "2aac1eefe495b35f4387beb43935081afa69aadb40c46258410960bd360b32c6",
+      "source_ref": "PR43, p. 47, párrafo 5",
+      "source_quote": "Habiendo quedado la razón destronada por una embriaguez desvergonzada, y habiendo cobrado ascendiente los impulsos y las pasiones inferiores, el rey mismo dirigía la ruidosa orgía.",
+      "parent_context": "Habiendo quedado la razón destronada por una embriaguez desvergonzada, y habiendo cobrado ascendiente los impulsos y las pasiones inferiores, el rey mismo dirigía la ruidosa orgía. En el transcurso del festín, ordenó “que trajesen los vasos de oro y de plata que Nabucodonosor ... había traído del templo de Jerusalem; para que bebiesen con ellos el rey y sus príncipes, sus mujeres y sus concubinas.” El rey quería probar que nada era demasiado sagrado para sus manos. “Entonces fueron traídos los vasos de oro, ... y bebieron con ellos el rey y sus príncipes, sus mujeres y sus concubinas. Bebieron vino, y alabaron a los dioses de oro y de plata, de metal, de hierro, de madera, y de piedra.”",
+      "existing_presentations": [
+        {
+          "question": "La embriaguez que destronó la razón era ____.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P047-P005-S002-F01",
+      "source_unit_id": "PR43-P047-P005-S002",
+      "fact_id": "PR43-P047-P005-S002-F01",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué recorrido y uso de los vasos sagrados preserva agentes, procedencia y participantes?",
+      "options": [
+        "Ciro los llevó de Susa; bebieron sólo sacerdotes",
+        "Nabucodonosor los trajo del templo de Jerusalén; Belsasar ordenó traerlos y bebieron rey, príncipes, mujeres y concubinas",
+        "Daniel los guardó en Babilonia; bebieron los sabios",
+        "Darío los recibió de Media; bebieron únicamente príncipes"
+      ],
+      "evidence_excerpt": "En el transcurso del festín, ordenó “que trajesen los vasos de oro y de plata que Nabucodonosor ... había traído del templo de Jerusalem; para que bebiesen con ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "vessels_provenance_use",
+      "option_category": "multi_actor_sequence",
+      "variant_justification": "Amplía la presentación central a una cadena multicláusula con una sola reconstrucción íntegra.",
+      "authored_content_sha256": "89a2fccf76a89e43272a61632d01f1ca6596ab48cf6ee8b11d8a6a66d8bede48",
+      "source_ref": "PR43, p. 47, párrafo 5",
+      "source_quote": "En el transcurso del festín, ordenó “que trajesen los vasos de oro y de plata que Nabucodonosor ... había traído del templo de Jerusalem; para que bebiesen con ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
+      "parent_context": "Habiendo quedado la razón destronada por una embriaguez desvergonzada, y habiendo cobrado ascendiente los impulsos y las pasiones inferiores, el rey mismo dirigía la ruidosa orgía. En el transcurso del festín, ordenó “que trajesen los vasos de oro y de plata que Nabucodonosor ... había traído del templo de Jerusalem; para que bebiesen con ellos el rey y sus príncipes, sus mujeres y sus concubinas.” El rey quería probar que nada era demasiado sagrado para sus manos. “Entonces fueron traídos los vasos de oro, ... y bebieron con ellos el rey y sus príncipes, sus mujeres y sus concubinas. Bebieron vino, y alabaron a los dioses de oro y de plata, de metal, de hierro, de madera, y de piedra.”",
+      "existing_presentations": [
+        {
+          "question": "¿Qué lugar se identifica como el templo del que Nabucodonosor había traído los vasos?",
+          "family": "single_choice_direct",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P048-P003-S003-F01",
+      "source_unit_id": "PR43-P048-P003-S003",
+      "fact_id": "PR43-P048-P003-S003-F01",
+      "family": "single_choice_direct",
+      "subtype": "relationship",
+      "question": "¿Qué correspondencia reúne presencia, desafío previo y efecto sobre Belsasar?",
+      "options": [
+        "Vigía invisible presente — poder desafiado y nombre blasfemado — rey paralizado de miedo",
+        "Ciro visible — poder aceptado — rey sereno",
+        "Daniel ausente — nombre honrado — rey fortalecido",
+        "Sabios presentes — poder explicado — rey jubiloso"
+      ],
+      "evidence_excerpt": "En presencia del Vigía invisible, representante de Aquel cuyo poder había sido desafiado y cuyo nombre había sido blasfemado, el rey se quedó paralizado de miedo.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "watcher_defiance_fear",
+      "option_category": "triple_correspondence",
+      "variant_justification": "Amplía la presentación central a una cadena multicláusula con una sola reconstrucción íntegra.",
+      "authored_content_sha256": "03b26f658214e4625a05eb6b3c148257cf8e34c6b999b13da42e03fd6aae541e",
+      "source_ref": "PR43, p. 48, párrafo 3",
+      "source_quote": "En presencia del Vigía invisible, representante de Aquel cuyo poder había sido desafiado y cuyo nombre había sido blasfemado, el rey se quedó paralizado de miedo.",
+      "parent_context": "Belsasar era el más aterrorizado de todos. El era quien llevaba la mayor responsabilidad por la rebelión contra Dios que había llegado esa noche a su apogeo en el reino babilónico. En presencia del Vigía invisible, representante de Aquel cuyo poder había sido desafiado y cuyo nombre había sido blasfemado, el rey se quedó paralizado de miedo. Su conciencia se despertó. “Desatáronse las ceñiduras de sus lomos, y sus rodillas se batían la una con la otra.” Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle: ¿Por qué obras así? Ahora comprendía que le tocaba dar cuenta de la mayordomía que le había sido confiada, y que no podía ofrecer excusa alguna por haber desperdiciado sus oportunidades ni por su actitud desafiante.",
+      "existing_presentations": [
+        {
+          "question": "Ante el Vigía invisible, el rey se ____ paralizado de miedo.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P048-P003-S007-F02",
+      "source_unit_id": "PR43-P048-P003-S007",
+      "fact_id": "PR43-P048-P003-S007-F02",
+      "family": "single_choice_direct",
+      "subtype": "cause_consequence",
+      "question": "¿Qué doble rendición de cuentas comprendió Belsasar al final?",
+      "options": [
+        "Debía explicar su mayordomía y no tenía excusa ni por oportunidades desperdiciadas ni por desafío",
+        "Sólo debía explicar el banquete y podía excusarse por ignorancia",
+        "Debía responder por las guerras, pero no por su actitud",
+        "No debía cuenta alguna porque había heredado el reino"
+      ],
+      "evidence_excerpt": "Ahora comprendía que le tocaba dar cuenta de la mayordomía que le había sido confiada, y que no podía ofrecer excusa alguna por haber desperdiciado sus oportunidades ni por su actitud desafiante.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "stewardship_no_excuse",
+      "option_category": "double_accountability",
+      "variant_justification": "Amplía la presentación central a una cadena multicláusula con una sola reconstrucción íntegra.",
+      "authored_content_sha256": "69b88397bcd839effef79cfaad0d8bbef17b32f2e6424227c037d8a868913258",
+      "source_ref": "PR43, p. 48, párrafo 3",
+      "source_quote": "Ahora comprendía que le tocaba dar cuenta de la mayordomía que le había sido confiada, y que no podía ofrecer excusa alguna por haber desperdiciado sus oportunidades ni por su actitud desafiante.",
+      "parent_context": "Belsasar era el más aterrorizado de todos. El era quien llevaba la mayor responsabilidad por la rebelión contra Dios que había llegado esa noche a su apogeo en el reino babilónico. En presencia del Vigía invisible, representante de Aquel cuyo poder había sido desafiado y cuyo nombre había sido blasfemado, el rey se quedó paralizado de miedo. Su conciencia se despertó. “Desatáronse las ceñiduras de sus lomos, y sus rodillas se batían la una con la otra.” Belsasar se había levantado impíamente contra el Dios del cielo, y había confiado en su propio poder, sin suponer siquiera que alguno pudiera atreverse a decirle: ¿Por qué obras así? Ahora comprendía que le tocaba dar cuenta de la mayordomía que le había sido confiada, y que no podía ofrecer excusa alguna por haber desperdiciado sus oportunidades ni por su actitud desafiante.",
+      "existing_presentations": [
+        {
+          "question": "¿De qué debía dar cuenta Belsasar después de comprender la gravedad de su conducta?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P048-P004-S009-F01",
+      "source_unit_id": "PR43-P048-P004-S009",
+      "fact_id": "PR43-P048-P004-S009-F01",
+      "family": "single_choice_contextual",
+      "subtype": "comparison",
+      "question": "¿Qué analogía generacional explica el fracaso de los sabios ante los caracteres?",
+      "options": [
+        "Era tan imposible leerlos como lo había sido para sabios anteriores interpretar los sueños de Nabucodonosor",
+        "Era más fácil leerlos que interpretar cualquier sueño",
+        "Los sabios actuales leyeron; los anteriores también interpretaron",
+        "Daniel había ocultado ambos mensajes"
+      ],
+      "evidence_excerpt": "Les era tan imposible leer los caracteres misteriosos como lo había sido para los sabios de una generación anterior interpretar los sueños de Nabucodonosor.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "generational_failure_analogy",
+      "option_category": "comparison_pair",
+      "variant_justification": "Amplía la presentación central a una cadena multicláusula con una sola reconstrucción íntegra.",
+      "authored_content_sha256": "2668c65e316a9c2914677260183919cf76c509e261bf4a435e121dff1cd89fa5",
+      "source_ref": "PR43, p. 48, párrafo 4",
+      "source_quote": "Les era tan imposible leer los caracteres misteriosos como lo había sido para los sabios de una generación anterior interpretar los sueños de Nabucodonosor.",
+      "parent_context": "En vano trató el rey de leer las letras ardientes. Encerraban un secreto que él no podía sondear, un poder que le era imposible comprender o contradecir. Desesperado, se volvió hacia los sabios de su reino en busca de ayuda. Su grito frenético repercutió en la asamblea, cuando invitó a los astrólogos, caldeos y adivinos a que leyesen la escritura. Prometió: “Cualquiera que leyere esta escritura, y me mostrare su declaración, será vestido de púrpura, y tendrá collar de oro a su cuello; y en el reino se enseñoreará el tercero.” Pero de nada valió la súplica que dirigió a sus consejeros de confianza ni su ofrecimiento de ricas recompensas. La sabiduría celestial no puede comprarse ni venderse. “Todos los sabios del rey ... no pudieron leer la escritura, ni mostrar al rey su declaración.” Les era tan imposible leer los caracteres misteriosos como lo había sido para los sabios de una generación anterior interpretar los sueños de Nabucodonosor.",
+      "existing_presentations": [
+        {
+          "question": "¿De quién habían interpretado sueños los sabios de una generación anterior?",
+          "family": "single_choice_contextual",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P048-P005-S002-F02",
+      "source_unit_id": "PR43-P048-P005-S002",
+      "fact_id": "PR43-P048-P005-S002-F02",
+      "family": "single_choice_direct",
+      "subtype": "relationship",
+      "question": "¿Qué mapa identifica al candidato recordado por la reina, sus capacidades y el cargo recibido de Nabucodonosor?",
+      "options": [
+        "Daniel/Beltsasar — espíritu, luz, inteligencia y resolución de dudas — príncipe sobre magos y sabios",
+        "Ciro — fuerza militar — príncipe sobre cautivos",
+        "Belsasar — riqueza — intérprete de Daniel",
+        "Darío — prudencia — jefe del banquete"
+      ],
+      "evidence_excerpt": "Dijo ella: “Rey, para siempre vive, no te asombren tus pensamientos, ni tus colores se demuden: En tu reino hay un varón, en el cual mora el espíritu de los dioses santos; y en los días de tu padre se halló en él luz e inteligencia y sabiduría, como ciencia de los dioses: al cual el rey Nabucodonosor ... constituyó príncipe sobre todos los magos, astrólogos, Caldeos, y adivinos: por cuanto fué hallado en él mayor espíritu, y ciencia, y entendimiento, interpretando sueños, y declarando preguntas, y deshaciendo dudas, es a saber, en Daniel; al cual el rey puso por nombre Beltsasar.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "daniel_gifts_office_name",
+      "option_category": "multi_correspondence",
+      "variant_justification": "Amplía la presentación central a una cadena multicláusula con una sola reconstrucción íntegra.",
+      "authored_content_sha256": "cc03e28772c34dd9f4d69434d163912fca422862322dadc14bd8c419dd2753ff",
+      "source_ref": "PR43, p. 48, párrafo 5",
+      "source_quote": "Dijo ella: “Rey, para siempre vive, no te asombren tus pensamientos, ni tus colores se demuden: En tu reino hay un varón, en el cual mora el espíritu de los dioses santos; y en los días de tu padre se halló en él luz e inteligencia y sabiduría, como ciencia de los dioses: al cual el rey Nabucodonosor ... constituyó príncipe sobre todos los magos, astrólogos, Caldeos, y adivinos: por cuanto fué hallado en él mayor espíritu, y ciencia, y entendimiento, interpretando sueños, y declarando preguntas, y deshaciendo dudas, es a saber, en Daniel; al cual el rey puso por nombre Beltsasar.",
+      "parent_context": "Entonces la reina madre recordó a Daniel, quien, más de medio siglo antes, había dado a conocer al rey Nabucodonosor el sueño de la gran imagen y su interpretación. Dijo ella: “Rey, para siempre vive, no te asombren tus pensamientos, ni tus colores se demuden: En tu reino hay un varón, en el cual mora el espíritu de los dioses santos; y en los días de tu padre se halló en él luz e inteligencia y sabiduría, como ciencia de los dioses: al cual el rey Nabucodonosor ... constituyó príncipe sobre todos los magos, astrólogos, Caldeos, y adivinos: por cuanto fué hallado en él mayor espíritu, y ciencia, y entendimiento, interpretando sueños, y declarando preguntas, y deshaciendo dudas, es a saber, en Daniel; al cual el rey puso por nombre Beltsasar. Llámese pues ahora a Daniel, y él mostrará la declaración.",
+      "existing_presentations": [
+        {
+          "question": "¿Qué declaraba Daniel además de interpretar sueños y deshacer dudas?",
+          "family": "single_choice_direct",
+          "subtype": "relationship"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P049-P004-S002-F01",
+      "source_unit_id": "PR43-P049-P004-S002",
+      "fact_id": "PR43-P049-P004-S002-F01",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué secuencia persistió después de desaparecer la mano?",
+      "options": [
+        "La mano siguió visible; las palabras se apagaron; la gente huyó",
+        "La mano dejó de verse; cuatro palabras brillaron; la gente escuchó en suspenso al profeta",
+        "Daniel borró las palabras y volvió el banquete",
+        "El rey leyó mientras la mano seguía escribiendo"
+      ],
+      "evidence_excerpt": "La mano que había trazado los caracteres ya no era visible, pero aquellas cuatro palabras seguían resplandeciendo con terrible claridad; y ahora la gente escuchó con el aliento en suspenso mientras el anciano profeta explicaba:",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "hand_words_audience",
+      "option_category": "causal_sequence",
+      "variant_justification": "Amplía el hecho central a una reconstrucción relacional completa.",
+      "authored_content_sha256": "01cf01ada9d990f804e4df9cd772700bb66f4cfb55ca24a6ca3d7cd3e2f33922",
+      "source_ref": "PR43, p. 49, párrafo 4",
+      "source_quote": "La mano que había trazado los caracteres ya no era visible, pero aquellas cuatro palabras seguían resplandeciendo con terrible claridad; y ahora la gente escuchó con el aliento en suspenso mientras el anciano profeta explicaba:",
+      "parent_context": "Volviéndose hacia el mensaje enviado por el Cielo, el profeta leyó en la pared: “MENE, MENE, TEKEL, UPHARSIN.” La mano que había trazado los caracteres ya no era visible, pero aquellas cuatro palabras seguían resplandeciendo con terrible claridad; y ahora la gente escuchó con el aliento en suspenso mientras el anciano profeta explicaba:",
+      "existing_presentations": [
+        {
+          "question": "¿Cuántas palabras seguían resplandeciendo con terrible claridad?",
+          "family": "single_choice_contextual",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P050-P001-S001-F01",
+      "source_unit_id": "PR43-P050-P001-S001",
+      "fact_id": "PR43-P050-P001-S001-F01",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué transformación había anticipado la Inspiración para la noche del rey?",
+      "options": [
+        "Placer y blasfemia se trocarían repentinamente en miedo y destrucción",
+        "Miedo se convertiría gradualmente en victoria",
+        "Ayuno terminaría en coronación",
+        "Blasfemia produciría paz y continuidad"
+      ],
+      "evidence_excerpt": "Más de un siglo antes, la Inspiración había predicho que “la noche de ... placer” durante la cual el rey y sus consejeros rivalizarían unos con otros para blasfemar contra Dios, se vería de repente trocada en ocasión de miedo y destrucción.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "prophecy_feast_reversal",
+      "option_category": "causal_sequence",
+      "variant_justification": "Amplía el hecho central a una reconstrucción relacional completa.",
+      "authored_content_sha256": "614ddfb3ef0066a4dc02aaa65aa21002d1184e4bd61ccc91ea6d5823d753af17",
+      "source_ref": "PR43, p. 50, párrafo 1",
+      "source_quote": "Más de un siglo antes, la Inspiración había predicho que “la noche de ... placer” durante la cual el rey y sus consejeros rivalizarían unos con otros para blasfemar contra Dios, se vería de repente trocada en ocasión de miedo y destrucción.",
+      "parent_context": "Más de un siglo antes, la Inspiración había predicho que “la noche de ... placer” durante la cual el rey y sus consejeros rivalizarían unos con otros para blasfemar contra Dios, se vería de repente trocada en ocasión de miedo y destrucción. Y ahora, en rápida sucesión, se produjeron uno tras otro acontecimientos portentosos que correspondían exactamente a lo descrito en las Sagradas Escrituras antes que hubiesen nacido los protagonistas del drama.",
+      "existing_presentations": [
+        {
+          "question": "¿Contra quién blasfemarían el rey y sus consejeros durante aquella noche de placer?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P050-P002-S001-F01",
+      "source_unit_id": "PR43-P050-P002-S001",
+      "fact_id": "PR43-P050-P002-S001-F01",
+      "family": "single_choice_direct",
+      "subtype": "narrative_order",
+      "question": "¿Qué informe triple recibió el rey aún en el salón pese a su seguridad?",
+      "options": [
+        "Ciudad tomada; vados ocupados; guerreros consternados",
+        "Palacio seguro; vados libres; ejército victorioso",
+        "Ciro retirado; río cerrado; príncipes serenos",
+        "Ciudad intacta; mensajero ausente; guerra terminada"
+      ],
+      "evidence_excerpt": "Mientras estaba todavía en el salón de fiestas, rodeado por aquellos cuya suerte estaba sellada, el rey recibió de un mensajero la información de “que su ciudad” era “tomada” por el enemigo contra cuyos planes se había sentido tan seguro; “los vados fueron tomados, ... y consternáronse los hombres de guerra.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "messenger_city_fords",
+      "option_category": "causal_sequence",
+      "variant_justification": "Amplía el hecho central a una reconstrucción relacional completa.",
+      "authored_content_sha256": "468a12f9a4767a7d5ea4975632705dabc8ddadf4b175ad6ab83a57fc04da9e9f",
+      "source_ref": "PR43, p. 50, párrafo 2",
+      "source_quote": "Mientras estaba todavía en el salón de fiestas, rodeado por aquellos cuya suerte estaba sellada, el rey recibió de un mensajero la información de “que su ciudad” era “tomada” por el enemigo contra cuyos planes se había sentido tan seguro; “los vados fueron tomados, ... y consternáronse los hombres de guerra.",
+      "parent_context": "Mientras estaba todavía en el salón de fiestas, rodeado por aquellos cuya suerte estaba sellada, el rey recibió de un mensajero la información de “que su ciudad” era “tomada” por el enemigo contra cuyos planes se había sentido tan seguro; “los vados fueron tomados, ... y consternáronse los hombres de guerra.” Jeremías 51:31, 32. Aun mientras él y sus nobles bebían de los vasos sagrados de Jehová, y alababan a sus dioses de plata y de oro, los medos y persas, habiendo desviado el curso del Eufrates, penetraban en el corazón de la ciudad desprevenida. El ejército de Ciro estaba ya al pie de las murallas del palacio; la ciudad se había llenado de soldados enemigos “como de langostas” (Vers. 14), y sus gritos de triunfo podían oírse sobre los clamores desesperados de los asombrados disolutos.",
+      "existing_presentations": [
+        {
+          "question": "¿Qué recibió el rey de un mensajero mientras permanecía en el salón de fiestas?",
+          "family": "single_choice_direct",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P050-P002-S003-F01",
+      "source_unit_id": "PR43-P050-P002-S003",
+      "fact_id": "PR43-P050-P002-S003-F01",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué mapa conserva ubicación, magnitud figurada y contraste sonoro del ejército de Ciro?",
+      "options": [
+        "Al pie del palacio; ciudad llena como de langostas; triunfo sobre clamores desesperados",
+        "Fuera de Babilonia; pocos soldados; silencio",
+        "En el templo; multitud como ovejas; himnos",
+        "Junto al río; retirada; lamentos persas"
+      ],
+      "evidence_excerpt": "El ejército de Ciro estaba ya al pie de las murallas del palacio; la ciudad se había llenado de soldados enemigos “como de langostas” (Vers. 14), y sus gritos de triunfo podían oírse sobre los clamores desesperados de los asombrados disolutos.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "army_location_sound",
+      "option_category": "causal_sequence",
+      "variant_justification": "Amplía el hecho central a una reconstrucción relacional completa.",
+      "authored_content_sha256": "c9a8fcb1db04e3280e31bab7d8db957dd3a3f4ea84693d8268577386be7866b4",
+      "source_ref": "PR43, p. 50, párrafo 2",
+      "source_quote": "El ejército de Ciro estaba ya al pie de las murallas del palacio; la ciudad se había llenado de soldados enemigos “como de langostas” (Vers. 14), y sus gritos de triunfo podían oírse sobre los clamores desesperados de los asombrados disolutos.",
+      "parent_context": "Mientras estaba todavía en el salón de fiestas, rodeado por aquellos cuya suerte estaba sellada, el rey recibió de un mensajero la información de “que su ciudad” era “tomada” por el enemigo contra cuyos planes se había sentido tan seguro; “los vados fueron tomados, ... y consternáronse los hombres de guerra.” Jeremías 51:31, 32. Aun mientras él y sus nobles bebían de los vasos sagrados de Jehová, y alababan a sus dioses de plata y de oro, los medos y persas, habiendo desviado el curso del Eufrates, penetraban en el corazón de la ciudad desprevenida. El ejército de Ciro estaba ya al pie de las murallas del palacio; la ciudad se había llenado de soldados enemigos “como de langostas” (Vers. 14), y sus gritos de triunfo podían oírse sobre los clamores desesperados de los asombrados disolutos.",
+      "existing_presentations": [
+        {
+          "question": "¿Cómo se describe el estado de la ciudad cuando el ejército de Ciro estaba al pie del palacio?",
+          "family": "single_choice_contextual",
+          "subtype": "narrative_order"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P051-P007-S002-F01",
+      "source_unit_id": "PR43-P051-P007-S002",
+      "fact_id": "PR43-P051-P007-S002-F01",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué progresión niega sucesivamente conocimiento, remedio y anticipación?",
+      "options": [
+        "Mal de origen desconocido; quebrantamiento irremediable; destrucción repentina",
+        "Mal anunciado; herida curable; restauración gradual",
+        "Paz desconocida; remedio inmediato; victoria prevista",
+        "Temor pasajero; consejo eficaz; retirada"
+      ],
+      "evidence_excerpt": "Vendrá pues sobre ti mal, cuyo nacimiento no sabrás: caerá sobre ti quebrantamiento, el cual no podrás remediar: y destrucción que no sabrás, vendrá de repente sobre ti.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "disaster_sequence",
+      "option_category": "causal_sequence",
+      "variant_justification": "Amplía el hecho central a una reconstrucción relacional completa.",
+      "authored_content_sha256": "c2440c191a922e7f44587809416903d34ccdc756a9b96f8d4c6bcd214d8d9b9f",
+      "source_ref": "PR43, p. 51, párrafo 7",
+      "source_quote": "Vendrá pues sobre ti mal, cuyo nacimiento no sabrás: caerá sobre ti quebrantamiento, el cual no podrás remediar: y destrucción que no sabrás, vendrá de repente sobre ti.",
+      "parent_context": "“Tu sabiduría y tu misma ciencia te engañaron, y dijiste en tu corazón: Yo, y no más. Vendrá pues sobre ti mal, cuyo nacimiento no sabrás: caerá sobre ti quebrantamiento, el cual no podrás remediar: y destrucción que no sabrás, vendrá de repente sobre ti.",
+      "existing_presentations": [
+        {
+          "question": "¿Qué aspecto del mal venidero se afirma que no se sabría?",
+          "family": "single_choice_contextual",
+          "subtype": "prophetic_detail"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR43-P051-P009-S002-F01",
+      "source_unit_id": "PR43-P051-P009-S002",
+      "fact_id": "PR43-P051-P009-S002-F01",
+      "family": "single_choice_direct",
+      "subtype": "narrative_order",
+      "question": "¿Qué tres especialistas son desafiados a defender mediante sus pronósticos?",
+      "options": [
+        "Contempladores del cielo, especuladores de estrellas y contadores de meses",
+        "Magos del templo, capitanes y comerciantes",
+        "Profetas de Judá, sacerdotes y escribas",
+        "Gobernadores medos, persas y caldeos"
+      ],
+      "evidence_excerpt": "Parezcan ahora y defiéndante los contempladores de los cielos, los especuladores de las estrellas, los que contaban los meses, para pronosticar lo que vendrá sobre ti.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "astrologer_triads",
+      "option_category": "causal_sequence",
+      "variant_justification": "Amplía el hecho central a una reconstrucción relacional completa.",
+      "authored_content_sha256": "f2c50246c42dff159b1294e569b59aab2aef859ac07393a11382f1fd5f262238",
+      "source_ref": "PR43, p. 51, párrafo 9",
+      "source_quote": "Parezcan ahora y defiéndante los contempladores de los cielos, los especuladores de las estrellas, los que contaban los meses, para pronosticar lo que vendrá sobre ti.",
+      "parent_context": "“Haste fatigado en la multitud de tus consejos. Parezcan ahora y defiéndante los contempladores de los cielos, los especuladores de las estrellas, los que contaban los meses, para pronosticar lo que vendrá sobre ti.",
+      "existing_presentations": [
+        {
+          "question": "¿Qué se pide que hagan los contempladores de los cielos y los especuladores de las estrellas?",
+          "family": "single_choice_direct",
+          "subtype": "cause_consequence"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "1125a1056538f96d93c450dda741dde2f412645ffc1a3e3b03f429677f68759a"
+}

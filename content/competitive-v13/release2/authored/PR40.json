@@ -1,0 +1,79 @@
+[
+  {
+    "id": "R2-PR40-0003",
+    "source_unit_id": "PR40-P033-P001-S003",
+    "fact_id": "PR40-P033-P001-S003-F01",
+    "family": "true_false",
+    "subtype": "comparison",
+    "question": "La profunda impresión que dejó el sueño permitió que Nabucodonosor recordara sus detalles al despertar.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La oración establece un contraste: pese a la impresión profunda, al rey le resultó imposible recordar los detalles.",
+    "why_distractors_fail": {
+      "Verdadero": "Convierte el contraste concesivo en una relación causal que el texto niega."
+    },
+    "evidence_excerpt": "aunque el ánimo del rey sufrió una impresión profunda, cuando despertó le resultó imposible recordar los detalles",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "memory_failure",
+    "option_category": "truth_value",
+    "false_mutation": {
+      "changed_fields": [
+        "outcome"
+      ],
+      "local": true,
+      "original": "le resultó imposible recordar los detalles",
+      "replacement": "recordó los detalles"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Exige reconocer la fuerza de «aunque» y rechazar una causalidad intuitiva pero falsa.",
+    "author": {
+      "id": "r2_author_d",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-PR40-0008",
+    "source_unit_id": "PR40-P033-P004-S001",
+    "fact_id": "PR40-P033-P004-S001-F01",
+    "family": "selection",
+    "subtype": "contextual",
+    "question": "¿Qué combinación explica mejor por qué la respuesta de los sabios intensificó la desconfianza del rey?",
+    "options": [
+      "Fue evasiva y contrastaba con sus jactancias de revelar secretos",
+      "Fue demasiado extensa y reveló antes de tiempo el sueño",
+      "Contradijo a Daniel y rechazó toda recompensa",
+      "Aceptó la tarea pero pidió abandonar Babilonia"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Fue evasiva y contrastaba con sus jactancias de revelar secretos"
+    ],
+    "explanation": "La evasión hizo sospechosa la distancia entre lo que los sabios afirmaban poder hacer y su falta de ayuda concreta.",
+    "why_distractors_fail": {
+      "Fue demasiado extensa y reveló antes de tiempo el sueño": "El problema fue que no revelaron el sueño.",
+      "Contradijo a Daniel y rechazó toda recompensa": "Daniel aún no participa y no se narra rechazo de recompensa.",
+      "Aceptó la tarea pero pidió abandonar Babilonia": "Los sabios pidieron que el rey les dijera el sueño."
+    },
+    "evidence_excerpt": "Desconforme con esta respuesta evasiva, y sospechando que, a pesar de sus aseveraciones jactanciosas de poder revelar los secretos de los hombres, no parecían dispuestos a ayudarle",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "royal_suspicion",
+    "option_category": "causal_explanation",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Integra evasión, jactancia y falta de ayuda como una sola inferencia causal.",
+    "author": {
+      "id": "r2_author_d",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

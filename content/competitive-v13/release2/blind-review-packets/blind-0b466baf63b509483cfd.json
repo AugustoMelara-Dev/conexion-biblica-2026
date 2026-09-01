@@ -1,0 +1,169 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-0b466baf63b509483cfd",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "R2-B5-DAN9-015",
+      "source_unit_id": "DAN9-V015",
+      "fact_id": "DAN9-V015-V11-F03",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué cadena retórica conserva el hecho histórico, el medio divino, su efecto duradero y la confesión que sigue?",
+      "options": [
+        "Salida de Egipto → mano poderosa → renombre vigente → hemos pecado y actuado impíamente",
+        "Salida de Babilonia → palabra profética → olvido del nombre → hemos obedecido",
+        "Regreso a Jerusalén → ejército persa → gloria del pueblo → hemos sido justos",
+        "Salida de Media → mano de Daniel → renombre del rey → hemos vencido"
+      ],
+      "evidence_excerpt": "sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "narrative_order",
+      "option_category": "event_means_result_confession",
+      "variant_justification": "La presentación existente pregunta sólo el efecto; ésta reconstruye la arquitectura completa de la apelación.",
+      "authored_content_sha256": "1133aa5a79c53ba971e2758c1d045021a24c4d7dba087f8438df044856c4ba4c",
+      "source_ref": "Daniel 9:15",
+      "source_quote": "”Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué efecto duradero acompañó la salida de Israel de Egipto realizada con mano poderosa?",
+          "family": "single_choice_direct",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-B5-DAN9-016",
+      "source_unit_id": "DAN9-V016",
+      "fact_id": "DAN9-V016-F01",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué mapeo conserva fundamento, petición doble, lugar y dos causas del oprobio?",
+      "options": [
+        "Actos justos de Dios → apartar ira y furor → Jerusalén, santo monte → pecados propios y maldad de los padres",
+        "Poder de Israel → aumentar ira y furor → Babilonia → pecados de los persas y sabiduría de los padres",
+        "Misericordia de Darío → trasladar el santuario → Egipto → ignorancia de los profetas y culpa de los reyes",
+        "Ley de Moisés → conservar el castigo → Susa → fidelidad del pueblo y justicia de los padres"
+      ],
+      "evidence_excerpt": "conforme a todos tus actos de justicia, apártese ahora tu ira y tu furor de sobre tu ciudad Jerusalén, tu santo monte; porque a causa de nuestros pecados y por la maldad de nuestros padres",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "cause_consequence",
+      "option_category": "ground_request_place_causes",
+      "variant_justification": "La central pide sólo qué debe apartarse; ésta evalúa fundamento, doble objeto, lugar y causalidad.",
+      "authored_content_sha256": "577b2cefadabc1a3f25fb2183bb07feb7c470ff80dd906e817ef00ae19becc2e",
+      "source_ref": "Daniel 9:16",
+      "source_quote": "Señor, conforme a todos tus actos de justicia, apártese ahora tu ira y tu furor de sobre tu ciudad Jerusalén, tu santo monte; porque a causa de nuestros pecados y por la maldad de nuestros padres, Jerusalén y tu pueblo son el oprobio de todos los que nos rodean.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué pidió Daniel que se apartara de Jerusalén, el santo monte de Dios?",
+          "family": "single_choice_direct",
+          "subtype": "speaker_addressee"
+        },
+        {
+          "question": "Respecto de Jerusalén, ¿qué pidió Daniel que Dios retirara?",
+          "family": "single_choice_direct",
+          "subtype": "speaker_addressee"
+        }
+      ]
+    },
+    {
+      "id": "R2-B5-DAN9-018",
+      "source_unit_id": "DAN9-V018",
+      "fact_id": "DAN9-V018-V11-F03",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué correspondencia mantiene órgano, acción y objeto en las dos peticiones paralelas antes de declarar el fundamento de los ruegos?",
+      "options": [
+        "Oído → inclinar y oír; ojos → abrir y mirar desolaciones",
+        "Oído → abrir y mirar; ojos → inclinar y oír la ciudad",
+        "Rostro → escuchar justicias; manos → mirar misericordias",
+        "Voz → inclinar desolaciones; ojos → cerrar la ciudad"
+      ],
+      "evidence_excerpt": "Inclina, Dios mío, tu oído, y oye; abre tus ojos y mira nuestras desolaciones y la ciudad",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "relationship",
+      "option_category": "organ_action_object",
+      "variant_justification": "La central pide dos acciones corporales; esta variante obliga a mapear órganos, acciones y objetos.",
+      "authored_content_sha256": "627215fb434ef4d131688a1e53f16acc374c40d3e28af2d688ca64ca4aac64c2",
+      "source_ref": "Daniel 9:18",
+      "source_quote": "Inclina, Dios mío, tu oído, y oye; abre tus ojos y mira nuestras desolaciones y la ciudad sobre la cual es invocado tu nombre; porque no elevamos nuestros ruegos ante ti confiados en nuestras justicias, sino en tus muchas misericordias.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué dos acciones corporales pide Daniel a Dios ante las desolaciones?",
+          "family": "single_choice_contextual",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "R2-B5-DAN9-020",
+      "source_unit_id": "DAN9-V020",
+      "fact_id": "DAN9-V020-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué distribución conserva actividad en curso, doble confesión, forma de súplica, destinatario y motivo territorial?",
+      "options": [
+        "Hablaba y oraba → pecado propio y de Israel → derramaba ruego ante Jehová → por el monte santo",
+        "Callaba y ayunaba → pecado de reyes y persas → dictaba sentencia a Gabriel → por Babilonia",
+        "Leía y enseñaba → culpa de profetas y sabios → ofrecía sacrificio a Darío → por el palacio",
+        "Dormía y veía → pecado de caldeos y medos → derramaba vino ante Ciro → por el río"
+      ],
+      "evidence_excerpt": "hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "relationship",
+      "option_category": "actions_confessions_recipient_motive",
+      "variant_justification": "La central pregunta sólo los pecados confesados; ésta evalúa la escena completa y sus relaciones.",
+      "authored_content_sha256": "ce8b06799d2a53ffce43cd35456ffabc018f0177b89240c14d8a02ee10fe6c9f",
+      "source_ref": "Daniel 9:20",
+      "source_quote": "Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios;",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué dos pecados confesaba Daniel mientras derramaba su ruego?",
+          "family": "single_choice_contextual",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "R2-B5-DAN9-021",
+      "source_unit_id": "DAN9-V021",
+      "fact_id": "DAN9-V021-V11-F04",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué reconstrucción conserva antecedente de reconocimiento, acción presente, modo de llegada y referencia horaria de Gabriel?",
+      "options": [
+        "Daniel ya lo había visto al principio → aún oraba → Gabriel vino con presteza → hora del sacrificio de la tarde",
+        "Daniel lo conoció en ese instante → ya había terminado de orar → Gabriel llegó lentamente → sacrificio de la mañana",
+        "Darío lo había visto antes → Daniel dormía → Gabriel caminó desde el palacio → medianoche",
+        "Jeremías lo anunció → Daniel leía → Gabriel llegó con los sabios → hora del banquete"
+      ],
+      "evidence_excerpt": "aún estaba hablando en oración, cuando el varón Gabriel, a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "narrative_order",
+      "option_category": "antecedent_action_manner_time",
+      "variant_justification": "La central pide sólo el antecedente; ésta integra reconocimiento, simultaneidad, manera y hora.",
+      "authored_content_sha256": "3522267e416315013975ec41355c98c8a7f3a8f23ea7c68b05a1d344b0f35f27",
+      "source_ref": "Daniel 9:21",
+      "source_quote": "aún estaba hablando en oración, cuando el varón Gabriel, a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué antecedente tenía Daniel para reconocer al varón Gabriel?",
+          "family": "single_choice_contextual",
+          "subtype": "narrative_order"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "15e10f9162b96199efddfd72601eacd19c1ca02ee5585816cbabdae7b1da1047"
+}

@@ -1,0 +1,189 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-a2aa6ab3536591fd07a4",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN2-V001-F01",
+      "source_unit_id": "DAN2-V001",
+      "fact_id": "DAN2-V001-F01",
+      "family": "single_choice_direct",
+      "subtype": "cause_consequence",
+      "question": "En el segundo año de su reinado, ¿qué doble efecto tuvieron los sueños sobre Nabucodonosor?",
+      "options": [
+        "se alegró su espíritu y recordó el sueño",
+        "se calmó su espíritu y durmió de nuevo",
+        "se endureció su espíritu y despreció el sueño",
+        "se turbó su espíritu y se le fue el sueño"
+      ],
+      "evidence_excerpt": "En el segundo año del reinado de Nabucodonosor, tuvo Nabucodonosor sueños, y se turbó su espíritu y se le fue el sueño.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "dream_effect",
+      "option_category": "effect",
+      "variant_justification": "La variante exige conservar simultáneamente la reacción interior y la consecuencia nocturna del episodio.",
+      "authored_content_sha256": "28fb31c54df2ce5783b6b2efb0ca36aeb700d300ae79c8f0ed600ee981700076",
+      "source_ref": "Daniel 2:1",
+      "source_quote": "En el segundo año del reinado de Nabucodonosor, tuvo Nabucodonosor sueños, y se turbó su espíritu y se le fue el sueño.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué efecto produjeron los sueños de Nabucodonosor en aquella noche?",
+          "family": "single_choice_direct",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN2-V004-F01",
+      "source_unit_id": "DAN2-V004",
+      "fact_id": "DAN2-V004-F01",
+      "family": "true_false",
+      "subtype": "relationship",
+      "question": "Los caldeos prometieron interpretar el sueño antes de pedir al rey que se lo relatara.",
+      "options": [
+        "Falso",
+        "Verdadero"
+      ],
+      "evidence_excerpt": "Entonces hablaron los caldeos al rey en lengua aramea: —¡Rey, para siempre vive! Cuenta el sueño a tus siervos, y te daremos la interpretación.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "request_condition",
+      "option_category": "statement",
+      "variant_justification": "La proposición conserva actores y acciones, pero invierte deliberadamente su dependencia temporal.",
+      "authored_content_sha256": "0976de9581bad51a7d38f3785409aa5d06efee0e8d400dc25d61ad9c41b0d2fc",
+      "source_ref": "Daniel 2:4",
+      "source_quote": "Entonces hablaron los caldeos al rey en lengua aramea: —¡Rey, para siempre vive! Cuenta el sueño a tus siervos, y te daremos la interpretación.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Los caldeos pidieron que el rey contara primero el sueño y prometieron darle después la interpretación.",
+          "family": "true_false",
+          "subtype": "relationship"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN2-V006-F03",
+      "source_unit_id": "DAN2-V006",
+      "fact_id": "DAN2-V006-F03",
+      "family": "single_choice_direct",
+      "subtype": "factual_recall",
+      "question": "¿Qué tríada ofreció el rey a cambio de que le dijeran el sueño junto con su interpretación?",
+      "options": [
+        "alimentos, vestidos y casa propia",
+        "dones, favores y gran honra",
+        "cargos, tierras y larga vida",
+        "caballos, armas y gran victoria"
+      ],
+      "evidence_excerpt": "Pero si me decís el sueño y su interpretación, de mí recibiréis dones, favores y gran honra. Decidme, pues, el sueño y su interpretación.",
+      "difficulty": "expert",
+      "importance": "medium",
+      "relation_type": "promised_reward",
+      "option_category": "reward",
+      "variant_justification": "La variante pregunta por una lista completa; cada distractor presenta otra tríada coherente pero no documentada.",
+      "authored_content_sha256": "c41fd435f6ae11ad61a88f28c0bac61ce1fb8148f6f1fff3750ad25820b425ba",
+      "source_ref": "Daniel 2:6",
+      "source_quote": "Pero si me decís el sueño y su interpretación, de mí recibiréis dones, favores y gran honra. Decidme, pues, el sueño y su interpretación.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué recompensa prometió el rey a quienes revelaran el sueño y su interpretación?",
+          "family": "single_choice_direct",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN2-V008-F03",
+      "source_unit_id": "DAN2-V008",
+      "fact_id": "DAN2-V008-F03",
+      "family": "true_false",
+      "subtype": "cause_consequence",
+      "question": "El rey acusó a los sabios de poner dilaciones porque comprendían que el asunto se le había ido.",
+      "options": [
+        "Falso",
+        "Verdadero"
+      ],
+      "evidence_excerpt": "El rey respondió y dijo: —Yo conozco ciertamente que vosotros ponéis dilaciones, porque veis que el asunto se me ha ido.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "delay_accusation",
+      "option_category": "statement",
+      "variant_justification": "La verificación reúne conducta imputada y causa percibida; ambas deben coincidir para aceptar la proposición.",
+      "authored_content_sha256": "b9dce97cded1600e3ef6f1cc183371758e1c3b2e06bf8c0828d59e16caa223fe",
+      "source_ref": "Daniel 2:8",
+      "source_quote": "El rey respondió y dijo: —Yo conozco ciertamente que vosotros ponéis dilaciones, porque veis que el asunto se me ha ido.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "El rey aseguró que los sabios estaban apresurando la respuesta porque el asunto se le había ido.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN2-V011-F01",
+      "source_unit_id": "DAN2-V011",
+      "fact_id": "DAN2-V011-F01",
+      "family": "fill_choice",
+      "subtype": "relationship",
+      "question": "Para los caldeos, nadie podía declarar el asunto difícil al rey salvo ____.",
+      "options": [
+        "los príncipes cuya morada está entre los nobles",
+        "los soldados cuya morada está dentro de la ciudad",
+        "los dioses cuya morada no está entre los hombres",
+        "los sabios cuya morada está junto al palacio"
+      ],
+      "evidence_excerpt": "Porque el asunto que el rey demanda es difícil, y no hay quien lo pueda declarar al rey, salvo los dioses cuya morada no está entre los hombres.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "claimed_exception",
+      "option_category": "group",
+      "variant_justification": "La recuperación conserva en una sola unidad tanto la identidad de la excepción como la razón espacial que la caracteriza.",
+      "authored_content_sha256": "aee0ae9dc5b8d7ffd681bda7d6b0409d95ded352a9e4091b0c004e15ad8d7dee",
+      "source_ref": "Daniel 2:11",
+      "source_quote": "Porque el asunto que el rey demanda es difícil, y no hay quien lo pueda declarar al rey, salvo los dioses cuya morada no está entre los hombres.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Quiénes, según los caldeos, podían declarar el difícil asunto del rey?",
+          "family": "single_choice_direct",
+          "subtype": "relationship"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN2-V012-F02",
+      "source_unit_id": "DAN2-V012",
+      "fact_id": "DAN2-V012-F02",
+      "family": "true_false",
+      "subtype": "cause_consequence",
+      "question": "La ira del rey produjo un decreto limitado únicamente a los caldeos que habían comparecido ante él.",
+      "options": [
+        "Falso",
+        "Verdadero"
+      ],
+      "evidence_excerpt": "Por esto el rey, con ira y con gran enojo, mandó que mataran a todos los sabios de Babilonia.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "death_decree",
+      "option_category": "statement",
+      "variant_justification": "La mutación afecta solo el alcance del decreto, un detalle competitivo que puede confundirse con los destinatarios del diálogo.",
+      "authored_content_sha256": "e2cb28a4cb5c7c53cf28699c20d2635f53952a0107733e519064b8aafe19f035",
+      "source_ref": "Daniel 2:12",
+      "source_quote": "Por esto el rey, con ira y con gran enojo, mandó que mataran a todos los sabios de Babilonia.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Nabucodonosor ordenó matar a todos los sabios de Babilonia movido por su ira y gran enojo.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "f19de9329334094c3897aee0e44711de447aaf00d7d74a0783db16ad7ff131df"
+}

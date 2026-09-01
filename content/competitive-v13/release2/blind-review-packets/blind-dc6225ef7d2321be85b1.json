@@ -1,0 +1,369 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-dc6225ef7d2321be85b1",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "R2-C5-DAN10-V001-F04",
+      "source_unit_id": "DAN10-V001",
+      "fact_id": "DAN10-V001-F04",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué combinación conserva el marco temporal y político de la revelación, la doble identidad de Daniel y su respuesta intelectual?",
+      "options": [
+        "Primer año de Darío — Daniel llamado Sadrac — olvidó una palabra incierta",
+        "Tercer año de Ciro rey de Persia — Daniel llamado Beltsasar — comprendió la palabra verdadera y tuvo inteligencia en la visión",
+        "Segundo año de Nabucodonosor — Beltsasar llamado Daniel — no comprendió el sueño",
+        "Tercer año de Belsasar — Daniel llamado Abed-nego — rechazó una visión breve"
+      ],
+      "evidence_excerpt": "En el tercer año de Ciro, rey de Persia, fue revelada palabra a Daniel, llamado Beltsasar. La palabra era verdadera y el conflicto grande, pero él comprendió la palabra y tuvo inteligencia en la visión.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "multi_clause_mapping",
+      "option_category": "compound_correspondence",
+      "variant_justification": "Integra año, soberano, alias y respuesta intelectual; la presentación rechazada sólo pedía el nombre del rey.",
+      "authored_content_sha256": "8f785fa932f8346f8fa58cd4dec2522ebc179770b2957181c29ffd6d5c759312",
+      "source_ref": "Daniel 10:1",
+      "source_quote": "En el tercer año de Ciro, rey de Persia, fue revelada palabra a Daniel, llamado Beltsasar. La palabra era verdadera y el conflicto grande, pero él comprendió la palabra y tuvo inteligencia en la visión.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿En el tercer año de qué rey recibió Daniel la revelación?",
+          "family": "single_choice_direct",
+          "subtype": "factual_recall"
+        },
+        {
+          "question": "En la datación inicial de la revelación, ¿qué monarca persa se hallaba en su tercer año?",
+          "family": "single_choice_direct",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "R2-C5-DAN10-V002-F02",
+      "source_unit_id": "DAN10-V002",
+      "fact_id": "DAN10-V002-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué correspondencia identifica al hablante, su estado y la duración completa que él mismo asigna a ese estado?",
+      "options": [
+        "Gabriel — en conflicto — veintiún días",
+        "Ciro — en ayuno — setenta semanas",
+        "Daniel — afligido — tres semanas",
+        "Miguel — fortalecido — una semana"
+      ],
+      "evidence_excerpt": "«En aquellos días yo, Daniel, estuve afligido por espacio de tres semanas.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "multi_clause_mapping",
+      "option_category": "compound_correspondence",
+      "variant_justification": "La duración deja de ser un hueco y debe adjudicarse junto con sujeto y estado.",
+      "authored_content_sha256": "c47d1e82345e522305e4022dc708386b720591b744d9d1e1e839d0f76a4ad104",
+      "source_ref": "Daniel 10:2",
+      "source_quote": "«En aquellos días yo, Daniel, estuve afligido por espacio de tres semanas.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Daniel permaneció afligido durante ____ semanas.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        },
+        {
+          "question": "La aflicción de Daniel abarcó un total de ____.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "R2-C5-DAN10-V003-F07",
+      "source_unit_id": "DAN10-V003",
+      "fact_id": "DAN10-V003-F07",
+      "family": "single_choice_contextual",
+      "subtype": "comparison",
+      "question": "¿Qué inventario distingue correctamente lo que Daniel no comió o bebió de la acción corporal que también omitió hasta cumplirse las tres semanas?",
+      "options": [
+        "No comió manjar delicado ni carne, no bebió vino y no se ungió con perfume",
+        "No comió pan ni legumbres, no bebió agua y no se lavó con aceite",
+        "No comió carne ni fruta, no bebió vino y no se vistió de lino",
+        "No comió manjar delicado, bebió vino y se ungió diariamente"
+      ],
+      "evidence_excerpt": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "multi_clause_mapping",
+      "option_category": "compound_correspondence",
+      "variant_justification": "Exige clasificar una lista de consumo frente a una omisión corporal; no vuelve a aislar la palabra «manjar».",
+      "authored_content_sha256": "72ad428368bfb09d59eb6ee3ca801f152346b95086ec112236ee1106cf7b26c3",
+      "source_ref": "Daniel 10:3",
+      "source_quote": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué alimento específico dejó de comer Daniel durante las tres semanas?",
+          "family": "single_choice_contextual",
+          "subtype": "factual_recall"
+        },
+        {
+          "question": "Durante aquellas semanas de duelo, ¿cuál de estos alimentos declaró Daniel que no probó?",
+          "family": "single_choice_contextual",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "R2-C5-DAN10-V005-F01",
+      "source_unit_id": "DAN10-V005",
+      "fact_id": "DAN10-V005-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué mapa asigna correctamente vestidura, zona del cuerpo, material y procedencia en la primera descripción del varón?",
+      "options": [
+        "Vestido de oro — cabeza ceñida — lino de Persia",
+        "Vestido de púrpura — pies ceñidos — bronce de Grecia",
+        "Vestido de lino — cintura ceñida — oro de Ufaz",
+        "Vestido de bronce — brazos ceñidos — plata de Media"
+      ],
+      "evidence_excerpt": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "multi_clause_mapping",
+      "option_category": "compound_correspondence",
+      "variant_justification": "La variante convierte el antiguo hueco Ufaz en un mapeo de cuatro atributos homogéneos.",
+      "authored_content_sha256": "1d89a0f322740959ff3c5a842c9c34b7dde01537cc1a70c34e3d5c8531231a91",
+      "source_ref": "Daniel 10:5",
+      "source_quote": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "La cintura del varón vestido de lino estaba ceñida con oro de ____.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        },
+        {
+          "question": "El oro que ceñía la cintura del varón vestido de lino procedía de ____.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "R2-C5-DAN10-V008-F02",
+      "source_unit_id": "DAN10-V008",
+      "fact_id": "DAN10-V008-F02",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué progresión conserva la situación de Daniel, el cambio de sus fuerzas y el resultado final ante la visión?",
+      "options": [
+        "Quedó acompañado → recuperó fuerzas → corrió hacia el río",
+        "Quedó solo → sus fuerzas se cambiaron en desfallecimiento → lo abandonaron totalmente",
+        "Quedó oculto → sus fuerzas aumentaron → despertó a sus compañeros",
+        "Quedó de pie → conservó fuerzas → interpretó de inmediato"
+      ],
+      "evidence_excerpt": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "multi_clause_mapping",
+      "option_category": "compound_correspondence",
+      "variant_justification": "Reemplaza la recuperación aislada de «desfallecimiento» por una secuencia completa de situación, transformación y desenlace.",
+      "authored_content_sha256": "00633bf187e2c6cafbf51b510dd079fbbaff4599bfcfb8db83837e7e245a95f2",
+      "source_ref": "Daniel 10:8",
+      "source_quote": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Al quedar solo ante la gran visión, ¿en qué se transformaron las fuerzas de Daniel?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        },
+        {
+          "question": "¿Qué palabra resume el estado al que quedaron reducidas las fuerzas de Daniel ante la visión?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-C5-DAN10-V009-F05",
+      "source_unit_id": "DAN10-V009",
+      "fact_id": "DAN10-V009-F05",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué cadena enlaza el estímulo recibido, la reacción de Daniel y la orientación final de su cuerpo?",
+      "options": [
+        "Vio una luz → quedó en pie → rostro hacia el cielo",
+        "Sintió un toque → se sentó → rostro hacia el río",
+        "Oyó palabras → cayó en sueño profundo sobre su rostro → rostro en tierra",
+        "Escuchó música → huyó → rostro cubierto"
+      ],
+      "evidence_excerpt": "Pero oí el sonido de sus palabras; y al oír el sonido de sus palabras caí sobre mi rostro en un profundo sueño, con mi rostro en tierra.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "multi_clause_mapping",
+      "option_category": "compound_correspondence",
+      "variant_justification": "La posición final se adjudica dentro de una cadena causal de tres elementos, no como cloze literal.",
+      "authored_content_sha256": "ef8b7afe6404ae804a5b986a07d732ce08414693cc20e4b4cbf3dd05b369e52c",
+      "source_ref": "Daniel 10:9",
+      "source_quote": "Pero oí el sonido de sus palabras; y al oír el sonido de sus palabras caí sobre mi rostro en un profundo sueño, con mi rostro en tierra.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Al caer en un profundo sueño, Daniel quedó con el rostro en ____.",
+          "family": "fill_choice",
+          "subtype": "narrative_order"
+        },
+        {
+          "question": "Tras oír el sonido de las palabras y caer dormido, Daniel quedó con el rostro contra la ____.",
+          "family": "fill_choice",
+          "subtype": "narrative_order"
+        }
+      ]
+    },
+    {
+      "id": "R2-C5-DAN10-V012-F07",
+      "source_unit_id": "DAN10-V012",
+      "fact_id": "DAN10-V012-F07",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué secuencia explica por qué el mensajero podía afirmar que había venido aun cuando Daniel apenas comenzaba su búsqueda?",
+      "options": [
+        "Daniel decidió entender y humillarse → sus palabras fueron oídas desde el primer día → el mensajero vino a causa de ellas",
+        "Daniel dejó de orar → sus palabras fueron rechazadas → el mensajero regresó",
+        "Daniel pidió poder político → Ciro oyó la petición → Miguel lo coronó",
+        "Daniel entendió la visión → ocultó sus palabras → el mensajero no fue enviado"
+      ],
+      "evidence_excerpt": "Entonces me dijo: “Daniel, no temas, porque desde el primer día que dispusiste tu corazón a entender y a humillarte en la presencia de tu Dios, fueron oídas tus palabras; y a causa de tus palabras yo he venido.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "multi_clause_mapping",
+      "option_category": "compound_correspondence",
+      "variant_justification": "Añade intención, tiempo de recepción y causa de la venida; las presentaciones existentes sólo preguntaban si las palabras fueron oídas.",
+      "authored_content_sha256": "ea7dabcc028b1b2a073f21350247ef01ebf964c5f5ca3c20106d84ec6d604755",
+      "source_ref": "Daniel 10:12",
+      "source_quote": "Entonces me dijo: “Daniel, no temas, porque desde el primer día que dispusiste tu corazón a entender y a humillarte en la presencia de tu Dios, fueron oídas tus palabras; y a causa de tus palabras yo he venido.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Cómo fueron recibidas las palabras de Daniel desde el primer día de su humillación ante Dios?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        },
+        {
+          "question": "Desde que Daniel dispuso su corazón a entender y humillarse, ¿cómo fueron recibidas sus palabras?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-C5-DAN10-V013-F01",
+      "source_unit_id": "DAN10-V013",
+      "fact_id": "DAN10-V013-F01",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué reconstrucción mantiene oponente, duración, ayudante con su rango y situación posterior del mensajero?",
+      "options": [
+        "Príncipe de Grecia — tres semanas — Ciro rey — volvió a Jerusalén",
+        "Rey de Persia — setenta días — Daniel profeta — quedó junto al río",
+        "Príncipe de Babilonia — siete días — Gabriel — huyó de los medos",
+        "Príncipe de Persia — veintiún días — Miguel, uno de los principales príncipes — quedó con los reyes de Persia"
+      ],
+      "evidence_excerpt": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "multi_clause_mapping",
+      "option_category": "compound_correspondence",
+      "variant_justification": "La cifra se integra en una secuencia de cuatro relaciones, en vez de repetirse como hueco.",
+      "authored_content_sha256": "195d423ae761387bc6179ec149f05d6ab7e722de2f8a443b864133939f6c8b1f",
+      "source_ref": "Daniel 10:13",
+      "source_quote": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "La oposición del príncipe del reino de Persia duró ____ días.",
+          "family": "fill_choice",
+          "subtype": "prophetic_detail"
+        },
+        {
+          "question": "La resistencia del príncipe de Persia se prolongó por ____.",
+          "family": "fill_choice",
+          "subtype": "prophetic_detail"
+        }
+      ]
+    },
+    {
+      "id": "R2-C5-DAN10-V017-F01",
+      "source_unit_id": "DAN10-V017",
+      "fact_id": "DAN10-V017-F01",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué argumento enlaza la autodesignación de Daniel, su incapacidad para hablar y los dos síntomas que presenta como causa?",
+      "options": [
+        "Se llamó príncipe y dijo que el conflicto le daba fuerza y aliento",
+        "Se llamó siervo de su señor y preguntó cómo hablar porque le faltaron las fuerzas y no le quedó aliento",
+        "Se llamó rey y afirmó que la visión le devolvió voz y energía",
+        "Se llamó profeta y explicó que el río le impedía escuchar"
+      ],
+      "evidence_excerpt": "¿Cómo, pues, podrá el siervo de mi señor hablar con mi señor? Porque al instante me faltaron las fuerzas, y no me quedó aliento.”",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "multi_clause_mapping",
+      "option_category": "compound_correspondence",
+      "variant_justification": "Combina identidad relacional, incapacidad y dos causas corporales; las presentaciones existentes preguntan esos fragmentos por separado.",
+      "authored_content_sha256": "c70bb81fc0839f081237c8522ddbd2a9c1097eeeee730e54af238f84faadf6a7",
+      "source_ref": "Daniel 10:17",
+      "source_quote": "¿Cómo, pues, podrá el siervo de mi señor hablar con mi señor? Porque al instante me faltaron las fuerzas, y no me quedó aliento.”",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué dijo Daniel que le impedía hablar con su señor?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        },
+        {
+          "question": "¿Qué razón dio Daniel para explicar que no podía hablar con su señor?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-C5-DAN10-V018-F01",
+      "source_unit_id": "DAN10-V018",
+      "fact_id": "DAN10-V018-F01",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué combinación conserva quién actuó, que la acción se repitió y el efecto inmediato sobre Daniel?",
+      "options": [
+        "La figura semejante a hombre — lo tocó otra vez — lo fortaleció",
+        "Miguel — lo llamó por primera vez — lo dejó sin aliento",
+        "El príncipe de Persia — lo tocó dos veces — lo hizo dormir",
+        "Ciro — le habló otra vez — lo envió al río"
+      ],
+      "evidence_excerpt": "Aquel que tenía semejanza de hombre me tocó otra vez, me fortaleció",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "multi_clause_mapping",
+      "option_category": "compound_correspondence",
+      "variant_justification": "Integra agente, repetición, acción y resultado; las presentaciones existentes sólo pedían el efecto o la palabra «otra».",
+      "authored_content_sha256": "a73bbd4cd687927e37eb4b989cca36b50593878bca92c9d8c0414cfd7910237b",
+      "source_ref": "Daniel 10:18",
+      "source_quote": "Aquel que tenía semejanza de hombre me tocó otra vez, me fortaleció",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué efecto describe Daniel después del nuevo toque de la figura semejante a hombre?",
+          "family": "single_choice_direct",
+          "subtype": "narrative_order"
+        },
+        {
+          "question": "¿Cómo terminó Daniel después de que la figura semejante a hombre lo tocara de nuevo?",
+          "family": "single_choice_direct",
+          "subtype": "narrative_order"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "844dfb10d59bb9e32946eb8237dc74f3b8e3729881f67bf76387b89ba8e9f5de"
+}

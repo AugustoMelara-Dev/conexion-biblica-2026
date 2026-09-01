@@ -1,0 +1,298 @@
+[
+  {
+    "id": "V13-R2-DAN9-C7-V006-V11-F02",
+    "source_unit_id": "DAN9-V006",
+    "fact_id": "DAN9-V006-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué distribución identifica correctamente la respuesta del pueblo, los portadores del mensaje, su autoridad y el alcance de sus destinatarios?",
+    "options": [
+      "No obedecieron → siervos profetas → hablaron en el nombre de Dios → reyes, príncipes, padres y todo el pueblo",
+      "No entendieron → sabios caldeos → hablaron por mandato de Darío → sacerdotes, jueces, hijos y extranjeros",
+      "No ayunaron → príncipes medos → hablaron en nombre de Jeremías → profetas, cautivos, ancianos y soldados",
+      "No confesaron → ángeles del cielo → hablaron por visión de Daniel → reinas, escribas, jóvenes y gobernadores"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "No obedecieron → siervos profetas → hablaron en el nombre de Dios → reyes, príncipes, padres y todo el pueblo"
+    ],
+    "explanation": "Daniel confiesa desobediencia a los profetas, siervos de Dios que hablaron en su nombre a dirigentes, antepasados y al pueblo entero.",
+    "evidence_excerpt": "No hemos obedecido a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.",
+    "why_distractors_fail": {
+      "No entendieron → sabios caldeos → hablaron por mandato de Darío → sacerdotes, jueces, hijos y extranjeros": "Cambia respuesta, mensajeros, autoridad y audiencia.",
+      "No ayunaron → príncipes medos → hablaron en nombre de Jeremías → profetas, cautivos, ancianos y soldados": "Ninguna de las cuatro funciones coincide con el versículo.",
+      "No confesaron → ángeles del cielo → hablaron por visión de Daniel → reinas, escribas, jóvenes y gobernadores": "Introduce una respuesta, agentes, fuente y destinatarios ajenos."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "response_messenger_authority_audience",
+    "option_category": "four_role_correspondence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue cuatro funciones simultáneas dentro de la confesión.",
+    "variant_justification": "La presentación existente enumera receptores; esta variante exige además respuesta, agente y autoridad del mensaje.",
+    "author": {
+      "id": "r2_regen_e",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN9-C7-V012-F08",
+    "source_unit_id": "DAN9-V012",
+    "fact_id": "DAN9-V012-F08",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué cadena conserva el anuncio previo, a quiénes alcanzó, la acción divina y la comparación que dimensiona el resultado?",
+    "options": [
+      "Palabra contra pueblo y jefes → Dios la cumplió → trajo un gran mal → nada semejante bajo el cielo ocurrió a Jerusalén",
+      "Ley a favor de pueblo y sacerdotes → Moisés la anuló → evitó un gran mal → Babilonia nunca vio algo semejante",
+      "Visión contra medos y caldeos → Gabriel la retrasó → trajo una guerra → Jerusalén ya había sufrido algo mayor",
+      "Orden a favor de reyes y padres → Daniel la cumplió → levantó el santuario → nada semejante ocurrió en Egipto"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Palabra contra pueblo y jefes → Dios la cumplió → trajo un gran mal → nada semejante bajo el cielo ocurrió a Jerusalén"
+    ],
+    "explanation": "Dios cumplió lo dicho contra el pueblo y sus gobernantes al traer un mal sin paralelo sobre Jerusalén.",
+    "evidence_excerpt": "él ha cumplido la palabra que habló contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal; pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Jerusalén.",
+    "why_distractors_fail": {
+      "Ley a favor de pueblo y sacerdotes → Moisés la anuló → evitó un gran mal → Babilonia nunca vio algo semejante": "Invierte el sentido del anuncio y cambia agentes, acción y lugar.",
+      "Visión contra medos y caldeos → Gabriel la retrasó → trajo una guerra → Jerusalén ya había sufrido algo mayor": "Sustituye destinatarios y agente, y contradice la comparación final.",
+      "Orden a favor de reyes y padres → Daniel la cumplió → levantó el santuario → nada semejante ocurrió en Egipto": "Cambia los cuatro eslabones de la relación."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "warning_fulfillment_scope_result",
+    "option_category": "four_stage_causal_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Obliga a conservar destinatarios, agente, acción y medida comparativa.",
+    "variant_justification": "La presentación pública pregunta sólo por la comparación; aquí se reconstruye la cadena que conduce a ella.",
+    "author": {
+      "id": "r2_regen_e",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN9-C7-V019-V11-F02",
+    "source_unit_id": "DAN9-V019",
+    "fact_id": "DAN9-V019-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué opción conserva la progresión de la súplica, la urgencia, el motivo centrado en Dios y los dos ámbitos asociados con su nombre?",
+    "options": [
+      "Oír → perdonar → prestar oído y actuar → no tardar por amor de sí mismo → nombre sobre ciudad y pueblo",
+      "Mirar → castigar → cerrar los ojos y esperar → tardar por amor del pueblo → nombre sobre templo y palacio",
+      "Hablar → recordar → enviar a Jeremías → no tardar por amor de Daniel → nombre sobre medos y caldeos",
+      "Escuchar → absolver → retirar la orden → esperar por amor de Darío → nombre sobre Egipto y Babilonia"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Oír → perdonar → prestar oído y actuar → no tardar por amor de sí mismo → nombre sobre ciudad y pueblo"
+    ],
+    "explanation": "La súplica acumula oír, perdonar y actuar, pide que Dios no tarde por amor de sí mismo y apela a su nombre sobre ciudad y pueblo.",
+    "evidence_excerpt": "¡Oye, Señor! ¡Señor, perdona! ¡Presta oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo.",
+    "why_distractors_fail": {
+      "Mirar → castigar → cerrar los ojos y esperar → tardar por amor del pueblo → nombre sobre templo y palacio": "Invierte la urgencia y sustituye acciones, motivo y ámbitos.",
+      "Hablar → recordar → enviar a Jeremías → no tardar por amor de Daniel → nombre sobre medos y caldeos": "Conserva sólo la idea de prontitud, pero altera toda su estructura.",
+      "Escuchar → absolver → retirar la orden → esperar por amor de Darío → nombre sobre Egipto y Babilonia": "Cambia la acción solicitada, su fundamento y los objetos del nombre."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "petition_progression_motive_scope",
+    "option_category": "imperatives_urgency_basis_domains",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Evalúa cinco funciones retóricas conectadas en el cierre de la oración.",
+    "variant_justification": "La presentación existente pregunta únicamente por la razón; esta variante exige reconstruir también la progresión que desemboca en ella.",
+    "author": {
+      "id": "r2_regen_e",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN9-C7-V022-F08",
+    "source_unit_id": "DAN9-V022",
+    "fact_id": "DAN9-V022-F08",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué mapeo conserva agente, efecto producido en Daniel, modo de comunicación, momento de la misión y su propósito doble?",
+    "options": [
+      "Gabriel → hizo entender a Daniel y habló con él → había salido ahora → darle sabiduría y entendimiento",
+      "Jeremías → hizo ayunar a Daniel y escribió para él → había regresado entonces → darle autoridad y renombre",
+      "Darío → hizo temer a Daniel y ordenó contra él → había reinado un año → darle plaza y muro",
+      "Moisés → hizo confesar a Daniel y leyó ante él → había salido de Egipto → darle justicia y misericordia"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Gabriel → hizo entender a Daniel y habló con él → había salido ahora → darle sabiduría y entendimiento"
+    ],
+    "explanation": "Gabriel hizo entender a Daniel y habló con él; explicó que acababa de salir con el propósito de darle sabiduría y entendimiento.",
+    "evidence_excerpt": "Me hizo entender, y habló conmigo diciendo: “Daniel, ahora he salido para darte sabiduría y entendimiento.",
+    "why_distractors_fail": {
+      "Jeremías → hizo ayunar a Daniel y escribió para él → había regresado entonces → darle autoridad y renombre": "Cambia agente, efectos, momento y propósito.",
+      "Darío → hizo temer a Daniel y ordenó contra él → había reinado un año → darle plaza y muro": "Mezcla el marco político con la misión explicativa y altera todas las funciones.",
+      "Moisés → hizo confesar a Daniel y leyó ante él → había salido de Egipto → darle justicia y misericordia": "Traslada elementos de la oración y del éxodo a la acción de Gabriel."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "messenger_effect_speech_time_purpose",
+    "option_category": "agent_double_action_time_double_goal",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige vincular cinco funciones y conservar dos acciones y dos objetos intelectuales.",
+    "variant_justification": "La presentación pública pregunta sólo qué aportaría Gabriel; esta variante evalúa además agente, efecto, comunicación y momento declarado.",
+    "author": {
+      "id": "r2_regen_e",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN9-C7-V023-V11-F03",
+    "source_unit_id": "DAN9-V023",
+    "fact_id": "DAN9-V023-V11-F03",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué cadena explica por qué Gabriel llegó y qué respuesta debía producir su enseñanza en Daniel?",
+    "options": [
+      "La orden salió al comenzar los ruegos → Gabriel vino a enseñarla porque Daniel era muy amado → Daniel debía entender orden y visión",
+      "La orden salió al terminar el ayuno → Jeremías vino a ocultarla porque Daniel era muy temido → Daniel debía olvidar ley y profecía",
+      "La visión salió a mitad de semana → Darío vino a cambiarla porque Daniel era muy poderoso → Daniel debía restaurar plaza y muro",
+      "La ley salió durante el sacrificio → Moisés vino a confirmarla porque Daniel era muy justo → Daniel debía contar pecado y ofrenda"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "La orden salió al comenzar los ruegos → Gabriel vino a enseñarla porque Daniel era muy amado → Daniel debía entender orden y visión"
+    ],
+    "explanation": "El comienzo de los ruegos coincide con la emisión de la orden; el amor hacia Daniel fundamenta la llegada explicativa y desemboca en comprender orden y visión.",
+    "evidence_excerpt": "Al principio de tus ruegos fue dada la orden, y yo he venido para enseñártela, porque tú eres muy amado. Entiende, pues, la orden, y entiende la visión.",
+    "why_distractors_fail": {
+      "La orden salió al terminar el ayuno → Jeremías vino a ocultarla porque Daniel era muy temido → Daniel debía olvidar ley y profecía": "Invierte tiempo, misión y efecto, además de cambiar mensajero y motivo.",
+      "La visión salió a mitad de semana → Darío vino a cambiarla porque Daniel era muy poderoso → Daniel debía restaurar plaza y muro": "Traslada elementos proféticos posteriores a la comisión de Gabriel.",
+      "La ley salió durante el sacrificio → Moisés vino a confirmarla porque Daniel era muy justo → Daniel debía contar pecado y ofrenda": "Confunde el marco temporal, el agente, la causa y la instrucción."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "petition_order_love_understanding",
+    "option_category": "three_stage_explanatory_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Resuelve una cadena temporal, causal y pedagógica completa.",
+    "variant_justification": "La presentación existente pide la instrucción final; aquí debe reconstruirse por qué y desde cuándo se produce.",
+    "author": {
+      "id": "r2_regen_e",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN9-C7-V024-F01",
+    "source_unit_id": "DAN9-V024",
+    "fact_id": "DAN9-V024-F01",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "Completa la clasificación funcional de los seis propósitos: remover la transgresión mediante terminar prevaricación, poner fin al pecado y expiar iniquidad; establecer el bien mediante traer justicia perdurable; consumar lo profético mediante ____.",
+    "options": [
+      "sellar la visión y la profecía y ungir al Santo de los santos",
+      "abrir los libros y contar setenta años y restaurar el muro",
+      "confirmar el pacto y hacer cesar la ofrenda y destruir la ciudad",
+      "inclinar el oído y mirar las desolaciones y perdonar al pueblo"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "sellar la visión y la profecía y ungir al Santo de los santos"
+    ],
+    "explanation": "Los propósitos culminan con sellar visión y profecía y ungir al Santo, después de la remoción del mal y el establecimiento de justicia perdurable.",
+    "evidence_excerpt": "para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.",
+    "why_distractors_fail": {
+      "abrir los libros y contar setenta años y restaurar el muro": "Combina estudio inicial y reconstrucción posterior, no los propósitos finales.",
+      "confirmar el pacto y hacer cesar la ofrenda y destruir la ciudad": "Reúne eventos de los versículos siguientes y altera la función positiva del cierre.",
+      "inclinar el oído y mirar las desolaciones y perdonar al pueblo": "Traslada acciones de la oración a la estructura profética."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "six_purposes_functional_classification",
+    "option_category": "terminal_purpose_cluster",
+    "false_mutation": null,
+    "blank_span": "sellar la visión y la profecía y ungir al Santo de los santos",
+    "significance": "El blanco exige reconocer el bloque funcional completo, no una palabra vecina.",
+    "variant_justification": "La presentación pública pregunta la duración; esta variante clasifica los seis objetivos del período en tres funciones.",
+    "author": {
+      "id": "r2_regen_e",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN9-C7-V025-F03",
+    "source_unit_id": "DAN9-V025",
+    "fact_id": "DAN9-V025-F03",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué correspondencia conserva punto de partida, término personal, partición temporal y obra urbana con su circunstancia?",
+    "options": [
+      "Salida de la orden de restaurar Jerusalén → Mesías Príncipe → siete semanas y sesenta y dos → plaza y muro reedificados en tiempos angustiosos",
+      "Llegada de Gabriel a Jerusalén → príncipe venidero → setenta años y media semana → santuario y palacio reedificados en paz",
+      "Lectura de la ley en Babilonia → Darío el medo → sesenta semanas y dos años → templo y altar destruidos en guerra",
+      "Fin de los ruegos de Daniel → Santo de los santos → una semana y setenta semanas → ciudad y río abandonados en prosperidad"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Salida de la orden de restaurar Jerusalén → Mesías Príncipe → siete semanas y sesenta y dos → plaza y muro reedificados en tiempos angustiosos"
+    ],
+    "explanation": "La orden de restauración inicia el cómputo hasta el Mesías Príncipe, dividido en siete y sesenta y dos semanas; plaza y muro se reedifican bajo angustia.",
+    "evidence_excerpt": "desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas; se volverán a edificar la plaza y el muro en tiempos angustiosos.",
+    "why_distractors_fail": {
+      "Llegada de Gabriel a Jerusalén → príncipe venidero → setenta años y media semana → santuario y palacio reedificados en paz": "Cambia inicio, término, períodos, objetos y circunstancia.",
+      "Lectura de la ley en Babilonia → Darío el medo → sesenta semanas y dos años → templo y altar destruidos en guerra": "Sustituye todas las funciones del anuncio.",
+      "Fin de los ruegos de Daniel → Santo de los santos → una semana y setenta semanas → ciudad y río abandonados en prosperidad": "Mezcla elementos del capítulo sin conservar ninguna correspondencia."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "decree_endpoint_periods_rebuilding",
+    "option_category": "trigger_endpoint_partition_work_condition",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige cinco correspondencias dentro de una sola cronología.",
+    "variant_justification": "La presentación pública pide sólo los dos períodos; esta variante integra sus anclas y el evento urbano asociado.",
+    "author": {
+      "id": "r2_regen_e",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN9-C7-V026-V11-F02",
+    "source_unit_id": "DAN9-V026",
+    "fact_id": "DAN9-V026-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué reparto preserva momento, afectado, agente colectivo, objetos destruidos, imagen del desenlace y duración de sus consecuencias?",
+    "options": [
+      "Después de sesenta y dos semanas → vida del Mesías quitada → pueblo de un príncipe → ciudad y santuario → final como inundación → devastaciones hasta el fin de la guerra",
+      "Después de siete años → vida de Darío preservada → pueblo de Jeremías → plaza y muro → final como sequía → sacrificios hasta el fin del exilio",
+      "Antes de setenta semanas → vida de Gabriel quitada → ejército del Mesías → Babilonia y Egipto → final como incendio → misericordias hasta el fin del pacto",
+      "A mitad de una semana → vida del príncipe restaurada → pueblo de Moisés → templo y palacio → final como terremoto → ofrendas hasta el fin de la visión"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Después de sesenta y dos semanas → vida del Mesías quitada → pueblo de un príncipe → ciudad y santuario → final como inundación → devastaciones hasta el fin de la guerra"
+    ],
+    "explanation": "Tras las sesenta y dos semanas se quita la vida al Mesías; el pueblo de un príncipe destruye ciudad y santuario, cuyo final se compara con inundación, y las devastaciones duran hasta el fin de la guerra.",
+    "evidence_excerpt": "Después de las sesenta y dos semanas se quitará la vida al Mesías, y nada ya le quedará. El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario, su final llegará como una inundación, y hasta el fin de la guerra durarán las devastaciones.",
+    "why_distractors_fail": {
+      "Después de siete años → vida de Darío preservada → pueblo de Jeremías → plaza y muro → final como sequía → sacrificios hasta el fin del exilio": "Altera las seis correspondencias de la secuencia.",
+      "Antes de setenta semanas → vida de Gabriel quitada → ejército del Mesías → Babilonia y Egipto → final como incendio → misericordias hasta el fin del pacto": "Sustituye momento, afectado, agente, lugares, imagen y consecuencia.",
+      "A mitad de una semana → vida del príncipe restaurada → pueblo de Moisés → templo y palacio → final como terremoto → ofrendas hasta el fin de la visión": "Confunde el versículo con eventos posteriores y cambia todo el reparto."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "time_victim_agent_targets_image_duration",
+    "option_category": "six_part_prophetic_correspondence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige seis elementos funcionales y evita confundir afectado, agente y objetos.",
+    "variant_justification": "La presentación existente pregunta sólo qué sucede tras la muerte; aquí debe mapearse toda la secuencia y sus funciones.",
+    "author": {
+      "id": "r2_regen_e",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

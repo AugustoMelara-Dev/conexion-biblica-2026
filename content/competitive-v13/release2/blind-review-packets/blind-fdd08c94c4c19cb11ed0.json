@@ -1,0 +1,133 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-fdd08c94c4c19cb11ed0",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2C10-DAN3-V008-F01",
+      "source_unit_id": "DAN3-V008",
+      "fact_id": "DAN3-V008-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "En la transición hacia la acusación, ¿qué cadena conserva con precisión marcador causal, marco temporal, identidad de los agentes, movimiento, modo de actuar y objeto humano?",
+      "options": [
+        "Por esto → en aquel tiempo → algunos hombres caldeos → vinieron → acusaron maliciosamente → a los judíos",
+        "Después de esto → al día siguiente → todos los magistrados → salieron → defendieron públicamente → a los tres caldeos",
+        "Sin causa → durante el banquete → ciertos hombres judíos → comparecieron → informaron fielmente → a los babilonios",
+        "Por orden real → esa misma noche → algunos hombres medos → huyeron → denunciaron en secreto → a los músicos"
+      ],
+      "evidence_excerpt": "Por esto, en aquel tiempo algunos hombres caldeos vinieron y acusaron maliciosamente a los judíos.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "causal_time_agents_motion_manner_target",
+      "option_category": "six_element_narrative_mapping",
+      "variant_justification": "La presentación existente pregunta qué hicieron; esta variante adjudica causalidad, tiempo, agentes, movimiento, modalidad y destinatarios.",
+      "authored_content_sha256": "8906fc4c75b2c1c53306b14cb3d2754dfef23fa59dc35515fd1d519a42e0019c",
+      "source_ref": "Daniel 3:8",
+      "source_quote": "Por esto, en aquel tiempo algunos hombres caldeos vinieron y acusaron maliciosamente a los judíos.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué hicieron algunos hombres caldeos contra los judíos?",
+          "family": "single_choice_direct",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2C10-DAN3-V010-F01",
+      "source_unit_id": "DAN3-V010",
+      "fact_id": "DAN3-V010-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué formulación preserva simultáneamente alcance de la ley, orden de las seis señales nombradas, extensión instrumental, respuesta doble y objeto?",
+      "options": [
+        "Todo hombre → bocina, flauta, cítara, arpa, salterio, zampoña y todo instrumento → postrarse y adorar → la estatua de oro",
+        "Todo sabio → flauta, bocina, arpa, cítara, zampoña, salterio sin otros instrumentos → escuchar y cantar → el dios del rey",
+        "Pueblos y lenguas → bocina, cítara, flauta, salterio, arpa, zampoña y toda voz → comparecer y jurar → el trono de Babilonia",
+        "Solo los funcionarios → zampoña, salterio, arpa, cítara, flauta, bocina y todo instrumento → tocar y postrarse → el horno ardiente"
+      ],
+      "evidence_excerpt": "Tú, rey, has dado una ley que todo hombre, al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, se postre y adore la estatua de oro;",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "law_scope_ordered_signal_actions_object",
+      "option_category": "ordered_normative_mapping",
+      "variant_justification": "El verdadero/falso previo solo comprueba la regla general; esta operación introduce orden completo y cinco dimensiones normativas.",
+      "authored_content_sha256": "e5c76d8e312a2d4bf70489ebee9a988b5282d809990c7cdc85f18dac00e8a841",
+      "source_ref": "Daniel 3:10",
+      "source_quote": "Tú, rey, has dado una ley que todo hombre, al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, se postre y adore la estatua de oro;",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "La ley real exigía que todo hombre se postrara y adorara la estatua al oír la música.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2C10-DAN3-V021-V11-F02",
+      "source_unit_id": "DAN3-V021",
+      "fact_id": "DAN3-V021-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué inventario narrativo mantiene estado de los tres, orden de las cuatro clases de prendas y movimiento final con su destino?",
+      "options": [
+        "Atados → mantos, calzados, turbantes y vestidos → fueron echados dentro del horno de fuego ardiente",
+        "Sueltos → calzados, mantos, vestidos y cinturones → salieron por la puerta del horno frío",
+        "Atados → mantos, armaduras, turbantes y collares → caminaron delante de la estatua de oro",
+        "Desvestidos → turbantes, calzados, mantos y vestidos → fueron llevados al palacio del rey"
+      ],
+      "evidence_excerpt": "Así pues, estos hombres fueron atados con sus mantos, sus calzados, sus turbantes y sus vestidos, y fueron echados dentro del horno de fuego ardiente.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "condition_ordered_clothing_action_destination",
+      "option_category": "ordered_inventory_sequence",
+      "variant_justification": "El cloze existente recupera únicamente «turbantes»; esta variante exige reconstruir todo el inventario dentro de la secuencia.",
+      "authored_content_sha256": "7502900a7ada24187567397c41e5230b8fd9335d6d7c2af808d85a554ed15f05",
+      "source_ref": "Daniel 3:21",
+      "source_quote": "Así pues, estos hombres fueron atados con sus mantos, sus calzados, sus turbantes y sus vestidos, y fueron echados dentro del horno de fuego ardiente.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Además de mantos, calzados y vestidos, los jóvenes fueron atados con sus ____.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2C10-DAN3-V023-F03",
+      "source_unit_id": "DAN3-V023",
+      "fact_id": "DAN3-V023-F03",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué ficha del ingreso al horno conserva cantidad, identidades en orden, condición, movimiento y ubicación final?",
+      "options": [
+        "Tres → Sadrac, Mesac y Abed-nego → atados → cayeron → dentro del horno de fuego ardiente",
+        "Cuatro → Mesac, Sadrac y Daniel → sueltos → caminaron → fuera del horno apagado",
+        "Tres → Abed-nego, Daniel y Sadrac → desatados → salieron → delante de la puerta del horno",
+        "Dos → Sadrac y Mesac → atados → fueron levantados → sobre el horno de fuego"
+      ],
+      "evidence_excerpt": "Estos tres hombres, Sadrac, Mesac y Abed-nego, cayeron atados dentro del horno de fuego ardiente.",
+      "difficulty": "hard",
+      "importance": "critical",
+      "relation_type": "count_ordered_identities_condition_motion_location",
+      "option_category": "event_entry_mapping",
+      "variant_justification": "La presentación central pregunta cuántos; la variante evalúa cantidad, identidad ordenada, estado, acción y ubicación.",
+      "authored_content_sha256": "61db3e248ab14da4077c63cbbc3554bb4d0b438780cd9841e85c4d3661d8e9d9",
+      "source_ref": "Daniel 3:23",
+      "source_quote": "Estos tres hombres, Sadrac, Mesac y Abed-nego, cayeron atados dentro del horno de fuego ardiente.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "____ hombres cayeron atados dentro del horno de fuego ardiente.",
+          "family": "fill_choice",
+          "subtype": "narrative_order"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "b704bbd06db1832a0d264a0bfe5c810201108fa0f40bc0857acc94682cab0759"
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-833f2d4c3b397c5788f4",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN1-V007-F01",
+      "source_unit_id": "DAN1-V007",
+      "fact_id": "DAN1-V007-F01",
+      "family": "single_choice_direct",
+      "subtype": "relationship",
+      "question": "¿Qué asignación de nombre babilónico rompe la serie correcta dada por el jefe de los eunucos?",
+      "options": [
+        "Daniel — Beltsasar",
+        "Ananías — Sadrac",
+        "Misael — Mesac",
+        "Azarías — Aspenaz"
+      ],
+      "evidence_excerpt": "a Daniel, Beltsasar; a Ananías, Sadrac; a Misael, Mesac; y a Azarías, Abed-nego",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "name_assignment",
+      "option_category": "name_pair",
+      "variant_justification": "La central preguntaba el nombre de Daniel; aquí se audita la serie entera.",
+      "authored_content_sha256": "1bf40adcefcbb59b279842b182c48ec45d0d0818b6813b80bb82f3c27d0d45c9",
+      "source_ref": "Daniel 1:7",
+      "source_quote": "A estos el jefe de los eunucos puso nombres: a Daniel, Beltsasar; a Ananías, Sadrac; a Misael, Mesac; y a Azarías, Abed-nego.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "El jefe de los eunucos llamó ____ a Daniel.",
+          "family": "fill_choice",
+          "subtype": "relationship"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN1-V010-F01",
+      "source_unit_id": "DAN1-V010",
+      "fact_id": "DAN1-V010-F01",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué cadena explica con precisión el temor del jefe de los eunucos?",
+      "options": [
+        "Menor peso → destierro de Daniel → pérdida del vino",
+        "Rostros más pálidos → comparación con coetáneos → condena del jefe",
+        "Rechazo de legumbres → ira de Melsar → fin de la formación",
+        "Aspecto robusto → sospecha del rey → regreso a Judá"
+      ],
+      "evidence_excerpt": "pues luego que él vea vuestros rostros más pálidos que los de los muchachos que son semejantes a vosotros, haréis que el rey me condene a muerte",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "feared_consequence",
+      "option_category": "causal_chain",
+      "variant_justification": "La central preguntaba el desenlace; ésta reconstruye los eslabones causales.",
+      "authored_content_sha256": "e9e2158eb2920c2af07bff7e60f04c0313083b54172266838233a5a40d6a5aef",
+      "source_ref": "Daniel 1:10",
+      "source_quote": "y el jefe de los eunucos dijo a Daniel: —Temo a mi señor el rey, que asignó vuestra comida y vuestra bebida; pues luego que él vea vuestros rostros más pálidos que los de los muchachos que son semejantes a vosotros, haréis que el rey me condene a muerte.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Al explicar su temor a Daniel, ¿qué consecuencia mencionó el jefe de los eunucos?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "6262f16ee42c8c5eebd38dbd7f72f6e10c4990644db295e6af00e185d5d20641"
+}

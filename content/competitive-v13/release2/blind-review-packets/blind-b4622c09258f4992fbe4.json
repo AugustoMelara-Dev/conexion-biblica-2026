@@ -1,0 +1,40 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-b4622c09258f4992fbe4",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN1-C10-V002-V11-F04",
+      "source_unit_id": "DAN1-V002",
+      "fact_id": "DAN1-V002-V11-F04",
+      "family": "single_choice_direct",
+      "subtype": "narrative_order",
+      "question": "¿Qué cadena conserva sin intercambios la entrega inicial, el traslado territorial y los dos destinos religiosos de los utensilios?",
+      "options": [
+        "El Señor entrega a Joacim y parte de los utensilios → Nabucodonosor los lleva a Sinar → casa de su dios → casa del tesoro de su dios",
+        "Joacim entrega a Nabucodonosor y todos los utensilios → Daniel los lleva a Judá → casa de Jehová → palacio del rey",
+        "El Señor entrega sólo a Joacim → Aspenaz lo lleva a Babilonia → casa del rey → escuela de los caldeos",
+        "Nabucodonosor entrega los utensilios a Ciro → Melsar los lleva a Persia → templo de Jerusalén → tesoro real"
+      ],
+      "evidence_excerpt": "El Señor entregó en sus manos a Joacim, rey de Judá, y parte de los utensilios de la casa de Dios; los trajo a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "delivery_transport_religious_deposit",
+      "option_category": "five_stage_chain",
+      "variant_justification": "La presentación pública sólo pide el tesoro; esta variante reconstruye toda la cadena causal y espacial.",
+      "authored_content_sha256": "9f83f2b3dba97387e12eb82c94152e9130ddab6daae348c57509eadd00d1493f",
+      "source_ref": "Daniel 1:2",
+      "source_quote": "El Señor entregó en sus manos a Joacim, rey de Judá, y parte de los utensilios de la casa de Dios; los trajo a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Los utensilios fueron colocados en la casa del ____ del dios de Nabucodonosor.",
+          "family": "fill_choice",
+          "subtype": "narrative_order"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "5b6a877f4a2b59d6489171213ec6be55bd6fadec798b853298341b70ec24dffd"
+}

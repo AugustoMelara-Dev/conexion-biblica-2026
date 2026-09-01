@@ -1,0 +1,43 @@
+[
+  {
+    "id": "R2-DAN8-014",
+    "source_unit_id": "DAN8-V014",
+    "fact_id": "DAN8-V014-F01",
+    "family": "true_false",
+    "subtype": "prophetic_detail",
+    "question": "Verdadero o falso: la respuesta del pasaje fija dos mil cuatrocientas tardes y mañanas antes de la purificación del santuario.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso",
+      "F"
+    ],
+    "explanation": "El período anunciado fue de dos mil trescientas tardes y mañanas.",
+    "why_distractors_fail": {
+      "Verdadero": "La afirmación altera localmente «dos mil trescientas tardes y mañanas» por «dos mil cuatrocientas tardes y mañanas»."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "prophetic_period",
+    "option_category": "truth_value",
+    "false_mutation": {
+      "local": true,
+      "original": "dos mil trescientas tardes y mañanas",
+      "replacement": "dos mil cuatrocientas tardes y mañanas",
+      "changed_fields": [
+        "answer_claim"
+      ]
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Introduce una alteración numérica mínima en el plazo profético, evitando que baste reconocer vocabulario general sobre el santuario.",
+    "author": {
+      "id": "r2_regen_g",
+      "model": "gpt-5.6-sol"
+    },
+    "evidence_excerpt": "Hasta dos mil trescientas tardes y mañanas"
+  }
+]

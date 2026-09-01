@@ -1,0 +1,154 @@
+[
+  {
+    "id": "V13-R2C9-DAN3-V004-V11-F02",
+    "source_unit_id": "DAN3-V004",
+    "fact_id": "DAN3-V004-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "En el inicio de la proclamación, ¿qué correspondencia conserva portavoz, modo de anuncio y alcance de los destinatarios?",
+    "options": [
+      "Pregonero → en alta voz → pueblos, naciones y lenguas",
+      "Rey → por escrito → únicamente los gobernadores provinciales",
+      "Capitanes → mediante música → solo los habitantes de Babilonia",
+      "Consejeros → en secreto → los tres judíos acusados"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Pregonero → en alta voz → pueblos, naciones y lenguas"
+    ],
+    "explanation": "La orden se introduce como un anuncio del pregonero en alta voz dirigido a pueblos, naciones y lenguas.",
+    "why_distractors_fail": {
+      "Rey → por escrito → únicamente los gobernadores provinciales": "Cambia al portavoz, el medio y reduce indebidamente la audiencia.",
+      "Capitanes → mediante música → solo los habitantes de Babilonia": "La música pertenece a la instrucción posterior; no identifica al portavoz ni a toda la audiencia.",
+      "Consejeros → en secreto → los tres judíos acusados": "Sustituye los tres elementos expresos de la proclamación."
+    },
+    "evidence_excerpt": "Y el pregonero anunciaba en alta voz: «Se os ordena a vosotros, pueblos, naciones y lenguas,",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "proclamation_speaker_mode_audience",
+    "option_category": "multi_element_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue simultáneamente quién comunica la orden, cómo lo hace y a quiénes alcanza.",
+    "variant_justification": "La variante exige reconstruir una correspondencia triple, no solo recuperar la audiencia de la presentación existente.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2C9-DAN3-V020-V11-F02",
+    "source_unit_id": "DAN3-V020",
+    "fact_id": "DAN3-V020-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué cadena preserva quién dio la orden, qué clase de ejecutores eligió, la tarea preparatoria y el destino previsto para los tres?",
+    "options": [
+      "Nabucodonosor → hombres muy vigorosos de su ejército → atar a Sadrac, Mesac y Abed-nego → echarlos al horno ardiente",
+      "El pregonero → músicos de la provincia → desatar a los tres → llevarlos ante la estatua",
+      "Los caldeos → consejeros del rey → interrogar a los tres → enviarlos fuera de Babilonia",
+      "Los sátrapas → soldados heridos → vestir a los tres → encerrarlos en el palacio"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Nabucodonosor → hombres muy vigorosos de su ejército → atar a Sadrac, Mesac y Abed-nego → echarlos al horno ardiente"
+    ],
+    "explanation": "La orden real seleccionó hombres muy vigorosos del ejército para atar a los tres con el fin de echarlos al horno.",
+    "why_distractors_fail": {
+      "El pregonero → músicos de la provincia → desatar a los tres → llevarlos ante la estatua": "Cambia emisor, ejecutores, acción y destino.",
+      "Los caldeos → consejeros del rey → interrogar a los tres → enviarlos fuera de Babilonia": "Confunde la acusación con la ejecución e inventa el destino.",
+      "Los sátrapas → soldados heridos → vestir a los tres → encerrarlos en el palacio": "Ningún eslabón corresponde a la orden descrita."
+    },
+    "evidence_excerpt": "Y ordenó a hombres muy vigorosos que tenía en su ejército, que ataran a Sadrac, Mesac y Abed-nego, para echarlos en el horno de fuego ardiente.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "issuer_agents_preparation_destination",
+    "option_category": "execution_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige encadenar autoridad, selección de agentes, acción instrumental y propósito.",
+    "variant_justification": "Amplía la pregunta existente sobre los ejecutores hacia toda la cadena de ejecución sin reutilizar su operación.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2C9-DAN3-V024-F01",
+    "source_unit_id": "DAN3-V024",
+    "fact_id": "DAN3-V024-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "Ante lo que percibió en el horno, ¿qué secuencia ordena reacción del rey, movimiento, consulta y confirmación recibida?",
+    "options": [
+      "Se espantó → se levantó apresuradamente → preguntó a su consejo si habían echado a tres hombres atados → ellos confirmaron",
+      "Se alegró → permaneció sentado → preguntó al ejército si había arrojado a cuatro hombres sueltos → ellos lo negaron",
+      "Se enojó → se acercó lentamente → preguntó a los caldeos si habían liberado a tres hombres → ellos guardaron silencio",
+      "Se maravilló → convocó a los músicos → preguntó a los sátrapas si el horno estaba frío → ellos lo confirmaron"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Se espantó → se levantó apresuradamente → preguntó a su consejo si habían echado a tres hombres atados → ellos confirmaron"
+    ],
+    "explanation": "Nabucodonosor se espantó, se levantó con prisa, consultó a su consejo sobre los tres hombres atados y recibió confirmación.",
+    "why_distractors_fail": {
+      "Se alegró → permaneció sentado → preguntó al ejército si había arrojado a cuatro hombres sueltos → ellos lo negaron": "Invierte la reacción, el movimiento, el número, la condición y la respuesta.",
+      "Se enojó → se acercó lentamente → preguntó a los caldeos si habían liberado a tres hombres → ellos guardaron silencio": "Sustituye cada etapa de la secuencia narrada.",
+      "Se maravilló → convocó a los músicos → preguntó a los sátrapas si el horno estaba frío → ellos lo confirmaron": "Mezcla actores y contenidos de otras escenas."
+    },
+    "evidence_excerpt": "Entonces el rey Nabucodonosor se espantó, se levantó apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego? Ellos respondieron al rey: —Es verdad, oh rey.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "reaction_movement_consultation_confirmation",
+    "option_category": "narrative_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Coordina cuatro etapas y conserva número, condición y participantes.",
+    "variant_justification": "La presentación central solo verifica el número; esta variante exige reconstruir la escena completa y su orden.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2C9-DAN3-V025-F01",
+    "source_unit_id": "DAN3-V025",
+    "fact_id": "DAN3-V025-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué contraste reúne lo que el rey contó, la condición de los hombres, su actividad, el efecto del fuego y la apariencia singular del cuarto?",
+    "options": [
+      "Cuatro → sueltos → se paseaban en el fuego → sin daño → el cuarto semejante a un hijo de los dioses",
+      "Tres → atados → yacían fuera del horno → quemados → el tercero semejante a un soldado",
+      "Siete → sueltos → adoraban la estatua → con sus ropas ardiendo → el séptimo semejante al rey",
+      "Cuatro → encadenados → corrían hacia la puerta → heridos → el primero semejante a un caldeo"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Cuatro → sueltos → se paseaban en el fuego → sin daño → el cuarto semejante a un hijo de los dioses"
+    ],
+    "explanation": "El rey vio cuatro hombres sueltos, caminando en el fuego sin daño, y distinguió la apariencia del cuarto.",
+    "why_distractors_fail": {
+      "Tres → atados → yacían fuera del horno → quemados → el tercero semejante a un soldado": "Contradice número, condición, ubicación, resultado y apariencia.",
+      "Siete → sueltos → adoraban la estatua → con sus ropas ardiendo → el séptimo semejante al rey": "Solo conserva la condición de soltura; altera los demás elementos.",
+      "Cuatro → encadenados → corrían hacia la puerta → heridos → el primero semejante a un caldeo": "Mantiene el número pero cambia condición, actividad, efecto y apariencia."
+    },
+    "evidence_excerpt": "Y él dijo: —Sin embargo, yo veo cuatro hombres sueltos, que se pasean en medio del fuego sin sufrir ningún daño; y el aspecto del cuarto es semejante a un hijo de los dioses.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "count_condition_activity_outcome_appearance",
+    "option_category": "multi_attribute_contrast",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Diferencia cinco atributos simultáneos de la observación real.",
+    "variant_justification": "La presentación central pide un único número; esta variante obliga a mantener toda la configuración observada.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

@@ -107,6 +107,26 @@ describe("auditoría editorial humana", () => {
     })
   })
 
+  it("deriva el shard de variantes competitivas v13 con prefijos de release", () => {
+    expect(
+      parseHumanReviewIndex({
+        schema_version: "10.0",
+        total_reviewed: 1,
+        entries: [
+          {
+            question_id: "V13-R2-DAN11-C10-V002-F01",
+            content_sha256: "hash-v13",
+            decision: "passed",
+          },
+        ],
+      }).entries[0]
+    ).toMatchObject({
+      id: "V13-R2-DAN11-C10-V002-F01",
+      chapter: "DAN11",
+      questions_file: "banks/final-2026/questions/DAN11.json",
+    })
+  })
+
   it("acepta los identificadores explícitos de variantes de presentación", () => {
     expect(
       parseHumanReviewIndex({

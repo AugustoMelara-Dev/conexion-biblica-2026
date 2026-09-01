@@ -1,6 +1,6 @@
 {
   "mission": "competitive-v13",
-  "updated_at": "2026-08-31T14:57:30-06:00",
+  "updated_at": "2026-08-31T20:10:44-06:00",
   "timezone": "America/Tegucigalpa",
   "deadline": "2026-09-05",
   "base_commit": "24c542fa3d2936c8fd98db706a9db930ba8338a3",
@@ -21,14 +21,14 @@
     "status": "preserved",
     "resume_from": "codex/expansion-competitiva-v11@004e6f5612bebb3a08fa86f2d6b54319b4be8103"
   },
-  "phase": "phase_1_release_1_ready_to_deploy",
-  "release": 1,
-  "public_questions": 2468,
+  "phase": "phase_3_release_2_ai_authoring",
+  "release": 2,
+  "public_questions": 2730,
   "public_facts": 2217,
   "public_shards": 18,
-  "new_ai_authored_accepted": 0,
-  "new_ai_authored_rejected": 0,
-  "new_ai_authored_rewritten": 0,
+  "new_ai_authored_accepted": 262,
+  "new_ai_authored_rejected": 131,
+  "new_ai_authored_rewritten": 393,
   "translation_noise": 0,
   "blind_private": {
     "A": 0,
@@ -37,15 +37,32 @@
     "status": "new pools not started; historical 250 promoted to public"
   },
   "tests": {
-    "competitive_audit": "pass: 2468 questions, 2217 facts, zero violations",
-    "release_contract": "pass: 12/12 with real-schema normalization and base collision detection",
-    "vitest": "pass: 433/433",
+    "competitive_audit": "pass: 2730 questions, 2217 facts, zero blind/private rows",
+    "release_contract": "pass: 36/36 promotion, pipeline, release-contract and live-audit integration tests",
+    "vitest": "pass: 434/434",
     "typecheck": "pass",
     "lint": "pass",
-    "build": "pass with non-fatal 609.67 kB chunk warning",
-    "e2e": "pass: 24 Chromium desktop/mobile, 12 intentionally skipped by project"
+    "build": "pass with non-fatal 609.68 kB chunk warning",
+    "e2e": "pass: 24 applicable Chromium desktop/mobile checks, 12 intentionally skipped by project"
   },
-  "last_commit": "24c542fa3d2936c8fd98db706a9db930ba8338a3",
-  "last_deployment": null,
-  "next_action": "Commit Release 1, deploy that exact clean commit to production, verify the immutable deployment, then start AI-authored Release 2 batches."
+  "last_commit": "2ba28c48ccb59fba4500d05523b3fff923a4055b",
+  "last_deployment": {
+    "id": "dpl_7vbxgG65gXet5pGBp4rVa78ZyLFR",
+    "immutable_url": "https://conexion-biblica-2026-3wxqvbja1.vercel.app",
+    "production_alias": "https://conexion-biblica-2026.vercel.app",
+    "status": "READY",
+    "public_verification": "pass: 13 applicable Chromium desktop/mobile tests; immutable URL is Vercel-login protected",
+    "manifest_build_id": "0964d9c4affc4dd06c322c190d4170dd4740fb026701c80e847efe8a6ca0d33a"
+  },
+  "release_2_checkpoint": {
+    "candidate_variants": 393,
+    "blind_reviewed": 393,
+    "accepted": 262,
+    "rejected": 131,
+    "awaiting_blind_review": 0,
+    "pending_editorial_authoring": 1955,
+    "publicly_compiled": 262,
+    "blindness_evidence": "packets redact author/answer/explanations and use an external HMAC binding key; reviewer independence is procedural because all subagents share the filesystem"
+  },
+  "next_action": "Commit and deploy the stable 262-question Release 2 increment, verify the public alias, then resume parallel authoring toward the 4685-question Release 2 target."
 }

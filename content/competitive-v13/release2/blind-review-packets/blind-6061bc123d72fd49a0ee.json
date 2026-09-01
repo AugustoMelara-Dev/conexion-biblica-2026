@@ -1,0 +1,69 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-6061bc123d72fd49a0ee",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "R2-PR40-0003",
+      "source_unit_id": "PR40-P033-P001-S003",
+      "fact_id": "PR40-P033-P001-S003-F01",
+      "family": "true_false",
+      "subtype": "comparison",
+      "question": "La profunda impresión que dejó el sueño permitió que Nabucodonosor recordara sus detalles al despertar.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "aunque el ánimo del rey sufrió una impresión profunda, cuando despertó le resultó imposible recordar los detalles",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "memory_failure",
+      "option_category": "truth_value",
+      "variant_justification": "Exige reconocer la fuerza de «aunque» y rechazar una causalidad intuitiva pero falsa.",
+      "authored_content_sha256": "4d707984de8a3f4768f2010fa5bfc9d739f717822eafc48cf4002451372bda78",
+      "source_ref": "PR40, p. 33, párrafo 1",
+      "source_quote": "Pero aunque el ánimo del rey sufrió una impresión profunda, cuando despertó le resultó imposible recordar los detalles.",
+      "parent_context": "Poco después que Daniel y sus compañeros entraron en el servicio del rey de Babilonia, acontecieron sucesos que revelaron a una nación idólatra el poder y la fidelidad del Dios de Israel. Nabucodonosor tuvo un sueño notable, “y perturbóse su espíritu, y su sueño se huyó de él.” Pero aunque el ánimo del rey sufrió una impresión profunda, cuando despertó le resultó imposible recordar los detalles.",
+      "existing_presentations": [
+        {
+          "question": "¿Qué le resultó imposible al rey cuando despertó, pese a la impresión profunda?",
+          "family": "single_choice_direct",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-PR40-0008",
+      "source_unit_id": "PR40-P033-P004-S001",
+      "fact_id": "PR40-P033-P004-S001-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué combinación explica mejor por qué la respuesta de los sabios intensificó la desconfianza del rey?",
+      "options": [
+        "Fue evasiva y contrastaba con sus jactancias de revelar secretos",
+        "Fue demasiado extensa y reveló antes de tiempo el sueño",
+        "Contradijo a Daniel y rechazó toda recompensa",
+        "Aceptó la tarea pero pidió abandonar Babilonia"
+      ],
+      "evidence_excerpt": "Desconforme con esta respuesta evasiva, y sospechando que, a pesar de sus aseveraciones jactanciosas de poder revelar los secretos de los hombres, no parecían dispuestos a ayudarle",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "royal_suspicion",
+      "option_category": "causal_explanation",
+      "variant_justification": "Integra evasión, jactancia y falta de ayuda como una sola inferencia causal.",
+      "authored_content_sha256": "fad881b2c8b4890e9b1e336dedff7b0326535945915a2a6de4ad8c16c8d56b0d",
+      "source_ref": "PR40, p. 33, párrafo 4",
+      "source_quote": "Desconforme con esta respuesta evasiva, y sospechando que, a pesar de sus aseveraciones jactanciosas de poder revelar los secretos de los hombres, no parecían dispuestos a ayudarle, el rey ordenó a sus sabios, con promesas de riquezas y honores por un lado y amenazas de muerte por el otro, que le diesen no sólo la interpretación del sueño, sino el sueño mismo.",
+      "parent_context": "Desconforme con esta respuesta evasiva, y sospechando que, a pesar de sus aseveraciones jactanciosas de poder revelar los secretos de los hombres, no parecían dispuestos a ayudarle, el rey ordenó a sus sabios, con promesas de riquezas y honores por un lado y amenazas de muerte por el otro, que le diesen no sólo la interpretación del sueño, sino el sueño mismo. Dijo: “El negocio se me fué: si no me mostráis el sueño y su declaración, seréis hechos cuartos, y vuestras casas serán puestas por muladares. Y si mostrareis el sueño y su declaración, recibiréis de mí dones y mercedes y grande honra.”",
+      "existing_presentations": [
+        {
+          "question": "El rey sospechaba de los sabios porque sus aseveraciones de revelar secretos le parecían jactanciosas.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "2b677ece95783c9df5a5a5cc9e6167eb062135b4b42c08bfe94f4bf76c3f6ed6"
+}

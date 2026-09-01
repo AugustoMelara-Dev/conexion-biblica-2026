@@ -1,0 +1,78 @@
+[
+  {
+    "id": "V13-R2-DAN1-V007-F01",
+    "source_unit_id": "DAN1-V007",
+    "fact_id": "DAN1-V007-F01",
+    "role": "variant",
+    "family": "single_choice_direct",
+    "subtype": "relationship",
+    "question": "¿Qué asignación de nombre babilónico rompe la serie correcta dada por el jefe de los eunucos?",
+    "options": [
+      "Daniel — Beltsasar",
+      "Ananías — Sadrac",
+      "Misael — Mesac",
+      "Azarías — Aspenaz"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Azarías — Aspenaz"
+    ],
+    "explanation": "Azarías recibió Abed-nego; Aspenaz era el jefe de los eunucos.",
+    "why_distractors_fail": {
+      "Daniel — Beltsasar": "Es correcta.",
+      "Ananías — Sadrac": "Es correcta.",
+      "Misael — Mesac": "Es correcta."
+    },
+    "evidence_excerpt": "a Daniel, Beltsasar; a Ananías, Sadrac; a Misael, Mesac; y a Azarías, Abed-nego",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "name_assignment",
+    "option_category": "name_pair",
+    "false_mutation": "Sustituye Abed-nego por Aspenaz.",
+    "blank_span": null,
+    "significance": "Evalúa cuatro correspondencias y una intrusión de rol.",
+    "variant_justification": "La central preguntaba el nombre de Daniel; aquí se audita la serie entera.",
+    "author": {
+      "id": "r2_author_a",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN1-V010-F01",
+    "source_unit_id": "DAN1-V010",
+    "fact_id": "DAN1-V010-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué cadena explica con precisión el temor del jefe de los eunucos?",
+    "options": [
+      "Menor peso → destierro de Daniel → pérdida del vino",
+      "Rostros más pálidos → comparación con coetáneos → condena del jefe",
+      "Rechazo de legumbres → ira de Melsar → fin de la formación",
+      "Aspecto robusto → sospecha del rey → regreso a Judá"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Rostros más pálidos → comparación con coetáneos → condena del jefe"
+    ],
+    "explanation": "Temía que el rey advirtiera palidez frente a los coetáneos y lo condenara.",
+    "why_distractors_fail": {
+      "Menor peso → destierro de Daniel → pérdida del vino": "No figura en su explicación.",
+      "Rechazo de legumbres → ira de Melsar → fin de la formación": "Melsar y la prueba aparecen después.",
+      "Aspecto robusto → sospecha del rey → regreso a Judá": "Invierte la apariencia y añade un regreso inexistente."
+    },
+    "evidence_excerpt": "pues luego que él vea vuestros rostros más pálidos que los de los muchachos que son semejantes a vosotros, haréis que el rey me condene a muerte",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "feared_consequence",
+    "option_category": "causal_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Ordena percepción, comparación y consecuencia.",
+    "variant_justification": "La central preguntaba el desenlace; ésta reconstruye los eslabones causales.",
+    "author": {
+      "id": "r2_author_a",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

@@ -1,7 +1,7 @@
 # Conexión Bíblica 2026 — checkpoint competitivo v13
 
-- Actualizado: 2026-08-31 14:57:30 -06:00 (`America/Tegucigalpa`)
-- Fase actual: Release 1 validado, listo para commit y despliegue exacto.
+- Actualizado: 2026-08-31 20:10:44 -06:00 (`America/Tegucigalpa`)
+- Fase actual: Release 2, autoría IA paralela y construcción de revisión ciega.
 - Rama: `codex/emergencia-competitiva-unica-v13`
 - Base segura: `24c542fa3d2936c8fd98db706a9db930ba8338a3`
 - Worktree: `C:\Users\melar\OneDrive\Desktop\Conexion biblica\.worktrees\emergencia-competitiva-unica-v13`
@@ -24,9 +24,9 @@
 
 ## Validación actual
 
-- Auditoría competitiva Python: pasa con 2,468 preguntas, 2,217 hechos y cero violaciones.
-- Contrato de cuotas/identidad R2–R3: 12/12; normaliza el esquema real y detecta colisiones con la base.
-- Vitest: 433/433 pasan, incluida resistencia de 3,000 respuestas.
+- Banco público local: 2,730 preguntas, 2,217 hechos, 18 unidades y cero filas blind/privadas; build ID `1cb318f973eacd4dbd74391bea3e77f77613994faccea42c31af375144a55eb2`.
+- Pipeline/contrato R2–R3: 36/36; incluye promoción atómica, HMAC externo, amarre revisor/paquete/decisión y mapeo exacto `fact_id`–`source_unit_id`.
+- Vitest: 434/434 pasan, incluida resistencia de 3,000 respuestas y 1,000 simulaciones de selección.
 - TypeScript y ESLint: pasan.
 - Build Vite: pasa; advertencia no fatal por chunk de 609.67 kB.
 - E2E Chromium: 24 pasan en escritorio/móvil y 12 se omiten por diseño de proyecto.
@@ -35,4 +35,6 @@
 
 ## Siguiente acción exacta
 
-Hacer commit de Release 1, desplegar exactamente ese commit, verificar la URL inmutable y producción; después iniciar los lotes AI-authored de Release 2 con revisión ciega independiente.
+Release 1 quedó fijado en `7dc70deb08345a9ecfdfdfd2e6a87c0a26c7df35` y desplegado como `dpl_7vbxgG65gXet5pGBp4rVa78ZyLFR`; el alias público pasó 13 pruebas Chromium aplicables.
+
+Release 2 tiene 393 variantes candidatas revisadas a ciegas: 262 aprobadas, 131 rechazadas y cero pendientes de revisión. Las 262 aprobadas ya fueron compiladas como incremento público estable, elevando el banco a 2,730 preguntas; quedan 1,955 hechos por cubrir para la meta R2 de 4,685. Los paquetes ocultan autor, respuesta y explicaciones y usan una clave HMAC fuera del repositorio; como los subagentes comparten filesystem, la independencia demostrable es procedural, no aislamiento criptográfico contra un revisor malicioso. La acción inmediata es publicar este checkpoint y reanudar autoría/revisión paralela.

@@ -1,0 +1,619 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-ad902d6861357d4a0311",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "R2-F-DAN2-C4-001",
+      "source_unit_id": "DAN2-V013",
+      "fact_id": "DAN2-V013-F01",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "El edicto alcanzaba a todos los sabios y por eso buscaron también a ____ y a sus compañeros para matarlos.",
+      "options": [
+        "Daniel",
+        "Arioc",
+        "Nabucodonosor",
+        "Melsar"
+      ],
+      "evidence_excerpt": "buscaron también a Daniel y a sus compañeros para matarlos.",
+      "difficulty": "hard",
+      "importance": "essential",
+      "relation_type": "edict_scope",
+      "option_category": "person",
+      "variant_justification": "Sitúa la identidad dentro del alcance causal del edicto.",
+      "authored_content_sha256": "6100414485f9249a8d1511f196347c2814a0cef74611ae2595a715f2b0f957d9",
+      "source_ref": "Daniel 2:13",
+      "source_quote": "Se publicó, pues, el edicto de que los sabios fueran llevados a la muerte; y buscaron también a Daniel y a sus compañeros para matarlos.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Al publicarse el edicto, los guardias buscaron también a ____ y a sus compañeros para matarlos.",
+          "family": "fill_choice",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-002",
+      "source_unit_id": "DAN2-V014",
+      "fact_id": "DAN2-V014-F02",
+      "family": "single_choice_contextual",
+      "subtype": "speaker_addressee",
+      "question": "Ante el capitán que había salido a ejecutar a los sabios, ¿quién respondió con sabiduría y prudencia en vez de huir o resistir?",
+      "options": [
+        "Daniel",
+        "Ananías",
+        "Misael",
+        "Azarías"
+      ],
+      "evidence_excerpt": "Entonces Daniel habló sabia y prudentemente a Arioc, capitán de la guardia del rey",
+      "difficulty": "hard",
+      "importance": "essential",
+      "relation_type": "crisis_response",
+      "option_category": "person",
+      "variant_justification": "Distingue al portavoz dentro del grupo mediante conducta e interlocutor.",
+      "authored_content_sha256": "6d60b76dba2908743e94866a8f16475dac34415b8e261f2540c6059ff780b086",
+      "source_ref": "Daniel 2:14",
+      "source_quote": "Entonces Daniel habló sabia y prudentemente a Arioc, capitán de la guardia del rey, que había salido para matar a los sabios de Babilonia.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Cómo habló Daniel a Arioc cuando éste salió a ejecutar la sentencia?",
+          "family": "single_choice_contextual",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-003",
+      "source_unit_id": "DAN2-V015",
+      "fact_id": "DAN2-V015-F03",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "La pregunta de Daniel a Arioc no cuestiona sólo el edicto, sino la velocidad de su publicación: «¿por qué ... tan ____?».",
+      "options": [
+        "apresuradamente",
+        "secretamente",
+        "injustamente",
+        "tardíamente"
+      ],
+      "evidence_excerpt": "¿Cuál es la causa de que este edicto se publique de parte del rey tan apresuradamente?",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "edict_timing",
+      "option_category": "adverb",
+      "variant_justification": "Evalúa el matiz temporal dentro de la pregunta causal.",
+      "authored_content_sha256": "26cb6071dfdc7108c1206ae64fd2f7843f5b748151146be16b8435b404df7ebc",
+      "source_ref": "Daniel 2:15",
+      "source_quote": "Habló y dijo a Arioc, capitán del rey: —¿Cuál es la causa de que este edicto se publique de parte del rey tan apresuradamente? Entonces Arioc hizo saber a Daniel lo que había;",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Daniel pidió a Arioc conocer ____.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-004",
+      "source_unit_id": "DAN2-V016",
+      "fact_id": "DAN2-V016-F03",
+      "family": "true_false",
+      "subtype": "cause_consequence",
+      "question": "Daniel pidió al rey tiempo y vinculó esa concesión con una promesa concreta: él entregaría la interpretación.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "pidió al rey que le concediera tiempo, que él daría al rey la interpretación.",
+      "difficulty": "hard",
+      "importance": "critical",
+      "relation_type": "request_commitment",
+      "option_category": "truth_value",
+      "variant_justification": "Verifica la estructura petición-compromiso, no una inversión léxica.",
+      "authored_content_sha256": "92cf0e07ca56a419d39cbbc5ec1cfa806aec21ff88c3bfa3c476ad1539a35359",
+      "source_ref": "Daniel 2:16",
+      "source_quote": "y Daniel entró y pidió al rey que le concediera tiempo, que él daría al rey la interpretación.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Daniel pidió al rey que le concediera riquezas y afirmó que le daría la interpretación.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-005",
+      "source_unit_id": "DAN2-V017",
+      "fact_id": "DAN2-V017-F01",
+      "family": "single_choice_direct",
+      "subtype": "narrative_order",
+      "question": "Al comunicar la crisis en casa, ¿qué compañero aparece primero en la enumeración que continúa con Misael y Azarías?",
+      "options": [
+        "Ananías",
+        "Arioc",
+        "Daniel",
+        "Nabucodonosor"
+      ],
+      "evidence_excerpt": "hizo saber a Ananías, Misael y Azarías, sus compañeros, lo que sucedía",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "ordered_companion_list",
+      "option_category": "person",
+      "variant_justification": "Exige posición en una lista y función narrativa, no simple parentesco.",
+      "authored_content_sha256": "8f234ada355affe9e453c8f95c74d91941f998d7b1a8b599425fd173de16da5c",
+      "source_ref": "Daniel 2:17",
+      "source_quote": "Luego se fue Daniel a su casa e hizo saber a Ananías, Misael y Azarías, sus compañeros, lo que sucedía",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿A qué tres compañeros comunicó Daniel lo que estaba sucediendo?",
+          "family": "single_choice_direct",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-006",
+      "source_unit_id": "DAN2-V018",
+      "fact_id": "DAN2-V018-F03",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Para evitar perecer con los sabios, los compañeros debían pedir misericordias del ____ del cielo acerca del misterio.",
+      "options": [
+        "Dios",
+        "rey",
+        "capitán",
+        "consejo"
+      ],
+      "evidence_excerpt": "pidieran misericordias del Dios del cielo sobre este misterio, a fin de que Daniel y sus compañeros no perecieran",
+      "difficulty": "hard",
+      "importance": "critical",
+      "relation_type": "prayer_purpose",
+      "option_category": "person",
+      "variant_justification": "El hueco queda condicionado por causa, objeto y finalidad.",
+      "authored_content_sha256": "3e1d710b0d78dc6e24d5951022a8b3d4b2dd3c5574479ba809f0fae5704b47d7",
+      "source_ref": "Daniel 2:18",
+      "source_quote": "para que pidieran misericordias del Dios del cielo sobre este misterio, a fin de que Daniel y sus compañeros no perecieran con los otros sabios de Babilonia.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Para no perecer con los otros sabios, Daniel y sus compañeros debían pedir ____ sobre el misterio.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-007",
+      "source_unit_id": "DAN2-V019",
+      "fact_id": "DAN2-V019-F01",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué respuesta de Daniel sigue inmediatamente a la revelación nocturna del secreto?",
+      "options": [
+        "Bendijo al Dios del cielo",
+        "Corrió primero ante el rey",
+        "Ordenó detener a Arioc",
+        "Guardó silencio hasta la mañana"
+      ],
+      "evidence_excerpt": "El secreto le fue revelado a Daniel en visión de noche, por lo cual bendijo Daniel al Dios del cielo.",
+      "difficulty": "hard",
+      "importance": "critical",
+      "relation_type": "revelation_response",
+      "option_category": "action",
+      "variant_justification": "Evalúa la transición revelación-respuesta dentro de la cronología.",
+      "authored_content_sha256": "38527b8442b99d11d5c45c7711609ebf0e9fdb687b42936e5d4413b07c2159f9",
+      "source_ref": "Daniel 2:19",
+      "source_quote": "El secreto le fue revelado a Daniel en visión de noche, por lo cual bendijo Daniel al Dios del cielo.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué hizo Daniel inmediatamente después de recibir el secreto en visión nocturna?",
+          "family": "single_choice_contextual",
+          "subtype": "narrative_order"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-008",
+      "source_unit_id": "DAN2-V020",
+      "fact_id": "DAN2-V020-F01",
+      "family": "true_false",
+      "subtype": "principle",
+      "question": "Daniel fundamenta la bendición eterna del nombre de Dios atribuyéndole conjuntamente poder y sabiduría.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Sea bendito el nombre de Dios de siglos en siglos, porque suyos son el poder y la sabiduría.",
+      "difficulty": "hard",
+      "importance": "critical",
+      "relation_type": "praise_basis",
+      "option_category": "truth_value",
+      "variant_justification": "Comprueba fundamento y doble atributo, no una negación de la frase central.",
+      "authored_content_sha256": "70a24527f7ecfd0e6851f953c91e5021a4d0704d66065b1ab8307aee981c91d1",
+      "source_ref": "Daniel 2:20",
+      "source_quote": "Habló Daniel y dijo: «Sea bendito el nombre de Dios de siglos en siglos, porque suyos son el poder y la sabiduría.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Daniel atribuyó a Dios tanto el poder como la sabiduría.",
+          "family": "true_false",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-009",
+      "source_unit_id": "DAN2-V021",
+      "fact_id": "DAN2-V021-F01",
+      "family": "fill_choice",
+      "subtype": "comparison",
+      "question": "Dentro de la cadena en que quita y pone reyes, Dios también ____ los tiempos y las edades.",
+      "options": [
+        "muda",
+        "oculta",
+        "detiene",
+        "ignora"
+      ],
+      "evidence_excerpt": "Él muda los tiempos y las edades, quita reyes y pone reyes",
+      "difficulty": "hard",
+      "importance": "critical",
+      "relation_type": "sovereignty_actions",
+      "option_category": "verb",
+      "variant_justification": "Sitúa el verbo dentro de tres correspondencias de soberanía.",
+      "authored_content_sha256": "c304ebe78e157be0a16635d17980dddb0301f527acaa4bf04df1e0365f3fc2a5",
+      "source_ref": "Daniel 2:21",
+      "source_quote": "Él muda los tiempos y las edades, quita reyes y pone reyes; da la sabiduría a los sabios y la ciencia a los entendidos.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Al describir el gobierno de Dios sobre la historia, Daniel afirmó que él ____.",
+          "family": "fill_choice",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-010",
+      "source_unit_id": "DAN2-V022",
+      "fact_id": "DAN2-V022-F02",
+      "family": "single_choice_direct",
+      "subtype": "comparison",
+      "question": "En el contraste tinieblas–luz, ¿qué relación se atribuye a la luz respecto de Dios?",
+      "options": [
+        "Mora con él",
+        "Se esconde de él",
+        "Lucha contra él",
+        "Le revela lo desconocido"
+      ],
+      "evidence_excerpt": "conoce lo que está en tinieblas y con él mora la luz.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "light_presence",
+      "option_category": "relationship",
+      "variant_justification": "Transforma el verbo en una relación contrastiva entre conocimiento, tinieblas y luz.",
+      "authored_content_sha256": "04c7f8c198b869787362c6630f81a74717d18b97e54aada4883eb2b9e43ebb14",
+      "source_ref": "Daniel 2:22",
+      "source_quote": "Él revela lo profundo y lo escondido, conoce lo que está en tinieblas y con él mora la luz.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué realidad acompaña a Dios mientras conoce lo que está en tinieblas?",
+          "family": "single_choice_direct",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-011",
+      "source_unit_id": "DAN2-V023",
+      "fact_id": "DAN2-V023-F01",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Daniel agradece primero la capacidad recibida y luego el misterio revelado: «me has dado ____».",
+      "options": [
+        "sabiduría y fuerza",
+        "reino y majestad",
+        "oro y plata",
+        "tiempo y edades"
+      ],
+      "evidence_excerpt": "porque me has dado sabiduría y fuerza, y ahora me has revelado lo que te pedimos",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "gift_revelation_sequence",
+      "option_category": "paired_attribute",
+      "variant_justification": "Exige separar dos beneficios consecutivos en la gratitud.",
+      "authored_content_sha256": "fe3c5daa281923218e8f6c8b12d67cce21db5688a796174133e05b58028a0431",
+      "source_ref": "Daniel 2:23",
+      "source_quote": "A ti, Dios de mis padres, te doy gracias y te alabo, porque me has dado sabiduría y fuerza, y ahora me has revelado lo que te pedimos, pues nos has dado a conocer el asunto del rey.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Daniel agradeció al Dios de sus padres porque le había dado ____.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-012",
+      "source_unit_id": "DAN2-V024",
+      "fact_id": "DAN2-V024-F02",
+      "family": "true_false",
+      "subtype": "cause_consequence",
+      "question": "Aunque Arioc había sido designado para matar a los sabios, Daniel le ordenó preservarlos y pidió ser llevado ante el rey para interpretar.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Arioc, al cual el rey había puesto para matar a los sabios de Babilonia, y le dijo: —No mates a los sabios de Babilonia; llévame a la presencia del rey",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "death_order_intervention",
+      "option_category": "truth_value",
+      "variant_justification": "Verifica tres acciones y dos agentes, no una inversión binaria.",
+      "authored_content_sha256": "9ed7f2208d323c67a5e8174964404b50f6dd66df97e01a03a2669f1756a0c5d3",
+      "source_ref": "Daniel 2:24",
+      "source_quote": "Después de esto fue Daniel a Arioc, al cual el rey había puesto para matar a los sabios de Babilonia, y le dijo: —No mates a los sabios de Babilonia; llévame a la presencia del rey, y yo le daré la interpretación.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Daniel pidió a Arioc que no matara a los sabios y que lo llevara ante los magos de Babilonia.",
+          "family": "true_false",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-013",
+      "source_unit_id": "DAN2-V025",
+      "fact_id": "DAN2-V025-F01",
+      "family": "single_choice_contextual",
+      "subtype": "identification",
+      "question": "Cuando Arioc presenta al intérprete, ¿de qué grupo de deportados declara haberlo hallado?",
+      "options": [
+        "De Judá",
+        "De Egipto",
+        "De Media",
+        "De Persia"
+      ],
+      "evidence_excerpt": "He hallado un hombre de los deportados de Judá, el cual dará al rey la interpretación.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "exile_identity_role",
+      "option_category": "place",
+      "variant_justification": "Integra procedencia forzada y función de intérprete en la presentación.",
+      "authored_content_sha256": "11b3b1e6f863489f8c1e30a6a938c308f9064b14ac69b239deebf5a65639c153",
+      "source_ref": "Daniel 2:25",
+      "source_quote": "Entonces Arioc llevó prontamente a Daniel ante el rey, y le dijo así: —He hallado un hombre de los deportados de Judá, el cual dará al rey la interpretación.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Cómo presentó Arioc el origen de Daniel al llevarlo ante el rey?",
+          "family": "single_choice_contextual",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-014",
+      "source_unit_id": "DAN2-V026",
+      "fact_id": "DAN2-V026-F01",
+      "family": "fill_choice",
+      "subtype": "identification",
+      "question": "El rey dirige su pregunta al Daniel conocido en la corte por el nombre de ____.",
+      "options": [
+        "Beltsasar",
+        "Belsasar",
+        "Sadrac",
+        "Abed-nego"
+      ],
+      "evidence_excerpt": "dijo a Daniel, al cual llamaban Beltsasar: —¿Podrás tú hacerme conocer el sueño",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "dual_name_audience",
+      "option_category": "person",
+      "variant_justification": "El contexto cortesano y distractores onomásticos homogéneos elevan la discriminación.",
+      "authored_content_sha256": "9cbf685e4bc0500d13f3a1e8a4a7d38595d375c68a1c003b575b89c142f5f65b",
+      "source_ref": "Daniel 2:26",
+      "source_quote": "Respondió el rey y dijo a Daniel, al cual llamaban Beltsasar: —¿Podrás tú hacerme conocer el sueño que vi, y su interpretación?",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "El rey preguntó por el sueño a Daniel, al cual llamaban ____.",
+          "family": "fill_choice",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-015",
+      "source_unit_id": "DAN2-V027",
+      "fact_id": "DAN2-V027-F02",
+      "family": "single_choice_direct",
+      "subtype": "comparison",
+      "question": "¿Qué relación establece Daniel entre el misterio exigido por el rey y la capacidad conjunta de sabios, astrólogos, magos y adivinos?",
+      "options": [
+        "Ninguno puede revelarlo",
+        "Todos pueden revelarlo por consenso",
+        "Sólo los astrólogos pueden revelarlo",
+        "Los magos pueden revelarlo sin interpretación"
+      ],
+      "evidence_excerpt": "El misterio que el rey demanda, ni sabios ni astrólogos, ni magos ni adivinos lo pueden revelar al rey.",
+      "difficulty": "hard",
+      "importance": "critical",
+      "relation_type": "human_inability_scope",
+      "option_category": "claim",
+      "variant_justification": "Evalúa demanda, cuatro grupos y negación total como una sola estructura.",
+      "authored_content_sha256": "537dae5eb3fd85f7378e234774d2e31f065fc8e7f14bfbbd6474600a65e16396",
+      "source_ref": "Daniel 2:27",
+      "source_quote": "Daniel respondió al rey diciendo: —El misterio que el rey demanda, ni sabios ni astrólogos, ni magos ni adivinos lo pueden revelar al rey.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué grupos declaró Daniel incapaces de revelar el misterio pedido por el rey?",
+          "family": "single_choice_direct",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-016",
+      "source_unit_id": "DAN2-V028",
+      "fact_id": "DAN2-V028-F01",
+      "family": "true_false",
+      "subtype": "cause_consequence",
+      "question": "Después de negar capacidad a los especialistas, Daniel atribuye al Dios del cielo revelar misterios y comunicar a Nabucodonosor lo que ocurrirá en los últimos días.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "hay un Dios en los cielos que revela los misterios, y él ha hecho saber al rey Nabucodonosor lo que ha de acontecer en los últimos días.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "divine_revelation_contrast",
+      "option_category": "truth_value",
+      "variant_justification": "Comprueba la transición argumental completa desde incapacidad humana a revelación divina.",
+      "authored_content_sha256": "1e5367962aeecac7a7e16c52576c749b199ff24d74e171f982e18cb02fa74f73",
+      "source_ref": "Daniel 2:28",
+      "source_quote": "Pero hay un Dios en los cielos que revela los misterios, y él ha hecho saber al rey Nabucodonosor lo que ha de acontecer en los últimos días. Éstos son tu sueño y las visiones que has tenido en tu cama:",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Daniel afirmó que hay un Dios en los cielos que revela los misterios y dio a conocer lo que ocurriría en los últimos días.",
+          "family": "true_false",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-017",
+      "source_unit_id": "DAN2-V029",
+      "fact_id": "DAN2-V029-F01",
+      "family": "fill_choice",
+      "subtype": "narrative_order",
+      "question": "Antes de que el revelador mostrara lo futuro, al rey le ____ pensamientos en su cama acerca de lo que sucedería.",
+      "options": [
+        "vinieron",
+        "faltaron",
+        "ocultaron",
+        "cesaron"
+      ],
+      "evidence_excerpt": "te vinieron pensamientos por saber lo que había de suceder en lo por venir; y el que revela los misterios te mostró lo que ha de ser.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "thought_revelation_sequence",
+      "option_category": "verb",
+      "variant_justification": "El verbo se decide por la cronología causa-respuesta.",
+      "authored_content_sha256": "1ed0005b10e47979a6121cc258c3646fada9e1a36f9a861f7477fd5c1206ff91",
+      "source_ref": "Daniel 2:29",
+      "source_quote": "Estando tú, rey, en tu cama, te vinieron pensamientos por saber lo que había de suceder en lo por venir; y el que revela los misterios te mostró lo que ha de ser.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Los pensamientos del rey en su cama se dirigieron a conocer ____.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-018",
+      "source_unit_id": "DAN2-V030",
+      "fact_id": "DAN2-V030-F01",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué propósito da Daniel a la revelación, al negar que proceda de una sabiduría personal superior?",
+      "options": [
+        "Dar al rey la interpretación y hacerle entender sus pensamientos",
+        "Probar que Daniel supera a todos los vivientes",
+        "Conceder a Arioc autoridad sobre los sabios",
+        "Ocultar el sueño hasta una fecha futura"
+      ],
+      "evidence_excerpt": "no porque en mí haya más sabiduría que en los demás vivientes, sino para que se dé a conocer al rey la interpretación y para que entiendas los pensamientos de tu corazón.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "revelation_purpose_contrast",
+      "option_category": "purpose",
+      "variant_justification": "Exige resolver la oposición «no porque... sino para» con doble finalidad.",
+      "authored_content_sha256": "e803f6e723a519e6e0344e5ffb4d359c0ee62c77e1ff38c39941705036ac7852",
+      "source_ref": "Daniel 2:30",
+      "source_quote": "Y a mí me ha sido revelado este misterio, no porque en mí haya más sabiduría que en los demás vivientes, sino para que se dé a conocer al rey la interpretación y para que entiendas los pensamientos de tu corazón.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Con qué propósito se reveló el misterio a Daniel, aparte de cualquier sabiduría superior personal?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-019",
+      "source_unit_id": "DAN2-V031",
+      "fact_id": "DAN2-V031-F01",
+      "family": "single_choice_direct",
+      "subtype": "comparison",
+      "question": "Tras describir tamaño, gloria y posición de la imagen, ¿qué cualidad resume el efecto de su aspecto?",
+      "options": [
+        "Terrible",
+        "Familiar",
+        "Frágil",
+        "Oculto"
+      ],
+      "evidence_excerpt": "Estaba en pie delante de ti y su aspecto era terrible.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "vision_appearance",
+      "option_category": "attribute",
+      "variant_justification": "Integra cuatro rasgos descriptivos antes de pedir el efecto visual.",
+      "authored_content_sha256": "2b7d43a5b2bdb4be1e0ec7b910bbe142c5609c6d90e9d342a9b9fcbf05191d9c",
+      "source_ref": "Daniel 2:31",
+      "source_quote": "Tú, rey, veías en tu sueño una gran imagen. Esta imagen era muy grande y su gloria, muy sublime. Estaba en pie delante de ti y su aspecto era terrible.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué rasgo del aspecto de la gran imagen intensificaba el impacto de la visión?",
+          "family": "single_choice_direct",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN2-C4-020",
+      "source_unit_id": "DAN2-V032",
+      "fact_id": "DAN2-V032-F01",
+      "family": "true_false",
+      "subtype": "symbol_interpretation",
+      "question": "La descripción desciende de cabeza de oro a pecho y brazos de plata, y luego a vientre y muslos de bronce.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "La cabeza de esta imagen era de oro fino; su pecho y sus brazos, de plata; su vientre y sus muslos, de bronce",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "body_material_sequence",
+      "option_category": "truth_value",
+      "variant_justification": "Evalúa tres mapeos y orden, no la inversión de una sola pareja.",
+      "authored_content_sha256": "20deb91c74814aaeaee2099f63460da276a38d104b44c9b0edf0d9e386e0abec",
+      "source_ref": "Daniel 2:32",
+      "source_quote": "La cabeza de esta imagen era de oro fino; su pecho y sus brazos, de plata; su vientre y sus muslos, de bronce;",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "La cabeza de la gran imagen era de plata fina.",
+          "family": "true_false",
+          "subtype": "prophetic_detail"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "63cf30c21985e25e03935edb06bc60b17906965046e2ae045fc1047be0505d5b"
+}

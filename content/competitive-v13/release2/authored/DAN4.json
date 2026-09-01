@@ -1,0 +1,446 @@
+[
+  {
+    "id": "R2-B-DAN4-008",
+    "source_unit_id": "DAN4-V008",
+    "fact_id": "DAN4-V008-F01",
+    "family": "single_choice_direct",
+    "subtype": "identification",
+    "question": "¿Qué triple correspondencia conserva identidad, nombre babilónico y explicación religiosa dada por el rey?",
+    "options": [
+      "Daniel — Beltsasar — nombre asociado al dios del rey",
+      "Ananías — Sadrac — título del jefe de los magos",
+      "Misael — Mesac — nombre del vigilante santo",
+      "Azarías — Abed-nego — nombre del árbol"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Daniel — Beltsasar — nombre asociado al dios del rey"
+    ],
+    "explanation": "Nabucodonosor identifica a Daniel como Beltsasar y relaciona ese nombre con el de su dios.",
+    "why_distractors_fail": {
+      "Ananías — Sadrac — título del jefe de los magos": "La pareja existe, pero Sadrac no es ese título.",
+      "Misael — Mesac — nombre del vigilante santo": "Mesac no designa al vigilante.",
+      "Azarías — Abed-nego — nombre del árbol": "Abed-nego no nombra al árbol."
+    },
+    "evidence_excerpt": "Daniel, cuyo nombre es Beltsasar, como el nombre de mi dios",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "relationship",
+    "option_category": "identity_name_reference",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "La triple correspondencia impide resolver el hecho recordando sólo un nombre.",
+    "variant_justification": "La central pide Beltsasar; esta variante lo relaciona con la identidad hebrea y la explicación del rey.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B-DAN4-011",
+    "source_unit_id": "DAN4-V017",
+    "fact_id": "DAN4-V017-F01",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué formulación conserva gobernante, ámbito, libertad de otorgamiento y criterio paradójico de designación?",
+    "options": [
+      "El Altísimo gobierna el reino humano, lo da a quien quiere y puede constituir al más humilde",
+      "Los vigilantes gobiernan Babilonia, la heredan por decreto y eligen al más fuerte",
+      "El rey gobierna el cielo, entrega los pueblos a los sabios y corona al más rico",
+      "Los santos gobiernan sólo el templo, reparten cargos y excluyen al humilde"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "El Altísimo gobierna el reino humano, lo da a quien quiere y puede constituir al más humilde"
+    ],
+    "explanation": "La resolución enseña que el Altísimo gobierna, entrega el reino según su voluntad y puede poner al más humilde.",
+    "why_distractors_fail": {
+      "Los vigilantes gobiernan Babilonia, la heredan por decreto y eligen al más fuerte": "Confunde quienes decretan con quien gobierna y revierte el criterio.",
+      "El rey gobierna el cielo, entrega los pueblos a los sabios y corona al más rico": "Cambia gobernante, ámbito, receptores y criterio.",
+      "Los santos gobiernan sólo el templo, reparten cargos y excluyen al humilde": "Reduce el ámbito y niega la designación expresada."
+    },
+    "evidence_excerpt": "el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "principle",
+    "option_category": "sovereignty_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "La respuesta exige mantener cuatro componentes de la doctrina de soberanía.",
+    "variant_justification": "La central recupera sólo al gobernante; ésta evalúa el principio completo y sus dos consecuencias.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B3-DAN4-018A",
+    "source_unit_id": "DAN4-V018",
+    "fact_id": "DAN4-V018-F02",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Qué contraste explica por qué la interpretación pasa de los sabios del reino a un solo destinatario?",
+    "options": [
+      "Ninguno de los sabios pudo; Beltsasar sí podía porque en él habitaba el espíritu de los dioses santos",
+      "Todos los sabios pudieron; Beltsasar sólo registró sus respuestas",
+      "Los sabios se negaron; Beltsasar recibió la interpretación del rey",
+      "Nabucodonosor interpretó; Beltsasar confirmó la explicación"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Ninguno de los sabios pudo; Beltsasar sí podía porque en él habitaba el espíritu de los dioses santos"
+    ],
+    "explanation": "El rey contrapone el fracaso colectivo con la capacidad de Beltsasar y da como razón el espíritu que habita en él.",
+    "why_distractors_fail": {
+      "Todos los sabios pudieron; Beltsasar sólo registró sus respuestas": "Invierte el fracaso de los sabios y reduce el papel de Beltsasar.",
+      "Los sabios se negaron; Beltsasar recibió la interpretación del rey": "Cambia incapacidad por negativa y atribuye la interpretación al rey.",
+      "Nabucodonosor interpretó; Beltsasar confirmó la explicación": "Intercambia las funciones del rey y del intérprete."
+    },
+    "evidence_excerpt": "ninguno entre los sabios de mi reino lo ha podido interpretar; pero tú puedes, porque habita en ti el espíritu de los dioses santos",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "cause_consequence",
+    "option_category": "group_person_reason",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige conservar fracaso colectivo, excepción individual y fundamento.",
+    "variant_justification": "La central identifica al intérprete; esta variante reconstruye el contraste que justifica su elección.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B3-DAN4-019",
+    "source_unit_id": "DAN4-V019",
+    "fact_id": "DAN4-V019-F03",
+    "family": "single_choice_contextual",
+    "subtype": "speaker_addressee",
+    "question": "¿Qué correspondencia conserva el tono respetuoso de Beltsasar y distribuye correctamente sueño e interpretación entre dos grupos hostiles?",
+    "options": [
+      "«Señor mío»; sueño para tus enemigos e interpretación para quienes te quieren mal",
+      "«Rey eterno»; sueño para tus sabios e interpretación para tus príncipes",
+      "«Jefe mío»; sueño para los vigilantes e interpretación para los santos",
+      "«Hermano mío»; sueño para tus padres e interpretación para tu pueblo"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "«Señor mío»; sueño para tus enemigos e interpretación para quienes te quieren mal"
+    ],
+    "explanation": "Beltsasar se dirige al rey como «Señor mío» y desea el sueño a sus enemigos y la interpretación a quienes le quieren mal.",
+    "why_distractors_fail": {
+      "«Rey eterno»; sueño para tus sabios e interpretación para tus príncipes": "Cambia tratamiento y destinatarios.",
+      "«Jefe mío»; sueño para los vigilantes e interpretación para los santos": "Introduce actores de la visión como destinatarios.",
+      "«Hermano mío»; sueño para tus padres e interpretación para tu pueblo": "Añade un vínculo y grupos ausentes."
+    },
+    "evidence_excerpt": "Señor mío, el sueño sea para tus enemigos y su interpretación para los que mal te quieren",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "speaker_addressee",
+    "option_category": "address_content_recipient",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Obliga a mapear tratamiento, contenido y dos destinatarios.",
+    "variant_justification": "La central pregunta sólo por enemigos; ésta audita la estructura completa de la respuesta.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B3-DAN4-022A",
+    "source_unit_id": "DAN4-V022",
+    "fact_id": "DAN4-V022-F03",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "question": "¿Qué mapeo entre atributo real y alcance espacial interpreta correctamente las dos dimensiones del árbol?",
+    "options": [
+      "Grandeza → cielo; dominio → confines de la tierra",
+      "Dominio → cielo; grandeza → interior del palacio",
+      "Riqueza → cielo; sabiduría → confines de Babilonia",
+      "Fuerza → río; autoridad → siete tiempos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Grandeza → cielo; dominio → confines de la tierra"
+    ],
+    "explanation": "Daniel aplica la altura del árbol a la grandeza que llega al cielo y su visibilidad al dominio que alcanza los confines.",
+    "why_distractors_fail": {
+      "Dominio → cielo; grandeza → interior del palacio": "Invierte un atributo y limita el otro sin apoyo.",
+      "Riqueza → cielo; sabiduría → confines de Babilonia": "Sustituye ambos atributos.",
+      "Fuerza → río; autoridad → siete tiempos": "Mezcla elementos de otras partes de la visión."
+    },
+    "evidence_excerpt": "creció tu grandeza y ha llegado hasta el cielo, y tu dominio hasta los confines de la tierra",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "comparison",
+    "option_category": "attribute_extent_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige asignar dos atributos a dos extensiones sin intercambiarlos.",
+    "variant_justification": "La central pregunta por grandeza; ésta evalúa el paralelismo interpretativo completo.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B3-DAN4-022B",
+    "source_unit_id": "DAN4-V022",
+    "fact_id": "DAN4-V022-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "symbol_interpretation",
+    "question": "¿Cuál interpretación conserva referente, desarrollo y doble alcance del símbolo?",
+    "options": [
+      "El árbol es el rey: creció y se fortaleció; su grandeza llegó al cielo y su dominio a los confines",
+      "El árbol es Babilonia: perdió fuerza; su riqueza quedó en el palacio y su dominio en el río",
+      "El árbol es Daniel: recibió sabiduría; su nombre llegó al cielo y su visión a los medos",
+      "El árbol es Ciro: cortó la cepa; su ejército llegó al cielo y su reino a siete tiempos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "El árbol es el rey: creció y se fortaleció; su grandeza llegó al cielo y su dominio a los confines"
+    ],
+    "explanation": "Daniel identifica al rey con el árbol y traduce crecimiento, fuerza, altura y extensión en grandeza y dominio.",
+    "why_distractors_fail": {
+      "El árbol es Babilonia: perdió fuerza; su riqueza quedó en el palacio y su dominio en el río": "Cambia referente, trayectoria y alcances.",
+      "El árbol es Daniel: recibió sabiduría; su nombre llegó al cielo y su visión a los medos": "Introduce otro referente y propiedades ajenas.",
+      "El árbol es Ciro: cortó la cepa; su ejército llegó al cielo y su reino a siete tiempos": "Mezcla personajes y detalles sin apoyo."
+    },
+    "evidence_excerpt": "tú mismo eres, oh rey, que creciste y te hiciste fuerte, pues creció tu grandeza y ha llegado hasta el cielo, y tu dominio hasta los confines de la tierra",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "symbol_interpretation",
+    "option_category": "symbol_referent_extent",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Evalúa la traducción completa del símbolo al rey.",
+    "variant_justification": "La central resume la aplicación; esta variante exige adjudicar referente, trayectoria y dos alcances.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B3-DAN4-023",
+    "source_unit_id": "DAN4-V023",
+    "fact_id": "DAN4-V023-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué secuencia distingue lo destruido de lo preservado y añade condición física, entorno y duración?",
+    "options": [
+      "Cortar y destruir árbol → dejar cepa atada con hierro y bronce → rocío y bestias → siete tiempos",
+      "Preservar árbol completo → soltar raíces → guardar en palacio → una generación",
+      "Cortar cepa → quemar raíces → ocultar entre aves → setenta años",
+      "Fortalecer árbol → coronar copa → apartar bestias → tres años"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Cortar y destruir árbol → dejar cepa atada con hierro y bronce → rocío y bestias → siete tiempos"
+    ],
+    "explanation": "La orden destruye el árbol, conserva la cepa atada en la hierba, la expone a rocío y bestias y fija siete tiempos.",
+    "why_distractors_fail": {
+      "Preservar árbol completo → soltar raíces → guardar en palacio → una generación": "Invierte destrucción y atadura, y cambia lugar y plazo.",
+      "Cortar cepa → quemar raíces → ocultar entre aves → setenta años": "Destruye lo preservado y mezcla otro periodo.",
+      "Fortalecer árbol → coronar copa → apartar bestias → tres años": "Sustituye cada etapa por acciones ajenas."
+    },
+    "evidence_excerpt": "Cortad el árbol y destruidlo; mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce en la hierba del campo; que lo empape el rocío del cielo, y con las bestias del campo sea su parte hasta que pasen sobre él siete tiempos",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "narrative_order",
+    "option_category": "event_condition_duration",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "La respuesta requiere seis componentes en orden.",
+    "variant_justification": "La central solicita un resumen; esta variante discrimina secuencia, contraste, condiciones y duración.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B4-DAN4-025",
+    "source_unit_id": "DAN4-V025",
+    "fact_id": "DAN4-V025-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué cadena conserva expulsión, nueva convivencia, sustento, exposición, duración y aprendizaje final?",
+    "options": [
+      "Fuera de los hombres → con bestias → hierba como bueyes → rocío → siete tiempos → reconocer el dominio del Altísimo",
+      "Fuera del palacio → con pastores → pan y agua → sombra → doce meses → recuperar Babilonia",
+      "Entre los hombres → con sabios → manjares reales → fuego → setenta años → reconocer a Daniel",
+      "Fuera del reino → con aves → frutos del árbol → lluvia → tres años → reconocer a los vigilantes"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Fuera de los hombres → con bestias → hierba como bueyes → rocío → siete tiempos → reconocer el dominio del Altísimo"
+    ],
+    "explanation": "La sentencia encadena expulsión, habitación con bestias, hierba, rocío, siete tiempos y reconocimiento de la soberanía divina.",
+    "why_distractors_fail": {
+      "Fuera del palacio → con pastores → pan y agua → sombra → doce meses → recuperar Babilonia": "Sustituye cada etapa por datos ajenos.",
+      "Entre los hombres → con sabios → manjares reales → fuego → setenta años → reconocer a Daniel": "Invierte la expulsión y mezcla episodios.",
+      "Fuera del reino → con aves → frutos del árbol → lluvia → tres años → reconocer a los vigilantes": "Cambia convivencia, sustento, plazo y aprendizaje."
+    },
+    "evidence_excerpt": "te echarán de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado; y siete tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "narrative_order",
+    "option_category": "event_condition_duration",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige mantener seis eslabones y su límite pedagógico.",
+    "variant_justification": "La central resume la experiencia; esta presentación adjudica su secuencia completa.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B4-DAN4-026",
+    "source_unit_id": "DAN4-V026",
+    "fact_id": "DAN4-V026-F03",
+    "family": "single_choice_direct",
+    "subtype": "symbol_interpretation",
+    "question": "¿Qué correspondencia conecta la orden simbólica, su resultado político y la condición previa para ese resultado?",
+    "options": [
+      "Dejar la cepa → reino firme → después de reconocer que el cielo gobierna",
+      "Cortar la cepa → reino dividido → antes de reconocer a los vigilantes",
+      "Atar la copa → reino oculto → mientras los sabios interpretan",
+      "Regar las ramas → reino ampliado → después de doce meses"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Dejar la cepa → reino firme → después de reconocer que el cielo gobierna"
+    ],
+    "explanation": "La cepa preservada significa que el reino quedará firme una vez que el rey reconozca el gobierno del cielo.",
+    "why_distractors_fail": {
+      "Cortar la cepa → reino dividido → antes de reconocer a los vigilantes": "Destruye lo preservado y cambia resultado y condición.",
+      "Atar la copa → reino oculto → mientras los sabios interpretan": "Ninguno de esos elementos aparece en la explicación.",
+      "Regar las ramas → reino ampliado → después de doce meses": "Confunde el símbolo y el marco temporal."
+    },
+    "evidence_excerpt": "dejar en la tierra la cepa de las raíces del mismo árbol, significa que tu reino te quedará firme, después que reconozcas que es el cielo el que gobierna",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "symbol_interpretation",
+    "option_category": "symbol_result_condition",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Une símbolo, promesa política y condición espiritual.",
+    "variant_justification": "La central pregunta sólo qué queda firme; ésta exige interpretar causa simbólica y condición.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B4-DAN4-027",
+    "source_unit_id": "DAN4-V027",
+    "fact_id": "DAN4-V027-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué mapeo conserva las dos faltas, sus remedios respectivos y el posible resultado señalado por Daniel?",
+    "options": [
+      "Pecados → justicia; iniquidades → misericordias con oprimidos; posible prolongación de tranquilidad",
+      "Pecados → sacrificios; iniquidades → tributos al rey; dominio inmediato",
+      "Pecados → ayuno; iniquidades → expulsión de sabios; siete tiempos de paz",
+      "Pecados → poder; iniquidades → gloria propia; conservación del palacio"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Pecados → justicia; iniquidades → misericordias con oprimidos; posible prolongación de tranquilidad"
+    ],
+    "explanation": "Daniel empareja pecados con justicia e iniquidades con misericordia hacia oprimidos, y presenta como posible efecto prolongar la tranquilidad.",
+    "why_distractors_fail": {
+      "Pecados → sacrificios; iniquidades → tributos al rey; dominio inmediato": "Sustituye ambos remedios y asegura un resultado no prometido.",
+      "Pecados → ayuno; iniquidades → expulsión de sabios; siete tiempos de paz": "Mezcla acciones y duración de otros episodios.",
+      "Pecados → poder; iniquidades → gloria propia; conservación del palacio": "Convierte el consejo en la soberbia que debía abandonar."
+    },
+    "evidence_excerpt": "redime tus pecados con justicia, y tus iniquidades haciendo misericordias con los oprimidos, pues tal vez será eso una prolongación de tu tranquilidad",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "cause_consequence",
+    "option_category": "fault_remedy_result",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "La respuesta exige dos correspondencias y un resultado no garantizado.",
+    "variant_justification": "La central resume conducta y resultado; ésta discrimina cada remedio y la modalidad del efecto.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B4-DAN4-029",
+    "source_unit_id": "DAN4-V029",
+    "fact_id": "DAN4-V029-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué combinación fija simultáneamente el intervalo, la acción en curso y el escenario donde comienza el cumplimiento?",
+    "options": [
+      "Doce meses → paseo del rey → palacio real de Babilonia",
+      "Siete tiempos → sueño del rey → campo entre bestias",
+      "Setenta años → oración de Daniel → templo de Jerusalén",
+      "Tres años → examen de jóvenes → corte de Susa"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Doce meses → paseo del rey → palacio real de Babilonia"
+    ],
+    "explanation": "El cumplimiento se introduce doce meses después, mientras el rey pasea por el palacio real de Babilonia.",
+    "why_distractors_fail": {
+      "Siete tiempos → sueño del rey → campo entre bestias": "Combina la duración de la sentencia con otra escena.",
+      "Setenta años → oración de Daniel → templo de Jerusalén": "Pertenece a otra profecía y otro lugar.",
+      "Tres años → examen de jóvenes → corte de Susa": "Mezcla la educación de los jóvenes con un escenario ajeno."
+    },
+    "evidence_excerpt": "Al cabo de doce meses, paseando por el palacio real de Babilonia",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "relationship",
+    "option_category": "time_action_place",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Evita acertar recordando sólo el número del intervalo.",
+    "variant_justification": "La central pide el marco; esta presentación exige el mapeo completo entre tiempo, acción y espacio.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B4-DAN4-030",
+    "source_unit_id": "DAN4-V030",
+    "fact_id": "DAN4-V030-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué cadena de atribuciones revela la soberbia del discurso real antes de la humillación?",
+    "options": [
+      "Babilonia como obra propia → fuerza de mi poder → gloria de mi majestad",
+      "Babilonia como don del cielo → misericordia con oprimidos → gloria del Altísimo",
+      "Jerusalén como obra propia → sabiduría de Daniel → honra de los vigilantes",
+      "El palacio como obra de los sabios → fuerza de los príncipes → gloria del pueblo"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Babilonia como obra propia → fuerza de mi poder → gloria de mi majestad"
+    ],
+    "explanation": "El rey se atribuye la edificación de Babilonia y la vincula con su propio poder y majestad.",
+    "why_distractors_fail": {
+      "Babilonia como don del cielo → misericordia con oprimidos → gloria del Altísimo": "Expresa la corrección moral opuesta al discurso.",
+      "Jerusalén como obra propia → sabiduría de Daniel → honra de los vigilantes": "Cambia ciudad, fundamento y destinatario de gloria.",
+      "El palacio como obra de los sabios → fuerza de los príncipes → gloria del pueblo": "Transfiere a otros las tres atribuciones personales."
+    },
+    "evidence_excerpt": "la gran Babilonia que yo edifiqué para casa real con la fuerza de mi poder, y para gloria de mi majestad",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "principle",
+    "option_category": "object_agent_motive",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Identifica objeto, agente atribuido y dos motivos egocéntricos.",
+    "variant_justification": "La central resume la soberbia; ésta reconstruye su arquitectura retórica en tres pasos.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

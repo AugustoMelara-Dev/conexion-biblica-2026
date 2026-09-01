@@ -1,0 +1,133 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-56000e7956c833adc5c0",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2C9-DAN3-V004-V11-F02",
+      "source_unit_id": "DAN3-V004",
+      "fact_id": "DAN3-V004-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "En el inicio de la proclamación, ¿qué correspondencia conserva portavoz, modo de anuncio y alcance de los destinatarios?",
+      "options": [
+        "Pregonero → en alta voz → pueblos, naciones y lenguas",
+        "Rey → por escrito → únicamente los gobernadores provinciales",
+        "Capitanes → mediante música → solo los habitantes de Babilonia",
+        "Consejeros → en secreto → los tres judíos acusados"
+      ],
+      "evidence_excerpt": "Y el pregonero anunciaba en alta voz: «Se os ordena a vosotros, pueblos, naciones y lenguas,",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "proclamation_speaker_mode_audience",
+      "option_category": "multi_element_mapping",
+      "variant_justification": "La variante exige reconstruir una correspondencia triple, no solo recuperar la audiencia de la presentación existente.",
+      "authored_content_sha256": "c042ec2927217d08f404721e79523c45af9f44ebb37b9fd6e6b2f55d17bf4907",
+      "source_ref": "Daniel 3:4",
+      "source_quote": "Y el pregonero anunciaba en alta voz: «Se os ordena a vosotros, pueblos, naciones y lenguas,",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿A qué audiencia universal dirigió el pregonero la orden real?",
+          "family": "single_choice_contextual",
+          "subtype": "speaker_addressee"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2C9-DAN3-V020-V11-F02",
+      "source_unit_id": "DAN3-V020",
+      "fact_id": "DAN3-V020-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué cadena preserva quién dio la orden, qué clase de ejecutores eligió, la tarea preparatoria y el destino previsto para los tres?",
+      "options": [
+        "Nabucodonosor → hombres muy vigorosos de su ejército → atar a Sadrac, Mesac y Abed-nego → echarlos al horno ardiente",
+        "El pregonero → músicos de la provincia → desatar a los tres → llevarlos ante la estatua",
+        "Los caldeos → consejeros del rey → interrogar a los tres → enviarlos fuera de Babilonia",
+        "Los sátrapas → soldados heridos → vestir a los tres → encerrarlos en el palacio"
+      ],
+      "evidence_excerpt": "Y ordenó a hombres muy vigorosos que tenía en su ejército, que ataran a Sadrac, Mesac y Abed-nego, para echarlos en el horno de fuego ardiente.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "issuer_agents_preparation_destination",
+      "option_category": "execution_chain",
+      "variant_justification": "Amplía la pregunta existente sobre los ejecutores hacia toda la cadena de ejecución sin reutilizar su operación.",
+      "authored_content_sha256": "7264307b6b615e1c172b6738300b1195a2898f1b1816d82fbbd755a30d6e0996",
+      "source_ref": "Daniel 3:20",
+      "source_quote": "Y ordenó a hombres muy vigorosos que tenía en su ejército, que ataran a Sadrac, Mesac y Abed-nego, para echarlos en el horno de fuego ardiente.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿A quiénes escogió el rey para atar a Sadrac, Mesac y Abed-nego?",
+          "family": "single_choice_contextual",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2C9-DAN3-V024-F01",
+      "source_unit_id": "DAN3-V024",
+      "fact_id": "DAN3-V024-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "Ante lo que percibió en el horno, ¿qué secuencia ordena reacción del rey, movimiento, consulta y confirmación recibida?",
+      "options": [
+        "Se espantó → se levantó apresuradamente → preguntó a su consejo si habían echado a tres hombres atados → ellos confirmaron",
+        "Se alegró → permaneció sentado → preguntó al ejército si había arrojado a cuatro hombres sueltos → ellos lo negaron",
+        "Se enojó → se acercó lentamente → preguntó a los caldeos si habían liberado a tres hombres → ellos guardaron silencio",
+        "Se maravilló → convocó a los músicos → preguntó a los sátrapas si el horno estaba frío → ellos lo confirmaron"
+      ],
+      "evidence_excerpt": "Entonces el rey Nabucodonosor se espantó, se levantó apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego? Ellos respondieron al rey: —Es verdad, oh rey.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "reaction_movement_consultation_confirmation",
+      "option_category": "narrative_sequence",
+      "variant_justification": "La presentación central solo verifica el número; esta variante exige reconstruir la escena completa y su orden.",
+      "authored_content_sha256": "bb1183dd6a9aa105b366ab35b40fd3b44ec320d45f8087199bea436c8946aaf1",
+      "source_ref": "Daniel 3:24",
+      "source_quote": "Entonces el rey Nabucodonosor se espantó, se levantó apresuradamente y dijo a los de su consejo: —¿No echaron a tres hombres atados dentro del fuego? Ellos respondieron al rey: —Es verdad, oh rey.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Nabucodonosor recordó ante su consejo que habían echado a cuatro hombres atados al fuego.",
+          "family": "true_false",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2C9-DAN3-V025-F01",
+      "source_unit_id": "DAN3-V025",
+      "fact_id": "DAN3-V025-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué contraste reúne lo que el rey contó, la condición de los hombres, su actividad, el efecto del fuego y la apariencia singular del cuarto?",
+      "options": [
+        "Cuatro → sueltos → se paseaban en el fuego → sin daño → el cuarto semejante a un hijo de los dioses",
+        "Tres → atados → yacían fuera del horno → quemados → el tercero semejante a un soldado",
+        "Siete → sueltos → adoraban la estatua → con sus ropas ardiendo → el séptimo semejante al rey",
+        "Cuatro → encadenados → corrían hacia la puerta → heridos → el primero semejante a un caldeo"
+      ],
+      "evidence_excerpt": "Y él dijo: —Sin embargo, yo veo cuatro hombres sueltos, que se pasean en medio del fuego sin sufrir ningún daño; y el aspecto del cuarto es semejante a un hijo de los dioses.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "count_condition_activity_outcome_appearance",
+      "option_category": "multi_attribute_contrast",
+      "variant_justification": "La presentación central pide un único número; esta variante obliga a mantener toda la configuración observada.",
+      "authored_content_sha256": "10953cfcf38f7852929120c53e14d983d924115ac3385dfcaa6aefa4f291ea0f",
+      "source_ref": "Daniel 3:25",
+      "source_quote": "Y él dijo: —Sin embargo, yo veo cuatro hombres sueltos, que se pasean en medio del fuego sin sufrir ningún daño; y el aspecto del cuarto es semejante a un hijo de los dioses.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Dentro del fuego, el rey vio ____ hombres sueltos y sin daño.",
+          "family": "fill_choice",
+          "subtype": "comparison"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "699a61a66d49c04c86f5536c6a75a9b170f47bab2c8973ffadd4e1c36b136053"
+}

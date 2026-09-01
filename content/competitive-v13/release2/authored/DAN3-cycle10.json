@@ -1,0 +1,154 @@
+[
+  {
+    "id": "V13-R2C10-DAN3-V008-F01",
+    "source_unit_id": "DAN3-V008",
+    "fact_id": "DAN3-V008-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "En la transición hacia la acusación, ¿qué cadena conserva con precisión marcador causal, marco temporal, identidad de los agentes, movimiento, modo de actuar y objeto humano?",
+    "options": [
+      "Por esto → en aquel tiempo → algunos hombres caldeos → vinieron → acusaron maliciosamente → a los judíos",
+      "Después de esto → al día siguiente → todos los magistrados → salieron → defendieron públicamente → a los tres caldeos",
+      "Sin causa → durante el banquete → ciertos hombres judíos → comparecieron → informaron fielmente → a los babilonios",
+      "Por orden real → esa misma noche → algunos hombres medos → huyeron → denunciaron en secreto → a los músicos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Por esto → en aquel tiempo → algunos hombres caldeos → vinieron → acusaron maliciosamente → a los judíos"
+    ],
+    "explanation": "La oración vincula causalidad y tiempo con la llegada de algunos caldeos, quienes acusaron maliciosamente a los judíos.",
+    "why_distractors_fail": {
+      "Después de esto → al día siguiente → todos los magistrados → salieron → defendieron públicamente → a los tres caldeos": "Cambia los seis componentes de la transición y convierte la acusación en defensa.",
+      "Sin causa → durante el banquete → ciertos hombres judíos → comparecieron → informaron fielmente → a los babilonios": "Invierte agentes y destinatarios, además de alterar tiempo, movimiento y modo.",
+      "Por orden real → esa misma noche → algunos hombres medos → huyeron → denunciaron en secreto → a los músicos": "Sustituye la relación causal, el grupo, la acción, su modalidad y el objeto."
+    },
+    "evidence_excerpt": "Por esto, en aquel tiempo algunos hombres caldeos vinieron y acusaron maliciosamente a los judíos.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "causal_time_agents_motion_manner_target",
+    "option_category": "six_element_narrative_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconstruir seis funciones narrativas de una acusación, no solo identificar la acción.",
+    "variant_justification": "La presentación existente pregunta qué hicieron; esta variante adjudica causalidad, tiempo, agentes, movimiento, modalidad y destinatarios.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2C10-DAN3-V010-F01",
+    "source_unit_id": "DAN3-V010",
+    "fact_id": "DAN3-V010-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué formulación preserva simultáneamente alcance de la ley, orden de las seis señales nombradas, extensión instrumental, respuesta doble y objeto?",
+    "options": [
+      "Todo hombre → bocina, flauta, cítara, arpa, salterio, zampoña y todo instrumento → postrarse y adorar → la estatua de oro",
+      "Todo sabio → flauta, bocina, arpa, cítara, zampoña, salterio sin otros instrumentos → escuchar y cantar → el dios del rey",
+      "Pueblos y lenguas → bocina, cítara, flauta, salterio, arpa, zampoña y toda voz → comparecer y jurar → el trono de Babilonia",
+      "Solo los funcionarios → zampoña, salterio, arpa, cítara, flauta, bocina y todo instrumento → tocar y postrarse → el horno ardiente"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Todo hombre → bocina, flauta, cítara, arpa, salterio, zampoña y todo instrumento → postrarse y adorar → la estatua de oro"
+    ],
+    "explanation": "La ley abarca a todo hombre, enumera en ese orden seis instrumentos y una extensión general, y exige postrarse y adorar la estatua de oro.",
+    "why_distractors_fail": {
+      "Todo sabio → flauta, bocina, arpa, cítara, zampoña, salterio sin otros instrumentos → escuchar y cantar → el dios del rey": "Reduce el alcance, altera orden y extensión, y sustituye acciones y objeto.",
+      "Pueblos y lenguas → bocina, cítara, flauta, salterio, arpa, zampoña y toda voz → comparecer y jurar → el trono de Babilonia": "Modifica el sujeto normativo, la secuencia, la categoría final, la respuesta y el objeto.",
+      "Solo los funcionarios → zampoña, salterio, arpa, cítara, flauta, bocina y todo instrumento → tocar y postrarse → el horno ardiente": "Invierte la lista y confunde alcance, acciones y sanción con objeto de culto."
+    },
+    "evidence_excerpt": "Tú, rey, has dado una ley que todo hombre, al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, se postre y adore la estatua de oro;",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "law_scope_ordered_signal_actions_object",
+    "option_category": "ordered_normative_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Obliga a mantener alcance, secuencia acústica, extensión, acciones y objeto en una sola estructura.",
+    "variant_justification": "El verdadero/falso previo solo comprueba la regla general; esta operación introduce orden completo y cinco dimensiones normativas.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2C10-DAN3-V021-V11-F02",
+    "source_unit_id": "DAN3-V021",
+    "fact_id": "DAN3-V021-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué inventario narrativo mantiene estado de los tres, orden de las cuatro clases de prendas y movimiento final con su destino?",
+    "options": [
+      "Atados → mantos, calzados, turbantes y vestidos → fueron echados dentro del horno de fuego ardiente",
+      "Sueltos → calzados, mantos, vestidos y cinturones → salieron por la puerta del horno frío",
+      "Atados → mantos, armaduras, turbantes y collares → caminaron delante de la estatua de oro",
+      "Desvestidos → turbantes, calzados, mantos y vestidos → fueron llevados al palacio del rey"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Atados → mantos, calzados, turbantes y vestidos → fueron echados dentro del horno de fuego ardiente"
+    ],
+    "explanation": "Los hombres estaban atados con mantos, calzados, turbantes y vestidos, y fueron echados dentro del horno ardiente.",
+    "why_distractors_fail": {
+      "Sueltos → calzados, mantos, vestidos y cinturones → salieron por la puerta del horno frío": "Invierte condición y movimiento, altera el inventario y cambia la cualidad del horno.",
+      "Atados → mantos, armaduras, turbantes y collares → caminaron delante de la estatua de oro": "Conserva el estado pero sustituye dos prendas, la acción y el destino.",
+      "Desvestidos → turbantes, calzados, mantos y vestidos → fueron llevados al palacio del rey": "Cambia condición, orden del inventario y destino final."
+    },
+    "evidence_excerpt": "Así pues, estos hombres fueron atados con sus mantos, sus calzados, sus turbantes y sus vestidos, y fueron echados dentro del horno de fuego ardiente.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "condition_ordered_clothing_action_destination",
+    "option_category": "ordered_inventory_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Integra condición, cuatro elementos ordenados, acción y destino.",
+    "variant_justification": "El cloze existente recupera únicamente «turbantes»; esta variante exige reconstruir todo el inventario dentro de la secuencia.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2C10-DAN3-V023-F03",
+    "source_unit_id": "DAN3-V023",
+    "fact_id": "DAN3-V023-F03",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué ficha del ingreso al horno conserva cantidad, identidades en orden, condición, movimiento y ubicación final?",
+    "options": [
+      "Tres → Sadrac, Mesac y Abed-nego → atados → cayeron → dentro del horno de fuego ardiente",
+      "Cuatro → Mesac, Sadrac y Daniel → sueltos → caminaron → fuera del horno apagado",
+      "Tres → Abed-nego, Daniel y Sadrac → desatados → salieron → delante de la puerta del horno",
+      "Dos → Sadrac y Mesac → atados → fueron levantados → sobre el horno de fuego"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Tres → Sadrac, Mesac y Abed-nego → atados → cayeron → dentro del horno de fuego ardiente"
+    ],
+    "explanation": "El versículo identifica a los tres en orden, señala que estaban atados y que cayeron dentro del horno ardiente.",
+    "why_distractors_fail": {
+      "Cuatro → Mesac, Sadrac y Daniel → sueltos → caminaron → fuera del horno apagado": "Altera cantidad, identidades, condición, movimiento y ubicación.",
+      "Tres → Abed-nego, Daniel y Sadrac → desatados → salieron → delante de la puerta del horno": "Conserva solo la cantidad y cambia los demás componentes.",
+      "Dos → Sadrac y Mesac → atados → fueron levantados → sobre el horno de fuego": "Omite a un hombre y sustituye movimiento y ubicación."
+    },
+    "evidence_excerpt": "Estos tres hombres, Sadrac, Mesac y Abed-nego, cayeron atados dentro del horno de fuego ardiente.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "count_ordered_identities_condition_motion_location",
+    "option_category": "event_entry_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige adjudicar conjuntamente cinco atributos del ingreso, no completar solo la cantidad.",
+    "variant_justification": "La presentación central pregunta cuántos; la variante evalúa cantidad, identidad ordenada, estado, acción y ubicación.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

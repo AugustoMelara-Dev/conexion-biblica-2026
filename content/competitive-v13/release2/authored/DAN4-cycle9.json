@@ -1,0 +1,113 @@
+[
+  {
+    "id": "R2-C9-DAN4-001",
+    "source_unit_id": "DAN4-V001",
+    "fact_id": "DAN4-V001-F02",
+    "family": "single_choice_contextual",
+    "subtype": "speaker_addressee",
+    "question": "¿Qué ficha epistolar asigna correctamente emisor con cargo, audiencia triple, alcance geográfico y saludo?",
+    "options": [
+      "Nabucodonosor, rey—pueblos, naciones y lenguas—toda la tierra—«Paz os sea multiplicada»",
+      "Daniel, profeta—sabios, astrólogos y caldeos—Babilonia—«Sabiduría os sea dada»",
+      "Beltsasar, jefe de magos—príncipes, gobernadores y consejeros—el palacio—«No os turbéis»",
+      "el vigilante santo—bestias, aves y vivientes—el campo—«Siete tiempos pasen»"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Nabucodonosor, rey—pueblos, naciones y lenguas—toda la tierra—«Paz os sea multiplicada»"
+    ],
+    "explanation": "El remitente es Nabucodonosor en calidad de rey; se dirige a tres grupos universales y les desea paz multiplicada.",
+    "why_distractors_fail": {
+      "Daniel, profeta—sabios, astrólogos y caldeos—Babilonia—«Sabiduría os sea dada»": "Cambia emisor, audiencia, alcance y saludo.",
+      "Beltsasar, jefe de magos—príncipes, gobernadores y consejeros—el palacio—«No os turbéis»": "Confunde al intérprete con el remitente y reduce el ámbito al palacio.",
+      "el vigilante santo—bestias, aves y vivientes—el campo—«Siete tiempos pasen»": "Convierte figuras del sueño en emisor y audiencia."
+    },
+    "evidence_excerpt": "Nabucodonosor, rey, a todos los pueblos, naciones y lenguas que moran en toda la tierra: Paz os sea multiplicada.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "speaker_addressee",
+    "option_category": "sender_role_audience_scope_greeting",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Cinco papeles discursivos deben corresponder en una sola apertura.",
+    "variant_justification": "Las presentaciones existentes preguntan remitente, audiencia o saludo por separado; ésta reconstruye la ficha completa.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-C9-DAN4-004",
+    "source_unit_id": "DAN4-V035",
+    "fact_id": "DAN4-V035-V11-F04",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué arquitectura de soberanía conserva valoración humana, dos ámbitos de acción, ausencia de resistencia y pregunta imposible?",
+    "options": [
+      "habitantes valiosos—templo y palacio—los sabios pueden frenarlo—«¿Dónde estás?»",
+      "habitantes como nada—ejército del cielo y habitantes de la tierra—nadie detiene su mano—«¿Qué haces?»",
+      "reyes eternos—río y campo—las bestias limitan su voluntad—«¿Cuándo será?»",
+      "pueblos poderosos—Babilonia y Jerusalén—Daniel corrige sus obras—«¿Quién eres?»"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "habitantes como nada—ejército del cielo y habitantes de la tierra—nadie detiene su mano—«¿Qué haces?»"
+    ],
+    "explanation": "La confesión reduce a nada a los habitantes, extiende la voluntad divina al cielo y la tierra y niega toda resistencia o interpelación.",
+    "why_distractors_fail": {
+      "habitantes valiosos—templo y palacio—los sabios pueden frenarlo—«¿Dónde estás?»": "Invierte la valoración y atribuye control a los sabios.",
+      "reyes eternos—río y campo—las bestias limitan su voluntad—«¿Cuándo será?»": "Cambia sujetos, ámbitos, límite y pregunta.",
+      "pueblos poderosos—Babilonia y Jerusalén—Daniel corrige sus obras—«¿Quién eres?»": "Sustituye la soberanía por ciudades y un corrector humano."
+    },
+    "evidence_excerpt": "Considerados como nada son los habitantes todos de la tierra; él hace según su voluntad en el ejército del cielo y en los habitantes de la tierra; no hay quien detenga su mano y le diga: ¿Qué haces?",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "principle",
+    "option_category": "human_status_domains_irresistibility_challenge",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Cinco componentes forman el argumento completo de soberanía.",
+    "variant_justification": "El ciclo 7 rechazado pedía sólo los dos ámbitos; ésta exige además valoración, irresistibilidad y desafío verbal.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-C9-DAN4-005",
+    "source_unit_id": "DAN4-V037",
+    "fact_id": "DAN4-V037-F01",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué conclusión asigna correctamente hablante, triple respuesta, título divino, dos fundamentos morales y capacidad respecto del soberbio?",
+    "options": [
+      "Daniel—interpreta, aconseja y advierte—Altísimo—decretos santos y tiempos exactos—premia al humilde",
+      "Nabucodonosor—alaba, engrandece y glorifica—Rey del cielo—obras verdaderas y caminos justos—humilla al soberbio",
+      "Beltsasar—lee, pesa y divide—Dios de Babilonia—señales grandes y maravillas potentes—exalta al fuerte",
+      "un vigilante—clama, derriba y dispersa—Señor del árbol—ramas hermosas y fruto abundante—ata al rey"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Nabucodonosor—alaba, engrandece y glorifica—Rey del cielo—obras verdaderas y caminos justos—humilla al soberbio"
+    ],
+    "explanation": "Nabucodonosor responde con tres verbos al Rey del cielo, fundamenta su alabanza en verdad y justicia y reconoce su poder humillador.",
+    "why_distractors_fail": {
+      "Daniel—interpreta, aconseja y advierte—Altísimo—decretos santos y tiempos exactos—premia al humilde": "Cambia hablante, acciones, título, fundamentos y efecto.",
+      "Beltsasar—lee, pesa y divide—Dios de Babilonia—señales grandes y maravillas potentes—exalta al fuerte": "Importa la escritura de otro episodio y revierte el criterio moral.",
+      "un vigilante—clama, derriba y dispersa—Señor del árbol—ramas hermosas y fruto abundante—ata al rey": "Confunde al mensajero del sueño con quien formula la confesión final."
+    },
+    "evidence_excerpt": "Ahora yo, Nabucodonosor, alabo, engrandezco y glorifico al Rey del cielo, porque todas sus obras son verdaderas y sus caminos justos; y él puede humillar a los que andan con soberbia.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "relationship",
+    "option_category": "speaker_response_title_grounds_capability",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Seis elementos cierran el arco moral sin reducirlo a una afirmación local.",
+    "variant_justification": "Las presentaciones existentes preguntan sólo qué hace Dios con el soberbio; ésta reconstruye toda la confesión conclusiva.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

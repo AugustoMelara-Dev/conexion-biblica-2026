@@ -1,0 +1,76 @@
+[
+  {
+    "id": "V13-R2-DAN1-C9-V003-V11-F03",
+    "source_unit_id": "DAN1-V003",
+    "fact_id": "DAN1-V003-V11-F03",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué jerarquía y criterio de procedencia conserva la orden real sobre los jóvenes?",
+    "options": [
+      "El rey ordena a Aspenaz, jefe de eunucos → traer hijos de Israel → del linaje real y de los príncipes",
+      "Joacim ordena a Melsar, jefe de soldados → traer caldeos → del linaje sacerdotal",
+      "Ciro ordena a Daniel, jefe de sabios → traer persas → de familias campesinas",
+      "Aspenaz ordena al rey, jefe de príncipes → traer babilonios → de linaje extranjero"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "El rey ordena a Aspenaz, jefe de eunucos → traer hijos de Israel → del linaje real y de los príncipes"
+    ],
+    "explanation": "La orden parte del rey hacia Aspenaz y especifica Israel y el linaje real y principesco.",
+    "evidence_excerpt": "Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,",
+    "why_distractors_fail": {
+      "Joacim ordena a Melsar, jefe de soldados → traer caldeos → del linaje sacerdotal": "Altera al menos un actor, duración, alimento, destino, jerarquía o consecuencia de la fuente.",
+      "Ciro ordena a Daniel, jefe de sabios → traer persas → de familias campesinas": "Altera al menos un actor, duración, alimento, destino, jerarquía o consecuencia de la fuente.",
+      "Aspenaz ordena al rey, jefe de príncipes → traer babilonios → de linaje extranjero": "Altera al menos un actor, duración, alimento, destino, jerarquía o consecuencia de la fuente."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "king_officer_lineage",
+    "option_category": "three_level_assignment",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige resolver una cadena o correspondencia multielemento.",
+    "variant_justification": "La operación material no se deriva de la presentación pública existente.",
+    "author": {
+      "id": "r2_pipeline_review",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN1-C9-V012-V11-F02",
+    "source_unit_id": "DAN1-V012",
+    "fact_id": "DAN1-V012-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué diseño de prueba distribuye correctamente duración, alimento, bebida y participantes?",
+    "options": [
+      "Diez días → legumbres → agua → Daniel y sus compañeros como siervos",
+      "Tres años → comida real → vino → todos los magos",
+      "Siete días → pan → leche → sólo Daniel",
+      "Diez años → legumbres → vino → Aspenaz y Melsar"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Diez días → legumbres → agua → Daniel y sus compañeros como siervos"
+    ],
+    "explanation": "Daniel solicita diez días de prueba para sus siervos con legumbres y agua.",
+    "evidence_excerpt": "—Te ruego que hagas la prueba con tus siervos durante diez días: que nos den legumbres para comer y agua para beber.",
+    "why_distractors_fail": {
+      "Tres años → comida real → vino → todos los magos": "Altera al menos un actor, duración, alimento, destino, jerarquía o consecuencia de la fuente.",
+      "Siete días → pan → leche → sólo Daniel": "Altera al menos un actor, duración, alimento, destino, jerarquía o consecuencia de la fuente.",
+      "Diez años → legumbres → vino → Aspenaz y Melsar": "Altera al menos un actor, duración, alimento, destino, jerarquía o consecuencia de la fuente."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "trial_duration_diet_group",
+    "option_category": "four_part_test_design",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige resolver una cadena o correspondencia multielemento.",
+    "variant_justification": "La operación material no se deriva de la presentación pública existente.",
+    "author": {
+      "id": "r2_pipeline_review",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

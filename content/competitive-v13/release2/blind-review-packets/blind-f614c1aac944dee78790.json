@@ -1,0 +1,253 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-f614c1aac944dee78790",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "R2-F-PR41-C7-001",
+      "source_unit_id": "PR41-P038-P004-S001",
+      "fact_id": "PR41-P038-P004-S001-F01",
+      "family": "true_false",
+      "subtype": "cause_consequence",
+      "question": "La sugestión halagadora no quedó en idea: agradó al rey, éste resolvió ejecutarla y decidió llevarla todavía más lejos.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Agradándole la halagadora sugestión, resolvió llevarla a ejecución, e ir aun más lejos.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "flattery_decision_escalation",
+      "option_category": "truth_value",
+      "variant_justification": "Evalúa una cadena causal completa, no el verbo local «resolvió».",
+      "authored_content_sha256": "970dfacf90dbd99cacb7c7498e424ff55f52380733900a53db65b6959f70416b",
+      "source_ref": "PR41, p. 38, párrafo 4",
+      "source_quote": "Agradándole la halagadora sugestión, resolvió llevarla a ejecución, e ir aun más lejos.",
+      "parent_context": "Agradándole la halagadora sugestión, resolvió llevarla a ejecución, e ir aun más lejos. En vez de reproducir la imagen tal como la había visto, iba a superar el original. En su imagen no habría descenso de valores desde la cabeza hasta los pies, sino que se la haría por completo de oro, para que toda ella simbolizara a Babilonia como reino eterno, indestructible y todopoderoso que quebrantaría y desmenuzaría todos los demás reinos, y perduraría para siempre.",
+      "existing_presentations": [
+        {
+          "question": "Nabucodonosor resolvió limitarse a copiar la imagen sin ir más lejos que el modelo visto.",
+          "family": "true_false",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-PR41-C7-002",
+      "source_unit_id": "PR41-P038-P002-S004",
+      "fact_id": "PR41-P038-P002-S004-F01",
+      "family": "true_false",
+      "subtype": "cause_consequence",
+      "question": "El abandono progresivo del honor a Dios desembocó en que el rey retomara la adoración idolátrica con más celo y fanatismo que antes.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "dejó de honrar a Dios, y resumió su adoración de los ídolos con mayor celo y fanatismo que antes.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "apostasy_intensification",
+      "option_category": "truth_value",
+      "variant_justification": "Verifica transición y grado comparativo; no invierte una palabra aislada.",
+      "authored_content_sha256": "f85dae2436dcbec90e3c3410585b51fbc06a591565a03e81b373fdca204bd8a2",
+      "source_ref": "PR41, p. 38, párrafo 2",
+      "source_quote": "Con el tiempo dejó de honrar a Dios, y resumió su adoración de los ídolos con mayor celo y fanatismo que antes.",
+      "parent_context": "El rey había reconocido el poder de Dios al decir a Daniel: “Ciertamente que el Dios vuestro es Dios de dioses, ... y el descubridor de los misterios.” Vers. 47. Después de esto, Nabucodonosor sintió por un tiempo la influencia del temor de Dios; pero su corazón no había quedado limpio de ambición mundanal ni del deseo de ensalzarse a sí mismo. La prosperidad que acompañaba su reinado le llenaba de orgullo. Con el tiempo dejó de honrar a Dios, y resumió su adoración de los ídolos con mayor celo y fanatismo que antes.",
+      "existing_presentations": [
+        {
+          "question": "Con el tiempo, Nabucodonosor abandonó la adoración de los ídolos.",
+          "family": "true_false",
+          "subtype": "narrative_order"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-PR41-C7-003",
+      "source_unit_id": "PR41-P038-P001-S002",
+      "fact_id": "PR41-P038-P001-S002-F02",
+      "family": "single_choice_direct",
+      "subtype": "principle",
+      "question": "¿Qué relación enseñanza–objeto había recibido el rey por medio de la interpretación del sueño?",
+      "options": [
+        "Instrucción clara—establecimiento del reino eterno de Dios",
+        "Advertencia vaga—duración eterna de Babilonia",
+        "Orden política—establecimiento del culto real",
+        "Cálculo secreto—fin del reino persa"
+      ],
+      "evidence_excerpt": "se le había instruído claramente acerca del establecimiento del reino eterno de Dios.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "instruction_kingdom_establishment",
+      "option_category": "paired_claim",
+      "variant_justification": "Exige emparejar grado de claridad, acción y reino frente a relaciones paralelas.",
+      "authored_content_sha256": "c4f93ab3ac00c261989c391f59c9b669a0bc5429ebdcfe89b0637d1fe89f1ad3",
+      "source_ref": "PR41, p. 38, párrafo 1",
+      "source_quote": "En la interpretación del sueño, se le había instruído claramente acerca del establecimiento del reino eterno de Dios.",
+      "parent_context": "El sueño de la gran imagen, que presentaba a Nabucodonosor acontecimientos que llegaban hasta el fin del tiempo, le había sido dado para que comprendiese la parte que le tocaba desempeñar en la historia del mundo y la relación que su reino debía sostener con el reino del cielo. En la interpretación del sueño, se le había instruído claramente acerca del establecimiento del reino eterno de Dios. Daniel había explicado: “Y en los días de estos reyes, levantará el Dios del cielo un reino que nunca jamás se corromperá: y no será dejado a otro pueblo este reino; el cual desmenuzará y consumirá todos estos reinos, y él permanecerá para siempre... El sueño es verdadero, y fiel su declaración.” Daniel 2:44, 45.",
+      "existing_presentations": [
+        {
+          "question": "La interpretación había instruido al rey acerca del ____ del reino eterno de Dios.",
+          "family": "fill_choice",
+          "subtype": "prophetic_detail"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-PR41-C7-004",
+      "source_unit_id": "PR41-P038-P001-S004",
+      "fact_id": "PR41-P038-P001-S004-F01",
+      "family": "single_choice_contextual",
+      "subtype": "comparison",
+      "question": "¿Qué doble garantía acompaña la conclusión de la interpretación, distinguiendo el contenido visto de su explicación?",
+      "options": [
+        "Sueño verdadero—declaración fiel",
+        "Sueño simbólico—declaración dudosa",
+        "Sueño falso—declaración literal",
+        "Sueño incompleto—declaración secreta"
+      ],
+      "evidence_excerpt": "El sueño es verdadero, y fiel su declaración.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "vision_interpretation_certainty",
+      "option_category": "paired_attribute",
+      "variant_justification": "Evalúa dos referentes y dos cualidades, no la frase como reconocimiento literal.",
+      "authored_content_sha256": "6c9e994376a362e11e8a420abac361222d416b50f9047c7a0c71cd7e2abbf0bf",
+      "source_ref": "PR41, p. 38, párrafo 1",
+      "source_quote": "El sueño es verdadero, y fiel su declaración.",
+      "parent_context": "El sueño de la gran imagen, que presentaba a Nabucodonosor acontecimientos que llegaban hasta el fin del tiempo, le había sido dado para que comprendiese la parte que le tocaba desempeñar en la historia del mundo y la relación que su reino debía sostener con el reino del cielo. En la interpretación del sueño, se le había instruído claramente acerca del establecimiento del reino eterno de Dios. Daniel había explicado: “Y en los días de estos reyes, levantará el Dios del cielo un reino que nunca jamás se corromperá: y no será dejado a otro pueblo este reino; el cual desmenuzará y consumirá todos estos reinos, y él permanecerá para siempre... El sueño es verdadero, y fiel su declaración.” Daniel 2:44, 45.",
+      "existing_presentations": [
+        {
+          "question": "¿Cómo se califican el sueño y su declaración al cerrar la explicación?",
+          "family": "single_choice_contextual",
+          "subtype": "text_recall"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-PR41-C7-005",
+      "source_unit_id": "PR41-P038-P002-S001",
+      "fact_id": "PR41-P038-P002-S001-F01",
+      "family": "single_choice_contextual",
+      "subtype": "speaker_addressee",
+      "question": "¿Ante quién formuló el rey el reconocimiento que une supremacía divina y capacidad para descubrir misterios?",
+      "options": [
+        "Daniel",
+        "Los sabios caldeos",
+        "Los sacerdotes de Bel",
+        "La multitud de Dura"
+      ],
+      "evidence_excerpt": "El rey había reconocido el poder de Dios al decir a Daniel: “Ciertamente que el Dios vuestro es Dios de dioses, ... y el descubridor de los misterios.",
+      "difficulty": "hard",
+      "importance": "critical",
+      "relation_type": "confession_addressee_content",
+      "option_category": "person",
+      "variant_justification": "Identifica al destinatario mediante el contenido doble de una confesión previa.",
+      "authored_content_sha256": "f98bd0c2ac0fb3616920374a9c139b6710baeffbcb4a6958321d7e19710f957a",
+      "source_ref": "PR41, p. 38, párrafo 2",
+      "source_quote": "El rey había reconocido el poder de Dios al decir a Daniel: “Ciertamente que el Dios vuestro es Dios de dioses, ... y el descubridor de los misterios.",
+      "parent_context": "El rey había reconocido el poder de Dios al decir a Daniel: “Ciertamente que el Dios vuestro es Dios de dioses, ... y el descubridor de los misterios.” Vers. 47. Después de esto, Nabucodonosor sintió por un tiempo la influencia del temor de Dios; pero su corazón no había quedado limpio de ambición mundanal ni del deseo de ensalzarse a sí mismo. La prosperidad que acompañaba su reinado le llenaba de orgullo. Con el tiempo dejó de honrar a Dios, y resumió su adoración de los ídolos con mayor celo y fanatismo que antes.",
+      "existing_presentations": [
+        {
+          "question": "El rey reconoció el poder de Dios al dirigirse a ____.",
+          "family": "fill_choice",
+          "subtype": "speaker_addressee"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-PR41-C7-006",
+      "source_unit_id": "PR41-P038-P002-S003",
+      "fact_id": "PR41-P038-P002-S003-F02",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "La prosperidad no quedó como circunstancia externa: acompañaba el reinado y le ____ de orgullo.",
+      "options": [
+        "llenaba",
+        "libraba",
+        "advertía",
+        "vaciaba"
+      ],
+      "evidence_excerpt": "La prosperidad que acompañaba su reinado le llenaba de orgullo.",
+      "difficulty": "hard",
+      "importance": "critical",
+      "relation_type": "prosperity_pride_effect",
+      "option_category": "verb",
+      "variant_justification": "El verbo depende de causa, sujeto afectado y estado resultante.",
+      "authored_content_sha256": "c369b0fd9323d1dffb34549379d89e4fba01b51c07e6af906c992b121f317e76",
+      "source_ref": "PR41, p. 38, párrafo 2",
+      "source_quote": "La prosperidad que acompañaba su reinado le llenaba de orgullo.",
+      "parent_context": "El rey había reconocido el poder de Dios al decir a Daniel: “Ciertamente que el Dios vuestro es Dios de dioses, ... y el descubridor de los misterios.” Vers. 47. Después de esto, Nabucodonosor sintió por un tiempo la influencia del temor de Dios; pero su corazón no había quedado limpio de ambición mundanal ni del deseo de ensalzarse a sí mismo. La prosperidad que acompañaba su reinado le llenaba de orgullo. Con el tiempo dejó de honrar a Dios, y resumió su adoración de los ídolos con mayor celo y fanatismo que antes.",
+      "existing_presentations": [
+        {
+          "question": "La prosperidad que acompañaba el reinado llenaba a Nabucodonosor de humildad.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-PR41-C7-007",
+      "source_unit_id": "PR41-P038-P003-S001",
+      "fact_id": "PR41-P038-P003-S001-F02",
+      "family": "single_choice_direct",
+      "subtype": "cause_consequence",
+      "question": "¿Qué relación cita–efecto produjo en el gobernante la frase «Tú eres aquella cabeza de oro»?",
+      "options": [
+        "Cabeza de oro—impresión profunda",
+        "Reino eterno—rechazo inmediato",
+        "Pies de barro—humildad duradera",
+        "Piedra cortada—olvido completo"
+      ],
+      "evidence_excerpt": "Las palabras: “Tú eres aquella cabeza de oro” (Vers. 38), habían hecho una profunda impresión en la mente del gobernante.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "symbol_psychological_effect",
+      "option_category": "paired_claim",
+      "variant_justification": "Vincula símbolo, cita y efecto mental mediante opciones homogéneas.",
+      "authored_content_sha256": "0730e829a34caf22089c6afb1ce1bb50bf726a0b48e228c614cfa70e230ac85e",
+      "source_ref": "PR41, p. 38, párrafo 3",
+      "source_quote": "Las palabras: “Tú eres aquella cabeza de oro” (Vers. 38), habían hecho una profunda impresión en la mente del gobernante.",
+      "parent_context": "Las palabras: “Tú eres aquella cabeza de oro” (Vers. 38), habían hecho una profunda impresión en la mente del gobernante. Los sabios de su reino, valiéndose de esto y de su regreso a la idolatría, le propusieron que hiciera una imagen similar a la que había visto en su sueño, y que la levantase donde todos pudiesen contemplar la cabeza de oro, que había sido interpretada como símbolo que representaba su reino.",
+      "existing_presentations": [
+        {
+          "question": "¿Qué efecto produjo en el gobernante la expresión «cabeza de oro»?",
+          "family": "single_choice_direct",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-PR41-C7-008",
+      "source_unit_id": "PR41-P038-P003-S002",
+      "fact_id": "PR41-P038-P003-S002-F01",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Valiéndose de la impresión de la cabeza de oro y del regreso a la idolatría, los sabios le ____ fabricar y exhibir una imagen similar.",
+      "options": [
+        "propusieron",
+        "prohibieron",
+        "ocultaron",
+        "lamentaron"
+      ],
+      "evidence_excerpt": "valiéndose de esto y de su regreso a la idolatría, le propusieron que hiciera una imagen similar",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "premise_proposal_result",
+      "option_category": "verb",
+      "variant_justification": "El verbo se resuelve por agentes, dos causas y finalidad, no por cloze local.",
+      "authored_content_sha256": "87bc1faaf15bbc2598a24e1368d66347ed2bfceda145e3b944a9eab459e65026",
+      "source_ref": "PR41, p. 38, párrafo 3",
+      "source_quote": "Los sabios de su reino, valiéndose de esto y de su regreso a la idolatría, le propusieron que hiciera una imagen similar a la que había visto en su sueño, y que la levantase donde todos pudiesen contemplar la cabeza de oro, que había sido interpretada como símbolo que representaba su reino.",
+      "parent_context": "Las palabras: “Tú eres aquella cabeza de oro” (Vers. 38), habían hecho una profunda impresión en la mente del gobernante. Los sabios de su reino, valiéndose de esto y de su regreso a la idolatría, le propusieron que hiciera una imagen similar a la que había visto en su sueño, y que la levantase donde todos pudiesen contemplar la cabeza de oro, que había sido interpretada como símbolo que representaba su reino.",
+      "existing_presentations": [
+        {
+          "question": "Los sabios le ____ que hiciera una imagen similar a la del sueño.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "daa6a051c366f03ed9f1349d943c41beaa2f2f29b16f05bd991074636b422de0"
+}

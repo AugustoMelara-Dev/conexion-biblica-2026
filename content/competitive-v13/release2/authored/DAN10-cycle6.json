@@ -1,0 +1,224 @@
+[
+  {
+    "id": "V13-R2C6-DAN10-V011-V11-COMMAND-RESPONSE-SEQUENCE",
+    "source_unit_id": "DAN10-V011",
+    "fact_id": "DAN10-V011-V11-COMMAND-RESPONSE-SEQUENCE",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "El mensaje contenía dos imperativos, mientras la narración registró una reacción corporal contemporánea. ¿Qué opción distingue correctamente mandato y cumplimiento?",
+    "options": [
+      "Atender y ponerse en pie fueron los mandatos; levantarse temblando fue la reacción de Daniel",
+      "Temblar y callar fueron los mandatos; sentarse fue la reacción de Daniel",
+      "Ponerse en pie y huir fueron los mandatos; dormir fue la reacción de Daniel",
+      "Escuchar y escribir fueron los mandatos; arrodillarse sereno fue la reacción de Daniel"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Atender y ponerse en pie fueron los mandatos; levantarse temblando fue la reacción de Daniel"
+    ],
+    "explanation": "Daniel respondió a las órdenes de atención y levantamiento poniéndose en pie mientras aún temblaba.",
+    "why_distractors_fail": {
+      "Temblar y callar fueron los mandatos; sentarse fue la reacción de Daniel": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia.",
+      "Ponerse en pie y huir fueron los mandatos; dormir fue la reacción de Daniel": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia.",
+      "Escuchar y escribir fueron los mandatos; arrodillarse sereno fue la reacción de Daniel": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia."
+    },
+    "evidence_excerpt": "Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "instruction_obedience_sequence",
+    "option_category": "compound_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Exige adjudicar una correspondencia causal o temporal de tres componentes con alternativas paralelas, no recuperar una palabra local.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2C6-DAN10-V012-V11-DISPOSITION-HEARING-ARRIVAL-CHAIN",
+    "source_unit_id": "DAN10-V012",
+    "fact_id": "DAN10-V012-V11-DISPOSITION-HEARING-ARRIVAL-CHAIN",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "La explicación enlaza disposición interior, respuesta divina y desplazamiento del mensajero. ¿Qué cadena conserva la dirección causal entre los tres momentos?",
+    "options": [
+      "Daniel quiso entender y se humilló → sus palabras fueron oídas desde el primer día → el mensajero vino a causa de ellas",
+      "Daniel recibió al mensajero → decidió humillarse → sus palabras comenzaron a ser oídas",
+      "El mensajero se opuso a Daniel → sus palabras fueron demoradas → decidió entender",
+      "Daniel comprendió por completo → dejó de hablar → el mensajero regresó por causa del silencio"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Daniel quiso entender y se humilló → sus palabras fueron oídas desde el primer día → el mensajero vino a causa de ellas"
+    ],
+    "explanation": "La disposición interior antecede a la recepción de sus palabras y explica la venida del mensajero.",
+    "why_distractors_fail": {
+      "Daniel recibió al mensajero → decidió humillarse → sus palabras comenzaron a ser oídas": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia.",
+      "El mensajero se opuso a Daniel → sus palabras fueron demoradas → decidió entender": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia.",
+      "Daniel comprendió por completo → dejó de hablar → el mensajero regresó por causa del silencio": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia."
+    },
+    "evidence_excerpt": "Entonces me dijo: “Daniel, no temas, porque desde el primer día que dispusiste tu corazón a entender y a humillarte en la presencia de tu Dios, fueron oídas tus palabras; y a causa de tus palabras yo he venido.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "spiritual_disposition_response_causality",
+    "option_category": "compound_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Exige adjudicar una correspondencia causal o temporal de tres componentes con alternativas paralelas, no recuperar una palabra local.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2C6-DAN10-V013-V11-OPPOSITION-HELP-REMAINING-SEQUENCE",
+    "source_unit_id": "DAN10-V013",
+    "fact_id": "DAN10-V013-V11-OPPOSITION-HELP-REMAINING-SEQUENCE",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "question": "En el conflicto, una intervención cambia la relación de fuerzas y conduce a una nueva ubicación del mensajero. ¿Qué mapa conserva oposición, auxilio y situación posterior?",
+    "options": [
+      "Príncipe de Persia: oposición de veintiún días → Miguel: ayuda → mensajero: quedó con los reyes de Persia",
+      "Miguel: oposición de tres semanas → Ciro: ayuda → mensajero: volvió al río",
+      "Reyes de Persia: ayuda inicial → príncipe de Grecia: oposición → mensajero: quedó con Daniel",
+      "Daniel: oposición mediante oración → Gabriel: retirada → mensajero: quedó en Jerusalén"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Príncipe de Persia: oposición de veintiún días → Miguel: ayuda → mensajero: quedó con los reyes de Persia"
+    ],
+    "explanation": "La oposición persa, la ayuda de Miguel y la permanencia con los reyes forman la secuencia del versículo.",
+    "why_distractors_fail": {
+      "Miguel: oposición de tres semanas → Ciro: ayuda → mensajero: volvió al río": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia.",
+      "Reyes de Persia: ayuda inicial → príncipe de Grecia: oposición → mensajero: quedó con Daniel": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia.",
+      "Daniel: oposición mediante oración → Gabriel: retirada → mensajero: quedó en Jerusalén": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia."
+    },
+    "evidence_excerpt": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "celestial_conflict_sequence",
+    "option_category": "compound_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Exige adjudicar una correspondencia causal o temporal de tres componentes con alternativas paralelas, no recuperar una palabra local.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2C6-DAN10-V014-V11-PURPOSE-PEOPLE-HORIZON",
+    "source_unit_id": "DAN10-V014",
+    "fact_id": "DAN10-V014-V11-PURPOSE-PEOPLE-HORIZON",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "La venida del mensajero tiene destinatario colectivo, contenido futuro y horizonte temporal. ¿Qué correspondencia mantiene unidos los tres?",
+    "options": [
+      "Pueblo de Daniel → lo que le sucederá → últimos días a los que pertenece la visión",
+      "Reyes de Persia → sus victorias → primer año de Darío",
+      "Sabios de Babilonia → interpretación del sueño → setenta semanas",
+      "Príncipes de Grecia → caída de Ciro → tres días de ayuno"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Pueblo de Daniel → lo que le sucederá → últimos días a los que pertenece la visión"
+    ],
+    "explanation": "Propósito, destinatario colectivo y horizonte temporal aparecen unidos en la declaración.",
+    "why_distractors_fail": {
+      "Reyes de Persia → sus victorias → primer año de Darío": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia.",
+      "Sabios de Babilonia → interpretación del sueño → setenta semanas": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia.",
+      "Príncipes de Grecia → caída de Ciro → tres días de ayuno": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia."
+    },
+    "evidence_excerpt": "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.”",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "mission_recipient_time_horizon",
+    "option_category": "compound_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Exige adjudicar una correspondencia causal o temporal de tres componentes con alternativas paralelas, no recuperar una palabra local.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2C6-DAN10-V016-V11-LIP-TOUCH-SPEECH-PAIN-SEQUENCE",
+    "source_unit_id": "DAN10-V016",
+    "fact_id": "DAN10-V016-V11-LIP-TOUCH-SPEECH-PAIN-SEQUENCE",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "El toque no fortaleció de inmediato: primero habilitó una acción y luego una declaración sobre los efectos de la visión. ¿Qué secuencia conserva agente, respuesta y contenido?",
+    "options": [
+      "Figura semejante a hijo de hombre tocó los labios → Daniel abrió la boca y habló → declaró dolores y falta de fuerzas",
+      "Miguel tocó los ojos → Daniel vio y corrió → declaró victoria sobre Persia",
+      "Mensajero tocó las manos → Daniel escribió → declaró que no sentía temor",
+      "Ciro tocó la frente → Daniel durmió → declaró que había recuperado el aliento"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Figura semejante a hijo de hombre tocó los labios → Daniel abrió la boca y habló → declaró dolores y falta de fuerzas"
+    ],
+    "explanation": "El contacto en los labios precedió al habla con la que Daniel describió el efecto debilitante de la visión.",
+    "why_distractors_fail": {
+      "Miguel tocó los ojos → Daniel vio y corrió → declaró victoria sobre Persia": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia.",
+      "Mensajero tocó las manos → Daniel escribió → declaró que no sentía temor": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia.",
+      "Ciro tocó la frente → Daniel durmió → declaró que había recuperado el aliento": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia."
+    },
+    "evidence_excerpt": "Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "touch_speech_testimony_sequence",
+    "option_category": "compound_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Exige adjudicar una correspondencia causal o temporal de tres componentes con alternativas paralelas, no recuperar una palabra local.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2C6-DAN10-V019-V11-EXHORTATION-RECOVERY-REQUEST",
+    "source_unit_id": "DAN10-V019",
+    "fact_id": "DAN10-V019-V11-EXHORTATION-RECOVERY-REQUEST",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "La exhortación reúne paz, esfuerzo y aliento; el relato muestra después efecto y petición. ¿Qué cadena preserva esa transición completa?",
+    "options": [
+      "El mensajero exhortó → Daniel recobró fuerzas mientras oía → pidió que su señor continuara hablando",
+      "Daniel exhortó al mensajero → este perdió fuerzas → pidió retirarse",
+      "El mensajero guardó silencio → Daniel siguió débil → pidió terminar la visión",
+      "Daniel recibió paz → huyó del lugar → pidió ayuda a los reyes de Persia"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "El mensajero exhortó → Daniel recobró fuerzas mientras oía → pidió que su señor continuara hablando"
+    ],
+    "explanation": "La palabra de ánimo coincide con la recuperación de Daniel y desemboca en su petición de seguir oyendo.",
+    "why_distractors_fail": {
+      "Daniel exhortó al mensajero → este perdió fuerzas → pidió retirarse": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia.",
+      "El mensajero guardó silencio → Daniel siguió débil → pidió terminar la visión": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia.",
+      "Daniel recibió paz → huyó del lugar → pidió ayuda a los reyes de Persia": "Invierte, sustituye u omite uno de los vínculos explícitos de la secuencia."
+    },
+    "evidence_excerpt": "y me dijo: “Muy amado, no temas; la paz sea contigo; esfuérzate y cobra aliento.” Mientras él me hablaba, recobré las fuerzas y dije: “Hable mi señor, porque me has fortalecido.”",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "encouragement_recovery_response_chain",
+    "option_category": "compound_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Exige adjudicar una correspondencia causal o temporal de tres componentes con alternativas paralelas, no recuperar una palabra local.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

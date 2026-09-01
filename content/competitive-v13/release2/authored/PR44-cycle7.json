@@ -1,0 +1,113 @@
+[
+  {
+    "id": "R2-B7-PR44-0568",
+    "source_unit_id": "PR44-P056-P008-S004",
+    "fact_id": "PR44-P056-P008-S004-F01",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Qué cadena vincula decisión individual, adversario derrotado y resultado para el nombre divino?",
+    "options": [
+      "Preferir justicia a conveniencia → derrota de Satanás → nombre de Dios ensalzado y honrado",
+      "Preferir conveniencia a justicia → derrota de Daniel → nombre del rey exaltado",
+      "Evitar toda prueba → derrota de los príncipes → nombre de Ciro ocultado",
+      "Aceptar el decreto → derrota de Darío → nombre de Babilonia honrado"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Preferir justicia a conveniencia → derrota de Satanás → nombre de Dios ensalzado y honrado"
+    ],
+    "explanation": "El valor de elegir la justicia antes que la conveniencia derrota a Satanás y exalta el nombre de Dios.",
+    "why_distractors_fail": {
+      "Preferir conveniencia a justicia → derrota de Daniel → nombre del rey exaltado": "Invierte la decisión y cambia ambos resultados.",
+      "Evitar toda prueba → derrota de los príncipes → nombre de Ciro ocultado": "No coincide ningún eslabón.",
+      "Aceptar el decreto → derrota de Darío → nombre de Babilonia honrado": "Sustituye decisión, adversario y desenlace."
+    },
+    "evidence_excerpt": "prefirió seguir la justicia antes que las conveniencias, Satanás iba a quedar derrotado y el nombre de Dios iba a ser ensalzado y honrado",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "cause_consequence",
+    "option_category": "choice_adversary_result",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige tres funciones causales, no sólo nombrar al adversario.",
+    "variant_justification": "La central pregunta quién queda derrotado; ésta reconstruye causa y doble desenlace.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B7-PR44-0577",
+    "source_unit_id": "PR44-P057-P007-S003",
+    "fact_id": "PR44-P057-P007-S003-F01",
+    "family": "single_choice_direct",
+    "subtype": "comparison",
+    "question": "¿Qué correspondencia conserva fundamento interior, estabilidad entre dos circunstancias y condición favorable descrita?",
+    "options": [
+      "Corazón apoyado en Dios → el mismo en prueba y prosperidad → aun bajo luz y favor divinos y humanos",
+      "Corazón apoyado en hombres → distinto en prueba y prosperidad → sólo bajo oscuridad y rechazo",
+      "Corazón apoyado en conveniencia → firme sólo en prosperidad → sin favor alguno",
+      "Corazón apoyado en poder → variable en la prueba → bajo luz exclusiva del rey"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Corazón apoyado en Dios → el mismo en prueba y prosperidad → aun bajo luz y favor divinos y humanos"
+    ],
+    "explanation": "El apoyo del corazón en Dios explica la continuidad del carácter entre prueba y prosperidad, incluso cuando resplandece el favor.",
+    "why_distractors_fail": {
+      "Corazón apoyado en hombres → distinto en prueba y prosperidad → sólo bajo oscuridad y rechazo": "Invierte fundamento y estabilidad.",
+      "Corazón apoyado en conveniencia → firme sólo en prosperidad → sin favor alguno": "Contradice el principio y elimina la prueba.",
+      "Corazón apoyado en poder → variable en la prueba → bajo luz exclusiva del rey": "Cambia fundamento, resultado y fuente del favor."
+    },
+    "evidence_excerpt": "cuyo corazón se apoya en Dios será en la hora de su prueba el mismo que en la prosperidad, cuando sobre él resplandece la luz y el favor de Dios y de los hombres",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "comparison",
+    "option_category": "ground_states_condition",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Mapea fundamento, dos estados y doble procedencia del favor.",
+    "variant_justification": "La central pide sólo la estabilidad; esta variante explica su fundamento y marco comparativo.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-B7-PR44-0581",
+    "source_unit_id": "PR44-P058-P001-S003",
+    "fact_id": "PR44-P058-P001-S003-F01",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Qué mapeo conserva objeto examinado, agentes hostiles, intensidad de la prueba y veredicto?",
+    "options": [
+      "Transacciones de Daniel → sus enemigos → escrutinio más severo → intachables",
+      "Oraciones de Daniel → sus amigos → revisión privada → incompletas",
+      "Decretos de Darío → los príncipes → lectura superficial → irrevocables",
+      "Negocios de Ciro → los caldeos → examen favorable → lucrativos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Transacciones de Daniel → sus enemigos → escrutinio más severo → intachables"
+    ],
+    "explanation": "Los enemigos sometieron las transacciones de Daniel al escrutinio más severo y comprobaron que eran intachables.",
+    "why_distractors_fail": {
+      "Oraciones de Daniel → sus amigos → revisión privada → incompletas": "Cambia objeto, agentes, intensidad y resultado.",
+      "Decretos de Darío → los príncipes → lectura superficial → irrevocables": "Describe otro asunto.",
+      "Negocios de Ciro → los caldeos → examen favorable → lucrativos": "Sustituye todos los componentes."
+    },
+    "evidence_excerpt": "transacciones de sus negocios fueron sometidas al escrutinio más severo de sus enemigos, se comprobó que eran intachables",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "cause_consequence",
+    "option_category": "object_agents_intensity_result",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Mantiene cuatro componentes de una prueba adversarial.",
+    "variant_justification": "La central pide sólo el veredicto; ésta evalúa objeto, agentes, rigor y resultado.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

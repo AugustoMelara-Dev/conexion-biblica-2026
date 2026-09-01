@@ -1,0 +1,102 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-1327aa2eadf9ba31e55c",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "R2-F-DAN9-0028",
+      "source_unit_id": "DAN9-V001",
+      "fact_id": "DAN9-V001-V11-F03",
+      "family": "single_choice_contextual",
+      "subtype": "comparison",
+      "question": "¿Qué combinación distingue correctamente la procedencia nacional de Darío del reino sobre el cual llegó a gobernar?",
+      "options": [
+        "Medo—reino caldeo",
+        "Caldeo—reino medo",
+        "Persa—reino judío",
+        "Judío—reino persa"
+      ],
+      "evidence_excerpt": "Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "origin_domain_contrast",
+      "option_category": "paired_attribute",
+      "variant_justification": "Evalúa una asimetría geopolítica completa, en vez de preguntar aisladamente la nación de Darío.",
+      "authored_content_sha256": "d49943888d93156a44648958e572b41d3dc398950991b4a16380e4f40b22543e",
+      "source_ref": "Daniel 9:1",
+      "source_quote": "«En el primer año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿A qué nación pertenecía Darío?",
+          "family": "single_choice_direct",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN9-0035",
+      "source_unit_id": "DAN9-V007",
+      "fact_id": "DAN9-V007-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "cross_source_integration",
+      "question": "¿Qué formulación conserva a la vez el alcance comunitario, geográfico y causal de la confusión de rostro?",
+      "options": [
+        "Judá, Jerusalén y todo Israel, cerca y lejos, por su rebelión",
+        "Sólo Jerusalén, dentro de sus muros, por la derrota militar",
+        "Únicamente los reyes exiliados, lejos, por falta de ejército",
+        "Todo pueblo extranjero, cerca, por desconocer la ley"
+      ],
+      "evidence_excerpt": "todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "shame_scope_cause",
+      "option_category": "compound_claim",
+      "variant_justification": "Cada distractor modifica alcance, ubicación y causa, obligando a validar los tres ejes.",
+      "authored_content_sha256": "189a86420bdb05ccb838ff7ca77876086f01b17e1920a541b9ed2a879576951b",
+      "source_ref": "Daniel 9:7",
+      "source_quote": "Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué alcance tenía la confusión de rostro atribuida al pueblo?",
+          "family": "single_choice_contextual",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN9-0037",
+      "source_unit_id": "DAN9-V010",
+      "fact_id": "DAN9-V010-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué cadena describe correctamente cómo las leyes llegaron a estar delante del pueblo y cuál era la respuesta esperada?",
+      "options": [
+        "Dios—profetas—pueblo—andar en las leyes",
+        "Moisés—reyes—profetas—reemplazar las leyes",
+        "Pueblo—príncipes—Dios—negociar las leyes",
+        "Darío—sabios—Israel—guardar silencio"
+      ],
+      "evidence_excerpt": "sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "law_transmission_response",
+      "option_category": "causal_chain",
+      "variant_justification": "Modela emisor, mediador, receptor y finalidad como una sola cadena verificable.",
+      "authored_content_sha256": "8eb30ebfe2d08c86059279a4049b641b298d15176ac1ecfbecfb66a05d2fccc4",
+      "source_ref": "Daniel 9:10",
+      "source_quote": "y no obedecimos a la voz de Jehová, nuestro Dios, para andar en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Por medio de quién puso Dios sus leyes delante del pueblo?",
+          "family": "single_choice_contextual",
+          "subtype": "relationship"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "c471cbb4d599e06ad9020a327e82c84d91d29c003cb459f79347565d3aefcadb"
+}

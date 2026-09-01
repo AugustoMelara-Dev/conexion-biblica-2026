@@ -1,0 +1,71 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-f85fa86810e01aff983c",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN1-C9-V003-V11-F03",
+      "source_unit_id": "DAN1-V003",
+      "fact_id": "DAN1-V003-V11-F03",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué jerarquía y criterio de procedencia conserva la orden real sobre los jóvenes?",
+      "options": [
+        "El rey ordena a Aspenaz, jefe de eunucos → traer hijos de Israel → del linaje real y de los príncipes",
+        "Joacim ordena a Melsar, jefe de soldados → traer caldeos → del linaje sacerdotal",
+        "Ciro ordena a Daniel, jefe de sabios → traer persas → de familias campesinas",
+        "Aspenaz ordena al rey, jefe de príncipes → traer babilonios → de linaje extranjero"
+      ],
+      "evidence_excerpt": "Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "king_officer_lineage",
+      "option_category": "three_level_assignment",
+      "variant_justification": "La operación material no se deriva de la presentación pública existente.",
+      "authored_content_sha256": "99ca46b0c91aad801daf0d17c42b28423922f170e4c263d01b4fa11a73b1890f",
+      "source_ref": "Daniel 1:3",
+      "source_quote": "Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Los jóvenes israelitas debían proceder del linaje real y de los ____.",
+          "family": "fill_choice",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN1-C9-V012-V11-F02",
+      "source_unit_id": "DAN1-V012",
+      "fact_id": "DAN1-V012-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué diseño de prueba distribuye correctamente duración, alimento, bebida y participantes?",
+      "options": [
+        "Diez días → legumbres → agua → Daniel y sus compañeros como siervos",
+        "Tres años → comida real → vino → todos los magos",
+        "Siete días → pan → leche → sólo Daniel",
+        "Diez años → legumbres → vino → Aspenaz y Melsar"
+      ],
+      "evidence_excerpt": "—Te ruego que hagas la prueba con tus siervos durante diez días: que nos den legumbres para comer y agua para beber.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "trial_duration_diet_group",
+      "option_category": "four_part_test_design",
+      "variant_justification": "La operación material no se deriva de la presentación pública existente.",
+      "authored_content_sha256": "07f49f26e09ffd937229e6799e07179ef562ad6f4fa1cd8047e229a21bb6858a",
+      "source_ref": "Daniel 1:12",
+      "source_quote": "—Te ruego que hagas la prueba con tus siervos durante diez días: que nos den legumbres para comer y agua para beber.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Durante la prueba, los jóvenes beberían únicamente ____.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "36254f311b6894267a36bf37a72115196a42bb5dcc01b4a7c0946afa80396ec8"
+}

@@ -1,0 +1,226 @@
+[
+  {
+    "id": "V13-R2-DAN2-V001-F01",
+    "source_unit_id": "DAN2-V001",
+    "fact_id": "DAN2-V001-F01",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "En el segundo año de su reinado, ¿qué doble efecto tuvieron los sueños sobre Nabucodonosor?",
+    "options": [
+      "se alegró su espíritu y recordó el sueño",
+      "se calmó su espíritu y durmió de nuevo",
+      "se endureció su espíritu y despreció el sueño",
+      "se turbó su espíritu y se le fue el sueño"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "se turbó su espíritu y se le fue el sueño"
+    ],
+    "explanation": "El versículo enlaza dos consecuencias: su espíritu se turbó y perdió el sueño.",
+    "why_distractors_fail": {
+      "se alegró su espíritu y recordó el sueño": "La escena no describe alegría ni recuerdo.",
+      "se calmó su espíritu y durmió de nuevo": "El rey no recuperó la calma.",
+      "se endureció su espíritu y despreció el sueño": "Tampoco reaccionó con desprecio."
+    },
+    "evidence_excerpt": "En el segundo año del reinado de Nabucodonosor, tuvo Nabucodonosor sueños, y se turbó su espíritu y se le fue el sueño.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "dream_effect",
+    "option_category": "effect",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "La variante exige conservar simultáneamente la reacción interior y la consecuencia nocturna del episodio.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN2-V004-F01",
+    "source_unit_id": "DAN2-V004",
+    "fact_id": "DAN2-V004-F01",
+    "family": "true_false",
+    "subtype": "relationship",
+    "question": "Los caldeos prometieron interpretar el sueño antes de pedir al rey que se lo relatara.",
+    "options": [
+      "Falso",
+      "Verdadero"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "El orden es el contrario: primero pidieron que contara el sueño y solo entonces prometieron la interpretación.",
+    "why_distractors_fail": {
+      "Verdadero": "Invierte la condición y la promesa expresadas por los caldeos."
+    },
+    "evidence_excerpt": "Entonces hablaron los caldeos al rey en lengua aramea: —¡Rey, para siempre vive! Cuenta el sueño a tus siervos, y te daremos la interpretación.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "request_condition",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "sequence"
+      ],
+      "local": true,
+      "original": "Cuenta el sueño ... y te daremos la interpretación",
+      "replacement": "interpretar antes de pedir el relato"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "La proposición conserva actores y acciones, pero invierte deliberadamente su dependencia temporal.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN2-V006-F03",
+    "source_unit_id": "DAN2-V006",
+    "fact_id": "DAN2-V006-F03",
+    "family": "single_choice_direct",
+    "subtype": "factual_recall",
+    "question": "¿Qué tríada ofreció el rey a cambio de que le dijeran el sueño junto con su interpretación?",
+    "options": [
+      "alimentos, vestidos y casa propia",
+      "dones, favores y gran honra",
+      "cargos, tierras y larga vida",
+      "caballos, armas y gran victoria"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "dones, favores y gran honra"
+    ],
+    "explanation": "La recompensa se enumera como dones, favores y gran honra.",
+    "why_distractors_fail": {
+      "cargos, tierras y larga vida": "No ofreció esa lista de privilegios políticos.",
+      "caballos, armas y gran victoria": "No prometió recursos militares.",
+      "alimentos, vestidos y casa propia": "Tampoco enumeró sustento y vivienda."
+    },
+    "evidence_excerpt": "Pero si me decís el sueño y su interpretación, de mí recibiréis dones, favores y gran honra. Decidme, pues, el sueño y su interpretación.",
+    "difficulty": "expert",
+    "importance": "medium",
+    "relation_type": "promised_reward",
+    "option_category": "reward",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "La variante pregunta por una lista completa; cada distractor presenta otra tríada coherente pero no documentada.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN2-V008-F03",
+    "source_unit_id": "DAN2-V008",
+    "fact_id": "DAN2-V008-F03",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "El rey acusó a los sabios de poner dilaciones porque comprendían que el asunto se le había ido.",
+    "options": [
+      "Falso",
+      "Verdadero"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La proposición reproduce tanto la acusación de demora como la razón que Nabucodonosor les atribuyó.",
+    "why_distractors_fail": {
+      "Falso": "Los dos elementos aparecen unidos explícitamente en la respuesta del rey."
+    },
+    "evidence_excerpt": "El rey respondió y dijo: —Yo conozco ciertamente que vosotros ponéis dilaciones, porque veis que el asunto se me ha ido.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "delay_accusation",
+    "option_category": "statement",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "La verificación reúne conducta imputada y causa percibida; ambas deben coincidir para aceptar la proposición.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN2-V011-F01",
+    "source_unit_id": "DAN2-V011",
+    "fact_id": "DAN2-V011-F01",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "Para los caldeos, nadie podía declarar el asunto difícil al rey salvo ____.",
+    "options": [
+      "los príncipes cuya morada está entre los nobles",
+      "los soldados cuya morada está dentro de la ciudad",
+      "los dioses cuya morada no está entre los hombres",
+      "los sabios cuya morada está junto al palacio"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "los dioses cuya morada no está entre los hombres"
+    ],
+    "explanation": "Ellos reservaron esa posibilidad a los dioses cuya morada no está entre los hombres.",
+    "why_distractors_fail": {
+      "los sabios cuya morada está junto al palacio": "Los sabios acababan de negar su propia capacidad.",
+      "los príncipes cuya morada está entre los nobles": "Los príncipes no eran la excepción mencionada.",
+      "los soldados cuya morada está dentro de la ciudad": "Los soldados no intervenían en la revelación."
+    },
+    "evidence_excerpt": "Porque el asunto que el rey demanda es difícil, y no hay quien lo pueda declarar al rey, salvo los dioses cuya morada no está entre los hombres.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "claimed_exception",
+    "option_category": "group",
+    "false_mutation": null,
+    "blank_span": "los dioses cuya morada no está entre los hombres",
+    "significance": "La excepción revela el límite que los especialistas babilonios reconocían en su propia capacidad.",
+    "variant_justification": "La recuperación conserva en una sola unidad tanto la identidad de la excepción como la razón espacial que la caracteriza.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN2-V012-F02",
+    "source_unit_id": "DAN2-V012",
+    "fact_id": "DAN2-V012-F02",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "La ira del rey produjo un decreto limitado únicamente a los caldeos que habían comparecido ante él.",
+    "options": [
+      "Falso",
+      "Verdadero"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "El alcance fue mucho mayor: ordenó matar a todos los sabios de Babilonia.",
+    "why_distractors_fail": {
+      "Verdadero": "Reduce indebidamente una orden que el texto extiende a todos los sabios de Babilonia."
+    },
+    "evidence_excerpt": "Por esto el rey, con ira y con gran enojo, mandó que mataran a todos los sabios de Babilonia.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "death_decree",
+    "option_category": "statement",
+    "false_mutation": {
+      "changed_fields": [
+        "scope"
+      ],
+      "local": true,
+      "original": "todos los sabios de Babilonia",
+      "replacement": "únicamente los caldeos presentes"
+    },
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "La mutación afecta solo el alcance del decreto, un detalle competitivo que puede confundirse con los destinatarios del diálogo.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

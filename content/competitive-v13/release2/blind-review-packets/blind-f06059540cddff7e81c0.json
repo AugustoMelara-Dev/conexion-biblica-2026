@@ -1,0 +1,381 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-f06059540cddff7e81c0",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN5-V023-F01",
+      "source_unit_id": "DAN5-V023",
+      "fact_id": "DAN5-V023-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué reconstrucción conserva simultáneamente el objeto profanado, el culto sustituto y el contraste final de la acusación contra Belsasar?",
+      "options": [
+        "Vasos de la Casa para beber; alabanza a ídolos incapaces; falta de honra al Dios que sostiene vida y caminos",
+        "Vasos persas para un sacrificio; alabanza al Señor del cielo; honra al dios que protegía el palacio",
+        "Vasos de la Casa reservados por Daniel; rechazo de metales preciosos; honra tardía al Dios de Jerusalén",
+        "Vasos del banquete destruidos; alabanza a Nabucodonosor; olvido de los caminos de los grandes"
+      ],
+      "evidence_excerpt": "hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus concubinas bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "indictment_chain",
+      "option_category": "compound_mapping",
+      "variant_justification": "Convierte la identificación aislada del ofendido en una cadena de tres correspondencias que debe conservar objetos, culto y responsabilidad.",
+      "authored_content_sha256": "1cf8043196c740290b7b461326fc6f1342c2917742ae3c025f2f0138a1d1b010",
+      "source_ref": "Daniel 5:23",
+      "source_quote": "sino que contra el Señor del cielo te has ensoberbecido; hiciste traer ante ti los vasos de su Casa, y tú y tus grandes, tus mujeres y tus concubinas bebisteis vino de ellos; además diste alabanza a dioses de plata y oro, de bronce, de hierro, de madera y de piedra, que ni ven ni oyen ni saben; pero nunca honraste al Dios en cuya mano está tu vida y de quien son todos tus caminos.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Contra quién dijo Daniel que Belsasar se había ensoberbecido al profanar los vasos y alabar ídolos?",
+          "family": "single_choice_direct",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-V021-F02",
+      "source_unit_id": "DAN5-V021",
+      "fact_id": "DAN5-V021-F02",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Cuál secuencia preserva tanto la degradación de Nabucodonosor como el límite que puso fin a ese estado?",
+      "options": [
+        "Expulsión de la sociedad, mente como de bestias, vida con asnos monteses, hierba y rocío, hasta reconocer el dominio del Altísimo",
+        "Retiro voluntario del palacio, mente de sabio, vida con pastores, pan y lluvia, hasta recuperar el favor de Belsasar",
+        "Expulsión del reino, mente intacta, vida con bueyes domésticos, vino y aceite, hasta dominar a los pueblos",
+        "Encarcelamiento entre hombres, mente de adivino, vida con caldeos, ayuno y ceniza, hasta interpretar la escritura"
+      ],
+      "evidence_excerpt": "Fue echado de entre los hijos de los hombres, su mente se hizo semejante a la de las bestias y con los asnos monteses fue su habitación. Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el Altísimo Dios tiene dominio sobre el reino de los hombres",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "discipline_sequence_until_recognition",
+      "option_category": "ordered_chain",
+      "variant_justification": "Sustituye la proposición verdadero/falso por la reconstrucción completa y ordenada de condición, duración y reconocimiento final.",
+      "authored_content_sha256": "5f60b801c067f558285a95626bba5e113d76cb2bdf0887be9939a8ecf32653b1",
+      "source_ref": "Daniel 5:21",
+      "source_quote": "Fue echado de entre los hijos de los hombres, su mente se hizo semejante a la de las bestias y con los asnos monteses fue su habitación. Le hicieron comer hierba, como al buey, y su cuerpo se empapó del rocío del cielo, hasta que reconoció que el Altísimo Dios tiene dominio sobre el reino de los hombres, y que pone sobre él al que le place.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Nabucodonosor permaneció entre las bestias hasta que reconoció que el Dios Altísimo domina el reino de los hombres.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-V019-F03",
+      "source_unit_id": "DAN5-V019",
+      "fact_id": "DAN5-V019-F03",
+      "family": "single_choice_contextual",
+      "subtype": "comparison",
+      "question": "Al separar las dos parejas de poder discrecional atribuidas a Nabucodonosor, ¿qué correspondencia mantiene ambos contrastes?",
+      "options": [
+        "Mataba frente a dar vida; engrandecía frente a humillar",
+        "Mataba frente a perdonar; enriquecía frente a desterrar",
+        "Amenazaba frente a dar vida; coronaba frente a humillar",
+        "Juzgaba frente a esconder; engrandecía frente a consultar"
+      ],
+      "evidence_excerpt": "A quien le placía, mataba, y a quien le placía, daba vida; engrandecía a quien le placía, y a quien le placía, humillaba",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "paired_sovereign_actions",
+      "option_category": "double_correspondence",
+      "variant_justification": "Exige reconstruir las dos oposiciones simultáneas en lugar de completar únicamente el último verbo.",
+      "authored_content_sha256": "e5707ce944f11ac6a80247b16a909c511a911aa7915b86b80b409d3c67f3e779",
+      "source_ref": "Daniel 5:19",
+      "source_quote": "Y por la grandeza que le dio, todos los pueblos, naciones y lenguas temblaban y temían delante de él. A quien le placía, mataba, y a quien le placía, daba vida; engrandecía a quien le placía, y a quien le placía, humillaba.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Nabucodonosor mataba o daba vida, engrandecía a unos y ________ a otros según le placía.",
+          "family": "fill_choice",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-V002-V11-F02",
+      "source_unit_id": "DAN5-V002",
+      "fact_id": "DAN5-V002-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué reconstrucción preserva el impulso, la procedencia de los objetos y todos los grupos destinados a usarlos?",
+      "options": [
+        "Gusto del vino; vasos de oro y plata traídos por Nabucodonosor desde el templo de Jerusalén; rey, grandes, mujeres y concubinas beberían",
+        "Temor por la escritura; vasos de bronce traídos por Daniel desde Persia; sólo los sabios beberían",
+        "Consejo de la reina; vasos de oro fabricados en Babilonia; príncipes y soldados los guardarían",
+        "Orden de Nabucodonosor; vasos de piedra del palacio; mujeres y concubinas los destruirían"
+      ],
+      "evidence_excerpt": "Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de Jerusalén, para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "impulse_provenance_user_chain",
+      "option_category": "compound_mapping",
+      "variant_justification": "Sustituye la pregunta general por una reconstrucción de siete datos enlazados.",
+      "authored_content_sha256": "2e1794956676b25516fa967594992618be5a1ebf9099cd35eb3421c625c3dc4c",
+      "source_ref": "Daniel 5:2",
+      "source_quote": "Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de Jerusalén, para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué orden dio Belsasar bajo el efecto del vino y para qué?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-V020-F01",
+      "source_unit_id": "DAN5-V020",
+      "fact_id": "DAN5-V020-F01",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Cuál secuencia conserva los dos cambios interiores y las dos pérdidas reales de Nabucodonosor?",
+      "options": [
+        "Corazón ensoberbecido y espíritu endurecido; deposición del trono y pérdida de gloria",
+        "Corazón humillado y espíritu sabio; recuperación del trono y aumento de gloria",
+        "Mente turbada y rodillas débiles; pérdida de vasos y banquete",
+        "Corazón temeroso y espíritu arrepentido; exilio de Daniel y caída de Media"
+      ],
+      "evidence_excerpt": "cuando su corazón se ensoberbeció y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y despojado de su gloria",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "inner_double_cause_double_loss",
+      "option_category": "compound_mapping",
+      "variant_justification": "Reemplaza el hueco verbal por una cadena causal de dos antecedentes y dos consecuencias.",
+      "authored_content_sha256": "c6892387ae2e7d196b88c11c14e2df7a8464f85d0ade1d18ad0ab26695ebdd97",
+      "source_ref": "Daniel 5:20",
+      "source_quote": "Pero cuando su corazón se ensoberbeció y su espíritu se endureció en su orgullo, fue depuesto del trono de su reino y despojado de su gloria.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Antes de perder el trono y la gloria, el corazón de Nabucodonosor se ________ y su espíritu se endureció en su orgullo.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-F-DAN5-C5-012",
+      "source_unit_id": "DAN5-V003",
+      "fact_id": "DAN5-V003-V11-F04",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué combinación identifica material, procedencia sagrada y uso profano de los vasos llevados al banquete?",
+      "options": [
+        "Oro—templo de Dios en Jerusalén—bebieron de ellos",
+        "Plata—palacio de Babilonia—escribieron con ellos",
+        "Bronce—templo de Persia—los pesaron",
+        "Hierro—casa del rey—los escondieron"
+      ],
+      "evidence_excerpt": "vasos de oro que habían traído del templo de la casa de Dios, que estaba en Jerusalén, y bebieron de ellos",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "object_material_origin_use",
+      "option_category": "triple_mapping",
+      "variant_justification": "Exige triple correspondencia material-origen-uso frente a alternativas paralelas.",
+      "authored_content_sha256": "d32d62ce134c7dffeb378ab1ff17c66c6ad88005625ef1b349d8f74fbb360ab7",
+      "source_ref": "Daniel 5:3",
+      "source_quote": "Entonces trajeron los vasos de oro que habían traído del templo de la casa de Dios, que estaba en Jerusalén, y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿De qué material eran los vasos que efectivamente llevaron al banquete de Belsasar?",
+          "family": "single_choice_contextual",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "R2-C-DAN5-V002-F01",
+      "source_unit_id": "DAN5-V002",
+      "fact_id": "DAN5-V002-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "Al seguir la historia de los vasos antes de que llegaran a la mesa, ¿qué opción asigna correctamente quién los había trasladado, de qué templo procedían y quiénes debían usarlos?",
+      "options": [
+        "Ciro — templo de Susa — sólo los sacerdotes",
+        "Nabucodonosor — templo de Jerusalén — el rey, sus grandes, mujeres y concubinas",
+        "Belsasar — templo de Babilonia — únicamente los príncipes",
+        "Darío — templo de Judea — los magos y caldeos"
+      ],
+      "evidence_excerpt": "Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de Jerusalén, para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "relationship_mapping",
+      "option_category": "compound_mapping",
+      "variant_justification": "Sustituye la pregunta aislada por un mapeo triple entre agente previo, procedencia sagrada y usuarios previstos.",
+      "authored_content_sha256": "f558cfbd9a2d454056b234d286e454b32eb41dc11d69bcf9891e77c39f0cfb15",
+      "source_ref": "Daniel 5:2",
+      "source_quote": "Belsasar, con el gusto del vino, mandó que trajeran los vasos de oro y de plata que Nabucodonosor, su padre, había traído del templo de Jerusalén, para que bebieran de ellos el rey y sus grandes, sus mujeres y sus concubinas.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿De qué ciudad procedían los vasos sagrados que Belsasar mandó traer durante el banquete?",
+          "family": "single_choice_contextual",
+          "subtype": "relationship"
+        }
+      ]
+    },
+    {
+      "id": "R2-C-DAN5-V005-F02",
+      "source_unit_id": "DAN5-V005",
+      "fact_id": "DAN5-V005-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué mapa de la aparición conserva a la vez el momento, la referencia visual y la superficie sobre la que se trazó la escritura?",
+      "options": [
+        "Al terminar la noche — detrás del trono — sobre una puerta de bronce",
+        "Durante el juicio — junto a la mesa — sobre los vasos de oro",
+        "En aquella misma hora — delante del candelabro — sobre la pared encalada del palacio",
+        "A la mañana siguiente — sobre el candelabro — en el suelo del salón"
+      ],
+      "evidence_excerpt": "En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del candelabro, sobre lo encalado de la pared del palacio real; y el rey veía la mano que escribía.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "scene_mapping",
+      "option_category": "compound_mapping",
+      "variant_justification": "La variante integra tres coordenadas de la escena; la central sólo preguntaba por el candelabro.",
+      "authored_content_sha256": "129ab4cea9fac3bfa623fdae5cd6454141716b27041b1176866cff1864d96bbf",
+      "source_ref": "Daniel 5:5",
+      "source_quote": "En aquella misma hora aparecieron los dedos de una mano de hombre que escribía delante del candelabro, sobre lo encalado de la pared del palacio real; y el rey veía la mano que escribía.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Delante de qué objeto apareció la escritura trazada por los dedos sobre la pared del palacio?",
+          "family": "single_choice_direct",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "R2-C-DAN5-V006-F02",
+      "source_unit_id": "DAN5-V006",
+      "fact_id": "DAN5-V006-F02",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "Desde el primer cambio visible hasta la última reacción corporal, ¿qué secuencia reproduce el deterioro de Belsasar?",
+      "options": [
+        "Se debilitó de las caderas → palideció → se calmó → juntó las rodillas",
+        "Palideció → sus pensamientos lo turbaron → se debilitaron sus caderas → chocaron sus rodillas",
+        "Gritó → sus rodillas se afirmaron → recobró el color → se sentó",
+        "Sus rodillas chocaron → bebió vino → palideció → convocó a Daniel"
+      ],
+      "evidence_excerpt": "Entonces el rey palideció y sus pensamientos lo turbaron, se debilitaron sus caderas y sus rodillas daban la una contra la otra.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "ordered_effects",
+      "option_category": "compound_mapping",
+      "variant_justification": "Convierte el antiguo hueco de «palideció» en una reconstrucción ordenada de cuatro efectos.",
+      "authored_content_sha256": "82061033651921bb6a2a4a95be61a93bf5177cc6289ea2c0e510c60af336c85b",
+      "source_ref": "Daniel 5:6",
+      "source_quote": "Entonces el rey palideció y sus pensamientos lo turbaron, se debilitaron sus caderas y sus rodillas daban la una contra la otra.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Al ver la mano que escribía, el rey ________, sus pensamientos lo turbaron y sus rodillas chocaban.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "R2-C-DAN5-V010-F02",
+      "source_unit_id": "DAN5-V010",
+      "fact_id": "DAN5-V010-F02",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué opción conserva el motivo de la entrada de la reina, el lugar al que entró y las dos reacciones que pidió evitar al rey?",
+      "options": [
+        "Entró por la escritura al patio y pidió que no convocara sabios",
+        "Entró por el vino al templo y pidió que no recordara el sueño",
+        "Entró por el grito de los guardias al palacio y pidió que no castigara a los príncipes",
+        "Entró por las palabras del rey y sus príncipes a la sala del banquete y pidió que no se turbara ni palideciera"
+      ],
+      "evidence_excerpt": "La reina, por las palabras del rey y de sus príncipes, entró a la sala del banquete, y dijo: —¡Rey, vive para siempre! No te turben tus pensamientos ni palidezca tu rostro.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "event_speech_mapping",
+      "option_category": "compound_mapping",
+      "variant_justification": "Integra causa, desplazamiento y consejo doble; evita la inversión V/F de una sola cláusula.",
+      "authored_content_sha256": "6d37fcfe30d4972b6c1f3242e695e91f3f38b393b3c4dd6ff91a6da3b0a14830",
+      "source_ref": "Daniel 5:10",
+      "source_quote": "La reina, por las palabras del rey y de sus príncipes, entró a la sala del banquete, y dijo: —¡Rey, vive para siempre! No te turben tus pensamientos ni palidezca tu rostro.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "La reina dirigió a los príncipes su consejo de no turbarse ni palidecer.",
+          "family": "true_false",
+          "subtype": "speaker_addressee"
+        }
+      ]
+    },
+    {
+      "id": "R2-C-DAN5-V012-F01",
+      "source_unit_id": "DAN5-V012",
+      "fact_id": "DAN5-V012-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué combinación distingue el nombre hebreo, el nombre impuesto por el rey y el resultado esperado si se le llamaba?",
+      "options": [
+        "Daniel — Beltsasar — daría la interpretación",
+        "Ananías — Sadrac — custodiaría los vasos",
+        "Misael — Mesac — leería el decreto sin explicarlo",
+        "Azarías — Abed-nego — convocaría a los astrólogos"
+      ],
+      "evidence_excerpt": "por cuanto en él se halló más espíritu, ciencia y entendimiento para interpretar sueños, descifrar enigmas y resolver dudas; esto es, en Daniel, al cual el rey puso por nombre Beltsasar. Llámese, pues, ahora a Daniel, y él te dará la interpretación.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "name_function_mapping",
+      "option_category": "compound_mapping",
+      "variant_justification": "Reúne identidad doble y función futura, superando la recuperación aislada del nombre Beltsasar.",
+      "authored_content_sha256": "390b51303a5bd8ee0aa96ed4c320ebfd3b6a735179e3ae684b75ba255146f3b0",
+      "source_ref": "Daniel 5:12",
+      "source_quote": "por cuanto en él se halló más espíritu, ciencia y entendimiento para interpretar sueños, descifrar enigmas y resolver dudas; esto es, en Daniel, al cual el rey puso por nombre Beltsasar. Llámese, pues, ahora a Daniel, y él te dará la interpretación.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué nombre había puesto el rey a Daniel, el hombre capaz de interpretar sueños y resolver dudas?",
+          "family": "single_choice_contextual",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "R2-C-DAN5-V015-F01",
+      "source_unit_id": "DAN5-V015",
+      "fact_id": "DAN5-V015-F01",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "Antes de recurrir a Daniel, ¿qué combinación resume para qué habían llevado sabios y astrólogos y hasta dónde llegó su fracaso?",
+      "options": [
+        "Para copiar la escritura; la copiaron, pero no aceptaron el collar",
+        "Para leer e interpretar; no pudieron interpretarle el asunto",
+        "Para destruir la escritura; la leyeron y la quemaron",
+        "Para identificar los vasos; no pudieron entrar al banquete"
+      ],
+      "evidence_excerpt": "Y ahora trajeron ante mí sabios y astrólogos para que leyeran esta escritura y me dieran su interpretación; pero no han podido interpretarme el asunto.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "attempt_outcome_mapping",
+      "option_category": "compound_mapping",
+      "variant_justification": "La variante relaciona propósito doble con desenlace negativo, no invierte superficialmente el éxito de los especialistas.",
+      "authored_content_sha256": "0f2c4495819143fe2eba6641f2b411ac20b2b6612b491394e3dccf5d0231f1a0",
+      "source_ref": "Daniel 5:15",
+      "source_quote": "Y ahora trajeron ante mí sabios y astrólogos para que leyeran esta escritura y me dieran su interpretación; pero no han podido interpretarme el asunto.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Los sabios y astrólogos lograron interpretar el asunto que Belsasar les presentó.",
+          "family": "true_false",
+          "subtype": "comparison"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "3a651ccfb432ce53c8ba823831bc192bf0cb1a685bc735d7977a17c3a9bb6d71"
+}

@@ -1,0 +1,372 @@
+[
+  {
+    "id": "R2-C7-DAN12-001",
+    "source_unit_id": "DAN12-V001",
+    "fact_id": "DAN12-V001-F08",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué cadena conserva marco temporal, defensor, crisis y criterio de liberación anunciados juntos?",
+    "options": [
+      "tiempo del fin—Gabriel, rey terrenal—guerra común—todo habitante de Babilonia",
+      "después de los días—Daniel, príncipe de los sabios—hambre prolongada—los que cruzaran el río",
+      "tiempo de reposo—el varón de lino, rey del pueblo—ciencia creciente—los que enseñaran justicia",
+      "aquel tiempo—Miguel, gran príncipe a favor del pueblo—angustia sin precedente—los inscritos en el libro"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "aquel tiempo—Miguel, gran príncipe a favor del pueblo—angustia sin precedente—los inscritos en el libro"
+    ],
+    "explanation": "La profecía enlaza aquel tiempo con Miguel, una angustia incomparable y la liberación de quienes figuren inscritos.",
+    "why_distractors_fail": {
+      "tiempo del fin—Gabriel, rey terrenal—guerra común—todo habitante de Babilonia": "Cambia tiempo, identidad, naturaleza de la crisis y beneficiarios.",
+      "después de los días—Daniel, príncipe de los sabios—hambre prolongada—los que cruzaran el río": "Asigna a Daniel un cargo y una condición de rescate inexistentes.",
+      "tiempo de reposo—el varón de lino, rey del pueblo—ciencia creciente—los que enseñaran justicia": "Mezcla escenas posteriores y sustituye la inscripción como criterio."
+    },
+    "evidence_excerpt": "En aquel tiempo se levantará Miguel, el gran príncipe que está de parte de los hijos de tu pueblo. Será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen inscritos en el libro.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "cause_consequence",
+    "option_category": "time_defender_crisis_eligibility",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Cuatro relaciones simultáneas impiden reducir el hecho a identificar a Miguel.",
+    "variant_justification": "Las presentaciones existentes afirman el cargo de Miguel o preguntan angustia e inscripción por separado; ésta integra la secuencia completa.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-C7-DAN12-002",
+    "source_unit_id": "DAN12-V003",
+    "fact_id": "DAN12-V003-F02",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué paralelismo asigna correctamente grupo, acción distintiva, imagen y duración?",
+    "options": [
+      "entendidos—enseñan justicia—estrellas—hasta el fin; maestros—comprenden—firmamento—mil días",
+      "entendidos—resplandecen—firmamento; quienes enseñan justicia a la multitud—estrellas—a perpetua eternidad",
+      "impíos—resplandecen—río; entendidos—purifican a muchos—sol—siete tiempos",
+      "inscritos—corren de aquí para allá—firmamento; sabios—sellan el libro—estrellas—una generación"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "entendidos—resplandecen—firmamento; quienes enseñan justicia a la multitud—estrellas—a perpetua eternidad"
+    ],
+    "explanation": "El primer miembro une entendidos y firmamento; el segundo vincula maestros de justicia, multitud, estrellas y permanencia.",
+    "why_distractors_fail": {
+      "entendidos—enseñan justicia—estrellas—hasta el fin; maestros—comprenden—firmamento—mil días": "Intercambia funciones e imágenes y cambia la duración.",
+      "impíos—resplandecen—río; entendidos—purifican a muchos—sol—siete tiempos": "Introduce grupos, acciones e imágenes de otros versículos.",
+      "inscritos—corren de aquí para allá—firmamento; sabios—sellan el libro—estrellas—una generación": "Convierte órdenes y movimientos en las dos comparaciones."
+    },
+    "evidence_excerpt": "Los entendidos resplandecerán como el resplandor del firmamento; y los que enseñan la justicia a la multitud, como las estrellas, a perpetua eternidad.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "comparison",
+    "option_category": "group_action_image_duration_parallel",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconstruir las dos mitades y no sólo completar una comparación.",
+    "variant_justification": "La central recupera únicamente «firmamento»; esta variante audita ambos miembros y la duración del segundo.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-C7-DAN12-003",
+    "source_unit_id": "DAN12-V004",
+    "fact_id": "DAN12-V004-F05",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué distribución enlaza destinatario, doble resguardo, límite temporal y dos fenómenos posteriores?",
+    "options": [
+      "Daniel—cerrar palabras y sellar libro—hasta el tiempo del fin—muchos correrán y la ciencia aumentará",
+      "Miguel—abrir palabras y romper sellos—hasta la angustia—muchos reposarán y el río crecerá",
+      "varón de lino—esconder libro y cerrar río—hasta mil días—los impíos entenderán y la justicia cesará",
+      "entendidos—copiar palabras y guardar libro—hasta siete tiempos—las estrellas caerán y el sacrificio aumentará"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Daniel—cerrar palabras y sellar libro—hasta el tiempo del fin—muchos correrán y la ciencia aumentará"
+    ],
+    "explanation": "Daniel recibe dos acciones de resguardo hasta el fin; después se anuncian movimiento extendido y aumento de ciencia.",
+    "why_distractors_fail": {
+      "Miguel—abrir palabras y romper sellos—hasta la angustia—muchos reposarán y el río crecerá": "Invierte las acciones y reemplaza los efectos anunciados.",
+      "varón de lino—esconder libro y cerrar río—hasta mil días—los impíos entenderán y la justicia cesará": "Cambia destinatario, objetos, plazo y consecuencias.",
+      "entendidos—copiar palabras y guardar libro—hasta siete tiempos—las estrellas caerán y el sacrificio aumentará": "Atribuye a un grupo órdenes y señales no expresadas."
+    },
+    "evidence_excerpt": "tú, Daniel, cierra las palabras y sella el libro hasta el tiempo del fin. Muchos correrán de aquí para allá, y la ciencia aumentará.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "relationship",
+    "option_category": "addressee_actions_limit_outcomes",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Integra mandato, plazo y dos desarrollos sin convertirlos en cloze.",
+    "variant_justification": "Las presentaciones existentes aíslan cerrar/sellar, correr o aumentar; ésta exige el mapa completo.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-C7-DAN12-004",
+    "source_unit_id": "DAN12-V007",
+    "fact_id": "DAN12-V007-F05",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué secuencia reproduce posición, gesto, fundamento del juramento, plazo y condición de cumplimiento?",
+    "options": [
+      "junto al río—bajó una mano—juró por Miguel—mil doscientos días—cuando aumentara el poder santo",
+      "en una orilla—cerró ambas manos—juró por Daniel—mil trescientos días—cuando se sellara el libro",
+      "bajo las aguas—extendió la mano derecha al pueblo—juró por los vigilantes—siete tiempos—cuando cesara la ciencia",
+      "sobre las aguas—alzó ambas manos al cielo—juró por el que vive por los siglos—tiempo, tiempos y medio tiempo—al acabarse la dispersión del poder santo"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "sobre las aguas—alzó ambas manos al cielo—juró por el que vive por los siglos—tiempo, tiempos y medio tiempo—al acabarse la dispersión del poder santo"
+    ],
+    "explanation": "El varón está sobre el río, alza ambas manos, jura por el Eterno, anuncia el plazo compuesto y liga el cumplimiento al fin de la dispersión.",
+    "why_distractors_fail": {
+      "junto al río—bajó una mano—juró por Miguel—mil doscientos días—cuando aumentara el poder santo": "Altera posición, gesto, objeto del juramento, plazo y condición.",
+      "en una orilla—cerró ambas manos—juró por Daniel—mil trescientos días—cuando se sellara el libro": "Traslada al varón a una orilla y mezcla los otros intervalos.",
+      "bajo las aguas—extendió la mano derecha al pueblo—juró por los vigilantes—siete tiempos—cuando cesara la ciencia": "Invierte la posición y añade actores, duración y condición ausentes."
+    },
+    "evidence_excerpt": "Oí al varón vestido de lino, que estaba sobre las aguas del río, el cual alzó su mano derecha y su mano izquierda al cielo y juró por el que vive por los siglos, que será por tiempo, tiempos y la mitad de un tiempo. Y cuando se acabe la dispersión del poder del pueblo santo, todas estas cosas se cumplirán.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "narrative_order",
+    "option_category": "position_gesture_oath_duration_condition",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Cinco eslabones distinguen la respuesta solemne de los plazos vecinos.",
+    "variant_justification": "Las presentaciones existentes preguntan gesto, juramento, duración o condición por separado; ésta recompone toda la cadena.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-C7-DAN12-005",
+    "source_unit_id": "DAN12-V008",
+    "fact_id": "DAN12-V008-F02",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué progresión conserva percepción, límite cognitivo, tratamiento e interrogación de Daniel?",
+    "options": [
+      "vio—comprendió—«príncipe mío»—preguntó quién vencería",
+      "oyó—no entendió—«Señor mío»—preguntó cuál sería el fin de estas cosas",
+      "leyó—selló—«rey mío»—preguntó cuántos serían inscritos",
+      "soñó—olvidó—«varón mío»—preguntó dónde estaba el río"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "oyó—no entendió—«Señor mío»—preguntó cuál sería el fin de estas cosas"
+    ],
+    "explanation": "Daniel pasa de oír sin comprender a dirigirse respetuosamente a su interlocutor y preguntar por el desenlace.",
+    "why_distractors_fail": {
+      "vio—comprendió—«príncipe mío»—preguntó quién vencería": "Invierte la falta de comprensión y cambia tratamiento y pregunta.",
+      "leyó—selló—«rey mío»—preguntó cuántos serían inscritos": "Sustituye percepción, acción, tratamiento y contenido.",
+      "soñó—olvidó—«varón mío»—preguntó dónde estaba el río": "Introduce sueño, olvido y una pregunta espacial inexistentes."
+    },
+    "evidence_excerpt": "Yo oí, pero no entendí. Dije entonces: Señor mío, ¿cuál será el fin de estas cosas?",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "narrative_order",
+    "option_category": "perception_cognition_address_question",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "La respuesta exige cuatro funciones consecutivas, no una palabra omitida.",
+    "variant_justification": "Las presentaciones existentes completan «entendí», «fin» o «Señor»; ésta obliga a ordenar y vincular los cuatro elementos.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-C7-DAN12-006",
+    "source_unit_id": "DAN12-V009",
+    "fact_id": "DAN12-V009-F04",
+    "family": "single_choice_contextual",
+    "subtype": "speaker_addressee",
+    "question": "¿Qué mapeo conserva imperativo, destinatario, estado doble del mensaje y término de vigencia?",
+    "options": [
+      "«Espera»—Miguel—abierto y explicado—hasta la angustia",
+      "«Anda»—Daniel—cerrado y sellado—hasta el tiempo del fin",
+      "«Levántate»—varón de lino—purificado y emblanquecido—hasta mil doscientos noventa días",
+      "«Corre»—entendidos—escrito e interpretado—hasta la eternidad"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "«Anda»—Daniel—cerrado y sellado—hasta el tiempo del fin"
+    ],
+    "explanation": "La respuesta ordena a Daniel seguir, describe las palabras con dos participios y fija como límite el tiempo del fin.",
+    "why_distractors_fail": {
+      "«Espera»—Miguel—abierto y explicado—hasta la angustia": "Cambia orden, receptor, estado y límite.",
+      "«Levántate»—varón de lino—purificado y emblanquecido—hasta mil doscientos noventa días": "Mezcla la promesa final y el proceso de purificación con este resguardo.",
+      "«Corre»—entendidos—escrito e interpretado—hasta la eternidad": "Convierte el movimiento de muchos en orden y sustituye los estados del mensaje."
+    },
+    "evidence_excerpt": "Él respondió: Anda, Daniel, pues estas palabras están cerradas y selladas hasta el tiempo del fin.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "speaker_addressee",
+    "option_category": "imperative_addressee_message_state_limit",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Cuatro asociaciones impiden resolver por el participio más previsible.",
+    "variant_justification": "Las presentaciones existentes aíslan «anda», «selladas» o «fin»; ésta evalúa la respuesta entera.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-C7-DAN12-007",
+    "source_unit_id": "DAN12-V001",
+    "fact_id": "DAN12-V001-V11-F03",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué contraste explica por qué la liberación no se presenta como salida indiscriminada de la angustia?",
+    "options": [
+      "la angustia afecta sólo a reyes, y la liberación corresponde a todo el que viva junto al río",
+      "la crisis termina antes de comenzar, y la liberación depende de correr de aquí para allá",
+      "la angustia alcanza al pueblo, pero la liberación se delimita a quienes estén inscritos en el libro",
+      "la angustia es ordinaria, y la liberación se reserva a quienes supriman el sacrificio"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "la angustia alcanza al pueblo, pero la liberación se delimita a quienes estén inscritos en el libro"
+    ],
+    "explanation": "El texto contrapone una angustia excepcional con una liberación cuyo conjunto queda identificado por la inscripción.",
+    "why_distractors_fail": {
+      "la angustia afecta sólo a reyes, y la liberación corresponde a todo el que viva junto al río": "Reduce arbitrariamente la crisis y sustituye el criterio de pertenencia.",
+      "la crisis termina antes de comenzar, y la liberación depende de correr de aquí para allá": "Niega la secuencia y usa el movimiento anunciado como condición de rescate.",
+      "la angustia es ordinaria, y la liberación se reserva a quienes supriman el sacrificio": "Rebaja la angustia y mezcla un hito cronológico posterior."
+    },
+    "evidence_excerpt": "Será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen inscritos en el libro.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "cause_consequence",
+    "option_category": "universal_crisis_bounded_deliverance",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "El contraste requiere distinguir alcance de crisis y delimitación de liberados.",
+    "variant_justification": "La presentación existente pregunta sólo la condición; ésta evalúa la función restrictiva de esa condición dentro del contraste.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-C7-DAN12-008",
+    "source_unit_id": "DAN12-V004",
+    "fact_id": "DAN12-V004-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué progresión distingue las acciones confiadas a Daniel de los comportamientos y resultados atribuidos a «muchos»?",
+    "options": [
+      "Daniel cierra palabras y sella libro; muchos corren de aquí para allá; la ciencia aumenta",
+      "Daniel corre de aquí para allá y aumenta ciencia; muchos cierran palabras y sellan libro",
+      "Daniel quita el sacrificio y fija los días; muchos reposan y reciben heredad",
+      "Daniel purifica a los impíos y abre el libro; muchos levantan las manos y juran"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Daniel cierra palabras y sella libro; muchos corren de aquí para allá; la ciencia aumenta"
+    ],
+    "explanation": "Las órdenes de preservación recaen en Daniel; el movimiento colectivo y el aumento de ciencia se predican de la etapa posterior.",
+    "why_distractors_fail": {
+      "Daniel corre de aquí para allá y aumenta ciencia; muchos cierran palabras y sellan libro": "Intercambia sujeto y funciones entre Daniel y muchos.",
+      "Daniel quita el sacrificio y fija los días; muchos reposan y reciben heredad": "Importa los dos intervalos finales y la promesa personal.",
+      "Daniel purifica a los impíos y abre el libro; muchos levantan las manos y juran": "Mezcla purificación y juramento con sujetos equivocados."
+    },
+    "evidence_excerpt": "Daniel, cierra las palabras y sella el libro hasta el tiempo del fin. Muchos correrán de aquí para allá, y la ciencia aumentará.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "cause_consequence",
+    "option_category": "agent_action_collective_outcome",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Diferencia dos agentes y tres acciones contiguas que una lectura superficial puede fusionar.",
+    "variant_justification": "La presentación existente pregunta sólo qué movimiento harían muchos; ésta distribuye responsabilidades y resultado.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-C7-DAN12-009",
+    "source_unit_id": "DAN12-V007",
+    "fact_id": "DAN12-V007-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué correspondencia espacial y gestual distingue al varón de las dos figuras ubicadas en las orillas?",
+    "options": [
+      "varón de lino—sobre las aguas—ambas manos al cielo; otras figuras—una a cada lado del río",
+      "varón de lino—en la orilla derecha—una mano al río; otras figuras—juntas sobre las aguas",
+      "varón de lino—bajo el río—manos sobre el libro; otras figuras—detrás de Daniel",
+      "varón de lino—en ambas orillas—sin levantar manos; otras figuras—en el cielo"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "varón de lino—sobre las aguas—ambas manos al cielo; otras figuras—una a cada lado del río"
+    ],
+    "explanation": "El varón ocupa el espacio sobre las aguas y alza ambas manos; las dos figuras de la escena previa permanecen repartidas entre las orillas.",
+    "why_distractors_fail": {
+      "varón de lino—en la orilla derecha—una mano al río; otras figuras—juntas sobre las aguas": "Intercambia la ubicación del varón y las figuras y reduce el gesto.",
+      "varón de lino—bajo el río—manos sobre el libro; otras figuras—detrás de Daniel": "Añade una posición sumergida y un objeto no asociado al gesto.",
+      "varón de lino—en ambas orillas—sin levantar manos; otras figuras—en el cielo": "Hace imposible la ubicación del varón y traslada las figuras al cielo."
+    },
+    "evidence_excerpt": "Oí al varón vestido de lino, que estaba sobre las aguas del río, el cual alzó su mano derecha y su mano izquierda al cielo",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "relationship",
+    "option_category": "figure_location_gesture_contrast",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "La pregunta integra continuidad escénica y gesto para diferenciar tres figuras.",
+    "variant_justification": "La presentación existente pregunta sólo qué gesto hizo; ésta lo usa para resolver la distribución espacial completa.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-C7-DAN12-010",
+    "source_unit_id": "DAN12-V003",
+    "fact_id": "DAN12-V003-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "En el segundo miembro del paralelismo, ¿qué cadena une sujetos, labor, destinatarios, imagen y permanencia?",
+    "options": [
+      "los entendidos—sellar el libro—Daniel—firmamento—hasta el fin",
+      "los impíos—proceder impíamente—muchos—polvo—mil doscientos noventa días",
+      "quienes enseñan justicia—la comunican a la multitud—estrellas—a perpetua eternidad",
+      "los inscritos—liberar al pueblo—hijos de Daniel—río—tiempo, tiempos y medio"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "quienes enseñan justicia—la comunican a la multitud—estrellas—a perpetua eternidad"
+    ],
+    "explanation": "El segundo miembro vincula maestros de justicia, multitud, estrellas y duración perpetua.",
+    "why_distractors_fail": {
+      "los entendidos—sellar el libro—Daniel—firmamento—hasta el fin": "Usa sujetos y acciones del mandato a Daniel y la imagen del primer miembro.",
+      "los impíos—proceder impíamente—muchos—polvo—mil doscientos noventa días": "Toma la conducta impía y un plazo sin relación con la comparación.",
+      "los inscritos—liberar al pueblo—hijos de Daniel—río—tiempo, tiempos y medio": "Mezcla inscripción, liberación, río y duración de otras escenas."
+    },
+    "evidence_excerpt": "los que enseñan la justicia a la multitud, como las estrellas, a perpetua eternidad.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "comparison",
+    "option_category": "subject_work_audience_image_duration",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Cinco componentes precisan la promesa dirigida a quienes enseñan justicia.",
+    "variant_justification": "La presentación existente sólo recupera «estrellas»; ésta exige sujeto, tarea, audiencia, imagen y permanencia.",
+    "author": {
+      "id": "r2_regen_c",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

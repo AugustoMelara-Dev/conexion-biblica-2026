@@ -1,0 +1,116 @@
+[
+  {
+    "id": "R2-F-DAN9-0028",
+    "source_unit_id": "DAN9-V001",
+    "fact_id": "DAN9-V001-V11-F03",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué combinación distingue correctamente la procedencia nacional de Darío del reino sobre el cual llegó a gobernar?",
+    "options": [
+      "Medo—reino caldeo",
+      "Caldeo—reino medo",
+      "Persa—reino judío",
+      "Judío—reino persa"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Medo—reino caldeo",
+      "de la nación de los medos sobre el reino de los caldeos"
+    ],
+    "explanation": "Darío era de la nación de los medos y vino a ser rey sobre el reino de los caldeos.",
+    "why_distractors_fail": {
+      "Caldeo—reino medo": "Invierte origen y dominio.",
+      "Persa—reino judío": "Ninguno de esos términos forma la relación del versículo.",
+      "Judío—reino persa": "No corresponde a la identidad ni al dominio atribuidos a Darío."
+    },
+    "evidence_excerpt": "Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "origin_domain_contrast",
+    "option_category": "paired_attribute",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Evalúa una asimetría geopolítica completa, en vez de preguntar aisladamente la nación de Darío.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-F-DAN9-0035",
+    "source_unit_id": "DAN9-V007",
+    "fact_id": "DAN9-V007-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "cross_source_integration",
+    "question": "¿Qué formulación conserva a la vez el alcance comunitario, geográfico y causal de la confusión de rostro?",
+    "options": [
+      "Judá, Jerusalén y todo Israel, cerca y lejos, por su rebelión",
+      "Sólo Jerusalén, dentro de sus muros, por la derrota militar",
+      "Únicamente los reyes exiliados, lejos, por falta de ejército",
+      "Todo pueblo extranjero, cerca, por desconocer la ley"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Judá, Jerusalén y todo Israel, cerca y lejos, por su rebelión",
+      "Judá, Jerusalén y todo Israel, cerca y lejos"
+    ],
+    "explanation": "La vergüenza alcanza Judá, Jerusalén y todo Israel, tanto cerca como lejos, dispersos a causa de su rebelión.",
+    "why_distractors_fail": {
+      "Sólo Jerusalén, dentro de sus muros, por la derrota militar": "Reduce alcance y sustituye la causa moral.",
+      "Únicamente los reyes exiliados, lejos, por falta de ejército": "Excluye al pueblo y altera la causa.",
+      "Todo pueblo extranjero, cerca, por desconocer la ley": "Cambia el sujeto confesante y la distribución geográfica."
+    },
+    "evidence_excerpt": "todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "shame_scope_cause",
+    "option_category": "compound_claim",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Cada distractor modifica alcance, ubicación y causa, obligando a validar los tres ejes.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "R2-F-DAN9-0037",
+    "source_unit_id": "DAN9-V010",
+    "fact_id": "DAN9-V010-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué cadena describe correctamente cómo las leyes llegaron a estar delante del pueblo y cuál era la respuesta esperada?",
+    "options": [
+      "Dios—profetas—pueblo—andar en las leyes",
+      "Moisés—reyes—profetas—reemplazar las leyes",
+      "Pueblo—príncipes—Dios—negociar las leyes",
+      "Darío—sabios—Israel—guardar silencio"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Dios—profetas—pueblo—andar en las leyes",
+      "Dios las puso por medio de sus profetas para que el pueblo anduviera en ellas"
+    ],
+    "explanation": "Dios puso sus leyes delante del pueblo por medio de sus siervos los profetas, con el fin de que anduviera en ellas.",
+    "why_distractors_fail": {
+      "Moisés—reyes—profetas—reemplazar las leyes": "Altera emisor, mediadores, receptor y respuesta.",
+      "Pueblo—príncipes—Dios—negociar las leyes": "Invierte la dirección de transmisión.",
+      "Darío—sabios—Israel—guardar silencio": "Introduce actores y conducta ajenos a la frase."
+    },
+    "evidence_excerpt": "sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "law_transmission_response",
+    "option_category": "causal_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": null,
+    "variant_justification": "Modela emisor, mediador, receptor y finalidad como una sola cadena verificable.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

@@ -45,10 +45,10 @@ export type HumanReviewQuestion = {
 const REVIEW_UNIT_SOURCE = "(?:DAN(?:[1-9]|1[0-2])|PR(?:39|4[0-4]))"
 const CHAPTER_PATTERN = new RegExp(`^${REVIEW_UNIT_SOURCE}$`)
 const SCHEMA_10_QUESTION_ID_PATTERN = new RegExp(
-  `^(?:(?:Q|PV)-)?${REVIEW_UNIT_SOURCE}-[A-Z0-9]+(?:-[A-Z0-9]+)*(?:::PRESENTATION-[0-9]+)?$`
+  `^(?:[A-Z0-9]+-)*${REVIEW_UNIT_SOURCE}-[A-Z0-9]+(?:-[A-Z0-9]+)*(?:::PRESENTATION-[0-9]+)?$`
 )
 const SCHEMA_10_QUESTION_CHAPTER_PATTERN = new RegExp(
-  `^(?:(?:Q|PV)-)?(${REVIEW_UNIT_SOURCE})-`
+  `^(?:[A-Z0-9]+-)*(${REVIEW_UNIT_SOURCE})-`
 )
 const QUESTIONS_FILE_PATTERN = new RegExp(
   `^banks/final-2026/questions/${REVIEW_UNIT_SOURCE}\\.json$`

@@ -1,0 +1,102 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-dd062a8cd9c34d763406",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2C8-DAN3-V002-V11-F02",
+      "source_unit_id": "DAN3-V002",
+      "fact_id": "DAN3-V002-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué relación une emisor, audiencia administrativa y propósito de la convocatoria?",
+      "options": [
+        "Nabucodonosor convocó autoridades provinciales para dedicar la estatua",
+        "Daniel convocó músicos para interpretar un sueño",
+        "Darío reunió sacerdotes para cerrar el horno",
+        "Ciro reunió cautivos para volver a Judá"
+      ],
+      "evidence_excerpt": "Y ordenó el rey Nabucodonosor que se reunieran los sátrapas, los magistrados, capitanes, oidores, tesoreros, consejeros, jueces y todos los gobernadores de las provincias, para que vinieran a la dedicación de la estatua que el rey Nabucodonosor había levantado.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "summons_officials_purpose",
+      "option_category": "multi_element_mapping",
+      "variant_justification": "La presentación central no resuelve el mapeo completo.",
+      "authored_content_sha256": "292ad37d3d8e839935ff955c5687438504d283497bd82b2d901d999468b5db29",
+      "source_ref": "Daniel 3:2",
+      "source_quote": "Y ordenó el rey Nabucodonosor que se reunieran los sátrapas, los magistrados, capitanes, oidores, tesoreros, consejeros, jueces y todos los gobernadores de las provincias, para que vinieran a la dedicación de la estatua que el rey Nabucodonosor había levantado.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué lista reúne los cargos convocados a la dedicación de la estatua?",
+          "family": "single_choice_contextual",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2C8-DAN3-V005-V11-F02",
+      "source_unit_id": "DAN3-V005",
+      "fact_id": "DAN3-V005-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué progresión conectaba señal acústica, respuesta corporal y objeto de culto?",
+      "options": [
+        "Conjunto de instrumentos → postrarse → adorar la estatua de oro de Nabucodonosor",
+        "Silencio → ponerse en pie → honrar a Daniel",
+        "Trompeta sola → huir → destruir el horno",
+        "Canto hebreo → arrodillarse → adorar al Dios del cielo"
+      ],
+      "evidence_excerpt": "que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os postréis y adoréis la estatua de oro que el rey Nabucodonosor ha levantado;",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "music_posture_object",
+      "option_category": "multi_element_mapping",
+      "variant_justification": "La presentación central no resuelve el mapeo completo.",
+      "authored_content_sha256": "cc590f22ad51b08c6843f9067dd2177ee3a3f1ff7f32987b6e772c395f32dfda",
+      "source_ref": "Daniel 3:5",
+      "source_quote": "que al oír el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, os postréis y adoréis la estatua de oro que el rey Nabucodonosor ha levantado;",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué conjunto reproduce los instrumentos mencionados antes de ordenar la adoración?",
+          "family": "single_choice_contextual",
+          "subtype": "text_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2C8-DAN3-V007-F02",
+      "source_unit_id": "DAN3-V007",
+      "fact_id": "DAN3-V007-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué mapa conserva estímulo, alcance humano y respuesta colectiva?",
+      "options": [
+        "Son de los instrumentos → pueblos, naciones y lenguas → postración y adoración",
+        "Decreto escrito → sólo caldeos → abandono del campo",
+        "Silencio → autoridades judías → resistencia al rey",
+        "Fuego → músicos → destrucción de la estatua"
+      ],
+      "evidence_excerpt": "Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se postraron y adoraron la estatua de oro que el rey Nabucodonosor había levantado.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "signal_audience_response",
+      "option_category": "multi_element_mapping",
+      "variant_justification": "La presentación central no resuelve el mapeo completo.",
+      "authored_content_sha256": "7fe9191ae8e84bb46efad7b432802ecfa21a4220f73d54a24cf16b14094c0ce5",
+      "source_ref": "Daniel 3:7",
+      "source_quote": "Por lo cual, al oír todos los pueblos el son de la bocina, la flauta, la cítara, el arpa, el salterio, la zampoña y todo instrumento de música, todos los pueblos, naciones y lenguas se postraron y adoraron la estatua de oro que el rey Nabucodonosor había levantado.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Al sonar los instrumentos, sólo los gobernadores se postraron y adoraron la estatua.",
+          "family": "true_false",
+          "subtype": "comparison"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "953bd67fc6d24f861c13d6e7a8b083d17e97c81151282334998530b5d88c276b"
+}
