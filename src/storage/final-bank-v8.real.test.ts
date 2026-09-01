@@ -31,29 +31,29 @@ const questions = manifest.shards.flatMap((shard) => {
 
 describe("real V10 competitive bank rounds", () => {
   it("loads every emitted entry into the human review queue", () => {
-    expect(parseHumanReviewIndex(reviewIndex).bank_questions).toBe(3212)
+    expect(parseHumanReviewIndex(reviewIndex).bank_questions).toBe(3452)
   })
 
   it("loads the exact public training artifact without leaking blind pools", () => {
-    expect(manifest.gold_questions).toBe(3212)
+    expect(manifest.gold_questions).toBe(3452)
     expect(manifest.unique_facts).toBe(2217)
     expect(manifest.shards).toHaveLength(18)
     expect(
       manifest.shards.reduce((sum, shard) => sum + shard.question_count, 0)
-    ).toBe(3212)
+    ).toBe(3452)
     expect(questions.every((question) => !question.blindPool)).toBe(true)
   })
 
-  it("sustains the national-final contract across 1,000 hard/expert seeds", () => {
-    const nationalFinal = questions.filter(
-      (question) =>
-        question.difficultyBand === "HARD" ||
-        question.difficultyBand === "EXPERT"
-    )
+  it("sustains the national-final contract across 1,000 hard/expert seeds with real selector", () => {
     const signatures = new Set<string>()
 
     for (let seed = 0; seed < 1000; seed += 1) {
-      const selected = selectMandatoryHundred(nationalFinal, seed)
+      const selected = selectMissionQuestions({
+        questions,
+        count: 100,
+        seed,
+        difficultyBands: ["HARD", "EXPERT"],
+      })
       const facts = selected.map((question) => question.factId)
       expect(selected).toHaveLength(100)
       expect(new Set(facts).size).toBe(100)
@@ -70,6 +70,7 @@ describe("real V10 competitive bank rounds", () => {
         selected.every(
           (question) =>
             !question.blindPool &&
+            question.tier !== "COVERAGE_ACCEPT" &&
             (question.difficultyBand === "HARD" ||
               question.difficultyBand === "EXPERT")
         )

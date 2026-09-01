@@ -222,12 +222,35 @@ export function selectMissionQuestions(input: {
   questions: Question[]
   count: number
   seed: number
+  difficultyBands?: readonly ("BASIC" | "MEDIUM" | "HARD" | "EXPERT" | "UNRATED")[]
+  tier?: "COMPETITIVE_ACCEPT" | "COVERAGE_ACCEPT"
   excludedFacts?: Set<string>
 }) {
   const excludedFacts = new Set(input.excludedFacts ?? [])
-  const eligible = input.questions.filter(
-    (question) => question.editorialStatus === "gold" && !question.blindPool
-  )
+  const bands = input.difficultyBands ? new Set(input.difficultyBands) : null
+  const requiredTier = input.tier ?? null
+
+  const eligible = input.questions.filter((question) => {
+    if (question.editorialStatus !== "gold" || question.blindPool) return false
+    if (question.metadata?.provisional) return false
+
+    const qTier = question.tier ?? (question.metadata?.tier as any)
+
+    if (requiredTier && qTier !== requiredTier) return false
+
+    if (bands) {
+      if (bands.has("HARD") || bands.has("EXPERT")) {
+        if (qTier === "COVERAGE_ACCEPT") return false
+      }
+      if (question.difficultyBand && !bands.has(question.difficultyBand)) return false
+      if (!question.difficultyBand && question.difficulty !== undefined) {
+        if (question.difficulty < 4 && (bands.has("HARD") || bands.has("EXPERT"))) return false
+      }
+    }
+
+    return true
+  })
+
   if (input.count === 20 || input.count === 50 || input.count === 100)
     return selectMandatoryRound(
       eligible,

@@ -257,6 +257,7 @@ export function adaptFinalQuestion(raw: FinalRawQuestion): Question {
     qualityScore: 100,
     semanticSkill: semanticSkill(raw),
     verified: true,
+    tier: (raw as any).tier ?? (level.band === "HARD" || level.band === "EXPERT" ? "COMPETITIVE_ACCEPT" : "COVERAGE_ACCEPT"),
     metadata: {
       sourceUnitId: raw.source_unit_id,
       relationType: raw.relation_type,
@@ -266,6 +267,8 @@ export function adaptFinalQuestion(raw: FinalRawQuestion): Question {
       aiReviewer: raw.ai_review?.reviewer,
       aiReviewerType: raw.ai_review?.reviewer_type,
       falseMutation: raw.false_mutation,
+      tier: (raw as any).tier ?? (level.band === "HARD" || level.band === "EXPERT" ? "COMPETITIVE_ACCEPT" : "COVERAGE_ACCEPT"),
+      provisional: (raw as any).provisional ?? false,
     },
   }
 }

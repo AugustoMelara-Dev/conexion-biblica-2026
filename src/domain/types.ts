@@ -83,6 +83,7 @@ export type Question = {
   editorialStatus?: "gold" | "silver" | "quarantine"
   qualityScore?: number
   semanticSkill?: string
+  tier?: "COMPETITIVE_ACCEPT" | "COVERAGE_ACCEPT"
   leftItems?: MatchItem[]
   rightItems?: MatchItem[]
   correctMatches?: CorrectMatch[]

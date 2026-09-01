@@ -1,0 +1,2409 @@
+{
+  "cycle_number": 33,
+  "previous_cycle_hash": "9f928cdc34850fec79c5a181965a3e03a3b9c7379c06fdb33292650f5b1d0b29",
+  "approved_in_this_cycle": 30,
+  "total_approved_cumulative": 924,
+  "approved": [
+    {
+      "id": "V14-R2-PR39-W2-111",
+      "lane": "CARRIL_R2_COBERTURA",
+      "fact_id": "PR39-P028-P001-S002-F01",
+      "source_unit_id": "PR39-P028-P001-S002",
+      "question": "¿Qué provisión especial había ordenado el monarca babilónico para el sustento diario de los cuatro jóvenes cautivos?",
+      "options": [
+        "Alimento y vino que provenían directamente de la mesa real",
+        "Porciones selectas adquiridas en los mercados de Babilonia",
+        "Alimento ordinario provisto para la servidumbre del palacio",
+        "Comida especial preparada por los sacerdotes del templo Bel"
+      ],
+      "correct_option": 0,
+      "correct_answer": "Alimento y vino que provenían directamente de la mesa real",
+      "accepted_answers": [
+        "Alimento y vino que provenían directamente de la mesa real"
+      ],
+      "why_distractors_fail": {
+        "Alimento ordinario provisto para la servidumbre del palacio": "No se les asignó comida común de sirvientes, sino el menú exclusivo de la mesa de Nabucodonosor.",
+        "Porciones selectas adquiridas en los mercados de Babilonia": "La provisión no procedía del mercado público, sino del suministro personal y diario del rey.",
+        "Comida especial preparada por los sacerdotes del templo Bel": "Aunque la comida real se consagraba a ídolos, provenía directamente de la cocina y mesa del monarca."
+      },
+      "explanation": "El registro declara que 'se había provisto que comiesen del alimento y bebiesen del vino que provenían de la mesa real'.",
+      "source_ref": "PR39, p. 28, párrafo 1",
+      "source_quote": "Se había provisto que comiesen del alimento y bebiesen del vino que provenían de la mesa real.",
+      "parent_context": "En el mismo comienzo de su carrera, su carácter fué probado de una manera decisiva. Se había provisto que comiesen del alimento y bebiesen del vino que provenían de la mesa real. Con esto el rey pensaba manifestarles su favor y la solicitud que sentía por su bienestar. Pero como una porción de estas cosas se ofrecía a los ídolos, el alimento proveniente de la mesa del rey estaba consagrado a la idolatría, y compartirlo sería considerado como tributo de homenaje a los dioses de Babilonia. La lealtad a Jehová prohibía a Daniel y a sus compañeros que rindiesen tal homenaje. Aun el hacer como que comieran del alimento o bebieran del vino habría sido negar su fe. Obrar así habría sido colocarse de parte del paganismo y deshonrar los principios de la ley de Dios.",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "97e5cf7b736b683f74f5b6b01750d03e4e3e619d19828b10a85b12c45a4742b3",
+      "answer_binding_sha256": "d16a6c29d7f58d6c8853d4783edbe07974b1cd9b344fe338f4503fc407b3a668",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R2-PR39-W2-111",
+          "presentation_sha256": "97e5cf7b736b683f74f5b6b01750d03e4e3e619d19828b10a85b12c45a4742b3",
+          "selected_option_index": 0,
+          "selected_option_text": "Alimento y vino que provenían directamente de la mesa real",
+          "confidence_0_100": 100,
+          "second_option_index": 1,
+          "second_option_text": "Porciones selectas adquiridas en los mercados de Babilonia",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 1:5 y Profetas y Reyes, p. 28 establecen que la provisión consistía en alimentos y vino procedentes de la mesa real."
+        },
+        "stage_b": {
+          "question_id": "V14-R2-PR39-W2-111",
+          "presentation_sha256": "97e5cf7b736b683f74f5b6b01750d03e4e3e619d19828b10a85b12c45a4742b3",
+          "selected_option_index": 0,
+          "selected_option_text": "Alimento y vino que provenían directamente de la mesa real",
+          "exact_supporting_phrase": "comiesen del alimento y bebiesen del vino que provenían de la mesa real.",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_1": "Falla porque sitúa el origen de las viandas en mercados ordinarios de Babilonia.",
+            "option_2": "Falla porque reduce la ración al alimento provisto para los siervos.",
+            "option_3": "Falla porque asigna la preparación de la comida al templo pagano de Bel."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 0 se ciñe textualmente a la provisión proveniente de la mesa real de PR 28.1."
+        },
+        "reviewer_answer_binding_sha256": "d16a6c29d7f58d6c8853d4783edbe07974b1cd9b344fe338f4503fc407b3a668",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R2-PR39-W2-112",
+      "lane": "CARRIL_R2_COBERTURA",
+      "fact_id": "PR39-P028-P001-S003-F01",
+      "source_unit_id": "PR39-P028-P001-S003",
+      "question": "¿Qué sentimientos e intenciones creía manifestar Nabucodonosor al asignarles porciones de su propia mesa y vino real?",
+      "options": [
+        "Manifestarles su favor y la solicitud por su bienestar",
+        "Manifestarles su desconfianza y el control de su dieta",
+        "Manifestarles su autoridad y la exigencia de sumisión",
+        "Manifestarles su superioridad y la vanagloria imperial"
+      ],
+      "correct_option": 0,
+      "correct_answer": "Manifestarles su favor y la solicitud por su bienestar",
+      "accepted_answers": [
+        "Manifestarles su favor y la solicitud por su bienestar"
+      ],
+      "why_distractors_fail": {
+        "Manifestarles su autoridad y la exigencia de sumisión": "En la mente del rey no era un acto de castigo o imposición severa, sino una muestra de benevolencia y aprecio.",
+        "Manifestarles su desconfianza y el control de su dieta": "El rey no desconfiaba de ellos, sino que buscaba su mejor desarrollo y honrarlos como futuros consejeros.",
+        "Manifestarles su superioridad y la vanagloria imperial": "El relato enfatiza la intención monárquica de expresarles favor y solicitud por su bienestar."
+      },
+      "explanation": "Profetas y Reyes destaca que 'con esto el rey pensaba manifestarles su favor y la solicitud que sentía por su bienestar'.",
+      "source_ref": "PR39, p. 28, párrafo 1",
+      "source_quote": "Con esto el rey pensaba manifestarles su favor y la solicitud que sentía por su bienestar.",
+      "parent_context": "En el mismo comienzo de su carrera, su carácter fué probado de una manera decisiva. Se había provisto que comiesen del alimento y bebiesen del vino que provenían de la mesa real. Con esto el rey pensaba manifestarles su favor y la solicitud que sentía por su bienestar. Pero como una porción de estas cosas se ofrecía a los ídolos, el alimento proveniente de la mesa del rey estaba consagrado a la idolatría, y compartirlo sería considerado como tributo de homenaje a los dioses de Babilonia. La lealtad a Jehová prohibía a Daniel y a sus compañeros que rindiesen tal homenaje. Aun el hacer como que comieran del alimento o bebieran del vino habría sido negar su fe. Obrar así habría sido colocarse de parte del paganismo y deshonrar los principios de la ley de Dios.",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "cf4491b3c3edcd893ea179735413372d0452c0b307b639cb513f14053d2213c8",
+      "answer_binding_sha256": "0826cc4759a2d1c03ea7c9fee4c05c005d116741a14e76b70bcb06e0fe3e2bcb",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R2-PR39-W2-112",
+          "presentation_sha256": "cf4491b3c3edcd893ea179735413372d0452c0b307b639cb513f14053d2213c8",
+          "selected_option_index": 0,
+          "selected_option_text": "Manifestarles su favor y la solicitud por su bienestar",
+          "confidence_0_100": 100,
+          "second_option_index": 2,
+          "second_option_text": "Manifestarles su autoridad y la exigencia de sumisión",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Profetas y Reyes, p. 28 señala que Nabucodonosor creía otorgarles un favor y demostrar solicitud por su bienestar."
+        },
+        "stage_b": {
+          "question_id": "V14-R2-PR39-W2-112",
+          "presentation_sha256": "cf4491b3c3edcd893ea179735413372d0452c0b307b639cb513f14053d2213c8",
+          "selected_option_index": 0,
+          "selected_option_text": "Manifestarles su favor y la solicitud por su bienestar",
+          "exact_supporting_phrase": "manifestarles su favor y la solicitud que sentía por su bienestar.",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_1": "Falla porque imputa al rey motivos de sospecha y control estricto.",
+            "option_2": "Falla porque califica la medida como una exigencia coercitiva de sumisión.",
+            "option_3": "Falla porque orienta la provisión a vanagloria e imposición de superioridad."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 0 sintetiza con exactitud la motivación benevolente del rey ('su favor y la solicitud que sentía por su bienestar') según PR 28.1."
+        },
+        "reviewer_answer_binding_sha256": "0826cc4759a2d1c03ea7c9fee4c05c005d116741a14e76b70bcb06e0fe3e2bcb",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R2-PR39-W2-113",
+      "lane": "CARRIL_R2_COBERTURA",
+      "fact_id": "PR39-P028-P001-S004-F01",
+      "source_unit_id": "PR39-P028-P001-S004",
+      "question": "¿Por qué razón compartir el alimento de la mesa del rey representaba un grave conflicto religioso para los cuatro jóvenes?",
+      "options": [
+        "Porque al ofrecerse a los ídolos, comerlo se consideraba un tributo de homenaje a los dioses caldeos",
+        "Porque su elevado costo económico aumentaba la deuda que los cautivos tenían contraída con el monarca",
+        "Porque contenía ingredientes prohibidos preparados exclusivamente para las ceremonias de adivinación",
+        "Porque estaba reservado para los nobles y comerlo constituía una transgresión de las leyes cortesanas"
+      ],
+      "correct_option": 0,
+      "correct_answer": "Porque al ofrecerse a los ídolos, comerlo se consideraba un tributo de homenaje a los dioses caldeos",
+      "accepted_answers": [
+        "Porque al ofrecerse a los ídolos, comerlo se consideraba un tributo de homenaje a los dioses caldeos"
+      ],
+      "why_distractors_fail": {
+        "Porque contenía ingredientes prohibidos preparados exclusivamente para las ceremonias de adivinación": "El conflicto fundamental radicaba en la consagración idolátrica de la comida a los dioses, no en fórmulas de adivinación.",
+        "Porque su elevado costo económico aumentaba la deuda que los cautivos tenían contraída con el monarca": "La objeción de Daniel y sus amigos no era de índole financiera ni económica, sino puramente moral y espiritual.",
+        "Porque estaba reservado para los nobles y comerlo constituía una transgresión de las leyes cortesanas": "Al contrario, el propio rey había ordenado y autorizado que comiesen de sus viandas reales."
+      },
+      "explanation": "Como una porción de las provisiones se ofrecía a los ídolos, el alimento estaba consagrado a la idolatría, y comerlo equivalía a tributar homenaje a los dioses babilónicos.",
+      "source_ref": "PR39, p. 28, párrafo 1",
+      "source_quote": "Pero como una porción de estas cosas se ofrecía a los ídolos, el alimento proveniente de la mesa del rey estaba consagrado a la idolatría, y compartirlo sería considerado como tributo de homenaje a los dioses de Babilonia.",
+      "parent_context": "En el mismo comienzo de su carrera, su carácter fué probado de una manera decisiva. Se había provisto que comiesen del alimento y bebiesen del vino que provenían de la mesa real. Con esto el rey pensaba manifestarles su favor y la solicitud que sentía por su bienestar. Pero como una porción de estas cosas se ofrecía a los ídolos, el alimento proveniente de la mesa del rey estaba consagrado a la idolatría, y compartirlo sería considerado como tributo de homenaje a los dioses de Babilonia. La lealtad a Jehová prohibía a Daniel y a sus compañeros que rindiesen tal homenaje. Aun el hacer como que comieran del alimento o bebieran del vino habría sido negar su fe. Obrar así habría sido colocarse de parte del paganismo y deshonrar los principios de la ley de Dios.",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "16e0a259480ba26c0da61e5ec11651fa806f85a69963719638467df85d89c7e0",
+      "answer_binding_sha256": "48fc98ebb000743652fd007eb1f3bbcbeec00a3d74df074d7e7e01414b4d5f08",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R2-PR39-W2-113",
+          "presentation_sha256": "16e0a259480ba26c0da61e5ec11651fa806f85a69963719638467df85d89c7e0",
+          "selected_option_index": 0,
+          "selected_option_text": "Porque al ofrecerse a los ídolos, comerlo se consideraba un tributo de homenaje a los dioses caldeos",
+          "confidence_0_100": 100,
+          "second_option_index": 2,
+          "second_option_text": "Porque contenía ingredientes prohibidos preparados exclusivamente para las ceremonias de adivinación",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Profetas y Reyes, p. 28 explica que comer de la comida consagrada a los ídolos equivalía a rendir homenaje a los dioses babilónicos."
+        },
+        "stage_b": {
+          "question_id": "V14-R2-PR39-W2-113",
+          "presentation_sha256": "16e0a259480ba26c0da61e5ec11651fa806f85a69963719638467df85d89c7e0",
+          "selected_option_index": 0,
+          "selected_option_text": "Porque al ofrecerse a los ídolos, comerlo se consideraba un tributo de homenaje a los dioses caldeos",
+          "exact_supporting_phrase": "el alimento proveniente de la mesa del rey estaba consagrado a la idolatría, y compartirlo sería considerado como tributo de homenaje a los dioses de Babilonia.",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_1": "Falla porque introduce deudas y gravámenes financieros contraídos con el rey.",
+            "option_2": "Falla porque inventa ingredientes mágicos consagrados a la adivinación.",
+            "option_3": "Falla porque plantea una transgresión de normas nobiliarias de etiqueta palaciega."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 0 explica la consagración idolátrica y el significado de homenaje a dioses paganos conforme a PR 28.1."
+        },
+        "reviewer_answer_binding_sha256": "48fc98ebb000743652fd007eb1f3bbcbeec00a3d74df074d7e7e01414b4d5f08",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R2-PR39-W2-114",
+      "lane": "CARRIL_R2_COBERTURA",
+      "fact_id": "PR39-P028-P001-S005-F02",
+      "source_unit_id": "PR39-P028-P001-S005",
+      "question": "¿Qué principio fundamental impedía a Daniel y a sus tres compañeros participar del banquete real y rendir homenaje idolátrico?",
+      "options": [
+        "El temor al castigo de los jueces",
+        "El apego a las normas sanitarias",
+        "La lealtad incondicional a Jehová",
+        "La simple tradición de los reyes"
+      ],
+      "correct_option": 2,
+      "correct_answer": "La lealtad incondicional a Jehová",
+      "accepted_answers": [
+        "La lealtad incondicional a Jehová"
+      ],
+      "why_distractors_fail": {
+        "El temor al castigo de los jueces": "Su motivación no nacía del miedo a tribunales humanos, sino del amor y reverencia a Dios.",
+        "El apego a las normas sanitarias": "Aunque la salud era vital, el principio motriz supremo señalado en el texto es la lealtad a Jehová frente a la idolatría.",
+        "La simple tradición de los reyes": "No se trataba de una costumbre dinástica judía superficial, sino de fidelidad al Dios viviente."
+      },
+      "explanation": "El texto enfatiza claramente: 'La lealtad a Jehová prohibía a Daniel y a sus compañeros que rindiesen tal homenaje'.",
+      "source_ref": "PR39, p. 28, párrafo 1",
+      "source_quote": "La lealtad a Jehová prohibía a Daniel y a sus compañeros que rindiesen tal homenaje.",
+      "parent_context": "En el mismo comienzo de su carrera, su carácter fué probado de una manera decisiva. Se había provisto que comiesen del alimento y bebiesen del vino que provenían de la mesa real. Con esto el rey pensaba manifestarles su favor y la solicitud que sentía por su bienestar. Pero como una porción de estas cosas se ofrecía a los ídolos, el alimento proveniente de la mesa del rey estaba consagrado a la idolatría, y compartirlo sería considerado como tributo de homenaje a los dioses de Babilonia. La lealtad a Jehová prohibía a Daniel y a sus compañeros que rindiesen tal homenaje. Aun el hacer como que comieran del alimento o bebieran del vino habría sido negar su fe. Obrar así habría sido colocarse de parte del paganismo y deshonrar los principios de la ley de Dios.",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "cc1b6274518c64bacfdb79bdcce0f90bbe3f4c7e387dd85f356af2413fad74c8",
+      "answer_binding_sha256": "98e460af1e9bd3c64a3e02b5daa6f2590fd8e95505a969c1c83967fbbfbd6261",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R2-PR39-W2-114",
+          "presentation_sha256": "cc1b6274518c64bacfdb79bdcce0f90bbe3f4c7e387dd85f356af2413fad74c8",
+          "selected_option_index": 2,
+          "selected_option_text": "La lealtad incondicional a Jehová",
+          "confidence_0_100": 100,
+          "second_option_index": 1,
+          "second_option_text": "El apego a las normas sanitarias",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Profetas y Reyes, p. 28 declara que la lealtad a Jehová prohibía terminantemente participar de dicho homenaje idolátrico."
+        },
+        "stage_b": {
+          "question_id": "V14-R2-PR39-W2-114",
+          "presentation_sha256": "cc1b6274518c64bacfdb79bdcce0f90bbe3f4c7e387dd85f356af2413fad74c8",
+          "selected_option_index": 2,
+          "selected_option_text": "La lealtad incondicional a Jehová",
+          "exact_supporting_phrase": "La lealtad a Jehová prohibía a Daniel y a sus compañeros que rindiesen tal homenaje.",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_0": "Falla porque fundamenta la decisión en temor al castigo judicial.",
+            "option_1": "Falla porque reduce la postura a un apego a normas de higiene sanitaria.",
+            "option_3": "Falla porque la califica como una simple costumbre de la monarquía judía."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 2 destaca con total precisión el móvil sagrado ('La lealtad a Jehová') expuesto en PR 28.1."
+        },
+        "reviewer_answer_binding_sha256": "98e460af1e9bd3c64a3e02b5daa6f2590fd8e95505a969c1c83967fbbfbd6261",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R2-PR39-W2-115",
+      "lane": "CARRIL_R2_COBERTURA",
+      "fact_id": "PR39-P028-P001-S006-F02",
+      "source_unit_id": "PR39-P028-P001-S006",
+      "question": "Según Profetas y Reyes, ¿qué habría significado para los jóvenes hebreos el solo hecho de fingir que participaban de la comida real?",
+      "options": [
+        "Habría significado negar abiertamente su fe",
+        "Habría significado cumplir un mero protocolo",
+        "Habría significado guardar prudencia social",
+        "Habría significado evitar una ofensa al rey"
+      ],
+      "correct_option": 0,
+      "correct_answer": "Habría significado negar abiertamente su fe",
+      "accepted_answers": [
+        "Habría significado negar abiertamente su fe"
+      ],
+      "why_distractors_fail": {
+        "Habría significado guardar prudencia social": "La simulación no era prudencia justificada, sino una concesión pecaminosa que comprometía su fe.",
+        "Habría significado cumplir un mero protocolo": "Para Daniel y sus amigos no existían actos religiosos neutrales; fingir comer era una traición espiritual.",
+        "Habría significado evitar una ofensa al rey": "Aunque buscaban no ofender innecesariamente, simular habría significado negar su fe ante Dios."
+      },
+      "explanation": "Elena G. de White advierte: 'Aun el hacer como que comieran del alimento o bebieran del vino habría sido negar su fe'.",
+      "source_ref": "PR39, p. 28, párrafo 1",
+      "source_quote": "Aun el hacer como que comieran del alimento o bebieran del vino habría sido negar su fe.",
+      "parent_context": "En el mismo comienzo de su carrera, su carácter fué probado de una manera decisiva. Se había provisto que comiesen del alimento y bebiesen del vino que provenían de la mesa real. Con esto el rey pensaba manifestarles su favor y la solicitud que sentía por su bienestar. Pero como una porción de estas cosas se ofrecía a los ídolos, el alimento proveniente de la mesa del rey estaba consagrado a la idolatría, y compartirlo sería considerado como tributo de homenaje a los dioses de Babilonia. La lealtad a Jehová prohibía a Daniel y a sus compañeros que rindiesen tal homenaje. Aun el hacer como que comieran del alimento o bebieran del vino habría sido negar su fe. Obrar así habría sido colocarse de parte del paganismo y deshonrar los principios de la ley de Dios.",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "4683c23220a06d64270a8ce73b5e8c1ae1d670ddd3e192434bf61db5b06e50b0",
+      "answer_binding_sha256": "f786eef2818731bb4cfa1638cfb92130e9bb9ec98c97ef6ae635ff642bf69094",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R2-PR39-W2-115",
+          "presentation_sha256": "4683c23220a06d64270a8ce73b5e8c1ae1d670ddd3e192434bf61db5b06e50b0",
+          "selected_option_index": 0,
+          "selected_option_text": "Habría significado negar abiertamente su fe",
+          "confidence_0_100": 100,
+          "second_option_index": 2,
+          "second_option_text": "Habría significado guardar prudencia social",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Profetas y Reyes, p. 28 subraya que la mera simulación o fingimiento hubiera significado una negación abierta de su fe."
+        },
+        "stage_b": {
+          "question_id": "V14-R2-PR39-W2-115",
+          "presentation_sha256": "4683c23220a06d64270a8ce73b5e8c1ae1d670ddd3e192434bf61db5b06e50b0",
+          "selected_option_index": 0,
+          "selected_option_text": "Habría significado negar abiertamente su fe",
+          "exact_supporting_phrase": "Aun el hacer como que comieran del alimento o bebieran del vino habría sido negar su fe.",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_1": "Falla porque justifica el fingimiento como cumplimiento inofensivo de protocolo.",
+            "option_2": "Falla porque califica la simulación de prudencia social.",
+            "option_3": "Falla porque evalúa la acción como mera cortesía para no agraviar al rey."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 0 expresa con rigor el veredicto moral ('habría sido negar su fe') de PR 28.1 ante la simulación."
+        },
+        "reviewer_answer_binding_sha256": "f786eef2818731bb4cfa1638cfb92130e9bb9ec98c97ef6ae635ff642bf69094",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R2-PR39-W2-116",
+      "lane": "CARRIL_R2_COBERTURA",
+      "fact_id": "PR39-P028-P001-S007-F01",
+      "source_unit_id": "PR39-P028-P001-S007",
+      "question": "En el análisis de Elena G. de White, ¿cuál era la verdadera consecuencia espiritual si los jóvenes cedían respecto a la mesa real?",
+      "options": [
+        "Colocarse de parte del paganismo y deshonrar los principios de la ley de Dios",
+        "Perder el aprecio de los oficiales pero preservar el testimonio ante el reino",
+        "Aceptar una cortesía diplomática sin alterar la devoción interior hacia Dios",
+        "Debilitar las facultades corporales sin quebrantar los mandamientos divinos"
+      ],
+      "correct_option": 0,
+      "correct_answer": "Colocarse de parte del paganismo y deshonrar los principios de la ley de Dios",
+      "accepted_answers": [
+        "Colocarse de parte del paganismo y deshonrar los principios de la ley de Dios"
+      ],
+      "why_distractors_fail": {
+        "Aceptar una cortesía diplomática sin alterar la devoción interior hacia Dios": "No era una cortesía inofensiva; ceder implicaba una alianza práctica con la idolatría babilónica.",
+        "Perder el aprecio de los oficiales pero preservar el testimonio ante el reino": "Ceder en la comida habría destruido su testimonio de lealtad a Jehová ante toda la corte.",
+        "Debilitar las facultades corporales sin quebrantar los mandamientos divinos": "El texto bíblico e inspiracional subraya que sí quebrantaba y deshonraba directamente la ley de Dios."
+      },
+      "explanation": "La autora afirma categóricamente: 'Obrar así habría sido colocarse de parte del paganismo y deshonrar los principios de la ley de Dios'.",
+      "source_ref": "PR39, p. 28, párrafo 1",
+      "source_quote": "Obrar así habría sido colocarse de parte del paganismo y deshonrar los principios de la ley de Dios.",
+      "parent_context": "En el mismo comienzo de su carrera, su carácter fué probado de una manera decisiva. Se había provisto que comiesen del alimento y bebiesen del vino que provenían de la mesa real. Con esto el rey pensaba manifestarles su favor y la solicitud que sentía por su bienestar. Pero como una porción de estas cosas se ofrecía a los ídolos, el alimento proveniente de la mesa del rey estaba consagrado a la idolatría, y compartirlo sería considerado como tributo de homenaje a los dioses de Babilonia. La lealtad a Jehová prohibía a Daniel y a sus compañeros que rindiesen tal homenaje. Aun el hacer como que comieran del alimento o bebieran del vino habría sido negar su fe. Obrar así habría sido colocarse de parte del paganismo y deshonrar los principios de la ley de Dios.",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "ed0ac28991353c4ac7af0677d712ae8d985801b5a59a189741f7865539af06dd",
+      "answer_binding_sha256": "aa282025fa1c3b766c88c99fd7a442bcd56eaea9e4eca18dac72497fcf98d931",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R2-PR39-W2-116",
+          "presentation_sha256": "ed0ac28991353c4ac7af0677d712ae8d985801b5a59a189741f7865539af06dd",
+          "selected_option_index": 0,
+          "selected_option_text": "Colocarse de parte del paganismo y deshonrar los principios de la ley de Dios",
+          "confidence_0_100": 100,
+          "second_option_index": 3,
+          "second_option_text": "Debilitar las facultades corporales sin quebrantar los mandamientos divinos",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Profetas y Reyes, p. 28 advierte que ceder habría sido alinearse con el paganismo y deshonrar la Santa Ley de Dios."
+        },
+        "stage_b": {
+          "question_id": "V14-R2-PR39-W2-116",
+          "presentation_sha256": "ed0ac28991353c4ac7af0677d712ae8d985801b5a59a189741f7865539af06dd",
+          "selected_option_index": 0,
+          "selected_option_text": "Colocarse de parte del paganismo y deshonrar los principios de la ley de Dios",
+          "exact_supporting_phrase": "colocarse de parte del paganismo y deshonrar los principios de la ley de Dios.",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_1": "Falla porque propone una supuesta preservación de testimonio incoherente con ceder al paganismo.",
+            "option_2": "Falla porque establece una separación relativista entre cortesía externa y devoción interna.",
+            "option_3": "Falla porque disocia las facultades físicas de la transgresión de mandamientos."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 0 reproduce con fidelidad absoluta la sentencia espiritual de PR 28.1."
+        },
+        "reviewer_answer_binding_sha256": "aa282025fa1c3b766c88c99fd7a442bcd56eaea9e4eca18dac72497fcf98d931",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R2-PR39-W2-117",
+      "lane": "CARRIL_R2_COBERTURA",
+      "fact_id": "PR39-P028-P002-S001-F01",
+      "source_unit_id": "PR39-P028-P002-S001",
+      "question": "Además del aspecto idolátrico, ¿sobre qué áreas del desarrollo humano temían los jóvenes el efecto enervador del lujo y la disipación?",
+      "options": [
+        "Sobre el desarrollo físico, mental y espiritual",
+        "Sobre el rendimiento verbal, técnico y cortesano",
+        "Sobre el desempeño político, social y castrense",
+        "Sobre el linaje familiar, moral y administrativo"
+      ],
+      "correct_option": 0,
+      "correct_answer": "Sobre el desarrollo físico, mental y espiritual",
+      "accepted_answers": [
+        "Sobre el desarrollo físico, mental y espiritual"
+      ],
+      "why_distractors_fail": {
+        "Sobre el desempeño político, social y castrense": "Su preocupación no se centraba en ambiciones sociopolíticas o militares, sino en la integridad integral de su ser.",
+        "Sobre el rendimiento verbal, técnico y cortesano": "No limitaban su cuidado a habilidades técnicas o retóricas, sino al desarrollo humano completo según Dios.",
+        "Sobre el linaje familiar, moral y administrativo": "El texto especifica con exactitud las tres dimensiones: desarrollo físico, mental y espiritual."
+      },
+      "explanation": "Profetas y Reyes señala: 'Tampoco podían correr el riesgo que representaba el efecto enervador del lujo y la disipación sobre el desarrollo físico, mental y espiritual'.",
+      "source_ref": "PR39, p. 28, párrafo 2",
+      "source_quote": "Tampoco podían correr el riesgo que representaba el efecto enervador del lujo y la disipación sobre el desarrollo físico, mental y espiritual.",
+      "parent_context": "Tampoco podían correr el riesgo que representaba el efecto enervador del lujo y la disipación sobre el desarrollo físico, mental y espiritual. Conocían la historia de Nadab y Abihú, cuya intemperancia, así como los resultados que había tenido, describían los pergaminos del Pentateuco; y sabían que sus propias facultades físicas y mentales quedarían perjudicadas por el consumo de vino.",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "5892cda39c754d29b6be0d5528d0c48550c653b5c9331faab9afa5253db254f1",
+      "answer_binding_sha256": "539754ecfc661206402dc2aee1ec014e53d52abb25aa0dcbaff1a32ae8c83ded",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R2-PR39-W2-117",
+          "presentation_sha256": "5892cda39c754d29b6be0d5528d0c48550c653b5c9331faab9afa5253db254f1",
+          "selected_option_index": 0,
+          "selected_option_text": "Sobre el desarrollo físico, mental y espiritual",
+          "confidence_0_100": 100,
+          "second_option_index": 1,
+          "second_option_text": "Sobre el rendimiento verbal, técnico y cortesano",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Triada antropológica clásica de Elena G. de White en PR p. 28: desarrollo físico, mental y espiritual."
+        },
+        "stage_b": {
+          "question_id": "V14-R2-PR39-W2-117",
+          "presentation_sha256": "5892cda39c754d29b6be0d5528d0c48550c653b5c9331faab9afa5253db254f1",
+          "selected_option_index": 0,
+          "selected_option_text": "Sobre el desarrollo físico, mental y espiritual",
+          "exact_supporting_phrase": "sobre el desarrollo físico, mental y espiritual.",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_1": "Falla porque reduce las áreas a competencias verbales, técnicas y cortesanas.",
+            "option_2": "Falla porque sustituye el desarrollo holístico por desempeño político y castrense.",
+            "option_3": "Falla porque alude a linaje familiar y facultades administrativas."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 0 cita íntegramente la tríada de desarrollo integral ('físico, mental y espiritual') de PR 28.2."
+        },
+        "reviewer_answer_binding_sha256": "539754ecfc661206402dc2aee1ec014e53d52abb25aa0dcbaff1a32ae8c83ded",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R2-PR39-W2-118",
+      "lane": "CARRIL_R2_COBERTURA",
+      "fact_id": "PR39-P028-P002-S002-F01",
+      "source_unit_id": "PR39-P028-P002-S002",
+      "question": "¿Qué relato del Pentateuco recordaban los jóvenes hebreos como advertencia de que el vino perjudicaría sus facultades físicas y mentales?",
+      "options": [
+        "La historia de Nadab y Abihú y los graves resultados de su intemperancia",
+        "La rebelión de Coré, Datán y Abiram contra la santa dirección de Moisés",
+        "La caída de Sansón ante los filisteos por violar su consagración nazarea",
+        "La conducta de los hijos de Elí al profanar los sacrificios del templo"
+      ],
+      "correct_option": 0,
+      "correct_answer": "La historia de Nadab y Abihú y los graves resultados de su intemperancia",
+      "accepted_answers": [
+        "La historia de Nadab y Abihú y los graves resultados de su intemperancia"
+      ],
+      "why_distractors_fail": {
+        "La caída de Sansón ante los filisteos por violar su consagración nazarea": "La historia de Sansón pertenece al libro de Jueces y no al Pentateuco que ellos estudiaban.",
+        "La rebelión de Coré, Datán y Abiram contra la santa dirección de Moisés": "Aunque está en el Pentateuco, trata de rebelión contra el liderazgo y no de los efectos del vino y la intemperancia.",
+        "La conducta de los hijos de Elí al profanar los sacrificios del templo": "El relato de Ofni y Finees se encuentra en 1 Samuel, no en los pergaminos del Pentateuco."
+      },
+      "explanation": "El texto indica que 'conocían la historia de Nadab y Abihú, cuya intemperancia, así como los resultados que había tenido, describían los pergaminos del Pentateuco'.",
+      "source_ref": "PR39, p. 28, párrafo 2",
+      "source_quote": "Conocían la historia de Nadab y Abihú, cuya intemperancia, así como los resultados que había tenido, describían los pergaminos del Pentateuco; y sabían que sus propias facultades físicas y mentales quedarían perjudicadas por el consumo de vino.",
+      "parent_context": "Tampoco podían correr el riesgo que representaba el efecto enervador del lujo y la disipación sobre el desarrollo físico, mental y espiritual. Conocían la historia de Nadab y Abihú, cuya intemperancia, así como los resultados que había tenido, describían los pergaminos del Pentateuco; y sabían que sus propias facultades físicas y mentales quedarían perjudicadas por el consumo de vino.",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "05a66334470a865c1f43f87ffb102bd04916686366797837bc9fe893299ce1d5",
+      "answer_binding_sha256": "c2330c368eb41c364f39432de7e483b63569a6ed9a1e6e05cc23dbfa2c595289",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R2-PR39-W2-118",
+          "presentation_sha256": "05a66334470a865c1f43f87ffb102bd04916686366797837bc9fe893299ce1d5",
+          "selected_option_index": 0,
+          "selected_option_text": "La historia de Nadab y Abihú y los graves resultados de su intemperancia",
+          "confidence_0_100": 100,
+          "second_option_index": 2,
+          "second_option_text": "La caída de Sansón ante los filisteos por violar su consagración nazarea",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Profetas y Reyes, p. 28 cita explícitamente el registro de Nadab y Abiú (Levítico 10) como advertencia contra la intemperancia."
+        },
+        "stage_b": {
+          "question_id": "V14-R2-PR39-W2-118",
+          "presentation_sha256": "05a66334470a865c1f43f87ffb102bd04916686366797837bc9fe893299ce1d5",
+          "selected_option_index": 0,
+          "selected_option_text": "La historia de Nadab y Abihú y los graves resultados de su intemperancia",
+          "exact_supporting_phrase": "Conocían la historia de Nadab y Abihú, cuya intemperancia, así como los resultados que había tenido, describían los pergaminos del Pentateuco;",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_1": "Falla porque cita la rebelión de Coré, Datán y Abiram en Números.",
+            "option_2": "Falla porque alude a Sansón y los filisteos en el libro de Jueces.",
+            "option_3": "Falla porque refiere la conducta de los hijos del sacerdote Elí en 1 Samuel."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 0 identifica con precisión el antecedente bíblico de Nadab y Abihú consignado en PR 28.2."
+        },
+        "reviewer_answer_binding_sha256": "c2330c368eb41c364f39432de7e483b63569a6ed9a1e6e05cc23dbfa2c595289",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R2-PR39-W2-119",
+      "lane": "CARRIL_R2_COBERTURA",
+      "fact_id": "PR39-P028-P003-S001-F02",
+      "source_unit_id": "PR39-P028-P003-S001",
+      "question": "Según Profetas y Reyes, ¿qué clase de hábitos habían inculcado los padres de Daniel y sus compañeros en sus hogares de Judea?",
+      "options": [
+        "Hábitos de estricta templanza",
+        "Hábitos de pericia diplomática",
+        "Hábitos de riguroso ascetismo",
+        "Hábitos de disciplina militar"
+      ],
+      "correct_option": 0,
+      "correct_answer": "Hábitos de estricta templanza",
+      "accepted_answers": [
+        "Hábitos de estricta templanza"
+      ],
+      "why_distractors_fail": {
+        "Hábitos de riguroso ascetismo": "La educación bíblica fomentaba la templanza y el autocontrol bajo Dios, no el ascetismo o aislamiento monástico.",
+        "Hábitos de pericia diplomática": "Sus padres se enfocaron en la fidelidad a la ley de Dios y la salud física/moral, no en tácticas de diplomacia humana.",
+        "Hábitos de disciplina militar": "No fueron educados para el combate armado, sino en los principios sagrados de vida y dominio propio."
+      },
+      "explanation": "Elena G. de White señala: 'Los padres de Daniel y sus compañeros les habían inculcado hábitos de estricta templanza'.",
+      "source_ref": "PR39, p. 28, párrafo 3",
+      "source_quote": "Los padres de Daniel y sus compañeros les habían inculcado hábitos de estricta templanza.",
+      "parent_context": "Los padres de Daniel y sus compañeros les habían inculcado hábitos de estricta templanza. Se les había enseñado que Dios los tendría por responsables de sus facultades, y que no debían atrofiarlas ni debilitarlas. Esta educación fué para Daniel y sus compañeros un medio de preservación entre las influencias desmoralizadoras de la corte babilónica. Intensas eran las tentaciones que los rodeaban en aquella corte corrompida y lujuriosa, pero no se contaminaron. Ningún poder ni influencia podía apartarlos de los principios que habían aprendido temprano en la vida por un estudio de la palabra y de las obras de Dios.",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "b0d0b97fdb45558084b58ffe545e574a904c55f763a18ba333ddf76da4c00448",
+      "answer_binding_sha256": "37414be691d5b2677afa0e5f509b2d8ff814670533520b2d32785b1923c03032",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R2-PR39-W2-119",
+          "presentation_sha256": "b0d0b97fdb45558084b58ffe545e574a904c55f763a18ba333ddf76da4c00448",
+          "selected_option_index": 0,
+          "selected_option_text": "Hábitos de estricta templanza",
+          "confidence_0_100": 100,
+          "second_option_index": 2,
+          "second_option_text": "Hábitos de riguroso ascetismo",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Profetas y Reyes, p. 29 destaca que los padres habían formado en los jóvenes hábitos de estricta templanza."
+        },
+        "stage_b": {
+          "question_id": "V14-R2-PR39-W2-119",
+          "presentation_sha256": "b0d0b97fdb45558084b58ffe545e574a904c55f763a18ba333ddf76da4c00448",
+          "selected_option_index": 0,
+          "selected_option_text": "Hábitos de estricta templanza",
+          "exact_supporting_phrase": "hábitos de estricta templanza.",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_1": "Falla porque orienta los hábitos a destrezas y pericia diplomática.",
+            "option_2": "Falla porque confunde la templanza bíblica con un ascetismo riguroso.",
+            "option_3": "Falla porque propone una disciplina de carácter marcial."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 0 cita literalmente la expresión 'hábitos de estricta templanza' de PR 28.3."
+        },
+        "reviewer_answer_binding_sha256": "37414be691d5b2677afa0e5f509b2d8ff814670533520b2d32785b1923c03032",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R2-PR39-W2-120",
+      "lane": "CARRIL_R2_COBERTURA",
+      "fact_id": "PR39-P028-P003-S001-V11-F02",
+      "source_unit_id": "PR39-P028-P003-S001",
+      "question": "¿A la instrucción temprana de quiénes debían Daniel y sus compañeros los hábitos de templanza que los protegieron en Babilonia?",
+      "options": [
+        "A la consagrada instrucción dada por sus padres",
+        "A las santas enseñanzas dadas por los profetas",
+        "A la rigurosa disciplina dada por los sacerdotes",
+        "A las lecciones cívicas dadas por los ancianos"
+      ],
+      "correct_option": 0,
+      "correct_answer": "A la consagrada instrucción dada por sus padres",
+      "accepted_answers": [
+        "A la consagrada instrucción dada por sus padres"
+      ],
+      "why_distractors_fail": {
+        "A la rigurosa disciplina dada por los sacerdotes": "El texto atribuye directamente a sus padres la formación hogareña que modeló su firmeza moral.",
+        "A las santas enseñanzas dadas por los profetas": "Aunque los profetas instruían a la nación, la influencia primordial destacada en el texto proviene del hogar de sus padres.",
+        "A las lecciones cívicas dadas por los ancianos": "La preservación de los jóvenes en la corte derivó de los hábitos inculcados por sus propios padres en su niñez."
+      },
+      "explanation": "El texto afirma que fueron sus padres quienes les inculcaron hábitos de estricta templanza y el sentido de responsabilidad ante Dios.",
+      "source_ref": "PR39, p. 28, párrafo 3",
+      "source_quote": "Los padres de Daniel y sus compañeros les habían inculcado hábitos de estricta templanza.",
+      "parent_context": "Los padres de Daniel y sus compañeros les habían inculcado hábitos de estricta templanza. Se les había enseñado que Dios los tendría por responsables de sus facultades, y que no debían atrofiarlas ni debilitarlas. Esta educación fué para Daniel y sus compañeros un medio de preservación entre las influencias desmoralizadoras de la corte babilónica. Intensas eran las tentaciones que los rodeaban en aquella corte corrompida y lujuriosa, pero no se contaminaron. Ningún poder ni influencia podía apartarlos de los principios que habían aprendido temprano en la vida por un estudio de la palabra y de las obras de Dios.",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "a85a183ed621809541ac0a488edfec482bb5dfea42fd72ff3f0d785e24b7e3d1",
+      "answer_binding_sha256": "987f9086667d1ab4cd159414e9b99875d731e9a2fb736c922712e7cce4770fa1",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R2-PR39-W2-120",
+          "presentation_sha256": "a85a183ed621809541ac0a488edfec482bb5dfea42fd72ff3f0d785e24b7e3d1",
+          "selected_option_index": 0,
+          "selected_option_text": "A la consagrada instrucción dada por sus padres",
+          "confidence_0_100": 100,
+          "second_option_index": 1,
+          "second_option_text": "A las santas enseñanzas dadas por los profetas",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Profetas y Reyes, p. 29 atribuye sus principios a la sólida formación y consagrada instrucción recibida de sus padres en el hogar."
+        },
+        "stage_b": {
+          "question_id": "V14-R2-PR39-W2-120",
+          "presentation_sha256": "a85a183ed621809541ac0a488edfec482bb5dfea42fd72ff3f0d785e24b7e3d1",
+          "selected_option_index": 0,
+          "selected_option_text": "A la consagrada instrucción dada por sus padres",
+          "exact_supporting_phrase": "Los padres de Daniel y sus compañeros les habían inculcado",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_1": "Falla porque traslada la instrucción formativa primaria a los profetas de Judá.",
+            "option_2": "Falla porque atribuye la disciplina del hogar a los sacerdotes del templo.",
+            "option_3": "Falla porque asigna la enseñanza ética a los ancianos cívicos."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 0 reconoce con total fidelidad la influencia formativa fundamental de los padres según PR 28.3."
+        },
+        "reviewer_answer_binding_sha256": "987f9086667d1ab4cd159414e9b99875d731e9a2fb736c922712e7cce4770fa1",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN2-W2-073",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN2-V033-F02",
+      "source_unit_id": "DAN2-V033",
+      "question": "Según Daniel 2:33, ¿de qué singular combinación de materiales estaban compuestos los pies de la gran imagen?",
+      "options": [
+        "En parte de bronce y en parte de plata labrada",
+        "En parte de plomo y en parte de arcilla cocida",
+        "En parte de hierro y en parte de barro cocido",
+        "En parte de cobre y en parte de piedra caliza"
+      ],
+      "correct_option": 2,
+      "correct_answer": "En parte de hierro y en parte de barro cocido",
+      "accepted_answers": [
+        "En parte de hierro y en parte de barro cocido"
+      ],
+      "why_distractors_fail": {
+        "En parte de bronce y en parte de plata labrada": "El bronce correspondía al vientre y los muslos, y la plata al pecho y los brazos.",
+        "En parte de plomo y en parte de arcilla cocida": "El texto bíblico no incluye plomo en la estructura de los pies ni de la estatua.",
+        "En parte de cobre y en parte de piedra caliza": "La descripción profética especifica hierro y barro cocido, no cobre ni piedra caliza."
+      },
+      "explanation": "Daniel 2:33 declara textualmente que los pies de la imagen eran 'en parte de hierro y en parte de barro cocido'.",
+      "source_ref": "Daniel 2:33",
+      "source_quote": "sus piernas, de hierro; sus pies, en parte de hierro y en parte de barro cocido.",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "detail",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "ee75bd8189c7d9d024c0dfd29ead01abe075a1feb34b651407e8e3d5053888b0",
+      "answer_binding_sha256": "6356bc6c3c9b9154146442dd9c31dc4d826721a85c2a314e5fbc0cbb16f4474e",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN2-W2-073",
+          "presentation_sha256": "ee75bd8189c7d9d024c0dfd29ead01abe075a1feb34b651407e8e3d5053888b0",
+          "selected_option_index": 2,
+          "selected_option_text": "En parte de hierro y en parte de barro cocido",
+          "confidence_0_100": 100,
+          "second_option_index": 0,
+          "second_option_text": "En parte de bronce y en parte de plata labrada",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 2:33 señala textualmente que sus pies eran «en parte de hierro y en parte de barro cocido»."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN2-W2-073",
+          "presentation_sha256": "ee75bd8189c7d9d024c0dfd29ead01abe075a1feb34b651407e8e3d5053888b0",
+          "selected_option_index": 2,
+          "selected_option_text": "En parte de hierro y en parte de barro cocido",
+          "exact_supporting_phrase": "en parte de hierro y en parte de barro cocido",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "0": "Menciona bronce y plata labrada, combinando metales de los muslos y del pecho.",
+            "1": "Propone plomo y arcilla cocida, materiales no descritos en la estatua de Daniel 2.",
+            "3": "Sugiere cobre y piedra caliza, combinación ajena a la profecía bíblica."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 2 cita con exactitud canónica los materiales de los pies en Daniel 2:33 ('en parte de hierro y en parte de barro cocido')."
+        },
+        "reviewer_answer_binding_sha256": "6356bc6c3c9b9154146442dd9c31dc4d826721a85c2a314e5fbc0cbb16f4474e",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN2-W2-074",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN2-V033-V11-F02",
+      "source_unit_id": "DAN2-V033",
+      "question": "En la descripción profética de la imagen en Daniel 2:33, ¿de qué material eran específicamente sus piernas?",
+      "options": [
+        "Piernas de bronce",
+        "Piernas de hierro",
+        "Piernas de plomo",
+        "Piernas de plata"
+      ],
+      "correct_option": 1,
+      "correct_answer": "Piernas de hierro",
+      "accepted_answers": [
+        "Piernas de hierro"
+      ],
+      "why_distractors_fail": {
+        "Piernas de bronce": "El bronce pertenecía al vientre y a los muslos de la estatua, no a las piernas.",
+        "Piernas de plomo": "El plomo no forma parte de ninguno de los metales descritos en la estatua de Daniel 2.",
+        "Piernas de plata": "La plata constituía el pecho y los brazos de la gran imagen profética."
+      },
+      "explanation": "Daniel 2:33 especifica claramente: 'sus piernas, de hierro; sus pies, en parte de hierro y en parte de barro cocido'.",
+      "source_ref": "Daniel 2:33",
+      "source_quote": "sus piernas, de hierro; sus pies, en parte de hierro y en parte de barro cocido.",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "detail",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "ec9ab685870560edffa7758b1cdd7df4aa962a11257d35a221d61fdad148717b",
+      "answer_binding_sha256": "be6dbca567d9736b0f97cd9dca7aadeaf3dfc6188d9a4b3a8722721cc5a7d055",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN2-W2-074",
+          "presentation_sha256": "ec9ab685870560edffa7758b1cdd7df4aa962a11257d35a221d61fdad148717b",
+          "selected_option_index": 1,
+          "selected_option_text": "Piernas de hierro",
+          "confidence_0_100": 100,
+          "second_option_index": 0,
+          "second_option_text": "Piernas de bronce",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 2:33 describe de manera unívoca: «sus piernas, de hierro»."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN2-W2-074",
+          "presentation_sha256": "ec9ab685870560edffa7758b1cdd7df4aa962a11257d35a221d61fdad148717b",
+          "selected_option_index": 1,
+          "selected_option_text": "Piernas de hierro",
+          "exact_supporting_phrase": "sus piernas, de hierro",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "0": "Atribuye bronce a las piernas, cuando este metal correspondía al vientre y muslos (v. 32).",
+            "2": "Propone plomo, metal inexistente en la estructura de la imagen de Daniel 2.",
+            "3": "Menciona plata, metal perteneciente al pecho y brazos de la estatua (v. 32)."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 1 es la única que nombra el material bíblico exacto de las piernas en Daniel 2:33 ('sus piernas, de hierro')."
+        },
+        "reviewer_answer_binding_sha256": "be6dbca567d9736b0f97cd9dca7aadeaf3dfc6188d9a4b3a8722721cc5a7d055",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN2-W2-075",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN2-V034-V11-F02",
+      "source_unit_id": "DAN2-V034",
+      "question": "Según Daniel 2:34, ¿en qué parte hirió a la imagen la piedra desprendida sin mano alguna y cuál fue su efecto?",
+      "options": [
+        "Hirió sus pies de hierro y barro cocido, y los desmenuzó",
+        "Hirió su cabeza de oro fino, y la redujo a polvo menudo",
+        "Hirió su pecho de plata y sus brazos, y los partió en dos",
+        "Hirió sus muslos de bronce sólido, y derribó la estatua"
+      ],
+      "correct_option": 0,
+      "correct_answer": "Hirió sus pies de hierro y barro cocido, y los desmenuzó",
+      "accepted_answers": [
+        "Hirió sus pies de hierro y barro cocido, y los desmenuzó"
+      ],
+      "why_distractors_fail": {
+        "Hirió su pecho de plata y sus brazos, y los partió en dos": "La piedra no impactó en el pecho de plata, sino directamente en la base de los pies.",
+        "Hirió su cabeza de oro fino, y la redujo a polvo menudo": "El golpe no fue asestado en la cabeza de oro sino en los pies de hierro y barro cocido.",
+        "Hirió sus muslos de bronce sólido, y derribó la estatua": "El texto bíblico precisa que el impacto destructivo ocurrió en los pies de hierro y barro cocido."
+      },
+      "explanation": "Daniel 2:34 señala que la piedra 'hirió a la imagen en sus pies de hierro y de barro cocido, y los desmenuzó'.",
+      "source_ref": "Daniel 2:34",
+      "source_quote": "Estabas mirando, hasta que una piedra se desprendió sin que la cortara mano alguna, e hirió a la imagen en sus pies de hierro y de barro cocido, y los desmenuzó.",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "e9ea4f14669bc21ffdaf2dd7a3b1700e1a1188265b88a60105219304db149a40",
+      "answer_binding_sha256": "021db3c962eea276b0cb1abaff66ef82f1411ff2384252ab3f6ddf5d6e57f3a8",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN2-W2-075",
+          "presentation_sha256": "e9ea4f14669bc21ffdaf2dd7a3b1700e1a1188265b88a60105219304db149a40",
+          "selected_option_index": 0,
+          "selected_option_text": "Hirió sus pies de hierro y barro cocido, y los desmenuzó",
+          "confidence_0_100": 100,
+          "second_option_index": 1,
+          "second_option_text": "Hirió su cabeza de oro fino, y la redujo a polvo menudo",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 2:34 afirma: «e hirió a la imagen en sus pies de hierro y de barro cocido, y los desmenuzó»."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN2-W2-075",
+          "presentation_sha256": "e9ea4f14669bc21ffdaf2dd7a3b1700e1a1188265b88a60105219304db149a40",
+          "selected_option_index": 0,
+          "selected_option_text": "Hirió sus pies de hierro y barro cocido, y los desmenuzó",
+          "exact_supporting_phrase": "hirió a la imagen en sus pies de hierro y de barro cocido, y los desmenuzó",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "1": "Ubica el impacto en la cabeza de oro fino, contradiciendo el lugar de impacto en los pies.",
+            "2": "Sitúa el golpe en el pecho y brazos de plata, alterando el relato profético.",
+            "3": "Señala los muslos de bronce, cuando el versículo especifica con claridad los pies."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 0 describe fielmente el lugar exacto del golpe y su efecto según Daniel 2:34 ('en sus pies de hierro y de barro cocido, y los desmenuzó')."
+        },
+        "reviewer_answer_binding_sha256": "021db3c962eea276b0cb1abaff66ef82f1411ff2384252ab3f6ddf5d6e57f3a8",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN2-W2-076",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN2-V035-F02",
+      "source_unit_id": "DAN2-V035",
+      "question": "Conforme a Daniel 2:35, ¿en qué se transformó la piedra que destruyó la imagen tras desmenuzar todos sus metales?",
+      "options": [
+        "Se hizo un caudaloso río que regó las naciones",
+        "Se hizo un gran monte que llenó toda la tierra",
+        "Se hizo un excelso muro que cercó las regiones",
+        "Se hizo un fuego devorador que cubrió el orbe"
+      ],
+      "correct_option": 1,
+      "correct_answer": "Se hizo un gran monte que llenó toda la tierra",
+      "accepted_answers": [
+        "Se hizo un gran monte que llenó toda la tierra"
+      ],
+      "why_distractors_fail": {
+        "Se hizo un caudaloso río que regó las naciones": "La metáfora bíblica no alude a un río, sino a una gran montaña que abarcó todo el planeta.",
+        "Se hizo un excelso muro que cercó las regiones": "El texto profético describe un monte en expansión global y no una muralla defensiva.",
+        "Se hizo un fuego devorador que cubrió el orbe": "La piedra se convirtió en un gran monte, símbolo del reino eterno de Dios, no en un fuego destructor."
+      },
+      "explanation": "Daniel 2:35 concluye: 'Pero la piedra que hirió a la imagen se hizo un gran monte que llenó toda la tierra'.",
+      "source_ref": "Daniel 2:35",
+      "source_quote": "Entonces fueron desmenuzados también el hierro, el barro cocido, el bronce, la plata y el oro, y fueron como tamo de las eras del verano, y se los llevó el viento sin que de ellos quedara rastro alguno. Pero la piedra que hirió a la imagen se hizo un gran monte que llenó toda la tierra.",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "detail",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "707ba3b0beb0351e9ce022bf26c91af56c481bc29a80b4d376ca95c7d904613c",
+      "answer_binding_sha256": "f38bb68a503a000c718479f52eb59f99e587ff397b14b6bdd803994bf1101812",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN2-W2-076",
+          "presentation_sha256": "707ba3b0beb0351e9ce022bf26c91af56c481bc29a80b4d376ca95c7d904613c",
+          "selected_option_index": 1,
+          "selected_option_text": "Se hizo un gran monte que llenó toda la tierra",
+          "confidence_0_100": 100,
+          "second_option_index": 0,
+          "second_option_text": "Se hizo un caudaloso río que regó las naciones",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 2:35 describe que «la piedra que hirió a la imagen fue hecha un gran monte que llenó toda la tierra»."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN2-W2-076",
+          "presentation_sha256": "707ba3b0beb0351e9ce022bf26c91af56c481bc29a80b4d376ca95c7d904613c",
+          "selected_option_index": 1,
+          "selected_option_text": "Se hizo un gran monte que llenó toda la tierra",
+          "exact_supporting_phrase": "se hizo un gran monte que llenó toda la tierra",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "0": "Habla de un caudaloso río que regó las naciones, figura inexistente en Daniel 2:35.",
+            "2": "Propone un excelso muro que cercó las regiones, invención poética no bíblica.",
+            "3": "Sugiere un fuego devorador que cubrió el orbe, símbolo ajeno a la transformación de la piedra."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 1 cita con exactitud la transformación final de la piedra en Daniel 2:35 ('se hizo un gran monte que llenó toda la tierra')."
+        },
+        "reviewer_answer_binding_sha256": "f38bb68a503a000c718479f52eb59f99e587ff397b14b6bdd803994bf1101812",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN2-W2-077",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN2-V035-V11-F03",
+      "source_unit_id": "DAN2-V035",
+      "question": "En Daniel 2:35, ¿con qué figura agrícola se compara a los metales desmenuzados que fueron arrebatados por el viento sin dejar rastro?",
+      "options": [
+        "A la ceniza de hogueras secas",
+        "A la arena de los lechos secos",
+        "Al tamo de las eras del verano",
+        "Al polvo de los caminos viejos"
+      ],
+      "correct_option": 2,
+      "correct_answer": "Al tamo de las eras del verano",
+      "accepted_answers": [
+        "Al tamo de las eras del verano"
+      ],
+      "why_distractors_fail": {
+        "A la ceniza de hogueras secas": "El texto no emplea la figura de cenizas de fuego, sino el tamo o paja trillada arrastrada por el viento.",
+        "A la arena de los lechos secos": "La comparación bíblica se refiere a las eras de trilla en verano y no a arena fluvial o marina.",
+        "Al polvo de los caminos viejos": "La expresión exacta y el símil del versículo es 'como tamo de las eras del verano'."
+      },
+      "explanation": "Daniel 2:35 afirma que los materiales triturados 'fueron como tamo de las eras del verano, y se los llevó el viento sin que de ellos quedara rastro alguno'.",
+      "source_ref": "Daniel 2:35",
+      "source_quote": "Entonces fueron desmenuzados también el hierro, el barro cocido, el bronce, la plata y el oro, y fueron como tamo de las eras del verano, y se los llevó el viento sin que de ellos quedara rastro alguno. Pero la piedra que hirió a la imagen se hizo un gran monte que llenó toda la tierra.",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "5bf6b47fc241fda417a45363e15bb6057131dec17c2c3153f3399b3e6614a775",
+      "answer_binding_sha256": "57ec1e7c414dabbf5bf61d97bcca5e69ed1aa40ba5bfaba8749a8c239223269d",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN2-W2-077",
+          "presentation_sha256": "5bf6b47fc241fda417a45363e15bb6057131dec17c2c3153f3399b3e6614a775",
+          "selected_option_index": 2,
+          "selected_option_text": "Al tamo de las eras del verano",
+          "confidence_0_100": 100,
+          "second_option_index": 3,
+          "second_option_text": "Al polvo de los caminos viejos",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 2:35 utiliza la figura poética: «y fueron como tamo de las eras del verano, y se los llevó el viento»."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN2-W2-077",
+          "presentation_sha256": "5bf6b47fc241fda417a45363e15bb6057131dec17c2c3153f3399b3e6614a775",
+          "selected_option_index": 2,
+          "selected_option_text": "Al tamo de las eras del verano",
+          "exact_supporting_phrase": "como tamo de las eras del verano",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "0": "Usa la figura de ceniza de hogueras secas, no registrada en el texto.",
+            "1": "Propone arena de lechos secos, imagen poética ajena a Daniel 2:35.",
+            "3": "Emplea polvo de los caminos viejos, sustitución no respaldada por la cita bíblica."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 2 es la comparación agrícola exacta de Daniel 2:35 ('como tamo de las eras del verano')."
+        },
+        "reviewer_answer_binding_sha256": "57ec1e7c414dabbf5bf61d97bcca5e69ed1aa40ba5bfaba8749a8c239223269d",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN2-W2-078",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN2-V036-F01",
+      "source_unit_id": "DAN2-V036",
+      "question": "En Daniel 2:36, una vez relatada la visión de la estatua, ¿qué dos aspectos esenciales aseguró Daniel que declararía ante el monarca?",
+      "options": [
+        "El misterio de los tiempos futuros y su cronología exacta",
+        "El destino del imperio caldeo y la victoria de sus armas",
+        "El significado de los metales y el fin de los sacerdotes",
+        "El contenido exacto del sueño y su debida interpretación"
+      ],
+      "correct_option": 3,
+      "correct_answer": "El contenido exacto del sueño y su debida interpretación",
+      "accepted_answers": [
+        "El contenido exacto del sueño y su debida interpretación"
+      ],
+      "why_distractors_fail": {
+        "El misterio de los tiempos futuros y su cronología exacta": "Daniel no prometió dar un cálculo cronológico matemático, sino el sueño y su interpretación dada por Dios.",
+        "El significado de los metales y el fin de los sacerdotes": "El propósito no era una diatriba contra el sacerdocio pagano sino revelar el mensaje divino al rey.",
+        "El destino del imperio caldeo y la victoria de sus armas": "La revelación mostraba la sucesión de los reinos y el establecimiento del reino de Dios, no victorias militares caldeas."
+      },
+      "explanation": "Daniel 2:36 afirma con precisión: 'Éste es el sueño. También la interpretación de él diremos en presencia del rey'.",
+      "source_ref": "Daniel 2:36",
+      "source_quote": "Éste es el sueño. También la interpretación de él diremos en presencia del rey.",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "detail",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "0749bab76c9220f8df98557cbc08a6aaf01bebb91cd610a926b953fceadf24f0",
+      "answer_binding_sha256": "b5049d4696494b147bcadd9928848b3d0df8bb67d7f053666c3868c9b5cd95fc",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN2-W2-078",
+          "presentation_sha256": "0749bab76c9220f8df98557cbc08a6aaf01bebb91cd610a926b953fceadf24f0",
+          "selected_option_index": 3,
+          "selected_option_text": "El contenido exacto del sueño y su debida interpretación",
+          "confidence_0_100": 100,
+          "second_option_index": 0,
+          "second_option_text": "El misterio de los tiempos futuros y su cronología exacta",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 2:36 resume: «Este es el sueño; también la interpretación de él diremos en presencia del rey»."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN2-W2-078",
+          "presentation_sha256": "0749bab76c9220f8df98557cbc08a6aaf01bebb91cd610a926b953fceadf24f0",
+          "selected_option_index": 3,
+          "selected_option_text": "El contenido exacto del sueño y su debida interpretación",
+          "exact_supporting_phrase": "Éste es el sueño. También la interpretación de él diremos en presencia del rey",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "0": "Plantea misterio de tiempos y cronología exacta, conceptos no formulados en Daniel 2:36.",
+            "1": "Enfoca destino de Caldea y victoria militar, temática ajena a la declaración del versículo.",
+            "2": "Menciona significado de metales y fin sacerdotal, formulación espuria no textual."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 3 recoge con precisión los dos aspectos declarados por Daniel en Daniel 2:36 ('Éste es el sueño. También la interpretación de él diremos')."
+        },
+        "reviewer_answer_binding_sha256": "b5049d4696494b147bcadd9928848b3d0df8bb67d7f053666c3868c9b5cd95fc",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN2-W2-079",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN2-V037-F01",
+      "source_unit_id": "DAN2-V037",
+      "question": "Según Daniel 2:37, ¿quién confirió soberanamente a Nabucodonosor el reino, el poder, la fuerza y la majestad?",
+      "options": [
+        "El Dios del cielo",
+        "Los magos del reino",
+        "Los dioses caldeos",
+        "El senado imperial"
+      ],
+      "correct_option": 0,
+      "correct_answer": "El Dios del cielo",
+      "accepted_answers": [
+        "El Dios del cielo"
+      ],
+      "why_distractors_fail": {
+        "Los dioses caldeos": "Daniel atribuye el poder no al panteón idolátrico de Babilonia sino al único Dios verdadero.",
+        "Los magos del reino": "Los sabios y magos eran hombres impotentes que ni siquiera pudieron recordar el sueño del rey.",
+        "El senado imperial": "El dominio monárquico procedía de la soberanía providencial divina y no de un cuerpo político humano."
+      },
+      "explanation": "Daniel 2:37 declara enfáticamente: 'porque el Dios del cielo te ha dado reino, poder, fuerza y majestad'.",
+      "source_ref": "Daniel 2:37",
+      "source_quote": "Tú, rey, eres rey de reyes; porque el Dios del cielo te ha dado reino, poder, fuerza y majestad.",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "346427add8fc5df939e4a55c43ad031dde032b42a336458a509300d907528d0a",
+      "answer_binding_sha256": "fe2d9dbb2d8ce5c2fbafab78491cefc4c1ef72c713f7857641a7655ddf690ce4",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN2-W2-079",
+          "presentation_sha256": "346427add8fc5df939e4a55c43ad031dde032b42a336458a509300d907528d0a",
+          "selected_option_index": 0,
+          "selected_option_text": "El Dios del cielo",
+          "confidence_0_100": 100,
+          "second_option_index": 2,
+          "second_option_text": "Los dioses caldeos",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 2:37 enfatiza: «porque el Dios del cielo te ha dado reino, poder, fuerza y majestad»."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN2-W2-079",
+          "presentation_sha256": "346427add8fc5df939e4a55c43ad031dde032b42a336458a509300d907528d0a",
+          "selected_option_index": 0,
+          "selected_option_text": "El Dios del cielo",
+          "exact_supporting_phrase": "el Dios del cielo te ha dado reino, poder, fuerza y majestad",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "1": "Atribuye el don a los magos del reino, personajes paganos sin poder soberano.",
+            "2": "Menciona a los dioses caldeos, contradiciendo la soberanía del Dios verdadero proclamada por Daniel.",
+            "3": "Sugiere el senado imperial, institución política romana ajena al contexto babilónico."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 0 señala unívocamente a la fuente suprema de autoridad según Daniel 2:37 ('el Dios del cielo')."
+        },
+        "reviewer_answer_binding_sha256": "fe2d9dbb2d8ce5c2fbafab78491cefc4c1ef72c713f7857641a7655ddf690ce4",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN2-W2-080",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN2-V037-V11-F02",
+      "source_unit_id": "DAN2-V037",
+      "question": "En Daniel 2:37, ¿cuál es la cuádruple dotación providencial que el Dios del cielo otorgó a Nabucodonosor como rey de reyes?",
+      "options": [
+        "Le ha dado oro, riquezas, victoria y honor",
+        "Le ha dado gloria, ejércitos, paz y tierras",
+        "Le ha dado reino, poder, fuerza y majestad",
+        "Le ha dado ciencia, dominio, cetro y trono"
+      ],
+      "correct_option": 2,
+      "correct_answer": "Le ha dado reino, poder, fuerza y majestad",
+      "accepted_answers": [
+        "Le ha dado reino, poder, fuerza y majestad"
+      ],
+      "why_distractors_fail": {
+        "Le ha dado oro, riquezas, victoria y honor": "Aunque poseía riquezas, la enumeración bíblica exacta de Daniel 2:37 es 'reino, poder, fuerza y majestad'.",
+        "Le ha dado gloria, ejércitos, paz y tierras": "Esta lista no coincide con los cuatro atributos otorgados por Dios señalados en el versículo.",
+        "Le ha dado ciencia, dominio, cetro y trono": "No corresponde a la fórmula inspirada textual registrada en el texto de Daniel."
+      },
+      "explanation": "Daniel 2:37 enumera explícitamente: 'porque el Dios del cielo te ha dado reino, poder, fuerza y majestad'.",
+      "source_ref": "Daniel 2:37",
+      "source_quote": "Tú, rey, eres rey de reyes; porque el Dios del cielo te ha dado reino, poder, fuerza y majestad.",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "detail",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "a96c73b68560d378195cc33e0db15fc45bf23d4a27bdde8e20bab14524bdb735",
+      "answer_binding_sha256": "4ead6ed8d4c8400b380f3ac4604a6a4d1a379affb572d6dbb2b4f362b80a4d75",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN2-W2-080",
+          "presentation_sha256": "a96c73b68560d378195cc33e0db15fc45bf23d4a27bdde8e20bab14524bdb735",
+          "selected_option_index": 2,
+          "selected_option_text": "Le ha dado reino, poder, fuerza y majestad",
+          "confidence_0_100": 100,
+          "second_option_index": 0,
+          "second_option_text": "Le ha dado oro, riquezas, victoria y honor",
+          "initially_plausible_options_count": 2,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 2:37 enumera textualmente la cuádruple dotación: «reino, poder, fuerza y majestad»."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN2-W2-080",
+          "presentation_sha256": "a96c73b68560d378195cc33e0db15fc45bf23d4a27bdde8e20bab14524bdb735",
+          "selected_option_index": 2,
+          "selected_option_text": "Le ha dado reino, poder, fuerza y majestad",
+          "exact_supporting_phrase": "reino, poder, fuerza y majestad",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "0": "Propone 'oro, riquezas, victoria y honor', términos no correspondientes a la cuaterna de Daniel 2:37.",
+            "1": "Usa 'gloria, ejércitos, paz y tierras', sustitución ajena al texto canónico.",
+            "3": "Presenta 'ciencia, dominio, cetro y trono', cuaterna inventada no registrada en la cita."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 2 reproduce de forma textual e idéntica los cuatro dones providenciales consignados en Daniel 2:37 ('reino, poder, fuerza y majestad')."
+        },
+        "reviewer_answer_binding_sha256": "4ead6ed8d4c8400b380f3ac4604a6a4d1a379affb572d6dbb2b4f362b80a4d75",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN7-W2-001",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN7-V025-V11-F20",
+      "source_unit_id": "DAN7-V025",
+      "question": "En la profecía de Daniel 7:25, ¿cuáles son las tres acciones blasfemas y perseguidoras que caracterizan la oposición de este poder antes de expirar el plazo fijado?",
+      "options": [
+        "Hablará contra el Altísimo, quebrantará a sus santos y pensará en cambiar los tiempos y la Ley",
+        "Edificará una estatua de oro, forzará la adoración idolátrica y echará a los justos al fuego",
+        "Profanará el santuario terrenal, quitará el continuo sacrificio y destruirá los santos muros",
+        "Sitiará la santa ciudadela, quemará los rollos de la profecía y usurpará el templo celestial"
+      ],
+      "correct_option": 0,
+      "correct_answer": "Hablará contra el Altísimo, quebrantará a sus santos y pensará en cambiar los tiempos y la Ley",
+      "accepted_answers": [
+        "Hablará contra el Altísimo, quebrantará a sus santos y pensará en cambiar los tiempos y la Ley"
+      ],
+      "why_distractors_fail": {
+        "Profanará el santuario terrenal, quitará el continuo sacrificio y destruirá los santos muros": "Estas acciones corresponden a otros contextos proféticos y no al versículo 7:25.",
+        "Edificará una estatua de oro, forzará la adoración idolátrica y echará a los justos al fuego": "Esta es la narrativa histórica de Nabucodonosor en Daniel 3, no la profecía de Daniel 7:25.",
+        "Sitiará la santa ciudadela, quemará los rollos de la profecía y usurpará el templo celestial": "No refleja la tríada textual de Daniel 7:25 (palabras contra el Altísimo, quebrantar a los santos y pensar en cambiar tiempos y ley)."
+      },
+      "explanation": "Daniel 7:25 detalla con precisión: 'Hablará palabras contra el Altísimo, a los santos del Altísimo quebrantará y pensará en cambiar los tiempos y la Ley'.",
+      "source_ref": "Daniel 7:25",
+      "source_quote": "Hablará palabras contra el Altísimo, a los santos del Altísimo quebrantará y pensará en cambiar los tiempos y la Ley; y serán entregados en sus manos hasta tiempo, tiempos y medio tiempo.",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "872f6c1a32700874b968ee58275d632442c19d348ff5887b2847ba46627b59a2",
+      "answer_binding_sha256": "e87f9f87cf4bc46f3a12720aa5c9eb56c8f6ea7d9b4b5ea5b540ba3aa1dc7174",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN7-W2-001",
+          "presentation_sha256": "872f6c1a32700874b968ee58275d632442c19d348ff5887b2847ba46627b59a2",
+          "selected_option_index": 0,
+          "selected_option_text": "Hablará contra el Altísimo, quebrantará a sus santos y pensará en cambiar los tiempos y la Ley",
+          "confidence_0_100": 100,
+          "second_option_index": null,
+          "second_option_text": null,
+          "initially_plausible_options_count": 1,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 7:25 describe con exactitud las tres acciones: hablar palabras contra el Altísimo, quebrantar a los santos del Altísimo y pensar en cambiar los tiempos y la ley."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN7-W2-001",
+          "presentation_sha256": "872f6c1a32700874b968ee58275d632442c19d348ff5887b2847ba46627b59a2",
+          "selected_option_index": 0,
+          "selected_option_text": "Hablará contra el Altísimo, quebrantará a sus santos y pensará en cambiar los tiempos y la Ley",
+          "exact_supporting_phrase": "Hablará palabras contra el Altísimo, a los santos del Altísimo quebrantará y pensará en cambiar los tiempos y la Ley",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_1": "Falla porque refiere acontecimientos del capítulo 3 (estatua de oro y horno de fuego).",
+            "option_2": "Falla porque mezcla elementos de capítulos 8 y 11 sobre el continuo sacrificio y santuario.",
+            "option_3": "Falla porque inventa quema de rollos de profecía y usurpación del templo celestial."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 0 enumera con precisión canónica la tríada de acciones profetizadas en Daniel 7:25."
+        },
+        "reviewer_answer_binding_sha256": "e87f9f87cf4bc46f3a12720aa5c9eb56c8f6ea7d9b4b5ea5b540ba3aa1dc7174",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN7-W2-002",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN7-V026-F06",
+      "source_unit_id": "DAN7-V026",
+      "question": "Al sentarse el Juez en el tribunal según Daniel 7:26, ¿qué potestad específica le será despojada a este poder como paso indispensable hacia su destrucción?",
+      "options": [
+        "Su riqueza",
+        "Su dominio",
+        "Su imperio",
+        "Su milicia"
+      ],
+      "correct_option": 1,
+      "correct_answer": "Su dominio",
+      "accepted_answers": [
+        "Su dominio"
+      ],
+      "why_distractors_fail": {
+        "Su riqueza": "El texto profético no habla de quitar riquezas, sino formalmente de quitar su 'dominio'.",
+        "Su imperio": "Aunque ejercía poder imperial, el término exacto e inspirado del versículo 26 es 'dominio'.",
+        "Su milicia": "La pérdida de fuerzas militares no es el término jurídico-profético empleado en Daniel 7:26."
+      },
+      "explanation": "Daniel 7:26 indica con exactitud jurídica: 'Pero se sentará el Juez, y le quitarán su dominio, para que sea destruido y arruinado hasta el fin'.",
+      "source_ref": "Daniel 7:26",
+      "source_quote": "Pero se sentará el Juez, y le quitarán su dominio, para que sea destruido y arruinado hasta el fin,",
+      "parent_context": null,
+      "family": "single_choice_direct",
+      "subtype": "cause_consequence",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "0d164d97ba6d3548940de9bc00bff28c51048ed390d2c669d488f2803ce6fb8c",
+      "answer_binding_sha256": "a70123b1eb85ddcc7a2585a6b96fa8a583135b75485ba903a34013a5ea858183",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN7-W2-002",
+          "presentation_sha256": "0d164d97ba6d3548940de9bc00bff28c51048ed390d2c669d488f2803ce6fb8c",
+          "selected_option_index": 1,
+          "selected_option_text": "Su dominio",
+          "confidence_0_100": 100,
+          "second_option_index": null,
+          "second_option_text": null,
+          "initially_plausible_options_count": 1,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 7:26 consigna: 'Pero se sentará el Juez, y le quitarán su dominio para que sea destruido y arruinado hasta el fin'."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN7-W2-002",
+          "presentation_sha256": "0d164d97ba6d3548940de9bc00bff28c51048ed390d2c669d488f2803ce6fb8c",
+          "selected_option_index": 1,
+          "selected_option_text": "Su dominio",
+          "exact_supporting_phrase": "le quitarán su dominio,",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_0": "Falla porque sustituye el sustantivo bíblico por 'su riqueza'.",
+            "option_2": "Falla porque cambia el término textual por 'su imperio'.",
+            "option_3": "Falla porque usa el vocablo 'su milicia', ajeno a Daniel 7:26."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 1 coincide literalmente con el término exacto de Daniel 7:26: 'su dominio'."
+        },
+        "reviewer_answer_binding_sha256": "a70123b1eb85ddcc7a2585a6b96fa8a583135b75485ba903a34013a5ea858183",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN7-W2-003",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN7-V026-V11-F20",
+      "source_unit_id": "DAN7-V026",
+      "question": "En Daniel 7:26, ¿cuáles son los dos verbos que expresan el propósito y resultado final de quitarle el dominio a ese poder?",
+      "options": [
+        "Quebrantado y juzgado",
+        "Destruido y arruinado",
+        "Avergonzado y vencido",
+        "Condenado y consumido"
+      ],
+      "correct_option": 1,
+      "correct_answer": "Destruido y arruinado",
+      "accepted_answers": [
+        "Destruido y arruinado"
+      ],
+      "why_distractors_fail": {
+        "Quebrantado y juzgado": "Aunque es juzgado, la fórmula conclusiva del versículo 26 es 'destruido y arruinado'.",
+        "Avergonzado y vencido": "Estos términos no aparecen en la sentencia final registrada en Daniel 7:26.",
+        "Condenado y consumido": "El pasaje bíblico emplea literalmente la dupla 'destruido y arruinado hasta el fin'."
+      },
+      "explanation": "Daniel 7:26 establece textualmente: 'para que sea destruido y arruinado hasta el fin'.",
+      "source_ref": "Daniel 7:26",
+      "source_quote": "Pero se sentará el Juez, y le quitarán su dominio, para que sea destruido y arruinado hasta el fin,",
+      "parent_context": null,
+      "family": "single_choice_direct",
+      "subtype": "detail",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "664276893a8e23ecec44372665c465060aa908ddda96cd4b1f7442070957a76b",
+      "answer_binding_sha256": "6fb8ee96bbbfe2fd2c616f28ccf9dadb797031ba0f521d0e33da146093607337",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN7-W2-003",
+          "presentation_sha256": "664276893a8e23ecec44372665c465060aa908ddda96cd4b1f7442070957a76b",
+          "selected_option_index": 1,
+          "selected_option_text": "Destruido y arruinado",
+          "confidence_0_100": 100,
+          "second_option_index": null,
+          "second_option_text": null,
+          "initially_plausible_options_count": 1,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 7:26 emplea literalmente los dos verbos: 'para que sea destruido y arruinado hasta el fin'."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN7-W2-003",
+          "presentation_sha256": "664276893a8e23ecec44372665c465060aa908ddda96cd4b1f7442070957a76b",
+          "selected_option_index": 1,
+          "selected_option_text": "Destruido y arruinado",
+          "exact_supporting_phrase": "para que sea destruido y arruinado hasta el fin,",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_0": "Falla porque utiliza los términos 'quebrantado y juzgado'.",
+            "option_2": "Falla porque recurre a la dupla 'avergonzado y vencido'.",
+            "option_3": "Falla porque emplea 'condenado y consumido', no textuales en Daniel 7:26."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 1 reproduce literalmente la pareja verbal de Daniel 7:26: 'destruido y arruinado'."
+        },
+        "reviewer_answer_binding_sha256": "6fb8ee96bbbfe2fd2c616f28ccf9dadb797031ba0f521d0e33da146093607337",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN7-W2-004",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN7-V027-F08",
+      "source_unit_id": "DAN7-V027",
+      "question": "Conforme a la solemne culminación de Daniel 7:27, ¿a quiénes les serán concedidos el reino, el dominio y la majestad universal?",
+      "options": [
+        "A los gobernantes gentiles que rigieron los imperios de la tierra",
+        "A los jueces y sabios caldeos que interpretaron visiones del rey",
+        "Al pueblo de los santos del Altísimo, cuyo reino es reino eterno",
+        "A los capitanes y príncipes que comandaron los ejércitos de Elam"
+      ],
+      "correct_option": 2,
+      "correct_answer": "Al pueblo de los santos del Altísimo, cuyo reino es reino eterno",
+      "accepted_answers": [
+        "Al pueblo de los santos del Altísimo, cuyo reino es reino eterno"
+      ],
+      "why_distractors_fail": {
+        "A los gobernantes gentiles que rigieron los imperios de la tierra": "Los imperios terrenales pierden su dominio frente al juicio divino.",
+        "A los jueces y sabios caldeos que interpretaron visiones del rey": "Los sabios de la corte pagana no son los herederos del reino eterno de Dios.",
+        "A los capitanes y príncipes que comandaron los ejércitos de Elam": "El texto bíblico otorga el reino al pueblo de los santos del Altísimo, no a líderes militares de Elam."
+      },
+      "explanation": "Daniel 7:27 declara que 'el reino, el dominio y la majestad de los reinos debajo de todo el cielo sean dados al pueblo de los santos del Altísimo'.",
+      "source_ref": "Daniel 7:27",
+      "source_quote": "y que el reino, el dominio y la majestad de los reinos debajo de todo el cielo sean dados al pueblo de los santos del Altísimo, cuyo reino es reino eterno, y todos los dominios lo servirán y obedecerán.”",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "9a37b60abe3f12762d194d51b34cf1654db45d85545937ddd809966a3750033d",
+      "answer_binding_sha256": "346d33a3c937d6c96b4929a94aa56789f5153fc630395a9c08371fcbe2ad2945",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN7-W2-004",
+          "presentation_sha256": "9a37b60abe3f12762d194d51b34cf1654db45d85545937ddd809966a3750033d",
+          "selected_option_index": 2,
+          "selected_option_text": "Al pueblo de los santos del Altísimo, cuyo reino es reino eterno",
+          "confidence_0_100": 100,
+          "second_option_index": null,
+          "second_option_text": null,
+          "initially_plausible_options_count": 1,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 7:27 promete que el reino, el dominio y la majestad serán dados 'al pueblo de los santos del Altísimo, cuyo reino es reino eterno'."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN7-W2-004",
+          "presentation_sha256": "9a37b60abe3f12762d194d51b34cf1654db45d85545937ddd809966a3750033d",
+          "selected_option_index": 2,
+          "selected_option_text": "Al pueblo de los santos del Altísimo, cuyo reino es reino eterno",
+          "exact_supporting_phrase": "sean dados al pueblo de los santos del Altísimo, cuyo reino es reino eterno,",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_0": "Falla porque atribuye el reino eterno a gobernantes gentiles que rigieron imperios.",
+            "option_1": "Falla porque adjudica la concesión a jueces y sabios caldeos que interpretaron visiones.",
+            "option_3": "Falla porque señala a capitanes y príncipes que comandaron los ejércitos de Elam."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 2 cita con total precisión el destinatario canónico de Daniel 7:27: 'el pueblo de los santos del Altísimo'."
+        },
+        "reviewer_answer_binding_sha256": "346d33a3c937d6c96b4929a94aa56789f5153fc630395a9c08371fcbe2ad2945",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN7-W2-005",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN7-V027-V11-B-KINGDOM-SCOPE",
+      "source_unit_id": "DAN7-V027",
+      "question": "De acuerdo con Daniel 7:27, ¿cuál es el alcance espacial de los reinos cuya majestad y dominio son conferidos a los santos del Altísimo?",
+      "options": [
+        "Debajo de todo el cielo",
+        "A lo largo de todo el mar",
+        "Dentro del gran palacio",
+        "En la provincia de Elam"
+      ],
+      "correct_option": 0,
+      "correct_answer": "Debajo de todo el cielo",
+      "accepted_answers": [
+        "Debajo de todo el cielo"
+      ],
+      "why_distractors_fail": {
+        "Dentro del gran palacio": "El alcance profético no es local ni palaciego, sino universal.",
+        "A lo largo de todo el mar": "Las bestias surgieron del mar, pero el reino final abarca todo debajo del cielo.",
+        "En la provincia de Elam": "Elam es el marco geográfico de la visión del capítulo 8, no la extensión del reino eterno."
+      },
+      "explanation": "Daniel 7:27 especifica literalmente: 'y que el reino, el dominio y la majestad de los reinos debajo de todo el cielo sean dados al pueblo de los santos del Altísimo'.",
+      "source_ref": "Daniel 7:27",
+      "source_quote": "y que el reino, el dominio y la majestad de los reinos debajo de todo el cielo sean dados al pueblo de los santos del Altísimo, cuyo reino es reino eterno, y todos los dominios lo servirán y obedecerán.”",
+      "parent_context": null,
+      "family": "single_choice_direct",
+      "subtype": "detail",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "144f894605b0716c4c4e1c79cb00c8d38a90b6e83a2c0dd67f847419a511aa7f",
+      "answer_binding_sha256": "116f6b4309a128102a559fa97186954a1e59be39dbe0e74d62b09b6bda373534",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN7-W2-005",
+          "presentation_sha256": "144f894605b0716c4c4e1c79cb00c8d38a90b6e83a2c0dd67f847419a511aa7f",
+          "selected_option_index": 0,
+          "selected_option_text": "Debajo de todo el cielo",
+          "confidence_0_100": 100,
+          "second_option_index": null,
+          "second_option_text": null,
+          "initially_plausible_options_count": 1,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 7:27 define el alcance geográfico de los reinos como 'debajo de todo el cielo'."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN7-W2-005",
+          "presentation_sha256": "144f894605b0716c4c4e1c79cb00c8d38a90b6e83a2c0dd67f847419a511aa7f",
+          "selected_option_index": 0,
+          "selected_option_text": "Debajo de todo el cielo",
+          "exact_supporting_phrase": "de los reinos debajo de todo el cielo",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_1": "Falla porque formula el ámbito espacial como 'a lo largo de todo el mar'.",
+            "option_2": "Falla porque restringe el dominio al interior del gran palacio.",
+            "option_3": "Falla porque confina el reino a la provincia de Elam."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 0 reproduce literalmente la delimitación espacial universal de Daniel 7:27: 'debajo de todo el cielo'."
+        },
+        "reviewer_answer_binding_sha256": "116f6b4309a128102a559fa97186954a1e59be39dbe0e74d62b09b6bda373534",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN7-W2-006",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN7-V028-F04",
+      "source_unit_id": "DAN7-V028",
+      "question": "Al culminar el relato de la visión en Daniel 7:28, ¿qué acción interior final realizó Daniel respecto al asunto revelado?",
+      "options": [
+        "Proclamó la visión ante el rey y toda la corte de los babilonios",
+        "Escribió una queja formal ante los sabios y caldeos del imperio",
+        "Guardó con prudencia todo el asunto en lo profundo de su corazón",
+        "Rechazó el mensaje profético tras sufrir una profunda turbación"
+      ],
+      "correct_option": 2,
+      "correct_answer": "Guardó con prudencia todo el asunto en lo profundo de su corazón",
+      "accepted_answers": [
+        "Guardó con prudencia todo el asunto en lo profundo de su corazón"
+      ],
+      "why_distractors_fail": {
+        "Proclamó la visión ante el rey y toda la corte de los babilonios": "Daniel no divulgó la visión de inmediato a la corte pagana.",
+        "Escribió una queja formal ante los sabios y caldeos del imperio": "No hubo ninguna queja ni interacción con los sabios caldeos en ese momento.",
+        "Rechazó el mensaje profético tras sufrir una profunda turbación": "Daniel no rechazó la revelación divina, sino que la conservó reverentemente en su corazón."
+      },
+      "explanation": "Daniel 7:28 concluye diciendo: 'En cuanto a mí, Daniel, mis pensamientos me turbaron y mi rostro se demudó; pero guardé el asunto en mi corazón'.",
+      "source_ref": "Daniel 7:28",
+      "source_quote": "Aquí fue el fin de sus palabras. En cuanto a mí, Daniel, mis pensamientos me turbaron y mi rostro se demudó; pero guardé el asunto en mi corazón.",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "ab65f7addec9c1dcc04cdaeaa7b365fae2a502cedfff3388f03b27e3b6de9f1d",
+      "answer_binding_sha256": "953aedd4eb2f3ba2461b95bc74d88fee510bcb43bff820ffda88a4d1d6d1439c",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN7-W2-006",
+          "presentation_sha256": "ab65f7addec9c1dcc04cdaeaa7b365fae2a502cedfff3388f03b27e3b6de9f1d",
+          "selected_option_index": 2,
+          "selected_option_text": "Guardó con prudencia todo el asunto en lo profundo de su corazón",
+          "confidence_0_100": 100,
+          "second_option_index": null,
+          "second_option_text": null,
+          "initially_plausible_options_count": 1,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 7:28 concluye diciendo: 'pero guardé el asunto en mi corazón'."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN7-W2-006",
+          "presentation_sha256": "ab65f7addec9c1dcc04cdaeaa7b365fae2a502cedfff3388f03b27e3b6de9f1d",
+          "selected_option_index": 2,
+          "selected_option_text": "Guardó con prudencia todo el asunto en lo profundo de su corazón",
+          "exact_supporting_phrase": "pero guardé el asunto en mi corazón.",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_0": "Falla porque afirma que Daniel proclamó la visión ante el rey y toda la corte.",
+            "option_1": "Falla porque introduce la redacción de una queja formal ante sabios y caldeos.",
+            "option_3": "Falla porque sostiene erróneamente que Daniel rechazó el mensaje profético."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 2 recoge fielmente la actitud reflexiva final de Daniel 7:28: 'guardé el asunto en mi corazón'."
+        },
+        "reviewer_answer_binding_sha256": "953aedd4eb2f3ba2461b95bc74d88fee510bcb43bff820ffda88a4d1d6d1439c",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN7-W2-007",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN7-V028-V11-F02",
+      "source_unit_id": "DAN7-V028",
+      "question": "En Daniel 7:28, además de la turbación de sus pensamientos, ¿qué cambio somático exacto sufrió el profeta en su semblante?",
+      "options": [
+        "Su rostro se alegró",
+        "Su rostro se ocultó",
+        "Su rostro se demudó",
+        "Su rostro se renovó"
+      ],
+      "correct_option": 2,
+      "correct_answer": "Su rostro se demudó",
+      "accepted_answers": [
+        "Su rostro se demudó"
+      ],
+      "why_distractors_fail": {
+        "Su rostro se alegró": "La visión le causó intensa turbación e impacto emocional, no gozo superficial.",
+        "Su rostro se ocultó": "El texto bíblico describe una alteración en la apariencia de su semblante ('se demudó'), no que se cubriera.",
+        "Su rostro se renovó": "La demudación refleja palidez o consternación ante la solemnidad del mensaje, no renovación física."
+      },
+      "explanation": "Daniel 7:28 señala textualmente: 'mis pensamientos me turbaron y mi rostro se demudó'.",
+      "source_ref": "Daniel 7:28",
+      "source_quote": "Aquí fue el fin de sus palabras. En cuanto a mí, Daniel, mis pensamientos me turbaron y mi rostro se demudó; pero guardé el asunto en mi corazón.",
+      "parent_context": null,
+      "family": "single_choice_direct",
+      "subtype": "detail",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "d908dd0d05c88758fe631c664a79210460fd1a3f91bf29cf145e8a2271ef1172",
+      "answer_binding_sha256": "f2a7431bf2715834dd1bcd1f92801b8c8d375c89c42ac846c0a64e84cec12b1b",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN7-W2-007",
+          "presentation_sha256": "d908dd0d05c88758fe631c664a79210460fd1a3f91bf29cf145e8a2271ef1172",
+          "selected_option_index": 2,
+          "selected_option_text": "Su rostro se demudó",
+          "confidence_0_100": 100,
+          "second_option_index": null,
+          "second_option_text": null,
+          "initially_plausible_options_count": 1,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 7:28 indica textualmente el impacto somático en Daniel: 'y mi rostro se demudó'."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN7-W2-007",
+          "presentation_sha256": "d908dd0d05c88758fe631c664a79210460fd1a3f91bf29cf145e8a2271ef1172",
+          "selected_option_index": 2,
+          "selected_option_text": "Su rostro se demudó",
+          "exact_supporting_phrase": "mi rostro se demudó;",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_0": "Falla porque contradice el pasaje postulando alegría en el rostro.",
+            "option_1": "Falla porque altera el verbo a 'se ocultó'.",
+            "option_3": "Falla porque cambia el sentido bíblico a 'se renovó'."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 2 concuerda palabra por palabra con el texto canónico de Daniel 7:28: 'mi rostro se demudó'."
+        },
+        "reviewer_answer_binding_sha256": "f2a7431bf2715834dd1bcd1f92801b8c8d375c89c42ac846c0a64e84cec12b1b",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN7-W2-008",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN7-V028-V11-F03",
+      "source_unit_id": "DAN7-V028",
+      "question": "¿Cuál de las siguientes afirmaciones describe de manera exacta el impacto personal que Daniel experimentó al finalizar la visión de Daniel 7:28?",
+      "options": [
+        "Tuvo absoluta tranquilidad y su apariencia física no sufrió mudanza",
+        "Sintió profundo gozo de espíritu y su semblante brilló con majestad",
+        "Sus pensamientos lo turbaron en gran manera y su rostro se demudó",
+        "Fue embargado por la ira y su semblante se endureció ante el ángel"
+      ],
+      "correct_option": 2,
+      "correct_answer": "Sus pensamientos lo turbaron en gran manera y su rostro se demudó",
+      "accepted_answers": [
+        "Sus pensamientos lo turbaron en gran manera y su rostro se demudó"
+      ],
+      "why_distractors_fail": {
+        "Tuvo absoluta tranquilidad y su apariencia física no sufrió mudanza": "Daniel no permaneció inmune; sus pensamientos se turbaron y su rostro se demudó visiblemente.",
+        "Sintió profundo gozo de espíritu y su semblante brilló con majestad": "El impacto fue de profunda consternación ante las escenas del juicio y la opresión.",
+        "Fue embargado por la ira y su semblante se endureció ante el ángel": "El profeta sintió turbación y reverencia, no enojo ni endurecimiento rebelde."
+      },
+      "explanation": "Daniel 7:28 registra la conmoción del profeta: sus pensamientos lo turbaron, su rostro se demudó y guardó el asunto en su corazón.",
+      "source_ref": "Daniel 7:28",
+      "source_quote": "Aquí fue el fin de sus palabras. En cuanto a mí, Daniel, mis pensamientos me turbaron y mi rostro se demudó; pero guardé el asunto en mi corazón.",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "d4527d7ff28a1acacc236ebee65448db0bfff0c84a8edfc86db4aa4e1023372d",
+      "answer_binding_sha256": "c37a5ce4e8995b813a851e7713bccb1e1506311b3910a1290cfc7ce68fb15583",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN7-W2-008",
+          "presentation_sha256": "d4527d7ff28a1acacc236ebee65448db0bfff0c84a8edfc86db4aa4e1023372d",
+          "selected_option_index": 2,
+          "selected_option_text": "Sus pensamientos lo turbaron en gran manera y su rostro se demudó",
+          "confidence_0_100": 100,
+          "second_option_index": null,
+          "second_option_text": null,
+          "initially_plausible_options_count": 1,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 7:28 registra fielmente: 'mis pensamientos me turbaron en gran manera, y mi rostro se demudó'."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN7-W2-008",
+          "presentation_sha256": "d4527d7ff28a1acacc236ebee65448db0bfff0c84a8edfc86db4aa4e1023372d",
+          "selected_option_index": 2,
+          "selected_option_text": "Sus pensamientos lo turbaron en gran manera y su rostro se demudó",
+          "exact_supporting_phrase": "mis pensamientos me turbaron y mi rostro se demudó; pero guardé el asunto en mi corazón.",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_0": "Falla porque niega la turbación y afirma que su apariencia no sufrió mudanza.",
+            "option_1": "Falla porque inventa gozo de espíritu y brillo majestuoso en el semblante.",
+            "option_3": "Falla porque atribuye ira y endurecimiento del semblante ante el ángel."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 2 refleja de manera fiel los efectos emocionales y físicos registrados en Daniel 7:28."
+        },
+        "reviewer_answer_binding_sha256": "c37a5ce4e8995b813a851e7713bccb1e1506311b3910a1290cfc7ce68fb15583",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN8-W2-009",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN8-V001-V11-F02",
+      "source_unit_id": "DAN8-V001",
+      "question": "En Daniel 8:1, ¿cómo relaciona el profeta Daniel esta nueva visión profética con las revelaciones recibidas con anterioridad?",
+      "options": [
+        "Declara que aconteció antes de toda visión que tuvo en su vida",
+        "Afirma que ocurrió a la par del sueño de la gran imagen dorada",
+        "Indica que aconteció después de aquella que había tenido antes",
+        "Aclara que reemplazó una revelación dada antes a Nabucodonosor"
+      ],
+      "correct_option": 2,
+      "correct_answer": "Indica que aconteció después de aquella que había tenido antes",
+      "accepted_answers": [
+        "Indica que aconteció después de aquella que había tenido antes"
+      ],
+      "why_distractors_fail": {
+        "Declara que aconteció antes de toda visión que tuvo en su vida": "Daniel afirma explícitamente que vino después de la visión anterior (la de Daniel 7).",
+        "Afirma que ocurrió a la par del sueño de la gran imagen dorada": "La visión de la imagen ocurrió décadas antes, durante el reinado de Nabucodonosor.",
+        "Aclara que reemplazó una revelación dada antes a Nabucodonosor": "No reemplazó ninguna profecía, sino que amplió la serie profética tras la visión del año primero de Belsasar."
+      },
+      "explanation": "Daniel 8:1 aclara textualmente: 'yo, Daniel, tuve una visión, después de aquella que había tenido antes'.",
+      "source_ref": "Daniel 8:1",
+      "source_quote": "«En el año tercero del reinado del rey Belsasar, yo, Daniel, tuve una visión, después de aquella que había tenido antes.",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "a0d9f2713975adbc6a2de7430080f5a423c600d06f77a25f38a775c5d8c7d5ab",
+      "answer_binding_sha256": "02b5a8afb736f49d829f8e3fea1b53ccc8eab0d65338f93ce9f84823602482d5",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN8-W2-009",
+          "presentation_sha256": "a0d9f2713975adbc6a2de7430080f5a423c600d06f77a25f38a775c5d8c7d5ab",
+          "selected_option_index": 2,
+          "selected_option_text": "Indica que aconteció después de aquella que había tenido antes",
+          "confidence_0_100": 100,
+          "second_option_index": null,
+          "second_option_text": null,
+          "initially_plausible_options_count": 1,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 8:1 señala cronológicamente: 'después de aquella que me había aparecido antes'."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN8-W2-009",
+          "presentation_sha256": "a0d9f2713975adbc6a2de7430080f5a423c600d06f77a25f38a775c5d8c7d5ab",
+          "selected_option_index": 2,
+          "selected_option_text": "Indica que aconteció después de aquella que había tenido antes",
+          "exact_supporting_phrase": "después de aquella que había tenido antes.",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_0": "Falla porque invierte la cronología afirmando que fue previa a toda visión en su vida.",
+            "option_1": "Falla porque asocia temporalmente la visión al sueño de la gran imagen dorada.",
+            "option_3": "Falla porque habla de reemplazar una revelación previa dada a Nabucodonosor."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 2 cita con exactitud la relación cronológica de Daniel 8:1: 'después de aquella que había tenido antes'."
+        },
+        "reviewer_answer_binding_sha256": "02b5a8afb736f49d829f8e3fea1b53ccc8eab0d65338f93ce9f84823602482d5",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN8-W2-010",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN8-V001-V11-F03",
+      "source_unit_id": "DAN8-V001",
+      "question": "¿En qué año del reinado del rey Belsasar tuvo lugar la visión del carnero y el macho cabrío registrada en Daniel 8:1?",
+      "options": [
+        "En el año primero",
+        "En el año tercero",
+        "En el año segundo",
+        "En el año séptimo"
+      ],
+      "correct_option": 1,
+      "correct_answer": "En el año tercero",
+      "accepted_answers": [
+        "En el año tercero"
+      ],
+      "why_distractors_fail": {
+        "En el año primero": "El año primero de Belsasar fue cuando recibió la visión de las cuatro bestias (Daniel 7:1).",
+        "En el año segundo": "El texto bíblico sitúa la visión explícitamente en el año tercero, no en el segundo.",
+        "En el año séptimo": "El cómputo bíblico de Daniel 8:1 fecha la visión en el año tercero de Belsasar."
+      },
+      "explanation": "Daniel 8:1 inicia indicando: 'En el año tercero del reinado del rey Belsasar, yo, Daniel, tuve una visión...'.",
+      "source_ref": "Daniel 8:1",
+      "source_quote": "«En el año tercero del reinado del rey Belsasar, yo, Daniel, tuve una visión, después de aquella que había tenido antes.",
+      "parent_context": null,
+      "family": "single_choice_direct",
+      "subtype": "detail",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "3f78b920abff3186e590708ac29d286b99f3c3fe20ae733ef791296ad5043095",
+      "answer_binding_sha256": "70c5a6cbeb4879bace65715164baf31336d85277d46e7e01f5b046f097c3d9a9",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN8-W2-010",
+          "presentation_sha256": "3f78b920abff3186e590708ac29d286b99f3c3fe20ae733ef791296ad5043095",
+          "selected_option_index": 1,
+          "selected_option_text": "En el año tercero",
+          "confidence_0_100": 100,
+          "second_option_index": null,
+          "second_option_text": null,
+          "initially_plausible_options_count": 1,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 8:1 especifica: 'En el año tercero del reinado del rey Belsasar'."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN8-W2-010",
+          "presentation_sha256": "3f78b920abff3186e590708ac29d286b99f3c3fe20ae733ef791296ad5043095",
+          "selected_option_index": 1,
+          "selected_option_text": "En el año tercero",
+          "exact_supporting_phrase": "En el año tercero del reinado del rey Belsasar,",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_0": "Falla porque asigna el año primero (fecha de la visión de Daniel 7:1).",
+            "option_2": "Falla porque propone incorrectamente el año segundo.",
+            "option_3": "Falla porque señala erróneamente el año séptimo."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 1 indica con precisión el cómputo temporal de Daniel 8:1: el año tercero de Belsasar."
+        },
+        "reviewer_answer_binding_sha256": "70c5a6cbeb4879bace65715164baf31336d85277d46e7e01f5b046f097c3d9a9",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN8-W2-011",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN8-V002-V11-F02",
+      "source_unit_id": "DAN8-V002",
+      "question": "De acuerdo con Daniel 8:2, ¿qué condición política y administrativa distinguía a la ciudad de Susa donde Daniel se veía en la visión?",
+      "options": [
+        "Era una guarnición en la frontera",
+        "Era el templo sagrado del imperio",
+        "Era la insigne capital del reino",
+        "Era una colonia comercial de Elam"
+      ],
+      "correct_option": 2,
+      "correct_answer": "Era la insigne capital del reino",
+      "accepted_answers": [
+        "Era la insigne capital del reino"
+      ],
+      "why_distractors_fail": {
+        "Era una guarnición en la frontera": "El texto bíblico define a Susa expresamente como 'la capital del reino', no como mera fortaleza fronteriza.",
+        "Era el templo sagrado del imperio": "Susa es identificada por su rol de capital política y real, no como santuario religioso.",
+        "Era una colonia comercial de Elam": "El pasaje no la califica de colonia comercial, sino de capital del reino situada en la provincia de Elam."
+      },
+      "explanation": "Daniel 8:2 señala: 'yo estaba en Susa, que es la capital del reino, en la provincia de Elam'.",
+      "source_ref": "Daniel 8:2",
+      "source_quote": "Miraba yo la visión, y en ella yo estaba en Susa, que es la capital del reino, en la provincia de Elam. En la visión, pues, me veía junto al río Ulai.",
+      "parent_context": null,
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "f89c48c51ec70d02f9640b647fb15927f732bfb071ed77160f386ad3fe1b33a6",
+      "answer_binding_sha256": "f208db6c5ff981e38b90e9c01d5ece30cb04de463b6855a5bf01806f7b22e027",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN8-W2-011",
+          "presentation_sha256": "f89c48c51ec70d02f9640b647fb15927f732bfb071ed77160f386ad3fe1b33a6",
+          "selected_option_index": 2,
+          "selected_option_text": "Era la insigne capital del reino",
+          "confidence_0_100": 100,
+          "second_option_index": null,
+          "second_option_text": null,
+          "initially_plausible_options_count": 1,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 8:2 califica a Susa textualmente como 'capital del reino en la provincia de Elam'."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN8-W2-011",
+          "presentation_sha256": "f89c48c51ec70d02f9640b647fb15927f732bfb071ed77160f386ad3fe1b33a6",
+          "selected_option_index": 2,
+          "selected_option_text": "Era la insigne capital del reino",
+          "exact_supporting_phrase": "Susa, que es la capital del reino",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_0": "Falla porque cataloga a Susa como guarnición en la frontera.",
+            "option_1": "Falla porque la califica de templo sagrado del imperio.",
+            "option_3": "Falla porque la define como colonia comercial de Elam."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 2 concuerda con la definición textual de Daniel 8:2: 'Susa, que es la capital del reino'."
+        },
+        "reviewer_answer_binding_sha256": "f208db6c5ff981e38b90e9c01d5ece30cb04de463b6855a5bf01806f7b22e027",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    },
+    {
+      "id": "V14-R3-DAN8-W2-012",
+      "lane": "CARRIL_R3_COMPETITIVO_TEMPRANO",
+      "fact_id": "DAN8-V002-V11-F03",
+      "source_unit_id": "DAN8-V002",
+      "question": "Según el marco geográfico detallado en Daniel 8:2, ¿en qué provincia se encontraba la capital Susa junto al río Ulai?",
+      "options": [
+        "En la provincia de Media",
+        "En la provincia de Judá",
+        "En la provincia de Elam",
+        "En la provincia de Siria"
+      ],
+      "correct_option": 2,
+      "correct_answer": "En la provincia de Elam",
+      "accepted_answers": [
+        "En la provincia de Elam"
+      ],
+      "why_distractors_fail": {
+        "En la provincia de Media": "Aunque los medos forman parte del imperio posterior, la provincia citada textualmente es Elam.",
+        "En la provincia de Judá": "Daniel estaba en el exilio oriental; Susa se encontraba en Elam y no en Judea.",
+        "En la provincia de Siria": "La ubicación bíblica explícita en Daniel 8:2 es la provincia de Elam."
+      },
+      "explanation": "Daniel 8:2 precisa: 'yo estaba en Susa, que es la capital del reino, en la provincia de Elam'.",
+      "source_ref": "Daniel 8:2",
+      "source_quote": "Miraba yo la visión, y en ella yo estaba en Susa, que es la capital del reino, en la provincia de Elam. En la visión, pues, me veía junto al río Ulai.",
+      "parent_context": null,
+      "family": "single_choice_direct",
+      "subtype": "detail",
+      "difficulty": "easy",
+      "tier": "COVERAGE_ACCEPT",
+      "presentation_sha256": "9fc3d9de4f2f66d08b760e9457f0b624f4243198fb823c20d6377dcd0221ced7",
+      "answer_binding_sha256": "01357929be52735c9e600e07fa7d519f09cba4b0dc586214e8b67bf74ac380ee",
+      "evaluation": {
+        "decision": "COVERAGE_ACCEPT",
+        "stage_a": {
+          "question_id": "V14-R3-DAN8-W2-012",
+          "presentation_sha256": "9fc3d9de4f2f66d08b760e9457f0b624f4243198fb823c20d6377dcd0221ced7",
+          "selected_option_index": 2,
+          "selected_option_text": "En la provincia de Elam",
+          "confidence_0_100": 100,
+          "second_option_index": null,
+          "second_option_text": null,
+          "initially_plausible_options_count": 1,
+          "solved_by": "KNOWLEDGE",
+          "clues_detected": {
+            "length": false,
+            "precision": false,
+            "grammar": false,
+            "style": false,
+            "absurd_option": false,
+            "semantic_category_mismatch": false
+          },
+          "length_or_precision_giveaway": false,
+          "real_difficulty": "EASY",
+          "recommendation": "ACCEPT",
+          "specific_reason": "Daniel 8:2 ubica la visión en Susa, 'en la provincia de Elam'."
+        },
+        "stage_b": {
+          "question_id": "V14-R3-DAN8-W2-012",
+          "presentation_sha256": "9fc3d9de4f2f66d08b760e9457f0b624f4243198fb823c20d6377dcd0221ced7",
+          "selected_option_index": 2,
+          "selected_option_text": "En la provincia de Elam",
+          "exact_supporting_phrase": "en la provincia de Elam.",
+          "second_defensible_option": false,
+          "second_defensible_text": null,
+          "distractor_analysis": {
+            "option_0": "Falla porque sustituye Elam por la provincia de Media.",
+            "option_1": "Falla porque ubica erróneamente a Susa en la provincia de Judá.",
+            "option_3": "Falla porque propone la provincia de Siria."
+          },
+          "semantic_category_check": "EXCELLENT",
+          "novelty_check": true,
+          "decision": "ACCEPT",
+          "specific_reason": "La opción 2 identifica de forma unívoca la provincia consignada en Daniel 8:2: Elam."
+        },
+        "reviewer_answer_binding_sha256": "01357929be52735c9e600e07fa7d519f09cba4b0dc586214e8b67bf74ac380ee",
+        "triple_text_verified": true,
+        "hash_verified": true
+      }
+    }
+  ],
+  "cycle_hash": "e8962e1090e35eba9bc42272aadaaa2ca62b1981ebffc53670773b017a6c6a0c"
+}

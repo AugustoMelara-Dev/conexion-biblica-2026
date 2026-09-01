@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
 Compile public 18 shards in public/banks/final-2026/
-Adds Wave 1 (201 items) to existing 3,011 questions -> Total: 3,212 questions.
-Maintains full cryptographic integrity with audit-live-final-bank.mjs.
+Includes Wave 1 (+201) and Wave 2 (+240) on top of clean 3,011 base -> Total: 3,452 public questions.
+Maintains strict schema compliance with audit-live-final-bank.mjs.
 """
 from collections import Counter
+import glob
 import hashlib
 import json
 import os
@@ -33,16 +34,21 @@ def sha256_file(path):
             h.update(chunk)
     return h.hexdigest()
 
-def sha256_bytes(data: bytes) -> str:
-    return hashlib.sha256(data).hexdigest()
-
 def compile_public_shards():
     # Load wave 1 approved items
     wave1_path = ROOT / "content" / "competitive-v13" / "wave1_approved_batch.json"
-    wave1_items = json.loads(wave1_path.read_text(encoding="utf-8"))
+    wave1_items = json.loads(wave1_path.read_text(encoding="utf-8")) if wave1_path.exists() else []
     print(f"Loaded {len(wave1_items)} Wave 1 approved items.")
 
-    # Load source units for metadata enrichment if needed
+    # Load wave 2 approved items
+    wave2_path = ROOT / "content" / "competitive-v13" / "waves" / "wave2" / "wave2_approved_batch.json"
+    wave2_items = json.loads(wave2_path.read_text(encoding="utf-8")) if wave2_path.exists() else []
+    print(f"Loaded {len(wave2_items)} Wave 2 approved items.")
+
+    all_new_items = wave1_items + wave2_items
+    print(f"Total new increment items: {len(all_new_items)}")
+
+    # Load source units
     source_units = {}
     source_packets_dir = ROOT / "content" / "competitive-v11" / "source-packets"
     for sf in source_packets_dir.glob("*.json"):
@@ -52,7 +58,7 @@ def compile_public_shards():
         for u in sdata.get("units", []):
             source_units[u["source_unit_id"]] = u
 
-    # Load existing questions from the 18 shards (from 3,011 base)
+    # Load base questions across 18 shards (from clean 3,011 base)
     shards_data = {}
     total_existing = 0
     for unit in EXPECTED_UNITS:
@@ -68,9 +74,8 @@ def compile_public_shards():
 
     existing_ids = {q["id"] for qs in shards_data.values() for q in qs}
 
-    # Group and append wave 1 items
     added_count = 0
-    for item in wave1_items:
+    for item in all_new_items:
         qid = item.get("id") or item.get("question_id")
         if qid in existing_ids:
             continue
@@ -90,19 +95,15 @@ def compile_public_shards():
         correct_text = item["options"][correct_idx]
 
         wdf = item.get("why_distractors_fail")
-        if isinstance(wdf, list):
-            wdf_dict = {opt: wdf[i] if i < len(wdf) else f"Opción incorrecta según {source_ref}."
-                        for i, opt in enumerate(item["options"]) if i != correct_idx}
-        elif isinstance(wdf, dict):
+        if isinstance(wdf, dict):
             wdf_dict = wdf
         else:
             wdf_dict = {opt: f"Opción incorrecta según {source_ref}."
                         for i, opt in enumerate(item["options"]) if i != correct_idx}
 
-        tier = item.get("evaluation", {}).get("decision", "COVERAGE_ACCEPT")
+        tier = item.get("tier", "COVERAGE_ACCEPT")
         honest_diff = item.get("difficulty", "medium").lower()
 
-        # Build raw question object
         canonical_q = {
             "id": qid,
             "bank_id": "BANCO_UNICO_CONEXION_BIBLICA_2026",
@@ -112,7 +113,7 @@ def compile_public_shards():
             "fact_id": item.get("fact_id", ""),
             "variant_id": qid,
             "role": "variant",
-            "template_id": "ai-authored-v13-wave1",
+            "template_id": "ai-authored-v13-release2",
             "family": item.get("family", "single_choice_contextual"),
             "subtype": item.get("subtype", "relationship"),
             "chapter": unit,
@@ -139,6 +140,7 @@ def compile_public_shards():
             "trap_type": None,
             "final_editorial_status": "GOLD",
             "difficulty": honest_diff,
+            "tier": tier,
             "false_mutation": None,
             "ai_review": {
                 "status": "passed",
@@ -176,7 +178,6 @@ def compile_public_shards():
         for q in qs:
             all_facts.add(q.get("fact_id"))
             families_counter[q.get("family", "single_choice_contextual")] += 1
-            # Ensure row_content_sha256 is strictly synchronized
             row_without_hash = {k: v for k, v in q.items() if k != "row_content_sha256"}
             q["row_content_sha256"] = canonical_hash(row_without_hash)
             all_questions_list.append(q)
@@ -226,8 +227,8 @@ def compile_public_shards():
         "approved_count": len(review_entries)
     }
 
-    review_index_str = json.dumps(review_index, ensure_ascii=False, indent=2) + "\n"
-    REVIEW_INDEX_PATH.write_text(review_index_str, encoding="utf-8")
+    review_index_str = json.dumps(review_index, ensure_ascii=False, indent=2) + "\n",
+    REVIEW_INDEX_PATH.write_text(json.dumps(review_index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     
     ri_bytes = REVIEW_INDEX_PATH.stat().st_size
     ri_sha = sha256_file(REVIEW_INDEX_PATH)
@@ -251,7 +252,6 @@ def compile_public_shards():
         "sha256": ri_sha
     }
 
-    # Build descriptor hash (matches artifactBuildDescriptor)
     public_count_keys = [
         "unique_facts", "gold_questions", "central_question_count",
         "presentation_variant_count", "training_fact_count",
