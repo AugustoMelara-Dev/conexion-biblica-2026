@@ -1,0 +1,116 @@
+[
+  {
+    "id": "V13-R2-DAN5-C11-V017-F01",
+    "source_unit_id": "DAN5-V017",
+    "fact_id": "DAN5-V017-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "speaker_addressee",
+    "question": "¿Qué distribución conserva los cuatro objetos del discurso de Daniel, la acción asignada a cada uno y su destinatario?",
+    "options": [
+      "Dones → sean para el rey; recompensas → délas a otros; escritura → Daniel la leerá al rey; interpretación → Daniel se la dará",
+      "Dones → sean para los sabios; recompensas → Daniel las conservará; escritura → el rey la leerá a otros; interpretación → los caldeos la darán",
+      "Dones → sean para Daniel; recompensas → repártalas la reina; escritura → otros la leerán; interpretación → el rey la guardará",
+      "Dones → sean para Darío; recompensas → entréguense a los medos; escritura → Daniel la ocultará; interpretación → Belsasar la rechazará"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Dones → sean para el rey; recompensas → délas a otros; escritura → Daniel la leerá al rey; interpretación → Daniel se la dará"
+    ],
+    "explanation": "Daniel dejó los dones al rey, mandó dar las recompensas a otros y, aun así, se comprometió a leer e interpretar para el rey.",
+    "why_distractors_fail": {
+      "Dones → sean para los sabios; recompensas → Daniel las conservará; escritura → el rey la leerá a otros; interpretación → los caldeos la darán": "Cambia destinatarios y agentes de las cuatro relaciones.",
+      "Dones → sean para Daniel; recompensas → repártalas la reina; escritura → otros la leerán; interpretación → el rey la guardará": "Invierte el rechazo de compensación y sustituye quién ejecuta y recibe las tareas.",
+      "Dones → sean para Darío; recompensas → entréguense a los medos; escritura → Daniel la ocultará; interpretación → Belsasar la rechazará": "Introduce destinatarios ajenos y contradice ambos compromisos de Daniel."
+    },
+    "evidence_excerpt": "Entonces Daniel respondió y dijo al rey: —Tus dones sean para ti; da tus recompensas a otros. Leeré la escritura al rey y le daré la interpretación.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "objects_actions_recipients_speech_mapping",
+    "option_category": "four_part_discourse_correspondence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue rechazo de compensación y aceptación de servicio mediante cuatro pares objeto–acción–destinatario.",
+    "variant_justification": "La presentación existente identifica a Daniel; esta variante exige reconstruir la distribución completa de dones, recompensas, lectura e interpretación.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN5-C11-V009-F02",
+    "source_unit_id": "DAN5-V009",
+    "fact_id": "DAN5-V009-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué correspondencia discrimina correctamente las dos reacciones del rey, su intensidad y la reacción distinta de los príncipes?",
+    "options": [
+      "Belsasar → se turbó sobremanera y palideció; príncipes → estaban perplejos",
+      "Belsasar → quedó perplejo y se alegró; príncipes → palidecieron sobremanera",
+      "Belsasar → se humilló y recuperó el color; príncipes → interpretaron la escritura",
+      "Belsasar → permaneció sereno y calló; príncipes → se turbaron y huyeron"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Belsasar → se turbó sobremanera y palideció; príncipes → estaban perplejos"
+    ],
+    "explanation": "La turbación intensa y la palidez corresponden a Belsasar; la perplejidad se atribuye a sus príncipes.",
+    "why_distractors_fail": {
+      "Belsasar → quedó perplejo y se alegró; príncipes → palidecieron sobremanera": "Intercambia la perplejidad y la palidez e inventa alegría.",
+      "Belsasar → se humilló y recuperó el color; príncipes → interpretaron la escritura": "Sustituye las tres reacciones por acciones no expresadas.",
+      "Belsasar → permaneció sereno y calló; príncipes → se turbaron y huyeron": "Contradice la turbación del rey y atribuye a los príncipes conductas ausentes."
+    },
+    "evidence_excerpt": "Entonces el rey Belsasar se turbó sobremanera y palideció, y sus príncipes estaban perplejos.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "actor_intensity_physical_collective_reaction",
+    "option_category": "reaction_correspondence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Evita fusionar tres reacciones y obliga a asignarlas al actor correcto.",
+    "variant_justification": "El verdadero/falso previo integra un antecedente externo; esta variante se limita a discriminar, dentro de la cita, reacción, intensidad y actor.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN5-C11-V026-F01",
+    "source_unit_id": "DAN5-V026",
+    "fact_id": "DAN5-V026-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "En la sentencia «Mene», ¿qué mapa conserva término interpretado, agente, objeto político y las dos operaciones divinas en su orden?",
+    "options": [
+      "Mene → Dios → tu reino → lo contó → le puso fin",
+      "Tekel → Daniel → al rey → lo contó → le dio gloria",
+      "Peres → los medos → la escritura → la pesaron → la sellaron",
+      "Uparsin → Belsasar → su banquete → lo dividió → le puso nombre"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Mene → Dios → tu reino → lo contó → le puso fin"
+    ],
+    "explanation": "Mene se interpreta como la acción de Dios que contó el reino de Belsasar y le puso fin.",
+    "why_distractors_fail": {
+      "Tekel → Daniel → al rey → lo contó → le dio gloria": "Cambia término, agente, objeto y resultado.",
+      "Peres → los medos → la escritura → la pesaron → la sellaron": "Mezcla otro término con agentes y operaciones no atribuidos en la sentencia.",
+      "Uparsin → Belsasar → su banquete → lo dividió → le puso nombre": "Sustituye cada función explícita de la interpretación de Mene."
+    },
+    "evidence_excerpt": "Ésta es la interpretación del asunto: “Mene”: Contó Dios tu reino y le ha puesto fin.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "term_agent_political_object_ordered_operations",
+    "option_category": "interpretive_sentence_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige conservar cinco funciones de la interpretación, no solo identificar a Dios.",
+    "variant_justification": "La presentación existente pregunta únicamente quién actuó; esta variante adjudica término, agente, objeto y doble operación ordenada.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

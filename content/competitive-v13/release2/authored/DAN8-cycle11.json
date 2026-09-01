@@ -1,0 +1,224 @@
+[
+  {
+    "id": "V13-R2-DAN8-C11-V003-V11-F05",
+    "source_unit_id": "DAN8-V003",
+    "fact_id": "DAN8-V003-V11-F05",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Cuál ficha conserva simultáneamente la ubicación del carnero, el número de cuernos, el rasgo compartido, la desigualdad y el orden de crecimiento?",
+    "options": [
+      "Delante del río → dos cuernos → ambos altos → uno más alto → el más alto creció después",
+      "Sobre la tierra → cuatro cuernos → ambos pequeños → iguales en altura → el más alto creció primero",
+      "Junto al santuario → dos cuernos → ambos quebrados → uno más bajo → el más bajo creció después",
+      "Entre las riberas → un cuerno → todos notables → uno más alto → los cuatro crecieron después"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Delante del río → dos cuernos → ambos altos → uno más alto → el más alto creció después"
+    ],
+    "explanation": "El carnero estaba delante del río y tenía dos cuernos altos, pero desiguales; el más alto apareció en crecimiento después del otro.",
+    "why_distractors_fail": {
+      "Sobre la tierra → cuatro cuernos → ambos pequeños → iguales en altura → el más alto creció primero": "Cambia ubicación, cantidad, altura relativa y cronología.",
+      "Junto al santuario → dos cuernos → ambos quebrados → uno más bajo → el más bajo creció después": "Conserva sólo la cantidad y sustituye escenario, estado y cuerno posterior.",
+      "Entre las riberas → un cuerno → todos notables → uno más alto → los cuatro crecieron después": "Mezcla la voz del Ulai y los cuatro cuernos de otra escena con el carnero descrito."
+    },
+    "evidence_excerpt": "había un carnero que estaba delante del río, y tenía dos cuernos; y aunque los cuernos eran altos, uno era más alto que el otro, y el más alto creció después.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "location_number_shared_height_inequality_growth_order",
+    "option_category": "five_part_horn_profile",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue una comparación estática de la secuencia temporal que explica la asimetría.",
+    "variant_justification": "La presentación base sólo afirma la desigualdad; esta variante exige reconstruir cinco relaciones verificables del mismo carnero.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN8-C11-V005-V11-F03",
+    "source_unit_id": "DAN8-V005",
+    "fact_id": "DAN8-V005-V11-F03",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué correspondencia identifica al visitante por procedencia, alcance, modo de avance y señal corporal?",
+    "options": [
+      "Poniente → ribera del Ulai → tocando tierra → dos cuernos sobre la cabeza",
+      "Poniente → faz de toda la tierra → sin tocar tierra → cuerno notable entre los ojos",
+      "Oriente → tierra gloriosa → pisoteando la tierra → cuerno pequeño detrás de los ojos",
+      "Norte → capital de Elam → debajo de la tierra → cuatro cuernos entre las riberas"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Poniente → faz de toda la tierra → sin tocar tierra → cuerno notable entre los ojos"
+    ],
+    "explanation": "El macho cabrío procede del poniente, recorre la faz de toda la tierra sin tocarla y lleva el cuerno notable entre los ojos.",
+    "why_distractors_fail": {
+      "Poniente → ribera del Ulai → tocando tierra → dos cuernos sobre la cabeza": "Mantiene sólo la procedencia y atribuye al visitante el escenario y los cuernos del carnero.",
+      "Oriente → tierra gloriosa → pisoteando la tierra → cuerno pequeño detrás de los ojos": "Invierte procedencia y modo de avance, y sustituye el cuerno notable.",
+      "Norte → capital de Elam → debajo de la tierra → cuatro cuernos entre las riberas": "Cambia los cuatro componentes por datos de escenas distintas."
+    },
+    "evidence_excerpt": "un macho cabrío venía del lado del poniente sobre la faz de toda la tierra, sin tocar tierra; y aquel macho cabrío tenía un cuerno notable entre sus ojos.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "origin_scope_motion_horn_position",
+    "option_category": "four_part_visitor_identification",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Integra geografía, desplazamiento extraordinario e identificación visual en una sola correspondencia.",
+    "variant_justification": "La presentación base pregunta sólo dónde estaba el cuerno; aquí esa posición debe discriminarse dentro del perfil completo del macho cabrío.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN8-C11-V012-V11-F02",
+    "source_unit_id": "DAN8-V012",
+    "fact_id": "DAN8-V012-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué cadena vincula correctamente la causa declarada, lo entregado, el objeto abatido, la autonomía y el resultado?",
+    "options": [
+      "A causa del sacrificio → se entrega la prevaricación → cae el ejército → obedece al santuario → fracasa",
+      "A causa de la verdad → se entrega el santuario → cae la prevaricación → hace lo ordenado → se debilita",
+      "A causa de la prevaricación → se entregan ejército y sacrificio continuo → cae la verdad → hace cuanto quiere → prospera",
+      "A causa del ejército → se entrega la verdad → cae el sacrificio continuo → hace lo que Gabriel manda → es quebrantado"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "A causa de la prevaricación → se entregan ejército y sacrificio continuo → cae la verdad → hace cuanto quiere → prospera"
+    ],
+    "explanation": "La prevaricación antecede a la entrega del ejército y el sacrificio; después se derriba la verdad, se actúa sin freno y se prospera.",
+    "why_distractors_fail": {
+      "A causa del sacrificio → se entrega la prevaricación → cae el ejército → obedece al santuario → fracasa": "Intercambia causa, objetos y resultado, además de inventar obediencia.",
+      "A causa de la verdad → se entrega el santuario → cae la prevaricación → hace lo ordenado → se debilita": "Invierte las funciones de verdad y prevaricación y contradice la prosperidad.",
+      "A causa del ejército → se entrega la verdad → cae el sacrificio continuo → hace lo que Gabriel manda → es quebrantado": "Reasigna todos los elementos y mezcla el desenlace de otro pasaje."
+    },
+    "evidence_excerpt": "A causa de la prevaricación le fue entregado el ejército junto con el sacrificio continuo; echó por tierra la verdad e hizo cuanto quiso, y prosperó.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "transgression_delivery_truth_fall_autonomy_prosperity",
+    "option_category": "five_stage_causal_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Separa causa, víctimas cultuales, objeto abstracto y desenlace de la acción.",
+    "variant_justification": "El hueco base recupera únicamente «verdad»; esta variante obliga a ubicarla dentro de la cadena causal completa.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN8-C11-V013-V11-F02",
+    "source_unit_id": "DAN8-V013",
+    "fact_id": "DAN8-V013-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "En el diálogo oído por Daniel, ¿qué mapeo conserva los dos papeles y los tres asuntos cuya duración se pregunta?",
+    "options": [
+      "Un santo pregunta → otro responde → cuerno grande, cuatro vientos y purificación del río",
+      "Daniel pregunta → Gabriel habla → carnero, macho cabrío y reyes de Media y Persia",
+      "Un santo habla → otro santo le pregunta → sacrificio continuo, prevaricación asoladora y entrega del santuario y el ejército para ser pisoteados",
+      "El príncipe habla → un rey pregunta → verdad, tierra gloriosa y negocios del rey"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Un santo habla → otro santo le pregunta → sacrificio continuo, prevaricación asoladora y entrega del santuario y el ejército para ser pisoteados"
+    ],
+    "explanation": "Daniel oye primero a un santo que habla; otro santo dirige a ese hablante una pregunta sobre la duración del sacrificio, la prevaricación y la entrega para el pisoteo.",
+    "why_distractors_fail": {
+      "Un santo pregunta → otro responde → cuerno grande, cuatro vientos y purificación del río": "Invierte los papeles y sustituye los asuntos enumerados.",
+      "Daniel pregunta → Gabriel habla → carnero, macho cabrío y reyes de Media y Persia": "Cambia participantes y traslada símbolos de la interpretación posterior.",
+      "El príncipe habla → un rey pregunta → verdad, tierra gloriosa y negocios del rey": "No conserva ni los interlocutores ni el contenido de la pregunta."
+    },
+    "evidence_excerpt": "oí hablar a un santo; y otro de los santos preguntó a aquel que hablaba: “¿Hasta cuándo durará la visión del sacrificio continuo, la prevaricación asoladora y la entrega del santuario y el ejército para ser pisoteados?”",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "speaker_questioner_duration_subjects",
+    "option_category": "dialogue_role_and_three_subject_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige distinguir hablante de interrogador y conservar la estructura triple de la pregunta.",
+    "variant_justification": "La afirmación base sólo verifica que dialogan dos santos; esta variante evalúa roles y contenido sin reducirlos a verdadero o falso.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN8-C11-V017-V11-F03",
+    "source_unit_id": "DAN8-V017",
+    "fact_id": "DAN8-V017-V11-F03",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué secuencia conserva acercamiento, reacción emocional, postura, mandato, tratamiento del destinatario y horizonte de la visión?",
+    "options": [
+      "Se acerca → Daniel se alegra → queda en pie → «Recuerda» → «rey» → visión para el pasado",
+      "Se acerca → Daniel se asusta → se postra sobre su rostro → «Entiende» → «hijo de hombre» → visión para el tiempo del fin",
+      "Se aleja → Daniel se engrandece → mira al cielo → «Guarda» → «príncipe» → visión para Belsasar",
+      "Se acerca → Daniel enferma → se sienta junto al río → «Purifica» → «santo» → visión para aquella tarde"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Se acerca → Daniel se asusta → se postra sobre su rostro → «Entiende» → «hijo de hombre» → visión para el tiempo del fin"
+    ],
+    "explanation": "La cercanía del intérprete provoca temor y postración; luego ordena entender, llama a Daniel hijo de hombre y sitúa la visión en el tiempo del fin.",
+    "why_distractors_fail": {
+      "Se acerca → Daniel se alegra → queda en pie → «Recuerda» → «rey» → visión para el pasado": "Invierte reacción y postura, y cambia mandato, título y horizonte.",
+      "Se aleja → Daniel se engrandece → mira al cielo → «Guarda» → «príncipe» → visión para Belsasar": "Contradice movimiento, reacción y mensaje.",
+      "Se acerca → Daniel enferma → se sienta junto al río → «Purifica» → «santo» → visión para aquella tarde": "Mezcla consecuencias posteriores y sustituye cuatro componentes del discurso."
+    },
+    "evidence_excerpt": "Vino luego cerca de donde yo estaba. Y al venir, me asusté y me postré sobre mi rostro. Pero él me dijo: “Entiende, hijo de hombre, que la visión es para el tiempo del fin.”",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "approach_fear_prostration_command_address_horizon",
+    "option_category": "six_stage_encounter_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Integra el efecto corporal del encuentro con la comisión interpretativa y su horizonte profético.",
+    "variant_justification": "La pregunta base empareja sólo título y horizonte; esta variante exige reconstruir también el orden físico y verbal que los enmarca.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN8-C11-V022-V11-F02",
+    "source_unit_id": "DAN8-V022",
+    "fact_id": "DAN8-V022-V11-F02",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué interpretación mantiene la relación entre quiebre, sustitución, cantidad, procedencia y fuerza relativa?",
+    "options": [
+      "El cuerno se fortalece → dos ocupan su lugar → representan dos reyes extranjeros → superan su fuerza",
+      "El cuerno es guardado → cuatro quedan debajo de él → representan un solo reino → conservan su fuerza",
+      "El cuerno es quebrado → cuatro ocupan su lugar → representan cuatro reinos de esa nación → no tienen la fuerza de él",
+      "El cuerno crece después → tres salen de otra nación → representan tres ejércitos → igualan su fuerza"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "El cuerno es quebrado → cuatro ocupan su lugar → representan cuatro reinos de esa nación → no tienen la fuerza de él"
+    ],
+    "explanation": "El cuerno quebrado es reemplazado por cuatro, interpretados como cuatro reinos de la misma nación, pero inferiores en fuerza al primero.",
+    "why_distractors_fail": {
+      "El cuerno se fortalece → dos ocupan su lugar → representan dos reyes extranjeros → superan su fuerza": "Invierte el quiebre y altera cantidad, origen y comparación.",
+      "El cuerno es guardado → cuatro quedan debajo de él → representan un solo reino → conservan su fuerza": "Cambia sustitución, significado numérico y fuerza relativa.",
+      "El cuerno crece después → tres salen de otra nación → representan tres ejércitos → igualan su fuerza": "Sustituye cada elemento de la interpretación."
+    },
+    "evidence_excerpt": "En cuanto al cuerno que fue quebrado y sucedieron cuatro en su lugar, significa que cuatro reinos se levantarán de esa nación, aunque no con la fuerza de él.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "break_replacement_number_origin_strength_comparison",
+    "option_category": "five_part_succession_interpretation",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Diferencia continuidad nacional de equivalencia de poder entre el cuerno y sus sucesores.",
+    "variant_justification": "La presentación base niega sólo igualdad de fuerza; esta variante obliga a vincular esa comparación con toda la interpretación sucesoria.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

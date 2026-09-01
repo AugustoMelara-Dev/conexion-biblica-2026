@@ -1,6 +1,6 @@
 # Conexión Bíblica 2026 — checkpoint competitivo v13
 
-- Actualizado: 2026-08-31 20:10:44 -06:00 (`America/Tegucigalpa`)
+- Actualizado: 2026-08-31 20:46:11 -06:00 (`America/Tegucigalpa`)
 - Fase actual: Release 2, autoría IA paralela y construcción de revisión ciega.
 - Rama: `codex/emergencia-competitiva-unica-v13`
 - Base segura: `24c542fa3d2936c8fd98db706a9db930ba8338a3`
@@ -39,4 +39,4 @@ Release 1 quedó fijado en `7dc70deb08345a9ecfdfdfd2e6a87c0a26c7df35` y desplega
 
 El incremento estable R2 quedó fijado en `b83cf26fdd363a8717b40de7492ab06c8a6e0109` y desplegado como `dpl_C5VMbaN79tjzAbba1GkZ3iiGDUh8`. El alias público pasó la auditoría remota de 20 recursos/18 shards/2,730 preguntas/2,217 hechos sin fallos y 25 flujos Chromium; 11 se omitieron por diseño de proyecto.
 
-Release 2 tiene 393 variantes candidatas revisadas a ciegas: 262 aprobadas, 131 rechazadas y cero pendientes de revisión. Las 262 aprobadas ya fueron compiladas como incremento público estable, elevando el banco a 2,730 preguntas; quedan 1,955 hechos por cubrir para la meta R2 de 4,685. Los paquetes ocultan autor, respuesta y explicaciones y usan una clave HMAC fuera del repositorio; como los subagentes comparten filesystem, la independencia demostrable es procedural, no aislamiento criptográfico contra un revisor malicioso. La acción inmediata es publicar este checkpoint y reanudar autoría/revisión paralela.
+Release 2 tiene 464 variantes candidatas revisadas a ciegas: 306 aprobadas, 158 rechazadas y cero pendientes de revisión. El ciclo 11 agregó 71 candidatas revisadas cruzadamente: 44 aprobadas y 27 rechazadas. El checkpoint append-only conserva exactamente las 262 aprobaciones publicadas y eleva el total editorial a 306, con hash `c3d33d58fbabda8200b79717477f5a6bc76f5aec46fae5767a972ae7c83fbf35`. Las 44 nuevas todavía no están públicas; se acumularán con otra ola antes de la próxima promoción estable. Quedan 1,911 hechos por cubrir para completar R2. Los paquetes ocultan autor, respuesta y explicaciones y usan una clave HMAC fuera del repositorio; como los subagentes comparten filesystem, la independencia demostrable es procedural, no aislamiento criptográfico contra un revisor malicioso.

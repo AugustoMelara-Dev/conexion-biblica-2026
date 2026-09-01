@@ -1,0 +1,195 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-051e4d4ecf15f96d45de",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN4-C11-001",
+      "source_unit_id": "DAN4-V028",
+      "fact_id": "DAN4-V028-F01",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué transición enlaza correctamente el consejo de Daniel con el comienzo del cumplimiento anunciado sobre Nabucodonosor?",
+      "options": [
+        "Consejo de redimir pecados e iniquidades → todo lo anunciado vino sobre el rey → transcurrieron doce meses",
+        "Consejo de engrandecer Babilonia → el sueño quedó sin interpretación → transcurrieron siete tiempos",
+        "Consejo de consultar a los magos → el reino fue entregado a Daniel → transcurrieron doce días",
+        "Consejo de cortar la cepa → nada de lo anunciado ocurrió → transcurrieron setenta años"
+      ],
+      "evidence_excerpt": "Todo esto vino sobre el rey Nabucodonosor:",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "counsel_fulfillment_elapsed_time",
+      "option_category": "three_step_narrative_chain",
+      "variant_justification": "La presentación existente sólo valida que ocurrió lo anunciado; ésta evalúa su función exacta dentro de la secuencia narrativa.",
+      "authored_content_sha256": "d60b6e66b8c6837ebc9486e27489b3d9886895e72d2a6e187078171033cbd0bc",
+      "source_ref": "Daniel 4:28",
+      "source_quote": "Todo esto vino sobre el rey Nabucodonosor:",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Todo lo anunciado en la interpretación terminó viniendo sobre el rey Nabucodonosor.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN4-C11-002",
+      "source_unit_id": "DAN4-V029",
+      "fact_id": "DAN4-V029-F02",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué ficha conserva intervalo, escenario y acción del rey inmediatamente antes de su declaración orgullosa?",
+      "options": [
+        "Doce meses → palacio real de Babilonia → Nabucodonosor paseaba",
+        "Siete tiempos → campo de Media → Darío oraba",
+        "Setenta años → templo de Jerusalén → Daniel ayunaba",
+        "Doce días → casa de los magos → Beltsasar interpretaba"
+      ],
+      "evidence_excerpt": "Al cabo de doce meses, paseando por el palacio real de Babilonia,",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "elapsed_time_place_action",
+      "option_category": "temporal_scene_correspondence",
+      "variant_justification": "La presentación existente recupera únicamente el número doce; ésta discrimina la escena completa que ese intervalo introduce.",
+      "authored_content_sha256": "599235517e1edc41e63370b8b3d3d92875754fc5811039c36bb398c2e06faefd",
+      "source_ref": "Daniel 4:29",
+      "source_quote": "Al cabo de doce meses, paseando por el palacio real de Babilonia,",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Desde la advertencia de Daniel hasta el paseo del rey por el palacio transcurrieron ________ meses.",
+          "family": "fill_choice",
+          "subtype": "narrative_order"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN4-C11-003",
+      "source_unit_id": "DAN4-V035",
+      "fact_id": "DAN4-V035-F02",
+      "family": "single_choice_contextual",
+      "subtype": "principle",
+      "question": "¿Qué formulación reúne correctamente la voluntad divina, sus dos ámbitos de acción y la imposibilidad de impugnarla?",
+      "options": [
+        "Dios actúa según su voluntad → ejército del cielo y habitantes de la tierra → nadie detiene su mano ni le exige cuentas",
+        "Dios actúa según la voluntad humana → sólo habitantes de Babilonia → los consejeros pueden detener su mano",
+        "El rey actúa según su voluntad → ejército de la tierra y habitantes del cielo → los vigilantes le exigen cuentas",
+        "Los habitantes actúan según la voluntad del rey → sólo el palacio → Daniel detiene su mano"
+      ],
+      "evidence_excerpt": "Considerados como nada son los habitantes todos de la tierra; él hace según su voluntad en el ejército del cielo y en los habitantes de la tierra; no hay quien detenga su mano y le diga: ‘¿Qué haces?’”",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "divine_will_two_realms_unanswerable_power",
+      "option_category": "principle_scope_consequence",
+      "variant_justification": "La presentación previa contrasta voluntad divina y humana; ésta exige además los dos ámbitos y la ausencia de oposición eficaz.",
+      "authored_content_sha256": "aec8b59a8d5a07271f69769649cc003870fe7abc166d88cc04f5841f8c631f2e",
+      "source_ref": "Daniel 4:35",
+      "source_quote": "Considerados como nada son los habitantes todos de la tierra; él hace según su voluntad en el ejército del cielo y en los habitantes de la tierra; no hay quien detenga su mano y le diga: ‘¿Qué haces?’”",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Nabucodonosor afirmó que Dios actúa según la voluntad de los habitantes de la tierra.",
+          "family": "true_false",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN4-C11-004",
+      "source_unit_id": "DAN4-V015",
+      "fact_id": "DAN4-V015-V11-F02",
+      "family": "fill_choice",
+      "subtype": "relationship",
+      "question": "Complete el mapa que distingue lo preservado, su sujeción material y el entorno asignado: ____.",
+      "options": [
+        "cepa de las raíces → dejada en tierra y atada con hierro y bronce → rocío, hierba y bestias del campo",
+        "copa del árbol → llevada al cielo y atada con oro y plata → fuego, piedras y aves del mar",
+        "fruto del árbol → guardado en palacio y atado con lino y madera → vino, mesa y sabios",
+        "tronco completo → plantado en Babilonia y atado con cobre y barro → desierto, arena y soldados"
+      ],
+      "evidence_excerpt": "Mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "preserved_stump_binding_environment",
+      "option_category": "object_material_setting_map",
+      "variant_justification": "La presentación existente completa sólo el segundo metal; ésta exige distinguir objeto, pareja de materiales y entorno.",
+      "authored_content_sha256": "4b67a48451d26870c2afcdc6a59d65e5327eb46cec9d7d441ec5dd58fe746595",
+      "source_ref": "Daniel 4:15",
+      "source_quote": "Mas la cepa de sus raíces dejaréis en la tierra, con atadura de hierro y de bronce entre la hierba del campo; que lo empape el rocío del cielo, y con las bestias sea su parte entre la hierba de la tierra.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "La cepa quedaría atada con hierro y ____.",
+          "family": "fill_choice",
+          "subtype": "prophetic_detail"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN4-C11-005",
+      "source_unit_id": "DAN4-V017",
+      "fact_id": "DAN4-V017-V11-F03",
+      "family": "fill_choice",
+      "subtype": "principle",
+      "question": "Complete la cadena de autoridad, propósito y libertad de designación expresada por la resolución: ____.",
+      "options": [
+        "decreto de vigilantes y dicho de santos → que los vivientes conozcan → el Altísimo gobierna, da el reino a quien quiere y constituye al más humilde",
+        "decreto de magos y dicho de reyes → que los sabios olviden → Nabucodonosor gobierna, retiene el reino y constituye al más poderoso",
+        "decreto de profetas y dicho de príncipes → que los muertos respondan → Daniel gobierna, reparte Babilonia y constituye al más rico",
+        "decreto de soldados y dicho de consejeros → que las bestias conozcan → Darío gobierna, vende el reino y constituye al más sabio"
+      ],
+      "evidence_excerpt": "La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "decree_purpose_sovereign_designation",
+      "option_category": "authority_purpose_principle_chain",
+      "variant_justification": "La presentación existente valida una consecuencia doctrinal; ésta obliga a reconstruir la arquitectura completa de la sentencia.",
+      "authored_content_sha256": "edd35b0c9cbdde196646fd06dea98b9a9b77a6d581d74f3836f4c3f51e53b1e6",
+      "source_ref": "Daniel 4:17",
+      "source_quote": "La sentencia es por decreto de los vigilantes y por dicho de los santos la resolución, para que conozcan los vivientes que el Altísimo gobierna el reino de los hombres, que a quien él quiere lo da y sobre él constituye al más humilde de los hombres.’",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "El Altísimo puede entregar el reino a quien quiere y establecer sobre él al más humilde de los hombres.",
+          "family": "true_false",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN4-C11-006",
+      "source_unit_id": "DAN4-V026",
+      "fact_id": "DAN4-V026-V11-F02",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete la correspondencia entre símbolo preservado, resultado político y condición temporal: ____.",
+      "options": [
+        "cepa de las raíces dejada en tierra → el reino quedará firme → después de reconocer que el cielo gobierna",
+        "copa del árbol cortada → el reino será destruido → antes de reconocer que los magos gobiernan",
+        "fruto dispersado → el palacio quedará vacío → mientras los consejeros gobiernan",
+        "ramas preservadas → Babilonia será entregada → después de reconocer que el rey gobierna el cielo"
+      ],
+      "evidence_excerpt": "Y en cuanto a la orden de dejar en la tierra la cepa de las raíces del mismo árbol, significa que tu reino te quedará firme, después que reconozcas que es el cielo el que gobierna.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "symbol_restoration_temporal_condition",
+      "option_category": "symbol_result_condition_map",
+      "variant_justification": "La presentación existente pregunta por el orden de la condición; ésta exige además vincular correctamente símbolo e interpretación política.",
+      "authored_content_sha256": "b6fc21ea81ede7a8e68d35cd0b28c01a2c1f9d7deac0ac190de36eec5b932227",
+      "source_ref": "Daniel 4:26",
+      "source_quote": "Y en cuanto a la orden de dejar en la tierra la cepa de las raíces del mismo árbol, significa que tu reino te quedará firme, después que reconozcas que es el cielo el que gobierna.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "El reino quedaría firme antes de que Nabucodonosor reconociera que el cielo gobierna.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "10a0a7e77a9600d7af7cbc5cb50f3a77d9995c07e2a9c33cf9e1f053973df369"
+}

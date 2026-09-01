@@ -1,0 +1,102 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-6f3bcd91eb3ddcf7ba2e",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2C11-DAN3-V014-F02",
+      "source_unit_id": "DAN3-V014",
+      "fact_id": "DAN3-V014-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "En la pregunta de Nabucodonosor, ¿qué correspondencia conserva el verbo negado con su objeto y la relación posesiva que el rey atribuye a cada uno?",
+      "options": [
+        "No honrar → mi dios; ni adorar → la estatua de oro que he levantado",
+        "No adorar → mi dios; ni honrar → la estatua de oro que los caldeos levantaron",
+        "No servir → vuestro Dios; ni escuchar → la estatua de oro que Daniel interpretó",
+        "No temer → mis dioses; ni postrarse → el horno de fuego que el ejército calentó"
+      ],
+      "evidence_excerpt": "Habló Nabucodonosor y les dijo: —¿Es verdad, Sadrac, Mesac y Abed-nego, que vosotros no honráis a mi dios ni adoráis la estatua de oro que he levantado?",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "negated_verb_object_possession_correspondence",
+      "option_category": "grammatical_semantic_mapping",
+      "variant_justification": "El cloze existente recupera un verbo aislado; esta variante exige adjudicar dos pares verbo–objeto y su posesión explícita.",
+      "authored_content_sha256": "0efd4667be1726045e006c393f781a51e05f3eb3f53b6aac60aa2af6eafd2426",
+      "source_ref": "Daniel 3:14",
+      "source_quote": "Habló Nabucodonosor y les dijo: —¿Es verdad, Sadrac, Mesac y Abed-nego, que vosotros no honráis a mi dios ni adoráis la estatua de oro que he levantado?",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Nabucodonosor preguntó: «¿Es verdad que vosotros no ____ a mi dios ni adoráis la estatua?»",
+          "family": "fill_choice",
+          "subtype": "speaker_addressee"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2C11-DAN3-V016-F03",
+      "source_unit_id": "DAN3-V016",
+      "fact_id": "DAN3-V016-F03",
+      "family": "single_choice_contextual",
+      "subtype": "speaker_addressee",
+      "question": "¿Qué mapa del acto de habla asigna correctamente emisores, destinatario, juicio de necesidad, acción descartada y ámbito de esa acción?",
+      "options": [
+        "Sadrac, Mesac y Abed-nego → rey Nabucodonosor → no es necesario → responderte → sobre este asunto",
+        "Nabucodonosor → los tres jóvenes → es urgente → defenderme → ante los caldeos",
+        "Los caldeos → rey Nabucodonosor → no es prudente → acusarlos → sobre la estatua",
+        "Sadrac y Mesac → el pregonero → es imposible → obedecerte → durante la música"
+      ],
+      "evidence_excerpt": "Sadrac, Mesac y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "speakers_addressee_modality_action_scope",
+      "option_category": "speech_act_mapping",
+      "variant_justification": "La presentación previa entrega la respuesta literal; esta variante exige clasificar participantes, modalidad, acción y alcance.",
+      "authored_content_sha256": "d98f1f50bbc7c0d6332dc6337ba187f7f0c7a3b2520a2a81c65e30555136f81d",
+      "source_ref": "Daniel 3:16",
+      "source_quote": "Sadrac, Mesac y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Cómo respondieron los tres hombres a la exigencia del rey?",
+          "family": "single_choice_direct",
+          "subtype": "speaker_addressee"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2C11-DAN3-V006-V11-F02",
+      "source_unit_id": "DAN3-V006",
+      "fact_id": "DAN3-V006-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué estructura condicional mantiene juntas la omisión doble, la inmediatez, la acción punitiva y la ubicación de destino?",
+      "options": [
+        "No postrarse y adorar → inmediatamente → ser echado → dentro de un horno de fuego ardiente",
+        "No escuchar y cantar → al día siguiente → ser atado → delante de la estatua de oro",
+        "No servir y responder → durante el banquete → ser llevado → fuera de la provincia de Babilonia",
+        "No comparecer y jurar → después de la música → ser encerrado → debajo del palacio real"
+      ],
+      "evidence_excerpt": "y cualquiera que no se postre y adore, inmediatamente será echado dentro de un horno de fuego ardiente.",
+      "difficulty": "hard",
+      "importance": "critical",
+      "relation_type": "double_omission_immediacy_penalty_destination",
+      "option_category": "conditional_consequence_mapping",
+      "variant_justification": "La presentación existente completa únicamente «inmediatamente»; esta variante exige reconstruir antecedente doble, tiempo, pena y destino.",
+      "authored_content_sha256": "c5fa0451a78e300ddb46667fd537ebe2943c583fac6791f841edd0ecc9cc4810",
+      "source_ref": "Daniel 3:6",
+      "source_quote": "y cualquiera que no se postre y adore, inmediatamente será echado dentro de un horno de fuego ardiente.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Quien no adorara sería echado ____ al horno.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "2695dc0c76f1c660b1f414f110a11fca847bfec1c8c034a5581d1ed9f87aff4f"
+}

@@ -1,0 +1,230 @@
+[
+  {
+    "id": "V13-R2-DAN7-C11-001",
+    "source_unit_id": "DAN7-V010",
+    "fact_id": "DAN7-V010-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "\u00bfQu\u00e9 secuencia distribuye fen\u00f3meno, dos escalas de asistentes y apertura formal del juicio?",
+    "options": [
+      "r\u00edo de fuego sale delante de \u00e9l \u2192 miles de miles sirven \u2192 millones de millones est\u00e1n delante \u2192 Juez se sienta \u2192 libros se abren",
+      "mar de vidrio sale detr\u00e1s \u2192 millones sirven \u2192 miles se retiran \u2192 rey se levanta \u2192 libros se sellan",
+      "viento sale del trono \u2192 cuatro bestias sirven \u2192 diez cuernos comparecen \u2192 Daniel se sienta \u2192 visi\u00f3n termina",
+      "llama baja del monte \u2192 santos sirven \u2192 pueblos huyen \u2192 Anciano se levanta \u2192 reino se cierra"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "r\u00edo de fuego sale delante de \u00e9l \u2192 miles de miles sirven \u2192 millones de millones est\u00e1n delante \u2192 Juez se sienta \u2192 libros se abren"
+    ],
+    "explanation": "La escena enlaza flujo \u00edgneo, servicio, comparecencia y sesi\u00f3n judicial con apertura de libros.",
+    "evidence_excerpt": "Un r\u00edo de fuego proced\u00eda y sal\u00eda de delante de \u00e9l; miles de miles lo serv\u00edan, y millones de millones estaban delante de \u00e9l. El Juez se sent\u00f3 y los libros fueron abiertos.",
+    "why_distractors_fail": {
+      "mar de vidrio sale detr\u00e1s \u2192 millones sirven \u2192 miles se retiran \u2192 rey se levanta \u2192 libros se sellan": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito.",
+      "viento sale del trono \u2192 cuatro bestias sirven \u2192 diez cuernos comparecen \u2192 Daniel se sienta \u2192 visi\u00f3n termina": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito.",
+      "llama baja del monte \u2192 santos sirven \u2192 pueblos huyen \u2192 Anciano se levanta \u2192 reino se cierra": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "fire_river_attendants_judgment_opening",
+    "option_category": "multi_clause_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconstruir una correspondencia multielemento dentro de la misma cita.",
+    "variant_justification": "La central pregunta un n\u00famero; esta variante exige ordenar cinco componentes y distinguir dos escalas.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN7-C11-002",
+    "source_unit_id": "DAN7-V011",
+    "fact_id": "DAN7-V011-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "\u00bfQu\u00e9 cadena conserva causa de la atenci\u00f3n, conducta del cuerno, destino de la bestia y tratamiento final del cuerpo?",
+    "options": [
+      "Daniel mira por las insolencias del cuerno \u2192 matan a la bestia \u2192 destrozan su cuerpo \u2192 lo entregan al fuego",
+      "Daniel mira por el silencio del cuerno \u2192 coronan a la bestia \u2192 preservan su cuerpo \u2192 lo entregan al mar",
+      "los santos miran por los libros \u2192 hieren al cuerno \u2192 levantan la bestia \u2192 la entregan al rey",
+      "el Juez mira por los tronos \u2192 atan a Daniel \u2192 dividen el cuerpo \u2192 lo entregan a las aves"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Daniel mira por las insolencias del cuerno \u2192 matan a la bestia \u2192 destrozan su cuerpo \u2192 lo entregan al fuego"
+    ],
+    "explanation": "El sonido insolente motiva la observaci\u00f3n que culmina en muerte, destrucci\u00f3n corporal y fuego.",
+    "evidence_excerpt": "Yo entonces miraba a causa del sonido de las grandes insolencias que hablaba el cuerno; y mientras miraba mataron a la bestia, y su cuerpo fue destrozado y entregado para quemarlo en el fuego.",
+    "why_distractors_fail": {
+      "Daniel mira por el silencio del cuerno \u2192 coronan a la bestia \u2192 preservan su cuerpo \u2192 lo entregan al mar": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito.",
+      "los santos miran por los libros \u2192 hieren al cuerno \u2192 levantan la bestia \u2192 la entregan al rey": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito.",
+      "el Juez mira por los tronos \u2192 atan a Daniel \u2192 dividen el cuerpo \u2192 lo entregan a las aves": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "insolent_speech_beast_destruction_fire",
+    "option_category": "multi_clause_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconstruir una correspondencia multielemento dentro de la misma cita.",
+    "variant_justification": "La presentaci\u00f3n previa identifica el desenlace; \u00e9sta exige causa perceptiva y tres fases del juicio.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN7-C11-003",
+    "source_unit_id": "DAN7-V014",
+    "fact_id": "DAN7-V014-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "\u00bfQu\u00e9 mapa conserva dones recibidos, finalidad universal, triple audiencia y doble permanencia?",
+    "options": [
+      "dominio, gloria y reino \u2192 para que lo sirvan pueblos, naciones y lenguas \u2192 dominio eterno que no pasa \u2192 reino nunca destruido",
+      "poder, fuerza y sabidur\u00eda \u2192 para que lo teman reyes y pr\u00edncipes \u2192 dominio temporal \u2192 reino dividido",
+      "libros, tronos y fuego \u2192 para que lo sirvan bestias y cuernos \u2192 dominio revocado \u2192 reino entregado al norte",
+      "oro, plata y bronce \u2192 para que lo alaben sabios y magos \u2192 dominio fr\u00e1gil \u2192 reino consumido"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "dominio, gloria y reino \u2192 para que lo sirvan pueblos, naciones y lenguas \u2192 dominio eterno que no pasa \u2192 reino nunca destruido"
+    ],
+    "explanation": "La concesi\u00f3n triple sirve a una audiencia triple y queda definida por dos negaciones de caducidad.",
+    "evidence_excerpt": "Y le fue dado dominio, gloria y reino, para que todos los pueblos, naciones y lenguas lo sirvieran; su dominio es dominio eterno, que nunca pasar\u00e1; y su reino es uno que nunca ser\u00e1 destruido.",
+    "why_distractors_fail": {
+      "poder, fuerza y sabidur\u00eda \u2192 para que lo teman reyes y pr\u00edncipes \u2192 dominio temporal \u2192 reino dividido": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito.",
+      "libros, tronos y fuego \u2192 para que lo sirvan bestias y cuernos \u2192 dominio revocado \u2192 reino entregado al norte": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito.",
+      "oro, plata y bronce \u2192 para que lo alaben sabios y magos \u2192 dominio fr\u00e1gil \u2192 reino consumido": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "triple_gift_universal_service_eternal_rule",
+    "option_category": "multi_clause_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconstruir una correspondencia multielemento dentro de la misma cita.",
+    "variant_justification": "La central pregunta un atributo eterno; aqu\u00ed se reconstruyen dones, prop\u00f3sito, audiencia y doble garant\u00eda.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN7-C11-004",
+    "source_unit_id": "DAN7-V023",
+    "fact_id": "DAN7-V023-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "\u00bfQu\u00e9 correspondencia conserva identidad ordinal, diferencia comparativa, alcance territorial y tres acciones destructivas?",
+    "options": [
+      "cuarta bestia \u2192 cuarto reino \u2192 diferente de los dem\u00e1s \u2192 toda la tierra \u2192 devora, trilla y despedaza",
+      "segunda bestia \u2192 tercer reino \u2192 igual a los dem\u00e1s \u2192 una provincia \u2192 protege, re\u00fane y edifica",
+      "cuerno peque\u00f1o \u2192 d\u00e9cimo reino \u2192 menor que todos \u2192 s\u00f3lo Babilonia \u2192 habla, mira y huye",
+      "Anciano de d\u00edas \u2192 reino eterno \u2192 diferente del cielo \u2192 los santos \u2192 juzga, sirve y obedece"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "cuarta bestia \u2192 cuarto reino \u2192 diferente de los dem\u00e1s \u2192 toda la tierra \u2192 devora, trilla y despedaza"
+    ],
+    "explanation": "La interpretaci\u00f3n asigna ordinal, car\u00e1cter excepcional, alcance mundial y una tr\u00edada de violencia.",
+    "evidence_excerpt": "Dijo as\u00ed: \u00bb\u201cLa cuarta bestia ser\u00e1 un cuarto reino en la tierra, el cual ser\u00e1 diferente de todos los otros reinos, y a toda la tierra devorar\u00e1, trillar\u00e1 y despedazar\u00e1.",
+    "why_distractors_fail": {
+      "segunda bestia \u2192 tercer reino \u2192 igual a los dem\u00e1s \u2192 una provincia \u2192 protege, re\u00fane y edifica": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito.",
+      "cuerno peque\u00f1o \u2192 d\u00e9cimo reino \u2192 menor que todos \u2192 s\u00f3lo Babilonia \u2192 habla, mira y huye": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito.",
+      "Anciano de d\u00edas \u2192 reino eterno \u2192 diferente del cielo \u2192 los santos \u2192 juzga, sirve y obedece": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "fourth_beast_distinct_worldwide_destruction",
+    "option_category": "multi_clause_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconstruir una correspondencia multielemento dentro de la misma cita.",
+    "variant_justification": "La presentaci\u00f3n existente identifica el reino; \u00e9sta exige cinco dimensiones y la acci\u00f3n destructiva triple.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN7-C11-005",
+    "source_unit_id": "DAN7-V027",
+    "fact_id": "DAN7-V027-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "\u00bfQu\u00e9 distribuci\u00f3n conserva lo entregado, destinatario, \u00e1mbito, duraci\u00f3n y respuesta de los dem\u00e1s dominios?",
+    "options": [
+      "reino, dominio y majestad de los reinos \u2192 pueblo de los santos del Alt\u00edsimo \u2192 debajo de todo el cielo \u2192 reino eterno \u2192 dominios lo sirven y obedecen",
+      "gloria y libros \u2192 cuerno peque\u00f1o \u2192 sobre un solo pa\u00eds \u2192 reino temporal \u2192 santos lo temen",
+      "poder y fuerza \u2192 cuarta bestia \u2192 debajo del mar \u2192 reino dividido \u2192 pueblos lo destruyen",
+      "trono y fuego \u2192 rey del norte \u2192 sobre las costas \u2192 reino fr\u00e1gil \u2192 dominios se rebelan"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "reino, dominio y majestad de los reinos \u2192 pueblo de los santos del Alt\u00edsimo \u2192 debajo de todo el cielo \u2192 reino eterno \u2192 dominios lo sirven y obedecen"
+    ],
+    "explanation": "La entrega combina triple objeto, destinatario santo, alcance celeste, eternidad y obediencia universal.",
+    "evidence_excerpt": "y que el reino, el dominio y la majestad de los reinos debajo de todo el cielo sean dados al pueblo de los santos del Alt\u00edsimo, cuyo reino es reino eterno, y todos los dominios lo servir\u00e1n y obedecer\u00e1n.\u201d",
+    "why_distractors_fail": {
+      "gloria y libros \u2192 cuerno peque\u00f1o \u2192 sobre un solo pa\u00eds \u2192 reino temporal \u2192 santos lo temen": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito.",
+      "poder y fuerza \u2192 cuarta bestia \u2192 debajo del mar \u2192 reino dividido \u2192 pueblos lo destruyen": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito.",
+      "trono y fuego \u2192 rey del norte \u2192 sobre las costas \u2192 reino fr\u00e1gil \u2192 dominios se rebelan": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "saints_kingdom_scope_eternity_obedience",
+    "option_category": "multi_clause_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconstruir una correspondencia multielemento dentro de la misma cita.",
+    "variant_justification": "La central a\u00edsla el receptor; la variante exige mapear objeto, alcance, duraci\u00f3n y respuesta.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN7-C11-006",
+    "source_unit_id": "DAN7-V025",
+    "fact_id": "DAN7-V025-V11-F20",
+    "role": "variant",
+    "family": "single_choice_direct",
+    "subtype": "relationship",
+    "question": "\u00bfQu\u00e9 cadena distribuye oposici\u00f3n verbal, da\u00f1o personal, pretensi\u00f3n normativa y l\u00edmite temporal?",
+    "options": [
+      "habla contra el Alt\u00edsimo \u2192 quebranta a sus santos \u2192 intenta cambiar tiempos y Ley \u2192 los recibe por tiempo, tiempos y medio tiempo",
+      "honra al Alt\u00edsimo \u2192 fortalece a sus santos \u2192 guarda tiempos y Ley \u2192 los pierde para siempre",
+      "habla contra los reyes \u2192 quebranta a las bestias \u2192 cambia tronos y libros \u2192 reina diez a\u00f1os",
+      "calla ante Dios \u2192 protege al pueblo \u2192 sella la visi\u00f3n \u2192 gobierna treinta d\u00edas"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "habla contra el Alt\u00edsimo \u2192 quebranta a sus santos \u2192 intenta cambiar tiempos y Ley \u2192 los recibe por tiempo, tiempos y medio tiempo"
+    ],
+    "explanation": "La actividad del cuerno une blasfemia, persecuci\u00f3n, pretensi\u00f3n de cambio y dominio temporal limitado.",
+    "evidence_excerpt": "Hablar\u00e1 palabras contra el Alt\u00edsimo, a los santos del Alt\u00edsimo quebrantar\u00e1 y pensar\u00e1 en cambiar los tiempos y la Ley; y ser\u00e1n entregados en sus manos hasta tiempo, tiempos y medio tiempo.",
+    "why_distractors_fail": {
+      "honra al Alt\u00edsimo \u2192 fortalece a sus santos \u2192 guarda tiempos y Ley \u2192 los pierde para siempre": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito.",
+      "habla contra los reyes \u2192 quebranta a las bestias \u2192 cambia tronos y libros \u2192 reina diez a\u00f1os": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito.",
+      "calla ante Dios \u2192 protege al pueblo \u2192 sella la visi\u00f3n \u2192 gobierna treinta d\u00edas": "Altera u omite al menos un agente, cantidad, orden, atributo, destinatario o resultado expl\u00edcito."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "blasphemy_persecution_norm_change_time_limit",
+    "option_category": "multi_clause_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconstruir una correspondencia multielemento dentro de la misma cita.",
+    "variant_justification": "La presentaci\u00f3n existente pregunta s\u00f3lo el plazo; aqu\u00ed se reconstruyen tres conductas y el l\u00edmite.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

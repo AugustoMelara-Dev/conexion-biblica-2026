@@ -1,0 +1,373 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-a028c38aa2198bbba12d",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN1-C11-001",
+      "source_unit_id": "DAN1-V006",
+      "fact_id": "DAN1-V006-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "Al auditar identidad, posición en la serie y procedencia colectiva, ¿qué registro conserva simultáneamente los tres datos?",
+      "options": [
+        "Ananías ocupa el segundo lugar entre Daniel y Misael; los cuatro son hijos de Judá",
+        "Ananías ocupa el tercer lugar entre Misael y Azarías; los cuatro son hijos de Babilonia",
+        "Misael ocupa el segundo lugar entre Daniel y Ananías; sólo Daniel es hijo de Judá",
+        "Azarías ocupa el primer lugar antes de Daniel; los cuatro son hijos de Israel sin vínculo con Judá"
+      ],
+      "evidence_excerpt": "Entre ellos estaban Daniel, Ananías, Misael y Azarías, de los hijos de Judá.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "identity_order_collective_origin",
+      "option_category": "three_axis_roster_audit",
+      "variant_justification": "Las presentaciones públicas recuperan nombres aislados; esta variante audita la estructura completa de la lista y su modificador colectivo.",
+      "authored_content_sha256": "9506f2c6380788ecd4846719d4fdde0fd9d315d7c7daef3a1d07da486b1b6a87",
+      "source_ref": "Daniel 1:6",
+      "source_quote": "Entre ellos estaban Daniel, Ananías, Misael y Azarías, de los hijos de Judá.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Quién aparece junto a Daniel, Misael y Azarías entre los jóvenes de Judá?",
+          "family": "single_choice_direct",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN1-C11-002",
+      "source_unit_id": "DAN1-V021",
+      "fact_id": "DAN1-V021-F02",
+      "family": "single_choice_direct",
+      "subtype": "relationship",
+      "question": "¿Qué ficha distingue correctamente sujeto de continuidad, límite cronológico y posición de ese límite dentro del reinado?",
+      "options": [
+        "Ciro → continuó → Daniel → tercer año",
+        "Daniel → continuó → Ciro → año primero",
+        "Joacim → reinó → Daniel → año décimo",
+        "Daniel → sirvió → Nabucodonosor → año séptimo"
+      ],
+      "evidence_excerpt": "Así continuó Daniel hasta el año primero del rey Ciro.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "continuity_subject_regnal_endpoint",
+      "option_category": "four_slot_temporal_mapping",
+      "variant_justification": "La base pide un nombre o una forma verbal aislados; aquí se discrimina la sintaxis temporal completa.",
+      "authored_content_sha256": "752fd63cb2b4a96a5e2621c3ae678baac3ab390ba6a09a5fa939340a8ae7ddfd",
+      "source_ref": "Daniel 1:21",
+      "source_quote": "Así continuó Daniel hasta el año primero del rey Ciro.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Daniel continuó hasta el año primero del rey ____.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN1-C11-003",
+      "source_unit_id": "DAN1-V005",
+      "fact_id": "DAN1-V005-F01",
+      "family": "single_choice_direct",
+      "subtype": "narrative_order",
+      "question": "¿Qué arquitectura del programa real mantiene la escala diaria, sus dos componentes, el proceso trienal y la comparecencia prevista?",
+      "options": [
+        "Ración semanal de legumbres y agua → prueba de diez días → comparación ante Melsar",
+        "Ración diaria de comida y vino del rey → educación de tres años → presentación ante el rey",
+        "Ración mensual de pan y leche → aprendizaje de un año → presentación ante los caldeos",
+        "Ración diaria sólo de vino → servicio de tres meses → regreso ante Joacim"
+      ],
+      "evidence_excerpt": "Y les señaló el rey una porción diaria de la comida del rey y del vino que él bebía; y que los educara durante tres años, para que al fin de ellos se presentaran delante del rey.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "frequency_provisions_training_audience",
+      "option_category": "program_architecture",
+      "variant_justification": "La presentación rechazada sólo unía los tres años con la audiencia; ésta añade frecuencia, doble provisión y discriminación entre escenas.",
+      "authored_content_sha256": "60ac7660abbf7835aee6cab1e975c4685de2f3cca7e94ccd308bce59d099f40f",
+      "source_ref": "Daniel 1:5",
+      "source_quote": "Y les señaló el rey una porción diaria de la comida del rey y del vino que él bebía; y que los educara durante tres años, para que al fin de ellos se presentaran delante del rey.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Los jóvenes serían educados durante ____ años antes de presentarse ante el rey.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN1-C11-004",
+      "source_unit_id": "DAN1-V020",
+      "fact_id": "DAN1-V020-F01",
+      "family": "single_choice_contextual",
+      "subtype": "comparison",
+      "question": "¿Qué matriz de evaluación conserva ámbito consultado, evaluador, magnitud comparativa, grupo de contraste y alcance territorial?",
+      "options": [
+        "Letras y lengua → Aspenaz → cuatro veces → jóvenes de Judá → palacio",
+        "Visiones y sueños → Melsar → diez días → eunucos → Jerusalén",
+        "Sabiduría e inteligencia → el rey → diez veces → magos y astrólogos → todo el reino",
+        "Fuerza y apariencia → Ciro → tres veces → príncipes → Sinar"
+      ],
+      "evidence_excerpt": "En todo asunto de sabiduría e inteligencia que el rey los consultó, los halló diez veces mejores que todos los magos y astrólogos que había en todo su reino.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "domain_evaluator_ratio_comparator_scope",
+      "option_category": "five_axis_evaluation_matrix",
+      "variant_justification": "La presentación rechazada conducía al mismo resultado cuantitativo; ésta convierte el versículo en una matriz multieje.",
+      "authored_content_sha256": "c3a10609a7cb9150783ea0bacd797de4dfdebd21c5ecd79f509f62bd4b6fd336",
+      "source_ref": "Daniel 1:20",
+      "source_quote": "En todo asunto de sabiduría e inteligencia que el rey los consultó, los halló diez veces mejores que todos los magos y astrólogos que había en todo su reino.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Cómo evaluó el rey a los jóvenes frente a los magos y astrólogos de su reino?",
+          "family": "single_choice_contextual",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN1-C11-005",
+      "source_unit_id": "DAN1-V001",
+      "fact_id": "DAN1-V001-V11-F02",
+      "family": "fill_choice",
+      "subtype": "narrative_order",
+      "question": "Complete el marco que debe preceder al movimiento del rey babilonio y al sitio de Jerusalén: ____.",
+      "options": [
+        "En el tercer año del reinado de Joacim, rey de Judá",
+        "En el año primero del reinado de Ciro, rey de Babilonia",
+        "Al cabo de diez días de la prueba de Melsar",
+        "Pasados los tres años del servicio de Daniel"
+      ],
+      "evidence_excerpt": "En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "regnal_frame_before_military_action",
+      "option_category": "temporal_political_clause",
+      "variant_justification": "En vez de recuperar un topónimo aislado, exige seleccionar el marco temporal-político completo que gobierna la secuencia.",
+      "authored_content_sha256": "14e3597abe3b927ed86ce1a0a2aadef864b3c261651886b69d046d3f294efebf",
+      "source_ref": "Daniel 1:1",
+      "source_quote": "En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué marco histórico acompañó el sitio de Jerusalén por Nabucodonosor?",
+          "family": "single_choice_contextual",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN1-C11-006",
+      "source_unit_id": "DAN1-V002",
+      "fact_id": "DAN1-V002-V11-F02",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete el objeto parcial que acompaña a Joacim en la entrega divina y que después entra en la cadena de traslado: ____.",
+      "options": [
+        "todos los tesoros de la casa del rey",
+        "parte de los utensilios de la casa de Dios",
+        "las letras y la lengua de los caldeos",
+        "la porción diaria de comida y vino"
+      ],
+      "evidence_excerpt": "El Señor entregó en sus manos a Joacim, rey de Judá, y parte de los utensilios de la casa de Dios; los trajo a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "divine_delivery_partial_object_transport",
+      "option_category": "causal_object_clause",
+      "variant_justification": "Las preguntas públicas fragmentan lugar, título y depósito; ésta recupera el objeto parcial que conecta entrega y traslado.",
+      "authored_content_sha256": "180336f036f5cb18dd11c3c388bd7c233d4068269d2c76a795022460ab289cc8",
+      "source_ref": "Daniel 1:2",
+      "source_quote": "El Señor entregó en sus manos a Joacim, rey de Judá, y parte de los utensilios de la casa de Dios; los trajo a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Cómo explica el relato que Joacim y parte de los utensilios sagrados quedaran en poder de Nabucodonosor?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN1-C11-007",
+      "source_unit_id": "DAN1-V004",
+      "fact_id": "DAN1-V004-V11-F02",
+      "family": "fill_choice",
+      "subtype": "relationship",
+      "question": "Complete el bloque que enlaza integridad física, apariencia y preparación sapiencial antes de la aptitud palaciega: ____.",
+      "options": [
+        "sin tacha alguna, de buen parecer, instruidos en toda sabiduría",
+        "de linaje real, alimentados con legumbres, expertos en sueños",
+        "más robustos, diez veces mejores, servidores del rey",
+        "hijos de Judá, llamados por nombres caldeos, puestos por Melsar"
+      ],
+      "evidence_excerpt": "muchachos en quienes no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey; y que les enseñara las letras y la lengua de los caldeos.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "physical_appearance_wisdom_prerequisites",
+      "option_category": "multi_attribute_clause",
+      "variant_justification": "La base completa atributos individuales; esta operación selecciona un bloque funcional de requisitos encadenados.",
+      "authored_content_sha256": "77c417aa091c65ed91cfa43f7960aa598665f9f2297a1d5dc2992cc1bd759c4b",
+      "source_ref": "Daniel 1:4",
+      "source_quote": "muchachos en quienes no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey; y que les enseñara las letras y la lengua de los caldeos.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué conjunto reunía las condiciones exigidas a los jóvenes destinados al palacio?",
+          "family": "single_choice_contextual",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN1-C11-008",
+      "source_unit_id": "DAN1-V008",
+      "fact_id": "DAN1-V008-V11-F02",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete la resolución interior que explica tanto el rechazo de dos provisiones como la petición administrativa posterior: ____.",
+      "options": [
+        "propuso en su corazón no contaminarse",
+        "temió en su corazón ser condenado a muerte",
+        "decidió en su corazón aprender la lengua caldea",
+        "prometió en su corazón servir al rey Ciro"
+      ],
+      "evidence_excerpt": "Daniel propuso en su corazón no contaminarse con la porción de la comida del rey ni con el vino que él bebía; pidió, por tanto, al jefe de los eunucos que no se le obligara a contaminarse.",
+      "difficulty": "hard",
+      "importance": "critical",
+      "relation_type": "inner_resolution_scope_request",
+      "option_category": "causal_motive_clause",
+      "variant_justification": "No pregunta sólo qué decidió Daniel: obliga a reconocer la cláusula que organiza causalmente toda la escena.",
+      "authored_content_sha256": "4d6795ec47cbb6aa3d214e2425c63a5e1c109cda66f487ee2530c9bd83d21432",
+      "source_ref": "Daniel 1:8",
+      "source_quote": "Daniel propuso en su corazón no contaminarse con la porción de la comida del rey ni con el vino que él bebía; pidió, por tanto, al jefe de los eunucos que no se le obligara a contaminarse.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué hizo Daniel después de resolver interiormente que no se contaminaría?",
+          "family": "single_choice_contextual",
+          "subtype": "narrative_order"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN1-C11-009",
+      "source_unit_id": "DAN1-V009",
+      "fact_id": "DAN1-V009-F04",
+      "family": "true_false",
+      "subtype": "relationship",
+      "question": "La relación favorable no se atribuye a una iniciativa del funcionario: Dios es el agente, Daniel el beneficiario y el jefe de los eunucos la contraparte humana de la gracia y buena voluntad.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Puso Dios a Daniel en gracia y en buena voluntad con el jefe de los eunucos;",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "divine_agent_human_beneficiary_counterpart",
+      "option_category": "relational_role_assertion",
+      "variant_justification": "La presentación pública recupera palabras locales; ésta obliga a atribuir correctamente cada papel de la relación.",
+      "authored_content_sha256": "204070bdedd6dcd1948386f8de067ff1c2e22f13bf4dca9a8b0361580773b561",
+      "source_ref": "Daniel 1:9",
+      "source_quote": "Puso Dios a Daniel en gracia y en buena voluntad con el jefe de los eunucos;",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Dios puso a Daniel en gracia y buena voluntad con el jefe de los eunucos.",
+          "family": "true_false",
+          "subtype": "relationship"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN1-C11-010",
+      "source_unit_id": "DAN1-V015",
+      "fact_id": "DAN1-V015-F03",
+      "family": "true_false",
+      "subtype": "comparison",
+      "question": "El resultado combina un límite temporal, dos ventajas visibles y un grupo de contraste: al cabo de diez días, el rostro de ellos parecía mejor y más robusto que el de quienes comían la porción real.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Y al cabo de los diez días pareció el rostro de ellos mejor y más robusto que el de los otros muchachos que comían de la porción de la comida del rey.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "time_dual_outcome_comparator_diet",
+      "option_category": "four_axis_comparative_assertion",
+      "variant_justification": "La base separa el plazo o una cualidad; aquí la verdad depende de conservar toda la estructura comparativa.",
+      "authored_content_sha256": "83284f8bfd5fcca155604e8325772bc48cdf790c95cedd02a3c6ad69b6cf4d0b",
+      "source_ref": "Daniel 1:15",
+      "source_quote": "Y al cabo de los diez días pareció el rostro de ellos mejor y más robusto que el de los otros muchachos que comían de la porción de la comida del rey.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Al cabo de los diez días, el rostro de los jóvenes parecía mejor y más robusto que el de quienes comían la porción del rey.",
+          "family": "true_false",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN1-C11-011",
+      "source_unit_id": "DAN1-V018",
+      "fact_id": "DAN1-V018-F04",
+      "family": "true_false",
+      "subtype": "narrative_order",
+      "question": "Primero concluyó el plazo que el rey había fijado para llevar a los jóvenes; después el jefe de los eunucos cumplió la orden presentándolos ante Nabucodonosor.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Pasados, pues, los días al fin de los cuales había dicho el rey que los llevaran, el jefe de los eunucos los llevó delante de Nabucodonosor.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "deadline_order_agent_audience_sequence",
+      "option_category": "temporal_execution_assertion",
+      "variant_justification": "Las presentaciones públicas preguntan verbo o nombre; ésta verifica la arquitectura temporal y administrativa completa.",
+      "authored_content_sha256": "e4d99b9991ab307a8545a817ac584fe38365c3172130c92be7a5b3ffcdeb5dd1",
+      "source_ref": "Daniel 1:18",
+      "source_quote": "Pasados, pues, los días al fin de los cuales había dicho el rey que los llevaran, el jefe de los eunucos los llevó delante de Nabucodonosor.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Al concluir el período fijado, el jefe de los eunucos llevó a los jóvenes delante de Ciro.",
+          "family": "true_false",
+          "subtype": "narrative_order"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN1-C11-012",
+      "source_unit_id": "DAN1-V001",
+      "fact_id": "DAN1-V001-F04",
+      "family": "true_false",
+      "subtype": "narrative_order",
+      "question": "El marco bélico conserva esta progresión: tercer año de Joacim de Judá, llegada de Nabucodonosor de Babilonia a Jerusalén y, como acción sobre la ciudad, el sitio.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "regnal_ruler_realm_destination_action_sequence",
+      "option_category": "five_stage_historical_assertion",
+      "variant_justification": "La base pregunta la acción aislada; esta variante exige validar el encadenamiento histórico completo.",
+      "authored_content_sha256": "1510d7b29ba17467624c2c6e9e17b67796b35d315897bfabdad91f9edd5aedff",
+      "source_ref": "Daniel 1:1",
+      "source_quote": "En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué hizo Nabucodonosor al llegar a Jerusalén durante el reinado de Joacim?",
+          "family": "single_choice_direct",
+          "subtype": "narrative_order"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "850a39f125b6f8415630b4b7f35fde3b2d79d68d37d13f97ef48605b60958724"
+}

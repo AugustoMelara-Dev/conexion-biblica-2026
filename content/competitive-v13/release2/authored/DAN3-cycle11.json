@@ -1,0 +1,116 @@
+[
+  {
+    "id": "V13-R2C11-DAN3-V014-F02",
+    "source_unit_id": "DAN3-V014",
+    "fact_id": "DAN3-V014-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "En la pregunta de Nabucodonosor, ¿qué correspondencia conserva el verbo negado con su objeto y la relación posesiva que el rey atribuye a cada uno?",
+    "options": [
+      "No honrar → mi dios; ni adorar → la estatua de oro que he levantado",
+      "No adorar → mi dios; ni honrar → la estatua de oro que los caldeos levantaron",
+      "No servir → vuestro Dios; ni escuchar → la estatua de oro que Daniel interpretó",
+      "No temer → mis dioses; ni postrarse → el horno de fuego que el ejército calentó"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "No honrar → mi dios; ni adorar → la estatua de oro que he levantado"
+    ],
+    "explanation": "El rey emparejó «no honráis» con «mi dios» y «ni adoráis» con «la estatua de oro que he levantado».",
+    "why_distractors_fail": {
+      "No adorar → mi dios; ni honrar → la estatua de oro que los caldeos levantaron": "Intercambia los verbos y atribuye a los caldeos la construcción que el rey se adjudica.",
+      "No servir → vuestro Dios; ni escuchar → la estatua de oro que Daniel interpretó": "Sustituye ambos verbos, la posesión y el origen de la estatua.",
+      "No temer → mis dioses; ni postrarse → el horno de fuego que el ejército calentó": "Introduce acciones, pluralidad y objeto punitivo ajenos a la pregunta."
+    },
+    "evidence_excerpt": "Habló Nabucodonosor y les dijo: —¿Es verdad, Sadrac, Mesac y Abed-nego, que vosotros no honráis a mi dios ni adoráis la estatua de oro que he levantado?",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "negated_verb_object_possession_correspondence",
+    "option_category": "grammatical_semantic_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Discrimina dos conductas religiosas por verbo, objeto y posesión sin intercambiarlas.",
+    "variant_justification": "El cloze existente recupera un verbo aislado; esta variante exige adjudicar dos pares verbo–objeto y su posesión explícita.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2C11-DAN3-V016-F03",
+    "source_unit_id": "DAN3-V016",
+    "fact_id": "DAN3-V016-F03",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "speaker_addressee",
+    "question": "¿Qué mapa del acto de habla asigna correctamente emisores, destinatario, juicio de necesidad, acción descartada y ámbito de esa acción?",
+    "options": [
+      "Sadrac, Mesac y Abed-nego → rey Nabucodonosor → no es necesario → responderte → sobre este asunto",
+      "Nabucodonosor → los tres jóvenes → es urgente → defenderme → ante los caldeos",
+      "Los caldeos → rey Nabucodonosor → no es prudente → acusarlos → sobre la estatua",
+      "Sadrac y Mesac → el pregonero → es imposible → obedecerte → durante la música"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Sadrac, Mesac y Abed-nego → rey Nabucodonosor → no es necesario → responderte → sobre este asunto"
+    ],
+    "explanation": "Los tres respondieron al rey que no era necesario responderle acerca de ese asunto.",
+    "why_distractors_fail": {
+      "Nabucodonosor → los tres jóvenes → es urgente → defenderme → ante los caldeos": "Invierte emisores y destinatarios y altera valoración, acción y ámbito.",
+      "Los caldeos → rey Nabucodonosor → no es prudente → acusarlos → sobre la estatua": "Confunde la acusación anterior con la respuesta de los tres.",
+      "Sadrac y Mesac → el pregonero → es imposible → obedecerte → durante la música": "Omite a Abed-nego y sustituye destinatario, modalidad, acción y ámbito."
+    },
+    "evidence_excerpt": "Sadrac, Mesac y Abed-nego respondieron al rey Nabucodonosor, diciendo: —No es necesario que te respondamos sobre este asunto.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "speakers_addressee_modality_action_scope",
+    "option_category": "speech_act_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Reconstruye cinco funciones del acto de habla y evita reducirlo a una cita aislada.",
+    "variant_justification": "La presentación previa entrega la respuesta literal; esta variante exige clasificar participantes, modalidad, acción y alcance.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2C11-DAN3-V006-V11-F02",
+    "source_unit_id": "DAN3-V006",
+    "fact_id": "DAN3-V006-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué estructura condicional mantiene juntas la omisión doble, la inmediatez, la acción punitiva y la ubicación de destino?",
+    "options": [
+      "No postrarse y adorar → inmediatamente → ser echado → dentro de un horno de fuego ardiente",
+      "No escuchar y cantar → al día siguiente → ser atado → delante de la estatua de oro",
+      "No servir y responder → durante el banquete → ser llevado → fuera de la provincia de Babilonia",
+      "No comparecer y jurar → después de la música → ser encerrado → debajo del palacio real"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "No postrarse y adorar → inmediatamente → ser echado → dentro de un horno de fuego ardiente"
+    ],
+    "explanation": "La cláusula vincula no postrarse y adorar con una consecuencia inmediata: ser echado dentro de un horno de fuego ardiente.",
+    "why_distractors_fail": {
+      "No escuchar y cantar → al día siguiente → ser atado → delante de la estatua de oro": "Sustituye las conductas, elimina la inmediatez y cambia acción y destino.",
+      "No servir y responder → durante el banquete → ser llevado → fuera de la provincia de Babilonia": "Ningún componente corresponde a la cláusula sancionadora.",
+      "No comparecer y jurar → después de la música → ser encerrado → debajo del palacio real": "Introduce otra condición, otro tiempo, otra pena y otro lugar."
+    },
+    "evidence_excerpt": "y cualquiera que no se postre y adore, inmediatamente será echado dentro de un horno de fuego ardiente.",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "double_omission_immediacy_penalty_destination",
+    "option_category": "conditional_consequence_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue cuatro funciones de la sanción sin reducirla al adverbio temporal.",
+    "variant_justification": "La presentación existente completa únicamente «inmediatamente»; esta variante exige reconstruir antecedente doble, tiempo, pena y destino.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

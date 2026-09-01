@@ -1,0 +1,230 @@
+[
+  {
+    "id": "V13-R2-DAN6-C11-001",
+    "source_unit_id": "DAN6-V003",
+    "fact_id": "DAN6-V003-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué cadena explica la posición de Daniel y la decisión que el rey consideró tomar?",
+    "options": [
+      "Espíritu superior en Daniel → superioridad sobre sátrapas y gobernadores → intención de ponerlo sobre todo el reino",
+      "Linaje real de Daniel → igualdad con los sátrapas → intención de enviarlo fuera del reino",
+      "Riqueza superior de Daniel → dominio sobre los magos → intención de coronarlo en Persia",
+      "Ejército superior de Daniel → derrota de los gobernadores → intención de dividir el reino"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Espíritu superior en Daniel → superioridad sobre sátrapas y gobernadores → intención de ponerlo sobre todo el reino"
+    ],
+    "explanation": "El espíritu superior explica la preeminencia administrativa de Daniel, la cual lleva al rey a pensar en ponerlo sobre todo el reino.",
+    "evidence_excerpt": "Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en ponerlo sobre todo el reino.",
+    "why_distractors_fail": {
+      "Linaje real de Daniel → igualdad con los sátrapas → intención de enviarlo fuera del reino": "Cambia la causa, niega la superioridad y revierte la intención real.",
+      "Riqueza superior de Daniel → dominio sobre los magos → intención de coronarlo en Persia": "Sustituye cualidad, grupo comparado y alcance del cargo.",
+      "Ejército superior de Daniel → derrota de los gobernadores → intención de dividir el reino": "Introduce una fuerza militar y resultados ausentes del texto."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "inner_quality_rank_royal_intention",
+    "option_category": "cause_status_consequence_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue la causa personal, el resultado administrativo y la intención política como tres eslabones.",
+    "variant_justification": "La presentación existente pregunta sólo por la causa de la superioridad; ésta exige además sus dos consecuencias institucionales.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN6-C11-002",
+    "source_unit_id": "DAN6-V004",
+    "fact_id": "DAN6-V004-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué contraste conserva el objetivo de los funcionarios, el ámbito investigado y la razón de su fracaso?",
+    "options": [
+      "Buscaban acusar a Daniel en asuntos del reino → no hallaron motivo, error ni falta → porque él era fiel",
+      "Buscaban premiar a Daniel en asuntos del templo → hallaron muchos errores → porque él era rebelde",
+      "Buscaban acusar al rey en asuntos de Persia → hallaron una falta política → porque Daniel era extranjero",
+      "Buscaban reemplazar a los sátrapas en asuntos militares → no hallaron soldados → porque el rey era fiel"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Buscaban acusar a Daniel en asuntos del reino → no hallaron motivo, error ni falta → porque él era fiel"
+    ],
+    "explanation": "Gobernadores y sátrapas investigan la administración del reino, pero la fidelidad de Daniel impide hallar motivo, error o falta.",
+    "evidence_excerpt": "Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+    "why_distractors_fail": {
+      "Buscaban premiar a Daniel en asuntos del templo → hallaron muchos errores → porque él era rebelde": "Invierte intención, ámbito, hallazgo y cualidad.",
+      "Buscaban acusar al rey en asuntos de Persia → hallaron una falta política → porque Daniel era extranjero": "Cambia acusado, ámbito y resultado, y atribuye una causa no expresada.",
+      "Buscaban reemplazar a los sátrapas en asuntos militares → no hallaron soldados → porque el rey era fiel": "Sustituye objetivo, objeto de búsqueda y sujeto de la fidelidad."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "hostile_audit_failure_faithfulness",
+    "option_category": "intent_scope_result_cause",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige separar intención hostil, ámbito administrativo, resultado negativo y explicación moral.",
+    "variant_justification": "La pregunta pública recupera sólo la fidelidad; ésta reconstruye la investigación adversaria completa y por qué fracasa.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN6-C11-003",
+    "source_unit_id": "DAN6-V008",
+    "fact_id": "DAN6-V008-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué correspondencia jurídica usan los funcionarios para asegurar la permanencia del edicto?",
+    "options": [
+      "Confirmarlo y firmarlo → someterlo a la ley de Media y Persia → impedir que sea revocado o abrogado",
+      "Proclamarlo y olvidarlo → someterlo a la costumbre de Judá → permitir que Daniel lo cambie",
+      "Copiarlo y esconderlo → someterlo a la ley de Babilonia → dejar que los sátrapas lo anulen",
+      "Interpretarlo y sellarlo → someterlo a la palabra de Jeremías → revocarlo después de treinta días"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Confirmarlo y firmarlo → someterlo a la ley de Media y Persia → impedir que sea revocado o abrogado"
+    ],
+    "explanation": "La petición une confirmación y firma con el carácter irrevocable atribuido a la ley medopersa.",
+    "evidence_excerpt": "Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+    "why_distractors_fail": {
+      "Proclamarlo y olvidarlo → someterlo a la costumbre de Judá → permitir que Daniel lo cambie": "Cambia acciones, marco legal y efecto buscado.",
+      "Copiarlo y esconderlo → someterlo a la ley de Babilonia → dejar que los sátrapas lo anulen": "Sustituye el procedimiento, la ley y su consecuencia.",
+      "Interpretarlo y sellarlo → someterlo a la palabra de Jeremías → revocarlo después de treinta días": "Confunde el edicto con profecía y afirma justamente lo que se quería impedir."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "royal_signature_legal_framework_irrevocability",
+    "option_category": "procedure_law_effect_map",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Evalúa cómo una acción real, un sistema legal y un efecto irreversible se refuerzan mutuamente.",
+    "variant_justification": "La presentación existente completa la irrevocabilidad; ésta obliga a vincularla con procedimiento y autoridad jurídica.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN6-C11-004",
+    "source_unit_id": "DAN6-V013",
+    "fact_id": "DAN6-V013-F03",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué ficha reproduce la acusación contra Daniel sin intercambiar identidad, doble cargo ni frecuencia?",
+    "options": [
+      "Hijo de los cautivos de Judá → no respeta al rey ni acata el edicto confirmado → hace su petición tres veces al día",
+      "Hijo de los príncipes de Media → respeta al rey y confirma el edicto → hace su petición una vez al mes",
+      "Jefe de los magos de Babilonia → no respeta a los sátrapas ni acata la ley de Judá → interpreta tres sueños al día",
+      "Siervo de Ciro el persa → no respeta a Darío ni firma el edicto → hace ayuno durante siete tiempos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Hijo de los cautivos de Judá → no respeta al rey ni acata el edicto confirmado → hace su petición tres veces al día"
+    ],
+    "explanation": "Los acusadores destacan el origen judío de Daniel, le imputan desatender al rey y al edicto y citan la frecuencia de su petición.",
+    "evidence_excerpt": "Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.",
+    "why_distractors_fail": {
+      "Hijo de los príncipes de Media → respeta al rey y confirma el edicto → hace su petición una vez al mes": "Cambia identidad, invierte la acusación y altera frecuencia.",
+      "Jefe de los magos de Babilonia → no respeta a los sátrapas ni acata la ley de Judá → interpreta tres sueños al día": "Sustituye origen, autoridades, norma y acción.",
+      "Siervo de Ciro el persa → no respeta a Darío ni firma el edicto → hace ayuno durante siete tiempos": "Confunde relación política, conducta imputada y duración."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "identity_double_charge_prayer_frequency",
+    "option_category": "accusation_profile",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "La respuesta depende de mantener cuatro datos coordinados de una acusación calculada.",
+    "variant_justification": "La presentación existente identifica sólo el edicto; ésta exige reconstruir el perfil retórico completo usado ante el rey.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN6-C11-005",
+    "source_unit_id": "DAN6-V018",
+    "fact_id": "DAN6-V018-F03",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "Después de ordenar que Daniel fuera echado al foso, ¿qué secuencia nocturna muestra la aflicción del rey?",
+    "options": [
+      "Regresó al palacio → se acostó en ayunas → rechazó instrumentos musicales → perdió el sueño",
+      "Fue al banquete → comió abundantemente → pidió instrumentos musicales → durmió profundamente",
+      "Regresó al foso → se acostó con los sátrapas → escuchó música → soñó con un árbol",
+      "Fue al templo → ofreció sacrificios → llamó a los magos → durmió siete tiempos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Regresó al palacio → se acostó en ayunas → rechazó instrumentos musicales → perdió el sueño"
+    ],
+    "explanation": "La noche del rey combina retorno al palacio, ayuno, ausencia de entretenimiento y pérdida del sueño.",
+    "evidence_excerpt": "Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+    "why_distractors_fail": {
+      "Fue al banquete → comió abundantemente → pidió instrumentos musicales → durmió profundamente": "Invierte cada señal de aflicción.",
+      "Regresó al foso → se acostó con los sátrapas → escuchó música → soñó con un árbol": "Cambia lugar, compañía, música y episodio onírico.",
+      "Fue al templo → ofreció sacrificios → llamó a los magos → durmió siete tiempos": "Introduce acciones, actores y duración ajenos a la escena."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "royal_distress_night_sequence",
+    "option_category": "four_step_behavioral_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige ordenar cuatro manifestaciones consecutivas de la preocupación del rey.",
+    "variant_justification": "La presentación previa completa únicamente el ayuno; ésta discrimina la secuencia nocturna completa.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN6-C11-006",
+    "source_unit_id": "DAN6-V028",
+    "fact_id": "DAN6-V028-V11-F02",
+    "role": "variant",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "Complete la síntesis final que conserva sujeto, resultado y los dos marcos reales: ____.",
+    "options": [
+      "Daniel → prosperó → durante los reinados de Darío y Ciro, el persa",
+      "Darío → fue humillado → durante los reinados de Daniel y Ciro, el medo",
+      "Ciro → cayó → durante los reinados de los sátrapas y gobernadores de Judá",
+      "Los acusadores → prosperaron → durante los reinados de Nabucodonosor y Belsasar, el persa"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Daniel → prosperó → durante los reinados de Darío y Ciro, el persa"
+    ],
+    "explanation": "El cierre atribuye la prosperidad a Daniel y la extiende por los reinados de Darío y Ciro, identificado como persa.",
+    "evidence_excerpt": "Daniel prosperó durante los reinados de Darío y de Ciro, el persa.",
+    "why_distractors_fail": {
+      "Darío → fue humillado → durante los reinados de Daniel y Ciro, el medo": "Intercambia sujeto y gobernantes, cambia el resultado y la identidad nacional.",
+      "Ciro → cayó → durante los reinados de los sátrapas y gobernadores de Judá": "Sustituye sujeto, acción y marcos reales.",
+      "Los acusadores → prosperaron → durante los reinados de Nabucodonosor y Belsasar, el persa": "Atribuye la prosperidad a los adversarios y cambia ambos reinados."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "subject_outcome_two_reigns",
+    "option_category": "closing_summary_map",
+    "false_mutation": null,
+    "blank_span": "Daniel → prosperó → durante los reinados de Darío y Ciro, el persa",
+    "significance": "Evalúa una síntesis cronológica que distingue al beneficiario de los dos gobernantes.",
+    "variant_justification": "La presentación anterior completa sólo Ciro; ésta exige sujeto, resultado y continuidad entre ambos reinados.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

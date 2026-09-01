@@ -1,0 +1,179 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-39772294d2a0c54212ba",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN10-C11-001",
+      "source_unit_id": "DAN10-V004",
+      "fact_id": "DAN10-V004-V11-F02",
+      "family": "single_choice_direct",
+      "subtype": "relationship",
+      "question": "¿Qué coordenada temporal y espacial sitúa conjuntamente a Daniel cuando comienza esta escena junto al río?",
+      "options": [
+        "Día veinticuatro del primer mes — orilla del gran río Hidekel",
+        "Día veintiuno del primer mes — centro del gran río Hidekel",
+        "Día veinticuatro del tercer mes — orilla del río Éufrates",
+        "Día primero del séptimo mes — orilla del río Ulai"
+      ],
+      "evidence_excerpt": "El día veinticuatro del primer mes estaba yo a la orilla del gran río Hidekel.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "temporal_spatial_coordinate",
+      "option_category": "compound_scene_coordinate",
+      "variant_justification": "Las presentaciones existentes preguntan la fecha; esta variante exige vincularla con el tipo de lugar y el río específico.",
+      "authored_content_sha256": "532bc43eb2bbeec04d923463969f11e7a3453f8417a5d3b17ec4884be89d746c",
+      "source_ref": "Daniel 10:4",
+      "source_quote": "El día veinticuatro del primer mes estaba yo a la orilla del gran río Hidekel.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿En qué fecha estaba Daniel junto al Hidekel?",
+          "family": "single_choice_direct",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN10-C11-002",
+      "source_unit_id": "DAN10-V006",
+      "fact_id": "DAN10-V006-F07",
+      "family": "fill_choice",
+      "subtype": "comparison",
+      "question": "Antes de pasar a brazos, pies y sonido, el inventario visual progresa así: «Su cuerpo era ____, sus brazos y sus pies como de color de bronce bruñido».",
+      "options": [
+        "como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego",
+        "como de bronce bruñido, su rostro parecía berilo, sus ojos como una multitud",
+        "como oro de Ufaz, su rostro parecía una antorcha, sus ojos como relámpagos",
+        "como de lino, su rostro parecía bronce, sus ojos como piedras de río"
+      ],
+      "evidence_excerpt": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "ordered_visual_attribute_mapping",
+      "option_category": "multi_attribute_completion",
+      "variant_justification": "La base pregunta únicamente por el material del cuerpo; aquí la respuesta depende de reconstruir un mapa visual de tres elementos.",
+      "authored_content_sha256": "9ab1ae354a8936152ac9508b846aa67a1f8c918083193e13f1530a6fb44073f9",
+      "source_ref": "Daniel 10:6",
+      "source_quote": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿A qué material se comparaba el cuerpo del varón?",
+          "family": "single_choice_direct",
+          "subtype": "comparison"
+        },
+        {
+          "question": "¿Con qué piedra fue comparada la apariencia del cuerpo del varón de la visión?",
+          "family": "single_choice_direct",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN10-C11-003",
+      "source_unit_id": "DAN10-V007",
+      "fact_id": "DAN10-V007-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué reconstrucción distingue correctamente la experiencia perceptiva de Daniel de la reacción de sus acompañantes?",
+      "options": [
+        "Daniel vio la visión; sus acompañantes no la vieron, pero un gran temor los llevó a huir y esconderse",
+        "Todos vieron la visión; sólo Daniel sintió temor y se escondió",
+        "Daniel no vio la visión; sus acompañantes la vieron y permanecieron junto a él",
+        "Nadie vio la visión; Daniel y sus acompañantes huyeron por el sonido del río"
+      ],
+      "evidence_excerpt": "Sólo yo, Daniel, vi aquella visión. No la vieron los hombres que estaban conmigo, sino que se apoderó de ellos un gran temor y huyeron y se escondieron.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "perception_reaction_asymmetry",
+      "option_category": "compound_participant_contrast",
+      "variant_justification": "La presentación existente enumera la reacción; esta variante evalúa la asimetría completa entre lo que Daniel vio y lo que los demás experimentaron.",
+      "authored_content_sha256": "842e89b2c8c58f0d1e7c356a7ff6e5e689df8d6d825ebca5bf0b14f873e8e1f1",
+      "source_ref": "Daniel 10:7",
+      "source_quote": "Sólo yo, Daniel, vi aquella visión. No la vieron los hombres que estaban conmigo, sino que se apoderó de ellos un gran temor y huyeron y se escondieron.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Cómo reaccionaron los hombres que acompañaban a Daniel aunque no vieron la visión?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN10-C11-004",
+      "source_unit_id": "DAN10-V010",
+      "fact_id": "DAN10-V010-F02",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "La transición corporal completa, desde el contacto hasta la nueva postura de Daniel, se expresa así: «____».",
+      "options": [
+        "una mano me tocó e hizo que me pusiera sobre mis rodillas y sobre las palmas de mis manos",
+        "una voz me llamó e hizo que me pusiera en pie sin temblar",
+        "un resplandor me cubrió e hizo que cayera con el rostro en tierra",
+        "una multitud me rodeó e hizo que huyera a la orilla del río"
+      ],
+      "evidence_excerpt": "Y una mano me tocó e hizo que me pusiera sobre mis rodillas y sobre las palmas de mis manos.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "contact_to_posture_transition",
+      "option_category": "complete_action_chain",
+      "variant_justification": "Las presentaciones públicas preguntan qué tocó; esta reconstruye la transición corporal completa provocada por el contacto.",
+      "authored_content_sha256": "4525d5dc8bbec7652a684d4cda917751efaa51f70b86b63b8b628c8531e24ed5",
+      "source_ref": "Daniel 10:10",
+      "source_quote": "Y una mano me tocó e hizo que me pusiera sobre mis rodillas y sobre las palmas de mis manos.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué tocó a Daniel antes de que se apoyara sobre sus rodillas y sus manos?",
+          "family": "single_choice_direct",
+          "subtype": "narrative_order"
+        },
+        {
+          "question": "¿Qué contacto hizo que Daniel pasara a apoyarse sobre rodillas y palmas?",
+          "family": "single_choice_direct",
+          "subtype": "narrative_order"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN10-C11-006",
+      "source_unit_id": "DAN10-V021",
+      "fact_id": "DAN10-V021-F01",
+      "family": "fill_choice",
+      "subtype": "relationship",
+      "question": "Después de anunciar que declararía lo escrito en el libro de la verdad, el mensajero delimitó así su alianza frente a los adversarios: «____».",
+      "options": [
+        "nadie me ayuda contra ellos, sino Miguel vuestro príncipe",
+        "todos los reyes me ayudan contra Miguel, príncipe de Persia",
+        "Daniel me ayuda contra ellos, junto con el príncipe de Grecia",
+        "nadie conoce el libro, salvo Ciro vuestro rey"
+      ],
+      "evidence_excerpt": "Pero yo te declararé lo que está escrito en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe.”",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "exclusive_ally_identity_relationship",
+      "option_category": "compound_relational_completion",
+      "variant_justification": "La base sólo identifica a Miguel; esta variante exige reconstruir la estructura completa de exclusividad y relación.",
+      "authored_content_sha256": "1d40340ae7df300ce0d395bd4ca2f175f91008fe95c3fdf594ba603f7647c8ae",
+      "source_ref": "Daniel 10:21",
+      "source_quote": "Pero yo te declararé lo que está escrito en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe.”",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "En la declaración recibida por Daniel, ¿quién fue identificado como el único que prestaba ayuda?",
+          "family": "single_choice_direct",
+          "subtype": "identification"
+        },
+        {
+          "question": "En el conflicto descrito junto al libro de la verdad, ¿quién era el único aliado del mensajero?",
+          "family": "single_choice_direct",
+          "subtype": "identification"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "1c2f9b28b1185b18aecfe9b454c4bcc43013cc2e1d55bc8ea3aa567fd40f0b0a"
+}

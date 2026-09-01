@@ -1,0 +1,225 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-7ca483fd50f5f50e97bf",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN11-C11-001",
+      "source_unit_id": "DAN11-V015",
+      "fact_id": "DAN11-V015-F02",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete la cadena ofensiva y defensiva sin cruzar actor, acciones, objetivo y causa del fracaso: ____.",
+      "options": [
+        "rey del norte → levanta baluartes y toma la ciudad fuerte → fuerzas y tropas escogidas del sur no se sostienen → no hay fuerzas para resistir",
+        "rey del sur → derriba baluartes y abandona la ciudad → tropas del norte prevalecen → sobran fuerzas para resistir",
+        "príncipe del pacto → levanta templos y toma Jerusalén → fuerzas de Persia no se sostienen → faltan naves para huir",
+        "rey de Egipto → reparte tierras y honra a muchos → tropas de Media se rinden → no hay oro para pagar"
+      ],
+      "evidence_excerpt": "Vendrá, pues, el rey del norte, levantará baluartes y tomará la ciudad fuerte; y las fuerzas del sur no podrán sostenerse, ni sus tropas escogidas, porque no habrá fuerzas para resistir.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "northern_siege_southern_failure_cause",
+      "option_category": "offense_defense_causal_chain",
+      "variant_justification": "Las presentaciones existentes completan sostenerse o resistir; ésta reconstruye la cadena militar completa.",
+      "authored_content_sha256": "5d879d769140944c6c66eb9884567763abc7af8b9caa5c2799d402bf601ed36c",
+      "source_ref": "Daniel 11:15",
+      "source_quote": "Vendrá, pues, el rey del norte, levantará baluartes y tomará la ciudad fuerte; y las fuerzas del sur no podrán sostenerse, ni sus tropas escogidas, porque no habrá fuerzas para resistir.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Ante el ataque del rey del norte, las fuerzas del sur no podrán ____.",
+          "family": "fill_choice",
+          "subtype": "comparison"
+        },
+        {
+          "question": "Ni siquiera las tropas escogidas del sur tendrán fuerzas para ____.",
+          "family": "fill_choice",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN11-C11-002",
+      "source_unit_id": "DAN11-V022",
+      "fact_id": "DAN11-V022-F03",
+      "family": "fill_choice",
+      "subtype": "relationship",
+      "question": "Complete la imagen que vincula modo de derrota, grado de destrucción y víctima asociada: ____.",
+      "options": [
+        "fuerzas enemigas → barridas como inundación de aguas y destruidas del todo → junto con el príncipe del pacto",
+        "fuerzas aliadas → afirmadas como baluartes y preservadas en parte → junto con el rey del sur",
+        "tropas escogidas → dispersadas como rocío y restauradas después → junto con el dios ajeno",
+        "naves de Quitim → quemadas como fuego y honradas del todo → junto con el rey del norte"
+      ],
+      "evidence_excerpt": "Las fuerzas enemigas serán barridas delante de él como por inundación de aguas; serán del todo destruidas, junto con el príncipe del pacto.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "flood_simile_total_destruction_covenant_prince",
+      "option_category": "force_simile_outcome_companion",
+      "variant_justification": "Las preguntas públicas identifican sólo al príncipe; ésta exige ubicarlo dentro de la imagen militar y su desenlace.",
+      "authored_content_sha256": "4c6510acd0c1917d3128e2b5f898adca5f7e6b14a6ff0d3f21e6ab2d80cd49e1",
+      "source_ref": "Daniel 11:22",
+      "source_quote": "Las fuerzas enemigas serán barridas delante de él como por inundación de aguas; serán del todo destruidas, junto con el príncipe del pacto.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Quién es destruido junto con las fuerzas barridas como por inundación?",
+          "family": "single_choice_contextual",
+          "subtype": "relationship"
+        },
+        {
+          "question": "Además de las fuerzas enemigas arrasadas como por una inundación, ¿quién será destruido?",
+          "family": "single_choice_contextual",
+          "subtype": "relationship"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN11-C11-003",
+      "source_unit_id": "DAN11-V025",
+      "fact_id": "DAN11-V025-F04",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete la confrontación conservando preparación del norte, respuesta del sur y causa paradójica del resultado: ____.",
+      "options": [
+        "norte despierta fuerzas y ardor con gran ejército → sur se empeña en guerra con ejército grande y fuerte → no prevalece porque le hacen traición",
+        "sur despierta fuerzas y temor con pequeño ejército → norte evita la guerra → prevalece porque recibe lisonjas",
+        "príncipe del pacto despierta a los sabios → sur se empeña en huir sin ejército → no prevalece porque faltan baluartes",
+        "Quitim despierta sus naves → norte se empeña en repartir tierras → prevalece porque honra a muchos"
+      ],
+      "evidence_excerpt": "Despertará sus fuerzas y su ardor con un gran ejército, contra el rey del sur, y el rey del sur se empeñará en la guerra con un ejército grande y muy fuerte; pero no prevalecerá, porque le harán traición.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "two_armies_southern_defeat_betrayal",
+      "option_category": "mobilization_response_outcome_cause",
+      "variant_justification": "Las presentaciones existentes completan guerra; ésta exige resolver la simetría militar y la causa no militar de la derrota.",
+      "authored_content_sha256": "b96979620af4b802c56f4d532e3ccceb11aa712f9bd28bec9b3ef66f67d378ea",
+      "source_ref": "Daniel 11:25",
+      "source_quote": "Despertará sus fuerzas y su ardor con un gran ejército, contra el rey del sur, y el rey del sur se empeñará en la guerra con un ejército grande y muy fuerte; pero no prevalecerá, porque le harán traición.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Ante el gran ejército del norte, el rey del sur ____.",
+          "family": "fill_choice",
+          "subtype": "narrative_order"
+        },
+        {
+          "question": "La respuesta del rey del sur al gran ejército enemigo será empeñarse en la ____.",
+          "family": "fill_choice",
+          "subtype": "narrative_order"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN11-C11-004",
+      "source_unit_id": "DAN11-V029",
+      "fact_id": "DAN11-V029-F03",
+      "family": "fill_choice",
+      "subtype": "comparison",
+      "question": "Complete el patrón temporal, direccional y comparativo de la nueva campaña: ____.",
+      "options": [
+        "al tiempo señalado → vuelve al sur → la última venida no será como la primera",
+        "al cabo de doce meses → vuelve al norte → la primera venida será igual a la última",
+        "durante siete tiempos → vuelve al oriente → ambas venidas serán victoriosas",
+        "al fin de setenta años → vuelve a Jerusalén → no habrá una nueva venida"
+      ],
+      "evidence_excerpt": "Al tiempo señalado volverá al sur; pero la última venida no será como la primera.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "appointed_time_southward_return_changed_outcome",
+      "option_category": "time_direction_comparison",
+      "variant_justification": "Las presentaciones anteriores identifican sólo el tiempo señalado; ésta integra dirección y contraste entre campañas.",
+      "authored_content_sha256": "ed5717d03612cba8f4d70b9559f490abd79ef67161cbdd1b068a631b09200da1",
+      "source_ref": "Daniel 11:29",
+      "source_quote": "Al tiempo señalado volverá al sur; pero la última venida no será como la primera.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué determina cuándo vuelve hacia el sur?",
+          "family": "single_choice_direct",
+          "subtype": "prophetic_detail"
+        },
+        {
+          "question": "¿Qué marca el momento del nuevo desplazamiento hacia el sur?",
+          "family": "single_choice_direct",
+          "subtype": "prophetic_detail"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN11-C11-005",
+      "source_unit_id": "DAN11-V034",
+      "fact_id": "DAN11-V034-F05",
+      "family": "fill_choice",
+      "subtype": "comparison",
+      "question": "Complete el contraste entre la ayuda recibida durante la caída y la adhesión posterior de muchos: ____.",
+      "options": [
+        "en su caída → pequeño socorro → muchos se juntan a ellos con lisonjas",
+        "en su victoria → gran ejército → pocos se apartan de ellos con fidelidad",
+        "en su regreso → naves de Quitim → todos se juntan a ellos con justicia",
+        "en su reinado → fortalezas inexpugnables → muchos los destruyen con baluartes"
+      ],
+      "evidence_excerpt": "En su caída serán ayudados con un pequeño socorro, y muchos se juntarán a ellos con lisonjas.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "fall_small_help_many_flatterers",
+      "option_category": "circumstance_scale_adherence_contrast",
+      "variant_justification": "Las presentaciones existentes aíslan la magnitud del socorro; ésta exige resolver el contraste completo con los muchos lisonjeros.",
+      "authored_content_sha256": "f87a2d23d20ca368f5c4953f631dc975aa592507364b724f46dc8b7a41a68463",
+      "source_ref": "Daniel 11:34",
+      "source_quote": "En su caída serán ayudados con un pequeño socorro, y muchos se juntarán a ellos con lisonjas.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿De qué magnitud es la ayuda recibida durante la caída?",
+          "family": "single_choice_contextual",
+          "subtype": "comparison"
+        },
+        {
+          "question": "Cuando los perseguidos sean auxiliados durante su caída, ¿cómo caracteriza el texto ese socorro?",
+          "family": "single_choice_contextual",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN11-C11-006",
+      "source_unit_id": "DAN11-V039",
+      "fact_id": "DAN11-V039-F07",
+      "family": "fill_choice",
+      "subtype": "cause_consequence",
+      "question": "Complete el sistema de poder y recompensas ligado al reconocimiento del dios ajeno: ____.",
+      "options": [
+        "dios ajeno → fortalezas más inexpugnables → reconocedores colmados de honores → gobierno sobre muchos y tierras como recompensa",
+        "Dios Altísimo → ciudades sin defensa → rebeldes colmados de vergüenza → exilio sobre pocos y baluartes como castigo",
+        "príncipe del pacto → naves de Quitim → sabios colmados de lisonjas → caída sobre todos y oro como tributo",
+        "rey del sur → ejército pequeño → traidores colmados de justicia → dominio sobre Media y leyes como recompensa"
+      ],
+      "evidence_excerpt": "Con un dios ajeno se hará de las fortalezas más inexpugnables, colmará de honores a los que lo reconozcan, los hará gobernar sobre muchos y repartirá tierras como recompensa.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "foreign_god_fortresses_honors_rule_land",
+      "option_category": "power_patronage_reward_system",
+      "variant_justification": "Las presentaciones anteriores preguntan únicamente por los honores; ésta exige reconstruir el sistema completo que los rodea.",
+      "authored_content_sha256": "69f6831a9f3ec4cff93ef1bfc9d75cdf088acc913db7ab1f0e4f54fe72b4d61f",
+      "source_ref": "Daniel 11:39",
+      "source_quote": "Con un dios ajeno se hará de las fortalezas más inexpugnables, colmará de honores a los que lo reconozcan, los hará gobernar sobre muchos y repartirá tierras como recompensa.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué reciben abundantemente quienes reconocen al dios ajeno?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        },
+        {
+          "question": "¿Con qué serán colmados quienes reconozcan al dios ajeno?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "406d20a09335af7364216afacabcd1676d0bb1afbd169609608eab3c75432817"
+}

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "V13-R2-DAN10-C11-001",
+    "source_unit_id": "DAN10-V004",
+    "fact_id": "DAN10-V004-V11-F02",
+    "role": "variant",
+    "family": "single_choice_direct",
+    "subtype": "relationship",
+    "question": "¿Qué coordenada temporal y espacial sitúa conjuntamente a Daniel cuando comienza esta escena junto al río?",
+    "options": [
+      "Día veinticuatro del primer mes — orilla del gran río Hidekel",
+      "Día veintiuno del primer mes — centro del gran río Hidekel",
+      "Día veinticuatro del tercer mes — orilla del río Éufrates",
+      "Día primero del séptimo mes — orilla del río Ulai"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Día veinticuatro del primer mes — orilla del gran río Hidekel"
+    ],
+    "explanation": "La narración une el día veinticuatro, el primer mes y la orilla del gran río Hidekel como una sola coordenada de la escena.",
+    "why_distractors_fail": {
+      "Día veintiuno del primer mes — centro del gran río Hidekel": "Cambia el día y sustituye la orilla por el centro del río.",
+      "Día veinticuatro del tercer mes — orilla del río Éufrates": "Conserva el día, pero cambia tanto el mes como el río.",
+      "Día primero del séptimo mes — orilla del río Ulai": "Sustituye día, mes y río por datos ausentes de la fuente."
+    },
+    "evidence_excerpt": "El día veinticuatro del primer mes estaba yo a la orilla del gran río Hidekel.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "temporal_spatial_coordinate",
+    "option_category": "compound_scene_coordinate",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Evalúa la integración de tres coordenadas narrativas en vez de recuperar aisladamente una fecha.",
+    "variant_justification": "Las presentaciones existentes preguntan la fecha; esta variante exige vincularla con el tipo de lugar y el río específico.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN10-C11-002",
+    "source_unit_id": "DAN10-V006",
+    "fact_id": "DAN10-V006-F07",
+    "role": "variant",
+    "family": "fill_choice",
+    "subtype": "comparison",
+    "question": "Antes de pasar a brazos, pies y sonido, el inventario visual progresa así: «Su cuerpo era ____, sus brazos y sus pies como de color de bronce bruñido».",
+    "options": [
+      "como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego",
+      "como de bronce bruñido, su rostro parecía berilo, sus ojos como una multitud",
+      "como oro de Ufaz, su rostro parecía una antorcha, sus ojos como relámpagos",
+      "como de lino, su rostro parecía bronce, sus ojos como piedras de río"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego"
+    ],
+    "explanation": "El tramo omitido conserva tres correspondencias consecutivas: cuerpo con berilo, rostro con relámpago y ojos con antorchas de fuego.",
+    "why_distractors_fail": {
+      "como de bronce bruñido, su rostro parecía berilo, sus ojos como una multitud": "Redistribuye entre cuerpo, rostro y ojos comparaciones que la fuente asigna a otros rasgos.",
+      "como oro de Ufaz, su rostro parecía una antorcha, sus ojos como relámpagos": "Introduce el oro de otro versículo e intercambia las comparaciones de rostro y ojos.",
+      "como de lino, su rostro parecía bronce, sus ojos como piedras de río": "Convierte la vestidura en material corporal y añade comparaciones no declaradas."
+    },
+    "evidence_excerpt": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "ordered_visual_attribute_mapping",
+    "option_category": "multi_attribute_completion",
+    "false_mutation": null,
+    "blank_span": "como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego",
+    "significance": "El hueco abarca tres correspondencias visuales y obliga a preservar su orden y sus referentes.",
+    "variant_justification": "La base pregunta únicamente por el material del cuerpo; aquí la respuesta depende de reconstruir un mapa visual de tres elementos.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN10-C11-003",
+    "source_unit_id": "DAN10-V007",
+    "fact_id": "DAN10-V007-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué reconstrucción distingue correctamente la experiencia perceptiva de Daniel de la reacción de sus acompañantes?",
+    "options": [
+      "Daniel vio la visión; sus acompañantes no la vieron, pero un gran temor los llevó a huir y esconderse",
+      "Todos vieron la visión; sólo Daniel sintió temor y se escondió",
+      "Daniel no vio la visión; sus acompañantes la vieron y permanecieron junto a él",
+      "Nadie vio la visión; Daniel y sus acompañantes huyeron por el sonido del río"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Daniel vio la visión; sus acompañantes no la vieron, pero un gran temor los llevó a huir y esconderse"
+    ],
+    "explanation": "La visión fue exclusiva de Daniel, mientras los demás, sin verla, experimentaron temor y respondieron huyendo y ocultándose.",
+    "why_distractors_fail": {
+      "Todos vieron la visión; sólo Daniel sintió temor y se escondió": "Invierte tanto quién vio como quién sintió temor y huyó.",
+      "Daniel no vio la visión; sus acompañantes la vieron y permanecieron junto a él": "Invierte la percepción y contradice la huida de los acompañantes.",
+      "Nadie vio la visión; Daniel y sus acompañantes huyeron por el sonido del río": "Niega que Daniel viera y atribuye la reacción a una causa no mencionada."
+    },
+    "evidence_excerpt": "Sólo yo, Daniel, vi aquella visión. No la vieron los hombres que estaban conmigo, sino que se apoderó de ellos un gran temor y huyeron y se escondieron.",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "perception_reaction_asymmetry",
+    "option_category": "compound_participant_contrast",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige distribuir percepción, emoción y acciones entre participantes distintos.",
+    "variant_justification": "La presentación existente enumera la reacción; esta variante evalúa la asimetría completa entre lo que Daniel vio y lo que los demás experimentaron.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN10-C11-004",
+    "source_unit_id": "DAN10-V010",
+    "fact_id": "DAN10-V010-F02",
+    "role": "variant",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "La transición corporal completa, desde el contacto hasta la nueva postura de Daniel, se expresa así: «____».",
+    "options": [
+      "una mano me tocó e hizo que me pusiera sobre mis rodillas y sobre las palmas de mis manos",
+      "una voz me llamó e hizo que me pusiera en pie sin temblar",
+      "un resplandor me cubrió e hizo que cayera con el rostro en tierra",
+      "una multitud me rodeó e hizo que huyera a la orilla del río"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "una mano me tocó e hizo que me pusiera sobre mis rodillas y sobre las palmas de mis manos"
+    ],
+    "explanation": "La mano es el agente del contacto y el resultado es una postura apoyada simultáneamente en rodillas y palmas.",
+    "why_distractors_fail": {
+      "una voz me llamó e hizo que me pusiera en pie sin temblar": "Sustituye el contacto, la postura y el estado corporal.",
+      "un resplandor me cubrió e hizo que cayera con el rostro en tierra": "Toma una postura de otro momento y le atribuye una causa ausente.",
+      "una multitud me rodeó e hizo que huyera a la orilla del río": "Confunde la comparación sonora y la huida de los acompañantes con la experiencia de Daniel."
+    },
+    "evidence_excerpt": "Y una mano me tocó e hizo que me pusiera sobre mis rodillas y sobre las palmas de mis manos.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "contact_to_posture_transition",
+    "option_category": "complete_action_chain",
+    "false_mutation": null,
+    "blank_span": "una mano me tocó e hizo que me pusiera sobre mis rodillas y sobre las palmas de mis manos",
+    "significance": "El hueco requiere reconstruir agente, acción causal y dos puntos de apoyo corporal.",
+    "variant_justification": "Las presentaciones públicas preguntan qué tocó; esta reconstruye la transición corporal completa provocada por el contacto.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN10-C11-006",
+    "source_unit_id": "DAN10-V021",
+    "fact_id": "DAN10-V021-F01",
+    "role": "variant",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "Después de anunciar que declararía lo escrito en el libro de la verdad, el mensajero delimitó así su alianza frente a los adversarios: «____».",
+    "options": [
+      "nadie me ayuda contra ellos, sino Miguel vuestro príncipe",
+      "todos los reyes me ayudan contra Miguel, príncipe de Persia",
+      "Daniel me ayuda contra ellos, junto con el príncipe de Grecia",
+      "nadie conoce el libro, salvo Ciro vuestro rey"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "nadie me ayuda contra ellos, sino Miguel vuestro príncipe"
+    ],
+    "explanation": "La cláusula combina exclusividad de la ayuda, oposición compartida, identidad del aliado y relación de Miguel con el pueblo de Daniel.",
+    "why_distractors_fail": {
+      "todos los reyes me ayudan contra Miguel, príncipe de Persia": "Convierte al aliado exclusivo en adversario y le atribuye un principado diferente.",
+      "Daniel me ayuda contra ellos, junto con el príncipe de Grecia": "Sustituye a Miguel y añade al príncipe de Grecia como aliado.",
+      "nadie conoce el libro, salvo Ciro vuestro rey": "Cambia el tema de ayuda contra adversarios por conocimiento del libro y sustituye a Miguel."
+    },
+    "evidence_excerpt": "Pero yo te declararé lo que está escrito en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe.”",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "exclusive_ally_identity_relationship",
+    "option_category": "compound_relational_completion",
+    "false_mutation": null,
+    "blank_span": "nadie me ayuda contra ellos, sino Miguel vuestro príncipe",
+    "significance": "El hueco integra cuantificación exclusiva, función, adversarios, identidad y pertenencia relacional.",
+    "variant_justification": "La base sólo identifica a Miguel; esta variante exige reconstruir la estructura completa de exclusividad y relación.",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

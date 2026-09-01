@@ -1,0 +1,195 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-2cb2a530273ae1af6b1b",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN6-C11-001",
+      "source_unit_id": "DAN6-V003",
+      "fact_id": "DAN6-V003-F01",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué cadena explica la posición de Daniel y la decisión que el rey consideró tomar?",
+      "options": [
+        "Espíritu superior en Daniel → superioridad sobre sátrapas y gobernadores → intención de ponerlo sobre todo el reino",
+        "Linaje real de Daniel → igualdad con los sátrapas → intención de enviarlo fuera del reino",
+        "Riqueza superior de Daniel → dominio sobre los magos → intención de coronarlo en Persia",
+        "Ejército superior de Daniel → derrota de los gobernadores → intención de dividir el reino"
+      ],
+      "evidence_excerpt": "Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en ponerlo sobre todo el reino.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "inner_quality_rank_royal_intention",
+      "option_category": "cause_status_consequence_chain",
+      "variant_justification": "La presentación existente pregunta sólo por la causa de la superioridad; ésta exige además sus dos consecuencias institucionales.",
+      "authored_content_sha256": "dad603f4f50d105ae661b5af28b789456bf05d05c3346e192f11e81b9a9dfa5e",
+      "source_ref": "Daniel 6:3",
+      "source_quote": "Pero Daniel mismo era superior a estos sátrapas y gobernadores, porque había en él un espíritu superior; y el rey pensó en ponerlo sobre todo el reino.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Por qué Daniel llegó a ser superior a los demás gobernadores y sátrapas?",
+          "family": "single_choice_direct",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN6-C11-002",
+      "source_unit_id": "DAN6-V004",
+      "fact_id": "DAN6-V004-F01",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué contraste conserva el objetivo de los funcionarios, el ámbito investigado y la razón de su fracaso?",
+      "options": [
+        "Buscaban acusar a Daniel en asuntos del reino → no hallaron motivo, error ni falta → porque él era fiel",
+        "Buscaban premiar a Daniel en asuntos del templo → hallaron muchos errores → porque él era rebelde",
+        "Buscaban acusar al rey en asuntos de Persia → hallaron una falta política → porque Daniel era extranjero",
+        "Buscaban reemplazar a los sátrapas en asuntos militares → no hallaron soldados → porque el rey era fiel"
+      ],
+      "evidence_excerpt": "Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "hostile_audit_failure_faithfulness",
+      "option_category": "intent_scope_result_cause",
+      "variant_justification": "La pregunta pública recupera sólo la fidelidad; ésta reconstruye la investigación adversaria completa y por qué fracasa.",
+      "authored_content_sha256": "8a19afc27cf7459fc861d4339d4de7b18043bc5ca023ab01dceaaeab1f661d2f",
+      "source_ref": "Daniel 6:4",
+      "source_quote": "Los gobernadores y sátrapas buscaron ocasión para acusar a Daniel en lo relacionado con el reino; pero no podían hallar motivo alguno o falta, porque él era fiel, y ningún error ni falta hallaron en él.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué cualidad explica que los adversarios de Daniel no hallaran error ni falta en su administración?",
+          "family": "single_choice_contextual",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN6-C11-003",
+      "source_unit_id": "DAN6-V008",
+      "fact_id": "DAN6-V008-F01",
+      "family": "single_choice_contextual",
+      "subtype": "principle",
+      "question": "¿Qué correspondencia jurídica usan los funcionarios para asegurar la permanencia del edicto?",
+      "options": [
+        "Confirmarlo y firmarlo → someterlo a la ley de Media y Persia → impedir que sea revocado o abrogado",
+        "Proclamarlo y olvidarlo → someterlo a la costumbre de Judá → permitir que Daniel lo cambie",
+        "Copiarlo y esconderlo → someterlo a la ley de Babilonia → dejar que los sátrapas lo anulen",
+        "Interpretarlo y sellarlo → someterlo a la palabra de Jeremías → revocarlo después de treinta días"
+      ],
+      "evidence_excerpt": "Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "royal_signature_legal_framework_irrevocability",
+      "option_category": "procedure_law_effect_map",
+      "variant_justification": "La presentación existente completa la irrevocabilidad; ésta obliga a vincularla con procedimiento y autoridad jurídica.",
+      "authored_content_sha256": "311af427e9da209faa8fc3ba5c20feec28deef0e2aa6bdad1375f4f1e76a3bb6",
+      "source_ref": "Daniel 6:8",
+      "source_quote": "Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Los funcionarios pidieron firmar el edicto para que, conforme a la ley medopersa, ________.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN6-C11-004",
+      "source_unit_id": "DAN6-V013",
+      "fact_id": "DAN6-V013-F03",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué ficha reproduce la acusación contra Daniel sin intercambiar identidad, doble cargo ni frecuencia?",
+      "options": [
+        "Hijo de los cautivos de Judá → no respeta al rey ni acata el edicto confirmado → hace su petición tres veces al día",
+        "Hijo de los príncipes de Media → respeta al rey y confirma el edicto → hace su petición una vez al mes",
+        "Jefe de los magos de Babilonia → no respeta a los sátrapas ni acata la ley de Judá → interpreta tres sueños al día",
+        "Siervo de Ciro el persa → no respeta a Darío ni firma el edicto → hace ayuno durante siete tiempos"
+      ],
+      "evidence_excerpt": "Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "identity_double_charge_prayer_frequency",
+      "option_category": "accusation_profile",
+      "variant_justification": "La presentación existente identifica sólo el edicto; ésta exige reconstruir el perfil retórico completo usado ante el rey.",
+      "authored_content_sha256": "0bb3ccabbf3cdfde9704d801ec234cced6a8395aaf3a9e6e544ee5082be149e6",
+      "source_ref": "Daniel 6:13",
+      "source_quote": "Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Los adversarios acusaron a Daniel de no respetar al rey ni acatar el ________, pues hacía su petición tres veces al día.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN6-C11-005",
+      "source_unit_id": "DAN6-V018",
+      "fact_id": "DAN6-V018-F03",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "Después de ordenar que Daniel fuera echado al foso, ¿qué secuencia nocturna muestra la aflicción del rey?",
+      "options": [
+        "Regresó al palacio → se acostó en ayunas → rechazó instrumentos musicales → perdió el sueño",
+        "Fue al banquete → comió abundantemente → pidió instrumentos musicales → durmió profundamente",
+        "Regresó al foso → se acostó con los sátrapas → escuchó música → soñó con un árbol",
+        "Fue al templo → ofreció sacrificios → llamó a los magos → durmió siete tiempos"
+      ],
+      "evidence_excerpt": "Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "royal_distress_night_sequence",
+      "option_category": "four_step_behavioral_sequence",
+      "variant_justification": "La presentación previa completa únicamente el ayuno; ésta discrimina la secuencia nocturna completa.",
+      "authored_content_sha256": "1a5616d6316c86b50883c3b17be7e8365feb359168ddc84eb89669b01b240613",
+      "source_ref": "Daniel 6:18",
+      "source_quote": "Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "El rey regresó a su palacio y pasó la noche en ________; no aceptó música y perdió el sueño.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN6-C11-006",
+      "source_unit_id": "DAN6-V028",
+      "fact_id": "DAN6-V028-V11-F02",
+      "family": "fill_choice",
+      "subtype": "relationship",
+      "question": "Complete la síntesis final que conserva sujeto, resultado y los dos marcos reales: ____.",
+      "options": [
+        "Daniel → prosperó → durante los reinados de Darío y Ciro, el persa",
+        "Darío → fue humillado → durante los reinados de Daniel y Ciro, el medo",
+        "Ciro → cayó → durante los reinados de los sátrapas y gobernadores de Judá",
+        "Los acusadores → prosperaron → durante los reinados de Nabucodonosor y Belsasar, el persa"
+      ],
+      "evidence_excerpt": "Daniel prosperó durante los reinados de Darío y de Ciro, el persa.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "subject_outcome_two_reigns",
+      "option_category": "closing_summary_map",
+      "variant_justification": "La presentación anterior completa sólo Ciro; ésta exige sujeto, resultado y continuidad entre ambos reinados.",
+      "authored_content_sha256": "c463020d31f4723745d1c392cd0174625b0e6aba1fb92f8392e4d5e12156d060",
+      "source_ref": "Daniel 6:28",
+      "source_quote": "Daniel prosperó durante los reinados de Darío y de Ciro, el persa.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Daniel prosperó durante los reinados de Darío y de ____ el persa.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "5b9c938dc6750ce6a3c8fceef4c20f48167b943f85921c6231853d65978a924b"
+}

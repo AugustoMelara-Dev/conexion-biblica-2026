@@ -1,0 +1,230 @@
+[
+  {
+    "id": "V13-R2-DAN11-C11-001",
+    "source_unit_id": "DAN11-V015",
+    "fact_id": "DAN11-V015-F02",
+    "role": "variant",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Complete la cadena ofensiva y defensiva sin cruzar actor, acciones, objetivo y causa del fracaso: ____.",
+    "options": [
+      "rey del norte → levanta baluartes y toma la ciudad fuerte → fuerzas y tropas escogidas del sur no se sostienen → no hay fuerzas para resistir",
+      "rey del sur → derriba baluartes y abandona la ciudad → tropas del norte prevalecen → sobran fuerzas para resistir",
+      "príncipe del pacto → levanta templos y toma Jerusalén → fuerzas de Persia no se sostienen → faltan naves para huir",
+      "rey de Egipto → reparte tierras y honra a muchos → tropas de Media se rinden → no hay oro para pagar"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "rey del norte → levanta baluartes y toma la ciudad fuerte → fuerzas y tropas escogidas del sur no se sostienen → no hay fuerzas para resistir"
+    ],
+    "explanation": "El rey del norte asedia y toma la ciudad fuerte; ni fuerzas ni tropas escogidas del sur logran sostenerse porque carecen de capacidad para resistir.",
+    "evidence_excerpt": "Vendrá, pues, el rey del norte, levantará baluartes y tomará la ciudad fuerte; y las fuerzas del sur no podrán sostenerse, ni sus tropas escogidas, porque no habrá fuerzas para resistir.",
+    "why_distractors_fail": {
+      "rey del sur → derriba baluartes y abandona la ciudad → tropas del norte prevalecen → sobran fuerzas para resistir": "Invierte actor, acciones, ejércitos y causa.",
+      "príncipe del pacto → levanta templos y toma Jerusalén → fuerzas de Persia no se sostienen → faltan naves para huir": "Mezcla otro personaje con acciones, lugar y recurso no citados.",
+      "rey de Egipto → reparte tierras y honra a muchos → tropas de Media se rinden → no hay oro para pagar": "Traslada elementos de otro pasaje y elimina el asedio."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "northern_siege_southern_failure_cause",
+    "option_category": "offense_defense_causal_chain",
+    "false_mutation": null,
+    "blank_span": "rey del norte → levanta baluartes y toma la ciudad fuerte → fuerzas y tropas escogidas del sur no se sostienen → no hay fuerzas para resistir",
+    "significance": "Exige mantener coordinadas ofensiva, dos niveles defensivos y explicación causal.",
+    "variant_justification": "Las presentaciones existentes completan sostenerse o resistir; ésta reconstruye la cadena militar completa.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN11-C11-002",
+    "source_unit_id": "DAN11-V022",
+    "fact_id": "DAN11-V022-F03",
+    "role": "variant",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "Complete la imagen que vincula modo de derrota, grado de destrucción y víctima asociada: ____.",
+    "options": [
+      "fuerzas enemigas → barridas como inundación de aguas y destruidas del todo → junto con el príncipe del pacto",
+      "fuerzas aliadas → afirmadas como baluartes y preservadas en parte → junto con el rey del sur",
+      "tropas escogidas → dispersadas como rocío y restauradas después → junto con el dios ajeno",
+      "naves de Quitim → quemadas como fuego y honradas del todo → junto con el rey del norte"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "fuerzas enemigas → barridas como inundación de aguas y destruidas del todo → junto con el príncipe del pacto"
+    ],
+    "explanation": "Las fuerzas enemigas son barridas con imagen de inundación, totalmente destruidas y el príncipe del pacto comparte esa destrucción.",
+    "evidence_excerpt": "Las fuerzas enemigas serán barridas delante de él como por inundación de aguas; serán del todo destruidas, junto con el príncipe del pacto.",
+    "why_distractors_fail": {
+      "fuerzas aliadas → afirmadas como baluartes y preservadas en parte → junto con el rey del sur": "Invierte identidad, movimiento, resultado y víctima.",
+      "tropas escogidas → dispersadas como rocío y restauradas después → junto con el dios ajeno": "Sustituye imagen, resultado y personaje asociado.",
+      "naves de Quitim → quemadas como fuego y honradas del todo → junto con el rey del norte": "Introduce naves y fuego de otro contexto y niega la destrucción."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "flood_simile_total_destruction_covenant_prince",
+    "option_category": "force_simile_outcome_companion",
+    "false_mutation": null,
+    "blank_span": "fuerzas enemigas → barridas como inundación de aguas y destruidas del todo → junto con el príncipe del pacto",
+    "significance": "La respuesta combina sujeto colectivo, símil, alcance y víctima individual.",
+    "variant_justification": "Las preguntas públicas identifican sólo al príncipe; ésta exige ubicarlo dentro de la imagen militar y su desenlace.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN11-C11-003",
+    "source_unit_id": "DAN11-V025",
+    "fact_id": "DAN11-V025-F04",
+    "role": "variant",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Complete la confrontación conservando preparación del norte, respuesta del sur y causa paradójica del resultado: ____.",
+    "options": [
+      "norte despierta fuerzas y ardor con gran ejército → sur se empeña en guerra con ejército grande y fuerte → no prevalece porque le hacen traición",
+      "sur despierta fuerzas y temor con pequeño ejército → norte evita la guerra → prevalece porque recibe lisonjas",
+      "príncipe del pacto despierta a los sabios → sur se empeña en huir sin ejército → no prevalece porque faltan baluartes",
+      "Quitim despierta sus naves → norte se empeña en repartir tierras → prevalece porque honra a muchos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "norte despierta fuerzas y ardor con gran ejército → sur se empeña en guerra con ejército grande y fuerte → no prevalece porque le hacen traición"
+    ],
+    "explanation": "Ambos lados movilizan gran fuerza, pero la potencia del ejército del sur no evita su fracaso porque la traición decide el resultado.",
+    "evidence_excerpt": "Despertará sus fuerzas y su ardor con un gran ejército, contra el rey del sur, y el rey del sur se empeñará en la guerra con un ejército grande y muy fuerte; pero no prevalecerá, porque le harán traición.",
+    "why_distractors_fail": {
+      "sur despierta fuerzas y temor con pequeño ejército → norte evita la guerra → prevalece porque recibe lisonjas": "Invierte actores, magnitud, acción, resultado y causa.",
+      "príncipe del pacto despierta a los sabios → sur se empeña en huir sin ejército → no prevalece porque faltan baluartes": "Sustituye atacante, respuesta y explicación.",
+      "Quitim despierta sus naves → norte se empeña en repartir tierras → prevalece porque honra a muchos": "Mezcla hechos posteriores y elimina la confrontación descrita."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "two_armies_southern_defeat_betrayal",
+    "option_category": "mobilization_response_outcome_cause",
+    "false_mutation": null,
+    "blank_span": "norte despierta fuerzas y ardor con gran ejército → sur se empeña en guerra con ejército grande y fuerte → no prevalece porque le hacen traición",
+    "significance": "Discrimina capacidad militar de causa decisiva: la superior descripción del ejército no neutraliza la traición.",
+    "variant_justification": "Las presentaciones existentes completan guerra; ésta exige resolver la simetría militar y la causa no militar de la derrota.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN11-C11-004",
+    "source_unit_id": "DAN11-V029",
+    "fact_id": "DAN11-V029-F03",
+    "role": "variant",
+    "family": "fill_choice",
+    "subtype": "comparison",
+    "question": "Complete el patrón temporal, direccional y comparativo de la nueva campaña: ____.",
+    "options": [
+      "al tiempo señalado → vuelve al sur → la última venida no será como la primera",
+      "al cabo de doce meses → vuelve al norte → la primera venida será igual a la última",
+      "durante siete tiempos → vuelve al oriente → ambas venidas serán victoriosas",
+      "al fin de setenta años → vuelve a Jerusalén → no habrá una nueva venida"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "al tiempo señalado → vuelve al sur → la última venida no será como la primera"
+    ],
+    "explanation": "El movimiento ocurre en el tiempo señalado, se dirige al sur y queda marcado por una diferencia entre la última campaña y la primera.",
+    "evidence_excerpt": "Al tiempo señalado volverá al sur; pero la última venida no será como la primera.",
+    "why_distractors_fail": {
+      "al cabo de doce meses → vuelve al norte → la primera venida será igual a la última": "Cambia tiempo, dirección y relación comparativa.",
+      "durante siete tiempos → vuelve al oriente → ambas venidas serán victoriosas": "Traslada otra duración y añade dirección y resultado ausentes.",
+      "al fin de setenta años → vuelve a Jerusalén → no habrá una nueva venida": "Mezcla otra profecía y niega el retorno expresado."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "appointed_time_southward_return_changed_outcome",
+    "option_category": "time_direction_comparison",
+    "false_mutation": null,
+    "blank_span": "al tiempo señalado → vuelve al sur → la última venida no será como la primera",
+    "significance": "Exige conservar simultáneamente cuándo, hacia dónde y con qué diferencia se produce el retorno.",
+    "variant_justification": "Las presentaciones anteriores identifican sólo el tiempo señalado; ésta integra dirección y contraste entre campañas.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN11-C11-005",
+    "source_unit_id": "DAN11-V034",
+    "fact_id": "DAN11-V034-F05",
+    "role": "variant",
+    "family": "fill_choice",
+    "subtype": "comparison",
+    "question": "Complete el contraste entre la ayuda recibida durante la caída y la adhesión posterior de muchos: ____.",
+    "options": [
+      "en su caída → pequeño socorro → muchos se juntan a ellos con lisonjas",
+      "en su victoria → gran ejército → pocos se apartan de ellos con fidelidad",
+      "en su regreso → naves de Quitim → todos se juntan a ellos con justicia",
+      "en su reinado → fortalezas inexpugnables → muchos los destruyen con baluartes"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "en su caída → pequeño socorro → muchos se juntan a ellos con lisonjas"
+    ],
+    "explanation": "El texto yuxtapone una ayuda limitada durante la caída con una adhesión numerosa, pero marcada por lisonjas.",
+    "evidence_excerpt": "En su caída serán ayudados con un pequeño socorro, y muchos se juntarán a ellos con lisonjas.",
+    "why_distractors_fail": {
+      "en su victoria → gran ejército → pocos se apartan de ellos con fidelidad": "Invierte situación, magnitud, número, dirección y carácter de la adhesión.",
+      "en su regreso → naves de Quitim → todos se juntan a ellos con justicia": "Sustituye contexto, ayuda y modo de adhesión.",
+      "en su reinado → fortalezas inexpugnables → muchos los destruyen con baluartes": "Mezcla otros elementos militares y elimina el contraste del versículo."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "fall_small_help_many_flatterers",
+    "option_category": "circumstance_scale_adherence_contrast",
+    "false_mutation": null,
+    "blank_span": "en su caída → pequeño socorro → muchos se juntan a ellos con lisonjas",
+    "significance": "La respuesta distingue cantidad de ayuda, cantidad de adherentes y calidad ambigua de su unión.",
+    "variant_justification": "Las presentaciones existentes aíslan la magnitud del socorro; ésta exige resolver el contraste completo con los muchos lisonjeros.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN11-C11-006",
+    "source_unit_id": "DAN11-V039",
+    "fact_id": "DAN11-V039-F07",
+    "role": "variant",
+    "family": "fill_choice",
+    "subtype": "cause_consequence",
+    "question": "Complete el sistema de poder y recompensas ligado al reconocimiento del dios ajeno: ____.",
+    "options": [
+      "dios ajeno → fortalezas más inexpugnables → reconocedores colmados de honores → gobierno sobre muchos y tierras como recompensa",
+      "Dios Altísimo → ciudades sin defensa → rebeldes colmados de vergüenza → exilio sobre pocos y baluartes como castigo",
+      "príncipe del pacto → naves de Quitim → sabios colmados de lisonjas → caída sobre todos y oro como tributo",
+      "rey del sur → ejército pequeño → traidores colmados de justicia → dominio sobre Media y leyes como recompensa"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "dios ajeno → fortalezas más inexpugnables → reconocedores colmados de honores → gobierno sobre muchos y tierras como recompensa"
+    ],
+    "explanation": "El gobernante usa un dios ajeno para dominar fortalezas y recompensa a quienes lo reconocen con honores, autoridad y tierras.",
+    "evidence_excerpt": "Con un dios ajeno se hará de las fortalezas más inexpugnables, colmará de honores a los que lo reconozcan, los hará gobernar sobre muchos y repartirá tierras como recompensa.",
+    "why_distractors_fail": {
+      "Dios Altísimo → ciudades sin defensa → rebeldes colmados de vergüenza → exilio sobre pocos y baluartes como castigo": "Cambia divinidad, objetivo, beneficiarios y recompensas.",
+      "príncipe del pacto → naves de Quitim → sabios colmados de lisonjas → caída sobre todos y oro como tributo": "Mezcla actores y acontecimientos distintos y altera cada efecto.",
+      "rey del sur → ejército pequeño → traidores colmados de justicia → dominio sobre Media y leyes como recompensa": "Sustituye medio religioso, fortalezas, honores y recompensas."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "foreign_god_fortresses_honors_rule_land",
+    "option_category": "power_patronage_reward_system",
+    "false_mutation": null,
+    "blank_span": "dios ajeno → fortalezas más inexpugnables → reconocedores colmados de honores → gobierno sobre muchos y tierras como recompensa",
+    "significance": "Evalúa una red de instrumento religioso, conquista, reconocimiento y patronazgo político-económico.",
+    "variant_justification": "Las presentaciones anteriores preguntan únicamente por los honores; ésta exige reconstruir el sistema completo que los rodea.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]
