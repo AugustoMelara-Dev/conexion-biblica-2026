@@ -1,0 +1,133 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-14c228a7e6592cf02be0",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN2-C13-001",
+      "source_unit_id": "DAN2-V004",
+      "fact_id": "DAN2-V004-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué secuencia de acto de habla asigna correctamente idioma, fórmula de lealtad, petición y compromiso interpretativo?",
+      "options": [
+        "lengua aramea → «¡Rey, para siempre vive!» → que cuente el sueño a sus siervos → ellos darán la interpretación",
+        "lengua hebrea → «¡Dios de dioses!» → que revele la interpretación a los magos → ellos reconstruirán el sueño",
+        "lengua caldea → «¡Señor de los sabios!» → que conceda tiempo a Daniel → los siervos guardarán silencio",
+        "lengua persa → «¡Rey de Judá!» → que reúna a los gobernadores → los astrólogos dictarán la sentencia"
+      ],
+      "evidence_excerpt": "Entonces hablaron los caldeos al rey en lengua aramea: —¡Rey, para siempre vive! Cuenta el sueño a tus siervos, y te daremos la interpretación.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "language_salutation_request_interpretive_commitment",
+      "option_category": "speech_act_mapping",
+      "variant_justification": "La presentación existente pregunta únicamente cómo iniciaron la respuesta; esta variante distribuye idioma, fórmula inicial, petición y compromiso posterior.",
+      "authored_content_sha256": "d03811153f9487879c9a623ba243199c6c63f98e76bf6ca95e692a0d8415d80f",
+      "source_ref": "Daniel 2:4",
+      "source_quote": "Entonces hablaron los caldeos al rey en lengua aramea: —¡Rey, para siempre vive! Cuenta el sueño a tus siervos, y te daremos la interpretación.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Cómo iniciaron los caldeos su respuesta al rey antes de pedirle que contara el sueño?",
+          "family": "single_choice_contextual",
+          "subtype": "speaker_addressee"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN2-C13-002",
+      "source_unit_id": "DAN2-V018",
+      "fact_id": "DAN2-V018-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué arquitectura conserva destinatario, objeto de la petición, propósito de supervivencia y grupo con el cual se compartía el riesgo?",
+      "options": [
+        "Dios del cielo → misericordias sobre el misterio → que Daniel y sus compañeros no perecieran → con los otros sabios de Babilonia",
+        "rey de Babilonia → tiempo sobre el decreto → que Arioc no pereciera → con los soldados de la guardia",
+        "dioses de los caldeos → interpretación sobre la imagen → que los magos fueran honrados → con los gobernadores de Judá",
+        "Daniel → sabiduría sobre el rey → que sus compañeros escaparan → con los cautivos de Jerusalén"
+      ],
+      "evidence_excerpt": "para que pidieran misericordias del Dios del cielo sobre este misterio, a fin de que Daniel y sus compañeros no perecieran con los otros sabios de Babilonia.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "prayer_addressee_object_survival_shared_risk",
+      "option_category": "purpose_risk_mapping",
+      "variant_justification": "La presentación existente recupera el objetivo completo de la oración; esta variante exige además mapear a quién se pide, sobre qué se pide y con quién se comparte el peligro.",
+      "authored_content_sha256": "10ddc25c780b874567e774dd63ff3fc92870e2a8dd0c9992babd22f8f01cfbb9",
+      "source_ref": "Daniel 2:18",
+      "source_quote": "para que pidieran misericordias del Dios del cielo sobre este misterio, a fin de que Daniel y sus compañeros no perecieran con los otros sabios de Babilonia.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué objetivo completo tenía la oración conjunta acerca del misterio?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN2-C13-003",
+      "source_unit_id": "DAN2-V030",
+      "fact_id": "DAN2-V030-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "comparison",
+      "question": "¿Qué contraste mantiene junta la causa que Daniel niega y las dos finalidades que atribuye a la revelación?",
+      "options": [
+        "no fue por poseer más sabiduría que los demás vivientes → dar a conocer al rey la interpretación → hacerle entender los pensamientos de su corazón",
+        "no fue por pertenecer a Judá → dar a conocer el decreto a los sabios → hacerles entender la fuerza del ejército",
+        "no fue por servir en la corte → ocultar al rey la interpretación → hacerle olvidar los pensamientos de su corazón",
+        "no fue por recibir tiempo de Arioc → dar a conocer a Daniel el sueño → hacer entender al rey los misterios de los caldeos"
+      ],
+      "evidence_excerpt": "Y a mí me ha sido revelado este misterio, no porque en mí haya más sabiduría que en los demás vivientes, sino para que se dé a conocer al rey la interpretación y para que entiendas los pensamientos de tu corazón.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "denied_personal_cause_dual_revelatory_purpose",
+      "option_category": "negative_cause_purpose_contrast",
+      "variant_justification": "La presentación existente pregunta los dos propósitos; esta variante añade la causa personal negada y exige ubicar correctamente los tres miembros del contraste.",
+      "authored_content_sha256": "f3be1a49caa7ea1a4951e23939b3710423833a4a797d6e59a0850ed3cff4bc6e",
+      "source_ref": "Daniel 2:30",
+      "source_quote": "Y a mí me ha sido revelado este misterio, no porque en mí haya más sabiduría que en los demás vivientes, sino para que se dé a conocer al rey la interpretación y para que entiendas los pensamientos de tu corazón.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué dos propósitos atribuyó Daniel a la revelación recibida?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN2-C13-004",
+      "source_unit_id": "DAN2-V035",
+      "fact_id": "DAN2-V035-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "comparison",
+      "question": "¿Qué doble trayectoria opone correctamente el destino de los materiales de la imagen al resultado alcanzado por la piedra?",
+      "options": [
+        "hierro, barro, bronce, plata y oro desmenuzados → como tamo llevado por el viento sin dejar rastro | piedra que hirió la imagen → gran monte que llenó toda la tierra",
+        "oro, plata y bronce fundidos → como metal reunido en una sola estatua | piedra que evitó la imagen → pequeño altar que quedó en Babilonia",
+        "hierro y barro preservados → como cimientos resistentes al viento | piedra que sostuvo la imagen → reino dividido que ocupó una provincia",
+        "todos los materiales dispersados → como semillas que volvieron a crecer | piedra desmenuzada por la imagen → polvo que desapareció sin rastro"
+      ],
+      "evidence_excerpt": "Entonces fueron desmenuzados también el hierro, el barro cocido, el bronce, la plata y el oro, y fueron como tamo de las eras del verano, y se los llevó el viento sin que de ellos quedara rastro alguno. Pero la piedra que hirió a la imagen se hizo un gran monte que llenó toda la tierra.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "image_dissipation_stone_expansion_contrast",
+      "option_category": "parallel_outcome_trajectories",
+      "variant_justification": "La presentación existente pregunta sólo qué ocurrió con los materiales antes del desenlace; esta variante contrasta esa trayectoria completa con la transformación y alcance posterior de la piedra.",
+      "authored_content_sha256": "17f5e5094d0c08ac2a8d5236858b585b5815ab6af2bfc221dcf1b04e4cf0e3d8",
+      "source_ref": "Daniel 2:35",
+      "source_quote": "Entonces fueron desmenuzados también el hierro, el barro cocido, el bronce, la plata y el oro, y fueron como tamo de las eras del verano, y se los llevó el viento sin que de ellos quedara rastro alguno. Pero la piedra que hirió a la imagen se hizo un gran monte que llenó toda la tierra.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué sucedió con los materiales desmenuzados antes de que la piedra llenara la tierra?",
+          "family": "single_choice_contextual",
+          "subtype": "narrative_order"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "e0adb0708e51212cee62b7bf9af16b153704df5d1a8c2ae447398fc116c11ace"
+}

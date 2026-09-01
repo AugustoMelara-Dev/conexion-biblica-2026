@@ -1,0 +1,153 @@
+[
+  {
+    "id": "V13-R2-DAN8-C13-001",
+    "source_unit_id": "DAN8-V006",
+    "fact_id": "DAN8-V006-F02",
+    "role": "variant",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "Complete la ficha del ataque conservando agresor, objetivo ya identificado, ubicación y modo de avance: ____.",
+    "options": [
+      "macho cabrío → carnero de dos cuernos visto antes → ribera del río → corre contra él con la furia de su fuerza",
+      "carnero → macho cabrío de cuatro cuernos → centro del mar → huye de él sin fuerza",
+      "cuerno pequeño → Anciano de días → orilla del Hidekel → se acerca con humildad",
+      "Gabriel → ejército del santuario → tierra gloriosa → vuela con presteza"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "macho cabrío → carnero de dos cuernos visto antes → ribera del río → corre contra él con la furia de su fuerza"
+    ],
+    "explanation": "El macho cabrío alcanza al carnero de dos cuernos en la ribera y carga contra él con fuerza furiosa.",
+    "evidence_excerpt": "Vino hasta el carnero de dos cuernos que yo había visto en la ribera del río, y corrió contra él con la furia de su fuerza.",
+    "why_distractors_fail": {
+      "carnero → macho cabrío de cuatro cuernos → centro del mar → huye de él sin fuerza": "Invierte agresor y objetivo y altera lugar y movimiento.",
+      "cuerno pequeño → Anciano de días → orilla del Hidekel → se acerca con humildad": "Mezcla símbolos, capítulo, río y actitud.",
+      "Gabriel → ejército del santuario → tierra gloriosa → vuela con presteza": "Traslada un mensajero y acciones de otro contexto."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "goat_ram_river_furious_charge",
+    "option_category": "attacker_target_setting_manner",
+    "false_mutation": null,
+    "blank_span": "macho cabrío → carnero de dos cuernos visto antes → ribera del río → corre contra él con la furia de su fuerza",
+    "significance": "Exige resolver la relación completa del ataque, no únicamente el verbo correr.",
+    "variant_justification": "Las presentaciones públicas completan sólo la acción; ésta añade atacante, objetivo, rasgo y ubicación.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN8-C13-002",
+    "source_unit_id": "DAN8-V012",
+    "fact_id": "DAN8-V012-F04",
+    "role": "variant",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "A causa de la prevaricación fueron entregados el ejército y el sacrificio continuo; después la verdad fue echada por tierra, el poder hizo cuanto quiso y prosperó.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "La afirmación conserva causa, doble entrega y la secuencia de abatir la verdad, actuar arbitrariamente y prosperar.",
+    "evidence_excerpt": "A causa de la prevaricación le fue entregado el ejército junto con el sacrificio continuo; echó por tierra la verdad e hizo cuanto quiso, y prosperó.",
+    "why_distractors_fail": {
+      "Falso": "Negaría una cadena causal y operativa que la fuente expresa sin alteración."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "transgression_double_delivery_truth_autonomy_prosperity",
+    "option_category": "cause_to_outcome_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Amplía la causa de la entrega hasta sus tres consecuencias sucesivas.",
+    "variant_justification": "Las presentaciones públicas sólo verifican la causa y lo entregado; ésta exige auditar además verdad, autonomía y prosperidad.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN8-C13-003",
+    "source_unit_id": "DAN8-V024",
+    "fact_id": "DAN8-V024-F10",
+    "role": "variant",
+    "family": "true_false",
+    "subtype": "comparison",
+    "question": "El poder del rey se fortalecerá con fuerza propia; causará grandes ruinas, prosperará, actuará arbitrariamente y destruirá a los fuertes y al pueblo de los santos.",
+    "options": [
+      "Verdadero",
+      "Falso"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Falso"
+    ],
+    "explanation": "La cadena de acciones y víctimas es correcta, pero la fuente precisa que su poder no se fortalecerá con fuerza propia.",
+    "evidence_excerpt": "Su poder se fortalecerá, mas no con fuerza propia; causará grandes ruinas, prosperará, actuará arbitrariamente y destruirá a los fuertes y al pueblo de los santos.",
+    "why_distractors_fail": {
+      "Verdadero": "Aceptaría una mutación local que invierte explícitamente el origen de la fuerza."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "external_power_ruin_prosperity_arbitrary_destruction",
+    "option_category": "power_source_and_action_chain",
+    "false_mutation": {
+      "local": true,
+      "original": "no con fuerza propia",
+      "replacement": "con fuerza propia",
+      "changed_fields": [
+        "power_source"
+      ]
+    },
+    "blank_span": null,
+    "significance": "Distingue la procedencia del poder de los resultados que ese poder produce.",
+    "variant_justification": "Las presentaciones previas verifican sólo las víctimas; ésta añade origen del poder, ruina, prosperidad y arbitrariedad con una única mutación local.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN8-C13-004",
+    "source_unit_id": "DAN8-V027",
+    "fact_id": "DAN8-V027-F09",
+    "role": "variant",
+    "family": "fill_choice",
+    "subtype": "narrative_order",
+    "question": "Complete la secuencia que distingue estado físico, recuperación funcional y reacción intelectual de Daniel: ____.",
+    "options": [
+      "quedó quebrantado y enfermo algunos días → se levantó y atendió los negocios del rey → siguió espantado y no entendía la visión",
+      "quedó fortalecido una tarde → abandonó los negocios del rey → comprendió plenamente la visión",
+      "quedó dormido siete tiempos → se levantó para gobernar Persia → olvidó que había visto una visión",
+      "quedó alegre y sano → atendió el santuario → explicó la visión a los magos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "quedó quebrantado y enfermo algunos días → se levantó y atendió los negocios del rey → siguió espantado y no entendía la visión"
+    ],
+    "explanation": "Daniel pasa de quebranto y enfermedad a retomar sus deberes, pero el espanto y la falta de comprensión permanecen.",
+    "evidence_excerpt": "Yo, Daniel, quedé quebrantado, y estuve enfermo algunos días. Cuando me levanté, atendí los negocios del rey; pero estaba espantado a causa de la visión, y no la entendía.",
+    "why_distractors_fail": {
+      "quedó fortalecido una tarde → abandonó los negocios del rey → comprendió plenamente la visión": "Invierte estado, conducta y comprensión.",
+      "quedó dormido siete tiempos → se levantó para gobernar Persia → olvidó que había visto una visión": "Mezcla duración y gobierno de otros episodios.",
+      "quedó alegre y sano → atendió el santuario → explicó la visión a los magos": "Sustituye condición, tarea y resultado intelectual."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "illness_return_to_duty_persistent_perplexity",
+    "option_category": "physical_functional_cognitive_sequence",
+    "false_mutation": null,
+    "blank_span": "quedó quebrantado y enfermo algunos días → se levantó y atendió los negocios del rey → siguió espantado y no entendía la visión",
+    "significance": "Separa recuperación laboral de recuperación física e interpretación profética.",
+    "variant_justification": "Las presentaciones públicas recuperan sólo la enfermedad; ésta exige reconstruir el contraste completo entre estado, deber y comprensión.",
+    "author": {
+      "id": "r2_c11_dan4_dan9",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

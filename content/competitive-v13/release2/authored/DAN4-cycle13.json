@@ -1,0 +1,192 @@
+[
+  {
+    "id": "V13-R2-DAN4-C13-001",
+    "source_unit_id": "DAN4-V005",
+    "fact_id": "DAN4-V005-F02",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "\u00bfQu\u00e9 registro conserva causa emocional, postura f\u00edsica y doble contenido mental despu\u00e9s del sue\u00f1o?",
+    "options": [
+      "El sue\u00f1o lo alegr\u00f3; caminaba por el palacio; s\u00f3lo una voz lo inquiet\u00f3",
+      "El sue\u00f1o lo espant\u00f3; tendido en la cama, imaginaciones y visiones de su cabeza lo turbaron",
+      "La interpretaci\u00f3n lo espant\u00f3; sentado en el trono, los sabios lo tranquilizaron",
+      "El \u00e1rbol lo alegr\u00f3; de pie ante Daniel, olvid\u00f3 todas las visiones"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "El sue\u00f1o lo espant\u00f3; tendido en la cama, imaginaciones y visiones de su cabeza lo turbaron"
+    ],
+    "explanation": "La fuente enlaza sue\u00f1o, espanto, cama y turbaci\u00f3n producida por imaginaciones y visiones.",
+    "why_distractors_fail": {
+      "El sue\u00f1o lo alegr\u00f3; caminaba por el palacio; s\u00f3lo una voz lo inquiet\u00f3": "Invierte la emoci\u00f3n, cambia postura y reduce el contenido.",
+      "La interpretaci\u00f3n lo espant\u00f3; sentado en el trono, los sabios lo tranquilizaron": "Confunde sue\u00f1o con interpretaci\u00f3n y a\u00f1ade a los sabios.",
+      "El \u00e1rbol lo alegr\u00f3; de pie ante Daniel, olvid\u00f3 todas las visiones": "Sustituye causa, postura y resultado."
+    },
+    "evidence_excerpt": "tendido en la cama",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "dream_fear_posture_mental_effect",
+    "option_category": "four_axis_dream_reaction",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue componentes simult\u00e1neos de una reacci\u00f3n nocturna.",
+    "variant_justification": "La presentaci\u00f3n existente s\u00f3lo opone complacido y turbado; esta variante exige reconstruir los cuatro campos.",
+    "answer_support_term": "tendido en la cama",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN4-C13-002",
+    "source_unit_id": "DAN4-V007",
+    "fact_id": "DAN4-V007-F01",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "\u00bfQu\u00e9 secuencia describe correctamente la consulta fallida del rey?",
+    "options": [
+      "Llegaron magos, astr\u00f3logos, caldeos y adivinos; el rey les cont\u00f3 el sue\u00f1o; no pudieron darle la interpretaci\u00f3n",
+      "Llegaron gobernadores y s\u00e1trapas; Daniel ocult\u00f3 el sue\u00f1o; todos lo interpretaron",
+      "Llegaron s\u00f3lo magos; el rey cont\u00f3 la interpretaci\u00f3n; ellos olvidaron el sue\u00f1o",
+      "Llegaron vigilantes y santos; el rey guard\u00f3 silencio; ellos cortaron el \u00e1rbol"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Llegaron magos, astr\u00f3logos, caldeos y adivinos; el rey les cont\u00f3 el sue\u00f1o; no pudieron darle la interpretaci\u00f3n"
+    ],
+    "explanation": "La cadena incluye cuatro grupos, comunicaci\u00f3n completa del sue\u00f1o y fracaso interpretativo.",
+    "why_distractors_fail": {
+      "Llegaron gobernadores y s\u00e1trapas; Daniel ocult\u00f3 el sue\u00f1o; todos lo interpretaron": "Sustituye grupos, hablante y resultado.",
+      "Llegaron s\u00f3lo magos; el rey cont\u00f3 la interpretaci\u00f3n; ellos olvidaron el sue\u00f1o": "Reduce los grupos e invierte sue\u00f1o e interpretaci\u00f3n.",
+      "Llegaron vigilantes y santos; el rey guard\u00f3 silencio; ellos cortaron el \u00e1rbol": "Introduce seres de la visi\u00f3n y acciones ajenas."
+    },
+    "evidence_excerpt": "no me pudieron dar su interpretacion",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "consulted_groups_disclosure_failure",
+    "option_category": "group_action_outcome_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Separa convocatoria, informaci\u00f3n disponible y capacidad interpretativa.",
+    "variant_justification": "El cloze existente s\u00f3lo recupera el fracaso; aqu\u00ed se exige toda la secuencia con actores homog\u00e9neos.",
+    "answer_support_term": "dar su interpretacion",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN4-C13-003",
+    "source_unit_id": "DAN4-V011",
+    "fact_id": "DAN4-V011-F03",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "\u00bfQu\u00e9 progresi\u00f3n espacial y de poder conserva todos los rasgos del \u00e1rbol?",
+    "options": [
+      "Dej\u00f3 de crecer, se debilit\u00f3, su copa cay\u00f3 y s\u00f3lo se vio desde Babilonia",
+      "Creci\u00f3, se fortaleci\u00f3, su copa lleg\u00f3 al cielo y pudo verse desde todos los confines de la tierra",
+      "Creci\u00f3 sin fortalecerse, sus ra\u00edces llegaron al cielo y qued\u00f3 invisible",
+      "Fue cortado, perdi\u00f3 ramas, su fruto se dispers\u00f3 y las bestias permanecieron"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Creci\u00f3, se fortaleci\u00f3, su copa lleg\u00f3 al cielo y pudo verse desde todos los confines de la tierra"
+    ],
+    "explanation": "El \u00e1rbol combina crecimiento, fuerza, altura celeste y visibilidad universal.",
+    "why_distractors_fail": {
+      "Dej\u00f3 de crecer, se debilit\u00f3, su copa cay\u00f3 y s\u00f3lo se vio desde Babilonia": "Invierte crecimiento, fuerza, altura y alcance.",
+      "Creci\u00f3 sin fortalecerse, sus ra\u00edces llegaron al cielo y qued\u00f3 invisible": "Cambia copa por ra\u00edces y niega fuerza y visibilidad.",
+      "Fue cortado, perdi\u00f3 ramas, su fruto se dispers\u00f3 y las bestias permanecieron": "Traslada \u00f3rdenes posteriores al perfil de crecimiento."
+    },
+    "evidence_excerpt": "se le alcanzaba a ver desde todos los confines de la tierra",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "growth_strength_height_visibility",
+    "option_category": "four_stage_tree_profile",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Construye un perfil acumulativo del s\u00edmbolo antes de su ca\u00edda.",
+    "variant_justification": "La presentaci\u00f3n existente s\u00f3lo identifica el \u00e1rbol; esta variante discrimina cuatro atributos relacionados.",
+    "answer_support_term": "todos los confines de la tierra",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN4-C13-004",
+    "source_unit_id": "DAN4-V014",
+    "fact_id": "DAN4-V014-F01",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "\u00bfQu\u00e9 alternativa mantiene la orden sobre estructura del \u00e1rbol, cobertura, fruto y ocupantes?",
+    "options": [
+      "Derribar el \u00e1rbol, cortar ramas, quitar follaje, dispersar fruto; apartar bestias de debajo y aves de las ramas",
+      "Podar el \u00e1rbol, conservar ramas, aumentar follaje, recoger fruto; reunir bestias y aves",
+      "Derribar el \u00e1rbol, conservar la copa, ocultar el fruto; dejar bestias y expulsar s\u00f3lo aves",
+      "Fortalecer el \u00e1rbol, extender ramas, repartir follaje; llevar bestias al cielo"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Derribar el \u00e1rbol, cortar ramas, quitar follaje, dispersar fruto; apartar bestias de debajo y aves de las ramas"
+    ],
+    "explanation": "La orden distingue cuatro acciones sobre el \u00e1rbol y dos desplazamientos de sus ocupantes.",
+    "why_distractors_fail": {
+      "Podar el \u00e1rbol, conservar ramas, aumentar follaje, recoger fruto; reunir bestias y aves": "Invierte cada acci\u00f3n y re\u00fane en vez de dispersar.",
+      "Derribar el \u00e1rbol, conservar la copa, ocultar el fruto; dejar bestias y expulsar s\u00f3lo aves": "Conserva elementos que deb\u00edan quitarse y altera los desplazamientos.",
+      "Fortalecer el \u00e1rbol, extender ramas, repartir follaje; llevar bestias al cielo": "Convierte destrucci\u00f3n en fortalecimiento y a\u00f1ade un destino imposible."
+    },
+    "evidence_excerpt": "quitadle el follaje y dispersad su fruto",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "tree_dismantling_dispersion",
+    "option_category": "ordered_object_action_matrix",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige mantener acci\u00f3n, objeto y destinatario en una orden m\u00faltiple.",
+    "variant_justification": "La presentaci\u00f3n existente s\u00f3lo muta recoger/dispersar fruto; esta variante reconstruye la orden completa.",
+    "answer_support_term": "dispersad su fruto",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN4-C13-005",
+    "source_unit_id": "DAN4-V025",
+    "fact_id": "DAN4-V025-F03",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "\u00bfQu\u00e9 cadena conserva expulsi\u00f3n, condici\u00f3n animal, duraci\u00f3n y aprendizaje soberano?",
+    "options": [
+      "Expulsado de los hombres; morada con bestias; hierba como bueyes y roc\u00edo; siete tiempos hasta reconocer que el Alt\u00edsimo domina y da el reino a quien quiere",
+      "Exiliado de Babilonia; morada con ovejas; pan de rey; tres tiempos hasta recuperar el trono por fuerza",
+      "Encerrado con hombres; alimento de aves; sin plazo; hasta reconocer el dominio de los sabios",
+      "Llevado al templo; morada con sacerdotes; vino y carne; doce meses hasta entregar el reino a Daniel"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Expulsado de los hombres; morada con bestias; hierba como bueyes y roc\u00edo; siete tiempos hasta reconocer que el Alt\u00edsimo domina y da el reino a quien quiere"
+    ],
+    "explanation": "La sentencia une degradaci\u00f3n social y f\u00edsica con un plazo y una meta cognitiva sobre soberan\u00eda y concesi\u00f3n del reino.",
+    "why_distractors_fail": {
+      "Exiliado de Babilonia; morada con ovejas; pan de rey; tres tiempos hasta recuperar el trono por fuerza": "Cambia expulsi\u00f3n, animales, alimento, plazo y aprendizaje.",
+      "Encerrado con hombres; alimento de aves; sin plazo; hasta reconocer el dominio de los sabios": "Invierte la separaci\u00f3n y elimina plazo y soberan\u00eda divina.",
+      "Llevado al templo; morada con sacerdotes; vino y carne; doce meses hasta entregar el reino a Daniel": "Sustituye escenario, dieta, duraci\u00f3n y destinatario."
+    },
+    "evidence_excerpt": "siete tiempos pasaran sobre ti",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "humiliation_duration_sovereignty",
+    "option_category": "punishment_learning_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Relaciona castigo, tiempo y prop\u00f3sito epistemol\u00f3gico.",
+    "variant_justification": "La presentaci\u00f3n existente s\u00f3lo discrimina bueyes frente a ovejas; aqu\u00ed se eval\u00faa la arquitectura completa de la sentencia.",
+    "answer_support_term": "siete tiempos",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

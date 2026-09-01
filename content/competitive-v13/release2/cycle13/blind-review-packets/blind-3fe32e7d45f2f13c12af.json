@@ -1,0 +1,195 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-3fe32e7d45f2f13c12af",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN6-C13-001",
+      "source_unit_id": "DAN6-V010",
+      "fact_id": "DAN6-V010-F02",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "Después de conocer el edicto, ¿qué registro conserva lugar, orientación, frecuencia, postura y doble acción devocional?",
+      "options": [
+        "Entró en su casa; ventanas hacia Jerusalén; tres veces al día se arrodilló, oró y dio gracias como antes",
+        "Fue al palacio; puertas hacia Media; una vez se mantuvo de pie y pidió al rey",
+        "Entró al templo; ventanas cerradas; siete veces cantó sin orar",
+        "Se ocultó en el foso; sin ventanas; dejó de dar gracias"
+      ],
+      "evidence_excerpt": "se arrodillaba tres veces al dia, oraba y daba gracias",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "decree_response_prayer_pattern",
+      "option_category": "five_axis_devotional_record",
+      "variant_justification": "La presentación existente pregunta sólo la frecuencia; ésta exige el patrón completo.",
+      "authored_content_sha256": "de146b42229690eaed595400e93488b63aef60450cb5aa1193c8dc7e96a29084",
+      "source_ref": "Daniel 6:10",
+      "source_quote": "Cuando Daniel supo que el edicto había sido firmado, entró en su casa; abiertas las ventanas de su habitación que daban a Jerusalén, se arrodillaba tres veces al día, oraba y daba gracias delante de su Dios como solía hacerlo antes.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Después de conocer el edicto, ¿cuántas veces al día continuó Daniel arrodillándose, orando y dando gracias?",
+          "family": "single_choice_direct",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN6-C13-002",
+      "source_unit_id": "DAN6-V012",
+      "fact_id": "DAN6-V012-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué correspondencia conserva contenido del edicto, sanción, respuesta del rey y fundamento legal?",
+      "options": [
+        "Treinta días sin pedir a dios u hombre fuera del rey; foso de leones; Dario confirmó que era verdad conforme a ley medopersa irrevocable",
+        "Siete días sin hablar a gobernadores; destierro; Dario negó haber firmado",
+        "Treinta años sin orar en Jerusalén; horno de fuego; los sátrapas revocaron la ley",
+        "Un día sin dar gracias; prisión; Daniel confirmó el edicto persa"
+      ],
+      "evidence_excerpt": "Verdad es, conforme a la ley de Media y de Persia",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "edict_sanction_royal_confirmation_law",
+      "option_category": "four_axis_legal_audit",
+      "variant_justification": "La presentación existente contiene una atribución falsa de confirmación; esta variante reconstruye toda la ficha legal.",
+      "authored_content_sha256": "6e9a7208567dd011f755e69513dbc35445b226156f33fdf7cb1dcc65d59c94d1",
+      "source_ref": "Daniel 6:12",
+      "source_quote": "Fueron luego ante el rey y le hablaron del edicto real: —¿No has confirmado un edicto ordenando que cualquiera que en el espacio de treinta días pida a cualquier dios u hombre fuera de ti, rey, sea echado al foso de los leones? Respondió el rey diciendo: —Verdad es, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Cuando le preguntaron por el edicto, Darío respondió que los sátrapas lo habían confirmado en su lugar.",
+          "family": "true_false",
+          "subtype": "speaker_addressee"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN6-C13-003",
+      "source_unit_id": "DAN6-V014",
+      "fact_id": "DAN6-V014-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "Al comprender el asunto, ¿qué secuencia describe emoción, decisión y esfuerzo temporal del rey?",
+      "options": [
+        "Se alegró, resolvió castigar a Daniel y trabajó hasta el amanecer",
+        "Le pesó en gran manera, resolvió librar a Daniel y trabajó hasta la puesta del sol para lograrlo",
+        "Quedó indiferente, revocó de inmediato la ley y abandonó el palacio",
+        "Se enojó con Daniel, decidió llamar a los leones y trabajó hasta mediodía"
+      ],
+      "evidence_excerpt": "hasta la puesta del sol trabajo para librarlo",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "grief_resolution_persistent_effort",
+      "option_category": "emotion_decision_duration_chain",
+      "variant_justification": "El cloze existente recupera sólo la resolución; aquí se requiere toda la progresión.",
+      "authored_content_sha256": "d56021884f552b82d60ddadbe1f5cd05188a9931e5a36c3bbebbbce28c2a8502",
+      "source_ref": "Daniel 6:14",
+      "source_quote": "Cuando el rey oyó el asunto, le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para librarlo.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Cuando comprendió la trampa contra Daniel, Darío ________ librarlo y trabajó hasta la puesta del sol.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN6-C13-004",
+      "source_unit_id": "DAN6-V018",
+      "fact_id": "DAN6-V018-F03",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué ficha nocturna conserva destino, alimentación, entretenimiento y resultado sobre el sueño?",
+      "options": [
+        "Volvió al palacio; se acostó en ayunas; rechazó instrumentos musicales; perdió el sueño",
+        "Fue al foso; cenó abundantemente; pidió música; durmió en paz",
+        "Regresó a Jerusalén; ayunó con Daniel; escuchó instrumentos; soñó con leones",
+        "Permaneció en el tribunal; bebió vino; llamó a músicos; despertó al mediodía"
+      ],
+      "evidence_excerpt": "se acosto en ayunas",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "palace_fast_no_music_sleeplessness",
+      "option_category": "four_axis_night_record",
+      "variant_justification": "La presentación existente sólo completa ayuno; esta variante exige el cuadro nocturno completo.",
+      "authored_content_sha256": "e4ebd3d7f90cf65364e6d57cb91db3d3a235197675b4102456283da5c056e1e7",
+      "source_ref": "Daniel 6:18",
+      "source_quote": "Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "El rey regresó a su palacio y pasó la noche en ________; no aceptó música y perdió el sueño.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN6-C13-005",
+      "source_unit_id": "DAN6-V020",
+      "fact_id": "DAN6-V020-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "Ante el foso, ¿qué registro conserva aproximación, tono, títulos y pregunta central de Dario?",
+      "options": [
+        "Se acercó en silencio, llamó alegre a Daniel rey y preguntó si los príncipes lo habían liberado",
+        "Se acercó al foso, gritó con voz triste a Daniel, siervo del Dios viviente, y preguntó si el Dios a quien servía continuamente pudo librarlo de los leones",
+        "Se alejó del foso, habló con voz airada a Daniel cautivo y preguntó por el edicto",
+        "Entró al foso, susurró a Daniel gobernador y preguntó si había dormido"
+      ],
+      "evidence_excerpt": "llamo a gritos a Daniel con voz triste",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "approach_tone_identity_deliverance_question",
+      "option_category": "four_axis_pit_address",
+      "variant_justification": "La presentación existente sólo completa el verbo servir; ésta reconstruye la escena y la pregunta completa.",
+      "authored_content_sha256": "5460ab81a995e2056e487606a08ffc1a18bd1a2d96bd445894d03097aba1ecb6",
+      "source_ref": "Daniel 6:20",
+      "source_quote": "Acercándose al foso, llamó a gritos a Daniel con voz triste, y le dijo: —Daniel, siervo del Dios viviente, el Dios tuyo, a quien tú continuamente sirves, ¿te ha podido librar de los leones?",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Darío llamó a Daniel siervo del Dios viviente y recordó: «el Dios tuyo, a quien tú continuamente ________».",
+          "family": "fill_choice",
+          "subtype": "speaker_addressee"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN6-C13-006",
+      "source_unit_id": "DAN6-V002",
+      "fact_id": "DAN6-V002-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué organigrama conserva nivel superior, ubicación de Daniel, flujo de cuentas y finalidad para el rey?",
+      "options": [
+        "Tres gobernadores sobre los sátrapas, Daniel entre ellos; los sátrapas rendían cuentas para que el rey no fuera perjudicado",
+        "Ciento veinte gobernadores sobre tres reyes, Daniel entre los sátrapas; el rey rendía cuentas",
+        "Tres sacerdotes bajo los sátrapas, Daniel excluido; las cuentas protegían a Babilonia",
+        "Un gobernador sobre Daniel, sin rendición de cuentas; los sátrapas elegían al rey"
+      ],
+      "evidence_excerpt": "para que el rey no fuera perjudicado",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "administrative_hierarchy_accountability_purpose",
+      "option_category": "four_axis_governance_map",
+      "variant_justification": "La presentación existente pregunta sólo la función; esta variante exige jerarquía, pertenencia, flujo y propósito.",
+      "authored_content_sha256": "a073562239c88652e06083e6f0e155230bf504312457468babb74ee0ec2460b9",
+      "source_ref": "Daniel 6:2",
+      "source_quote": "Y sobre ellos tres gobernadores, de los cuales Daniel era uno, a quienes estos sátrapas dieran cuenta, para que el rey no fuera perjudicado.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué función cumplían los tres gobernadores colocados sobre los sátrapas?",
+          "family": "single_choice_contextual",
+          "subtype": "cause_consequence"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "d5f079f324d478da112cf10c9b283a6ac30c72a8a41fcabeaf9d2b767c0bfcef"
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-20c8dc7e0e44b3c274fa",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN8-C13-001",
+      "source_unit_id": "DAN8-V006",
+      "fact_id": "DAN8-V006-F02",
+      "family": "fill_choice",
+      "subtype": "relationship",
+      "question": "Complete la ficha del ataque conservando agresor, objetivo ya identificado, ubicación y modo de avance: ____.",
+      "options": [
+        "macho cabrío → carnero de dos cuernos visto antes → ribera del río → corre contra él con la furia de su fuerza",
+        "carnero → macho cabrío de cuatro cuernos → centro del mar → huye de él sin fuerza",
+        "cuerno pequeño → Anciano de días → orilla del Hidekel → se acerca con humildad",
+        "Gabriel → ejército del santuario → tierra gloriosa → vuela con presteza"
+      ],
+      "evidence_excerpt": "Vino hasta el carnero de dos cuernos que yo había visto en la ribera del río, y corrió contra él con la furia de su fuerza.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "goat_ram_river_furious_charge",
+      "option_category": "attacker_target_setting_manner",
+      "variant_justification": "Las presentaciones públicas completan sólo la acción; ésta añade atacante, objetivo, rasgo y ubicación.",
+      "authored_content_sha256": "435da557272df809b7ccf12c8a6c25a5ecaffca7f14bd580536cdba3c2628601",
+      "source_ref": "Daniel 8:6",
+      "source_quote": "Vino hasta el carnero de dos cuernos que yo había visto en la ribera del río, y corrió contra él con la furia de su fuerza.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Completa: Al ver al carnero junto al río, el macho cabrío ____ contra él.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        },
+        {
+          "question": "El macho cabrío vio al carnero junto al río y, con la furia de su fuerza, ____ contra él.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN8-C13-002",
+      "source_unit_id": "DAN8-V012",
+      "fact_id": "DAN8-V012-F04",
+      "family": "true_false",
+      "subtype": "cause_consequence",
+      "question": "A causa de la prevaricación fueron entregados el ejército y el sacrificio continuo; después la verdad fue echada por tierra, el poder hizo cuanto quiso y prosperó.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "A causa de la prevaricación le fue entregado el ejército junto con el sacrificio continuo; echó por tierra la verdad e hizo cuanto quiso, y prosperó.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "transgression_double_delivery_truth_autonomy_prosperity",
+      "option_category": "cause_to_outcome_chain",
+      "variant_justification": "Las presentaciones públicas sólo verifican la causa y lo entregado; ésta exige auditar además verdad, autonomía y prosperidad.",
+      "authored_content_sha256": "26fa2f74b02a09bb941c88f690f83a6ec0e67c3d92fab78f50ec44ddaacd0dcf",
+      "source_ref": "Daniel 8:12",
+      "source_quote": "A causa de la prevaricación le fue entregado el ejército junto con el sacrificio continuo; echó por tierra la verdad e hizo cuanto quiso, y prosperó.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "El ejército fue entregado junto con el sacrificio continuo a causa de la fidelidad.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        },
+        {
+          "question": "La prevaricación fue la causa de que el ejército y el sacrificio continuo fueran entregados.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN8-C13-003",
+      "source_unit_id": "DAN8-V024",
+      "fact_id": "DAN8-V024-F10",
+      "family": "true_false",
+      "subtype": "comparison",
+      "question": "El poder del rey se fortalecerá con fuerza propia; causará grandes ruinas, prosperará, actuará arbitrariamente y destruirá a los fuertes y al pueblo de los santos.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Su poder se fortalecerá, mas no con fuerza propia; causará grandes ruinas, prosperará, actuará arbitrariamente y destruirá a los fuertes y al pueblo de los santos.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "external_power_ruin_prosperity_arbitrary_destruction",
+      "option_category": "power_source_and_action_chain",
+      "variant_justification": "Las presentaciones previas verifican sólo las víctimas; ésta añade origen del poder, ruina, prosperidad y arbitrariedad con una única mutación local.",
+      "authored_content_sha256": "2b20708545ccc0720aa4432928a103f4f1e33783342bbfa5ce86526704b929cc",
+      "source_ref": "Daniel 8:24",
+      "source_quote": "Su poder se fortalecerá, mas no con fuerza propia; causará grandes ruinas, prosperará, actuará arbitrariamente y destruirá a los fuertes y al pueblo de los santos.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "El rey destruirá a los fuertes y al pueblo de los santos.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        },
+        {
+          "question": "El poder del rey ocasionaría ruina tanto entre los fuertes como entre el pueblo de los santos.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN8-C13-004",
+      "source_unit_id": "DAN8-V027",
+      "fact_id": "DAN8-V027-F09",
+      "family": "fill_choice",
+      "subtype": "narrative_order",
+      "question": "Complete la secuencia que distingue estado físico, recuperación funcional y reacción intelectual de Daniel: ____.",
+      "options": [
+        "quedó quebrantado y enfermo algunos días → se levantó y atendió los negocios del rey → siguió espantado y no entendía la visión",
+        "quedó fortalecido una tarde → abandonó los negocios del rey → comprendió plenamente la visión",
+        "quedó dormido siete tiempos → se levantó para gobernar Persia → olvidó que había visto una visión",
+        "quedó alegre y sano → atendió el santuario → explicó la visión a los magos"
+      ],
+      "evidence_excerpt": "Yo, Daniel, quedé quebrantado, y estuve enfermo algunos días. Cuando me levanté, atendí los negocios del rey; pero estaba espantado a causa de la visión, y no la entendía.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "illness_return_to_duty_persistent_perplexity",
+      "option_category": "physical_functional_cognitive_sequence",
+      "variant_justification": "Las presentaciones públicas recuperan sólo la enfermedad; ésta exige reconstruir el contraste completo entre estado, deber y comprensión.",
+      "authored_content_sha256": "c94e4cc9dae3bd3a936150e6193a399dac8d6ece3003ac0f70b552e103e54785",
+      "source_ref": "Daniel 8:27",
+      "source_quote": "Yo, Daniel, quedé quebrantado, y estuve enfermo algunos días. Cuando me levanté, atendí los negocios del rey; pero estaba espantado a causa de la visión, y no la entendía.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Cómo estuvo Daniel durante algunos días después de la visión?",
+          "family": "single_choice_direct",
+          "subtype": "cause_consequence"
+        },
+        {
+          "question": "¿Qué estado físico acompañó a Daniel durante varios días después de quedar quebrantado?",
+          "family": "single_choice_direct",
+          "subtype": "cause_consequence"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "b72a0e0481189d27f9f41fc0f043549bf2dc5bb11c900a3abe1024c097559664"
+}

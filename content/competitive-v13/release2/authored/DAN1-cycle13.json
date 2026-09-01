@@ -1,0 +1,40 @@
+[
+  {
+    "id": "V13-R2-DAN1-C13-001",
+    "source_unit_id": "DAN1-V011",
+    "fact_id": "DAN1-V011-F03",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué mapa conserva simultáneamente la cadena de autoridad, el interlocutor inmediato de Daniel y la cobertura nominal completa del encargo?",
+    "options": [
+      "El jefe de los eunucos puso a Melsar sobre Daniel, Ananías, Misael y Azarías; Melsar habló a Daniel.",
+      "El rey puso a Melsar sobre Daniel, Ananías, Misael y Azarías; Daniel habló a Melsar.",
+      "El jefe de los eunucos puso a Melsar sobre Daniel, Ananías, Misael y Azarías; Daniel habló a Melsar.",
+      "El jefe de los eunucos puso a Daniel sobre Melsar, Ananías, Misael y Azarías; Daniel habló a Melsar."
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "El jefe de los eunucos puso a Melsar sobre Daniel, Ananías, Misael y Azarías; Daniel habló a Melsar."
+    ],
+    "explanation": "El jefe de los eunucos es quien designó a Melsar sobre los cuatro jóvenes nombrados, y Daniel es quien se dirigió inmediatamente a Melsar.",
+    "why_distractors_fail": {
+      "El jefe de los eunucos puso a Melsar sobre Daniel, Ananías, Misael y Azarías; Melsar habló a Daniel.": "Invierte la dirección del diálogo: Daniel habló a Melsar.",
+      "El rey puso a Melsar sobre Daniel, Ananías, Misael y Azarías; Daniel habló a Melsar.": "Atribuye la designación al rey, aunque el texto la atribuye al jefe de los eunucos.",
+      "El jefe de los eunucos puso a Daniel sobre Melsar, Ananías, Misael y Azarías; Daniel habló a Melsar.": "Intercambia encargado y beneficiario: el designado sobre los cuatro fue Melsar, no Daniel."
+    },
+    "evidence_excerpt": "Entonces dijo Daniel a Melsar, a quien el jefe de los eunucos había puesto sobre Daniel, Ananías, Misael y Azarías:",
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "authority_speaker_addressee_roster_mapping",
+    "option_category": "four_axis_role_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige mantener sin intercambios al agente de la designación, al encargado, al hablante, al destinatario y a los cuatro integrantes bajo su responsabilidad.",
+    "variant_justification": "La presentación pública recupera sólo quién designó a Melsar; esta variante exige reconstruir además la dirección del diálogo y el conjunto nominal completo bajo su encargo.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

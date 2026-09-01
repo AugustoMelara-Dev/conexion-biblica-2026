@@ -1,0 +1,164 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-d0f5e6044511daf5c690",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN5-C13-001",
+      "source_unit_id": "DAN5-V001",
+      "fact_id": "DAN5-V001-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué ficha conserva anfitrión, escala del banquete y conducta pública?",
+      "options": [
+        "Belsasar ofreció un gran banquete a mil príncipes y bebía vino en presencia de los mil",
+        "Darío ofreció una cena a ciento veinte sátrapas y ayunó delante de ellos",
+        "Nabucodonosor reunió a tres sabios y evitó beber vino",
+        "Daniel ofreció un banquete privado y bebió ante el rey"
+      ],
+      "evidence_excerpt": "en presencia de los mil bebia vino",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "host_scale_public_conduct",
+      "option_category": "banquet_three_axis_record",
+      "variant_justification": "La presentación existente sólo identifica al rey; esta variante exige tres relaciones simultáneas.",
+      "authored_content_sha256": "ae941b78de214b92df5cf2650028ef21749f94a9638c288a71dc2eeea1f7193c",
+      "source_ref": "Daniel 5:1",
+      "source_quote": "El rey Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué rey ofreció un gran banquete a mil de sus príncipes y bebió vino delante de ellos?",
+          "family": "single_choice_direct",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C13-002",
+      "source_unit_id": "DAN5-V017",
+      "fact_id": "DAN5-V017-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué contraste define la respuesta de Daniel antes de interpretar?",
+      "options": [
+        "Aceptó dones y recompensas, pero se negó a leer la escritura",
+        "Rechazó para sí los dones y mandó dar recompensas a otros, pero se comprometió a leer la escritura y explicar su interpretación",
+        "Pidió mayores dones y delegó la lectura en los sabios",
+        "Rechazó hablar con el rey y guardó para sí la escritura"
+      ],
+      "evidence_excerpt": "Leere la escritura al rey y le dare la interpretacion",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "gift_refusal_service_acceptance",
+      "option_category": "double_response_contrast",
+      "variant_justification": "La presentación existente sólo pregunta quién actuó; ésta exige resolver el contraste completo.",
+      "authored_content_sha256": "1a81962f1ad199fa393cc0d869b116bde6ee397afdf44ee4d3963376e13692c6",
+      "source_ref": "Daniel 5:17",
+      "source_quote": "Entonces Daniel respondió y dijo al rey: —Tus dones sean para ti; da tus recompensas a otros. Leeré la escritura al rey y le daré la interpretación.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Quién rechazó los dones del rey, pero aceptó leer la escritura y explicar su significado?",
+          "family": "single_choice_direct",
+          "subtype": "speaker_addressee"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C13-003",
+      "source_unit_id": "DAN5-V025",
+      "fact_id": "DAN5-V025-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Cuál es la secuencia exacta de la escritura, incluida la repetición inicial?",
+      "options": [
+        "Mene, Tekel, Mene, Uparsin",
+        "Mene, Mene, Tekel, Uparsin",
+        "Tekel, Mene, Uparsin, Mene",
+        "Uparsin, Tekel, Mene, Mene"
+      ],
+      "evidence_excerpt": "Mene, Mene, Tekel, Uparsin",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "inscription_exact_order",
+      "option_category": "four_position_sequence",
+      "variant_justification": "La presentación existente completa sólo la última palabra; esta variante exige ordenar las cuatro posiciones.",
+      "authored_content_sha256": "7022d702100abfd799a6aa59ed323f6356f2759aee77679632a008e123423eaf",
+      "source_ref": "Daniel 5:25",
+      "source_quote": "Y la escritura que trazó es: “Mene, Mene, Tekel, Uparsin.”",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "La inscripción apareció en esta secuencia: «Mene, Mene, Tekel, ________».",
+          "family": "fill_choice",
+          "subtype": "text_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C13-004",
+      "source_unit_id": "DAN5-V026",
+      "fact_id": "DAN5-V026-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "En la interpretación de Mene, ¿qué correspondencia une palabra, agente, objeto y resultado?",
+      "options": [
+        "Mene: Daniel contó los días del banquete y lo prolongó",
+        "Mene: Dios contó el reino de Belsasar y le puso fin",
+        "Tekel: Dios contó el ejército persa y lo fortaleció",
+        "Peres: Belsasar pesó su reino y lo dividió por voluntad propia"
+      ],
+      "evidence_excerpt": "Conto Dios tu reino y le ha puesto fin",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "term_agent_object_outcome",
+      "option_category": "interpretive_four_field_map",
+      "variant_justification": "La presentación existente pregunta sólo quién contó; esta variante exige la correspondencia completa.",
+      "authored_content_sha256": "a18c3d5f7cf438da9ade317f33e3f36d5f694673f118258a5f21d2fbda0d0399",
+      "source_ref": "Daniel 5:26",
+      "source_quote": "Ésta es la interpretación del asunto: “Mene”: Contó Dios tu reino y le ha puesto fin.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "En la interpretación de «Mene», ¿quién había contado el reino de Belsasar y le había puesto fin?",
+          "family": "single_choice_contextual",
+          "subtype": "symbol_interpretation"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN5-C13-005",
+      "source_unit_id": "DAN5-V028",
+      "fact_id": "DAN5-V028-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué ficha interpreta correctamente Peres en acción sobre el reino y destinatarios?",
+      "options": [
+        "Peres: el reino quedó fortalecido y reservado para Babilonia",
+        "Peres: el reino fue roto y dado a medos y persas",
+        "Tekel: el reino fue contado y devuelto a Belsasar",
+        "Mene: el reino fue pesado y dado sólo a Daniel"
+      ],
+      "evidence_excerpt": "dado a los medos y a los persas",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "term_break_transfer_recipients",
+      "option_category": "judgment_transfer_map",
+      "variant_justification": "La presentación existente pregunta sólo qué palabra corresponde; aquí se exige término, doble acción y receptores.",
+      "authored_content_sha256": "edb8344222f8c3f0f938d82ef9d9ea71c31b00261fc6135485fa965cca25a4ae",
+      "source_ref": "Daniel 5:28",
+      "source_quote": "“Peres”: Tu reino ha sido roto y dado a los medos y a los persas.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué palabra fue interpretada como el reino roto y entregado a medos y persas?",
+          "family": "single_choice_direct",
+          "subtype": "symbol_interpretation"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "c09a875efad5477b969e504bd0ddb68bdfaf1f3dc1e85eef41e2affc5f257ab6"
+}

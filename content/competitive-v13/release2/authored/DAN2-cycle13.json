@@ -1,0 +1,154 @@
+[
+  {
+    "id": "V13-R2-DAN2-C13-001",
+    "source_unit_id": "DAN2-V004",
+    "fact_id": "DAN2-V004-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué secuencia de acto de habla asigna correctamente idioma, fórmula de lealtad, petición y compromiso interpretativo?",
+    "options": [
+      "lengua aramea → «¡Rey, para siempre vive!» → que cuente el sueño a sus siervos → ellos darán la interpretación",
+      "lengua hebrea → «¡Dios de dioses!» → que revele la interpretación a los magos → ellos reconstruirán el sueño",
+      "lengua caldea → «¡Señor de los sabios!» → que conceda tiempo a Daniel → los siervos guardarán silencio",
+      "lengua persa → «¡Rey de Judá!» → que reúna a los gobernadores → los astrólogos dictarán la sentencia"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "lengua aramea → «¡Rey, para siempre vive!» → que cuente el sueño a sus siervos → ellos darán la interpretación"
+    ],
+    "explanation": "Los caldeos hablan en arameo, abren con una fórmula de lealtad, piden el relato del sueño y prometen aportar su interpretación.",
+    "evidence_excerpt": "Entonces hablaron los caldeos al rey en lengua aramea: —¡Rey, para siempre vive! Cuenta el sueño a tus siervos, y te daremos la interpretación.",
+    "why_distractors_fail": {
+      "lengua hebrea → «¡Dios de dioses!» → que revele la interpretación a los magos → ellos reconstruirán el sueño": "Sustituye el idioma, la fórmula de lealtad, los destinatarios de la petición y la tarea prometida.",
+      "lengua caldea → «¡Señor de los sabios!» → que conceda tiempo a Daniel → los siervos guardarán silencio": "La cita no presenta ese idioma ni esa fórmula, tampoco pide tiempo para Daniel ni promete silencio.",
+      "lengua persa → «¡Rey de Judá!» → que reúna a los gobernadores → los astrólogos dictarán la sentencia": "Cambia los cuatro componentes explícitos del acto de habla y agrega actores ausentes."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "language_salutation_request_interpretive_commitment",
+    "option_category": "speech_act_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconstruir cuatro funciones consecutivas del discurso de los caldeos, no recordar sólo su saludo.",
+    "variant_justification": "La presentación existente pregunta únicamente cómo iniciaron la respuesta; esta variante distribuye idioma, fórmula inicial, petición y compromiso posterior.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN2-C13-002",
+    "source_unit_id": "DAN2-V018",
+    "fact_id": "DAN2-V018-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué arquitectura conserva destinatario, objeto de la petición, propósito de supervivencia y grupo con el cual se compartía el riesgo?",
+    "options": [
+      "Dios del cielo → misericordias sobre el misterio → que Daniel y sus compañeros no perecieran → con los otros sabios de Babilonia",
+      "rey de Babilonia → tiempo sobre el decreto → que Arioc no pereciera → con los soldados de la guardia",
+      "dioses de los caldeos → interpretación sobre la imagen → que los magos fueran honrados → con los gobernadores de Judá",
+      "Daniel → sabiduría sobre el rey → que sus compañeros escaparan → con los cautivos de Jerusalén"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Dios del cielo → misericordias sobre el misterio → que Daniel y sus compañeros no perecieran → con los otros sabios de Babilonia"
+    ],
+    "explanation": "La súplica se dirige al Dios del cielo, pide misericordia respecto del misterio y procura evitar que Daniel y sus compañeros mueran junto con los demás sabios.",
+    "evidence_excerpt": "para que pidieran misericordias del Dios del cielo sobre este misterio, a fin de que Daniel y sus compañeros no perecieran con los otros sabios de Babilonia.",
+    "why_distractors_fail": {
+      "rey de Babilonia → tiempo sobre el decreto → que Arioc no pereciera → con los soldados de la guardia": "Sustituye destinatario, objeto, beneficiario y comunidad de riesgo.",
+      "dioses de los caldeos → interpretación sobre la imagen → que los magos fueran honrados → con los gobernadores de Judá": "Convierte la petición de misericordia y supervivencia en una solicitud de interpretación y honor no mencionada.",
+      "Daniel → sabiduría sobre el rey → que sus compañeros escaparan → con los cautivos de Jerusalén": "La cita dirige la súplica a Dios, no a Daniel, y sitúa el riesgo entre los sabios de Babilonia."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "prayer_addressee_object_survival_shared_risk",
+    "option_category": "purpose_risk_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue cuatro funciones dentro de una oración final: destinatario, objeto, finalidad y comunidad amenazada.",
+    "variant_justification": "La presentación existente recupera el objetivo completo de la oración; esta variante exige además mapear a quién se pide, sobre qué se pide y con quién se comparte el peligro.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN2-C13-003",
+    "source_unit_id": "DAN2-V030",
+    "fact_id": "DAN2-V030-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué contraste mantiene junta la causa que Daniel niega y las dos finalidades que atribuye a la revelación?",
+    "options": [
+      "no fue por poseer más sabiduría que los demás vivientes → dar a conocer al rey la interpretación → hacerle entender los pensamientos de su corazón",
+      "no fue por pertenecer a Judá → dar a conocer el decreto a los sabios → hacerles entender la fuerza del ejército",
+      "no fue por servir en la corte → ocultar al rey la interpretación → hacerle olvidar los pensamientos de su corazón",
+      "no fue por recibir tiempo de Arioc → dar a conocer a Daniel el sueño → hacer entender al rey los misterios de los caldeos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "no fue por poseer más sabiduría que los demás vivientes → dar a conocer al rey la interpretación → hacerle entender los pensamientos de su corazón"
+    ],
+    "explanation": "Daniel descarta una superioridad personal como causa y atribuye la revelación a dos fines orientados al rey: conocer la interpretación y comprender sus propios pensamientos.",
+    "evidence_excerpt": "Y a mí me ha sido revelado este misterio, no porque en mí haya más sabiduría que en los demás vivientes, sino para que se dé a conocer al rey la interpretación y para que entiendas los pensamientos de tu corazón.",
+    "why_distractors_fail": {
+      "no fue por pertenecer a Judá → dar a conocer el decreto a los sabios → hacerles entender la fuerza del ejército": "Reemplaza la causa negada y desvía ambos propósitos hacia actores y contenidos ausentes.",
+      "no fue por servir en la corte → ocultar al rey la interpretación → hacerle olvidar los pensamientos de su corazón": "Invierte la comunicación y la comprensión que la cita atribuye a la revelación.",
+      "no fue por recibir tiempo de Arioc → dar a conocer a Daniel el sueño → hacer entender al rey los misterios de los caldeos": "Confunde la causa negada, el beneficiario de la interpretación y el objeto del entendimiento."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "denied_personal_cause_dual_revelatory_purpose",
+    "option_category": "negative_cause_purpose_contrast",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Obliga a distinguir fundamento negado de finalidades afirmadas dentro de una estructura adversativa y causal.",
+    "variant_justification": "La presentación existente pregunta los dos propósitos; esta variante añade la causa personal negada y exige ubicar correctamente los tres miembros del contraste.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN2-C13-004",
+    "source_unit_id": "DAN2-V035",
+    "fact_id": "DAN2-V035-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué doble trayectoria opone correctamente el destino de los materiales de la imagen al resultado alcanzado por la piedra?",
+    "options": [
+      "hierro, barro, bronce, plata y oro desmenuzados → como tamo llevado por el viento sin dejar rastro | piedra que hirió la imagen → gran monte que llenó toda la tierra",
+      "oro, plata y bronce fundidos → como metal reunido en una sola estatua | piedra que evitó la imagen → pequeño altar que quedó en Babilonia",
+      "hierro y barro preservados → como cimientos resistentes al viento | piedra que sostuvo la imagen → reino dividido que ocupó una provincia",
+      "todos los materiales dispersados → como semillas que volvieron a crecer | piedra desmenuzada por la imagen → polvo que desapareció sin rastro"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "hierro, barro, bronce, plata y oro desmenuzados → como tamo llevado por el viento sin dejar rastro | piedra que hirió la imagen → gran monte que llenó toda la tierra"
+    ],
+    "explanation": "Los materiales terminan desmenuzados y eliminados sin rastro, mientras la piedra sigue la trayectoria inversa: crece hasta ser un monte que llena la tierra.",
+    "evidence_excerpt": "Entonces fueron desmenuzados también el hierro, el barro cocido, el bronce, la plata y el oro, y fueron como tamo de las eras del verano, y se los llevó el viento sin que de ellos quedara rastro alguno. Pero la piedra que hirió a la imagen se hizo un gran monte que llenó toda la tierra.",
+    "why_distractors_fail": {
+      "oro, plata y bronce fundidos → como metal reunido en una sola estatua | piedra que evitó la imagen → pequeño altar que quedó en Babilonia": "Cambia tanto el destino de los materiales como la acción, escala y alcance de la piedra.",
+      "hierro y barro preservados → como cimientos resistentes al viento | piedra que sostuvo la imagen → reino dividido que ocupó una provincia": "Invierte la destrucción de la imagen e inventa una función de sostén y un alcance provincial.",
+      "todos los materiales dispersados → como semillas que volvieron a crecer | piedra desmenuzada por la imagen → polvo que desapareció sin rastro": "Intercambia las trayectorias: atribuye renovación a los materiales y destrucción a la piedra."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "image_dissipation_stone_expansion_contrast",
+    "option_category": "parallel_outcome_trajectories",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige comparar dos secuencias opuestas de transformación, eliminación y expansión en una misma unidad textual.",
+    "variant_justification": "La presentación existente pregunta sólo qué ocurrió con los materiales antes del desenlace; esta variante contrasta esa trayectoria completa con la transformación y alcance posterior de la piedra.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

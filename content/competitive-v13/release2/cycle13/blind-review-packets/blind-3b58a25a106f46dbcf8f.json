@@ -1,0 +1,40 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-3b58a25a106f46dbcf8f",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN1-C13-001",
+      "source_unit_id": "DAN1-V011",
+      "fact_id": "DAN1-V011-F03",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué mapa conserva simultáneamente la cadena de autoridad, el interlocutor inmediato de Daniel y la cobertura nominal completa del encargo?",
+      "options": [
+        "El jefe de los eunucos puso a Melsar sobre Daniel, Ananías, Misael y Azarías; Melsar habló a Daniel.",
+        "El rey puso a Melsar sobre Daniel, Ananías, Misael y Azarías; Daniel habló a Melsar.",
+        "El jefe de los eunucos puso a Melsar sobre Daniel, Ananías, Misael y Azarías; Daniel habló a Melsar.",
+        "El jefe de los eunucos puso a Daniel sobre Melsar, Ananías, Misael y Azarías; Daniel habló a Melsar."
+      ],
+      "evidence_excerpt": "Entonces dijo Daniel a Melsar, a quien el jefe de los eunucos había puesto sobre Daniel, Ananías, Misael y Azarías:",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "authority_speaker_addressee_roster_mapping",
+      "option_category": "four_axis_role_mapping",
+      "variant_justification": "La presentación pública recupera sólo quién designó a Melsar; esta variante exige reconstruir además la dirección del diálogo y el conjunto nominal completo bajo su encargo.",
+      "authored_content_sha256": "c91e66883056507fa4c225ad39fed50cfe0ad84f3390777cd6d1f90bc543f09b",
+      "source_ref": "Daniel 1:11",
+      "source_quote": "Entonces dijo Daniel a Melsar, a quien el jefe de los eunucos había puesto sobre Daniel, Ananías, Misael y Azarías:",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Melsar había sido puesto sobre Daniel, Ananías, Misael y Azarías por ____.",
+          "family": "fill_choice",
+          "subtype": "relationship"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "b0710ed45c5bc246c9f19b25ea3defd4866ae3f4c66f837750307887ea75628a"
+}

@@ -1,0 +1,164 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-2087c297c26d52f59f48",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN4-C13-001",
+      "source_unit_id": "DAN4-V005",
+      "fact_id": "DAN4-V005-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué registro conserva causa emocional, postura física y doble contenido mental después del sueño?",
+      "options": [
+        "El sueño lo alegró; caminaba por el palacio; sólo una voz lo inquietó",
+        "El sueño lo espantó; tendido en la cama, imaginaciones y visiones de su cabeza lo turbaron",
+        "La interpretación lo espantó; sentado en el trono, los sabios lo tranquilizaron",
+        "El árbol lo alegró; de pie ante Daniel, olvidó todas las visiones"
+      ],
+      "evidence_excerpt": "tendido en la cama",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "dream_fear_posture_mental_effect",
+      "option_category": "four_axis_dream_reaction",
+      "variant_justification": "La presentación existente sólo opone complacido y turbado; esta variante exige reconstruir los cuatro campos.",
+      "authored_content_sha256": "005621a30639f7526ba0a20e3d8a140e09115ff70204bd95bbf4770b658273e0",
+      "source_ref": "Daniel 4:5",
+      "source_quote": "Tuve un sueño que me espantó; tendido en la cama, las imaginaciones y visiones de mi cabeza me turbaron.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "El sueño dejó a Nabucodonosor complacido, aunque las visiones de su cabeza lo turbaron.",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN4-C13-002",
+      "source_unit_id": "DAN4-V007",
+      "fact_id": "DAN4-V007-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué secuencia describe correctamente la consulta fallida del rey?",
+      "options": [
+        "Llegaron magos, astrólogos, caldeos y adivinos; el rey les contó el sueño; no pudieron darle la interpretación",
+        "Llegaron gobernadores y sátrapas; Daniel ocultó el sueño; todos lo interpretaron",
+        "Llegaron sólo magos; el rey contó la interpretación; ellos olvidaron el sueño",
+        "Llegaron vigilantes y santos; el rey guardó silencio; ellos cortaron el árbol"
+      ],
+      "evidence_excerpt": "no me pudieron dar su interpretacion",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "consulted_groups_disclosure_failure",
+      "option_category": "group_action_outcome_chain",
+      "variant_justification": "El cloze existente sólo recupera el fracaso; aquí se exige toda la secuencia con actores homogéneos.",
+      "authored_content_sha256": "ec21e64b3869f573e37c81f452df782375d1eef3c52f616eb355b0899dc06aa6",
+      "source_ref": "Daniel 4:7",
+      "source_quote": "Y vinieron magos, astrólogos, caldeos y adivinos, y les conté el sueño, pero no me pudieron dar su interpretación,",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Aunque el rey contó el sueño a magos, astrólogos, caldeos y adivinos, ellos no ________ darle su interpretación.",
+          "family": "fill_choice",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN4-C13-003",
+      "source_unit_id": "DAN4-V011",
+      "fact_id": "DAN4-V011-F03",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué progresión espacial y de poder conserva todos los rasgos del árbol?",
+      "options": [
+        "Dejó de crecer, se debilitó, su copa cayó y sólo se vio desde Babilonia",
+        "Creció, se fortaleció, su copa llegó al cielo y pudo verse desde todos los confines de la tierra",
+        "Creció sin fortalecerse, sus raíces llegaron al cielo y quedó invisible",
+        "Fue cortado, perdió ramas, su fruto se dispersó y las bestias permanecieron"
+      ],
+      "evidence_excerpt": "se le alcanzaba a ver desde todos los confines de la tierra",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "growth_strength_height_visibility",
+      "option_category": "four_stage_tree_profile",
+      "variant_justification": "La presentación existente sólo identifica el árbol; esta variante discrimina cuatro atributos relacionados.",
+      "authored_content_sha256": "adc18193d8a08c6d024fe832442475d879e249eb64dfefc538d2663a254f6967",
+      "source_ref": "Daniel 4:11",
+      "source_quote": "Crecía este árbol, y se hacía fuerte, y su copa llegaba hasta el cielo y se le alcanzaba a ver desde todos los confines de la tierra.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué elemento de la visión crecía, se fortalecía y llegaba con su copa hasta el cielo?",
+          "family": "single_choice_direct",
+          "subtype": "symbol_interpretation"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN4-C13-004",
+      "source_unit_id": "DAN4-V014",
+      "fact_id": "DAN4-V014-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué alternativa mantiene la orden sobre estructura del árbol, cobertura, fruto y ocupantes?",
+      "options": [
+        "Derribar el árbol, cortar ramas, quitar follaje, dispersar fruto; apartar bestias de debajo y aves de las ramas",
+        "Podar el árbol, conservar ramas, aumentar follaje, recoger fruto; reunir bestias y aves",
+        "Derribar el árbol, conservar la copa, ocultar el fruto; dejar bestias y expulsar sólo aves",
+        "Fortalecer el árbol, extender ramas, repartir follaje; llevar bestias al cielo"
+      ],
+      "evidence_excerpt": "quitadle el follaje y dispersad su fruto",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "tree_dismantling_dispersion",
+      "option_category": "ordered_object_action_matrix",
+      "variant_justification": "La presentación existente sólo muta recoger/dispersar fruto; esta variante reconstruye la orden completa.",
+      "authored_content_sha256": "bd53e07c5a6c51005deec7a7c57103824eb12b54b506cc692e609718f8b46f9e",
+      "source_ref": "Daniel 4:14",
+      "source_quote": "Clamaba fuertemente y decía así: »”‘Derribad el árbol y cortad sus ramas, quitadle el follaje y dispersad su fruto; váyanse las bestias que están debajo de él, y las aves de sus ramas.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "El vigilante ordenó derribar el árbol, cortar sus ramas, quitar el follaje y recoger su fruto.",
+          "family": "true_false",
+          "subtype": "narrative_order"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN4-C13-005",
+      "source_unit_id": "DAN4-V025",
+      "fact_id": "DAN4-V025-F03",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué cadena conserva expulsión, condición animal, duración y aprendizaje soberano?",
+      "options": [
+        "Expulsado de los hombres; morada con bestias; hierba como bueyes y rocío; siete tiempos hasta reconocer que el Altísimo domina y da el reino a quien quiere",
+        "Exiliado de Babilonia; morada con ovejas; pan de rey; tres tiempos hasta recuperar el trono por fuerza",
+        "Encerrado con hombres; alimento de aves; sin plazo; hasta reconocer el dominio de los sabios",
+        "Llevado al templo; morada con sacerdotes; vino y carne; doce meses hasta entregar el reino a Daniel"
+      ],
+      "evidence_excerpt": "siete tiempos pasaran sobre ti",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "humiliation_duration_sovereignty",
+      "option_category": "punishment_learning_chain",
+      "variant_justification": "La presentación existente sólo discrimina bueyes frente a ovejas; aquí se evalúa la arquitectura completa de la sentencia.",
+      "authored_content_sha256": "3b065b23561d36b00e3cb86c0624ce33c9a5046657f5cd270ce7bb78dca34cb1",
+      "source_ref": "Daniel 4:25",
+      "source_quote": "Que te echarán de entre los hombres y con las bestias del campo será tu habitación, con hierba del campo te apacentarán como a los bueyes y con el rocío del cielo serás bañado; y siete tiempos pasarán sobre ti, hasta que conozcas que el Altísimo tiene dominio en el reino de los hombres, y que lo da a quien él quiere.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Daniel anunció que al rey lo apacentarían con hierba como a las ovejas, hasta que reconociera el dominio del Altísimo.",
+          "family": "true_false",
+          "subtype": "comparison"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "46ce22f09eb3efdc0b970dc483a766b23ea9273ec6858ee7481859d4ce3d962b"
+}

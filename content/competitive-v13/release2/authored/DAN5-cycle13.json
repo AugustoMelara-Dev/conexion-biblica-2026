@@ -1,0 +1,192 @@
+[
+  {
+    "id": "V13-R2-DAN5-C13-001",
+    "source_unit_id": "DAN5-V001",
+    "fact_id": "DAN5-V001-F01",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "\u00bfQu\u00e9 ficha conserva anfitri\u00f3n, escala del banquete y conducta p\u00fablica?",
+    "options": [
+      "Belsasar ofreci\u00f3 un gran banquete a mil pr\u00edncipes y beb\u00eda vino en presencia de los mil",
+      "Dar\u00edo ofreci\u00f3 una cena a ciento veinte s\u00e1trapas y ayun\u00f3 delante de ellos",
+      "Nabucodonosor reuni\u00f3 a tres sabios y evit\u00f3 beber vino",
+      "Daniel ofreci\u00f3 un banquete privado y bebi\u00f3 ante el rey"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Belsasar ofreci\u00f3 un gran banquete a mil pr\u00edncipes y beb\u00eda vino en presencia de los mil"
+    ],
+    "explanation": "La escena fija qui\u00e9n convoca, cu\u00e1ntos asisten y qu\u00e9 hace el rey ante ellos.",
+    "why_distractors_fail": {
+      "Dar\u00edo ofreci\u00f3 una cena a ciento veinte s\u00e1trapas y ayun\u00f3 delante de ellos": "Cambia anfitri\u00f3n, escala y conducta.",
+      "Nabucodonosor reuni\u00f3 a tres sabios y evit\u00f3 beber vino": "Sustituye anfitri\u00f3n, asistentes y acci\u00f3n.",
+      "Daniel ofreci\u00f3 un banquete privado y bebi\u00f3 ante el rey": "Convierte el acto real en una reuni\u00f3n privada de Daniel."
+    },
+    "evidence_excerpt": "en presencia de los mil bebia vino",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "host_scale_public_conduct",
+    "option_category": "banquet_three_axis_record",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Sit\u00faa la conducta del rey dentro de la escala y publicidad del banquete.",
+    "variant_justification": "La presentaci\u00f3n existente s\u00f3lo identifica al rey; esta variante exige tres relaciones simult\u00e1neas.",
+    "answer_support_term": "los mil",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN5-C13-002",
+    "source_unit_id": "DAN5-V017",
+    "fact_id": "DAN5-V017-F01",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "\u00bfQu\u00e9 contraste define la respuesta de Daniel antes de interpretar?",
+    "options": [
+      "Acept\u00f3 dones y recompensas, pero se neg\u00f3 a leer la escritura",
+      "Rechaz\u00f3 para s\u00ed los dones y mand\u00f3 dar recompensas a otros, pero se comprometi\u00f3 a leer la escritura y explicar su interpretaci\u00f3n",
+      "Pidi\u00f3 mayores dones y deleg\u00f3 la lectura en los sabios",
+      "Rechaz\u00f3 hablar con el rey y guard\u00f3 para s\u00ed la escritura"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Rechaz\u00f3 para s\u00ed los dones y mand\u00f3 dar recompensas a otros, pero se comprometi\u00f3 a leer la escritura y explicar su interpretaci\u00f3n"
+    ],
+    "explanation": "Daniel separa recompensa personal de deber interpretativo: reh\u00fasa una y acepta el otro.",
+    "why_distractors_fail": {
+      "Acept\u00f3 dones y recompensas, pero se neg\u00f3 a leer la escritura": "Invierte aceptaci\u00f3n y negativa.",
+      "Pidi\u00f3 mayores dones y deleg\u00f3 la lectura en los sabios": "A\u00f1ade codicia y delegaci\u00f3n ausentes.",
+      "Rechaz\u00f3 hablar con el rey y guard\u00f3 para s\u00ed la escritura": "Niega la lectura y cambia el destino de la escritura."
+    },
+    "evidence_excerpt": "Leere la escritura al rey y le dare la interpretacion",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "gift_refusal_service_acceptance",
+    "option_category": "double_response_contrast",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue independencia moral de disposici\u00f3n a servir con la verdad.",
+    "variant_justification": "La presentaci\u00f3n existente s\u00f3lo pregunta qui\u00e9n actu\u00f3; \u00e9sta exige resolver el contraste completo.",
+    "answer_support_term": "Leere la escritura",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN5-C13-003",
+    "source_unit_id": "DAN5-V025",
+    "fact_id": "DAN5-V025-F01",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "\u00bfCu\u00e1l es la secuencia exacta de la escritura, incluida la repetici\u00f3n inicial?",
+    "options": [
+      "Mene, Tekel, Mene, Uparsin",
+      "Mene, Mene, Tekel, Uparsin",
+      "Tekel, Mene, Uparsin, Mene",
+      "Uparsin, Tekel, Mene, Mene"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Mene, Mene, Tekel, Uparsin"
+    ],
+    "explanation": "La inscripci\u00f3n repite Mene antes de Tekel y termina con Uparsin.",
+    "why_distractors_fail": {
+      "Mene, Tekel, Mene, Uparsin": "Interrumpe la repetici\u00f3n inicial.",
+      "Tekel, Mene, Uparsin, Mene": "Comienza con Tekel y altera el orden.",
+      "Uparsin, Tekel, Mene, Mene": "Invierte por completo la secuencia."
+    },
+    "evidence_excerpt": "Mene, Mene, Tekel, Uparsin",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "inscription_exact_order",
+    "option_category": "four_position_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Preserva posici\u00f3n y repetici\u00f3n dentro de la f\u00f3rmula judicial.",
+    "variant_justification": "La presentaci\u00f3n existente completa s\u00f3lo la \u00faltima palabra; esta variante exige ordenar las cuatro posiciones.",
+    "answer_support_term": "Mene, Mene",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN5-C13-004",
+    "source_unit_id": "DAN5-V026",
+    "fact_id": "DAN5-V026-F01",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "En la interpretaci\u00f3n de Mene, \u00bfqu\u00e9 correspondencia une palabra, agente, objeto y resultado?",
+    "options": [
+      "Mene: Daniel cont\u00f3 los d\u00edas del banquete y lo prolong\u00f3",
+      "Mene: Dios cont\u00f3 el reino de Belsasar y le puso fin",
+      "Tekel: Dios cont\u00f3 el ej\u00e9rcito persa y lo fortaleci\u00f3",
+      "Peres: Belsasar pes\u00f3 su reino y lo dividi\u00f3 por voluntad propia"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Mene: Dios cont\u00f3 el reino de Belsasar y le puso fin"
+    ],
+    "explanation": "Mene vincula conteo divino del reino con su terminaci\u00f3n.",
+    "why_distractors_fail": {
+      "Mene: Daniel cont\u00f3 los d\u00edas del banquete y lo prolong\u00f3": "Cambia agente, objeto y resultado.",
+      "Tekel: Dios cont\u00f3 el ej\u00e9rcito persa y lo fortaleci\u00f3": "Sustituye el t\u00e9rmino y el objeto del conteo.",
+      "Peres: Belsasar pes\u00f3 su reino y lo dividi\u00f3 por voluntad propia": "Confunde otra palabra y atribuye la acci\u00f3n al rey."
+    },
+    "evidence_excerpt": "Conto Dios tu reino y le ha puesto fin",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "term_agent_object_outcome",
+    "option_category": "interpretive_four_field_map",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Relaciona s\u00edmbolo verbal, soberan\u00eda evaluadora y fin pol\u00edtico.",
+    "variant_justification": "La presentaci\u00f3n existente pregunta s\u00f3lo qui\u00e9n cont\u00f3; esta variante exige la correspondencia completa.",
+    "answer_support_term": "Conto Dios",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN5-C13-005",
+    "source_unit_id": "DAN5-V028",
+    "fact_id": "DAN5-V028-F02",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "\u00bfQu\u00e9 ficha interpreta correctamente Peres en acci\u00f3n sobre el reino y destinatarios?",
+    "options": [
+      "Peres: el reino qued\u00f3 fortalecido y reservado para Babilonia",
+      "Peres: el reino fue roto y dado a medos y persas",
+      "Tekel: el reino fue contado y devuelto a Belsasar",
+      "Mene: el reino fue pesado y dado s\u00f3lo a Daniel"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Peres: el reino fue roto y dado a medos y persas"
+    ],
+    "explanation": "Peres combina ruptura del reino con transferencia a dos pueblos nombrados.",
+    "why_distractors_fail": {
+      "Peres: el reino qued\u00f3 fortalecido y reservado para Babilonia": "Invierte ambas acciones y conserva el reino en Babilonia.",
+      "Tekel: el reino fue contado y devuelto a Belsasar": "Usa otro t\u00e9rmino y cambia acciones y destinatario.",
+      "Mene: el reino fue pesado y dado s\u00f3lo a Daniel": "Confunde palabra, evaluaci\u00f3n y receptor."
+    },
+    "evidence_excerpt": "dado a los medos y a los persas",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "term_break_transfer_recipients",
+    "option_category": "judgment_transfer_map",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue juicio de ruptura y transferencia pol\u00edtica.",
+    "variant_justification": "La presentaci\u00f3n existente pregunta s\u00f3lo qu\u00e9 palabra corresponde; aqu\u00ed se exige t\u00e9rmino, doble acci\u00f3n y receptores.",
+    "answer_support_term": "medos y a los persas",
+    "author": {
+      "id": "r2_regen_b",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]
