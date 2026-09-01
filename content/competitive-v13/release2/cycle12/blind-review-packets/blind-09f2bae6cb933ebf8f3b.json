@@ -1,0 +1,105 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-09f2bae6cb933ebf8f3b",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN12-C12-001",
+      "source_unit_id": "DAN12-V002",
+      "fact_id": "DAN12-V002-F06",
+      "family": "true_false",
+      "subtype": "comparison",
+      "question": "El despertar anunciado conserva un origen común y dos desenlaces opuestos: muchos duermen en el polvo de la tierra; unos serán despertados para vida eterna, y otros para vergüenza y confusión perpetua.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Muchos de los que duermen en el polvo de la tierra serán despertados: unos para vida eterna, otros para vergüenza y confusión perpetua.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "common_origin_opposed_destinations",
+      "option_category": "four_axis_resurrection_contrast",
+      "variant_justification": "Las presentaciones públicas afirman o niegan sólo la igualdad de destino; esta variante exige auditar toda la arquitectura del contraste.",
+      "authored_content_sha256": "9598dda8582c4c9475c4f36f4fb12a6d5ef7411f9c6c98c4150dec08047ad13b",
+      "source_ref": "Daniel 12:2",
+      "source_quote": "Muchos de los que duermen en el polvo de la tierra serán despertados: unos para vida eterna, otros para vergüenza y confusión perpetua.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Muchos de los que duermen en el polvo de la tierra despertarán: unos para vida eterna y otros para vergüenza y confusión perpetua.",
+          "family": "true_false",
+          "subtype": "symbol_interpretation"
+        },
+        {
+          "question": "Todos los que despierten del polvo recibirán el mismo destino de vida eterna.",
+          "family": "true_false",
+          "subtype": "symbol_interpretation"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN12-C12-002",
+      "source_unit_id": "DAN12-V006",
+      "fact_id": "DAN12-V006-V11-F02",
+      "family": "fill_choice",
+      "subtype": "speaker_addressee",
+      "question": "Complete la interrogación que uno de los presentes dirige al varón vestido de lino sobre las aguas, conservando tanto el alcance temporal como el referente plural: ____.",
+      "options": [
+        "¿Cuándo será el fin de estas maravillas?",
+        "¿Dónde comenzará el juicio de estos príncipes?",
+        "¿Quién abrirá el libro de aquellas palabras?",
+        "¿Cómo terminará la dispersión de este río?"
+      ],
+      "evidence_excerpt": "Y dijo uno al varón vestido de lino que estaba sobre las aguas del río: “¿Cuándo será el fin de estas maravillas?”",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "speaker_addressee_location_temporal_question_referent",
+      "option_category": "interrogative_scope_mapping",
+      "variant_justification": "Las aprobadas resuelven quién habla y a quién; ésta desplaza la operación al contenido semántico completo de la pregunta.",
+      "authored_content_sha256": "d3d43dc95aaa397615aa5d8aa8beab721a56a543d1106a143e029dfe3d11c846",
+      "source_ref": "Daniel 12:6",
+      "source_quote": "Y dijo uno al varón vestido de lino que estaba sobre las aguas del río: “¿Cuándo será el fin de estas maravillas?”",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué quiso saber una de las figuras acerca de las maravillas?",
+          "family": "single_choice_direct",
+          "subtype": "text_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN12-C12-003",
+      "source_unit_id": "DAN12-V010",
+      "fact_id": "DAN12-V010-V11-F02",
+      "family": "fill_choice",
+      "subtype": "comparison",
+      "question": "Complete el enunciado que antepone un proceso triple y luego distribuye sin invertir conducta y comprensión entre impíos y entendidos: ____.",
+      "options": [
+        "Muchos serán limpios, emblanquecidos y purificados; los impíos procederán impíamente, y ninguno de los impíos entenderá; pero los entendidos comprenderán.",
+        "Muchos serán limpios, comprendidos y exaltados; los entendidos procederán impíamente, y ninguno de los purificados comprenderá; pero los impíos entenderán.",
+        "Muchos serán sellados, dispersados y despertados; los impíos serán emblanquecidos, y todos los impíos entenderán; pero los entendidos reposarán.",
+        "Muchos serán juzgados, inscritos y libertados; los entendidos no comprenderán, y ninguno de los impíos procederá impíamente; pero todos serán purificados."
+      ],
+      "evidence_excerpt": "Muchos serán limpios, emblanquecidos y purificados; los impíos procederán impíamente, y ninguno de los impíos entenderá; pero los entendidos comprenderán.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "triple_process_conduct_understanding_contrast",
+      "option_category": "three_clause_group_mapping",
+      "variant_justification": "Las aprobadas se concentran en el contraste cognitivo; esta variante incorpora como eje decisivo el proceso triple que lo precede.",
+      "authored_content_sha256": "87452e7bd9fa72a8bd71213b76acc0e95431282c543b6e922ba4013eeb0135fb",
+      "source_ref": "Daniel 12:10",
+      "source_quote": "Muchos serán limpios, emblanquecidos y purificados; los impíos procederán impíamente, y ninguno de los impíos entenderá; pero los entendidos comprenderán.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Muchos serían limpios, emblanquecidos y ____.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "a9084b33b0758e49b68a861016530ae588b240f618b02d5cd0f7aac0a7e4eb89"
+}

@@ -20,7 +20,6 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.lib.competitive_v13 import (  # noqa: E402
-    APPLIED_SCHEMA,
     ContractError,
     build_blind_review_packet,
     canonical_hash,
@@ -30,7 +29,6 @@ from scripts.lib.competitive_v13 import (  # noqa: E402
 
 
 PACKET_SET_SCHEMA = "competitive-v13-blind-packet-set/v1"
-HISTORICAL_APPROVED_COUNT = 262
 
 
 class CycleError(ContractError):
@@ -51,39 +49,27 @@ def _load_existing_builder():
     return module
 
 
+def _load_promoter():
+    path = ROOT / "scripts" / "promote-reviewed-release-v13.py"
+    spec = importlib.util.spec_from_file_location("competitive_v13_promoter_contract", path)
+    if spec is None or spec.loader is None:
+        raise CycleError(f"cannot load checkpoint lineage validator: {path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
 def validate_prior_checkpoint(checkpoint: Mapping[str, Any]) -> list[dict[str, Any]]:
-    if checkpoint.get("schema_version") != APPLIED_SCHEMA or checkpoint.get("release") != 2:
-        raise CycleError("prior checkpoint schema or release mismatch")
-    stored_hash = checkpoint.get("release_sha256")
-    payload = {
-        key: value for key, value in checkpoint.items() if key != "release_sha256"
-    }
-    if not isinstance(stored_hash, str) or stored_hash != canonical_hash(payload):
-        raise CycleError("prior checkpoint release_sha256 mismatch")
+    if not isinstance(checkpoint, Mapping):
+        raise CycleError("prior checkpoint must be a mapping")
+    promoter = _load_promoter()
+    try:
+        promoter.validate_checkpoint_lineage(checkpoint)
+    except ValueError as exc:
+        raise CycleError(f"prior checkpoint cycle_history validation failed: {exc}") from exc
     approved = checkpoint.get("approved")
-    pending = checkpoint.get("pending")
-    batches = checkpoint.get("batches")
-    if not isinstance(approved, list) or len(approved) != HISTORICAL_APPROVED_COUNT:
-        raise CycleError("prior checkpoint must contain exactly 262 approved rows")
-    if not isinstance(pending, list) or not isinstance(batches, list):
-        raise CycleError("prior checkpoint batches and pending must be lists")
-    if any(not isinstance(row, dict) for row in approved):
+    if not isinstance(approved, list) or any(not isinstance(row, dict) for row in approved):
         raise CycleError("prior approved rows must be mappings")
-    counts = [
-        (batch.get("approved"), batch.get("pending"))
-        for batch in batches
-        if isinstance(batch, Mapping)
-    ]
-    if len(counts) != len(batches) or any(
-        isinstance(value, bool) or not isinstance(value, int) or value < 0
-        for pair in counts
-        for value in pair
-    ):
-        raise CycleError("prior checkpoint batch totals mismatch")
-    approved_total = sum(approved for approved, _pending in counts)
-    pending_total = sum(pending for _approved, pending in counts)
-    if approved_total != len(approved) or pending_total != len(pending):
-        raise CycleError("prior checkpoint batch totals mismatch")
     return approved
 
 

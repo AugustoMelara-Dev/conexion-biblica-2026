@@ -39,6 +39,67 @@ def resign(checkpoint: dict) -> dict:
     return checkpoint
 
 
+def checkpoint_with_cycle11_306(base_checkpoint: dict) -> dict:
+    checkpoint = copy.deepcopy(base_checkpoint)
+    already_approved = {row["fact_id"] for row in checkpoint["approved"]}
+    new_rows = []
+    for unit_file in sorted((BASE_ROOT / "questions").glob("*.json")):
+        value = json.loads(unit_file.read_text(encoding="utf-8"))
+        if not isinstance(value, list):
+            continue
+        for source_row in value:
+            fact_id = source_row["fact_id"]
+            if fact_id in already_approved:
+                continue
+            row = copy.deepcopy(source_row)
+            row["id"] = f"V13-R2-C11-PROMOTE-{len(new_rows) + 1:03d}"
+            row["role"] = "variant"
+            row["question"] = (
+                f"{source_row['question']} Considerá la relación completa #{len(new_rows) + 1}."
+            )
+            row["variant_justification"] = "Variante relacional aprobada en ciclo 11."
+            row.pop("blind_pool", None)
+            new_rows.append(row)
+            already_approved.add(fact_id)
+            if len(new_rows) == 44:
+                break
+        if len(new_rows) == 44:
+            break
+    if len(new_rows) != 44:
+        raise AssertionError("fixture needs 44 unused base facts")
+
+    increment = {
+        "schema_version": checkpoint["schema_version"],
+        "release": 2,
+        "batches": [
+            {
+                "batch_id": "promotion-cycle11",
+                "blind_packet_sha256": "b" * 64,
+                "reviewer": "cycle11-reviewer",
+                "approved": 44,
+                "pending": 0,
+            }
+        ],
+        "approved": new_rows,
+        "pending": [],
+    }
+    increment["release_sha256"] = canonical_hash(increment)
+    base_hash = checkpoint["release_sha256"]
+    checkpoint["batches"].extend(increment["batches"])
+    checkpoint["approved"].extend(new_rows)
+    checkpoint["cycle_history"] = [
+        {
+            "cycle": 11,
+            "base_release_sha256": base_hash,
+            "increment_release_sha256": increment["release_sha256"],
+            "base_approved_count": 262,
+            "new_approved_count": 44,
+            "merged_approved_count": 306,
+        }
+    ]
+    return resign(checkpoint)
+
+
 class PromoteReviewedReleaseV13Tests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -119,6 +180,38 @@ class PromoteReviewedReleaseV13Tests(unittest.TestCase):
                 BASE_ROOT,
                 BASE_ROOT / "questions",
             )
+
+    def test_promotes_append_only_cycle11_checkpoint_with_306_approved(self) -> None:
+        checkpoint = checkpoint_with_cycle11_306(self.checkpoint)
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "public-bank"
+            manifest = self.promoter.promote_release(BASE_ROOT, checkpoint, output)
+
+            self.assertEqual(manifest["gold_questions"], 2774)
+            self.assertEqual(manifest["unique_facts"], 2217)
+            self.assertEqual(manifest["central_question_count"], 2217)
+            self.assertEqual(manifest["presentation_variant_count"], 557)
+            self.assertEqual(manifest["blind_fact_count"], 0)
+            emitted_ids = {
+                row["id"]
+                for shard in manifest["shards"]
+                for row in json.loads(
+                    (output / "questions" / f"{shard['chapter']}.json").read_text(
+                        encoding="utf-8"
+                    )
+                )
+            }
+            self.assertTrue(
+                {row["id"] for row in checkpoint["approved"]} <= emitted_ids
+            )
+
+    def test_rejects_rehashed_checkpoint_with_tampered_cycle_history(self) -> None:
+        checkpoint = checkpoint_with_cycle11_306(self.checkpoint)
+        checkpoint["cycle_history"][0]["increment_release_sha256"] = "f" * 64
+        resign(checkpoint)
+
+        with self.assertRaisesRegex(self.promoter.PromotionError, "cycle_history"):
+            self.promoter.prepare_promotion(BASE_ROOT, checkpoint)
 
 
 if __name__ == "__main__":

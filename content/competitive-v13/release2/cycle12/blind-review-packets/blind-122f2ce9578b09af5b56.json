@@ -1,0 +1,200 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-122f2ce9578b09af5b56",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-PR40-C12-001",
+      "source_unit_id": "PR40-P033-P004-S001",
+      "fact_id": "PR40-P033-P004-S001-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué arquitectura de presión conserva evaluación del rey, doble incentivo y doble exigencia?",
+      "options": [
+        "considera evasiva la respuesta y sospecha de sus jactancias → promete riquezas y honores → amenaza de muerte → exige sueño e interpretación",
+        "considera sincera la respuesta → promete sólo tiempo → amenaza destierro → exige una nueva imagen",
+        "confía plenamente en sus sabios → ofrece provincias → amenaza a Daniel → exige únicamente interpretación",
+        "ignora las aseveraciones → promete libertad → amenaza sus casas → exige el nombre del soñador"
+      ],
+      "evidence_excerpt": "Desconforme con esta respuesta evasiva, y sospechando que, a pesar de sus aseveraciones jactanciosas de poder revelar los secretos de los hombres, no parecían dispuestos a ayudarle, el rey ordenó a sus sabios, con promesas de riquezas y honores por un lado y amenazas de muerte por el otro, que le diesen no sólo la interpretación del sueño, sino el sueño mismo.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "evasive_answer_reward_threat_double_demand",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "La presentación previa pregunta una exigencia; ésta reconstruye diagnóstico, incentivos y contrato completo.",
+      "authored_content_sha256": "77e023f78f775537858cb01e0691d93b276e92610fdfdf7ed630761896f81b7a",
+      "source_ref": "PR40, p. 33, párrafo 4",
+      "source_quote": "Desconforme con esta respuesta evasiva, y sospechando que, a pesar de sus aseveraciones jactanciosas de poder revelar los secretos de los hombres, no parecían dispuestos a ayudarle, el rey ordenó a sus sabios, con promesas de riquezas y honores por un lado y amenazas de muerte por el otro, que le diesen no sólo la interpretación del sueño, sino el sueño mismo.",
+      "parent_context": "Desconforme con esta respuesta evasiva, y sospechando que, a pesar de sus aseveraciones jactanciosas de poder revelar los secretos de los hombres, no parecían dispuestos a ayudarle, el rey ordenó a sus sabios, con promesas de riquezas y honores por un lado y amenazas de muerte por el otro, que le diesen no sólo la interpretación del sueño, sino el sueño mismo. Dijo: “El negocio se me fué: si no me mostráis el sueño y su declaración, seréis hechos cuartos, y vuestras casas serán puestas por muladares. Y si mostrareis el sueño y su declaración, recibiréis de mí dones y mercedes y grande honra.”",
+      "existing_presentations": [
+        {
+          "question": "¿Qué doble presión ejerció el rey para obtener el sueño y su interpretación?",
+          "family": "single_choice_contextual",
+          "subtype": "comparison"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR40-C12-002",
+      "source_unit_id": "PR40-P034-P003-S002",
+      "fact_id": "PR40-P034-P003-S002-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué mapa distribuye atributos divinos, gobierno histórico, dones cognitivos y dominio sobre lo oculto?",
+      "options": [
+        "sabiduría y fortaleza pertenecen a Dios → muda tiempos y oportunidades y quita/pone reyes → da sabiduría y ciencia → revela lo profundo, conoce tinieblas y en él mora la luz",
+        "riqueza y guerra pertenecen al rey → fija un solo tiempo y conserva reyes → da tributos → oculta lo profundo y mora en tinieblas",
+        "sueños y enigmas pertenecen a Daniel → cambia leyes y fortalezas → da reinos → ignora lo escondido",
+        "gloria y majestad pertenecen a los magos → quitan oportunidades → dan amenazas → revelan sólo lo visible"
+      ],
+      "evidence_excerpt": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "divine_attributes_history_gifts_hidden_knowledge",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "La central aísla una acción; aquí se reconstruyen cuatro dominios coordinados de la doxología.",
+      "authored_content_sha256": "2045d4190b7f8b2081c901b277baec501a6a9171d7db04237b5a0d9664e323e3",
+      "source_ref": "PR40, p. 34, párrafo 3",
+      "source_quote": "Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él.",
+      "parent_context": "El primer acto de Daniel fué agradecer a Dios la revelación que le había dado. Exclamó: “Sea bendito el nombre de Dios de siglo hasta siglo: porque suya es la sabiduría y la fortaleza: y él es el que muda los tiempos y las oportunidades: quita reyes, y pone reyes: da la sabiduría a los sabios, y la ciencia a los entendidos: él revela lo profundo y lo escondido: conoce lo que está en tinieblas, y la luz mora con él. A ti, oh Dios de mis padres, confieso y te alabo, que me diste sabiduría y fortaleza, y ahora me enseñaste lo que te pedimos; pues nos has enseñado el negocio del rey.”",
+      "existing_presentations": [
+        {
+          "question": "¿Qué acción de Dios expresa de modo directo su autoridad sobre la historia política?",
+          "family": "single_choice_contextual",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR40-C12-003",
+      "source_unit_id": "PR40-P034-P006-S002",
+      "fact_id": "PR40-P034-P006-S002-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué contraste explica por qué Daniel niega superioridad personal y para qué fue revelado el misterio?",
+      "options": [
+        "no por tener más sabiduría que los demás vivientes → para notificar la interpretación al rey → para que comprendiera los pensamientos de su corazón",
+        "por superar a todos los vivientes → para ocultar el sueño al rey → para que olvidara sus pensamientos",
+        "no por conocer a Dios → para premiar a los magos → para que gobernaran Babilonia",
+        "por ser príncipe de Judá → para revelar el futuro a Arioc → para que destruyera a los sabios"
+      ],
+      "evidence_excerpt": "Y a mí ha sido revelado este misterio, no por sabiduría que en mí haya más que en todos los vivientes, sino para que yo notifique al rey la declaración, y que entendieses los pensamientos de tu corazón.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "humility_revelation_interpretation_heart",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "La presentación existente pregunta la causa negativa; esta variante exige contraste y dos propósitos.",
+      "authored_content_sha256": "49f21fba3996187ddd4d13143d267bbb53f85d37d65d34335401dd6d4809a842",
+      "source_ref": "PR40, p. 34, párrafo 6",
+      "source_quote": "Y a mí ha sido revelado este misterio, no por sabiduría que en mí haya más que en todos los vivientes, sino para que yo notifique al rey la declaración, y que entendieses los pensamientos de tu corazón.",
+      "parent_context": "“Tu sueño—declaró Daniel—y las visiones de tu cabeza sobre tu cama, es esto: Tú, oh rey, en tu cama subieron tus pensamientos por saber lo que había de ser en lo por venir; y el que revela los misterios te mostró lo que ha de ser. Y a mí ha sido revelado este misterio, no por sabiduría que en mí haya más que en todos los vivientes, sino para que yo notifique al rey la declaración, y que entendieses los pensamientos de tu corazón.",
+      "existing_presentations": [
+        {
+          "question": "¿Qué propósito expresó Daniel con las palabras «a mí ha sido revelado este misterio»?",
+          "family": "single_choice_direct",
+          "subtype": "cause_consequence"
+        },
+        {
+          "question": "Daniel negó que el misterio le hubiera sido revelado por superioridad personal. ¿Para qué dijo haberlo recibido?",
+          "family": "single_choice_direct",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR40-C12-004",
+      "source_unit_id": "PR40-P035-P008-S002",
+      "fact_id": "PR40-P035-P008-S002-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué secuencia conserva origen no humano, inventario destruido, autor de la revelación, horizonte y garantía?",
+      "options": [
+        "piedra cortada del monte sin manos → desmenuza hierro, bronce, barro, plata y oro → el gran Dios muestra lo por venir → sueño verdadero e interpretación fiel",
+        "piedra tallada por Daniel → conserva oro y plata → los magos muestran el pasado → sueño dudoso",
+        "imagen bajada del cielo → destruye sólo barro → el rey revela el presente → interpretación incompleta",
+        "monte cortado por manos → desmenuza la piedra → Arioc muestra un secreto → sueño falso"
+      ],
+      "evidence_excerpt": "De la manera que viste que del monte fué cortada una piedra, no con manos, la cual desmenuzó al hierro, al metal, al tiesto, a la plata, y al oro; el gran Dios ha mostrado al rey lo que ha de acontecer en lo por venir: y el sueño es verdadero, y fiel su declaración.”",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "unmade_stone_materials_future_certainty",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "La central pregunta uno de los materiales; ésta exige cinco relaciones y la doble garantía final.",
+      "authored_content_sha256": "4a3d7cfde2c1b84693b41287e04cad99f63a77436b685af60fa1ac3b310fb697",
+      "source_ref": "PR40, p. 35, párrafo 8",
+      "source_quote": "De la manera que viste que del monte fué cortada una piedra, no con manos, la cual desmenuzó al hierro, al metal, al tiesto, a la plata, y al oro; el gran Dios ha mostrado al rey lo que ha de acontecer en lo por venir: y el sueño es verdadero, y fiel su declaración.”",
+      "parent_context": "“Y en los días de estos reyes, levantará el Dios del cielo un reino que nunca jamás se corromperá: y no será dejado a otro pueblo este reino; el cual desmenuzará y consumirá todos estos reinos, y él permanecerá para siempre. De la manera que viste que del monte fué cortada una piedra, no con manos, la cual desmenuzó al hierro, al metal, al tiesto, a la plata, y al oro; el gran Dios ha mostrado al rey lo que ha de acontecer en lo por venir: y el sueño es verdadero, y fiel su declaración.”",
+      "existing_presentations": [
+        {
+          "question": "¿Qué doble garantía ofreció Daniel sobre la revelación comunicada?",
+          "family": "single_choice_contextual",
+          "subtype": "relationship"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR40-C12-005",
+      "source_unit_id": "PR40-P036-P003-S002",
+      "fact_id": "PR40-P036-P003-S002-F01",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué arquitectura del propósito creador enlaza origen humano, distribución, límites históricos y finalidad espiritual?",
+      "options": [
+        "Dios hace el mundo → de una sangre forma todo linaje → dispone habitación sobre la tierra, tiempos y límites → para que busquen y puedan hallar a Dios",
+        "los reyes hacen el mundo → de muchas sangres forman naciones → eliminan tiempos y fronteras → para que se busquen a sí mismos",
+        "Daniel crea las razas → de un reino forma la tierra → fija sólo lugares → para que hallen riquezas",
+        "los sabios distribuyen pueblos → de una ley forman imperios → anulan plazos → para que ignoren a Dios"
+      ],
+      "evidence_excerpt": "Declaró el apóstol: “El Dios que hizo el mundo y todas las cosas que en él hay, ... de una sangre ha hecho todo el linaje de los hombres, para que habitasen sobre toda la faz de la tierra; y les ha prefijado el orden de los tiempos, y los términos de la habitación de ellos; para que buscasen a Dios, si en alguna manera, palpando, le hallen.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "creation_one_blood_times_boundaries_seek_god",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "La presentación previa recupera un elemento; la variante exige agente, origen, distribución y propósito.",
+      "authored_content_sha256": "4eb3b0fff955cd9c55f85ef6ad1699a3720007b36fd78a4f21463e3ab386b074",
+      "source_ref": "PR40, p. 36, párrafo 3",
+      "source_quote": "Declaró el apóstol: “El Dios que hizo el mundo y todas las cosas que en él hay, ... de una sangre ha hecho todo el linaje de los hombres, para que habitasen sobre toda la faz de la tierra; y les ha prefijado el orden de los tiempos, y los términos de la habitación de ellos; para que buscasen a Dios, si en alguna manera, palpando, le hallen.",
+      "parent_context": "En palabras de incomparable belleza y ternura, el apóstol Pablo presentó a los sabios de Atenas el propósito que Dios había tenido en la creación y distribución de las razas y naciones. Declaró el apóstol: “El Dios que hizo el mundo y todas las cosas que en él hay, ... de una sangre ha hecho todo el linaje de los hombres, para que habitasen sobre toda la faz de la tierra; y les ha prefijado el orden de los tiempos, y los términos de la habitación de ellos; para que buscasen a Dios, si en alguna manera, palpando, le hallen.” Hechos 17:24-27.",
+      "existing_presentations": [
+        {
+          "question": "¿Con qué alcance territorial dispuso Dios que habitase el linaje humano hecho de una sangre?",
+          "family": "single_choice_contextual",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR40-C12-006",
+      "source_unit_id": "PR40-P037-P004-S001",
+      "fact_id": "PR40-P037-P004-S001-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué red de principios define la filosofía de la historia según la cita?",
+      "options": [
+        "justicia engrandece la nación → justicia afirma el trono → clemencia lo sustenta → el poder divino quita y pone reyes",
+        "riqueza engrandece la nación → guerra afirma el trono → temor lo sustenta → la casualidad pone reyes",
+        "sabiduría engrandece al individuo → tributos afirman ciudades → fuerza sostiene imperios → Daniel quita reyes",
+        "clemencia elimina la justicia → idolatría afirma el trono → orgullo lo sustenta → los magos ponen reyes"
+      ],
+      "evidence_excerpt": "Comprender estas cosas, comprender que “la justicia engrandece la nación;” que “con justicia será afirmado el trono” y que éste se sustenta “con clemencia,” reconocer el desarrollo de estos principios en la manifestación del poder de aquel que “quita reyes, y pone reyes,” es comprender la filosofía de la historia.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "justice_mercy_throne_divine_history",
+      "option_category": "multi_clause_chain",
+      "variant_justification": "La central pregunta un aforismo; ésta exige integrar cuatro principios y su aplicación histórica.",
+      "authored_content_sha256": "19ee878adfd09d7c92ab0986be1ea681f572dd57006e3e34eebd5147e2889858",
+      "source_ref": "PR40, p. 37, párrafo 4",
+      "source_quote": "Comprender estas cosas, comprender que “la justicia engrandece la nación;” que “con justicia será afirmado el trono” y que éste se sustenta “con clemencia,” reconocer el desarrollo de estos principios en la manifestación del poder de aquel que “quita reyes, y pone reyes,” es comprender la filosofía de la historia.",
+      "parent_context": "Comprender estas cosas, comprender que “la justicia engrandece la nación;” que “con justicia será afirmado el trono” y que éste se sustenta “con clemencia,” reconocer el desarrollo de estos principios en la manifestación del poder de aquel que “quita reyes, y pone reyes,” es comprender la filosofía de la historia. Proverbios 14:34; 16:12; 20:28; Daniel 2:21.",
+      "existing_presentations": [
+        {
+          "question": "Al relacionar la justicia que engrandece a la nación, la clemencia que sostiene el trono y el poder que quita y pone reyes, ¿qué debe hacerse con el desarrollo de esos principios?",
+          "family": "single_choice_contextual",
+          "subtype": "principle"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "9756a63208c530bcad4e79749aee2dea35a5b5da8517290b1e72ec3d2705639c"
+}

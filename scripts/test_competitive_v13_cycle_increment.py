@@ -131,6 +131,54 @@ def incremental_checkpoint() -> dict:
     return value
 
 
+def checkpoint_with_cycle11_306() -> dict:
+    prior = checkpoint_with_262()
+    new_rows = [
+        {
+            "id": f"C11-APPROVED-{index:03d}",
+            "source_unit_id": "DAN1-V001",
+            "fact_id": f"DAN1-V001-C11-F{index:03d}",
+            "question": f"Presentación aprobada del ciclo once {index}",
+        }
+        for index in range(44)
+    ]
+    increment = {
+        "schema_version": v13.APPLIED_SCHEMA,
+        "release": 2,
+        "batches": [
+            {
+                "batch_id": "historical-cycle11",
+                "blind_packet_sha256": "c" * 64,
+                "reviewer": "cycle11-reviewer",
+                "approved": 44,
+                "pending": 0,
+            }
+        ],
+        "approved": new_rows,
+        "pending": [],
+    }
+    increment["release_sha256"] = v13.canonical_hash(increment)
+    value = {
+        "schema_version": v13.APPLIED_SCHEMA,
+        "release": 2,
+        "batches": [*prior["batches"], *increment["batches"]],
+        "approved": [*prior["approved"], *new_rows],
+        "pending": [],
+        "cycle_history": [
+            {
+                "cycle": 11,
+                "base_release_sha256": prior["release_sha256"],
+                "increment_release_sha256": increment["release_sha256"],
+                "base_approved_count": 262,
+                "new_approved_count": 44,
+                "merged_approved_count": 306,
+            }
+        ],
+    }
+    value["release_sha256"] = v13.canonical_hash(value)
+    return value
+
+
 class CompetitiveV13CycleIncrementTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -330,7 +378,105 @@ class CompetitiveV13CycleIncrementTests(unittest.TestCase):
             {key: value for key, value in prior.items() if key != "release_sha256"}
         )
 
-        with self.assertRaisesRegex(self.builder.CycleError, "batch totals"):
+        with self.assertRaisesRegex(self.builder.CycleError, "invalid approved count"):
+            self.builder.validate_prior_checkpoint(prior)
+
+    def test_cycle12_build_review_apply_extends_valid_prior306(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            authored = root / "authored"
+            sources = root / "sources"
+            base = root / "base"
+            packets = root / "packets-cycle12"
+            reviews = root / "reviews-cycle12"
+            output = root / "merged-cycle12.json"
+            for path in (authored, sources, base, reviews):
+                path.mkdir()
+            batch = authored_cycle11()
+            batch["batch_id"] = "DAN1-cycle12"
+            batch["questions"][0]["id"] = "R2-C12-DAN1-001"
+            batch["questions"][0]["question"] = (
+                "¿Qué acción bélica ejecutó el monarca cuando llegó a Jerusalén?"
+            )
+            (authored / "DAN1-cycle12.json").write_text(
+                json.dumps(batch, ensure_ascii=False), encoding="utf-8"
+            )
+            (sources / "DAN1.json").write_text(
+                json.dumps({"source_sha256": SOURCE_HASH, "units": [SOURCE]}),
+                encoding="utf-8",
+            )
+            (base / "DAN1.json").write_text(
+                json.dumps(
+                    [
+                        {
+                            "id": "CENTRAL",
+                            "source_unit_id": "DAN1-V001",
+                            "fact_id": "DAN1-V001-F04",
+                            "question": "¿Quién puso sitio a Jerusalén?",
+                        }
+                    ],
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            prior = checkpoint_with_cycle11_306()
+            manifest = self.builder.build_cycle_packets(
+                authored, sources, base, prior, packets, KEY, cycle=12
+            )
+            self.assertEqual(manifest["base_approved_count"], 306)
+            packet = json.loads(
+                (packets / manifest["packets"][0]["filename"]).read_text(encoding="utf-8")
+            )
+            row = batch["questions"][0]
+            decision = {
+                "question_id": row["id"],
+                "authored_content_sha256": v13.authored_content_hash(row),
+                "decision": "approved",
+                "adjudicated_option": 0,
+                "second_defensible_option": False,
+                "rationale": "La pregunta tiene una respuesta única.",
+                "source_alignment_reason": "La cita explicita la acción bélica.",
+            }
+            decision["review_sha256"] = v13.review_decision_hash(
+                decision,
+                reviewer="cycle12-reviewer",
+                blind_packet_sha256=packet["packet_sha256"],
+            )
+            review = {
+                "schema_version": v13.REVIEW_SCHEMA,
+                "blind_batch_id": packet["blind_batch_id"],
+                "reviewer": "cycle12-reviewer",
+                "blind_packet_sha256": packet["packet_sha256"],
+                "decisions": [decision],
+            }
+            (reviews / f"{packet['blind_batch_id']}.json").write_text(
+                json.dumps(review, ensure_ascii=False), encoding="utf-8"
+            )
+
+            merged = self.applier.apply_cycle_reviews(
+                authored,
+                packets,
+                reviews,
+                sources,
+                base,
+                prior,
+                output,
+                KEY,
+                cycle=12,
+            )
+
+            self.assertEqual(len(merged["approved"]), 307)
+            self.assertEqual(merged["approved"][:306], prior["approved"])
+            self.assertEqual([entry["cycle"] for entry in merged["cycle_history"]], [11, 12])
+
+    def test_cycle12_rejects_rehashed_prior_with_tampered_history(self) -> None:
+        prior = checkpoint_with_cycle11_306()
+        prior["cycle_history"][0]["increment_release_sha256"] = "f" * 64
+        prior["release_sha256"] = v13.canonical_hash(
+            {key: value for key, value in prior.items() if key != "release_sha256"}
+        )
+
+        with self.assertRaisesRegex(self.builder.CycleError, "cycle_history"):
             self.builder.validate_prior_checkpoint(prior)
 
 

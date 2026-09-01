@@ -1,0 +1,196 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-8ef79281bbd61ed9ecb0",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-PR44-C12-001",
+      "source_unit_id": "PR44-P055-P001-S002",
+      "fact_id": "PR44-P055-P001-S002-F01",
+      "family": "fill_choice",
+      "subtype": "relationship",
+      "question": "Complete el organigrama administrativo, la ubicación de Daniel y el propósito de rendir cuentas: ____.",
+      "options": [
+        "ciento veinte gobernadores → tres presidentes sobre ellos, Daniel entre los tres → rendir cuentas para que el rey no recibiese daño",
+        "treinta gobernadores → dos reyes sobre ellos, Daniel entre los gobernadores → rendir tributo para que Babilonia no recibiese daño",
+        "ciento veinte presidentes → tres sátrapas bajo ellos, Darío entre los tres → rendir culto para que Daniel no recibiese daño",
+        "siete gobernadores → ciento veinte príncipes sobre ellos, Ciro entre los príncipes → rendir cuentas para que Media no perdiese oro"
+      ],
+      "evidence_excerpt": "Decidió “constituir sobre el reino ciento veinte gobernadores,... y sobre ellos tres presidentes, de los cuales Daniel era el uno, a quienes estos gobernadores diesen cuenta, porque el rey no recibiese daño.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "governors_presidents_daniel_accountability_purpose",
+      "option_category": "administrative_hierarchy_map",
+      "variant_justification": "La presentación pública completa sólo ciento veinte gobernadores; ésta evalúa todo el organigrama y su razón funcional.",
+      "authored_content_sha256": "66d41f6dad439fcb40931544af0d5388d583e08b25c270919addaf3627676edb",
+      "source_ref": "PR44, p. 55, párrafo 1",
+      "source_quote": "Decidió “constituir sobre el reino ciento veinte gobernadores,... y sobre ellos tres presidentes, de los cuales Daniel era el uno, a quienes estos gobernadores diesen cuenta, porque el rey no recibiese daño.",
+      "parent_context": "Cuando Darío el Medo subió al trono antes ocupado por los gobernantes babilónicos, procedió inmediatamente a reorganizar el gobierno. Decidió “constituir sobre el reino ciento veinte gobernadores,... y sobre ellos tres presidentes, de los cuales Daniel era el uno, a quienes estos gobernadores diesen cuenta, porque el rey no recibiese daño. Pero el mismo Daniel era superior a estos gobernadores y presidentes, porque había en él más abundancia de espíritu: y el rey pensaba de ponerlo sobre todo el reino.”",
+      "existing_presentations": [
+        {
+          "question": "Darío decidió constituir sobre el reino ____ y sobre ellos tres presidentes.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR44-C12-002",
+      "source_unit_id": "PR44-P055-P002-S001",
+      "fact_id": "PR44-P055-P002-S001-F01",
+      "family": "true_false",
+      "subtype": "cause_consequence",
+      "question": "Los honores de Daniel provocaron celos y una búsqueda de acusación, pero sus adversarios no hallaron motivo porque era fiel y no encontraron en él vicio ni falta.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Los honores otorgados a Daniel despertaron los celos de los principales del reino, y buscaron ocasión de quejarse contra él; pero no pudieron hallar motivo para ello, “porque él era fiel, y ningún vicio ni falta fué en él hallado.”",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "honors_jealousy_hostile_search_faithful_failure",
+      "option_category": "cause_investigation_result_reason",
+      "variant_justification": "La presentación existente sólo verifica que los honores despertaron celos; ésta exige resolver la investigación y su resultado.",
+      "authored_content_sha256": "0098518b9567b69f5a8e375fa17deec6df5f8235dd220a4b8a64ed440fc610c6",
+      "source_ref": "PR44, p. 55, párrafo 2",
+      "source_quote": "Los honores otorgados a Daniel despertaron los celos de los principales del reino, y buscaron ocasión de quejarse contra él; pero no pudieron hallar motivo para ello, “porque él era fiel, y ningún vicio ni falta fué en él hallado.”",
+      "parent_context": "Los honores otorgados a Daniel despertaron los celos de los principales del reino, y buscaron ocasión de quejarse contra él; pero no pudieron hallar motivo para ello, “porque él era fiel, y ningún vicio ni falta fué en él hallado.”",
+      "existing_presentations": [
+        {
+          "question": "Evalúa la afirmación: «Los honores otorgados a Daniel despertaron los celos de los principales del reino».",
+          "family": "true_false",
+          "subtype": "cause_consequence"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR44-C12-003",
+      "source_unit_id": "PR44-P055-P004-S002",
+      "fact_id": "PR44-P055-P004-S002-V11-F03",
+      "family": "fill_choice",
+      "subtype": "relationship",
+      "question": "Complete la ficha del decreto proyectado sin perder alcance, duración, conducta prohibida ni excepción: ____.",
+      "options": [
+        "cualquier persona del reino → treinta días → no pedir nada a Dios ni a hombres → excepto al rey Darío",
+        "sólo los presidentes → siete días → no rendir cuentas a gobernadores → excepto a Daniel",
+        "todos los cautivos de Judá → treinta años → no orar hacia Jerusalén → excepto al rey Ciro",
+        "los príncipes de Persia → un día → no pedir nada al rey → excepto a los dioses"
+      ],
+      "evidence_excerpt": "Resolvieron pedir al rey que firmase un decreto que ellos iban a preparar, en el cual se prohibiría a cualquier persona del reino que por treinta días pidiese algo a Dios o a los hombres, excepto al rey Darío.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "decree_scope_duration_prohibition_exception",
+      "option_category": "four_constraint_legal_map",
+      "variant_justification": "La presentación previa completa el nombre del rey; ésta reconstruye alcance, plazo, prohibición y excepción.",
+      "authored_content_sha256": "facfb005efb305e16e86bc991a07ca88320aefce001e7465d6144bc31b4509e9",
+      "source_ref": "PR44, p. 55, párrafo 4",
+      "source_quote": "Resolvieron pedir al rey que firmase un decreto que ellos iban a preparar, en el cual se prohibiría a cualquier persona del reino que por treinta días pidiese algo a Dios o a los hombres, excepto al rey Darío.",
+      "parent_context": "Por lo tanto, los presidentes y príncipes, consultándose, idearon un plan por el cual esperaban lograr la destrucción del profeta. Resolvieron pedir al rey que firmase un decreto que ellos iban a preparar, en el cual se prohibiría a cualquier persona del reino que por treinta días pidiese algo a Dios o a los hombres, excepto al rey Darío. La violación de este decreto se castigaría arrojando al culpable en el foso de los leones.",
+      "existing_presentations": [
+        {
+          "question": "Durante el plazo del decreto, toda petición debía dirigirse únicamente al rey ____.",
+          "family": "fill_choice",
+          "subtype": "factual_recall"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR44-C12-004",
+      "source_unit_id": "PR44-P055-P007-S006",
+      "fact_id": "PR44-P055-P007-S006-F01",
+      "family": "true_false",
+      "subtype": "comparison",
+      "question": "Daniel cumplía con calma sus deberes de presidente y, a la hora acostumbrada, entraba en su cámara con ventanas abiertas hacia Jerusalén para presentar su petición al Dios del cielo.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Cumplía con calma sus deberes como presidente de los príncipes; y a la hora de la oración entraba en su cámara, y con las ventanas abiertas hacia Jerusalén, según su costumbre, ofrecía su petición al Dios del cielo.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "public_duty_calm_customary_visible_prayer",
+      "option_category": "civil_devotional_parallel_conduct",
+      "variant_justification": "La presentación pública sólo valida ventanas y orientación; ésta exige integrar deber civil, calma y estructura completa de oración.",
+      "authored_content_sha256": "9e50d75ef065d93ae63bf645093ddbd2d1f2c03bc6d6f38e2f576c262296f609",
+      "source_ref": "PR44, p. 55, párrafo 7",
+      "source_quote": "Cumplía con calma sus deberes como presidente de los príncipes; y a la hora de la oración entraba en su cámara, y con las ventanas abiertas hacia Jerusalén, según su costumbre, ofrecía su petición al Dios del cielo.",
+      "parent_context": "Los enemigos del profeta contaban con la firme adhesión de Daniel a los buenos principios para que su plan tuviese éxito. Y no se habían equivocado en su manera de estimar su carácter. El reconoció prestamente el propósito maligno que habían tenido al fraguar el decreto, pero no cambió su conducta en un solo detalle. ¿Por qué dejaría de orar ahora, cuando más necesitaba hacerlo? Antes renunciaría a la vida misma que a la esperanza de ayuda que hallaba en Dios. Cumplía con calma sus deberes como presidente de los príncipes; y a la hora de la oración entraba en su cámara, y con las ventanas abiertas hacia Jerusalén, según su costumbre, ofrecía su petición al Dios del cielo.",
+      "existing_presentations": [
+        {
+          "question": "Evalúa la afirmación: «Daniel mantuvo su costumbre de orar al Dios del cielo con las ventanas abiertas hacia Jerusalén».",
+          "family": "true_false",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR44-C12-005",
+      "source_unit_id": "PR44-P056-P001-S004",
+      "fact_id": "PR44-P056-P001-S004-F01",
+      "family": "fill_choice",
+      "subtype": "principle",
+      "question": "Complete el límite de obediencia que distingue autoridad legítima y lealtad suprema: ____.",
+      "options": [
+        "cuando el rey tenía derecho a ordenar → Daniel obedecía → ni rey ni decreto podían desviarlo de su lealtad al Rey de reyes",
+        "cuando los príncipes adulaban → Daniel obedecía → el decreto podía desviarlo de su lealtad a Dios",
+        "cuando Darío prohibía toda oración → Daniel abandonaba sus deberes → los gobernadores ocupaban el lugar del Rey de reyes",
+        "cuando la ley podía mudarse → Daniel desobedecía toda orden → el rey quedaba libre de responsabilidad"
+      ],
+      "evidence_excerpt": "En todos los casos en los cuales el rey tuviese derecho a ordenar, Daniel le obedecería; pero ni el rey ni su decreto podían desviarle de su lealtad al Rey de reyes.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "legitimate_civil_obedience_supreme_loyalty_limit",
+      "option_category": "authority_boundary_principle",
+      "variant_justification": "Las presentaciones existentes completan sólo la lealtad final; ésta exige reconstruir también la obediencia legítima y su límite.",
+      "authored_content_sha256": "6da6ede15bb44b66c19fc8e8084f8f5aaed3159e40eeac2c4a911c788f1f048d",
+      "source_ref": "PR44, p. 56, párrafo 1",
+      "source_quote": "En todos los casos en los cuales el rey tuviese derecho a ordenar, Daniel le obedecería; pero ni el rey ni su decreto podían desviarle de su lealtad al Rey de reyes.",
+      "parent_context": "No procuraba ocultar su acto. Aunque conocía muy bien las consecuencias que tendría su fidelidad a Dios, su ánimo no vaciló. No permitiría que aquellos que maquinaban su ruina pudieran ver siquiera la menor apariencia de que su relación con el Cielo se hubiese cortado. En todos los casos en los cuales el rey tuviese derecho a ordenar, Daniel le obedecería; pero ni el rey ni su decreto podían desviarle de su lealtad al Rey de reyes.",
+      "existing_presentations": [
+        {
+          "question": "Ni el rey ni su decreto podían desviar a Daniel de ____.",
+          "family": "fill_choice",
+          "subtype": "principle"
+        },
+        {
+          "question": "Ni el rey ni su decreto podían quebrantar ____.",
+          "family": "fill_choice",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR44-C12-006",
+      "source_unit_id": "PR44-P056-P003-S002",
+      "fact_id": "PR44-P056-P003-S002-F01",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "Durante la vigilancia de los príncipes, ¿qué correspondencia conserva doble frecuencia, lugar observado y carácter de la oración?",
+      "options": [
+        "Tres veces lo vieron y tres veces lo oyeron → iba a su cámara → voz en ferviente intercesión a Dios",
+        "Una vez lo vieron y nunca lo oyeron → iba al palacio → voz en alabanza a Darío",
+        "Siete veces lo vieron y dos lo oyeron → iba al foso → voz en petición a los príncipes",
+        "Dos veces lo vieron y tres lo oyeron → iba al templo → voz en consulta a los magos"
+      ],
+      "evidence_excerpt": "Tres veces le vieron ir a su cámara, y tres veces oyeron su voz elevarse en ferviente intercesión para con Dios.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "surveillance_visual_auditory_prayer_map",
+      "option_category": "observation_frequency_setting_content",
+      "variant_justification": "La presentación pública pregunta sólo cuántas veces; ésta exige reconstruir visión, audición, lugar y carácter de la acción.",
+      "authored_content_sha256": "707a4f92c36ecfc9fb1b42dbc0478522fe6db99d8efdcdb73c67b7bea5bd8df3",
+      "source_ref": "PR44, p. 56, párrafo 3",
+      "source_quote": "Tres veces le vieron ir a su cámara, y tres veces oyeron su voz elevarse en ferviente intercesión para con Dios.",
+      "parent_context": "Durante todo un día los príncipes vigilaron a Daniel. Tres veces le vieron ir a su cámara, y tres veces oyeron su voz elevarse en ferviente intercesión para con Dios. A la mañana siguiente, presentaron su queja al rey. Daniel, su estadista más honrado y fiel, había desafiado el decreto real. Recordaron al rey: “¿No has confirmado edicto que cualquiera que pidiere a cualquier dios u hombre en el espacio de treinta días, excepto a ti, oh rey, fuese echado en el foso de los leones?”",
+      "existing_presentations": [
+        {
+          "question": "¿Cuántas veces vieron los príncipes a Daniel ir a su cámara y oyeron su intercesión durante el día de vigilancia?",
+          "family": "single_choice_contextual",
+          "subtype": "narrative_order"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "8d62ffca32000f558629d74fae5b4c12f02f957511db26806a0981b626dac30b"
+}

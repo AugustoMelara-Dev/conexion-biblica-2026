@@ -34,8 +34,7 @@ EXPECTED_UNITS = (
 )
 BASE_QUESTION_COUNT = 2468
 BASE_FACT_COUNT = 2217
-APPROVED_INCREMENT_COUNT = 262
-FINAL_QUESTION_COUNT = BASE_QUESTION_COUNT + APPROVED_INCREMENT_COUNT
+HISTORICAL_APPROVED_COUNT = 262
 SHA256_PATTERN = re.compile(r"^[0-9a-f]{64}$")
 UNIT_PREFIX_PATTERN = re.compile(r"^(DAN(?:1[0-2]|[1-9])|PR(?:3[9]|4[0-4]))(?:-|$)")
 
@@ -66,7 +65,27 @@ def _load_compiler():
     return module
 
 
-def _validate_checkpoint_envelope(checkpoint: Mapping[str, Any]) -> None:
+def _checkpoint_payload(
+    batches: list[Any],
+    approved: list[Any],
+    pending: list[Any],
+    history: list[Any] | None = None,
+) -> dict[str, Any]:
+    payload: dict[str, Any] = {
+        "schema_version": APPLIED_SCHEMA,
+        "release": 2,
+        "batches": deepcopy(batches),
+        "approved": deepcopy(approved),
+        "pending": deepcopy(pending),
+    }
+    if history:
+        payload["cycle_history"] = deepcopy(history)
+    return payload
+
+
+def validate_checkpoint_lineage(checkpoint: Mapping[str, Any]) -> None:
+    """Validate the original 262 checkpoint or reconstruct its append-only chain."""
+
     if checkpoint.get("schema_version") != APPLIED_SCHEMA:
         raise PromotionError("checkpoint schema mismatch")
     if checkpoint.get("release") != 2:
@@ -83,10 +102,8 @@ def _validate_checkpoint_envelope(checkpoint: Mapping[str, Any]) -> None:
     batches = checkpoint.get("batches")
     if not isinstance(approved, list) or not isinstance(pending, list):
         raise PromotionError("checkpoint approved and pending must be lists")
-    if len(approved) != APPROVED_INCREMENT_COUNT:
-        raise PromotionError(
-            f"approved increment count must be {APPROVED_INCREMENT_COUNT}, got {len(approved)}"
-        )
+    if len(approved) < HISTORICAL_APPROVED_COUNT:
+        raise PromotionError("checkpoint cannot contain fewer than 262 approved rows")
     if not isinstance(batches, list) or not batches:
         raise PromotionError("checkpoint batches must be a non-empty list")
 
@@ -126,6 +143,116 @@ def _validate_checkpoint_envelope(checkpoint: Mapping[str, Any]) -> None:
         raise PromotionError("batch approved total does not bind checkpoint rows")
     if pending_total != len(pending):
         raise PromotionError("batch pending total does not bind checkpoint rows")
+
+    history = checkpoint.get("cycle_history")
+    if len(approved) == HISTORICAL_APPROVED_COUNT:
+        if history not in (None, []):
+            raise PromotionError("cycle_history is not allowed on the original checkpoint")
+        return
+    if not isinstance(history, list) or not history:
+        raise PromotionError("cycle_history is required after the original checkpoint")
+    if any(not isinstance(entry, Mapping) for entry in history):
+        raise PromotionError("cycle_history entries must be mappings")
+
+    expected_history_keys = {
+        "cycle",
+        "base_release_sha256",
+        "increment_release_sha256",
+        "base_approved_count",
+        "new_approved_count",
+        "merged_approved_count",
+    }
+    groups: list[tuple[int, int]] = []
+    batch_cursor = next(
+        (
+            index
+            for index, batch in enumerate(batches)
+            if str(batch["batch_id"]).endswith("-cycle11")
+        ),
+        -1,
+    )
+    if batch_cursor < 0:
+        raise PromotionError("cycle_history has no cycle11 batch boundary")
+    historical_batch_end = batch_cursor
+    expected_cycle = 11
+    approved_cursor = HISTORICAL_APPROVED_COUNT
+    for index, entry in enumerate(history):
+        if set(entry) != expected_history_keys or entry.get("cycle") != expected_cycle:
+            raise PromotionError(f"cycle_history[{index}] has invalid schema or cycle")
+        start = batch_cursor
+        suffix = f"-cycle{expected_cycle}"
+        while batch_cursor < len(batches) and str(
+            batches[batch_cursor]["batch_id"]
+        ).endswith(suffix):
+            batch_cursor += 1
+        if start == batch_cursor:
+            raise PromotionError(f"cycle_history[{index}] has no matching batches")
+        groups.append((start, batch_cursor))
+        values = (
+            entry.get("base_approved_count"),
+            entry.get("new_approved_count"),
+            entry.get("merged_approved_count"),
+        )
+        if any(
+            isinstance(value, bool) or not isinstance(value, int) or value < 0
+            for value in values
+        ):
+            raise PromotionError(f"cycle_history[{index}] has invalid counts")
+        base_count, new_count, merged_count = values
+        if (
+            base_count != approved_cursor
+            or new_count <= 0
+            or merged_count != base_count + new_count
+        ):
+            raise PromotionError(f"cycle_history[{index}] count chain mismatch")
+        approved_cursor = merged_count
+        expected_cycle += 1
+    if batch_cursor != len(batches) or approved_cursor != len(approved):
+        raise PromotionError("cycle_history does not cover append-only batches/approved rows")
+
+    cycle_pending_total = sum(
+        batch["pending"] for start, end in groups for batch in batches[start:end]
+    )
+    historical_pending_count = len(pending) - cycle_pending_total
+    if historical_pending_count < 0:
+        raise PromotionError("cycle_history pending counts exceed checkpoint pending rows")
+
+    approved_cursor = HISTORICAL_APPROVED_COUNT
+    pending_cursor = historical_pending_count
+    for index, (entry, (start, end)) in enumerate(zip(history, groups, strict=True)):
+        prior_payload = _checkpoint_payload(
+            batches[:start],
+            approved[:approved_cursor],
+            pending[:pending_cursor],
+            history[:index],
+        )
+        if entry["base_release_sha256"] != canonical_hash(prior_payload):
+            raise PromotionError(f"cycle_history[{index}] base SHA mismatch")
+
+        new_approved_count = entry["new_approved_count"]
+        cycle_batches = batches[start:end]
+        cycle_approved = approved[
+            approved_cursor : approved_cursor + new_approved_count
+        ]
+        cycle_pending_count = sum(batch["pending"] for batch in cycle_batches)
+        cycle_pending = pending[pending_cursor : pending_cursor + cycle_pending_count]
+        if sum(batch["approved"] for batch in cycle_batches) != len(cycle_approved):
+            raise PromotionError(f"cycle_history[{index}] batch approved mismatch")
+        increment_payload = _checkpoint_payload(
+            cycle_batches,
+            cycle_approved,
+            cycle_pending,
+        )
+        if entry["increment_release_sha256"] != canonical_hash(increment_payload):
+            raise PromotionError(f"cycle_history[{index}] increment SHA mismatch")
+        approved_cursor += new_approved_count
+        pending_cursor += cycle_pending_count
+    if approved_cursor != len(approved) or pending_cursor != len(pending):
+        raise PromotionError("cycle_history row slices do not cover checkpoint")
+
+
+def _validate_checkpoint_envelope(checkpoint: Mapping[str, Any]) -> None:
+    validate_checkpoint_lineage(checkpoint)
 
 
 def _load_base(base_root: Path) -> tuple[dict[str, list[dict[str, Any]]], dict[str, dict[str, Any]]]:
@@ -241,8 +368,9 @@ def prepare_promotion(
         merged[unit].append(row)
 
     merged_rows = [row for unit in EXPECTED_UNITS for row in merged[unit]]
-    if len(merged_rows) != FINAL_QUESTION_COUNT:
-        raise PromotionError(f"merged question count must be {FINAL_QUESTION_COUNT}")
+    expected_final_count = BASE_QUESTION_COUNT + len(approved)
+    if len(merged_rows) != expected_final_count:
+        raise PromotionError(f"merged question count must be {expected_final_count}")
     if len({str(row.get("fact_id") or "") for row in merged_rows}) != BASE_FACT_COUNT:
         raise PromotionError("promotion must not add or remove base facts")
     violations = {key: value for key, value in audit_corpus(merged_rows).items() if value}
@@ -274,7 +402,8 @@ def promote_release(
         manifest = compiler.compile_bank(staged_source, output)
 
     if (
-        manifest.get("gold_questions") != FINAL_QUESTION_COUNT
+        manifest.get("gold_questions")
+        != BASE_QUESTION_COUNT + len(checkpoint["approved"])
         or manifest.get("unique_facts") != BASE_FACT_COUNT
         or manifest.get("blind_fact_count") != 0
         or manifest.get("blind_presentation_count") != 0
