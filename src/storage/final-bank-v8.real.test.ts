@@ -31,16 +31,16 @@ const questions = manifest.shards.flatMap((shard) => {
 
 describe("real V10 competitive bank rounds", () => {
   it("loads every emitted entry into the human review queue", () => {
-    expect(parseHumanReviewIndex(reviewIndex).bank_questions).toBe(2852)
+    expect(parseHumanReviewIndex(reviewIndex).bank_questions).toBe(3011)
   })
 
   it("loads the exact public training artifact without leaking blind pools", () => {
-    expect(manifest.gold_questions).toBe(2852)
+    expect(manifest.gold_questions).toBe(3011)
     expect(manifest.unique_facts).toBe(2217)
     expect(manifest.shards).toHaveLength(18)
     expect(
       manifest.shards.reduce((sum, shard) => sum + shard.question_count, 0)
-    ).toBe(2852)
+    ).toBe(3011)
     expect(questions.every((question) => !question.blindPool)).toBe(true)
   })
 

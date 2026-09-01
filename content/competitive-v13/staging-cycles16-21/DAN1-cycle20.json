@@ -1,8 +1,8 @@
 [
   {
     "id": "V14-R2-DAN1-C20-001",
-    "source_unit_id": "DAN1-V001",
     "fact_id": "DAN1-V001-V11-F02",
+    "source_unit_id": "DAN1-V001",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
@@ -10,155 +10,107 @@
     "options": [
       "En el tercer año del reinado de Joacim, rey de Judá",
       "En el cuarto año del reinado de Sedequías, rey de Judá",
-      "En el primer año del reinado de Joaquín, rey de Judá",
-      "En el décimo año del reinado de Josías, rey de Judá"
+      "En el décimo año del reinado de Josías, rey de Judá",
+      "En el primer año del reinado de Joaquín, rey de Judá"
     ],
     "correct_option": 0,
     "accepted_answers": [
       "En el tercer año del reinado de Joacim, rey de Judá"
     ],
-    "explanation": "Daniel 1:1 fija con exactitud histórica el tercer año de Joacim como la fecha del primer sitio babilónico (605 a.C.).",
+    "explanation": "Daniel 1:1 declara: \"En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.\"",
     "why_distractors_fail": {
-      "En el cuarto año del reinado de Sedequías, rey de Judá": "Sedequías reinó al final del cautiverio hasta la destrucción de 586 a.C.",
-      "En el primer año del reinado de Joaquín, rey de Judá": "Joaquín reinó sólo tres meses en 597 a.C.",
-      "En el décimo año del reinado de Josías, rey de Judá": "Josías murió antes de la invasión de Nabucodonosor."
+      "En el cuarto año del reinado de Sedequías, rey de Judá": "Opción incorrecta según Daniel 1:1.",
+      "En el décimo año del reinado de Josías, rey de Judá": "Opción incorrecta según Daniel 1:1.",
+      "En el primer año del reinado de Joaquín, rey de Judá": "Opción incorrecta según Daniel 1:1."
     },
-    "evidence_excerpt": "En el tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió.",
-    "difficulty": "hard",
-    "importance": "critical",
-    "relation_type": "chronological_anchor_third_year_jehoiakim",
-    "option_category": "biblical_chronology_record",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Marca el inicio formal del cautiverio de 70 años profetizado por Jeremías.",
-    "variant_justification": "La pública pregunta de forma parcial; esta exige el binomio cronológico y dinástico exacto ('tercer año / Joacim').",
-    "answer_support_term": "tercer año del reinado de Joacim, rey de Judá",
-    "author": {
-      "id": "autor-D1-D2",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "fa9cc0f23d71a894d04120bc194c8190c3a973e5a29d2fda4d8cb6b30b45a182"
   },
   {
     "id": "V14-R2-DAN1-C20-002",
-    "source_unit_id": "DAN1-V002",
     "fact_id": "DAN1-V002-V11-F03",
+    "source_unit_id": "DAN1-V002",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿A qué tierra y a qué recinto específico llevó y colocó Nabucodonosor los utensilios sagrados de la casa de Dios?",
     "options": [
-      "los llevó a Persépolis y los fundió para forjar una estatua de plata",
       "los trajo a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios",
+      "los escondió en una cueva del desierto de Arabia junto al monte Sinaí",
       "los transportó a Tiro y los vendió a los mercaderes del mar",
-      "los escondió en una cueva del desierto de Arabia junto al monte Sinaí"
+      "los llevó a Persépolis y los fundió para forjar una estatua de plata"
     ],
-    "correct_option": 1,
+    "correct_option": 0,
     "accepted_answers": [
       "los trajo a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios"
     ],
-    "explanation": "Daniel 1:2 registra el traslado de los vasos santos a la tierra de Sinar (Babilonia) y su depósito en el tesoro del templo pagano.",
+    "explanation": "Daniel 1:2 declara: \"El Señor entregó en sus manos a Joacim, rey de Judá, y parte de los utensilios de la casa de Dios; los trajo a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.\"",
     "why_distractors_fail": {
-      "los llevó a Persépolis y los fundió para forjar una estatua de plata": "Persépolis era persa y los vasos fueron preservados intactos hasta Belsasar.",
-      "los transportó a Tiro y los vendió a los mercaderes del mar": "Fueron dedicados como trofeo religioso en Babilonia, no vendidos.",
-      "los escondió en una cueva del desierto de Arabia junto al monte Sinaí": "Leyenda apócrifa del arca, no el destino de los utensilios de Daniel 1:2."
+      "los escondió en una cueva del desierto de Arabia junto al monte Sinaí": "Opción incorrecta según Daniel 1:2.",
+      "los transportó a Tiro y los vendió a los mercaderes del mar": "Opción incorrecta según Daniel 1:2.",
+      "los llevó a Persépolis y los fundió para forjar una estatua de plata": "Opción incorrecta según Daniel 1:2."
     },
-    "evidence_excerpt": "los trajo a tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios.",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "sacred_vessels_transfer_to_shinar_treasure_house",
-    "option_category": "sacred_relics_geographical_relocation",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Establece el antecedente histórico de los vasos que serían profanados en Daniel 5.",
-    "variant_justification": "La pública es un fill_blank sobre Sinar; esta exige la correlación geográfica y cúltica completa ('tierra de Sinar / casa del tesoro de su dios').",
-    "answer_support_term": "tierra de Sinar, a la casa de su dios, y colocó los utensilios en la casa del tesoro de su dios",
-    "author": {
-      "id": "autor-D1-D2",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "6788648303ea37b0a342aefca68486ef1fc2099a1bc6fbf3fa79d1e876513f34"
   },
   {
     "id": "V14-R2-DAN1-C20-003",
-    "source_unit_id": "DAN1-V003",
     "fact_id": "DAN1-V003-V11-F02",
+    "source_unit_id": "DAN1-V003",
     "role": "variant",
     "family": "single_choice_direct",
     "subtype": "relationship",
     "question": "¿A qué alto funcionario de la corte ordenó el rey traer a jóvenes de la nobleza hebrea y de qué estirpe debían proceder?",
     "options": [
-      "a Arioc, capitán de la guardia, que trajera a los sacerdotes de la tribu de Leví",
-      "a Mardoqueo, copero del palacio, que trajera a los mercaderes de Benjamín",
       "a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes",
-      "a Hamán, primer ministro, que trajera a los sabios de Samaria"
+      "a Mardoqueo, copero del palacio, que trajera a los mercaderes de Benjamín",
+      "a Arioc, capitán de la guardia, que trajera a los sacerdotes de la tribu de Leví",
+      "a Aspenaz, primer ministro, que trajera a los sabios de Samaria"
     ],
-    "correct_option": 2,
+    "correct_option": 0,
     "accepted_answers": [
       "a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes"
     ],
-    "explanation": "Daniel 1:3 identifica a Aspenaz, jefe de los eunucos, y la condición aristocrática requerida: 'del linaje real de los príncipes'.",
+    "explanation": "Daniel 1:3 declara: \"Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes,\"",
     "why_distractors_fail": {
-      "a Arioc, capitán de la guardia, que trajera a los sacerdotes de la tribu de Leví": "Arioc era el capitán ejecutor en Daniel 2, no el encargado de la educación.",
-      "a Mardoqueo, copero del palacio, que trajera a los mercaderes de Benjamín": "Mardoqueo pertenece al libro de Ester.",
-      "a Hamán, primer ministro, que trajera a los sabios de Samaria": "Personaje del libro de Ester ajeno a la corte de Nabucodonosor."
+      "a Mardoqueo, copero del palacio, que trajera a los mercaderes de Benjamín": "Opción incorrecta según Daniel 1:3.",
+      "a Arioc, capitán de la guardia, que trajera a los sacerdotes de la tribu de Leví": "Opción incorrecta según Daniel 1:3.",
+      "a Aspenaz, primer ministro, que trajera a los sabios de Samaria": "Opción incorrecta según Daniel 1:3."
     },
-    "evidence_excerpt": "Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "royal_commission_to_ashpenaz_for_royal_youth",
-    "option_category": "court_official_and_selection_mandate",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Cumplimiento de la profecía de Isaías 39:7 a Ezequías sobre sus descendientes en el palacio de Babilonia.",
-    "variant_justification": "La pública pregunta de forma simple por Aspenaz; esta exige la correspondencia entre el oficial y la condición de linaje real y de príncipes.",
-    "answer_support_term": "Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes",
-    "author": {
-      "id": "autor-D1-D2",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "3258fa8df599499252cc4228b6fef2399f98b122c335b6e4c3a378a879f4321a"
   },
   {
     "id": "V14-R2-DAN1-C20-004",
-    "source_unit_id": "DAN1-V004",
     "fact_id": "DAN1-V004-V11-F02",
+    "source_unit_id": "DAN1-V004",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿Qué séxtupla cualificación física e intelectual debían poseer los jóvenes y qué debían aprender en el palacio?",
     "options": [
-      "que fuesen fuertes para la guerra, adiestrados en el arco, jinetes veloces y leales al culto del dios Marduk",
-      "que conociesen la astrología de Egipto, la medicina de Grecia y la filosofía de los sabios de Tiro",
       "que fuesen de edad madura, con experiencia en tributos y capaces de construir murallas de ladrillo cocido",
-      "en quienes no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey; y que les enseñara las letras y la lengua de los caldeos"
+      "que fuesen fuertes para la guerra, adiestrados en el arco, jinetes veloces y leales al culto del dios Marduk",
+      "en quienes no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey; y que les enseñara las letras y la lengua de los caldeos",
+      "que conociesen la astrología de Egipto, la medicina de Grecia y la filosofía de los sabios de Tiro"
     ],
-    "correct_option": 3,
+    "correct_option": 2,
     "accepted_answers": [
       "en quienes no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey; y que les enseñara las letras y la lengua de los caldeos"
     ],
-    "explanation": "Daniel 1:4 enumera las rigurosas exigencias holísticas: integridad física, apostura, sabiduría, ciencia, entendimiento e idoneidad cortesana, además del aprendizaje de las letras y lengua caldeas.",
+    "explanation": "Daniel 1:4 declara: \"muchachos en quienes no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey; y que les enseñara las letras y la lengua de los caldeos.\"",
     "why_distractors_fail": {
-      "que fuesen fuertes para la guerra, adiestrados en el arco, jinetes veloces y leales al culto del dios Marduk": "Se buscaban estadistas y administradores palaciegos, no jinetes militares.",
-      "que conociesen la astrología de Egipto, la medicina de Grecia y la filosofía de los sabios de Tiro": "El plan de estudio era específicamente la literatura y lengua caldeas.",
-      "que fuesen de edad madura, con experiencia en tributos y capaces de construir murallas de ladrillo cocido": "Eran muchachos jóvenes ('muchachos'), no hombres maduros."
+      "que fuesen de edad madura, con experiencia en tributos y capaces de construir murallas de ladrillo cocido": "Opción incorrecta según Daniel 1:4.",
+      "que fuesen fuertes para la guerra, adiestrados en el arco, jinetes veloces y leales al culto del dios Marduk": "Opción incorrecta según Daniel 1:4.",
+      "que conociesen la astrología de Egipto, la medicina de Grecia y la filosofía de los sabios de Tiro": "Opción incorrecta según Daniel 1:4."
     },
-    "evidence_excerpt": "muchachos en quienes no hubiera tacha alguna, de buen parecer, instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento e idóneos para estar en el palacio del rey; y que les enseñara las letras y la lengua de los caldeos.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "sixfold_qualifications_and_chaldean_curriculum",
-    "option_category": "holistic_candidate_profile_and_education",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra el altísimo estándar de selección imperial y la preparación integral que Dios proveyó a sus siervos.",
-    "variant_justification": "La pública pregunta de forma parcial; esta exige la serie completa de las seis virtudes y el currículo de letras y lengua caldeas.",
-    "answer_support_term": "instruidos en toda sabiduría, sabios en ciencia, de buen entendimiento",
-    "author": {
-      "id": "autor-D1-D2",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "9eaede25ff230a1d47d7640dbb5255fffd4e5aedadf028abc49b0cc6f6e41e82"
   },
   {
     "id": "V14-R2-DAN1-C20-005",
-    "source_unit_id": "DAN1-V005",
     "fact_id": "DAN1-V005-V11-F02",
+    "source_unit_id": "DAN1-V005",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
@@ -173,220 +125,148 @@
     "accepted_answers": [
       "una porción diaria de la comida del rey y del vino que él bebía; y que los educara durante tres años, para que al fin de ellos se presentaran delante del rey"
     ],
-    "explanation": "Daniel 1:5 fija el suministro de la comida y vino real y el plazo formativo de tres años.",
+    "explanation": "Daniel 1:5 declara: \"Y les señaló el rey una porción diaria de la comida del rey y del vino que él bebía; y que los educara durante tres años, para que al fin de ellos se presentaran delante del rey.\"",
     "why_distractors_fail": {
-      "pan de cebada y agua del río Éufrates; y que los educara durante siete años": "La dieta prescrita por el rey era la suya propia y el plazo de 3 años, no 7.",
-      "manjares vegetarianos y legumbres; y que los educara durante un año de prueba": "Las legumbres fueron pedidas por Daniel, no señaladas por el rey.",
-      "vino de Persia y carnes de caza; y que los educara durante cinco años en Susa": "Escenario babilónico y plazo erróneo."
+      "pan de cebada y agua del río Éufrates; y que los educara durante siete años": "Opción incorrecta según Daniel 1:5.",
+      "manjares vegetarianos y legumbres; y que los educara durante un año de prueba": "Opción incorrecta según Daniel 1:5.",
+      "vino de Persia y carnes de caza; y que los educara durante cinco años en Susa": "Opción incorrecta según Daniel 1:5."
     },
-    "evidence_excerpt": "Y les señaló el rey una porción diaria de la comida del rey y del vino que él bebía; y que los educara durante tres años, para que al fin de ellos se presentaran delante del rey.",
-    "difficulty": "hard",
-    "importance": "critical",
-    "relation_type": "royal_diet_allocation_and_three_year_education_term",
-    "option_category": "imperial_training_protocol",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Marco del conflicto ético sobre la dieta y la consagración en Daniel 1.",
-    "variant_justification": "La pública pregunta solo cuántos años; esta evalúa el binomio de la porción regia y el término formativo de tres años.",
-    "answer_support_term": "educara durante tres años, para que al fin de ellos se presentaran delante del rey",
-    "author": {
-      "id": "autor-D1-D2",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "fa699a18537336014824dd4b9334c830787e1ca8edf67ec167c5fd00a0da3ddb"
   },
   {
     "id": "V14-R2-DAN1-C20-006",
-    "source_unit_id": "DAN1-V006",
     "fact_id": "DAN1-V006-V11-F02",
+    "source_unit_id": "DAN1-V006",
     "role": "variant",
     "family": "single_choice_direct",
     "subtype": "relationship",
     "question": "¿Quiénes eran los cuatro jóvenes prominentes de la tribu de Judá seleccionados entre los cautivos?",
     "options": [
+      "Daniel, Ananías, Misael y Azarías, de los hijos de Judá",
       "Esdras, Nehemías, Zorobabel y Josué, de los hijos de Leví",
       "Mardoqueo, Ester, Elimelec y Booz, de los hijos de Benjamín",
-      "Daniel, Ananías, Misael y Azarías, de los hijos de Judá",
       "Isaías, Jeremías, Ezequiel y Baruc, de los hijos de Efraín"
     ],
-    "correct_option": 2,
+    "correct_option": 0,
     "accepted_answers": [
       "Daniel, Ananías, Misael y Azarías, de los hijos de Judá"
     ],
-    "explanation": "Daniel 1:6 nombra a los cuatro héroes hebreos con sus nombres teóforos originales de Judá.",
+    "explanation": "Daniel 1:6 declara: \"Entre ellos estaban Daniel, Ananías, Misael y Azarías, de los hijos de Judá.\"",
     "why_distractors_fail": {
-      "Esdras, Nehemías, Zorobabel y Josué, de los hijos de Leví": "Líderes de la época de la restauración posterior.",
-      "Mardoqueo, Ester, Elimelec y Booz, de los hijos de Benjamín": "Personajes de los libros de Ester y Rut.",
-      "Isaías, Jeremías, Ezequiel y Baruc, de los hijos de Efraín": "Profetas y escribas de distintas épocas."
+      "Esdras, Nehemías, Zorobabel y Josué, de los hijos de Leví": "Opción incorrecta según Daniel 1:6.",
+      "Mardoqueo, Ester, Elimelec y Booz, de los hijos de Benjamín": "Opción incorrecta según Daniel 1:6.",
+      "Isaías, Jeremías, Ezequiel y Baruc, de los hijos de Efraín": "Opción incorrecta según Daniel 1:6."
     },
-    "evidence_excerpt": "Entre ellos estaban Daniel, Ananías, Misael y Azarías, de los hijos de Judá.",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "four_hebrew_youth_original_names",
-    "option_category": "biblical_prosopography_four_nobles",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Nombres hebreos que contenían el nombre y atributos del Dios verdadero (El e Yah).",
-    "variant_justification": "La pública es un fill_blank; esta exige la identificación prosopográfica cuádruple exacta y su tribu de origen.",
-    "answer_support_term": "Daniel, Ananías, Misael y Azarías, de los hijos de Judá",
-    "author": {
-      "id": "autor-D1-D2",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "70e1ac7dc7ad94baf238dbff9784dac34d1d495f01df0f8c2dcd8d460505b14c"
   },
   {
     "id": "V14-R2-DAN1-C20-007",
-    "source_unit_id": "DAN1-V007",
     "fact_id": "DAN1-V007-V11-F02",
+    "source_unit_id": "DAN1-V007",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿Cuáles fueron los cuatro nombres caldeos sustitutivos asignados por el jefe de los eunucos a Daniel, Ananías, Misael y Azarías?",
     "options": [
       "a Daniel, Nabopolasar; a Ananías, Nergal; a Misael, Marduk; y a Azarías, Nebo",
-      "a Daniel, Ciro; a Ananías, Darío; a Misael, Jerjes; y a Azarías, Artajerjes",
+      "a Daniel, Beltsasar; a Ananías, Sadrac; a Misael, Mesac; y a Azarías, Abed-nego",
       "a Daniel, Aspenaz; a Ananías, Arioc; a Misael, Belsasar; y a Azarías, Amel-Marduk",
-      "a Daniel, Beltsasar; a Ananías, Sadrac; a Misael, Mesac; y a Azarías, Abed-nego"
+      "a Daniel, Ciro; a Ananías, Darío; a Misael, Jerjes; y a Azarías, Artajerjes"
     ],
-    "correct_option": 3,
+    "correct_option": 1,
     "accepted_answers": [
       "a Daniel, Beltsasar; a Ananías, Sadrac; a Misael, Mesac; y a Azarías, Abed-nego"
     ],
-    "explanation": "Daniel 1:7 detalla la imposición de nombres babilónicos vinculados a deidades paganas (Bel, Aku, Nego).",
+    "explanation": "Daniel 1:7 declara: \"A estos el jefe de los eunucos puso nombres: a Daniel, Beltsasar; a Ananías, Sadrac; a Misael, Mesac; y a Azarías, Abed-nego.\"",
     "why_distractors_fail": {
-      "a Daniel, Nabopolasar; a Ananías, Nergal; a Misael, Marduk; y a Azarías, Nebo": "Nombres de reyes y dioses caldeos no asignados a los cuatro hebreos.",
-      "a Daniel, Ciro; a Ananías, Darío; a Misael, Jerjes; y a Azarías, Artajerjes": "Nombres de monarcas persas posteriores.",
-      "a Daniel, Aspenaz; a Ananías, Arioc; a Misael, Belsasar; y a Azarías, Amel-Marduk": "Mezcla nombres de oficiales y reyes babilónicos."
+      "a Daniel, Nabopolasar; a Ananías, Nergal; a Misael, Marduk; y a Azarías, Nebo": "Opción incorrecta según Daniel 1:7.",
+      "a Daniel, Aspenaz; a Ananías, Arioc; a Misael, Belsasar; y a Azarías, Amel-Marduk": "Opción incorrecta según Daniel 1:7.",
+      "a Daniel, Ciro; a Ananías, Darío; a Misael, Jerjes; y a Azarías, Artajerjes": "Opción incorrecta según Daniel 1:7."
     },
-    "evidence_excerpt": "A estos el jefe de los eunucos puso nombres: a Daniel, Beltsasar; a Ananías, Sadrac; a Misael, Mesac; y a Azarías, Abed-nego.",
-    "difficulty": "hard",
-    "importance": "critical",
-    "relation_type": "chaldean_name_reassignment_quadruple_mapping",
-    "option_category": "onomastic_assimilation_mapping",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Intento de asimilación cultural para borrar la memoria de Jehová en los jóvenes.",
-    "variant_justification": "La pública pregunta de forma parcial; esta exige el mapeo cuádruple completo y riguroso de los cuatro nombres caldeos.",
-    "answer_support_term": "a Daniel, Beltsasar; a Ananías, Sadrac; a Misael, Mesac; y a Azarías, Abed-nego",
-    "author": {
-      "id": "autor-D1-D2",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "eac28e6dd4940f2925cadbf7de7a648ce6c06c87329ba85e5e351ad0dfa37e43"
   },
   {
     "id": "V14-R2-DAN1-C20-008",
-    "source_unit_id": "DAN1-V008",
     "fact_id": "DAN1-V008-V11-F02",
+    "source_unit_id": "DAN1-V008",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "principle",
     "question": "¿Qué firme resolución interior tomó Daniel y qué respetuosa petición elevó al jefe de los eunucos para no transigir con su fe?",
     "options": [
-      "propuso en su corazón no contaminarse con la porción de la comida del rey ni con el vino que él bebía; pidió, por tanto, al jefe de los eunucos que no se le obligara a contaminarse",
       "decidió huir de Babilonia en la noche y pidió a sus compañeros que lo cubrieran ante los guardias",
+      "exigió que el rey cambiara las leyes dietéticas de todo el imperio antes de iniciar las clases",
       "aceptó comer los manjares reales pero derramó el vino en secreto detrás de la mesa",
-      "exigió que el rey cambiara las leyes dietéticas de todo el imperio antes de iniciar las clases"
+      "propuso en su corazón no contaminarse con la porción de la comida del rey ni con el vino que él bebía; pidió, por tanto, al jefe de los eunucos que no se le obligara a contaminarse"
     ],
-    "correct_option": 0,
+    "correct_option": 3,
     "accepted_answers": [
       "propuso en su corazón no contaminarse con la porción de la comida del rey ni con el vino que él bebía; pidió, por tanto, al jefe de los eunucos que no se le obligara a contaminarse"
     ],
-    "explanation": "Daniel 1:8 formula la magna resolución moral del profeta: decisión interna inquebrantable unida a una petición respetuosa y sabia.",
+    "explanation": "Daniel 1:8 declara: \"Daniel propuso en su corazón no contaminarse con la porción de la comida del rey ni con el vino que él bebía; pidió, por tanto, al jefe de los eunucos que no se le obligara a contaminarse.\"",
     "why_distractors_fail": {
-      "decidió huir de Babilonia en la noche y pidió a sus compañeros que lo cubrieran ante los guardias": "Daniel no huyó sino que enfrentó la prueba con fe y sabiduría.",
-      "aceptó comer los manjares reales pero derramó el vino en secreto detrás de la mesa": "Daniel no recurrió a engaños ni hipocresía.",
-      "exigió que el rey cambiara las leyes dietéticas de todo el imperio antes de iniciar las clases": "Presentó una petición humilde para su persona y amigos, no demandas políticas arrogantes."
+      "decidió huir de Babilonia en la noche y pidió a sus compañeros que lo cubrieran ante los guardias": "Opción incorrecta según Daniel 1:8.",
+      "exigió que el rey cambiara las leyes dietéticas de todo el imperio antes de iniciar las clases": "Opción incorrecta según Daniel 1:8.",
+      "aceptó comer los manjares reales pero derramó el vino en secreto detrás de la mesa": "Opción incorrecta según Daniel 1:8."
     },
-    "evidence_excerpt": "Daniel propuso en su corazón no contaminarse con la porción de la comida del rey ni con el vino que él bebía; pidió, por tanto, al jefe de los eunucos que no se le obligara a contaminarse.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "moral_resolution_in_heart_and_courteous_request",
-    "option_category": "cornerstone_temperance_pledge",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Texto cumbre sobre la integridad de principios y la temperancia en la juventud.",
-    "variant_justification": "La pública pregunta de forma parcial; esta evalúa la correlación integral entre el propósito del corazón y la petición al jefe de eunucos.",
-    "answer_support_term": "propuso en su corazón no contaminarse con la porción de la comida del rey ni con el vino que él bebía",
-    "author": {
-      "id": "autor-D1-D2",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "67ae66bbd5aac749aea18d9262114521f7c5c4a6f109f3905961ec9720c2fb11"
   },
   {
     "id": "V14-R2-DAN1-C20-009",
-    "source_unit_id": "DAN1-V010",
     "fact_id": "DAN1-V010-V11-F02",
+    "source_unit_id": "DAN1-V010",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "cause_consequence",
     "question": "¿Qué temor mortal manifestó el jefe de los eunucos si el rey veía los rostros de los hebreos desmejorados frente a los otros jóvenes?",
     "options": [
-      "Temo que los sacerdotes de Bel descubran vuestras oraciones y me destituyan de mi cargo en la corte",
-      "Temo que los soldados persas asedien la ciudad antes de que termine vuestro curso de tres años",
+      "Temo que el rey os deporte a las tierras de Egipto por desobedecer sus órdenes",
       "«Temo a mi señor el rey, que asignó vuestra comida y vuestra bebida; pues luego que él vea vuestros rostros más pálidos que los de los muchachos que son semejantes a vosotros, haréis que el rey me condene a muerte.»",
-      "Temo que el rey os deporte a las tierras de Egipto por desobedecer sus órdenes"
+      "Temo que los soldados persas asedien la ciudad antes de que termine vuestro curso de tres años",
+      "Temo que los sacerdotes de Bel descubran vuestras oraciones y me destituyan de mi cargo en la corte"
     ],
-    "correct_option": 2,
+    "correct_option": 1,
     "accepted_answers": [
       "«Temo a mi señor el rey, que asignó vuestra comida y vuestra bebida; pues luego que él vea vuestros rostros más pálidos que los de los muchachos que son semejantes a vosotros, haréis que el rey me condene a muerte.»"
     ],
-    "explanation": "Daniel 1:10 explica la reticencia de Aspenaz por el riesgo personal de pena de muerte bajo un monarca despótico.",
+    "explanation": "Daniel 1:10 declara: \"y el jefe de los eunucos dijo a Daniel: —Temo a mi señor el rey, que asignó vuestra comida y vuestra bebida; pues luego que él vea vuestros rostros más pálidos que los de los muchachos que son semejantes a vosotros, haréis que el rey me condene a muerte.\"",
     "why_distractors_fail": {
-      "Temo que los sacerdotes de Bel descubran vuestras oraciones y me destituyan de mi cargo en la corte": "La preocupación era el aspecto físico de los rostros ante el rey, no las oraciones.",
-      "Temo que los soldados persas asedien la ciudad antes de que termine vuestro curso de tres años": "Persia no era amenaza en ese momento inicial de Nabucodonosor.",
-      "Temo que el rey os deporte a las tierras de Egipto por desobedecer sus órdenes": "El peligro de muerte recaía sobre el jefe de eunucos mismo."
+      "Temo que el rey os deporte a las tierras de Egipto por desobedecer sus órdenes": "Opción incorrecta según Daniel 1:10.",
+      "Temo que los soldados persas asedien la ciudad antes de que termine vuestro curso de tres años": "Opción incorrecta según Daniel 1:10.",
+      "Temo que los sacerdotes de Bel descubran vuestras oraciones y me destituyan de mi cargo en la corte": "Opción incorrecta según Daniel 1:10."
     },
-    "evidence_excerpt": "«Temo a mi señor el rey, que asignó vuestra comida y vuestra bebida; pues luego que él vea vuestros rostros más pálidos que los de los muchachos que son semejantes a vosotros, haréis que el rey me condene a muerte.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "official_fear_of_capital_punishment_over_diet",
-    "option_category": "despotic_risk_and_physical_appearance",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra la gravedad del riesgo que asumieron Daniel y el oficial al pactar la prueba.",
-    "variant_justification": "La pública es un fill_blank; esta exige la formulación textual completa del razonamiento y temor de muerte de Aspenaz.",
-    "answer_support_term": "haréis que el rey me condene a muerte",
-    "author": {
-      "id": "autor-D1-D2",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "a0836a17be212edd638c1e2aae8491cf191fa5d1bf5b342d652a0a0eec30eb31"
   },
   {
     "id": "V14-R2-DAN1-C20-010",
-    "source_unit_id": "DAN1-V013",
     "fact_id": "DAN1-V013-V11-F02",
+    "source_unit_id": "DAN1-V013",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "comparison",
     "question": "¿Qué método empírico de comparación visual propuso Daniel al mayordomo tras la prueba de los diez días?",
     "options": [
       "Pesa luego nuestros cuerpos en la balanza del templo y compara nuestro peso con el de los sabios caldeos",
-      "Mide luego nuestra estatura y examina nuestra fuerza en una carrera de mil codos",
       "Haz luego un examen de astrología y comprueba si sabemos más que los magos de palacio",
-      "Compara luego nuestros rostros con los rostros de los muchachos que comen de la porción de la comida del rey, y haz después con tus siervos según veas."
+      "Compara luego nuestros rostros con los rostros de los muchachos que comen de la porción de la comida del rey, y haz después con tus siervos según veas.",
+      "Mide luego nuestra estatura y examina nuestra fuerza en una carrera de mil codos"
     ],
-    "correct_option": 3,
+    "correct_option": 2,
     "accepted_answers": [
       "Compara luego nuestros rostros con los rostros de los muchachos que comen de la porción de la comida del rey, y haz después con tus siervos según veas."
     ],
-    "explanation": "Daniel 1:13 plantea una sabia prueba comparativa de aspecto físico y salud entre ambos grupos alimenticios.",
+    "explanation": "Daniel 1:13 declara: \"Compara luego nuestros rostros con los rostros de los muchachos que comen de la porción de la comida del rey, y haz después con tus siervos según veas.\"",
     "why_distractors_fail": {
-      "Pesa luego nuestros cuerpos en la balanza del templo y compara nuestro peso con el de los sabios caldeos": "No se trató de pesaje en balanzas cúlticas sino de inspección visual de semblante.",
-      "Mide luego nuestra estatura y examina nuestra fuerza en una carrera de mil codos": "No hubo pruebas atléticas sino evaluación de salud y lozanía.",
-      "Haz luego un examen de astrología y comprueba si sabemos más que los magos de palacio": "El examen intelectual vino al fin de los tres años (v. 18-20), no a los diez días."
+      "Pesa luego nuestros cuerpos en la balanza del templo y compara nuestro peso con el de los sabios caldeos": "Opción incorrecta según Daniel 1:13.",
+      "Haz luego un examen de astrología y comprueba si sabemos más que los magos de palacio": "Opción incorrecta según Daniel 1:13.",
+      "Mide luego nuestra estatura y examina nuestra fuerza en una carrera de mil codos": "Opción incorrecta según Daniel 1:13."
     },
-    "evidence_excerpt": "Compara luego nuestros rostros con los rostros de los muchachos que comen de la porción de la comida del rey, y haz después con tus siervos según veas.",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "empirical_health_comparison_proposal",
-    "option_category": "scientific_comparative_trial_method",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra la confianza en las leyes de la salud dadas por el Creador frente a la dieta artificial de la corte.",
-    "variant_justification": "La pública pregunta de forma parcial; esta exige la formulación metodológica completa del cotejo de rostros y la sumisión al resultado.",
-    "answer_support_term": "Compara luego nuestros rostros con los rostros de los muchachos",
-    "author": {
-      "id": "autor-D1-D2",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "b8a0d490efb4ad2ee3b1155382dcda698ceef8a1bfa1155aaf4dc840714f9c44"
   }
 ]

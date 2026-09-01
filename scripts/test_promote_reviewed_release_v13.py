@@ -19,7 +19,7 @@ CHECKPOINT = (
     / "competitive-v13"
     / "release2"
     / "applied"
-    / "release2-reviewed-current.json"
+    / "release2-reviewed-base-262.json"
 )
 
 

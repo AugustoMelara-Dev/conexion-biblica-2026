@@ -1,4 +1,4 @@
-﻿import json
+import json
 import pathlib
 import unittest
 from collections import Counter
@@ -79,12 +79,29 @@ class AntiSimulationInvariantsTest(unittest.TestCase):
         for bf in staging_dir.glob("*.json"):
             data = json.loads(bf.read_text(encoding="utf-8"))
             for q in data:
-                text = (q.get("explanation", "") + " " + q.get("significance", "")).lower()
+                sig = q.get("significance") or ""
+                exp = q.get("explanation") or ""
+                text = (exp + " " + sig).lower()
                 for phrase in banned_phrases:
                     self.assertNotIn(
                         phrase, text,
                         f"External theology violation in {bf.name} {q.get('id')}: found '{phrase}'"
                     )
+
+    def test_provenance_requires_real_model_conversation_id(self):
+        """Reviews must preserve genuine conversation IDs and model provenance."""
+        reviews_dir = ROOT / "content" / "competitive-v13" / "staging-reviews"
+        if not reviews_dir.exists() or not list(reviews_dir.glob("blind-*.json")):
+            self.skipTest("No staging reviews to check yet.")
+        for rf in reviews_dir.glob("blind-*.json"):
+            data = json.loads(rf.read_text(encoding="utf-8"))
+            reviewer = data.get("reviewer", {})
+            self.assertIn("conversation_id", reviewer, f"Missing conversation_id in {rf.name}")
+            cid = reviewer["conversation_id"]
+            self.assertTrue(
+                len(cid) >= 10,
+                f"Invalid conversation_id in {rf.name}: '{cid}'"
+            )
 
 if __name__ == "__main__":
     unittest.main()

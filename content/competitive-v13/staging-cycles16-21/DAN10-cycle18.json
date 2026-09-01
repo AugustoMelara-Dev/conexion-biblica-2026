@@ -1,93 +1,69 @@
 [
   {
     "id": "V14-R2-DAN10-C18-001",
-    "source_unit_id": "DAN10-V004",
     "fact_id": "DAN10-V004-F02",
+    "source_unit_id": "DAN10-V004",
     "role": "variant",
     "family": "single_choice_direct",
     "subtype": "relationship",
     "question": "¿En qué fecha exacta y junto a qué gran río se encontraba Daniel cuando recibió la visión del varón celestial?",
     "options": [
-      "El día veinticuatro del primer mes estaba yo a la orilla del gran río Hidekel.",
       "El día catorce del primer mes estaba yo junto al río Éufrates en Babilonia.",
-      "El día diez del séptimo mes estaba yo junto al torrente de Cedrón en Jerusalén.",
-      "El día primero del quinto mes estaba yo junto al río Ulai en Susa."
+      "El día primero del quinto mes estaba yo junto al río Ulai en Susa.",
+      "El día veinticuatro del primer mes estaba yo a la orilla del gran río Hidekel.",
+      "El día diez del séptimo mes estaba yo junto al torrente de Cedrón en Jerusalén."
     ],
-    "correct_option": 0,
+    "correct_option": 2,
     "accepted_answers": [
       "El día veinticuatro del primer mes estaba yo a la orilla del gran río Hidekel."
     ],
-    "explanation": "Daniel 10:4 fija la fecha del día 24 del primer mes (Nisán) y el río Hidekel (Tigris).",
+    "explanation": "Daniel 10:4 declara: \"El día veinticuatro del primer mes estaba yo a la orilla del gran río Hidekel.\"",
     "why_distractors_fail": {
-      "El día catorce del primer mes estaba yo junto al río Éufrates en Babilonia.": "Día de la Pascua y río Éufrates no mencionados en el texto.",
-      "El día diez del séptimo mes estaba yo junto al torrente de Cedrón en Jerusalén.": "Día de la Expiación y geografía jerosolimitana ajena.",
-      "El día primero del quinto mes estaba yo junto al río Ulai en Susa.": "El río Ulai pertenece a la visión de Daniel 8:2."
+      "El día catorce del primer mes estaba yo junto al río Éufrates en Babilonia.": "Opción incorrecta según Daniel 10:4.",
+      "El día primero del quinto mes estaba yo junto al río Ulai en Susa.": "Opción incorrecta según Daniel 10:4.",
+      "El día diez del séptimo mes estaba yo junto al torrente de Cedrón en Jerusalén.": "Opción incorrecta según Daniel 10:4."
     },
-    "evidence_excerpt": "El día veinticuatro del primer mes estaba yo a la orilla del gran río Hidekel.",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "vision_date_and_river_location",
-    "option_category": "chronological_and_geographical_anchor",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Marca la conclusión de las tres semanas de ayuno de Daniel junto al Tigris.",
-    "variant_justification": "La pública pregunta de forma parcial; esta evalúa el binomio completo de calendario y toponimia fluvial.",
-    "answer_support_term": "gran río Hidekel",
-    "author": {
-      "id": "autor-D9-D12",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "4cc38f710915e8b8c2053b90b3baad230bce70271fb141f4b5c95b407dd9efe9"
   },
   {
     "id": "V14-R2-DAN10-C18-002",
-    "source_unit_id": "DAN10-V007",
     "fact_id": "DAN10-V007-F01",
+    "source_unit_id": "DAN10-V007",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "comparison",
     "question": "¿Qué contraste de percepción visual y reacción física ocurrió entre Daniel y sus acompañantes ante la teofanía?",
     "options": [
       "Todos los hombres vieron la figura celestial y cayeron postrados adorando juntos al Señor.",
-      "Sólo yo, Daniel, vi aquella visión. No la vieron los hombres que estaban conmigo, sino que se apoderó de ellos un gran temor y huyeron y se escondieron.",
+      "Los hombres vieron al ser de lino y huyeron a Susa, mientras Daniel permaneció de pie sin temor.",
       "Daniel no vio nada pero escuchó la voz, mientras sus compañeros vieron un relámpago y celebraron.",
-      "Los hombres vieron al ser de lino y huyeron a Susa, mientras Daniel permaneció de pie sin temor."
+      "Sólo yo, Daniel, vi aquella visión. No la vieron los hombres que estaban conmigo, sino que se apoderó de ellos un gran temor y huyeron y se escondieron."
     ],
-    "correct_option": 1,
+    "correct_option": 3,
     "accepted_answers": [
       "Sólo yo, Daniel, vi aquella visión. No la vieron los hombres que estaban conmigo, sino que se apoderó de ellos un gran temor y huyeron y se escondieron."
     ],
-    "explanation": "Daniel 10:7 contrasta la visión exclusiva de Daniel con el pánico ciego de sus acompañantes que huyeron a ocultarse.",
+    "explanation": "Daniel 10:7 declara: \"Sólo yo, Daniel, vi aquella visión. No la vieron los hombres que estaban conmigo, sino que se apoderó de ellos un gran temor y huyeron y se escondieron.\"",
     "why_distractors_fail": {
-      "Todos los hombres vieron la figura celestial y cayeron postrados adorando juntos al Señor.": "Contradice que los hombres no vieron la visión.",
-      "Daniel no vio nada pero escuchó la voz, mientras sus compañeros vieron un relámpago y celebraron.": "Invierte totalmente quién vio y la reacción de pánico.",
-      "Los hombres vieron al ser de lino y huyeron a Susa, mientras Daniel permaneció de pie sin temor.": "Daniel cayó desfallecido y los hombres no vieron la aparición."
+      "Todos los hombres vieron la figura celestial y cayeron postrados adorando juntos al Señor.": "Opción incorrecta según Daniel 10:7.",
+      "Los hombres vieron al ser de lino y huyeron a Susa, mientras Daniel permaneció de pie sin temor.": "Opción incorrecta según Daniel 10:7.",
+      "Daniel no vio nada pero escuchó la voz, mientras sus compañeros vieron un relámpago y celebraron.": "Opción incorrecta según Daniel 10:7."
     },
-    "evidence_excerpt": "Sólo yo, Daniel, vi aquella visión. No la vieron los hombres que estaban conmigo, sino que se apoderó de ellos un gran temor y huyeron y se escondieron.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "exclusive_vision_vs_companion_terror_flight",
-    "option_category": "theophanic_perception_asymmetry",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Demuestra la naturaleza espiritual de la visión perceptible únicamente por el profeta preparado.",
-    "variant_justification": "La pública pregunta solo qué hicieron los acompañantes; esta exige la correlación completa entre la visión exclusiva y la huida aterrorizada.",
-    "answer_support_term": "se apoderó de ellos un gran temor y huyeron y se escondieron",
-    "author": {
-      "id": "autor-D9-D12",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "014e875b2769eeda858969f574fc9778936efc2cde9fb599e444e1a9829ce565"
   },
   {
     "id": "V14-R2-DAN10-C18-003",
-    "source_unit_id": "DAN10-V010",
     "fact_id": "DAN10-V010-F02",
+    "source_unit_id": "DAN10-V010",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿Qué acción física restauradora ejecutó la mano celestial sobre el cuerpo postrado de Daniel?",
     "options": [
-      "Una mano de fuego lo levantó en el aire y lo transportó a las puertas de Jerusalén.",
       "Un ángel le ungió la frente con aceite santo y le devolvió instantáneamente toda su fuerza.",
+      "Una mano de fuego lo levantó en el aire y lo transportó a las puertas de Jerusalén.",
       "Y una mano me tocó e hizo que me pusiera sobre mis rodillas y sobre las palmas de mis manos.",
       "Una espada celestial tocó su hombro y lo nombró capitán de los ejércitos de Judá."
     ],
@@ -95,109 +71,73 @@
     "accepted_answers": [
       "Y una mano me tocó e hizo que me pusiera sobre mis rodillas y sobre las palmas de mis manos."
     ],
-    "explanation": "Daniel 10:10 relata el primer toque que incorporó a Daniel sobre rodillas y palmas de las manos.",
+    "explanation": "Daniel 10:10 declara: \"Y una mano me tocó e hizo que me pusiera sobre mis rodillas y sobre las palmas de mis manos.\"",
     "why_distractors_fail": {
-      "Una mano de fuego lo levantó en el aire y lo transportó a las puertas de Jerusalén.": "Transporte místico de Ezequiel 8:3, no de Daniel 10.",
-      "Un ángel le ungió la frente con aceite santo y le devolvió instantáneamente toda su fuerza.": "Inventa ritos de unción ajenos a la recuperación gradual del profeta.",
-      "Una espada celestial tocó su hombro y lo nombró capitán de los ejércitos de Judá.": "Investidura caballeresca no presente en el texto bíblico."
+      "Un ángel le ungió la frente con aceite santo y le devolvió instantáneamente toda su fuerza.": "Opción incorrecta según Daniel 10:10.",
+      "Una mano de fuego lo levantó en el aire y lo transportó a las puertas de Jerusalén.": "Opción incorrecta según Daniel 10:10.",
+      "Una espada celestial tocó su hombro y lo nombró capitán de los ejércitos de Judá.": "Opción incorrecta según Daniel 10:10."
     },
-    "evidence_excerpt": "Y una mano me tocó e hizo que me pusiera sobre mis rodillas y sobre las palmas de mis manos.",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "angelic_touch_and_quadrupedal_recovery",
-    "option_category": "physical_restoration_stage",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra el proceso gradual de fortalecimiento físico conferido por el mensajero divino.",
-    "variant_justification": "La pública es un fill_blank; esta evalúa la proposición kinésica integral ('sobre mis rodillas y sobre las palmas de mis manos').",
-    "answer_support_term": "sobre mis rodillas y sobre las palmas de mis manos",
-    "author": {
-      "id": "autor-D9-D12",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "b8345e63bfe5d9c5bc4d9b8f29759773dbd25799a66d7cac3c39a025bbecd3af"
   },
   {
     "id": "V14-R2-DAN10-C18-004",
-    "source_unit_id": "DAN10-V011",
     "fact_id": "DAN10-V011-F01",
+    "source_unit_id": "DAN10-V011",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿Con qué vocativo de afecto, mandato de atención y postura conminó el ángel a Daniel y cuál fue su reacción corporal?",
     "options": [
-      "Me dijo: «Daniel, profeta de Israel, siéntate sobre la roca y escribe este libro.» Mientras hablaba, me senté con gran gozo.",
-      "Me dijo: «Siervo de Darío, regresa a palacio porque la visión ha terminado.» Mientras hablaba, corrí hacia Susa.",
       "Me dijo: «Hombre de guerra, empuña la espada contra los reyes de Persia.» Mientras hablaba, me armé de valor.",
-      "Me dijo: «Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.» Mientras hablaba esto conmigo, me puse en pie temblando."
+      "Me dijo: «Daniel, profeta de Israel, siéntate sobre la roca y escribe este libro.» Mientras hablaba, me senté con gran gozo.",
+      "Me dijo: «Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.» Mientras hablaba esto conmigo, me puse en pie temblando.",
+      "Me dijo: «Siervo de Darío, regresa a palacio porque la visión ha terminado.» Mientras hablaba, corrí hacia Susa."
     ],
-    "correct_option": 3,
+    "correct_option": 2,
     "accepted_answers": [
       "Me dijo: «Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.» Mientras hablaba esto conmigo, me puse en pie temblando."
     ],
-    "explanation": "Daniel 10:11 une el saludo 'varón muy amado', la orden de ponerse en pie y la reacción de incorporarse temblando.",
+    "explanation": "Daniel 10:11 declara: \"Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.\"",
     "why_distractors_fail": {
-      "Me dijo: «Daniel, profeta de Israel, siéntate sobre la roca y escribe este libro.» Mientras hablaba, me senté con gran gozo.": "Cambia el mandato de pie por sentarse y la emoción de temblor por gozo.",
-      "Me dijo: «Siervo de Darío, regresa a palacio porque la visión ha terminado.» Mientras hablaba, corrí hacia Susa.": "Introduce una orden de retorno cortesano ficticia.",
-      "Me dijo: «Hombre de guerra, empuña la espada contra los reyes de Persia.» Mientras hablaba, me armé de valor.": "Sustituye la misión de revelación por una arenga bélica."
+      "Me dijo: «Hombre de guerra, empuña la espada contra los reyes de Persia.» Mientras hablaba, me armé de valor.": "Opción incorrecta según Daniel 10:11.",
+      "Me dijo: «Daniel, profeta de Israel, siéntate sobre la roca y escribe este libro.» Mientras hablaba, me senté con gran gozo.": "Opción incorrecta según Daniel 10:11.",
+      "Me dijo: «Siervo de Darío, regresa a palacio porque la visión ha terminado.» Mientras hablaba, corrí hacia Susa.": "Opción incorrecta según Daniel 10:11."
     },
-    "evidence_excerpt": "Me dijo: «Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.» Mientras hablaba esto conmigo, me puse en pie temblando.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "angelic_address_command_and_trembling_stance",
-    "option_category": "theophanic_dialogue_and_somatics",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Ilustra la dignidad que el cielo otorga al profeta junto a la sobrecogedora reverencia humana.",
-    "variant_justification": "La pública pregunta de forma parcial; esta exige la correlación exacta del mandato angélico con la postura erguida y temblorosa de Daniel.",
-    "answer_support_term": "me puse en pie temblando",
-    "author": {
-      "id": "autor-D9-D12",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "60de7fb3850fefc24ce1aafc7380573481f763889bdacbbe584ae62593a4c89b"
   },
   {
     "id": "V14-R2-DAN10-C18-005",
-    "source_unit_id": "DAN10-V014",
     "fact_id": "DAN10-V014-F04",
+    "source_unit_id": "DAN10-V014",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿Cuál fue el propósito explícito y el horizonte temporal de la misión del mensajero celestial según Daniel 10:14?",
     "options": [
-      "He venido para revelarte los secretos del reinado de Ciro y la fecha exacta del fin del cautiverio en Babilonia.",
       "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.",
-      "He venido para ordenar la reconstrucción inmediata de las murallas de Jerusalén bajo el mando de Zorobabel.",
-      "He venido para juzgar a los príncipes de Persia y Grecia y sellar el destino eterno de sus ejércitos."
+      "He venido para juzgar a los príncipes de Persia y Grecia y sellar el destino eterno de sus ejércitos.",
+      "He venido para revelarte los secretos del reinado de Ciro y la fecha exacta del fin del cautiverio en Babilonia.",
+      "He venido para ordenar la reconstrucción inmediata de las murallas de Jerusalén bajo el mando de Zorobabel."
     ],
-    "correct_option": 1,
+    "correct_option": 0,
     "accepted_answers": [
       "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días."
     ],
-    "explanation": "Daniel 10:14 define la finalidad profética: revelar el destino del pueblo de Dios en el horizonte escatológico de los 'últimos días'.",
+    "explanation": "Daniel 10:14 declara: \"He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.”\"",
     "why_distractors_fail": {
-      "He venido para revelarte los secretos del reinado de Ciro y la fecha exacta del fin del cautiverio en Babilonia.": "Limita el horizonte al contexto local inmediato de Ciro.",
-      "He venido para ordenar la reconstrucción inmediata de las murallas de Jerusalén bajo el mando de Zorobabel.": "Sustituye la revelación escatológica por órdenes arquitectónicas.",
-      "He venido para juzgar a los príncipes de Persia y Grecia y sellar el destino eterno de sus ejércitos.": "Confunde la lucha espiritual del ángel con el propósito de instrucción a Daniel."
+      "He venido para juzgar a los príncipes de Persia y Grecia y sellar el destino eterno de sus ejércitos.": "Opción incorrecta según Daniel 10:14.",
+      "He venido para revelarte los secretos del reinado de Ciro y la fecha exacta del fin del cautiverio en Babilonia.": "Opción incorrecta según Daniel 10:14.",
+      "He venido para ordenar la reconstrucción inmediata de las murallas de Jerusalén bajo el mando de Zorobabel.": "Opción incorrecta según Daniel 10:14."
     },
-    "evidence_excerpt": "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "prophetic_mission_purpose_and_latter_days_horizon",
-    "option_category": "eschatological_scope_definition",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Fija la perspectiva temporal de los capítulos 11 y 12 extendiéndose hasta los tiempos finales.",
-    "variant_justification": "La pública pregunta de forma simple qué sucedería; esta exige la formulación teológica íntegra sobre el pueblo y los 'últimos días'.",
-    "answer_support_term": "lo que ha de sucederle a tu pueblo en los últimos días",
-    "author": {
-      "id": "autor-D9-D12",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "53793f2406b95b83066d117f340f37490e4139e60de55975aca9ad1d4508a0be"
   },
   {
     "id": "V14-R2-DAN10-C18-006",
-    "source_unit_id": "DAN10-V015",
     "fact_id": "DAN10-V015-F01",
+    "source_unit_id": "DAN10-V015",
     "role": "variant",
     "family": "single_choice_direct",
     "subtype": "relationship",
@@ -205,162 +145,114 @@
     "options": [
       "yo miraba fijamente al cielo y gritaba con gran voz",
       "yo cerré mis oídos con las manos y caí en llanto amargo",
-      "yo tenía los ojos puestos en tierra y había enmudecido",
-      "yo hui hacia el río Hidekel y me escondí en la espesura"
+      "yo hui hacia el río Hidekel y me escondí en la espesura",
+      "yo tenía los ojos puestos en tierra y había enmudecido"
     ],
-    "correct_option": 2,
+    "correct_option": 3,
     "accepted_answers": [
       "yo tenía los ojos puestos en tierra y había enmudecido"
     ],
-    "explanation": "Daniel 10:15 registra la reacción somática del profeta: mirada baja hacia la tierra e incapacidad de hablar.",
+    "explanation": "Daniel 10:15 declara: \"Mientras me decía estas palabras, yo tenía los ojos puestos en tierra y había enmudecido.\"",
     "why_distractors_fail": {
-      "yo miraba fijamente al cielo y gritaba con gran voz": "Invierte la mirada en tierra y la pérdida de la voz.",
-      "yo cerré mis oídos con las manos y caí en llanto amargo": "Introduce gestos de taparse los oídos no narrados.",
-      "yo hui hacia el río Hidekel y me escondí en la espesura": "Fueron los hombres quienes huyeron en el v. 7, no Daniel."
+      "yo miraba fijamente al cielo y gritaba con gran voz": "Opción incorrecta según Daniel 10:15.",
+      "yo cerré mis oídos con las manos y caí en llanto amargo": "Opción incorrecta según Daniel 10:15.",
+      "yo hui hacia el río Hidekel y me escondí en la espesura": "Opción incorrecta según Daniel 10:15."
     },
-    "evidence_excerpt": "yo tenía los ojos puestos en tierra y había enmudecido.",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "downcast_eyes_and_speechlessness",
-    "option_category": "physical_reaction_to_revelation",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra el impacto abrumador de la presencia y el mensaje celestial sobre la condición humana.",
-    "variant_justification": "La pública es un fill_blank; esta evalúa el par somático conjunto 'ojos puestos en tierra / enmudecido'.",
-    "answer_support_term": "ojos puestos en tierra y había enmudecido",
-    "author": {
-      "id": "autor-D9-D12",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "9cb854b35018945bd7e2b89564f694ac05e1fa2b04fbaa381b4d7197e3c5c323"
   },
   {
     "id": "V14-R2-DAN10-C18-007",
-    "source_unit_id": "DAN10-V016",
     "fact_id": "DAN10-V016-F07",
+    "source_unit_id": "DAN10-V016",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "cause_consequence",
     "question": "¿Quién tocó los labios de Daniel para restaurar su habla y qué confesión de dolor y falta de fuerzas pronunció ante él?",
     "options": [
-      "el arcángel Gabriel tocó su corazón; «Soberano mío, estoy listo para gobernar las provincias de Persia.»",
       "un querubín de cuatro alas tocó su lengua; «Dios eterno, he comprendido todas las visiones pasadas.»",
+      "uno con semejanza de hijo de hombre tocó mis labios; «Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.»",
       "el rey Ciro tocó sus manos; «Monarca noble, te agradezco la libertad concedida a Judá.»",
-      "uno con semejanza de hijo de hombre tocó mis labios; «Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.»"
+      "el arcángel Gabriel tocó su corazón; «Soberano mío, estoy listo para gobernar las provincias de Persia.»"
     ],
-    "correct_option": 3,
+    "correct_option": 1,
     "accepted_answers": [
       "uno con semejanza de hijo de hombre tocó mis labios; «Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.»"
     ],
-    "explanation": "Daniel 10:16 relata el toque en los labios por la figura semejante a hijo de hombre y la sincera confesión de postración y dolor.",
+    "explanation": "Daniel 10:16 declara: \"Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.\"",
     "why_distractors_fail": {
-      "el arcángel Gabriel tocó su corazón; «Soberano mío, estoy listo para gobernar las provincias de Persia.»": "Inventa ambiciones políticas ajenas a la crisis corporal del profeta.",
-      "un querubín de cuatro alas tocó su lengua; «Dios eterno, he comprendido todas las visiones pasadas.»": "Sustituye la figura semejante a hijo de hombre por un querubín.",
-      "el rey Ciro tocó sus manos; «Monarca noble, te agradezco la libertad concedida a Judá.»": "Ciro no estaba presente en la visión a orillas del Hidekel."
+      "un querubín de cuatro alas tocó su lengua; «Dios eterno, he comprendido todas las visiones pasadas.»": "Opción incorrecta según Daniel 10:16.",
+      "el rey Ciro tocó sus manos; «Monarca noble, te agradezco la libertad concedida a Judá.»": "Opción incorrecta según Daniel 10:16.",
+      "el arcángel Gabriel tocó su corazón; «Soberano mío, estoy listo para gobernar las provincias de Persia.»": "Opción incorrecta según Daniel 10:16."
     },
-    "evidence_excerpt": "uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: «Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "lip_touch_restoration_and_weakness_confession",
-    "option_category": "theophanic_touch_and_physical_crisis",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra cómo el poder divino asiste al profeta en su debilidad extrema para capacitarlo para el diálogo profético.",
-    "variant_justification": "La pública pregunta de forma parcial; esta exige la correlación entre el toque en los labios y la confesión literal de dolores y falta de fuerzas.",
-    "answer_support_term": "con la visión me han sobrevenido dolores",
-    "author": {
-      "id": "autor-D9-D12",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "2f914dc5e5e0d0ef269a1fdecfb4bbc123a2dfb13b71050aea520bd4c889fde9"
   },
   {
     "id": "V14-R2-DAN10-C18-008",
-    "source_unit_id": "DAN10-V019",
     "fact_id": "DAN10-V019-F03",
+    "source_unit_id": "DAN10-V019",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "cause_consequence",
     "question": "¿Qué bendición de paz y aliento pronunció el ser celestial y con qué confesión de fortalecimiento respondió Daniel?",
     "options": [
-      "«Muy amado, no temas; la paz sea contigo; esfuérzate y cobra aliento.» Mientras él me hablaba, recobré las fuerzas y dije: «Hable mi señor, porque me has fortalecido.»",
       "«Siervo fiel, descansa; la victoria es tuya; levántate y marcha a Jerusalén.» Mientras hablaba, me puse alegre y corrí al templo.",
-      "«Guerrero de Dios, prepárate; el conflicto ha terminado; toma tu recompensa.» Mientras hablaba, sentí gran orgullo.",
-      "«Profeta anciano, despídete; tus palabras han concluido; sella este libro.» Mientras hablaba, guardé silencio para siempre."
+      "«Muy amado, no temas; la paz sea contigo; esfuérzate y cobra aliento.» Mientras él me hablaba, recobré las fuerzas y dije: «Hable mi señor, porque me has fortalecido.»",
+      "«Profeta anciano, despídete; tus palabras han concluido; sella este libro.» Mientras hablaba, guardé silencio para siempre.",
+      "«Guerrero de Dios, prepárate; el conflicto ha terminado; toma tu recompensa.» Mientras hablaba, sentí gran orgullo."
     ],
-    "correct_option": 0,
+    "correct_option": 1,
     "accepted_answers": [
       "«Muy amado, no temas; la paz sea contigo; esfuérzate y cobra aliento.» Mientras él me hablaba, recobré las fuerzas y dije: «Hable mi señor, porque me has fortalecido.»"
     ],
-    "explanation": "Daniel 10:19 culmina la restauración física y espiritual: paz, exhortación al esfuerzo y la capacidad renovada de escuchar el mensaje.",
+    "explanation": "Daniel 10:19 declara: \"y me dijo: “Muy amado, no temas; la paz sea contigo; esfuérzate y cobra aliento.” Mientras él me hablaba, recobré las fuerzas y dije: “Hable mi señor, porque me has fortalecido.”\"",
     "why_distractors_fail": {
-      "«Siervo fiel, descansa; la victoria es tuya; levántate y marcha a Jerusalén.» Mientras hablaba, me puse alegre y corrí al templo.": "Altera las palabras angélicas y la reacción del profeta.",
-      "«Guerrero de Dios, prepárate; el conflicto ha terminado; toma tu recompensa.» Mientras hablaba, sentí gran orgullo.": "Introduce recompensas y sentimientos contrarios a la humildad de Daniel.",
-      "«Profeta anciano, despídete; tus palabras han concluido; sella este libro.» Mientras hablaba, guardé silencio para siempre.": "Daniel aún debía recibir la gran revelación de los caps. 11 y 12."
+      "«Siervo fiel, descansa; la victoria es tuya; levántate y marcha a Jerusalén.» Mientras hablaba, me puse alegre y corrí al templo.": "Opción incorrecta según Daniel 10:19.",
+      "«Profeta anciano, despídete; tus palabras han concluido; sella este libro.» Mientras hablaba, guardé silencio para siempre.": "Opción incorrecta según Daniel 10:19.",
+      "«Guerrero de Dios, prepárate; el conflicto ha terminado; toma tu recompensa.» Mientras hablaba, sentí gran orgullo.": "Opción incorrecta según Daniel 10:19."
     },
-    "evidence_excerpt": "«Muy amado, no temas; la paz sea contigo; esfuérzate y cobra aliento.» Mientras él me hablaba, recobré las fuerzas y dije: «Hable mi señor, porque me has fortalecido.»",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "peace_impartation_strength_recovery_and_readiness",
-    "option_category": "divine_empowerment_and_receptivity",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra que la palabra divina imparte el poder necesario para recibir la verdad eterna.",
-    "variant_justification": "La pública es una afirmación simple; esta exige la correlación bilateral del mandato 'esfuérzate y cobra aliento' con la respuesta 'me has fortalecido'.",
-    "answer_support_term": "Hable mi señor, porque me has fortalecido",
-    "author": {
-      "id": "autor-D9-D12",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "7179cc9ae3f7864f8ce0bb37c7aa79bdde6cd8cf808df6a031a0adf749c2d2c1"
   },
   {
     "id": "V14-R2-DAN10-C18-009",
-    "source_unit_id": "DAN10-V020",
     "fact_id": "DAN10-V020-F02",
+    "source_unit_id": "DAN10-V020",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿Qué dos conflictos cósmicos sucesivos contra los poderes invisibles de dos imperios reveló el ángel a Daniel?",
     "options": [
-      "Ahora debo viajar a Babilonia para deponer a Belsasar; luego marcharé contra los reyes de Egipto.",
+      "Ahora debo descender al gran abismo para encadenar al dragón; luego coronaré a los jueces de Judá.",
       "Ahora tengo que proteger las murallas de Susa; luego levantaré a los ejércitos de Roma contra Tiro.",
       "Ahora tengo que volver para pelear contra el príncipe de Persia; al terminar con él, el príncipe de Grecia vendrá.",
-      "Ahora debo descender al gran abismo para encadenar al dragón; luego coronaré a los jueces de Judá."
+      "Ahora debo viajar a Babilonia para deponer a Belsasar; luego marcharé contra los reyes de Egipto."
     ],
     "correct_option": 2,
     "accepted_answers": [
       "Ahora tengo que volver para pelear contra el príncipe de Persia; al terminar con él, el príncipe de Grecia vendrá."
     ],
-    "explanation": "Daniel 10:20 descorre el velo del gran conflicto entre ángeles de Dios y huestes demoníacas sobre los reinos de Persia y Grecia.",
+    "explanation": "Daniel 10:20 declara: \"Él me dijo: “¿Sabes por qué he venido a ti? Ahora tengo que volver para pelear contra el príncipe de Persia; al terminar con él, el príncipe de Grecia vendrá.\"",
     "why_distractors_fail": {
-      "Ahora debo viajar a Babilonia para deponer a Belsasar; luego marcharé contra los reyes de Egipto.": "Babilonia ya había caído cuando Darío reinaba.",
-      "Ahora tengo que proteger las murallas de Susa; luego levantaré a los ejércitos de Roma contra Tiro.": "Sustituye la guerra espiritual por defensa física de murallas.",
-      "Ahora debo descender al gran abismo para encadenar al dragón; luego coronaré a los jueces de Judá.": "Mezcla visiones de Apocalipsis con el conflicto de Daniel 10."
+      "Ahora debo descender al gran abismo para encadenar al dragón; luego coronaré a los jueces de Judá.": "Opción incorrecta según Daniel 10:20.",
+      "Ahora tengo que proteger las murallas de Susa; luego levantaré a los ejércitos de Roma contra Tiro.": "Opción incorrecta según Daniel 10:20.",
+      "Ahora debo viajar a Babilonia para deponer a Belsasar; luego marcharé contra los reyes de Egipto.": "Opción incorrecta según Daniel 10:20."
     },
-    "evidence_excerpt": "Ahora tengo que volver para pelear contra el príncipe de Persia; al terminar con él, el príncipe de Grecia vendrá.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "spiritual_warfare_succession_persia_and_greece",
-    "option_category": "cosmic_conflict_monarchies",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Revela que detrás de las decisiones geopolíticas de los imperios operan fuerzas espirituales en conflicto.",
-    "variant_justification": "La pública pregunta de forma parcial; esta exige la correlación consecutiva exacta entre el combate con Persia y la posterior llegada del príncipe de Grecia.",
-    "answer_support_term": "pelear contra el príncipe de Persia",
-    "author": {
-      "id": "autor-D9-D12",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "e984636c80192aab5a9cdfeaca09331cfff45bc4b5a21de1959233d7de0a2ecc"
   },
   {
     "id": "V14-R2-DAN10-C18-010",
-    "source_unit_id": "DAN10-V021",
     "fact_id": "DAN10-V021-F01",
+    "source_unit_id": "DAN10-V021",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "principle",
     "question": "¿En qué registro infalible prometió el ángel declarar la verdad y a quién reconoció como su único auxiliador en la contienda?",
     "options": [
-      "en las crónicas de los reyes de Media: nadie me ayuda sino los capitanes de Darío",
       "en las tablas de piedra del Sinaí: nadie me ayuda sino el sacerdote de Jerusalén",
+      "en las crónicas de los reyes de Media: nadie me ayuda sino los capitanes de Darío",
       "en los rollos sellados de Babilonia: nadie me ayuda sino los sabios convertidos",
       "en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe"
     ],
@@ -368,25 +260,13 @@
     "accepted_answers": [
       "en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe"
     ],
-    "explanation": "Daniel 10:21 cita el 'libro de la verdad' celestial y la cooperación exclusiva de Miguel (Cristo) como defensor del pueblo de Dios.",
+    "explanation": "Daniel 10:21 declara: \"Pero yo te declararé lo que está escrito en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe.”\"",
     "why_distractors_fail": {
-      "en las crónicas de los reyes de Media: nadie me ayuda sino los capitanes de Darío": "Sustituye el libro celestial por anales humanos y a Miguel por capitanes.",
-      "en las tablas de piedra del Sinaí: nadie me ayuda sino el sacerdote de Jerusalén": "Confunde el libro de la verdad con el decálogo mosaico.",
-      "en los rollos sellados de Babilonia: nadie me ayuda sino los sabios convertidos": "Introduce fuentes caldeas incompatibles con la revelación divina."
+      "en las tablas de piedra del Sinaí: nadie me ayuda sino el sacerdote de Jerusalén": "Opción incorrecta según Daniel 10:21.",
+      "en las crónicas de los reyes de Media: nadie me ayuda sino los capitanes de Darío": "Opción incorrecta según Daniel 10:21.",
+      "en los rollos sellados de Babilonia: nadie me ayuda sino los sabios convertidos": "Opción incorrecta según Daniel 10:21."
     },
-    "evidence_excerpt": "lo que está escrito en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe.",
-    "difficulty": "hard",
-    "importance": "critical",
-    "relation_type": "book_of_truth_and_michael_exclusive_helper",
-    "option_category": "celestial_epistemology_and_defender",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Establece la autoridad absoluta del mensaje profético y la omnipotencia de Miguel en favor de su pueblo.",
-    "variant_justification": "La pública pregunta solo quién ayuda; esta evalúa el binomio 'libro de la verdad' y 'Miguel vuestro príncipe'.",
-    "answer_support_term": "libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe",
-    "author": {
-      "id": "autor-D9-D12",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "0b390a758595b8c65d59d2cf293d5483032540e3808d1fd4b6e331bd0ef42a17"
   }
 ]

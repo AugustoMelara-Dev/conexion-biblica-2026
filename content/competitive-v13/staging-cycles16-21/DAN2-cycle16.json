@@ -1,8 +1,8 @@
 [
   {
     "id": "V14-R2-DAN2-C16-001",
-    "source_unit_id": "DAN2-V002",
     "fact_id": "DAN2-V002-F01",
+    "source_unit_id": "DAN2-V002",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
@@ -10,38 +10,26 @@
     "options": [
       "magos, astrólogos, encantadores y caldeos",
       "sátrapas, magistrados, capitanes y oidores",
-      "tesoreros, consejeros, jueces y gobernadores",
-      "adivinos, agoreros, hechiceros y sacerdotes de Bel"
+      "adivinos, agoreros, hechiceros y sacerdotes de Bel",
+      "tesoreros, consejeros, jueces y gobernadores"
     ],
     "correct_option": 0,
     "accepted_answers": [
       "magos, astrólogos, encantadores y caldeos"
     ],
-    "explanation": "Daniel 2:2 enumera específicamente la tétrada sacerdotal y adivinatoria: magos, astrólogos, encantadores y caldeos.",
+    "explanation": "Daniel 2:2 declara: \"Hizo llamar el rey a magos, astrólogos, encantadores y caldeos, para que le explicaran sus sueños. Vinieron, pues, y se presentaron delante del rey.\"",
     "why_distractors_fail": {
-      "sátrapas, magistrados, capitanes y oidores": "Son los oficiales civiles y militares convocados en Daniel 3:2.",
-      "tesoreros, consejeros, jueces y gobernadores": "Completan los cargos administrativos de Daniel 3:2, no los sabios de Daniel 2:2.",
-      "adivinos, agoreros, hechiceros y sacerdotes de Bel": "Términos no enumerados en este versículo específico."
+      "sátrapas, magistrados, capitanes y oidores": "Opción incorrecta según Daniel 2:2.",
+      "adivinos, agoreros, hechiceros y sacerdotes de Bel": "Opción incorrecta según Daniel 2:2.",
+      "tesoreros, consejeros, jueces y gobernadores": "Opción incorrecta según Daniel 2:2."
     },
-    "evidence_excerpt": "Hizo llamar el rey a magos, astrólogos, encantadores y caldeos, para que le explicaran sus sueños",
-    "difficulty": "hard",
-    "importance": "critical",
-    "relation_type": "king_summons_four_classes_of_wise_men",
-    "option_category": "wise_men_guilds",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Identifica las cuatro categorías de especialistas paganos confrontados con el misterio.",
-    "variant_justification": "La pública pregunta solo qué ordenó el rey; esta exige la identificación precisa de las cuatro corporaciones.",
-    "answer_support_term": "magos, astrólogos, encantadores y caldeos",
-    "author": {
-      "id": "autor-D1",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "952a4996461fe9c7cdca1121f260133db4be63ae1ec0d1db1c01f8afdcd1ae1f"
   },
   {
     "id": "V14-R2-DAN2-C16-002",
-    "source_unit_id": "DAN2-V003",
     "fact_id": "DAN2-V003-F01",
+    "source_unit_id": "DAN2-V003",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "cause_consequence",
@@ -56,337 +44,229 @@
     "accepted_answers": [
       "He tenido un sueño, y mi espíritu se ha turbado por saber el sueño"
     ],
-    "explanation": "Daniel 2:3 registra las palabras directas del monarca declarando la turbación de su espíritu por conocer el sueño.",
+    "explanation": "Daniel 2:3 declara: \"El rey les dijo: —He tenido un sueño, y mi espíritu se ha turbado por saber el sueño.\"",
     "why_distractors_fail": {
-      "He visto a mi dios Bel, y mi corazón desea ofrecerle sacrificios de gratitud": "Introduce una escena cúltica no mencionada.",
-      "He escuchado un decreto celestial, y mi mente está tranquila sobre el futuro": "Contradice la angustia e incertidumbre del rey.",
-      "He conquistado a mis enemigos, y quiero que compongáis un himno de victoria": "Sustituye la crisis onírica por una celebración militar."
+      "He visto a mi dios Bel, y mi corazón desea ofrecerle sacrificios de gratitud": "Opción incorrecta según Daniel 2:3.",
+      "He escuchado un decreto celestial, y mi mente está tranquila sobre el futuro": "Opción incorrecta según Daniel 2:3.",
+      "He conquistado a mis enemigos, y quiero que compongáis un himno de victoria": "Opción incorrecta según Daniel 2:3."
     },
-    "evidence_excerpt": "mi espíritu se ha turbado por saber el sueño",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "king_troubled_spirit_dream_inquiry",
-    "option_category": "royal_declaration",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra la angustia existencial del rey ante la revelación divina no comprendida.",
-    "variant_justification": "La pública pregunta solo qué causó la turbación; esta evalúa la declaración literal y psicológica del monarca.",
-    "answer_support_term": "mi espíritu se ha turbado",
-    "author": {
-      "id": "autor-D1",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "8cd0fa321e131fefbe01e35a12163e392823c1344721a7828cd5fae1afe347bb"
   },
   {
     "id": "V14-R2-DAN2-C16-003",
-    "source_unit_id": "DAN2-V004",
     "fact_id": "DAN2-V004-F01",
+    "source_unit_id": "DAN2-V004",
     "role": "variant",
     "family": "single_choice_direct",
     "subtype": "relationship",
     "question": "¿En qué lengua respondieron los caldeos al rey y cuál fue su petición y promesa condicionada?",
     "options": [
       "En lengua hebrea: «¡Señor de señores! Danos tres días de ayuno y revelaremos el secreto.»",
-      "En lengua persa: «¡Gran soberano! Consulta a los astrólogos de Media para que descifren el enigma.»",
       "En lengua aramea: «¡Rey, para siempre vive! Cuenta el sueño a tus siervos, y te daremos la interpretación.»",
-      "En lengua egipcia: «¡Hijo del sol! Ofrece oro a los dioses y el sueño volverá a tu memoria.»"
+      "En lengua egipcia: «¡Hijo del sol! Ofrece oro a los dioses y el sueño volverá a tu memoria.»",
+      "En lengua persa: «¡Gran soberano! Consulta a los astrólogos de Media para que descifren el enigma.»"
     ],
-    "correct_option": 2,
+    "correct_option": 1,
     "accepted_answers": [
       "En lengua aramea: «¡Rey, para siempre vive! Cuenta el sueño a tus siervos, y te daremos la interpretación.»"
     ],
-    "explanation": "Daniel 2:4 señala la transición lingüística al arameo y la respuesta condicionada: si el rey cuenta el sueño, darán la interpretación.",
+    "explanation": "Daniel 2:4 declara: \"Entonces hablaron los caldeos al rey en lengua aramea: —¡Rey, para siempre vive! Cuenta el sueño a tus siervos, y te daremos la interpretación.\"",
     "why_distractors_fail": {
-      "En lengua hebrea: «¡Señor de señores! Danos tres días de ayuno y revelaremos el secreto.»": "La lengua fue aramea y los caldeos no ayunaban al Dios hebreo.",
-      "En lengua persa: «¡Gran soberano! Consulta a los astrólogos de Media para que descifren el enigma.»": "Persia no dominaba aún y la respuesta fue interna.",
-      "En lengua egipcia: «¡Hijo del sol! Ofrece oro a los dioses y el sueño volverá a tu memoria.»": "Propuesta mítica ajena al diálogo registrado."
+      "En lengua hebrea: «¡Señor de señores! Danos tres días de ayuno y revelaremos el secreto.»": "Opción incorrecta según Daniel 2:4.",
+      "En lengua egipcia: «¡Hijo del sol! Ofrece oro a los dioses y el sueño volverá a tu memoria.»": "Opción incorrecta según Daniel 2:4.",
+      "En lengua persa: «¡Gran soberano! Consulta a los astrólogos de Media para que descifren el enigma.»": "Opción incorrecta según Daniel 2:4."
     },
-    "evidence_excerpt": "Hablaron los caldeos al rey en lengua aramea",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "language_greeting_condition_promise",
-    "option_category": "court_dialogue_aramaic",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Marca el cambio canónico al idioma arameo y la pretensión de los sabios humanos.",
-    "variant_justification": "La pública pregunta solo qué idioma hablaron; esta exige el cuarteto de lengua, salutación, condición y promesa.",
-    "answer_support_term": "lengua aramea",
-    "author": {
-      "id": "autor-D1",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "bcbff576de125dbee2763a5e6722ecde6b5b1e84bdc9f15c88576e094114ae82"
   },
   {
     "id": "V14-R2-DAN2-C16-004",
-    "source_unit_id": "DAN2-V005",
     "fact_id": "DAN2-V005-F03",
+    "source_unit_id": "DAN2-V005",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "cause_consequence",
     "question": "¿Qué doble castigo decretó Nabucodonosor si los sabios no le revelaban el sueño con su interpretación?",
     "options": [
-      "seréis arrojados a los leones y vuestras familias vendidas como esclavas",
-      "seréis expulsados de Babilonia y vuestros libros quemados en la plaza",
       "seréis colgados de maderos y vuestros bienes confiscados para el templo de Bel",
+      "seréis expulsados de Babilonia y vuestros libros quemados en la plaza",
+      "seréis arrojados a los leones y vuestras familias vendidas como esclavas",
       "seréis hechos pedazos y vuestras casas serán convertidas en estercoleros"
     ],
     "correct_option": 3,
     "accepted_answers": [
       "seréis hechos pedazos y vuestras casas serán convertidas en estercoleros"
     ],
-    "explanation": "Daniel 2:5 establece los dos castigos exactos del decreto: despedazamiento físico y casas convertidas en estercoleros.",
+    "explanation": "Daniel 2:5 declara: \"Respondió el rey y dijo a los caldeos: —El asunto lo olvidé; pero si no me decís el sueño y su interpretación, seréis hechos pedazos y vuestras casas serán convertidas en estercoleros.\"",
     "why_distractors_fail": {
-      "seréis arrojados a los leones y vuestras familias vendidas como esclavas": "El foso de los leones aparece en el capítulo 6 bajo Darío.",
-      "seréis expulsados de Babilonia y vuestros libros quemados en la plaza": "La pena decretada era de muerte física violenta y destrucción patrimonial.",
-      "seréis colgados de maderos y vuestros bienes confiscados para el templo de Bel": "Pena persa posterior, no el decreto babilónico del versículo 5."
+      "seréis colgados de maderos y vuestros bienes confiscados para el templo de Bel": "Opción incorrecta según Daniel 2:5.",
+      "seréis expulsados de Babilonia y vuestros libros quemados en la plaza": "Opción incorrecta según Daniel 2:5.",
+      "seréis arrojados a los leones y vuestras familias vendidas como esclavas": "Opción incorrecta según Daniel 2:5."
     },
-    "evidence_excerpt": "seréis hechos pedazos y vuestras casas serán convertidas en estercoleros",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "threat_and_punishment_duo",
-    "option_category": "royal_sanctions",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Refleja la severidad despótica del imperio y la gravedad de la crisis.",
-    "variant_justification": "La pública pregunta solo qué les sucedería; esta exige la exactitud de ambos castigos (corporal y patrimonial).",
-    "answer_support_term": "convertidas en estercoleros",
-    "author": {
-      "id": "autor-D1",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "bd35729a977226b80abb312fb92357db8157c4383fe691b9c6b67fe27c70af73"
   },
   {
     "id": "V14-R2-DAN2-C16-005",
-    "source_unit_id": "DAN2-V006",
     "fact_id": "DAN2-V006-F03",
+    "source_unit_id": "DAN2-V006",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "comparison",
     "question": "¿Qué triple recompensa prometió el rey a quienquiera que revelase el sueño y su interpretación?",
     "options": [
-      "oro, plata y vestidos de púrpura imperial",
-      "de mí recibiréis dones, favores y gran honra",
       "ciudades, tributos y corona de príncipe",
-      "esclavos, tierras fértiles y sacerdocio perpetuo"
+      "esclavos, tierras fértiles y sacerdocio perpetuo",
+      "oro, plata y vestidos de púrpura imperial",
+      "de mí recibiréis dones, favores y gran honra"
     ],
-    "correct_option": 1,
+    "correct_option": 3,
     "accepted_answers": [
       "de mí recibiréis dones, favores y gran honra"
     ],
-    "explanation": "Daniel 2:6 promete textualmente 'de mí recibiréis dones, favores y gran honra' al que declare el misterio.",
+    "explanation": "Daniel 2:6 declara: \"Pero si me decís el sueño y su interpretación, de mí recibiréis dones, favores y gran honra. Decidme, pues, el sueño y su interpretación.\"",
     "why_distractors_fail": {
-      "oro, plata y vestidos de púrpura imperial": "Detalles ofrecidos en el capítulo 5 a Daniel por Belsasar.",
-      "ciudades, tributos y corona de príncipe": "Sustituye la tríada del texto por prebendas feudales.",
-      "esclavos, tierras fértiles y sacerdocio perpetuo": "Introduce privilegios ajenos a la oferta de Nabucodonosor."
+      "ciudades, tributos y corona de príncipe": "Opción incorrecta según Daniel 2:6.",
+      "esclavos, tierras fértiles y sacerdocio perpetuo": "Opción incorrecta según Daniel 2:6.",
+      "oro, plata y vestidos de púrpura imperial": "Opción incorrecta según Daniel 2:6."
     },
-    "evidence_excerpt": "de mí recibiréis dones, favores y gran honra",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "royal_incentives_triad",
-    "option_category": "imperial_rewards",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Contrapone la máxima amenaza del v. 5 con el máximo incentivo mundano del v. 6.",
-    "variant_justification": "La pública formula una pregunta general; esta evalúa la terna léxica exacta de la promesa.",
-    "answer_support_term": "dones, favores y gran honra",
-    "author": {
-      "id": "autor-D1",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "62ae55122ffaca1f28fbde29438de0b5a1c6c6c5fe7eb48f3fd45de0beb68708"
   },
   {
     "id": "V14-R2-DAN2-C16-006",
-    "source_unit_id": "DAN2-V007",
     "fact_id": "DAN2-V007-F03",
+    "source_unit_id": "DAN2-V007",
     "role": "variant",
     "family": "single_choice_direct",
     "subtype": "relationship",
     "question": "¿Qué reiteraron los sabios por segunda vez como condición indispensable para ofrecer la interpretación?",
     "options": [
       "«Otorgue el rey un mes de plazo para consultar los astros en el templo de Marduk.»",
-      "«Traiga el rey a los profetas de Judá para que ellos oren a su Dios.»",
       "«Cuente el rey el sueño a sus siervos, y le daremos la interpretación.»",
-      "«Entregue el rey las tablas astronómicas de los antiguos reyes de Acad.»"
+      "«Entregue el rey las tablas astronómicas de los antiguos reyes de Acad.»",
+      "«Traiga el rey a los profetas de Judá para que ellos oren a su Dios.»"
     ],
-    "correct_option": 2,
+    "correct_option": 1,
     "accepted_answers": [
       "«Cuente el rey el sueño a sus siervos, y le daremos la interpretación.»"
     ],
-    "explanation": "Daniel 2:7 muestra la insistencia impotente de los sabios en que el rey primero declare el contenido del sueño.",
+    "explanation": "Daniel 2:7 declara: \"Respondieron por segunda vez, y dijeron: —Cuente el rey el sueño a sus siervos, y le daremos la interpretación.\"",
     "why_distractors_fail": {
-      "«Otorgue el rey un mes de plazo para consultar los astros en el templo de Marduk.»": "Inventa una solicitud de prórroga con nombre pagano.",
-      "«Traiga el rey a los profetas de Judá para que ellos oren a su Dios.»": "Los caldeos no apelaron a profetas hebreos.",
-      "«Entregue el rey las tablas astronómicas de los antiguos reyes de Acad.»": "Introduce fuentes históricas ajenas al diálogo."
+      "«Otorgue el rey un mes de plazo para consultar los astros en el templo de Marduk.»": "Opción incorrecta según Daniel 2:7.",
+      "«Entregue el rey las tablas astronómicas de los antiguos reyes de Acad.»": "Opción incorrecta según Daniel 2:7.",
+      "«Traiga el rey a los profetas de Judá para que ellos oren a su Dios.»": "Opción incorrecta según Daniel 2:7."
     },
-    "evidence_excerpt": "Cuente el rey el sueño a sus siervos, y le daremos la interpretación",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "wise_men_repetition_condition",
-    "option_category": "court_procedural_defense",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Evidencia la incapacidad absoluta de la sabiduría humana para revelar lo oculto sin datos previos.",
-    "variant_justification": "La pública es un fill_blank; esta variante exige la cita directa en su contexto de reiteración.",
-    "answer_support_term": "Cuente el rey el sueño a sus siervos",
-    "author": {
-      "id": "autor-D1",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "be33c7aa62256c8b4c43c9aef2ee3db63804b3ffe3c786854fb63a298c2aba34"
   },
   {
     "id": "V14-R2-DAN2-C16-007",
-    "source_unit_id": "DAN2-V008",
     "fact_id": "DAN2-V008-F03",
+    "source_unit_id": "DAN2-V008",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "cause_consequence",
     "question": "¿De qué acusó el rey a los sabios y qué motivo reconoció detrás de su conducta?",
     "options": [
-      "«Sé que sois espías de Judá y buscáis la ruina de mi trono y de mi reino.»",
-      "«Compruebo que vuestros dioses son mudos y vuestros encantamientos falsos.»",
       "«Entiendo que queréis robar los tesoros del palacio antes del amanecer.»",
-      "«Yo conozco ciertamente que vosotros ponéis dilaciones, porque veis que el asunto se me ha ido.»"
+      "«Yo conozco ciertamente que vosotros ponéis dilaciones, porque veis que el asunto se me ha ido.»",
+      "«Sé que sois espías de Judá y buscáis la ruina de mi trono y de mi reino.»",
+      "«Compruebo que vuestros dioses son mudos y vuestros encantamientos falsos.»"
     ],
-    "correct_option": 3,
+    "correct_option": 1,
     "accepted_answers": [
       "«Yo conozco ciertamente que vosotros ponéis dilaciones, porque veis que el asunto se me ha ido.»"
     ],
-    "explanation": "Daniel 2:8 expresa la perspicacia del monarca desenmascarando la táctica dilatoria de los caldeos.",
+    "explanation": "Daniel 2:8 declara: \"El rey respondió y dijo: —Yo conozco ciertamente que vosotros ponéis dilaciones, porque veis que el asunto se me ha ido.\"",
     "why_distractors_fail": {
-      "«Sé que sois espías de Judá y buscáis la ruina de mi trono y de mi reino.»": "Acusación de espionaje ajena al texto.",
-      "«Compruebo que vuestros dioses son mudos y vuestros encantamientos falsos.»": "Interpretación teológica posterior, no la frase de Nabucodonosor.",
-      "«Entiendo que queréis robar los tesoros del palacio antes del amanecer.»": "Introduce conspiración de robo no mencionada."
+      "«Entiendo que queréis robar los tesoros del palacio antes del amanecer.»": "Opción incorrecta según Daniel 2:8.",
+      "«Sé que sois espías de Judá y buscáis la ruina de mi trono y de mi reino.»": "Opción incorrecta según Daniel 2:8.",
+      "«Compruebo que vuestros dioses son mudos y vuestros encantamientos falsos.»": "Opción incorrecta según Daniel 2:8."
     },
-    "evidence_excerpt": "Yo conozco ciertamente que vosotros ponéis dilaciones, porque veis que el asunto se me ha ido",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "king_accusation_delay_tactics",
-    "option_category": "royal_discernment",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra que el rey no se dejaba engañar por rodeos sacerdotales.",
-    "variant_justification": "La pública era un verdadero/falso con inversión; esta evalúa la cita causal integral del rey.",
-    "answer_support_term": "ponéis dilaciones",
-    "author": {
-      "id": "autor-D1",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "00dac48849bf11618b4c9ff5a71aa5bb231e5f4db86f5caf63d306c61022f414"
   },
   {
     "id": "V14-R2-DAN2-C16-008",
-    "source_unit_id": "DAN2-V009",
     "fact_id": "DAN2-V009-F01",
+    "source_unit_id": "DAN2-V009",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿Qué sospecha albergaba el rey sobre la respuesta que preparaban y qué prueba exigió como garantía de una interpretación verdadera?",
     "options": [
-      "Sospechaba una respuesta mentirosa y perversa mientras pasaba el tiempo; exigió que le contasen el sueño para saber que podían darle su interpretación",
-      "Sospechaba una rebelión armada en el ejército; exigió que sacrificaran a sus primogénitos ante los dioses",
       "Sospechaba incompetencia en el idioma caldeo; exigió que redactaran un tratado de astronomía",
-      "Sospechaba soborno por reyes extranjeros; exigió que entregasen todos sus bienes personales al tesoro"
+      "Sospechaba soborno por reyes extranjeros; exigió que entregasen todos sus bienes personales al tesoro",
+      "Sospechaba una rebelión armada en el ejército; exigió que sacrificaran a sus primogénitos ante los dioses",
+      "Sospechaba una respuesta mentirosa y perversa mientras pasaba el tiempo; exigió que le contasen el sueño para saber que podían darle su interpretación"
     ],
-    "correct_option": 0,
+    "correct_option": 3,
     "accepted_answers": [
       "Sospechaba una respuesta mentirosa y perversa mientras pasaba el tiempo; exigió que le contasen el sueño para saber que podían darle su interpretación"
     ],
-    "explanation": "Daniel 2:9 formula el test epistemológico del rey: quien puede revelar el sueño olvidado demuestra que su interpretación no es invención humana.",
+    "explanation": "Daniel 2:9 declara: \"Si no me contáis el sueño, una sola sentencia hay para vosotros. Ciertamente preparáis una respuesta mentirosa y perversa que decir delante de mí, entre tanto que pasa el tiempo. Contadme, pues, el sueño, para que yo sepa que me podéis dar su interpretación.\"",
     "why_distractors_fail": {
-      "Sospechaba una rebelión armada en el ejército; exigió que sacrificaran a sus primogénitos ante los dioses": "Sustituye el fraude interpretativo por rebelión militar.",
-      "Sospechaba incompetencia en el idioma caldeo; exigió que redactaran un tratado de astronomía": "Introduce pruebas académicas ajenas al problema del sueño.",
-      "Sospechaba soborno por reyes extranjeros; exigió que entregasen todos sus bienes personales al tesoro": "Desvía la atención hacia temas de corrupción financiera inexistentes en el pasaje."
+      "Sospechaba incompetencia en el idioma caldeo; exigió que redactaran un tratado de astronomía": "Opción incorrecta según Daniel 2:9.",
+      "Sospechaba soborno por reyes extranjeros; exigió que entregasen todos sus bienes personales al tesoro": "Opción incorrecta según Daniel 2:9.",
+      "Sospechaba una rebelión armada en el ejército; exigió que sacrificaran a sus primogénitos ante los dioses": "Opción incorrecta según Daniel 2:9."
     },
-    "evidence_excerpt": "preparáis una respuesta mentirosa y perversa que decir delante de mí, entre tanto que pasa el tiempo. Contadme, pues, el sueño, para que yo sepa que me podéis dar su interpretación",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "fraud_suspicion_and_validation_criterion",
-    "option_category": "epistemological_test",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Fija la lógica del rey que condujo a la bancarrota de la sabiduría pagana.",
-    "variant_justification": "La pública pregunta solo para qué exigía contar el sueño; esta exige la correlación entre la acusación de mentira y el criterio probatorio.",
-    "answer_support_term": "respuesta mentirosa y perversa",
-    "author": {
-      "id": "autor-D1",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "cdb2975c22d69605cea245f85d182bc0918f86f3d33bef0c3e08710cc28dd81c"
   },
   {
     "id": "V14-R2-DAN2-C16-009",
-    "source_unit_id": "DAN2-V010",
     "fact_id": "DAN2-V010-F02",
+    "source_unit_id": "DAN2-V010",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "comparison",
     "question": "¿Qué doble confesión de impotencia humana y precedente histórico presentaron los caldeos ante el rey?",
     "options": [
-      "Solo los sacerdotes de Menfis conocen estos misterios; ningún rey babilónico los había desafiado con la muerte",
-      "El tiempo fijado era demasiado breve; otros soberanos concedían siempre tres lunas para consultar los oráculos",
+      "La sabiduría humana tiene límites conocidos; los reyes anteriores pagaban tributo antes de exigir visiones",
+      "Solo los sabios de Babilonia conocen estos misterios; ningún rey babilónico los había desafiado con la muerte",
       "No hay hombre sobre la tierra que pueda declarar el asunto; ningún rey, príncipe ni señor preguntó jamás cosa semejante a ningún sabio",
-      "La sabiduría humana tiene límites conocidos; los reyes anteriores pagaban tributo antes de exigir visiones"
+      "El tiempo fijado era demasiado breve; otros soberanos concedían siempre tres lunas para consultar los oráculos"
     ],
     "correct_option": 2,
     "accepted_answers": [
       "No hay hombre sobre la tierra que pueda declarar el asunto; ningún rey, príncipe ni señor preguntó jamás cosa semejante a ningún sabio"
     ],
-    "explanation": "Daniel 2:10 une la incapacidad universal de los hombres con la ausencia absoluta de precedente histórico de tal demanda.",
+    "explanation": "Daniel 2:10 declara: \"Los caldeos respondieron delante del rey y dijeron: —No hay hombre sobre la tierra que pueda declarar el asunto del rey. Además, ningún rey, príncipe ni señor preguntó cosa semejante a ningún mago ni astrólogo ni caldeo.\"",
     "why_distractors_fail": {
-      "Solo los sacerdotes de Menfis conocen estos misterios; ningún rey babilónico los había desafiado con la muerte": "Introduce sacerdotes egipcios no citados.",
-      "El tiempo fijado era demasiado breve; otros soberanos concedían siempre tres lunas para consultar los oráculos": "Inventa plazos y prácticas no mencionadas.",
-      "La sabiduría humana tiene límites conocidos; los reyes anteriores pagaban tributo antes de exigir visiones": "Desvía la declaración hacia tributos monetarios."
+      "La sabiduría humana tiene límites conocidos; los reyes anteriores pagaban tributo antes de exigir visiones": "Opción incorrecta según Daniel 2:10.",
+      "Solo los sabios de Babilonia conocen estos misterios; ningún rey babilónico los había desafiado con la muerte": "Opción incorrecta según Daniel 2:10.",
+      "El tiempo fijado era demasiado breve; otros soberanos concedían siempre tres lunas para consultar los oráculos": "Opción incorrecta según Daniel 2:10."
     },
-    "evidence_excerpt": "ningún rey, príncipe ni señor preguntó cosa semejante",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "human_incapacity_and_historical_precedent",
-    "option_category": "caldean_confession_of_limits",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Los propios sabios admiten que ningún ser humano puede cumplir la exigencia del rey.",
-    "variant_justification": "La pública es un fill_blank parcial; esta variante evalúa los dos enunciados completos de la defensa de los sabios.",
-    "answer_support_term": "ningún rey, príncipe ni señor",
-    "author": {
-      "id": "autor-D1",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "35fd8cffec37ee68b8ab4c49bc11595d547a336275c66a5ecc6f2ddcd4a018fe"
   },
   {
     "id": "V14-R2-DAN2-C16-010",
-    "source_unit_id": "DAN2-V011",
     "fact_id": "DAN2-V011-F01",
+    "source_unit_id": "DAN2-V011",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "principle",
     "question": "¿A quiénes atribuyeron los caldeos la única capacidad de declarar el difícil asunto demandado por el monarca?",
     "options": [
-      "a los ángeles guardianes del trono de Persia",
+      "a los dioses cuya morada no está entre los hombres",
       "a los espíritus de los antiguos monarcas sepultados en Ur",
       "a los profetas cautivos traídos de Jerusalén",
-      "a los dioses cuya morada no está entre los hombres"
+      "a los ángeles guardianes del trono de Persia"
     ],
-    "correct_option": 3,
+    "correct_option": 0,
     "accepted_answers": [
       "a los dioses cuya morada no está entre los hombres"
     ],
-    "explanation": "Daniel 2:11 registra la conclusión pagana: solo seres divinos trascendentes no encarnados entre los hombres podrían resolver el misterio.",
+    "explanation": "Daniel 2:11 declara: \"Porque el asunto que el rey demanda es difícil, y no hay quien lo pueda declarar al rey, salvo los dioses cuya morada no está entre los hombres.\"",
     "why_distractors_fail": {
-      "a los ángeles guardianes del trono de Persia": "Término ajeno a la teología caldea del versículo.",
-      "a los espíritus de los antiguos monarcas sepultados en Ur": "Introduce nigromancia no aludida en la respuesta.",
-      "a los profetas cautivos traídos de Jerusalén": "Los sabios babilónicos no reconocían a los cautivos hebreos en este punto."
+      "a los espíritus de los antiguos monarcas sepultados en Ur": "Opción incorrecta según Daniel 2:11.",
+      "a los profetas cautivos traídos de Jerusalén": "Opción incorrecta según Daniel 2:11.",
+      "a los ángeles guardianes del trono de Persia": "Opción incorrecta según Daniel 2:11."
     },
-    "evidence_excerpt": "salvo los dioses cuya morada no está entre los hombres",
-    "difficulty": "hard",
-    "importance": "critical",
-    "relation_type": "divine_transcendence_caldean_declaration",
-    "option_category": "theological_boundary_confession",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Prepara el escenario para la revelación del verdadero Dios de los cielos que sí se comunica con los hombres.",
-    "variant_justification": "La pública formula una pregunta directa; esta exige la definición ontológica completa ('dioses cuya morada no está entre los hombres').",
-    "answer_support_term": "cuya morada no está entre los hombres",
-    "author": {
-      "id": "autor-D1",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "ee501469e86b736854a81365a1c0025f6def2e2cb0427a5f485c28ec2da18042"
   }
 ]

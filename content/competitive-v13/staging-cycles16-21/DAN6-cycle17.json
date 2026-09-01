@@ -1,47 +1,35 @@
 [
   {
     "id": "V14-R2-DAN6-C17-001",
-    "source_unit_id": "DAN6-V006",
     "fact_id": "DAN6-V006-F01",
+    "source_unit_id": "DAN6-V006",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿Quiénes se confabularon ante el rey Darío y con qué salutación protocolar encabezaron su propuesta?",
     "options": [
-      "estos gobernadores y sátrapas se juntaron delante del rey, y le dijeron: «¡Rey Darío, para siempre vive!»",
+      "los tres gobernadores principales y Daniel le dijeron: «¡Paz y justicia sobre las provincias!»",
       "los capitanes del ejército y los jueces de Babilonia le dijeron: «¡Gran señor de Media y Persia!»",
       "los sacerdotes de Bel y los sabios caldeos le dijeron: «¡Que los dioses prosperen tu reinado!»",
-      "los tres gobernadores principales y Daniel le dijeron: «¡Paz y justicia sobre las provincias!»"
+      "estos gobernadores y sátrapas se juntaron delante del rey, y le dijeron: «¡Rey Darío, para siempre vive!»"
     ],
-    "correct_option": 0,
+    "correct_option": 3,
     "accepted_answers": [
       "estos gobernadores y sátrapas se juntaron delante del rey, y le dijeron: «¡Rey Darío, para siempre vive!»"
     ],
-    "explanation": "Daniel 6:6 señala la asamblea de conspiradores compuesta por gobernadores y sátrapas con su saludo protocolar.",
+    "explanation": "Daniel 6:6 declara: \"Entonces estos gobernadores y sátrapas se juntaron delante del rey, y le dijeron: —¡Rey Darío, para siempre vive!\"",
     "why_distractors_fail": {
-      "los capitanes del ejército y los jueces de Babilonia le dijeron: «¡Gran señor de Media y Persia!»": "Sustituye a los gobernadores y sátrapas por militares y jueces.",
-      "los sacerdotes de Bel y los sabios caldeos le dijeron: «¡Que los dioses prosperen tu reinado!»": "Introduce sacerdotes paganos babilónicos en el nuevo gobierno medo-persa.",
-      "los tres gobernadores principales y Daniel le dijeron: «¡Paz y justicia sobre las provincias!»": "Daniel fue excluido deliberadamente de la confabulación."
+      "los tres gobernadores principales y Daniel le dijeron: «¡Paz y justicia sobre las provincias!»": "Opción incorrecta según Daniel 6:6.",
+      "los capitanes del ejército y los jueces de Babilonia le dijeron: «¡Gran señor de Media y Persia!»": "Opción incorrecta según Daniel 6:6.",
+      "los sacerdotes de Bel y los sabios caldeos le dijeron: «¡Que los dioses prosperen tu reinado!»": "Opción incorrecta según Daniel 6:6."
     },
-    "evidence_excerpt": "estos gobernadores y sátrapas se juntaron delante del rey, y le dijeron: «¡Rey Darío, para siempre vive!",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "conspirators_assembly_and_greeting",
-    "option_category": "court_conspiracy_address",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra la unidad maliciosa de los oficiales para entrampar al rey y destruir a Daniel.",
-    "variant_justification": "La pública pregunta solo qué dijeron; esta evalúa los sujetos colectivos conjuntos con la salutación formal.",
-    "answer_support_term": "gobernadores y sátrapas se juntaron",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "0fe435183448511100d97f3c965239910b2936f7cc5474bff557696d1f7d8dbb"
   },
   {
     "id": "V14-R2-DAN6-C17-002",
-    "source_unit_id": "DAN6-V008",
     "fact_id": "DAN6-V008-F01",
+    "source_unit_id": "DAN6-V008",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "principle",
@@ -56,337 +44,229 @@
     "accepted_answers": [
       "«Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.»"
     ],
-    "explanation": "Daniel 6:8 cita la doble exigencia de confirmación y firma respaldada en la irrevocabilidad de la ley medo-persa.",
+    "explanation": "Daniel 6:8 declara: \"Ahora, pues, oh rey, confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.\"",
     "why_distractors_fail": {
-      "«Exigimos un decreto temporal de diez días que pueda modificarse si el pueblo se rebela.»": "El plazo era de 30 días y no admitía modificación alguna.",
-      "«Ordena que los sacerdotes de Persia revisen cada semana las peticiones del pueblo antes de castigar.»": "Introduce tribunales sacerdotales ajenos al edicto.",
-      "«Confirma el edicto de modo que solo el tribunal supremo de los sátrapas pueda anularlo.»": "Contradice la prohibición absoluta de abrogación."
+      "«Exigimos un decreto temporal de diez días que pueda modificarse si el pueblo se rebela.»": "Opción incorrecta según Daniel 6:8.",
+      "«Ordena que los sacerdotes de Persia revisen cada semana las peticiones del pueblo antes de castigar.»": "Opción incorrecta según Daniel 6:8.",
+      "«Confirma el edicto de modo que solo el tribunal supremo de los sátrapas pueda anularlo.»": "Opción incorrecta según Daniel 6:8."
     },
-    "evidence_excerpt": "confirma el edicto y fírmalo, para que no pueda ser revocado, conforme a la ley de Media y de Persia, que no puede ser abrogada.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "decree_signature_and_irrevocability_principle",
-    "option_category": "medo_persian_legal_doctrine",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Fija la trampa institucional construida sobre el dogma de la infalibilidad del decreto real.",
-    "variant_justification": "La pública pregunta solo qué ley no puede ser abrogada; esta exige la formulación jurídica completa de la petición y su principio.",
-    "answer_support_term": "ley de Media y de Persia, que no puede ser abrogada",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "29e7bd6004b28c170551830774170909a7c97e05cd054df2b4a230088b807a70"
   },
   {
     "id": "V14-R2-DAN6-C17-003",
-    "source_unit_id": "DAN6-V009",
     "fact_id": "DAN6-V009-F02",
+    "source_unit_id": "DAN6-V009",
     "role": "variant",
     "family": "single_choice_direct",
     "subtype": "relationship",
     "question": "¿Qué dos instrumentos jurídicos promulgó y firmó formalmente el rey Darío?",
     "options": [
-      "el indulto y el tratado de paz",
+      "la declaración de guerra y el reclutamiento",
       "el censo y la ley de tributos",
-      "el edicto y la prohibición",
-      "la declaración de guerra y el reclutamiento"
+      "el indulto y el tratado de paz",
+      "el edicto y la prohibición"
     ],
-    "correct_option": 2,
+    "correct_option": 3,
     "accepted_answers": [
       "el edicto y la prohibición"
     ],
-    "explanation": "Daniel 6:9 expresa los dos componentes normativos firmados por el rey: el edicto y la prohibición.",
+    "explanation": "Daniel 6:9 declara: \"Firmó, pues, el rey Darío el edicto y la prohibición.\"",
     "why_distractors_fail": {
-      "el indulto y el tratado de paz": "Instrumentos de derecho internacional ajenos a la prohibición religiosa.",
-      "el censo y la ley de tributos": "Leyes administrativas no relacionadas con la oración.",
-      "la declaración de guerra y el reclutamiento": "Decretos militares inexistentes en el contexto."
+      "la declaración de guerra y el reclutamiento": "Opción incorrecta según Daniel 6:9.",
+      "el censo y la ley de tributos": "Opción incorrecta según Daniel 6:9.",
+      "el indulto y el tratado de paz": "Opción incorrecta según Daniel 6:9."
     },
-    "evidence_excerpt": "Firmó, pues, el rey Darío el edicto y la prohibición.",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "royal_enactment_edict_and_prohibition",
-    "option_category": "legislative_promulgation",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra el momento decisivo en que la trampa legal cobró fuerza obligatoria en todo el imperio.",
-    "variant_justification": "La pública es un fill_blank simple; esta variante evalúa la terna 'rey Darío / edicto / prohibición'.",
-    "answer_support_term": "el edicto y la prohibición",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "67ce1895c41eda702639b40359372da252b63609ac008c65ba6f910008e79aec"
   },
   {
     "id": "V14-R2-DAN6-C17-004",
-    "source_unit_id": "DAN6-V011",
     "fact_id": "DAN6-V011-F02",
+    "source_unit_id": "DAN6-V011",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿En qué doble actitud devocional hallaron los conspiradores a Daniel cuando se juntaron?",
     "options": [
+      "orando y rogando en presencia de su Dios",
       "escondido en su cámara y temiendo a los guardias persas",
-      "redactando una queja formal para enviarla a Darío",
       "ofreciendo sacrificios de animales en el patio de su casa",
-      "orando y rogando en presencia de su Dios"
+      "redactando una queja formal para enviarla a Darío"
     ],
-    "correct_option": 3,
+    "correct_option": 0,
     "accepted_answers": [
       "orando y rogando en presencia de su Dios"
     ],
-    "explanation": "Daniel 6:11 registra las dos acciones de comunión espiritual encontradas por los espías: 'orando y rogando'.",
+    "explanation": "Daniel 6:11 declara: \"Se juntaron entonces aquellos hombres, y hallaron a Daniel orando y rogando en presencia de su Dios.\"",
     "why_distractors_fail": {
-      "escondido en su cámara y temiendo a los guardias persas": "Contradice la valiente oración pública y abierta de Daniel.",
-      "redactando una queja formal para enviarla a Darío": "Daniel no apeló a tácticas políticas sino a la oración.",
-      "ofreciendo sacrificios de animales en el patio de su casa": "Los sacrificios correspondían solo al templo en Jerusalén."
+      "escondido en su cámara y temiendo a los guardias persas": "Opción incorrecta según Daniel 6:11.",
+      "ofreciendo sacrificios de animales en el patio de su casa": "Opción incorrecta según Daniel 6:11.",
+      "redactando una queja formal para enviarla a Darío": "Opción incorrecta según Daniel 6:11."
     },
-    "evidence_excerpt": "hallaron a Daniel orando y rogando en presencia de su Dios",
-    "difficulty": "hard",
-    "importance": "critical",
-    "relation_type": "devotional_surveillance_discovery",
-    "option_category": "religious_fidelity_record",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Evidencia que la devoción de Daniel fue inalterable aun bajo amenaza de muerte inminente.",
-    "variant_justification": "La pública pregunta de forma general; esta evalúa el par devocional 'orando y rogando' ante su Dios.",
-    "answer_support_term": "orando y rogando",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "ea18b8dfd978b15f9accf0724576ca53db7eaa8e724dff3e2ab064f0e587cf6a"
   },
   {
     "id": "V14-R2-DAN6-C17-005",
-    "source_unit_id": "DAN6-V013",
     "fact_id": "DAN6-V013-F03",
+    "source_unit_id": "DAN6-V013",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿Qué triple acusación presentaron los delatores ante el rey respecto a Daniel?",
     "options": [
-      "Daniel conspira con los generales de Persia para derrocar el trono y ha dejado de cobrar los tributos",
-      "Daniel, de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición",
+      "Daniel oculta armas en su casa y entrena a los jóvenes de Judá para una rebelión armada",
       "Daniel rehúsa hablar en lengua aramea en el consejo y blasfema públicamente contra los dioses de Media",
-      "Daniel oculta armas en su casa y entrena a los jóvenes de Judá para una rebelión armada"
+      "Daniel conspira con los generales de Persia para derrocar el trono y ha dejado de cobrar los tributos",
+      "Daniel, de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición"
     ],
-    "correct_option": 1,
+    "correct_option": 3,
     "accepted_answers": [
       "Daniel, de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición"
     ],
-    "explanation": "Daniel 6:13 articula la acusación maliciosa: desprecio al rey, desacato al edicto y persistencia en orar tres veces al día.",
+    "explanation": "Daniel 6:13 declara: \"Entonces respondieron y dijeron delante del rey: —Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.\"",
     "why_distractors_fail": {
-      "Daniel conspira con los generales de Persia para derrocar el trono y ha dejado de cobrar los tributos": "Acusación de golpe de estado militar inexistente en el texto.",
-      "Daniel rehúsa hablar en lengua aramea en el consejo y blasfema públicamente contra los dioses de Media": "Inventa delitos lingüísticos y blasfemias paganas.",
-      "Daniel oculta armas en su casa y entrena a los jóvenes de Judá para una rebelión armada": "Introduce insurrección armada ajena al conflicto religioso."
+      "Daniel oculta armas en su casa y entrena a los jóvenes de Judá para una rebelión armada": "Opción incorrecta según Daniel 6:13.",
+      "Daniel rehúsa hablar en lengua aramea en el consejo y blasfema públicamente contra los dioses de Media": "Opción incorrecta según Daniel 6:13.",
+      "Daniel conspira con los generales de Persia para derrocar el trono y ha dejado de cobrar los tributos": "Opción incorrecta según Daniel 6:13."
     },
-    "evidence_excerpt": "«Daniel, que es de los hijos de los cautivos de Judá, no te respeta a ti, rey, ni acata el edicto que confirmaste, sino que tres veces al día hace su petición.»",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "triple_indictment_disrespect_disobedience_prayer",
-    "option_category": "court_formal_denunciation",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Ilustra el sesgo antisemita y rencoroso de los acusadores al llamarlo 'cautivo de Judá'.",
-    "variant_justification": "La pública es un resumen; esta exige la triple correlación (persona cautiva, falta de respeto al rey/edicto y frecuencia de oración).",
-    "answer_support_term": "no te respeta a ti, rey",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "c788111a0a2967e783f05927ead6efe26098168733baf6e08f0b4bc310a3dd06"
   },
   {
     "id": "V14-R2-DAN6-C17-006",
-    "source_unit_id": "DAN6-V014",
     "fact_id": "DAN6-V014-F01",
+    "source_unit_id": "DAN6-V014",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "cause_consequence",
     "question": "¿Qué profunda aflicción y esfuerzo desesperado desplegó el rey Darío al escuchar la acusación contra Daniel?",
     "options": [
-      "se enfureció contra Daniel y ordenó ejecutarlo al instante en presencia de los sátrapas",
-      "consultó a los magos de Babilonia para buscar una excepción en el libro de los reyes",
       "le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para librarlo",
-      "envió a Daniel secretamente fuera de la ciudad antes de que cayera la noche"
+      "envió a Daniel secretamente fuera de la ciudad antes de que cayera la noche",
+      "consultó a los magos de Babilonia para buscar una excepción en el libro de los reyes",
+      "se enfureció contra Daniel y ordenó ejecutarlo al instante en presencia de los sátrapas"
     ],
-    "correct_option": 2,
+    "correct_option": 0,
     "accepted_answers": [
       "le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para librarlo"
     ],
-    "explanation": "Daniel 6:14 muestra el pesar genuino de Darío y su lucha jurídica continua hasta el ocaso para hallar una vía de escape.",
+    "explanation": "Daniel 6:14 declara: \"Cuando el rey oyó el asunto, le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para librarlo.\"",
     "why_distractors_fail": {
-      "se enfureció contra Daniel y ordenó ejecutarlo al instante en presencia de los sátrapas": "Contradice el amor del monarca por Daniel y su deseo de salvarlo.",
-      "consultó a los magos de Babilonia para buscar una excepción en el libro de los reyes": "El rey trabajó personalmente con sus consejeros legales persas.",
-      "envió a Daniel secretamente fuera de la ciudad antes de que cayera la noche": "El rey respetaba la ley imperial y no podía vulnerarla clandestinamente."
+      "envió a Daniel secretamente fuera de la ciudad antes de que cayera la noche": "Opción incorrecta según Daniel 6:14.",
+      "consultó a los magos de Babilonia para buscar una excepción en el libro de los reyes": "Opción incorrecta según Daniel 6:14.",
+      "se enfureció contra Daniel y ordenó ejecutarlo al instante en presencia de los sátrapas": "Opción incorrecta según Daniel 6:14."
     },
-    "evidence_excerpt": "le pesó en gran manera y resolvió librar a Daniel; y hasta la puesta del sol trabajó para librarlo.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "king_grief_and_prolonged_effort_to_deliver",
-    "option_category": "royal_internal_struggle",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra la estimación del rey hacia Daniel y la impotencia de la monarquía ante sus propias leyes injustas.",
-    "variant_justification": "La pública pregunta de forma general; esta evalúa la correlación entre el pesar moral y el límite temporal de la puesta del sol.",
-    "answer_support_term": "hasta la puesta del sol trabajó para librarlo",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "bdbc96c661c1e8ac9a573e25342f00627568a0a656910f410b5e7921de76c81a"
   },
   {
     "id": "V14-R2-DAN6-C17-007",
-    "source_unit_id": "DAN6-V015",
     "fact_id": "DAN6-V015-F03",
+    "source_unit_id": "DAN6-V015",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "principle",
     "question": "¿Cómo acorralaron los conspiradores al rey al finalizar la tarde para forzar la ejecución?",
     "options": [
-      "amenazaron con sublevar las tropas de Susa si Daniel no era degollado antes de la medianoche",
       "exigieron que el rey abdicara al trono si se negaba a cumplir el edicto imperial",
-      "presentaron una queja ante el consejo de príncipes para destituir a Darío por prevaricación",
-      "rodearon al rey y le dijeron: «Sabes, oh rey, que es ley de Media y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.»"
+      "rodearon al rey y le dijeron: «Sabes, oh rey, que es ley de Media y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.»",
+      "amenazaron con sublevar las tropas de Susa si Daniel no era degollado antes de la medianoche",
+      "presentaron una queja ante el consejo de príncipes para destituir a Darío por prevaricación"
     ],
-    "correct_option": 3,
+    "correct_option": 1,
     "accepted_answers": [
       "rodearon al rey y le dijeron: «Sabes, oh rey, que es ley de Media y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.»"
     ],
-    "explanation": "Daniel 6:15 relata la presión física y jurídica de los sátrapas citando la irrevocabilidad inmutable de toda ordenanza confirmada.",
+    "explanation": "Daniel 6:15 declara: \"Pero aquellos hombres rodearon al rey y le dijeron: —Sabes, oh rey, que es ley de Media y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.\"",
     "why_distractors_fail": {
-      "amenazaron con sublevar las tropas de Susa si Daniel no era degollado antes de la medianoche": "Inventa una amenaza militar de motín no registrada.",
-      "exigieron que el rey abdicara al trono si se negaba a cumplir el edicto imperial": "No exigieron abdicación sino la aplicación mecánica de la ley.",
-      "presentaron una queja ante el consejo de príncipes para destituir a Darío por prevaricación": "Introduce instancias de destitución modernas inexistentes en Persia."
+      "exigieron que el rey abdicara al trono si se negaba a cumplir el edicto imperial": "Opción incorrecta según Daniel 6:15.",
+      "amenazaron con sublevar las tropas de Susa si Daniel no era degollado antes de la medianoche": "Opción incorrecta según Daniel 6:15.",
+      "presentaron una queja ante el consejo de príncipes para destituir a Darío por prevaricación": "Opción incorrecta según Daniel 6:15."
     },
-    "evidence_excerpt": "rodearon al rey y le dijeron: «Sabes, oh rey, que es ley de Media y de Persia que ningún edicto u ordenanza que el rey confirme puede ser abrogado.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "satraps_intimidation_and_legal_coercion",
-    "option_category": "judicial_entrapment_execution",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra el clímax de la presión política que cerró toda vía humana de salvación.",
-    "variant_justification": "La pública es un resumen explicativo; esta exige la cita de confrontación directa de los hombres al rodear al monarca.",
-    "answer_support_term": "ningún edicto u ordenanza",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "3a9dd9605856f6037bea24d9d2139d914e2f70d0ffdb0f60edf74f9f90f74d58"
   },
   {
     "id": "V14-R2-DAN6-C17-008",
-    "source_unit_id": "DAN6-V018",
     "fact_id": "DAN6-V018-F03",
+    "source_unit_id": "DAN6-V018",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿Qué tres señales de duelo, abstinencia y desvelo marcaron la noche del rey en su palacio tras arrojar a Daniel al foso?",
     "options": [
+      "cerró las puertas del palacio; ordenó duelo general y ejecutó a los guardias del foso",
       "se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño",
       "se vistió de cilicio; quemó sus vestiduras reales y bebió agua amarga toda la noche",
-      "cerró las puertas del palacio; ordenó duelo general y ejecutó a los guardias del foso",
       "oró a los dioses de Persia; consultó a los astrólogos y durmió profundamente hasta el alba"
     ],
-    "correct_option": 0,
+    "correct_option": 1,
     "accepted_answers": [
       "se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño"
     ],
-    "explanation": "Daniel 6:18 describe con exactitud la terna de ayuno voluntario, ausencia de música y pérdida del sueño.",
+    "explanation": "Daniel 6:18 declara: \"Luego el rey se fue a su palacio, y se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.\"",
     "why_distractors_fail": {
-      "se vistió de cilicio; quemó sus vestiduras reales y bebió agua amarga toda la noche": "Añade ritos luctuosos inventados no presentes en el versículo.",
-      "cerró las puertas del palacio; ordenó duelo general y ejecutó a los guardias del foso": "Introduce ejecuciones arbitrarias no mencionadas.",
-      "oró a los dioses de Persia; consultó a los astrólogos y durmió profundamente hasta el alba": "Contradice el insomnio y la angustia sincera de Darío."
+      "cerró las puertas del palacio; ordenó duelo general y ejecutó a los guardias del foso": "Opción incorrecta según Daniel 6:18.",
+      "se vistió de cilicio; quemó sus vestiduras reales y bebió agua amarga toda la noche": "Opción incorrecta según Daniel 6:18.",
+      "oró a los dioses de Persia; consultó a los astrólogos y durmió profundamente hasta el alba": "Opción incorrecta según Daniel 6:18."
     },
-    "evidence_excerpt": "se acostó en ayunas; no trajeron ante él instrumentos musicales, y se le fue el sueño.",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "king_fasting_absence_of_music_insomnia",
-    "option_category": "royal_mourning_and_anguish",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Contrapone la paz de Daniel en el foso con el tormento del rey en su palacio.",
-    "variant_justification": "La pública es un fill_blank sobre ayunas; esta exige la identificación de las tres condiciones somáticas y afectivas de la vigilia real.",
-    "answer_support_term": "no trajeron ante él instrumentos musicales",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "a4e2a2770a32bf23e0fce3f8185145e82d43d4135f223ad55bac93fef603e63c"
   },
   {
     "id": "V14-R2-DAN6-C17-009",
-    "source_unit_id": "DAN6-V021",
     "fact_id": "DAN6-V021-F01",
+    "source_unit_id": "DAN6-V021",
     "role": "variant",
     "family": "single_choice_direct",
     "subtype": "relationship",
     "question": "¿Con qué salutación de respeto y lealtad respondió Daniel desde el foso a la angustiada voz del rey?",
     "options": [
-      "«¡Oh rey, malditos sean tus sátrapas!»",
       "«¡Señor Darío, he sido salvado por mis fuerzas!»",
-      "«¡Rey, vive para siempre!»",
-      "«¡Grande es el foso que no pudo devorarme!»"
+      "«¡Grande es el foso que no pudo devorarme!»",
+      "«¡Oh rey, malditos sean tus sátrapas!»",
+      "«¡Rey, vive para siempre!»"
     ],
-    "correct_option": 2,
+    "correct_option": 3,
     "accepted_answers": [
       "«¡Rey, vive para siempre!»"
     ],
-    "explanation": "Daniel 6:21 registra la primera respuesta del profeta vivo: la salutación canónica y leal '¡Rey, vive para siempre!'.",
+    "explanation": "Daniel 6:21 declara: \"Entonces Daniel respondió al rey: —¡Rey, vive para siempre!\"",
     "why_distractors_fail": {
-      "«¡Oh rey, malditos sean tus sátrapas!»": "Daniel no profirió maldiciones ni rencores contra sus enemigos.",
-      "«¡Señor Darío, he sido salvado por mis fuerzas!»": "La liberación fue atribuida al ángel enviado por Dios en el v. 22.",
-      "«¡Grande es el foso que no pudo devorarme!»": "Frase ficticia ajena a la cortesía del profeta."
+      "«¡Señor Darío, he sido salvado por mis fuerzas!»": "Opción incorrecta según Daniel 6:21.",
+      "«¡Grande es el foso que no pudo devorarme!»": "Opción incorrecta según Daniel 6:21.",
+      "«¡Oh rey, malditos sean tus sátrapas!»": "Opción incorrecta según Daniel 6:21."
     },
-    "evidence_excerpt": "Entonces Daniel respondió al rey: «¡Rey, vive para siempre!",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "prophetic_response_and_loyalty_greeting",
-    "option_category": "pit_dialogue_salutation",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra que Daniel no guardaba resentimiento personal hacia el soberano engañado.",
-    "variant_justification": "La pública contenía una variante falsa de 'muchos años'; esta evalúa la cita textual exacta del saludo.",
-    "answer_support_term": "vive para siempre",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "a0c1f2b92e7d2a4b7b2c5863c2a66ae4057c22b6d6360f2d7c8a2bd339f3c154"
   },
   {
     "id": "V14-R2-DAN6-C17-010",
-    "source_unit_id": "DAN6-V024",
     "fact_id": "DAN6-V024-F03",
+    "source_unit_id": "DAN6-V024",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "cause_consequence",
     "question": "¿Qué juicio retributivo ejecutó el rey sobre los acusadores de Daniel y qué ferocidad mostraron los leones?",
     "options": [
       "fueron desterrados a los confines del imperio y sus casas confiscadas para el tesoro real",
-      "fueron atados a cuatro caballos y descuartizados en la plaza mayor de Babilonia",
       "fueron perdonados tras jurar lealtad al Dios de Daniel y pagar una multa de mil talentos",
+      "fueron atados a cuatro caballos y descuartizados en la plaza mayor de Babilonia",
       "fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos"
     ],
     "correct_option": 3,
     "accepted_answers": [
       "fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos"
     ],
-    "explanation": "Daniel 6:24 registra el severo principio de responsabilidad familiar persa y la voracidad instantánea de las fieras antes de tocar el suelo.",
+    "explanation": "Daniel 6:24 declara: \"Luego ordenó el rey que trajeran a aquellos hombres que habían acusado a Daniel, y fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.\"",
     "why_distractors_fail": {
-      "fueron desterrados a los confines del imperio y sus casas confiscadas para el tesoro real": "Sustituye la pena de muerte por destierro patrimonial.",
-      "fueron atados a cuatro caballos y descuartizados en la plaza mayor de Babilonia": "Pena de descuartizamiento equino ajena al relato.",
-      "fueron perdonados tras jurar lealtad al Dios de Daniel y pagar una multa de mil talentos": "No hubo perdón ni conmutación económica de la pena."
+      "fueron desterrados a los confines del imperio y sus casas confiscadas para el tesoro real": "Opción incorrecta según Daniel 6:24.",
+      "fueron perdonados tras jurar lealtad al Dios de Daniel y pagar una multa de mil talentos": "Opción incorrecta según Daniel 6:24.",
+      "fueron atados a cuatro caballos y descuartizados en la plaza mayor de Babilonia": "Opción incorrecta según Daniel 6:24."
     },
-    "evidence_excerpt": "fueron echados al foso de los leones ellos, sus hijos y sus mujeres; y aún no habían llegado al fondo del foso, cuando los leones se apoderaron de ellos y quebraron todos sus huesos.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "retributive_justice_and_instant_lion_destruction",
-    "option_category": "capital_execution_and_feline_ferocity",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Demuestra irrefutablemente que la preservación de Daniel no se debió a falta de apetito de los leones, sino al milagro divino.",
-    "variant_justification": "La pública es un resumen afirmativo; esta exige la correlación exacta entre los miembros familiares arrojados y el despedazamiento antes de tocar fondo.",
-    "answer_support_term": "quebraron todos sus huesos",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "9e35221b8b954fdc690222dfe91bab2c770f95330aa8afdfd4c82581545bbd4f"
   }
 ]

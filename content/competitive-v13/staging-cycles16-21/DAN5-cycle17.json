@@ -1,47 +1,35 @@
 [
   {
     "id": "V14-R2-DAN5-C17-001",
-    "source_unit_id": "DAN5-V001",
     "fact_id": "DAN5-V001-F01",
+    "source_unit_id": "DAN5-V001",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿Qué registro une al soberano babilónico, la magnitud de los invitados y la acción festiva en la apertura del capítulo 5?",
     "options": [
-      "El rey Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino",
       "El rey Nabucodonosor convocó a setenta ancianos de Judá y les ofreció manjares reales",
       "El rey Darío de Media ofreció una cena a ciento veinte sátrapas en el palacio de Susa",
+      "El rey Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino",
       "El rey Ciro de Persia celebró la toma de Babilonia con los capitanes de su ejército"
     ],
-    "correct_option": 0,
+    "correct_option": 2,
     "accepted_answers": [
       "El rey Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino"
     ],
-    "explanation": "Daniel 5:1 fija el banquete imperial presidido por Belsasar ante mil de sus dignatarios con consumo ostentoso de vino.",
+    "explanation": "Daniel 5:1 declara: \"El rey Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.\"",
     "why_distractors_fail": {
-      "El rey Nabucodonosor convocó a setenta ancianos de Judá y les ofreció manjares reales": "Sustituye al rey Belsasar por Nabucodonosor y altera la multitud de príncipes.",
-      "El rey Darío de Media ofreció una cena a ciento veinte sátrapas en el palacio de Susa": "Confunde el contexto persa de Darío con el festín babilónico.",
-      "El rey Ciro de Persia celebró la toma de Babilonia con los capitanes de su ejército": "Introduce a Ciro en una fiesta militar no narrada en este versículo."
+      "El rey Nabucodonosor convocó a setenta ancianos de Judá y les ofreció manjares reales": "Opción incorrecta según Daniel 5:1.",
+      "El rey Darío de Media ofreció una cena a ciento veinte sátrapas en el palacio de Susa": "Opción incorrecta según Daniel 5:1.",
+      "El rey Ciro de Persia celebró la toma de Babilonia con los capitanes de su ejército": "Opción incorrecta según Daniel 5:1."
     },
-    "evidence_excerpt": "El rey Belsasar hizo un gran banquete a mil de sus príncipes, y en presencia de los mil bebía vino.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "king_banquet_guests_wine_consumption",
-    "option_category": "royal_banquet_record",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Abre el relato del colapso del imperio babilónico en medio de la embriaguez y la soberbia.",
-    "variant_justification": "La pública pregunta solo qué rey ofreció el banquete; esta exige la correspondencia simultánea de monarca, cantidad exacta de príncipes y acción celebratoria.",
-    "answer_support_term": "gran banquete a mil de sus príncipes",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "882ad25cec27f0e3e586ab44164bfcaa28881c7886ed8bcaf9ffd166d1649f62"
   },
   {
     "id": "V14-R2-DAN5-C17-002",
-    "source_unit_id": "DAN5-V003",
     "fact_id": "DAN5-V003-F03",
+    "source_unit_id": "DAN5-V003",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
@@ -49,116 +37,80 @@
     "options": [
       "los fundieron para forjar una nueva estatua de oro dedicada a Bel",
       "bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas",
-      "los ofrecieron como trofeo de guerra ante los embajadores de Egipto",
-      "los llenaron de incienso y los quemaron en honor a los dioses persas"
+      "los llenaron de incienso y los quemaron en honor a los dioses persas",
+      "los ofrecieron como trofeo de guerra ante los embajadores de Egipto"
     ],
     "correct_option": 1,
     "accepted_answers": [
       "bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas"
     ],
-    "explanation": "Daniel 5:3 detalla el cuarteto de participantes cortesanos que bebieron de los vasos sagrados.",
+    "explanation": "Daniel 5:3 declara: \"Entonces trajeron los vasos de oro que habían traído del templo de la casa de Dios, que estaba en Jerusalén, y bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas.\"",
     "why_distractors_fail": {
-      "los fundieron para forjar una nueva estatua de oro dedicada a Bel": "Inventa una refundición metalúrgica no mencionada en el texto.",
-      "los ofrecieron como trofeo de guerra ante los embajadores de Egipto": "Introduce embajadas diplomáticas inexistentes en el relato.",
-      "los llenaron de incienso y los quemaron en honor a los dioses persas": "Sustituye el acto de beber vino por un rito de incensación persa."
+      "los fundieron para forjar una nueva estatua de oro dedicada a Bel": "Opción incorrecta según Daniel 5:3.",
+      "los llenaron de incienso y los quemaron en honor a los dioses persas": "Opción incorrecta según Daniel 5:3.",
+      "los ofrecieron como trofeo de guerra ante los embajadores de Egipto": "Opción incorrecta según Daniel 5:3."
     },
-    "evidence_excerpt": "bebieron de ellos el rey y sus príncipes, sus mujeres y sus concubinas",
-    "difficulty": "hard",
-    "importance": "critical",
-    "relation_type": "sacrilegious_drinking_assembly",
-    "option_category": "court_profanation_participants",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Marca el clímax de la profanación que provocó el juicio divino inmediato.",
-    "variant_justification": "La pública es un fill_blank sobre concubinas; esta evalúa la acción profanadora conjunta del rey y sus tres estamentos cortesanos.",
-    "answer_support_term": "bebieron de ellos el rey",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "d1b5d66707b19c727950b34bfeeefd907a82f4338f4865a7abab4e3da7480912"
   },
   {
     "id": "V14-R2-DAN5-C17-003",
-    "source_unit_id": "DAN5-V009",
     "fact_id": "DAN5-V009-F02",
+    "source_unit_id": "DAN5-V009",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "cause_consequence",
     "question": "¿Qué doble impacto emocional y físico experimentaron el rey y sus príncipes ante la imposibilidad de descifrar la escritura?",
     "options": [
       "el rey Belsasar montó en cólera y ordenó decapitar a los sabios, mientras los príncipes huyeron",
-      "el rey Belsasar se burló de los adivinos y continuó bebiendo vino, mientras los príncipes aplaudían",
+      "el rey Belsasar cayó en trance místico y sus príncipes se postraron a orar ante Bel",
       "el rey Belsasar se turbó sobremanera y palideció, y sus príncipes estaban perplejos",
-      "el rey Belsasar cayó en trance místico y sus príncipes se postraron a orar ante Bel"
+      "el rey Belsasar se burló de los adivinos y continuó bebiendo vino, mientras los príncipes aplaudían"
     ],
     "correct_option": 2,
     "accepted_answers": [
       "el rey Belsasar se turbó sobremanera y palideció, y sus príncipes estaban perplejos"
     ],
-    "explanation": "Daniel 5:9 describe la turbación extrema y palidez del monarca acompañada de la perplejidad de sus dignatarios.",
+    "explanation": "Daniel 5:9 declara: \"Entonces el rey Belsasar se turbó sobremanera y palideció, y sus príncipes estaban perplejos.\"",
     "why_distractors_fail": {
-      "el rey Belsasar montó en cólera y ordenó decapitar a los sabios, mientras los príncipes huyeron": "Pena de muerte dada en Daniel 2 pero no en este versículo.",
-      "el rey Belsasar se burló de los adivinos y continuó bebiendo vino, mientras los príncipes aplaudían": "Contradice el pavor y desmoronamiento físico del rey.",
-      "el rey Belsasar cayó en trance místico y sus príncipes se postraron a orar ante Bel": "Introduce un trance cúltico ajeno a la crisis relatada."
+      "el rey Belsasar montó en cólera y ordenó decapitar a los sabios, mientras los príncipes huyeron": "Opción incorrecta según Daniel 5:9.",
+      "el rey Belsasar cayó en trance místico y sus príncipes se postraron a orar ante Bel": "Opción incorrecta según Daniel 5:9.",
+      "el rey Belsasar se burló de los adivinos y continuó bebiendo vino, mientras los príncipes aplaudían": "Opción incorrecta según Daniel 5:9."
     },
-    "evidence_excerpt": "el rey Belsasar se turbó sobremanera y palideció, y sus príncipes estaban perplejos",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "king_and_court_terror_reaction",
-    "option_category": "court_crisis_affective_state",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Muestra la impotencia colectiva del imperio ante el enigma divino.",
-    "variant_justification": "La pública formula una afirmación afirmativa simple; esta exige la distinción clínica entre la turbación/palidez del rey y la perplejidad de los príncipes.",
-    "answer_support_term": "príncipes estaban perplejos",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "c6473139a372cfd1975c35d3723ea0ec6b60f488b928271d5d5f806393679517"
   },
   {
     "id": "V14-R2-DAN5-C17-004",
-    "source_unit_id": "DAN5-V013",
     "fact_id": "DAN5-V013-F02",
+    "source_unit_id": "DAN5-V013",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿Con qué interrogatorio sobre su linaje y origen cautivo recibió Belsasar a Daniel al ser traído a su presencia?",
     "options": [
       "«¿Eres tú el sumo sacerdote del templo destruido de Jerusalén que conoce los secretos de oro?»",
-      "«¿Eres tú el gobernador de la provincia de Babilonia nombrado por los reyes de Media?»",
+      "«¿Eres tú aquel Daniel de los hijos de la cautividad de Judá, que mi padre trajo de Judea?»",
       "«¿Eres tú el mago caldeo que predijo la derrota de Nínive ante nuestros ejércitos?»",
-      "«¿Eres tú aquel Daniel de los hijos de la cautividad de Judá, que mi padre trajo de Judea?»"
+      "«¿Eres tú el gobernador de la provincia de Babilonia nombrado por los reyes de Media?»"
     ],
-    "correct_option": 3,
+    "correct_option": 1,
     "accepted_answers": [
       "«¿Eres tú aquel Daniel de los hijos de la cautividad de Judá, que mi padre trajo de Judea?»"
     ],
-    "explanation": "Daniel 5:13 registra la pregunta directa del monarca recordando la condición de Daniel como cautivo hebreo traído por Nabucodonosor.",
+    "explanation": "Daniel 5:13 declara: \"Entonces trajeron a Daniel ante el rey. Y dijo el rey a Daniel: —¿Eres tú aquel Daniel de los hijos de la cautividad de Judá, que mi padre trajo de Judea?\"",
     "why_distractors_fail": {
-      "«¿Eres tú el sumo sacerdote del templo destruido de Jerusalén que conoce los secretos de oro?»": "Daniel no era sumo sacerdote levítico ni compareció como tal.",
-      "«¿Eres tú el gobernador de la provincia de Babilonia nombrado por los reyes de Media?»": "Media no gobernaba aún Babilonia en esa noche.",
-      "«¿Eres tú el mago caldeo que predijo la derrota de Nínive ante nuestros ejércitos?»": "Introduce hechos militares de generaciones pasadas no aludidos."
+      "«¿Eres tú el sumo sacerdote del templo destruido de Jerusalén que conoce los secretos de oro?»": "Opción incorrecta según Daniel 5:13.",
+      "«¿Eres tú el mago caldeo que predijo la derrota de Nínive ante nuestros ejércitos?»": "Opción incorrecta según Daniel 5:13.",
+      "«¿Eres tú el gobernador de la provincia de Babilonia nombrado por los reyes de Media?»": "Opción incorrecta según Daniel 5:13."
     },
-    "evidence_excerpt": "«¿Eres tú aquel Daniel de los hijos de la cautividad de Judá, que mi padre trajo de Judea?»",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "king_inquiry_lineage_exile_origin",
-    "option_category": "royal_interrogation",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Subraya el contraste entre el orgullo imperial y el siervo cautivo de Dios que revelaría la sentencia.",
-    "variant_justification": "La pública es una afirmación resumida; esta evalúa la cita textual interrogativa de Belsasar.",
-    "answer_support_term": "hijos de la cautividad de Judá",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "dbde5299dbaee91a9e8b535ad481979b715f8ffe66b2c08dfa572ee255015e78"
   },
   {
     "id": "V14-R2-DAN5-C17-005",
-    "source_unit_id": "DAN5-V017",
     "fact_id": "DAN5-V017-F01",
+    "source_unit_id": "DAN5-V017",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "principle",
@@ -173,109 +125,73 @@
     "accepted_answers": [
       "«Tus dones sean para ti; da tus recompensas a otros. Leeré la escritura al rey y le daré la interpretación.»"
     ],
-    "explanation": "Daniel 5:17 expresa la dignidad del profeta: rechaza toda dádiva terrenal y asegura el servicio incondicional de descifrar el mensaje.",
+    "explanation": "Daniel 5:17 declara: \"Entonces Daniel respondió y dijo al rey: —Tus dones sean para ti; da tus recompensas a otros. Leeré la escritura al rey y le daré la interpretación.\"",
     "why_distractors_fail": {
-      "«Acepto el collar de oro y el tercer lugar en el reino antes de comenzar a leer el enigma.»": "Invierte el rechazo frontal de los dones expresado por Daniel.",
-      "«Exijo que liberes a todos los cautivos de Judá como pago por interpretar las palabras de la pared.»": "Introduce una condición política inexistente en el diálogo.",
-      "«No puedo leer la escritura porque está sellada en lengua secreta reservada a los ángeles.»": "Contradice la capacidad y promesa inmediata de lectura de Daniel."
+      "«Acepto el collar de oro y el tercer lugar en el reino antes de comenzar a leer el enigma.»": "Opción incorrecta según Daniel 5:17.",
+      "«Exijo que liberes a todos los cautivos de Judá como pago por interpretar las palabras de la pared.»": "Opción incorrecta según Daniel 5:17.",
+      "«No puedo leer la escritura porque está sellada en lengua secreta reservada a los ángeles.»": "Opción incorrecta según Daniel 5:17."
     },
-    "evidence_excerpt": "«Tus dones sean para ti; da tus recompensas a otros. Leeré la escritura al rey y le daré la interpretación.»",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "disdain_of_material_rewards_and_service_offer",
-    "option_category": "prophetic_integrity_declaration",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Manifiesta la incorruptibilidad del siervo de Dios frente a los sobornos de un imperio agonizante.",
-    "variant_justification": "La pública pregunta solo quién rechazó los dones; esta exige la formulación exacta de la doble cláusula profética.",
-    "answer_support_term": "Tus dones sean para ti",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "74ed5a5f80b63a14644a0585f471f5c2e58c977af42467415904391e425e239e"
   },
   {
     "id": "V14-R2-DAN5-C17-006",
-    "source_unit_id": "DAN5-V018",
     "fact_id": "DAN5-V018-F02",
+    "source_unit_id": "DAN5-V018",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
     "question": "¿Qué cuatro atributos de investidura y soberanía recordó Daniel que el Dios Altísimo concedió a Nabucodonosor?",
     "options": [
-      "el oro, la plata, el bronce y el hierro",
+      "las leyes, los jueces, los sacerdotes y los templos",
       "los caballos, los carros, las armas y los tributos",
-      "el reino, la grandeza, la gloria y la majestad",
-      "las leyes, los jueces, los sacerdotes y los templos"
+      "el oro, la plata, el bronce y el hierro",
+      "el reino, la grandeza, la gloria y la majestad"
     ],
-    "correct_option": 2,
+    "correct_option": 3,
     "accepted_answers": [
       "el reino, la grandeza, la gloria y la majestad"
     ],
-    "explanation": "Daniel 5:18 enumera la tétrada de gobierno universal concedida por el Dios Altísimo: reino, grandeza, gloria y majestad.",
+    "explanation": "Daniel 5:18 declara: \"El Altísimo Dios, oh rey, dio a Nabucodonosor, tu padre, el reino, la grandeza, la gloria y la majestad.\"",
     "why_distractors_fail": {
-      "el oro, la plata, el bronce y el hierro": "Materiales de la estatua del capítulo 2, no los atributos de investidura divina.",
-      "los caballos, los carros, las armas y los tributos": "Elementos bélicos ajenos a la cuádruple concesión real.",
-      "las leyes, los jueces, los sacerdotes y los templos": "Instituciones civiles no enumeradas en este versículo."
+      "las leyes, los jueces, los sacerdotes y los templos": "Opción incorrecta según Daniel 5:18.",
+      "los caballos, los carros, las armas y los tributos": "Opción incorrecta según Daniel 5:18.",
+      "el oro, la plata, el bronce y el hierro": "Opción incorrecta según Daniel 5:18."
     },
-    "evidence_excerpt": "El Altísimo Dios, oh rey, dio a Nabucodonosor, tu padre, el reino, la grandeza, la gloria y la majestad.",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "divine_endowment_attributes_tetrad",
-    "option_category": "theological_sovereignty_endowment",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Recuerda a Belsasar que todo poder humano emana de Dios y no de mérito propio.",
-    "variant_justification": "La pública pregunta de forma general; esta evalúa la tétrada canónica exacta de dones de soberanía.",
-    "answer_support_term": "el reino, la grandeza, la gloria y la majestad",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "5a81561e486f5fa604425c456449f881c5fd9d6c13d416b73466454c32be4859"
   },
   {
     "id": "V14-R2-DAN5-C17-007",
-    "source_unit_id": "DAN5-V024",
     "fact_id": "DAN5-V024-F01",
+    "source_unit_id": "DAN5-V024",
     "role": "variant",
     "family": "single_choice_direct",
     "subtype": "cause_consequence",
     "question": "¿De dónde fue enviada la mano misteriosa que trazó la enigmática escritura en la pared del palacio?",
     "options": [
-      "del templo de Bel emergió una sombra que escribió las palabras",
-      "de la corte de Susa vino un mensajero con cartas selladas",
       "del cielo descendió un rayo de fuego que grabó las letras en la piedra",
-      "de su presencia envió él la mano que trazó esta escritura"
+      "del templo de Bel emergió una sombra que escribió las palabras",
+      "de su presencia envió él la mano que trazó esta escritura",
+      "de la corte de Susa vino un mensajero con cartas selladas"
     ],
-    "correct_option": 3,
+    "correct_option": 2,
     "accepted_answers": [
       "de su presencia envió él la mano que trazó esta escritura"
     ],
-    "explanation": "Daniel 5:24 declara categóricamente el origen divino: la mano fue enviada directamente de la presencia de Dios.",
+    "explanation": "Daniel 5:24 declara: \"Por eso, de su presencia envió él la mano que trazó esta escritura.\"",
     "why_distractors_fail": {
-      "del templo de Bel emergió una sombra que escribió las palabras": "Introduce templos paganos como origen del prodigio.",
-      "de la corte de Susa vino un mensajero con cartas selladas": "Sustituye la mano milagrosa por un mensajero humano.",
-      "del cielo descendió un rayo de fuego que grabó las letras en la piedra": "Inventa una acción pirotécnica no narrada en el texto."
+      "del cielo descendió un rayo de fuego que grabó las letras en la piedra": "Opción incorrecta según Daniel 5:24.",
+      "del templo de Bel emergió una sombra que escribió las palabras": "Opción incorrecta según Daniel 5:24.",
+      "de la corte de Susa vino un mensajero con cartas selladas": "Opción incorrecta según Daniel 5:24."
     },
-    "evidence_excerpt": "de su presencia envió él la mano que trazó esta escritura.",
-    "difficulty": "hard",
-    "importance": "high",
-    "relation_type": "hand_origin_from_divine_presence",
-    "option_category": "theophanic_origin_record",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Confirma que la sentencia no fue ilusión humana sino intervención directa de Dios.",
-    "variant_justification": "La pública pregunta solo qué fue enviado; esta evalúa la procedencia teológica directa 'de su presencia'.",
-    "answer_support_term": "de su presencia envió él la mano",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "0c6e1bb42e51a37730afd66d04dd76888cdb0624b390d6e78bf69606da7caf9e"
   },
   {
     "id": "V14-R2-DAN5-C17-008",
-    "source_unit_id": "DAN5-V026",
     "fact_id": "DAN5-V026-F01",
+    "source_unit_id": "DAN5-V026",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "relationship",
@@ -283,110 +199,74 @@
     "options": [
       "MENE: Contó Dios tu reino y le ha puesto fin",
       "MENE: Dividido está tu imperio entre persas y medos",
-      "MENE: Pesado has sido en balanza y fuiste hallado falto",
-      "MENE: Destruido será el templo de Babilonia antes del amanecer"
+      "MENE: Destruido será el templo de Babilonia antes del amanecer",
+      "MENE: Pesado has sido en balanza y fuiste hallado falto"
     ],
     "correct_option": 0,
     "accepted_answers": [
       "MENE: Contó Dios tu reino y le ha puesto fin"
     ],
-    "explanation": "Daniel 5:26 define el significado de MENE: el cómputo final de los días del reino babilónico por parte de Dios y su clausura definitiva.",
+    "explanation": "Daniel 5:26 declara: \"Ésta es la interpretación del asunto: “Mene”: Contó Dios tu reino y le ha puesto fin.\"",
     "why_distractors_fail": {
-      "MENE: Dividido está tu imperio entre persas y medos": "Significado correspondiente a la palabra PERES en el v. 28.",
-      "MENE: Pesado has sido en balanza y fuiste hallado falto": "Significado correspondiente a la palabra TEKEL en el v. 27.",
-      "MENE: Destruido será el templo de Babilonia antes del amanecer": "Interpretación ficticia no registrada en las Escrituras."
+      "MENE: Dividido está tu imperio entre persas y medos": "Opción incorrecta según Daniel 5:26.",
+      "MENE: Destruido será el templo de Babilonia antes del amanecer": "Opción incorrecta según Daniel 5:26.",
+      "MENE: Pesado has sido en balanza y fuiste hallado falto": "Opción incorrecta según Daniel 5:26."
     },
-    "evidence_excerpt": "Ésta es la interpretación del asunto: MENE: Contó Dios tu reino y le ha puesto fin.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "mene_interpretation_reign_counted_ended",
-    "option_category": "cryptic_decipherment_definition",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Establece el límite temporal decretado por Dios para la hegemonía babilónica.",
-    "variant_justification": "La pública formula una pregunta general de significado; esta exige la correlación hermenéutica exacta del término arameo MENE.",
-    "answer_support_term": "Contó Dios tu reino y le ha puesto fin",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "b88d97f2e4ade273c4a3f30810bb49b968d460189921302a2278b611799c7e40"
   },
   {
     "id": "V14-R2-DAN5-C17-009",
-    "source_unit_id": "DAN5-V027",
     "fact_id": "DAN5-V027-F02",
+    "source_unit_id": "DAN5-V027",
     "role": "variant",
     "family": "single_choice_contextual",
     "subtype": "principle",
     "question": "¿Cuál es la interpretación judicial y el veredicto moral de la palabra «TEKEL»?",
     "options": [
-      "«Tekel»: Coronaron a tus generales y tu trono fue vendido",
+      "«Tekel»: Olvidaste la ley de tu padre y edificaste sobre arena",
       "«Tekel»: Rechazaste los sacrificios y tus sacerdotes huyeron",
-      "«Tekel»: Pesado has sido en balanza y hallado falto",
-      "«Tekel»: Olvidaste la ley de tu padre y edificaste sobre arena"
+      "«Tekel»: Coronaron a tus generales y tu trono fue vendido",
+      "«Tekel»: Pesado has sido en balanza y hallado falto"
     ],
-    "correct_option": 2,
+    "correct_option": 3,
     "accepted_answers": [
       "«Tekel»: Pesado has sido en balanza y hallado falto"
     ],
-    "explanation": "Daniel 5:27 revela el significado de TEKEL: la evaluación moral en la balanza de la justicia de Dios y el déficit espiritual de Belsasar.",
+    "explanation": "Daniel 5:27 declara: \"“Tekel”: Pesado has sido en balanza y hallado falto.\"",
     "why_distractors_fail": {
-      "«Tekel»: Coronaron a tus generales y tu trono fue vendido": "Introduce traiciones militares no descritas en el versículo.",
-      "«Tekel»: Rechazaste los sacrificios y tus sacerdotes huyeron": "Inventa motivos cúlticos ajenos al pesaje moral.",
-      "«Tekel»: Olvidaste la ley de tu padre y edificaste sobre arena": "Metáfora del Sermón del Monte inaplicable a este versículo."
+      "«Tekel»: Olvidaste la ley de tu padre y edificaste sobre arena": "Opción incorrecta según Daniel 5:27.",
+      "«Tekel»: Rechazaste los sacrificios y tus sacerdotes huyeron": "Opción incorrecta según Daniel 5:27.",
+      "«Tekel»: Coronaron a tus generales y tu trono fue vendido": "Opción incorrecta según Daniel 5:27."
     },
-    "evidence_excerpt": "«Tekel»: Pesado has sido en balanza y hallado falto.",
-    "difficulty": "expert",
-    "importance": "critical",
-    "relation_type": "tekel_weighed_in_scales_found_wanting",
-    "option_category": "moral_adjudication_formula",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Ilustra el principio del juicio donde todo carácter humano es pesado según las normas divinas.",
-    "variant_justification": "La pública es un fill_blank sobre 'falto'; esta evalúa la sentencia judicial completa de ponderación en la balanza divina.",
-    "answer_support_term": "Pesado has sido en balanza y hallado falto",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "8bc758406ebedee1857b19a044d0eefd944d5cc3f0bed72f728ab51a91ffaac3"
   },
   {
     "id": "V14-R2-DAN5-C17-010",
-    "source_unit_id": "DAN5-V025",
     "fact_id": "DAN5-V025-F01",
+    "source_unit_id": "DAN5-V025",
     "role": "variant",
     "family": "single_choice_direct",
     "subtype": "relationship",
     "question": "¿Cuál fue el texto enigmático literal trazado por la mano en la pared del palacio real?",
     "options": [
       "«Kavod, Kavod, Shalom, Israel»",
+      "«Mene, Mene, Tekel, Uparsin»",
       "«Babel, Babel, Persia, Media»",
-      "«Ur, Ur, Caldea, Susa»",
-      "«Mene, Mene, Tekel, Uparsin»"
+      "«Ur, Ur, Caldea, Susa»"
     ],
-    "correct_option": 3,
+    "correct_option": 1,
     "accepted_answers": [
       "«Mene, Mene, Tekel, Uparsin»"
     ],
-    "explanation": "Daniel 5:25 cita el cuadrinomio arameo exacto registrado en la pared: MENE, MENE, TEKEL, UPARSIN.",
+    "explanation": "Daniel 5:25 declara: \"Y la escritura que trazó es: “Mene, Mene, Tekel, Uparsin.”\"",
     "why_distractors_fail": {
-      "«Kavod, Kavod, Shalom, Israel»": "Palabras hebreas litúrgicas no relacionadas con la sentencia aramea.",
-      "«Babel, Babel, Persia, Media»": "Inventa nombres geográficos en lugar de las palabras enigmáticas.",
-      "«Ur, Ur, Caldea, Susa»": "Sustituye la escritura por toponímicos mesopotámicos."
+      "«Kavod, Kavod, Shalom, Israel»": "Opción incorrecta según Daniel 5:25.",
+      "«Babel, Babel, Persia, Media»": "Opción incorrecta según Daniel 5:25.",
+      "«Ur, Ur, Caldea, Susa»": "Opción incorrecta según Daniel 5:25."
     },
-    "evidence_excerpt": "Mene, Mene, Tekel, Uparsin.",
-    "difficulty": "hard",
-    "importance": "critical",
-    "relation_type": "wall_inscription_literal_text",
-    "option_category": "cryptic_epigraphy_formula",
-    "false_mutation": null,
-    "blank_span": null,
-    "significance": "Representa el veredicto escrito e irrevocable del juicio divino sobre Babilonia.",
-    "variant_justification": "La pública pregunta solo qué palabras fueron trazadas; esta evalúa la fórmula epigráfica aramea exacta y autónoma.",
-    "answer_support_term": "Mene, Mene, Tekel, Uparsin",
-    "author": {
-      "id": "autor-D5-D8",
-      "model": "gemini-3.7-flash"
-    }
+    "significance": null,
+    "question_content_sha256": "af6173a37b8eb3a6f51723861ee2e2b2be1c72ee4bce52ffc3fc5d072cfc07d7"
   }
 ]
