@@ -1,0 +1,392 @@
+[
+  {
+    "id": "V14-R2-DAN9-C18-001",
+    "source_unit_id": "DAN9-V001",
+    "fact_id": "DAN9-V001-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué marco cronológico, genealogía regia y ámbito territorial encabezan la oración de intercesión de Daniel 9?",
+    "options": [
+      "En el año primero de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos",
+      "En el año tercero de Ciro rey de Persia, que conquistó Babilonia y liberó a los cautivos de Judá",
+      "En el año primero de Belsasar rey de Babilonia, que gobernaba sobre la provincia de Elam",
+      "En el año duodécimo de Artajerjes rey de Media, que envió a Nehemías a reconstruir Jerusalén"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "En el año primero de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos"
+    ],
+    "explanation": "Daniel 9:1 une el año primero de Darío, su filiación medo-asueriana y su soberanía sobre el reino caldeo.",
+    "why_distractors_fail": {
+      "En el año tercero de Ciro rey de Persia, que conquistó Babilonia y liberó a los cautivos de Judá": "Marco del capítulo 10:1.",
+      "En el año primero de Belsasar rey de Babilonia, que gobernaba sobre la provincia de Elam": "Marco del capítulo 7:1.",
+      "En el año duodécimo de Artajerjes rey de Media, que envió a Nehemías a reconstruir Jerusalén": "Contexto del libro de Nehemías."
+    },
+    "evidence_excerpt": "En el primer año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "chronological_genealogical_and_territorial_framework",
+    "option_category": "historical_framework_triad",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Sitúa la plegaria de Daniel en el primer año del cambio de régimen dinástico babilónico a medo-persa.",
+    "variant_justification": "La pública pregunta de forma parcial sobre el padre de Darío; esta exige la correspondencia simultánea de los cuatro datos históricos del encabezado.",
+    "answer_support_term": "hijo de Asuero, de la nación de los medos",
+    "author": {
+      "id": "autor-D9-D12",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN9-C18-002",
+    "source_unit_id": "DAN9-V004",
+    "fact_id": "DAN9-V004-F07",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué invocación solemne sobre la grandeza, el pacto y la misericordia divina dirigió Daniel a su Dios?",
+    "options": [
+      "«Soberano de los cielos, que perdonas sin condiciones a todas las naciones aunque quebranten tus estatutos»",
+      "«Señor, Dios grande, digno de ser temido, que guardas el pacto y la misericordia con los que te aman y guardan tus mandamientos»",
+      "«Dios altísimo de Israel, que destruyes a los imperios paganos y enriqueces a los que ofrecen holocaustos»",
+      "«Rey eterno de Sión, que prometiste acortar los setenta años a causa de los méritos de los patriarcas»"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "«Señor, Dios grande, digno de ser temido, que guardas el pacto y la misericordia con los que te aman y guardan tus mandamientos»"
+    ],
+    "explanation": "Daniel 9:4 expresa los atributos de pacto y fidelidad condicional a los mandamientos divinos.",
+    "why_distractors_fail": {
+      "«Soberano de los cielos, que perdonas sin condiciones a todas las naciones aunque quebranten tus estatutos»": "Ignora el requerimiento bíblico de fidelidad al pacto y mandamientos.",
+      "«Dios altísimo de Israel, que destruyes a los imperios paganos y enriqueces a los que ofrecen holocaustos»": "Sustituye el pacto moral por transacciones cúlticas.",
+      "«Rey eterno de Sión, que prometiste acortar los setenta años a causa de los méritos de los patriarcas»": "Introduce conceptos de méritos patriarcales ausentes de la teología de Daniel."
+    },
+    "evidence_excerpt": "«Señor, Dios grande, digno de ser temido, que guardas el pacto y la misericordia con los que te aman y guardan tus mandamientos",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "covenant_keeping_and_mercy_attributes",
+    "option_category": "theological_invocation_formula",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Reconoce la inmutabilidad del pacto de Dios como fundamento de la súplica del pecador.",
+    "variant_justification": "La pública es un fill_blank sobre misericordia; esta evalúa la fórmula doxológica completa del pacto y amor obediente.",
+    "answer_support_term": "guardas el pacto y la misericordia",
+    "author": {
+      "id": "autor-D9-D12",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN9-C18-003",
+    "source_unit_id": "DAN9-V008",
+    "fact_id": "DAN9-V008-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿A qué cuatro estamentos de la nación judía atribuyó Daniel la confusión de rostro por haber pecado contra Dios?",
+    "options": [
+      "la confusión de rostro es de los soldados, de los mercaderes, de los sacerdotes y de los extranjeros",
+      "la confusión de rostro es de los sabios caldeos, de los magos de Babilonia y de los sátrapas persas",
+      "Nuestra es, Jehová, la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos",
+      "la confusión de rostro es de los escribas levíticos, de los profetas de Samaria y de los reyes de Egipto"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Nuestra es, Jehová, la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos"
+    ],
+    "explanation": "Daniel 9:8 señala la responsabilidad colectiva e intergeneracional: reyes, príncipes y antepasados ('padres').",
+    "why_distractors_fail": {
+      "la confusión de rostro es de los soldados, de los mercaderes, de los sacerdotes y de los extranjeros": "Sustituye la tríada de liderazgo por clases socioeconómicas.",
+      "la confusión de rostro es de los sabios caldeos, de los magos de Babilonia y de los sátrapas persas": "Traslada la culpabilidad a las naciones paganas en lugar del pueblo de Dios.",
+      "la confusión de rostro es de los escribas levíticos, de los profetas de Samaria y de los reyes de Egipto": "Introduce grupos ajenos a la confesión de Daniel 9."
+    },
+    "evidence_excerpt": "Nuestra es, Jehová, la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "collective_shame_and_leadership_tiers",
+    "option_category": "corporate_repentance_actors",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Muestra la solidaridad moral de Daniel asumiendo la culpa colectiva de toda la jerarquía de su nación.",
+    "variant_justification": "La pública pregunta solo de quién es la confusión de rostro; esta evalúa la tríada jerárquica exacta vinculada a la causalidad del pecado.",
+    "answer_support_term": "confusión de rostro, y de nuestros reyes",
+    "author": {
+      "id": "autor-D9-D12",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN9-C18-004",
+    "source_unit_id": "DAN9-V009",
+    "fact_id": "DAN9-V009-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué dos virtudes salvíficas pertenecen al Señor Dios nuestro aun frente a la rebelión pertinaz de su pueblo?",
+    "options": [
+      "el juicio implacable y la venganza",
+      "el olvido de la ley y el destierro perpetuo",
+      "la exigencia de sacrificios y la riqueza terrenal",
+      "el tener misericordia y el perdonar"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "el tener misericordia y el perdonar"
+    ],
+    "explanation": "Daniel 9:9 contrasta la rebelión humana con las dos propiedades esenciales de Dios: misericordia y perdón.",
+    "why_distractors_fail": {
+      "el juicio implacable y la venganza": "Contradice el énfasis redentor y compasivo del versículo.",
+      "el olvido de la ley y el destierro perpetuo": "Niega la fidelidad de Dios y la promesa de restauración.",
+      "la exigencia de sacrificios y la riqueza terrenal": "Sustituye la gracia divina por demandas rituales."
+    },
+    "evidence_excerpt": "De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "divine_mercy_and_forgiveness_despite_rebellion",
+    "option_category": "theological_grace_definition",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Fundamento teológico de toda oración de arrepentimiento: la gracia inagotable de Dios.",
+    "variant_justification": "La pública pregunta de forma parcial; esta exige el par virtuoso exacto 'el tener misericordia y el perdonar'.",
+    "answer_support_term": "tener misericordia y el perdonar",
+    "author": {
+      "id": "autor-D9-D12",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN9-C18-005",
+    "source_unit_id": "DAN9-V011",
+    "fact_id": "DAN9-V011-F03",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué consecuencias jurídicas solemnes cayeron sobre Israel por traspasar la ley y apartarse de la voz de Dios?",
+    "options": [
+      "Dios anuló el pacto abrahámico y eligió a los pueblos de Media y Persia como su nueva heredad",
+      "ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios pecamos",
+      "los sacerdotes fueron transferidos al templo de Susa y las genealogías de Judá fueron borradas",
+      "la ciudad de Jerusalén quedó bajo servidumbre de Egipto hasta el fin de las setenta semanas"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios pecamos"
+    ],
+    "explanation": "Daniel 9:11 cita el cumplimiento exacto de las estipulaciones de pacto de Deuteronomio 28 (maldición y juramento en la ley de Moisés).",
+    "why_distractors_fail": {
+      "Dios anuló el pacto abrahámico y eligió a los pueblos de Media y Persia como su nueva heredad": "Contradice la fidelidad de Dios y su remanente.",
+      "los sacerdotes fueron transferidos al templo de Susa y las genealogías de Judá fueron borradas": "Inventa transferencias cúlticas persas.",
+      "la ciudad de Jerusalén quedó bajo servidumbre de Egipto hasta el fin de las setenta semanas": "El poder opresor era Babilonia/Persia, no Egipto."
+    },
+    "evidence_excerpt": "ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios pecamos.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "covenant_curses_fulfillment_mosaic_law",
+    "option_category": "juridical_covenant_sanctions",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Demuestra que la desolación de Jerusalén fue el cumplimiento exacto de las advertencias proféticas de Moisés.",
+    "variant_justification": "La pública pregunta solo qué cayó sobre el pueblo; esta evalúa el binomio 'la maldición y el juramento' vinculado a Moisés y la causa del pecado.",
+    "answer_support_term": "la maldición y el juramento",
+    "author": {
+      "id": "autor-D9-D12",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN9-C18-006",
+    "source_unit_id": "DAN9-V013",
+    "fact_id": "DAN9-V013-F08",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué doble actitud obstinada reconoció Daniel en el pueblo a pesar de que todo el mal vino según lo escrito en la ley de Moisés?",
+    "options": [
+      "ofrecimos sacrificios continuos en Babilonia pero nos negamos a orar hacia el templo",
+      "solicitamos ayuda militar a los reyes de Persia en lugar de esperar la orden divina",
+      "no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos convertido de nuestras maldades ni entendido tu verdad",
+      "guardamos el sábado en secreto pero adoptamos las costumbres idolátricas de los caldeos"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos convertido de nuestras maldades ni entendido tu verdad"
+    ],
+    "explanation": "Daniel 9:13 confiesa la falta de búsqueda genuina de Dios: no implorar el favor divino para apartarse del pecado ni comprender la verdad.",
+    "why_distractors_fail": {
+      "ofrecimos sacrificios continuos en Babilonia pero nos negamos a orar hacia el templo": "No había sacrificios en Babilonia sin templo.",
+      "solicitamos ayuda militar a los reyes de Persia en lugar de esperar la orden divina": "Introduce alianzas militares no relatadas.",
+      "guardamos el sábado en secreto pero adoptamos las costumbres idolátricas de los caldeos": "Ficticia combinación de observancias no mencionada en el versículo."
+    },
+    "evidence_excerpt": "no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos convertido de nuestras maldades ni entendido tu verdad.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "failure_to_seek_grace_and_understand_truth",
+    "option_category": "spiritual_obstinacy_confession",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Denuncia la dureza de corazón que no aprovecha la disciplina divina para volverse a la verdad.",
+    "variant_justification": "La pública es un fill_blank sobre entender la verdad; esta exige la correlación bilateral de no implorar el favor para conversión y comprensión.",
+    "answer_support_term": "no nos hemos convertido de nuestras maldades ni entendido tu verdad",
+    "author": {
+      "id": "autor-D9-D12",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN9-C18-007",
+    "source_unit_id": "DAN9-V015",
+    "fact_id": "DAN9-V015-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué precedente histórico de liberación y renombre invocó Daniel antes de reiterar la confesión de culpa nacional?",
+    "options": [
+      "abriste las puertas de Babilonia ante Ciro para librar a los cautivos de Judea",
+      "hiciste descender maná del cielo en el desierto y salvaste a los tres jóvenes del horno",
+      "detuviste el sol en Gabaón y diste la victoria a Josué sobre los reyes cananeos",
+      "sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy"
+    ],
+    "explanation": "Daniel 9:15 apela al éxodo de Egipto como el acto fundacional del poder salvador y la gloria del nombre de Dios.",
+    "why_distractors_fail": {
+      "abriste las puertas de Babilonia ante Ciro para librar a los cautivos de Judea": "Ciro aún no había emitido el decreto de liberación al inicio de Darío.",
+      "hiciste descender maná del cielo en el desierto y salvaste a los tres jóvenes del horno": "Mezcla el milagro del éxodo con el capítulo 3.",
+      "detuviste el sol en Gabaón y diste la victoria a Josué sobre los reyes cananeos": "Precedente del libro de Josué no invocado en este versículo."
+    },
+    "evidence_excerpt": "sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "exodus_deliverance_and_divine_renown",
+    "option_category": "historical_redemption_precedent",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Recuerda que el Dios que redimió a Israel de Egipto tiene el mismo poder para restaurarlo de Babilonia.",
+    "variant_justification": "La pública pregunta de forma general; esta exige la articulación de los tres elementos (éxodo, mano poderosa y renombre perpetuo).",
+    "answer_support_term": "de la tierra de Egipto con mano poderosa",
+    "author": {
+      "id": "autor-D9-D12",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN9-C18-008",
+    "source_unit_id": "DAN9-V019",
+    "fact_id": "DAN9-V019-F04",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "principle",
+    "question": "¿Qué cuatro imperativos de súplica y qué motivo supremo de amor propio divino pronunció Daniel en el clímax de su oración?",
+    "options": [
+      "«¡Oye, Señor! ¡Señor, perdona! ¡Presta oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo.»",
+      "«¡Mira, Señor! ¡Señor, destruye a Babilonia! ¡Venga a tus siervos! No tardes por causa de nuestras obras justas.»",
+      "«¡Escucha, Dios nuestro! ¡Envía fuego sobre los persas! ¡Edifica el santuario por los méritos de David!»",
+      "«¡Despierta, Señor! ¡Perdona a los sacerdotes! ¡Danos oro y plata para reconstruir el templo de Sión!»"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "«¡Oye, Señor! ¡Señor, perdona! ¡Presta oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo.»"
+    ],
+    "explanation": "Daniel 9:19 es el clamor culminante: cuatro ruegos directos fundamentados en el honor y el nombre de Dios ('por amor de ti mismo').",
+    "why_distractors_fail": {
+      "«¡Mira, Señor! ¡Señor, destruye a Babilonia! ¡Venga a tus siervos! No tardes por causa de nuestras obras justas.»": "Contradice la confesión de Daniel de que no piden por justicias propias sino por las misericordias de Dios (v. 18).",
+      "«¡Escucha, Dios nuestro! ¡Envía fuego sobre los persas! ¡Edifica el santuario por los méritos de David!»": "Introduce peticiones de venganza ajenas a la súplica de gracia.",
+      "«¡Despierta, Señor! ¡Perdona a los sacerdotes! ¡Danos oro y plata para reconstruir el templo de Sión!»": "Degenera la plegaria en petición de bienes materiales."
+    },
+    "evidence_excerpt": "«¡Oye, Señor! ¡Señor, perdona! ¡Presta oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo.»",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "culminating_intercessory_imperatives_and_divine_honor",
+    "option_category": "climactic_intercession_formula",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Constituye una de las más apasionadas y puras súplicas de intercesión de toda la revelación bíblica.",
+    "variant_justification": "La pública pregunta de forma parcial; esta evalúa la cadena imperativa cuádruple unida al principio teocéntrico 'por amor de ti mismo'.",
+    "answer_support_term": "No tardes, por amor de ti mismo",
+    "author": {
+      "id": "autor-D9-D12",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN9-C18-009",
+    "source_unit_id": "DAN9-V020",
+    "fact_id": "DAN9-V020-F08",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Por qué lugar sagrado derramaba Daniel su ruego delante de Jehová mientras confesaba su pecado y el de Israel?",
+    "options": [
+      "por las puertas del palacio de Susa",
+      "por las murallas caídas de Babilonia",
+      "por el monte santo de mi Dios",
+      "por los altares antiguos de Bet-el"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "por el monte santo de mi Dios"
+    ],
+    "explanation": "Daniel 9:20 especifica que su ruego ardiente era 'por el monte santo de mi Dios' (el monte del templo en Jerusalén desolado).",
+    "why_distractors_fail": {
+      "por las puertas del palacio de Susa": "Lugar civil persa ajeno al interés cúltico de Daniel.",
+      "por las murallas caídas de Babilonia": "Daniel intercedía por Jerusalén, no por las murallas paganas.",
+      "por los altares antiguos de Bet-el": "Bet-el fue centro del culto cismático de Jeroboam, no el monte santo."
+    },
+    "evidence_excerpt": "derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "intercession_object_holy_mountain",
+    "option_category": "sacred_geography_intercession",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Fija la devoción central del profeta por la restauración del templo y la adoración en Jerusalén.",
+    "variant_justification": "La pública es un fill_blank; esta exige la identificación precisa del objeto sagrado de intercesión ('monte santo de mi Dios').",
+    "answer_support_term": "por el monte santo de mi Dios",
+    "author": {
+      "id": "autor-D9-D12",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN9-C18-010",
+    "source_unit_id": "DAN9-V023",
+    "fact_id": "DAN9-V023-F04",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿En qué momento exacto fue dada la orden celestial en respuesta a la oración de Daniel y qué título afectivo le atribuyó Gabriel?",
+    "options": [
+      "Al finalizar los tres días de ayuno fue emitida la respuesta, porque fuiste fiel en la corte de Babilonia.",
+      "Al ponerse el sol de la tarde fue enviado Miguel, porque eres el profeta escogido para los reyes persas.",
+      "Al término de los setenta años fue revelado el secreto, porque cumpliste la ley de Moisés en el destierro.",
+      "Al principio de tus ruegos fue dada la orden, y yo he venido para enseñártela, porque tú eres muy amado. Entiende, pues, la orden, y entiende la visión."
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Al principio de tus ruegos fue dada la orden, y yo he venido para enseñártela, porque tú eres muy amado. Entiende, pues, la orden, y entiende la visión."
+    ],
+    "explanation": "Daniel 9:23 muestra la inmediatez de la respuesta divina desde el inicio de la oración y el título celestial 'muy amado'.",
+    "why_distractors_fail": {
+      "Al finalizar los tres días de ayuno fue emitida la respuesta, porque fuiste fiel en la corte de Babilonia.": "La orden salió al principio mismo de la oración, no al final de tres días.",
+      "Al ponerse el sol de la tarde fue enviado Miguel, porque eres el profeta escogido para los reyes persas.": "El mensajero fue Gabriel (v. 21) y no Miguel.",
+      "Al término de los setenta años fue revelado el secreto, porque cumpliste la ley de Moisés en el destierro.": "Introduce plazos y méritos ajenos a la declaración de Gabriel."
+    },
+    "evidence_excerpt": "Al principio de tus ruegos fue dada la orden, y yo he venido para enseñártela, porque tú eres muy amado. Entiende, pues, la orden, y entiende la visión.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "prayer_timing_angelic_commission_and_beloved_title",
+    "option_category": "heavenly_dispatch_and_affection",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Demuestra la prontitud de la respuesta divina y la ternura del cielo hacia los siervos de Dios.",
+    "variant_justification": "La pública pregunta solo cuándo fue dada la orden; esta exige la correlación completa entre el inicio del ruego, la misión angélica de enseñanza y la condición de 'muy amado'.",
+    "answer_support_term": "Al principio de tus ruegos fue dada la orden",
+    "author": {
+      "id": "autor-D9-D12",
+      "model": "gemini-3.7-flash"
+    }
+  }
+]

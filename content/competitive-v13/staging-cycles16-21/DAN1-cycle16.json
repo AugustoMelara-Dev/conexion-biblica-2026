@@ -1,0 +1,388 @@
+[
+  {
+    "id": "V14-R2-DAN1-C16-001",
+    "source_unit_id": "DAN1-V001",
+    "fact_id": "DAN1-V001-F04",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué registro une año de reinado, monarca judío, soberano invasor y acción militar sobre Jerusalén?",
+    "options": [
+      "Tercer año de Joacim, rey de Judá; vino Nabucodonosor, rey de Babilonia, a Jerusalén y la sitió",
+      "Primer año de Sedequías, rey de Judá; vino Ciro, rey de Persia, a Jerusalén y la destruyó",
+      "Cuarto año de Joacim, rey de Judá; vino Belsasar, rey de Babilonia, a Jerusalén y la incendió",
+      "Tercer año de Josías, rey de Judá; vino Darío, rey de Media, a Jerusalén y la tributó"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "Tercer año de Joacim, rey de Judá; vino Nabucodonosor, rey de Babilonia, a Jerusalén y la sitió"
+    ],
+    "explanation": "Daniel 1:1 sitúa el asedio en el tercer año de Joacim rey de Judá por Nabucodonosor rey de Babilonia.",
+    "why_distractors_fail": {
+      "Primer año de Sedequías, rey de Judá; vino Ciro, rey de Persia, a Jerusalén y la destruyó": "Cambia fecha, rey de Judá, rey invasor y acción.",
+      "Cuarto año de Joacim, rey de Judá; vino Belsasar, rey de Babilonia, a Jerusalén y la incendió": "Altera el año, el monarca babilonio y la acción militar.",
+      "Tercer año de Josías, rey de Judá; vino Darío, rey de Media, a Jerusalén y la tributó": "Sustituye al rey de Judá por Josías y al invasor por Darío."
+    },
+    "evidence_excerpt": "vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "chronology_kings_city_siege",
+    "option_category": "historical_siege_record",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Fija el inicio histórico del cautiverio babilónico y marco cronológico del libro.",
+    "variant_justification": "La pública pregunta solo qué hizo; esta variante evalúa la correspondencia simultánea de los cuatro ejes.",
+    "answer_support_term": "la sitió",
+    "author": {
+      "id": "autor-D1",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN1-C16-002",
+    "source_unit_id": "DAN1-V002",
+    "fact_id": "DAN1-V002-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué disposición divina y destino geográfico de los utensilios del templo detalla el texto?",
+    "options": [
+      "Nabucodonosor conquistó por su propia fuerza; trajo todos los utensilios a Media, al templo de Dagón",
+      "El Señor entregó a Joacim y parte de los utensilios; Nabucodonosor los trajo a Sinar, a la casa de su dios y en la casa del tesoro",
+      "El Señor protegió los utensilios; Joacim los escondió en el desierto de Judea antes del asedio",
+      "El Señor entregó solo al rey; los sacerdotes quemaron los utensilios para que no fueran a Persia"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "El Señor entregó a Joacim y parte de los utensilios; Nabucodonosor los trajo a Sinar, a la casa de su dios y en la casa del tesoro"
+    ],
+    "explanation": "El texto subraya la soberanía divina en la entrega y el traslado específico a tierra de Sinar en el tesoro de su dios.",
+    "why_distractors_fail": {
+      "Nabucodonosor conquistó por su propia fuerza; trajo todos los utensilios a Media, al templo de Dagón": "Niega la acción del Señor y altera la tierra, cantidad y deidad.",
+      "El Señor protegió los utensilios; Joacim los escondió en el desierto de Judea antes del asedio": "Contradice la entrega efectiva y el cautiverio relatado.",
+      "El Señor entregó solo al rey; los sacerdotes quemaron los utensilios para que no fueran a Persia": "Introduce una acción sacerdotal inexistente en el texto."
+    },
+    "evidence_excerpt": "los trajo a tierra de Sinar, a la casa de su dios",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "divine_handover_geographical_destination",
+    "option_category": "theological_sovereignty_and_spoils",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Demuestra que la caída de Jerusalén fue permisión de Dios y no simple triunfo pagano.",
+    "variant_justification": "La pública pregunta solo la tierra de Sinar; esta exige la causalidad divina de la entrega junto al destino del tesoro.",
+    "answer_support_term": "tierra de Sinar",
+    "author": {
+      "id": "autor-D1",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN1-C16-003",
+    "source_unit_id": "DAN1-V003",
+    "fact_id": "DAN1-V003-F01",
+    "role": "variant",
+    "family": "single_choice_direct",
+    "subtype": "relationship",
+    "question": "¿A qué oficial babilónico encargó el rey la selección de jóvenes del linaje real y de los príncipes de Israel?",
+    "options": [
+      "Arioc, capitán de la guardia",
+      "Melsar, mayordomo de la corte",
+      "Aspenaz, jefe de sus eunucos",
+      "Hamán, visir del imperio"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Aspenaz, jefe de sus eunucos"
+    ],
+    "explanation": "Daniel 1:3 menciona expresamente a Aspenaz, jefe de los eunucos, como el comisionado real.",
+    "why_distractors_fail": {
+      "Arioc, capitán de la guardia": "Arioc aparece en el capítulo 2 con otra función militar.",
+      "Melsar, mayordomo de la corte": "Melsar es el cuidador directo asignado más adelante en el versículo 11.",
+      "Hamán, visir del imperio": "Hamán pertenece al libro de Ester y no a Babilonia."
+    },
+    "evidence_excerpt": "Y dijo el rey a Aspenaz, jefe de sus eunucos",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "king_commission_eunuch_chief",
+    "option_category": "court_officials",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Identifica la estructura de mando babilónica y el primer contacto institucional.",
+    "variant_justification": "La pública usa un fill_blank simple; esta variante exige discriminación entre los oficiales del libro.",
+    "answer_support_term": "Aspenaz",
+    "author": {
+      "id": "autor-D1",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN1-C16-004",
+    "source_unit_id": "DAN1-V009",
+    "fact_id": "DAN1-V009-F04",
+    "role": "variant",
+    "family": "true_false",
+    "subtype": "cause_consequence",
+    "question": "Dios intervino activamente concediendo a Daniel gracia y buena voluntad ante el jefe de los eunucos.",
+    "options": [
+      "Falso",
+      "Verdadero"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Verdadero"
+    ],
+    "explanation": "Daniel 1:9 afirma textualmente que 'Puso Dios a Daniel en gracia y en buena voluntad con el jefe de los eunucos'.",
+    "why_distractors_fail": {
+      "Falso": "El texto bíblico afirma de manera explícita la acción providencial de Dios en el corazón del funcionario."
+    },
+    "evidence_excerpt": "Puso Dios a Daniel en gracia y en buena voluntad con el jefe de los eunucos",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "divine_favor_official_attitude",
+    "option_category": "providential_intervention",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Subraya la providencia divina facilitando la fidelidad de Daniel en tierra extraña.",
+    "variant_justification": "La pública es una afirmación directa; esta variante evalúa la causalidad teológica del favor hallado.",
+    "answer_support_term": "buena voluntad",
+    "author": {
+      "id": "autor-D1",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN1-C16-005",
+    "source_unit_id": "DAN1-V012",
+    "fact_id": "DAN1-V012-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué condiciones exactas de plazo y dieta propuso Daniel para la prueba con sus siervos?",
+    "options": [
+      "Prueba de siete días: pan de cebada y vino moderado",
+      "Prueba de diez días: legumbres para comer y agua para beber",
+      "Prueba de tres años: ración del rey sin carne de cerdo",
+      "Prueba de cuarenta días: frutas silvestres y agua de río"
+    ],
+    "correct_option": 1,
+    "accepted_answers": [
+      "Prueba de diez días: legumbres para comer y agua para beber"
+    ],
+    "explanation": "Daniel 1:12 especifica diez días de prueba con legumbres y agua.",
+    "why_distractors_fail": {
+      "Prueba de siete días: pan de cebada y vino moderado": "El plazo bíblico es de 10 días y el agua excluía todo vino.",
+      "Prueba de tres años: ración del rey sin carne de cerdo": "Tres años era la duración total de la educación, no la prueba inmediata.",
+      "Prueba de cuarenta días: frutas silvestres y agua de río": "El plazo y la dieta descritos no corresponden al texto bíblico."
+    },
+    "evidence_excerpt": "prueba con tus siervos durante diez días: que nos den legumbres para comer y agua para beber",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "trial_duration_and_diet",
+    "option_category": "dietary_trial_parameters",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Muestra la sabiduría y moderación de Daniel al solicitar una prueba acotada y demostrable.",
+    "variant_justification": "La pública contenía un falso sobre 7 días; esta variante evalúa positivamente los dos componentes de la propuesta.",
+    "answer_support_term": "diez días",
+    "author": {
+      "id": "autor-D1",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN1-C16-006",
+    "source_unit_id": "DAN1-V013",
+    "fact_id": "DAN1-V013-F01",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué método comparativo propuso Daniel para que el mayordomo juzgara el resultado de la prueba?",
+    "options": [
+      "Pesar a los jóvenes en balanza y medir su estatura antes y después del plazo de prueba",
+      "Someter a ambos grupos a un examen académico inmediato ante los sabios de Babilonia",
+      "Comparar los rostros de ellos con los rostros de los muchachos que comían de la porción de la comida del rey, y actuar según lo visto",
+      "Consultar a los médicos caldeos para certificar el estado de salud de los siervos hebreos"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Comparar los rostros de ellos con los rostros de los muchachos que comían de la porción de la comida del rey, y actuar según lo visto"
+    ],
+    "explanation": "Daniel 1:13 establece el cotejo visual directo de los semblantes entre ambos grupos como base de decisión.",
+    "why_distractors_fail": {
+      "Pesar a los jóvenes en balanza y medir su estatura antes y después del plazo de prueba": "Introduce mediciones físicas ajenas a la inspección visual del rostro.",
+      "Someter a ambos grupos a un examen académico inmediato ante los sabios de Babilonia": "El examen académico ocurrió al final de los tres años (v. 18-20), no al décimo día.",
+      "Consultar a los médicos caldeos para certificar el estado de salud de los siervos hebreos": "La evaluación fue encomendada directamente a la observación del mayordomo."
+    },
+    "evidence_excerpt": "Compara luego nuestros rostros con los rostros de los muchachos que comen de la porción de la comida del rey, y haz después con tus siervos según veas.",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "visual_comparison_and_adjudication",
+    "option_category": "comparative_evaluation_criteria",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Fija el criterio de inspección empírica y respeto por la autoridad del oficial.",
+    "variant_justification": "La pública evalúa solo el mandato 'compara'; esta variante exige la relación completa entre grupos y el principio de decisión.",
+    "answer_support_term": "Compara luego nuestros rostros",
+    "author": {
+      "id": "autor-D1",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN1-C16-007",
+    "source_unit_id": "DAN1-V014",
+    "fact_id": "DAN1-V014-F02",
+    "role": "variant",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "question": "¿Cómo respondió el encargado ante la propuesta de Daniel y durante cuántos días los probó?",
+    "options": [
+      "Rechazó la propuesta temiendo el castigo del rey y los obligó a comer la ración",
+      "Consultó primero con Aspenaz y luego redujo la prueba a tres días",
+      "Aceptó la prueba pero exigió que comieran vino al quinto día",
+      "Consintió, pues, con ellos en esto, y probó con ellos durante diez días"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Consintió, pues, con ellos en esto, y probó con ellos durante diez días"
+    ],
+    "explanation": "Daniel 1:14 indica textualmente que consintió con ellos en esto y probó con ellos durante diez días.",
+    "why_distractors_fail": {
+      "Rechazó la propuesta temiendo el castigo del rey y los obligó a comer la ración": "Contradice el consentimiento explícito del versículo.",
+      "Consultó primero con Aspenaz y luego redujo la prueba a tres días": "No hubo consulta intermedia ni reducción del plazo.",
+      "Aceptó la prueba pero exigió que comieran vino al quinto día": "No hubo exigencias intermedias de consumo de vino."
+    },
+    "evidence_excerpt": "Consintió, pues, con ellos en esto, y probó con ellos durante diez días.",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "official_consent_and_execution",
+    "option_category": "administrative_compliance",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Marca la ejecución del acuerdo que llevó a la victoria de la fidelidad.",
+    "variant_justification": "La pública pregunta por qué consintió; esta se enfoca en la correspondencia acción-duración.",
+    "answer_support_term": "Consintió",
+    "author": {
+      "id": "autor-D1",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN1-C16-008",
+    "source_unit_id": "DAN1-V015",
+    "fact_id": "DAN1-V015-F03",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué dos cualidades físicas manifestaron los jóvenes hebreos al cabo de los diez días en comparación con los otros?",
+    "options": [
+      "El rostro de ellos pareció mejor y más robusto que el de los otros muchachos",
+      "Eran más altos de estatura y tenían la piel más blanca que los demás",
+      "Tenían mayor agilidad muscular y menor peso corporal que los caldeos",
+      "Sus ojos brillaban más y vestían mejores ropas que el resto"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "El rostro de ellos pareció mejor y más robusto que el de los otros muchachos"
+    ],
+    "explanation": "Daniel 1:15 señala los dos resultados físicos exactos: 'mejor' y 'más robusto' que el de los otros muchachos.",
+    "why_distractors_fail": {
+      "Eran más altos de estatura y tenían la piel más blanca que los demás": "Introduce rasgos de estatura y tez ausentes del relato.",
+      "Tenían mayor agilidad muscular y menor peso corporal que los caldeos": "El texto habla de mayor robustez, no de menor peso corporal.",
+      "Sus ojos brillaban más y vestían mejores ropas que el resto": "Atribuye vestimenta y brillo ocular no mencionados."
+    },
+    "evidence_excerpt": "pareció el rostro de ellos mejor y más robusto",
+    "difficulty": "hard",
+    "importance": "critical",
+    "relation_type": "physical_outcome_comparison",
+    "option_category": "health_and_appearance_results",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Demuestra la superioridad tangible de los hábitos ordenados por Dios.",
+    "variant_justification": "La pública pide completar 'robustos'; esta variante evalúa el par completo 'mejor y más robusto'.",
+    "answer_support_term": "más robusto",
+    "author": {
+      "id": "autor-D1",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN1-C16-009",
+    "source_unit_id": "DAN1-V016",
+    "fact_id": "DAN1-V016-F03",
+    "role": "variant",
+    "family": "single_choice_direct",
+    "subtype": "cause_consequence",
+    "question": "¿Qué determinación definitiva tomó Melsar al verificar el resultado favorable de la prueba?",
+    "options": [
+      "Les duplicó la porción de carne pero les permitió beber solo agua",
+      "Informó al rey Nabucodonosor para que emitiera un decreto especial de alimentación",
+      "Se llevaba la porción de la comida de ellos y el vino que habían de beber, y les daba legumbres",
+      "Permitió las legumbres solo los días de fiesta y mantuvo el vino en días ordinarios"
+    ],
+    "correct_option": 2,
+    "accepted_answers": [
+      "Se llevaba la porción de la comida de ellos y el vino que habían de beber, y les daba legumbres"
+    ],
+    "explanation": "Daniel 1:16 describe la sustitución permanente de la comida y vino real por legumbres.",
+    "why_distractors_fail": {
+      "Les duplicó la porción de carne pero les permitió beber solo agua": "Contradice la remoción total de la porción real.",
+      "Informó al rey Nabucodonosor para que emitiera un decreto especial de alimentación": "El mayordomo resolvió internamente sin elevar informe al rey.",
+      "Permitió las legumbres solo los días de fiesta y mantuvo el vino en días ordinarios": "La provisión de legumbres fue continua y no restringida a fiestas."
+    },
+    "evidence_excerpt": "se llevaba la porción de la comida de ellos y el vino que habían de beber, y les daba legumbres",
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "steward_action_dietary_substitution",
+    "option_category": "court_routine_adjustment",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Consolida la libertad dietética de los jóvenes durante todo el período formativo.",
+    "variant_justification": "La pública pregunta por Melsar; esta variante evalúa la sustitución operativa bilateral (retirar vino/comida real y suministrar legumbres).",
+    "answer_support_term": "les daba legumbres",
+    "author": {
+      "id": "autor-D1",
+      "model": "gemini-3.7-flash"
+    }
+  },
+  {
+    "id": "V14-R2-DAN1-C16-010",
+    "source_unit_id": "DAN1-V018",
+    "fact_id": "DAN1-V018-F04",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Cuándo y por medio de quién fueron introducidos los jóvenes ante el rey Nabucodonosor al finalizar su formación?",
+    "options": [
+      "Al cumplir un año de estudios; Melsar los introdujo secretamente a la cámara real",
+      "Tras la caída de Jerusalén; Arioc los presentó como prisioneros de honor",
+      "Al término de los diez días de prueba; Daniel solicitó audiencia personal ante el rey",
+      "Pasados los días señalados; el jefe de los eunucos los llevó delante de Nabucodonosor"
+    ],
+    "correct_option": 3,
+    "accepted_answers": [
+      "Pasados los días señalados; el jefe de los eunucos los llevó delante de Nabucodonosor"
+    ],
+    "explanation": "Daniel 1:18 une el cumplimiento del plazo fijado por el rey con la presentación formal realizada por el jefe de los eunucos.",
+    "why_distractors_fail": {
+      "Al cumplir un año de estudios; Melsar los introdujo secretamente a la cámara real": "El plazo total fue de tres años y el intermediario fue el jefe de eunucos, no Melsar.",
+      "Tras la caída de Jerusalén; Arioc los presentó como prisioneros de honor": "Arioc no intervino en la graduación académica ni presentación formal.",
+      "Al término de los diez días de prueba; Daniel solicitó audiencia personal ante el rey": "La prueba de 10 días no fue la graduación ante el monarca."
+    },
+    "evidence_excerpt": "el jefe de los eunucos los llevó delante de Nabucodonosor",
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "graduation_timing_and_presentation",
+    "option_category": "court_presentation_protocol",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Muestra la culminación del proceso educativo y la comparecencia oficial ante el monarca.",
+    "variant_justification": "La pública pregunta solo qué hizo el jefe de eunucos; esta exige la correlación entre el plazo real señalado y la comparecencia final.",
+    "answer_support_term": "delante de Nabucodonosor",
+    "author": {
+      "id": "autor-D1",
+      "model": "gemini-3.7-flash"
+    }
+  }
+]

@@ -1,0 +1,119 @@
+﻿import json, pathlib
+ROOT = pathlib.Path(".")
+reviews_dir = ROOT / "content" / "competitive-v13" / "staging-reviews"
+reviews_dir.mkdir(parents=True, exist_ok=True)
+
+data = {
+  "schema_version": "competitive-v13-review/v1",
+  "blind_batch_id": "blind-233a5f2467f43ced0252",
+  "reviewer": {
+    "id": "arbitro-ciego-subagent-1",
+    "conversation_id": "4f262e7e-d172-47f1-98dd-b0acbd5fa2c3",
+    "model": "gemini-3.7-flash"
+  },
+  "reviewed_at": "2026-09-01T05:13:14Z",
+  "total_reviewed": 10,
+  "verdict_counts": {
+    "approved": 10,
+    "rewrite": 0,
+    "rejected": 0
+  },
+  "decisions": [
+    {
+      "id": "V14-R2-DAN1-C16-001",
+      "adjudicated_option": 1,
+      "second_defensible_option": False,
+      "decision": "approved",
+      "difficulty": "hard",
+      "rationale": "El texto bíblico de Daniel 1:1 estipula taxativamente que en el 'tercer año del reinado de Joacim, rey de Judá, vino Nabucodonosor, rey de Babilonia, a Jerusalén, y la sitió'. La opción 1 integra fielmente los cuatro datos históricos y militares sin alteración de nombres ni fechas.",
+      "source_alignment_reason": "Correspondencia literal exacta con Daniel 1:1 en año (tercero), monarca judío (Joacim), soberano invasor (Nabucodonosor) y acción militar (sitió)."
+    },
+    {
+      "id": "V14-R2-DAN1-C16-002",
+      "adjudicated_option": 0,
+      "second_defensible_option": False,
+      "decision": "approved",
+      "difficulty": "hard",
+      "rationale": "Según Daniel 1:2, fue 'El Señor [quien] entregó en sus manos a Joacim, rey de Judá, y parte de los utensilios de la casa de Dios', trasladándolos a 'tierra de Sinar, a la casa de su dios' y a 'la casa del tesoro de su dios'. La opción 0 es la única que refleja con total apego el relato canónico.",
+      "source_alignment_reason": "Alineación estricta con Daniel 1:2 sobre la entrega soberana de Dios y el depósito de los utensilios en la casa del tesoro de su dios en Sinar."
+    },
+    {
+      "id": "V14-R2-DAN1-C16-003",
+      "adjudicated_option": 1,
+      "second_defensible_option": False,
+      "decision": "approved",
+      "difficulty": "hard",
+      "rationale": "Daniel 1:3 indica expresamente: 'Y dijo el rey a Aspenaz, jefe de sus eunucos, que trajera de los hijos de Israel, del linaje real de los príncipes'. La opción 1 identifica correctamente al funcionario y su cargo oficial.",
+      "source_alignment_reason": "Identificación unívoca del funcionario 'Aspenaz, jefe de sus eunucos' como receptor de la orden real en Daniel 1:3."
+    },
+    {
+      "id": "V14-R2-DAN1-C16-004",
+      "adjudicated_option": 0,
+      "second_defensible_option": False,
+      "decision": "approved",
+      "difficulty": "hard",
+      "rationale": "La afirmación es verdadera porque Daniel 1:9 afirma de forma directa: 'Puso Dios a Daniel en gracia y en buena voluntad con el jefe de los eunucos'.",
+      "source_alignment_reason": "Verificación afirmativa indiscutible respaldada por la declaración explícita de providencia divina en Daniel 1:9."
+    },
+    {
+      "id": "V14-R2-DAN1-C16-005",
+      "adjudicated_option": 2,
+      "second_defensible_option": False,
+      "decision": "approved",
+      "difficulty": "hard",
+      "rationale": "En Daniel 1:12, Daniel ruega explícitamente: 'hagas la prueba con tus siervos durante diez días: que nos den legumbres para comer y agua para beber'. La opción 2 reproduce con precisión milimétrica el plazo y los elementos de la dieta solicitada.",
+      "source_alignment_reason": "Concordancia textual plena con los términos exactos de Daniel 1:12 (plazo de diez días, menú de legumbres y agua)."
+    },
+    {
+      "id": "V14-R2-DAN1-C16-006",
+      "adjudicated_option": 0,
+      "second_defensible_option": False,
+      "decision": "approved",
+      "difficulty": "hard",
+      "rationale": "Daniel 1:13 define la metodología de evaluación propuesta: 'Compara luego nuestros rostros con los rostros de los muchachos que comen de la porción de la comida del rey, y haz después con tus siervos según veas'. La opción 0 describe con exactitud dicha instrucción comparativa.",
+      "source_alignment_reason": "Reflejo literal del procedimiento de cotejo visual ordenado por Daniel en Daniel 1:13."
+    },
+    {
+      "id": "V14-R2-DAN1-C16-007",
+      "adjudicated_option": 3,
+      "second_defensible_option": False,
+      "decision": "approved",
+      "difficulty": "hard",
+      "rationale": "Daniel 1:14 consigna textualmente: 'Consintió, pues, con ellos en esto, y probó con ellos durante diez días'. La opción 3 es un reflejo fidedigno de la respuesta afirmativa del encargado y la duración del periodo de prueba.",
+      "source_alignment_reason": "Coincidencia exacta con la resolución del mayordomo descrita en Daniel 1:14."
+    },
+    {
+      "id": "V14-R2-DAN1-C16-008",
+      "adjudicated_option": 1,
+      "second_defensible_option": False,
+      "decision": "approved",
+      "difficulty": "hard",
+      "rationale": "Al finalizar el plazo, Daniel 1:15 señala que 'pareció el rostro de ellos mejor y más robusto que el de los otros muchachos que comían de la porción de la comida del rey'. La opción 1 recoge de manera incontrovertible estas dos características físicas.",
+      "source_alignment_reason": "Concordancia directa con los adjetivos y descripción somática de Daniel 1:15 ('mejor y más robusto')."
+    },
+    {
+      "id": "V14-R2-DAN1-C16-008",
+      "adjudicated_option": 1,
+      "second_defensible_option": False,
+      "decision": "approved",
+      "difficulty": "hard",
+      "rationale": "Daniel 1:16 describe la conducta definitiva adoptada: 'Así, pues, Melsar se llevaba la porción de la comida de ellos y el vino que habían de beber, y les daba legumbres'. La opción 1 expresa sin ambigüedad esta sustitución alimenticia permanente.",
+      "source_alignment_reason": "Alineación fiel con la cláusula narrativa de Daniel 1:16 relativa a la acción continuada de Melsar."
+    },
+    {
+      "id": "V14-R2-DAN1-C16-010",
+      "adjudicated_option": 1,
+      "second_defensible_option": False,
+      "decision": "approved",
+      "difficulty": "hard",
+      "rationale": "Según Daniel 1:18, 'Pasados, pues, los días al fin de los cuales había dicho el rey que los llevaran, el jefe de los eunucos los llevó delante de Nabucodonosor'. La opción 1 compila con precisión tanto el momento como el oficial responsable de la presentación regia.",
+      "source_alignment_reason": "Alineación incontrovertible con el cumplimiento del plazo formativo y la mediación del jefe de los eunucos registrada en Daniel 1:18."
+    }
+  ]
+}
+# Fix decision index 8 ID typo to V14-R2-DAN1-C16-009
+data["decisions"][8]["id"] = "V14-R2-DAN1-C16-009"
+
+rf = reviews_dir / "blind-233a5f2467f43ced0252.json"
+rf.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+print(f"Saved review to {rf}")
