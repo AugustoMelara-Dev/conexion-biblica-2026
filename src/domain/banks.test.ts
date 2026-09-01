@@ -16,7 +16,7 @@ describe("selecciones de bancos", () => {
   it("declara el banco competitivo V10 sin cambiar el perfil histórico", () => {
     expect(BANK_DEFINITIONS["final-v7"]).toMatchObject({
       version: "10.0",
-      expectedQuestionCount: 2730,
+      expectedQuestionCount: 2852,
     })
   })
 

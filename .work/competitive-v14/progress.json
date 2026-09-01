@@ -1,0 +1,53 @@
+{
+  "mission": "competitive-v14",
+  "updated_at": "2026-08-31T22:20:00-06:00",
+  "timezone": "America/Tegucigalpa",
+  "deadline": "2026-09-05",
+  "base_commit": "562620c",
+  "branch": "antigravity/emergencia-competitiva-v14",
+  "worktree": "C:\\Users\\melar\\OneDrive\\Desktop\\Conexion biblica\\.worktrees\\emergencia-competitiva-v14",
+  "canonical_pdf": {
+    "path": "MaterialConexionBiblica (1).pdf",
+    "sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+    "pages": 60,
+    "verified_material": [
+      "Daniel 1-12, Reina-Valera 1995",
+      "Profetas y Reyes 39-44"
+    ]
+  },
+  "phase": "phase_3_release_2_ai_authoring",
+  "release": 2,
+  "public_questions": 2852,
+  "public_facts": 2217,
+  "public_shards": 18,
+  "new_ai_authored_accepted": 384,
+  "new_ai_authored_rejected": 215,
+  "new_ai_authored_rewritten": 599,
+  "translation_noise": 0,
+  "blind_private": {
+    "A": 0,
+    "B": 0,
+    "emergency": 0,
+    "status": "new pools not started; historical 250 promoted to public"
+  },
+  "tests": {
+    "competitive_audit": "pass: 2852 questions, 2217 facts, zero blind/private rows",
+    "release_contract": "pass: 36/36 promotion, pipeline, release-contract and live-audit integration tests",
+    "vitest": "pass: 434/434",
+    "typecheck": "pass",
+    "lint": "pass",
+    "build": "pass with non-fatal chunk warning",
+    "e2e": "pass: 24 applicable Chromium desktop/mobile checks, 12 intentionally skipped by project"
+  },
+  "release_2_checkpoint": {
+    "candidate_variants": 599,
+    "blind_reviewed": 599,
+    "accepted": 384,
+    "rejected": 215,
+    "awaiting_blind_review": 0,
+    "pending_editorial_authoring": 1833,
+    "publicly_compiled": 384,
+    "blindness_evidence": "packets redact author/answer/explanations and use an external HMAC binding key; reviewer independence is procedural because all subagents share the filesystem"
+  },
+  "next_action": "Analyze the 215 rejection causes to construct .work/competitive-v14/rejection-playbook.md, then initiate parallel authoring to cover the 1,833 remaining facts in R2."
+}

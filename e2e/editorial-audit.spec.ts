@@ -31,7 +31,7 @@ test("la auditoría humana firma por huella y avanza sobre el artefacto V10", as
   await expect(
     page.getByRole("heading", { name: "Auditoría humana final" })
   ).toBeVisible()
-  await expect(page.getByText("0 de 2730 revisadas")).toBeVisible({
+  await expect(page.getByText("0 de 2852 revisadas")).toBeVisible({
     timeout: 60_000,
   })
   const approveButton = page.getByRole("button", { name: "Aprobar pregunta" })
@@ -51,7 +51,7 @@ test("la auditoría humana firma por huella y avanza sobre el artefacto V10", as
   await page.getByLabel("Nombre del revisor").fill("Auditor E2E")
   await approveButton.click()
 
-  await expect(page.getByText("1 de 2730 revisadas")).toBeVisible()
+  await expect(page.getByText("1 de 2852 revisadas")).toBeVisible()
   const stored = await page.evaluate(() =>
     JSON.parse(localStorage.getItem("conexion-biblica-human-review-v1") ?? "[]")
   )
@@ -64,7 +64,7 @@ test("la auditoría humana firma por huella y avanza sobre el artefacto V10", as
   expect(stored[0].content_sha256).toMatch(/^[a-f0-9]{64}$/)
 
   await page.getByRole("button", { name: "Deshacer última decisión" }).click()
-  await expect(page.getByText("0 de 2730 revisadas")).toBeVisible()
+  await expect(page.getByText("0 de 2852 revisadas")).toBeVisible()
   await expect(page.getByText(questionText!, { exact: true })).toBeVisible()
   expect(
     await page.evaluate(() =>
