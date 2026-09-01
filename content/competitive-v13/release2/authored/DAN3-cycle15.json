@@ -1,0 +1,40 @@
+[
+    {
+      "id": "V13-R2C15-DAN3-V017-F01",
+      "source_unit_id": "DAN3-V017",
+      "fact_id": "DAN3-V017-F01",
+      "role": "variant",
+      "family": "single_choice_contextual",
+      "subtype": "comparison",
+      "question": "¿Qué correspondencia distingue sin intercambiar la modalidad verbal y el ámbito de las dos liberaciones declaradas?",
+      "options": [
+        "Puede librarnos de las manos del rey → nos librará del horno",
+        "Puede librarnos del horno → nos librará de las manos del rey",
+        "Debe librarnos del horno → podría librarnos de las manos del rey",
+        "Nos librará de los dioses del rey → puede librarnos de la estatua"
+      ],
+      "correct_option": 1,
+      "accepted_answers": [
+        "Puede librarnos del horno → nos librará de las manos del rey"
+      ],
+      "explanation": "Los tres atribuyen a Dios capacidad respecto del horno mediante «puede librarnos» y afirman respecto de las manos del rey «nos librará».",
+      "why_distractors_fail": {
+        "Puede librarnos de las manos del rey → nos librará del horno": "Intercambia los dos ámbitos asignados a cada forma verbal.",
+        "Debe librarnos del horno → podría librarnos de las manos del rey": "Sustituye capacidad y afirmación por obligación y posibilidad hipotética.",
+        "Nos librará de los dioses del rey → puede librarnos de la estatua": "Cambia ambos peligros y no conserva las modalidades del texto."
+      },
+      "evidence_excerpt": "Nuestro Dios, a quien servimos, puede librarnos del horno de fuego ardiente; y de tus manos, rey, nos librará.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "modal_force_double_deliverance_domain",
+      "option_category": "modality_domain_correspondence",
+      "false_mutation": null,
+      "blank_span": null,
+      "significance": "Distingue una afirmación de capacidad de una afirmación futura y asigna a cada una su peligro específico.",
+      "variant_justification": "La presentación previa reduce ambas cláusulas a que Dios podía librarlos; esta variante evalúa el contraste modal puede/nos librará y su distribución entre horno y poder real.",
+      "author": {
+        "id": "r2_author_f",
+        "model": "gpt-5.6-sol"
+      }
+    }
+]

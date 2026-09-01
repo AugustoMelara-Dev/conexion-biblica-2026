@@ -1,0 +1,40 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-14a48aee8b7e6cd452ea",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2C15-DAN3-V017-F01",
+      "source_unit_id": "DAN3-V017",
+      "fact_id": "DAN3-V017-F01",
+      "family": "single_choice_contextual",
+      "subtype": "comparison",
+      "question": "¿Qué correspondencia distingue sin intercambiar la modalidad verbal y el ámbito de las dos liberaciones declaradas?",
+      "options": [
+        "Puede librarnos de las manos del rey → nos librará del horno",
+        "Puede librarnos del horno → nos librará de las manos del rey",
+        "Debe librarnos del horno → podría librarnos de las manos del rey",
+        "Nos librará de los dioses del rey → puede librarnos de la estatua"
+      ],
+      "evidence_excerpt": "Nuestro Dios, a quien servimos, puede librarnos del horno de fuego ardiente; y de tus manos, rey, nos librará.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "modal_force_double_deliverance_domain",
+      "option_category": "modality_domain_correspondence",
+      "variant_justification": "La presentación previa reduce ambas cláusulas a que Dios podía librarlos; esta variante evalúa el contraste modal puede/nos librará y su distribución entre horno y poder real.",
+      "authored_content_sha256": "47420110c1d65f8ddc73fe0cb590a4cab978f6a5d5a81aacb56c637fda437828",
+      "source_ref": "Daniel 3:17",
+      "source_quote": "Nuestro Dios, a quien servimos, puede librarnos del horno de fuego ardiente; y de tus manos, rey, nos librará.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Los tres afirmaron que el Dios a quien servían podía librarlos del horno y de las manos del rey.",
+          "family": "true_false",
+          "subtype": "principle"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "2f211ffa829f40691a751a940eb6af94faa6e833c27c7d139d727d15320fffba"
+}

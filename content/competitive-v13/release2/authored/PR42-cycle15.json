@@ -1,0 +1,68 @@
+[
+  {
+    "id": "V13-R2-PR42-C15-001",
+    "source_unit_id": "PR42-P044-P005-S002",
+    "fact_id": "PR42-P044-P005-S002-V11-F02",
+    "role": "variant",
+    "family": "fill_choice",
+    "subtype": "relationship",
+    "question": "Complete la correspondencia entre rasgos del árbol y realidad del rey: ____.",
+    "options": [
+      "árbol crecido y fuerte, altura al cielo y vista por toda la tierra → el rey creció y se fortaleció, su grandeza llegó al cielo y su señorío al cabo de la tierra",
+      "árbol cortado y seco, altura reducida y vista local → el rey perdió toda grandeza antes del sueño y gobernó sólo Jerusalén",
+      "árbol de plata con fruto escaso → Daniel se hizo rey y su señorío llegó a Persia",
+      "árbol oculto sin aves ni bestias → Nabucodonosor permaneció débil y sin súbditos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["árbol crecido y fuerte, altura al cielo y vista por toda la tierra → el rey creció y se fortaleció, su grandeza llegó al cielo y su señorío al cabo de la tierra"],
+    "explanation": "Daniel identifica al árbol con el rey y alinea crecimiento, fuerza, altura y extensión visual con grandeza y señorío.",
+    "evidence_excerpt": "Dijo: “El árbol que viste, que crecía y se hacía fuerte, y que su altura llegaba hasta el cielo, y su vista por toda la tierra; y cuya copa era hermosa, y su fruto en abundancia, y que para todos había mantenimiento en él; debajo del cual moraban las bestias del campo, y en sus ramas habitaban las aves del cielo, tú mismo eres, oh rey, que creciste, y te hiciste fuerte, pues creció tu grandeza, y ha llegado hasta el cielo, y tu señorío hasta el cabo de la tierra.",
+    "why_distractors_fail": {
+      "árbol cortado y seco, altura reducida y vista local → el rey perdió toda grandeza antes del sueño y gobernó sólo Jerusalén": "Invierte estado, cronología y alcance.",
+      "árbol de plata con fruto escaso → Daniel se hizo rey y su señorío llegó a Persia": "Cambia materia, fruto, referente y territorio.",
+      "árbol oculto sin aves ni bestias → Nabucodonosor permaneció débil y sin súbditos": "Niega las descripciones de visibilidad, fuerza y cobertura."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "tree_growth_height_visibility_king_greatness_rule",
+    "option_category": "symbol_attribute_referent_attribute",
+    "false_mutation": null,
+    "blank_span": "árbol crecido y fuerte, altura al cielo y vista por toda la tierra → el rey creció y se fortaleció, su grandeza llegó al cielo y su señorío al cabo de la tierra",
+    "significance": "Exige alinear cuatro propiedades simbólicas con cuatro propiedades políticas.",
+    "variant_justification": "No había presentación pública de este hecho; la operación prueba correspondencia símbolo–referente, no memoria aislada.",
+    "author": {"id": "r2_c11_dan4_dan9", "model": "gpt-5.6-sol"}
+  },
+  {
+    "id": "V13-R2-PR42-C15-002",
+    "source_unit_id": "PR42-P043-P003-S003",
+    "fact_id": "PR42-P043-P003-S003-V11-F04",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué cadena explica cómo un logro urbanístico amenazó la utilidad política y espiritual del rey?",
+    "options": [
+      "pasión constructora + éxito al hacer de Babilonia una maravilla → orgullo halagado → peligro para sus realizaciones como gobernante sabio → riesgo de dejar de ser instrumento del propósito divino",
+      "fracaso constructor + ruina de Babilonia → humildad → fortalecimiento militar → nombramiento como profeta",
+      "éxito agrícola + abundancia del campo → generosidad → pérdida del trono → servicio al propósito persa",
+      "pasión religiosa + construcción del templo → arrepentimiento → perfección política → independencia de Dios"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["pasión constructora + éxito al hacer de Babilonia una maravilla → orgullo halagado → peligro para sus realizaciones como gobernante sabio → riesgo de dejar de ser instrumento del propósito divino"],
+    "explanation": "El éxito constructor alimentó el orgullo y puso en peligro tanto su calidad de gobernante como la posibilidad de que Dios continuara usándolo.",
+    "evidence_excerpt": "Su pasión como constructor, y su señalado éxito al hacer de Babilonia una de las maravillas del mundo, halagaron su orgullo al punto de poner en grave peligro sus realizaciones como sabio gobernante a quien Dios pudiera continuar usando como instrumento para la ejecución del propósito divino.",
+    "why_distractors_fail": {
+      "fracaso constructor + ruina de Babilonia → humildad → fortalecimiento militar → nombramiento como profeta": "Invierte logro, reacción y resultados.",
+      "éxito agrícola + abundancia del campo → generosidad → pérdida del trono → servicio al propósito persa": "Sustituye actividad, virtud y propósito.",
+      "pasión religiosa + construcción del templo → arrepentimiento → perfección política → independencia de Dios": "Introduce templo y arrepentimiento y contradice la dependencia divina."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "building_success_pride_governance_divine_instrument_risk",
+    "option_category": "achievement_psychology_dual_consequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue logro externo, efecto moral y dos niveles de riesgo.",
+    "variant_justification": "El hecho no tenía presentación pública; la cadena causal evita una paráfrasis nominal simple.",
+    "author": {"id": "r2_c11_dan4_dan9", "model": "gpt-5.6-sol"}
+  }
+]

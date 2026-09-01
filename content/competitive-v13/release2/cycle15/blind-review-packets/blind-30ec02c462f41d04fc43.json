@@ -1,0 +1,74 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-30ec02c462f41d04fc43",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-PR41-C15-001",
+      "source_unit_id": "PR41-P041-P006-S001",
+      "fact_id": "PR41-P041-P006-S001-F01",
+      "family": "true_false",
+      "subtype": "comparison",
+      "question": "La confesión pública del rey y su exaltación de Dios eran correctas; el exceso de su autoridad temporal comenzó cuando quiso imponer a sus súbditos la misma confesión y reverencia.",
+      "options": [
+        "Verdadero",
+        "Falso"
+      ],
+      "evidence_excerpt": "Era correcto que el rey hiciese una confesión pública, y procurase exaltar al Dios de los cielos sobre todos los demás dioses; pero al intentar obligar a sus súbditos a hacer una confesión de fe similar a la suya y a manifestar la misma reverencia que él, Nabucodonosor se excedía de su derecho como soberano temporal.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "public_confession_legitimate_religious_coercion_excess",
+      "option_category": "legitimate_act_boundary_violation",
+      "variant_justification": "La presentación pública confirma sólo manifestar; ésta exige discriminar el límite normativo entre confesión e imposición.",
+      "authored_content_sha256": "75e1192aa0fbbd2c409c672bb570237312f6dd7148fbd0988442b42f2722e689",
+      "source_ref": "PR41, p. 41, párrafo 6",
+      "source_quote": "Era correcto que el rey hiciese una confesión pública, y procurase exaltar al Dios de los cielos sobre todos los demás dioses; pero al intentar obligar a sus súbditos a hacer una confesión de fe similar a la suya y a manifestar la misma reverencia que él, Nabucodonosor se excedía de su derecho como soberano temporal.",
+      "parent_context": "Era correcto que el rey hiciese una confesión pública, y procurase exaltar al Dios de los cielos sobre todos los demás dioses; pero al intentar obligar a sus súbditos a hacer una confesión de fe similar a la suya y a manifestar la misma reverencia que él, Nabucodonosor se excedía de su derecho como soberano temporal. No tenía más derecho, civil o moral, de amenazar de muerte a los hombres por no adorar a Dios, que lo había tenido para promulgar un decreto que consignaba a las llamas a cuantos se negasen a adorar la imagen de oro. Nunca compele Dios a los hombres a obedecer. Deja a todos libres para elegir a quien quieren servir.",
+      "existing_presentations": [
+        {
+          "question": "La confesión pública del rey era correcta, pero obligar a sus súbditos a imitar su fe excedía su derecho como soberano temporal.",
+          "family": "true_false",
+          "subtype": "principle"
+        },
+        {
+          "question": "Como soberano temporal, Nabucodonosor tenía derecho a exigir que sus súbditos reprodujeran su confesión de fe.",
+          "family": "true_false",
+          "subtype": "principle"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-PR41-C15-002",
+      "source_unit_id": "PR41-P038-P004-S003",
+      "fact_id": "PR41-P038-P004-S003-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "comparison",
+      "question": "¿Qué diseño de la nueva imagen contradice deliberadamente la degradación de metales y qué pretensión política expresa?",
+      "options": [
+        "sin descenso de valor y toda de oro → Babilonia eterna, indestructible y todopoderosa, vencedora de los demás reinos y permanente",
+        "descenso de oro a barro → Babilonia temporal, subordinada a Persia y destinada a dividirse",
+        "toda de plata → Media eterna pero incapaz de quebrantar otros reinos",
+        "sin metales y hecha de piedra → reino de Daniel que cedería ante Babilonia"
+      ],
+      "evidence_excerpt": "En su imagen no habría descenso de valores desde la cabeza hasta los pies, sino que se la haría por completo de oro, para que toda ella simbolizara a Babilonia como reino eterno, indestructible y todopoderoso que quebrantaría y desmenuzaría todos los demás reinos, y perduraría para siempre.",
+      "difficulty": "expert",
+      "importance": "critical",
+      "relation_type": "uniform_gold_denial_decline_babylon_eternal_supremacy",
+      "option_category": "design_change_symbolic_claim",
+      "variant_justification": "El hecho carecía de presentación aprobada; la variante exige traducir diseño visual en programa político.",
+      "authored_content_sha256": "44721d608c8243ca362ac4e84114a4e20ebb2ddef9a34590a33fc8f6ddbd1555",
+      "source_ref": "PR41, p. 38, párrafo 4",
+      "source_quote": "En su imagen no habría descenso de valores desde la cabeza hasta los pies, sino que se la haría por completo de oro, para que toda ella simbolizara a Babilonia como reino eterno, indestructible y todopoderoso que quebrantaría y desmenuzaría todos los demás reinos, y perduraría para siempre.",
+      "parent_context": "Agradándole la halagadora sugestión, resolvió llevarla a ejecución, e ir aun más lejos. En vez de reproducir la imagen tal como la había visto, iba a superar el original. En su imagen no habría descenso de valores desde la cabeza hasta los pies, sino que se la haría por completo de oro, para que toda ella simbolizara a Babilonia como reino eterno, indestructible y todopoderoso que quebrantaría y desmenuzaría todos los demás reinos, y perduraría para siempre.",
+      "existing_presentations": [
+        {
+          "question": "¿Qué mensaje pretendía transmitir una estatua completamente de oro, sin descenso de valores?",
+          "family": "single_choice_contextual",
+          "subtype": "symbol_interpretation"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "8dfe468dddef334d8ee27686f067c8bb4e847a5d33d467430c7685bf58c95828"
+}

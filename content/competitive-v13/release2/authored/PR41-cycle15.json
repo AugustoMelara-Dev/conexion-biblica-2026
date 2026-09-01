@@ -1,0 +1,59 @@
+[
+  {
+    "id": "V13-R2-PR41-C15-001",
+    "source_unit_id": "PR41-P041-P006-S001",
+    "fact_id": "PR41-P041-P006-S001-F01",
+    "role": "variant",
+    "family": "true_false",
+    "subtype": "comparison",
+    "question": "La confesión pública del rey y su exaltación de Dios eran correctas; el exceso de su autoridad temporal comenzó cuando quiso imponer a sus súbditos la misma confesión y reverencia.",
+    "options": ["Verdadero", "Falso"],
+    "correct_option": 0,
+    "accepted_answers": ["Verdadero"],
+    "explanation": "El texto aprueba la confesión personal pública, pero separa de ella la coerción religiosa que excedía el derecho del soberano.",
+    "evidence_excerpt": "Era correcto que el rey hiciese una confesión pública, y procurase exaltar al Dios de los cielos sobre todos los demás dioses; pero al intentar obligar a sus súbditos a hacer una confesión de fe similar a la suya y a manifestar la misma reverencia que él, Nabucodonosor se excedía de su derecho como soberano temporal.",
+    "why_distractors_fail": {"Falso": "Borraría el contraste explícito entre testimonio legítimo y coacción ilegítima."},
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "public_confession_legitimate_religious_coercion_excess",
+    "option_category": "legitimate_act_boundary_violation",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Distingue dos actos religiosos semejantes por su relación con la autoridad y la libertad.",
+    "variant_justification": "La presentación pública confirma sólo manifestar; ésta exige discriminar el límite normativo entre confesión e imposición.",
+    "author": {"id": "r2_c11_dan4_dan9", "model": "gpt-5.6-sol"}
+  },
+  {
+    "id": "V13-R2-PR41-C15-002",
+    "source_unit_id": "PR41-P038-P004-S003",
+    "fact_id": "PR41-P038-P004-S003-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "comparison",
+    "question": "¿Qué diseño de la nueva imagen contradice deliberadamente la degradación de metales y qué pretensión política expresa?",
+    "options": [
+      "sin descenso de valor y toda de oro → Babilonia eterna, indestructible y todopoderosa, vencedora de los demás reinos y permanente",
+      "descenso de oro a barro → Babilonia temporal, subordinada a Persia y destinada a dividirse",
+      "toda de plata → Media eterna pero incapaz de quebrantar otros reinos",
+      "sin metales y hecha de piedra → reino de Daniel que cedería ante Babilonia"
+    ],
+    "correct_option": 0,
+    "accepted_answers": ["sin descenso de valor y toda de oro → Babilonia eterna, indestructible y todopoderosa, vencedora de los demás reinos y permanente"],
+    "explanation": "La uniformidad de oro elimina el descenso de valores y convierte toda la estatua en una afirmación de supremacía babilónica eterna.",
+    "evidence_excerpt": "En su imagen no habría descenso de valores desde la cabeza hasta los pies, sino que se la haría por completo de oro, para que toda ella simbolizara a Babilonia como reino eterno, indestructible y todopoderoso que quebrantaría y desmenuzaría todos los demás reinos, y perduraría para siempre.",
+    "why_distractors_fail": {
+      "descenso de oro a barro → Babilonia temporal, subordinada a Persia y destinada a dividirse": "Restaura el diseño rechazado e invierte la pretensión de permanencia.",
+      "toda de plata → Media eterna pero incapaz de quebrantar otros reinos": "Cambia metal, reino y capacidad.",
+      "sin metales y hecha de piedra → reino de Daniel que cedería ante Babilonia": "Introduce una materia y un reino ajenos y revierte la supremacía."
+    },
+    "difficulty": "expert",
+    "importance": "critical",
+    "relation_type": "uniform_gold_denial_decline_babylon_eternal_supremacy",
+    "option_category": "design_change_symbolic_claim",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Relaciona una decisión material con cinco afirmaciones ideológicas.",
+    "variant_justification": "El hecho carecía de presentación aprobada; la variante exige traducir diseño visual en programa político.",
+    "author": {"id": "r2_c11_dan4_dan9", "model": "gpt-5.6-sol"}
+  }
+]

@@ -1,6 +1,6 @@
 # Conexión Bíblica 2026 — checkpoint competitivo v13
 
-- Actualizado: 2026-08-31 21:32:44 -06:00 (`America/Tegucigalpa`)
+- Actualizado: 2026-08-31 21:45:17 -06:00 (`America/Tegucigalpa`)
 - Fase actual: Release 2, autoría IA paralela y construcción de revisión ciega.
 - Rama: `codex/emergencia-competitiva-unica-v13`
 - Base segura: `24c542fa3d2936c8fd98db706a9db930ba8338a3`
@@ -39,4 +39,4 @@ Release 1 quedó fijado en `7dc70deb08345a9ecfdfdfd2e6a87c0a26c7df35` y desplega
 
 El incremento estable R2 quedó fijado en `b83cf26fdd363a8717b40de7492ab06c8a6e0109` y desplegado como `dpl_C5VMbaN79tjzAbba1GkZ3iiGDUh8`. El alias público pasó la auditoría remota de 20 recursos/18 shards/2,730 preguntas/2,217 hechos sin fallos y 25 flujos Chromium; 11 se omitieron por diseño de proyecto.
 
-Release 2 tiene 572 variantes candidatas revisadas a ciegas: 364 aprobadas, 208 rechazadas y cero pendientes de revisión. Los ciclos 11–14 agregaron 179 candidatas revisadas cruzadamente: 102 aprobadas y 77 rechazadas. El checkpoint append-only conserva exactamente las 262 aprobaciones publicadas y eleva el total editorial a 364, con hash `258d0a7e6ad228b759b6a03a6c8ec4b77a11c5e0843c3229c9757cfa1d14287e`. Las 102 nuevas todavía no están públicas; se acumularán hasta un siguiente incremento estable de 250. Quedan 1,853 hechos por cubrir para completar R2. Los paquetes ocultan autor, respuesta y explicaciones y usan una clave HMAC fuera del repositorio; como los subagentes comparten filesystem, la independencia demostrable es procedural, no aislamiento criptográfico contra un revisor malicioso.
+Release 2 tiene 599 variantes candidatas revisadas a ciegas: 384 aprobadas, 215 rechazadas y cero pendientes de revisión. Los ciclos 11–15 agregaron 206 candidatas revisadas cruzadamente: 122 aprobadas y 84 rechazadas. El checkpoint append-only conserva exactamente las 262 aprobaciones publicadas y eleva el total editorial a 384, con hash `7507bb7490a2f8217df7839990642b2a538032cdb2e8f8f09ae29e512caae249`. Las 122 nuevas todavía no están públicas; se acumularán hasta un siguiente incremento estable de 250. Quedan 1,833 hechos por cubrir para completar R2. Los paquetes ocultan autor, respuesta y explicaciones y usan una clave HMAC fuera del repositorio; como los subagentes comparten filesystem, la independencia demostrable es procedural, no aislamiento criptográfico contra un revisor malicioso.
