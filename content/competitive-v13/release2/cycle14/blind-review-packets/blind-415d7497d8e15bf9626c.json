@@ -1,0 +1,179 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-415d7497d8e15bf9626c",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN11-C14-001",
+      "source_unit_id": "DAN11-V031",
+      "fact_id": "DAN11-V031-F05",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué cadena asigna correctamente agente, profanación, supresión cultual e instalación final?",
+      "options": [
+        "las tropas se levantan → profanan santuario y fortaleza → quitan el sacrificio continuo → ponen la abominación desoladora",
+        "los sacerdotes se levantan → restauran santuario y fortaleza → aumentan el sacrificio continuo → quitan la abominación",
+        "el pueblo se dispersa → abandona las ciudades → conserva el sacrificio continuo → instala un nuevo altar",
+        "los reyes se reúnen → fortifican el santuario → trasladan el sacrificio → ponen tropas en Persia"
+      ],
+      "evidence_excerpt": "Se levantarán sus tropas, que profanarán el santuario y la fortaleza, quitarán el sacrificio continuo y pondrán la abominación desoladora.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "troops_profanation_sacrifice_removal_abomination",
+      "option_category": "cultic_deterioration_sequence",
+      "variant_justification": "La presentación existente pregunta sólo qué se instala después de quitar el sacrificio; esta variante exige agente, profanación previa, supresión e instalación.",
+      "authored_content_sha256": "9a906a6fbdca626995ad37481339e6a22f5621b801515d2826757546c072abc6",
+      "source_ref": "Daniel 11:31",
+      "source_quote": "Se levantarán sus tropas, que profanarán el santuario y la fortaleza, quitarán el sacrificio continuo y pondrán la abominación desoladora.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Las tropas profanan el santuario y quitan el sacrificio continuo. ¿Qué elemento colocan después?",
+          "family": "single_choice_contextual",
+          "subtype": "narrative_order"
+        },
+        {
+          "question": "¿Qué instalarán las tropas después de quitar el sacrificio continuo?",
+          "family": "single_choice_contextual",
+          "subtype": "narrative_order"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN11-C14-002",
+      "source_unit_id": "DAN11-V038",
+      "fact_id": "DAN11-V038-F02",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué ficha conserva objeto honrado, novedad respecto de los padres y cuatro medios de honra?",
+      "options": [
+        "dios de las fortalezas → desconocido por sus padres → oro, plata, piedras preciosas y cosas de gran precio",
+        "Dios de sus padres → conocido desde antiguo → hierro, bronce, madera y barro",
+        "príncipe de Persia → desconocido por sus tropas → sacrificios, incienso, vino y trigo",
+        "rey del sur → honrado por sus padres → fortalezas, barcos, caballos y provincias"
+      ],
+      "evidence_excerpt": "honrará en su lugar al dios de las fortalezas, un dios que sus padres no conocieron; lo honrará con oro y plata, con piedras preciosas y cosas de gran precio.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "fortress_deity_ancestral_novelty_valuable_honors",
+      "option_category": "object_novelty_offering_mapping",
+      "variant_justification": "La presentación existente pregunta sólo el ámbito del título; esta variante exige además novedad ancestral y medios materiales de honra.",
+      "authored_content_sha256": "eb98aa2823f108da10fdc9fda75dc0ba2a87ecf8588a620fecb4d88a0a34e6af",
+      "source_ref": "Daniel 11:38",
+      "source_quote": "Pero honrará en su lugar al dios de las fortalezas, un dios que sus padres no conocieron; lo honrará con oro y plata, con piedras preciosas y cosas de gran precio.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Qué ámbito da nombre al dios que el rey honra en lugar de los dioses de sus padres?",
+          "family": "single_choice_contextual",
+          "subtype": "identification"
+        },
+        {
+          "question": "¿Con qué ámbito se relaciona el título del dios desconocido por los padres del rey?",
+          "family": "single_choice_contextual",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN11-C14-003",
+      "source_unit_id": "DAN11-V028",
+      "fact_id": "DAN11-V028-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué itinerario conserva condición del retorno, orientación interior, acción autónoma y cierre geográfico?",
+      "options": [
+        "vuelve a su tierra con gran riqueza → pone su corazón contra el pacto santo → hace su voluntad → vuelve a su tierra",
+        "entra en tierra ajena sin riquezas → favorece el pacto santo → cumple la voluntad del pueblo → permanece en Jerusalén",
+        "regresa al sur con pocas tropas → pone su corazón contra Persia → consulta a los sabios → marcha a Grecia",
+        "sale de su tierra con despojos → restaura el pacto santo → renuncia a su voluntad → queda en Egipto"
+      ],
+      "evidence_excerpt": "Él volverá a su tierra con gran riqueza, y pondrá su corazón contra el pacto santo; hará su voluntad y volverá a su tierra.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "wealth_return_covenant_hostility_self_will_return",
+      "option_category": "framed_hostile_itinerary",
+      "variant_justification": "La presentación existente sólo verifica que riqueza precede la hostilidad; esta variante exige la estructura completa de retorno, intención, voluntad y segundo retorno.",
+      "authored_content_sha256": "daa6701fb29d050d35d4a9445682630e115f34833c297efa99711648ff7ce4aa",
+      "source_ref": "Daniel 11:28",
+      "source_quote": "Él volverá a su tierra con gran riqueza, y pondrá su corazón contra el pacto santo; hará su voluntad y volverá a su tierra.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "El gobernante volvería a su tierra con gran riqueza antes de actuar contra el pacto santo.",
+          "family": "true_false",
+          "subtype": "narrative_order"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN11-C14-004",
+      "source_unit_id": "DAN11-V044",
+      "fact_id": "DAN11-V044-F06",
+      "family": "single_choice_contextual",
+      "subtype": "cause_consequence",
+      "question": "¿Qué progresión enlaza procedencia de las noticias, efecto emocional, modo de salida y propósito destructivo?",
+      "options": [
+        "oriente y norte → temor → salida con gran ira → destruir y matar a muchos",
+        "occidente y sur → confianza → regreso en paz → proteger y enriquecer a muchos",
+        "norte y occidente → alegría → entrada con riquezas → liberar y reunir a muchos",
+        "sur y oriente → indiferencia → permanencia en su tierra → contar y pesar a muchos"
+      ],
+      "evidence_excerpt": "noticias del oriente y del norte lo atemorizarán, y saldrá con gran ira para destruir y matar a muchos.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "news_origins_fear_wrath_destructive_purpose",
+      "option_category": "cause_response_intent_chain",
+      "variant_justification": "La presentación existente pregunta sólo los puntos cardinales; esta variante exige además la cadena causal hasta el propósito de la salida.",
+      "authored_content_sha256": "bbc9e0ceabe6ef396809971539407c78224bf3f779df605e1b2deb1a5640941b",
+      "source_ref": "Daniel 11:44",
+      "source_quote": "Pero noticias del oriente y del norte lo atemorizarán, y saldrá con gran ira para destruir y matar a muchos.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿De qué dirección, además del norte, proceden las noticias que lo atemorizan?",
+          "family": "single_choice_contextual",
+          "subtype": "relationship"
+        },
+        {
+          "question": "¿Qué par de puntos cardinales marca el origen de las noticias que desatarán su temor?",
+          "family": "single_choice_contextual",
+          "subtype": "relationship"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN11-C14-005",
+      "source_unit_id": "DAN11-V019",
+      "fact_id": "DAN11-V019-V11-F02",
+      "family": "single_choice_contextual",
+      "subtype": "narrative_order",
+      "question": "¿Qué secuencia conserva orientación, destino inmediato, doble fracaso y desaparición final?",
+      "options": [
+        "vuelve el rostro → fortalezas de su tierra → tropieza y cae → no es hallado",
+        "vuelve el ejército → ciudades del sur → vence y se levanta → es coronado",
+        "vuelve la riqueza → santuario de su pueblo → negocia y permanece → es fortalecido",
+        "vuelve el mensajero → reino de Grecia → huye y se oculta → es encontrado"
+      ],
+      "evidence_excerpt": "Luego volverá su rostro a las fortalezas de su tierra; pero tropezará y caerá, y no será hallado.",
+      "difficulty": "hard",
+      "importance": "high",
+      "relation_type": "homeland_orientation_stumble_fall_disappearance",
+      "option_category": "terminal_failure_sequence",
+      "variant_justification": "La presentación existente completa únicamente el desenlace «no sería hallado»; esta variante exige orientación, destino, dos acciones de fracaso y estado final.",
+      "authored_content_sha256": "d73f0c9428a9dccfcd430dce6f10c2865d6569982622bda6f0d3b718292f4509",
+      "source_ref": "Daniel 11:19",
+      "source_quote": "Luego volverá su rostro a las fortalezas de su tierra; pero tropezará y caerá, y no será hallado.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "Después de tropezar y caer, el gobernante no sería ____.",
+          "family": "fill_choice",
+          "subtype": "cause_consequence"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "7897d2e497de09ad4b69824113ac9f6b90b30b50eb75b50bad54cde4198bdfa3"
+}

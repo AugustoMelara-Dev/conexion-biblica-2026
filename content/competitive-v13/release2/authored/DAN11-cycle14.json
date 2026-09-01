@@ -1,0 +1,192 @@
+[
+  {
+    "id": "V13-R2-DAN11-C14-001",
+    "source_unit_id": "DAN11-V031",
+    "fact_id": "DAN11-V031-F05",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué cadena asigna correctamente agente, profanación, supresión cultual e instalación final?",
+    "options": [
+      "las tropas se levantan → profanan santuario y fortaleza → quitan el sacrificio continuo → ponen la abominación desoladora",
+      "los sacerdotes se levantan → restauran santuario y fortaleza → aumentan el sacrificio continuo → quitan la abominación",
+      "el pueblo se dispersa → abandona las ciudades → conserva el sacrificio continuo → instala un nuevo altar",
+      "los reyes se reúnen → fortifican el santuario → trasladan el sacrificio → ponen tropas en Persia"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "las tropas se levantan → profanan santuario y fortaleza → quitan el sacrificio continuo → ponen la abominación desoladora"
+    ],
+    "explanation": "La acción de las tropas progresa desde la profanación del recinto fortificado hasta quitar el sacrificio continuo e instalar la abominación desoladora.",
+    "evidence_excerpt": "Se levantarán sus tropas, que profanarán el santuario y la fortaleza, quitarán el sacrificio continuo y pondrán la abominación desoladora.",
+    "why_distractors_fail": {
+      "los sacerdotes se levantan → restauran santuario y fortaleza → aumentan el sacrificio continuo → quitan la abominación": "Invierte agente y las tres acciones de deterioro cultual.",
+      "el pueblo se dispersa → abandona las ciudades → conserva el sacrificio continuo → instala un nuevo altar": "Sustituye la cadena completa por acciones y objetos no citados.",
+      "los reyes se reúnen → fortifican el santuario → trasladan el sacrificio → ponen tropas en Persia": "Cambia agente, dirección de la acción, objeto retirado y desenlace."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "troops_profanation_sacrifice_removal_abomination",
+    "option_category": "cultic_deterioration_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconstruir una progresión de cuatro acciones con agente y objetos distintos.",
+    "variant_justification": "La presentación existente pregunta sólo qué se instala después de quitar el sacrificio; esta variante exige agente, profanación previa, supresión e instalación.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN11-C14-002",
+    "source_unit_id": "DAN11-V038",
+    "fact_id": "DAN11-V038-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué ficha conserva objeto honrado, novedad respecto de los padres y cuatro medios de honra?",
+    "options": [
+      "dios de las fortalezas → desconocido por sus padres → oro, plata, piedras preciosas y cosas de gran precio",
+      "Dios de sus padres → conocido desde antiguo → hierro, bronce, madera y barro",
+      "príncipe de Persia → desconocido por sus tropas → sacrificios, incienso, vino y trigo",
+      "rey del sur → honrado por sus padres → fortalezas, barcos, caballos y provincias"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "dios de las fortalezas → desconocido por sus padres → oro, plata, piedras preciosas y cosas de gran precio"
+    ],
+    "explanation": "El objeto de honra es el dios de las fortalezas, ajeno a sus padres, y recibe cuatro clases de bienes valiosos.",
+    "evidence_excerpt": "honrará en su lugar al dios de las fortalezas, un dios que sus padres no conocieron; lo honrará con oro y plata, con piedras preciosas y cosas de gran precio.",
+    "why_distractors_fail": {
+      "Dios de sus padres → conocido desde antiguo → hierro, bronce, madera y barro": "Invierte la novedad del dios y reemplaza los cuatro medios de honra.",
+      "príncipe de Persia → desconocido por sus tropas → sacrificios, incienso, vino y trigo": "Sustituye objeto, referente de desconocimiento y ofrendas.",
+      "rey del sur → honrado por sus padres → fortalezas, barcos, caballos y provincias": "Cambia la naturaleza del objeto, la relación con los padres y todos los bienes."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "fortress_deity_ancestral_novelty_valuable_honors",
+    "option_category": "object_novelty_offering_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Coordina identidad, contraste ancestral e inventario homogéneo de cuatro medios de honra.",
+    "variant_justification": "La presentación existente pregunta sólo el ámbito del título; esta variante exige además novedad ancestral y medios materiales de honra.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN11-C14-003",
+    "source_unit_id": "DAN11-V028",
+    "fact_id": "DAN11-V028-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué itinerario conserva condición del retorno, orientación interior, acción autónoma y cierre geográfico?",
+    "options": [
+      "vuelve a su tierra con gran riqueza → pone su corazón contra el pacto santo → hace su voluntad → vuelve a su tierra",
+      "entra en tierra ajena sin riquezas → favorece el pacto santo → cumple la voluntad del pueblo → permanece en Jerusalén",
+      "regresa al sur con pocas tropas → pone su corazón contra Persia → consulta a los sabios → marcha a Grecia",
+      "sale de su tierra con despojos → restaura el pacto santo → renuncia a su voluntad → queda en Egipto"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "vuelve a su tierra con gran riqueza → pone su corazón contra el pacto santo → hace su voluntad → vuelve a su tierra"
+    ],
+    "explanation": "El pasaje enmarca la hostilidad contra el pacto y la acción voluntaria entre dos referencias al retorno a su tierra, la primera acompañada de riqueza.",
+    "evidence_excerpt": "Él volverá a su tierra con gran riqueza, y pondrá su corazón contra el pacto santo; hará su voluntad y volverá a su tierra.",
+    "why_distractors_fail": {
+      "entra en tierra ajena sin riquezas → favorece el pacto santo → cumple la voluntad del pueblo → permanece en Jerusalén": "Invierte condición, orientación, agencia y destino.",
+      "regresa al sur con pocas tropas → pone su corazón contra Persia → consulta a los sabios → marcha a Grecia": "Reemplaza los cuatro miembros por lugares y acciones no mencionados.",
+      "sale de su tierra con despojos → restaura el pacto santo → renuncia a su voluntad → queda en Egipto": "Invierte movimiento, relación con el pacto, voluntad y cierre geográfico."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "wealth_return_covenant_hostility_self_will_return",
+    "option_category": "framed_hostile_itinerary",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconocer una estructura envolvente y las dos acciones interiores que contiene.",
+    "variant_justification": "La presentación existente sólo verifica que riqueza precede la hostilidad; esta variante exige la estructura completa de retorno, intención, voluntad y segundo retorno.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN11-C14-004",
+    "source_unit_id": "DAN11-V044",
+    "fact_id": "DAN11-V044-F06",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "cause_consequence",
+    "question": "¿Qué progresión enlaza procedencia de las noticias, efecto emocional, modo de salida y propósito destructivo?",
+    "options": [
+      "oriente y norte → temor → salida con gran ira → destruir y matar a muchos",
+      "occidente y sur → confianza → regreso en paz → proteger y enriquecer a muchos",
+      "norte y occidente → alegría → entrada con riquezas → liberar y reunir a muchos",
+      "sur y oriente → indiferencia → permanencia en su tierra → contar y pesar a muchos"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "oriente y norte → temor → salida con gran ira → destruir y matar a muchos"
+    ],
+    "explanation": "Las noticias procedentes del oriente y del norte causan temor, que desemboca en una salida airada con doble propósito destructivo.",
+    "evidence_excerpt": "noticias del oriente y del norte lo atemorizarán, y saldrá con gran ira para destruir y matar a muchos.",
+    "why_distractors_fail": {
+      "occidente y sur → confianza → regreso en paz → proteger y enriquecer a muchos": "Invierte los cuatro eslabones causales y direccionales.",
+      "norte y occidente → alegría → entrada con riquezas → liberar y reunir a muchos": "Conserva sólo un punto cardinal y sustituye emoción, movimiento y propósito.",
+      "sur y oriente → indiferencia → permanencia en su tierra → contar y pesar a muchos": "Mezcla una dirección correcta con tres elementos ausentes."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "news_origins_fear_wrath_destructive_purpose",
+    "option_category": "cause_response_intent_chain",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Integra dos procedencias con emoción, movimiento y finalidad doble.",
+    "variant_justification": "La presentación existente pregunta sólo los puntos cardinales; esta variante exige además la cadena causal hasta el propósito de la salida.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN11-C14-005",
+    "source_unit_id": "DAN11-V019",
+    "fact_id": "DAN11-V019-V11-F02",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "narrative_order",
+    "question": "¿Qué secuencia conserva orientación, destino inmediato, doble fracaso y desaparición final?",
+    "options": [
+      "vuelve el rostro → fortalezas de su tierra → tropieza y cae → no es hallado",
+      "vuelve el ejército → ciudades del sur → vence y se levanta → es coronado",
+      "vuelve la riqueza → santuario de su pueblo → negocia y permanece → es fortalecido",
+      "vuelve el mensajero → reino de Grecia → huye y se oculta → es encontrado"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "vuelve el rostro → fortalezas de su tierra → tropieza y cae → no es hallado"
+    ],
+    "explanation": "El gobernante orienta su atención hacia las fortalezas de su propia tierra, pero tropieza, cae y deja de ser hallado.",
+    "evidence_excerpt": "Luego volverá su rostro a las fortalezas de su tierra; pero tropezará y caerá, y no será hallado.",
+    "why_distractors_fail": {
+      "vuelve el ejército → ciudades del sur → vence y se levanta → es coronado": "Sustituye orientación, destino y desenlace por una victoria inexistente.",
+      "vuelve la riqueza → santuario de su pueblo → negocia y permanece → es fortalecido": "Cambia sujeto gramatical, destino, acciones y resultado.",
+      "vuelve el mensajero → reino de Grecia → huye y se oculta → es encontrado": "Reemplaza los tres primeros miembros e invierte la desaparición final."
+    },
+    "difficulty": "hard",
+    "importance": "high",
+    "relation_type": "homeland_orientation_stumble_fall_disappearance",
+    "option_category": "terminal_failure_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige reconstruir una progresión terminal de cuatro miembros y no sólo su último estado.",
+    "variant_justification": "La presentación existente completa únicamente el desenlace «no sería hallado»; esta variante exige orientación, destino, dos acciones de fracaso y estado final.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]

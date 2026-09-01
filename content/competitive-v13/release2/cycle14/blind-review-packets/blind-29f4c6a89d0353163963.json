@@ -1,0 +1,71 @@
+{
+  "schema_version": "competitive-v13-blind-review/v1",
+  "release": 2,
+  "blind_batch_id": "blind-29f4c6a89d0353163963",
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "questions": [
+    {
+      "id": "V13-R2-DAN10-C14-001",
+      "source_unit_id": "DAN10-V011",
+      "fact_id": "DAN10-V011-V11-F04",
+      "family": "single_choice_direct",
+      "subtype": "narrative_order",
+      "question": "¿Qué secuencia conserva tratamiento, doble mandato, razón de la visita y respuesta corporal de Daniel?",
+      "options": [
+        "«varón muy amado» → atender las palabras y ponerse en pie → el mensajero había sido enviado a él → Daniel se puso en pie temblando",
+        "«siervo rebelde» → cerrar el libro y arrodillarse → el mensajero venía por Persia → Daniel permaneció dormido",
+        "«príncipe de Judá» → mirar el río y guardar silencio → Daniel había llamado al mensajero → ambos huyeron",
+        "«rey muy amado» → escribir las palabras y sentarse → el mensajero fue enviado a Darío → Daniel se puso en pie sin temor"
+      ],
+      "evidence_excerpt": "Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora. Mientras hablaba esto conmigo, me puse en pie temblando.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "address_commands_mission_embodied_response",
+      "option_category": "speech_response_sequence",
+      "variant_justification": "La presentación existente pregunta únicamente el título afectuoso; esta variante exige además los dos mandatos, la razón del envío y la respuesta de Daniel.",
+      "authored_content_sha256": "d8db301ab084d5520f1875927abb34569b29eddea6a015fc6af31dbbad728e4a",
+      "source_ref": "Daniel 10:11",
+      "source_quote": "Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿Con qué título afectuoso se dirigió el mensajero a Daniel?",
+          "family": "single_choice_direct",
+          "subtype": "identification"
+        }
+      ]
+    },
+    {
+      "id": "V13-R2-DAN10-C14-002",
+      "source_unit_id": "DAN10-V014",
+      "fact_id": "DAN10-V014-V11-F03",
+      "family": "single_choice_contextual",
+      "subtype": "relationship",
+      "question": "¿Qué mapa distribuye propósito del mensajero, destinatario del conocimiento, grupo afectado y horizonte temporal de la visión?",
+      "options": [
+        "hacer saber lo venidero → Daniel recibe la explicación → su pueblo afrontará los acontecimientos → la visión corresponde a los últimos días",
+        "ocultar lo sucedido → Darío recibe la explicación → Persia afrontará los acontecimientos → la visión corresponde al primer año",
+        "interpretar un sueño → Miguel recibe la explicación → los caldeos afrontarán los acontecimientos → la visión carece de horizonte",
+        "dictar un decreto → Ciro recibe la explicación → Grecia evita los acontecimientos → la visión corresponde a días ya pasados"
+      ],
+      "evidence_excerpt": "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.",
+      "difficulty": "expert",
+      "importance": "high",
+      "relation_type": "messenger_purpose_recipient_people_temporal_horizon",
+      "option_category": "prophetic_mission_mapping",
+      "variant_justification": "La presentación existente recupera sólo a quién afectarían los acontecimientos; esta variante integra propósito, destinatario de la explicación, grupo afectado y temporalidad.",
+      "authored_content_sha256": "7fc64000c6efd8fd9a3751c830be8dc37b602d7bd21c13b695b3330ede4c5880",
+      "source_ref": "Daniel 10:14",
+      "source_quote": "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.”",
+      "parent_context": null,
+      "existing_presentations": [
+        {
+          "question": "¿A quién afectarían los acontecimientos que el mensajero vino a explicar?",
+          "family": "single_choice_contextual",
+          "subtype": "speaker_addressee"
+        }
+      ]
+    }
+  ],
+  "packet_sha256": "165fa2ad2443c9abda2a6123d5061825f3483e3f06186b653616aaa6e4c8ec0f"
+}

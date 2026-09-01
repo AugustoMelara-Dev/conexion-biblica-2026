@@ -1,0 +1,78 @@
+[
+  {
+    "id": "V13-R2-DAN10-C14-001",
+    "source_unit_id": "DAN10-V011",
+    "fact_id": "DAN10-V011-V11-F04",
+    "role": "variant",
+    "family": "single_choice_direct",
+    "subtype": "narrative_order",
+    "question": "¿Qué secuencia conserva tratamiento, doble mandato, razón de la visita y respuesta corporal de Daniel?",
+    "options": [
+      "«varón muy amado» → atender las palabras y ponerse en pie → el mensajero había sido enviado a él → Daniel se puso en pie temblando",
+      "«siervo rebelde» → cerrar el libro y arrodillarse → el mensajero venía por Persia → Daniel permaneció dormido",
+      "«príncipe de Judá» → mirar el río y guardar silencio → Daniel había llamado al mensajero → ambos huyeron",
+      "«rey muy amado» → escribir las palabras y sentarse → el mensajero fue enviado a Darío → Daniel se puso en pie sin temor"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "«varón muy amado» → atender las palabras y ponerse en pie → el mensajero había sido enviado a él → Daniel se puso en pie temblando"
+    ],
+    "explanation": "El mensajero trata a Daniel como muy amado, le manda atender y levantarse, explica que fue enviado a él y provoca que se ponga en pie temblando.",
+    "evidence_excerpt": "Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora. Mientras hablaba esto conmigo, me puse en pie temblando.",
+    "why_distractors_fail": {
+      "«siervo rebelde» → cerrar el libro y arrodillarse → el mensajero venía por Persia → Daniel permaneció dormido": "Cambia el tratamiento, ambos mandatos, la razón del envío y la reacción de Daniel.",
+      "«príncipe de Judá» → mirar el río y guardar silencio → Daniel había llamado al mensajero → ambos huyeron": "Sustituye todos los miembros explícitos de la secuencia por acciones ausentes.",
+      "«rey muy amado» → escribir las palabras y sentarse → el mensajero fue enviado a Darío → Daniel se puso en pie sin temor": "Conserva sólo una acción parcial e invierte destinatario, mandatos y estado corporal."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "address_commands_mission_embodied_response",
+    "option_category": "speech_response_sequence",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige coordinar cuatro funciones consecutivas del diálogo y su efecto corporal.",
+    "variant_justification": "La presentación existente pregunta únicamente el título afectuoso; esta variante exige además los dos mandatos, la razón del envío y la respuesta de Daniel.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  },
+  {
+    "id": "V13-R2-DAN10-C14-002",
+    "source_unit_id": "DAN10-V014",
+    "fact_id": "DAN10-V014-V11-F03",
+    "role": "variant",
+    "family": "single_choice_contextual",
+    "subtype": "relationship",
+    "question": "¿Qué mapa distribuye propósito del mensajero, destinatario del conocimiento, grupo afectado y horizonte temporal de la visión?",
+    "options": [
+      "hacer saber lo venidero → Daniel recibe la explicación → su pueblo afrontará los acontecimientos → la visión corresponde a los últimos días",
+      "ocultar lo sucedido → Darío recibe la explicación → Persia afrontará los acontecimientos → la visión corresponde al primer año",
+      "interpretar un sueño → Miguel recibe la explicación → los caldeos afrontarán los acontecimientos → la visión carece de horizonte",
+      "dictar un decreto → Ciro recibe la explicación → Grecia evita los acontecimientos → la visión corresponde a días ya pasados"
+    ],
+    "correct_option": 0,
+    "accepted_answers": [
+      "hacer saber lo venidero → Daniel recibe la explicación → su pueblo afrontará los acontecimientos → la visión corresponde a los últimos días"
+    ],
+    "explanation": "El mensajero llega para informar a Daniel acerca de lo que sucederá a su pueblo en los últimos días, horizonte al cual pertenece la visión.",
+    "evidence_excerpt": "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.",
+    "why_distractors_fail": {
+      "ocultar lo sucedido → Darío recibe la explicación → Persia afrontará los acontecimientos → la visión corresponde al primer año": "Invierte el propósito y cambia destinatario, grupo y horizonte.",
+      "interpretar un sueño → Miguel recibe la explicación → los caldeos afrontarán los acontecimientos → la visión carece de horizonte": "Atribuye tareas y participantes ausentes y elimina la referencia temporal explícita.",
+      "dictar un decreto → Ciro recibe la explicación → Grecia evita los acontecimientos → la visión corresponde a días ya pasados": "Sustituye los cuatro ejes de la declaración del mensajero."
+    },
+    "difficulty": "expert",
+    "importance": "high",
+    "relation_type": "messenger_purpose_recipient_people_temporal_horizon",
+    "option_category": "prophetic_mission_mapping",
+    "false_mutation": null,
+    "blank_span": null,
+    "significance": "Exige distinguir destinatario inmediato, referente colectivo y horizonte de cumplimiento.",
+    "variant_justification": "La presentación existente recupera sólo a quién afectarían los acontecimientos; esta variante integra propósito, destinatario de la explicación, grupo afectado y temporalidad.",
+    "author": {
+      "id": "r2_author_f",
+      "model": "gpt-5.6-sol"
+    }
+  }
+]
