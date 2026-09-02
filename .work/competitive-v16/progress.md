@@ -16,10 +16,11 @@
 | **Hechos con Variante R2 Aprobada** | 970 | +240 (W3) +181 (W4) | **1,391** |
 | **Hechos R2 Pendientes** | 1,247 | -240 (W3) -181 (W4) | **826** |
 | **R3 Candidatas Generadas** | 0 | +60 (P1) +60 (P2) | **120** |
-| **R3 COMPETITIVE_ACCEPT** | 0 | +53 (P2) | **53** (de 1,315) |
+| **R3 COMPETITIVE_ACCEPT Verificadas** | 0 | 0 | **0** (de 1,315) |
+| **R3 Candidatas Provisionales (Staging)** | 0 | +60 (P2) | **60** (`R3_PROVISIONAL_UNVERIFIED`) |
 | **R3 Degradadas a Cobertura** | 80 | +59 (P1) +7 (P2) | **146** |
 | **R3 Rechazadas / En Revisión** | 0 | +1 (P1) | **1** |
-| **Translation Noise Aprobadas** | 0 | +9 (P2) | **9** |
+| **Translation Noise Aprobadas** | 0 | 0 | **0** (provisionales) |
 | **Shards Públicos** | 18 | 18 | **18 shards** |
 
 ---

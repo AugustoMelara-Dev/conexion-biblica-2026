@@ -14,6 +14,7 @@ import {
   selectCoverageCycle,
   selectSequentialBlock,
 } from "@/domain/session-selection"
+import { selectSprintNacionalRound } from "@/domain/sprint-3x"
 import type {
   ActiveRound,
   Question,
@@ -255,7 +256,17 @@ export function App() {
           target,
           nextConfig.sequentialBlock ?? 0
         ).questions
-      else
+      else if (
+        nextConfig.trainingPresetId === "sprint-nacional-3x" ||
+        nextConfig.strategy === "sprint-3x"
+      ) {
+        selected = selectSprintNacionalRound(
+          roundQuestions,
+          target,
+          timestamp()
+        )
+        selectionSummary = { strategy: "sprint-3x" }
+      } else
         selected = selectSessionQuestions(
           roundQuestions,
           progress,

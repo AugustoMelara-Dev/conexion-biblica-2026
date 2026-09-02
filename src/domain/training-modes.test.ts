@@ -2,9 +2,10 @@ import { describe, expect, it } from "vitest"
 import { MASSIVE_TRAINING_MODES, getMassiveTrainingMode } from "@/domain/training-modes"
 
 describe("catálogo de modos masivos", () => {
-  it("define exactamente los veinte modos solicitados", () => {
-    expect(MASSIVE_TRAINING_MODES).toHaveLength(20)
-    expect(new Set(MASSIVE_TRAINING_MODES.map((mode) => mode.id)).size).toBe(20)
+  it("define exactamente los modos solicitados incluyendo sprint nacional 3x", () => {
+    expect(MASSIVE_TRAINING_MODES).toHaveLength(21)
+    expect(new Set(MASSIVE_TRAINING_MODES.map((mode) => mode.id)).size).toBe(21)
+    expect(getMassiveTrainingMode("sprint-nacional-3x").count).toBe(100)
     expect(getMassiveTrainingMode("national-final").count).toBe(100)
     expect(getMassiveTrainingMode("extreme-championship").count).toBe(200)
   })

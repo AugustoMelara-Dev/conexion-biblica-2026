@@ -20,7 +20,7 @@ describe("centro de entrenamiento masivo", () => {
     expect(screen.queryByRole("combobox", { name: "Modo avanzado" })).not.toBeInTheDocument()
     await userEvent.click(screen.getByRole("button", { name: "Ver plan y modos" }))
     const select = screen.getByRole("combobox", { name: "Modo avanzado" })
-    expect(screen.getAllByRole("option")).toHaveLength(19)
+    expect(screen.getAllByRole("option")).toHaveLength(20)
     expect(
       screen.queryByRole("option", { name: /Simulación ciega/ })
     ).not.toBeInTheDocument()

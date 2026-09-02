@@ -33,7 +33,7 @@ export type BankProfileId =
 export type BankSelection = BankProfileId | "mixed"
 export type DifficultyBand = "BASIC" | "MEDIUM" | "HARD" | "EXPERT" | "UNRATED"
 export type AnswerMode = "option_id" | "canonical_text"
-export type SelectionStrategy = "coverage-cycle" | "random-balanced" | "sequential-blocks" | "adaptive"
+export type SelectionStrategy = "coverage-cycle" | "random-balanced" | "sequential-blocks" | "adaptive" | "sprint-3x"
 export type MatchItem = { id: string; text: string }
 export type CorrectMatch = { left: string; right: string }
 
