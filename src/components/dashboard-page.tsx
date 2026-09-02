@@ -15,6 +15,13 @@ import { MetricStrip } from "@/components/layout/metric-strip"
 import { SectionHeader } from "@/components/layout/section-header"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import {
   Table,
@@ -87,6 +94,7 @@ export function DashboardPage({
 }) {
   const {
     statistics,
+    activeRound,
     questions,
     sessions,
     progress,
@@ -111,7 +119,7 @@ export function DashboardPage({
       : general.difficult > 0
         ? `${general.difficult} preguntas difíciles merecen un repaso.`
         : "Mantén el ritmo con una ronda breve."
-  const evidenceAccuracy = (kind: "cold" | "deferred" | "blind") => {
+  const evidenceAccuracy = (kind: "cold" | "deferred") => {
     const totals = exposures.reduce(
       (sum, exposure) => ({
         attempts: sum.attempts + (exposure.evidence?.[kind].attempts ?? 0),
@@ -128,7 +136,39 @@ export function DashboardPage({
   ).length
 
   return (
-    <div className="flex min-w-0 flex-col gap-10">
+    <div className="flex min-w-0 flex-col gap-8">
+      {activeRound ? (
+        <Card className="border-2 border-primary bg-primary/5 shadow-sm">
+          <CardHeader className="pb-3">
+            <div className="flex items-center justify-between">
+              <Badge variant="default" className="font-bold">
+                Ronda en curso
+              </Badge>
+              <span className="text-xs font-medium text-muted-foreground">
+                Pregunta {activeRound.currentIndex + 1} de {activeRound.questionKeys.length}
+              </span>
+            </div>
+            <CardTitle className="text-xl font-bold mt-1">
+              {activeRound.config.strategy === "sprint-3x"
+                ? "Sprint Nacional 3X"
+                : "Ronda de práctica activa"}
+            </CardTitle>
+            <CardDescription>
+              Tienes una ronda abierta guardada localmente. Puedes continuar exactamente donde la dejaste.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button
+              size="lg"
+              className="w-full sm:w-auto font-semibold"
+              onClick={() => setNav("practice")}
+            >
+              Continuar ronda ({activeRound.currentIndex + 1}/{activeRound.questionKeys.length})
+            </Button>
+          </CardContent>
+        </Card>
+      ) : null}
+
       <SprintDailyTracker
         onStartSprint={(cfg) =>
           onStartMission ? onStartMission(cfg) : setNav("practice")
@@ -136,18 +176,7 @@ export function DashboardPage({
         onStartSimulation={(cfg) =>
           onStartMission ? onStartMission(cfg) : setNav("practice")
         }
-      />
-
-      <FinalMissionDashboard
-        completedMissionIds={sessions
-          .map((session) => session.config.trainingPresetId)
-          .filter((id): id is string => Boolean(id))}
-        onContinue={(mission) =>
-          onStartMission
-            ? onStartMission(missionConfig(mission))
-            : setNav("practice")
-        }
-        onManual={() => setNav("practice")}
+        onConfigureRound={() => setNav("practice")}
       />
 
       <MetricStrip
@@ -163,12 +192,6 @@ export function DashboardPage({
             value: `${evidenceAccuracy("deferred")}%`,
             detail: "Después de un intervalo",
             icon: Clock3,
-          },
-          {
-            label: "Precisión ciega",
-            value: `${evidenceAccuracy("blind")}%`,
-            detail: "Reserva A/B",
-            icon: Gauge,
           },
           {
             label: "Dominio por hechos",
@@ -199,8 +222,8 @@ export function DashboardPage({
           </div>
           <Badge variant="outline" className="w-fit bg-background/70">
             {finalManifest
-              ? `${finalManifest.gold_questions.toLocaleString("es-HN")} preguntas GOLD`
-              : "Cargando banco GOLD…"}
+              ? `${finalManifest.gold_questions.toLocaleString("es-HN")} preguntas oficiales`
+              : "Cargando banco oficial…"}
           </Badge>
         </div>
       </section>
@@ -394,6 +417,27 @@ export function DashboardPage({
           </div>
         </div>
       </section>
+
+      {/* Misiones del plan general (panel secundario) */}
+      <details className="group rounded-2xl border bg-card/60 p-5 shadow-none">
+        <summary className="cursor-pointer text-sm font-semibold text-muted-foreground flex items-center justify-between">
+          <span>Ver misiones guiadas adicionales</span>
+          <span className="text-xs text-primary font-normal">Plan 48 Horas</span>
+        </summary>
+        <div className="mt-5 pt-4 border-t">
+          <FinalMissionDashboard
+            completedMissionIds={sessions
+              .map((session) => session.config.trainingPresetId)
+              .filter((id): id is string => Boolean(id))}
+            onContinue={(mission) =>
+              onStartMission
+                ? onStartMission(missionConfig(mission))
+                : setNav("practice")
+            }
+            onManual={() => setNav("practice")}
+          />
+        </div>
+      </details>
 
       <p
         className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-muted-foreground"

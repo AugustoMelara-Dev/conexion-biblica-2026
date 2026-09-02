@@ -576,10 +576,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
     async (config: import("@/domain/types").SessionConfig) => {
       if (!repositories)
         throw new Error("El almacenamiento todavía no está disponible")
-      const desiredCount = config.count === "all" ? 200 : config.count
-      const adaptivePoolCount = requiresFactMasteryPool(config.trainingPresetId)
-        ? Math.max(desiredCount, desiredCount * 4)
-        : desiredCount
+      const isManual = config.selectionOrigin === "manual"
+      const desiredCount = isManual
+        ? 3873
+        : config.count === "all"
+          ? 200
+          : config.count
+      const adaptivePoolCount = isManual
+        ? 3873
+        : requiresFactMasteryPool(config.trainingPresetId)
+          ? Math.max(desiredCount, desiredCount * 4)
+          : desiredCount
       const factFilter = factFilterForPreset(
         config.trainingPresetId,
         factMastery,

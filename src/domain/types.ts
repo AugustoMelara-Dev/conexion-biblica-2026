@@ -214,6 +214,8 @@ export type SessionConfig = {
   trainingPresetId?: string
   includeBlind?: boolean
   massive?: boolean
+  selectionOrigin?: "manual" | "preset" | "sprint" | "simulation"
+  tierFilter?: "all" | "coverage" | "competitive"
 }
 
 export type CoverageCycle = {
@@ -236,6 +238,17 @@ export type ActiveRound = {
   answers: SessionAnswer[]
   config: SessionConfig
   selectionSummary?: SelectionSummary
+  requestedConfig?: SessionConfig
+  realizedSummary?: {
+    total: number
+    prCount: number
+    danielCount: number
+    chapterCounts: Record<string, number>
+    familyCounts: Record<string, number>
+    competitiveCount: number
+    coverageCount: number
+  }
+  quotaShortfalls?: Record<string, number>
 }
 
 export type SessionAnswer = {

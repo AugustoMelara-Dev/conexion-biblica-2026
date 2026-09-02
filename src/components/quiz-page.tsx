@@ -770,6 +770,29 @@ export function QuizPage({
   const completion = ((index + (submitted ? 1 : 0)) / queue.length) * 100
   const instruction = "Elige una respuesta y confirma."
 
+  const roundContractTitle = useMemo(() => {
+    if (config.strategy === "sprint-3x") {
+      return "Sprint Nacional 3X · 70% PR / 30% Daniel · 100 preguntas"
+    }
+    const worksText =
+      config.sourceWorks.length === 1
+        ? config.sourceWorks[0] === "Profetas y Reyes"
+          ? "PR"
+          : "Daniel"
+        : "Mixto"
+    const chaptersText =
+      config.chapters.length > 0
+        ? `Cap. ${config.chapters.join(", ")}`
+        : "Todos los capítulos"
+    const levelText =
+      config.tierFilter === "competitive"
+        ? "Competitivas"
+        : config.tierFilter === "coverage"
+          ? "Cobertura"
+          : "Estándar"
+    return `${worksText} · ${chaptersText} · ${levelText} · ${queue.length} preguntas`
+  }, [config, queue.length])
+
   return (
     <article className="mx-auto flex min-h-screen w-full max-w-3xl flex-col px-4 py-5 pb-28 sm:px-6 sm:py-6">
       <header className="grid grid-cols-[auto_1fr_auto] items-center gap-3">
@@ -782,11 +805,21 @@ export function QuizPage({
           Salir
         </Button>
         <div className="min-w-0">
-          <div className="mb-2 flex items-center justify-between gap-3 text-xs font-medium text-muted-foreground">
+          <div className="mb-1 flex items-center justify-between gap-3 text-xs font-medium text-muted-foreground">
             <span>
               Pregunta {index + 1} de {queue.length}
             </span>
             <span>{Math.round(completion)}%</span>
+          </div>
+          <div
+            className="mb-1.5 text-[11px] font-semibold text-primary truncate"
+            data-testid="round-contract-summary"
+            data-questions-count={questions.length}
+            data-pr-count={questions.filter((q) => q.source.work === "Profetas y Reyes").length}
+            data-dan-count={questions.filter((q) => q.source.work === "Daniel").length}
+            data-competitive-count={questions.filter((q) => q.tier === "COMPETITIVE_ACCEPT" || q.difficultyBand === "HARD" || q.difficultyBand === "EXPERT").length}
+          >
+            {roundContractTitle}
           </div>
           <Progress aria-label="Progreso de la ronda" value={completion} />
         </div>

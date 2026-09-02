@@ -6,7 +6,7 @@ import {
   useState,
   type ReactNode,
 } from "react"
-import { CircleHelp, Shuffle, TimerReset } from "lucide-react"
+import { ChevronDown, CircleHelp, Shuffle, TimerReset } from "lucide-react"
 import { useApp } from "@/app/app-state"
 import { AdvancedSettings } from "@/components/practice/advanced-settings"
 import { EssentialSettings } from "@/components/practice/essential-settings"
@@ -32,19 +32,19 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { Switch } from "@/components/ui/switch"
-import { filterEligibleQuestions } from "@/domain/session-selector"
 import {
   buildPoolKey,
   getSequentialBlockCount,
 } from "@/domain/session-selection"
+import { computeFacetedCounts } from "@/domain/manual-selector"
 import { SIMULATION_PRESET } from "@/domain/simulation-calibration"
 import { getStudyDay, type StudyDay } from "@/domain/study-plan"
 import {
   type DifficultyBand,
   type QuestionStatus,
   type QuestionType,
-  type SelectionStrategy,
   type SessionConfig,
+  type SourceWork,
 } from "@/domain/types"
 import { typeLabel } from "@/lib/statistics"
 
@@ -79,6 +79,7 @@ const initialConfig: SessionConfig = {
   totalSeconds: null,
   bankSelection: "final-v7",
   strategy: "coverage-cycle",
+  selectionOrigin: "manual",
 }
 
 export function SessionBuilderPage({
@@ -100,7 +101,11 @@ export function SessionBuilderPage({
   const [totalEnabled, setTotalEnabled] = useState(false)
   const [starting, setStarting] = useState(false)
   const [startError, setStartError] = useState<string | null>(null)
+  const [showMoreModes, setShowMoreModes] = useState(false)
   const startingRef = useRef(false)
+
+  const isMockManifest = Boolean(finalManifest && finalManifest.shards.length < 18)
+
   const finalChapterCounts = useMemo(() => {
     const counts = new Map<string, number>()
     if (bankSelection !== "final-v7" || !finalManifest) return counts
@@ -116,6 +121,7 @@ export function SessionBuilderPage({
     }
     return counts
   }, [bankSelection, finalManifest])
+
   const availableChapters = useMemo(() => {
     if (finalChapterCounts.size) return new Set(finalChapterCounts.keys())
     return new Set(
@@ -125,27 +131,6 @@ export function SessionBuilderPage({
     )
   }, [finalChapterCounts, questions])
 
-  useEffect(() => {
-    setConfig((current) => ({
-      ...current,
-      bankSelection,
-      difficultyBands:
-        bankSelection === "legacy-v1"
-          ? undefined
-          : (current.difficultyBands ?? [
-              "BASIC",
-              "MEDIUM",
-              "HARD",
-              "EXPERT",
-              "UNRATED",
-            ]),
-    }))
-  }, [bankSelection])
-
-  const eligibleQuestions = useMemo(
-    () => filterEligibleQuestions(questions, progress, config),
-    [config, progress, questions]
-  )
   const manifestEstimate = useMemo(() => {
     if (bankSelection !== "final-v7" || !finalChapterCounts.size) return null
     if (!config.sourceWorks.length || !config.types.length) return 0
@@ -166,37 +151,68 @@ export function SessionBuilderPage({
     }
     return total
   }, [bankSelection, config, finalChapterCounts])
-  const estimated = manifestEstimate ?? eligibleQuestions.length
+
+  // Use exact in-memory faceted counts
+  const facetedCounts = useMemo(() => {
+    return computeFacetedCounts(config, progress, questions)
+  }, [config, progress, questions])
+
+  const estimated = isMockManifest
+    ? (manifestEstimate ?? facetedCounts.totalEligible)
+    : facetedCounts.totalEligible
+
   const update = (partial: Partial<SessionConfig>) =>
     setConfig((current) => ({ ...current, ...partial }))
+
+  const handleSourceWorksChange = (works: SourceWork[]) => {
+    setConfig((current) => {
+      // Clear chapters incompatible with the newly selected works
+      const nextChapters = current.chapters.filter((ch) => {
+        if (works.includes("Daniel") && ch >= 1 && ch <= 12) return true
+        if (works.includes("Profetas y Reyes") && ch >= 39 && ch <= 44) return true
+        return false
+      })
+      return {
+        ...current,
+        sourceWorks: works,
+        chapters: nextChapters,
+      }
+    })
+  }
+
   const toggleDifficulty = (difficulty: number) =>
     update({
       difficulties: config.difficulties.includes(difficulty)
         ? config.difficulties.filter((item) => item !== difficulty)
         : [...config.difficulties, difficulty],
     })
+
   const toggleDifficultyBand = (band: DifficultyBand) =>
     update({
       difficultyBands: config.difficultyBands?.includes(band)
         ? config.difficultyBands.filter((item) => item !== band)
         : [...(config.difficultyBands ?? []), band],
     })
+
   const toggleType = (type: QuestionType) =>
     update({
       types: config.types.includes(type)
         ? config.types.filter((item) => item !== type)
         : [...config.types, type],
     })
+
   const toggleChapter = (chapter: number) =>
     update({
       chapters: config.chapters.includes(chapter)
         ? config.chapters.filter((item) => item !== chapter)
         : [...config.chapters, chapter],
     })
+
   const currentCycle =
     config.strategy === "coverage-cycle"
       ? coverageCycles.get(buildPoolKey(config))
       : undefined
+
   const sequentialBlockCount = Math.max(
     1,
     getSequentialBlockCount(estimated, config.count)
@@ -229,9 +245,11 @@ export function SessionBuilderPage({
     )
     setTotalEnabled(mode === "simulation")
   }
+
   const resetCycle = Boolean(
     currentCycle && currentCycle.remainingQuestionKeys.length === 0
   )
+
   const startRound = async (
     nextConfig: SessionConfig,
     shouldResetCycle = false
@@ -241,7 +259,14 @@ export function SessionBuilderPage({
     setStarting(true)
     setStartError(null)
     try {
-      await onStart(nextConfig, shouldResetCycle)
+      await onStart(
+        {
+          ...nextConfig,
+          selectionOrigin: "manual",
+          massive: nextConfig.bankSelection === "final-v7" || nextConfig.massive,
+        },
+        shouldResetCycle
+      )
     } catch (error) {
       setStartError(
         error instanceof Error
@@ -257,15 +282,15 @@ export function SessionBuilderPage({
   return (
     <div className="flex flex-col gap-7">
       <PageHeader
-        eyebrow="Entrenamiento"
+        eyebrow="Consola Competitiva"
         title="Configura tu próxima ronda"
-        description="Elige cómo quieres estudiar; ajusta los detalles solo si los necesitas."
+        description="Elige cómo quieres estudiar; ajusta los detalles con inventario en tiempo real."
       />
       {starting ? (
         <p
           role="status"
           aria-live="polite"
-          className="rounded-xl border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-muted-foreground"
+          className="rounded-xl border border-primary/20 bg-primary/5 px-4 py-3 text-sm text-muted-foreground font-medium"
         >
           Preparando la ronda y cargando el banco maestro…
         </p>
@@ -273,25 +298,21 @@ export function SessionBuilderPage({
       {startError ? (
         <p
           role="alert"
-          className="rounded-xl border border-destructive/30 bg-destructive/5 px-4 py-3 text-sm text-destructive"
+          className="rounded-xl border border-destructive/30 bg-destructive/5 px-4 py-3 text-sm text-destructive font-medium"
         >
           {startError}
         </p>
       ) : null}
-      <MassiveTrainingHub
-        starting={starting}
-        questionCount={finalManifest?.gold_questions}
-        factCount={finalManifest?.unique_facts}
-        onStart={(massiveConfig) => startRound(massiveConfig)}
-      />
+
       <ModePicker value={config.mode} onChange={selectMode} />
+
       <section className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_22rem]">
         <div className="grid gap-6">
           <EssentialSettings
             count={config.count}
             sourceWorks={config.sourceWorks}
             onCountChange={(value) => update({ count: value })}
-            onSourceWorksChange={(value) => update({ sourceWorks: value })}
+            onSourceWorksChange={handleSourceWorksChange}
           />
           <AdvancedSettings open={advancedOpen} onOpenChange={setAdvancedOpen}>
             <div data-testid="advanced-round-settings" className="grid gap-6">
@@ -304,8 +325,7 @@ export function SessionBuilderPage({
                     Dificultad
                   </h2>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    El modo elegido puede aplicar sus propios filtros
-                    prioritarios.
+                    Elige el nivel de complejidad de los reactivos.
                   </p>
                 </div>
                 {bankSelection === "legacy-v1" ? (
@@ -353,63 +373,62 @@ export function SessionBuilderPage({
                     ))}
                   </div>
                 )}
-                {config.mode === "difficult" ? (
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="w-fit"
-                    onClick={() =>
-                      update(
-                        bankSelection === "legacy-v1"
-                          ? { difficulties: [5] }
-                          : { difficultyBands: ["EXPERT"] }
-                      )
-                    }
-                  >
-                    Solo máxima dificultad
-                  </Button>
-                ) : null}
               </section>
-              <section
-                aria-labelledby="chapters-heading"
-                className="grid gap-4"
-              >
-                <div>
-                  <h2 id="chapters-heading" className="font-semibold">
-                    Capítulos
-                  </h2>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    Los capítulos sin banco se muestran deshabilitados.
-                  </p>
+              <section aria-labelledby="chapters-heading" className="grid gap-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h2 id="chapters-heading" className="font-semibold">
+                      Capítulos
+                    </h2>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      Filtra por capítulos específicos o déjalos vacíos para
+                      incluir todos.
+                    </p>
+                  </div>
+                  {config.chapters.length > 0 ? (
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      onClick={() => update({ chapters: [] })}
+                    >
+                      Limpiar capítulos
+                    </Button>
+                  ) : null}
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {allChapters.map(({ source, chapter }) => {
-                    const available = availableChapters.has(
-                      `${source}:${chapter}`
+                  {allChapters
+                    .filter((item) =>
+                      (config.sourceWorks as string[]).includes(item.source)
                     )
-                    const selected = config.chapters.includes(chapter)
-                    return (
-                      <Button
-                        key={`${source}-${chapter}`}
-                        disabled={!available}
-                        size="sm"
-                        variant={selected ? "default" : "outline"}
-                        onClick={() => toggleChapter(chapter)}
-                      >
-                        {source === "Daniel" ? `D${chapter}` : `PR ${chapter}`}
-                        {available ? (
-                          <span className="ml-1 text-[10px] opacity-70">
-                            {finalChapterCounts.get(`${source}:${chapter}`) ??
-                              questions.filter(
-                                (q) =>
-                                  q.source.work === source &&
-                                  q.source.chapter === chapter
-                              ).length}
-                          </span>
-                        ) : null}
-                      </Button>
-                    )
-                  })}
+                    .map(({ source, chapter }) => {
+                      const available = availableChapters.has(
+                        `${source}:${chapter}`
+                      )
+                      const selected = config.chapters.includes(chapter)
+                      const chKey = `${source === "Daniel" ? "DAN" : "PR"}${chapter}`
+                      const chCount = isMockManifest
+                        ? (finalChapterCounts.get(`${source}:${chapter}`) ?? 0)
+                        : (facetedCounts.chapterCounts[chKey] ?? 0)
+                      const isDisabled = !available || chCount === 0
+
+                      return (
+                        <Button
+                          key={`${source}-${chapter}`}
+                          disabled={isDisabled}
+                          size="sm"
+                          variant={selected ? "default" : "outline"}
+                          className={isDisabled ? "opacity-40" : ""}
+                          onClick={() => toggleChapter(chapter)}
+                        >
+                          {source === "Daniel" ? `D${chapter}` : `PR ${chapter}`}
+                          {available && chCount > 0 ? (
+                            <span className="ml-1 text-[10px] opacity-70 tabular-nums">
+                              {chCount}
+                            </span>
+                          ) : null}
+                        </Button>
+                      )
+                    })}
                 </div>
               </section>
               <section aria-labelledby="types-heading" className="grid gap-4">
@@ -423,18 +442,26 @@ export function SessionBuilderPage({
                   </p>
                 </div>
                 <div className="grid gap-2 sm:grid-cols-2">
-                  {FINAL_VISIBLE_TYPES.map((type) => (
-                    <label
-                      key={type}
-                      className="flex min-h-11 cursor-pointer items-center gap-3 rounded-lg border px-3 py-2.5 text-sm transition-colors hover:bg-muted/40"
-                    >
-                      <Checkbox
-                        checked={config.types.includes(type)}
-                        onCheckedChange={() => toggleType(type)}
-                      />
-                      <span>{typeLabel(type)}</span>
-                    </label>
-                  ))}
+                  {FINAL_VISIBLE_TYPES.map((type) => {
+                    const count = (facetedCounts.typeCounts as Record<string, number>)[type] ?? 0
+                    return (
+                      <label
+                        key={type}
+                        className="flex min-h-11 cursor-pointer items-center justify-between rounded-lg border px-3 py-2.5 text-sm transition-colors hover:bg-muted/40"
+                      >
+                        <div className="flex items-center gap-3">
+                          <Checkbox
+                            checked={config.types.includes(type)}
+                            onCheckedChange={() => toggleType(type)}
+                          />
+                          <span>{typeLabel(type)}</span>
+                        </div>
+                        <span className="text-xs text-muted-foreground tabular-nums">
+                          {count}
+                        </span>
+                      </label>
+                    )
+                  })}
                 </div>
               </section>
               <section
@@ -448,9 +475,9 @@ export function SessionBuilderPage({
                   <label className="grid gap-2 text-sm font-medium">
                     Estado
                     <Select
-                      value={config.statuses[0]}
-                      onValueChange={(value) =>
-                        update({ statuses: [value as QuestionStatus] })
+                      value={config.statuses[0] ?? "all"}
+                      onValueChange={(status: QuestionStatus) =>
+                        update({ statuses: [status] })
                       }
                     >
                       <SelectTrigger>
@@ -458,42 +485,24 @@ export function SessionBuilderPage({
                       </SelectTrigger>
                       <SelectContent>
                         <SelectGroup>
-                          <SelectItem value="all">Todas</SelectItem>
-                          <SelectItem value="new">Nuevas</SelectItem>
-                          <SelectItem value="failed">Falladas</SelectItem>
-                          <SelectItem value="difficult">Difíciles</SelectItem>
-                          <SelectItem value="mastered">Dominadas</SelectItem>
-                          <SelectItem value="favorite">Favoritas</SelectItem>
-                        </SelectGroup>
-                      </SelectContent>
-                    </Select>
-                  </label>
-                  <label className="grid gap-2 text-sm font-medium">
-                    Estrategia de selección
-                    <Select
-                      value={config.strategy ?? "coverage-cycle"}
-                      onValueChange={(value) =>
-                        update({
-                          strategy: value as SelectionStrategy,
-                          shuffleQuestions: value !== "sequential-blocks",
-                        })
-                      }
-                    >
-                      <SelectTrigger>
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectGroup>
-                          <SelectItem value="coverage-cycle">
-                            Cobertura sin repetir
+                          <SelectItem value="all">
+                            Todas ({facetedCounts.statusCounts.all})
                           </SelectItem>
-                          <SelectItem value="random-balanced">
-                            Aleatoria equilibrada
+                          <SelectItem value="new">
+                            Nuevas ({facetedCounts.statusCounts.new})
                           </SelectItem>
-                          <SelectItem value="sequential-blocks">
-                            Bloques secuenciales
+                          <SelectItem value="failed">
+                            Falladas ({facetedCounts.statusCounts.failed})
                           </SelectItem>
-                          <SelectItem value="adaptive">Adaptativa</SelectItem>
+                          <SelectItem value="difficult">
+                            Difíciles ({facetedCounts.statusCounts.difficult})
+                          </SelectItem>
+                          <SelectItem value="mastered">
+                            Dominadas ({facetedCounts.statusCounts.mastered})
+                          </SelectItem>
+                          <SelectItem value="favorite">
+                            Favoritas ({facetedCounts.statusCounts.favorite})
+                          </SelectItem>
                         </SelectGroup>
                       </SelectContent>
                     </Select>
@@ -570,6 +579,36 @@ export function SessionBuilderPage({
               </section>
             </div>
           </AdvancedSettings>
+
+          {/* Collapsible secondary hub */}
+          <div className="pt-2">
+            <Button
+              type="button"
+              variant="ghost"
+              className="w-full text-muted-foreground flex items-center justify-between border border-dashed py-3 h-auto"
+              onClick={() => setShowMoreModes((prev) => !prev)}
+            >
+              <span className="text-sm font-medium">
+                {showMoreModes ? "Ocultar modos avanzados" : "Más modos de entrenamiento…"}
+              </span>
+              <ChevronDown
+                className={`size-4 transition-transform ${
+                  showMoreModes ? "rotate-180" : ""
+                }`}
+              />
+            </Button>
+
+            {showMoreModes ? (
+              <div className="mt-4">
+                <MassiveTrainingHub
+                  starting={starting}
+                  questionCount={finalManifest?.gold_questions}
+                  factCount={finalManifest?.unique_facts}
+                  onStart={(massiveConfig) => startRound(massiveConfig)}
+                />
+              </div>
+            ) : null}
+          </div>
         </div>
         <aside className="min-w-0 xl:sticky xl:top-24 xl:self-start">
           <RoundSummary
@@ -586,6 +625,7 @@ export function SessionBuilderPage({
               void startRound(
                 {
                   ...config,
+                  selectionOrigin: "manual",
                   massive:
                     config.massive || config.bankSelection === "final-v7",
                 },
@@ -649,8 +689,7 @@ export function StudyDayQuickStart({
       <CardHeader>
         <CardTitle>Ruta rápida de 4 días</CardTitle>
         <CardDescription>
-          Cada día mezcla Daniel con Profetas y Reyes para ayudarte a recordar
-          por recuperación activa.
+          Cada día mezcla Daniel con Profetas y Reyes para ayudarte a recordar por recuperación activa.
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-2 md:grid-cols-2">

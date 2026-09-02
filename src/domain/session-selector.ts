@@ -271,21 +271,38 @@ export function filterEligibleQuestions(
       !config.chapters.includes(question.source.chapter)
     )
       return false
+    if (!config.includeBlind && (question.blindPool || question.blindFinalPool))
+      return false
+    if (question.metadata?.provisional) return false
     if (
       config.difficulties.length &&
       !config.difficulties.includes(question.difficulty)
     )
       return false
-    if (
+    if (config.tierFilter === "competitive") {
+      if (
+        question.tier !== "COMPETITIVE_ACCEPT" ||
+        (question.difficultyBand !== "HARD" && question.difficultyBand !== "EXPERT")
+      )
+        return false
+    } else if (config.tierFilter === "coverage") {
+      if (
+        question.tier !== "COVERAGE_ACCEPT" &&
+        question.difficultyBand !== "BASIC" &&
+        question.difficultyBand !== "MEDIUM"
+      )
+        return false
+    } else if (
       config.difficultyBands?.length &&
       question.difficultyBand &&
       !config.difficultyBands.includes(question.difficultyBand)
-    )
+    ) {
       return false
+    }
     if (config.types.length && !config.types.includes(question.type))
       return false
     if (
-      !config.massive &&
+      (!config.massive || !config.trainingPresetId) &&
       !statusMatches(question, itemProgress, config.statuses)
     )
       return false

@@ -25,9 +25,11 @@ import { Progress } from "@/components/ui/progress"
 export function SprintDailyTracker({
   onStartSprint,
   onStartSimulation,
+  onConfigureRound,
 }: {
   onStartSprint: (config: SessionConfig) => void | Promise<void>
   onStartSimulation: (config: SessionConfig) => void | Promise<void>
+  onConfigureRound?: () => void
 }) {
   const { sessions = [], exposures = [], factMastery = [] } = useApp()
 
@@ -249,18 +251,27 @@ export function SprintDailyTracker({
             onClick={() => onStartSprint(sprintDirectedConfig)}
           >
             <Play className="mr-2 size-5 fill-current" />
-            Iniciar Sprint Dirigido (100 preguntas · 70/30)
+            Sprint Nacional 3X (100 preguntas · 70/30)
           </Button>
 
-          {plan.includesSimulation ? (
+          <Button
+            size="lg"
+            variant="outline"
+            className="flex-1 font-semibold text-base h-12 border-primary/40 hover:bg-primary/5"
+            onClick={() => onStartSimulation(sprintSimulationConfig)}
+          >
+            <Gauge className="mr-2 size-5 text-primary" />
+            Simulación Nacional 5×20 (Mezcla Oculta)
+          </Button>
+
+          {onConfigureRound ? (
             <Button
               size="lg"
-              variant="outline"
-              className="flex-1 font-semibold text-base h-12 border-primary/40 hover:bg-primary/5"
-              onClick={() => onStartSimulation(sprintSimulationConfig)}
+              variant="secondary"
+              className="font-semibold text-base h-12"
+              onClick={onConfigureRound}
             >
-              <Gauge className="mr-2 size-5 text-primary" />
-              Simulación 5×20 (Mezcla Oculta)
+              Configurar una ronda
             </Button>
           ) : null}
         </div>

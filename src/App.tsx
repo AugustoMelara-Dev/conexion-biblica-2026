@@ -20,6 +20,7 @@ import {
   buildSprintSimulationRounds,
   type FactExposure3x,
 } from "@/domain/sprint-3x"
+import { selectManualSession } from "@/domain/manual-selector"
 import type {
   ActiveRound,
   Question,
@@ -164,8 +165,9 @@ export function App() {
           config.strategy ??
           (config.shuffleQuestions ? "coverage-cycle" : "sequential-blocks"),
       }
-      const roundQuestions = nextConfig.massive
-        ? await loadMassiveQuestions(nextConfig)
+      const isFinalBank = nextConfig.bankSelection === "final-v7" || !nextConfig.bankSelection
+      const roundQuestions = (nextConfig.massive || isFinalBank)
+        ? await loadMassiveQuestions({ ...nextConfig, massive: true })
         : filterQuestionsForSelection(
             allQuestions,
             nextConfig.bankSelection ?? bankSelection
@@ -200,7 +202,27 @@ export function App() {
         nextConfig.trainingPresetId === "sprint-nacional-3x" ||
         nextConfig.strategy === "sprint-3x"
 
-      if (isSprintSim || isSprint3x) {
+      if (nextConfig.selectionOrigin === "manual") {
+        const manualResult = selectManualSession(
+          roundQuestions,
+          nextConfig,
+          progress,
+          timestamp()
+        )
+        if (!manualResult.success) {
+          throw new Error(manualResult.error)
+        }
+        selected = manualResult.questions
+        selectionSummary = {
+          strategy: nextConfig.strategy ?? "coverage-cycle",
+          prCount: manualResult.realizedSummary.prCount,
+          danielCount: manualResult.realizedSummary.danielCount,
+          chapterCounts: manualResult.realizedSummary.chapterCounts,
+          familyCounts: manualResult.realizedSummary.familyCounts as any,
+          distinctFacts: new Set(selected.map((q) => q.factId)).size,
+          quotaShortfalls: manualResult.quotaShortfalls,
+        }
+      } else if (isSprintSim || isSprint3x) {
         const historyMap = new Map<string, FactExposure3x>()
         for (const exp of exposures) {
           const fid = exp.factId
@@ -333,6 +355,16 @@ export function App() {
         )
 
       const startedAt = timestamp()
+      const requestedSelection = { ...nextConfig }
+      const realizedSummary = {
+        total: selected.length,
+        prCount: selected.filter((q) => q.source.work === "Profetas y Reyes").length,
+        danielCount: selected.filter((q) => q.source.work === "Daniel").length,
+        chapterCounts: selectionSummary.chapterCounts ?? {},
+        familyCounts: selectionSummary.familyCounts ?? { single_choice: 0, fill_blank: 0, true_false: 0 },
+        competitiveCount: selected.filter((q) => q.tier === "COMPETITIVE_ACCEPT" || q.difficultyBand === "HARD" || q.difficultyBand === "EXPERT").length,
+        coverageCount: selected.filter((q) => q.tier === "COVERAGE_ACCEPT" || q.difficultyBand === "BASIC" || q.difficultyBand === "MEDIUM").length,
+      }
       const persisted: ActiveRound = {
         id: "active",
         startedAt,
@@ -341,10 +373,13 @@ export function App() {
         questionKeys: selected.map(
           (question) => `${question.bankId ?? "local"}:${question.id}`
         ),
-        questionSnapshots: nextConfig.massive ? selected : undefined,
+        questionSnapshots: selected,
         answers: [],
         config: nextConfig,
         selectionSummary,
+        requestedConfig: requestedSelection,
+        realizedSummary,
+        quotaShortfalls: selectionSummary.quotaShortfalls ?? {},
       }
       await saveActiveRound(persisted)
       const round: RoundView = {
