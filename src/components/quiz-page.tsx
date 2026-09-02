@@ -927,6 +927,16 @@ export function QuizPage({
               isCorrect={feedback.isCorrect}
               onUnderstood={() => advance()}
               onConfused={() => setDifficult(true)}
+              onDoubted={async () => {
+                if (question) {
+                  await recordAnswer(question, feedback, value, {
+                    doubted: true,
+                    markedDifficult: true,
+                    context: sessionContextForMode(config.mode),
+                  })
+                }
+                advance()
+              }}
             />
           ) : null}
           {showFeedback ? <MemoryCue cue={question.memoryCue} /> : null}

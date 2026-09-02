@@ -14,7 +14,12 @@ import {
   selectCoverageCycle,
   selectSequentialBlock,
 } from "@/domain/session-selection"
-import { selectSprintNacionalRound } from "@/domain/sprint-3x"
+import {
+  emptyFactExposure,
+  selectSprintNacionalRound,
+  buildSprintSimulationRounds,
+  type FactExposure3x,
+} from "@/domain/sprint-3x"
 import type {
   ActiveRound,
   Question,
@@ -189,7 +194,66 @@ export function App() {
       let selectionSummary: SelectionSummary = {
         strategy: nextConfig.strategy!,
       }
-      if (nextConfig.massive) {
+      const isSprintSim =
+        nextConfig.trainingPresetId === "sprint-simulation-hidden"
+      const isSprint3x =
+        nextConfig.trainingPresetId === "sprint-nacional-3x" ||
+        nextConfig.strategy === "sprint-3x"
+
+      if (isSprintSim || isSprint3x) {
+        const historyMap = new Map<string, FactExposure3x>()
+        for (const exp of exposures) {
+          const fid = exp.factId
+          const existing = historyMap.get(fid) ?? emptyFactExposure(fid)
+          existing.exposures_completed = Math.max(
+            existing.exposures_completed,
+            exp.exposures
+          )
+          if (!existing.distinct_presentations_seen.includes(exp.variantId)) {
+            existing.distinct_presentations_seen.push(exp.variantId)
+          }
+          if (
+            exp.lastSeenAt &&
+            (!existing.last_seen_at || exp.lastSeenAt > existing.last_seen_at)
+          ) {
+            existing.last_seen_at = exp.lastSeenAt
+            existing.last_response_ms = exp.averageResponseTimeMs
+            existing.last_result =
+              exp.incorrect > 0
+                ? "incorrect"
+                : exp.correct > 0
+                  ? "correct"
+                  : null
+          }
+          historyMap.set(fid, existing)
+        }
+
+        if (isSprintSim) {
+          const sim = buildSprintSimulationRounds(
+            eligible,
+            timestamp(),
+            historyMap
+          )
+          selected = sim.rounds.flat()
+          selectionSummary = {
+            ...sim.summary,
+            strategy: "sprint-3x",
+            poolKey: `hidden-mix:${sim.mix}`,
+          }
+          nextConfig.mode = "simulation"
+          nextConfig.strategy = "sprint-3x"
+        } else {
+          const sprint = selectSprintNacionalRound(
+            eligible,
+            target,
+            timestamp(),
+            historyMap
+          )
+          selected = sprint.questions
+          selectionSummary = sprint.summary
+          nextConfig.strategy = "sprint-3x"
+        }
+      } else if (nextConfig.massive) {
         const weakChapters = [
           ...new Set(
             roundQuestions
@@ -256,17 +320,7 @@ export function App() {
           target,
           nextConfig.sequentialBlock ?? 0
         ).questions
-      else if (
-        nextConfig.trainingPresetId === "sprint-nacional-3x" ||
-        nextConfig.strategy === "sprint-3x"
-      ) {
-        selected = selectSprintNacionalRound(
-          roundQuestions,
-          target,
-          timestamp()
-        )
-        selectionSummary = { strategy: "sprint-3x" }
-      } else
+      else
         selected = selectSessionQuestions(
           roundQuestions,
           progress,

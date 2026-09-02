@@ -73,6 +73,11 @@ import {
   resolveFinalMigrationSignatures,
   type FinalBankManifest,
 } from "@/storage/final-bank"
+import {
+  emptyFactExposure,
+  recordAttempt3x,
+  type FactExposure3x,
+} from "@/domain/sprint-3x"
 
 type RepositorySet = ReturnType<typeof createRepositories>
 type NavKey =
@@ -134,6 +139,7 @@ type AppContextValue = {
     flags?: {
       favorite?: boolean
       markedDifficult?: boolean
+      doubted?: boolean
       context?: "practice" | "simulation"
       afterFeedback?: boolean
       hintUsed?: boolean
@@ -949,6 +955,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       flags: {
         favorite?: boolean
         markedDifficult?: boolean
+        doubted?: boolean
         context?: "practice" | "simulation"
         afterFeedback?: boolean
         hintUsed?: boolean
@@ -968,8 +975,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
         )
         updated.questionKey = key
         if (flags.favorite !== undefined) updated.favorite = flags.favorite
-        if (flags.markedDifficult !== undefined)
-          updated.markedDifficult = flags.markedDifficult
+        if (flags.markedDifficult !== undefined || flags.doubted)
+          updated.markedDifficult = flags.markedDifficult ?? true
         return updated
       })
       setProgress((current) => new Map(current).set(key, next))
@@ -1004,11 +1011,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
           isCorrect: result.isCorrect,
           responseTimeMs: result.responseTimeMs,
           selectedAnswer,
-          errorType: result.isCorrect
-            ? null
-            : question.trapType === "true_elsewhere"
-              ? "context-confusion"
-              : result.reason,
+          errorType: flags.doubted
+            ? "doubted"
+            : result.isCorrect
+              ? null
+              : question.trapType === "true_elsewhere"
+                ? "context-confusion"
+                : result.reason,
           exposureKind:
             flags.exposureKind ??
             (flags.context === "simulation" ? "cold" : "practice"),
@@ -1019,6 +1028,32 @@ export function AppProvider({ children }: { children: ReactNode }) {
             (item) => item.exposureKey !== exposure.exposureKey
           ),
         ])
+
+        // Persist Sprint 3X state
+        const sprint3xStore =
+          (await repositories.settings.get<Record<string, FactExposure3x>>(
+            "sprint-3x-progress",
+            {}
+          )) ?? {}
+        const fid = question.factId
+        const current3x =
+          sprint3xStore[fid] ??
+          emptyFactExposure(
+            fid,
+            question.sourceUnitId ??
+              (question.metadata?.sourceUnitId as string) ??
+              ""
+          )
+        const updated3x = recordAttempt3x(
+          current3x,
+          question,
+          result.isCorrect,
+          Boolean(flags.doubted),
+          result.responseTimeMs,
+          Date.now()
+        )
+        sprint3xStore[fid] = updated3x
+        await repositories.settings.put("sprint-3x-progress", sprint3xStore)
         const existingMastery = await repositories.factMastery.get(
           question.factId
         )

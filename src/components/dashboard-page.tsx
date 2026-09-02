@@ -10,6 +10,7 @@ import {
 } from "lucide-react"
 import { useApp } from "@/app/app-state"
 import { FinalMissionDashboard } from "@/components/final-mission-dashboard"
+import { SprintDailyTracker } from "@/components/sprint-daily-tracker"
 import { MetricStrip } from "@/components/layout/metric-strip"
 import { SectionHeader } from "@/components/layout/section-header"
 import { Badge } from "@/components/ui/badge"
@@ -128,6 +129,15 @@ export function DashboardPage({
 
   return (
     <div className="flex min-w-0 flex-col gap-10">
+      <SprintDailyTracker
+        onStartSprint={(cfg) =>
+          onStartMission ? onStartMission(cfg) : setNav("practice")
+        }
+        onStartSimulation={(cfg) =>
+          onStartMission ? onStartMission(cfg) : setNav("practice")
+        }
+      />
+
       <FinalMissionDashboard
         completedMissionIds={sessions
           .map((session) => session.config.trainingPresetId)

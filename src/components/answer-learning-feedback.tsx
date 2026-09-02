@@ -15,12 +15,14 @@ export function AnswerLearningFeedback({
   isCorrect,
   onUnderstood,
   onConfused,
+  onDoubted,
 }: {
   question: Question
   selectedAnswer: AnswerValue
   isCorrect: boolean
   onUnderstood: () => void
   onConfused: () => void
+  onDoubted?: () => void
 }) {
   const selected = selectedText(question, selectedAnswer)
   const correct = question.correctAnswerText ?? question.correctAnswer
@@ -44,12 +46,18 @@ export function AnswerLearningFeedback({
         </div>
         <p className="flex items-center gap-2 text-xs text-muted-foreground">
           <Clock3 className="size-4" aria-hidden="true" />
-          {isCorrect ? "Próxima recuperación: en 6–12 horas o mañana." : "Nueva variante: después de 8–15 preguntas intermedias."}
+          {isCorrect
+            ? "Próxima recuperación espaciada: 3 horas o mañana."
+            : "Reparación programada: vuelve en 20–40 preguntas y al día siguiente."}
         </p>
         {!isCorrect ? (
           <div className="flex flex-wrap gap-2">
             <Button size="sm" variant="outline" onClick={onUnderstood}>Entendido</Button>
             <Button size="sm" variant="secondary" onClick={onConfused}>Todavía lo confundo</Button>
+          </div>
+        ) : onDoubted ? (
+          <div className="flex flex-wrap gap-2">
+            <Button size="sm" variant="outline" onClick={onDoubted}>Dudé entre dos</Button>
           </div>
         ) : null}
       </AlertDescription>

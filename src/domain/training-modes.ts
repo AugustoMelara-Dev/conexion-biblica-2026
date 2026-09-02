@@ -7,6 +7,7 @@ import type {
 
 export type MassiveTrainingModeId =
   | "sprint-nacional-3x"
+  | "sprint-simulation-hidden"
   | "national-final"
   | "extreme-championship"
   | "pr-complete"
@@ -51,6 +52,7 @@ const ALL_WORKS: SourceWork[] = ["Daniel", "Profetas y Reyes"]
 
 export const MASSIVE_TRAINING_MODES: MassiveTrainingMode[] = [
   { id: "sprint-nacional-3x", label: "Sprint Nacional 3X (70/30)", description: "70% Profetas y Reyes, 30% Daniel. Contrato de 3 exposiciones con alternancia de variantes.", group: "competencia", count: 100, sourceWorks: ALL_WORKS, chapters: [], types: [], difficultyBands: ALL_DIFFICULTIES, statuses: ["all"], includeBlind: false, perQuestionSeconds: 12 },
+  { id: "sprint-simulation-hidden", label: "Simulación Nacional 5×20 (Mezcla Oculta)", description: "100 preguntas en 5 rondas de 20 con mezcla oculta (70/30, 50/50 o 30/70) revelada al final.", group: "competencia", count: 100, sourceWorks: ALL_WORKS, chapters: [], types: [], difficultyBands: ["HARD", "EXPERT"], statuses: ["all"], includeBlind: false, perQuestionSeconds: 12 },
   { id: "national-final", label: "Final nacional", description: "100 preguntas con mezcla de final.", group: "competencia", count: 100, sourceWorks: ALL_WORKS, chapters: [], types: [], difficultyBands: ["HARD", "EXPERT"], statuses: ["all"], includeBlind: false, perQuestionSeconds: 12 },
   { id: "extreme-championship", label: "Campeonato extremo", description: "200 preguntas de máxima interferencia.", group: "competencia", count: 200, sourceWorks: ALL_WORKS, chapters: [], types: [], difficultyBands: ["HARD", "EXPERT"], statuses: ["all"], includeBlind: false, perQuestionSeconds: 10 },
   { id: "pr-complete", label: "PR39–44 completo", description: "Cobertura integral de los seis capítulos.", group: "cobertura", count: 100, sourceWorks: ["Profetas y Reyes"], chapters: [39, 40, 41, 42, 43, 44], types: [], difficultyBands: ALL_DIFFICULTIES, statuses: ["all"], includeBlind: false, perQuestionSeconds: null },

@@ -229,6 +229,7 @@ export function adaptFinalQuestion(raw: FinalRawQuestion): Question {
     factKey: raw.fact_id,
     factKeys: [raw.fact_id],
     factId: raw.fact_id,
+    sourceUnitId: raw.source_unit_id,
     variantId: raw.variant_id,
     templateId: raw.template_id,
     verseOrPage: raw.verse_or_page,

@@ -69,6 +69,7 @@ export type Question = {
   integrative?: boolean
   verified?: boolean
   factId?: string
+  sourceUnitId?: string
   variantId?: string
   templateId?: string
   verseOrPage?: string
@@ -269,6 +270,19 @@ export type SelectionSummary = {
   seen?: number
   remaining?: number
   total?: number
+  prCount?: number
+  danielCount?: number
+  familyCounts?: {
+    single_choice: number
+    fill_blank: number
+    true_false: number
+  }
+  chapterCounts?: Record<string, number>
+  newCount?: number
+  repairCount?: number
+  slowCount?: number
+  distinctFacts?: number
+  quotaShortfalls?: Record<string, number>
 }
 
 export type ValidationError = {

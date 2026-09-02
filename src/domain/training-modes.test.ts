@@ -3,9 +3,10 @@ import { MASSIVE_TRAINING_MODES, getMassiveTrainingMode } from "@/domain/trainin
 
 describe("catálogo de modos masivos", () => {
   it("define exactamente los modos solicitados incluyendo sprint nacional 3x", () => {
-    expect(MASSIVE_TRAINING_MODES).toHaveLength(21)
-    expect(new Set(MASSIVE_TRAINING_MODES.map((mode) => mode.id)).size).toBe(21)
+    expect(MASSIVE_TRAINING_MODES).toHaveLength(22)
+    expect(new Set(MASSIVE_TRAINING_MODES.map((mode) => mode.id)).size).toBe(22)
     expect(getMassiveTrainingMode("sprint-nacional-3x").count).toBe(100)
+    expect(getMassiveTrainingMode("sprint-simulation-hidden").count).toBe(100)
     expect(getMassiveTrainingMode("national-final").count).toBe(100)
     expect(getMassiveTrainingMode("extreme-championship").count).toBe(200)
   })
