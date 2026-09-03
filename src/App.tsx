@@ -21,6 +21,10 @@ import {
   type FactExposure3x,
 } from "@/domain/sprint-3x"
 import { selectManualSession } from "@/domain/manual-selector"
+import {
+  selectEmergencySession,
+  type EmergencyModeId,
+} from "@/domain/emergency-modes"
 import type {
   ActiveRound,
   Question,
@@ -165,13 +169,27 @@ export function App() {
           config.strategy ??
           (config.shuffleQuestions ? "coverage-cycle" : "sequential-blocks"),
       }
-      const isFinalBank = nextConfig.bankSelection === "final-v7" || !nextConfig.bankSelection
-      const roundQuestions = (nextConfig.massive || isFinalBank)
-        ? await loadMassiveQuestions({ ...nextConfig, massive: true })
-        : filterQuestionsForSelection(
-            allQuestions,
-            nextConfig.bankSelection ?? bankSelection
-          )
+      const isEmergency = Boolean(
+        nextConfig.trainingPresetId &&
+          nextConfig.trainingPresetId.startsWith("emergency-")
+      )
+      const isFinalBank =
+        nextConfig.bankSelection === "final-v7" || !nextConfig.bankSelection
+      const roundQuestions = isEmergency
+        ? await loadMassiveQuestions({
+            ...nextConfig,
+            count: "all",
+            chapters: [],
+            sourceWorks: ["Daniel", "Profetas y Reyes"],
+            selectionOrigin: "manual",
+            massive: true,
+          })
+        : nextConfig.massive || isFinalBank
+          ? await loadMassiveQuestions({ ...nextConfig, massive: true })
+          : filterQuestionsForSelection(
+              allQuestions,
+              nextConfig.bankSelection ?? bankSelection
+            )
       const roundFactMastery =
         nextConfig.massive && repositories
           ? (
@@ -202,7 +220,55 @@ export function App() {
         nextConfig.trainingPresetId === "sprint-nacional-3x" ||
         nextConfig.strategy === "sprint-3x"
 
-      if (nextConfig.selectionOrigin === "manual") {
+      if (isEmergency && subset && subset.length > 0) {
+        selected = subset
+        const chCounts: Record<string, number> = {}
+        let pr = 0
+        let dan = 0
+        let sc = 0
+        let tf = 0
+        for (const q of selected) {
+          if (q.source.work === "Daniel") dan++
+          else pr++
+          if (q.type === "true_false" || q.family === "true_false") tf++
+          else sc++
+          const k = `${q.source.work === "Daniel" ? "DAN" : "PR"}${q.source.chapter}`
+          chCounts[k] = (chCounts[k] ?? 0) + 1
+        }
+        selectionSummary = {
+          strategy: (isEmergency ? "emergency-mode" : nextConfig.strategy) as any,
+          prCount: pr,
+          danielCount: dan,
+          chapterCounts: chCounts,
+          familyCounts: {
+            single_choice: sc,
+            true_false: tf,
+          } as any,
+          distinctFacts: new Set(selected.map((q) => q.factId ?? q.id)).size,
+        }
+      } else if (isEmergency) {
+        const emResult = selectEmergencySession(
+          roundQuestions,
+          nextConfig.trainingPresetId as EmergencyModeId,
+          progress,
+          timestamp()
+        )
+        if (!emResult.success) {
+          throw new Error("Error iniciando modo de emergencia")
+        }
+        selected = emResult.questions
+        selectionSummary = {
+          strategy: "emergency-mode" as any,
+          prCount: emResult.realizedSummary.prCount,
+          danielCount: emResult.realizedSummary.danielCount,
+          chapterCounts: emResult.realizedSummary.chapterCounts,
+          familyCounts: {
+            single_choice: emResult.realizedSummary.scCount,
+            true_false: emResult.realizedSummary.tfCount,
+          } as any,
+          distinctFacts: emResult.realizedSummary.distinctFacts,
+        }
+      } else if (nextConfig.selectionOrigin === "manual") {
         const manualResult = selectManualSession(
           roundQuestions,
           nextConfig,
@@ -456,7 +522,7 @@ export function App() {
         />
       )
     }
-    if (activeRound)
+    if (activeRound && nav === "practice")
       return (
         <QuizPage
           questions={activeRound.questions}
@@ -470,6 +536,7 @@ export function App() {
           }}
           onFinish={finishRound}
           onExit={exitRound}
+          onBack={() => setNav("dashboard")}
         />
       )
     if (nav === "banks") return <BankManagerPage />
@@ -494,7 +561,7 @@ export function App() {
     return <DashboardPage onStartMission={startRound} />
   }
 
-  if (activeRound) {
+  if (activeRound && nav === "practice") {
     return <FocusShell>{renderPage()}</FocusShell>
   }
 

@@ -10,6 +10,7 @@ import {
   Star,
   TimerOff,
   HelpCircle,
+  ArrowLeft,
   X,
 } from "lucide-react"
 import { useApp } from "@/app/app-state"
@@ -57,6 +58,7 @@ export function QuizPage({
   onStateChange,
   onFinish,
   onExit,
+  onBack,
 }: {
   questions: Question[]
   config: SessionConfig
@@ -64,6 +66,7 @@ export function QuizPage({
   onStateChange?: (round: ActiveRound) => Promise<void>
   onFinish: (session: Session) => Promise<void>
   onExit: () => Promise<void>
+  onBack?: () => void
 }) {
   const { progress, recordAnswer, recordReport } = useApp()
   const initialIndex = resumeQuestionIndex(
@@ -801,14 +804,28 @@ export function QuizPage({
   return (
     <article className="mx-auto flex min-h-screen w-full max-w-3xl flex-col px-4 py-5 pb-28 sm:px-6 sm:py-6">
       <header className="grid grid-cols-[auto_1fr_auto] items-center gap-3">
-        <Button
-          variant="ghost"
-          disabled={transitionPending !== null}
-          onClick={() => void exitSafely()}
-        >
-          <X data-icon="inline-start" />
-          Salir
-        </Button>
+        <div className="flex items-center gap-1">
+          {onBack ? (
+            <Button
+              variant="ghost"
+              disabled={transitionPending !== null}
+              onClick={() => {
+                void stopAutosaveAndDrainRef.current().then(() => onBack())
+              }}
+            >
+              <ArrowLeft data-icon="inline-start" />
+              Pausar
+            </Button>
+          ) : null}
+          <Button
+            variant="ghost"
+            disabled={transitionPending !== null}
+            onClick={() => void exitSafely()}
+          >
+            <X data-icon="inline-start" />
+            Salir
+          </Button>
+        </div>
         <div className="min-w-0">
           <div className="mb-1 flex items-center justify-between gap-3 text-xs font-medium text-muted-foreground">
             <span>

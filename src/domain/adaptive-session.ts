@@ -74,6 +74,11 @@ export function selectAdaptiveSession({
   presetId?: string
   now?: number
 }) {
+  if (presetId && presetId.startsWith("emergency-")) {
+    throw new Error(
+      `Violation: Emergency preset "${presetId}" must never reach selectAdaptiveSession`
+    )
+  }
   const random = seededRandom(seed)
   const exposureByVariant = new Map(
     exposures.map((exposure) => [exposure.variantId, exposure])

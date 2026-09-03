@@ -10,7 +10,7 @@ import {
   Zap,
 } from 'lucide-react'
 import { useApp } from '@/app/app-state'
-import type { SessionConfig } from '@/domain/types'
+import type { Question, SessionConfig } from '@/domain/types'
 import {
   type EmergencyModeId,
   selectEmergencySession,
@@ -26,13 +26,15 @@ import {
 } from '@/components/ui/card'
 
 interface EmergencyDashboardProps {
-  onStartEmergencyMode: (config: SessionConfig) => void | Promise<void>
+  onStartEmergencyMode: (config: SessionConfig, questions: Question[]) => void | Promise<void>
   onConfigureRound?: () => void
+  onContinueRound?: () => void
 }
 
 export function EmergencyDashboard({
   onStartEmergencyMode,
   onConfigureRound,
+  onContinueRound,
 }: EmergencyDashboardProps) {
   const {
     activeRound,
@@ -89,7 +91,7 @@ export function EmergencyDashboard({
   const handleStartMode = (modeId: EmergencyModeId) => {
     const result = selectEmergencySession(questions, modeId, progress)
     if (result.success) {
-      onStartEmergencyMode(result.config)
+      onStartEmergencyMode(result.config, result.questions)
     }
   }
 
@@ -157,7 +159,10 @@ export function EmergencyDashboard({
             <Button
               size="lg"
               className="font-bold gap-2 min-h-12 px-6"
-              onClick={() => onStartEmergencyMode(activeRound.config)}
+              onClick={() => {
+                if (onContinueRound) onContinueRound()
+                else if (onConfigureRound) onConfigureRound()
+              }}
             >
               <Play className="h-4 w-4 fill-current" />
               Continuar ronda
@@ -179,8 +184,7 @@ export function EmergencyDashboard({
             </div>
             <CardTitle className="text-lg mt-2">1. PR39–44 Intensivo</CardTitle>
             <CardDescription className="text-xs leading-relaxed">
-              Exactamente 25 preguntas por cada capítulo (PR 39 al 44). Enfoque en causas, secuencias,
-              frases exactas y personajes clave.
+              Aprendizaje, cobertura y fijación de detalles. Exactamente 25 preguntas por cada capítulo (PR 39 al 44).
             </CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
@@ -205,8 +209,7 @@ export function EmergencyDashboard({
             </div>
             <CardTitle className="text-lg mt-2">2. Daniel 7–12 Contrastes</CardTitle>
             <CardDescription className="text-xs leading-relaxed">
-              Prioridad en Dan 8, 9, 10 y 12. Discriminación de Gabriel vs Miguel, 70 semanas,
-              1,290 vs 1,335 días, Ulai vs Hidekel y festín de Dan 5.
+              150 preguntas: Enfoque profundo en Daniel 7 al 12 (Dan 7: 20, Dan 8: 25, Dan 9: 30, Dan 10: 20, Dan 11: 30, Dan 12: 25). Cero Daniel 1–6.
             </CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
@@ -272,7 +275,7 @@ export function EmergencyDashboard({
           </CardContent>
         </Card>
 
-        {/* BLOQUE 5: SIMULACIÓN AAH (PATRÓN REAL) */}
+        {/* BLOQUE 5: SIMULACIÓN PATRÓN AAH 2026 */}
         <Card className="flex flex-col justify-between hover:border-primary/40 transition-colors shadow-sm border-purple-500/20 bg-purple-500/5">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between gap-2">
@@ -281,10 +284,9 @@ export function EmergencyDashboard({
               </Badge>
               <Trophy className="h-5 w-5 text-purple-500" />
             </div>
-            <CardTitle className="text-lg mt-2">5. Simulación AAH (Oficial)</CardTitle>
+            <CardTitle className="text-lg mt-2">5. Simulación patrón AAH 2026</CardTitle>
             <CardDescription className="text-xs leading-relaxed">
-              Formato idéntico a la final: ~71 Daniel / ~29 PR, 77 Selección / 23 V-F, 20 segundos por
-              pregunta y 1,000 pts base con decaimiento de tiempo.
+              Reproduce la distribución observada en tu final de asociación. No predice la distribución de la final nacional. 71 Daniel / 29 PR, 77 Selección / 23 V-F, 20 segundos por pregunta.
             </CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
@@ -298,27 +300,26 @@ export function EmergencyDashboard({
           </CardContent>
         </Card>
 
-        {/* BLOQUE 6: ESCUDO CENTRAL (100% COMPETITIVO) */}
+        {/* BLOQUE 6: SIMULACIÓN ADVERSARIAL */}
         <Card className="flex flex-col justify-between hover:border-primary/40 transition-colors shadow-sm border-red-500/20 bg-red-500/5">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between gap-2">
               <Badge className="bg-red-500/15 text-red-600 dark:text-red-400 border-red-500/30">
-                100 Qs • Álite
+                100 Qs • Verificadas
               </Badge>
               <Shield className="h-5 w-5 text-red-500" />
             </div>
-            <CardTitle className="text-lg mt-2">6. Escudo Central</CardTitle>
+            <CardTitle className="text-lg mt-2">6. Simulación Adversarial</CardTitle>
             <CardDescription className="text-xs leading-relaxed">
-              50 PR / 50 Daniel 7–12. Solo reactivos COMPETITIVE_GOOD: distractores verosímiles,
-              opciones simétricas y máxima discriminación textual.
+              50 PR / 50 Daniel 7–12. 100 reactivos con tier COMPETITIVE_ACCEPT verificado y 100 hechos distintos: distractores plausibles, opciones homogéneas y máxima discriminación textual.
             </CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
             <Button
               className="w-full font-semibold min-h-11 justify-between bg-red-600 hover:bg-red-700 text-white"
-              onClick={() => handleStartMode('emergency-escudo-central')}
+              onClick={() => handleStartMode('emergency-adversarial-simulation')}
             >
-              <span>Iniciar Escudo Central</span>
+              <span>Iniciar Simulación Adversarial</span>
               <ArrowRight className="h-4 w-4" />
             </Button>
           </CardContent>

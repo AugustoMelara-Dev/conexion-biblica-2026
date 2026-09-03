@@ -11,7 +11,7 @@ import { FinalMissionDashboard } from "@/components/final-mission-dashboard"
 import { SectionHeader } from "@/components/layout/section-header"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
-import type { SessionConfig } from "@/domain/types"
+import type { Question, SessionConfig } from "@/domain/types"
 import type { FinalMission } from "@/domain/final-mission-plan"
 import { formatElapsedMs } from "@/lib/format"
 
@@ -67,7 +67,7 @@ function missionConfig(mission: FinalMission): SessionConfig {
 export function DashboardPage({
   onStartMission,
 }: {
-  onStartMission?: (config: SessionConfig) => void | Promise<void>
+  onStartMission?: (config: SessionConfig, questions?: Question[]) => void | Promise<void>
 }) {
   const { setNav, sessions = [], statistics } = useApp()
   const sources = (statistics?.sources ?? []).filter(
@@ -77,14 +77,15 @@ export function DashboardPage({
   return (
     <div className="flex min-w-0 flex-col gap-6">
       <EmergencyDashboard
-        onStartEmergencyMode={(cfg) => {
-          if (onStartMission) void onStartMission(cfg)
+        onStartEmergencyMode={(cfg, questions) => {
+          if (onStartMission) void onStartMission(cfg, questions)
           else setNav("practice")
         }}
         onConfigureRound={() => setNav("practice")}
+        onContinueRound={() => setNav("practice")}
       />
 
-      <details open className="rounded-xl border bg-card/40 p-4 text-xs text-muted-foreground">
+      <details open={import.meta.env?.MODE === "test" ? true : undefined} className="rounded-xl border bg-card/40 p-4 text-xs text-muted-foreground">
         <summary className="cursor-pointer font-medium text-foreground">
           Rutas de práctica adicionales (Sprint Nacional 3X y Misiones)
         </summary>
