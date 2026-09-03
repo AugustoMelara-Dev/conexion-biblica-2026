@@ -166,6 +166,7 @@ export type QuestionProgress = {
   masteryScore: number
   favorite: boolean
   markedDifficult: boolean
+  doubted?: boolean
   reported: boolean
   history: AttemptRecord[]
 }
@@ -258,6 +259,7 @@ export type SessionAnswer = {
   responseTimeMs: number
   favorite?: boolean
   markedDifficult?: boolean
+  doubted?: boolean
   reported?: boolean
   reportReason?: string
 }

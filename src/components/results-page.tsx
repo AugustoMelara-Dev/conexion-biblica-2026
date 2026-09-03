@@ -73,6 +73,22 @@ export function ResultsPage({
       question,
     ])
   )
+  const slowCount = session.answers.filter(
+    (item) => item.responseTimeMs > 6000
+  ).length
+  const doubtedCount = session.answers.filter(
+    (item) => Boolean((item as any).doubted)
+  ).length
+  const chapterFails = new Map<string, number>()
+  session.answers.forEach((ans) => {
+    if (!ans.result.isCorrect) {
+      const q = questionMap.get(ans.questionKey)
+      if (q) {
+        const ch = `${q.source.work === "Daniel" ? "Dan" : "PR"} ${q.source.chapter}`
+        chapterFails.set(ch, (chapterFails.get(ch) ?? 0) + 1)
+      }
+    }
+  })
   const displayedAnswers = onlyIncorrect
     ? session.answers.filter((answer) => !answer.result.isCorrect)
     : session.answers
@@ -189,6 +205,37 @@ export function ResultsPage({
         </CardHeader>
         <CardContent>
           <Progress aria-label="Precisión de la ronda" value={accuracy} />
+        </CardContent>
+      </Card>
+
+      <Card className="border-amber-500/20 bg-amber-500/5 shadow-none">
+        <CardHeader className="pb-3">
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg font-semibold tracking-tight">Diagnóstico de Emergencia</h2>
+            <Badge variant="outline" className="text-xs">Examen Nacional</Badge>
+          </div>
+          <CardDescription>
+            Análisis de velocidad y discriminación para la final:
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="grid gap-3 sm:grid-cols-3 pt-0">
+          <div className="rounded-lg border bg-background/80 p-3">
+            <p className="text-xs text-muted-foreground">Preguntas lentas (&gt;6s)</p>
+            <p className="text-2xl font-bold tabular-nums text-foreground mt-1">{slowCount}</p>
+            <p className="text-[11px] text-muted-foreground mt-0.5">Riesgo en rondas rápidas</p>
+          </div>
+          <div className="rounded-lg border bg-background/80 p-3">
+            <p className="text-xs text-muted-foreground">Dudas marcadas</p>
+            <p className="text-2xl font-bold tabular-nums text-foreground mt-1">{doubtedCount}</p>
+            <p className="text-[11px] text-muted-foreground mt-0.5">Dudé entre dos opciones</p>
+          </div>
+          <div className="rounded-lg border bg-background/80 p-3">
+            <p className="text-xs text-muted-foreground">Capítulos con fallos</p>
+            <p className="text-sm font-semibold text-foreground mt-1 truncate">
+              {chapterFails.size > 0 ? Array.from(chapterFails.keys()).join(", ") : "Ninguno"}
+            </p>
+            <p className="text-[11px] text-muted-foreground mt-0.5">Prioridad de repaso</p>
+          </div>
         </CardContent>
       </Card>
 

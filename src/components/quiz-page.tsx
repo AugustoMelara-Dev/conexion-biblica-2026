@@ -9,6 +9,7 @@ import {
   Maximize2,
   Star,
   TimerOff,
+  HelpCircle,
   X,
 } from "lucide-react"
 import { useApp } from "@/app/app-state"
@@ -84,6 +85,7 @@ export function QuizPage({
   const [totalRemaining, setTotalRemaining] = useState(config.totalSeconds)
   const [favorite, setFavorite] = useState(false)
   const [difficult, setDifficult] = useState(false)
+  const [doubted, setDoubted] = useState(false)
   const [reportReason, setReportReason] = useState("")
   const [reportOpen, setReportOpen] = useState(false)
   const [reportPending, setReportPending] = useState(false)
@@ -343,6 +345,7 @@ export function QuizPage({
     setRemaining(config.perQuestionSeconds)
     setFavorite(Boolean(itemProgress?.favorite))
     setDifficult(Boolean(itemProgress?.markedDifficult))
+    setDoubted(Boolean((itemProgress as any)?.doubted))
     reportSequenceRef.current += 1
     isReportingRef.current = false
     setReportReason("")
@@ -472,6 +475,7 @@ export function QuizPage({
         responseTimeMs,
         favorite,
         markedDifficult: difficult,
+        doubted,
       }
       setAnswers((current) => [...current, sessionAnswer])
       setFeedback(result)
@@ -481,6 +485,7 @@ export function QuizPage({
         nextProgress = await recordAnswer(question, result, value, {
           favorite,
           markedDifficult: difficult,
+          doubted,
           context: sessionContextForMode(config.mode),
           afterFeedback: answers.some((answer) => {
             const earlier = queue.find(
@@ -1063,6 +1068,23 @@ export function QuizPage({
               className={difficult ? "fill-current" : undefined}
             />
             Marcar difícil
+          </Button>
+          <Button
+            aria-pressed={doubted}
+            size="sm"
+            className="min-h-11"
+            variant={doubted ? "secondary" : "outline"}
+            disabled={transitionPending !== null}
+            onClick={() => {
+              if (isExitingRef.current || hasFinishedRef.current) return
+              setDoubted((current) => !current)
+            }}
+          >
+            <HelpCircle
+              data-icon="inline-start"
+              className={doubted ? "fill-current text-amber-500" : undefined}
+            />
+            Dudé entre dos
           </Button>
           <Button
             size="sm"
