@@ -127,6 +127,7 @@ export function App() {
     repositories,
   } = useApp()
   const [activeRound, setActiveRound] = useState<RoundView | null>(null)
+  const [isPaused, setIsPaused] = useState(false)
   const [result, setResult] = useState<Session | null>(null)
   const roundStarting = useRef(false)
 
@@ -237,6 +238,7 @@ export function App() {
         }
         selectionSummary = {
           strategy: (isEmergency ? "emergency-mode" : nextConfig.strategy) as any,
+          seed: nextConfig.seed,
           prCount: pr,
           danielCount: dan,
           chapterCounts: chCounts,
@@ -442,6 +444,7 @@ export function App() {
         questionSnapshots: selected,
         answers: [],
         config: nextConfig,
+        seed: nextConfig.seed,
         selectionSummary,
         requestedConfig: requestedSelection,
         realizedSummary,
@@ -454,6 +457,7 @@ export function App() {
         persisted,
       }
       setActiveRound(round)
+      setIsPaused(false)
       setResult(null)
       setNav("practice")
     } finally {
@@ -464,18 +468,24 @@ export function App() {
   const finishRound = async (session: Session) => {
     const completed = {
       ...session,
+      seed:
+        activeRound?.persisted.seed ??
+        activeRound?.persisted.selectionSummary?.seed ??
+        activeRound?.config.seed,
       selectionSummary: activeRound?.persisted.selectionSummary,
     }
     await saveSession(completed)
     await clearActiveRound()
     setResult(completed)
     setActiveRound(null)
+    setIsPaused(false)
     setNav("dashboard")
   }
 
   const exitRound = async () => {
     await clearActiveRound()
     setActiveRound(null)
+    setIsPaused(false)
   }
 
   const renderPage = () => {
@@ -522,7 +532,7 @@ export function App() {
         />
       )
     }
-    if (activeRound && nav === "practice")
+    if (activeRound && !isPaused)
       return (
         <QuizPage
           questions={activeRound.questions}
@@ -536,7 +546,10 @@ export function App() {
           }}
           onFinish={finishRound}
           onExit={exitRound}
-          onBack={() => setNav("dashboard")}
+          onBack={() => {
+            setIsPaused(true)
+            setNav("dashboard")
+          }}
         />
       )
     if (nav === "banks") return <BankManagerPage />
@@ -558,10 +571,18 @@ export function App() {
           }
         />
       )
-    return <DashboardPage onStartMission={startRound} />
+    return (
+      <DashboardPage
+        onStartMission={startRound}
+        onContinueRound={() => {
+          setIsPaused(false)
+          setNav("practice")
+        }}
+      />
+    )
   }
 
-  if (activeRound && nav === "practice") {
+  if (activeRound && !isPaused) {
     return <FocusShell>{renderPage()}</FocusShell>
   }
 

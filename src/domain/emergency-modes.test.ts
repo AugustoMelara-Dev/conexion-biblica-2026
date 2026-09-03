@@ -175,4 +175,141 @@ describe('Entrenamiento de Emergencia Final 2026', () => {
       })
     ).toThrowError(/Violation: Emergency preset "emergency-simulation-aah" must never reach selectAdaptiveSession/)
   })
+
+  describe('Rotación de Semilla y Cuotas en Sesiones Consecutivas', () => {
+    const seed1 = 20260905
+    const seed2 = 20260906
+
+    it('PR Intensivo: conserva 25 por capítulo y al menos 100 de 150 preguntas son diferentes', () => {
+      const progress = new Map<string, QuestionProgress>()
+      const r1 = selectEmergencySession(allQuestions, 'emergency-pr-intensive', progress, seed1)
+      const r2 = selectEmergencySession(allQuestions, 'emergency-pr-intensive', progress, seed2)
+
+      expect(r1.questions).toHaveLength(150)
+      expect(r2.questions).toHaveLength(150)
+
+      for (let c = 39; c <= 44; c++) {
+        expect(r1.realizedSummary.chapterCounts[`PR${c}`]).toBe(25)
+        expect(r2.realizedSummary.chapterCounts[`PR${c}`]).toBe(25)
+      }
+
+      const ids1 = new Set(r1.questions.map((q) => q.id))
+      const diffCount = r2.questions.filter((q) => !ids1.has(q.id)).length
+      expect(diffCount).toBeGreaterThanOrEqual(100)
+    })
+
+    it('Daniel Contrastes: conserva cuotas exactas y al menos 100 de 150 preguntas son diferentes', () => {
+      const progress = new Map<string, QuestionProgress>()
+      const r1 = selectEmergencySession(allQuestions, 'emergency-daniel-contrast', progress, seed1)
+      const r2 = selectEmergencySession(allQuestions, 'emergency-daniel-contrast', progress, seed2)
+
+      expect(r1.questions).toHaveLength(150)
+      expect(r2.questions).toHaveLength(150)
+
+      const expectedQuotas: Record<number, number> = {
+        7: 20,
+        8: 25,
+        9: 30,
+        10: 20,
+        11: 30,
+        12: 25,
+      }
+
+      for (const [ch, count] of Object.entries(expectedQuotas)) {
+        expect(r1.realizedSummary.chapterCounts[`DAN${ch}`]).toBe(count)
+        expect(r2.realizedSummary.chapterCounts[`DAN${ch}`]).toBe(count)
+      }
+
+      const ids1 = new Set(r1.questions.map((q) => q.id))
+      const diffCount = r2.questions.filter((q) => !ids1.has(q.id)).length
+      expect(diffCount).toBeGreaterThanOrEqual(100)
+    })
+
+    it('Simulación AAH: conserva 71/29 y 77/23 y al menos 60 de 100 preguntas son diferentes', () => {
+      const progress = new Map<string, QuestionProgress>()
+      const r1 = selectEmergencySession(allQuestions, 'emergency-simulation-aah', progress, seed1)
+      const r2 = selectEmergencySession(allQuestions, 'emergency-simulation-aah', progress, seed2)
+
+      expect(r1.questions).toHaveLength(100)
+      expect(r2.questions).toHaveLength(100)
+
+      expect(r1.realizedSummary.danielCount).toBe(71)
+      expect(r1.realizedSummary.prCount).toBe(29)
+      expect(r1.realizedSummary.scCount).toBe(77)
+      expect(r1.realizedSummary.tfCount).toBe(23)
+      expect(r1.realizedSummary.distinctFacts).toBe(100)
+
+      expect(r2.realizedSummary.danielCount).toBe(71)
+      expect(r2.realizedSummary.prCount).toBe(29)
+      expect(r2.realizedSummary.scCount).toBe(77)
+      expect(r2.realizedSummary.tfCount).toBe(23)
+      expect(r2.realizedSummary.distinctFacts).toBe(100)
+
+      const ids1 = new Set(r1.questions.map((q) => q.id))
+      const diffCount = r2.questions.filter((q) => !ids1.has(q.id)).length
+      expect(diffCount).toBeGreaterThanOrEqual(60)
+    })
+
+    it('Simulación Adversarial: conserva 50/50 y al menos 60 de 100 son diferentes con solo COMPETITIVE_ACCEPT', () => {
+      const progress = new Map<string, QuestionProgress>()
+      const r1 = selectEmergencySession(allQuestions, 'emergency-adversarial-simulation', progress, seed1)
+      const r2 = selectEmergencySession(allQuestions, 'emergency-adversarial-simulation', progress, seed2)
+
+      expect(r1.questions).toHaveLength(100)
+      expect(r2.questions).toHaveLength(100)
+
+      expect(r1.realizedSummary.prCount).toBe(50)
+      expect(r1.realizedSummary.danielCount).toBe(50)
+      expect(r1.realizedSummary.competitiveCount).toBe(100)
+      expect(r1.realizedSummary.distinctFacts).toBe(100)
+
+      expect(r2.realizedSummary.prCount).toBe(50)
+      expect(r2.realizedSummary.danielCount).toBe(50)
+      expect(r2.realizedSummary.competitiveCount).toBe(100)
+      expect(r2.realizedSummary.distinctFacts).toBe(100)
+
+      for (const q of [...r1.questions, ...r2.questions]) {
+        expect(VERIFIED_COMPETITIVE_IDS.has(q.id)).toBe(true)
+      }
+
+      const ids1 = new Set(r1.questions.map((q) => q.id))
+      const diffCount = r2.questions.filter((q) => !ids1.has(q.id)).length
+      expect(diffCount).toBeGreaterThanOrEqual(60)
+    })
+
+    it('Priorización: selecciona preguntas nunca vistas antes que preguntas vistas hoy', () => {
+      const progress = new Map<string, QuestionProgress>()
+      const r1 = selectEmergencySession(allQuestions, 'emergency-pr-intensive', progress, seed1)
+
+      // Simular que todas las preguntas de r1 fueron vistas hoy
+      const now = Date.now()
+      for (const q of r1.questions) {
+        progress.set(q.id, {
+          questionKey: `local:${q.id}`,
+          timesSeen: 1,
+          timesCorrect: 1,
+          timesIncorrect: 0,
+          timesUnanswered: 0,
+          currentCorrectStreak: 1,
+          averageResponseTimeMs: 3000,
+          bestResponseTimeMs: 3000,
+          lastResponseTimeMs: 3000,
+          lastSeenAt: now,
+          masteryScore: 1,
+          favorite: false,
+          markedDifficult: false,
+          reported: false,
+          history: [],
+        })
+      }
+
+      // En la siguiente ronda, el selector debe priorizar las preguntas no vistas
+      const r2 = selectEmergencySession(allQuestions, 'emergency-pr-intensive', progress, seed2)
+      const seenIds = new Set(r1.questions.map((q) => q.id))
+      
+      // La gran mayoría deben ser preguntas nuevas
+      const newQuestions = r2.questions.filter((q) => !seenIds.has(q.id))
+      expect(newQuestions.length).toBeGreaterThanOrEqual(120)
+    })
+  })
 })

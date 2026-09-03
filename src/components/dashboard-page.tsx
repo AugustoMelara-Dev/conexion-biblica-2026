@@ -66,8 +66,10 @@ function missionConfig(mission: FinalMission): SessionConfig {
 
 export function DashboardPage({
   onStartMission,
+  onContinueRound,
 }: {
   onStartMission?: (config: SessionConfig, questions?: Question[]) => void | Promise<void>
+  onContinueRound?: () => void
 }) {
   const { setNav, sessions = [], statistics } = useApp()
   const sources = (statistics?.sources ?? []).filter(
@@ -82,7 +84,10 @@ export function DashboardPage({
           else setNav("practice")
         }}
         onConfigureRound={() => setNav("practice")}
-        onContinueRound={() => setNav("practice")}
+        onContinueRound={() => {
+          if (onContinueRound) onContinueRound()
+          else setNav("practice")
+        }}
       />
 
       <details open={import.meta.env?.MODE === "test" ? true : undefined} className="rounded-xl border bg-card/40 p-4 text-xs text-muted-foreground">

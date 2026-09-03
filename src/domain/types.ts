@@ -217,6 +217,7 @@ export type SessionConfig = {
   massive?: boolean
   selectionOrigin?: "manual" | "preset" | "sprint" | "simulation"
   tierFilter?: "all" | "coverage" | "competitive"
+  seed?: number
 }
 
 export type CoverageCycle = {
@@ -238,6 +239,7 @@ export type ActiveRound = {
   questionSnapshots?: Question[]
   answers: SessionAnswer[]
   config: SessionConfig
+  seed?: number
   selectionSummary?: SelectionSummary
   requestedConfig?: SessionConfig
   realizedSummary?: {
@@ -271,6 +273,7 @@ export type Session = {
   mode: SessionMode
   context?: AttemptContext
   config: SessionConfig
+  seed?: number
   questionKeys: string[]
   answers: SessionAnswer[]
   score: number
@@ -280,6 +283,7 @@ export type Session = {
 
 export type SelectionSummary = {
   strategy: SelectionStrategy
+  seed?: number
   poolKey?: string
   cycleId?: string
   seen?: number

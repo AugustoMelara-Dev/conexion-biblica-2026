@@ -63,17 +63,70 @@ function shuffleWithRng<T>(items: T[], seed: number): T[] {
   return copy
 }
 
+function getQuestionPriority(
+  q: Question,
+  progress: Map<string, QuestionProgress>,
+  startOfToday: number
+): { tier: number; lastSeenAt: number; timesSeen: number } {
+  const p =
+    progress.get(q.id) ??
+    progress.get(`BANCO_UNICO_CONEXION_BIBLICA_2026:${q.id}`) ??
+    progress.get(`local:${q.id}`)
+
+  if (!p || p.timesSeen === 0) {
+    return { tier: 1, lastSeenAt: 0, timesSeen: 0 }
+  }
+
+  const lastSeen = p.lastSeenAt ?? 0
+  if (lastSeen < startOfToday) {
+    return { tier: 2, lastSeenAt: lastSeen, timesSeen: p.timesSeen }
+  }
+
+  return { tier: 3, lastSeenAt: lastSeen, timesSeen: p.timesSeen }
+}
+
 function selectWithUniqueFacts(
   pool: Question[],
   targetCount: number,
-  seed: number
+  progress: Map<string, QuestionProgress>,
+  seed: number,
+  usedFactsGlobal?: Set<string>
 ): Question[] {
-  const shuffled = shuffleWithRng(pool, seed)
+  const startOfToday = new Date().setHours(0, 0, 0, 0)
+
+  const tier1: Question[] = []
+  const tier2: Question[] = []
+  const tier3: Question[] = []
+
+  for (const q of pool) {
+    const prio = getQuestionPriority(q, progress, startOfToday)
+    if (prio.tier === 1) tier1.push(q)
+    else if (prio.tier === 2) tier2.push(q)
+    else tier3.push(q)
+  }
+
+  const shuffledTier1 = shuffleWithRng(tier1, seed)
+
+  const shuffledTier2 = shuffleWithRng(tier2, seed + 101).sort((a, b) => {
+    const pa = getQuestionPriority(a, progress, startOfToday)
+    const pb = getQuestionPriority(b, progress, startOfToday)
+    return pa.lastSeenAt - pb.lastSeenAt
+  })
+
+  const shuffledTier3 = shuffleWithRng(tier3, seed + 202).sort((a, b) => {
+    const pa = getQuestionPriority(a, progress, startOfToday)
+    const pb = getQuestionPriority(b, progress, startOfToday)
+    if (pa.timesSeen !== pb.timesSeen) return pa.timesSeen - pb.timesSeen
+    return pa.lastSeenAt - pb.lastSeenAt
+  })
+
+  const candidates = [...shuffledTier1, ...shuffledTier2, ...shuffledTier3]
+
   const selected: Question[] = []
-  const usedFacts = new Set<string>()
+  const usedFacts = usedFactsGlobal ?? new Set<string>()
   const leftovers: Question[] = []
 
-  for (const q of shuffled) {
+  for (const q of candidates) {
     const fid = q.factId ?? q.id
     if (!usedFacts.has(fid) && selected.length < targetCount) {
       usedFacts.add(fid)
@@ -84,7 +137,9 @@ function selectWithUniqueFacts(
   }
 
   while (selected.length < targetCount && leftovers.length > 0) {
-    selected.push(leftovers.shift()!)
+    const q = leftovers.shift()!
+    usedFacts.add(q.factId ?? q.id)
+    selected.push(q)
   }
 
   return selected
@@ -97,6 +152,7 @@ export interface EmergencySessionResult {
   description: string
   questions: Question[]
   config: SessionConfig
+  seed: number
   realizedSummary: {
     total: number
     prCount: number
@@ -131,11 +187,12 @@ export function selectEmergencySession(
     title = 'PR39–44 Intensivo'
     description =
       'Aprendizaje, cobertura y fijación de detalles. Exactamente 25 preguntas por cada capítulo (PR 39 al 44).'
+    const usedFacts = new Set<string>()
     for (let c = 39; c <= 44; c++) {
       const chPool = cleanPool.filter(
         (q) => q.source.work === 'Profetas y Reyes' && q.source.chapter === c
       )
-      const chSelected = selectWithUniqueFacts(chPool, 25, seed + c)
+      const chSelected = selectWithUniqueFacts(chPool, 25, progress, seed + c, usedFacts)
       selected.push(...chSelected)
     }
   } else if (modeId === 'emergency-daniel-contrast') {
@@ -150,25 +207,27 @@ export function selectEmergencySession(
       11: 30,
       12: 25,
     }
+    const usedFacts = new Set<string>()
     for (const [chStr, count] of Object.entries(targets)) {
       const ch = Number(chStr)
       const chPool = cleanPool.filter(
         (q) => q.source.work === 'Daniel' && q.source.chapter === ch
       )
-      const chSelected = selectWithUniqueFacts(chPool, count, seed + ch)
+      const chSelected = selectWithUniqueFacts(chPool, count, progress, seed + ch, usedFacts)
       selected.push(...chSelected)
     }
   } else if (modeId === 'emergency-daniel-maintenance') {
     title = 'Daniel 1–6 Mantenimiento'
     description =
       '50 preguntas: Repaso rápido de las narrativas fundamentales (capítulos 1 al 6).'
+    const usedFacts = new Set<string>()
     for (let c = 1; c <= 6; c++) {
       const count = c === 1 || c === 6 ? 9 : 8
       const chPool = cleanPool.filter(
         (q) => q.source.work === 'Daniel' && q.source.chapter === c
       )
-      const shuffled = shuffleWithRng(chPool, seed + c)
-      selected.push(...shuffled.slice(0, count))
+      const chSelected = selectWithUniqueFacts(chPool, count, progress, seed + c, usedFacts)
+      selected.push(...chSelected)
     }
   } else if (modeId === 'emergency-personal-repair') {
     title = 'Reparar Errores y Dudas'
@@ -227,56 +286,40 @@ export function selectEmergencySession(
     const usedFacts = new Set<string>()
 
     // Dan TF: 16
-    const danTF: Question[] = []
-    for (const q of shuffleWithRng(
+    const danTF = selectWithUniqueFacts(
       danPool.filter((q) => q.type === 'true_false' || q.family === 'true_false'),
-      seed + 1
-    )) {
-      const fid = q.factId ?? q.id
-      if (!usedFacts.has(fid) && danTF.length < 16) {
-        usedFacts.add(fid)
-        danTF.push(q)
-      }
-    }
+      16,
+      progress,
+      seed + 1,
+      usedFacts
+    )
 
     // Dan SC: 55
-    const danSC: Question[] = []
-    for (const q of shuffleWithRng(
+    const danSC = selectWithUniqueFacts(
       danPool.filter((q) => q.type !== 'true_false' && q.family !== 'true_false'),
-      seed + 2
-    )) {
-      const fid = q.factId ?? q.id
-      if (!usedFacts.has(fid) && danSC.length < 55) {
-        usedFacts.add(fid)
-        danSC.push(q)
-      }
-    }
+      55,
+      progress,
+      seed + 2,
+      usedFacts
+    )
 
     // PR TF: 7
-    const prTF: Question[] = []
-    for (const q of shuffleWithRng(
+    const prTF = selectWithUniqueFacts(
       prPool.filter((q) => q.type === 'true_false' || q.family === 'true_false'),
-      seed + 3
-    )) {
-      const fid = q.factId ?? q.id
-      if (!usedFacts.has(fid) && prTF.length < 7) {
-        usedFacts.add(fid)
-        prTF.push(q)
-      }
-    }
+      7,
+      progress,
+      seed + 3,
+      usedFacts
+    )
 
     // PR SC: 22
-    const prSC: Question[] = []
-    for (const q of shuffleWithRng(
+    const prSC = selectWithUniqueFacts(
       prPool.filter((q) => q.type !== 'true_false' && q.family !== 'true_false'),
-      seed + 4
-    )) {
-      const fid = q.factId ?? q.id
-      if (!usedFacts.has(fid) && prSC.length < 22) {
-        usedFacts.add(fid)
-        prSC.push(q)
-      }
-    }
+      22,
+      progress,
+      seed + 4,
+      usedFacts
+    )
 
     selected = shuffleWithRng([...danTF, ...danSC, ...prTF, ...prSC], seed)
   } else if (
@@ -305,8 +348,9 @@ export function selectEmergencySession(
         VERIFIED_COMPETITIVE_IDS.has(q.id)
     )
 
-    const selPR = selectWithUniqueFacts(compPR, 50, seed + 10)
-    const selDan = selectWithUniqueFacts(compDan, 50, seed + 20)
+    const usedFacts = new Set<string>()
+    const selPR = selectWithUniqueFacts(compPR, 50, progress, seed + 10, usedFacts)
+    const selDan = selectWithUniqueFacts(compDan, 50, progress, seed + 20, usedFacts)
 
     selected = shuffleWithRng([...selPR, ...selDan], seed)
   }
@@ -339,6 +383,8 @@ export function selectEmergencySession(
   const config: SessionConfig = {
     mode,
     count: selected.length,
+    seed,
+    trainingPresetId: modeId,
     sourceWorks:
       prCount > 0 && danielCount > 0
         ? ['Daniel', 'Profetas y Reyes']
@@ -357,7 +403,6 @@ export function selectEmergencySession(
     totalSeconds,
     bankSelection: 'final-v7',
     strategy: 'adaptive',
-    trainingPresetId: modeId,
     selectionOrigin: 'preset',
     massive: true,
   }
@@ -369,6 +414,7 @@ export function selectEmergencySession(
     description,
     questions: selected,
     config,
+    seed,
     realizedSummary: {
       total: selected.length,
       prCount,

@@ -89,7 +89,11 @@ export function EmergencyDashboard({
   }, [sessions])
 
   const handleStartMode = (modeId: EmergencyModeId) => {
-    const result = selectEmergencySession(questions, modeId, progress)
+    const modeSessionCount = sessions.filter(
+      (s) => s.config.trainingPresetId === modeId
+    ).length
+    const seed = Date.now() + modeSessionCount * 1009
+    const result = selectEmergencySession(questions, modeId, progress, seed)
     if (result.success) {
       onStartEmergencyMode(result.config, result.questions)
     }

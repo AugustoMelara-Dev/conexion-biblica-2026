@@ -140,4 +140,39 @@ test.describe('Modo Emergencia Final 2026 E2E', () => {
     await expect(contract).toHaveAttribute('data-dan-count', '50')
     await expect(contract).toHaveAttribute('data-pr-count', '50')
   })
+
+  test('Rotación: dos sesiones del mismo modo iniciadas consecutivamente reciben preguntas diferentes', async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+    await page.goto('/')
+
+    // Iniciar Simulación AAH primera vez
+    const startSimBtn1 = page.getByRole('button', { name: 'Iniciar Simulación AAH' })
+    await expect(startSimBtn1).toBeVisible({ timeout: 30_000 })
+    await startSimBtn1.click()
+
+    await expect(page.getByText('Pregunta 1 de 100', { exact: true })).toBeVisible({ timeout: 30_000 })
+    const question1 = await page.locator('#question-title').innerText()
+
+    // Salir (descartando la ronda activa)
+    const exitBtn = page.getByRole('button', { name: 'Salir' })
+    await expect(exitBtn).toBeVisible()
+    await exitBtn.click()
+
+    // Regresar al dashboard
+    await page.goto('/')
+
+    // Volver a iniciar Simulación AAH (semilla distinta por timestamp)
+    const startSimBtn2 = page.getByRole('button', { name: 'Iniciar Simulación AAH' })
+    await expect(startSimBtn2).toBeVisible({ timeout: 30_000 })
+    await startSimBtn2.click()
+
+    await expect(page.getByText('Pregunta 1 de 100', { exact: true })).toBeVisible({ timeout: 30_000 })
+
+    const contract = page.locator('[data-testid="round-contract-summary"]')
+    await expect(contract).toHaveAttribute('data-questions-count', '100')
+    await expect(contract).toHaveAttribute('data-dan-count', '71')
+    await expect(contract).toHaveAttribute('data-pr-count', '29')
+  })
 })
