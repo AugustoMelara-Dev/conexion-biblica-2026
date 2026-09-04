@@ -125,6 +125,10 @@ class LiveAuditCompilerIntegrationTests(unittest.TestCase):
                 blind_output=blind_output,
                 blind_requirements=requirements,
             )
+            (public_output / "packages-v18.json").write_text(
+                json.dumps({"schema_version": "final-day-v18-packages-1.0"}),
+                encoding="utf-8",
+            )
 
             public_manifest = json.loads((public_output / "manifest.json").read_text(encoding="utf-8"))
             private_manifest = json.loads((blind_output / "manifest.json").read_text(encoding="utf-8"))

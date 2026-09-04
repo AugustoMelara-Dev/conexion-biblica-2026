@@ -8,6 +8,7 @@ const BANK_ID = "BANCO_UNICO_CONEXION_BIBLICA_2026"
 const BANK_ROOT = "banks/final-2026"
 const MANIFEST_PATH = `${BANK_ROOT}/manifest.json`
 const REVIEW_INDEX_PATH = `${BANK_ROOT}/review-index.json`
+const V18_PACKAGES_PATH = `${BANK_ROOT}/packages-v18.json`
 const BLIND_CONTRACT = "private-blind-artifact-v1"
 const BLIND_ARTIFACT_ID = "competitive-v11-blind"
 const BUILD_DESCRIPTOR_CONTRACT = "competitive-v11-emitted-descriptors-v1"
@@ -738,7 +739,7 @@ export async function auditLiveFinalBank(options = {}) {
   if (!shards) return report(context, { totalBytes })
 
   const resourcePaths = [REVIEW_INDEX_PATH, ...shards.map((shard) => shard.questions_file)]
-  const declaredPaths = new Set([MANIFEST_PATH, ...resourcePaths])
+  const declaredPaths = new Set([MANIFEST_PATH, V18_PACKAGES_PATH, ...resourcePaths])
   await validateLocalAllowlist(context, declaredPaths)
   const remote = new Map()
   await Promise.all(resourcePaths.map(async (path) => {
