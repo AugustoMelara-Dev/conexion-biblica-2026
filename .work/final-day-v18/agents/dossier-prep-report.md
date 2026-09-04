@@ -199,3 +199,11 @@ dosier/ciego; una mutación posterior devuelve `False`.
 - Conteos: **20** ítems, **3 ACCEPT_COVERAGE**, **17 REWRITE** por variantes superficiales documentadas, 0 `ACCEPT_COMPETITIVE`, 0 `REJECT`, 0 `INVALID_OUTPUT`; todos con evidencia de Daniel 9 (`DANIEL_ONLY`).
 - `input_sha256`: `9ced1a74ace06efc382f10cb07c632690ff7cf512a9fc3adf61d9157e1ee327f`; SHA del payload publicado: `f79853ee9717444c905b76875408a9928fee7d3d5baa2b5d153f41f7235f15f3`.
 - Verificación adicional: comprobaciones independientes de contrato/evidencia/privacidad — **OK**. La promoción posterior requiere el resultado ciego correspondiente.
+
+## Auditoría Sol Medium — priority batch-036
+
+- Se publicó únicamente `.work/final-day-v18/audits/v18-priority-audit/sol-medium/batch-036.json` mediante staging temporal y `os.replace`; no se sobrescribieron lotes vecinos.
+- Validación literal `final-day-v18-sol-audit-1.0` con `_validate_agent_output()` — **OK**; comprobación independiente de IDs, índice/texto, citas exactas, análisis por opción y hashes — **OK**.
+- Conteos: **20** ítems, **6 ACCEPT_COVERAGE**, **14 REWRITE** por variantes superficiales documentadas, 0 `ACCEPT_COMPETITIVE`, 0 `REJECT`, 0 `INVALID_OUTPUT`; todos con evidencia de Daniel 10 (`DANIEL_ONLY`).
+- `input_sha256`: `49ef2fd877c73870f43f17922fdb9d4a097d3a9ebaf029a140ec4f842eabf339`; SHA del payload publicado: `2955c1ab9fb3f1e9e864c5099a69d11e0be081e556d5c5996c15d0088612a63b`.
+- Verificación adicional: `python -m unittest scripts.test_compile_final_day_v18 -v` — **9 OK**; `python -m py_compile scripts/compile_final_day_v18.py` — **OK**. La promoción posterior requiere el resultado ciego correspondiente.

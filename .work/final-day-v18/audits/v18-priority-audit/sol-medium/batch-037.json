@@ -1,0 +1,1084 @@
+ {
+   "schema_version": "final-day-v18-sol-audit-1.0",
+   "audit_run_id": "v18-priority-audit",
+   "batch_id": "batch-037",
+   "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-037.json",
+   "input_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+   "auditor": {
+     "model": "GPT-5.6 Sol",
+     "reasoning_effort": "medium",
+     "agent_id": "/root/contracts_rereview",
+     "conversation_id": "/root/contracts_rereview",
+     "conversation_id_kind": "codex_canonical_agent_task_name"
+   },
+   "items": [
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-042",
+       "selected_option_index": 1,
+       "selected_option_text": "No quedaron fuerzas en él, se tornaron en desfallecimiento y lo dejaron por completo.",
+       "exact_supporting_phrase": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Sintió un temor inicial, procuró mantenerse en pie y luego recobró el aliento enseguida.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:8",
+           "exact_reason": "La cita respalda «No quedaron fuerzas en él, se tornaron en desfallecimiento y lo dejaron por completo.», no «Sintió un temor inicial, procuró mantenerse en pie y luego recobró el aliento enseguida.»."
+         },
+         {
+           "text": "No quedaron fuerzas en él, se tornaron en desfallecimiento y lo dejaron por completo.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:8",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «No quedaron fuerzas en él, se tornaron en desfallecimiento y lo dejaron por completo.»."
+         },
+         {
+           "text": "Perdió la vista temporalmente, cayó de rodillas y recuperó toda su energía sin auxilio.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:8",
+           "exact_reason": "La cita respalda «No quedaron fuerzas en él, se tornaron en desfallecimiento y lo dejaron por completo.», no «Perdió la vista temporalmente, cayó de rodillas y recuperó toda su energía sin auxilio.»."
+         },
+         {
+           "text": "Se turbó su espíritu, clamó por ayuda a Dios y halló vigor renovado en sus extremidades.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:8",
+           "exact_reason": "La cita respalda «No quedaron fuerzas en él, se tornaron en desfallecimiento y lo dejaron por completo.», no «Se turbó su espíritu, clamó por ayuda a Dios y halló vigor renovado en sus extremidades.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "MEDIUM",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-047 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "112ec74a32fcc34051a0ce3cca6161092fa237de1f31f6a5981ca76f4d752dc4"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-043",
+       "selected_option_index": 2,
+       "selected_option_text": "Cayó sobre su rostro en un profundo sueño, con el rostro en tierra.",
+       "exact_supporting_phrase": "Pero oí el sonido de sus palabras; y al oír el sonido de sus palabras caí sobre mi rostro en un profundo sueño, con mi rostro en tierra.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Tomó una pluma y escribió al instante cada una de las revelaciones.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita respalda «Cayó sobre su rostro en un profundo sueño, con el rostro en tierra.», no «Tomó una pluma y escribió al instante cada una de las revelaciones.»."
+         },
+         {
+           "text": "Se puso inmediatamente en pie para responder al mandato del varón.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita respalda «Cayó sobre su rostro en un profundo sueño, con el rostro en tierra.», no «Se puso inmediatamente en pie para responder al mandato del varón.»."
+         },
+         {
+           "text": "Cayó sobre su rostro en un profundo sueño, con el rostro en tierra.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «Cayó sobre su rostro en un profundo sueño, con el rostro en tierra.»."
+         },
+         {
+           "text": "Corrió apresuradamente para alcanzar a los hombres que habían huido.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita respalda «Cayó sobre su rostro en un profundo sueño, con el rostro en tierra.», no «Corrió apresuradamente para alcanzar a los hombres que habían huido.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "EASY",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-011 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "4f87f51bdb570275f815f52c736da0bb3c759762474337011133f2b656d1d027"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-044",
+       "selected_option_index": 0,
+       "selected_option_text": "En un profundo sueño.",
+       "exact_supporting_phrase": "Pero oí el sonido de sus palabras; y al oír el sonido de sus palabras caí sobre mi rostro en un profundo sueño, con mi rostro en tierra.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "En un profundo sueño.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «En un profundo sueño.»."
+         },
+         {
+           "text": "En un profundo dolor.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita respalda «En un profundo sueño.», no «En un profundo dolor.»."
+         },
+         {
+           "text": "En un profundo llanto.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita respalda «En un profundo sueño.», no «En un profundo llanto.»."
+         },
+         {
+           "text": "En un profundo temor.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita respalda «En un profundo sueño.», no «En un profundo temor.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "EASY",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-014 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "17ecc204545940173752c0e4454a241dfc456cb9786012a8c7007d7bbfca9f45"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-045",
+       "selected_option_index": 1,
+       "selected_option_text": "Sobre sus rodillas y sobre las palmas de sus manos.",
+       "exact_supporting_phrase": "Y una mano me tocó e hizo que me pusiera sobre mis rodillas y sobre las palmas de mis manos.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Sobre sus hombros erguidos y sobre sus dos muslos.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:10",
+           "exact_reason": "La cita respalda «Sobre sus rodillas y sobre las palmas de sus manos.», no «Sobre sus hombros erguidos y sobre sus dos muslos.»."
+         },
+         {
+           "text": "Sobre sus rodillas y sobre las palmas de sus manos.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:10",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «Sobre sus rodillas y sobre las palmas de sus manos.»."
+         },
+         {
+           "text": "Sobre su costado derecho y sobre su brazo herido.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:10",
+           "exact_reason": "La cita respalda «Sobre sus rodillas y sobre las palmas de sus manos.», no «Sobre su costado derecho y sobre su brazo herido.»."
+         },
+         {
+           "text": "Sobre la planta de sus pies y sobre sus dos codos.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:10",
+           "exact_reason": "La cita respalda «Sobre sus rodillas y sobre las palmas de sus manos.», no «Sobre la planta de sus pies y sobre sus dos codos.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "EASY",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-015 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "0133f79edce98d2771e00925bbaf2abff24703999ab4c6073a6cbbd8fcbc4308"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-046",
+       "selected_option_index": 0,
+       "selected_option_text": "«Daniel, varón muy amado»",
+       "exact_supporting_phrase": "Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "«Daniel, varón muy amado»",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita conserva expresamente todos los elementos de ««Daniel, varón muy amado»»."
+         },
+         {
+           "text": "«Daniel, sabio consejero»",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda ««Daniel, varón muy amado»», no ««Daniel, sabio consejero»»."
+         },
+         {
+           "text": "«Daniel, siervo prudente»",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda ««Daniel, varón muy amado»», no ««Daniel, siervo prudente»»."
+         },
+         {
+           "text": "«Daniel, profeta insigne»",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda ««Daniel, varón muy amado»», no ««Daniel, profeta insigne»»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "EASY",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-029 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "2d4615ec2a6f4a17d96a7ae54ce750d78760886fce5fe6b577e59c679d118fe6"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-047",
+       "selected_option_index": 0,
+       "selected_option_text": "Le mandó atender y ponerse en pie; mientras hablaba con él, Daniel se levantó temblando.",
+       "exact_supporting_phrase": "Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Le mandó atender y ponerse en pie; mientras hablaba con él, Daniel se levantó temblando.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «Le mandó atender y ponerse en pie; mientras hablaba con él, Daniel se levantó temblando.»."
+         },
+         {
+           "text": "Le mandó huir y esconderse; mientras hablaba con él, Daniel corrió junto a sus hombres.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda «Le mandó atender y ponerse en pie; mientras hablaba con él, Daniel se levantó temblando.», no «Le mandó huir y esconderse; mientras hablaba con él, Daniel corrió junto a sus hombres.»."
+         },
+         {
+           "text": "Le mandó escribir y profetizar; mientras hablaba con él, Daniel permaneció en el suelo.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda «Le mandó atender y ponerse en pie; mientras hablaba con él, Daniel se levantó temblando.», no «Le mandó escribir y profetizar; mientras hablaba con él, Daniel permaneció en el suelo.»."
+         },
+         {
+           "text": "Le mandó callar y arrodillarse; mientras hablaba con él, Daniel se postró tranquilamente.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda «Le mandó atender y ponerse en pie; mientras hablaba con él, Daniel se levantó temblando.», no «Le mandó callar y arrodillarse; mientras hablaba con él, Daniel se postró tranquilamente.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "MEDIUM",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-049 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "6b3738842df87f22101d4cad1a9d71c0976abc94c4f9a034158438f39d3adf79"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-048",
+       "selected_option_index": 1,
+       "selected_option_text": "El profeta se puso en pie temblando.",
+       "exact_supporting_phrase": "Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "El profeta se puso en pie regocijado.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda «El profeta se puso en pie temblando.», no «El profeta se puso en pie regocijado.»."
+         },
+         {
+           "text": "El profeta se puso en pie temblando.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «El profeta se puso en pie temblando.»."
+         },
+         {
+           "text": "El profeta se puso en pie confiado.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda «El profeta se puso en pie temblando.», no «El profeta se puso en pie confiado.»."
+         },
+         {
+           "text": "El profeta se puso en pie indignado.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda «El profeta se puso en pie temblando.», no «El profeta se puso en pie indignado.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "EASY",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-016 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "a84f36baf46af38d872b06efdfa277f2c29ddd6d99f92496d40bec3b84252177"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-049",
+       "selected_option_index": 3,
+       "selected_option_text": "Estar atento a las palabras que había de decirle y ponerse en pie.",
+       "exact_supporting_phrase": "Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Escribir la profecía en un rollo y regresar deprisa a Babilonia.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda «Estar atento a las palabras que había de decirle y ponerse en pie.», no «Escribir la profecía en un rollo y regresar deprisa a Babilonia.»."
+         },
+         {
+           "text": "Buscar a sus acompañantes dispersos y conducirlos ante el río.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda «Estar atento a las palabras que había de decirle y ponerse en pie.», no «Buscar a sus acompañantes dispersos y conducirlos ante el río.»."
+         },
+         {
+           "text": "Cerrar sus ojos en silencio absoluto y permanecer arrodillado.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda «Estar atento a las palabras que había de decirle y ponerse en pie.», no «Cerrar sus ojos en silencio absoluto y permanecer arrodillado.»."
+         },
+         {
+           "text": "Estar atento a las palabras que había de decirle y ponerse en pie.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «Estar atento a las palabras que había de decirle y ponerse en pie.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "EASY",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-020 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "d295c3749e64dbe0d3da67101d75e7dd2d2b66f9b228ca9c151cb64a5435ed1d"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-050",
+       "selected_option_index": 3,
+       "selected_option_text": "Declaró que a Daniel había sido enviado en ese momento preciso.",
+       "exact_supporting_phrase": "Me dijo: “Daniel, varón muy amado, está atento a las palabras que he de decirte y ponte en pie, porque a ti he sido enviado ahora.” »Mientras hablaba esto conmigo, me puse en pie temblando.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Declaró que Daniel debía acudir ante la presencia del rey Ciro.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda «Declaró que a Daniel había sido enviado en ese momento preciso.», no «Declaró que Daniel debía acudir ante la presencia del rey Ciro.»."
+         },
+         {
+           "text": "Declaró que otros profetas aguardaban su mensaje en Jerusalén.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda «Declaró que a Daniel había sido enviado en ese momento preciso.», no «Declaró que otros profetas aguardaban su mensaje en Jerusalén.»."
+         },
+         {
+           "text": "Declaró que el tiempo del juicio final había concluido para él.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita respalda «Declaró que a Daniel había sido enviado en ese momento preciso.», no «Declaró que el tiempo del juicio final había concluido para él.»."
+         },
+         {
+           "text": "Declaró que a Daniel había sido enviado en ese momento preciso.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «Declaró que a Daniel había sido enviado en ese momento preciso.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "EASY",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-061 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "2ad59ae0776b63493e34f104d64626e481a422d1353c5ca94dcc565cbc6b5666"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-051",
+       "selected_option_index": 0,
+       "selected_option_text": "Desde el primer día Daniel dispuso entender y humillarse, sus ruegos fueron oídos y por ellos vino el ángel.",
+       "exact_supporting_phrase": "Entonces me dijo: “Daniel, no temas, porque desde el primer día que dispusiste tu corazón a entender y a humillarte en la presencia de tu Dios, fueron oídas tus palabras; y a causa de tus palabras yo he venido.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Desde el primer día Daniel dispuso entender y humillarse, sus ruegos fueron oídos y por ellos vino el ángel.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «Desde el primer día Daniel dispuso entender y humillarse, sus ruegos fueron oídos y por ellos vino el ángel.»."
+         },
+         {
+           "text": "Después de recibir la visión Daniel dispuso su mente, sus oraciones fueron aprobadas y el ángel partió a Susa.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita respalda «Desde el primer día Daniel dispuso entender y humillarse, sus ruegos fueron oídos y por ellos vino el ángel.», no «Después de recibir la visión Daniel dispuso su mente, sus oraciones fueron aprobadas y el ángel partió a Susa.»."
+         },
+         {
+           "text": "Desde el primer día Daniel ayunó sin humillar su corazón, sus palabras se demoraron y el ángel vino por Ciro.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita respalda «Desde el primer día Daniel dispuso entender y humillarse, sus ruegos fueron oídos y por ellos vino el ángel.», no «Desde el primer día Daniel ayunó sin humillar su corazón, sus palabras se demoraron y el ángel vino por Ciro.»."
+         },
+         {
+           "text": "Al cabo de veintiún días Daniel decidió humillarse, Dios atendió su queja y el ángel llegó sin ser solicitado.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita respalda «Desde el primer día Daniel dispuso entender y humillarse, sus ruegos fueron oídos y por ellos vino el ángel.», no «Al cabo de veintiún días Daniel decidió humillarse, Dios atendió su queja y el ángel llegó sin ser solicitado.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "MEDIUM",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-050 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "513c102d37287f8f14b67ecd71a8bca373d5af09a522553cdb8d5f02c53db95d"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-052",
+       "selected_option_index": 3,
+       "selected_option_text": "A entender las revelaciones y a humillarse en la presencia de Dios.",
+       "exact_supporting_phrase": "Entonces me dijo: “Daniel, no temas, porque desde el primer día que dispusiste tu corazón a entender y a humillarte en la presencia de tu Dios, fueron oídas tus palabras; y a causa de tus palabras yo he venido.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "A juzgar al pueblo cautivo y a edificar altares santos en Babilonia.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita respalda «A entender las revelaciones y a humillarse en la presencia de Dios.», no «A juzgar al pueblo cautivo y a edificar altares santos en Babilonia.»."
+         },
+         {
+           "text": "A desafiar a los príncipes y a exigir señales del cielo con poder.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita respalda «A entender las revelaciones y a humillarse en la presencia de Dios.», no «A desafiar a los príncipes y a exigir señales del cielo con poder.»."
+         },
+         {
+           "text": "A pedir favores al monarca y a engrandecerse ante la corte persa.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita respalda «A entender las revelaciones y a humillarse en la presencia de Dios.», no «A pedir favores al monarca y a engrandecerse ante la corte persa.»."
+         },
+         {
+           "text": "A entender las revelaciones y a humillarse en la presencia de Dios.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «A entender las revelaciones y a humillarse en la presencia de Dios.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "EASY",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-017 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "4ade841a1d16a1de2e1c847f5dd0c5dc4822fd04e951e162b1570083d6a8cc2d"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-053",
+       "selected_option_index": 1,
+       "selected_option_text": "Acudió a causa de las palabras y ruegos de Daniel.",
+       "exact_supporting_phrase": "Entonces me dijo: “Daniel, no temas, porque desde el primer día que dispusiste tu corazón a entender y a humillarte en la presencia de tu Dios, fueron oídas tus palabras; y a causa de tus palabras yo he venido.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Acudió para inspeccionar las aguas del río Hidekel.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita respalda «Acudió a causa de las palabras y ruegos de Daniel.», no «Acudió para inspeccionar las aguas del río Hidekel.»."
+         },
+         {
+           "text": "Acudió a causa de las palabras y ruegos de Daniel.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «Acudió a causa de las palabras y ruegos de Daniel.»."
+         },
+         {
+           "text": "Acudió debido a la insistencia de los sabios persas.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita respalda «Acudió a causa de las palabras y ruegos de Daniel.», no «Acudió debido a la insistencia de los sabios persas.»."
+         },
+         {
+           "text": "Acudió por una orden urgente enviada por el rey Ciro.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita respalda «Acudió a causa de las palabras y ruegos de Daniel.», no «Acudió por una orden urgente enviada por el rey Ciro.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "EASY",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-021 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "df766494a3f896ac5a36b402a49ecff48d9782d4a9f1df8e3d7253b4de45acab"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-054",
+       "selected_option_index": 1,
+       "selected_option_text": "Miguel, uno de los principales príncipes celestiales.",
+       "exact_supporting_phrase": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Darío, el rey que promulgó el decreto en Babilonia.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita respalda «Miguel, uno de los principales príncipes celestiales.», no «Darío, el rey que promulgó el decreto en Babilonia.»."
+         },
+         {
+           "text": "Miguel, uno de los principales príncipes celestiales.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «Miguel, uno de los principales príncipes celestiales.»."
+         },
+         {
+           "text": "Gabriel, el mensajero enviado a explicar la visión.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita respalda «Miguel, uno de los principales príncipes celestiales.», no «Gabriel, el mensajero enviado a explicar la visión.»."
+         },
+         {
+           "text": "Ciro, el gobernante supremo de las naciones persas.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita respalda «Miguel, uno de los principales príncipes celestiales.», no «Ciro, el gobernante supremo de las naciones persas.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "EASY",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-018 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "76efb9ee55344416ac6edd5b0451aa8a1da8053d5caf92c70128213bcea3da6d"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-055",
+       "selected_option_index": 1,
+       "selected_option_text": "Intervino como uno de los principales príncipes para prestar ayuda al mensajero.",
+       "exact_supporting_phrase": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Promulgó un decreto real como soberano supremo para liberar a los cautivos judíos.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita respalda «Intervino como uno de los principales príncipes para prestar ayuda al mensajero.», no «Promulgó un decreto real como soberano supremo para liberar a los cautivos judíos.»."
+         },
+         {
+           "text": "Intervino como uno de los principales príncipes para prestar ayuda al mensajero.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «Intervino como uno de los principales príncipes para prestar ayuda al mensajero.»."
+         },
+         {
+           "text": "Se unió a la oposición de los príncipes de Grecia para retardar la revelación dada.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita respalda «Intervino como uno de los principales príncipes para prestar ayuda al mensajero.», no «Se unió a la oposición de los príncipes de Grecia para retardar la revelación dada.»."
+         },
+         {
+           "text": "Ordenó a Daniel suspender su ayuno de tres semanas y marchar rumbo a Jerusalén.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita respalda «Intervino como uno de los principales príncipes para prestar ayuda al mensajero.», no «Ordenó a Daniel suspender su ayuno de tres semanas y marchar rumbo a Jerusalén.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "MEDIUM",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-022 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "749651999356deb892852667ad620704539f0572187fa8e84229f6aa1cc92b62"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-056",
+       "selected_option_index": 2,
+       "selected_option_text": "Permaneció allí junto a los reyes de Persia.",
+       "exact_supporting_phrase": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Permaneció allí junto a los jueces de Media.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita respalda «Permaneció allí junto a los reyes de Persia.», no «Permaneció allí junto a los jueces de Media.»."
+         },
+         {
+           "text": "Permaneció allí junto a los sabios de Babel.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita respalda «Permaneció allí junto a los reyes de Persia.», no «Permaneció allí junto a los sabios de Babel.»."
+         },
+         {
+           "text": "Permaneció allí junto a los reyes de Persia.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «Permaneció allí junto a los reyes de Persia.»."
+         },
+         {
+           "text": "Permaneció allí junto a los jefes de Grecia.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita respalda «Permaneció allí junto a los reyes de Persia.», no «Permaneció allí junto a los jefes de Grecia.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "MEDIUM",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-032 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "898b5b650dd9cc4e5f695597adb9820b2163110e66cdb49c268b045eb167690f"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-057",
+       "selected_option_index": 3,
+       "selected_option_text": "El príncipe de Persia se opuso veintiún días, Miguel acudió a ayudar y el ángel quedó con los reyes persas.",
+       "exact_supporting_phrase": "Mas el príncipe del reino de Persia se me opuso durante veintiún días; pero Miguel, uno de los principales príncipes, vino para ayudarme, y quedé allí con los reyes de Persia.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "El príncipe de Persia huyó durante tres días, Miguel relevó al mensajero y este volvió deprisa a Judea.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita respalda «El príncipe de Persia se opuso veintiún días, Miguel acudió a ayudar y el ángel quedó con los reyes persas.», no «El príncipe de Persia huyó durante tres días, Miguel relevó al mensajero y este volvió deprisa a Judea.»."
+         },
+         {
+           "text": "Los reyes de Persia ayudaron veintiún días, Miguel se opuso al mensajero y Daniel quedó solo en el río.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita respalda «El príncipe de Persia se opuso veintiún días, Miguel acudió a ayudar y el ángel quedó con los reyes persas.», no «Los reyes de Persia ayudaron veintiún días, Miguel se opuso al mensajero y Daniel quedó solo en el río.»."
+         },
+         {
+           "text": "El príncipe de Grecia combatió veintiún días, Gabriel vino en auxilio y el ángel marchó hacia Babilonia.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita respalda «El príncipe de Persia se opuso veintiún días, Miguel acudió a ayudar y el ángel quedó con los reyes persas.», no «El príncipe de Grecia combatió veintiún días, Gabriel vino en auxilio y el ángel marchó hacia Babilonia.»."
+         },
+         {
+           "text": "El príncipe de Persia se opuso veintiún días, Miguel acudió a ayudar y el ángel quedó con los reyes persas.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «El príncipe de Persia se opuso veintiún días, Miguel acudió a ayudar y el ángel quedó con los reyes persas.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "MEDIUM",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-051 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "be648e38cc037f15970b4d084ae9f04515f6cd05580f201cea0bb985df0d6f14"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-058",
+       "selected_option_index": 0,
+       "selected_option_text": "En los últimos días señalados.",
+       "exact_supporting_phrase": "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.”",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "En los últimos días señalados.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:14",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «En los últimos días señalados.»."
+         },
+         {
+           "text": "En los pasados siglos de oro.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:14",
+           "exact_reason": "La cita respalda «En los últimos días señalados.», no «En los pasados siglos de oro.»."
+         },
+         {
+           "text": "En los primeros años de Ciro.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:14",
+           "exact_reason": "La cita respalda «En los últimos días señalados.», no «En los primeros años de Ciro.»."
+         },
+         {
+           "text": "En los setenta días de duelo.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:14",
+           "exact_reason": "La cita respalda «En los últimos días señalados.», no «En los setenta días de duelo.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "EASY",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-019 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "50227447d7f1e40ef513bcc1e90c76abc13bd2a93430eec92e12e1368472bb8a"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-059",
+       "selected_option_index": 2,
+       "selected_option_text": "Vino para hacerle saber lo que ocurrirá a su pueblo en los últimos días, pues la visión es para ese tiempo.",
+       "exact_supporting_phrase": "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.”",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Vino para reprender la falta de fe de los sabios en Babilonia, pues la visión trataba de la caída caldea.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:14",
+           "exact_reason": "La cita respalda «Vino para hacerle saber lo que ocurrirá a su pueblo en los últimos días, pues la visión es para ese tiempo.», no «Vino para reprender la falta de fe de los sabios en Babilonia, pues la visión trataba de la caída caldea.»."
+         },
+         {
+           "text": "Vino para ocultar el destino final del reino persa en la antigüedad, pues la visión pertenecía al pasado.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:14",
+           "exact_reason": "La cita respalda «Vino para hacerle saber lo que ocurrirá a su pueblo en los últimos días, pues la visión es para ese tiempo.», no «Vino para ocultar el destino final del reino persa en la antigüedad, pues la visión pertenecía al pasado.»."
+         },
+         {
+           "text": "Vino para hacerle saber lo que ocurrirá a su pueblo en los últimos días, pues la visión es para ese tiempo.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:14",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «Vino para hacerle saber lo que ocurrirá a su pueblo en los últimos días, pues la visión es para ese tiempo.»."
+         },
+         {
+           "text": "Vino para anunciar la coronación inmediata del rey Darío en Susa, pues la visión duraba veintiún jornadas.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:14",
+           "exact_reason": "La cita respalda «Vino para hacerle saber lo que ocurrirá a su pueblo en los últimos días, pues la visión es para ese tiempo.», no «Vino para anunciar la coronación inmediata del rey Darío en Susa, pues la visión duraba veintiún jornadas.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "MEDIUM",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-052 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "a907b2fbe9afb5d173a8828d3b907232f9f6b90530fac76fa7887f5d1b030a05"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-060",
+       "selected_option_index": 3,
+       "selected_option_text": "Tocó sus labios para que pudiera hablar.",
+       "exact_supporting_phrase": "Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Tocó sus muñecas para que se levantara.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:16",
+           "exact_reason": "La cita respalda «Tocó sus labios para que pudiera hablar.», no «Tocó sus muñecas para que se levantara.»."
+         },
+         {
+           "text": "Tocó sus hombros para infundirle ánimo.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:16",
+           "exact_reason": "La cita respalda «Tocó sus labios para que pudiera hablar.», no «Tocó sus hombros para infundirle ánimo.»."
+         },
+         {
+           "text": "Tocó sus párpados para abrir su visión.",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:16",
+           "exact_reason": "La cita respalda «Tocó sus labios para que pudiera hablar.», no «Tocó sus párpados para abrir su visión.»."
+         },
+         {
+           "text": "Tocó sus labios para que pudiera hablar.",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:16",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «Tocó sus labios para que pudiera hablar.»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "EASY",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de Q-DAN10-CENTRAL-0016 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "ec60c7e7ac08a5e79674b50cc094c1134dfc8b2a54b483cea98a00c5d7d742fc"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "V14-R2-DAN10-W1-061",
+       "selected_option_index": 1,
+       "selected_option_text": "Se dirigió a él llamándole: «Señor mío»",
+       "exact_supporting_phrase": "Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Se dirigió a él llamándole: «Príncipe»",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:16",
+           "exact_reason": "La cita respalda «Se dirigió a él llamándole: «Señor mío»», no «Se dirigió a él llamándole: «Príncipe»»."
+         },
+         {
+           "text": "Se dirigió a él llamándole: «Señor mío»",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:16",
+           "exact_reason": "La cita conserva expresamente todos los elementos de «Se dirigió a él llamándole: «Señor mío»»."
+         },
+         {
+           "text": "Se dirigió a él llamándole: «Gran rey»",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:16",
+           "exact_reason": "La cita respalda «Se dirigió a él llamándole: «Señor mío»», no «Se dirigió a él llamándole: «Gran rey»»."
+         },
+         {
+           "text": "Se dirigió a él llamándole: «Mi sabio»",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:16",
+           "exact_reason": "La cita respalda «Se dirigió a él llamándole: «Señor mío»», no «Se dirigió a él llamándole: «Mi sabio»»."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": true,
+       "duplicate_or_superficial_variant": true,
+       "real_difficulty": "EASY",
+       "decision": "REWRITE",
+       "specific_reason": "Respuesta única y sustentada, pero variante superficial de DAN10-V11-WAVE-066 sobre la misma unidad y hecho; requiere otro ángulo.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T12:03:33.091Z",
+       "input_content_sha256": "f7cb452a39ec6ae55a85e18900718df5f3abb4b33d434e87c53301faab910526",
+       "output_sha256": "b3ff2c59c3b2b318911e61f64e95cad99e0568c854e440da4002b97807c7083d"
+     }
+   ],
+   "summary": {
+     "total": 20,
+     "ACCEPT_COVERAGE": 0,
+     "ACCEPT_COMPETITIVE": 0,
+     "REWRITE": 20,
+     "REJECT": 0,
+     "INVALID_OUTPUT": 0
+   }
+}

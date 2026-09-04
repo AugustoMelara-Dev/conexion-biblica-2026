@@ -1,0 +1,1037 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-034",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-034.json",
+  "input_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/ledger_v18",
+    "conversation_id": "/root/ledger_v18",
+    "conversation_id_kind": "codex_canonical_agent_task_name",
+    "reviewed_at": "2026-09-04T12:04:55.281Z"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0014::PRESENTATION-01",
+      "selected_option_index": 1,
+      "selected_option_text": "revelar lo que sucedería al pueblo de Daniel",
+      "exact_supporting_phrase": "He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días, porque la visión es para esos días.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "coronar a Daniel sobre Persia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:14",
+          "exact_reason": "La cita solo anuncia que el mensajero vino a hacer saber lo que sucedería al pueblo de Daniel."
+        },
+        {
+          "text": "revelar lo que sucedería al pueblo de Daniel",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:14",
+          "exact_reason": "La cita dice: «He venido para hacerte saber lo que ha de sucederle a tu pueblo en los últimos días»."
+        },
+        {
+          "text": "llevar a Daniel de regreso a Jerusalén",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:14",
+          "exact_reason": "La cita no menciona llevar a Daniel a Jerusalén ni esa misión."
+        },
+        {
+          "text": "poner fin inmediato al conflicto",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:14",
+          "exact_reason": "La cita no anuncia poner fin inmediato al conflicto; habla de una visión para los últimos días."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta se sostiene literalmente, pero esta presentación duplica Q-DAN10-CENTRAL-0014 y varias preguntas del mismo hecho en el inventario; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "552f6bd0993021c7c5380f412a86b7b7540abac070a68911edba2124ffada69c"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0015",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Mientras me decía estas palabras, yo tenía los ojos puestos en tierra y había enmudecido.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:15",
+          "exact_reason": "La cita afirma que Daniel tenía los ojos en tierra y había enmudecido, no respalda la afirmación contraria."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:15",
+          "exact_reason": "La cita dice: «tenía los ojos puestos en tierra y había enmudecido»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación es verificable, pero duplica Q-DAN10-CENTRAL-0015::PRESENTATION-01 y el mismo hecho del inventario; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "a0a0950d7d15e087ee4fd11ca2a641f384415bd895704cd1637fbcfeec0aefc2"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0015::PRESENTATION-01",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "Mientras me decía estas palabras, yo tenía los ojos puestos en tierra y había enmudecido.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:15",
+          "exact_reason": "La cita dice «ojos puestos en tierra», por lo que la afirmación sobre el cielo es falsa."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:15",
+          "exact_reason": "La opción «Falso» es correcta porque la cita establece «ojos puestos en tierra»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La negación se resuelve sin ambigüedad, pero duplica Q-DAN10-CENTRAL-0015 y el mismo hecho del inventario; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "3f32518561177c07c54e18081bd92ac849468098a0145ae8ef742776de4b5d66"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0016",
+      "selected_option_index": 0,
+      "selected_option_text": "labios",
+      "exact_supporting_phrase": "Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "labios",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:16",
+          "exact_reason": "La cita dice: «tocó mis labios»."
+        },
+        {
+          "text": "manos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:16",
+          "exact_reason": "La cita no menciona manos como el lugar tocado."
+        },
+        {
+          "text": "hombros",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:16",
+          "exact_reason": "La cita no menciona hombros como el lugar tocado."
+        },
+        {
+          "text": "ojos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:16",
+          "exact_reason": "La cita no menciona ojos como el lugar tocado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero duplica Q-DAN10-CENTRAL-0016::PRESENTATION-01 y otras preguntas del mismo contacto; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "4f6680a5040e1d9feba6045f89861a28cd7dd2f59201fdd83301ea32402f11ed"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0016::PRESENTATION-01",
+      "selected_option_index": 0,
+      "selected_option_text": "labios",
+      "exact_supporting_phrase": "Pero uno con semejanza de hijo de hombre tocó mis labios. Entonces abrí la boca y hablé, y dije al que estaba delante de mí: “Señor mío, con la visión me han sobrevenido dolores y no me quedan fuerzas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "labios",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:16",
+          "exact_reason": "La cita dice: «tocó mis labios»."
+        },
+        {
+          "text": "párpados",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:16",
+          "exact_reason": "La cita no menciona párpados como el lugar tocado."
+        },
+        {
+          "text": "muñecas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:16",
+          "exact_reason": "La cita no menciona muñecas como el lugar tocado."
+        },
+        {
+          "text": "sienes",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:16",
+          "exact_reason": "La cita no menciona sienes como el lugar tocado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero duplica Q-DAN10-CENTRAL-0016 y otras preguntas del mismo contacto; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "823bb105b4f5fa5d1b07fa080c5bac705b5f34cb0eb9f9980eb36982def6c8a0"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0017",
+      "selected_option_index": 3,
+      "selected_option_text": "Me faltaron las fuerzas y no me quedó aliento",
+      "exact_supporting_phrase": "¿Cómo, pues, podrá el siervo de mi señor hablar con mi señor? Porque al instante me faltaron las fuerzas, y no me quedó aliento.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "No conseguí recordar la visión recibida",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:17",
+          "exact_reason": "La cita no dice que Daniel olvidara la visión."
+        },
+        {
+          "text": "Fui herido mientras participaba en el combate",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:17",
+          "exact_reason": "La cita no dice que Daniel fuera herido en un combate."
+        },
+        {
+          "text": "No logré entender las palabras que escuché",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:17",
+          "exact_reason": "La cita no dice que Daniel no entendiera las palabras."
+        },
+        {
+          "text": "Me faltaron las fuerzas y no me quedó aliento",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:17",
+          "exact_reason": "La cita dice: «me faltaron las fuerzas, y no me quedó aliento»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero duplica Q-DAN10-CENTRAL-0017::PRESENTATION-01 y el mismo motivo de incapacidad; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "ef19b8f9fc7124ad5e76b5c32f8dbc4110d65db6f9511d24c1229ca9506f5c2a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0017::PRESENTATION-01",
+      "selected_option_index": 3,
+      "selected_option_text": "le faltaban las fuerzas y el aliento",
+      "exact_supporting_phrase": "¿Cómo, pues, podrá el siervo de mi señor hablar con mi señor? Porque al instante me faltaron las fuerzas, y no me quedó aliento.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "había olvidado la visión",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:17",
+          "exact_reason": "La cita no atribuye la incapacidad a olvidar la visión."
+        },
+        {
+          "text": "desconocía al mensajero",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:17",
+          "exact_reason": "La cita no atribuye la incapacidad a desconocer al mensajero."
+        },
+        {
+          "text": "temía la reacción de Ciro",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:17",
+          "exact_reason": "La cita no atribuye la incapacidad a temer la reacción de Ciro."
+        },
+        {
+          "text": "le faltaban las fuerzas y el aliento",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:17",
+          "exact_reason": "La cita dice: «me faltaron las fuerzas, y no me quedó aliento»."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero duplica Q-DAN10-CENTRAL-0017 y el mismo motivo; además la correcta queda delatada por su longitud; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "2a110563fd207c519bc6330233b6cef4c726c4486d3828b5eebec34ce85fd9b7"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0018",
+      "selected_option_index": 2,
+      "selected_option_text": "Me fortaleció",
+      "exact_supporting_phrase": "Aquel que tenía semejanza de hombre me tocó otra vez, me fortaleció",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Me volvió a enmudecer",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:18",
+          "exact_reason": "La cita no describe un nuevo enmudecimiento."
+        },
+        {
+          "text": "Me dejó dormido",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:18",
+          "exact_reason": "La cita no describe que Daniel quedara dormido."
+        },
+        {
+          "text": "Me fortaleció",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:18",
+          "exact_reason": "La cita dice: «me tocó otra vez, me fortaleció»."
+        },
+        {
+          "text": "Me hizo huir",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:18",
+          "exact_reason": "La cita no describe que Daniel huyera."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero duplica Q-DAN10-CENTRAL-0018::PRESENTATION-01 y el mismo efecto del toque; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "a7f6a1cce5cde9ce6c842f76bab17f5b9275ec400adfc410b7b2c2fc30e9f11a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0018::PRESENTATION-01",
+      "selected_option_index": 2,
+      "selected_option_text": "fortalecido",
+      "exact_supporting_phrase": "Aquel que tenía semejanza de hombre me tocó otra vez, me fortaleció",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "paralizado",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:18",
+          "exact_reason": "La cita no describe que Daniel quedara paralizado."
+        },
+        {
+          "text": "desorientado",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:18",
+          "exact_reason": "La cita no describe desorientación."
+        },
+        {
+          "text": "fortalecido",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:18",
+          "exact_reason": "La cita dice: «me fortaleció»."
+        },
+        {
+          "text": "escondido",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:18",
+          "exact_reason": "La cita no describe que Daniel se escondiera."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero duplica Q-DAN10-CENTRAL-0018 y el mismo efecto del toque; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "8d2ab787a78e3673839ccaa7cd978d35de0505109f8355b89c827109ed4e58b4"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0019",
+      "selected_option_index": 0,
+      "selected_option_text": "Esfuérzate",
+      "exact_supporting_phrase": "y me dijo: “Muy amado, no temas; la paz sea contigo; esfuérzate y cobra aliento.” Mientras él me hablaba, recobré las fuerzas y dije: “Hable mi señor, porque me has fortalecido.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Esfuérzate",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:19",
+          "exact_reason": "La cita dice: «esfuérzate y cobra aliento»."
+        },
+        {
+          "text": "Comprende",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:19",
+          "exact_reason": "La cita no comienza la exhortación con «Comprende»."
+        },
+        {
+          "text": "Escucha",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:19",
+          "exact_reason": "La cita no comienza la exhortación con «Escucha»."
+        },
+        {
+          "text": "Levántate",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:19",
+          "exact_reason": "La cita no comienza la exhortación con «Levántate»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero duplica Q-DAN10-CENTRAL-0019::PRESENTATION-01 y la misma exhortación; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "c55bf2a27c85c0ee4211b2cb333045d3e40e5236a0d018b68b5453d10f13b358"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0019::PRESENTATION-01",
+      "selected_option_index": 3,
+      "selected_option_text": "Esfuérzate",
+      "exact_supporting_phrase": "y me dijo: “Muy amado, no temas; la paz sea contigo; esfuérzate y cobra aliento.” Mientras él me hablaba, recobré las fuerzas y dije: “Hable mi señor, porque me has fortalecido.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Alégrate",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:19",
+          "exact_reason": "La cita no contiene «Alégrate» antes de «cobra aliento»."
+        },
+        {
+          "text": "Confía",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:19",
+          "exact_reason": "La cita no contiene «Confía» antes de «cobra aliento»."
+        },
+        {
+          "text": "Anímate",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:19",
+          "exact_reason": "La cita no contiene «Anímate» antes de «cobra aliento»."
+        },
+        {
+          "text": "Esfuérzate",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:19",
+          "exact_reason": "La cita dice: «esfuérzate y cobra aliento»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero duplica Q-DAN10-CENTRAL-0019 y la misma exhortación; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "cb7e65fd184530b8c12b639bf596ccb5ea66c9fd5bb6861a0b294fc5604231d9"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0020",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "Él me dijo: “¿Sabes por qué he venido a ti? Ahora tengo que volver para pelear contra el príncipe de Persia; al terminar con él, el príncipe de Grecia vendrá.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:20",
+          "exact_reason": "La cita dice que el príncipe de Grecia vendrá «al terminar con él» (el príncipe de Persia), no antes."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:20",
+          "exact_reason": "La opción «Falso» es correcta porque la cita sitúa a Grecia después de terminar con Persia."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La proposición temporal es resoluble, pero duplica Q-DAN10-CENTRAL-0020::PRESENTATION-01 y el mismo orden narrativo; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "2514ab0db8a0e14209e117d44ef8387ef2e814fd30f49a01a3a0f444856e9fd3"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0020::PRESENTATION-01",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Él me dijo: “¿Sabes por qué he venido a ti? Ahora tengo que volver para pelear contra el príncipe de Persia; al terminar con él, el príncipe de Grecia vendrá.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:20",
+          "exact_reason": "La cita no sitúa a Grecia antes de la lucha contra Persia; establece el orden inverso."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:20",
+          "exact_reason": "La cita dice: «al terminar con él, el príncipe de Grecia vendrá»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La proposición temporal es resoluble, pero duplica Q-DAN10-CENTRAL-0020 y el mismo orden narrativo; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "b12bb9abff8efd5ce181f61f65cb40d019d40b999b0797d5dca4cf7c7dff3265"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0021",
+      "selected_option_index": 0,
+      "selected_option_text": "Miguel",
+      "exact_supporting_phrase": "Pero yo te declararé lo que está escrito en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Miguel",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:21",
+          "exact_reason": "La cita dice: «nadie me ayuda contra ellos, sino Miguel vuestro príncipe»."
+        },
+        {
+          "text": "Gabriel",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:21",
+          "exact_reason": "La cita no identifica a Gabriel como el único ayudante en este pasaje."
+        },
+        {
+          "text": "Daniel",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:21",
+          "exact_reason": "La cita no identifica a Daniel como el único ayudante."
+        },
+        {
+          "text": "Ciro",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:21",
+          "exact_reason": "La cita no identifica a Ciro como el único ayudante."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero duplica Q-DAN10-CENTRAL-0021::PRESENTATION-01 y otras preguntas sobre el único ayudante; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "976c75863545d79b2d4192dbeaf11a88aec6b3f05c6256afefda19288ffd94cb"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN10-CENTRAL-0021::PRESENTATION-01",
+      "selected_option_index": 0,
+      "selected_option_text": "Miguel",
+      "exact_supporting_phrase": "Pero yo te declararé lo que está escrito en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Miguel",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:21",
+          "exact_reason": "La cita identifica expresamente a Miguel como el único aliado: «sino Miguel vuestro príncipe»."
+        },
+        {
+          "text": "el príncipe de Grecia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:21",
+          "exact_reason": "La cita no identifica al príncipe de Grecia como ese único aliado."
+        },
+        {
+          "text": "uno de los reyes de Persia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:21",
+          "exact_reason": "La cita no identifica a un rey de Persia como ese único aliado."
+        },
+        {
+          "text": "un hombre vestido de lino",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:21",
+          "exact_reason": "La cita no identifica a un hombre vestido de lino como ese único aliado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero duplica Q-DAN10-CENTRAL-0021 y otras preguntas sobre el único ayudante; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "5f1cad03e7ddefcb6d490a7329b49a0f5e62967cf6124513e6093d792fdc494c"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "R2-C5-DAN10-V001-F04",
+      "selected_option_index": 1,
+      "selected_option_text": "Tercer año de Ciro rey de Persia — Daniel llamado Beltsasar — comprendió la palabra verdadera y tuvo inteligencia en la visión",
+      "exact_supporting_phrase": "En el tercer año de Ciro, rey de Persia, fue revelada palabra a Daniel, llamado Beltsasar. La palabra era verdadera y el conflicto grande, pero él comprendió la palabra y tuvo inteligencia en la visión.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Primer año de Darío — Daniel llamado Sadrac — olvidó una palabra incierta",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "La cita establece tercer año de Ciro, Daniel llamado Beltsasar, palabra verdadera, conflicto grande y comprensión de la palabra; esta combinación cambia varios datos."
+        },
+        {
+          "text": "Tercer año de Ciro rey de Persia — Daniel llamado Beltsasar — comprendió la palabra verdadera y tuvo inteligencia en la visión",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "La cita conserva conjuntamente «tercer año de Ciro, rey de Persia», «Daniel, llamado Beltsasar» y «comprendió la palabra y tuvo inteligencia en la visión»."
+        },
+        {
+          "text": "Tercer año de Belsasar — Daniel llamado Abed-nego — rechazó una visión breve",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "La cita establece tercer año de Ciro y comprensión, no los datos de Belsasar, Abed-nego ni rechazo de la visión."
+        },
+        {
+          "text": "Segundo año de Nabucodonosor — Beltsasar llamado Daniel — no comprendió el sueño",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "La cita no establece segundo año de Nabucodonosor, ni que Beltsasar fuera llamado Daniel, ni incomprensión del sueño."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EXPERT",
+      "decision": "REWRITE",
+      "specific_reason": "La combinación es correcta, pero el inventario ya contiene V13-R2-DAN10-C15-001 para el mismo mapeo y la opción correcta es mucho más larga; requiere reescritura con longitudes comparables y otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "9e48dc8ca0c8bc3023d7372b4d5879daafdf62853158bbe1033a4e3451c0e9a2"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "R2-C5-DAN10-V002-F02",
+      "selected_option_index": 2,
+      "selected_option_text": "Daniel — afligido — tres semanas",
+      "exact_supporting_phrase": "«En aquellos días yo, Daniel, estuve afligido por espacio de tres semanas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Gabriel — en conflicto — veintiún días",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:2",
+          "exact_reason": "La cita identifica al hablante como Daniel, no Gabriel, y fija la aflicción en tres semanas, no conflicto de veintiún días."
+        },
+        {
+          "text": "Miguel — fortalecido — una semana",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:2",
+          "exact_reason": "La cita identifica a Daniel afligido durante tres semanas, no a Miguel fortalecido durante una semana."
+        },
+        {
+          "text": "Daniel — afligido — tres semanas",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:2",
+          "exact_reason": "La cita dice: «yo, Daniel, estuve afligido por espacio de tres semanas»."
+        },
+        {
+          "text": "Ciro — en ayuno — setenta semanas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:2",
+          "exact_reason": "La cita no identifica a Ciro como hablante ni menciona ayuno de setenta semanas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La combinación conserva hablante, estado y duración de Daniel 10:2; las cuatro opciones tienen estructura y longitud comparables, sin atajo formal, por lo que se acepta como competitiva.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "8745ef98503a8a553fc3315654bfb8c9fa23229d58976b16fba1377c7ff76f67"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "R2-C5-DAN10-V003-F07",
+      "selected_option_index": 0,
+      "selected_option_text": "No comió manjar delicado ni carne, no bebió vino y no se ungió con perfume",
+      "exact_supporting_phrase": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "No comió manjar delicado ni carne, no bebió vino y no se ungió con perfume",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita enumera exactamente «manjar delicado», «carne», «vino» y «perfume», y dice «no me ungí con perfume»."
+        },
+        {
+          "text": "No comió manjar delicado, bebió vino y se ungió diariamente",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita dice que no entró vino y que no se ungió con perfume, contrario a esta opción."
+        },
+        {
+          "text": "No comió carne ni fruta, no bebió vino y no se vistió de lino",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita dice que no comió carne y no bebió vino, y no menciona fruta ni vestirse de lino."
+        },
+        {
+          "text": "No comió pan ni legumbres, no bebió agua y no se lavó con aceite",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita no menciona pan, legumbres, agua ni lavarse con aceite."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EXPERT",
+      "decision": "REWRITE",
+      "specific_reason": "La combinación es correcta, pero el inventario ya contiene DAN10-V11-WAVE-003, V14-R2-DAN10-W1-026 y preguntas de la misma privación; además la correcta es la más larga; requiere otro ángulo y opciones equilibradas.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "a83766c7e62b21f4815fc45923e8caeaaa25a05c4ef17db0984a29f39bedf49d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "R2-C5-DAN10-V005-F01",
+      "selected_option_index": 2,
+      "selected_option_text": "Vestido de lino — cintura ceñida — oro de Ufaz",
+      "exact_supporting_phrase": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Vestido de oro — cabeza ceñida — lino de Persia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita dice lino, cintura y oro de Ufaz; no respalda oro en la vestidura, cabeza ceñida ni lino de Persia."
+        },
+        {
+          "text": "Vestido de púrpura — pies ceñidos — bronce de Grecia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita no menciona púrpura, pies ceñidos, bronce de Grecia."
+        },
+        {
+          "text": "Vestido de lino — cintura ceñida — oro de Ufaz",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita dice: «vestido de lino y ceñida su cintura con oro de Ufaz»."
+        },
+        {
+          "text": "Vestido de bronce — brazos ceñidos — plata de Media",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita no menciona bronce como vestidura, brazos ceñidos ni plata de Media."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EXPERT",
+      "decision": "REWRITE",
+      "specific_reason": "La combinación es correcta, pero repite el mapeo de DAN10-V11-WAVE-044 y V14-R2-DAN10-W1-030/031; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "ef2fd592e9888983f39566ced4e2dc2e0f048f57e020485f5080315503bf684f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "R2-C5-DAN10-V008-F02",
+      "selected_option_index": 0,
+      "selected_option_text": "Quedó solo → sus fuerzas se cambiaron en desfallecimiento → lo abandonaron totalmente",
+      "exact_supporting_phrase": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Quedó solo → sus fuerzas se cambiaron en desfallecimiento → lo abandonaron totalmente",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:8",
+          "exact_reason": "La cita dice: «Quedé ... solo», «mis fuerzas se cambiaron en desfallecimiento» y «me abandonaron totalmente»."
+        },
+        {
+          "text": "Quedó acompañado → recuperó fuerzas → corrió hacia el río",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:8",
+          "exact_reason": "La cita no dice que Daniel quedara acompañado, recuperara fuerzas ni corriera hacia el río."
+        },
+        {
+          "text": "Quedó oculto → sus fuerzas aumentaron → despertó a sus compañeros",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:8",
+          "exact_reason": "La cita no dice que Daniel quedara oculto, aumentaran sus fuerzas ni despertara a sus compañeros."
+        },
+        {
+          "text": "Quedó de pie → conservó fuerzas → interpretó de inmediato",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:8",
+          "exact_reason": "La cita no dice que Daniel quedara de pie, conservara fuerzas ni interpretara de inmediato."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EXPERT",
+      "decision": "REWRITE",
+      "specific_reason": "La progresión es correcta, pero repite DAN10-V11-WAVE-047 y V14-R2-DAN10-W1-042, y la correcta es la más larga; requiere otro ángulo y longitudes comparables.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:55.281Z",
+      "input_content_sha256": "ef39d3ad887240a2e06da54f118df56ff44f898c2020bef0709438a2db73e807",
+      "output_sha256": "fd465b1d9da80008201f60358f6546de8ef2ce9d7cda5654e9dc150ae0dc5f54"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 0,
+    "ACCEPT_COMPETITIVE": 1,
+    "REWRITE": 19,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

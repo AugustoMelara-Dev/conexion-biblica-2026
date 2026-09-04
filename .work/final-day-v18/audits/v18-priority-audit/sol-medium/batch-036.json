@@ -1,0 +1,1085 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-036",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-036.json",
+  "input_sha256": "49ef2fd877c73870f43f17922fdb9d4a097d3a9ebaf029a140ec4f842eabf339",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/dossier_prep",
+    "conversation_id": "/root/dossier_prep",
+    "conversation_id_kind": "codex_canonical_agent_task_name",
+    "reviewed_at": "2026-09-04T12:04:11.706Z"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-C18-010",
+      "selected_option_index": 0,
+      "selected_option_text": "en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe",
+      "exact_supporting_phrase": "Pero yo te declararé lo que está escrito en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "en el libro de la verdad: nadie me ayuda contra ellos, sino Miguel vuestro príncipe",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:21",
+          "exact_reason": "La cita dice que la verdad está escrita en el libro de la verdad y que nadie ayuda contra ellos sino Miguel, el príncipe de Daniel."
+        },
+        {
+          "text": "en los rollos sellados de Babilonia: nadie me ayuda sino los sabios convertidos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:21",
+          "exact_reason": "La cita no menciona rollos sellados de Babilonia ni sabios convertidos como registro o auxiliares."
+        },
+        {
+          "text": "en las tablas de piedra del Sinaí: nadie me ayuda sino el sacerdote de Jerusalén",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:21",
+          "exact_reason": "La cita no menciona tablas de piedra del Sinaí ni a un sacerdote de Jerusalén."
+        },
+        {
+          "text": "en las crónicas de los reyes de Media: nadie me ayuda sino los capitanes de Darío",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:21",
+          "exact_reason": "La cita no menciona crónicas de los reyes de Media ni capitanes de Darío."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sostiene los dos componentes de la primera opción —registro y único auxiliador— y no respalda las demás; es cobertura textual, no competitiva.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "656593d9ee012d1aa1b493d3041eeae4c0b7f6980b6cd75447521c22eca3c68b",
+      "output_sha256": "6a39a0574db3d38714a1f3e0d16015bdb0cb121e2dad6cdf8714f6044bf87cff"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-023",
+      "selected_option_index": 2,
+      "selected_option_text": "En el tercer año de Ciro rey de Persia",
+      "exact_supporting_phrase": "En el tercer año de Ciro, rey de Persia, fue revelada palabra a Daniel, llamado Beltsasar. La palabra era verdadera y el conflicto grande, pero él comprendió la palabra y tuvo inteligencia en la visión.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "En el cuarto año de Ciro rey de Persia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "La cita no sitúa la revelación en el cuarto año de Ciro."
+        },
+        {
+          "text": "En el séptimo año de Ciro rey de Persia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "La cita no sitúa la revelación en el séptimo año de Ciro."
+        },
+        {
+          "text": "En el tercer año de Ciro rey de Persia",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "La cita fecha la revelación en el tercer año de Ciro, rey de Persia."
+        },
+        {
+          "text": "En el primer año de Ciro rey de Persia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "La cita fija el tercer año, no el primero."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La fecha aparece literalmente en la cita y solo la tercera opción coincide; es cobertura textual.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "8758c137223423f237aa84987ef8f54f2405927bc80c83579614274fbfefab5a",
+      "output_sha256": "e53536baf51deca62bf54a7b89c99fdebc2f94533f2f19c50db00f0b0fd2f6a6"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-024",
+      "selected_option_index": 0,
+      "selected_option_text": "La palabra era verdadera, el conflicto grande y él comprendió la visión",
+      "exact_supporting_phrase": "En el tercer año de Ciro, rey de Persia, fue revelada palabra a Daniel, llamado Beltsasar. La palabra era verdadera y el conflicto grande, pero él comprendió la palabra y tuvo inteligencia en la visión.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "La palabra era verdadera, el conflicto grande y él comprendió la visión",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "La cita califica la palabra como verdadera, describe grande el conflicto y afirma que Daniel comprendió la palabra y tuvo inteligencia en la visión."
+        },
+        {
+          "text": "La palabra era sellada, el conflicto futuro y él ignoró dicha visión",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "La cita dice que la palabra era verdadera y que Daniel comprendió; no la presenta como sellada ni ignorada."
+        },
+        {
+          "text": "La palabra era condicional, el conflicto breve y él olvidó la visión",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "La cita no llama condicional a la palabra ni dice que el conflicto fuera breve o que Daniel olvidara la visión."
+        },
+        {
+          "text": "La palabra era simbólica, el conflicto oculto y él calló ante la visión",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "La cita no califica la palabra de simbólica ni dice que Daniel callara; afirma comprensión e inteligencia en la visión."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La primera opción conserva la naturaleza, magnitud del conflicto y comprensión expresadas en la cita; las otras alteran esos datos.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "3a88e76d9ad6b622b59c2c18758e3751d3fe4a7de76ce26690a3a7860956e126",
+      "output_sha256": "38812eb67f5293bc13e504c44a039523993f56651f0cff7eb0add114a8d836cd"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-025",
+      "selected_option_index": 2,
+      "selected_option_text": "Por espacio de tres semanas completas",
+      "exact_supporting_phrase": "«En aquellos días yo, Daniel, estuve afligido por espacio de tres semanas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Por espacio de siete semanas completas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:2",
+          "exact_reason": "La cita fija tres semanas, no siete semanas completas."
+        },
+        {
+          "text": "Por espacio de tres meses consecutivos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:2",
+          "exact_reason": "La cita no habla de tres meses consecutivos."
+        },
+        {
+          "text": "Por espacio de tres semanas completas",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:2",
+          "exact_reason": "La cita dice que Daniel estuvo afligido por espacio de tres semanas."
+        },
+        {
+          "text": "Por espacio de diez días consecutivos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:2",
+          "exact_reason": "La cita no fija diez días consecutivos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La duración aparece literalmente y solo la tercera opción coincide; cobertura textual.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "d93d0f7638fc0a49db416f5b79d2f6929c9d538876124b47338ce88dbab3b005",
+      "output_sha256": "833b8fbea6ae3ea2b085fa50de759cc05d35e564a0e4ace8441cdb2720bcf287"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-026",
+      "selected_option_index": 2,
+      "selected_option_text": "No comió manjar delicado, ni carne ni vino, ni usó perfume",
+      "exact_supporting_phrase": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "No comió pan ni bebió agua, ni encendió fuego en su aposento",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita no menciona abstenerse de pan, agua o encender fuego en el aposento."
+        },
+        {
+          "text": "No salió a la puerta del rey, ni leyó cartas, ni usó manto",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita no menciona no salir a la puerta del rey, leer cartas ni usar manto."
+        },
+        {
+          "text": "No comió manjar delicado, ni carne ni vino, ni usó perfume",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita enumera no comer manjar delicado, no tener carne ni vino en la boca y no ungirse con perfume durante las tres semanas."
+        },
+        {
+          "text": "No durmió en su lecho, ni vistió lino, ni habló con sabios",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita no menciona dejar de dormir, vestir lino o hablar con sabios."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La cita respalda el conjunto de privaciones, pero la pregunta repite superficialmente el mismo dato de DAN10-V11-WAVE-003 sobre la misma unidad y hecho; requiere otra operación.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "e1d7488be49ba82c16b1cfc738969f6dfae5a8358eb3ecfdceef829d137e9b8c",
+      "output_sha256": "bdaac1b20afb8141f0ce28e927f9a6b195364c70ced39a5be85187ea1933365c"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-027",
+      "selected_option_index": 0,
+      "selected_option_text": "Hasta que se cumplieron totalmente las tres semanas",
+      "exact_supporting_phrase": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Hasta que se cumplieron totalmente las tres semanas",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita establece que la abstinencia continuó hasta que se cumplieron las tres semanas."
+        },
+        {
+          "text": "Hasta que llegó la fiesta de los panes sin levadura",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita no prolonga la abstinencia hasta una fiesta de los panes sin levadura."
+        },
+        {
+          "text": "Hasta que el rey Ciro promulgó su segundo decreto",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita no vincula el final de la abstinencia con un segundo decreto de Ciro."
+        },
+        {
+          "text": "Hasta que los príncipes regresaron desde Jerusalén",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita no menciona el regreso de príncipes desde Jerusalén como límite temporal."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El momento está expresado literalmente, pero el ítem repite la misma pregunta temporal de DAN10-V11-WAVE-027; requiere otra presentación.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "d5417614fb850ede87d3a7c019c9ac5e81a2b9003b90e4e1a14e0d5c66d225db",
+      "output_sha256": "cf703c81bb71c96628de52f81cb8d12c5db604d9628619436239e85bbe791069"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-028",
+      "selected_option_index": 3,
+      "selected_option_text": "No entró en su boca carne ni vino durante el ayuno",
+      "exact_supporting_phrase": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume, hasta que se cumplieron las tres semanas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "No entró en su boca fruta ni trigo durante el ayuno",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita no dice que fruta y trigo fueran los dos elementos de la cláusula sobre lo que entró en la boca."
+        },
+        {
+          "text": "No entró en su boca agua ni aceite durante el ayuno",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita no nombra agua y aceite en esa cláusula."
+        },
+        {
+          "text": "No entró en su boca leche ni miel durante el ayuno",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cita no nombra leche y miel en esa cláusula."
+        },
+        {
+          "text": "No entró en su boca carne ni vino durante el ayuno",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:3",
+          "exact_reason": "La cláusula «ni entró en mi boca» nombra específicamente la carne y el vino."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La evidencia distingue «no comí manjar delicado» de «ni entró en mi boca carne ni vino»; aun con respuesta textual, el ítem repite DAN10-V11-WAVE-042 y debe conservar esa distinción en otra formulación.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "134fd0184303afd899ebf9515b963b4e6891853e0ceab74be4518d6c7f37dfca",
+      "output_sha256": "4979ae1b96425799cf9382aecfd49ddc38744056cf8827a451dad6ea2952ff81"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-029",
+      "selected_option_index": 3,
+      "selected_option_text": "El día veinticuatro del primer mes a la orilla del gran río Hidekel",
+      "exact_supporting_phrase": "El día veinticuatro del primer mes estaba yo a la orilla del gran río Hidekel.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "El día veintiuno del séptimo mes a la orilla del gran río Éufrates",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:4",
+          "exact_reason": "La cita no da el día veintiuno del séptimo mes ni sitúa a Daniel junto al Éufrates."
+        },
+        {
+          "text": "El día primero del tercer mes a la ribera del histórico río Quebar",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:4",
+          "exact_reason": "La cita no da el primer día del tercer mes ni menciona el río Quebar."
+        },
+        {
+          "text": "El día catorce del primer mes a la ribera del caudaloso río Ulai",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:4",
+          "exact_reason": "La cita no da el día catorce del primer mes ni ubica a Daniel en el río Ulai."
+        },
+        {
+          "text": "El día veinticuatro del primer mes a la orilla del gran río Hidekel",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:4",
+          "exact_reason": "La cita sitúa a Daniel el día veinticuatro del primer mes a la orilla del gran río Hidekel."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita conserva conjuntamente la fecha y el enclave pedidos; las demás combinaciones cambian ambos datos. Es cobertura verificable.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "a0f3d61d009bd1ee2c8a1b3ba471c8327afb74ab16883b4839a85b0ccdcb21db",
+      "output_sha256": "5df96234b61693a85424371b771d9abfc555a35e53c3e01746665d937bc8cd52"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-030",
+      "selected_option_index": 1,
+      "selected_option_text": "Vestido de lino y ceñida su cintura con resplandeciente oro de Ufaz",
+      "exact_supporting_phrase": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Vestido de púrpura imperial y ceñida su cintura con fino oro de Ofir",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita no habla de púrpura ni de oro de Ofir."
+        },
+        {
+          "text": "Vestido de lino y ceñida su cintura con resplandeciente oro de Ufaz",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita describe al varón vestido de lino y con la cintura ceñida con oro de Ufaz."
+        },
+        {
+          "text": "Vestido de blanco resplandeciente y ceñida su cintura con plata pura",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita sí menciona lino y oro de Ufaz; las otras prendas y materiales no aparecen."
+        },
+        {
+          "text": "Vestido de carmesí sacerdotal y ceñida su cintura con bronce pulido",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita no habla de carmesí sacerdotal ni de bronce pulido para la vestidura y el ceñidor."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La cita respalda la combinación de vestidura y ceñidor, pero el enunciado reproduce la misma combinación que V14-R2-DAN10-W1-031 y DAN10-V11-WAVE-044; es una variante superficial.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "02cc523627b4757188c7f2717e15bd1ea3d2d66ae775ee2207cfc62ee7398a3b",
+      "output_sha256": "71c2bdcf2372e4a659f1cbdd40e8b549734f7161529c427c17b672ab0920578e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-031",
+      "selected_option_index": 3,
+      "selected_option_text": "Estaba vestido de lino y ceñida su cintura con oro de Ufaz.",
+      "exact_supporting_phrase": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Estaba vestido de lana limpia y ceñida su cintura con bronce.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita no identifica lana ni bronce como la combinación de vestidura y cintura."
+        },
+        {
+          "text": "Estaba vestido de jacinto y ceñida su cintura con fina plata.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita no identifica jacinto ni plata fina en esa combinación."
+        },
+        {
+          "text": "Estaba vestido de púrpura y ceñida su cintura con oro de Ofir.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita no identifica púrpura ni oro de Ofir en esa combinación."
+        },
+        {
+          "text": "Estaba vestido de lino y ceñida su cintura con oro de Ufaz.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita describe al varón vestido de lino y con la cintura ceñida con oro de Ufaz."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La combinación está respaldada literalmente, pero el ítem repite el mapeo de vestidura y cintura de DAN10-V11-WAVE-044 y también duplica V14-R2-DAN10-W1-030; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "5421cd6ad68e7a056dd392bd14082ca7a4915d9393853e5e764acb3c55781e25",
+      "output_sha256": "c4bc30146213fd61c9c2ed0c5ca09dcdd3d57c568b6c9f0f59c8b4881b108cb4"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-032",
+      "selected_option_index": 0,
+      "selected_option_text": "«Abrí mi boca y hablé»",
+      "exact_supporting_phrase": "Alcé mis ojos y miré, y vi un varón vestido de lino y ceñida su cintura con oro de Ufaz.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "«Abrí mi boca y hablé»",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita comienza con las palabras «Alcé mis ojos y miré»."
+        },
+        {
+          "text": "«Alcé mis ojos y miré»",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita no comienza con «Abrí mi boca y hablé»."
+        },
+        {
+          "text": "«Volví mi vista y oré»",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita no usa «Volví mi vista y oré» para describir esa acción."
+        },
+        {
+          "text": "«Fijé mis ojos y clamé»",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:5",
+          "exact_reason": "La cita no usa «Fijé mis ojos y clamé»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La frase está citada literalmente, pero el ítem repite la misma acción de DAN10-V11-WAVE-058 sobre la misma unidad y hecho; requiere otra presentación.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "a422dfeef6292bdd75822c1624c3ef15af0b9476de709863908987e974d3c1b9",
+      "output_sha256": "8654d09f689fb8162ed8532aa43124c8dd44bb6ba84f2f9d9ab9e693c8462ad7"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-033",
+      "selected_option_index": 0,
+      "selected_option_text": "Al bronce bruñido incandescente.",
+      "exact_supporting_phrase": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Al bronce bruñido incandescente.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita compara el rostro del varón con un relámpago."
+        },
+        {
+          "text": "A un cristal de berilo precioso.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita reserva las antorchas de fuego para los ojos, no para el rostro."
+        },
+        {
+          "text": "A un relámpago resplandeciente.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita compara el cuerpo con berilo, no el rostro."
+        },
+        {
+          "text": "A una antorcha de fuego ardiente.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita asigna el bronce bruñido a brazos y pies, no al rostro."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La comparación del rostro está respaldada, pero es la misma identificación directa de DAN10-V11-WAVE-006; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "6a49bda1841c09a053f396709a0b310ee7b2b727e4e8e68fab505ffbf7cf20e5",
+      "output_sha256": "dd3e37def26dd516478ec91578e72c677990429691058a176ee0dc578091303e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-034",
+      "selected_option_index": 0,
+      "selected_option_text": "Eran como antorchas de fuego encendidas.",
+      "exact_supporting_phrase": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Eran como antorchas de fuego encendidas.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita compara los ojos del varón con antorchas de fuego."
+        },
+        {
+          "text": "Eran como piezas de bronce bruñido fino.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita no compara los ojos con un relámpago; esa comparación corresponde al rostro."
+        },
+        {
+          "text": "Eran como piedras de berilo relucientes.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita compara el cuerpo con berilo, no los ojos con piedras de berilo."
+        },
+        {
+          "text": "Eran como un relámpago resplandeciente.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita no asigna el bronce bruñido a los ojos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La comparación de los ojos está respaldada, pero el ítem repite directamente DAN10-V11-WAVE-007 sobre el mismo hecho; requiere otra operación.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "80f8a1187b14d491d8c91eac94f4f3c4c5e9d0e59cc8663de613a629f35cdda8",
+      "output_sha256": "e338b75ea58a297003fd30909e4ec5a6b3c511e3a3e641d4fa64b411396218b6"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-035",
+      "selected_option_index": 2,
+      "selected_option_text": "Específicamente sus brazos y sus pies.",
+      "exact_supporting_phrase": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Específicamente su cintura y su pecho.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita no asigna el bronce bruñido a la cintura y el pecho."
+        },
+        {
+          "text": "Específicamente su cabeza y su cuello.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita no asigna el bronce bruñido a la cabeza y el cuello."
+        },
+        {
+          "text": "Específicamente sus brazos y sus pies.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita asigna la apariencia de bronce bruñido a los brazos y los pies."
+        },
+        {
+          "text": "Específicamente sus hombros y sus manos.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita no asigna el bronce bruñido a hombros y manos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Las extremidades correctas aparecen literalmente, pero el ítem repite la misma identificación de DAN10-V11-WAVE-008; requiere otra presentación.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "627918f05bd59021ee18905c9bc93b1c1d601798663b34da5bfa681c80a74603",
+      "output_sha256": "b7c8ed67abed949c5918be43fc44c924b4ba03a618d7f9075a57c6baf8c43020"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-036",
+      "selected_option_index": 1,
+      "selected_option_text": "Como el estruendo potente de una gran multitud.",
+      "exact_supporting_phrase": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Como el silbo apacible y delicado en el monte.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita no compara las palabras con un silbo apacible y delicado."
+        },
+        {
+          "text": "Como el estruendo potente de una gran multitud.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita compara el sonido de las palabras con el estruendo de una multitud."
+        },
+        {
+          "text": "Como el rugido de muchas aguas en una catarata.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita no usa el rugido de muchas aguas para describir el sonido de las palabras."
+        },
+        {
+          "text": "Como el toque marcial de una sola gran trompeta.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita no usa el toque de una sola trompeta."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La comparación auditiva está respaldada, pero el ítem repite la misma pregunta de DAN10-V11-WAVE-009 sobre el mismo hecho; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "a71051162bf25015d17c5158dce860df684d52299c77a927cdaab686d9bc7349",
+      "output_sha256": "95c6c8f090804159c8a84a7dd0addae133555c07202d5da0ebf5b8a234aef6cd"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-037",
+      "selected_option_index": 0,
+      "selected_option_text": "Cuerpo de bronce bruñido, rostro como antorcha y palabras como silbo de viento.",
+      "exact_supporting_phrase": "Su cuerpo era como de berilo, su rostro parecía un relámpago, sus ojos como antorchas de fuego, sus brazos y sus pies como de color de bronce bruñido, y el sonido de sus palabras como el estruendo de una multitud.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Cuerpo de bronce bruñido, rostro como antorcha y palabras como silbo de viento.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita asocia cuerpo con berilo, rostro con relámpago y sonido de las palabras con estruendo de multitud."
+        },
+        {
+          "text": "Cuerpo de oro de Ufaz, rostro como de berilo y palabras como rugido del león.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita no asocia cuerpo de bronce con rostro de antorcha ni palabras como silbo de viento."
+        },
+        {
+          "text": "Cuerpo de lino fino, rostro de bronce bruñido y palabras como toque de bocina.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita no asocia cuerpo de oro de Ufaz, rostro de berilo ni palabras como rugido de león."
+        },
+        {
+          "text": "Cuerpo de berilo, rostro como relámpago y palabras como estruendo de multitud.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:6",
+          "exact_reason": "La cita no asocia cuerpo de lino, rostro de bronce ni palabras como toque de bocina."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La primera opción conserva tres correspondencias explícitas de la cita; las demás intercambian o inventan comparaciones. Es cobertura compuesta, no competitiva.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "b080d5551c34df2c912a34498c4b6d03ac1cb8c464f71d5c48026cf1c02d81e3",
+      "output_sha256": "3c571bd43fe1d1e85e5988842dff0698d83f31325a26eb5c6e0812c099cb3eac"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-038",
+      "selected_option_index": 3,
+      "selected_option_text": "Únicamente el profeta Daniel contempló la visión.",
+      "exact_supporting_phrase": "Sólo yo, Daniel, vi aquella visión. No la vieron los hombres que estaban conmigo, sino que se apoderó de ellos un gran temor y huyeron y se escondieron.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "El rey Darío de Media contempló toda la visión.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:7",
+          "exact_reason": "La cita no atribuye la visión al rey Darío de Media."
+        },
+        {
+          "text": "Ninguno de los allí reunidos contempló la visión.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:7",
+          "exact_reason": "La cita no dice que ninguno de los reunidos la contemplara: Daniel sí la vio."
+        },
+        {
+          "text": "Todos los hombres presentes contemplaron la visión.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:7",
+          "exact_reason": "La cita niega que todos los hombres presentes contemplaran la visión."
+        },
+        {
+          "text": "Únicamente el profeta Daniel contempló la visión.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:7",
+          "exact_reason": "La cita dice «Sólo yo, Daniel, vi aquella visión» y niega que la vieran los hombres que estaban con él."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La identidad de Daniel como único vidente está respaldada, pero repite el hecho de Q-DAN10-CENTRAL-0007 y sus presentaciones; requiere otra operación.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "93b791c885f2d3ff382a22305a5bb621c88e8695f39c3f051c0c38f0a709b61e",
+      "output_sha256": "dfadae78a0466b0db579ef0b89e773c992c9d0444bdb5946b7289b14d64fac72"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-039",
+      "selected_option_index": 0,
+      "selected_option_text": "Se apoderó de ellos gran temor, huyeron y se escondieron.",
+      "exact_supporting_phrase": "Sólo yo, Daniel, vi aquella visión. No la vieron los hombres que estaban conmigo, sino que se apoderó de ellos un gran temor y huyeron y se escondieron.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Se apoderó de ellos gran temor, huyeron y se escondieron.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:7",
+          "exact_reason": "La cita enumera las tres reacciones: gran temor, huida y ocultamiento."
+        },
+        {
+          "text": "Cayeron en profundo sueño, callaron y quedaron inmóviles.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:7",
+          "exact_reason": "La cita no habla de sueño profundo, silencio o inmovilidad de esos hombres."
+        },
+        {
+          "text": "Sintieron asombro reverente, se postraron y oraron a Dios.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:7",
+          "exact_reason": "La cita no dice que se postraran y oraran; dice que huyeron y se escondieron."
+        },
+        {
+          "text": "Quedaron totalmente ciegos, gritaron y pidieron auxilio.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:7",
+          "exact_reason": "La cita no dice que quedaran ciegos ni que pidieran auxilio."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La triple reacción está respaldada literalmente, pero el ítem repite DAN10-V11-WAVE-010 sobre la misma unidad y hecho; requiere otra presentación.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "3f20f3bcf0028466686b582edbeb7596a43d9fec48ddcc075ae88aa673f12eea",
+      "output_sha256": "fd659b93be5609b6191034467a153bbbc86daf7868d8406d97a83596cef10cd5"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-040",
+      "selected_option_index": 3,
+      "selected_option_text": "Quedó completamente solo ante aquella gran visión.",
+      "exact_supporting_phrase": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Quedó rodeado por los sabios y magos de Babilonia.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:8",
+          "exact_reason": "La cita no deja a Daniel rodeado de sabios y magos de Babilonia."
+        },
+        {
+          "text": "Quedó sostenido por sus tres compañeros hebreos.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:8",
+          "exact_reason": "La cita no dice que sus tres compañeros lo sostuvieran."
+        },
+        {
+          "text": "Quedó escoltado por los guardias persas del rey.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:8",
+          "exact_reason": "La cita no menciona una escolta de guardias persas."
+        },
+        {
+          "text": "Quedó completamente solo ante aquella gran visión.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:8",
+          "exact_reason": "La cita afirma que Daniel quedó solo ante la gran visión."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La condición de quedar solo está respaldada, pero repite directamente DAN10-V11-WAVE-013 sobre el mismo hecho; requiere otro ángulo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "aa9350827be4f06ad7dd763057ae48834736665ca7ef9b2fefaf8ed03917bc08",
+      "output_sha256": "666e8e5c5efbdab4e1c748d4f27d047548cb43a4d8939b648acdd0ef30a5118d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN10-W1-041",
+      "selected_option_index": 3,
+      "selected_option_text": "Sus fuerzas se mudaron en desfallecimiento y lo abandonaron del todo.",
+      "exact_supporting_phrase": "Quedé, pues, yo solo ante esta gran visión, pero no quedaron fuerzas en mí, antes bien, mis fuerzas se cambiaron en desfallecimiento, pues me abandonaron totalmente.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Perdió temporalmente el habla pero conservó la firmeza de sus pies.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:8",
+          "exact_reason": "La cita no describe un cansancio ligero con vigor conservado."
+        },
+        {
+          "text": "Sintió un ligero cansancio corporal pero retuvo suficiente vigor.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:8",
+          "exact_reason": "La cita no dice que perdiera solo el habla conservando la firmeza de los pies."
+        },
+        {
+          "text": "Mantuvo intacta su fortaleza física mientras contemplaba la visión.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 10:8",
+          "exact_reason": "La cita no afirma que mantuviera intacta su fortaleza física."
+        },
+        {
+          "text": "Sus fuerzas se mudaron en desfallecimiento y lo abandonaron del todo.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:8",
+          "exact_reason": "La cita dice que las fuerzas de Daniel se mudaron en desfallecimiento y lo abandonaron totalmente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La intensidad del debilitamiento está respaldada, pero el ítem repite la misma condición de DAN10-V11-WAVE-028; requiere otra formulación.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T12:04:11.706Z",
+      "input_content_sha256": "6054c7d16e4638c914e1fbcdeff550212b1e9a9bbd75976e2f38ea80288c5c57",
+      "output_sha256": "e5a116c6971b1e3e735a2dcf380cc934fa366aecbb49f178b634dc8c80983259"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 6,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 14,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}
