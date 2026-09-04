@@ -13,6 +13,7 @@ import {
   type FinalRawQuestion,
 } from '@/storage/final-bank'
 import type { QuestionProgress } from './types'
+import { V18_PACKAGE_COUNTS } from '@/data/final-day-v18'
 
 const root = resolve(import.meta.dirname, '../..')
 const bankRoot = resolve(root, 'public/banks/final-2026')
@@ -28,7 +29,7 @@ const allQuestions = manifest.shards.flatMap((shard) => {
 })
 
 describe('Entrenamiento de Emergencia Final 2026', () => {
-  it('clasifica las 3,873 preguntas en las 3 categorías canónicas sin pérdida', () => {
+  it('solo llama competitivas a preguntas con evidencia V18 real', () => {
     expect(allQuestions).toHaveLength(3873)
 
     let competitive = 0
@@ -42,8 +43,29 @@ describe('Entrenamiento de Emergencia Final 2026', () => {
       else if (cat === 'EXCLUDE_EMERGENCY') excluded++
     }
 
-    expect(competitive).toBe(1039)
+    expect(competitive).toBe(V18_PACKAGE_COUNTS.competitive)
     expect(competitive + coverage + excluded).toBe(3873)
+  })
+
+  it('Paquete A carga exactamente el subconjunto V18 verificado disponible', () => {
+    const result = selectEmergencySession(
+      allQuestions,
+      'emergency-last-day-coverage',
+      new Map(),
+    )
+    expect(result.questions).toHaveLength(V18_PACKAGE_COUNTS.coverage)
+    expect(result.config.count).toBe(V18_PACKAGE_COUNTS.coverage)
+    expect(result.realizedSummary.distinctFacts).toBe(result.questions.length)
+  })
+
+  it('Paquete C no incluye preguntas fuera de la reparación V18', () => {
+    const result = selectEmergencySession(
+      allQuestions,
+      'emergency-last-day-repair',
+      new Map(),
+    )
+    expect(result.questions).toHaveLength(V18_PACKAGE_COUNTS.repair)
+    expect(result.config.count).toBe(V18_PACKAGE_COUNTS.repair)
   })
 
   it('Bloque A: PR39-44 Intensivo entrega exactamente 150 preguntas (25 por capítulo) con hechos únicos', () => {
@@ -136,20 +158,18 @@ describe('Entrenamiento de Emergencia Final 2026', () => {
     expect(result.realizedSummary.distinctFacts).toBe(100)
   })
 
-  it('Simulación Adversarial: entrega 100 Qs (50 PR / 50 Dan 7-12) verificadas como COMPETITIVE_ACCEPT y 100 hechos distintos', () => {
+  it('Simulación Adversarial usa solamente el subconjunto competitivo V18 disponible', () => {
     const progress = new Map<string, QuestionProgress>()
     const result = selectEmergencySession(allQuestions, 'emergency-adversarial-simulation', progress)
 
     expect(result.success).toBe(true)
-    expect(result.questions).toHaveLength(100)
-    expect(result.config.count).toBe(100)
+    expect(result.questions).toHaveLength(V18_PACKAGE_COUNTS.competitive)
+    expect(result.config.count).toBe(V18_PACKAGE_COUNTS.competitive)
     expect(result.config.mode).toBe('simulation')
     expect(result.config.perQuestionSeconds).toBe(25)
 
-    expect(result.realizedSummary.prCount).toBe(50)
-    expect(result.realizedSummary.danielCount).toBe(50)
-    expect(result.realizedSummary.competitiveCount).toBe(100)
-    expect(result.realizedSummary.distinctFacts).toBe(100)
+    expect(result.realizedSummary.competitiveCount).toBe(V18_PACKAGE_COUNTS.competitive)
+    expect(result.realizedSummary.distinctFacts).toBe(result.questions.length)
 
     for (const q of result.questions) {
       expect(VERIFIED_COMPETITIVE_IDS.has(q.id)).toBe(true)
@@ -250,31 +270,23 @@ describe('Entrenamiento de Emergencia Final 2026', () => {
       expect(diffCount).toBeGreaterThanOrEqual(60)
     })
 
-    it('Simulación Adversarial: conserva 50/50 y al menos 60 de 100 son diferentes con solo COMPETITIVE_ACCEPT', () => {
+    it('Simulación Adversarial nunca amplía el pool más allá de V18', () => {
       const progress = new Map<string, QuestionProgress>()
       const r1 = selectEmergencySession(allQuestions, 'emergency-adversarial-simulation', progress, seed1)
       const r2 = selectEmergencySession(allQuestions, 'emergency-adversarial-simulation', progress, seed2)
 
-      expect(r1.questions).toHaveLength(100)
-      expect(r2.questions).toHaveLength(100)
-
-      expect(r1.realizedSummary.prCount).toBe(50)
-      expect(r1.realizedSummary.danielCount).toBe(50)
-      expect(r1.realizedSummary.competitiveCount).toBe(100)
-      expect(r1.realizedSummary.distinctFacts).toBe(100)
-
-      expect(r2.realizedSummary.prCount).toBe(50)
-      expect(r2.realizedSummary.danielCount).toBe(50)
-      expect(r2.realizedSummary.competitiveCount).toBe(100)
-      expect(r2.realizedSummary.distinctFacts).toBe(100)
+      expect(r1.questions).toHaveLength(V18_PACKAGE_COUNTS.competitive)
+      expect(r2.questions).toHaveLength(V18_PACKAGE_COUNTS.competitive)
+      expect(r1.realizedSummary.competitiveCount).toBe(V18_PACKAGE_COUNTS.competitive)
+      expect(r2.realizedSummary.competitiveCount).toBe(V18_PACKAGE_COUNTS.competitive)
 
       for (const q of [...r1.questions, ...r2.questions]) {
         expect(VERIFIED_COMPETITIVE_IDS.has(q.id)).toBe(true)
       }
 
-      const ids1 = new Set(r1.questions.map((q) => q.id))
-      const diffCount = r2.questions.filter((q) => !ids1.has(q.id)).length
-      expect(diffCount).toBeGreaterThanOrEqual(60)
+      expect(new Set(r1.questions.map((q) => q.id))).toEqual(
+        new Set(r2.questions.map((q) => q.id))
+      )
     })
 
     it('Priorización: selecciona preguntas nunca vistas antes que preguntas vistas hoy', () => {

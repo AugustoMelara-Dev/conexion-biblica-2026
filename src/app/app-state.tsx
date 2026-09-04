@@ -74,6 +74,11 @@ import {
   type FinalBankManifest,
 } from "@/storage/final-bank"
 import {
+  V18_PERSONAL_REPAIR_IDS,
+  V18_VERIFIED_COMPETITIVE_IDS,
+  V18_VERIFIED_COVERAGE_IDS,
+} from "@/data/final-day-v18"
+import {
   emptyFactExposure,
   recordAttempt3x,
   type FactExposure3x,
@@ -660,6 +665,15 @@ export function AppProvider({ children }: { children: ReactNode }) {
           ],
           Date.now()
         )
+        const exactQuestionIds =
+          config.trainingPresetId === "emergency-last-day-coverage"
+            ? V18_VERIFIED_COVERAGE_IDS
+            : config.trainingPresetId === "emergency-last-day-repair"
+              ? V18_PERSONAL_REPAIR_IDS
+              : config.trainingPresetId === "emergency-adversarial-simulation" ||
+                  config.trainingPresetId === "emergency-escudo-central"
+                ? V18_VERIFIED_COMPETITIVE_IDS
+                : undefined
         const gold = await loadFinalQuestionPool({
           manifest: finalManifest,
           chapters,
@@ -679,6 +693,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
           seenFactIds: new Set(exposures.map((exposure) => exposure.factId)),
           exposures,
           factFilter: effectiveFactFilter,
+          questionIds: exactQuestionIds,
           seed: Date.now(),
         })
         await repositories.questions.putMany(gold)

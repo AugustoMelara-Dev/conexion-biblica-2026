@@ -1,0 +1,1044 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-004",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-004.json",
+  "input_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/sol_audit_004",
+    "conversation_id": "/root/sol_audit_004",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0057",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Durante este tiempo se mantuvieron fieles a Dios y confiaron constantemente en su poder.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "Contradice directamente la cita."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "Coincide con la fidelidad y la confianza constante descritas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Respuesta correcta y soporte inequívocos, pero falta la delimitación obligatoria del material.",
+      "suggested_rewrite": "Según Profetas y Reyes, durante su formación, los jóvenes permanecieron fieles a Dios y confiaron constantemente en su poder.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "89f795e84d2b3352b9dca7611abb4de1c735c3741e69f172ae4af1cebac7801b"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0058",
+      "selected_option_index": 2,
+      "selected_option_text": "un propósito ferviente, diligencia y constancia",
+      "exact_supporting_phrase": "A sus hábitos de renunciamiento, unían un propósito ferviente, diligencia y constancia.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "un interés pasajero, talento y prudencia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "No aparece en la evidencia y 'pasajero' contradice la constancia."
+        },
+        {
+          "text": "un deseo de prestigio, rapidez y flexibilidad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "No aparece; el contexto además excluye la ambición."
+        },
+        {
+          "text": "un propósito ferviente, diligencia y constancia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "Reproduce literalmente la enumeración de la cita."
+        },
+        {
+          "text": "un plan reservado, ambición y competencia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "No aparece y la ambición se niega en el contexto."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave está plenamente sustentada; debe añadirse el boundary editorial del material.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué conjunto añadían los jóvenes a sus hábitos de renunciamiento?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "198788ec938c9c727bb690d7bd26e3a418bf6b103aa8e03beae53be7571a89ec"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0059",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "No era el orgullo ni la ambición lo que los había llevado a la corte del rey, junto a los que no conocían ni temían a Dios; eran cautivos puestos en un país extraño por la Sabiduría infinita.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "Afirma precisamente lo que la fuente niega."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "La fuente atribuye su llegada al cautiverio bajo la Sabiduría infinita, no a la ambición."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es inequívoca, pero el enunciado incumple el boundary obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, la ambición fue la causa de que los jóvenes llegaran a la corte del rey.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "a6a12c7f5c2f6dafb1a15c70177cceb5112b906e92e7be33a79dec8a60987d35"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0060",
+      "selected_option_index": 3,
+      "selected_option_text": "que honrase a su pueblo oprimido y glorificase al Dios cuyos siervos eran",
+      "exact_supporting_phrase": "Privados de la influencia del hogar y de sus relaciones sagradas, procuraron conducirse en forma que honrase a su pueblo oprimido y glorificase al Dios cuyos siervos eran.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "que obtuviese privilegios personales y ganase influencia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "Sustituye los fines colectivos y religiosos por beneficios personales no mencionados."
+        },
+        {
+          "text": "que recuperase la comodidad del hogar y evitase toda relación",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "No corresponde a la conducta descrita."
+        },
+        {
+          "text": "que ocultase su origen y adoptase las metas de la corte",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "Contradice el propósito de honrar a su pueblo y a Dios."
+        },
+        {
+          "text": "que honrase a su pueblo oprimido y glorificase al Dios cuyos siervos eran",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "Reproduce exactamente ambos fines."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Contenido correcto y sustentado; falta identificar el material en el enunciado.",
+      "suggested_rewrite": "Según Profetas y Reyes, privados de la influencia del hogar y de sus relaciones sagradas, ¿qué doble orientación dieron los jóvenes a su conducta?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "cfd91e6c32be7399fc1877135da70531d21ea9352dc747b95b103a8053575726"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0061",
+      "selected_option_index": 0,
+      "selected_option_text": "los acompañó",
+      "exact_supporting_phrase": "El Señor miró con aprobación la firmeza y abnegación de los jóvenes hebreos, así como la pureza de sus motivos; y su bendición los acompañó.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "los acompañó",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Completa literalmente la proposición de la fuente."
+        },
+        {
+          "text": "los aisló",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "No aparece y altera el sentido de bendición."
+        },
+        {
+          "text": "los puso a prueba",
+          "verdict": "TRUE_ELSEWHERE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La prueba aparece después y no completa esta frase."
+        },
+        {
+          "text": "los hizo retroceder",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "No está sustentado y contradice el sentido favorable."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La selección es exacta; se requiere añadir el boundary del material.",
+      "suggested_rewrite": "Según Profetas y Reyes, la aprobación divina se expresó en que su bendición ____ a los jóvenes.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "01f3df6454ae3283b2d24db429fb4d55584e45b541a7f16e5440b36d5d194b0e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0062",
+      "selected_option_index": 1,
+      "selected_option_text": "cuatro",
+      "exact_supporting_phrase": "“A estos cuatro muchachos dióles Dios conocimiento e inteligencia en todas las letras y ciencia: mas Daniel tuvo entendimiento en toda visión y sueños.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "tres",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Cantidad distinta de la citada."
+        },
+        {
+          "text": "cuatro",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Es la cantidad textual."
+        },
+        {
+          "text": "siete",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Cantidad no sustentada."
+        },
+        {
+          "text": "diez",
+          "verdict": "TRUE_ELSEWHERE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Confunde la cantidad de muchachos con la comparación 'diez veces' de otro pasaje."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es inequívoca; falta la referencia obligatoria al material.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿a cuántos muchachos dio Dios conocimiento e inteligencia en letras y ciencia?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "405236a66e8ba0636866e8e437e54b6c5913693066225b8ffcd0cc928682b9a1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0063",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Se cumplió para ellos la promesa: “Yo honraré a los que me honran. 1 Samuel 2:30.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Negaría la promesa explícita."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Corresponde exactamente a 'Yo honraré a los que me honran'."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Soporte pleno, pero falta delimitar la fuente PR en el enunciado.",
+      "suggested_rewrite": "Según Profetas y Reyes, la promesa cumplida afirmaba que Dios honraría a quienes lo honraran.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "bdc9ea65437343eba738d463031eb162fd845c1c6ee139f7eb07de93149e3afa"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0064",
+      "selected_option_index": 1,
+      "selected_option_text": "se aferraba a Dios con una confianza inquebrantable",
+      "exact_supporting_phrase": "Mientras Daniel se aferraba a Dios con una confianza inquebrantable, se manifestó en él el espíritu del poder profético.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "se mantenía distante de los misterios futuros",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "No aparece y choca con la enseñanza profética descrita después."
+        },
+        {
+          "text": "se aferraba a Dios con una confianza inquebrantable",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Reproduce literalmente la actitud."
+        },
+        {
+          "text": "buscaba señales antes de confiar en Dios",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Invierte el carácter inquebrantable de la confianza."
+        },
+        {
+          "text": "dependía de su formación humana con cautela",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Desplaza hacia la formación humana lo que la cita atribuye a su relación con Dios."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Respuesta sustentada y única; se debe agregar la delimitación del material.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué actitud de Daniel acompañó la manifestación del espíritu del poder profético?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "daf9ddda4eb2d757f8a963ba7f5fc9028b19736f54646715a60dffc22b63ce51"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0065",
+      "selected_option_index": 3,
+      "selected_option_text": "registrar para las generaciones futuras, mediante figuras y símbolos, acontecimientos",
+      "exact_supporting_phrase": "Al mismo tiempo que recibía instrucciones de los hombres acerca de los deberes que debía cumplir en la corte, Dios le enseñaba a leer los misterios de lo por venir, y a registrar para las generaciones futuras, mediante figuras y símbolos, acontecimientos que abarcaban la historia de este mundo hasta el fin del tiempo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "interpretar solo los deberes cotidianos de la corte",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Confunde la instrucción humana sobre deberes con la enseñanza divina sobre profecía."
+        },
+        {
+          "text": "transmitir oralmente las instrucciones de los hombres",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "No aparece y contradice la acción de registrar."
+        },
+        {
+          "text": "ocultar las figuras hasta el fin del tiempo",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La fuente dice registrar acontecimientos que llegan hasta ese fin, no ocultar figuras."
+        },
+        {
+          "text": "registrar para las generaciones futuras, mediante figuras y símbolos, acontecimientos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Coincide con la segunda acción descrita."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Además del boundary ausente, forma un duplicado semántico directo con PR39-AUTH-0065-PV01.",
+      "suggested_rewrite": "Según Profetas y Reyes, Dios enseñaba a Daniel a leer los misterios del porvenir y a ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "a2f2b94d985e9cfacf3236172d7c99ed1187ecd7ec06d7c61a865cf225fd36b9"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0065-PV01",
+      "selected_option_index": 0,
+      "selected_option_text": "registrar para las generaciones futuras, mediante figuras y símbolos, acontecimientos",
+      "exact_supporting_phrase": "Al mismo tiempo que recibía instrucciones de los hombres acerca de los deberes que debía cumplir en la corte, Dios le enseñaba a leer los misterios de lo por venir, y a registrar para las generaciones futuras, mediante figuras y símbolos, acontecimientos que abarcaban la historia de este mundo hasta el fin del tiempo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "registrar para las generaciones futuras, mediante figuras y símbolos, acontecimientos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Reproduce la acción y sus destinatarios y medios."
+        },
+        {
+          "text": "ordenar para los maestros de la corte, mediante listas y relatos, conocimientos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Cambia destinatarios, medios y objeto sin apoyo."
+        },
+        {
+          "text": "reservar para los sabios de Babilonia, mediante claves y enigmas, advertencias",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "No coincide con generaciones futuras, figuras y símbolos ni acontecimientos."
+        },
+        {
+          "text": "explicar para los gobernantes presentes, mediante discursos y debates, decisiones",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Contradice el horizonte futuro y el registro simbólico."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta el boundary y la pregunta duplica directamente PR39-AUTH-0065; conviene conservar solo una variante.",
+      "suggested_rewrite": "Según Profetas y Reyes, además de enseñarle a comprender los misterios del porvenir, Dios capacitaba a Daniel para ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "26ba8108162b63a74d6d0e1ca79851ba42f4d45928eae316a67e1dc1e38576d3"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0066",
+      "selected_option_index": 0,
+      "selected_option_text": "se estaba educando",
+      "exact_supporting_phrase": "Cuando llegó el momento en que debían ser probados los jóvenes a quienes se estaba educando, los hebreos, juntamente con los otros candidatos, fueron examinados para el servicio del reino.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "se estaba educando",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "Expresión textual del estado previo al examen."
+        },
+        {
+          "text": "se estaba ocultando",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "No aparece en la fuente."
+        },
+        {
+          "text": "se estaba desterrando",
+          "verdict": "TRUE_ELSEWHERE",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "El cautiverio es contexto general, pero no la acción previa descrita aquí."
+        },
+        {
+          "text": "se estaba coronando",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "No tiene apoyo en el pasaje."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta está respaldada; el enunciado debe nombrar Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, antes del examen para el servicio del reino, ¿qué se estaba haciendo con los jóvenes?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "b8a7e6a4bc9a1388feef29091f9e5dc73ccd40f71694a1580933fe4f3c0889d6"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0067",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "Pero “no fué hallado entre todos ellos otro como Daniel, Ananías, Misael, y Azarías.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "La comparación los distingue de todos los demás candidatos."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "Contradice la ausencia de pares indicada por la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El dictamen es claro; solo incumple el boundary obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, el examen situó a Daniel, Ananías, Misael y Azarías al mismo nivel que los demás candidatos.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "c270387117e91ec9b5e621f3df6d5f0a51bec1af4fe6ef14d318acbbf0f57aef"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0068",
+      "selected_option_index": 2,
+      "selected_option_text": "la fuerza indemne y el vigor de sus facultades mentales",
+      "exact_supporting_phrase": "Su aguda comprensión, su vasto conocimiento y su lenguaje selecto y preciso atestiguaban la fuerza indemne y el vigor de sus facultades mentales.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "la improvisación y el desorden de sus facultades mentales",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "Contradice la comprensión, conocimiento y precisión."
+        },
+        {
+          "text": "la fragilidad y el agotamiento de sus facultades mentales",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "Es el opuesto de fuerza y vigor."
+        },
+        {
+          "text": "la fuerza indemne y el vigor de sus facultades mentales",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "Reproduce literalmente la conclusión."
+        },
+        {
+          "text": "la dependencia y la pasividad de sus facultades mentales",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "No está sustentado y contradice los rasgos activos descritos."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Clave válida, pero falta la delimitación obligatoria del material.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué demostraban la comprensión aguda, el vasto conocimiento y el lenguaje selecto y preciso?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "a6a26abecd1210025738003ebf5a89658ec495f5c019716de0e8c75a422c0803"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0069",
+      "selected_option_index": 0,
+      "selected_option_text": "diez veces",
+      "exact_supporting_phrase": "“Y en todo negocio de sabiduría e inteligencia que el rey les demandó, hallólos diez veces mejores que todos los magos y astrólogos que había en todo su reino;” “y así estuvieron delante del rey.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "diez veces",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "Es la cifra exacta de la comparación."
+        },
+        {
+          "text": "cinco veces",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "Cifra no citada."
+        },
+        {
+          "text": "veinte veces",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "Cifra no citada."
+        },
+        {
+          "text": "dos veces",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "Cifra no citada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Selección exacta; falta nombrar el material en el enunciado.",
+      "suggested_rewrite": "Según Profetas y Reyes, en sabiduría e inteligencia, el rey los halló ____ mejores que todos los magos y astrólogos.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "a995566586062f0449b73d9cc87967a893042191f319a76b0f03c2a942e90bc9"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0070",
+      "selected_option_index": 2,
+      "selected_option_text": "poseían la cultura más amplia que el mundo pudiera otorgar; y sin embargo, los jóvenes hebreos no tenían pares entre todos ellos",
+      "exact_supporting_phrase": "En la corte de Babilonia estaban reunidos representantes de todas las tierras, hombres de los más encumbrados talentos, de los más ricamente favorecidos con dones naturales, y quienes poseían la cultura más amplia que el mundo pudiera otorgar; y sin embargo, los jóvenes hebreos no tenían pares entre todos ellos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "carecían de dones naturales y de una cultura amplia; y sin embargo, los jóvenes hebreos no tenían pares entre todos ellos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 7",
+          "exact_reason": "Conserva el resultado, pero niega los dones y cultura que la fuente atribuye a los representantes."
+        },
+        {
+          "text": "procedían de todas las tierras y estaban ricamente dotados; y sin embargo, los jóvenes hebreos quedaban por debajo de todos ellos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 7",
+          "exact_reason": "Conserva el primer polo, pero invierte el resultado comparativo."
+        },
+        {
+          "text": "poseían la cultura más amplia que el mundo pudiera otorgar; y sin embargo, los jóvenes hebreos no tenían pares entre todos ellos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 7",
+          "exact_reason": "Mantiene fielmente el contraste completo."
+        },
+        {
+          "text": "poseían los talentos más encumbrados que el mundo pudiera otorgar; y sin embargo, los jóvenes hebreos dependían por completo de ellos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 7",
+          "exact_reason": "Mezcla atributos y añade una dependencia ausente y contraria al resultado."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "Falta el boundary y duplica PR39-AUTH-0070-PV01; debe conservarse una sola variante.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué contraste se estableció entre los representantes reunidos en la corte y los jóvenes hebreos?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "9368c6efa1c624c3998576e1b641e9d091fdd2a95b38f1c53bb4167b67a6473b"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0070-PV01",
+      "selected_option_index": 2,
+      "selected_option_text": "poseían la cultura más amplia que el mundo pudiera otorgar; y sin embargo, los jóvenes hebreos no tenían pares entre todos ellos",
+      "exact_supporting_phrase": "En la corte de Babilonia estaban reunidos representantes de todas las tierras, hombres de los más encumbrados talentos, de los más ricamente favorecidos con dones naturales, y quienes poseían la cultura más amplia que el mundo pudiera otorgar; y sin embargo, los jóvenes hebreos no tenían pares entre todos ellos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "reunían los mayores talentos, y por eso varios representantes de la corte superaban a los jóvenes hebreos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 7",
+          "exact_reason": "La premisa parcial no autoriza el resultado, que contradice 'no tenían pares'."
+        },
+        {
+          "text": "poseían gran cultura, pero los jóvenes hebreos solo sobresalían entre los candidatos de preparación más limitada",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 7",
+          "exact_reason": "Restringe indebidamente la superioridad de los jóvenes."
+        },
+        {
+          "text": "poseían la cultura más amplia que el mundo pudiera otorgar; y sin embargo, los jóvenes hebreos no tenían pares entre todos ellos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 7",
+          "exact_reason": "Es el contraste exacto de la fuente."
+        },
+        {
+          "text": "procedían de muchas tierras, y en conjunto no se observaba diferencia notable entre ellos y los jóvenes hebreos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 7",
+          "exact_reason": "Niega la distinción central del pasaje."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Además del boundary ausente, duplica PR39-AUTH-0070; conviene retirar una de las dos.",
+      "suggested_rewrite": "Según Profetas y Reyes, aunque la corte concentraba el talento y la cultura de muchas tierras, ¿qué resultado sobresalía al comparar a sus representantes?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "8de9a7ea5ab302aef56201b881146ed789c6bc73f2a64828041605c6b0f1ee64"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0071",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "En fuerza y belleza física, en vigor mental y realizaciones literarias, no tenían rivales.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "Contradice literalmente la cita."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "Coincide de forma directa con la evidencia."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El contenido es válido; falta la identificación obligatoria de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, en fuerza y belleza física, vigor mental y realizaciones literarias, los jóvenes no tenían rivales.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "b7f44417954269df63af495805197ede9ae86b6be6b9a71ff76fd520fe7f0ae8"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0072",
+      "selected_option_index": 1,
+      "selected_option_text": "certificados de sus buenos hábitos, insignias de la nobleza",
+      "exact_supporting_phrase": "El porte erguido, el paso firme y elástico, el rostro hermoso, los sentidos agudos, el aliento no contaminado, todas estas cosas eran otros tantos certificados de sus buenos hábitos, insignias de la nobleza con que la naturaleza honra a los que obedecen sus leyes.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "requisitos ceremoniales impuestos por la corte",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "No se mencionan requisitos ni imposición cortesana."
+        },
+        {
+          "text": "certificados de sus buenos hábitos, insignias de la nobleza",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "Reproduce las dos caracterizaciones de la cita."
+        },
+        {
+          "text": "señales de superioridad heredada sin relación con los hábitos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "Contradice la relación explícita con buenos hábitos y obediencia."
+        },
+        {
+          "text": "adornos externos que ocultaban debilidad mental",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "No aparece y contradice el vigor mental descrito."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Soporte exacto y sin ambigüedad; falta el boundary de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué significado compartían el porte erguido, el paso firme, los sentidos agudos y los demás rasgos enumerados?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "a27148f81650b93ddea8c86f5d4e8c7bdc7d570ba808b42690089eee5067ff8a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0073",
+      "selected_option_index": 3,
+      "selected_option_text": "babilonios",
+      "exact_supporting_phrase": "Al adquirir la sabiduría de los babilonios, Daniel y sus compañeros tuvieron mucho más éxito que los demás estudiantes; pero su saber no les llegó por casualidad.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "egipcios",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Pueblo no citado en esta oración."
+        },
+        {
+          "text": "medos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Pueblo no citado en esta oración."
+        },
+        {
+          "text": "persas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Pueblo no citado en esta oración."
+        },
+        {
+          "text": "babilonios",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Gentilicio exacto de la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Respuesta inequívoca; debe añadirse el boundary obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, Daniel y sus compañeros tuvieron más éxito que los demás al adquirir la sabiduría de los ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "5c58eba9ce95e06a9c91a0448d06fae89e5938a36812aa15d5d059500563d3ba"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0074",
+      "selected_option_index": 3,
+      "selected_option_text": "del Espíritu Santo",
+      "exact_supporting_phrase": "Lo obtuvieron por el uso fiel de sus facultades, bajo la dirección del Espíritu Santo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "de la casualidad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La oración previa niega expresamente que el saber llegara por casualidad."
+        },
+        {
+          "text": "de sus propios impulsos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "No está sustentado y desplaza la dirección divina."
+        },
+        {
+          "text": "de los demás estudiantes",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Los demás estudiantes sirven como comparación, no como dirección."
+        },
+        {
+          "text": "del Espíritu Santo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Completa literalmente la afirmación."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La selección es exacta, pero debe agregarse 'Según Profetas y Reyes' al enunciado.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿bajo qué dirección hicieron Daniel y sus compañeros uso fiel de sus facultades?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T08:59:48.6694401Z",
+      "input_content_sha256": "2d7763e1460e6815aeeb795982ff32b419976961d46e6ba0c7d381287a452f28",
+      "output_sha256": "a359f2b7b184d3ab9972c1d103b0f83647b3a45dfac6af1f4f6f30728385a175"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 0,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 20,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

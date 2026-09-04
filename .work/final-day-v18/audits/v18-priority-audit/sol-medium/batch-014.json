@@ -1,0 +1,1103 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-014",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-014.json",
+  "input_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/sol_audit_004",
+    "conversation_id": "/root/sol_audit_004",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-C19-009",
+      "selected_option_index": 1,
+      "selected_option_text": "De lo que pueden llegar a ser los hombres que se unen sinceramente con el Dios de sabiduría y poder",
+      "exact_supporting_phrase": "Entre los que mantenían su fidelidad a Dios, se contaban Daniel y sus tres compañeros, ilustres ejemplos de lo que pueden llegar a ser los hombres que se unen con el Dios de sabiduría y poder.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "De la forma en que los fieles protegieron su religión en Babilonia mediante una prudente discreción",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La fuente no presenta discreción como el ejemplo señalado."
+        },
+        {
+          "text": "De lo que pueden llegar a ser los hombres que se unen sinceramente con el Dios de sabiduría y poder",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Conserva el sentido de unirse con el Dios de sabiduría y poder."
+        },
+        {
+          "text": "De cómo los sabios creyentes lograron armonizar la ciencia pagana con las leyes del santo santuario",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No se menciona armonizar ciencia pagana y leyes del santuario."
+        },
+        {
+          "text": "De la manera en que los nobles desterrados alcanzaron honores cortesanos sin padecer la persecución",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No se define su ejemplo por honores sin persecución."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿de qué son ilustres ejemplos Daniel y sus tres compañeros entre los cautivos hebreos?",
+      "output_sha256": "edad352d9cb62391ece2fca97b336fdfc4a4fd5f698a42c412e9561dc44bb021"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-C19-010",
+      "selected_option_index": 3,
+      "selected_option_text": "Pasaron de la sencillez de su hogar judío a la más magnífica de las ciudades y a la corte del mayor monarca",
+      "exact_supporting_phrase": "Desde la comparativa sencillez de su hogar judío, estos jóvenes del linaje real fueron llevados a la más magnífica de las ciudades, y a la corte del mayor monarca del mundo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Pasaron de la severa disciplina sacerdotal de Sión a la servidumbre forzada en los talleres reales de Babel",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No aparecen disciplina sacerdotal ni talleres reales."
+        },
+        {
+          "text": "Pasaron del aislamiento campesino de Galilea a las escuelas militares de los comandantes caldeos en palacio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No procedían de Galilea ni fueron a escuelas militares."
+        },
+        {
+          "text": "Pasaron de la opulencia de su palacio en Judá a la estrechez de las prisiones caldeas en medio del desierto",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La fuente parte de sencillez doméstica, no opulencia palaciega, y no habla de prisión."
+        },
+        {
+          "text": "Pasaron de la sencillez de su hogar judío a la más magnífica de las ciudades y a la corte del mayor monarca",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Reproduce los dos extremos del traslado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué contraste de entorno experimentaron Daniel y sus compañeros en su traslado a Babilonia?",
+      "output_sha256": "a785ab0b7cbb18ef44629af3f9495d8bff4efe0df8abf6b0c79f9aa0035506ed"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-073",
+      "selected_option_index": 1,
+      "selected_option_text": "Eran tan fieles a los buenos principios como el acero",
+      "exact_supporting_phrase": "Entre los hijos de Israel que fueron llevados a Babilonia al principio de los setenta años de cautiverio, se contaban patriotas cristianos, hombres que eran tan fieles a los buenos principios como el acero, que no serían corrompidos por el egoísmo, sino que honrarían a Dios aun cuando lo perdiesen todo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Eran tan puros en sus decisiones santas como la plata",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La comparación con plata no aparece."
+        },
+        {
+          "text": "Eran tan fieles a los buenos principios como el acero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Es la comparación literal con el acero."
+        },
+        {
+          "text": "Eran tan firmes ante las leyes reales como el bronce",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La comparación con bronce no aparece."
+        },
+        {
+          "text": "Eran tan constantes en su consagración como la piedra",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La comparación con piedra no aparece."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿con qué comparación gráfica se destaca la inquebrantable firmeza de los patriotas cristianos ante los buenos principios?",
+      "output_sha256": "df15dee3a5fd136aa86de9fb771446bf6f3ace25fd870da61e63ebdb780e440c"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-074",
+      "selected_option_index": 3,
+      "selected_option_text": "Honrarían a Dios aun cuando lo perdiesen todo",
+      "exact_supporting_phrase": "Entre los hijos de Israel que fueron llevados a Babilonia al principio de los setenta años de cautiverio, se contaban patriotas cristianos, hombres que eran tan fieles a los buenos principios como el acero, que no serían corrompidos por el egoísmo, sino que honrarían a Dios aun cuando lo perdiesen todo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Honrarían a Dios mientras conservasen favores",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Limitar la honra a conservar favores contradice perderlo todo."
+        },
+        {
+          "text": "Honrarían a Dios únicamente si volvían a Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Volver a Judá no aparece como condición."
+        },
+        {
+          "text": "Honrarían a Dios solo al recibir altos cargos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Recibir cargos no aparece como condición."
+        },
+        {
+          "text": "Honrarían a Dios aun cuando lo perdiesen todo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Reproduce literalmente el extremo de entrega."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿hasta qué extremo de entrega estaban resueltos a mantener su honra a Dios los jóvenes cautivos?",
+      "output_sha256": "5c2ed6f21395030509d47914a862643913a92780a3c325758507b9f4196e2032"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-075",
+      "selected_option_index": 1,
+      "selected_option_text": "No serían corrompidos por el egoísmo",
+      "exact_supporting_phrase": "Entre los hijos de Israel que fueron llevados a Babilonia al principio de los setenta años de cautiverio, se contaban patriotas cristianos, hombres que eran tan fieles a los buenos principios como el acero, que no serían corrompidos por el egoísmo, sino que honrarían a Dios aun cuando lo perdiesen todo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "No serían cautivados por los manjares",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La cita no identifica los manjares como el vicio corruptor."
+        },
+        {
+          "text": "No serían corrompidos por el egoísmo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "El egoísmo es el agente corruptor negado expresamente."
+        },
+        {
+          "text": "No serían intimidados por el destierro",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La intimidación por destierro no es la frase citada."
+        },
+        {
+          "text": "No serían fascinados por los tesoros",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Los tesoros no aparecen como el vicio señalado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué sentimiento o vicio degradante no lograría corromper a los patriotas cristianos?",
+      "output_sha256": "83bbe039f846ee757240629a45d1956f8b4ac2b3c4e711a2b9c24d86327e78de"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-076",
+      "selected_option_index": 0,
+      "selected_option_text": "Fueron conducidos al principio del cautiverio",
+      "exact_supporting_phrase": "Entre los hijos de Israel que fueron llevados a Babilonia al principio de los setenta años de cautiverio, se contaban patriotas cristianos, hombres que eran tan fieles a los buenos principios como el acero, que no serían corrompidos por el egoísmo, sino que honrarían a Dios aun cuando lo perdiesen todo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Fueron conducidos al principio del cautiverio",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Parafrasea al principio de los setenta años de cautiverio."
+        },
+        {
+          "text": "Fueron conducidos al promediar los setenta años",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La fuente no dice a la mitad, sino al principio."
+        },
+        {
+          "text": "Fueron conducidos al finalizar los setenta años",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La fuente no dice al final, sino al principio."
+        },
+        {
+          "text": "Fueron conducidos tras expirar el gran destierro",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La fuente los sitúa al comienzo, no después del destierro."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿en qué momento exacto del período de cautiverio de setenta años fueron llevados a Babilonia estos fieles israelitas?",
+      "output_sha256": "a40ec5eae30e4246c7b41e10c00d5324adf657728a42181d6d322e705e644b0c"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-077",
+      "selected_option_index": 2,
+      "selected_option_text": "Dando a las naciones las bendiciones del conocimiento de Jehová",
+      "exact_supporting_phrase": "En la tierra de su cautiverio, estos hombres habrían de ejecutar el propósito de Dios dando a las naciones paganas las bendiciones provenientes del conocimiento de Jehová.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Enseñando a los caldeos los métodos bélicos del reino de Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "No se mencionan métodos bélicos."
+        },
+        {
+          "text": "Imponiendo por la fuerza las leyes ceremoniales de Jerusalén",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "No se menciona imposición violenta de leyes ceremoniales."
+        },
+        {
+          "text": "Dando a las naciones las bendiciones del conocimiento de Jehová",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Parafrasea exactamente cómo ejecutarían el propósito divino."
+        },
+        {
+          "text": "Asimilando los ritos paganos para obtener cargos en la corte",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Asimilar ritos paganos contradice su fidelidad y no aparece como propósito."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, en la tierra de su destierro, ¿cómo habrían de ejecutar estos fieles el propósito divino?",
+      "output_sha256": "e814125fcb6928dec8ac35ee4d9d65a7c0615b7fcbd3bf4bb4b4220969c88b9e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-078",
+      "selected_option_index": 0,
+      "selected_option_text": "No debían en caso alguno transigir con los idólatras",
+      "exact_supporting_phrase": "No debían en caso alguno transigir con los idólatras, sino considerar como alto honor la fe que sostenían y el nombre de adoradores del Dios viviente.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "No debían en caso alguno transigir con los idólatras",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Es la prohibición estricta y literal."
+        },
+        {
+          "text": "No debían aprender la lengua y letras de los caldeos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Más adelante estudiaron lengua y letras caldeas; no se prohíbe aquí."
+        },
+        {
+          "text": "No debían tolerar el cambio de sus nombres originales",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "El cambio de nombres no aparece como esta prohibición."
+        },
+        {
+          "text": "No debían desempeñar labores de estado en el palacio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "El servicio estatal no aparece como prohibición."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué prohibición estricta definía la postura que los cautivos hebreos debían asumir ante los idólatras?",
+      "output_sha256": "70215c507d3f1140c7de5b8eaaae0db1a99c254513bc150fce64c8623ef1676f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-079",
+      "selected_option_index": 1,
+      "selected_option_text": "La fe que sostenían y el nombre de adoradores del Dios viviente",
+      "exact_supporting_phrase": "No debían en caso alguno transigir con los idólatras, sino considerar como alto honor la fe que sostenían y el nombre de adoradores del Dios viviente.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "La admiración de los magos y el dominio de las ciencias sabias",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La admiración y las ciencias no se llaman alto honor."
+        },
+        {
+          "text": "La fe que sostenían y el nombre de adoradores del Dios viviente",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Reproduce los dos elementos considerados alto honor."
+        },
+        {
+          "text": "El rango diplomático y la asignación de aposentos en el palacio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Rango y aposentos no aparecen."
+        },
+        {
+          "text": "El favor imperial y los nombramientos recibidos del rey caldeo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Favor y nombramientos no aparecen."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué debían considerar los jóvenes hebreos como un alto honor en Babilonia?",
+      "output_sha256": "59419d39879467c2e6ec621bf1d7915a6ae526f19f8f3ed4da7b88d396801070"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-080",
+      "selected_option_index": 0,
+      "selected_option_text": "Honraron a Dios tanto en la prosperidad como en la adversidad",
+      "exact_supporting_phrase": "Honraron a Dios en la prosperidad y en la adversidad; y Dios los honró a ellos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Honraron a Dios tanto en la prosperidad como en la adversidad",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Reproduce prosperidad y adversidad."
+        },
+        {
+          "text": "Honraron a Dios exclusivamente al verse librados del sufrimiento",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La cita incluye adversidad, no solo liberación."
+        },
+        {
+          "text": "Honraron a Dios únicamente al disfrutar de paz y bienes en Judá",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "No limita la honra a paz y bienes en Judá."
+        },
+        {
+          "text": "Honraron a Dios solo cuando ocuparon cargos de mando en palacio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Los cargos palaciegos no son la condición señalada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿bajo qué circunstancias demostraron Daniel y sus compañeros su lealtad al honrar a Dios?",
+      "output_sha256": "8db9b1217ffbcb91ba0e5717b47e4fac7ec75969cfb1fe7c61459ef8befc6417"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-081",
+      "selected_option_index": 3,
+      "selected_option_text": "Dios los honró a ellos por su inquebrantable lealtad",
+      "exact_supporting_phrase": "Honraron a Dios en la prosperidad y en la adversidad; y Dios los honró a ellos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Dios los coronó como soberanos del imperio de Media",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "No se menciona una coronación en Media."
+        },
+        {
+          "text": "Dios los libró de toda aflicción física en el exilio",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "El contexto incluye adversidad, no liberación de toda aflicción."
+        },
+        {
+          "text": "Dios los repatrió de inmediato al santuario de Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "No se menciona repatriación inmediata."
+        },
+        {
+          "text": "Dios los honró a ellos por su inquebrantable lealtad",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Conserva la correspondencia explícita: Dios los honró."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cómo correspondió Dios a la firme fidelidad de los jóvenes hebreos?",
+      "output_sha256": "9bc6009da4535c11520d0bd0e1f652e1a9e0eb161ce385086281a568096f9ef9"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-082",
+      "selected_option_index": 0,
+      "selected_option_text": "El cautiverio de los siervos de Jehová y los vasos sagrados en sus templos paganos",
+      "exact_supporting_phrase": "El hecho de que esos adoradores de Jehová estuviesen cautivos en Babilonia y de que los vasos de la casa de Dios se hallaran en el templo de los dioses babilónicos, era mencionado jactanciosamente por los vencedores como evidencia de que su religión y sus costumbres eran superiores a la religión y las costumbres de los hebreos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "El cautiverio de los siervos de Jehová y los vasos sagrados en sus templos paganos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Resume los dos hechos exhibidos: cautivos y vasos en templo pagano."
+        },
+        {
+          "text": "La caída de los muros de Jerusalén y la derrota de los profetas ante los astrólogos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "No aparecen derrota de profetas ni este par de hechos."
+        },
+        {
+          "text": "La imposición de tributos anuales a Judá y la captura de los sacerdotes del santuario",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Tributos y captura de sacerdotes no son los argumentos citados."
+        },
+        {
+          "text": "La ruina militar del ejército hebreo y la quema de los manuscritos de las escrituras",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La quema de manuscritos no aparece."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, la cita sustenta ambos hechos y solo una opción los conserva.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "output_sha256": "46f74b11984771c564d4488b9f2006718b3ec77cd8a253bb9d8caf1adb002247"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-083",
+      "selected_option_index": 1,
+      "selected_option_text": "La forma en que el pueblo de Israel se desvió de Dios",
+      "exact_supporting_phrase": "Sin embargo, mediante las mismas humillaciones que había acarreado la forma en que Israel se había desviado de él, Dios dió a Babilonia evidencia de su supremacía, de la santidad de sus requerimientos y de los seguros resultados que produce la obediencia.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "La inferioridad numérica de las tropas del rey de Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La inferioridad militar no se identifica como causa."
+        },
+        {
+          "text": "La forma en que el pueblo de Israel se desvió de Dios",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La desviación de Israel de Dios es la causa expresada."
+        },
+        {
+          "text": "La falta de alianzas bélicas con las naciones vecinas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "No se mencionan alianzas bélicas como causa."
+        },
+        {
+          "text": "El atraso científico frente a los astrónomos caldeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "No se menciona atraso científico como causa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cuál fue la causa real que acarreó las humillaciones sufridas por el pueblo de Israel en el cautiverio?",
+      "output_sha256": "dd975d922f82c0ae838cfcb61ce343a95240609fa27fd04dd132bcb48251959d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-084",
+      "selected_option_index": 0,
+      "selected_option_text": "De su supremacía, de la santidad de sus requerimientos y de los resultados de la obediencia",
+      "exact_supporting_phrase": "Sin embargo, mediante las mismas humillaciones que había acarreado la forma en que Israel se había desviado de él, Dios dió a Babilonia evidencia de su supremacía, de la santidad de sus requerimientos y de los seguros resultados que produce la obediencia.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "De su supremacía, de la santidad de sus requerimientos y de los resultados de la obediencia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Contiene los tres elementos exactos de la evidencia."
+        },
+        {
+          "text": "De la severidad del juicio, de la condenación de los idólatras y de la ruina de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "No es la triple evidencia enumerada."
+        },
+        {
+          "text": "De su riqueza eterna, del alcance de sus ejércitos celestiales y del poderío de su templo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Riqueza, ejércitos y templo no se enumeran."
+        },
+        {
+          "text": "De la sabiduría humana, de la vanidad de las ciencias paganas y del destino de las naciones",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Sabiduría humana y ciencias paganas no son la evidencia dada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué triple evidencia dio Dios al imperio babilónico aun a través de las humillaciones de su pueblo?",
+      "output_sha256": "f310fdd221e8689f63f2217659c9a6a5947fb62e3b0b97bb7311db739329c381"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-085",
+      "selected_option_index": 3,
+      "selected_option_text": "Por medio de aquellos siervos que le eran plenamente leales",
+      "exact_supporting_phrase": "Y dió este testimonio de la única manera que podía ser dado, por medio de los que le eran leales.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Por medio de decretos políticos negociados con el rey pagano",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "No se mencionan decretos negociados."
+        },
+        {
+          "text": "Por medio de victorias armadas sobre los escuadrones caldeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "No se mencionan victorias armadas."
+        },
+        {
+          "text": "Por medio de prodigios cósmicos y catástrofes en la capital",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "No se mencionan prodigios cósmicos."
+        },
+        {
+          "text": "Por medio de aquellos siervos que le eran plenamente leales",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Parafrasea el medio único: los que le eran leales."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿por qué medio exclusivo dio Dios su testimonio ante el reino de Babilonia?",
+      "output_sha256": "c50f173938fd917b3f37b8f5abcf58e0873d7fe8accd8e98a58c460e8961d7c6"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-086",
+      "selected_option_index": 0,
+      "selected_option_text": "De lo que pueden llegar a ser los hombres unidos con el Dios sabio y fuerte",
+      "exact_supporting_phrase": "Entre los que mantenían su fidelidad a Dios, se contaban Daniel y sus tres compañeros, ilustres ejemplos de lo que pueden llegar a ser los hombres que se unen con el Dios de sabiduría y poder.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "De lo que pueden llegar a ser los hombres unidos con el Dios sabio y fuerte",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Parafrasea hombres unidos con el Dios de sabiduría y poder."
+        },
+        {
+          "text": "De la supremacía del linaje davídico sobre las dinastías del imperio caldeo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No se habla de supremacía dinástica."
+        },
+        {
+          "text": "De la erudición que se logra al asimilar plenamente la cultura de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No se define el ejemplo por asimilación cultural."
+        },
+        {
+          "text": "De la habilidad para acumular riquezas sin caer en las trampas cortesanas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No se define por acumular riquezas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿de qué eran ilustres ejemplos Daniel y sus tres compañeros al permanecer fieles al Altísimo?",
+      "output_sha256": "3e9dff1e7b5d74580e19035ba443a627cdf99d9b5edcc56676f0679bfb152d04"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-087",
+      "selected_option_index": 3,
+      "selected_option_text": "De la sencillez de su hogar judío a la ciudad más magnífica y la corte del mayor monarca",
+      "exact_supporting_phrase": "Desde la comparativa sencillez de su hogar judío, estos jóvenes del linaje real fueron llevados a la más magnífica de las ciudades, y a la corte del mayor monarca del mundo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Del servicio sacerdotal en el templo a las fortalezas militares en los confines de Tiro",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No aparecen Tiro ni fortalezas militares."
+        },
+        {
+          "text": "De las escuelas proféticas de Judá a las prisiones secretas de la gran fortaleza caldea",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No se mencionan escuelas proféticas o prisiones."
+        },
+        {
+          "text": "De la realeza opulenta de Salomón a los duros trabajos forzados en las murallas de Babel",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La fuente parte de sencillez, no opulencia, y no habla de trabajos forzados."
+        },
+        {
+          "text": "De la sencillez de su hogar judío a la ciudad más magnífica y la corte del mayor monarca",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Conserva ambos extremos del cambio de entorno."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué impresionante cambio de entorno vivieron estos jóvenes del linaje real al ser deportados?",
+      "output_sha256": "fc2af122396a44caf63d3192bb91ed7b71bc0e1c74b9485c4dfcb1e978d88a11"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-088",
+      "selected_option_index": 0,
+      "selected_option_text": "A Aspenaz, príncipe de sus eunucos",
+      "exact_supporting_phrase": "Nabucodonosor ordenó “a Aspenaz, príncipe de sus eunucos, que trajese de los hijos de Israel, del linaje real de los príncipes, muchachos en quienes no hubiese tacha alguna, y de buen parecer, y enseñados en toda sabiduría, y sabios en ciencia, y de buen entendimiento, e idóneos para estar en el palacio del rey...",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "A Aspenaz, príncipe de sus eunucos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Identifica literalmente a Aspenaz y su cargo."
+        },
+        {
+          "text": "A Melsar, mayordomo de los hebreos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Melsar aparece en otro momento, pero no recibe esta orden en la cita."
+        },
+        {
+          "text": "A Belsasar, regente de su gobierno",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Belsasar no es el funcionario nombrado."
+        },
+        {
+          "text": "A Arioc, capitán de su guardia real",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Arioc no es el funcionario nombrado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿a qué funcionario imperial ordenó Nabucodonosor elegir a los jóvenes de Israel?",
+      "output_sha256": "f7eaaf42475e2538e2d8d6fff2da1ff042b85aae92106d9c1563ab40a2897fe1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-089",
+      "selected_option_index": 1,
+      "selected_option_text": "Que no hubiese en ellos tacha alguna",
+      "exact_supporting_phrase": "Nabucodonosor ordenó “a Aspenaz, príncipe de sus eunucos, que trajese de los hijos de Israel, del linaje real de los príncipes, muchachos en quienes no hubiese tacha alguna, y de buen parecer, y enseñados en toda sabiduría, y sabios en ciencia, y de buen entendimiento, e idóneos para estar en el palacio del rey...",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Que no guardasen leyes de sus padres",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No se exige abandonar leyes paternas."
+        },
+        {
+          "text": "Que no hubiese en ellos tacha alguna",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Reproduce la condición literal de no tener tacha."
+        },
+        {
+          "text": "Que no tuvieran defecto en su linaje",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita exige linaje real, pero no formula ausencia de defecto en el linaje."
+        },
+        {
+          "text": "Que no profesasen fe en su santuario",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No se exige abandonar la fe."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, al fijar los requisitos para los cautivos elegidos, ¿qué condición primordial se exigía en ellos?",
+      "output_sha256": "13940930703d3d7cdb003af2b4252c630bbe543819756cdf3483f4a6049c773b"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-090",
+      "selected_option_index": 1,
+      "selected_option_text": "Para servir y estar en el palacio del rey",
+      "exact_supporting_phrase": "Nabucodonosor ordenó “a Aspenaz, príncipe de sus eunucos, que trajese de los hijos de Israel, del linaje real de los príncipes, muchachos en quienes no hubiese tacha alguna, y de buen parecer, y enseñados en toda sabiduría, y sabios en ciencia, y de buen entendimiento, e idóneos para estar en el palacio del rey...",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Para guiar tropas en el campo de batalla",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No se menciona mando de tropas."
+        },
+        {
+          "text": "Para servir y estar en el palacio del rey",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Conserva el destino explícito de estar en el palacio del rey."
+        },
+        {
+          "text": "Para oficiar sacrificios en templo pagano",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No se menciona oficiar sacrificios."
+        },
+        {
+          "text": "Para vigilar y custodiar el muro oriental",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "No se menciona custodiar un muro."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es unívoca, pero el enunciado no usa el prefijo editorial exacto “Según Profetas y Reyes...”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:30.6136556Z",
+      "input_content_sha256": "a74d526b7bec8269d27c74a0e23e32b7a735a06e6ff27499539e825838b324a2",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿para qué destino específico debían ser idóneos los jóvenes seleccionados por orden de Nabucodonosor?",
+      "output_sha256": "def48aec7cf4f392794147b4033a001162592cc483937020320617a0bd4f4ea0"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 1,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 19,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

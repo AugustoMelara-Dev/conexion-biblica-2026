@@ -286,11 +286,7 @@ export function filterEligibleQuestions(
       )
         return false
     } else if (config.tierFilter === "coverage") {
-      if (
-        question.tier !== "COVERAGE_ACCEPT" &&
-        question.difficultyBand !== "BASIC" &&
-        question.difficultyBand !== "MEDIUM"
-      )
+      if (question.tier !== "COVERAGE_ACCEPT")
         return false
     } else if (
       config.difficultyBands?.length &&

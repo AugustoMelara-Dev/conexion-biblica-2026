@@ -16,6 +16,7 @@ import {
   selectEmergencySession,
 } from '@/domain/emergency-modes'
 import { Badge } from '@/components/ui/badge'
+import { V18_PACKAGE_COUNTS } from '@/data/final-day-v18'
 import { Button } from '@/components/ui/button'
 import {
   Card,
@@ -95,7 +96,21 @@ export function EmergencyDashboard({
     const seed = Date.now() + modeSessionCount * 1009
     const result = selectEmergencySession(questions, modeId, progress, seed)
     if (result.success) {
-      onStartEmergencyMode(result.config, result.questions)
+      const fullBankV18Mode =
+        modeId === 'emergency-last-day-coverage' ||
+        modeId === 'emergency-last-day-repair' ||
+        modeId === 'emergency-adversarial-simulation' ||
+        modeId === 'emergency-escudo-central'
+      const expectedCount =
+        modeId === 'emergency-last-day-repair'
+          ? V18_PACKAGE_COUNTS.repair
+          : modeId === 'emergency-last-day-coverage'
+            ? V18_PACKAGE_COUNTS.coverage
+            : V18_PACKAGE_COUNTS.competitive
+      onStartEmergencyMode(
+        fullBankV18Mode ? { ...result.config, count: expectedCount } : result.config,
+        fullBankV18Mode ? [] : result.questions,
+      )
     }
   }
 
@@ -174,6 +189,50 @@ export function EmergencyDashboard({
           </CardContent>
         </Card>
       ) : null}
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        <Card className="border-emerald-500/30 bg-emerald-500/5">
+          <CardHeader className="pb-3">
+            <Badge className="w-fit bg-emerald-500/15 text-emerald-700 dark:text-emerald-300">
+              {V18_PACKAGE_COUNTS.coverage} verificadas
+            </Badge>
+            <CardTitle className="text-lg">Paquete A · Cobertura V18</CardTitle>
+            <CardDescription>
+              Subconjunto disponible del objetivo de 1,000. Cada reactivo pasó Sol, competidor ciego y concordancia almacenada.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button
+              className="w-full"
+              disabled={V18_PACKAGE_COUNTS.coverage === 0}
+              onClick={() => handleStartMode('emergency-last-day-coverage')}
+            >
+              Estudiar paquete verificado
+            </Button>
+          </CardContent>
+        </Card>
+        <Card className="border-amber-500/30 bg-amber-500/5">
+          <CardHeader className="pb-3">
+            <Badge variant="outline" className="w-fit">
+              {V18_PACKAGE_COUNTS.repair} verificadas
+            </Badge>
+            <CardTitle className="text-lg">Paquete C · Reparación V18</CardTitle>
+            <CardDescription>
+              Refuerzo verificable de Daniel 9 y 12, las dos zonas de error del reporte AAH.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button
+              variant="outline"
+              className="w-full"
+              disabled={V18_PACKAGE_COUNTS.repair === 0}
+              onClick={() => handleStartMode('emergency-last-day-repair')}
+            >
+              Reparar zonas personales
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
 
       {/* BLOQUES PRINCIPALES DE ENTRENAMIENTO */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -309,18 +368,19 @@ export function EmergencyDashboard({
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between gap-2">
               <Badge className="bg-red-500/15 text-red-600 dark:text-red-400 border-red-500/30">
-                100 Qs • Verificadas
+                {V18_PACKAGE_COUNTS.competitive} verificadas con Sol
               </Badge>
               <Shield className="h-5 w-5 text-red-500" />
             </div>
             <CardTitle className="text-lg mt-2">6. Simulación Adversarial</CardTitle>
             <CardDescription className="text-xs leading-relaxed">
-              50 PR / 50 Daniel 7–12. 100 reactivos con tier COMPETITIVE_ACCEPT verificado y 100 hechos distintos: distractores plausibles, opciones homogéneas y máxima discriminación textual.
+              Subconjunto V18 que superó auditoría textual Sol, competidor ciego y concordancia con la respuesta almacenada. No se amplía usando dificultad histórica.
             </CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
             <Button
               className="w-full font-semibold min-h-11 justify-between bg-red-600 hover:bg-red-700 text-white"
+              disabled={V18_PACKAGE_COUNTS.competitive === 0}
               onClick={() => handleStartMode('emergency-adversarial-simulation')}
             >
               <span>Iniciar Simulación Adversarial</span>

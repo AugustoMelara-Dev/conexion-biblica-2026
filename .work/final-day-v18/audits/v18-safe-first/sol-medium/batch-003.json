@@ -1,0 +1,1084 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-safe-first",
+  "batch_id": "batch-003",
+  "input_file": ".work/final-day-v18/dossiers/v18-safe-first/batch-003.json",
+  "input_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/safe_sol_003",
+    "conversation_id": "/root/safe_sol_003",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R3-PR39-W2-068",
+      "selected_option_index": 3,
+      "selected_option_text": "Dios puso a Daniel en gracia y en buena voluntad ante el príncipe",
+      "exact_supporting_phrase": "“Puso Dios a Daniel en gracia y en buena voluntad con el príncipe de los eunucos,” y la petición de que se le permitiera no contaminarse fué recibida con respeto.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Dios otorgó a Daniel riquezas para persuadir al oficial a cargo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Dios transformó por milagro el contenido del edicto del monarca",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Dios envió una visión nocturna de advertencia al noble babilonio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Dios puso a Daniel en gracia y en buena voluntad ante el príncipe",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "e2c214fd4194b01f85edb5d5e75a38e4fcba401880020003ccbe7300ed428cc2"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR41-W4-073",
+      "selected_option_index": 3,
+      "selected_option_text": "Por estar celosos de los honores concedidos a los amigos de Daniel",
+      "exact_supporting_phrase": "Ciertos sabios, celosos de los honores que se habían concedido a los fieles compañeros de Daniel, informaron al rey acerca de la flagrante violación de sus deseos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Por preservar el prestigio militar de Babilonia ante las naciones",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 5",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Por defender estrictamente la pureza del culto a las divinidades",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 5",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Por asegurar el cumplimiento exacto de las leyes del gran imperio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 5",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Por estar celosos de los honores concedidos a los amigos de Daniel",
+          "verdict": "CORRECT",
+          "source_ref": "PR41, p. 39, párrafo 5",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "8dca72885137b6949146584478b180ee4611a6e6437f9c9061f6fdbe096c3493"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR39-W3-074",
+      "selected_option_index": 0,
+      "selected_option_text": "Melsar consintió con temor de desagradar al rey, y Daniel supo que ganó su causa",
+      "exact_supporting_phrase": "Melsar consintió en ello, aunque con temor de que esa concesión pudiera desagradar al rey; y Daniel supo que había ganado su causa.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Melsar consintió con temor de desagradar al rey, y Daniel supo que ganó su causa",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "Melsar rechazó la propuesta por lealtad al rey, y Daniel decidió apelar a Aspenaz",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Melsar castigó a los cuatro jóvenes hebreos, y Daniel resolvió ayunar en silencio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Melsar consultó a los sabios caldeos en secreto, y Daniel esperó una nueva visión",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "a2099cb5aa9c168631806aa323ba6cc7ba9e294e3218d169fd1b5fd9c7f3f1e7"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR41-W4-078",
+      "selected_option_index": 2,
+      "selected_option_text": "Si era verdad que no honraban a su dios ni adoraban la estatua de oro",
+      "exact_supporting_phrase": "Preguntó: “¿Es verdad Sadrach, Mesach, y Abed-nego, que vosotros no honráis a mi dios, ni adoráis la estatua de oro que he levantado?",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Si rechazaban someterse a la soberanía imperial de la corona caldea",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 6",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Si pretendían imponer la adoración del Dios de Israel en su provincia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 6",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Si era verdad que no honraban a su dios ni adoraban la estatua de oro",
+          "verdict": "CORRECT",
+          "source_ref": "PR41, p. 39, párrafo 6",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "Si habían conspirado con las naciones rebeldes contra el trono de Babel",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 6",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "baa26d90a8f3a337ab78503da70f7e20ec540c554bb9510111fcea7719fa76d6"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR39-W3-078",
+      "selected_option_index": 2,
+      "selected_option_text": "Seguir su régimen sencillo durante todo el curso educativo",
+      "exact_supporting_phrase": "Como resultado, se permitió a Daniel y sus amigos que siguiesen su régimen sencillo durante todo el curso de su educación.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Regresar de inmediato a la tierra de sus padres en Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Salir libremente del palacio real los días de reposo santo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Seguir su régimen sencillo durante todo el curso educativo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "Prescindir de los exámenes ante los sabios y magos caldeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "1b13212348e60d8de35a31d600dae70f3668235df587f1521695bf79c29a6286"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR41-W4-079",
+      "selected_option_index": 0,
+      "selected_option_text": "Por medio de severas amenazas directas",
+      "exact_supporting_phrase": "Por medio de amenazas procuró inducirlos a unirse con la multitud.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Por medio de severas amenazas directas",
+          "verdict": "CORRECT",
+          "source_ref": "PR41, p. 39, párrafo 6",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "Por medio de razonamientos de los sabios",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 6",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Por medio de promesas de mayores honores",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 6",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Por medio de dádivas de oro y de plata",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 6",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "016ad62bead4d8eff25284b2e9d72b65f5d619a6ceed12081f90520fb64604de"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR39-W3-081",
+      "selected_option_index": 1,
+      "selected_option_text": "Un propósito ferviente, diligencia y constancia",
+      "exact_supporting_phrase": "A sus hábitos de renunciamiento, unían un propósito ferviente, diligencia y constancia.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Un porte altivo, ambición de gloria y celo guerrero",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Un propósito ferviente, diligencia y constancia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "Un aislamiento severo, resignación y silencio total",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Una gran elocuencia, diplomacia y astucia política",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "c0114a0898357ab8068fd311cdbf550e4cd4f680d504318e067389ba6515730d"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR41-W4-080",
+      "selected_option_index": 2,
+      "selected_option_text": "Hacia el ardiente horno de fuego",
+      "exact_supporting_phrase": "Señalando el horno de fuego, les recordó el castigo que los esperaba si persistían en su negativa a obedecer su voluntad.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Hacia las altas murallas reales",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 6",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Hacia el cadalso de la provincia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 6",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Hacia el ardiente horno de fuego",
+          "verdict": "CORRECT",
+          "source_ref": "PR41, p. 39, párrafo 6",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "Hacia el foso de fieras salvajes",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 6",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "a2acbe1266d2164916759be4bd091a925f16e5dafdc165e3704f938416ff1cec"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR39-W3-083",
+      "selected_option_index": 1,
+      "selected_option_text": "Honrar a su pueblo oprimido y glorificar al Dios cuyos siervos eran",
+      "exact_supporting_phrase": "Privados de la influencia del hogar y de sus relaciones sagradas, procuraron conducirse en forma que honrase a su pueblo oprimido y glorificase al Dios cuyos siervos eran.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Asimilarse a la cultura caldea y evitar el reproche de los paganos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Honrar a su pueblo oprimido y glorificar al Dios cuyos siervos eran",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "Agradar a los magistrados reales y asegurar una posición influyente",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Acumular grandes riquezas terrenales y regresar victoriosos a Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "fdf92e8a6edb5de0622d22ecb99e5383d8ae284081322650ff1cff64341300cf"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR41-W4-082",
+      "selected_option_index": 1,
+      "selected_option_text": "Como un acto de culto religioso",
+      "exact_supporting_phrase": "Todos comprendían que el acto de postrarse ante la imagen era un acto de culto.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Como un saludo formal al monarca",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 1",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Como un acto de culto religioso",
+          "verdict": "CORRECT",
+          "source_ref": "PR41, p. 40, párrafo 1",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "Como una señal de sumisión civil",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 1",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Como un mero homenaje cortesano",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 1",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "1bf5ef93f70d159bba7ff8934bb6d0a4150cc149e5298eabc4802c924d912b2c"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR39-W3-086",
+      "selected_option_index": 1,
+      "selected_option_text": "Se aferraba a Dios con una confianza inquebrantable",
+      "exact_supporting_phrase": "Mientras Daniel se aferraba a Dios con una confianza inquebrantable, se manifestó en él el espíritu del poder profético.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Buscaba la instrucción de los sabios de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Se aferraba a Dios con una confianza inquebrantable",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "Se apoyaba en el favor del príncipe de los eunucos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Confiaba plenamente en sus propios dones naturales",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "156c11c15669933e10c985e05c1ebafcee84166b1cfe9ada566aec82597b95c5"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR41-W4-084",
+      "selected_option_index": 3,
+      "selected_option_text": "De que poseían algo que no tenían los otros sabios de su reino",
+      "exact_supporting_phrase": "Mientras los tres hebreos estaban delante del rey, él se convenció de que poseían algo que no tenían los otros sabios de su reino.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "De que su rechazo nacía tan solo de un ciego fanatismo religioso",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 2",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "De que cederían de inmediato si se les ofrecían mayores honores",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 2",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "De que ocultaban una peligrosa conspiración contra la corona real",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 2",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "De que poseían algo que no tenían los otros sabios de su reino",
+          "verdict": "CORRECT",
+          "source_ref": "PR41, p. 40, párrafo 2",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "38de1a999d092826bbcee8406d213728d86693b78c863f99f861380e7d68fdad"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR39-W3-092",
+      "selected_option_index": 2,
+      "selected_option_text": "En fuerza y belleza física, en vigor mental y realizaciones literarias",
+      "exact_supporting_phrase": "En fuerza y belleza física, en vigor mental y realizaciones literarias, no tenían rivales.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "En dominio de artes místicas, en astucia política y diplomacia civil",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "En alcurnia dinástica, en destreza bélica y riquezas ceremoniales",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "En fuerza y belleza física, en vigor mental y realizaciones literarias",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "En elocuencia oratoria, en linaje regio y nobleza cortesana imperial",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "7484dd1c7a126e65c89e3fa3ffa7bc326108f694429435b8b17206eb809b0437"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR41-W4-088",
+      "selected_option_index": 1,
+      "selected_option_text": "¿Qué dios será aquel que os libre de mis manos?",
+      "exact_supporting_phrase": "Y con la mano extendida hacia arriba en son de desafío, preguntó: “¿Qué dios será aquel que os libre de mis manos?”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "¿Quién podrá oponerse a los mandatos de Babel?",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 2",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "¿Qué dios será aquel que os libre de mis manos?",
+          "verdict": "CORRECT",
+          "source_ref": "PR41, p. 40, párrafo 2",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "¿Qué poder terrenal salvará vuestra existencia?",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 2",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "¿Acaso vuestro Señor resistirá mi real poder?",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 2",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "509b216ac6de8927ad7ae1b18693616bea2cea957325b7cbe62b007d481d3c8c"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR39-W3-095",
+      "selected_option_index": 2,
+      "selected_option_text": "Por el uso fiel de sus facultades, bajo la dirección del Espíritu Santo",
+      "exact_supporting_phrase": "Lo obtuvieron por el uso fiel de sus facultades, bajo la dirección del Espíritu Santo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Por el empleo exclusivo de su intelecto sin requerir auxilio celestial",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Por la estricta sumisión a los dogmas y ritos de los sacerdotes caldeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Por el uso fiel de sus facultades, bajo la dirección del Espíritu Santo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "Por la asimilación pasiva de las doctrinas de los astrólogos de palacio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "e2eb032811aff931a7b186a1c065a3ba82813490ffae035b19c56aaacd0e5df6"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR41-W4-090",
+      "selected_option_index": 2,
+      "selected_option_text": "De su fidelidad al Príncipe del universo",
+      "exact_supporting_phrase": "No podía desviar a esos hombres de su fidelidad al Príncipe del universo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "De su apego estricto a la ley de Moisés",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 3",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "De su amor sagrado a la santa Jerusalén",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 3",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "De su fidelidad al Príncipe del universo",
+          "verdict": "CORRECT",
+          "source_ref": "PR41, p. 40, párrafo 3",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "De su devoción a los ritos del santuario",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 3",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "acbf2dd56ca2b54d690ec1e7991053da0c7c653f465e28f758ce4d10738df445"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR39-W3-112",
+      "selected_option_index": 3,
+      "selected_option_text": "Obrar en nosotros el querer y el hacer, nunca para sustituir nuestro esfuerzo",
+      "exact_supporting_phrase": "Su gracia nos es dada para obrar en nosotros el querer y el hacer, nunca para reemplazar nuestro esfuerzo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Premiar con honores a los sabios que alcanzan éxito sin requerir ayuda divina",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Reemplazar en su totalidad nuestra voluntad y anular toda necesidad de obrar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Eximirnos de la obediencia de la ley mediante una dispensa especial de gracia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Obrar en nosotros el querer y el hacer, nunca para sustituir nuestro esfuerzo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "d49aa00bf87ec085a1d7f883ec9682494609a58fa7106329db29457682529005"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR41-W4-091",
+      "selected_option_index": 1,
+      "selected_option_text": "Declararon que no cuidaban de responderle sobre aquel negocio",
+      "exact_supporting_phrase": "Mirando con calma el horno, dijeron: “No cuidamos de responderte sobre este negocio.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Aceptaron inclinarse ante la estatua si se cambiaba el edicto",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 3",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Declararon que no cuidaban de responderle sobre aquel negocio",
+          "verdict": "CORRECT",
+          "source_ref": "PR41, p. 40, párrafo 3",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        },
+        {
+          "text": "Solicitaron un plazo de deliberación antes de pronunciarse",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 3",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Imploraron clemencia real para evitar ser arrojados al fuego",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 40, párrafo 3",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "e39c862f980091736202177e5158d464f96e5d243b4abf9a1cc573a3a0540a32"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR39-W3-120",
+      "selected_option_index": 3,
+      "selected_option_text": "Así como llamó a Daniel a testificar en Babilonia, hoy nos llama a ser sus testigos en el mundo",
+      "exact_supporting_phrase": "Así como Dios llamó a Daniel para que testificase por él en Babilonia, nos llama hoy a nosotros para que seamos sus testigos en el mundo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Así como Daniel se apartó del imperio terrenal, hoy debemos retirarnos totalmente del mundo vil",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Así como Daniel toleró costumbres de Caldea, hoy debemos acomodarnos a las modas de la sociedad",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Así como Daniel gobernó sobre Caldea entera, hoy cada cristiano debe aspirar al dominio político",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Así como llamó a Daniel a testificar en Babilonia, hoy nos llama a ser sus testigos en el mundo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "06b2acddf8b0fbe027bfc1f141bf1ab9d6bbc0469f5f1621c7fd9581370d9975"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR39-W3-151",
+      "selected_option_index": 3,
+      "selected_option_text": "Quien resuelva hacer el bien por el bien mismo",
+      "exact_supporting_phrase": "Pero sólo podrá alcanzar la victoria el que resuelva hacer el bien por el bien mismo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Quien intente evitar el castigo por el temor",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Quien busque lograr el triunfo por la ventaja",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Quien procure obtener la honra por el renombre",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La cita y su contexto no mencionan ni sustentan esta alternativa."
+        },
+        {
+          "text": "Quien resuelva hacer el bien por el bien mismo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La cita respalda de forma directa y exclusiva esta respuesta."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente; la cita sustenta el enunciado y una sola opción conserva el dato solicitado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_003",
+      "conversation_id": "/root/safe_sol_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:39.578Z",
+      "input_content_sha256": "b71c15d66ff048df77eb30e5baddb6df9c4b1280ccef1b932ced66bdb9f108fb",
+      "output_sha256": "053277733d6e628c8e631b2d4c86a2a807e3bc78ca8dae1619da158f96b9e4c3"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 20,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 0,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

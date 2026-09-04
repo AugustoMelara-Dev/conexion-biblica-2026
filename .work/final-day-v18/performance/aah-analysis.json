@@ -1,0 +1,2988 @@
+{
+  "schema_version": "final-day-v18-aah-analysis-1.0",
+  "artifact": {
+    "kind": "secondary_performance_prioritization",
+    "event": "Final Conexión Bíblica AAH 2026",
+    "participant": "Augusto Melara",
+    "report_path": "C:\\Users\\melar\\Downloads\\cxb-final-conexion-biblica-aah-2026_augusto-melara_reporte.pdf",
+    "report_sha256": "C6364ADA30789393732BFFDBB64AFE89F5B07709546A17AEEDE7D93F179261A7",
+    "pdf_pages": 26,
+    "report_question_pages": 25,
+    "report_generated_date": "2026-08-31",
+    "authority": "AAH report is secondary performance evidence only.",
+    "canonical_content_source": "MaterialConexionBiblica (1).pdf per AGENTS.md; not used as editorial authority here.",
+    "no_editorial_mutation": true,
+    "no_question_copy_as_source": true
+  },
+  "extraction": {
+    "method": "pypdf + pdfplumber text extraction; visual render spot-checks",
+    "pypdf": {
+      "version": "6.14.2",
+      "pages": 26,
+      "chars": 27597,
+      "question_headers": 100
+    },
+    "pdfplumber": {
+      "version": "0.11.10",
+      "pages": 26,
+      "chars": 27596,
+      "question_headers": 100
+    },
+    "agreement": "Both extractors found 26 pages and 100 question headers.",
+    "render_command": "pdftoppm -png -r 120 -f 1 -l 26 <report.pdf> <tmp/pdfs/aah-analysis/page>",
+    "visual_spot_checked_pdf_pages": [1, 12, 14, 18, 20, 21, 22, 24],
+    "visual_note": "Summary and both incorrect items visually confirmed; all 26 pages rendered. Poppler emitted missing-font warnings for Symbol/ArialUnicode but relevant renders were legible."
+  },
+  "summary": {
+    "reported_score_points": 94480,
+    "reported_questions_answered": 100,
+    "reported_correct": 98,
+    "reported_incorrect": 2,
+    "reported_accuracy_pct": 98,
+    "reported_average_time_s": 3.72,
+    "reported_total_time": "06:11.787",
+    "rounds": 5,
+    "recomputed_total_time_s": 371.787,
+    "recomputed_average_time_s": 3.71787,
+    "recomputed_item_gain_points": 94479.93,
+    "score_gap_to_100000_points": 5520.07,
+    "latency_penalty_on_correct_items_points": 3520.07,
+    "error_penalty_points": 2000,
+    "evidence": {
+      "pdf_page": 1,
+      "detail": "cover summary; generated 31 de agosto de 2026"
+    }
+  },
+  "thresholds": {
+    "package_c_slow_proxy_gt_6s": "Correct items above 6 seconds are included as a practice proxy; this is inferred hesitation, not a self-reported doubt.",
+    "watchlist_gt_5s_lte_6s": "Monitoring band only.",
+    "explicit_error": "Reported status Incorrecta, visually checked on PDF pages 20 and 24."
+  },
+  "by_round": {
+    "R1": {
+      "n": 20,
+      "correct": 20,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 63.309,
+      "mean_time_s": 3.165,
+      "median_time_s": 2.974,
+      "min_time_s": 1.452,
+      "max_time_s": 5.594,
+      "population_sd_s": 1.157,
+      "p90_time_s": 4.735,
+      "over_5s": 2,
+      "over_6s": 0,
+      "over_8s": 0,
+      "gain_points_recomputed": 19366.91,
+      "reported_round_score_points": 19367,
+      "evidence": {
+        "pdf_page": 2,
+        "footer_label": "Página 1 de 25"
+      }
+    },
+    "R2": {
+      "n": 20,
+      "correct": 20,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 65.632,
+      "mean_time_s": 3.282,
+      "median_time_s": 3.088,
+      "min_time_s": 1.773,
+      "max_time_s": 5.615,
+      "population_sd_s": 1.09,
+      "p90_time_s": 4.522,
+      "over_5s": 2,
+      "over_6s": 0,
+      "over_8s": 0,
+      "gain_points_recomputed": 19343.68,
+      "reported_round_score_points": 19344,
+      "evidence": {
+        "pdf_page": 7,
+        "footer_label": "Página 6 de 25"
+      }
+    },
+    "R3": {
+      "n": 20,
+      "correct": 20,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 60.758,
+      "mean_time_s": 3.038,
+      "median_time_s": 2.572,
+      "min_time_s": 1.134,
+      "max_time_s": 6.666,
+      "population_sd_s": 1.462,
+      "p90_time_s": 4.925,
+      "over_5s": 2,
+      "over_6s": 2,
+      "over_8s": 0,
+      "gain_points_recomputed": 19392.42,
+      "reported_round_score_points": 19392,
+      "evidence": {
+        "pdf_page": 12,
+        "footer_label": "Página 11 de 25"
+      }
+    },
+    "R4": {
+      "n": 20,
+      "correct": 19,
+      "incorrect": 1,
+      "accuracy_pct": 95,
+      "total_time_s": 102.382,
+      "mean_time_s": 5.119,
+      "median_time_s": 4.537,
+      "min_time_s": 1.915,
+      "max_time_s": 12.799,
+      "population_sd_s": 2.993,
+      "p90_time_s": 9.029,
+      "over_5s": 8,
+      "over_6s": 5,
+      "over_8s": 3,
+      "gain_points_recomputed": 18104.17,
+      "reported_round_score_points": 18104,
+      "evidence": {
+        "pdf_page": 17,
+        "footer_label": "Página 16 de 25"
+      }
+    },
+    "R5": {
+      "n": 20,
+      "correct": 19,
+      "incorrect": 1,
+      "accuracy_pct": 95,
+      "total_time_s": 79.706,
+      "mean_time_s": 3.985,
+      "median_time_s": 3.958,
+      "min_time_s": 1.811,
+      "max_time_s": 7.826,
+      "population_sd_s": 1.588,
+      "p90_time_s": 5.401,
+      "over_5s": 6,
+      "over_6s": 2,
+      "over_8s": 0,
+      "gain_points_recomputed": 18272.75,
+      "reported_round_score_points": 18273,
+      "evidence": {
+        "pdf_page": 22,
+        "footer_label": "Página 21 de 25"
+      }
+    }
+  },
+  "by_chapter": {
+    "DAN1": {
+      "n": 7,
+      "correct": 7,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 19.612,
+      "mean_time_s": 2.802,
+      "median_time_s": 2.369,
+      "min_time_s": 2.005,
+      "max_time_s": 3.935,
+      "population_sd_s": 0.739,
+      "p90_time_s": 3.935,
+      "over_5s": 0,
+      "over_6s": 0,
+      "over_8s": 0,
+      "gain_points_recomputed": 6803.88,
+      "evidence_pages": [2, 3],
+      "classification_basis": "analyst content-cluster mapping from report sequence",
+      "classification_authority": "performance prioritization only; not canonical content adjudication"
+    },
+    "DAN2": {
+      "n": 7,
+      "correct": 7,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 20.28,
+      "mean_time_s": 2.897,
+      "median_time_s": 2.509,
+      "min_time_s": 1.548,
+      "max_time_s": 5.149,
+      "population_sd_s": 1.037,
+      "p90_time_s": 5.149,
+      "over_5s": 1,
+      "over_6s": 0,
+      "over_8s": 0,
+      "gain_points_recomputed": 6797.2,
+      "evidence_pages": [3, 4],
+      "classification_basis": "analyst content-cluster mapping from report sequence",
+      "classification_authority": "performance prioritization only; not canonical content adjudication"
+    },
+    "DAN3": {
+      "n": 5,
+      "correct": 5,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 15.013,
+      "mean_time_s": 3.003,
+      "median_time_s": 3.104,
+      "min_time_s": 1.773,
+      "max_time_s": 3.963,
+      "population_sd_s": 0.797,
+      "p90_time_s": 3.963,
+      "over_5s": 0,
+      "over_6s": 0,
+      "over_8s": 0,
+      "gain_points_recomputed": 4849.87,
+      "evidence_pages": [7, 8],
+      "classification_basis": "analyst content-cluster mapping from report sequence",
+      "classification_authority": "performance prioritization only; not canonical content adjudication"
+    },
+    "DAN4": {
+      "n": 5,
+      "correct": 5,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 13.579,
+      "mean_time_s": 2.716,
+      "median_time_s": 2.093,
+      "min_time_s": 1.851,
+      "max_time_s": 5.144,
+      "population_sd_s": 1.237,
+      "p90_time_s": 5.144,
+      "over_5s": 1,
+      "over_6s": 0,
+      "over_8s": 0,
+      "gain_points_recomputed": 4864.21,
+      "evidence_pages": [8, 9],
+      "classification_basis": "analyst content-cluster mapping from report sequence",
+      "classification_authority": "performance prioritization only; not canonical content adjudication"
+    },
+    "DAN5": {
+      "n": 4,
+      "correct": 4,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 12.407,
+      "mean_time_s": 3.102,
+      "median_time_s": 2.076,
+      "min_time_s": 1.589,
+      "max_time_s": 6.666,
+      "population_sd_s": 2.095,
+      "p90_time_s": 6.666,
+      "over_5s": 1,
+      "over_6s": 1,
+      "over_8s": 0,
+      "gain_points_recomputed": 3875.93,
+      "evidence_pages": [12],
+      "classification_basis": "analyst content-cluster mapping from report sequence",
+      "classification_authority": "performance prioritization only; not canonical content adjudication"
+    },
+    "DAN6": {
+      "n": 4,
+      "correct": 4,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 8.902,
+      "mean_time_s": 2.226,
+      "median_time_s": 2.005,
+      "min_time_s": 1.569,
+      "max_time_s": 3.323,
+      "population_sd_s": 0.671,
+      "p90_time_s": 3.323,
+      "over_5s": 0,
+      "over_6s": 0,
+      "over_8s": 0,
+      "gain_points_recomputed": 3910.98,
+      "evidence_pages": [13],
+      "classification_basis": "analyst content-cluster mapping from report sequence",
+      "classification_authority": "performance prioritization only; not canonical content adjudication"
+    },
+    "DAN7": {
+      "n": 7,
+      "correct": 7,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 26.273,
+      "mean_time_s": 3.753,
+      "median_time_s": 2.667,
+      "min_time_s": 2.071,
+      "max_time_s": 7.474,
+      "population_sd_s": 1.925,
+      "p90_time_s": 7.474,
+      "over_5s": 2,
+      "over_6s": 1,
+      "over_8s": 0,
+      "gain_points_recomputed": 6737.27,
+      "evidence_pages": [17, 18],
+      "classification_basis": "analyst content-cluster mapping from report sequence",
+      "classification_authority": "performance prioritization only; not canonical content adjudication"
+    },
+    "DAN8": {
+      "n": 7,
+      "correct": 7,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 38.537,
+      "mean_time_s": 5.505,
+      "median_time_s": 4.987,
+      "min_time_s": 3.312,
+      "max_time_s": 9.029,
+      "population_sd_s": 1.702,
+      "p90_time_s": 9.029,
+      "over_5s": 3,
+      "over_6s": 2,
+      "over_8s": 1,
+      "gain_points_recomputed": 6614.63,
+      "evidence_pages": [18, 19],
+      "classification_basis": "analyst content-cluster mapping from report sequence",
+      "classification_authority": "performance prioritization only; not canonical content adjudication"
+    },
+    "DAN9": {
+      "n": 6,
+      "correct": 5,
+      "incorrect": 1,
+      "accuracy_pct": 83.33,
+      "total_time_s": 37.572,
+      "mean_time_s": 6.262,
+      "median_time_s": 4.739,
+      "min_time_s": 1.915,
+      "max_time_s": 12.799,
+      "population_sd_s": 4.3,
+      "p90_time_s": 12.799,
+      "over_5s": 3,
+      "over_6s": 2,
+      "over_8s": 2,
+      "gain_points_recomputed": 4752.27,
+      "evidence_pages": [20, 21],
+      "classification_basis": "analyst content-cluster mapping from report sequence",
+      "classification_authority": "performance prioritization only; not canonical content adjudication"
+    },
+    "DAN10": {
+      "n": 6,
+      "correct": 6,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 25.682,
+      "mean_time_s": 4.28,
+      "median_time_s": 3.677,
+      "min_time_s": 2.478,
+      "max_time_s": 7.826,
+      "population_sd_s": 1.855,
+      "p90_time_s": 7.826,
+      "over_5s": 2,
+      "over_6s": 1,
+      "over_8s": 0,
+      "gain_points_recomputed": 5743.18,
+      "evidence_pages": [22, 23],
+      "classification_basis": "analyst content-cluster mapping from report sequence",
+      "classification_authority": "performance prioritization only; not canonical content adjudication"
+    },
+    "DAN11": {
+      "n": 7,
+      "correct": 7,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 28.81,
+      "mean_time_s": 4.116,
+      "median_time_s": 4.149,
+      "min_time_s": 1.811,
+      "max_time_s": 5.401,
+      "population_sd_s": 1.281,
+      "p90_time_s": 5.401,
+      "over_5s": 3,
+      "over_6s": 0,
+      "over_8s": 0,
+      "gain_points_recomputed": 6711.9,
+      "evidence_pages": [23, 24],
+      "classification_basis": "analyst content-cluster mapping from report sequence",
+      "classification_authority": "performance prioritization only; not canonical content adjudication"
+    },
+    "DAN12": {
+      "n": 6,
+      "correct": 5,
+      "incorrect": 1,
+      "accuracy_pct": 83.33,
+      "total_time_s": 20.946,
+      "mean_time_s": 3.491,
+      "median_time_s": 2.683,
+      "min_time_s": 2.224,
+      "max_time_s": 6.981,
+      "population_sd_s": 1.64,
+      "p90_time_s": 6.981,
+      "over_5s": 1,
+      "over_6s": 1,
+      "over_8s": 0,
+      "gain_points_recomputed": 4860.35,
+      "evidence_pages": [24, 25],
+      "classification_basis": "analyst content-cluster mapping from report sequence",
+      "classification_authority": "performance prioritization only; not canonical content adjudication"
+    },
+    "PR_UNSPECIFIED": {
+      "n": 29,
+      "correct": 29,
+      "incorrect": 0,
+      "accuracy_pct": 100,
+      "total_time_s": 104.174,
+      "mean_time_s": 3.592,
+      "median_time_s": 3.681,
+      "min_time_s": 1.134,
+      "max_time_s": 6.049,
+      "population_sd_s": 1.206,
+      "p90_time_s": 5.594,
+      "over_5s": 3,
+      "over_6s": 1,
+      "over_8s": 0,
+      "gain_points_recomputed": 27958.26,
+      "evidence_pages": [5, 6, 9, 10, 11, 13, 14, 15, 16, 26],
+      "classification_basis": "PR label in report; chapter PR39-44 absent",
+      "classification_authority": "performance prioritization only; not canonical content adjudication"
+    }
+  },
+  "question_trace": [
+    {
+      "sample_index": 1,
+      "report_question_id": "R1-Q1",
+      "round": 1,
+      "q": 1,
+      "chapter": "DAN1",
+      "status": "CORRECT",
+      "time_s": 2.005,
+      "time_display": "00:02.005",
+      "gain_points": 979.95,
+      "evidence": {
+        "pdf_page": 2,
+        "footer_label": "Página 1 de 25"
+      }
+    },
+    {
+      "sample_index": 2,
+      "report_question_id": "R1-Q2",
+      "round": 1,
+      "q": 2,
+      "chapter": "DAN1",
+      "status": "CORRECT",
+      "time_s": 3.032,
+      "time_display": "00:03.032",
+      "gain_points": 969.68,
+      "evidence": {
+        "pdf_page": 2,
+        "footer_label": "Página 1 de 25"
+      }
+    },
+    {
+      "sample_index": 3,
+      "report_question_id": "R1-Q3",
+      "round": 1,
+      "q": 3,
+      "chapter": "DAN1",
+      "status": "CORRECT",
+      "time_s": 3.935,
+      "time_display": "00:03.935",
+      "gain_points": 960.65,
+      "evidence": {
+        "pdf_page": 2,
+        "footer_label": "Página 1 de 25"
+      }
+    },
+    {
+      "sample_index": 4,
+      "report_question_id": "R1-Q4",
+      "round": 1,
+      "q": 4,
+      "chapter": "DAN1",
+      "status": "CORRECT",
+      "time_s": 2.346,
+      "time_display": "00:02.346",
+      "gain_points": 976.54,
+      "evidence": {
+        "pdf_page": 2,
+        "footer_label": "Página 1 de 25"
+      }
+    },
+    {
+      "sample_index": 5,
+      "report_question_id": "R1-Q5",
+      "round": 1,
+      "q": 5,
+      "chapter": "DAN1",
+      "status": "CORRECT",
+      "time_s": 2.126,
+      "time_display": "00:02.126",
+      "gain_points": 978.74,
+      "evidence": {
+        "pdf_page": 3,
+        "footer_label": "Página 2 de 25"
+      }
+    },
+    {
+      "sample_index": 6,
+      "report_question_id": "R1-Q6",
+      "round": 1,
+      "q": 6,
+      "chapter": "DAN1",
+      "status": "CORRECT",
+      "time_s": 3.799,
+      "time_display": "00:03.799",
+      "gain_points": 962.01,
+      "evidence": {
+        "pdf_page": 3,
+        "footer_label": "Página 2 de 25"
+      }
+    },
+    {
+      "sample_index": 7,
+      "report_question_id": "R1-Q7",
+      "round": 1,
+      "q": 7,
+      "chapter": "DAN1",
+      "status": "CORRECT",
+      "time_s": 2.369,
+      "time_display": "00:02.369",
+      "gain_points": 976.31,
+      "evidence": {
+        "pdf_page": 3,
+        "footer_label": "Página 2 de 25"
+      }
+    },
+    {
+      "sample_index": 8,
+      "report_question_id": "R1-Q8",
+      "round": 1,
+      "q": 8,
+      "chapter": "DAN2",
+      "status": "CORRECT",
+      "time_s": 1.548,
+      "time_display": "00:01.548",
+      "gain_points": 984.52,
+      "evidence": {
+        "pdf_page": 3,
+        "footer_label": "Página 2 de 25"
+      }
+    },
+    {
+      "sample_index": 9,
+      "report_question_id": "R1-Q9",
+      "round": 1,
+      "q": 9,
+      "chapter": "DAN2",
+      "status": "CORRECT",
+      "time_s": 2.916,
+      "time_display": "00:02.916",
+      "gain_points": 970.84,
+      "evidence": {
+        "pdf_page": 3,
+        "footer_label": "Página 2 de 25"
+      }
+    },
+    {
+      "sample_index": 10,
+      "report_question_id": "R1-Q10",
+      "round": 1,
+      "q": 10,
+      "chapter": "DAN2",
+      "status": "CORRECT",
+      "time_s": 3.228,
+      "time_display": "00:03.228",
+      "gain_points": 967.72,
+      "evidence": {
+        "pdf_page": 4,
+        "footer_label": "Página 3 de 25"
+      }
+    },
+    {
+      "sample_index": 11,
+      "report_question_id": "R1-Q11",
+      "round": 1,
+      "q": 11,
+      "chapter": "DAN2",
+      "status": "CORRECT",
+      "time_s": 5.149,
+      "time_display": "00:05.149",
+      "gain_points": 948.51,
+      "evidence": {
+        "pdf_page": 4,
+        "footer_label": "Página 3 de 25"
+      }
+    },
+    {
+      "sample_index": 12,
+      "report_question_id": "R1-Q12",
+      "round": 1,
+      "q": 12,
+      "chapter": "DAN2",
+      "status": "CORRECT",
+      "time_s": 2.506,
+      "time_display": "00:02.506",
+      "gain_points": 974.94,
+      "evidence": {
+        "pdf_page": 4,
+        "footer_label": "Página 3 de 25"
+      }
+    },
+    {
+      "sample_index": 13,
+      "report_question_id": "R1-Q13",
+      "round": 1,
+      "q": 13,
+      "chapter": "DAN2",
+      "status": "CORRECT",
+      "time_s": 2.424,
+      "time_display": "00:02.424",
+      "gain_points": 975.76,
+      "evidence": {
+        "pdf_page": 4,
+        "footer_label": "Página 3 de 25"
+      }
+    },
+    {
+      "sample_index": 14,
+      "report_question_id": "R1-Q14",
+      "round": 1,
+      "q": 14,
+      "chapter": "DAN2",
+      "status": "CORRECT",
+      "time_s": 2.509,
+      "time_display": "00:02.509",
+      "gain_points": 974.91,
+      "evidence": {
+        "pdf_page": 4,
+        "footer_label": "Página 3 de 25"
+      }
+    },
+    {
+      "sample_index": 15,
+      "report_question_id": "R1-Q15",
+      "round": 1,
+      "q": 15,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 5.594,
+      "time_display": "00:05.594",
+      "gain_points": 944.06,
+      "evidence": {
+        "pdf_page": 5,
+        "footer_label": "Página 4 de 25"
+      }
+    },
+    {
+      "sample_index": 16,
+      "report_question_id": "R1-Q16",
+      "round": 1,
+      "q": 16,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 3.063,
+      "time_display": "00:03.063",
+      "gain_points": 969.37,
+      "evidence": {
+        "pdf_page": 5,
+        "footer_label": "Página 4 de 25"
+      }
+    },
+    {
+      "sample_index": 17,
+      "report_question_id": "R1-Q17",
+      "round": 1,
+      "q": 17,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 4.587,
+      "time_display": "00:04.587",
+      "gain_points": 954.13,
+      "evidence": {
+        "pdf_page": 5,
+        "footer_label": "Página 4 de 25"
+      }
+    },
+    {
+      "sample_index": 18,
+      "report_question_id": "R1-Q18",
+      "round": 1,
+      "q": 18,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 3.986,
+      "time_display": "00:03.986",
+      "gain_points": 960.14,
+      "evidence": {
+        "pdf_page": 5,
+        "footer_label": "Página 4 de 25"
+      }
+    },
+    {
+      "sample_index": 19,
+      "report_question_id": "R1-Q19",
+      "round": 1,
+      "q": 19,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 4.735,
+      "time_display": "00:04.735",
+      "gain_points": 952.65,
+      "evidence": {
+        "pdf_page": 5,
+        "footer_label": "Página 4 de 25"
+      }
+    },
+    {
+      "sample_index": 20,
+      "report_question_id": "R1-Q20",
+      "round": 1,
+      "q": 20,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 1.452,
+      "time_display": "00:01.452",
+      "gain_points": 985.48,
+      "evidence": {
+        "pdf_page": 6,
+        "footer_label": "Página 5 de 25"
+      }
+    },
+    {
+      "sample_index": 21,
+      "report_question_id": "R2-Q1",
+      "round": 2,
+      "q": 1,
+      "chapter": "DAN3",
+      "status": "CORRECT",
+      "time_s": 3.104,
+      "time_display": "00:03.104",
+      "gain_points": 968.96,
+      "evidence": {
+        "pdf_page": 7,
+        "footer_label": "Página 6 de 25"
+      }
+    },
+    {
+      "sample_index": 22,
+      "report_question_id": "R2-Q2",
+      "round": 2,
+      "q": 2,
+      "chapter": "DAN3",
+      "status": "CORRECT",
+      "time_s": 3.963,
+      "time_display": "00:03.963",
+      "gain_points": 960.37,
+      "evidence": {
+        "pdf_page": 7,
+        "footer_label": "Página 6 de 25"
+      }
+    },
+    {
+      "sample_index": 23,
+      "report_question_id": "R2-Q3",
+      "round": 2,
+      "q": 3,
+      "chapter": "DAN3",
+      "status": "CORRECT",
+      "time_s": 1.773,
+      "time_display": "00:01.773",
+      "gain_points": 982.27,
+      "evidence": {
+        "pdf_page": 7,
+        "footer_label": "Página 6 de 25"
+      }
+    },
+    {
+      "sample_index": 24,
+      "report_question_id": "R2-Q4",
+      "round": 2,
+      "q": 4,
+      "chapter": "DAN3",
+      "status": "CORRECT",
+      "time_s": 2.486,
+      "time_display": "00:02.486",
+      "gain_points": 975.14,
+      "evidence": {
+        "pdf_page": 7,
+        "footer_label": "Página 6 de 25"
+      }
+    },
+    {
+      "sample_index": 25,
+      "report_question_id": "R2-Q5",
+      "round": 2,
+      "q": 5,
+      "chapter": "DAN3",
+      "status": "CORRECT",
+      "time_s": 3.687,
+      "time_display": "00:03.687",
+      "gain_points": 963.13,
+      "evidence": {
+        "pdf_page": 8,
+        "footer_label": "Página 7 de 25"
+      }
+    },
+    {
+      "sample_index": 26,
+      "report_question_id": "R2-Q6",
+      "round": 2,
+      "q": 6,
+      "chapter": "DAN4",
+      "status": "CORRECT",
+      "time_s": 5.144,
+      "time_display": "00:05.144",
+      "gain_points": 948.56,
+      "evidence": {
+        "pdf_page": 8,
+        "footer_label": "Página 7 de 25"
+      }
+    },
+    {
+      "sample_index": 27,
+      "report_question_id": "R2-Q7",
+      "round": 2,
+      "q": 7,
+      "chapter": "DAN4",
+      "status": "CORRECT",
+      "time_s": 2.093,
+      "time_display": "00:02.093",
+      "gain_points": 979.07,
+      "evidence": {
+        "pdf_page": 8,
+        "footer_label": "Página 7 de 25"
+      }
+    },
+    {
+      "sample_index": 28,
+      "report_question_id": "R2-Q8",
+      "round": 2,
+      "q": 8,
+      "chapter": "DAN4",
+      "status": "CORRECT",
+      "time_s": 2.544,
+      "time_display": "00:02.544",
+      "gain_points": 974.56,
+      "evidence": {
+        "pdf_page": 8,
+        "footer_label": "Página 7 de 25"
+      }
+    },
+    {
+      "sample_index": 29,
+      "report_question_id": "R2-Q9",
+      "round": 2,
+      "q": 9,
+      "chapter": "DAN4",
+      "status": "CORRECT",
+      "time_s": 1.851,
+      "time_display": "00:01.851",
+      "gain_points": 981.49,
+      "evidence": {
+        "pdf_page": 8,
+        "footer_label": "Página 7 de 25"
+      }
+    },
+    {
+      "sample_index": 30,
+      "report_question_id": "R2-Q10",
+      "round": 2,
+      "q": 10,
+      "chapter": "DAN4",
+      "status": "CORRECT",
+      "time_s": 1.947,
+      "time_display": "00:01.947",
+      "gain_points": 980.53,
+      "evidence": {
+        "pdf_page": 9,
+        "footer_label": "Página 8 de 25"
+      }
+    },
+    {
+      "sample_index": 31,
+      "report_question_id": "R2-Q11",
+      "round": 2,
+      "q": 11,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 2.519,
+      "time_display": "00:02.519",
+      "gain_points": 974.81,
+      "evidence": {
+        "pdf_page": 9,
+        "footer_label": "Página 8 de 25"
+      }
+    },
+    {
+      "sample_index": 32,
+      "report_question_id": "R2-Q12",
+      "round": 2,
+      "q": 12,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 3.071,
+      "time_display": "00:03.071",
+      "gain_points": 969.29,
+      "evidence": {
+        "pdf_page": 9,
+        "footer_label": "Página 8 de 25"
+      }
+    },
+    {
+      "sample_index": 33,
+      "report_question_id": "R2-Q13",
+      "round": 2,
+      "q": 13,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 2.293,
+      "time_display": "00:02.293",
+      "gain_points": 977.07,
+      "evidence": {
+        "pdf_page": 9,
+        "footer_label": "Página 8 de 25"
+      }
+    },
+    {
+      "sample_index": 34,
+      "report_question_id": "R2-Q14",
+      "round": 2,
+      "q": 14,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 4.167,
+      "time_display": "00:04.167",
+      "gain_points": 958.33,
+      "evidence": {
+        "pdf_page": 9,
+        "footer_label": "Página 8 de 25"
+      }
+    },
+    {
+      "sample_index": 35,
+      "report_question_id": "R2-Q15",
+      "round": 2,
+      "q": 15,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 3.963,
+      "time_display": "00:03.963",
+      "gain_points": 960.37,
+      "evidence": {
+        "pdf_page": 10,
+        "footer_label": "Página 9 de 25"
+      }
+    },
+    {
+      "sample_index": 36,
+      "report_question_id": "R2-Q16",
+      "round": 2,
+      "q": 16,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 4.212,
+      "time_display": "00:04.212",
+      "gain_points": 957.88,
+      "evidence": {
+        "pdf_page": 10,
+        "footer_label": "Página 9 de 25"
+      }
+    },
+    {
+      "sample_index": 37,
+      "report_question_id": "R2-Q17",
+      "round": 2,
+      "q": 17,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 5.615,
+      "time_display": "00:05.615",
+      "gain_points": 943.85,
+      "evidence": {
+        "pdf_page": 10,
+        "footer_label": "Página 9 de 25"
+      }
+    },
+    {
+      "sample_index": 38,
+      "report_question_id": "R2-Q18",
+      "round": 2,
+      "q": 18,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 3.681,
+      "time_display": "00:03.681",
+      "gain_points": 963.19,
+      "evidence": {
+        "pdf_page": 10,
+        "footer_label": "Página 9 de 25"
+      }
+    },
+    {
+      "sample_index": 39,
+      "report_question_id": "R2-Q19",
+      "round": 2,
+      "q": 19,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 2.997,
+      "time_display": "00:02.997",
+      "gain_points": 970.03,
+      "evidence": {
+        "pdf_page": 10,
+        "footer_label": "Página 9 de 25"
+      }
+    },
+    {
+      "sample_index": 40,
+      "report_question_id": "R2-Q20",
+      "round": 2,
+      "q": 20,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 4.522,
+      "time_display": "00:04.522",
+      "gain_points": 954.78,
+      "evidence": {
+        "pdf_page": 11,
+        "footer_label": "Página 10 de 25"
+      }
+    },
+    {
+      "sample_index": 41,
+      "report_question_id": "R3-Q1",
+      "round": 3,
+      "q": 1,
+      "chapter": "DAN5",
+      "status": "CORRECT",
+      "time_s": 1.589,
+      "time_display": "00:01.589",
+      "gain_points": 984.11,
+      "evidence": {
+        "pdf_page": 12,
+        "footer_label": "Página 11 de 25"
+      }
+    },
+    {
+      "sample_index": 42,
+      "report_question_id": "R3-Q2",
+      "round": 3,
+      "q": 2,
+      "chapter": "DAN5",
+      "status": "CORRECT",
+      "time_s": 2.553,
+      "time_display": "00:02.553",
+      "gain_points": 974.47,
+      "evidence": {
+        "pdf_page": 12,
+        "footer_label": "Página 11 de 25"
+      }
+    },
+    {
+      "sample_index": 43,
+      "report_question_id": "R3-Q3",
+      "round": 3,
+      "q": 3,
+      "chapter": "DAN5",
+      "status": "CORRECT",
+      "time_s": 6.666,
+      "time_display": "00:06.666",
+      "gain_points": 933.34,
+      "evidence": {
+        "pdf_page": 12,
+        "footer_label": "Página 11 de 25"
+      }
+    },
+    {
+      "sample_index": 44,
+      "report_question_id": "R3-Q4",
+      "round": 3,
+      "q": 4,
+      "chapter": "DAN5",
+      "status": "CORRECT",
+      "time_s": 1.599,
+      "time_display": "00:01.599",
+      "gain_points": 984.01,
+      "evidence": {
+        "pdf_page": 12,
+        "footer_label": "Página 11 de 25"
+      }
+    },
+    {
+      "sample_index": 45,
+      "report_question_id": "R3-Q5",
+      "round": 3,
+      "q": 5,
+      "chapter": "DAN6",
+      "status": "CORRECT",
+      "time_s": 1.822,
+      "time_display": "00:01.822",
+      "gain_points": 981.78,
+      "evidence": {
+        "pdf_page": 13,
+        "footer_label": "Página 12 de 25"
+      }
+    },
+    {
+      "sample_index": 46,
+      "report_question_id": "R3-Q6",
+      "round": 3,
+      "q": 6,
+      "chapter": "DAN6",
+      "status": "CORRECT",
+      "time_s": 1.569,
+      "time_display": "00:01.569",
+      "gain_points": 984.31,
+      "evidence": {
+        "pdf_page": 13,
+        "footer_label": "Página 12 de 25"
+      }
+    },
+    {
+      "sample_index": 47,
+      "report_question_id": "R3-Q7",
+      "round": 3,
+      "q": 7,
+      "chapter": "DAN6",
+      "status": "CORRECT",
+      "time_s": 3.323,
+      "time_display": "00:03.323",
+      "gain_points": 966.77,
+      "evidence": {
+        "pdf_page": 13,
+        "footer_label": "Página 12 de 25"
+      }
+    },
+    {
+      "sample_index": 48,
+      "report_question_id": "R3-Q8",
+      "round": 3,
+      "q": 8,
+      "chapter": "DAN6",
+      "status": "CORRECT",
+      "time_s": 2.188,
+      "time_display": "00:02.188",
+      "gain_points": 978.12,
+      "evidence": {
+        "pdf_page": 13,
+        "footer_label": "Página 12 de 25"
+      }
+    },
+    {
+      "sample_index": 49,
+      "report_question_id": "R3-Q9",
+      "round": 3,
+      "q": 9,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 3.009,
+      "time_display": "00:03.009",
+      "gain_points": 969.91,
+      "evidence": {
+        "pdf_page": 13,
+        "footer_label": "Página 12 de 25"
+      }
+    },
+    {
+      "sample_index": 50,
+      "report_question_id": "R3-Q10",
+      "round": 3,
+      "q": 10,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 2.347,
+      "time_display": "00:02.347",
+      "gain_points": 976.53,
+      "evidence": {
+        "pdf_page": 14,
+        "footer_label": "Página 13 de 25"
+      }
+    },
+    {
+      "sample_index": 51,
+      "report_question_id": "R3-Q11",
+      "round": 3,
+      "q": 11,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 4.925,
+      "time_display": "00:04.925",
+      "gain_points": 950.75,
+      "evidence": {
+        "pdf_page": 14,
+        "footer_label": "Página 13 de 25"
+      }
+    },
+    {
+      "sample_index": 52,
+      "report_question_id": "R3-Q12",
+      "round": 3,
+      "q": 12,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 3.05,
+      "time_display": "00:03.050",
+      "gain_points": 969.5,
+      "evidence": {
+        "pdf_page": 14,
+        "footer_label": "Página 13 de 25"
+      }
+    },
+    {
+      "sample_index": 53,
+      "report_question_id": "R3-Q13",
+      "round": 3,
+      "q": 13,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 2.507,
+      "time_display": "00:02.507",
+      "gain_points": 974.93,
+      "evidence": {
+        "pdf_page": 14,
+        "footer_label": "Página 13 de 25"
+      }
+    },
+    {
+      "sample_index": 54,
+      "report_question_id": "R3-Q14",
+      "round": 3,
+      "q": 14,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 6.049,
+      "time_display": "00:06.049",
+      "gain_points": 939.51,
+      "evidence": {
+        "pdf_page": 14,
+        "footer_label": "Página 13 de 25"
+      }
+    },
+    {
+      "sample_index": 55,
+      "report_question_id": "R3-Q15",
+      "round": 3,
+      "q": 15,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 4.233,
+      "time_display": "00:04.233",
+      "gain_points": 957.67,
+      "evidence": {
+        "pdf_page": 15,
+        "footer_label": "Página 14 de 25"
+      }
+    },
+    {
+      "sample_index": 56,
+      "report_question_id": "R3-Q16",
+      "round": 3,
+      "q": 16,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 1.134,
+      "time_display": "00:01.134",
+      "gain_points": 988.66,
+      "evidence": {
+        "pdf_page": 15,
+        "footer_label": "Página 14 de 25"
+      }
+    },
+    {
+      "sample_index": 57,
+      "report_question_id": "R3-Q17",
+      "round": 3,
+      "q": 17,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 3.368,
+      "time_display": "00:03.368",
+      "gain_points": 966.32,
+      "evidence": {
+        "pdf_page": 15,
+        "footer_label": "Página 14 de 25"
+      }
+    },
+    {
+      "sample_index": 58,
+      "report_question_id": "R3-Q18",
+      "round": 3,
+      "q": 18,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 2.592,
+      "time_display": "00:02.592",
+      "gain_points": 974.08,
+      "evidence": {
+        "pdf_page": 15,
+        "footer_label": "Página 14 de 25"
+      }
+    },
+    {
+      "sample_index": 59,
+      "report_question_id": "R3-Q19",
+      "round": 3,
+      "q": 19,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 4.107,
+      "time_display": "00:04.107",
+      "gain_points": 958.93,
+      "evidence": {
+        "pdf_page": 15,
+        "footer_label": "Página 14 de 25"
+      }
+    },
+    {
+      "sample_index": 60,
+      "report_question_id": "R3-Q20",
+      "round": 3,
+      "q": 20,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 2.128,
+      "time_display": "00:02.128",
+      "gain_points": 978.72,
+      "evidence": {
+        "pdf_page": 16,
+        "footer_label": "Página 15 de 25"
+      }
+    },
+    {
+      "sample_index": 61,
+      "report_question_id": "R4-Q1",
+      "round": 4,
+      "q": 1,
+      "chapter": "DAN7",
+      "status": "CORRECT",
+      "time_s": 2.334,
+      "time_display": "00:02.334",
+      "gain_points": 976.66,
+      "evidence": {
+        "pdf_page": 17,
+        "footer_label": "Página 16 de 25"
+      }
+    },
+    {
+      "sample_index": 62,
+      "report_question_id": "R4-Q2",
+      "round": 4,
+      "q": 2,
+      "chapter": "DAN7",
+      "status": "CORRECT",
+      "time_s": 2.667,
+      "time_display": "00:02.667",
+      "gain_points": 973.33,
+      "evidence": {
+        "pdf_page": 17,
+        "footer_label": "Página 16 de 25"
+      }
+    },
+    {
+      "sample_index": 63,
+      "report_question_id": "R4-Q3",
+      "round": 4,
+      "q": 3,
+      "chapter": "DAN7",
+      "status": "CORRECT",
+      "time_s": 2.071,
+      "time_display": "00:02.071",
+      "gain_points": 979.29,
+      "evidence": {
+        "pdf_page": 17,
+        "footer_label": "Página 16 de 25"
+      }
+    },
+    {
+      "sample_index": 64,
+      "report_question_id": "R4-Q4",
+      "round": 4,
+      "q": 4,
+      "chapter": "DAN7",
+      "status": "CORRECT",
+      "time_s": 5.817,
+      "time_display": "00:05.817",
+      "gain_points": 941.83,
+      "evidence": {
+        "pdf_page": 17,
+        "footer_label": "Página 16 de 25"
+      }
+    },
+    {
+      "sample_index": 65,
+      "report_question_id": "R4-Q5",
+      "round": 4,
+      "q": 5,
+      "chapter": "DAN7",
+      "status": "CORRECT",
+      "time_s": 3.478,
+      "time_display": "00:03.478",
+      "gain_points": 965.22,
+      "evidence": {
+        "pdf_page": 18,
+        "footer_label": "Página 17 de 25"
+      }
+    },
+    {
+      "sample_index": 66,
+      "report_question_id": "R4-Q6",
+      "round": 4,
+      "q": 6,
+      "chapter": "DAN7",
+      "status": "CORRECT",
+      "time_s": 7.474,
+      "time_display": "00:07.474",
+      "gain_points": 925.26,
+      "evidence": {
+        "pdf_page": 18,
+        "footer_label": "Página 17 de 25"
+      }
+    },
+    {
+      "sample_index": 67,
+      "report_question_id": "R4-Q7",
+      "round": 4,
+      "q": 7,
+      "chapter": "DAN7",
+      "status": "CORRECT",
+      "time_s": 2.432,
+      "time_display": "00:02.432",
+      "gain_points": 975.68,
+      "evidence": {
+        "pdf_page": 18,
+        "footer_label": "Página 17 de 25"
+      }
+    },
+    {
+      "sample_index": 68,
+      "report_question_id": "R4-Q8",
+      "round": 4,
+      "q": 8,
+      "chapter": "DAN8",
+      "status": "CORRECT",
+      "time_s": 9.029,
+      "time_display": "00:09.029",
+      "gain_points": 909.71,
+      "evidence": {
+        "pdf_page": 18,
+        "footer_label": "Página 17 de 25"
+      }
+    },
+    {
+      "sample_index": 69,
+      "report_question_id": "R4-Q9",
+      "round": 4,
+      "q": 9,
+      "chapter": "DAN8",
+      "status": "CORRECT",
+      "time_s": 5.727,
+      "time_display": "00:05.727",
+      "gain_points": 942.73,
+      "evidence": {
+        "pdf_page": 18,
+        "footer_label": "Página 17 de 25"
+      }
+    },
+    {
+      "sample_index": 70,
+      "report_question_id": "R4-Q10",
+      "round": 4,
+      "q": 10,
+      "chapter": "DAN8",
+      "status": "CORRECT",
+      "time_s": 3.312,
+      "time_display": "00:03.312",
+      "gain_points": 966.88,
+      "evidence": {
+        "pdf_page": 19,
+        "footer_label": "Página 18 de 25"
+      }
+    },
+    {
+      "sample_index": 71,
+      "report_question_id": "R4-Q11",
+      "round": 4,
+      "q": 11,
+      "chapter": "DAN8",
+      "status": "CORRECT",
+      "time_s": 4.385,
+      "time_display": "00:04.385",
+      "gain_points": 956.15,
+      "evidence": {
+        "pdf_page": 19,
+        "footer_label": "Página 18 de 25"
+      }
+    },
+    {
+      "sample_index": 72,
+      "report_question_id": "R4-Q12",
+      "round": 4,
+      "q": 12,
+      "chapter": "DAN8",
+      "status": "CORRECT",
+      "time_s": 4.689,
+      "time_display": "00:04.689",
+      "gain_points": 953.11,
+      "evidence": {
+        "pdf_page": 19,
+        "footer_label": "Página 18 de 25"
+      }
+    },
+    {
+      "sample_index": 73,
+      "report_question_id": "R4-Q13",
+      "round": 4,
+      "q": 13,
+      "chapter": "DAN8",
+      "status": "CORRECT",
+      "time_s": 6.408,
+      "time_display": "00:06.408",
+      "gain_points": 935.92,
+      "evidence": {
+        "pdf_page": 19,
+        "footer_label": "Página 18 de 25"
+      }
+    },
+    {
+      "sample_index": 74,
+      "report_question_id": "R4-Q14",
+      "round": 4,
+      "q": 14,
+      "chapter": "DAN8",
+      "status": "CORRECT",
+      "time_s": 4.987,
+      "time_display": "00:04.987",
+      "gain_points": 950.13,
+      "evidence": {
+        "pdf_page": 19,
+        "footer_label": "Página 18 de 25"
+      }
+    },
+    {
+      "sample_index": 75,
+      "report_question_id": "R4-Q15",
+      "round": 4,
+      "q": 15,
+      "chapter": "DAN9",
+      "status": "CORRECT",
+      "time_s": 2.096,
+      "time_display": "00:02.096",
+      "gain_points": 979.04,
+      "evidence": {
+        "pdf_page": 20,
+        "footer_label": "Página 19 de 25"
+      }
+    },
+    {
+      "sample_index": 76,
+      "report_question_id": "R4-Q16",
+      "round": 4,
+      "q": 16,
+      "chapter": "DAN9",
+      "status": "CORRECT",
+      "time_s": 1.915,
+      "time_display": "00:01.915",
+      "gain_points": 980.85,
+      "evidence": {
+        "pdf_page": 20,
+        "footer_label": "Página 19 de 25"
+      }
+    },
+    {
+      "sample_index": 77,
+      "report_question_id": "R4-Q17",
+      "round": 4,
+      "q": 17,
+      "chapter": "DAN9",
+      "status": "CORRECT",
+      "time_s": 5.762,
+      "time_display": "00:05.762",
+      "gain_points": 942.38,
+      "evidence": {
+        "pdf_page": 20,
+        "footer_label": "Página 19 de 25"
+      }
+    },
+    {
+      "sample_index": 78,
+      "report_question_id": "R4-Q18",
+      "round": 4,
+      "q": 18,
+      "chapter": "DAN9",
+      "status": "CORRECT",
+      "time_s": 3.715,
+      "time_display": "00:03.715",
+      "gain_points": 962.85,
+      "evidence": {
+        "pdf_page": 20,
+        "footer_label": "Página 19 de 25"
+      }
+    },
+    {
+      "sample_index": 79,
+      "report_question_id": "R4-Q19",
+      "round": 4,
+      "q": 19,
+      "chapter": "DAN9",
+      "status": "INCORRECT",
+      "time_s": 12.799,
+      "time_display": "00:12.799",
+      "gain_points": 0,
+      "evidence": {
+        "pdf_page": 20,
+        "footer_label": "Página 19 de 25"
+      }
+    },
+    {
+      "sample_index": 80,
+      "report_question_id": "R4-Q20",
+      "round": 4,
+      "q": 20,
+      "chapter": "DAN9",
+      "status": "CORRECT",
+      "time_s": 11.285,
+      "time_display": "00:11.285",
+      "gain_points": 887.15,
+      "evidence": {
+        "pdf_page": 21,
+        "footer_label": "Página 20 de 25"
+      }
+    },
+    {
+      "sample_index": 81,
+      "report_question_id": "R5-Q1",
+      "round": 5,
+      "q": 1,
+      "chapter": "DAN10",
+      "status": "CORRECT",
+      "time_s": 7.826,
+      "time_display": "00:07.826",
+      "gain_points": 921.74,
+      "evidence": {
+        "pdf_page": 22,
+        "footer_label": "Página 21 de 25"
+      }
+    },
+    {
+      "sample_index": 82,
+      "report_question_id": "R5-Q2",
+      "round": 5,
+      "q": 2,
+      "chapter": "DAN10",
+      "status": "CORRECT",
+      "time_s": 2.749,
+      "time_display": "00:02.749",
+      "gain_points": 972.51,
+      "evidence": {
+        "pdf_page": 22,
+        "footer_label": "Página 21 de 25"
+      }
+    },
+    {
+      "sample_index": 83,
+      "report_question_id": "R5-Q3",
+      "round": 5,
+      "q": 3,
+      "chapter": "DAN10",
+      "status": "CORRECT",
+      "time_s": 3.062,
+      "time_display": "00:03.062",
+      "gain_points": 969.38,
+      "evidence": {
+        "pdf_page": 22,
+        "footer_label": "Página 21 de 25"
+      }
+    },
+    {
+      "sample_index": 84,
+      "report_question_id": "R5-Q4",
+      "round": 5,
+      "q": 4,
+      "chapter": "DAN10",
+      "status": "CORRECT",
+      "time_s": 4.292,
+      "time_display": "00:04.292",
+      "gain_points": 957.08,
+      "evidence": {
+        "pdf_page": 22,
+        "footer_label": "Página 21 de 25"
+      }
+    },
+    {
+      "sample_index": 85,
+      "report_question_id": "R5-Q5",
+      "round": 5,
+      "q": 5,
+      "chapter": "DAN10",
+      "status": "CORRECT",
+      "time_s": 5.275,
+      "time_display": "00:05.275",
+      "gain_points": 947.25,
+      "evidence": {
+        "pdf_page": 23,
+        "footer_label": "Página 22 de 25"
+      }
+    },
+    {
+      "sample_index": 86,
+      "report_question_id": "R5-Q6",
+      "round": 5,
+      "q": 6,
+      "chapter": "DAN10",
+      "status": "CORRECT",
+      "time_s": 2.478,
+      "time_display": "00:02.478",
+      "gain_points": 975.22,
+      "evidence": {
+        "pdf_page": 23,
+        "footer_label": "Página 22 de 25"
+      }
+    },
+    {
+      "sample_index": 87,
+      "report_question_id": "R5-Q7",
+      "round": 5,
+      "q": 7,
+      "chapter": "DAN11",
+      "status": "CORRECT",
+      "time_s": 2.794,
+      "time_display": "00:02.794",
+      "gain_points": 972.06,
+      "evidence": {
+        "pdf_page": 23,
+        "footer_label": "Página 22 de 25"
+      }
+    },
+    {
+      "sample_index": 88,
+      "report_question_id": "R5-Q8",
+      "round": 5,
+      "q": 8,
+      "chapter": "DAN11",
+      "status": "CORRECT",
+      "time_s": 4.149,
+      "time_display": "00:04.149",
+      "gain_points": 958.51,
+      "evidence": {
+        "pdf_page": 23,
+        "footer_label": "Página 22 de 25"
+      }
+    },
+    {
+      "sample_index": 89,
+      "report_question_id": "R5-Q9",
+      "round": 5,
+      "q": 9,
+      "chapter": "DAN11",
+      "status": "CORRECT",
+      "time_s": 5.354,
+      "time_display": "00:05.354",
+      "gain_points": 946.46,
+      "evidence": {
+        "pdf_page": 23,
+        "footer_label": "Página 22 de 25"
+      }
+    },
+    {
+      "sample_index": 90,
+      "report_question_id": "R5-Q10",
+      "round": 5,
+      "q": 10,
+      "chapter": "DAN11",
+      "status": "CORRECT",
+      "time_s": 5.401,
+      "time_display": "00:05.401",
+      "gain_points": 945.99,
+      "evidence": {
+        "pdf_page": 24,
+        "footer_label": "Página 23 de 25"
+      }
+    },
+    {
+      "sample_index": 91,
+      "report_question_id": "R5-Q11",
+      "round": 5,
+      "q": 11,
+      "chapter": "DAN11",
+      "status": "CORRECT",
+      "time_s": 4.073,
+      "time_display": "00:04.073",
+      "gain_points": 959.27,
+      "evidence": {
+        "pdf_page": 24,
+        "footer_label": "Página 23 de 25"
+      }
+    },
+    {
+      "sample_index": 92,
+      "report_question_id": "R5-Q12",
+      "round": 5,
+      "q": 12,
+      "chapter": "DAN11",
+      "status": "CORRECT",
+      "time_s": 5.228,
+      "time_display": "00:05.228",
+      "gain_points": 947.72,
+      "evidence": {
+        "pdf_page": 24,
+        "footer_label": "Página 23 de 25"
+      }
+    },
+    {
+      "sample_index": 93,
+      "report_question_id": "R5-Q13",
+      "round": 5,
+      "q": 13,
+      "chapter": "DAN11",
+      "status": "CORRECT",
+      "time_s": 1.811,
+      "time_display": "00:01.811",
+      "gain_points": 981.89,
+      "evidence": {
+        "pdf_page": 24,
+        "footer_label": "Página 23 de 25"
+      }
+    },
+    {
+      "sample_index": 94,
+      "report_question_id": "R5-Q14",
+      "round": 5,
+      "q": 14,
+      "chapter": "DAN12",
+      "status": "INCORRECT",
+      "time_s": 6.981,
+      "time_display": "00:06.981",
+      "gain_points": 0,
+      "evidence": {
+        "pdf_page": 24,
+        "footer_label": "Página 23 de 25"
+      }
+    },
+    {
+      "sample_index": 95,
+      "report_question_id": "R5-Q15",
+      "round": 5,
+      "q": 15,
+      "chapter": "DAN12",
+      "status": "CORRECT",
+      "time_s": 2.224,
+      "time_display": "00:02.224",
+      "gain_points": 977.76,
+      "evidence": {
+        "pdf_page": 25,
+        "footer_label": "Página 24 de 25"
+      }
+    },
+    {
+      "sample_index": 96,
+      "report_question_id": "R5-Q16",
+      "round": 5,
+      "q": 16,
+      "chapter": "DAN12",
+      "status": "CORRECT",
+      "time_s": 2.747,
+      "time_display": "00:02.747",
+      "gain_points": 972.53,
+      "evidence": {
+        "pdf_page": 25,
+        "footer_label": "Página 24 de 25"
+      }
+    },
+    {
+      "sample_index": 97,
+      "report_question_id": "R5-Q17",
+      "round": 5,
+      "q": 17,
+      "chapter": "DAN12",
+      "status": "CORRECT",
+      "time_s": 3.843,
+      "time_display": "00:03.843",
+      "gain_points": 961.57,
+      "evidence": {
+        "pdf_page": 25,
+        "footer_label": "Página 24 de 25"
+      }
+    },
+    {
+      "sample_index": 98,
+      "report_question_id": "R5-Q18",
+      "round": 5,
+      "q": 18,
+      "chapter": "DAN12",
+      "status": "CORRECT",
+      "time_s": 2.533,
+      "time_display": "00:02.533",
+      "gain_points": 974.67,
+      "evidence": {
+        "pdf_page": 25,
+        "footer_label": "Página 24 de 25"
+      }
+    },
+    {
+      "sample_index": 99,
+      "report_question_id": "R5-Q19",
+      "round": 5,
+      "q": 19,
+      "chapter": "DAN12",
+      "status": "CORRECT",
+      "time_s": 2.618,
+      "time_display": "00:02.618",
+      "gain_points": 973.82,
+      "evidence": {
+        "pdf_page": 25,
+        "footer_label": "Página 24 de 25"
+      }
+    },
+    {
+      "sample_index": 100,
+      "report_question_id": "R5-Q20",
+      "round": 5,
+      "q": 20,
+      "chapter": "PR_UNSPECIFIED",
+      "status": "CORRECT",
+      "time_s": 4.268,
+      "time_display": "00:04.268",
+      "gain_points": 957.32,
+      "evidence": {
+        "pdf_page": 26,
+        "footer_label": "Página 25 de 25"
+      }
+    }
+  ],
+  "errors": [
+    {
+      "report_question_id": "R4-Q19",
+      "sample_index": 79,
+      "chapter": "DAN9",
+      "time_s": 12.799,
+      "time_display": "00:12.799",
+      "reported_status": "Incorrecta",
+      "error_type": "temporal_sequence_confusion",
+      "correct_option": "A",
+      "correct_option_text": "Se quitará la vida al Mesías",
+      "selected_option": "B",
+      "selected_option_text": "Se reconstruirá el templo",
+      "pattern": "Confusión entre la reconstrucción asociada al tramo anterior y el evento posterior a las sesenta y dos semanas.",
+      "action": "P0: recuperación inmediata de la secuencia de Daniel 9; revisar con una variante de orden/contraste y nueva verificación Sol.",
+      "evidence_excerpt": "después de las sesenta y dos semanas; A en verde y B en rojo",
+      "evidence": {
+        "pdf_page": 20,
+        "footer_label": "Página 19 de 25",
+        "visual_spot_check": true
+      }
+    },
+    {
+      "report_question_id": "R5-Q14",
+      "sample_index": 94,
+      "chapter": "DAN12",
+      "time_s": 6.981,
+      "time_display": "00:06.981",
+      "reported_status": "Incorrecta",
+      "error_type": "person_identity_cross_chapter_confusion",
+      "correct_option": "A",
+      "correct_option_text": "Miguel",
+      "selected_option": "D",
+      "selected_option_text": "El Mesías Príncipe",
+      "pattern": "Confusión de identidad entre Miguel (Daniel 12) y Mesías Príncipe (Daniel 9).",
+      "action": "P0: recuperación inmediata de identidades y capítulo; contrastar Daniel 9/12 sin mezclar fuentes y volver a verificar Sol.",
+      "evidence_excerpt": "gran príncipe que está de parte de los hijos de tu pueblo; A en verde y D en rojo",
+      "evidence": {
+        "pdf_page": 24,
+        "footer_label": "Página 23 de 25",
+        "visual_spot_check": true
+      }
+    }
+  ],
+  "slow_items_gt_6s": [
+    {
+      "rank": 1,
+      "report_question_id": "R4-Q19",
+      "sample_index": 79,
+      "chapter": "DAN9",
+      "topic": "qué ocurre después de las sesenta y dos semanas",
+      "time_s": 12.799,
+      "time_display": "00:12.799",
+      "status": "INCORRECT",
+      "inferred_doubt_proxy": false,
+      "priority": "P0",
+      "evidence": {
+        "pdf_page": 20,
+        "footer_label": "Página 19 de 25"
+      }
+    },
+    {
+      "rank": 2,
+      "report_question_id": "R4-Q20",
+      "sample_index": 80,
+      "chapter": "DAN9",
+      "topic": "frase de Gabriel sobre ser muy amado al principio de los ruegos",
+      "time_s": 11.285,
+      "time_display": "00:11.285",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "priority": "P1",
+      "evidence": {
+        "pdf_page": 21,
+        "footer_label": "Página 20 de 25"
+      }
+    },
+    {
+      "rank": 3,
+      "report_question_id": "R4-Q8",
+      "sample_index": 68,
+      "chapter": "DAN8",
+      "topic": "ubicación de Daniel: Susa y río Ulai",
+      "time_s": 9.029,
+      "time_display": "00:09.029",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "priority": "P1",
+      "evidence": {
+        "pdf_page": 18,
+        "footer_label": "Página 17 de 25"
+      }
+    },
+    {
+      "rank": 4,
+      "report_question_id": "R5-Q1",
+      "sample_index": 81,
+      "chapter": "DAN10",
+      "topic": "tercer año de Ciro",
+      "time_s": 7.826,
+      "time_display": "00:07.826",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "priority": "P2",
+      "evidence": {
+        "pdf_page": 22,
+        "footer_label": "Página 21 de 25"
+      }
+    },
+    {
+      "rank": 5,
+      "report_question_id": "R4-Q6",
+      "sample_index": 66,
+      "chapter": "DAN7",
+      "topic": "dominio, gloria y reino dados a uno como hijo de hombre",
+      "time_s": 7.474,
+      "time_display": "00:07.474",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "priority": "P2",
+      "evidence": {
+        "pdf_page": 18,
+        "footer_label": "Página 17 de 25"
+      }
+    },
+    {
+      "rank": 6,
+      "report_question_id": "R5-Q14",
+      "sample_index": 94,
+      "chapter": "DAN12",
+      "topic": "identidad del gran príncipe que está de parte del pueblo",
+      "time_s": 6.981,
+      "time_display": "00:06.981",
+      "status": "INCORRECT",
+      "inferred_doubt_proxy": false,
+      "priority": "P0",
+      "evidence": {
+        "pdf_page": 24,
+        "footer_label": "Página 23 de 25"
+      }
+    },
+    {
+      "rank": 7,
+      "report_question_id": "R3-Q3",
+      "sample_index": 43,
+      "chapter": "DAN5",
+      "topic": "significado de Tekel",
+      "time_s": 6.666,
+      "time_display": "00:06.666",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "priority": "P2",
+      "evidence": {
+        "pdf_page": 12,
+        "footer_label": "Página 11 de 25"
+      }
+    },
+    {
+      "rank": 8,
+      "report_question_id": "R4-Q13",
+      "sample_index": 73,
+      "chapter": "DAN8",
+      "topic": "macho cabrío como rey de Grecia",
+      "time_s": 6.408,
+      "time_display": "00:06.408",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "priority": "P2",
+      "evidence": {
+        "pdf_page": 19,
+        "footer_label": "Página 18 de 25"
+      }
+    },
+    {
+      "rank": 9,
+      "report_question_id": "R3-Q14",
+      "sample_index": 54,
+      "chapter": "PR_UNSPECIFIED",
+      "topic": "Belsasar desatiende la conversión y curación milagrosa (PR)",
+      "time_s": 6.049,
+      "time_display": "00:06.049",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "priority": "P2",
+      "evidence": {
+        "pdf_page": 14,
+        "footer_label": "Página 13 de 25"
+      }
+    }
+  ],
+  "watchlist_items_5_to_6s": [
+    {
+      "report_question_id": "R4-Q4",
+      "sample_index": 64,
+      "chapter": "DAN7",
+      "topic": "tres cuernos arrancados por el cuerno pequeño",
+      "time_s": 5.817,
+      "time_display": "00:05.817",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "evidence": {
+        "pdf_page": 17,
+        "footer_label": "Página 16 de 25"
+      }
+    },
+    {
+      "report_question_id": "R4-Q17",
+      "sample_index": 77,
+      "chapter": "DAN9",
+      "topic": "Gabriel llega mientras Daniel ora para dar sabiduría y entendimiento",
+      "time_s": 5.762,
+      "time_display": "00:05.762",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "evidence": {
+        "pdf_page": 20,
+        "footer_label": "Página 19 de 25"
+      }
+    },
+    {
+      "report_question_id": "R4-Q9",
+      "sample_index": 69,
+      "chapter": "DAN8",
+      "topic": "dos cuernos del carnero",
+      "time_s": 5.727,
+      "time_display": "00:05.727",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "evidence": {
+        "pdf_page": 18,
+        "footer_label": "Página 17 de 25"
+      }
+    },
+    {
+      "report_question_id": "R2-Q17",
+      "sample_index": 37,
+      "chapter": "PR_UNSPECIFIED",
+      "topic": "sabios celosos denuncian a los compañeros de Daniel (PR)",
+      "time_s": 5.615,
+      "time_display": "00:05.615",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "evidence": {
+        "pdf_page": 10,
+        "footer_label": "Página 9 de 25"
+      }
+    },
+    {
+      "report_question_id": "R1-Q15",
+      "sample_index": 15,
+      "chapter": "PR_UNSPECIFIED",
+      "topic": "gracia y buena voluntad con el príncipe de los eunucos (PR)",
+      "time_s": 5.594,
+      "time_display": "00:05.594",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "evidence": {
+        "pdf_page": 5,
+        "footer_label": "Página 4 de 25"
+      }
+    },
+    {
+      "report_question_id": "R5-Q10",
+      "sample_index": 90,
+      "chapter": "DAN11",
+      "topic": "abominación desoladora en el santuario",
+      "time_s": 5.401,
+      "time_display": "00:05.401",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "evidence": {
+        "pdf_page": 24,
+        "footer_label": "Página 23 de 25"
+      }
+    },
+    {
+      "report_question_id": "R5-Q9",
+      "sample_index": 89,
+      "chapter": "DAN11",
+      "topic": "contienda entre rey del sur y rey del norte",
+      "time_s": 5.354,
+      "time_display": "00:05.354",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "evidence": {
+        "pdf_page": 23,
+        "footer_label": "Página 22 de 25"
+      }
+    },
+    {
+      "report_question_id": "R5-Q5",
+      "sample_index": 85,
+      "chapter": "DAN10",
+      "topic": "príncipe de Persia y veintiún días",
+      "time_s": 5.275,
+      "time_display": "00:05.275",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "evidence": {
+        "pdf_page": 23,
+        "footer_label": "Página 22 de 25"
+      }
+    },
+    {
+      "report_question_id": "R5-Q12",
+      "sample_index": 92,
+      "chapter": "DAN11",
+      "topic": "dios de las fortalezas",
+      "time_s": 5.228,
+      "time_display": "00:05.228",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "evidence": {
+        "pdf_page": 24,
+        "footer_label": "Página 23 de 25"
+      }
+    },
+    {
+      "report_question_id": "R1-Q11",
+      "sample_index": 11,
+      "chapter": "DAN2",
+      "topic": "solicitud de tiempo ante el rey para orar y pedir la interpretación",
+      "time_s": 5.149,
+      "time_display": "00:05.149",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "evidence": {
+        "pdf_page": 4,
+        "footer_label": "Página 3 de 25"
+      }
+    },
+    {
+      "report_question_id": "R2-Q6",
+      "sample_index": 26,
+      "chapter": "DAN4",
+      "topic": "segundo sueño: árbol grande y copa que llega al cielo",
+      "time_s": 5.144,
+      "time_display": "00:05.144",
+      "status": "CORRECT",
+      "inferred_doubt_proxy": true,
+      "evidence": {
+        "pdf_page": 8,
+        "footer_label": "Página 7 de 25"
+      }
+    }
+  ],
+  "mandatory_personal_units": {
+    "source": "Spec adjunto, sección ZONAS PERSONALES OBLIGATORIAS; la lista no convierte al reporte en fuente editorial.",
+    "report_role": "secondary_performance_only",
+    "chapters": {
+      "DAN7": [
+        {
+          "unit": "Anciano de días",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q5"],
+          "pdf_pages": [18],
+          "evidence_excerpt": "Anciano de días; vestido blanco como la nieve",
+          "note": null
+        },
+        {
+          "unit": "hijo de hombre",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q6"],
+          "pdf_pages": [18],
+          "evidence_excerpt": "uno como un hijo de hombre",
+          "note": null
+        },
+        {
+          "unit": "dominio, gloria y reino",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q6"],
+          "pdf_pages": [18],
+          "evidence_excerpt": "dominio, gloria y reino",
+          "note": null
+        },
+        {
+          "unit": "cuatro bestias",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q1", "R4-Q7"],
+          "pdf_pages": [17, 18],
+          "evidence_excerpt": "cuatro bestias; cuatro reyes",
+          "note": null
+        },
+        {
+          "unit": "cuernos",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q3", "R4-Q4"],
+          "pdf_pages": [17],
+          "evidence_excerpt": "cuarta bestia y cuerno pequeño",
+          "note": null
+        },
+        {
+          "unit": "juicio",
+          "status": "NOT_OBSERVED_IN_SAMPLE",
+          "report_question_refs": [],
+          "pdf_pages": [],
+          "evidence_excerpt": null,
+          "note": "No aparece como unidad explícita en las 100 preguntas del reporte."
+        }
+      ],
+      "DAN8": [
+        {
+          "unit": "Susa",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q8"],
+          "pdf_pages": [18],
+          "evidence_excerpt": "Susa",
+          "note": null
+        },
+        {
+          "unit": "río Ulai",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q8"],
+          "pdf_pages": [18],
+          "evidence_excerpt": "río Ulai",
+          "note": null
+        },
+        {
+          "unit": "carnero",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q8", "R4-Q9", "R4-Q12"],
+          "pdf_pages": [18, 19],
+          "evidence_excerpt": "carnero",
+          "note": null
+        },
+        {
+          "unit": "macho cabrío",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": [
+            "R4-Q8",
+            "R4-Q10",
+            "R4-Q11",
+            "R4-Q12",
+            "R4-Q13",
+            "R4-Q14"
+          ],
+          "pdf_pages": [18, 19],
+          "evidence_excerpt": "macho cabrío",
+          "note": null
+        },
+        {
+          "unit": "Media y Persia",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q12"],
+          "pdf_pages": [19],
+          "evidence_excerpt": "reyes de Media y de Persia",
+          "note": null
+        },
+        {
+          "unit": "Grecia",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q13"],
+          "pdf_pages": [19],
+          "evidence_excerpt": "rey de Grecia",
+          "note": null
+        },
+        {
+          "unit": "Gabriel",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q14"],
+          "pdf_pages": [19],
+          "evidence_excerpt": "Gabriel",
+          "note": null
+        }
+      ],
+      "DAN9": [
+        {
+          "unit": "setenta años",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q15"],
+          "pdf_pages": [20],
+          "evidence_excerpt": "setenta años",
+          "note": null
+        },
+        {
+          "unit": "setenta semanas",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q18"],
+          "pdf_pages": [20],
+          "evidence_excerpt": "setenta semanas",
+          "note": null
+        },
+        {
+          "unit": "siete semanas",
+          "status": "OBSERVED_OPTION_ONLY",
+          "report_question_refs": ["R4-Q18"],
+          "pdf_pages": [20],
+          "evidence_excerpt": "siete semanas aparece como opción",
+          "note": null
+        },
+        {
+          "unit": "sesenta y dos semanas",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R4-Q18", "R4-Q19"],
+          "pdf_pages": [20],
+          "evidence_excerpt": "sesenta y dos semanas",
+          "note": null
+        },
+        {
+          "unit": "reconstrucción",
+          "status": "OBSERVED_OPTION_ONLY",
+          "report_question_refs": ["R4-Q19"],
+          "pdf_pages": [20],
+          "evidence_excerpt": "reconstrucción del templo aparece como opción seleccionada",
+          "note": null
+        },
+        {
+          "unit": "Mesías Príncipe",
+          "status": "OBSERVED_PARTIAL_OPTION_ONLY",
+          "report_question_refs": ["R4-Q19", "R5-Q14"],
+          "pdf_pages": [20, 24],
+          "evidence_excerpt": "Mesías aparece en R4-Q19; Mesías Príncipe aparece como opción en R5-Q14",
+          "note": null
+        },
+        {
+          "unit": "después de las sesenta y dos semanas",
+          "status": "OBSERVED_DIRECT_ERROR",
+          "report_question_refs": ["R4-Q19"],
+          "pdf_pages": [20],
+          "evidence_excerpt": "después de las sesenta y dos semanas",
+          "note": null
+        },
+        {
+          "unit": "pacto",
+          "status": "NOT_OBSERVED_IN_SAMPLE",
+          "report_question_refs": [],
+          "pdf_pages": [],
+          "evidence_excerpt": null,
+          "note": "No aparece como unidad explícita en las 100 preguntas del reporte."
+        },
+        {
+          "unit": "ciudad y santuario",
+          "status": "NOT_OBSERVED_IN_SAMPLE",
+          "report_question_refs": [],
+          "pdf_pages": [],
+          "evidence_excerpt": null,
+          "note": "No aparece como par de unidades explícito en las 100 preguntas del reporte."
+        }
+      ],
+      "DAN10": [
+        {
+          "unit": "tercer año de Ciro",
+          "status": "OBSERVED_DIRECT_SLOW",
+          "report_question_refs": ["R5-Q1"],
+          "pdf_pages": [22],
+          "evidence_excerpt": "tercer año de Ciro",
+          "note": null
+        },
+        {
+          "unit": "tres semanas",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q2"],
+          "pdf_pages": [22],
+          "evidence_excerpt": "tres semanas",
+          "note": null
+        },
+        {
+          "unit": "Hidekel",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q3"],
+          "pdf_pages": [22],
+          "evidence_excerpt": "río Hidekel",
+          "note": null
+        },
+        {
+          "unit": "príncipe de Persia",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q5", "R5-Q6"],
+          "pdf_pages": [23],
+          "evidence_excerpt": "príncipe del reino de Persia",
+          "note": null
+        },
+        {
+          "unit": "veintiún días",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q5"],
+          "pdf_pages": [23],
+          "evidence_excerpt": "veintiún días",
+          "note": null
+        },
+        {
+          "unit": "Miguel",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q6"],
+          "pdf_pages": [23],
+          "evidence_excerpt": "Miguel, uno de los principales príncipes",
+          "note": null
+        },
+        {
+          "unit": "varón vestido de lino",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q3", "R5-Q4"],
+          "pdf_pages": [22],
+          "evidence_excerpt": "varón vestido de lino",
+          "note": null
+        }
+      ],
+      "DAN11": [
+        {
+          "unit": "norte y sur",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q9"],
+          "pdf_pages": [23],
+          "evidence_excerpt": "rey del sur; rey del norte",
+          "note": null
+        },
+        {
+          "unit": "secuencias",
+          "status": "OBSERVED_PARTIAL",
+          "report_question_refs": ["R5-Q7", "R5-Q8", "R5-Q9"],
+          "pdf_pages": [23],
+          "evidence_excerpt": "cuarto rey; reino del rey valiente; sur y norte en secuencia",
+          "note": null
+        },
+        {
+          "unit": "santuario",
+          "status": "OBSERVED_DIRECT_SLOW",
+          "report_question_refs": ["R5-Q10"],
+          "pdf_pages": [24],
+          "evidence_excerpt": "santuario",
+          "note": null
+        },
+        {
+          "unit": "abominación desoladora",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q10"],
+          "pdf_pages": [24],
+          "evidence_excerpt": "abominación desoladora",
+          "note": null
+        },
+        {
+          "unit": "lisonjas",
+          "status": "NOT_OBSERVED_IN_SAMPLE",
+          "report_question_refs": [],
+          "pdf_pages": [],
+          "evidence_excerpt": null,
+          "note": "No aparece como unidad explícita en las 100 preguntas del reporte."
+        },
+        {
+          "unit": "dios de las fortalezas",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q12"],
+          "pdf_pages": [24],
+          "evidence_excerpt": "dios de las fortalezas",
+          "note": null
+        },
+        {
+          "unit": "monte glorioso",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q13"],
+          "pdf_pages": [24],
+          "evidence_excerpt": "monte glorioso y santo",
+          "note": null
+        },
+        {
+          "unit": "direcciones y orden",
+          "status": "OBSERVED_PARTIAL",
+          "report_question_refs": ["R5-Q9", "R5-Q13"],
+          "pdf_pages": [23, 24],
+          "evidence_excerpt": "sur/norte; ubicación final entre los mares y el monte",
+          "note": null
+        }
+      ],
+      "DAN12": [
+        {
+          "unit": "Miguel, el gran príncipe",
+          "status": "OBSERVED_DIRECT_ERROR",
+          "report_question_refs": ["R5-Q14"],
+          "pdf_pages": [24],
+          "evidence_excerpt": "gran príncipe que está de parte de los hijos de tu pueblo",
+          "note": null
+        },
+        {
+          "unit": "tiempo de angustia",
+          "status": "NOT_OBSERVED_IN_SAMPLE",
+          "report_question_refs": [],
+          "pdf_pages": [],
+          "evidence_excerpt": null,
+          "note": "No aparece como unidad explícita en las 100 preguntas del reporte."
+        },
+        {
+          "unit": "resurrección",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q15"],
+          "pdf_pages": [25],
+          "evidence_excerpt": "despertados; vida eterna o vergüenza",
+          "note": null
+        },
+        {
+          "unit": "sellar el libro",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q16"],
+          "pdf_pages": [25],
+          "evidence_excerpt": "cerrar las palabras y sellar el libro",
+          "note": null
+        },
+        {
+          "unit": "1,290",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q17"],
+          "pdf_pages": [25],
+          "evidence_excerpt": "mil doscientos noventa días",
+          "note": null
+        },
+        {
+          "unit": "1,335",
+          "status": "OBSERVED_OPTION_ONLY",
+          "report_question_refs": ["R5-Q17"],
+          "pdf_pages": [25],
+          "evidence_excerpt": "mil trescientos treinta y cinco días aparece como opción",
+          "note": null
+        },
+        {
+          "unit": "heredad de Daniel",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R5-Q18"],
+          "pdf_pages": [25],
+          "evidence_excerpt": "recibir su heredad al fin de los días",
+          "note": null
+        }
+      ],
+      "DAN5": [
+        {
+          "unit": "Mene",
+          "status": "OBSERVED_OPTION_ONLY",
+          "report_question_refs": ["R3-Q12"],
+          "pdf_pages": [14],
+          "evidence_excerpt": "Mene, Mene, Tekel, Uparsin aparece dentro de una opción PR",
+          "note": null
+        },
+        {
+          "unit": "Tekel",
+          "status": "OBSERVED_DIRECT_SLOW",
+          "report_question_refs": ["R3-Q3"],
+          "pdf_pages": [12],
+          "evidence_excerpt": "Tekel",
+          "note": null
+        },
+        {
+          "unit": "Peres",
+          "status": "NOT_OBSERVED_IN_SAMPLE",
+          "report_question_refs": [],
+          "pdf_pages": [],
+          "evidence_excerpt": null,
+          "note": "No aparece como unidad explícita en las 100 preguntas del reporte."
+        },
+        {
+          "unit": "recompensa",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R3-Q16"],
+          "pdf_pages": [15],
+          "evidence_excerpt": "recompensa ofrecida por leer la escritura",
+          "note": null
+        },
+        {
+          "unit": "caída de Belsasar",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R3-Q4"],
+          "pdf_pages": [12],
+          "evidence_excerpt": "la misma noche fue muerto Belsasar",
+          "note": null
+        }
+      ],
+      "PR39_44": [
+        {
+          "unit": "frases exactas",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": [
+            "R1-Q15",
+            "R1-Q16",
+            "R2-Q12",
+            "R2-Q16",
+            "R3-Q14"
+          ],
+          "pdf_pages": [5, 10, 14],
+          "evidence_excerpt": "citas textuales o afirmaciones entrecomilladas bajo Según Profetas y Reyes",
+          "note": null
+        },
+        {
+          "unit": "quién dijo o hizo",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R2-Q17", "R3-Q13", "R3-Q15"],
+          "pdf_pages": [10, 14, 15],
+          "evidence_excerpt": "sabios; Ciro; reina madre",
+          "note": null
+        },
+        {
+          "unit": "por qué",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R1-Q16", "R2-Q16", "R3-Q17"],
+          "pdf_pages": [5, 10, 15],
+          "evidence_excerpt": "qué representaba; qué deseo llevó; qué motivó",
+          "note": null
+        },
+        {
+          "unit": "qué ocurrió primero",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R2-Q11", "R2-Q13"],
+          "pdf_pages": [9],
+          "evidence_excerpt": "recurrió primero; lo primero que hizo Daniel",
+          "note": null
+        },
+        {
+          "unit": "propósito",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R2-Q16"],
+          "pdf_pages": [10],
+          "evidence_excerpt": "deseo que llevó a construir la imagen",
+          "note": null
+        },
+        {
+          "unit": "consecuencia",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R2-Q19"],
+          "pdf_pages": [10],
+          "evidence_excerpt": "decreto posterior al horno",
+          "note": null
+        },
+        {
+          "unit": "detalles exclusivos de PR",
+          "status": "OBSERVED_DIRECT",
+          "report_question_refs": ["R1-Q15", "R2-Q11", "R3-Q9", "R5-Q20"],
+          "pdf_pages": [5, 9, 13, 26],
+          "evidence_excerpt": "marcadores explícitos Según Profetas y Reyes / El vigía invisible",
+          "note": null
+        },
+        {
+          "unit": "diferencias entre los seis capítulos",
+          "status": "PARTIAL_NO_PR_CHAPTER_LABEL",
+          "report_question_refs": ["R1-Q15", "R2-Q11", "R3-Q9", "R5-Q20"],
+          "pdf_pages": [5, 9, 13, 26],
+          "evidence_excerpt": "Hay bloques PR distribuidos, pero el reporte no etiqueta PR39, PR40, PR41, PR42, PR43 o PR44.",
+          "note": "Requiere mapeo posterior al ledger; no se puede atribuir una unidad a un capítulo PR específico desde este reporte."
+        }
+      ]
+    }
+  },
+  "patterns": [
+    {
+      "id": "error_concentration_late_rounds",
+      "type": "OBSERVED",
+      "observation": "Las 2/2 respuestas incorrectas están en las rondas 4 y 5; rondas 1-3 quedaron 60/60.",
+      "evidence": [
+        {
+          "pdf_page": 17,
+          "detail": "inicio Ronda 4: 19 correcta"
+        },
+        {
+          "pdf_page": 22,
+          "detail": "inicio Ronda 5: 19 correcta"
+        }
+      ]
+    },
+    {
+      "id": "adjacent_prophetic_interference",
+      "type": "INFERENCE",
+      "observation": "Los dos errores cruzan conceptos personales de Daniel 9 y Daniel 12: una secuencia temporal y una identidad de personaje.",
+      "evidence": [
+        {
+          "pdf_page": 20,
+          "detail": "R4-Q19"
+        },
+        {
+          "pdf_page": 24,
+          "detail": "R5-Q14"
+        }
+      ],
+      "caveat": "Hipótesis con solo dos errores, no diagnóstico causal."
+    },
+    {
+      "id": "round_4_latency_peak",
+      "type": "OBSERVED",
+      "observation": "Ronda 4 es el pico: media 5.119 s, 8/20 >5 s, 5/20 >6 s y total 102.382 s.",
+      "evidence": [
+        {
+          "pdf_page": 17,
+          "detail": "Ronda 4"
+        },
+        {
+          "pdf_page": 18,
+          "detail": "D7/D8"
+        },
+        {
+          "pdf_page": 20,
+          "detail": "D9 y error"
+        }
+      ]
+    },
+    {
+      "id": "chapter_latency_peak",
+      "type": "OBSERVED_WITH_MAPPING_CAVEAT",
+      "observation": "Entre bloques Daniel mapeados, D9 promedia 6.262 s (1 error), D8 5.505 s y D10 4.280 s.",
+      "evidence": [
+        {
+          "pdf_page": 18,
+          "detail": "D7/D8"
+        },
+        {
+          "pdf_page": 20,
+          "detail": "D9"
+        },
+        {
+          "pdf_page": 22,
+          "detail": "D10"
+        }
+      ],
+      "caveat": "Capítulo reconstruido por contenido/secuencia; PR no tiene capítulo explícito."
+    },
+    {
+      "id": "long_tail",
+      "type": "OBSERVED",
+      "observation": "20/100 ítems superan 5 s; 9/100 superan 6 s; 3/100 superan 8 s; 2/100 superan 10 s.",
+      "evidence": [
+        {
+          "pdf_page": 1,
+          "detail": "promedio y total"
+        },
+        {
+          "pdf_page": 17,
+          "detail": "inicio del bloque lento"
+        },
+        {
+          "pdf_page": 20,
+          "detail": "12.799 y 11.285 s"
+        }
+      ]
+    },
+    {
+      "id": "slow_correct_items",
+      "type": "OBSERVED",
+      "observation": "7 de los 9 ítems >6 s fueron correctos; la latencia es señal de práctica, no por sí sola de rechazo.",
+      "evidence": [
+        {
+          "pdf_page": 12,
+          "detail": "Tekel 6.666 s correcto"
+        },
+        {
+          "pdf_page": 18,
+          "detail": "D7/D8 lentos correctos"
+        },
+        {
+          "pdf_page": 22,
+          "detail": "tercer año de Ciro 7.826 s correcto"
+        }
+      ]
+    },
+    {
+      "id": "score_cost",
+      "type": "DERIVED",
+      "observation": "La suma de ganancias por ítem es 94,479.93 y redondea a 94,480; costo derivado de latencia en aciertos 3,520.07 puntos y de dos errores 2,000.",
+      "evidence": [
+        {
+          "pdf_page": 1,
+          "detail": "94,480 puntos"
+        },
+        {
+          "pdf_page": 2,
+          "detail": "nota de redondeo"
+        }
+      ],
+      "caveat": "Cálculo derivado; no es criterio editorial."
+    },
+    {
+      "id": "pr_chapter_visibility",
+      "type": "OBSERVED_LIMITATION",
+      "observation": "29 ítems llevan marcador PR/Profetas y Reyes, pero el reporte no asigna PR39-44 individualmente.",
+      "evidence": [
+        {
+          "pdf_page": 5,
+          "detail": "bloque PR"
+        },
+        {
+          "pdf_page": 9,
+          "detail": "bloque PR"
+        },
+        {
+          "pdf_page": 13,
+          "detail": "bloque PR"
+        },
+        {
+          "pdf_page": 26,
+          "detail": "bloque PR"
+        }
+      ],
+      "caveat": "No inferir cuotas PR39-44 desde esta muestra."
+    }
+  ],
+  "priority_matrix": [
+    {
+      "rank": 1,
+      "priority": "P0",
+      "target": "DAN9 - secuencia posterior a las sesenta y dos semanas",
+      "evidence_refs": ["R4-Q19"],
+      "pdf_pages": [20],
+      "rationale": "Error explícito y máxima latencia del reporte: 12.799 s.",
+      "action": "P0 de recuperación inmediata; revisar con contraste de orden y nueva verificación Sol antes de promoción."
+    },
+    {
+      "rank": 2,
+      "priority": "P0",
+      "target": "DAN12 - identidad de Miguel como gran príncipe",
+      "evidence_refs": ["R5-Q14"],
+      "pdf_pages": [24],
+      "rationale": "Error explícito (6.981 s) y confusión con Mesías Príncipe de Daniel 9.",
+      "action": "P0 de recuperación inmediata; contrastar Daniel 9/12 y volver a verificar Sol antes de promoción."
+    },
+    {
+      "rank": 3,
+      "priority": "P1",
+      "target": "DAN9 - frase temporal y llegada de Gabriel",
+      "evidence_refs": ["R4-Q20", "R4-Q17"],
+      "pdf_pages": [20, 21],
+      "rationale": "Dos correctas lentas: 11.285 s y 5.762 s; el bloque D9 encabeza la media por capítulo.",
+      "action": "Practicar secuencia y señales temporales; registrar como duda inferida, no como auto-reporte."
+    },
+    {
+      "rank": 4,
+      "priority": "P1",
+      "target": "DAN8 - localización y correspondencias del carnero/macho cabrío",
+      "evidence_refs": ["R4-Q8", "R4-Q9", "R4-Q13"],
+      "pdf_pages": [18, 19],
+      "rationale": "Máxima latencia correcta de D8 (9.029 s) y otras dos sobre 5 s.",
+      "action": "Repasar nombres propios y relaciones de interpretación en presentaciones distintas."
+    },
+    {
+      "rank": 5,
+      "priority": "P2",
+      "target": "DAN10 y DAN7 - cronología/actores",
+      "evidence_refs": ["R5-Q1", "R4-Q6", "R4-Q4"],
+      "pdf_pages": [17, 18, 22],
+      "rationale": "Tiempos altos de 7.826 s, 7.474 s y 5.817 s, todos correctos.",
+      "action": "Usar recuperación espaciada; no convertir latencia en rechazo factual."
+    },
+    {
+      "rank": 6,
+      "priority": "P2",
+      "target": "DAN5 y PR no etiquetado por capítulo",
+      "evidence_refs": ["R3-Q3", "R3-Q14", "R1-Q15", "R2-Q17"],
+      "pdf_pages": [5, 10, 12, 14],
+      "rationale": "Tekel (6.666 s), PR conversión (6.049 s) y dos ítems PR sobre 5 s.",
+      "action": "Añadir vigilancia y mapeo posterior; el reporte no autoriza cambios editoriales."
+    }
+  ],
+  "limitations": [
+    "El reporte contiene una sola traza de 100 preguntas de cinco rondas; no representa automáticamente las 3,873 preguntas del banco.",
+    "No incluye auto-reporte de dudas, confianza, segunda opción, tiempo de lectura, versión del banco ni referencias canónicas por pregunta.",
+    "Los tiempos >6 s se usan como proxy operacional de duda/lentitud porque el reporte no declara dudas explícitas.",
+    "El capítulo Daniel se mapea por contenido y secuencia del bloque; las preguntas de Profetas y Reyes no están etiquetadas PR39-PR44.",
+    "La extracción textual presenta glifos de reemplazo en algunos acentos; las páginas relevantes y los dos errores se verificaron visualmente.",
+    "No se usó el reporte para resolver ni corregir contenido bíblico, y no se modificaron bancos."
+  ]
+}

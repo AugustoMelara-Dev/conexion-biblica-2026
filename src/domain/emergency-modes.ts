@@ -1,5 +1,9 @@
 import type { Question, QuestionProgress, SessionConfig } from './types'
-import { FINAL_FILTER_CATALOG } from '@/data/filter-catalog'
+import {
+  V18_PERSONAL_REPAIR_IDS,
+  V18_VERIFIED_COMPETITIVE_IDS,
+  V18_VERIFIED_COVERAGE_IDS,
+} from '@/data/final-day-v18'
 
 export type EmergencyCategory =
   | 'COMPETITIVE_GOOD'
@@ -7,6 +11,8 @@ export type EmergencyCategory =
   | 'EXCLUDE_EMERGENCY'
 
 export type EmergencyModeId =
+  | 'emergency-last-day-coverage'
+  | 'emergency-last-day-repair'
   | 'emergency-pr-intensive'
   | 'emergency-daniel-contrast'
   | 'emergency-daniel-maintenance'
@@ -15,12 +21,8 @@ export type EmergencyModeId =
   | 'emergency-adversarial-simulation'
   | 'emergency-escudo-central'
 
-// Set of semantically verified competitive questions (tier COMPETITIVE_ACCEPT, non-provisional, non-blind)
-export const VERIFIED_COMPETITIVE_IDS = new Set<string>(
-  FINAL_FILTER_CATALOG
-    .filter((item) => item.tier === 'COMPETITIVE_ACCEPT' && !item.provisional && !item.blind)
-    .map((item) => item.id)
-)
+// Only IDs that passed the V18 Sol + blind + stored-answer gates.
+export const VERIFIED_COMPETITIVE_IDS = V18_VERIFIED_COMPETITIVE_IDS
 
 export function classifyEmergencyQuestion(q: Question): EmergencyCategory {
   const options = q.options ?? []
@@ -183,7 +185,17 @@ export function selectEmergencySession(
   let totalSeconds: number | null = null
   let mode: SessionConfig['mode'] = 'learn'
 
-  if (modeId === 'emergency-pr-intensive') {
+  if (modeId === 'emergency-last-day-coverage') {
+    title = 'Último día — cobertura V18'
+    description = 'Preguntas que superaron las puertas V18 disponibles; el objetivo de 1,000 sigue incompleto.'
+    const pool = allQuestions.filter((q) => V18_VERIFIED_COVERAGE_IDS.has(q.id))
+    selected = selectWithUniqueFacts(pool, pool.length, progress, seed)
+  } else if (modeId === 'emergency-last-day-repair') {
+    title = 'Reparación personal V18'
+    description = 'Daniel 9 y 12 verificados para reforzar los errores y demoras del reporte AAH.'
+    const pool = allQuestions.filter((q) => V18_PERSONAL_REPAIR_IDS.has(q.id))
+    selected = selectWithUniqueFacts(pool, pool.length, progress, seed)
+  } else if (modeId === 'emergency-pr-intensive') {
     title = 'PR39–44 Intensivo'
     description =
       'Aprendizaje, cobertura y fijación de detalles. Exactamente 25 preguntas por cada capítulo (PR 39 al 44).'
@@ -328,31 +340,18 @@ export function selectEmergencySession(
   ) {
     title = 'Simulación adversarial'
     description =
-      '100 preguntas de máxima discriminación (50 PR / 50 Daniel 7–12) con tier COMPETITIVE_ACCEPT verificado y 100 hechos distintos.'
+      'Subconjunto disponible de máxima discriminación, verificado por el pipeline V18.'
     mode = 'simulation'
     perQuestionSeconds = 25
-    totalSeconds = 2500
 
-    const compPR = cleanPool.filter(
-      (q) =>
-        q.source.work === 'Profetas y Reyes' &&
-        q.source.chapter >= 39 &&
-        q.source.chapter <= 44 &&
-        VERIFIED_COMPETITIVE_IDS.has(q.id)
+    const verifiedPool = allQuestions.filter((q) => VERIFIED_COMPETITIVE_IDS.has(q.id))
+    totalSeconds = verifiedPool.length * perQuestionSeconds
+    selected = selectWithUniqueFacts(
+      verifiedPool,
+      verifiedPool.length,
+      progress,
+      seed
     )
-    const compDan = cleanPool.filter(
-      (q) =>
-        q.source.work === 'Daniel' &&
-        q.source.chapter >= 7 &&
-        q.source.chapter <= 12 &&
-        VERIFIED_COMPETITIVE_IDS.has(q.id)
-    )
-
-    const usedFacts = new Set<string>()
-    const selPR = selectWithUniqueFacts(compPR, 50, progress, seed + 10, usedFacts)
-    const selDan = selectWithUniqueFacts(compDan, 50, progress, seed + 20, usedFacts)
-
-    selected = shuffleWithRng([...selPR, ...selDan], seed)
   }
 
   // Compute realized summary

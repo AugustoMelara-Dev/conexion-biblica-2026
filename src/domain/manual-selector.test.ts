@@ -4,6 +4,8 @@ import {
   selectManualSession,
 } from "@/domain/manual-selector"
 import type { Question, QuestionProgress, SessionConfig } from "@/domain/types"
+import { FINAL_FILTER_CATALOG } from "@/data/filter-catalog"
+import { V18_AUDIT_STATUS_BY_ID } from "@/data/final-day-v18"
 
 function mockQuestion(partial: Partial<Question>): Question {
   return {
@@ -301,5 +303,59 @@ describe("manual-selector", () => {
     expect(counts.danielEligible).toBe(0)
     expect(counts.chapterCounts["PR39"]).toBe(1)
     expect(counts.chapterCounts["PR43"]).toBe(1)
+  })
+
+  it("no convierte dificultad en estado de auditoría", () => {
+    const unverified = mockQuestion({ id: "HARD-NOT-AUDITED", difficultyBand: "HARD" })
+    delete unverified.tier
+    const config: SessionConfig = {
+      mode: "learn",
+      count: 1,
+      sourceWorks: [],
+      chapters: [],
+      difficulties: [1, 2, 3, 4, 5],
+      types: [],
+      statuses: ["all"],
+      shuffleQuestions: false,
+      shuffleOptions: false,
+      perQuestionSeconds: null,
+      totalSeconds: null,
+      tierFilter: "coverage",
+    }
+    expect(selectManualSession([unverified], config, emptyProgress, 1).success).toBe(false)
+    expect(computeFacetedCounts(config, emptyProgress, [unverified]).totalEligible).toBe(0)
+  })
+
+  it("excluye del catálogo facetado tipos que el selector manual no ofrece", () => {
+    const unsupported = mockQuestion({ id: "MULTI-NOT-SUPPORTED", type: "multi_select" })
+    const config: SessionConfig = {
+      mode: "learn",
+      count: 1,
+      sourceWorks: ["Profetas y Reyes"],
+      chapters: [],
+      difficulties: [1, 2, 3, 4, 5],
+      types: ["single_choice", "fill_blank", "true_false"],
+      statuses: ["all"],
+      shuffleQuestions: false,
+      shuffleOptions: false,
+      perQuestionSeconds: null,
+      totalSeconds: null,
+      tierFilter: "all",
+    }
+
+    expect(computeFacetedCounts(config, emptyProgress, [unsupported]).totalEligible).toBe(0)
+  })
+
+  it("el catálogo final expone tier solo para IDs V18 auditados", () => {
+    const withTier = FINAL_FILTER_CATALOG.filter((item) => item.tier !== null)
+    expect(withTier).toHaveLength(Object.keys(V18_AUDIT_STATUS_BY_ID).length)
+    for (const item of withTier) {
+      const status = V18_AUDIT_STATUS_BY_ID[item.id]
+      expect(item.tier).toBe(
+        status === "VERIFIED_COMPETITIVE_SOL"
+          ? "COMPETITIVE_ACCEPT"
+          : "COVERAGE_ACCEPT",
+      )
+    }
   })
 })

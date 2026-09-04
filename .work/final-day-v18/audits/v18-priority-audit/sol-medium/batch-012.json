@@ -1,0 +1,996 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-012",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-012.json",
+  "input_sha256": "48eb0b72f410fdbdc748cf88d2e9ad8f3f145f9159c29529307623ac7574838a",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/sol_audit_001",
+    "conversation_id": "/root/sol_audit_001",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-067",
+      "selected_option_index": 0,
+      "selected_option_text": "Tener su espíritu, sacar fuerza de la misma fuente, ejercer dominio propio y revelar la misma gracia",
+      "exact_supporting_phrase": "pueden tener el espíritu que dominó a Daniel; pueden sacar fuerza de la misma fuente, poseer el mismo poder de dominio propio y revelar la misma gracia en su vida",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Tener su espíritu, sacar fuerza de la misma fuente, ejercer dominio propio y revelar la misma gracia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Resume fielmente las cuatro posibilidades enumeradas en la cita."
+        },
+        {
+          "text": "Evitar toda prueba, eludir cada deber, escapar de la oposición y vivir sin circunstancias adversas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La fuente contempla circunstancias desfavorables; no promete evitarlas."
+        },
+        {
+          "text": "Adoptar su nombre, recibir el mismo cargo, heredar su linaje y habitar la misma ciudad",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Ninguno de esos elementos figura entre las posibilidades citadas."
+        },
+        {
+          "text": "Buscar ventajas naturales, confiar en sus talentos, obtener privilegios y procurar la aprobación humana",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La cita atribuye la fuerza a la misma fuente y a la gracia, no a ventajas o aprobación."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta reúne exactamente las cuatro posibilidades de la cita, pero el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué conjunto de posibilidades está disponible para los jóvenes actuales al seguir el ejemplo de Daniel?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "ee25acb3ced4249509b44ba2d6e157653b51c9e64ea4230939d97f973446470f",
+      "output_sha256": "d63a04ea3cdca4f905483a1b726271e4745a40fcfa7d1571ff8f8e6e056b025a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-068",
+      "selected_option_index": 0,
+      "selected_option_text": "parecer",
+      "exact_supporting_phrase": "muchachos en quienes no hubiese tacha alguna, y de buen parecer",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "parecer",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Es la palabra exacta que completa «de buen parecer»."
+        },
+        {
+          "text": "nombre",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita dice «parecer», no «nombre»."
+        },
+        {
+          "text": "rango",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita dice «parecer», no «rango»."
+        },
+        {
+          "text": "humor",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita dice «parecer», no «humor»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es una recuperación literal inequívoca, pero falta la atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, además de no tener tacha, los muchachos seleccionados debían ser de buen ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "aa09cc6b5bc1ea786accad98d56f11e248e719e3927468f91d06246357dfe10f",
+      "output_sha256": "327be15fd8a62cb0669ccde4ac599692332af88296cf19c06d03a14789c1536a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-069",
+      "selected_option_index": 0,
+      "selected_option_text": "Samuel",
+      "exact_supporting_phrase": "Yo honraré a los que me honran. 1 Samuel 2:30.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Samuel",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La referencia citada es explícitamente 1 Samuel 2:30."
+        },
+        {
+          "text": "Reyes",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La cita no atribuye la referencia a 1 Reyes."
+        },
+        {
+          "text": "Daniel",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La cita no atribuye la referencia a Daniel."
+        },
+        {
+          "text": "Crónicas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La cita no atribuye la referencia a 1 Crónicas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La referencia es literal y única, pero el enunciado de Profetas y Reyes carece de la delimitación requerida.",
+      "suggested_rewrite": "Según Profetas y Reyes, la promesa «Yo honraré a los que me honran» se cita de 1 ____ 2:30.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "83240e0c0f547ca53cdb8523f7263aaa1014e02353860ed17337cd7e1025d587",
+      "output_sha256": "f07a6b641c0276031bcecc7615567dc7cdf77e631c249e0593270a9a4170aada"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-071",
+      "selected_option_index": 3,
+      "selected_option_text": "nobleza",
+      "exact_supporting_phrase": "insignias de la nobleza con que la naturaleza honra a los que obedecen sus leyes",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "cultura",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "La cita usa «nobleza», no «cultura»."
+        },
+        {
+          "text": "autoridad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "La cita usa «nobleza», no «autoridad»."
+        },
+        {
+          "text": "riqueza",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "La cita usa «nobleza», no «riqueza»."
+        },
+        {
+          "text": "nobleza",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "Es el sustantivo exacto de la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Solo «nobleza» completa la frase fuente, pero el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, los certificados de buenos hábitos eran también insignias de la ____ con que la naturaleza honra la obediencia a sus leyes.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "0aad7f26e92d41479a82d8507bc77d33695b4a93c01dee14e29a90ef673cda5f",
+      "output_sha256": "1752915b207cad1cea584d0303ceef502590801457278137602c533d9dc3bd10"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-072",
+      "selected_option_index": 2,
+      "selected_option_text": "sabiduría",
+      "exact_supporting_phrase": "Se relacionaron con la Fuente de toda sabiduría",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "influencia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita dice «sabiduría», no «influencia»."
+        },
+        {
+          "text": "riqueza",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita dice «sabiduría», no «riqueza»."
+        },
+        {
+          "text": "sabiduría",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Es la palabra exacta que completa la expresión."
+        },
+        {
+          "text": "cultura",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita dice «sabiduría», no «cultura»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta aparece literalmente, pero el enunciado no delimita la fuente con «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, Daniel y sus compañeros se relacionaron con la Fuente de toda ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "ffe9273592714c5d361ae0d12783ad4c072fa253bdfd4d55bedfa25a10a4195e",
+      "output_sha256": "8571f768c4d084d1a70eea0d8a58d95377edd8b5a5f10eb502759e30efdbfbbe"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-073",
+      "selected_option_index": 0,
+      "selected_option_text": "noble",
+      "exact_supporting_phrase": "fortalecerá todo propósito fiel, toda resolución noble",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "noble",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "Es el adjetivo exacto aplicado a la resolución."
+        },
+        {
+          "text": "cómoda",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "La cita dice «noble», no «cómoda»."
+        },
+        {
+          "text": "secreta",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "La cita dice «noble», no «secreta»."
+        },
+        {
+          "text": "popular",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "La cita dice «noble», no «popular»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta literal es única, pero falta la atribución obligatoria a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, el Espíritu de Dios fortalecerá todo propósito fiel y toda resolución ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "9dc2565800ea76cde803121a7a54fd4391435f40600f07270705b369de184822",
+      "output_sha256": "6bf536d1e77ee50e091731e35f4b6f0bf0aea347bf8574077869cc45f1d4f14b"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-074",
+      "selected_option_index": 3,
+      "selected_option_text": "ambiciosos",
+      "exact_supporting_phrase": "satisfacer sus anhelos ambiciosos",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "espirituales",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "La cita califica los anhelos como ambiciosos, no espirituales."
+        },
+        {
+          "text": "modestos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "«Modestos» contradice «ambiciosos»."
+        },
+        {
+          "text": "altruistas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "La cita no califica esos anhelos como altruistas."
+        },
+        {
+          "text": "ambiciosos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "Es el calificativo exacto empleado en la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La palabra correcta es inequívoca, pero el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, al esperar una obra grande donde lucir sus supuestos talentos, muchos buscan satisfacer anhelos ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "0f11959ebe38229b249e42fe993b4cfee45bc3a135bab6300df5bbd745cc6b8a",
+      "output_sha256": "703431145329e00b64cfe2d990d4056ce62287d2c2edf21274099366a5c8170a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-075",
+      "selected_option_index": 0,
+      "selected_option_text": "superior",
+      "exact_supporting_phrase": "la sujeción de la naturaleza inferior a la superior",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "superior",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "Es el término exacto contrapuesto a «naturaleza inferior»."
+        },
+        {
+          "text": "material",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "La cita dice «superior», no «material»."
+        },
+        {
+          "text": "popular",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "La cita dice «superior», no «popular»."
+        },
+        {
+          "text": "exterior",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "La cita dice «superior», no «exterior»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La oposición inferior-superior hace única la respuesta, pero falta la atribución de la fuente.",
+      "suggested_rewrite": "Según Profetas y Reyes, la formación de un carácter noble exige sujetar la naturaleza inferior a la ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "9bae26e6b24edccaa8628b18cfe4ab643ff956bdcbe33dbf61537a4e20a27b7a",
+      "output_sha256": "e6107aa1ea294284490cdc95b581e2b5b4d190f996cc6dcbdcbb4e9c1bad4125"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-076",
+      "selected_option_index": 0,
+      "selected_option_text": "divina",
+      "exact_supporting_phrase": "La facultad regia de la razón, santificada por la gracia divina, debe regir la vida.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "divina",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Es el adjetivo exacto que califica la gracia."
+        },
+        {
+          "text": "real",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La cita dice «gracia divina», no «real»."
+        },
+        {
+          "text": "civil",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La cita dice «gracia divina», no «civil»."
+        },
+        {
+          "text": "humana",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "«Humana» contradice el calificativo «divina»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es literal y única, pero el enunciado no incluye la atribución requerida.",
+      "suggested_rewrite": "Según Profetas y Reyes, la facultad regia de la razón debe ser santificada por la gracia ____ antes de regir la vida.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "d888f9368f739e3e1b34779a0685ba66ae06a719b55216ee8319454ae556e431",
+      "output_sha256": "7247a0f10d16f9d864b5646b61ba920680f07536e80c4c7b8ea11c7ee96fe2fc"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-077",
+      "selected_option_index": 1,
+      "selected_option_text": "pasiones",
+      "exact_supporting_phrase": "Los notables hebreos fueron hombres de pasiones como las nuestras",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "riquezas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 7",
+          "exact_reason": "La cita dice «pasiones», no «riquezas»."
+        },
+        {
+          "text": "pasiones",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 7",
+          "exact_reason": "Es la palabra exacta de la cita."
+        },
+        {
+          "text": "lenguas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 7",
+          "exact_reason": "La cita dice «pasiones», no «lenguas»."
+        },
+        {
+          "text": "visiones",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 7",
+          "exact_reason": "La cita dice «pasiones», no «visiones»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta literal no admite alternativa, pero el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, los notables hebreos fueron hombres de ____ como las nuestras.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "4f60439b19a02958608967c39db6aab1ccbd0bab23a6a2c2c7a3993403e26df0",
+      "output_sha256": "60bd76bdd7627a868ad8a9204ca5f1a40f18de8855bc99c663e0aca6af53d08d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-078",
+      "selected_option_index": 0,
+      "selected_option_text": "constante",
+      "exact_supporting_phrase": "Mediante una determinación enérgica y una vigilancia constante, pueden resistir toda tentación",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "constante",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Es el adjetivo exacto aplicado a la vigilancia."
+        },
+        {
+          "text": "secreta",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La cita dice «constante», no «secreta»."
+        },
+        {
+          "text": "improvisada",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La cita dice «constante», no «improvisada»."
+        },
+        {
+          "text": "ocasional",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "«Ocasional» contradice «constante»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La palabra correcta aparece literalmente, pero falta «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, además de una determinación enérgica, resistir toda tentación exige una vigilancia ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "715c30ee3b330b248ac0d0d54d6cfd651021d0406c715b561b5e6f433960560a",
+      "output_sha256": "cf8534d91a3588b0c0351067dda72e998595bfbc6139a981db05f658cd41c031"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-080",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "los hebreos, juntamente con los otros candidatos, fueron examinados para el servicio del reino",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "La cita dice que fueron examinados juntamente con los otros candidatos."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "«Por separado» contradice explícitamente «juntamente»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación invierte un dato explícito, pero el enunciado no atribuye la fuente.",
+      "suggested_rewrite": "Según Profetas y Reyes, los hebreos fueron examinados por separado, sin los otros candidatos al servicio del reino.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "987892f89cf7a2c9e93de3873847309092e00d8200294ab154c52004004d6d4f",
+      "output_sha256": "d77d414c1fbcdac30457305dad828018f80be283ffbe2e1c7af5a0bce18247a5"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-081",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "el verdadero éxito no es resultado de la casualidad ni del destino",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La cita niega expresamente que el éxito sea resultado del destino."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La negación de la fuente hace falso el enunciado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La proposición contradice literalmente la fuente, pero falta la atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, en cualquier ramo de trabajo, el verdadero éxito es resultado del destino.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "528017f37641aff79737f45202ed80916af3b54fbbbccedb36112b7763a0aad9",
+      "output_sha256": "0807a636f2460cb1c63e889d271fede8200c033d8cf613b34378323c83943882"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-082",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "El Señor mide con exactitud toda posibilidad de servir.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "«Aproximada» contradice la medida exacta afirmada por la cita."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "La fuente afirma exactitud, por lo que el enunciado es falso."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La oposición aproximada-exacta resuelve el ítem, pero el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, el Señor calcula de manera aproximada, no exacta, las posibilidades de servir.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "1fed64df7f2f773c769ffe91a7ec781cff8818169e044e239a60f30adcd556fc",
+      "output_sha256": "3b7b91502895dc832ae9c796a780e11fafd05bb36ca49e76fd253cb20b1c3fa9"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-083",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "encauce sus tentaciones para debilitar y degradar las facultades físicas",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La fuente dice debilitar y degradar, no fortalecer y dignificar."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "El enunciado invierte ambos verbos de la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación es directamente contraria a la cita, pero no delimita su fuente.",
+      "suggested_rewrite": "Según Profetas y Reyes, el adversario dirige sus tentaciones a fortalecer y dignificar las facultades físicas.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "cb6f6f00fea2fe2eb2e43389128cfea6574e814bdf5f902acbfe67e66df8e4af",
+      "output_sha256": "fc984af154e7789be5202f88b29a876354011a67fe8ebdf200bca03cfaa65d2e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-084",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "En el antiguo ritual que era el Evangelio en símbolos",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 6",
+          "exact_reason": "El enunciado reproduce el sentido literal de la frase."
+        },
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 6",
+          "exact_reason": "Contradice la equivalencia explícita entre ritual y Evangelio en símbolos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación está expresamente sustentada, pero el enunciado carece de la atribución requerida.",
+      "suggested_rewrite": "Según Profetas y Reyes, el antiguo ritual se presenta como el Evangelio expresado en símbolos.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "b1b72266fff2de630df3c13fae3ae6c636b5eeb8156721c313b3767b88af1e76",
+      "output_sha256": "09bc21d0158d92464b2a80d8dcd79e007379264d575b3ba471a7fdc6c0b4a7e7"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-085",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Aunque rodeados por tentaciones [...] pueden permanecer por la gracia de Dios firmes en su propósito de honrar a Dios.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "El enunciado resume fielmente la concesión, el medio y el propósito de la cita."
+        },
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Contradice la posibilidad afirmada de permanecer firmes por la gracia de Dios."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La proposición coincide con la cita, pero el enunciado no está atribuido explícitamente a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, aun rodeados de tentaciones sensuales, los jóvenes pueden permanecer firmes por la gracia de Dios en su propósito de honrarlo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "c955a4306746a73c7a7a6c7365520c8e708a104be2d04e8f8842254ce687d9eb",
+      "output_sha256": "9b01b6efd1ecc8ee232aced809c607f2d19364c0a6d8a2e12c5d75a92c7066a2"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-086",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "Poco se imaginaban cuando se despedían del hogar de su infancia cuál sería su alto destino.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "«Poco se imaginaban» contradice que conocieran plenamente su destino."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "La cita afirma conocimiento escaso, no pleno."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación es inequívocamente falsa, pero omite la atribución a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, al despedirse del hogar de su infancia, los jóvenes conocían plenamente el alto destino que les esperaba.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "20dda4f3c601ae9ca44482895c030fc389df72690b8dc788c9572d4575af30cc",
+      "output_sha256": "73fc34235e748789e995b774ace9e47b728a798fcaba8fdc6f128d7d735370ec"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-087",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Honraron a Dios en la prosperidad y en la adversidad; y Dios los honró a ellos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La cita afirma la secuencia recogida en el enunciado."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "El enunciado reproduce fielmente la relación entre ambas acciones."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La proposición es literalmente verdadera, pero no incluye «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, después de que los jóvenes honraron a Dios, Dios los honró a ellos.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "7ee1c1b14dea6ee413c557a5dd196dda8e6cffe1be5ba1b694c85f3fe3a3f1c2",
+      "output_sha256": "f72d77c2758d0e6f581cf3898e5040834e22ff1400ccda33d6fa16f6c2ab5bc2"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-088",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "su carácter fué probado de una manera decisiva",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "«Indecisa» contradice el calificativo «decisiva» de la cita."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La prueba fue decisiva, por lo que el enunciado es falso."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La oposición indecisa-decisiva resuelve el ítem, pero falta la atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, al comienzo de su carrera, el carácter de los jóvenes fue probado de una manera indecisa.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:29:47.263Z",
+      "input_content_sha256": "f9868491f40a00c81d4a073864327f380b099c97ae3a61461c7287efdecc167b",
+      "output_sha256": "b0d1ab0f8c5e9bbd8dbea8abc77457d3d432be7bef69d5a3fce58faefd7079b0"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 0,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 20,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

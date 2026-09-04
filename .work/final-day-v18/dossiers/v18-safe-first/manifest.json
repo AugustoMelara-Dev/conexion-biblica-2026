@@ -1,0 +1,113 @@
+{
+  "schema_version": "final-day-v18-dossier-manifest-1.0",
+  "audit_run_id": "v18-safe-first",
+  "selection_mode": "safe-first",
+  "priority_order": [
+    "PR39",
+    "PR40",
+    "PR41",
+    "PR42",
+    "PR43",
+    "PR44",
+    "DAN9",
+    "DAN12",
+    "DAN7",
+    "DAN8",
+    "DAN10",
+    "DAN11"
+  ],
+  "batch_min": 20,
+  "batch_max": 20,
+  "selected_count": 80,
+  "valid_count": 80,
+  "batched_count": 80,
+  "invalid_count": 0,
+  "out_of_batch_count": 0,
+  "outside_priority_count": 1840,
+  "batch_count": 4,
+  "batch_sizes": [
+    20,
+    20,
+    20,
+    20
+  ],
+  "question_errors": [],
+  "source_errors": [],
+  "source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+  "input_question_count": 3873,
+  "excluded_count": 3793,
+  "selected_invalid_count": 0,
+  "batches": [
+    {
+      "batch_id": "batch-001",
+      "file": "batch-001.json",
+      "item_count": 20,
+      "content_sha256": "018712db5483b20ca015496183bf3ffbc8d1f43ce0d6a55cc46630ebafcb0703"
+    },
+    {
+      "batch_id": "batch-002",
+      "file": "batch-002.json",
+      "item_count": 20,
+      "content_sha256": "5932378d73dd420864dab6940e637fe0481850f319800074a69b629b27acdacb"
+    },
+    {
+      "batch_id": "batch-003",
+      "file": "batch-003.json",
+      "item_count": 20,
+      "content_sha256": "575e041935948f42d7ea47c348956763da1786b6085111d4c6c145c596e81888"
+    },
+    {
+      "batch_id": "batch-004",
+      "file": "batch-004.json",
+      "item_count": 20,
+      "content_sha256": "27f2ae6a04e806edf294a61226c094e6d59f536198db9ddb0158e649d35d9a2d"
+    }
+  ],
+  "blind_batches": [
+    {
+      "batch_id": "batch-001",
+      "file": "batch-001.json",
+      "item_count": 20,
+      "content_sha256": "60b6b799fc26526e7c2ab6c58bebe96d6311b624a65a71f0bd3de2adda593ff9"
+    },
+    {
+      "batch_id": "batch-002",
+      "file": "batch-002.json",
+      "item_count": 20,
+      "content_sha256": "30252dd026fbd41a56d704fedbcbe095c23f1469f9558b7752c2e8499e8fa79b"
+    },
+    {
+      "batch_id": "batch-003",
+      "file": "batch-003.json",
+      "item_count": 20,
+      "content_sha256": "40f8aa996dacb642a987bbb92cb50a4cd27dfcc8e6b99dcdd262c91df58c22fa"
+    },
+    {
+      "batch_id": "batch-004",
+      "file": "batch-004.json",
+      "item_count": 20,
+      "content_sha256": "881ac8445f813a9ca25f1957b7411ba819a57f6b61701a7dbcd19644dc6c1bc4"
+    }
+  ],
+  "invalid_items_file": "invalid-items.json",
+  "invalid_items_sha256": "f0801f7625282a3b4d9cea2c0a5ae477876bff90ae5320d062b4e16319b284eb",
+  "safe_first_pr_delimiter": "Según Profetas y Reyes",
+  "safe_first_pr_count": 60,
+  "safe_first_daniel_count": 20,
+  "safe_first_candidate_count": 367,
+  "safe_first_valid_candidate_count": 367,
+  "safe_first_invalid_candidate_count": 0,
+  "safe_first_unselected_candidate_count": 287,
+  "safe_first_excluded_count": 3793,
+  "outside_scope_count": 1840,
+  "unknown_priority_count": 0,
+  "pr_without_delimiter_count": 1666,
+  "question_error_count": 0,
+  "safe_first_daniel_priority": [
+    "DAN9",
+    "DAN12"
+  ],
+  "ocr_path": "C:\\Users\\melar\\OneDrive\\Desktop\\Conexion biblica\\.worktrees\\operacion-nacional-ultimo-dia-v18\\scripts\\source-cache\\final-v7\\ocr-pages.json",
+  "ocr_status": "VALID",
+  "ocr_source_sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3"
+}

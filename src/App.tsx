@@ -430,8 +430,8 @@ export function App() {
         danielCount: selected.filter((q) => q.source.work === "Daniel").length,
         chapterCounts: selectionSummary.chapterCounts ?? {},
         familyCounts: selectionSummary.familyCounts ?? { single_choice: 0, fill_blank: 0, true_false: 0 },
-        competitiveCount: selected.filter((q) => q.tier === "COMPETITIVE_ACCEPT" || q.difficultyBand === "HARD" || q.difficultyBand === "EXPERT").length,
-        coverageCount: selected.filter((q) => q.tier === "COVERAGE_ACCEPT" || q.difficultyBand === "BASIC" || q.difficultyBand === "MEDIUM").length,
+        competitiveCount: selected.filter((q) => q.tier === "COMPETITIVE_ACCEPT").length,
+        coverageCount: selected.filter((q) => q.tier === "COVERAGE_ACCEPT").length,
       }
       const persisted: ActiveRound = {
         id: "active",

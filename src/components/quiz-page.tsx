@@ -839,7 +839,7 @@ export function QuizPage({
             data-questions-count={questions.length}
             data-pr-count={questions.filter((q) => q.source.work === "Profetas y Reyes").length}
             data-dan-count={questions.filter((q) => q.source.work === "Daniel").length}
-            data-competitive-count={questions.filter((q) => q.tier === "COMPETITIVE_ACCEPT" || q.difficultyBand === "HARD" || q.difficultyBand === "EXPERT").length}
+            data-competitive-count={questions.filter((q) => q.tier === "COMPETITIVE_ACCEPT").length}
           >
             {roundContractTitle}
           </div>

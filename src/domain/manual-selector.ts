@@ -31,6 +31,12 @@ export type FacetedCounts = {
   }
 }
 
+function isFilterCatalogQuestionType(
+  type: Question["type"],
+): type is FilterCatalogItem["type"] {
+  return type === "single_choice" || type === "fill_blank" || type === "true_false"
+}
+
 export function filterCatalogItemMatches(
   item: FilterCatalogItem,
   config: SessionConfig,
@@ -60,11 +66,7 @@ export function filterCatalogItemMatches(
       return false
     }
   } else if (tierMode === "coverage") {
-    if (
-      item.tier !== "COVERAGE_ACCEPT" &&
-      item.difficultyBand !== "BASIC" &&
-      item.difficultyBand !== "MEDIUM"
-    ) {
+    if (item.tier !== "COVERAGE_ACCEPT") {
       return false
     }
   } else if (config.difficultyBands && config.difficultyBands.length > 0) {
@@ -122,7 +124,9 @@ export function computeFacetedCounts(
 
   const catalog: FilterCatalogItem[] =
     customQuestions && customQuestions.length > 0 && (!customQuestions[0].bankId || customQuestions[0].bankId !== "BANCO_UNICO_CONEXION_BIBLICA_2026" || customQuestions.length < 100)
-      ? customQuestions.map((q) => ({
+      ? customQuestions.flatMap((q): FilterCatalogItem[] => {
+          if (!isFilterCatalogQuestionType(q.type)) return []
+          return [{
           id: q.id,
           factId: q.factId ?? q.factKey,
           sourceUnitId: q.sourceUnitId ?? q.id,
@@ -132,10 +136,11 @@ export function computeFacetedCounts(
           family: q.family ?? q.type,
           difficulty: q.difficulty,
           difficultyBand: (q.difficultyBand ?? "MEDIUM") as any,
-          tier: (q.tier ?? (q.difficultyBand === "HARD" || q.difficultyBand === "EXPERT" ? "COMPETITIVE_ACCEPT" : "COVERAGE_ACCEPT")) as any,
+          tier: q.tier ?? null,
           provisional: Boolean(q.metadata?.provisional),
           blind: Boolean(q.blindPool || q.blindFinalPool),
-        }))
+          }]
+        })
       : FINAL_FILTER_CATALOG
 
   for (const item of catalog) {
@@ -161,11 +166,7 @@ export function computeFacetedCounts(
     if (filterCatalogItemMatches(item, baseConfig, progressMap)) {
       // Tier facets
       tierCounts.all++
-      if (
-        item.tier === "COVERAGE_ACCEPT" ||
-        item.difficultyBand === "BASIC" ||
-        item.difficultyBand === "MEDIUM"
-      ) {
+      if (item.tier === "COVERAGE_ACCEPT") {
         tierCounts.coverage++
       }
       if (
@@ -276,11 +277,7 @@ export function selectManualSession(
         return false
       }
     } else if (tierMode === "coverage") {
-      if (
-        q.tier !== "COVERAGE_ACCEPT" &&
-        q.difficultyBand !== "BASIC" &&
-        q.difficultyBand !== "MEDIUM"
-      ) {
+      if (q.tier !== "COVERAGE_ACCEPT") {
         return false
       }
     } else if (config.difficultyBands && config.difficultyBands.length > 0) {
@@ -358,13 +355,9 @@ export function selectManualSession(
     if (q.source.work === "Profetas y Reyes") prCount++
     else danielCount++
 
-    if (
-      q.tier === "COMPETITIVE_ACCEPT" ||
-      q.difficultyBand === "HARD" ||
-      q.difficultyBand === "EXPERT"
-    ) {
+    if (q.tier === "COMPETITIVE_ACCEPT") {
       competitiveCount++
-    } else {
+    } else if (q.tier === "COVERAGE_ACCEPT") {
       coverageCount++
     }
 

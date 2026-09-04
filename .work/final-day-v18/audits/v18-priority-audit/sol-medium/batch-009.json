@@ -1,0 +1,1020 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-009",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-009.json",
+  "input_sha256": "355ad6b50d00324567357f9ff7d52ba1fb64c2dda70e882aca8a7f448431615b",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/sol_audit_001",
+    "conversation_id": "/root/sol_audit_001",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-007",
+      "selected_option_index": 1,
+      "selected_option_text": "El alejamiento de Israel respecto de Dios",
+      "exact_supporting_phrase": "las mismas humillaciones que había acarreado la forma en que Israel se había desviado de él",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "La falta de educación caldea",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La cita no atribuye las humillaciones a falta de educación."
+        },
+        {
+          "text": "El alejamiento de Israel respecto de Dios",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Parafrasea directamente que Israel se había desviado de Dios."
+        },
+        {
+          "text": "La fidelidad excesiva de los cautivos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La fuente presenta a los leales como medio del testimonio, no como causa de la humillación."
+        },
+        {
+          "text": "El rechazo del idioma babilónico",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La cita no menciona rechazo de idioma."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La causa queda expresada como el desvío de Israel respecto de Dios, pero el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué había ocasionado las humillaciones que Dios convirtió en testimonio ante Babilonia?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "9714c9c918066e378cf23c161ee26fdf52f402bb6910afb1424fe005834489bf",
+      "output_sha256": "0f759ee16ecac447b88e258ba7838aa8618a3fa6b13f374e0dd829a8c710c71a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-008",
+      "selected_option_index": 2,
+      "selected_option_text": "Su supremacía, la santidad de sus requerimientos y los resultados de la obediencia",
+      "exact_supporting_phrase": "evidencia de su supremacía, de la santidad de sus requerimientos y de los seguros resultados que produce la obediencia",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "La grandeza de Babilonia, sus dioses y sus costumbres",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La evidencia era acerca de Dios, no de la grandeza o los dioses babilónicos."
+        },
+        {
+          "text": "La sabiduría humana, la fama y el éxito político",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Ninguno de esos tres elementos aparece en la cita."
+        },
+        {
+          "text": "Su supremacía, la santidad de sus requerimientos y los resultados de la obediencia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La opción conserva los tres componentes explícitos de la evidencia."
+        },
+        {
+          "text": "Su riqueza, su poder militar y su idioma",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La cita no menciona riqueza, poder militar ni idioma."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta más larga reproduce casi literalmente la triple evidencia y el enunciado no atribuye la fuente a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué triple evidencia dio Dios por medio de la experiencia de los cautivos fieles?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "5d84fdff9ca4d93ad2e2377823a81ca468624db1213db37903abb2a8e45f6560",
+      "output_sha256": "5ae77114557f2a9089cca421524546816e4bc720af84cb6999b0e9c0aa9bf575"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-009",
+      "selected_option_index": 2,
+      "selected_option_text": "De lo que pueden llegar a ser quienes se unen con el Dios de sabiduría y poder",
+      "exact_supporting_phrase": "ilustres ejemplos de lo que pueden llegar a ser los hombres que se unen con el Dios de sabiduría y poder",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "De la imposibilidad de servir en una corte pagana",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita los presenta como ejemplos positivos, no como prueba de imposibilidad."
+        },
+        {
+          "text": "De la superioridad natural del linaje real",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cualidad explicativa es su unión con Dios, no una superioridad natural."
+        },
+        {
+          "text": "De lo que pueden llegar a ser quienes se unen con el Dios de sabiduría y poder",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La opción reproduce el sentido y casi toda la formulación de la cita."
+        },
+        {
+          "text": "De que la educación elimina toda tentación",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita no afirma que la educación elimine la tentación."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La correcta es claramente más larga y reproduce la frase fuente; además, falta «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿de qué eran ejemplos Daniel y sus compañeros al mantenerse unidos a Dios?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "7096cff860a3b0181f6a45834fabc6872a2c972e01c9ed07040fdc60dafddc67",
+      "output_sha256": "73cca5fdc893d877a0c8ec4943862db5daadb50743a28cbc741aa8b90c6139fe"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-010",
+      "selected_option_index": 3,
+      "selected_option_text": "De la sencillez de un hogar judío a una ciudad magnífica y la corte del mayor monarca",
+      "exact_supporting_phrase": "Desde la comparativa sencillez de su hogar judío, estos jóvenes del linaje real fueron llevados a la más magnífica de las ciudades, y a la corte del mayor monarca del mundo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "De un ejército victorioso a una escuela rural",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita no menciona ejército ni escuela rural."
+        },
+        {
+          "text": "De la abundancia egipcia al desierto de Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita no menciona Egipto ni el desierto."
+        },
+        {
+          "text": "De la corte babilónica a una aldea persa sin autoridad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Invierte y altera el trayecto descrito."
+        },
+        {
+          "text": "De la sencillez de un hogar judío a una ciudad magnífica y la corte del mayor monarca",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Resume fielmente ambos extremos del cambio de ambiente."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La correcta es mucho más larga y conserva las expresiones de la cita; el enunciado también omite la atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué contraste resume el cambio de ambiente vivido por los jóvenes?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "30fd15fce49cdc7b191e644bb184163a7c01d302f309a14fe77f18bdbec167d5",
+      "output_sha256": "1361f0c4d9f3e88f27d5fdca68fa809c2315f37166b1a72b17b744f61029939d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-011",
+      "selected_option_index": 2,
+      "selected_option_text": "tacha",
+      "exact_supporting_phrase": "muchachos en quienes no hubiese tacha alguna",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "familia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita no exige ausencia de familia."
+        },
+        {
+          "text": "experiencia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita no exige ausencia de experiencia."
+        },
+        {
+          "text": "tacha",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Es la palabra exacta que completa la cita."
+        },
+        {
+          "text": "riqueza",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita no exige ausencia de riqueza."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta literal es única, pero el enunciado no incluye «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, los jóvenes seleccionados no debían tener ____ alguna.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "7a90944d6f2a0cf5ed842c67feead4b81c486d96510816abb283bc0e8d8ff6ee",
+      "output_sha256": "84a54895def2ef8f989f6b31cb89f957917c054573b90d66ef14609e13f83e1d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-012",
+      "selected_option_index": 0,
+      "selected_option_text": "palacio",
+      "exact_supporting_phrase": "idóneos para estar en el palacio del rey",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "palacio",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Es el lugar nombrado explícitamente en la cita."
+        },
+        {
+          "text": "ejército",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita no dice ejército."
+        },
+        {
+          "text": "campo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita no dice campo."
+        },
+        {
+          "text": "templo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita no dice templo."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta está explícita y es única, pero falta la delimitación de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, las cualidades exigidas debían hacerlos idóneos para estar en el ____ del rey.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "8c18690f9811d1fdd36030c6529191c1bbda0beb15a9746b497edae3af043012",
+      "output_sha256": "bdd0878d02ef2106be83a1c8cb52c3485a874a9493cc5099a79a3f28dabcd128"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-013",
+      "selected_option_index": 0,
+      "selected_option_text": "notable",
+      "exact_supporting_phrase": "una promesa de capacidad notable",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "notable",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "Es el calificativo exacto usado para la capacidad."
+        },
+        {
+          "text": "militar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no califica la capacidad como militar."
+        },
+        {
+          "text": "limitada",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "Contradice la promesa de capacidad notable."
+        },
+        {
+          "text": "sacerdotal",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no califica la capacidad como sacerdotal."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La palabra correcta es literal e inequívoca, pero el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, Nabucodonosor vio en los jóvenes una promesa de capacidad ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "915865a9a8f49d07bec0927428c62a3364423bc890e3bb115ca640a0f3003a1b",
+      "output_sha256": "d4ec3ec166c98748e5d446459f7a5489db3fe8f012159d12b54d793289bd6daa"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-014",
+      "selected_option_index": 3,
+      "selected_option_text": "caldeos",
+      "exact_supporting_phrase": "ordenó que aprendiesen el idioma de los caldeos",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "griegos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "El idioma indicado es el de los caldeos, no el de los griegos."
+        },
+        {
+          "text": "medos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "El idioma indicado es el de los caldeos, no el de los medos."
+        },
+        {
+          "text": "egipcios",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "El idioma indicado es el de los caldeos, no el de los egipcios."
+        },
+        {
+          "text": "caldeos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita nombra explícitamente a los caldeos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Solo «caldeos» completa la cita, pero el enunciado no atribuye la fuente.",
+      "suggested_rewrite": "Según Profetas y Reyes, como parte de su preparación, debían aprender el idioma de los ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "ea0a830e99f061fe01be605794bdfb63ee9c9e82ffcc092f8071ea2c07a20734",
+      "output_sha256": "2546e8f5112d8e73dae70ae855dc2548d1ad86bd8d895d07e1daec7c7b499f90"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-015",
+      "selected_option_index": 0,
+      "selected_option_text": "príncipes",
+      "exact_supporting_phrase": "las ventajas educativas que tenían los príncipes del reino",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "príncipes",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "Es el grupo nombrado explícitamente en la cita."
+        },
+        {
+          "text": "soldados",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no menciona ventajas educativas de soldados."
+        },
+        {
+          "text": "mercaderes",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no menciona ventajas educativas de mercaderes."
+        },
+        {
+          "text": "sacerdotes",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no menciona ventajas educativas de sacerdotes."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta literal es inequívoca, pero el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, recibirían las mismas ventajas educativas que los ____ del reino.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "94ccd8fcb0479fe36480d66fd1fd99c76e9d60640259128e8b3500dbefc4422e",
+      "output_sha256": "5878fe9c34fe16b6f12e49baa1e8a19190ce345cf4b2ab91086193e2605ccf28"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-016",
+      "selected_option_index": 1,
+      "selected_option_text": "Beltsasar",
+      "exact_supporting_phrase": "puso a Daniel, Beltsasar",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Sadrach",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita asigna Sadrach a Ananías."
+        },
+        {
+          "text": "Beltsasar",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita asigna explícitamente Beltsasar a Daniel."
+        },
+        {
+          "text": "Abednego",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita asigna Abednego a Azarías."
+        },
+        {
+          "text": "Mesach",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita asigna Mesach a Misael."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La correspondencia es explícita, pero este ítem forma una serie superficial de cambios de nombre y omite la atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, en la corte, Daniel recibió el nombre de ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "8e13750666130c9ceaa0d421169180b2ee06c79d29d79ec39f7ff557c22f3816",
+      "output_sha256": "c7b3609fcc66c8f965ecf4c47b1443567cfc4b3cc72e71ab89e7755fa7c4fa8f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-017",
+      "selected_option_index": 2,
+      "selected_option_text": "Sadrach",
+      "exact_supporting_phrase": "y a Ananías, Sadrach",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Abednego",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita asigna Abednego a Azarías."
+        },
+        {
+          "text": "Mesach",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita asigna Mesach a Misael."
+        },
+        {
+          "text": "Sadrach",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita asigna explícitamente Sadrach a Ananías."
+        },
+        {
+          "text": "Beltsasar",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita asigna Beltsasar a Daniel."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La correspondencia es explícita, pero es una variante superficial del mismo listado de nombres y falta «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, Ananías fue llamado ____ por el príncipe de los eunucos.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "15b42ff1a82dfb395ba0b1d3fc0af8b8d2db380ed9b91843a6063a520e0007b7",
+      "output_sha256": "f5494903cf5e6526330eedfb5c7f296b8aa78bbbc07302143d46b20abdc14dcf"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-018",
+      "selected_option_index": 2,
+      "selected_option_text": "Mesach",
+      "exact_supporting_phrase": "y a Misael, Mesach",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Beltsasar",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita asigna Beltsasar a Daniel."
+        },
+        {
+          "text": "Abednego",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita asigna Abednego a Azarías."
+        },
+        {
+          "text": "Mesach",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita asigna explícitamente Mesach a Misael."
+        },
+        {
+          "text": "Sadrach",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita asigna Sadrach a Ananías."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La correspondencia es explícita, pero repite superficialmente el mismo listado de nombres y el enunciado omite la fuente.",
+      "suggested_rewrite": "Según Profetas y Reyes, Misael recibió el nombre cortesano de ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "ab95ec69a510590ccec7b5dbbe84adc1d7cb2bc5cd0305f36d1ed762b502a4cb",
+      "output_sha256": "78f1939bb990369faaa42163683ae062d324a334bf8e690b27113de0fb25fd9b"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-019",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "no serían corrompidos por el egoísmo",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La cita afirma que no serían corrompidos por el egoísmo."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "El enunciado reproduce fielmente la afirmación fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La proposición es explícitamente verdadera, pero no está atribuida a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, el egoísmo no lograría corromper a los jóvenes que permanecían fieles a los buenos principios.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "47c516ed667d136cb305d6e1dcb4d6fa5ca998c131ae7059a0ae19d7dd88519b",
+      "output_sha256": "1f0951ae12cc318e551fd16c813fe5271c1bfb5bd7f08d5a77aa3157d11ad6f1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-020",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "considerar como alto honor la fe que sostenían y el nombre de adoradores del Dios viviente",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La cita manda considerar ese nombre como alto honor."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "El enunciado conserva el sentido directo de la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación está plenamente sustentada, pero falta la fórmula «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, los jóvenes debían considerar un alto honor ser conocidos como adoradores del Dios viviente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "eac195c8cdd9b9c46aa7f0ffed15951e93ed162e35db62107bddb8d626416ff8",
+      "output_sha256": "b9295a6bf391e89d3ba1f17864ed6c742b253bec52b8b93fcf60ed2603058e90"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-021",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "de la única manera que podía ser dado, por medio de los que le eran leales",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La cita afirma exclusividad mediante «la única manera»."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "El enunciado parafrasea con precisión la única manera indicada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La exclusividad queda expresada de manera inequívoca, pero el enunciado omite la atribución requerida.",
+      "suggested_rewrite": "Según Profetas y Reyes, el testimonio de Dios ante Babilonia solo podía darse por medio de quienes le eran leales.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "59f49c03d2f7a853c9271fb0b1e78b0be7d45491f201de5a743c8439c62b5558",
+      "output_sha256": "5d500cb1f39c593963963b531883f737ca5ed32e03c4898bdf8085ad4352f050"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-022",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Dándoles nombres que expresaban sentimientos de idolatría [...] esperaba inducirlos a renunciar a la religión de su nación",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "La cita incluye los nombres idolátricos entre los medios para inducir la renuncia religiosa."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "El enunciado resume correctamente la función de esos nombres en el proceso gradual."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La relación medio-finalidad es inequívoca, pero el ítem fragmenta la misma oración que el siguiente y omite la atribución a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, los nombres de sentido idolátrico formaban parte del intento gradual de apartar a los jóvenes de su religión.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "1c39c874262866cbe0ff8de945dc06827d04201edb42284317a43b5615105db6",
+      "output_sha256": "cee18d92af257f89556e947a6b337cf07877ec2fc57b76c16913ef7052e0dd4d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-023",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "poniéndolos en trato íntimo con costumbres idólatras y bajo la influencia de ritos seductores del culto pagano, esperaba inducirlos [...] a participar en el culto babilónico",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "La cita conecta expresamente esos medios con la participación en el culto babilónico."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "El enunciado reproduce fielmente la relación causal de la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación es directa, pero constituye una variante superficial de la oración del ítem anterior y carece de atribución explícita.",
+      "suggested_rewrite": "Según Profetas y Reyes, el trato íntimo con costumbres idólatras y los ritos paganos buscaban inducirlos a participar en el culto babilónico.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "e6911cc4eb66ee9785d724685bb25414bef68d2ecb34373001f6e57a7e548a31",
+      "output_sha256": "3798fcbab77d12a37841348d10df29f2c236d976a4ea52a2c65254a2e805b658"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-024",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "si seguía la enseñanza divina no podía menos que ofender al rey y probablemente perdería su puesto y la vida",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "La cita presenta exactamente ese razonamiento posible y sus dos consecuencias."
+        },
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "Contradice la posibilidad de perder el puesto y la vida expresada en la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación está explícitamente sustentada, pero comparte la misma argumentación con el ítem siguiente y omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, Daniel podía razonar que obedecer la enseñanza divina le costaría el puesto e incluso la vida.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "74ffad6f6f365e5da973d86907e7aeb6dbcfc1dcc20fddd9b2bd4c7362e62444",
+      "output_sha256": "41496d2636e3de732660f2ef31048968e8ba3dc2415e91a266d2527cdaa9a653"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-025",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "si despreciaba el mandamiento del Señor, conservaría el favor del rey y se aseguraría ventajas intelectuales y perspectivas halagüeñas en este mundo",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "La cita enumera precisamente favor real, ventajas intelectuales y perspectivas mundanas."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "El enunciado resume fielmente las ventajas aparentes descritas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación es inequívoca, pero repite la otra mitad del razonamiento del ítem anterior y no delimita la fuente.",
+      "suggested_rewrite": "Según Profetas y Reyes, despreciar el mandamiento del Señor parecía ofrecerle a Daniel favor real, ventajas intelectuales y perspectivas mundanas.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "2fc95f25c21d6fcfbb20b912c57aa221bf002ce4ffc214d5d5f095b7c368df4d",
+      "output_sha256": "9b08cf10319e601beeba1d604261b084ba4588f103e05c0b997688a8b8d1ee0c"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-026",
+      "selected_option_index": 1,
+      "selected_option_text": "Dios le dio gracia y buena voluntad ante el príncipe de los eunucos",
+      "exact_supporting_phrase": "Puso Dios a Daniel en gracia y en buena voluntad con el príncipe de los eunucos",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Dios ocultó a Daniel de los funcionarios",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "La cita no menciona ocultamiento."
+        },
+        {
+          "text": "Dios le dio gracia y buena voluntad ante el príncipe de los eunucos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "La opción parafrasea directamente la intervención divina descrita."
+        },
+        {
+          "text": "Dios cambió inmediatamente la orden del rey",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "La cita no dice que Dios cambiara la orden del rey."
+        },
+        {
+          "text": "Dios eliminó la prueba de alimentación",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "La petición de no contaminarse siguió siendo necesaria; la prueba no fue eliminada."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La correcta es la opción más larga y reproduce la intervención de la cita; además, falta la atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué intervención divina favoreció que la petición de Daniel fuera tratada con respeto?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:25:28.855Z",
+      "input_content_sha256": "136a850497223d4e157d11b01d1652d7c0ca583687592043bd14142a4d87da1b",
+      "output_sha256": "d0d35bdc09649ea733c660c1f2df56d3495455b53408419ece740f381fbb696b"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 0,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 20,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

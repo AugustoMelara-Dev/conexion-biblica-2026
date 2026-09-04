@@ -123,22 +123,28 @@ test.describe('Modo Emergencia Final 2026 E2E', () => {
     await expect(contract).toHaveAttribute('data-pr-count', '0')
   })
 
-  test('Simulación Adversarial: inicia con 100 preguntas verificadas (50 PR / 50 Daniel)', async ({
+  test('Paquete V18: publica cobertura y reparación, y bloquea adversarial sin verificadas', async ({
     page,
   }) => {
     await page.setViewportSize({ width: 390, height: 844 })
     await page.goto('/')
 
-    const startBtn = page.getByRole('button', { name: 'Iniciar Simulación Adversarial' })
-    await expect(startBtn).toBeVisible({ timeout: 30_000 })
-    await startBtn.click()
+    await expect(page.getByText('45 verificadas', { exact: true })).toBeVisible({ timeout: 30_000 })
+    await expect(page.getByText('8 verificadas', { exact: true })).toBeVisible()
 
-    await expect(page.getByText('Pregunta 1 de 100', { exact: true })).toBeVisible({ timeout: 30_000 })
+    const adversarialBtn = page.getByRole('button', { name: 'Iniciar Simulación Adversarial' })
+    await expect(adversarialBtn).toBeDisabled()
+
+    const coverageBtn = page.getByRole('button', { name: 'Estudiar paquete verificado' })
+    await expect(coverageBtn).toBeEnabled()
+    await coverageBtn.click()
+
+    await expect(page.getByText('Pregunta 1 de 45', { exact: true })).toBeVisible({ timeout: 30_000 })
 
     const contract = page.locator('[data-testid="round-contract-summary"]')
-    await expect(contract).toHaveAttribute('data-questions-count', '100')
-    await expect(contract).toHaveAttribute('data-dan-count', '50')
-    await expect(contract).toHaveAttribute('data-pr-count', '50')
+    await expect(contract).toHaveAttribute('data-questions-count', '45')
+    await expect(contract).toHaveAttribute('data-dan-count', '8')
+    await expect(contract).toHaveAttribute('data-pr-count', '37')
   })
 
   test('Rotación: dos sesiones del mismo modo iniciadas consecutivamente reciben preguntas diferentes', async ({

@@ -1,0 +1,104 @@
+{
+  "schema_version": "final-day-v18-progress-1.0",
+  "current_phase": "first_verified_increment_pre_deploy",
+  "source": {
+    "path": "C:\\Users\\melar\\OneDrive\\Desktop\\MaterialConexionBiblica (1).pdf",
+    "sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
+    "pages": 60,
+    "verified": true
+  },
+  "source_units_total": 1031,
+  "source_units_covered": 997,
+  "source_atomic_facts": 1381,
+  "source_units_ambiguous": 27,
+  "source_units_needing_question": 1,
+  "existing_questions_total": 3873,
+  "sol_audited": 375,
+  "sol_audit_outputs": 380,
+  "verified_coverage": 45,
+  "verified_competitive": 0,
+  "rewrite_required": 307,
+  "rewrites_completed": 75,
+  "rewrites_withdrawn_duplicate": 5,
+  "rejected": 0,
+  "new_candidates": 0,
+  "new_sol_audited": 0,
+  "new_accepted": 0,
+  "new_rejected": 0,
+  "package_a_count": 45,
+  "package_b_count": 0,
+  "package_c_count": 8,
+  "PR_count": 37,
+  "Daniel_count": 8,
+  "by_chapter": {
+    "PR39": { "package_a": 10 },
+    "PR40": { "package_a": 1 },
+    "PR41": { "package_a": 14 },
+    "PR42": { "package_a": 5 },
+    "PR43": { "package_a": 4 },
+    "PR44": { "package_a": 3 },
+    "DAN9": { "package_a": 4, "package_c": 4 },
+    "DAN12": { "package_a": 4, "package_c": 4 }
+  },
+  "active_agents": [],
+  "actual_models": [
+    { "role": "orchestrator", "model": "GPT-5.6 Sol", "reasoning_effort": "medium" },
+    { "role": "textual auditors", "model": "GPT-5.6 Sol", "reasoning_effort": "medium", "audit_outputs": 380 },
+    { "role": "authors_and_blind_competitors", "model": "GPT-5.6 Luna", "reasoning_effort": "max" }
+  ],
+  "conversation_id_evidence": {
+    "kind": "codex_canonical_agent_task_name",
+    "limitation": "The backend conversation UUID is not exposed to agents; canonical task names are recorded without fabrication."
+  },
+  "remaining_sol_budget_estimate": {
+    "used_percent": 9,
+    "remaining_percent": 91,
+    "reserved_percent_minimum": 35,
+    "measured_live": true
+  },
+  "commits": [],
+  "deployments": [],
+  "baseline": {
+    "npm_install": "pass: 358 packages, 0 vulnerabilities",
+    "vitest": "pass: 66 files, 466 tests",
+    "typecheck": "pass",
+    "build": "pass with pre-existing chunk-size warning",
+    "lint": "fail: 26 errors and 1 warning present at base commit",
+    "editorial_unittest": "blocked before tests: source_inventory.json absent at base commit"
+  },
+  "current_gates": {
+    "pipeline_unittest": "pass: 57 tests after contract hardening",
+    "vitest": "pass: 66 files, 473 tests",
+    "typecheck": "pass",
+    "build": "pass with existing chunk-size warning",
+    "playwright_emergency": "pass: 10/10 desktop Chromium and mobile Chromium",
+    "lint": "legacy fail: 22 errors and 1 warning; base had 26 errors and 1 warning",
+    "diff_check": "pass",
+    "independent_contract_review": "SPEC PASS"
+  },
+  "dossiers": {
+    "valid": 2045,
+    "invalid_or_excluded": 1828,
+    "invalid_missing_source_unit_id": 162,
+    "pr_without_required_delimiter": 1666,
+    "batches": 103,
+    "safe_first_items": 80,
+    "safe_first_batches": 4
+  },
+  "integration": {
+    "safe_first_integrated": 80,
+    "safe_first_verified_before_cross_run_conflicts": 45,
+    "safe_first_rewrite_required": 25,
+    "safe_first_invalid_stored_source_contract": 10,
+    "cross_run_conflicts_withheld": 0,
+    "priority_integrated_with_blind": 140,
+    "priority_invalid_output": 140,
+    "priority_note": "All previously processed priority outputs fail closed after dossier contract regeneration."
+  },
+  "performance": {
+    "score": "98/100",
+    "average_seconds": 3.72,
+    "priority_errors": ["Daniel 9:26", "Daniel 12:1"]
+  },
+  "next_exact_action": "Commit, push, deploy the independently approved 45-question package, and perform remote audit."
+}

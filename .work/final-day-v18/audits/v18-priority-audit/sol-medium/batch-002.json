@@ -1,0 +1,1020 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-002",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-002.json",
+  "input_sha256": "9a5e21f4826fd92d3b70b6603374ed11c8214a7cefe39f8ae7270f9aaa62e4f1",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/sol_audit_002",
+    "conversation_id": "/root/sol_audit_002",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "question_id": "PR39-AUTH-0020-PV01",
+      "selected_option_index": 1,
+      "selected_option_text": "inducirlos a renunciar a la religión de su nación",
+      "exact_supporting_phrase": "esperaba inducirlos a renunciar a la religión de su nación, y a participar en el culto babilónico",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "permitirles conservar su culto en un ámbito privado",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "La meta descrita era que renunciaran a su religión, no conservarla privadamente."
+        },
+        {
+          "text": "inducirlos a renunciar a la religión de su nación",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "Reproduce literalmente la meta expresada en la fuente."
+        },
+        {
+          "text": "enseñarles a distinguir las ceremonias de cada provincia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "La fuente no menciona enseñanza comparativa de ceremonias."
+        },
+        {
+          "text": "prepararlos para explicar su religión ante el monarca",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "La fuente no atribuye esa finalidad al contacto progresivo."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El enunciado no delimita la fuente con la fórmula obligatoria ‘Según Profetas y Reyes...’.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué meta perseguía el contacto progresivo de los jóvenes con nombres, costumbres y ritos idolátricos?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.001-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "ba9e8b0069caeec9f159e218763de89628e913647f17ac23bd0e9d3a5a569bbb",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "254b0c35cddbc88974d62c3f3e3e7ea35e0be4da500fc06ab1034103e03c2ed8"
+    },
+    {
+      "question_id": "PR39-AUTH-0021",
+      "selected_option_index": 2,
+      "selected_option_text": "En el mismo comienzo de su carrera",
+      "exact_supporting_phrase": "En el mismo comienzo de su carrera, su carácter fué probado de una manera decisiva.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Al final de su carrera",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La fuente dice ‘en el mismo comienzo’, no al final."
+        },
+        {
+          "text": "Después de volver a Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "No se menciona un regreso a Judá."
+        },
+        {
+          "text": "En el mismo comienzo de su carrera",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "Es la expresión literal de la fuente."
+        },
+        {
+          "text": "Antes de ser llevados cautivos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La prueba descrita ocurre ya dentro de su carrera en la corte."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta ‘Según Profetas y Reyes...’ en el enunciado.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿en qué momento de su preparación fue probado decisivamente el carácter de los jóvenes?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.002-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "2c891f54ae93f305793f5f71a30513d1eb025c2dea7a5f80b61744021779999b",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "3e8940f656b9dc75e0d9c6785072cf825c65bbff16f44cbe77f971beeb2bf0a2"
+    },
+    {
+      "question_id": "PR39-AUTH-0022",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "provenían de la mesa real",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La afirmación niega la mesa real, pero la fuente la identifica expresamente."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La fuente no dice mesa común; dice mesa real."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta la delimitación ‘Según Profetas y Reyes...’.",
+      "suggested_rewrite": "Según Profetas y Reyes, el alimento y el vino asignados provenían de una mesa común, no de la mesa real. ¿Verdadero o falso?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.003-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "c7f9a07ab852f0b7548b8aeb96ae7edc80971cfb48e3e0b511e3b40db87b9054",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "7ba861d261b2df0cc6d000ad42935c7364c1d95d39f7558dc52623c76cac12ca"
+    },
+    {
+      "question_id": "PR39-AUTH-0023",
+      "selected_option_index": 0,
+      "selected_option_text": "manifestarles su favor",
+      "exact_supporting_phrase": "el rey pensaba manifestarles su favor y la solicitud que sentía por su bienestar",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "manifestarles su favor",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "Es una intención expresamente atribuida al rey."
+        },
+        {
+          "text": "manifestarles su confianza",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La fuente habla de favor y solicitud, no de confianza."
+        },
+        {
+          "text": "manifestarles su gratitud",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La gratitud no aparece en el pasaje."
+        },
+        {
+          "text": "manifestarles su respeto",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "El respeto no es la intención declarada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta la fórmula de atribución requerida para Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué intención atribuía el rey a la provisión de alimento y vino de su mesa?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.004-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "9dc2287a8c9c4fb51cbeefdd80b59812c49406a651af268e737f44d9581dd224",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "6aae1cd5b28d4b8abf3418f8fdbff993edd8bc0d761e1f3691143d00f0259a52"
+    },
+    {
+      "question_id": "PR39-AUTH-0024",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "compartirlo sería considerado como tributo de homenaje a los dioses de Babilonia",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "Contradice la equivalencia explícita del pasaje."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La afirmación parafrasea fielmente la fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Además de faltar ‘Según Profetas y Reyes...’, duplica superficialmente PR39-AUTH-0024-PV01.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué significado religioso habría tenido compartir el alimento consagrado de la mesa real?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.005-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "dfef5c08f3cea6b629a733a147f24011152713100aeec16b08540bdea610b8c6",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "e64f7723bfe6b1c2846b30a46848c9c33917cfbbf559995d66c30555a4ae24eb"
+    },
+    {
+      "question_id": "PR39-AUTH-0024-PV01",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "compartirlo sería considerado como tributo de homenaje a los dioses de Babilonia",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "‘Comunicado homenaje’ expresa la misma relación que ‘tributo de homenaje’."
+        },
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "Niega lo afirmado explícitamente por la fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta ‘Según Profetas y Reyes...’ y es una variante superficial de PR39-AUTH-0024.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿por qué compartir el alimento de la mesa real constituía un problema de lealtad religiosa?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.006-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "f7e54f6ab764d73ae876a319f844f5c0898529779973564e7248e1c6ad6c761d",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "857adc0ba6ec9c70aa14f9ab6b11c91e5424c82b048ba047af7564acb3a51251"
+    },
+    {
+      "question_id": "PR39-AUTH-0025",
+      "selected_option_index": 0,
+      "selected_option_text": "La lealtad a Jehová",
+      "exact_supporting_phrase": "La lealtad a Jehová prohibía a Daniel y a sus compañeros que rindiesen tal homenaje.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "La lealtad a Jehová",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "Coincide literalmente con el principio citado."
+        },
+        {
+          "text": "La búsqueda de aprobación",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "No se presenta como motivo de la prohibición."
+        },
+        {
+          "text": "La conveniencia personal",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La postura descrita se funda en lealtad religiosa, no conveniencia."
+        },
+        {
+          "text": "La obediencia a la costumbre",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La fuente no atribuye la decisión a una costumbre."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El enunciado omite la atribución obligatoria a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué principio les prohibía a Daniel y a sus compañeros rendir tal homenaje?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.007-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "43193d51f85bd10fc697f0028d763771975375090c395945979b69b3da4d86a6",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "ecaa17f9578248186baff81f82c0eb90dd96c64ca38f43ad63ef5bbcdb7cd37b"
+    },
+    {
+      "question_id": "PR39-AUTH-0026",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "habría sido negar su fe",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La fuente dice ‘negar’, no ‘afirmar’."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La inversión de ‘negar’ por ‘afirmar’ hace falsa la proposición."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta la fórmula ‘Según Profetas y Reyes...’.",
+      "suggested_rewrite": "Según Profetas y Reyes, aun hacer como que comieran del alimento o bebieran del vino habría sido afirmar su fe. ¿Verdadero o falso?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.008-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "d393fdcee1e295c2e5ce554b1858eff990f230186d07ccc5d1a8e2cbd55b4f86",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "6794f24990e3a30872c0f7a70d0efcea8110d7ee48166e0034a704ddacb77082"
+    },
+    {
+      "question_id": "PR39-AUTH-0027",
+      "selected_option_index": 0,
+      "selected_option_text": "colocarse de parte del paganismo y deshonrar los principios de la ley de Dios",
+      "exact_supporting_phrase": "colocarse de parte del paganismo y deshonrar los principios de la ley de Dios",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "colocarse de parte del paganismo y deshonrar los principios de la ley de Dios",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "Reproduce literalmente ambas consecuencias."
+        },
+        {
+          "text": "adoptar una disciplina externa sin comprometer los principios de la ley",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La fuente afirma que sí deshonraría los principios de la ley."
+        },
+        {
+          "text": "separarse de las costumbres hebreas y ganar la confianza de los oficiales",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "Esas consecuencias no aparecen en la frase fuente."
+        },
+        {
+          "text": "evitar un conflicto inmediato y conservar intacta su relación con Dios",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "Ceder implicaría negar la fe y deshonrar la ley, no conservar intacta la relación."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta ‘Según Profetas y Reyes...’ y existe una variante paralela casi equivalente.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué doble consecuencia moral habría tenido ceder ante las exigencias religiosas de la mesa real?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.009-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "c102405312808e1459f8864462ac44a05a772c459fd0c306b0070d5a962e111e",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "aae0153b07882fcd4eec4f31133022cd082f06cf4b972364688259f00ae31d2e"
+    },
+    {
+      "question_id": "PR39-AUTH-0027-PV01",
+      "selected_option_index": 3,
+      "selected_option_text": "colocarse de parte del paganismo y deshonrar los principios de la ley de Dios",
+      "exact_supporting_phrase": "colocarse de parte del paganismo y deshonrar los principios de la ley de Dios",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "aceptar la hospitalidad real mientras rechazaban todo significado religioso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La fuente atribuye significado religioso al acto de compartir el alimento."
+        },
+        {
+          "text": "perder el favor de los oficiales, pero conservar íntegra su fe",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "No es el compromiso espiritual descrito al ceder."
+        },
+        {
+          "text": "cambiar una costumbre sin alterar su lealtad religiosa",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La fuente dice que habría sido negar la fe."
+        },
+        {
+          "text": "colocarse de parte del paganismo y deshonrar los principios de la ley de Dios",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "Es la consecuencia literal declarada."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta la atribución obligatoria y es una variante superficial de PR39-AUTH-0027.",
+      "suggested_rewrite": "Según Profetas y Reyes, aceptar una práctica vinculada al culto babilónico parecía una concesión de mesa. ¿Qué compromiso espiritual implicaba realmente?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.010-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "9899efb94b39d6804eaa91337e3e29e142a83bc7c82b89c278825f923563d914",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "98b40dbf96714925027de93b858e9ecc5e984ebdef26ad42ae87877980e5e20b"
+    },
+    {
+      "question_id": "PR39-AUTH-0028",
+      "selected_option_index": 0,
+      "selected_option_text": "físico, mental y espiritual",
+      "exact_supporting_phrase": "sobre el desarrollo físico, mental y espiritual",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "físico, mental y espiritual",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "Completa literalmente la enumeración fuente."
+        },
+        {
+          "text": "militar, técnico y ceremonial",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "Ninguna de esas dimensiones aparece en el pasaje."
+        },
+        {
+          "text": "social, político y económico",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "La fuente no usa esas categorías."
+        },
+        {
+          "text": "artístico, lingüístico y administrativo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "La fuente no menciona esas dimensiones."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El enunciado no comienza con la atribución requerida a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, el lujo y la disipación amenazaban con un efecto enervador sobre el desarrollo ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.011-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "10ccefa7734d6418cabcb73759d899346acfe9a5fec5d75f98dd7589d2049052",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "890fdc7ec34367dd94b6fa2764e4e4c96b46e977073cdc5dba6e8c384eff7e05"
+    },
+    {
+      "question_id": "PR39-AUTH-0029",
+      "selected_option_index": 3,
+      "selected_option_text": "sus propias facultades físicas y mentales quedarían perjudicadas por el consumo de vino",
+      "exact_supporting_phrase": "sus propias facultades físicas y mentales quedarían perjudicadas por el consumo de vino",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "sus conocimientos del Pentateuco sustituirían todo cuidado de sus facultades",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "Conocer el relato sustentaba el cuidado, no lo sustituía."
+        },
+        {
+          "text": "su posición en la corte quedaría asegurada si imitaban las costumbres reales",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "La fuente no ofrece esa seguridad cortesana."
+        },
+        {
+          "text": "sus facultades espirituales quedarían fortalecidas por el uso moderado del vino",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "La fuente habla de perjuicio físico y mental, no fortalecimiento espiritual."
+        },
+        {
+          "text": "sus propias facultades físicas y mentales quedarían perjudicadas por el consumo de vino",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "Reproduce literalmente la advertencia aplicada."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta ‘Según Profetas y Reyes...’ en el enunciado.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué advertencia aplicaban a sí mismos al recordar la historia de Nadab y Abihú?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.012-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "630ee2ce0e574dc4f8ce47c4bd9a5718fdd85ae3515f6e5c528fda34e7734a45",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "9e7e8edf7bf421aecc1517ce7fcc7db7700f343347c2c0b94b575fe4ffa252f0"
+    },
+    {
+      "question_id": "PR39-AUTH-0030",
+      "selected_option_index": 1,
+      "selected_option_text": "estricta templanza",
+      "exact_supporting_phrase": "les habían inculcado hábitos de estricta templanza",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "cuidadosa diplomacia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "No se menciona diplomacia."
+        },
+        {
+          "text": "estricta templanza",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "Es la expresión literal de la fuente."
+        },
+        {
+          "text": "constante ambición",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "No se menciona ambición."
+        },
+        {
+          "text": "amplia erudición",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "No es el hábito identificado en el pasaje."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta la atribución ‘Según Profetas y Reyes...’.",
+      "suggested_rewrite": "Según Profetas y Reyes, los padres de Daniel y sus compañeros les habían inculcado hábitos de ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.013-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "606904a17fa718c314d937104b9103c200c70bcd60585696fc7ac36ae5fc29d9",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "f3b8693b8e929aa3a96750ce0b9ae62c38a00b438292bc100abba72d26a0a7ed"
+    },
+    {
+      "question_id": "PR39-AUTH-0031",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Dios los tendría por responsables de sus facultades, y que no debían atrofiarlas ni debilitarlas",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "Niega una afirmación explícita de la fuente."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "La proposición parafrasea fielmente el pasaje."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El enunciado omite ‘Según Profetas y Reyes...’.",
+      "suggested_rewrite": "Según Profetas y Reyes, se les había enseñado que Dios los consideraría responsables de sus facultades y que no debían atrofiarlas ni debilitarlas. ¿Verdadero o falso?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.014-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "84e8faa04b3149c177af60d0dd42610706db213f391d5eb04519a611b3c9d797",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "64ee9e9c220a490bff197a77ec2d39bee09d7d685cf63bfa9ec8c43bc695b1e9"
+    },
+    {
+      "question_id": "PR39-AUTH-0032",
+      "selected_option_index": 0,
+      "selected_option_text": "un medio de preservación",
+      "exact_supporting_phrase": "Esta educación fué para Daniel y sus compañeros un medio de preservación",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "un medio de preservación",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "Es la función declarada literalmente."
+        },
+        {
+          "text": "un motivo de aislamiento",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "La fuente no habla de aislamiento."
+        },
+        {
+          "text": "un medio de ascenso",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "No relaciona esa educación con ascenso cortesano."
+        },
+        {
+          "text": "un método de asimilación",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "La educación los preservó de la asimilación desmoralizadora."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta la delimitación explícita de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué función cumplió la educación recibida ante las influencias de la corte?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.015-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "2ccc3d17b17f59425cb293c0e7030e095d6f5386132e1896b7985bdd6d32a5d1",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "32fb9a083ee3e805a67c9455b44db7814cac7d64a595e844af5f48d81fc00b03"
+    },
+    {
+      "question_id": "PR39-AUTH-0033",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "pero no se contaminaron",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "La proposición es falsa porque la fuente dice que no se contaminaron."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "Confunde estar rodeados de tentaciones con ceder ante ellas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta ‘Según Profetas y Reyes...’ en el enunciado.",
+      "suggested_rewrite": "Según Profetas y Reyes, intensas tentaciones rodeaban a los jóvenes en aquella corte corrompida, y ellos cedieron ante ellas. ¿Verdadero o falso?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.016-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "2507c95e787073ecc23ab2ed0fe781ac084313a2147d0f2b7eb5e341bc4c7077",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "2ea11fd3919487a319139b1a8fe3d42b506f63e5b787e995c3766d990d2a2115"
+    },
+    {
+      "question_id": "PR39-AUTH-0034",
+      "selected_option_index": 3,
+      "selected_option_text": "un estudio de la palabra y de las obras de Dios",
+      "exact_supporting_phrase": "por un estudio de la palabra y de las obras de Dios",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "la observación de los ritos y de las fiestas de Babilonia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "Las influencias babilónicas son el entorno del que fueron preservados, no su formación fundante."
+        },
+        {
+          "text": "la enseñanza de los magos y de los consejeros de la corte",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "No aparece como origen de sus principios."
+        },
+        {
+          "text": "la práctica de la estrategia y de las leyes del imperio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "La fuente no menciona esa formación."
+        },
+        {
+          "text": "un estudio de la palabra y de las obras de Dios",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "Coincide literalmente con la formación temprana descrita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta la atribución obligatoria a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué formación temprana sostenía los principios de los cuales ninguna influencia logró apartarlos?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.017-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "f370de49271e764b95c71107d0062167f2a0204c0f4faf7c8d3aa1852badf4ef",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "afe165360805548fd8fa7fc062649e3883c98cff33c2cafb80aa46177f38959f"
+    },
+    {
+      "question_id": "PR39-AUTH-0035",
+      "selected_option_index": 3,
+      "selected_option_text": "una excusa plausible",
+      "exact_supporting_phrase": "podría haber hallado en las circunstancias que le rodeaban una excusa plausible",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "una orden irrevocable",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "La fuente habla de una excusa que Daniel podía formular, no de una orden irrevocable."
+        },
+        {
+          "text": "una ventaja legítima",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "No caracteriza las circunstancias como ventaja legítima."
+        },
+        {
+          "text": "una prueba concluyente",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "La expresión no figura ni resume la idea fuente."
+        },
+        {
+          "text": "una excusa plausible",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "Completa literalmente la frase fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El enunciado no delimita Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, Daniel podría haber usado las circunstancias que lo rodeaban como ____ para abandonar sus hábitos temperantes.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.018-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "12bd8518ec3c10a85da02f97096ea8510844dd6ebb674cfed02276fbd4710abb",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "5671424642b386797753386ce9245ff9bc916e7f17d754d620db1efa55348af4"
+    },
+    {
+      "question_id": "PR39-AUTH-0036",
+      "selected_option_index": 3,
+      "selected_option_text": "su puesto y la vida",
+      "exact_supporting_phrase": "probablemente perdería su puesto y la vida",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "su educación y el respeto de sus maestros",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "No son las pérdidas enumeradas."
+        },
+        {
+          "text": "el apoyo de sus padres y su herencia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "El pasaje no menciona esas pérdidas."
+        },
+        {
+          "text": "sus bienes y el derecho de volver a Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "No aparece ninguna de esas consecuencias."
+        },
+        {
+          "text": "su puesto y la vida",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "Es la pareja de pérdidas expresamente señalada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta la fórmula de fuente obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué podía imaginar Daniel que perdería si seguía la enseñanza divina y ofendía al rey?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.019-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "42c447b07d0a85fc8bb9f52546b86d7f7f3f1008ec28d7a0c07075e752bae62e",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "0eb2c42513b7daa126fea2de369bdbb97b5c79048f032671bb6e2707e5a22b1f"
+    },
+    {
+      "question_id": "PR39-AUTH-0037",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Pero Daniel no vaciló.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "La proposición coincide con la afirmación literal."
+        },
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "Niega la declaración directa de la fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El enunciado omite ‘Según Profetas y Reyes...’.",
+      "suggested_rewrite": "Según Profetas y Reyes, Daniel no vaciló ante la decisión que debía tomar. ¿Verdadero o falso?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "reviewed_at": "2026-09-04T02:59:52.020-06:00",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "input_content_sha256": "2940047fd17ed36fd6d73728457236d0b3e886e5240d439a5d83bbcb2341808e",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "1716db1409f22d8b2821cabb5e4952518dd701f159f1395e55cb0e882ffdb8e8"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 0,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 20,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

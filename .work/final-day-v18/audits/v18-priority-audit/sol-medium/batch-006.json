@@ -1,0 +1,1044 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-006",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-006.json",
+  "input_sha256": "9f69cafff5416ae5051c49c2463db6a49ef69ad1b948a1887b01f3bda823fed9",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/sol_audit_002",
+    "conversation_id": "/root/sol_audit_002",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0091",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "Para que la gracia de Dios nos sea impartida, debemos hacer nuestra parte.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La fuente condiciona el impartimiento de la gracia a que hagamos nuestra parte."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La proposición contradice el deber explícito de hacer nuestra parte."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta ‘Según Profetas y Reyes...’ y tiene una variante superficial en PR39-AUTH-0091-PV01.",
+      "suggested_rewrite": "Según Profetas y Reyes, la gracia de Dios nos es impartida aunque no hagamos nuestra parte. ¿Verdadero o falso?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.001-06:00",
+      "input_content_sha256": "638aa50120e85bdf4de47199083d9a8b83ef1c01c90eda843c259c5aa0ea86b4",
+      "output_sha256": "fd411362062dcef2cc7aea9633fb4df215b5f378ba621dae8a683e954fa357e0"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0091-PV01",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "Su gracia nos es dada para obrar en nosotros el querer y el hacer, nunca para reemplazar nuestro esfuerzo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La gracia obra el querer y el hacer, pero nunca reemplaza nuestro esfuerzo."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La parte humana sigue siendo necesaria según el contexto inmediato."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta el prefijo obligatorio y es una reformulación superficial de PR39-AUTH-0091.",
+      "suggested_rewrite": "Según Profetas y Reyes, la gracia obra en nosotros el querer y el hacer de modo que nuestra parte resulta innecesaria. ¿Verdadero o falso?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.002-06:00",
+      "input_content_sha256": "a3f120c7d23cd905e7ec93043cff229f634a0aa757edb8515d1356d7e15a6dad",
+      "output_sha256": "b0afab8eebac3132662004974b9d07b612eeb3fba9454816f4a5fc6e3f6951eb"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0092",
+      "selected_option_index": 3,
+      "selected_option_text": "reemplazar",
+      "exact_supporting_phrase": "nunca para reemplazar nuestro esfuerzo",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "fortalecer",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La oración fuente niega reemplazar; no niega fortalecer."
+        },
+        {
+          "text": "acompañar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "‘Acompañar’ no completa la formulación citada."
+        },
+        {
+          "text": "orientar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "‘Orientar’ no aparece en la proposición fuente."
+        },
+        {
+          "text": "reemplazar",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "Completa literalmente ‘nunca para reemplazar nuestro esfuerzo’."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta el prefijo de fuente y duplica superficialmente PR39-AUTH-0092-PV01.",
+      "suggested_rewrite": "Según Profetas y Reyes, la gracia obra en nosotros el querer y el hacer, pero nunca busca ____ nuestro esfuerzo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.003-06:00",
+      "input_content_sha256": "864a7491aa99c9917c8d95d0ee322a0b4f55615438f6d311e426c1576e370eb3",
+      "output_sha256": "c6868c19636c66c2c5cede0c7f6b2b472303e5171c83088ca391164edbf41a12"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0092-PV01",
+      "selected_option_index": 0,
+      "selected_option_text": "reemplazar",
+      "exact_supporting_phrase": "nunca para reemplazar nuestro esfuerzo",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "reemplazar",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "Es el verbo usado expresamente por la fuente."
+        },
+        {
+          "text": "dirigir",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La fuente no dice que la gracia deje de dirigir nuestra parte."
+        },
+        {
+          "text": "exigir",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "El contexto sí establece que debemos hacer nuestra parte."
+        },
+        {
+          "text": "evaluar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "Evaluar no aparece en esta relación entre gracia y esfuerzo."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta ‘Según Profetas y Reyes...’ y es una variante superficial de PR39-AUTH-0092.",
+      "suggested_rewrite": "Según Profetas y Reyes, la gracia produce en nosotros el querer y el hacer, sin ____ la parte que debemos realizar.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.004-06:00",
+      "input_content_sha256": "a8a94aea18ec5b9496653f6c7bb7ed9926a98e00dd6ebc317e188391ec4ff703",
+      "output_sha256": "0f44b7b1bf706c514a973937748165ba75589e43220c64aafabedbb4c3857755"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0093",
+      "selected_option_index": 3,
+      "selected_option_text": "el Señor",
+      "exact_supporting_phrase": "Así como el Señor cooperó con Daniel y sus compañeros, cooperará con todos los que se esfuercen por hacer su voluntad.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "la casualidad",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "La casualidad no es el sujeto de la cooperación."
+        },
+        {
+          "text": "el destino",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "El destino no aparece en el pasaje."
+        },
+        {
+          "text": "el poder humano",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "La fuente atribuye esta cooperación al Señor, no al poder humano."
+        },
+        {
+          "text": "el Señor",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "Es el sujeto literal de la oración fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El enunciado omite la delimitación obligatoria de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, así como cooperó con Daniel y sus compañeros, ____ cooperará con todos los que se esfuercen por hacer su voluntad.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.005-06:00",
+      "input_content_sha256": "9281fd6c612390e104ecf6bac0c4063b613f22e967e4648c1ed52063b952c9cf",
+      "output_sha256": "9e05e291b40843c5effa4e501857a94bf225237481e972f1047a38e9ebfc55d4"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0094",
+      "selected_option_index": 2,
+      "selected_option_text": "impartimiento",
+      "exact_supporting_phrase": "Mediante el impartimiento de su Espíritu fortalecerá todo propósito fiel, toda resolución noble.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "aislamiento",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "La fuente no habla del aislamiento del Espíritu."
+        },
+        {
+          "text": "ocultamiento",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "No es el sustantivo empleado ni una paráfrasis válida."
+        },
+        {
+          "text": "impartimiento",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "Completa literalmente la frase fuente."
+        },
+        {
+          "text": "alejamiento",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "La acción descrita es impartir el Espíritu, no alejarlo."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta la fórmula ‘Según Profetas y Reyes...’.",
+      "suggested_rewrite": "Según Profetas y Reyes, mediante el ____ de su Espíritu, Dios fortalecerá todo propósito fiel y toda resolución noble.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.006-06:00",
+      "input_content_sha256": "6d0122e1c937a70e2915c7e7ebf37cb56d0990938cbf96d30186d7c3e97f1c4f",
+      "output_sha256": "e5a7ab91fde8209c75af90389463eab16ffc9041fb27b09a240833641ba3803d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0095",
+      "selected_option_index": 1,
+      "selected_option_text": "encontrarán",
+      "exact_supporting_phrase": "Los que anden en la senda de la obediencia encontrarán muchos obstáculos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": false,
+      "second_defensible_option": true,
+      "second_defensible_text": "enfrentarán",
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "rechazarán",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "La fuente no afirma que rechazarán los obstáculos."
+        },
+        {
+          "text": "encontrarán",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "Es el verbo literal de la fuente."
+        },
+        {
+          "text": "enfrentarán",
+          "verdict": "AMBIGUOUS",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "En contexto ordinario, quien encuentra obstáculos en la senda también puede decirse que los enfrenta; es una paráfrasis defendible."
+        },
+        {
+          "text": "ignorarán",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "No se afirma que los ignorarán."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Además de faltar el prefijo de fuente, ‘enfrentarán’ es una segunda opción semánticamente defendible.",
+      "suggested_rewrite": "Según Profetas y Reyes, los que anden en la senda de la obediencia, literalmente, ____ muchos obstáculos.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.007-06:00",
+      "input_content_sha256": "d30bf0d4f91ab0ae0ce1f4cf986313c6b6cc2744882527ccfbca30481ee166b1",
+      "output_sha256": "557eabe87aed6d6f58c5195d639909cb75e1253fbf8beb955ee95a494733f465"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0096",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "el Señor puede inutilizar todo agente que obre para derrotar a sus escogidos",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "La proposición reproduce literalmente la primera parte de la oración fuente."
+        },
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "Niega una afirmación explícita del pasaje."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta ‘Según Profetas y Reyes...’.",
+      "suggested_rewrite": "Según Profetas y Reyes, pueden ligarlos al mundo influencias poderosas y sutiles; pero el Señor puede inutilizar todo agente que obre para derrotar a sus escogidos. ¿Verdadero o falso?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.008-06:00",
+      "input_content_sha256": "5e26b2d05b0e0b37eb4e23566ca37b9b8f1eaa0377da8435f35f478eccb0bac1",
+      "output_sha256": "6b919a621880a1f4f13e8d0d8cffe4cf350ada96d37336901575f31e91478053"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0097",
+      "selected_option_index": 1,
+      "selected_option_text": "Babilonia",
+      "exact_supporting_phrase": "Dios puso a Daniel y a sus compañeros en relación con los grandes de Babilonia",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Sinar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "La frase fuente nombra Babilonia, no Sinar."
+        },
+        {
+          "text": "Babilonia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "Es el lugar explícitamente nombrado."
+        },
+        {
+          "text": "Jerusalén",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "La relación con los grandes se sitúa en Babilonia."
+        },
+        {
+          "text": "Judá",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "La fuente sitúa el encargo en Babilonia, no Judá."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El enunciado no atribuye la pregunta a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿en qué lugar puso Dios a Daniel y a sus compañeros en relación con los grandes?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.009-06:00",
+      "input_content_sha256": "996f87af72a211b9b0f25dcca79c7f4d549808a97b31178742648e5a795a435c",
+      "output_sha256": "e354a185b88c692f01cf04f587fc6dedb364f5adbd214014ad5fd9ceed003d5f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0098",
+      "selected_option_index": 1,
+      "selected_option_text": "hacerse",
+      "exact_supporting_phrase": "¿Cómo pudieron ellos hacerse idóneos para un puesto de tanta confianza y honor?",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "declararse",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "No es el verbo usado por la fuente."
+        },
+        {
+          "text": "hacerse",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "Completa literalmente la pregunta fuente."
+        },
+        {
+          "text": "presentarse",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "Presentarse idóneos no equivale al proceso preguntado."
+        },
+        {
+          "text": "considerarse",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "La fuente no trata de su propia consideración."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta la delimitación obligatoria ‘Según Profetas y Reyes...’.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cómo pudieron ellos ____ idóneos para un puesto de tanta confianza y honor?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.010-06:00",
+      "input_content_sha256": "28717ef3feda58d1f80e7c4e0cafee9fc666a6d772444da8381d8b8379998a64",
+      "output_sha256": "0a401e2f6d4a7bda30e2b7ff4a98c4c826e325db095a470dd1581863f7c97c21"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0099",
+      "selected_option_index": 2,
+      "selected_option_text": "carácter",
+      "exact_supporting_phrase": "Fué la fidelidad en las cosas pequeñas lo que dió carácter a toda su vida.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "educación",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "La fuente no dice que la fidelidad diera educación a su vida."
+        },
+        {
+          "text": "fidelidad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "La fidelidad es la causa; el rasgo dado a toda la vida es carácter."
+        },
+        {
+          "text": "carácter",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "Es el efecto expresamente atribuido a la fidelidad en cosas pequeñas."
+        },
+        {
+          "text": "prosperidad",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "La prosperidad no aparece en la frase."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta la atribución requerida a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué rasgo de toda la vida resultó de la fidelidad en las cosas pequeñas?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.011-06:00",
+      "input_content_sha256": "56a08441ffe376d9fd4dc81a56d8184ca473b310353e81f16d35cec3d3477c24",
+      "output_sha256": "1760674a320b270ce6fb8c6b94bd1cdff9961f62257836990de45863d146a7f5"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0100",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Honraron a Dios en los deberes más insignificantes, tanto como en las mayores responsabilidades.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "La afirmación coincide literalmente con la fuente."
+        },
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "Niega la afirmación explícita del pasaje."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El enunciado omite ‘Según Profetas y Reyes...’.",
+      "suggested_rewrite": "Según Profetas y Reyes, honraron a Dios en los deberes más insignificantes, tanto como en las mayores responsabilidades. ¿Verdadero o falso?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.012-06:00",
+      "input_content_sha256": "6400b96a55fb10e18d1b74423dbaae0daa674572dac01f481dfdf6691eade4c7",
+      "output_sha256": "325e73c52be57c69ca476978499ef2a84aaa929a63704eb6c6ce17c996c8d376"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0101",
+      "selected_option_index": 3,
+      "selected_option_text": "Babilonia",
+      "exact_supporting_phrase": "Dios llamó a Daniel para que testificase por él en Babilonia",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Sinar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "La fuente usa el nombre Babilonia."
+        },
+        {
+          "text": "Nínive",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "El lugar indicado no es Nínive."
+        },
+        {
+          "text": "Jerusalén",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "La fuente sitúa el testimonio de Daniel en Babilonia."
+        },
+        {
+          "text": "Babilonia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "Es el lugar expresamente nombrado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta el prefijo obligatorio de fuente.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿dónde llamó Dios a Daniel para que testificase por él?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.013-06:00",
+      "input_content_sha256": "fcbb864606afc5fba4674c0e8cf03cd0f51bc889a64c214aa2f337630e23bef2",
+      "output_sha256": "2424b03e7318762d0eed79086585fc334c9d771e152d989adce1ec0ce428ec2d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0102",
+      "selected_option_index": 0,
+      "selected_option_text": "revelemos",
+      "exact_supporting_phrase": "desea que revelemos a los hombres los principios de su reino",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "revelemos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "Es el verbo literal de la fuente."
+        },
+        {
+          "text": "ocultemos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "Es lo contrario de revelar."
+        },
+        {
+          "text": "ignoremos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "La fuente pide revelar los principios, no ignorarlos."
+        },
+        {
+          "text": "neguemos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "Negar contradice la acción indicada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta el prefijo y duplica superficialmente PR39-AUTH-0102-PV01.",
+      "suggested_rewrite": "Según Profetas y Reyes, tanto en los asuntos menores como en los mayores de la vida, desea que ____ a los hombres los principios de su reino.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.014-06:00",
+      "input_content_sha256": "62f221433e22351a886635435f18641515993cd223f948300db35a4421a8ca8f",
+      "output_sha256": "e2961c470cff68fe36d634c5f0c36f01cf9d4dafd3b744e6dc8a8fca882d7c1b"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0102-PV01",
+      "selected_option_index": 3,
+      "selected_option_text": "revelemos",
+      "exact_supporting_phrase": "desea que revelemos a los hombres los principios de su reino",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "reservemos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "Reservar contradice el mandato de revelar a otros."
+        },
+        {
+          "text": "adaptemos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "La fuente no dice adaptar los principios."
+        },
+        {
+          "text": "negociemos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "Negociar los principios no aparece en el pasaje."
+        },
+        {
+          "text": "revelemos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "Reproduce el verbo fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta la atribución obligatoria y es una variante superficial de PR39-AUTH-0102.",
+      "suggested_rewrite": "Según Profetas y Reyes, en las decisiones pequeñas y grandes, Dios desea que ____ ante otros los principios de su reino.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.015-06:00",
+      "input_content_sha256": "d9ebf4418bb3364e63944bbddfdf42e44daab0ddabb8785d8c5ddbc791fb6bd9",
+      "output_sha256": "8bef296cd6aa7715634bd3343cab0bb1c0f73f98aaee68ff4fd6e1cf03c4fe6a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0103",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "desperdician diariamente las oportunidades que tienen de ser fieles a Dios",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "La fuente dice que desperdician, no que aprovechan, las oportunidades."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "‘Aprovechan’ invierte la afirmación fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta ‘Según Profetas y Reyes...’.",
+      "suggested_rewrite": "Según Profetas y Reyes, muchos aguardan algo grande que hacer mientras aprovechan diariamente las oportunidades de ser fieles a Dios. ¿Verdadero o falso?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.016-06:00",
+      "input_content_sha256": "fefdac9e6052283eea5a8a0debd3f88a8c0d29cbc69d94535dd02d56c102e396",
+      "output_sha256": "b05454580207b4876e5490714fa9de0b57b5ad46a2ae7441e12fbcafb422840e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0104",
+      "selected_option_index": 3,
+      "selected_option_text": "cumplir",
+      "exact_supporting_phrase": "dejan de cumplir con todo el corazón los deberes pequeños de la vida",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "recordar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "El pasaje no trata de recordar los deberes."
+        },
+        {
+          "text": "anunciar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "Anunciar no es la acción omitida."
+        },
+        {
+          "text": "honrar",
+          "verdict": "TRUE_ELSEWHERE",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "Honrar a Dios en los deberes aparece en el contexto anterior, pero la frase auditada dice ‘cumplir’."
+        },
+        {
+          "text": "cumplir",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "Es la acción literal que dejan de realizar con todo el corazón."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El enunciado no incluye la atribución obligatoria a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, cuando los deberes pequeños no se realizan con todo el corazón, ¿qué acción se está dejando de hacer?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.017-06:00",
+      "input_content_sha256": "2d9730aea9b892d27fc22360fc5c77653cc0fdc2dd0ade0be81090ddddab7c3a",
+      "output_sha256": "bbeb00ecc8e017790dcfd0f63aa8fee58fe75418293164e29b2c0709c756a01d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0105",
+      "selected_option_index": 1,
+      "selected_option_text": "aguardan",
+      "exact_supporting_phrase": "Mientras aguardan alguna obra grande",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "celebran",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "No se afirma que celebren una obra grande."
+        },
+        {
+          "text": "aguardan",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "Completa literalmente la oración fuente."
+        },
+        {
+          "text": "reciben",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "La obra no ha sido recibida; la están aguardando."
+        },
+        {
+          "text": "concluyen",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 1",
+          "exact_reason": "No concluyen la obra; esperan que llegue."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, mientras ____ alguna obra grande en la cual podrían ejercer los importantes talentos que creen tener, van transcurriendo los días.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.018-06:00",
+      "input_content_sha256": "f44c6ee6ab85cd10a356ab07f4c4a9b4e8872828896aaf72ed92ad001b50ba84",
+      "output_sha256": "2f31398d27e8d3774ec42cd1b96cea68e3035dafe47fe94c33160e0cf692e407"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0106",
+      "selected_option_index": 2,
+      "selected_option_text": "a la vista del Omnipotente todo deber es importante",
+      "exact_supporting_phrase": "a la vista del Omnipotente todo deber es importante",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "solo los deberes grandes son esenciales para el verdadero cristiano",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "La fuente declara esenciales todas las cosas y deberes."
+        },
+        {
+          "text": "la importancia de un deber depende del tamaño de la responsabilidad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "Contradice que todo deber sea importante ante el Omnipotente."
+        },
+        {
+          "text": "a la vista del Omnipotente todo deber es importante",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "Reproduce literalmente el principio rector."
+        },
+        {
+          "text": "los deberes pequeños carecen de valor ante el Omnipotente",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "Es la negación directa de que todo deber es importante."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Falta la atribución ‘Según Profetas y Reyes...’.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué principio rige la importancia de los deberes en la vida del verdadero cristiano?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.019-06:00",
+      "input_content_sha256": "990a52eaf7b3495f5512db931d425a0f40288a51b3ff6ca7172cded7328f2e46",
+      "output_sha256": "03ac87dba870107d700f3c0d31fed03dee7ba5faba6a96cf55c60acebbbf848e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0107",
+      "selected_option_index": 3,
+      "selected_option_text": "servir",
+      "exact_supporting_phrase": "El Señor mide con exactitud toda posibilidad de servir.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "aprender",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "Aprender no es la actividad asociada a ‘toda posibilidad’."
+        },
+        {
+          "text": "gobernar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "Gobernar no aparece en la frase fuente."
+        },
+        {
+          "text": "enseñar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "La fuente no limita la posibilidad al acto de enseñar."
+        },
+        {
+          "text": "servir",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "Es la actividad nombrada literalmente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El enunciado omite la fórmula obligatoria de fuente.",
+      "suggested_rewrite": "Según Profetas y Reyes, cuando el Señor mide con exactitud toda posibilidad, ¿qué actividad está teniendo en cuenta?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_002",
+      "conversation_id": "/root/sol_audit_002",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T03:19:44.020-06:00",
+      "input_content_sha256": "3d30201b5c9767f12ffd32d4ae96aaba1fd9a14b2b9b2756fc10801a5f46952a",
+      "output_sha256": "f361e99dc92dbf04748a30b401c353ce6ca83dd75a171bb9fb69bb3c846c85e2"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 0,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 20,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

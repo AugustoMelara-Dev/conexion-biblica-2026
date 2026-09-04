@@ -1,0 +1,1057 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-safe-first",
+  "batch_id": "batch-004",
+  "input_file": ".work/final-day-v18/dossiers/v18-safe-first/batch-004.json",
+  "input_sha256": "2423fc720537270b88e3d3b355c4bd20fa4accb776fc284bf631e6429865df7f",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/safe_sol_004",
+    "conversation_id": "/root/safe_sol_004",
+    "conversation_id_kind": "codex_canonical_agent_task_name",
+    "reviewed_at": "2026-09-04T09:45:48.851Z"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V13-R2-DAN9-C15-003",
+      "selected_option_index": 0,
+      "selected_option_text": "Orden para restaurar y edificar Jerusalén; hasta el Mesías Príncipe; siete semanas y sesenta y dos; plaza y muro reedificados en tiempos angustiosos",
+      "exact_supporting_phrase": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas; se volverán a edificar la plaza y el muro en tiempos angustiosos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Orden para restaurar y edificar Jerusalén; hasta el Mesías Príncipe; siete semanas y sesenta y dos; plaza y muro reedificados en tiempos angustiosos",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La cita fija orden de restaurar Jerusalén, Mesías Príncipe, siete y sesenta y dos semanas, plaza y muro en angustia."
+        },
+        {
+          "text": "Decreto para edificar Persia; hasta Gabriel; una semana; palacio y foso sin oposición",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita fija orden de restaurar Jerusalén, Mesías Príncipe, siete y sesenta y dos semanas, plaza y muro en angustia."
+        },
+        {
+          "text": "Orden para destruir Babilonia; hasta Darío; setenta semanas; templo y río en paz",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita fija orden de restaurar Jerusalén, Mesías Príncipe, siete y sesenta y dos semanas, plaza y muro en angustia."
+        },
+        {
+          "text": "Salida de Egipto; hasta Ciro; tres tiempos; plaza sin muro después de la angustia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita fija orden de restaurar Jerusalén, Mesías Príncipe, siete y sesenta y dos semanas, plaza y muro en angustia."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "HARD",
+      "decision": "REWRITE",
+      "specific_reason": "Repite casi el mismo ensamblaje de Daniel 9:25 que V13-R2-DAN9-C7-V025-F03; no aporta una variante sustantiva.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "9342fd71dc06d8953fe7bfca000c8bbf5981ba49b3ffc6681ab85849c8d6f9cf",
+      "suggested_rewrite": "Según Daniel 9:25, ¿qué secuencia enlaza el decreto, el Mesías Príncipe, los dos períodos y la reedificación en angustia?",
+      "output_sha256": "6e357df14de363fd1f2e215a661b40c38c8c83628b8a5891d50eadc7f7a57ef1"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "DAN12-V11-WAVE-001",
+      "selected_option_index": 2,
+      "selected_option_text": "No habría existido otro igual desde que hubo gente",
+      "exact_supporting_phrase": "En aquel tiempo se levantará Miguel, el gran príncipe que está de parte de los hijos de tu pueblo. »Será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen inscritos en el libro.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Duraría únicamente una noche",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita caracteriza la angustia como una crisis sin precedente."
+        },
+        {
+          "text": "Sería menor que todas las crisis anteriores",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita caracteriza la angustia como una crisis sin precedente."
+        },
+        {
+          "text": "No habría existido otro igual desde que hubo gente",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "La cita caracteriza la angustia como una crisis sin precedente."
+        },
+        {
+          "text": "Afectaría solo a los reyes de Persia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita caracteriza la angustia como una crisis sin precedente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita distingue el tiempo de angustia por no tener precedente y sólo esa opción lo expresa.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "d90f1f110b25ff42e529b4d10d2b30dd237c9fb1a91ccec0e2063d375ce12b2f",
+      "suggested_rewrite": null,
+      "output_sha256": "bed69d8095d184f2d4a21fdb25004ef436fe7dfbab33504405bad514c521cfbc"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "DAN9-V11-WAVE-034",
+      "selected_option_index": 1,
+      "selected_option_text": "La plaza y el muro",
+      "exact_supporting_phrase": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas; se volverán a edificar la plaza y el muro en tiempos angustiosos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "El palacio y el trono",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita nombra la plaza y el muro como lo reedificado."
+        },
+        {
+          "text": "La plaza y el muro",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La cita nombra la plaza y el muro como lo reedificado."
+        },
+        {
+          "text": "El altar de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita nombra la plaza y el muro como lo reedificado."
+        },
+        {
+          "text": "El río y sus riberas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita nombra la plaza y el muro como lo reedificado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Duplica superficialmente el dato de plaza y muro también preguntado por DAN9-V11-WAVE-043 y V16-R2-DAN9-W3-058.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "af03a33a45efa8bc231f7745dc9c42d2b95673dcccbddd3a9a23ac0058afc056",
+      "suggested_rewrite": "Según Daniel 9:25, además de la plaza, ¿qué elemento urbano volvería a edificarse en tiempos angustiosos?",
+      "output_sha256": "56a551ecef7660896d5fbe7fb79073c866e325e765839d779906939fadc55628"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "DAN12-V11-WAVE-002",
+      "selected_option_index": 1,
+      "selected_option_text": "Estar inscritos en el libro",
+      "exact_supporting_phrase": "En aquel tiempo se levantará Miguel, el gran príncipe que está de parte de los hijos de tu pueblo. »Será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen inscritos en el libro.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Vivir junto al río",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita limita la liberación a los inscritos en el libro."
+        },
+        {
+          "text": "Estar inscritos en el libro",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "La cita limita la liberación a los inscritos en el libro."
+        },
+        {
+          "text": "Conocer el número de los días",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita limita la liberación a los inscritos en el libro."
+        },
+        {
+          "text": "Pertenecer al ejército persa",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita limita la liberación a los inscritos en el libro."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Es una variante superficial del criterio de liberación ya formulado con mayor profundidad en R2-C7-DAN12-007.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "084d3328145a3d973b7ecaa5157b581cff04c86fc3e4ee5b63fddaf22155a4be",
+      "suggested_rewrite": "Según Daniel 12:1, ¿dónde debían hallarse registrados quienes serían libertados durante la angustia?",
+      "output_sha256": "d95da677eb7de127761b0c506126cc06b868e8ccb44079d4922d0647db27e0a8"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "DAN9-V11-WAVE-043",
+      "selected_option_index": 3,
+      "selected_option_text": "muro",
+      "exact_supporting_phrase": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas; se volverán a edificar la plaza y el muro en tiempos angustiosos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "trono",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La palabra ausente en la cita es muro."
+        },
+        {
+          "text": "palacio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La palabra ausente en la cita es muro."
+        },
+        {
+          "text": "río",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La palabra ausente en la cita es muro."
+        },
+        {
+          "text": "muro",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La palabra ausente en la cita es muro."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Es un ejercicio de completar que repite el mismo dato de plaza y muro de otras dos preguntas del lote.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "089aa5ff0151c597a8cf9c7e5d2c19217885d7ea8ab17742ec5a65694d059ac4",
+      "suggested_rewrite": "Según Daniel 9:25, ¿qué obra defensiva se reedificaría junto con la plaza en tiempos angustiosos?",
+      "output_sha256": "7fc54d03edecc682a9709c6ea3c87c32251b8f2e8b3e46f13e9420aee3bc03ce"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "Q-DAN12-0001",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "En aquel tiempo se levantará Miguel, el gran príncipe que está de parte de los hijos de tu pueblo. »Será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen inscritos en el libro.",
+      "stem_fully_supported": false,
+      "one_unambiguous_answer": false,
+      "second_defensible_option": true,
+      "second_defensible_text": "Verdadero",
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "DEFENSIBLE",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita presenta a Miguel como gran príncipe, no formula expresamente su naturaleza ni usa “rey terrenal”."
+        },
+        {
+          "text": "Falso",
+          "verdict": "DEFENSIBLE",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "Es la lectura textual más estricta, aunque la formulación admite la alternativa indicada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La fuente llama a Miguel “gran príncipe”, pero el enunciado negativo “rey terrenal” exige una inferencia ontológica no expresada en la cita.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "4f53b7a959d7cbdd58f40ecec418270ba84e1483ac343039a628e0dcc41b042a",
+      "suggested_rewrite": "Según Daniel 12:1, Miguel es presentado como el gran príncipe que está de parte del pueblo de Daniel.",
+      "output_sha256": "cd62314199253f2d2f23754f59cab266dd09193f57a42b489c646fd008c38341"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "PV-DAN9-0025",
+      "selected_option_index": 0,
+      "selected_option_text": "siete semanas y sesenta y dos semanas",
+      "exact_supporting_phrase": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas; se volverán a edificar la plaza y el muro en tiempos angustiosos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "siete semanas y sesenta y dos semanas",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La cita divide el lapso en siete semanas y sesenta y dos semanas."
+        },
+        {
+          "text": "veintiún días y tres semanas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita divide el lapso en siete semanas y sesenta y dos semanas."
+        },
+        {
+          "text": "setenta años y una semana",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita divide el lapso en siete semanas y sesenta y dos semanas."
+        },
+        {
+          "text": "cuarenta años y siete semanas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita divide el lapso en siete semanas y sesenta y dos semanas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La fuente enumera exactamente siete semanas y sesenta y dos semanas; los demás pares son ajenos al pasaje.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "491aa3f67bd10f38cc47c4ccaca7e2039fd352ec6b47e0608515bf3fd82e4674",
+      "suggested_rewrite": null,
+      "output_sha256": "0aab1c17abac8008a42d8d1874f36ad27bab5d51f2f3d2b9159804e3b67fe841"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "Q-DAN12-0001::PRESENTATION-01",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "En aquel tiempo se levantará Miguel, el gran príncipe que está de parte de los hijos de tu pueblo. »Será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen inscritos en el libro.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "La cita llama a Miguel gran príncipe favorable al pueblo."
+        },
+        {
+          "text": "Falso",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita llama a Miguel gran príncipe favorable al pueblo."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La afirmación reproduce de manera directa la presentación de Miguel en Daniel 12:1.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "24382a2c078306f5eeb039e8b2d10f1f04ddb2361a03d38c33e9638faa3fb7ea",
+      "suggested_rewrite": null,
+      "output_sha256": "a71e8971a4f3befdffa2944cd65cada067e515afc1407ba32f253e89bc5ece9d"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "Q-DAN9-CENTRAL-0025",
+      "selected_option_index": 3,
+      "selected_option_text": "Siete semanas y sesenta y dos semanas",
+      "exact_supporting_phrase": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas; se volverán a edificar la plaza y el muro en tiempos angustiosos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Una semana y setenta años",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita anuncia siete semanas y sesenta y dos semanas."
+        },
+        {
+          "text": "Cuarenta años y tres semanas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita anuncia siete semanas y sesenta y dos semanas."
+        },
+        {
+          "text": "Veintiún días y una semana",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita anuncia siete semanas y sesenta y dos semanas."
+        },
+        {
+          "text": "Siete semanas y sesenta y dos semanas",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La cita anuncia siete semanas y sesenta y dos semanas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "Repite el mismo dato temporal ya preguntado por PV-DAN9-0025 sin una operación cognitiva diferente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "0272693f788e849a16ebe6b09d6b6913d209d0057b9100ce76c61c107692ecc1",
+      "suggested_rewrite": "Según Daniel 9:25, ¿cómo se divide el período que llega hasta el Mesías Príncipe?",
+      "output_sha256": "95178cffc4a7449746618e2dd31ffd9d7f0e01e655d86cb3002107848329ea09"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "R2-C7-DAN12-001",
+      "selected_option_index": 1,
+      "selected_option_text": "aquel tiempo—Miguel, gran príncipe a favor del pueblo—angustia sin precedente—los inscritos en el libro",
+      "exact_supporting_phrase": "En aquel tiempo se levantará Miguel, el gran príncipe que está de parte de los hijos de tu pueblo. »Será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen inscritos en el libro.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "después de los días—Daniel, príncipe de los sabios—hambre prolongada—los que cruzaran el río",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita reúne aquel tiempo, Miguel, angustia incomparable e inscritos en el libro."
+        },
+        {
+          "text": "aquel tiempo—Miguel, gran príncipe a favor del pueblo—angustia sin precedente—los inscritos en el libro",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "La cita reúne aquel tiempo, Miguel, angustia incomparable e inscritos en el libro."
+        },
+        {
+          "text": "tiempo del fin—Gabriel, rey terrenal—guerra común—todo habitante de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita reúne aquel tiempo, Miguel, angustia incomparable e inscritos en el libro."
+        },
+        {
+          "text": "tiempo de reposo—el varón de lino, rey del pueblo—ciencia creciente—los que enseñaran justicia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita reúne aquel tiempo, Miguel, angustia incomparable e inscritos en el libro."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "Exige conservar conjuntamente tiempo, defensor, crisis y criterio de liberación; una sola cadena coincide por completo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "2b65f146679cd8886d7c4462c3bf7b4527c126288c79a851f48b3efffbb08321",
+      "suggested_rewrite": null,
+      "output_sha256": "4575ad852fa333848b8119c1d12c938f736647854f27a7a9a845bddfee2db671"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V13-R2-DAN9-C7-V025-F03",
+      "selected_option_index": 1,
+      "selected_option_text": "Salida de la orden de restaurar Jerusalén → Mesías Príncipe → siete semanas y sesenta y dos → plaza y muro reedificados en tiempos angustiosos",
+      "exact_supporting_phrase": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas; se volverán a edificar la plaza y el muro en tiempos angustiosos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Fin de los ruegos de Daniel → Santo de los santos → una semana y setenta semanas → ciudad y río abandonados en prosperidad",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita reúne orden, Mesías Príncipe, dos períodos, plaza, muro y tiempos angustiosos."
+        },
+        {
+          "text": "Salida de la orden de restaurar Jerusalén → Mesías Príncipe → siete semanas y sesenta y dos → plaza y muro reedificados en tiempos angustiosos",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La cita reúne orden, Mesías Príncipe, dos períodos, plaza, muro y tiempos angustiosos."
+        },
+        {
+          "text": "Llegada de Gabriel a Jerusalén → príncipe venidero → setenta años y media semana → santuario y palacio reedificados en paz",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita reúne orden, Mesías Príncipe, dos períodos, plaza, muro y tiempos angustiosos."
+        },
+        {
+          "text": "Lectura de la ley en Babilonia → Darío el medo → sesenta semanas y dos años → templo y altar destruidos en guerra",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita reúne orden, Mesías Príncipe, dos períodos, plaza, muro y tiempos angustiosos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "HARD",
+      "decision": "REWRITE",
+      "specific_reason": "Duplica el ensamblaje cronológico de V13-R2-DAN9-C15-003 y usa la misma unidad y relaciones.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "00b29f3b0f0ae4bee0c2e7bf0936b791a2352ed6405d856b01ef3e2a4cd9d00c",
+      "suggested_rewrite": "Según Daniel 9:25, ¿qué relación correcta une el inicio de la profecía con el Mesías y la reconstrucción de Jerusalén?",
+      "output_sha256": "a06da9a3434b968e849cab6ac2ca7f0c33d4c39c1794b56f9cd427e2fc595ee0"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "R2-C7-DAN12-007",
+      "selected_option_index": 1,
+      "selected_option_text": "la angustia alcanza al pueblo, pero la liberación se delimita a quienes estén inscritos en el libro",
+      "exact_supporting_phrase": "En aquel tiempo se levantará Miguel, el gran príncipe que está de parte de los hijos de tu pueblo. »Será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen inscritos en el libro.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "la crisis termina antes de comenzar, y la liberación depende de correr de aquí para allá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita expone angustia para el pueblo y liberación de los inscritos."
+        },
+        {
+          "text": "la angustia alcanza al pueblo, pero la liberación se delimita a quienes estén inscritos en el libro",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "La cita expone angustia para el pueblo y liberación de los inscritos."
+        },
+        {
+          "text": "la angustia afecta sólo a reyes, y la liberación corresponde a todo el que viva junto al río",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita expone angustia para el pueblo y liberación de los inscritos."
+        },
+        {
+          "text": "la angustia es ordinaria, y la liberación se reserva a quienes supriman el sacrificio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita expone angustia para el pueblo y liberación de los inscritos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La respuesta requiere distinguir entre el pueblo expuesto a la angustia y el subconjunto inscrito en el libro.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "5aac6a4a5e397c862531902962fa0761a5960feaa76dc8b4110558f2d229be0b",
+      "suggested_rewrite": null,
+      "output_sha256": "2e9b7df482b04338e890ff13172515ab8f8ce039c8b9adeaf5fa8f3f9b11fed9"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-DAN9-W3-058",
+      "selected_option_index": 2,
+      "selected_option_text": "La plaza y el muro de la ciudad",
+      "exact_supporting_phrase": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas; se volverán a edificar la plaza y el muro en tiempos angustiosos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Las casas y las puertas reales",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita identifica plaza y muro."
+        },
+        {
+          "text": "El palacio y los altos vallados",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita identifica plaza y muro."
+        },
+        {
+          "text": "La plaza y el muro de la ciudad",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La cita identifica plaza y muro."
+        },
+        {
+          "text": "El templo y la torre del vigía",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No coincide con la información explícita: La cita identifica plaza y muro."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Pregunta de forma directa el mismo par plaza-muro ya cubierto dos veces en el lote.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "20e684c3f786cc0578b3de0984d4b89a97d702da7733435a33331373fe4f291d",
+      "suggested_rewrite": "Según Daniel 9:25, ¿qué dos espacios de Jerusalén serían restaurados bajo condiciones angustiosas?",
+      "output_sha256": "4d63217f7dcea634cec22b42c1d0a78bb4131175699e87a14278a8a20974e1b9"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-DAN12-C18-002",
+      "selected_option_index": 2,
+      "selected_option_text": "Se levantará Miguel, el gran príncipe defensor de tu pueblo, y serán librados todos los inscritos en el libro.",
+      "exact_supporting_phrase": "En aquel tiempo se levantará Miguel, el gran príncipe que está de parte de los hijos de tu pueblo. »Será tiempo de angustia, cual nunca fue desde que hubo gente hasta entonces; pero en aquel tiempo será libertado tu pueblo, todos los que se hallen inscritos en el libro.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Se levantará el monarca persa en favor de los hijos de Judá, y serán librados todos los que paguen el tributo.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita identifica a Miguel y a los inscritos en el libro."
+        },
+        {
+          "text": "Se levantará el sumo sacerdote en favor del pueblo de Judá, y serán librados los santos descendientes de Leví.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita identifica a Miguel y a los inscritos en el libro."
+        },
+        {
+          "text": "Se levantará Miguel, el gran príncipe defensor de tu pueblo, y serán librados todos los inscritos en el libro.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "La cita identifica a Miguel y a los inscritos en el libro."
+        },
+        {
+          "text": "Se levantará un ángel de paz en favor del pueblo de Judá, y serán librados todos los sabios de las provincias.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:1",
+          "exact_reason": "No coincide con la información explícita: La cita identifica a Miguel y a los inscritos en el libro."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "Es una variante superficial del compuesto de Miguel, angustia y liberación ya cubierto por R2-C7-DAN12-001.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "d33e36a9fa54f0e5fb0350f31383191e3a907f21e2871eab0cebd0a5385ee552",
+      "suggested_rewrite": "Según Daniel 12:1, ¿qué relación existe entre Miguel, el tiempo de angustia y quienes están inscritos en el libro?",
+      "output_sha256": "ea54b09b6d91ba33d0be12efc897d1ebb81f519f0a84c648709ce46c314be16d"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "DAN9-V11-BLINDB-017",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "Después de las sesenta y dos semanas se quitará la vida al Mesías, y nada ya le quedará. El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario, su final llegará como una inundación, y hasta el fin de la guerra durarán las devastaciones.",
+      "stem_fully_supported": false,
+      "one_unambiguous_answer": false,
+      "second_defensible_option": true,
+      "second_defensible_text": "Verdadero",
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "DEFENSIBLE",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No coincide con la información explícita: La cita dice “el pueblo de un príncipe”, no “el ejército”."
+        },
+        {
+          "text": "Falso",
+          "verdict": "DEFENSIBLE",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "Es la lectura textual más estricta, aunque la formulación admite la alternativa indicada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La cita atribuye la destrucción al “pueblo de un príncipe”; sustituir pueblo por ejército introduce una equivalencia no establecida y permite defender ambas respuestas.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "fe74b595c347bcc9a58c09f0a2fa096d008e209f77b85cfac0fa7461f1f09244",
+      "suggested_rewrite": "Según Daniel 9:26, el pueblo de un príncipe que había de venir destruiría la ciudad y el santuario.",
+      "output_sha256": "2d026241f47c0ac16fa196abbe7c5b9118f0de228f16a47b24aa276be3d1de9e"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "Q-DAN12-0004::PRESENTATION-01",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "“Pero tú, Daniel, cierra las palabras y sella el libro hasta el tiempo del fin. Muchos correrán de aquí para allá, y la ciencia aumentará.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 12:4",
+          "exact_reason": "La cita ordena cerrar las palabras y sellar el libro hasta el fin."
+        },
+        {
+          "text": "Falso",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 12:4",
+          "exact_reason": "No coincide con la información explícita: La cita ordena cerrar las palabras y sellar el libro hasta el fin."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La afirmación reproduce las dos órdenes explícitas dadas a Daniel y su límite temporal.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "e8e7bf5ad4376e9a3b20c1c0e6ab8de5fd77ffe046d694b372ebee57bfe8ca69",
+      "suggested_rewrite": null,
+      "output_sha256": "c398ac7527b071ec07950db07850d183e43eeb792d9fb415b5ab14b6c32405b7"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "DAN9-V11-WAVE-035",
+      "selected_option_index": 3,
+      "selected_option_text": "El pueblo de un príncipe destruiría la ciudad y el santuario",
+      "exact_supporting_phrase": "Después de las sesenta y dos semanas se quitará la vida al Mesías, y nada ya le quedará. El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario, su final llegará como una inundación, y hasta el fin de la guerra durarán las devastaciones.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "El sacrificio comenzaría de nuevo para siempre",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No coincide con la información explícita: La cita dice que el pueblo del príncipe destruirá ciudad y santuario."
+        },
+        {
+          "text": "Jerusalén sería declarada inexpugnable",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No coincide con la información explícita: La cita dice que el pueblo del príncipe destruirá ciudad y santuario."
+        },
+        {
+          "text": "Los medos devolverían el reino a Belsasar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No coincide con la información explícita: La cita dice que el pueblo del príncipe destruirá ciudad y santuario."
+        },
+        {
+          "text": "El pueblo de un príncipe destruiría la ciudad y el santuario",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "La cita dice que el pueblo del príncipe destruirá ciudad y santuario."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "Sólo la cuarta opción reproduce el acto posterior: el pueblo del príncipe destruye ciudad y santuario.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "a0b376f15b0f6a8eadff9d9ec126a4b8740e18e31e19d0ece879425a98e7f070",
+      "suggested_rewrite": null,
+      "output_sha256": "fe6ba7d25fb52c8a3be5d55e8fe00a005fdccd295db8635e06561f0acf1bd29a"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-DAN12-C18-001",
+      "selected_option_index": 0,
+      "selected_option_text": "unos para vida eterna, otros para vergüenza y confusión perpetua.",
+      "exact_supporting_phrase": "Muchos de los que duermen en el polvo de la tierra serán despertados: unos para vida eterna, otros para vergüenza y confusión perpetua.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "unos para vida eterna, otros para vergüenza y confusión perpetua.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 12:2",
+          "exact_reason": "La cita contrasta vida eterna con vergüenza y confusión perpetua."
+        },
+        {
+          "text": "unos para reencarnar en reyes justos, otros para vagar como espíritus en el desierto.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 12:2",
+          "exact_reason": "No coincide con la información explícita: La cita contrasta vida eterna con vergüenza y confusión perpetua."
+        },
+        {
+          "text": "todos para entrar en la gloria celestial independientemente de sus obras pasadas.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 12:2",
+          "exact_reason": "No coincide con la información explícita: La cita contrasta vida eterna con vergüenza y confusión perpetua."
+        },
+        {
+          "text": "unos para reinar en la tierra por mil años, otros para ser aniquilados en el mar.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 12:2",
+          "exact_reason": "No coincide con la información explícita: La cita contrasta vida eterna con vergüenza y confusión perpetua."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita presenta exactamente los dos destinos eternos opuestos y ninguna otra opción está respaldada.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "12c2008d994bb9e73153f65f2e1ffe6eb223130e06017e6338414b9ade36691e",
+      "suggested_rewrite": null,
+      "output_sha256": "e2fde5dc1746329d879e849a36b0d890fa4055fe6d17fc8a02c6ef2965fd0ffa"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "DAN9-V11-WAVE-044",
+      "selected_option_index": 3,
+      "selected_option_text": "inundación",
+      "exact_supporting_phrase": "Después de las sesenta y dos semanas se quitará la vida al Mesías, y nada ya le quedará. El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario, su final llegará como una inundación, y hasta el fin de la guerra durarán las devastaciones.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "sequía",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No coincide con la información explícita: La cita compara el final con una inundación."
+        },
+        {
+          "text": "brisa",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No coincide con la información explícita: La cita compara el final con una inundación."
+        },
+        {
+          "text": "cosecha",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No coincide con la información explícita: La cita compara el final con una inundación."
+        },
+        {
+          "text": "inundación",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "La cita compara el final con una inundación."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La comparación “como una inundación” aparece literalmente y las otras imágenes no aparecen.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "adc164dfc946ef6af8d32912647b2e9b979aaba0b4211870f641137345e446e4",
+      "suggested_rewrite": null,
+      "output_sha256": "f687b46c07201fda465564fe4dab07ffb447dbe2f87c049f33245f8feff73bb3"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "DAN9-V11-WAVE-067",
+      "selected_option_index": 1,
+      "selected_option_text": "devastaciones",
+      "exact_supporting_phrase": "Después de las sesenta y dos semanas se quitará la vida al Mesías, y nada ya le quedará. El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario, su final llegará como una inundación, y hasta el fin de la guerra durarán las devastaciones.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "misericordias",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No coincide con la información explícita: La cita afirma que durarían las devastaciones."
+        },
+        {
+          "text": "devastaciones",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "La cita afirma que durarían las devastaciones."
+        },
+        {
+          "text": "celebraciones",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No coincide con la información explícita: La cita afirma que durarían las devastaciones."
+        },
+        {
+          "text": "coronaciones",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No coincide con la información explícita: La cita afirma que durarían las devastaciones."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita declara que las devastaciones durarían hasta el fin de la guerra.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_004",
+      "conversation_id": "/root/safe_sol_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:48.851Z",
+      "input_content_sha256": "e4f97a001a4589da82f76c1a7cd4ff31badfb504d2054a791126ca848ceca3f8",
+      "suggested_rewrite": null,
+      "output_sha256": "90e1b282b84ba62a75d20b12dc693c3d6e974f8a06c074c522aab8975cb492ae"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 8,
+    "ACCEPT_COMPETITIVE": 2,
+    "REWRITE": 10,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

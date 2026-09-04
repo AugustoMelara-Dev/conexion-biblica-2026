@@ -13,6 +13,7 @@ import type {
   QuestionType,
   SourceWork,
 } from "@/domain/types"
+import { V18_AUDIT_STATUS_BY_ID } from "@/data/final-day-v18"
 
 export type FinalRawQuestion = {
   id: string
@@ -67,6 +68,8 @@ export type FinalRawQuestion = {
     rationale: string
     second_defensible_option: boolean
   }
+  tier?: "COMPETITIVE_ACCEPT" | "COVERAGE_ACCEPT"
+  provisional?: boolean
 }
 
 export type FinalBankManifest = {
@@ -210,6 +213,13 @@ export function adaptFinalQuestion(raw: FinalRawQuestion): Question {
     ? "Daniel"
     : "Profetas y Reyes"
   const level = difficulty[raw.difficulty]
+  const auditStatus = V18_AUDIT_STATUS_BY_ID[raw.id]
+  const auditedTier =
+    auditStatus === "VERIFIED_COMPETITIVE_SOL"
+      ? "COMPETITIVE_ACCEPT"
+      : auditStatus === "VERIFIED_COVERAGE_SOL"
+        ? "COVERAGE_ACCEPT"
+        : undefined
   return {
     id: raw.id,
     bankId: FINAL_BANK_ID,
@@ -257,8 +267,8 @@ export function adaptFinalQuestion(raw: FinalRawQuestion): Question {
     editorialStatus: "gold",
     qualityScore: 100,
     semanticSkill: semanticSkill(raw),
-    verified: true,
-    tier: (raw as any).tier ?? (level.band === "HARD" || level.band === "EXPERT" ? "COMPETITIVE_ACCEPT" : "COVERAGE_ACCEPT"),
+    verified: Boolean(auditStatus),
+    tier: auditedTier,
     metadata: {
       sourceUnitId: raw.source_unit_id,
       relationType: raw.relation_type,
@@ -268,8 +278,9 @@ export function adaptFinalQuestion(raw: FinalRawQuestion): Question {
       aiReviewer: raw.ai_review?.reviewer,
       aiReviewerType: raw.ai_review?.reviewer_type,
       falseMutation: raw.false_mutation,
-      tier: (raw as any).tier ?? (level.band === "HARD" || level.band === "EXPERT" ? "COMPETITIVE_ACCEPT" : "COVERAGE_ACCEPT"),
-      provisional: (raw as any).provisional ?? false,
+      tier: auditedTier,
+      auditStatus,
+      provisional: raw.provisional ?? false,
     },
   }
 }
@@ -318,6 +329,7 @@ export async function loadFinalQuestionPool(input: {
   exposures?: QuestionExposure[]
   factFilter?: (factId: string) => boolean
   preferredMigrationSignatures?: ReadonlySet<string>
+  questionIds?: ReadonlySet<string>
   fetcher?: typeof fetch
 }) {
   const fetcher = input.fetcher ?? fetch
@@ -337,6 +349,7 @@ export async function loadFinalQuestionPool(input: {
   if (input.factFilter || input.preferredMigrationSignatures?.size) {
     const rawCandidates = shardRows
       .flat()
+      .filter((row) => !input.questionIds || input.questionIds.has(row.id))
       .filter((row) =>
         input.blindPool
           ? row.blind_pool === input.blindPool
@@ -380,6 +393,7 @@ export async function loadFinalQuestionPool(input: {
     const selected = selectedRows.map(adaptFinalQuestion)
     const retryRows = shardRows
       .flat()
+      .filter((row) => !input.questionIds || input.questionIds.has(row.id))
       .filter((row) => selectedFacts.has(row.fact_id))
       .filter((row) =>
         input.blindPool
@@ -391,6 +405,7 @@ export async function loadFinalQuestionPool(input: {
   }
   for (const rows of shardRows) {
     const eligibleRows = rows
+      .filter((row) => !input.questionIds || input.questionIds.has(row.id))
       .filter((row) =>
         input.blindPool
           ? row.blind_pool === input.blindPool

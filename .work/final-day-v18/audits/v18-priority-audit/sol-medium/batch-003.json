@@ -1,0 +1,1068 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-003",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-003.json",
+  "input_sha256": "160349e6fe54c43011787884287c4d998309e708a077b153962032937695c212",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/sol_audit_003",
+    "conversation_id": "/root/sol_audit_003",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0038",
+      "selected_option_index": 0,
+      "selected_option_text": "la aprobación de Dios",
+      "exact_supporting_phrase": "Apreciaba más la aprobación de Dios que el favor del mayor potentado de la tierra, aun más que la vida misma.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "la aprobación de Dios",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "La cita declara literalmente que Daniel apreciaba más la aprobación de Dios."
+        },
+        {
+          "text": "la estima del príncipe de los eunucos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "La fuente contrapone la aprobación de Dios al favor del potentado; no identifica la estima del príncipe como prioridad suprema."
+        },
+        {
+          "text": "la seguridad de su puesto",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "El pasaje afirma que prefería la aprobación divina aun por encima de la vida, no la seguridad del puesto."
+        },
+        {
+          "text": "la admiración de sus compañeros",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "La admiración de sus compañeros no aparece como objeto de esta comparación."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es inequívoca, pero el enunciado de una pregunta PR no incluye el prefijo obligatorio «Según Profetas y Reyes...». Además, la opción correcta reproduce el núcleo exacto de la cita y ofrece una pista de precisión.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué apreciaba Daniel más que el favor del mayor potentado de la tierra y aun más que la vida misma?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "70e7aa6bef22b0d6da63264ec7a4e5342a31421e9db3fab7bafb0238afad3f7b",
+      "output_sha256": "f83d681a2a8db21e62ff75c6830ece38b763801f9f9ee2668cd6032acffaa2f1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0039",
+      "selected_option_index": 3,
+      "selected_option_text": "integridad",
+      "exact_supporting_phrase": "Resolvió permanecer firme en su integridad, cualesquiera fuesen los resultados.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "comodidad",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "La comodidad no completa la afirmación de la fuente."
+        },
+        {
+          "text": "posición",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "El contexto contempla perder el puesto; no dice que resolviera permanecer firme en su posición."
+        },
+        {
+          "text": "prestigio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "El prestigio no es el objeto de la resolución citada."
+        },
+        {
+          "text": "integridad",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "La frase exacta dice que resolvió permanecer firme en su integridad."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El contenido y la clave están sustentados, pero falta el prefijo obligatorio que delimita Profetas y Reyes; el formato de completar cita también reduce la dificultad a recuerdo literal.",
+      "suggested_rewrite": "Según Profetas y Reyes, Daniel resolvió permanecer firme en su ____, cualesquiera que fuesen los resultados.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "4425e4b11050b66157522c7eadbde53ead973d440e4802b5c3cf7d099117d320",
+      "output_sha256": "17d7db5ef27490f33a0676442911af106a31b223ce104f6b0360d93cc8fe9b8d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0040",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "Propuso en su corazón de no contaminarse en la ración de la comida del rey, ni en el vino de su beber.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "Es falso porque la fuente dice vino, mientras el enunciado sustituye esa bebida por agua."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "La afirmación no coincide con la fuente: esta menciona vino de su beber, no agua."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La falsedad se determina de forma inequívoca por el cambio de «vino» a «agua», pero falta el prefijo obligatorio de atribución a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, Daniel propuso en su corazón no contaminarse con la comida del rey ni con el agua de su beber.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "827350a5a873e534d492e9d99defebd81dd86a26ab01eb447646d3dacb44c04d",
+      "output_sha256": "39a2f5ea9e9f88b7bd5228a0d08d9a226a38e369c9eeabccb581e459f811f597"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0041",
+      "selected_option_index": 0,
+      "selected_option_text": "tres compañeros",
+      "exact_supporting_phrase": "Esta resolución fué apoyada por sus tres compañeros.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "tres compañeros",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "La fuente fija explícitamente la cantidad en tres compañeros."
+        },
+        {
+          "text": "cuatro compañeros",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "Contradice la cantidad explícita de tres."
+        },
+        {
+          "text": "dos compañeros",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "Contradice la cantidad explícita de tres."
+        },
+        {
+          "text": "un compañero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 5",
+          "exact_reason": "Contradice la cantidad explícita de tres."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La cantidad tiene una sola respuesta, pero «la resolución» depende del contexto inmediato y el enunciado omite el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cuántos compañeros apoyaron la resolución de Daniel de no contaminarse?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "a55d84f2c150677b03e3b059e1ddeef99c17010ad4efe6ad50ffc60e796b03d1",
+      "output_sha256": "72dfd562f6780b03fb0dcf8c0060d436d6f5e84127b490812bb025b40ee33153"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0042",
+      "selected_option_index": 3,
+      "selected_option_text": "confiando firmemente en Dios",
+      "exact_supporting_phrase": "los jóvenes hebreos no obraron presuntuosamente, sino confiando firmemente en Dios.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "siguiendo discretamente la costumbre",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "La fuente no atribuye la decisión a seguir una costumbre."
+        },
+        {
+          "text": "desafiando abiertamente al rey",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "El pasaje niega una acción presuntuosa y no describe un desafío abierto al rey."
+        },
+        {
+          "text": "calculando prudentemente el riesgo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "Aunque hubo una petición prudente después, esta oración atribuye la decisión a confianza firme en Dios, no a cálculo de riesgo."
+        },
+        {
+          "text": "confiando firmemente en Dios",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "La opción reproduce la contraposición explícita de la fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave está citada literalmente y es única, pero el enunciado no delimita Profetas y Reyes con el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, los jóvenes hebreos no obraron presuntuosamente, sino ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "6100ef3adf94ce3cb09ae5c8bbfc7e400a0a5755fc39e86ea9a3f70b7cacea74",
+      "output_sha256": "c22aeda2efea7f182114650d036801edafe9732aaa29a873813ae91869eb98c1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0043",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "No decidieron singularizarse, aunque preferirían eso antes que deshonrar a Dios.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "La proposición coincide con la fuente; por eso «Falso» contradice el pasaje."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "«No buscaban singularizarse» y «habrían preferido eso» expresan fielmente la oración citada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La paráfrasis es fiel y la respuesta es única, pero la pregunta PR carece del prefijo obligatorio «Según Profetas y Reyes...». ",
+      "suggested_rewrite": "Según Profetas y Reyes, los jóvenes no buscaban singularizarse, aunque habrían preferido eso antes que deshonrar a Dios.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "dc64852283db53151d19089bc9459e2224f10cfe9c1a72d45c9d6e706d39aca8",
+      "output_sha256": "8b5dcc15b71e062237dae8a3281e48864109ba1862b6a2206c778d33dc49bdf1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0044",
+      "selected_option_index": 2,
+      "selected_option_text": "habría debilitado su sentido de lo recto y su aborrecimiento por lo malo",
+      "exact_supporting_phrase": "su desvío de los buenos principios habría debilitado su sentido de lo recto y su aborrecimiento por lo malo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "habría protegido su reputación y su influencia entre los oficiales",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "La fuente no presenta protección de reputación o influencia como efecto de ceder."
+        },
+        {
+          "text": "habría separado sus decisiones privadas de sus deberes religiosos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "Esa separación conceptual no aparece en el pasaje."
+        },
+        {
+          "text": "habría debilitado su sentido de lo recto y su aborrecimiento por lo malo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "La opción reproduce literalmente el daño moral descrito."
+        },
+        {
+          "text": "habría fortalecido su prudencia y su adaptación a las circunstancias",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "La fuente describe debilitamiento moral, no fortalecimiento por adaptación."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es exacta y única, pero falta el prefijo obligatorio de Profetas y Reyes. Además, comparte fuente, clave y competencia casi idénticas con PR39-AUTH-0044-PV01.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué efecto habría tenido en los jóvenes hebreos desviarse de los buenos principios al ceder a la presión de las circunstancias?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "02f982c3e46667fc886443987cfd9309dccb2251b375f8a6f2207ac55231d0a0",
+      "output_sha256": "c1733ccce53753b5ea444d6c3a8f47da22f406724af8aedac9ecf7b2d79633e3"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0044-PV01",
+      "selected_option_index": 2,
+      "selected_option_text": "habría debilitado su sentido de lo recto y su aborrecimiento por lo malo",
+      "exact_supporting_phrase": "su desvío de los buenos principios habría debilitado su sentido de lo recto y su aborrecimiento por lo malo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "habría limitado su memoria de las enseñanzas y costumbres de su pueblo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "El pasaje no menciona pérdida de memoria de enseñanzas o costumbres."
+        },
+        {
+          "text": "habría aumentado su temor al castigo y su dependencia de los oficiales",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "Ese deterioro no se atribuye a la primera concesión en la fuente."
+        },
+        {
+          "text": "habría debilitado su sentido de lo recto y su aborrecimiento por lo malo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "Es el deterioro interior enunciado de manera literal."
+        },
+        {
+          "text": "habría reducido su conocimiento de la corte y su capacidad para servir al rey",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "La fuente no relaciona la concesión con conocimiento cortesano o capacidad de servicio."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "Aunque la inferencia causal está plenamente apoyada, falta el prefijo obligatorio de Profetas y Reyes y esta variante duplica sustancialmente la fuente y respuesta de PR39-AUTH-0044.",
+      "suggested_rewrite": "Según Profetas y Reyes, tras ceder al mal por la presión de las circunstancias, ¿qué deterioro interior habría favorecido posteriores pasos erróneos?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "31376f9d1f2b2aa69899650fac3068a98abcb69f05dc046a147a5db15ec35306",
+      "output_sha256": "33a8ddbda2af9de7d2999b6a39da8f44fb1673f9dfc822e1d1794119146b2c56"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0045",
+      "selected_option_index": 1,
+      "selected_option_text": "arrastrados por la tentación",
+      "exact_supporting_phrase": "hasta que, cortada su relación con el Cielo, se vieran arrastrados por la tentación.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "reconocidos por la corte",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "El desenlace de reconocimiento cortesano no aparece en esta cadena causal."
+        },
+        {
+          "text": "arrastrados por la tentación",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "La opción reproduce el desenlace explícito de la cita."
+        },
+        {
+          "text": "afirmados en la obediencia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "Es contrario al desenlace de cortar su relación con el Cielo y ser arrastrados por la tentación."
+        },
+        {
+          "text": "protegidos de la presión",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "El pasaje advierte de sucumbir progresivamente, no de quedar protegidos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La secuencia y el desenlace están plenamente sustentados, pero el enunciado PR omite el prefijo obligatorio de atribución.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cómo habrían terminado los jóvenes después de una cadena de pasos erróneos que cortara su relación con el Cielo?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "7803f07e1b5748de4ff08655ec7addb095074e6533bf1bf15a53afb20e10d4bc",
+      "output_sha256": "98dc692032c0e1c6d772b47de1ed2b0d367da2e441c6d369ed5dcda72d7043e6"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0046",
+      "selected_option_index": 1,
+      "selected_option_text": "respeto",
+      "exact_supporting_phrase": "la petición de que se le permitiera no contaminarse fué recibida con respeto.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "interés",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "La fuente califica la recepción con respeto, no con interés."
+        },
+        {
+          "text": "respeto",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "Es el término exacto con que la fuente describe la recepción de la petición."
+        },
+        {
+          "text": "reserva",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "Aunque el príncipe vaciló después, la fuente no dice que la petición fuera recibida con reserva."
+        },
+        {
+          "text": "cautela",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "La cautela puede inferirse de la vacilación, pero no completa la afirmación exacta sobre cómo fue recibida la petición."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave literal es única pese a distractores contextualmente próximos, pero la pregunta de Profetas y Reyes carece del prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, la petición de Daniel de que se le permitiera no contaminarse fue recibida con ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "39d55a9cd20b6a24804e0043c22b50e7574e97cf81f5802b8956693ae2347666",
+      "output_sha256": "64d0dece42178d822b458401e0388a1e8a142d0df9c97900a89529564f5c53c3"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0047",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Sin embargo, el príncipe vacilaba antes de acceder.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "El enunciado reproduce fielmente que el príncipe vacilaba antes de acceder."
+        },
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 7",
+          "exact_reason": "Contradice la afirmación explícita de la fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación está directamente sustentada, pero el enunciado PR no comienza con el prefijo obligatorio «Según Profetas y Reyes...». ",
+      "suggested_rewrite": "Según Profetas y Reyes, el príncipe vaciló antes de acceder a la petición de Daniel.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "bfcea86e8338a9c1ced1f305d5cdbb2089fe4d509aafe6dcb437e3ce711a4fe9",
+      "output_sha256": "333f5ac11dc6c5d84d0919c0e3e371cc43377f79bc735746ee8ce2f6f75fceab"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0048",
+      "selected_option_index": 0,
+      "selected_option_text": "vuestros rostros más tristes que los de los muchachos que son semejantes a vosotros",
+      "exact_supporting_phrase": "pues luego que él habrá visto vuestros rostros más tristes que los de los muchachos que son semejantes a vosotros",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "vuestros rostros más tristes que los de los muchachos que son semejantes a vosotros",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 1",
+          "exact_reason": "Es la comparación que el príncipe temía que el rey observara."
+        },
+        {
+          "text": "vuestras respuestas menos sabias que las de los consejeros del reino",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 1",
+          "exact_reason": "El temor citado concierne a los rostros, no a la sabiduría de sus respuestas."
+        },
+        {
+          "text": "vuestros vestidos más sencillos que los de los jóvenes de la corte",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 1",
+          "exact_reason": "La vestimenta no forma parte de la comparación temida."
+        },
+        {
+          "text": "vuestras fuerzas menores que las de los guardias asignados al palacio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 1",
+          "exact_reason": "La fuente compara rostros con muchachos semejantes, no fuerzas con guardias."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es inequívoca, pero falta el prefijo obligatorio de Profetas y Reyes y la opción correcta es notoriamente más larga y reproduce de forma literal la cita.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué cambio temía el príncipe que el rey observara en el rostro de Daniel y sus compañeros frente al de los otros jóvenes?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "efd0ab350739f5e8937c0780f49acefe3029b6102068bd0f99ca1c29f073b674",
+      "output_sha256": "3ac5a38d864916e72e9ba926d610d1bdec7abc0676cfa190f8e4e47f52542903"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0049",
+      "selected_option_index": 1,
+      "selected_option_text": "solicitó",
+      "exact_supporting_phrase": "Daniel apeló entonces a Melsar, oficial encargado especialmente de la juventud hebrea, y solicitó que se les excusase de comer la comida del rey y beber su vino.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "afirmó",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 2",
+          "exact_reason": "La acción descrita es una solicitud, no una afirmación."
+        },
+        {
+          "text": "solicitó",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 2",
+          "exact_reason": "Es el verbo exacto usado por la fuente."
+        },
+        {
+          "text": "negó",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 2",
+          "exact_reason": "Daniel pidió ser excusado; no negó que fueran a ser excusados."
+        },
+        {
+          "text": "anunció",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 2",
+          "exact_reason": "El pasaje no describe un anuncio, sino una petición."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave está sustentada literalmente y es única, pero el enunciado omite la delimitación obligatoria de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, Daniel apeló a Melsar y ____ que se les excusase de comer la comida del rey y beber su vino.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "d1f093dad47a19dd08a84ded731586356440ad9ea333f212730a9d58875c2fa8",
+      "output_sha256": "e8c46c339aaa1e93043c84008c48cccb15c269ffc85bac1fde3c7bce67b2c978"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0050",
+      "selected_option_index": 0,
+      "selected_option_text": "diez días",
+      "exact_supporting_phrase": "Pidió que se hiciese una prueba de diez días",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "diez días",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 2",
+          "exact_reason": "La duración solicitada se fija explícitamente en diez días."
+        },
+        {
+          "text": "veinte días",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 2",
+          "exact_reason": "Contradice la duración explícita de diez días."
+        },
+        {
+          "text": "siete días",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 2",
+          "exact_reason": "Contradice la duración explícita de diez días."
+        },
+        {
+          "text": "tres días",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 2",
+          "exact_reason": "Contradice la duración explícita de diez días."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La duración es inequívoca, pero el enunciado de Profetas y Reyes no incluye el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cuánto debía durar la prueba durante la cual se daría alimento sencillo a los jóvenes hebreos?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "44d58ac8fec3609ef592cde13755ffd637059043468c653ffde933fdefd7c1f5",
+      "output_sha256": "853506da14a5ca4e06dc240df4c240cf1454127f93bece53028bb232cd27d6f7"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0051",
+      "selected_option_index": 2,
+      "selected_option_text": "consintió en ello",
+      "exact_supporting_phrase": "Melsar consintió en ello, aunque con temor de que esa concesión pudiera desagradar al rey",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "remitió el caso al príncipe",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La fuente no dice que Melsar remitiera el caso; afirma que consintió."
+        },
+        {
+          "text": "modificó la propuesta",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "No se registra una modificación de la prueba propuesta."
+        },
+        {
+          "text": "consintió en ello",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La opción reproduce literalmente la acción de Melsar."
+        },
+        {
+          "text": "aplazó la decisión",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "Contradice que Melsar consintiera y que Daniel supiera que había ganado su causa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta está expresamente sustentada, pero falta el prefijo obligatorio que identifica Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, aunque temía que la concesión desagradara al rey, ¿qué hizo Melsar ante la propuesta de Daniel?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "2dd93f0bfc8383ce4349f2e6ea3fdaa9fdb3390e81bfa953474631f42bddaf80",
+      "output_sha256": "829a2df3e7bcf78e63235332e5da7d86931e1ede0c2e62e449a256eb3b0dbaed"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0052",
+      "selected_option_index": 1,
+      "selected_option_text": "lo opuesto de lo que había temido el príncipe",
+      "exact_supporting_phrase": "Al fin de la prueba de diez días, el resultado era lo opuesto de lo que había temido el príncipe.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "semejante a lo que había temido el príncipe",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La fuente dice que fue lo opuesto, no semejante."
+        },
+        {
+          "text": "lo opuesto de lo que había temido el príncipe",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "Reproduce literalmente la valoración del resultado."
+        },
+        {
+          "text": "imposible de comparar con lo que había temido el príncipe",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La fuente sí realiza una comparación directa y lo llama opuesto."
+        },
+        {
+          "text": "exactamente lo que había temido el príncipe",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "Contradice la afirmación explícita de que el resultado fue lo opuesto."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es literal y única, pero falta el prefijo obligatorio de Profetas y Reyes; además, el conjunto de opciones hace evidente la oposición lógica.",
+      "suggested_rewrite": "Según Profetas y Reyes, al concluir la prueba de diez días, ¿cómo fue el resultado respecto de lo que había temido el príncipe?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "734da0fe139f1041f3ee9221460b62c769b876b827768ea75aaec4335b671489",
+      "output_sha256": "3710508689602a2766f3ce72111e4f89fbf902320e2ce4901918122cfc0e6cfb"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0053",
+      "selected_option_index": 1,
+      "selected_option_text": "mejor y más nutrido de carne",
+      "exact_supporting_phrase": "Pareció el rostro de ellos mejor y más nutrido de carne, que los otros muchachos que comían de la ración de la comida del rey.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "igual de sano pero más delgado",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "Contradice que sus rostros parecieran mejores y más nutridos."
+        },
+        {
+          "text": "mejor y más nutrido de carne",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "Es la descripción literal del rostro de los jóvenes."
+        },
+        {
+          "text": "más serio y menos descansado",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "Seriedad y descanso no se mencionan en la comparación."
+        },
+        {
+          "text": "más pálido y menos vigoroso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "Es incompatible con la apariencia mejor y más nutrida que describe la fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La comparación tiene una sola respuesta textual, pero el enunciado no contiene el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cómo parecieron los rostros de los jóvenes hebreos frente a los de quienes comían la ración del rey?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "c035f74f56d08491ad9da19ea2723aa366c6dfc1432d48545a5bd1496a67a0b2",
+      "output_sha256": "27f2ce4d619fc75b086ad1f1005e216959a0d896e28ae43ace0801540dcfd1e5"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0054",
+      "selected_option_index": 2,
+      "selected_option_text": "notablemente superiores a sus compañeros",
+      "exact_supporting_phrase": "En su apariencia personal los jóvenes hebreos resultaron notablemente superiores a sus compañeros.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "visiblemente inferiores a sus compañeros",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "Contradice la superioridad notable descrita."
+        },
+        {
+          "text": "exactamente iguales a sus compañeros",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "Contradice que resultaran notablemente superiores."
+        },
+        {
+          "text": "notablemente superiores a sus compañeros",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La opción completa literalmente la oración de la fuente."
+        },
+        {
+          "text": "apenas distintos de sus compañeros",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "«Apenas distintos» es incompatible con «notablemente superiores»."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es inequívoca, pero falta el prefijo obligatorio de Profetas y Reyes; la respuesta correcta es también la opción más específica y una de las más largas.",
+      "suggested_rewrite": "Según Profetas y Reyes, en su apariencia personal, los jóvenes hebreos resultaron ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "69103035b462026ed2d3f303cd8571b3b6975905f982f4a147b1b993a06a8b18",
+      "output_sha256": "b297c9e1451e278eb39a985415701cee8a15af93573b9ab7127b394bf8f31ae1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0055",
+      "selected_option_index": 3,
+      "selected_option_text": "que siguiesen su régimen sencillo durante todo el curso de su educación",
+      "exact_supporting_phrase": "se permitió a Daniel y sus amigos que siguiesen su régimen sencillo durante todo el curso de su educación.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "que abandonasen el régimen sencillo al comenzar la educación",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "Contradice la autorización de mantenerlo durante todo el curso."
+        },
+        {
+          "text": "que reservasen el régimen para el final de la educación",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La continuidad fue durante todo el curso, no solo al final."
+        },
+        {
+          "text": "que alternasen el régimen solo durante los días de examen",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "La fuente autoriza continuidad completa, no alternancia en días de examen."
+        },
+        {
+          "text": "que siguiesen su régimen sencillo durante todo el curso de su educación",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "Reproduce exactamente la continuidad autorizada."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única y literal, pero falta el prefijo obligatorio de Profetas y Reyes; la clave es además la opción más larga y completa.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué se permitió a Daniel y sus amigos respecto de su régimen después del resultado favorable de la prueba?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "09a0d559fd60779e45f1d32cf745608ba1f298a19473fd7b5a6ae057e4ac2899",
+      "output_sha256": "250947d50ade7486fc472d5ad701390497ad3fe0e54a5cfc38a7967c06c4c2fa"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0056",
+      "selected_option_index": 2,
+      "selected_option_text": "tres años",
+      "exact_supporting_phrase": "Los jóvenes hebreos estudiaron tres años «las letras y la lengua de los Caldeos». ",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "un año",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "Contradice la duración explícita de tres años."
+        },
+        {
+          "text": "siete años",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "Contradice la duración explícita de tres años."
+        },
+        {
+          "text": "tres años",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "La fuente establece literalmente que estudiaron tres años."
+        },
+        {
+          "text": "diez años",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 4",
+          "exact_reason": "Contradice la duración explícita de tres años."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La duración es una respuesta explícita y única, pero el enunciado PR omite el prefijo obligatorio «Según Profetas y Reyes...». ",
+      "suggested_rewrite": "Según Profetas y Reyes, los jóvenes hebreos estudiaron durante ____ las letras y la lengua de los caldeos.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:00:54.8868845Z",
+      "input_content_sha256": "5aa5320decdaea62689b9952e4769e3ad5a205482fef0bf531878c1ba382aff9",
+      "output_sha256": "61c6006e871a4b61cde99c8043164d9c63cbb047d8527e5b6659030d27bc365e"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 0,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 20,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

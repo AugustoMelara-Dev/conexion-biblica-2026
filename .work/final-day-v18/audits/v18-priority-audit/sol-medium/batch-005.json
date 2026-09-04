@@ -1,0 +1,1056 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-005",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-005.json",
+  "input_sha256": "ebb527f4fd69a80bc304e9dd6830a54bd6cffc5e512dde9d1d12b948d3e8a0b2",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/sol_audit_001",
+    "conversation_id": "/root/sol_audit_001",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0075",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "hicieron del conocimiento de Dios el fundamento de su educación",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita sitúa el conocimiento de Dios como fundamento, no en un lugar secundario."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Contradice la afirmación explícita de que fue el fundamento de su educación."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La proposición es inequívocamente falsa, pero el enunciado no delimita la fuente con «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, el conocimiento de Dios ocupó un lugar secundario en la educación de Daniel y sus compañeros.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "d6dcb712644b14643c82496fe09bf4362f3751fa2495598613ac6020bae7e412",
+      "output_sha256": "5407dea7b791bf07ae8e3769824cd375185269c4d07a40bb224c8e62e5a887e8"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0076",
+      "selected_option_index": 0,
+      "selected_option_text": "vivieron",
+      "exact_supporting_phrase": "Con fe, oraron por sabiduría y vivieron de acuerdo con sus oraciones.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "vivieron",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Es el verbo exacto que completa la cita."
+        },
+        {
+          "text": "discutieron",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita usa «vivieron», no «discutieron»."
+        },
+        {
+          "text": "enseñaron",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita usa «vivieron», no «enseñaron»."
+        },
+        {
+          "text": "esperaron",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita usa «vivieron», no «esperaron»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es una recuperación literal inequívoca, pero falta la atribución obligatoria a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, con fe, oraron por sabiduría y ____ de acuerdo con sus oraciones.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "51cffa20faf077bf18c681ed956f6257bc24874ba90570f3e7cccd2a5aaf02eb",
+      "output_sha256": "f07dd0aa0a1622f591c945ee690f889e2e391db2e7569d164d70b52fd76220ce"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0077",
+      "selected_option_index": 1,
+      "selected_option_text": "se colocaron donde Dios podía bendecirlos",
+      "exact_supporting_phrase": "Se colocaron donde Dios podía bendecirlos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "buscaron un lugar donde no necesitaran ayuda divina",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Contradice que se colocaron donde Dios podía bendecirlos."
+        },
+        {
+          "text": "se colocaron donde Dios podía bendecirlos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La opción reproduce literalmente la disposición indicada."
+        },
+        {
+          "text": "se apartaron de toda posibilidad de recibir dirección",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Expresa lo opuesto a colocarse donde Dios podía bendecirlos."
+        },
+        {
+          "text": "esperaron una bendición sin cambiar de posición",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita describe una acción de colocarse, no una espera pasiva."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es literal y única, pero el enunciado omite «Según Profetas y Reyes»; las opciones son variaciones transparentes sobre la misma acción.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué disposición personal hizo posible que recibieran la bendición divina?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "bc5176f241ded8df99d2ec1e82f992d711e1fa68fc41656508f27abecfdb24de",
+      "output_sha256": "3cc79d8613b7bd71dea0839bb5154708c83effeccc77d1d2ca43352ad259e32b"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0078",
+      "selected_option_index": 2,
+      "selected_option_text": "evitaron lo que habría debilitado sus facultades, y aprovecharon toda oportunidad de familiarizarse con todos los ramos del saber",
+      "exact_supporting_phrase": "Evitaron lo que habría debilitado sus facultades, y aprovecharon toda oportunidad de familiarizarse con todos los ramos del saber.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "protegieron sus facultades de todo esfuerzo intelectual, y rechazaron toda oportunidad de familiarizarse con nuevos ramos del saber",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita dice que aprovecharon toda oportunidad de aprendizaje, no que la rechazaron."
+        },
+        {
+          "text": "evitaron cualquier disciplina que exigiera sus facultades, y reservaron toda oportunidad de aprendizaje para un solo ramo del saber",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita habla de todos los ramos del saber, no de uno solo."
+        },
+        {
+          "text": "evitaron lo que habría debilitado sus facultades, y aprovecharon toda oportunidad de familiarizarse con todos los ramos del saber",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La opción reproduce íntegramente la combinación descrita."
+        },
+        {
+          "text": "aceptaron lo que habría debilitado sus facultades, y desaprovecharon toda oportunidad de familiarizarse con los diversos ramos del saber",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Invierte ambas acciones de la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La opción correcta copia la cita y las demás invierten o deforman sus dos cláusulas; además, falta la atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cómo combinaron los jóvenes el cuidado de sus facultades con el aprendizaje?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "93e7584ec841759c79a0f83f138cb0009057a1ad3accc239e9105cdfebcd1367",
+      "output_sha256": "35ffeac3cbef40d90818e34cf469a174e44f2c14ce07c4ab498bc59b91a76273"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0078-PV01",
+      "selected_option_index": 1,
+      "selected_option_text": "evitaron lo que habría debilitado sus facultades, y aprovecharon toda oportunidad de familiarizarse con todos los ramos del saber",
+      "exact_supporting_phrase": "Evitaron lo que habría debilitado sus facultades, y aprovecharon toda oportunidad de familiarizarse con todos los ramos del saber.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "concentraron sus esfuerzos en la salud física, y dejaron el desarrollo intelectual a cargo de sus maestros",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita no limita su esfuerzo a la salud física ni delega el desarrollo intelectual."
+        },
+        {
+          "text": "evitaron lo que habría debilitado sus facultades, y aprovecharon toda oportunidad de familiarizarse con todos los ramos del saber",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La opción reproduce exactamente la estrategia descrita."
+        },
+        {
+          "text": "aceptaron cuanto fortalecía su posición, y pospusieron el cuidado de sus hábitos hasta concluir su preparación",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita no habla de fortalecer una posición ni de posponer hábitos."
+        },
+        {
+          "text": "rechazaron toda instrucción cortesana, y limitaron su aprendizaje a lo recibido durante la infancia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Contradice que aprovecharon toda oportunidad en todos los ramos del saber."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La correcta es la opción más larga y copia literalmente la fuente; el ítem también omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué estrategia siguieron los jóvenes para conservar y desarrollar sus capacidades?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "510fd500a802c7be99151eaf3813d85395d7c30e2d6c6dce567c3063898790eb",
+      "output_sha256": "f236d2866e33ad7a58641c1a62085c8748b5160a411ea1e930188dd9e082b377"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0079",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Siguieron las reglas de la vida que no podían menos que darles fuerza intelectual.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita afirma expresamente que esas reglas les daban fuerza intelectual."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "El enunciado reproduce fielmente la afirmación de la fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación es verdadera sin ambigüedad, pero no está atribuida explícitamente a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, las reglas de vida que siguieron les proporcionaban fuerza intelectual.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "0a5e065047a9d01ccda7a0d6be0bd9da24a31a662f074bc081dc4e25e7752bc4",
+      "output_sha256": "976af9d2c0ceb4042f2e6be593001ce4c3fa93f9ebc8f0f96df5b59990cec194"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0080",
+      "selected_option_index": 2,
+      "selected_option_text": "procuraron",
+      "exact_supporting_phrase": "Procuraron adquirir conocimiento con un propósito: el de poder honrar a Dios.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "pospusieron",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita usa «procuraron», no «pospusieron»."
+        },
+        {
+          "text": "simularon",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita usa «procuraron», no «simularon»."
+        },
+        {
+          "text": "procuraron",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Es el verbo exacto de la cita."
+        },
+        {
+          "text": "evitaron",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita usa «procuraron», no «evitaron»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta literal es única, pero el enunciado no contiene «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, los jóvenes ____ adquirir conocimiento para poder honrar a Dios.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "d2d5fab166d09460dabbc1943d171d80fbac39335c2b81ee60842b0b109b145d",
+      "output_sha256": "d977a1bbb082a19593d7164514291635da5cc49f1eebf6e427b267705fd0d784"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0081",
+      "selected_option_index": 3,
+      "selected_option_text": "las falsas religiones del paganismo",
+      "exact_supporting_phrase": "representantes de la religión verdadera en medio de las falsas religiones del paganismo",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "las escuelas literarias de los caldeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita no identifica escuelas literarias como el entorno del contraste religioso."
+        },
+        {
+          "text": "los oficios administrativos de la corte",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita no menciona oficios administrativos."
+        },
+        {
+          "text": "las tradiciones políticas de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita no menciona tradiciones políticas."
+        },
+        {
+          "text": "las falsas religiones del paganismo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La opción reproduce el entorno nombrado en la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El entorno aparece literalmente y es único, pero falta la atribución obligatoria a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿en medio de qué entorno debían destacarse como representantes de la religión verdadera?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "c7bc8d54b17c7050d708efbf68e5eb5fdadbdb93c4c1e9feb0201cb84c146d18",
+      "output_sha256": "766ac132df99c9b850fb8daa03d0ff249f32217f9a6fd612fd5af31750ae1752"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0082",
+      "selected_option_index": 2,
+      "selected_option_text": "Dios mismo fué su Maestro",
+      "exact_supporting_phrase": "Y Dios mismo fué su Maestro.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Dios intervino solo después de su educación",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita no limita la intervención divina a un momento posterior."
+        },
+        {
+          "text": "Dios se limitó a observar su aprendizaje",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Ser su Maestro contradice una mera observación pasiva."
+        },
+        {
+          "text": "Dios mismo fué su Maestro",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La opción reproduce literalmente toda la cita."
+        },
+        {
+          "text": "Dios delegó por completo su enseñanza",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Contradice que Dios mismo fue su Maestro."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La opción correcta es una copia literal entre paráfrasis contrarias y el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cómo se describe la relación docente de Dios con los jóvenes?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "9f37254211f8bd1d968e5d0dcff60961a02b55c4afe66dcf43d31f1a8e76cc53",
+      "output_sha256": "bc65bc7f9796617ddeac76d4804fad860258d603c60020101a8ed3b939fb3b5a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0083",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "Orando constantemente, estudiando concienzudamente y manteniéndose en relación con el Invisible",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La cita coordina las tres prácticas; no presenta una como reemplazo de las otras."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "«Y» expresa concurrencia, mientras el enunciado afirma sustitución."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La estructura coordinada hace falsa la afirmación, pero el enunciado no delimita la fuente requerida.",
+      "suggested_rewrite": "Según Profetas y Reyes, mantenerse en relación con el Invisible reemplazó la oración constante y el estudio concienzudo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "1a80e32c3b9938defcae82a55b7ca50f186f75dac92ded6be46f9e2b6004044e",
+      "output_sha256": "b49f4f49bdc3a6eff886724f6d5e733b49e087cd52d94e19483b0ced2621137f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0084",
+      "selected_option_index": 0,
+      "selected_option_text": "casualidad",
+      "exact_supporting_phrase": "el verdadero éxito no es resultado de la casualidad ni del destino",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "casualidad",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "Es la palabra exacta que precede a «ni del destino»."
+        },
+        {
+          "text": "experiencia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La cita usa «casualidad», no «experiencia»."
+        },
+        {
+          "text": "popularidad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La cita usa «casualidad», no «popularidad»."
+        },
+        {
+          "text": "habilidad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La cita usa «casualidad», no «habilidad»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La palabra correcta está dada literalmente, pero el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, en cualquier ramo de trabajo, el verdadero éxito no es resultado de la ____ ni del destino.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "6f441dfe3fd9e77f9ffd3764aa60cd0fd30f42eae0fb41d258462d13d50cba64",
+      "output_sha256": "5cf9f827473ac5538e2533cfb25d952a1de9492498381522baa0ad087e0589d3"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0085",
+      "selected_option_index": 0,
+      "selected_option_text": "el desarrollo de las providencias de Dios, la recompensa de la fe y de la discreción, de la virtud y de la perseverancia",
+      "exact_supporting_phrase": "Es el desarrollo de las providencias de Dios, la recompensa de la fe y de la discreción, de la virtud y de la perseverancia.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "el desarrollo de las providencias de Dios, la recompensa de la fe y de la discreción, de la virtud y de la perseverancia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La opción reproduce íntegramente la definición de la cita."
+        },
+        {
+          "text": "el desarrollo de la voluntad humana, la recompensa del estudio y de la fama, de la ambición y de la competencia personal",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "Sustituye todos los componentes de la definición fuente."
+        },
+        {
+          "text": "el desarrollo de la posición social, la recompensa del linaje y de los honores, de la comodidad y del poder cortesano",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "Ninguno de esos elementos aparece en la definición."
+        },
+        {
+          "text": "el desarrollo de la buena fortuna, la recompensa del talento y del prestigio, de la riqueza y de la influencia política",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La buena fortuna contradice el rechazo de casualidad y destino, y los demás elementos no aparecen."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La correcta copia literalmente la definición y los distractores son sustituciones de plantilla; además, falta la atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cómo se define el verdadero éxito?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "1b2126991da2482b5f431fc57829c61159f8c3a227766c494bed393923dfb97e",
+      "output_sha256": "4f116edb8dce7b5e08d1f8fd11412362d5a2ab792127904cdf1b4e8035f1a1cf"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0085-PV01",
+      "selected_option_index": 1,
+      "selected_option_text": "el desarrollo de las providencias de Dios, la recompensa de la fe y de la discreción, de la virtud y de la perseverancia",
+      "exact_supporting_phrase": "Es el desarrollo de las providencias de Dios, la recompensa de la fe y de la discreción, de la virtud y de la perseverancia.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "la aprobación de quienes observan, la recompensa de la disciplina y de la cultura, de la rapidez y de la competencia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La fuente no incluye aprobación, cultura, rapidez ni competencia en su definición."
+        },
+        {
+          "text": "el desarrollo de las providencias de Dios, la recompensa de la fe y de la discreción, de la virtud y de la perseverancia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La opción reproduce exactamente los elementos del verdadero éxito."
+        },
+        {
+          "text": "el dominio de las circunstancias adversas, la recompensa de la ambición y de la prudencia, del poder y de la reputación",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "Esos elementos no integran la definición fuente."
+        },
+        {
+          "text": "la acumulación de ventajas personales, la recompensa del talento y de la influencia, del prestigio y de la oportunidad",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La fuente no define el éxito por ventajas, prestigio o influencia."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La opción correcta es la más larga y una transcripción exacta, mientras los distractores son sustituciones superficiales; también falta «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, aunque un logro parezca fruto de capacidad personal y circunstancias favorables, ¿qué elementos permiten reconocerlo como verdadero éxito?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "ad9fa83927c8858157d9585672e593052c99b7b8c7d6de8bb5d6fe1fd9b44c56",
+      "output_sha256": "134dc76b849a13e2b6abc62ffa6090e5a9fca404607699ad597cf2a90d635e65"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0086",
+      "selected_option_index": 3,
+      "selected_option_text": "las bellas cualidades mentales y un tono moral elevado",
+      "exact_supporting_phrase": "Las bellas cualidades mentales y un tono moral elevado no son resultado de la casualidad.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "la posición elevada y la prosperidad material",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La cita no menciona posición ni prosperidad material."
+        },
+        {
+          "text": "la rapidez intelectual y la habilidad política",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La cita no menciona rapidez ni habilidad política."
+        },
+        {
+          "text": "la fuerza física y el reconocimiento público",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La cita no menciona fuerza física ni reconocimiento."
+        },
+        {
+          "text": "las bellas cualidades mentales y un tono moral elevado",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La opción reproduce literalmente el par señalado."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es la opción más larga y copia la cita; además, el enunciado no atribuye la pregunta a Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué par se afirma que no proviene de la casualidad?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "8e461d35c5a3ae514c1def0e7400097a7004ca548529bd626a0b039ba834bb44",
+      "output_sha256": "be3ec6305a88f96bd98bf4bd033987111238822ccadcf8536f1c7620efeddb88"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0087",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Dios da las oportunidades; el éxito depende del uso que se haga de ellas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "La cita afirma las dos cláusulas del enunciado."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 3",
+          "exact_reason": "El enunciado reproduce fielmente la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación es literalmente verdadera, pero el enunciado omite la delimitación de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, Dios da las oportunidades, pero el éxito depende del uso que se haga de ellas.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "2dcbb99b0fbb15e990675f9b6b02897ac9c98dbebcdd59eb9d105a7ac737e8e1",
+      "output_sha256": "6b1a3e15ab0eafce94c25a4e5e2047d8ff91274e71484c172f2cd8f7d989990a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0088",
+      "selected_option_index": 1,
+      "selected_option_text": "obraban",
+      "exact_supporting_phrase": "ellos obraban su propia salvación",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "delegaban",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La cita usa «obraban», no «delegaban»."
+        },
+        {
+          "text": "obraban",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "Es el verbo exacto con que se describe su respuesta."
+        },
+        {
+          "text": "ignoraban",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La cita usa «obraban», no «ignoraban»."
+        },
+        {
+          "text": "posponían",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La cita usa «obraban», no «posponían»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta literal es única, pero el enunciado no incluye «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, mientras Dios obraba en ellos el querer y el hacer, Daniel y sus compañeros ____ su propia salvación.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "3b2b0053c697ffdb66da2cad405463e2c6baf541f9fcea75bb54631bbed82e8d",
+      "output_sha256": "c4ce42e3c3ddcceb388e6bec70704bc5a5b6ed5200a75e0d9c5dadaf9e95c25d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0089",
+      "selected_option_index": 1,
+      "selected_option_text": "el principio divino de cooperación",
+      "exact_supporting_phrase": "el principio divino de cooperación, sin la cual no puede alcanzarse verdadero éxito",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "el principio de reemplazo del esfuerzo",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La fuente presenta cooperación, no reemplazo del esfuerzo."
+        },
+        {
+          "text": "el principio divino de cooperación",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "Es el nombre exacto del principio en la cita."
+        },
+        {
+          "text": "el principio de autosuficiencia humana",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La cooperación divina contradice la autosuficiencia humana."
+        },
+        {
+          "text": "el principio de dependencia de la casualidad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La fuente rechaza la casualidad y nombra cooperación."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La denominación correcta es literal y las opciones son variaciones de plantilla; además, falta la atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué principio explica que el verdadero éxito requiera acción divina y respuesta humana?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "d78d5fb6269686c7ed2b3522ce2174dcc6b83207754f57f1e41f1631ab87789c",
+      "output_sha256": "a884be185922e7fccba55e20239966a1a01a3e426829ac234e49262e90f32fa0"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0089-PV01",
+      "selected_option_index": 1,
+      "selected_option_text": "el principio divino de cooperación",
+      "exact_supporting_phrase": "el principio divino de cooperación",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "el principio humano de autosuficiencia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La fuente integra la acción divina y humana, no autosuficiencia."
+        },
+        {
+          "text": "el principio divino de cooperación",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La opción reproduce el nombre exacto del principio."
+        },
+        {
+          "text": "el principio providencial de sustitución",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La cita habla de cooperación, no de sustitución."
+        },
+        {
+          "text": "el principio moral de compensación",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La cita no menciona un principio de compensación."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La correcta copia la denominación fuente y las demás cambian solo el tipo de principio; además, el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, Dios obra el querer y el hacer, mientras la persona también obra su salvación. ¿Qué principio integra ambas acciones?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "a0f051f40cee1d24ee187586e67a0ecc3552d5aa919da038954f9be56f91d712",
+      "output_sha256": "7a39eb4ca30e90811a05ae6aaf74128ca18aa9f7cd3f00a0768fc41c400f5a32"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0090",
+      "selected_option_index": 1,
+      "selected_option_text": "De nada vale el esfuerzo humano sin el poder divino; y sin el esfuerzo humano, el divino no tiene utilidad para muchos",
+      "exact_supporting_phrase": "De nada vale el esfuerzo humano sin el poder divino; y sin el esfuerzo humano, el divino no tiene utilidad para muchos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "El esfuerzo humano puede sustituir por completo al poder divino; y sin esfuerzo humano, el poder divino conserva solo una utilidad intelectual",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "Contradice la necesidad del poder divino y añade una utilidad intelectual inexistente."
+        },
+        {
+          "text": "De nada vale el esfuerzo humano sin el poder divino; y sin el esfuerzo humano, el divino no tiene utilidad para muchos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La opción reproduce íntegramente la relación indicada."
+        },
+        {
+          "text": "El esfuerzo humano basta por sí solo sin poder divino; y sin esfuerzo humano, el poder divino actúa con igual eficacia para muchos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "Invierte ambas dependencias afirmadas en la cita."
+        },
+        {
+          "text": "El esfuerzo humano pierde valor cuando interviene el poder divino; y sin esfuerzo humano, el poder divino beneficia por igual a todos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La cita no enfrenta ambos esfuerzos y limita la utilidad divina para muchos sin respuesta humana."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es una transcripción exacta entre variantes de plantilla y el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué relación existe entre el esfuerzo humano y el poder divino?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "ed68818b9e92af77e15295c82ff8fb913bd267181d7c58e11f49bbca919426da",
+      "output_sha256": "b29362129321666731f87954f0ad23f0ba2ad1b94349d8ca4fa3174a4c2d1806"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0090-PV01",
+      "selected_option_index": 3,
+      "selected_option_text": "De nada vale el esfuerzo humano sin el poder divino; y sin el esfuerzo humano, el divino no tiene utilidad para muchos",
+      "exact_supporting_phrase": "De nada vale el esfuerzo humano sin el poder divino; y sin el esfuerzo humano, el divino no tiene utilidad para muchos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "El poder divino vuelve innecesaria la respuesta humana cuando el propósito es correcto",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "Contradice la necesidad del esfuerzo humano afirmada por la fuente."
+        },
+        {
+          "text": "La acción humana y la divina producen por separado el mismo resultado en cualquier persona",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La fuente presenta dependencia mutua, no resultados independientes equivalentes."
+        },
+        {
+          "text": "El esfuerzo humano inicia la obra, mientras el poder divino solo confirma el resultado alcanzado",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La cita no asigna ese orden ni limita el poder divino a confirmar."
+        },
+        {
+          "text": "De nada vale el esfuerzo humano sin el poder divino; y sin el esfuerzo humano, el divino no tiene utilidad para muchos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 4",
+          "exact_reason": "La opción reproduce exactamente la dependencia descrita."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La correcta es notoriamente más larga y copia la fuente, mientras los distractores son paráfrasis incompletas; además, falta la atribución requerida.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cuál formulación expresa la dependencia recíproca entre la colaboración humana y la acción de Dios?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:14:37.046Z",
+      "input_content_sha256": "151d8dc4264f11d003b649ed2f31671a00097e3aa3f42ca267ac76334284cff3",
+      "output_sha256": "de9df522242b86b14576987a576c501d2547f0036d74b9c7810930da9fa75455"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 0,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 20,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

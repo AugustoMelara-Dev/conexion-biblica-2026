@@ -1,0 +1,1068 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-008",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-008.json",
+  "input_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/sol_audit_004",
+    "conversation_id": "/root/sol_audit_004",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0128",
+      "selected_option_index": 1,
+      "selected_option_text": "confiaban en una fuerza infinita",
+      "exact_supporting_phrase": "Los notables hebreos fueron hombres de pasiones como las nuestras; y no obstante las influencias seductoras de la corte babilónica, permanecieron firmes, porque confiaban en una fuerza infinita.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "desconocían las pasiones humanas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 7",
+          "exact_reason": "La fuente afirma que eran hombres de pasiones como las nuestras."
+        },
+        {
+          "text": "confiaban en una fuerza infinita",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 7",
+          "exact_reason": "La confianza en una fuerza infinita explica explícitamente su firmeza."
+        },
+        {
+          "text": "dependían de la aprobación de la corte",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 7",
+          "exact_reason": "La fuente atribuye la firmeza a una fuerza infinita, no a la aprobación cortesana."
+        },
+        {
+          "text": "evitaban toda relación con Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 7",
+          "exact_reason": "El pasaje los sitúa en la corte babilónica y no afirma aislamiento total."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La causa está expresada de modo directo, pero el enunciado omite la delimitación obligatoria de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué explica que los notables hebreos permanecieran firmes pese a las influencias seductoras?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "9eefb25dd6cd4d15eb89339a20156ba562c866e1aaa4a11d492e20572498df6f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0129",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "En ellos una nación pagana contempló una ilustración de la bondad y beneficencia de Dios, así como del amor de Cristo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 1",
+          "exact_reason": "La afirmación invierte los complementos: la fuente asigna la bondad y beneficencia a Dios, y el amor a Cristo."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 1",
+          "exact_reason": "La inversión Dios/Cristo impide considerar verdadera la afirmación."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es falsa por un intercambio preciso de atributos; además falta el delimitador obligatorio del material.",
+      "suggested_rewrite": "Según Profetas y Reyes, una nación pagana contempló en ellos la bondad y beneficencia de Cristo, así como el amor de Dios.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "e26492d5bfdb39daf9eee3cf2aa836de6fc80a45da6c408f8fb62d315c73de49"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0130",
+      "selected_option_index": 3,
+      "selected_option_text": "depravación",
+      "exact_supporting_phrase": "En lo que experimentaron tenemos un ejemplo del triunfo de los buenos principios sobre la tentación, de la pureza sobre la depravación, de la devoción y la lealtad sobre el ateísmo y la idolatría.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "idolatría",
+          "verdict": "TRUE_ELSEWHERE",
+          "source_ref": "PR39, p. 32, párrafo 1",
+          "exact_reason": "La idolatría sí aparece, pero como aquello sobre lo cual triunfan la devoción y la lealtad."
+        },
+        {
+          "text": "lealtad",
+          "verdict": "TRUE_ELSEWHERE",
+          "source_ref": "PR39, p. 32, párrafo 1",
+          "exact_reason": "La lealtad sí aparece, pero unida a la devoción como sujeto del triunfo."
+        },
+        {
+          "text": "tentación",
+          "verdict": "TRUE_ELSEWHERE",
+          "source_ref": "PR39, p. 32, párrafo 1",
+          "exact_reason": "La tentación sí aparece, pero como objeto del triunfo de los buenos principios."
+        },
+        {
+          "text": "depravación",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 1",
+          "exact_reason": "La cita empareja literalmente la pureza con la depravación."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "Solo depravación completa el emparejamiento correcto, aunque los demás términos aparecen en la misma cita; falta el delimitador PR.",
+      "suggested_rewrite": "Según Profetas y Reyes, la pureza triunfa sobre la ____ en la experiencia de los jóvenes.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "e926c5543927a254c05df27f29ddac7ec164b3e5a7322f5db42e9682c0e5b704"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0131",
+      "selected_option_index": 2,
+      "selected_option_text": "tan desfavorables como las que predominaban entonces",
+      "exact_supporting_phrase": "Los jóvenes de hoy pueden tener el espíritu que dominó a Daniel; pueden sacar fuerza de la misma fuente, poseer el mismo poder de dominio propio y revelar la misma gracia en su vida, aun en circunstancias tan desfavorables como las que predominaban entonces.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "menos desfavorables que las que predominaban entonces",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La fuente dice tan desfavorables, no menos desfavorables."
+        },
+        {
+          "text": "imposibles de afrontar con dominio propio",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La cita afirma que pueden manifestar dominio propio aun en esas circunstancias."
+        },
+        {
+          "text": "tan desfavorables como las que predominaban entonces",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Reproduce exactamente la comparación de circunstancias."
+        },
+        {
+          "text": "ajenas a toda tentación de los apetitos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "El contexto inmediato menciona tentaciones relacionadas con los apetitos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La comparación está explícita y es unívoca; el enunciado debe identificar Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué rasgo de las circunstancias se destaca al comparar a los jóvenes de hoy con los de entonces?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "07a62e5aad16aa66c40f6eb360a8cbfc1fb90918c80102990253e12a6bae5df9"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0132",
+      "selected_option_index": 2,
+      "selected_option_text": "satisfacer",
+      "exact_supporting_phrase": "Aunque rodeados por tentaciones a satisfacer sus apetitos, especialmente en nuestras grandes ciudades, donde resulta fácil y atrayente toda complacencia sensual, pueden permanecer por la gracia de Dios firmes en su propósito de honrar a Dios.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "dominar",
+          "verdict": "TRUE_ELSEWHERE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "El dominio propio aparece como posibilidad, pero no como la acción a la que inducen las tentaciones."
+        },
+        {
+          "text": "negar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Negar los apetitos no es la formulación de la cita."
+        },
+        {
+          "text": "satisfacer",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La fuente habla literalmente de tentaciones a satisfacer sus apetitos."
+        },
+        {
+          "text": "examinar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Examinar los apetitos no aparece en la evidencia."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La acción inducida por la tentación es explícita; falta el boundary obligatorio del material.",
+      "suggested_rewrite": "Según Profetas y Reyes, las tentaciones pueden llevar a los jóvenes a ____ sus apetitos.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "353c43b78b613a17a32dc80c3211486422bcfaedcc9f53b3cb4e6e289e5835ba"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0133",
+      "selected_option_index": 0,
+      "selected_option_text": "determinación",
+      "exact_supporting_phrase": "Mediante una determinación enérgica y una vigilancia constante, pueden resistir toda tentación que asalte el alma.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "determinación",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Completa literalmente la expresión determinación enérgica."
+        },
+        {
+          "text": "discusión",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La discusión no aparece como medio para resistir."
+        },
+        {
+          "text": "vacilación",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La vacilación contradice la determinación enérgica."
+        },
+        {
+          "text": "distracción",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La distracción contradice la vigilancia constante."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La compleción es literal y única, pero no se delimita Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, mediante una ____ enérgica y una vigilancia constante, los jóvenes pueden resistir toda tentación.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "faa8936a7960ccbfa2e4747d78ca56fa9c013327df585ac252fde9efb0291e02"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0134",
+      "selected_option_index": 3,
+      "selected_option_text": "el que resuelva hacer el bien por el bien mismo",
+      "exact_supporting_phrase": "Pero sólo podrá alcanzar la victoria el que resuelva hacer el bien por el bien mismo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "el que evite toda tentación sin una decisión firme",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "La fuente exige resolver hacer el bien, no ausencia de decisión."
+        },
+        {
+          "text": "el que busque el bien solo por reconocimiento",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Hacer el bien por reconocimiento contradice hacerlo por el bien mismo."
+        },
+        {
+          "text": "el que espere que otros decidan por él",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Esperar la decisión ajena contradice la resolución personal indicada."
+        },
+        {
+          "text": "el que resuelva hacer el bien por el bien mismo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Reproduce exactamente la condición para alcanzar la victoria."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La condición es explícita y los distractores la contradicen; falta el delimitador PR.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿quién podrá alcanzar la victoria?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "4388ca449df8d4536fb8ff06388b7969e328f13910a3c80969604915689ef645"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0135",
+      "selected_option_index": 3,
+      "selected_option_text": "esos nobles hebreos",
+      "exact_supporting_phrase": "¡Qué carrera fué la de esos nobles hebreos!",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "esos nobles romanos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "La cita no menciona nobles romanos."
+        },
+        {
+          "text": "esos nobles griegos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "La cita no menciona nobles griegos."
+        },
+        {
+          "text": "esos nobles persas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "La cita no menciona nobles persas."
+        },
+        {
+          "text": "esos nobles hebreos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "La exclamación se refiere literalmente a nobles hebreos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El grupo está nombrado de manera expresa; falta identificar el material en el enunciado.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿de quiénes se destaca la carrera mediante una exclamación?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "c42c4d5a8a97dba9b703d70131dcc782b3b8bc05357b431de23f4dfe151d83c7"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0136",
+      "selected_option_index": 3,
+      "selected_option_text": "del hogar de su infancia",
+      "exact_supporting_phrase": "Poco se imaginaban cuando se despedían del hogar de su infancia cuál sería su alto destino.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "de la corte de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "La despedida de la corte no aparece."
+        },
+        {
+          "text": "del palacio del rey caldeo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "La despedida del palacio no aparece."
+        },
+        {
+          "text": "del campamento de los soldados",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "La despedida del campamento no aparece."
+        },
+        {
+          "text": "del hogar de su infancia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "La fuente dice literalmente que se despedían del hogar de su infancia."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El lugar de despedida es literal y único; el enunciado omite el boundary requerido.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿de qué se despedían los jóvenes sin imaginar cuál sería su alto destino?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "a2fcbed84259b30a8a16f8363355993f7dc3048e5bcbdd83de63140b9445e9ed"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0137",
+      "selected_option_index": 1,
+      "selected_option_text": "entregaron",
+      "exact_supporting_phrase": "Se entregaron a la dirección divina con tal fidelidad y constancia que Dios pudo cumplir su propósito por su intermedio.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "ocultaron",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "Ocultarse contradice la entrega a la dirección divina."
+        },
+        {
+          "text": "entregaron",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "Es el verbo exacto de la cita."
+        },
+        {
+          "text": "resistieron",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "Resistir la dirección divina invierte el sentido de la entrega fiel."
+        },
+        {
+          "text": "apartaron",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "Apartarse contradice la entrega y constancia descritas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es inequívoca, pero falta el delimitador PR y el ítem duplica superficialmente PR39-AUTH-0137-PV01.",
+      "suggested_rewrite": "Según Profetas y Reyes, se ____ a la dirección divina con fidelidad y constancia, y así Dios pudo cumplir su propósito por su intermedio.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "92170ca6852089d76c279df83a633114e6dacd175f737c79151cecf0be516107"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0137-PV01",
+      "selected_option_index": 1,
+      "selected_option_text": "entregaron",
+      "exact_supporting_phrase": "Se entregaron a la dirección divina con tal fidelidad y constancia que Dios pudo cumplir su propósito por su intermedio.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "adelantaron",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "Adelantarse a la dirección no aparece en la fuente."
+        },
+        {
+          "text": "entregaron",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "Entregarse expresa literalmente la relación causal indicada."
+        },
+        {
+          "text": "acostumbraron",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "Acostumbrarse no comunica la entrega fiel descrita."
+        },
+        {
+          "text": "antepusieron",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 3",
+          "exact_reason": "Anteponerse a la dirección no aparece ni conserva el sentido."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero falta el delimitador PR y es una variante superficial de PR39-AUTH-0137.",
+      "suggested_rewrite": "Según Profetas y Reyes, Dios pudo cumplir su propósito por medio de ellos porque se ____ fiel y constantemente a su dirección.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "1aff6de9eb133c32bcdb08bb2eb57a05d854cdf5abb1185bcc1def76fab2e082"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0138",
+      "selected_option_index": 3,
+      "selected_option_text": "revelarlas mediante los jóvenes y los niños de hoy",
+      "exact_supporting_phrase": "Las mismas poderosas verdades que fueron reveladas mediante estos hombres, Dios desea revelarlas mediante los jóvenes y los niños de hoy.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "reservarlas para los hombres que vivieron en aquel tiempo",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 4",
+          "exact_reason": "La fuente proyecta la revelación a los jóvenes y niños de hoy, no solo a hombres del pasado."
+        },
+        {
+          "text": "ocultarlas de los jóvenes y los niños de hoy",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 4",
+          "exact_reason": "La cita afirma que Dios desea revelarlas mediante ellos, no ocultarlas."
+        },
+        {
+          "text": "reemplazarlas con las tradiciones religiosas de los adultos de hoy",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 4",
+          "exact_reason": "No se menciona reemplazo por tradiciones de adultos."
+        },
+        {
+          "text": "revelarlas mediante los jóvenes y los niños de hoy",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 4",
+          "exact_reason": "Reproduce exactamente el deseo divino expresado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El propósito actual está expresado de forma literal; falta delimitar Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué desea hacer Dios hoy con las poderosas verdades comunicadas mediante aquellos hombres?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "7083c399806b36f775d59d5e15408066625ccf712631654bcec71521834ea028"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0139",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "La vida de Daniel y sus compañeros es una demostración de lo que él hará en favor de los que se entreguen a él y procuren con todo el corazón realizar su propósito.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 4",
+          "exact_reason": "La fuente condiciona el favor a entregarse a Dios y procurar de corazón su propósito, no a confiar solo en fuerzas propias."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 4",
+          "exact_reason": "La afirmación contradice la entrega y dependencia de Dios descritas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "Es falsa por sustituir entrega a Dios por autosuficiencia; falta el delimitador PR y duplica PR39-AUTH-0139-PV01.",
+      "suggested_rewrite": "Según Profetas y Reyes, la vida de Daniel y sus compañeros demuestra lo que Dios hará en favor de quienes confíen únicamente en sus propias fuerzas para realizar su propósito.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "96296151cf03e692c556f7a2bb62573a3cdb01937c4a1e5b2e32c3e6239940ea"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0139-PV01",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "La vida de Daniel y sus compañeros es una demostración de lo que él hará en favor de los que se entreguen a él y procuren con todo el corazón realizar su propósito.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 4",
+          "exact_reason": "La capacidad personal exclusiva contradice entregarse a Dios y procurar con todo el corazón su propósito."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 4",
+          "exact_reason": "La negación concuerda con la dependencia de Dios expresada por la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "Es falsa por reemplazar la entrega a Dios por capacidad personal; falta el delimitador PR y es variante de PR39-AUTH-0139.",
+      "suggested_rewrite": "Según Profetas y Reyes, el testimonio de Daniel y sus compañeros muestra lo que Dios hará por quienes dependen únicamente de su capacidad personal para cumplir el propósito divino.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "0b0275831c7e66bcdf4f049097e683e79ceef385bf20fe7f8bdd395a6c866d1e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-001",
+      "selected_option_index": 3,
+      "selected_option_text": "Eran fieles como el acero",
+      "exact_supporting_phrase": "Entre los hijos de Israel que fueron llevados a Babilonia al principio de los setenta años de cautiverio, se contaban patriotas cristianos, hombres que eran tan fieles a los buenos principios como el acero, que no serían corrompidos por el egoísmo, sino que honrarían a Dios aun cuando lo perdiesen todo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Eran flexibles como la cera",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La cera sugiere maleabilidad, contraria a la firmeza descrita."
+        },
+        {
+          "text": "Eran frágiles como el vidrio",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La fragilidad del vidrio contradice la imagen de firmeza."
+        },
+        {
+          "text": "Eran variables como el viento",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La variabilidad del viento contradice la fidelidad estable."
+        },
+        {
+          "text": "Eran fieles como el acero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La fuente los describe literalmente tan fieles a los buenos principios como el acero."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La metáfora correcta es textual y única; el enunciado omite el delimitador obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué imagen describe la firmeza de los jóvenes cautivos ante los buenos principios?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "b79b5d6715331889a812f59ec1b275d23d7700ff9af78faa6b674d699df051a4"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-002",
+      "selected_option_index": 0,
+      "selected_option_text": "Aunque lo perdieran todo",
+      "exact_supporting_phrase": "Entre los hijos de Israel que fueron llevados a Babilonia al principio de los setenta años de cautiverio, se contaban patriotas cristianos, hombres que eran tan fieles a los buenos principios como el acero, que no serían corrompidos por el egoísmo, sino que honrarían a Dios aun cuando lo perdiesen todo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Aunque lo perdieran todo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Parafrasea fielmente aun cuando lo perdiesen todo."
+        },
+        {
+          "text": "Mientras nadie criticara su decisión",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Condicionar la honra a evitar críticas contradice la disposición incondicional."
+        },
+        {
+          "text": "Únicamente si regresaban a Jerusalén",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "El regreso a Jerusalén no se establece como condición."
+        },
+        {
+          "text": "Solo mientras conservaran sus privilegios",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Conservar privilegios contradice honrar a Dios aun perdiéndolo todo."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El extremo está explícito; la pregunta necesita delimitar Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿hasta qué extremo estaban dispuestos a honrar a Dios?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "d5418d768cf45dfcc703c9ee8528589b705e37db384deed377460bf8f83acaf1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-003",
+      "selected_option_index": 1,
+      "selected_option_text": "Las bendiciones del conocimiento de Jehová",
+      "exact_supporting_phrase": "En la tierra de su cautiverio, estos hombres habrían de ejecutar el propósito de Dios dando a las naciones paganas las bendiciones provenientes del conocimiento de Jehová.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "La riqueza de la corte real",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La riqueza de la corte no forma parte del propósito descrito."
+        },
+        {
+          "text": "Las bendiciones del conocimiento de Jehová",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Reproduce el contenido que debían dar a las naciones paganas."
+        },
+        {
+          "text": "Los secretos administrativos de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Los secretos administrativos no aparecen."
+        },
+        {
+          "text": "La superioridad militar de Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La superioridad militar de Judá no aparece."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El contenido que debían comunicar está expresado literalmente; falta el boundary PR.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué debían comunicar a las naciones paganas al cumplir el propósito divino?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "675c373acbba38933a040a35b16a2d609f7f46cfec93a1bdc87b340c92e1678b"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-004",
+      "selected_option_index": 0,
+      "selected_option_text": "Transigir con ellos",
+      "exact_supporting_phrase": "No debían en caso alguno transigir con los idólatras, sino considerar como alto honor la fe que sostenían y el nombre de adoradores del Dios viviente.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Transigir con ellos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La fuente ordena explícitamente no transigir en caso alguno con los idólatras."
+        },
+        {
+          "text": "Servir en puestos públicos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Servir en puestos públicos no se menciona como conducta prohibida."
+        },
+        {
+          "text": "Hablar su idioma",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Hablar su idioma no aparece como prohibición."
+        },
+        {
+          "text": "Aprender en la corte",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Aprender en la corte no aparece como prohibición en esta evidencia."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La conducta rechazada se nombra explícitamente; falta delimitar el material.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué conducta debían rechazar por completo frente a los idólatras?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "9c321ba3784d0cc01a9307a6c9bfeced0f20072a0a91fb7c4b2b75ee517e69c1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-005",
+      "selected_option_index": 3,
+      "selected_option_text": "En la prosperidad y en la adversidad",
+      "exact_supporting_phrase": "Honraron a Dios en la prosperidad y en la adversidad; y Dios los honró a ellos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Después de terminar el cautiverio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La cita se refiere a su conducta durante prosperidad y adversidad, no después del cautiverio."
+        },
+        {
+          "text": "Solo durante la prosperidad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La fuente incluye también la adversidad."
+        },
+        {
+          "text": "Únicamente cuando estaban entre hebreos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La evidencia no limita la honra a estar entre hebreos y los sitúa en Babilonia."
+        },
+        {
+          "text": "En la prosperidad y en la adversidad",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Reproduce exactamente las dos circunstancias."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Las circunstancias están explícitas y son complementarias; falta el delimitador PR.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿en qué circunstancias conservaron los jóvenes su honra a Dios?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "994a007c2ccd5b5bd74be000db74ab72ec7d809b7f615e6371db4c9ce37ae222"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-006",
+      "selected_option_index": 0,
+      "selected_option_text": "El cautiverio de los adoradores de Jehová y los vasos del templo en poder babilónico",
+      "exact_supporting_phrase": "El hecho de que esos adoradores de Jehová estuviesen cautivos en Babilonia y de que los vasos de la casa de Dios se hallaran en el templo de los dioses babilónicos, era mencionado jactanciosamente por los vencedores como evidencia de que su religión y sus costumbres eran superiores a la religión y las costumbres de los hebreos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "El cautiverio de los adoradores de Jehová y los vasos del templo en poder babilónico",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Resume fielmente los dos hechos: cautivos en Babilonia y vasos de la casa de Dios en el templo babilónico."
+        },
+        {
+          "text": "La destrucción de los ídolos y la restauración del templo",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La cita no habla de destruir ídolos ni restaurar el templo; describe los vasos en un templo pagano."
+        },
+        {
+          "text": "La conversión del rey y el regreso de los cautivos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La conversión del rey y el regreso no son los hechos exhibidos aquí."
+        },
+        {
+          "text": "La riqueza de Daniel y la derrota de Persia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La riqueza de Daniel y la derrota de Persia no aparecen en la evidencia."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "Solo una opción contiene ambos hechos de la cita; además el enunciado omite la delimitación obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué dos hechos exhibían los vencedores como prueba de superioridad religiosa?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_004",
+      "conversation_id": "/root/sol_audit_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:23:14.9570107Z",
+      "input_content_sha256": "71732ebae9f6ecb326e33d14045569d19a28196319967de4b68ce15e5bd81923",
+      "output_sha256": "9809de6240fda96c26ec1e7ca2d095a7ff534c8dfed1a1988b7617d73205737a"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 0,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 20,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

@@ -1,0 +1,1103 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-015",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-015.json",
+  "input_sha256": "cd73555c95016469726c9c95e99f63e844a66b0f06a91970a8768c0cfb7b435d",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/sol_audit_001",
+    "conversation_id": "/root/sol_audit_001",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-091",
+      "selected_option_index": 1,
+      "selected_option_text": "Enseñados en toda sabiduría, sabios en ciencia y de buen entendimiento",
+      "exact_supporting_phrase": "enseñados en toda sabiduría, y sabios en ciencia, y de buen entendimiento",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Adiestrados en toda doctrina, doctos en decretos y de hábil razonamiento",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Sustituye los tres requisitos intelectuales de la cita."
+        },
+        {
+          "text": "Enseñados en toda sabiduría, sabios en ciencia y de buen entendimiento",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Reproduce exactamente la tríada requerida."
+        },
+        {
+          "text": "Instruidos en toda disciplina, peritos en leyes y de sabio discernimiento",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Disciplina, leyes y discernimiento no son la tríada citada."
+        },
+        {
+          "text": "Educados en toda filosofía, peritos en enigmas y de fino entendimiento",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Filosofía y enigmas reemplazan requisitos expresos de la fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es una transcripción inequívoca, pero «registrada en Profetas y Reyes» no cumple la fórmula obligatoria «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cuál tríada describe con exactitud las aptitudes intelectuales requeridas en la orden de Nabucodonosor a Aspenaz?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "cbabf299c8b07e9b703bf6a858c4d21951a8556dc5b8246fedc69bac424ce30e",
+      "output_sha256": "31192607ebd3e10e6cec9912e403fc87552a9b31a94583beb593a5e169c2c18a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-092",
+      "selected_option_index": 3,
+      "selected_option_text": "Que fuesen de buen parecer",
+      "exact_supporting_phrase": "muchachos en quienes no hubiese tacha alguna, y de buen parecer",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Que fuesen de porte marcial",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita no exige porte marcial."
+        },
+        {
+          "text": "Que fuesen de noble estirpe",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Aunque menciona linaje real, la cualidad pedida además de no tener tacha es el buen parecer."
+        },
+        {
+          "text": "Que fuesen de regia postura",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La cita no usa ni exige una postura regia."
+        },
+        {
+          "text": "Que fuesen de buen parecer",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Es la cualidad física expresamente indicada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única y literal, pero el enunciado no contiene «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, al ordenar la selección de jóvenes israelitas para el palacio, ¿qué cualidad física exigió Nabucodonosor además de no tener tacha alguna?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "7931b0f5e21c2ed746fb05ac510565f290a102fb5982bfeb2ef401ed8f3c6cfd",
+      "output_sha256": "53877243cf657e52f048edccc7d9eb838338a69358e396d0ab5e4c443de821c4"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-093",
+      "selected_option_index": 3,
+      "selected_option_text": "Pertenecían a los linajes de la tribu de Judá",
+      "exact_supporting_phrase": "de los hijos de Judá, Daniel, Ananías, Misael y Azarías",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Pertenecían a los linajes de la tribu de Gad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La fuente los identifica como hijos de Judá, no de Gad."
+        },
+        {
+          "text": "Pertenecían a los linajes de la tribu de Leví",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La fuente los identifica como hijos de Judá, no de Leví."
+        },
+        {
+          "text": "Pertenecían a los linajes de la tribu de Dan",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La fuente los identifica como hijos de Judá, no de Dan."
+        },
+        {
+          "text": "Pertenecían a los linajes de la tribu de Judá",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "Judá es la procedencia nombrada expresamente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La procedencia es explícita, pero las opciones son sustituciones de una plantilla y falta la atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿a cuál tribu de Israel pertenecían Daniel, Ananías, Misael y Azarías al ser seleccionados en Babilonia?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "350bda03fb407eb1c1790390a60b2356ce5e5380589eabdf381ca9b72cd82c8c",
+      "output_sha256": "04952cfc3f8797b1ebe4a12b621e8b248da4d3e80193ae6eff0fde158f729803"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-094",
+      "selected_option_index": 1,
+      "selected_option_text": "Para que pudiesen ocupar puestos importantes en su reino",
+      "exact_supporting_phrase": "resolvió que se los educase para que pudiesen ocupar puestos importantes en su reino",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Para que pudiesen gobernar las satrapías lejanas del rey",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no especifica gobierno de satrapías."
+        },
+        {
+          "text": "Para que pudiesen ocupar puestos importantes en su reino",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "Reproduce literalmente el propósito de la educación."
+        },
+        {
+          "text": "Para que pudiesen custodiar los templos paganos del reino",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no menciona custodia de templos."
+        },
+        {
+          "text": "Para que pudiesen dirigir el servicio militar en su reino",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no menciona dirección militar."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La finalidad es literal, pero el ítem se solapa con el siguiente y no incluye «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿con qué propósito resolvió Nabucodonosor educar a los cuatro jóvenes hebreos tras notar su notable capacidad?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "a8f073930a6c70a8a90c3088cace508cf52234c3f76ed667662c2b39ae1bd4ef",
+      "output_sha256": "b2a69dd13e5a0fc1e1b12ca3e8632633f665c60fbf63c8bba0c5f9954c0a1017"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-095",
+      "selected_option_index": 1,
+      "selected_option_text": "Una promesa de capacidad notable",
+      "exact_supporting_phrase": "Viendo en estos jóvenes una promesa de capacidad notable",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Una promesa de gran valor bélico",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no menciona valor bélico."
+        },
+        {
+          "text": "Una promesa de capacidad notable",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "Es la expresión exacta usada por la fuente."
+        },
+        {
+          "text": "Una promesa de devoción absoluta",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no denomina así el potencial observado por Nabucodonosor."
+        },
+        {
+          "text": "Una promesa de sumisión política",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no menciona sumisión política."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta copia la cita y el ítem repite la otra cláusula del mismo pasaje que la pregunta anterior; también falta la atribución.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué potencial reconoció Nabucodonosor en Daniel y sus compañeros antes de ordenar su preparación en la corte?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "d74bb8d698a3d832c40f231f67e36329a6c5213c9ae89698f5a49a4f9e96dc5d",
+      "output_sha256": "3b8fc2125f1c605e2ed070d3421efb6b8d97bc185cea117084e8fa005511a72b"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-096",
+      "selected_option_index": 2,
+      "selected_option_text": "Durante un período de tres años",
+      "exact_supporting_phrase": "durante tres años se les concediesen las ventajas educativas",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Durante un período de dos años",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La duración indicada es tres años, no dos."
+        },
+        {
+          "text": "Durante un período de cinco años",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La duración indicada es tres años, no cinco."
+        },
+        {
+          "text": "Durante un período de tres años",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "Coincide con la duración explícita de la cita."
+        },
+        {
+          "text": "Durante un período de siete años",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La duración indicada es tres años, no siete."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La duración es inequívoca, pero el enunciado no está delimitado con «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿durante cuánto tiempo dispuso Nabucodonosor otorgar a los jóvenes hebreos las ventajas educativas de los príncipes?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "c5d4473e202567f9ad84c80e1db482e939c79cbad2e6f4fc36794913a441d4f7",
+      "output_sha256": "687cad0015b5836eec6c9b8a4298f6fed84a392ce05ec0536216bee843e5dd4d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-097",
+      "selected_option_index": 2,
+      "selected_option_text": "El idioma propio de los caldeos",
+      "exact_supporting_phrase": "ordenó que aprendiesen el idioma de los caldeos",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "La lengua culta de los egipcios",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La lengua indicada es la de los caldeos, no la de los egipcios."
+        },
+        {
+          "text": "El idioma oficial de los persas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La lengua indicada es la de los caldeos, no la de los persas."
+        },
+        {
+          "text": "El idioma propio de los caldeos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "Conserva el idioma y pueblo nombrados en la cita."
+        },
+        {
+          "text": "El dialecto común de los asirios",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La lengua indicada es la de los caldeos, no la de los asirios."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es literal y única, pero falta la fórmula de atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, a fin de que quedasen plenamente capacitados para su carrera, ¿qué lengua mandó Nabucodonosor que aprendiesen?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "42d531c1c1eea7b2b53e2dcc35f29226aae4d5d8f1e0b7e5f0ab24cc3e8f63a3",
+      "output_sha256": "f67161e95e2c66576462a943fa23acd8d0ebce335851639029d73e599b3489f4"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-098",
+      "selected_option_index": 2,
+      "selected_option_text": "A las ventajas formativas concedidas a los príncipes del reino",
+      "exact_supporting_phrase": "las ventajas educativas que tenían los príncipes del reino",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "A la instrucción militar reservada para los capitanes de tropa",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no menciona instrucción militar ni capitanes."
+        },
+        {
+          "text": "Al adiestramiento técnico impartido a los escribas del tesoro",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no menciona escribas del tesoro."
+        },
+        {
+          "text": "A las ventajas formativas concedidas a los príncipes del reino",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "Parafrasea directamente el estatus educativo indicado."
+        },
+        {
+          "text": "A la disciplina sacerdotal dada a los astrólogos de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 4",
+          "exact_reason": "La cita no menciona disciplina sacerdotal ni astrólogos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El estatus formativo es explícito, pero el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿a qué estatus correspondían las ventajas formativas concedidas a los cautivos hebreos?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "4ddc49ed4f5ea15fe876b000ab9f82b015c8519ecc6d52bfd2c1ce6251652f2e",
+      "output_sha256": "088a7101aacf9de848c1f9064d4481d123cfb8bc844a052c37678dcb339bed2a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-099",
+      "selected_option_index": 2,
+      "selected_option_text": "Conmemoraban a divinidades caldeas",
+      "exact_supporting_phrase": "otros que conmemoraban divinidades caldeas",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Conmemoraban a monarcas victoriosos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita identifica divinidades caldeas, no monarcas."
+        },
+        {
+          "text": "Conmemoraban a victorias babilónicas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita identifica divinidades, no victorias."
+        },
+        {
+          "text": "Conmemoraban a divinidades caldeas",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Reproduce literalmente el motivo de los nombres."
+        },
+        {
+          "text": "Conmemoraban a constelaciones reales",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita no identifica constelaciones."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La opción correcta copia la cita y los distractores repiten la misma plantilla; además, falta la atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, al llegar a Babilonia, ¿qué motivo religioso conmemoraban los nuevos nombres asignados a Daniel y sus compañeros?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "c16da98885f246d78bfc75e1eb9e6129a954fc7dac51544a7d5736c572b41b7e",
+      "output_sha256": "0c72ffea334393fc4fd882f3d9251fa79f79f3253f6211dbc45781e39288fb13"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-100",
+      "selected_option_index": 1,
+      "selected_option_text": "Eran nombres que tenían gran significado",
+      "exact_supporting_phrase": "nombres que tenían gran significado",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Eran nombres que imitaban títulos reales",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita no menciona imitación de títulos."
+        },
+        {
+          "text": "Eran nombres que tenían gran significado",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La opción reproduce la característica exacta."
+        },
+        {
+          "text": "Eran nombres que denotaban rango militar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita no menciona rango militar."
+        },
+        {
+          "text": "Eran nombres que honraban héroes caldeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita no atribuye esos nombres hebreos a héroes caldeos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es literal y las opciones son variantes de plantilla; «De acuerdo con Profetas y Reyes» no cumple la fórmula estricta «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué rasgo distinguía a los nombres dados por los padres hebreos a sus hijos?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "e914915a025d85e0caef0fafae9886efa3456307a93f914577a7e53616819e25",
+      "output_sha256": "a8933adb1bc41ca7bf12b4a672f9b54aa46b054f901a0201f9ae02f6af60a92e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-101",
+      "selected_option_index": 1,
+      "selected_option_text": "Los rasgos de carácter que deseaban ver desarrollarse en sus hijos",
+      "exact_supporting_phrase": "los rasgos de carácter que deseaban ver desarrollarse en sus hijos",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Las hazañas militares pasadas que habían realizado sus antepasados",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita no menciona hazañas militares."
+        },
+        {
+          "text": "Los rasgos de carácter que deseaban ver desarrollarse en sus hijos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La opción reproduce literalmente lo que expresaban."
+        },
+        {
+          "text": "Los honores civiles y riquezas que anhelaban legar a sus herederos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita no menciona honores ni riquezas."
+        },
+        {
+          "text": "Los títulos y cargos políticos que aspiraban conseguir para su casa",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "La cita no menciona títulos ni cargos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es inequívoca y textual, pero el enunciado omite la delimitación de la fuente.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué expresaban con frecuencia los padres hebreos mediante los nombres que elegían para sus hijos?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "64e78e832355088aa19d25803d9b0a40d434a64070ecaa3911b043df95f41d65",
+      "output_sha256": "cea2bb53f5fd146c5bc204f3d1e77e50106361f80e43187800c01165b8818b6f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-102",
+      "selected_option_index": 2,
+      "selected_option_text": "Le asignó el nombre de Abednego",
+      "exact_supporting_phrase": "y a Azarías, Abednego",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Le asignó el nombre de Sadrach",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Sadrach fue asignado a Ananías."
+        },
+        {
+          "text": "Le asignó el nombre de Mesach",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Mesach fue asignado a Misael."
+        },
+        {
+          "text": "Le asignó el nombre de Abednego",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Abednego fue asignado explícitamente a Azarías."
+        },
+        {
+          "text": "Le asignó el nombre de Beltsasar",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Beltsasar fue asignado a Daniel."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La correspondencia es única, pero el ítem forma una serie superficial de cuatro cambios de nombre y «Según el registro de Profetas y Reyes» no usa la fórmula exigida.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué nombre babilónico impuso el príncipe de los eunucos a Azarías?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "843aa1f8cac9205344bb5d514ca9624612a5ca949165e3dc64e3608092e5b8b1",
+      "output_sha256": "799223b33a2b9439cb7ffe6365e9ff74c174a0c5543aeaf4affe69e17ed4f65f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-103",
+      "selected_option_index": 2,
+      "selected_option_text": "Le asignó el nombre de Beltsasar",
+      "exact_supporting_phrase": "puso a Daniel, Beltsasar",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Le asignó el nombre de Abednego",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Abednego fue asignado a Azarías."
+        },
+        {
+          "text": "Le asignó el nombre de Sadrach",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Sadrach fue asignado a Ananías."
+        },
+        {
+          "text": "Le asignó el nombre de Beltsasar",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Beltsasar fue asignado explícitamente a Daniel."
+        },
+        {
+          "text": "Le asignó el nombre de Mesach",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Mesach fue asignado a Misael."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es literal, pero este ítem repite superficialmente el listado de nombres y omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué nombre caldeo asignó el jefe de los eunucos a Daniel en la corte?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "f30593006d5296d72ba19813e181ed4f25b975a531ace8ea9131370ca0357e5d",
+      "output_sha256": "86a10c782e75caaec7c9eb145ea256f79dfe20365dd351b3744f59b60c473524"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-104",
+      "selected_option_index": 1,
+      "selected_option_text": "Le fue dado el nombre de Sadrach",
+      "exact_supporting_phrase": "y a Ananías, Sadrach",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Le fue dado el nombre de Beltsasar",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Beltsasar fue asignado a Daniel."
+        },
+        {
+          "text": "Le fue dado el nombre de Sadrach",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Sadrach fue asignado explícitamente a Ananías."
+        },
+        {
+          "text": "Le fue dado el nombre de Mesach",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Mesach fue asignado a Misael."
+        },
+        {
+          "text": "Le fue dado el nombre de Abednego",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Abednego fue asignado a Azarías."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La correspondencia es inequívoca, pero constituye otra variante superficial del mismo listado y carece de la atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué nombre caldeo fue asignado a Ananías por el príncipe de los eunucos?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "26e2d96934e86b9841b39c6a2c9f542a502189e0edd3a1fc9db2607c9770c8ad",
+      "output_sha256": "5f9f34b60baae8b941dc31acdb67350171aa395d845d8656b22295d2aec5a270"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-105",
+      "selected_option_index": 2,
+      "selected_option_text": "Le impuso el nombre de Mesach",
+      "exact_supporting_phrase": "y a Misael, Mesach",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Le impuso el nombre de Beltsasar",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Beltsasar fue asignado a Daniel."
+        },
+        {
+          "text": "Le impuso el nombre de Abednego",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Abednego fue asignado a Azarías."
+        },
+        {
+          "text": "Le impuso el nombre de Mesach",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Mesach fue asignado explícitamente a Misael."
+        },
+        {
+          "text": "Le impuso el nombre de Sadrach",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 5",
+          "exact_reason": "Sadrach fue asignado a Ananías."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero el ítem repite superficialmente el mismo listado de nombres y no delimita la fuente.",
+      "suggested_rewrite": "Según Profetas y Reyes, al cambiar los nombres de los cautivos, ¿qué nombre impuso el oficial babilónico a Misael?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "758fc133087dfa78ea0125f27b3c15774fcba3c25bfa502dc68d0e2feba2e2c4",
+      "output_sha256": "5bc3e3c3d353a8305cc6ae8e25df9319ee233794dc529311da962d429c6eef52"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-106",
+      "selected_option_index": 1,
+      "selected_option_text": "Esperaba lograrlo de manera gradual mediante influencias",
+      "exact_supporting_phrase": "no obligó a los jóvenes hebreos [...] sino que esperaba obtener esto gradualmente",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Esperaba lograrlo privándolos de toda educación cortesana",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "La fuente describe educación e influencias cortesanas, no privación de ellas."
+        },
+        {
+          "text": "Esperaba lograrlo de manera gradual mediante influencias",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "«Gradual» está explícito y el contexto enumera las influencias empleadas."
+        },
+        {
+          "text": "Esperaba lograrlo por violencia inmediata y castigos reales",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "Contradice que no los obligó y buscó lograrlo gradualmente."
+        },
+        {
+          "text": "Esperaba lograrlo por decretos públicos de pena de muerte",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "La cita no menciona decretos ni pena de muerte."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La manera gradual se sostiene con exact_quote y contexto, pero el enunciado omite «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿de qué manera esperaba Nabucodonosor lograr que los jóvenes hebreos se hiciesen idólatras?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "0fa35f222b3b4f1c4fa3b877549526e3cad68cf23d5a0d086bae5153870c98ab",
+      "output_sha256": "e76c65108c4f8689f588a16352866b39430e59f8461438876384d6e4667a3e82"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-107",
+      "selected_option_index": 3,
+      "selected_option_text": "Nombres idolátricos, trato íntimo con costumbres paganas y ritos seductores",
+      "exact_supporting_phrase": "nombres que expresaban sentimientos de idolatría, poniéndolos en trato íntimo con costumbres idólatras y bajo la influencia de ritos seductores del culto pagano",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Torturas continuas, encierro solitario y prohibición absoluta de sus libros",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "Ninguno de esos medios aparece en la cita."
+        },
+        {
+          "text": "Aislamiento total, censura lingüística y amenazas directas de muerte diaria",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "La cita no menciona aislamiento, censura ni amenazas diarias."
+        },
+        {
+          "text": "Tributos forzados, degradación militar y trabajos pesados en obras públicas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "La cita no menciona esos medios."
+        },
+        {
+          "text": "Nombres idolátricos, trato íntimo con costumbres paganas y ritos seductores",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "Resume con precisión los tres medios enumerados."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La tríada correcta está explícita, pero el enunciado no contiene la atribución requerida.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué medios combinó la corte babilónica para inducir gradualmente a los jóvenes hebreos a renunciar a su religión?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "e1210498ee66c831fc57c3108bf4c8e547acaf0b6bfd88c9f36c94a6e2873eef",
+      "output_sha256": "ae6f4abe438fc838e916732b655b12ce655351ab88ea68a8fde2f7f6d05d688c"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-108",
+      "selected_option_index": 3,
+      "selected_option_text": "Inducirlos a renunciar a su religión y a participar en el culto babilónico",
+      "exact_supporting_phrase": "esperaba inducirlos a renunciar a la religión de su nación, y a participar en el culto babilónico",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Hacerlos olvidar sus orígenes familiares sin alterar sus votos sagrados",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "La cita no menciona olvidar orígenes y sí persigue alterar su adhesión religiosa."
+        },
+        {
+          "text": "Convertirlos en esclavos perpetuos para la edificación de los santuarios",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "La cita no menciona esclavitud constructiva."
+        },
+        {
+          "text": "Obligarlos a dirigir las expediciones militares contra las tribus de Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "La cita no menciona expediciones militares."
+        },
+        {
+          "text": "Inducirlos a renunciar a su religión y a participar en el culto babilónico",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "Reproduce exactamente los dos objetivos religiosos de la cita."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La correcta es la opción más larga y copia la finalidad de la fuente; además, falta «Según Profetas y Reyes».",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cuál era el objetivo final de someter a los cuatro jóvenes al entorno de la corte?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "e883fdef281cf7b368ff7675dcc9ca11eba9c69b491cc879451fc77030384ddc",
+      "output_sha256": "98eef534729f2448c3bc05bc1fc56bf391b17e6d81cd50d75ebc52d1daead052"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-109",
+      "selected_option_index": 0,
+      "selected_option_text": "En el mismo comienzo de su carrera en la corte",
+      "exact_supporting_phrase": "En el mismo comienzo de su carrera, su carácter fué probado de una manera decisiva.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "En el mismo comienzo de su carrera en la corte",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "Conserva el momento específico indicado por la cita y el contexto cortesano."
+        },
+        {
+          "text": "Durante su primera designación como ministros",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La cita no menciona una designación ministerial."
+        },
+        {
+          "text": "Al término de los tres años de su preparación",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "Contradice «en el mismo comienzo de su carrera»."
+        },
+        {
+          "text": "Luego de interpretar el gran sueño del monarca",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La cita no ubica la prueba después de un sueño."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El enunciado delimita explícitamente Profetas y Reyes, la cita determina un único momento y los distractores no ofrecen una segunda respuesta defendible.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "55e371a163b8df768ef45b4f1af2e1d3700c20de279b8d2f4e2971173c35ac1f",
+      "output_sha256": "1592cae3b9e7cec449f3583328abf01221aaed7da6e43a6a4c85de31e4a2b2da"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-W2-110",
+      "selected_option_index": 1,
+      "selected_option_text": "Fue probado de una manera decisiva",
+      "exact_supporting_phrase": "su carácter fué probado de una manera decisiva",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Fue probado de una manera aparente",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La cita califica la prueba como decisiva, no aparente."
+        },
+        {
+          "text": "Fue probado de una manera decisiva",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La opción reproduce literalmente la calificación."
+        },
+        {
+          "text": "Fue probado de una manera pasajera",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La cita dice «decisiva», no «pasajera»."
+        },
+        {
+          "text": "Fue probado de una manera simulada",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 1",
+          "exact_reason": "La cita dice «decisiva», no «simulada»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es una copia literal y las opciones son sustituciones de un adjetivo; además, el enunciado omite la atribución obligatoria.",
+      "suggested_rewrite": "Según Profetas y Reyes, al iniciar su estancia en el palacio real, ¿de qué forma se califica la prueba del carácter de los jóvenes?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_001",
+      "conversation_id": "/root/sol_audit_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:34:10.524Z",
+      "input_content_sha256": "8dba57d001934f4561edcb5aef599aa56f1eb2a0ee1b4d2a93a42a5f9260c530",
+      "output_sha256": "3b366a665f216f129394c96c39ea0f23084d512c1f000fd52d3235f83f320c10"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 1,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 19,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

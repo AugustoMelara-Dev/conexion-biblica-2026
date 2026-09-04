@@ -1,0 +1,1044 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-007",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-007.json",
+  "input_sha256": "ed2313f81ebb2a6b96e265a68fa4c86bbd9f5b356f3d17f18a272de577e66770",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/sol_audit_003",
+    "conversation_id": "/root/sol_audit_003",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0108",
+      "selected_option_index": 2,
+      "selected_option_text": "se tienen en cuenta tanto como las que se usan",
+      "exact_supporting_phrase": "Las capacidades que no se usan se tienen en cuenta tanto como las que se usan.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "se valoran menos que las que se usan",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "Contradice la igualdad explícita con que se tienen en cuenta las capacidades usadas y no usadas."
+        },
+        {
+          "text": "se pasan por alto frente a las que se usan",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "La fuente afirma que las capacidades no usadas también se tienen en cuenta."
+        },
+        {
+          "text": "se tienen en cuenta tanto como las que se usan",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "Completa literalmente la oración de la fuente."
+        },
+        {
+          "text": "se descartan antes que las que se usan",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "La fuente no las descarta; afirma que se contabilizan en igual medida."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es única y literal, pero la pregunta PR omite el prefijo obligatorio «Según Profetas y Reyes...». La opción correcta es además la más larga y precisa.",
+      "suggested_rewrite": "Según Profetas y Reyes, las capacidades que no se usan ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "073d39d0046395c927c47171dda084e548a2557c142bd1f8507d0fe96150fed3",
+      "output_sha256": "3e082cc69f67b2ab1e9677fffc417a8fa3b34ed0d127b1e80b34b69f987ca5c0"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0109",
+      "selected_option_index": 2,
+      "selected_option_text": "no usamos nuestras facultades para glorificar a Dios",
+      "exact_supporting_phrase": "Seremos juzgados por lo que debiéramos haber hecho y no hicimos porque no usamos nuestras facultades para glorificar a Dios.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "no obedecimos las leyes humanas de nuestro entorno",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "El pasaje no atribuye ese juicio al incumplimiento de leyes humanas."
+        },
+        {
+          "text": "no aceptamos las responsabilidades menores de la vida",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "El contexto habla de deberes pequeños, pero la oración auditada identifica como causa no usar las facultades para glorificar a Dios."
+        },
+        {
+          "text": "no usamos nuestras facultades para glorificar a Dios",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "Es la causa expresamente introducida por «porque» en la fuente."
+        },
+        {
+          "text": "no recibimos oportunidades para demostrar nuestros talentos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 2",
+          "exact_reason": "El contexto dice que se desperdician oportunidades disponibles, no que falten oportunidades."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La relación causal está plenamente sustentada y solo una opción la expresa, pero falta el delimitador obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué omisión explica que seamos juzgados por lo que debiéramos haber hecho y no hicimos?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "e0f4e56ac9e9509710b528db22cc03ff3c3fc9548da53aa0d709098c37ff7604",
+      "output_sha256": "604ab94063969d7fae2bee510c9b12ef886d26d0f668c3338988d095e1cd4032"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0110",
+      "selected_option_index": 3,
+      "selected_option_text": "Providencia",
+      "exact_supporting_phrase": "no se debe a favores o dones especiales de la Providencia.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Disciplina",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "La disciplina propia sí participa en la formación del carácter; no es el origen atribuido a los favores o dones especiales."
+        },
+        {
+          "text": "Casualidad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "La casualidad se niega como origen del carácter noble y no modifica la frase «dones especiales de»."
+        },
+        {
+          "text": "Temperancia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "La temperancia no aparece como origen de esos favores o dones."
+        },
+        {
+          "text": "Providencia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "La fuente habla literalmente de «favores o dones especiales de la Providencia»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es inequívoca, aunque el giro «qué origen tienen» resulta menos natural que preguntar de dónde provienen; además, falta el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿de dónde proceden los favores o dones especiales que no producen por sí solos un carácter noble?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "80a70abccb8fbf1e6fac182337873928db0bc6accfb8a3601dd93210cdbd40aa",
+      "output_sha256": "fea73e856ccc0b920280693ddc80d0e0cb0b26bd9fb75d975e3f0676782dab00"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0111",
+      "selected_option_index": 2,
+      "selected_option_text": "de Dios y de los hombres",
+      "exact_supporting_phrase": "de la entrega del yo al servicio de Dios y de los hombres.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "de la naturaleza inferior y de la superior",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "La naturaleza inferior se sujeta a la superior, pero ninguna se presenta como destinataria del servicio del yo."
+        },
+        {
+          "text": "de la disciplina propia y del yo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "La disciplina propia es un medio formativo; no es destinataria del servicio."
+        },
+        {
+          "text": "de Dios y de los hombres",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "La fuente identifica literalmente a Dios y a los hombres como destinatarios del servicio."
+        },
+        {
+          "text": "de los hombres y de la naturaleza superior",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "Incluye a los hombres, pero sustituye a Dios por la naturaleza superior, que cumple otra función en la frase."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave está sustentada y todas las opciones conservan la misma forma gramatical, pero falta el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, en la formación de un carácter noble, ¿al servicio de quiénes se entrega el yo?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "614e19cd9ee55e52a15f3383f495f5f99780c096691fdd483ae4fbaff4d0d455",
+      "output_sha256": "1555d25763822d2729505d00ef17853d9ef53c17b530fd119ada990d2fed146a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0112",
+      "selected_option_index": 3,
+      "selected_option_text": "manifestaron",
+      "exact_supporting_phrase": "Por la fidelidad que los jóvenes hebreos manifestaron hacia los principios de temperancia, Dios habla a los jóvenes de hoy.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "olvidaron",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "Contradice que manifestaran fidelidad hacia esos principios."
+        },
+        {
+          "text": "abandonaron",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "Abandonar los principios es incompatible con manifestar fidelidad hacia ellos."
+        },
+        {
+          "text": "rechazaron",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "Rechazar los principios contradice la fidelidad descrita."
+        },
+        {
+          "text": "manifestaron",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "Es el verbo exacto de la oración fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave literal es única, pero tres distractores son antónimos evidentes y la pregunta PR no contiene el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, por la fidelidad que los jóvenes hebreos ____ hacia los principios de temperancia, Dios habla a los jóvenes de hoy.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "b7a36ac5c73305d031e450fc5792fb377e618cab210166a05adfec38fb4a811e",
+      "output_sha256": "acbda46cf217df3e19e0a72aaad9ac75c40d2a10ed1397349bfe843f9c827a85"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0113",
+      "selected_option_index": 2,
+      "selected_option_text": "audaces",
+      "exact_supporting_phrase": "Se necesitan hombres que, como Daniel, serán activos y audaces para la causa del bien.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "prudentes",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "La prudencia no es el calificativo emparejado con «activos» en esta oración."
+        },
+        {
+          "text": "fieles",
+          "verdict": "TRUE_ELSEWHERE",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "La fidelidad de los jóvenes hebreos aparece en la oración anterior, pero la cualidad solicitada junto a «activos» es «audaces»."
+        },
+        {
+          "text": "audaces",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "La fuente une explícitamente «activos y audaces»."
+        },
+        {
+          "text": "firmes",
+          "verdict": "TRUE_ELSEWHERE",
+          "source_ref": "PR39, p. 31, párrafo 6",
+          "exact_reason": "Más adelante se dice que los notables hebreos permanecieron firmes, pero no es la palabra de esta oración."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "Solo «audaces» completa la frase citada, aunque dos distractores describen verdaderamente a los hebreos en el contexto amplio; falta además el delimitador obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, además de activos, ¿cómo serán los hombres que se necesitan para la causa del bien?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "064bdf32f9b547e50f62c835cc3328be22b3446c8f5a12cf44ac3821573ef293",
+      "output_sha256": "29f8e9c95ff08a9abd7fe879ac68bd8077f9f0ca6a4b34b71f9126de44b9739d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0114",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "la guerra entre el vicio y la virtud exige una vigilancia incesante.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "El enunciado reproduce literalmente la conclusión causal del pasaje."
+        },
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "Contradice una afirmación explícita de la fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación es literalmente verdadera, pero el enunciado PR omite el prefijo obligatorio «Según Profetas y Reyes...». ",
+      "suggested_rewrite": "Según Profetas y Reyes, la guerra entre el vicio y la virtud exige una vigilancia incesante.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "f1c850f90964f191186d8b14884ac752be87d937192f06a749e3d50e96ec3780",
+      "output_sha256": "158d2b2935898fe80c2bcc11e7eb1687fb1f0f76b7e009ae8c851fc5c449eaff"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0115",
+      "selected_option_index": 3,
+      "selected_option_text": "Satanás",
+      "exact_supporting_phrase": "Satanás se presenta a toda alma con tentaciones que asumen muchas formas seductoras en lo que respecta a la satisfacción del apetito.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Dios",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "La fuente atribuye esas tentaciones a Satanás, no a Dios."
+        },
+        {
+          "text": "Nabucodonosor",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "Nabucodonosor no es el sujeto de esta afirmación sobre tentaciones a toda alma."
+        },
+        {
+          "text": "Daniel",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "Daniel se presenta como ejemplo de fidelidad, no como quien tienta a toda alma."
+        },
+        {
+          "text": "Satanás",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "Es el sujeto nombrado explícitamente en la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La identidad es expresa e inequívoca, pero falta el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, cuando se trata de tentaciones relacionadas con la satisfacción del apetito, ¿quién se presenta a toda alma?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "65adb4babce4ad2e4bdba67a7b7e4d6954f175a1c4981654d9eb68e59ca7a82c",
+      "output_sha256": "20101416bf41cfddc9159011ae8d027a8a8239330deeada7c855bd6d867efa69"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0116",
+      "selected_option_index": 1,
+      "selected_option_text": "edificación del carácter",
+      "exact_supporting_phrase": "El cuerpo es un medio muy importante de desarrollar la mente y el alma para la edificación del carácter.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "desarrollo de la fama",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La fama no se menciona como finalidad del desarrollo de la mente y el alma."
+        },
+        {
+          "text": "edificación del carácter",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Completa literalmente la finalidad expresada en la fuente."
+        },
+        {
+          "text": "satisfacción del apetito",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La satisfacción del apetito aparece como ámbito de tentación, no como finalidad positiva del cuerpo."
+        },
+        {
+          "text": "conservación del poder",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La conservación del poder no aparece en esta afirmación."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es literal y única, pero el enunciado PR carece del delimitador obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, el cuerpo es un medio muy importante para desarrollar la mente y el alma con miras a la ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "d71dcca64ea0097ad0199cd4a4fa506600008ae0c7be64478ffe3dca4567907a",
+      "output_sha256": "abe5d7ebd04851945e51a5cafacd173af817386b36efcb03952e38fdf04b901b"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0117",
+      "selected_option_index": 2,
+      "selected_option_text": "el adversario de las almas",
+      "exact_supporting_phrase": "el adversario de las almas encauce sus tentaciones para debilitar y degradar las facultades físicas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "el defensor de las almas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Invierte la designación explícita «adversario de las almas»."
+        },
+        {
+          "text": "el promotor de la virtud",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Debilitar y degradar facultades físicas no se atribuye a un promotor de la virtud."
+        },
+        {
+          "text": "el adversario de las almas",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Es la figura nombrada de forma literal como quien encauza sus tentaciones."
+        },
+        {
+          "text": "el custodio de la razón",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La expresión «custodio de la razón» no aparece en el pasaje."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave exacta no compite con los distractores, pero la pregunta omite el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿quién encauza sus tentaciones para debilitar y degradar las facultades físicas?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "f8858068d09359e9f1f23d8ed9a801b7ca171c0b67d75661ffb004067a78fb18",
+      "output_sha256": "0174c17b4e2286024e205f7c7871fa4668575443a342caf2139f41fa5178befc"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0118",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "El éxito que obtiene en ello significa con frecuencia la entrega de todo el ser al mal.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Es falso porque el enunciado cambia «todo el ser» por «parte del ser»."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La fuente afirma la entrega de todo el ser, no solamente de una parte."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La sustitución de «todo» por «parte» hace la afirmación inequívocamente falsa, pero falta el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, el éxito del adversario al debilitar las facultades físicas significa con frecuencia la entrega de parte del ser al mal.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "d7dff0ebd22bf321384e0672fa6f92c7b55fafe98065cf9a7f9dd4c5fc0fd977",
+      "output_sha256": "9598b2fe37293f6cb2fc47c8d58ae0f443f175f9b64cd25525340aa612d65e6e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0119",
+      "selected_option_index": 1,
+      "selected_option_text": "con certidumbre ruina y muerte",
+      "exact_supporting_phrase": "A menos que las tendencias de la naturaleza física estén dominadas por un poder superior, obrarán con certidumbre ruina y muerte.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "con lentitud cansancio y duda",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Lentitud, cansancio y duda no son los efectos declarados."
+        },
+        {
+          "text": "con certidumbre ruina y muerte",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La opción reproduce literalmente el modo y los resultados expresados."
+        },
+        {
+          "text": "con certidumbre armonía y vida",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Armonía y vida son contrarias a la ruina y muerte citadas."
+        },
+        {
+          "text": "con prudencia dominio y virtud",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La fuente no atribuye prudencia, dominio o virtud a las tendencias físicas no dominadas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es inequívoca, pero falta el prefijo obligatorio; conviene además conservar la puntuación de la fuente para evitar la secuencia nominal áspera.",
+      "suggested_rewrite": "Según Profetas y Reyes, sin el dominio de un poder superior, las tendencias de la naturaleza física obrarán con certidumbre ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "e869d7524e17d3ce997c1b5672ca26ab844bcb03dae303143bb17fb637fb1bd8",
+      "output_sha256": "d0a974cebbb1cc09643a4fe0e4e15c43dad8390432181828606a65b95071bab7"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0120",
+      "selected_option_index": 3,
+      "selected_option_text": "facultades superiores del ser",
+      "exact_supporting_phrase": "El cuerpo debe ser puesto en sujeción a las facultades superiores del ser.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "tentaciones de la naturaleza física",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Las tendencias físicas deben dominarse; no son la autoridad a la cual se subordina el cuerpo."
+        },
+        {
+          "text": "pasiones de la voluntad humana",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La fuente manda controlar las pasiones mediante la voluntad, no someter el cuerpo a ellas."
+        },
+        {
+          "text": "leyes del vigor físico",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "El pasaje menciona leyes inmutables después, pero no usa «leyes del vigor físico» como término de esta sujeción."
+        },
+        {
+          "text": "facultades superiores del ser",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Es el complemento explícito de la sujeción del cuerpo."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La paráfrasis «funciones corporales» es razonablemente equivalente al cuerpo en este contexto y solo una opción responde, pero falta la delimitación obligatoria de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿a qué deben sujetarse las funciones corporales?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "e9d113004fdfea270d769768971fb0597b883111f7f89fb130f0c13fbbfcf5be",
+      "output_sha256": "a6d39e9bc090d718f572411018b6d9e53ecca4b214d3851dc05861e6eee0e76e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0121",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Las pasiones deben ser controladas por la voluntad, que debe estar a su vez bajo el control de Dios.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Contradice la doble relación de control expresada literalmente."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "El enunciado reproduce fielmente que la voluntad controla las pasiones y Dios controla la voluntad."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación es literalmente verdadera y no ambigua, pero carece del prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, las pasiones deben ser controladas por la voluntad, y la voluntad debe estar bajo el control de Dios.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "fe0ba6c94650e653ee53c7954a2e8b520d84ebf1c203233429a945259f20d0fc",
+      "output_sha256": "dcf11dc5755e4ae0f989385f3207fc83d52c06a002fec1952dcb03275fdea352"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0122",
+      "selected_option_index": 1,
+      "selected_option_text": "regir",
+      "exact_supporting_phrase": "La facultad regia de la razón, santificada por la gracia divina, debe regir la vida.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "examinar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La fuente no dice que la facultad regia deba limitarse a examinar la vida."
+        },
+        {
+          "text": "regir",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Es el verbo exacto que expresa la acción de la razón sobre la vida."
+        },
+        {
+          "text": "someter",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La fuente usa «regir», no «someter», para esta relación."
+        },
+        {
+          "text": "acompañar",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Acompañar no expresa la autoridad rectora que atribuye el pasaje a la razón."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La acción es explícita y única, pero el enunciado PR omite el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué acción debe ejercer sobre la vida la facultad regia de la razón santificada por la gracia divina?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "c8c6be4cd67287138ec86a5ddf9eecf014c86ef25d83a19f5069761e6e43dcc4",
+      "output_sha256": "643d20158763fc114943612e04bae9ea04d4edecac1de47fd8886089cda9bad3"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0123",
+      "selected_option_index": 0,
+      "selected_option_text": "leyes inmutables",
+      "exact_supporting_phrase": "El poder intelectual, el vigor físico y la longevidad dependen de leyes inmutables.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "leyes inmutables",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La opción completa literalmente la oración fuente."
+        },
+        {
+          "text": "preferencias culturales",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Las preferencias culturales son variables y no son la dependencia señalada."
+        },
+        {
+          "text": "decisiones personales",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La fuente no presenta las decisiones personales como fundamento de esos tres bienes."
+        },
+        {
+          "text": "circunstancias cambiantes",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Lo cambiante contradice directamente el carácter inmutable de las leyes citadas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es literal y única, pero falta el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, el poder intelectual, el vigor físico y la longevidad dependen de ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "2a355fc6b34d6d8d24225ed1485001e7e639a1cb0e5444ce4e82a0bdd483cfbb",
+      "output_sha256": "cee3fe425035d02c596a3e30a2a76c99277783849a296708525d7bc91e632601"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0124",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "Mediante la obediencia a esas leyes, el hombre puede ser vencedor de sí mismo, vencedor de sus propias inclinaciones, vencedor de principados y potestades",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Es falso porque la fuente dice «vencedor de principados y potestades», no aliado de ellos."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "«Aliado» contradice la relación de victoria expresada en el pasaje."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La sustitución de «vencedor» por «aliado» hace la afirmación inequívocamente falsa, pero el enunciado omite el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, mediante la obediencia a esas leyes, el hombre puede ser aliado de principados y potestades.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "a379d344158009027834899dcd659ba22128998947d33219a8701231b53059ed",
+      "output_sha256": "fde3bf49330a1074c02cc558712601d34a472a92c1bc854086c8966722a3c409"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0125",
+      "selected_option_index": 2,
+      "selected_option_text": "ninguna ofrenda imperfecta podía ser llevada al altar de Dios",
+      "exact_supporting_phrase": "ninguna ofrenda imperfecta podía ser llevada al altar de Dios.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "ninguna ofrenda perfecta debía ser llevada al altar de Dios",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 6",
+          "exact_reason": "Sustituye «imperfecta» por «perfecta» y cambia el sentido del requisito ritual."
+        },
+        {
+          "text": "algunas ofrendas imperfectas podían ser llevadas al altar de Dios",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 6",
+          "exact_reason": "Contradice el cuantificador absoluto «ninguna»."
+        },
+        {
+          "text": "ninguna ofrenda imperfecta podía ser llevada al altar de Dios",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 6",
+          "exact_reason": "Reproduce literalmente la regla indicada."
+        },
+        {
+          "text": "cualquier ofrenda imperfecta podía ser llevada al altar de Dios",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 6",
+          "exact_reason": "«Cualquier» invierte la prohibición absoluta de la fuente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "Solo una opción conserva correctamente cuantificador, cualidad y modalidad, pero falta el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, en el antiguo ritual, ¿qué ocurría con una ofrenda imperfecta respecto del altar de Dios?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "3ba11cdbc16a50591582a6aa33525756afac5b0e1e65125febdb2cf257d4321f",
+      "output_sha256": "b3f8d8fb289ee83dda9e0fc71499223d02ec8dce7d37b7da9688f25ff1f9a22f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0126",
+      "selected_option_index": 3,
+      "selected_option_text": "sacrificio",
+      "exact_supporting_phrase": "El sacrificio que había de representar a Cristo debía ser sin mancha.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "altar",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 6",
+          "exact_reason": "El altar recibe la ofrenda; no es lo destinado a representar a Cristo en esta oración."
+        },
+        {
+          "text": "evangelio",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 6",
+          "exact_reason": "El antiguo ritual era el Evangelio en símbolos, pero el sujeto que representaba a Cristo era el sacrificio."
+        },
+        {
+          "text": "ritual",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 6",
+          "exact_reason": "La oración atribuye directamente la representación a Cristo al sacrificio, no al ritual como opción léxica."
+        },
+        {
+          "text": "sacrificio",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 6",
+          "exact_reason": "Es el sujeto exacto de la afirmación citada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es directa y única, pero falta el delimitador obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, el ____ destinado a representar a Cristo debía ser sin mancha.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "8fd314e8da2bb153a4477328d2b69027124987d0412f3f24061f56ac3333a9cb",
+      "output_sha256": "1dc326c99d6be3d0583c4571a9ca410dd49d73af0494e8e18f45a0ba72419322"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-AUTH-0127",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "La palabra de Dios señala esto como ilustración de lo que deben ser sus hijos: un «sacrificio vivo», santo y «sin mancha».",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 6",
+          "exact_reason": "El enunciado conserva los tres rasgos con los que la fuente describe lo que deben ser los hijos de Dios."
+        },
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 6",
+          "exact_reason": "Contradice la ilustración explícita del pasaje."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación es fiel e inequívoca, pero la pregunta PR carece del prefijo obligatorio «Según Profetas y Reyes...». ",
+      "suggested_rewrite": "Según Profetas y Reyes, la palabra de Dios señala que sus hijos deben ser un «sacrificio vivo», santo y «sin mancha».",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:22:23.6632332Z",
+      "input_content_sha256": "609bcee4c2763c68a8f3459e411eb2f817ce44a6206b36309a926b658c29e119",
+      "output_sha256": "53fd218d3ecf610cec16f5ad1409490c0b9d55539dc03711755a8178004311fa"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 0,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 20,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

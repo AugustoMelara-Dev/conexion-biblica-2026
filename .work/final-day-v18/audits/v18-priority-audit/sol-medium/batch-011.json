@@ -1,0 +1,1056 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-011",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-011.json",
+  "input_sha256": "ab1215582494e86c3cfa493ceecdb70ddff875d85ddbfd0992c640c8f64d540b",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/sol_audit_003",
+    "conversation_id": "/root/sol_audit_003",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-047",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Se necesitan corazones puros, manos fuertes, valor intrépido; porque la guerra entre el vicio y la virtud exige una vigilancia incesante.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "La fuente enumera literalmente corazones puros, manos fuertes y valor intrépido como necesidades para la causa del bien."
+        },
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "Contradice la enumeración expresa del pasaje."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación resume fielmente dos oraciones consecutivas y tiene una sola respuesta, pero omite el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, la causa del bien necesita corazones puros, manos fuertes y valor intrépido.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "618477d385b1a8d4210e3d35a3eedeea55ea4832183e8e987b84bdc2c5000cf2",
+      "output_sha256": "be815c0347ec832531f9791f15c747ae4c72e8c68f0e446ac319ed66e22815cc"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-048",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "tentaciones que asumen muchas formas seductoras en lo que respecta a la satisfacción del apetito.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "Es falso porque la fuente dice que las tentaciones asumen muchas formas seductoras, no una sola forma evidente."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 4",
+          "exact_reason": "«Siempre de una única forma evidente» contradice «muchas formas seductoras»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La doble oposición «única/muchas» y «evidente/seductoras» hace inequívoca la falsedad, pero falta el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, las tentaciones relacionadas con el apetito se presentan siempre de una única forma evidente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "338efef26ac7e71c2741f01f184817ac91c2f772a47de9cc2e9ac94aff4020b3",
+      "output_sha256": "a43b37c983dbefd57b8e05f94ec3c6e73466bd958f10c2ca76f9529fa3b4c96e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-049",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "el Señor puede inutilizar todo agente que obre para derrotar a sus escogidos; en su fuerza pueden ellos vencer toda tentación y toda dificultad.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "Niega dos capacidades que la fuente atribuye expresamente al Señor y a la fuerza que da."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "El enunciado conserva la inutilización de agentes hostiles y la fuerza para vencer tentaciones y dificultades."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La paráfrasis reúne correctamente las dos cláusulas de la fuente, pero la pregunta PR no incorpora el delimitador obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, el Señor puede inutilizar los agentes que procuran derrotar a sus escogidos y darles fuerza para vencer tentaciones y dificultades.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "8491bcb278b70682b63881d759f400a5877d7aed62f419809925a6a0e1101a64",
+      "output_sha256": "9cd711f74fa95f269f9857b772ce07f9bda99593cc2852a2b6be169dfad9c764"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-050",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "su saber no les llegó por casualidad.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Contradice literalmente la negación de que el saber llegara por casualidad."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La fuente declara de manera directa que su saber no llegó por casualidad."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La afirmación invierte de forma explícita la fuente y es inequívocamente falsa, pero omite el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, el saber superior de los jóvenes les llegó por casualidad.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "4d14010af4ad669a22377c519bee3b899ddacf87f68f19548b3a27d63fe87a0e",
+      "output_sha256": "84b6dd4d49858e5825ba15441f3b0ed7e9dc155e7237b3026c3491a6b80e8302"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-051",
+      "selected_option_index": 1,
+      "selected_option_text": "Al principio del cautiverio",
+      "exact_supporting_phrase": "fueron llevados a Babilonia al principio de los setenta años de cautiverio",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Después de los setenta años",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Sitúa el traslado después del período, contrario a «al principio»."
+        },
+        {
+          "text": "Al principio del cautiverio",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La fuente ubica expresamente el traslado al principio de los setenta años de cautiverio."
+        },
+        {
+          "text": "A la mitad del cautiverio",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Contradice la ubicación temporal explícita al principio."
+        },
+        {
+          "text": "Al concluir el cautiverio",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "El final del cautiverio no coincide con el principio indicado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La ubicación temporal tiene una sola respuesta, pero falta el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿en qué momento de los setenta años de cautiverio fueron llevados a Babilonia estos hijos de Israel?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "bc19716653121ff1afd1f3622077c7d3ef9de6387b278cadf95ef9c43e46dba6",
+      "output_sha256": "5f9c37f1423436886dcff9a3b69e02dab7624591e846b566f54f1f898adbfa03"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-052",
+      "selected_option_index": 0,
+      "selected_option_text": "Enseñados en toda sabiduría, sabios en ciencia y de buen entendimiento",
+      "exact_supporting_phrase": "enseñados en toda sabiduría, y sabios en ciencia, y de buen entendimiento",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Enseñados en toda sabiduría, sabios en ciencia y de buen entendimiento",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "La opción reúne fielmente las tres aptitudes intelectuales enumeradas."
+        },
+        {
+          "text": "Enseñados en artes musicales, sabios en poesía y de buen espectáculo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Música, poesía y espectáculo no aparecen entre los requisitos citados."
+        },
+        {
+          "text": "Enseñados en estrategia militar, sabios en armas y de buen mando",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "El pasaje no exige estrategia, armas ni mando."
+        },
+        {
+          "text": "Enseñados en labores agrícolas, sabios en cultivos y de buen comercio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 3",
+          "exact_reason": "Agricultura, cultivos y comercio no forman parte de la enumeración."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave reproduce la enumeración textual y es ligeramente más larga y precisa que distractores temáticos débiles; además, falta el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué conjunto reúne las aptitudes intelectuales exigidas a los muchachos destinados al palacio?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "063d007ed7a88bdab7edb69a7803d1e4767e2d7d8be452a0c30349c1cd4a1b5b",
+      "output_sha256": "cf4cb4f18fb08a99f25d76e78b45800211db2f9324cae0736648bc5740c10beb"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-053",
+      "selected_option_index": 2,
+      "selected_option_text": "En los pergaminos del Pentateuco",
+      "exact_supporting_phrase": "describían los pergaminos del Pentateuco",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "En las crónicas de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "La fuente no atribuye ese conocimiento a crónicas babilónicas."
+        },
+        {
+          "text": "En los registros de la corte",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "Los registros cortesanos no se mencionan como soporte de esa historia."
+        },
+        {
+          "text": "En los pergaminos del Pentateuco",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "Es la colección nombrada literalmente por la fuente."
+        },
+        {
+          "text": "En los decretos de Nabucodonosor",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "Los decretos del rey no son la fuente citada para Nadab y Abihú."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La colección está identificada de forma directa y única, pero la pregunta PR omite el delimitador obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿en qué colección de escritos conocían los jóvenes la historia de Nadab y Abihú y los resultados de su intemperancia?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "51004c8515ca31adedf934c423dab44c0d0f4c345df950ee1d2bf789947abb78",
+      "output_sha256": "c112c1dae43f758c3b1c701757f728af3c54fdff084cdd3725d0dd56113789e4"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-054",
+      "selected_option_index": 0,
+      "selected_option_text": "Sus padres",
+      "exact_supporting_phrase": "Los padres de Daniel y sus compañeros les habían inculcado hábitos de estricta templanza.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Sus padres",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "La fuente identifica expresamente a los padres de Daniel y sus compañeros."
+        },
+        {
+          "text": "El príncipe de los eunucos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "El príncipe aparece en la corte, no como quien inculcó la templanza desde antes."
+        },
+        {
+          "text": "Los sabios caldeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "No se atribuye a los sabios caldeos esa educación."
+        },
+        {
+          "text": "Los funcionarios del rey",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "Los funcionarios reales no son quienes la fuente nombra."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El agente educativo es explícito e inequívoco, pero falta el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿quiénes habían inculcado en Daniel y sus compañeros hábitos de estricta templanza?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "02216c5cc0ef156a6bd9424757d9bc91f556dc078c2002e1f744e4c5cc496b68",
+      "output_sha256": "a128542e419be217fa153e324a2b557d57915cb9c546edfd2e7e6edf6abdaa6d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-055",
+      "selected_option_index": 3,
+      "selected_option_text": "Corrompida y lujuriosa",
+      "exact_supporting_phrase": "aquella corte corrompida y lujuriosa",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Austera y reformada",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "Contradice la caracterización de la corte como corrompida y lujuriosa."
+        },
+        {
+          "text": "Justa y temperante",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "La justicia y templanza son opuestas a la descripción fuente."
+        },
+        {
+          "text": "Pacífica y aislada",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "El pasaje no caracteriza la corte como pacífica o aislada."
+        },
+        {
+          "text": "Corrompida y lujuriosa",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 3",
+          "exact_reason": "Reproduce literalmente los dos adjetivos aplicados a la corte."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La descripción tiene una sola opción textual, pero el enunciado PR no contiene el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cómo se caracteriza la corte donde intensas tentaciones rodeaban a los jóvenes?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "ece7108515f2da988883e43c9cdd1d10d3653fed8ec555afae550e7672374420",
+      "output_sha256": "66294475989c4f72355fab21f032c6e74aca30c74bea45a76f1c5605f5d3a3e0"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-056",
+      "selected_option_index": 2,
+      "selected_option_text": "Dependía del favor del rey y estaba sometido a su poder",
+      "exact_supporting_phrase": "dependía del favor del rey y estaba sometido a su poder",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Dependía del favor de sus compañeros y estaba sometido al poder de los candidatos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "Compañeros y candidatos no constituyen la doble dependencia indicada."
+        },
+        {
+          "text": "Dependía del favor de Melsar y estaba sometido al poder de los magos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "Melsar y los magos no son los sujetos de la dependencia citada."
+        },
+        {
+          "text": "Dependía del favor del rey y estaba sometido a su poder",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "La opción reproduce literalmente las dos relaciones con el rey."
+        },
+        {
+          "text": "Dependía del favor de Aspenaz y estaba sometido al poder de Melsar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "La fuente atribuye tanto el favor como el poder al rey, no a esos oficiales."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La doble relación es explícita y única, pero falta el delimitador obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué doble dependencia podía alegar Daniel para decir que no tenía alternativa ante la comida y el vino del rey?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "faf18f56fbfda87ca66a98cbeee8634c032ad78814967f90765a944ee472a872",
+      "output_sha256": "9034f91d57c32e624a8d54ba31c8cc6320a35f037eeeb5792e775afd34e0d293"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-057",
+      "selected_option_index": 0,
+      "selected_option_text": "Su relación con el Cielo",
+      "exact_supporting_phrase": "cortada su relación con el Cielo",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Su relación con el Cielo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "Es el vínculo que la fuente declara que quedaría cortado."
+        },
+        {
+          "text": "Su relación con el servicio del reino",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "El servicio del reino no es el vínculo mencionado en esta consecuencia."
+        },
+        {
+          "text": "Su relación con la lengua caldea",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "La lengua caldea no aparece en esta cadena moral."
+        },
+        {
+          "text": "Su relación con el alimento sencillo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "El pasaje no dice que ese régimen fuera el vínculo cortado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El vínculo se nombra literalmente y no admite otra opción, pero el enunciado omite el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué vínculo habría quedado cortado tras avanzar por sucesivos pasos en dirección errónea?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "0e3a044c4974bdd6c735bc1f8be3cc051e1fd0c5de6e99bdc90af6217edaf546",
+      "output_sha256": "03bd35c9c75a0c08bdcdc9a963da878f042facab3ac97ce99bcfddd277555f12"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-058",
+      "selected_option_index": 3,
+      "selected_option_text": "Que había ganado su causa",
+      "exact_supporting_phrase": "Daniel supo que había ganado su causa.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Que debía abandonar la petición",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "El consentimiento de Melsar significó éxito, no abandono de la petición."
+        },
+        {
+          "text": "Que el rey había cancelado su educación",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "No se registra cancelación de la educación."
+        },
+        {
+          "text": "Que ya no habría evaluación alguna",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "El contexto describe una prueba de diez días, no la eliminación de toda evaluación."
+        },
+        {
+          "text": "Que había ganado su causa",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 3",
+          "exact_reason": "Es exactamente lo que Daniel supo tras el consentimiento."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La comprensión de Daniel está expresada de forma directa, pero la pregunta PR carece del delimitador obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué comprendió Daniel cuando Melsar accedió a la prueba solicitada?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "614d6f87f6276b10835d3cfed68ac7fd295703a7b7d87f054858222c296b8132",
+      "output_sha256": "18ccaad1dc2e4371bdf77315223ea01e0c04236941e3a23260e2d6ccb9f9fa27"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-059",
+      "selected_option_index": 2,
+      "selected_option_text": "Conocimiento e inteligencia en todas las letras y ciencia",
+      "exact_supporting_phrase": "A estos cuatro muchachos dióles Dios conocimiento e inteligencia en todas las letras y ciencia",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Autoridad sobre todos los funcionarios y soldados",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La fuente no concede autoridad administrativa o militar a los cuatro."
+        },
+        {
+          "text": "Dominio de los ritos y sacrificios babilónicos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "No se atribuye a los cuatro dominio de ritos babilónicos."
+        },
+        {
+          "text": "Conocimiento e inteligencia en todas las letras y ciencia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Reproduce los dones educativos concedidos por Dios a los cuatro."
+        },
+        {
+          "text": "Capacidad para interpretar únicamente los decretos reales",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Reduce el don a decretos reales, mientras la fuente habla de todas las letras y ciencia y distingue visiones y sueños para Daniel."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La clave está plenamente sustentada y distingue el don común del particular de Daniel, pero es la opción más larga y literal; falta además el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, antes de distinguirse el don particular de Daniel, ¿qué dones educativos compartieron los cuatro jóvenes?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "d75c6e0b2518e2a9bf01e43d36a43542805bc8bfd96dc6f2788e9d4dfb8085dc",
+      "output_sha256": "2aefe2bc0081de556b72a1c60be85376e1b0444d371f5374384dd9594cf325ee"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-060",
+      "selected_option_index": 1,
+      "selected_option_text": "El espíritu del poder profético",
+      "exact_supporting_phrase": "se manifestó en él el espíritu del poder profético.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "El deseo de abandonar la corte",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "El pasaje no presenta deseo de abandonar la corte."
+        },
+        {
+          "text": "El espíritu del poder profético",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Es lo que la fuente dice literalmente que se manifestó en Daniel."
+        },
+        {
+          "text": "La autoridad del príncipe de los eunucos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La autoridad del príncipe no se manifiesta en Daniel."
+        },
+        {
+          "text": "La ambición de gobernar Babilonia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "El contexto destaca confianza en Dios, no ambición de gobierno."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La manifestación se identifica literalmente y es única, pero el enunciado PR omite el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué se manifestó en Daniel mientras se aferraba a Dios con confianza inquebrantable?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "7e3d753d655cc1515c3ae9f90683b73a98e172d2d0220e0f11808830be882b61",
+      "output_sha256": "aaa50dda5a51d728195243e1641e81983144a404f0d9695498f525c6c5cdbc21"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-061",
+      "selected_option_index": 2,
+      "selected_option_text": "Abarcaban la historia del mundo hasta el fin del tiempo",
+      "exact_supporting_phrase": "acontecimientos que abarcaban la historia de este mundo hasta el fin del tiempo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Terminaban con la prueba de los diez días",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La prueba de diez días es un episodio anterior y no el límite de los acontecimientos proféticos."
+        },
+        {
+          "text": "Se limitaban a los tres años de su educación",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La duración educativa no coincide con el alcance hasta el fin del tiempo."
+        },
+        {
+          "text": "Abarcaban la historia del mundo hasta el fin del tiempo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "La opción reproduce el alcance temporal explícito."
+        },
+        {
+          "text": "Incluían solo el reinado presente de Nabucodonosor",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "«Solo el reinado presente» es mucho más estrecho que la historia mundial hasta el fin."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es literal, inequívoca y notablemente más amplia y larga que los distractores; además, falta el delimitador obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué alcance temporal tenían los acontecimientos que Daniel debía registrar para las generaciones futuras?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "7f94264c9374aa55d6ed770c152af50dcb7fbb241cc97295b49925ad37b0edc4",
+      "output_sha256": "68ad4e0cbd4bbfce25cc0df9bf900c5e14ee932ede8d8f95547b357f00800e2f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-062",
+      "selected_option_index": 1,
+      "selected_option_text": "Estuvieron delante del rey",
+      "exact_supporting_phrase": "y así estuvieron delante del rey.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Regresaron de inmediato a Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "La fuente no registra un regreso inmediato a Judá."
+        },
+        {
+          "text": "Estuvieron delante del rey",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "Es la posición que la cita declara como resultado."
+        },
+        {
+          "text": "Quedaron bajo la enseñanza de los magos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "Fueron hallados superiores a magos y astrólogos; no se afirma que quedaran bajo su enseñanza."
+        },
+        {
+          "text": "Fueron excluidos del servicio real",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 6",
+          "exact_reason": "Estar delante del rey contradice la exclusión del servicio real."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La posición resultante está citada de forma directa, pero la pregunta omite el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, después de ser hallados diez veces mejores en sabiduría e inteligencia, ¿qué posición ocuparon los jóvenes?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "c4649e3ceac21c25676add7d4aa0c4c37c3b6aed66c43f47835133dc4e8a961f",
+      "output_sha256": "71b7a8e4ac47779310832bea46986fb108620300eb1c4f39b28069c8e6386770"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-063",
+      "selected_option_index": 2,
+      "selected_option_text": "A quienes obedecen sus leyes",
+      "exact_supporting_phrase": "insignias de la nobleza con que la naturaleza honra a los que obedecen sus leyes.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "A quienes buscan únicamente privilegios cortesanos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "La búsqueda de privilegios cortesanos no se vincula con esas insignias."
+        },
+        {
+          "text": "A quienes dependen de dones sin disciplina",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "El contexto niega que los resultados procedan de casualidad o dones sin uso fiel de las facultades."
+        },
+        {
+          "text": "A quienes obedecen sus leyes",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "La fuente nombra literalmente a quienes obedecen las leyes de la naturaleza."
+        },
+        {
+          "text": "A quienes desprecian los buenos hábitos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 1",
+          "exact_reason": "Las señales visibles se describen como certificados de buenos hábitos, no de desprecio hacia ellos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única y textual, aunque el posesivo «sus» exige reconocer que se refiere a las leyes de la naturaleza; falta además el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿a quiénes honra la naturaleza con insignias de nobleza visibles en su condición personal?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "fc06bfe6f85032c03f9f8c6db669891cde73b7f88e50526b0e614e83ff437fad",
+      "output_sha256": "f8987f5b0b7d7edba91574a1a078078354b0d23343b99ed37d65a7a989218738"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-064",
+      "selected_option_index": 3,
+      "selected_option_text": "Tuvieron mucho más éxito",
+      "exact_supporting_phrase": "Daniel y sus compañeros tuvieron mucho más éxito que los demás estudiantes",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Obtuvieron exactamente el mismo resultado",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La igualdad contradice que tuvieron mucho más éxito."
+        },
+        {
+          "text": "Quedaron muy por debajo de los demás",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Invierte la superioridad declarada."
+        },
+        {
+          "text": "No participaron en ese aprendizaje",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "La fuente dice que adquirieron la sabiduría babilónica."
+        },
+        {
+          "text": "Tuvieron mucho más éxito",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Reproduce literalmente la comparación con los demás estudiantes."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La comparación es explícita y todos los distractores la contradicen, pero falta el prefijo obligatorio de Profetas y Reyes.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿cómo se comparó el éxito de Daniel y sus compañeros con el de los demás estudiantes al aprender la sabiduría babilónica?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "60b1f91afbb4fa78b206a14c8afe44602209869fca6683f46486036f46215c75",
+      "output_sha256": "cbb5951ebdd6742685322a8d8caf6784ce387869ffff7ea7147056ecdedd6963"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-065",
+      "selected_option_index": 0,
+      "selected_option_text": "Con todos los que se esfuercen por hacer su voluntad",
+      "exact_supporting_phrase": "cooperará con todos los que se esfuercen por hacer su voluntad.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Con todos los que se esfuercen por hacer su voluntad",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "La opción reproduce exactamente con quiénes cooperará el Señor."
+        },
+        {
+          "text": "Con quienes esperen resultados sin hacer esfuerzo",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "El contexto afirma que la gracia nunca reemplaza el esfuerzo humano."
+        },
+        {
+          "text": "Solo con quienes ocupen puestos reales",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "La promesa se extiende a todos los que hagan su voluntad, no solo a funcionarios reales."
+        },
+        {
+          "text": "Únicamente con quienes vivan fuera de ciudades paganas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 5",
+          "exact_reason": "Daniel recibió cooperación divina precisamente en Babilonia, y la fuente no impone ese límite geográfico."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La promesa tiene un destinatario inequívoco y literal, pero la pregunta PR omite el delimitador obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿con quiénes cooperará el Señor del mismo modo que cooperó con Daniel y sus compañeros?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "5bf62b90f4da68710a99efa353fff3807ae8639444351232702f23da5193b14a",
+      "output_sha256": "17d726073191092bf5457d116746d61da9328fb9ae902a8dd17b7776aa2a62a3"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PR39-V11-WAVE-066",
+      "selected_option_index": 0,
+      "selected_option_text": "La mente y el alma",
+      "exact_supporting_phrase": "El cuerpo es un medio muy importante de desarrollar la mente y el alma para la edificación del carácter.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "La mente y el alma",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Son las dos dimensiones que la fuente dice que el cuerpo ayuda a desarrollar."
+        },
+        {
+          "text": "La riqueza y el rango",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Riqueza y rango no aparecen como dimensiones desarrolladas por el cuerpo."
+        },
+        {
+          "text": "El idioma y la nacionalidad",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "Idioma y nacionalidad no forman parte de esta afirmación."
+        },
+        {
+          "text": "La fama y la influencia política",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 5",
+          "exact_reason": "La fuente no relaciona el cuerpo con fama o influencia política."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La pareja conceptual está expresamente sustentada y es única, pero el enunciado PR no contiene el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué dimensiones del ser puede desarrollar el cuerpo como medio para edificar el carácter?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:28:01.4682915Z",
+      "input_content_sha256": "9dbbf8acbc18588cb7dd0bb86f5b1e83f0d67a0f7e8e35d53c6d441dfbfa11ee",
+      "output_sha256": "d9198bcff9d19a805eba78c4023527a4b76369e7d2780d162d47bd928f224ebc"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 0,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 20,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

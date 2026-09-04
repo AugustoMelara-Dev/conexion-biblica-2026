@@ -102,6 +102,12 @@ describe("canonical final bank storage", () => {
     expect(question.correctAnswer).toEqual(["A"])
   })
 
+  it("does not promote hard questions to competitive without explicit evidence", () => {
+    const question = adaptFinalQuestion(raw({ difficulty: "hard" }))
+    expect(question.tier).toBeUndefined()
+    expect(question.metadata?.tier).toBeUndefined()
+  })
+
   it("keeps fill-choice as four buttons rather than written text", () => {
     const question = adaptFinalQuestion(raw({ family: "fill_choice" }))
     expect(question.type).toBe("fill_blank")
@@ -164,6 +170,38 @@ describe("canonical final bank storage", () => {
     expect(fetcher).toHaveBeenCalledWith(
       "/banks/final-2026/questions/DAN7.json"
     )
+  })
+
+  it("loads exact audited question IDs without replacing them with another presentation", async () => {
+    const manifest: FinalBankManifest = {
+      schema_version: "9.0",
+      bank_id: "BANCO_UNICO_CONEXION_BIBLICA_2026",
+      display_name: "Banco Maestro Único — Final 2026",
+      gold_questions: 2,
+      unique_facts: 1,
+      shards: [{
+        chapter: "DAN7",
+        question_count: 2,
+        questions_file: "banks/final-2026/questions/DAN7.json",
+      }],
+    }
+    const rows = [
+      raw({ id: "DROP", fact_id: "DROP-FACT", variant_id: "DROP-VARIANT" }),
+      raw({ id: "KEEP", variant_id: "KEEP-VARIANT" }),
+    ]
+    const fetcher = vi.fn(async () => ({ ok: true, json: async () => rows })) as unknown as typeof fetch
+
+    const loaded = await loadFinalQuestionPool({
+      manifest,
+      chapters: [7],
+      count: 2,
+      seed: 7,
+      questionIds: new Set(["KEEP"]),
+      fetcher,
+    })
+
+    expect(loaded.map((question) => question.id)).toEqual(["KEEP"])
+    expect(loaded[0].metadata?.retryVariants).toEqual([])
   })
 
   it("attaches alternate families for delayed repair without repeating the prompt", async () => {

@@ -1,0 +1,1085 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-safe-first",
+  "batch_id": "batch-001",
+  "input_file": ".work/final-day-v18/dossiers/v18-safe-first/batch-001.json",
+  "input_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/safe_sol_001",
+    "conversation_id": "/root/safe_sol_001",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR39-C19-001",
+      "selected_option_index": 2,
+      "selected_option_text": "Eran tan fieles a los buenos principios como el acero, inmunes a la corrupción del egoísmo y resueltos a honrar a Dios aun perdiéndolo todo",
+      "exact_supporting_phrase": "Entre los hijos de Israel que fueron llevados a Babilonia al principio de los setenta años de cautiverio, se contaban patriotas cristianos, hombres que eran tan fieles a los buenos principios como el acero, que no serían corrompidos por el egoísmo, sino que honrarían a Dios aun cuando lo perdiesen todo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Eran celosos defensores de los ritos judaicos, decididos a fundar sinagogas secretas y juntar riquezas para financiar el retorno hacia Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Eran prudentes observadores de las leyes caldeas, dispuestos a transigir en ceremonias civiles para preservar sus vidas en la corte del rey",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Eran tan fieles a los buenos principios como el acero, inmunes a la corrupción del egoísmo y resueltos a honrar a Dios aun perdiéndolo todo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Reúne los tres rasgos declarados: fidelidad como el acero, rechazo del egoísmo y honra a Dios aun perdiéndolo todo."
+        },
+        {
+          "text": "Eran hábiles diplomáticos de la estirpe regia, preparados para asimilar la filosofía de Babel sin descuidar sus sagradas tradiciones patrias",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "72397d66cd1eb32f51e3bf749cfe91b7843cf654e7dc62d79eea1af43df77263"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR40-C19-003",
+      "selected_option_index": 1,
+      "selected_option_text": "Aunque su ánimo sufrió una profunda impresión, al despertar le resultó imposible recordar los detalles",
+      "exact_supporting_phrase": "Pero aunque el ánimo del rey sufrió una impresión profunda, cuando despertó le resultó imposible recordar los detalles.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Aunque entendió el significado general, al despertar no pudo hallar a ningún astrólogo que lo ayudara",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR40, p. 33, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Aunque su ánimo sufrió una profunda impresión, al despertar le resultó imposible recordar los detalles",
+          "verdict": "CORRECT",
+          "source_ref": "PR40, p. 33, párrafo 1",
+          "exact_reason": "Reproduce la impresión profunda seguida de la imposibilidad de recordar los detalles al despertar."
+        },
+        {
+          "text": "Aunque olvidó el terror sentido, al despertar retuvo la figura exacta de la estatua para sus artífices",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR40, p. 33, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Aunque recordó con claridad los grandes símbolos, al despertar temió que los sabios lo juzgasen loco",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR40, p. 33, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "6f52f7ce6fffc84f9be7c54923de8a097aadce401cba958b175ac64108e9fac8"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR41-C19-007",
+      "selected_option_index": 1,
+      "selected_option_text": "Hacer una estatua semejante a la del sueño y levantarla para que todos contemplaran la cabeza de oro que representaba a su reino.",
+      "exact_supporting_phrase": "Los sabios de su reino, valiéndose de esto y de su regreso a la idolatría, le propusieron que hiciera una imagen similar a la que había visto en su sueño, y que la levantase donde todos pudiesen contemplar la cabeza de oro, que había sido interpretada como símbolo que representaba su reino.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Promulgar un edicto solemne que prohibiera orar a cualquier dios u hombre fuera del monarca caldeo por un plazo de treinta días.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 38, párrafo 3",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Hacer una estatua semejante a la del sueño y levantarla para que todos contemplaran la cabeza de oro que representaba a su reino.",
+          "verdict": "CORRECT",
+          "source_ref": "PR41, p. 38, párrafo 3",
+          "exact_reason": "Conserva la propuesta completa: una imagen similar y la exhibición pública de la cabeza de oro que simbolizaba el reino."
+        },
+        {
+          "text": "Erigir un monumento de plata maciza en Babilonia para consolidar la alianza militar con los príncipes y sátrapas del imperio.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 38, párrafo 3",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Consagrar a los sabios y magos de la corte como sacerdotes supremos encargados de ofrecer holocaustos continuos en el templo de Bel.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 38, párrafo 3",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "23a271c4486c2d79134c0e580d0a074a9f5b53d07e6324d204ac61ee5b20a505"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR42-C19-002",
+      "selected_option_index": 0,
+      "selected_option_text": "Que Babilonia caería finalmente, otros reinos dominarían y las potencias terrenales cederían su lugar al reino eterno establecido por Dios.",
+      "exact_supporting_phrase": "Su espíritu sintió la profunda influencia de esa visión y del pensamiento de que el Imperio Babilónico, por universal que fuera, iba a caer finalmente y otros reinos ejercerían el dominio, hasta que al fin todas las potencias terrenales cedieran su lugar a un reino establecido por el Dios del cielo para nunca ser destruido.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Que Babilonia caería finalmente, otros reinos dominarían y las potencias terrenales cederían su lugar al reino eterno establecido por Dios.",
+          "verdict": "CORRECT",
+          "source_ref": "PR42, p. 43, párrafo 1",
+          "exact_reason": "Resume la sucesión anunciada: caída de Babilonia, dominio de otros reinos y reino eterno de Dios."
+        },
+        {
+          "text": "Que todas las naciones del mundo formarían una confederación universal sujeta para siempre a los consejos de los sabios de Babilonia.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR42, p. 43, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Que el imperio de los medos destruiría su capital a menos que nombrara inmediatamente a Daniel como corregente de todas las provincias.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR42, p. 43, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Que Babilonia subsistiría invicta por los siglos si los monarcas caldeos preservaban el culto supremo a los dioses en la llanura de Dura.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR42, p. 43, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "a8dfc67c52b04ce8eccfff32aabfa8e1c9785484c54b893d0ee8ad108776ac97"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR43-C20-001",
+      "selected_option_index": 3,
+      "selected_option_text": "Se gloriaba en su poder y ensalzó su corazón contra el Dios del cielo.",
+      "exact_supporting_phrase": "Admitido en su juventud a compartir la autoridad real, Belsasar se gloriaba en su poder, y ensalzó su corazón contra el Dios del cielo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Temía el asedio enemigo y buscó el consejo sacerdotal de los profetas.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR43, p. 47, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Fortaleció las murallas de Susa y delegó el mando a generales medos.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR43, p. 47, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Promovió reformas de humildad y abolió el culto idólatra en el reino.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR43, p. 47, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Se gloriaba en su poder y ensalzó su corazón contra el Dios del cielo.",
+          "verdict": "CORRECT",
+          "source_ref": "PR43, p. 47, párrafo 2",
+          "exact_reason": "Reproduce las dos conductas atribuidas a Belsasar: gloriarse en su poder y ensalzar su corazón contra Dios."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "12d147f383653e6bf206a91d2868b673c635b97f6c1eb5d76b4ae6183becd9ec"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR44-C20-004",
+      "selected_option_index": 2,
+      "selected_option_text": "Vio que no era el celo por la gloria del rey, sino los celos contra Daniel, lo que motivó la propuesta del decreto.",
+      "exact_supporting_phrase": "Vió que no era el celo por la gloria ni el honor del rey, sino los celos contra Daniel, lo que había motivado aquella propuesta de promulgar un decreto real.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Vio que Daniel había organizado en secreto una rebelión armada en Judea aprovechando su alto cargo en el palacio.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR44, p. 56, párrafo 6",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Vio que los sátrapas conspiraban para derrocar su dinastía y ceder el mando de las satrapías a generales babilonios.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR44, p. 56, párrafo 6",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Vio que no era el celo por la gloria del rey, sino los celos contra Daniel, lo que motivó la propuesta del decreto.",
+          "verdict": "CORRECT",
+          "source_ref": "PR44, p. 56, párrafo 6",
+          "exact_reason": "Identifica el motivo que el rey descubrió: celos contra Daniel, no celo por la gloria real."
+        },
+        {
+          "text": "Vio que los sacerdotes de los medos habían alterado el sello del anillo real para desacreditar la justicia persa.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR44, p. 56, párrafo 6",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "a22c816af6b64d136fdca8030153953b44a74adc30b673d0897417cee302dbdd"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR39-C19-004",
+      "selected_option_index": 0,
+      "selected_option_text": "No transigir en caso alguno con los idólatras, sino estimar como alto honor su fe y el nombre de adoradores del Dios viviente",
+      "exact_supporting_phrase": "No debían en caso alguno transigir con los idólatras, sino considerar como alto honor la fe que sostenían y el nombre de adoradores del Dios viviente.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "No transigir en caso alguno con los idólatras, sino estimar como alto honor su fe y el nombre de adoradores del Dios viviente",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Conserva tanto la prohibición de transigir como el alto honor atribuido a la fe y al nombre de adoradores de Dios."
+        },
+        {
+          "text": "No contradecir las doctrinas religiosas de los caldeos, sino considerar como alto honor el servicio civil bajo el rey pagano",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "No participar de las asambleas públicas de Babilonia, sino considerar como alto honor el aislamiento total dentro de la corte",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "No rechazar abiertamente los dioses de corte, sino considerar como alto honor el guardar su devoción en secreto y en silencio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "b1af83acaa797e19b9b9e3b2a5d7842b4f73dbb563b5ebd0015c01be4d510ca5"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR41-C19-010",
+      "selected_option_index": 3,
+      "selected_option_text": "Con entusiasmo nacido de la ambición ilimitada y del orgullo egoísta.",
+      "exact_supporting_phrase": "Con entusiasmo nacido de la ambición ilimitada y del orgullo egoísta, consultó a sus sabios acerca de cómo ejecutar lo pensado.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Con celo religioso orientado a pacificar las provincias de su imperio.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 38, párrafo 5",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Con profundo temor provocado por la amenaza militar de medos y persas.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 38, párrafo 5",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Con incertidumbre sincera nacida de los consejos proféticos de Daniel.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 38, párrafo 5",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Con entusiasmo nacido de la ambición ilimitada y del orgullo egoísta.",
+          "verdict": "CORRECT",
+          "source_ref": "PR41, p. 38, párrafo 5",
+          "exact_reason": "Reproduce la actitud indicada: entusiasmo nacido de ambición ilimitada y orgullo egoísta."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "12ea82567c4e2329952a62fee435e1ed25c7b81cfc0fc801a4582f3199fc3cdd"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR42-C19-006",
+      "selected_option_index": 0,
+      "selected_option_text": "Egipto, cuya derrota acrecentó su fama como el mayor gobernante de la época al añadir nación tras nación.",
+      "exact_supporting_phrase": "Egipto también cayó presa de sus ejércitos victoriosos; y mientras añadía una nación tras otra al reino babilónico, aumentaba su fama como el mayor gobernante de la época.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Egipto, cuya derrota acrecentó su fama como el mayor gobernante de la época al añadir nación tras nación.",
+          "verdict": "CORRECT",
+          "source_ref": "PR42, p. 43, párrafo 2",
+          "exact_reason": "Identifica a Egipto y conserva el efecto señalado sobre la fama de Nabucodonosor."
+        },
+        {
+          "text": "Grecia, cuyos puertos marítimos fueron anexados para consolidar una flota invencible en el Mediterráneo.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR42, p. 43, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Media, cuya rendición pacífica le permitió duplicar el tamaño del ejército y los tributos de la corte.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR42, p. 43, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Persia, cuya nobleza juró lealtad incondicional al rey para evitar el asedio de sus principales ciudades.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR42, p. 43, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "71171fff33d629664777e875829091e115a673959bcc167649aae861e4024ec4"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR43-C20-002",
+      "selected_option_index": 2,
+      "selected_option_text": "El amor por los placeres y el deseo de glorificación propia.",
+      "exact_supporting_phrase": "Pero Belsasar dejó que el amor por los placeres y la glorificación propia borrasen las lecciones que nunca debiera haber olvidado.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "El temor ante la invasión persa y las intrigas de los nobles.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR43, p. 47, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "La influencia de la magia caldea y la rebelión de los sátrapas.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR43, p. 47, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "El amor por los placeres y el deseo de glorificación propia.",
+          "verdict": "CORRECT",
+          "source_ref": "PR43, p. 47, párrafo 2",
+          "exact_reason": "Nombra las dos influencias expresas: amor por los placeres y glorificación propia."
+        },
+        {
+          "text": "La constante presión del asedio y la escasez de provisiones.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR43, p. 47, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "ed55dff82b678c85dcf801439a5e5cbb69f94277f12f3211a8ff167510fdd48b"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR44-C20-005",
+      "selected_option_index": 2,
+      "selected_option_text": "Cumplió sus deberes de presidente y en su cámara oró al Dios del cielo con ventanas abiertas a Jerusalén según su costumbre.",
+      "exact_supporting_phrase": "Cumplía con calma sus deberes como presidente de los príncipes; y a la hora de la oración entraba en su cámara, y con las ventanas abiertas hacia Jerusalén, según su costumbre, ofrecía su petición al Dios del cielo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Clausuró las ventanas de sus aposentos y limitó sus oraciones al silencio nocturno para salvaguardar la paz de la satrapía.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR44, p. 55, párrafo 7",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Presentó un recurso formal ante los jueces medos y convocó a los ancianos de Judá para organizar la resistencia del pueblo.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR44, p. 55, párrafo 7",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Cumplió sus deberes de presidente y en su cámara oró al Dios del cielo con ventanas abiertas a Jerusalén según su costumbre.",
+          "verdict": "CORRECT",
+          "source_ref": "PR44, p. 55, párrafo 7",
+          "exact_reason": "Conserva sus deberes, la cámara, las ventanas abiertas hacia Jerusalén y la oración acostumbrada."
+        },
+        {
+          "text": "Suspendió sus labores públicas de presidente y se ocultó en las cámaras secretas del palacio para orar sin ser descubierto.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR44, p. 55, párrafo 7",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "9756385e725a86accad302716472604fc6247c1b127e50a41c02e2dd50d7273e"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR39-C19-007",
+      "selected_option_index": 1,
+      "selected_option_text": "Evidencia de su supremacía, de la santidad de sus requerimientos y de los seguros resultados que produce la obediencia",
+      "exact_supporting_phrase": "Sin embargo, mediante las mismas humillaciones que había acarreado la forma en que Israel se había desviado de él, Dios dió a Babilonia evidencia de su supremacía, de la santidad de sus requerimientos y de los seguros resultados que produce la obediencia.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Evidencia de su severidad implacable, de la caducidad del sacerdocio y de la pronta destrucción del reino de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Evidencia de su supremacía, de la santidad de sus requerimientos y de los seguros resultados que produce la obediencia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Reproduce los tres elementos de la evidencia: supremacía, santidad de los requerimientos y resultados de la obediencia."
+        },
+        {
+          "text": "Evidencia de su justicia punitiva, de la santidad del sacerdocio y del valor meritorio de los sacrificios en el templo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Evidencia de su misericordia universal, de la tolerancia con los cultos paganos y del triunfo temporal de los caldeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "7e70cf5af55a70a4030a5f8e78223672e8e3cc0cbe540bc4c5531ba6f25ded5c"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR41-W4-061",
+      "selected_option_index": 1,
+      "selected_option_text": "Para impedir la difusión del conocimiento de Dios",
+      "exact_supporting_phrase": "El símbolo destinado por el Cielo para revelar a los intelectos humanos acontecimientos futuros importantes iba a emplearse para impedir la difusión del conocimiento que Dios deseaba ver recibido por el mundo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": false,
+      "second_defensible_option": true,
+      "second_defensible_text": "Para distorsionar el mensaje profético en las naciones",
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Para acelerar el avance del falso culto en Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Para impedir la difusión del conocimiento de Dios",
+          "verdict": "CORRECT",
+          "source_ref": "PR41, p. 39, párrafo 1",
+          "exact_reason": "Expresa el fin declarado literalmente: impedir la difusión del conocimiento que Dios quería comunicar."
+        },
+        {
+          "text": "Para distorsionar el mensaje profético en las naciones",
+          "verdict": "PARTIALLY_SUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 1",
+          "exact_reason": "El contexto sí dice que la verdad sería interpretada con falsedad y mal aplicada, por lo que esta formulación puede parecer un segundo fin defendible."
+        },
+        {
+          "text": "Para quebrantar el testimonio de los sabios de Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 1",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "Aunque la opción 1 reproduce el fin declarado, la opción 2 también encuentra apoyo parcial en el contexto y puede funcionar como segunda respuesta defendible.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "suggested_rewrite": "Según Profetas y Reyes, p. 39, ¿qué fin declara explícitamente el texto para el uso del símbolo destinado a revelar acontecimientos futuros? Sustituir el distractor sobre distorsionar el mensaje por uno sin apoyo en el contexto.",
+      "output_sha256": "283fb1049c95da048e198a949f72c6a8d32456c3571dcb3897fb277ad39e3402"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR42-C19-008",
+      "selected_option_index": 3,
+      "selected_option_text": "En el fortalecimiento y embellecimiento de Babilonia, reconocida como «la ciudad codiciosa del oro» y «alabada por toda la tierra».",
+      "exact_supporting_phrase": "Durante los intervalos entre sus guerras de conquista, pensó mucho en el fortalecimiento y embellecimiento de su capital, hasta que al fin la ciudad de Babilonia vino a ser la gloria principal de su reino, “la ciudad codiciosa del oro,” “que era alabada por toda la tierra.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "En la edificación de templos en la llanura de Dura, proclamada ante los reinos «la fortaleza suprema» y «el santuario de los dioses».",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR42, p. 43, párrafo 3",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "En la fortificación defensiva de ciudades de Judea, distinguiendo la sede como «la joya del desierto» y «el escudo de las provincias».",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR42, p. 43, párrafo 3",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "En el desarrollo de una flota en el golfo Pérsico, consagrando la capital como «la reina del oriente» y «el emporio de las naciones».",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR42, p. 43, párrafo 3",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "En el fortalecimiento y embellecimiento de Babilonia, reconocida como «la ciudad codiciosa del oro» y «alabada por toda la tierra».",
+          "verdict": "CORRECT",
+          "source_ref": "PR42, p. 43, párrafo 3",
+          "exact_reason": "Conserva la labor de fortalecer y embellecer Babilonia y los dos títulos citados."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "fbecd8eb4453546f7bad9ea0c5a8d215184c08745e36ec953a1a225b29cbbe8f"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR43-C20-003",
+      "selected_option_index": 0,
+      "selected_option_text": "Malgastó las oportunidades dadas misericordiosamente y no aprovechó los medios a su alcance para conocer la verdad.",
+      "exact_supporting_phrase": "Malgastó las oportunidades que se le habían concedido misericordiosamente, y no aprovechó los medios que tenía a su alcance para conocer mejor la verdad.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Malgastó las oportunidades dadas misericordiosamente y no aprovechó los medios a su alcance para conocer la verdad.",
+          "verdict": "CORRECT",
+          "source_ref": "PR43, p. 47, párrafo 2",
+          "exact_reason": "Reproduce las oportunidades malgastadas y los medios desaprovechados para conocer mejor la verdad."
+        },
+        {
+          "text": "Permitió que los sacerdotes caldeos quemaran los escritos sagrados que contenían las interpretaciones de Daniel.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR43, p. 47, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Ignoró las advertencias militares de los vigías y prefirió destinar el tesoro real a festines con sus capitanes.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR43, p. 47, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Confió en los sacrificios a los dioses de plata y expulsó a los siervos de Dios que administraban las provincias.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR43, p. 47, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "32535baa71d82ce02bb0b2f16e3892fa6a3522b7c61535429e3c1fb9b49b5fdc"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR44-C20-009",
+      "selected_option_index": 3,
+      "selected_option_text": "Para recalcar más la liberación de su siervo y hacer más completa la derrota de los enemigos de la verdad y de la justicia.",
+      "exact_supporting_phrase": "Permitió que hasta allí cumpliesen su propósito los malos ángeles y los hombres impíos; pero lo hizo para recalcar tanto más la liberación de su siervo y para que la derrota de los enemigos de la verdad y de la justicia fuese más completa.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Para probar si la devoción de Darío era suficiente para desafiar las leyes inmutables de los medos y los persas en el reino.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR44, p. 56, párrafo 8",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Para castigar las faltas cometidas por el pueblo judío durante el cautiverio y purificar la fe de los príncipes en Babilonia.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR44, p. 56, párrafo 8",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Para obligar a los gobernadores caldeos a renunciar a sus cargos civiles y devolver los vasos sagrados robados del santuario.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR44, p. 56, párrafo 8",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Para recalcar más la liberación de su siervo y hacer más completa la derrota de los enemigos de la verdad y de la justicia.",
+          "verdict": "CORRECT",
+          "source_ref": "PR44, p. 56, párrafo 8",
+          "exact_reason": "Conserva los dos fines providenciales: recalcar la liberación y completar la derrota de los enemigos de la verdad y la justicia."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "a338eb0dcfece4733c1d42f89778a3e9643f8ed94c24563b2dd27eb6d0c035a5"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR39-W2-082",
+      "selected_option_index": 0,
+      "selected_option_text": "El cautiverio de los siervos de Jehová y los vasos sagrados en sus templos paganos",
+      "exact_supporting_phrase": "El hecho de que esos adoradores de Jehová estuviesen cautivos en Babilonia y de que los vasos de la casa de Dios se hallaran en el templo de los dioses babilónicos, era mencionado jactanciosamente por los vencedores como evidencia de que su religión y sus costumbres eran superiores a la religión y las costumbres de los hebreos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "El cautiverio de los siervos de Jehová y los vasos sagrados en sus templos paganos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Resume exactamente los dos argumentos: cautiverio de los adoradores y vasos de la casa de Dios en templos paganos."
+        },
+        {
+          "text": "La caída de los muros de Jerusalén y la derrota de los profetas ante los astrólogos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "La imposición de tributos anuales a Judá y la captura de los sacerdotes del santuario",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "La ruina militar del ejército hebreo y la quema de los manuscritos de las escrituras",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "9176cdee4a2b205a49e756a75ab27b8c8e96b264296ece4c955c1e93bfc1e12f"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V16-R2-PR41-W4-062",
+      "selected_option_index": 1,
+      "selected_option_text": "Con recursos provenientes de sus propios grandes tesoros",
+      "exact_supporting_phrase": "Con recursos de sus grandes tesoros, Nabucodonosor hizo hacer una gran imagen de oro, similar en sus rasgos generales a la que había visto en visión, menos en un detalle relativo al material de que se componía.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Con las ofrendas recolectadas de los templos caldeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Con recursos provenientes de sus propios grandes tesoros",
+          "verdict": "CORRECT",
+          "source_ref": "PR41, p. 39, párrafo 2",
+          "exact_reason": "Identifica el origen explícito de los recursos: los grandes tesoros de Nabucodonosor."
+        },
+        {
+          "text": "Con los tributos exigidos a las naciones conquistadas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Con las riquezas confiscadas a los cautivos de Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR41, p. 39, párrafo 2",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "0454745fc2d074dcf122c95fa23d4c2deca78b93718d3a77ded6fc79f8de294d"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR42-C19-009",
+      "selected_option_index": 2,
+      "selected_option_text": "Para advertirle del riesgo que corría y del lazo que se le tendía para arruinarlo a causa de su orgullo.",
+      "exact_supporting_phrase": "En su misericordia, Dios dió al rey otro sueño, para advertirle del riesgo que corría y del lazo que se le tendía para arruinarlo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Para exigirle la reconstrucción del templo de Jerusalén y la devolución inmediata de los vasos sagrados.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR42, p. 43, párrafo 4",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Para castigar su soberbia retirándole de inmediato el dominio del reino sin oportunidad de arrepentimiento.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR42, p. 43, párrafo 4",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Para advertirle del riesgo que corría y del lazo que se le tendía para arruinarlo a causa de su orgullo.",
+          "verdict": "CORRECT",
+          "source_ref": "PR42, p. 43, párrafo 4",
+          "exact_reason": "Expresa el propósito del sueño: advertir del riesgo y del lazo que podía arruinar al rey."
+        },
+        {
+          "text": "Para revelarle la caída inminente de Babilonia y ordenar el desarme total de sus tropas ante los persas.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR42, p. 43, párrafo 4",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "7d0f97f6bdeba408138d2a615fc64e80ca6e305de9c7c16d0fd4b70385ceef80"
+    },
+    {
+      "audit_run_id": "v18-safe-first",
+      "question_id": "V14-R2-PR43-C20-004",
+      "selected_option_index": 1,
+      "selected_option_text": "Ciro, sobrino de Darío el Medo y general de los ejércitos combinados de medos y persas.",
+      "exact_supporting_phrase": "Babilonia fué sitiada por Ciro, sobrino de Darío el Medo y general de los ejércitos combinados de los medos y persas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Cambises, hijo de Darío el Medo y comandante principal de las fuerzas de caballería persa.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR43, p. 47, párrafo 3",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Ciro, sobrino de Darío el Medo y general de los ejércitos combinados de medos y persas.",
+          "verdict": "CORRECT",
+          "source_ref": "PR43, p. 47, párrafo 3",
+          "exact_reason": "Conserva las tres identificaciones: Ciro, sobrino de Darío y general de los ejércitos combinados medopersas."
+        },
+        {
+          "text": "Asuero, primo de Darío el Medo e intendente general de las tropas de asedio de Media.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR43, p. 47, párrafo 3",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        },
+        {
+          "text": "Artajerjes, hermano de Darío el Medo y capitán supremo de los arqueros aliados de Elam.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR43, p. 47, párrafo 3",
+          "exact_reason": "Introduce hechos, motivos o circunstancias que no aparecen en la cita ni en el contexto proporcionado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "El prefijo requerido está presente, el enunciado está íntegramente sustentado y solo una opción conserva la información de la fuente.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_sol_001",
+      "conversation_id": "/root/safe_sol_001",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:45:23.061Z",
+      "input_content_sha256": "eee0fc32d7b072e81d6c22502ac5d93f53609322b288edbe5029dee74e67e50d",
+      "output_sha256": "6236897b2d6bd100240213623666433e9e93a7093ad16a47964ec9a597f34c0d"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 19,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 1,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

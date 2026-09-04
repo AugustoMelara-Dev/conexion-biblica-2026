@@ -1,0 +1,1104 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-013",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-013.json",
+  "input_sha256": "6aa85f889852e8fc65cc3d6b6948be1e68b3beb61c86226732e4b2e61f8e4cf0",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/sol_audit_003",
+    "conversation_id": "/root/sol_audit_003",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-PR39-C12-003",
+      "selected_option_index": 1,
+      "selected_option_text": "depender del favor y poder real → seguir la enseñanza divina podía ofender al rey y costar puesto y vida → despreciar el mandamiento conservaría favor y prometería ventajas intelectuales y mundanas",
+      "exact_supporting_phrase": "dependía del favor del rey y estaba sometido a su poder [...] si seguía la enseñanza divina [...] probablemente perdería su puesto y la vida, mientras que si despreciaba el mandamiento del Señor, conservaría el favor del rey y se aseguraría ventajas intelectuales y perspectivas halagüeñas en este mundo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "depender de Jerusalén → obedecer a Dios impedía estudiar → comer sencillo garantizaba poder político",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "Jerusalén, impedimento de estudiar y garantía de poder político no forman parte del dilema."
+        },
+        {
+          "text": "depender del favor y poder real → seguir la enseñanza divina podía ofender al rey y costar puesto y vida → despreciar el mandamiento conservaría favor y prometería ventajas intelectuales y mundanas",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "Conserva correctamente dependencia, costo de obediencia y ventajas aparentes de desobediencia."
+        },
+        {
+          "text": "depender de los magos → seguir la enseñanza humana daba el reino → desobedecer al rey producía sabiduría divina",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "Sustituye todos los agentes y resultados de la cadena por elementos ausentes."
+        },
+        {
+          "text": "depender de Daniel → obedecer al rey aseguraba la vida → guardar el mandamiento eliminaba toda perspectiva",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 4",
+          "exact_reason": "La dependencia era del rey y la obediencia divina, no la obediencia al rey, exponía puesto y vida."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "REWRITE",
+      "specific_reason": "La cadena correcta está plenamente sustentada, pero la opción clave es mucho más larga y detallada que las demás, y el enunciado PR carece del prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué dilema hipotético combina dependencia política, costo de obedecer a Dios y ventajas aparentes de desobedecer?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "be89378d7c658da405d81c4235eed112bf81540c38aaf1bcb06cf4525fe84674",
+      "output_sha256": "657c8a825ba9b42997404cbdb7cb01d99310f15ab6399be94e8ea1048925cc4c"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-PR39-C12-005",
+      "selected_option_index": 2,
+      "selected_option_text": "prueba de diez días → alimento sencillo para los jóvenes hebreos → compañeros continúan con los manjares del rey",
+      "exact_supporting_phrase": "una prueba de diez días, durante los cuales se proveería alimento sencillo a los jóvenes hebreos, mientras que sus compañeros comerían los manjares del rey.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "prueba de siete años → vino para los hebreos → compañeros ayunan",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 2",
+          "exact_reason": "Duración, tratamiento y control contradicen la prueba de diez días descrita."
+        },
+        {
+          "text": "prueba de doce meses → manjares para Daniel solo → todos los demás comen alimento sencillo",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 2",
+          "exact_reason": "Invierte los alimentos, restringe incorrectamente el grupo y cambia la duración."
+        },
+        {
+          "text": "prueba de diez días → alimento sencillo para los jóvenes hebreos → compañeros continúan con los manjares del rey",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 2",
+          "exact_reason": "Reproduce los tres elementos explícitos del diseño de la prueba."
+        },
+        {
+          "text": "prueba de tres días → ningún alimento para los hebreos → compañeros reciben agua",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 2",
+          "exact_reason": "Ninguno de sus tres elementos coincide con la fuente."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es inequívoca, pero «solicitante implícito» no se codifica en las opciones, la correcta es la más larga y falta el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué diseño conserva la duración de la prueba, el alimento de los jóvenes hebreos y la dieta del grupo de comparación?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "1f9d185fd7a5ede66f77a360076ec0cad42007cb7c09bb2d9a244a1f78b0a484",
+      "output_sha256": "0b751a5d93c7b1da3e3d1415de2f207334584a82351a8aad29eff7c9c7cd08d3"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-PR39-C12-006",
+      "selected_option_index": 2,
+      "selected_option_text": "Dios → Daniel y sus compañeros → relación con los grandes de Babilonia → en una nación idólatra → representar el carácter divino",
+      "exact_supporting_phrase": "Dios puso a Daniel y a sus compañeros en relación con los grandes de Babilonia, a fin de que en medio de una nación idólatra representasen su carácter.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "el rey → magos y astrólogos → relación con los cautivos de Judá → en una nación fiel → representar el poder babilónico",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "Sustituye agente, personas, entorno y propósito por elementos no afirmados."
+        },
+        {
+          "text": "los caldeos → jóvenes babilonios → relación con los profetas → en una nación neutral → representar la ciencia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "Ningún eslabón corresponde a la relación providencial descrita."
+        },
+        {
+          "text": "Dios → Daniel y sus compañeros → relación con los grandes de Babilonia → en una nación idólatra → representar el carácter divino",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "Conserva agente, personas, esfera, contexto y finalidad de la cita."
+        },
+        {
+          "text": "Daniel → sus padres → relación con sacerdotes de Jerusalén → en una corte hebrea → representar al monarca",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 6",
+          "exact_reason": "Todos los componentes difieren de la oración fuente."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "REWRITE",
+      "specific_reason": "La correspondencia es exacta y única, aunque la clave es la opción más larga y detallada; el enunciado omite el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué correspondencia conserva quién actuó, a quiénes colocó, con qué grupo los relacionó, en qué entorno y con qué propósito?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "f9cf136773c0d1511d366b428500eb8300864d6dbe240967b2352c650c969312",
+      "output_sha256": "f4cc3772015ce803ebac6e404b7f3ef8bf3a15f123b9e78129abd29bca45d9b9"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-PR39-C14-001",
+      "selected_option_index": 1,
+      "selected_option_text": "Nombres idolátricos, trato íntimo con costumbres idólatras e influencia de ritos paganos; inducirlos a renunciar a su religión y participar en el culto babilónico",
+      "exact_supporting_phrase": "Dándoles nombres que expresaban sentimientos de idolatría, poniéndolos en trato íntimo con costumbres idólatras y bajo la influencia de ritos seductores del culto pagano, esperaba inducirlos a renunciar a la religión de su nación, y a participar en el culto babilónico.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Nombres hebreos, aislamiento de costumbres y rechazo de ritos; fortalecer su religión y abandonar Babilonia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "Invierte los tres medios de asimilación y sus metas."
+        },
+        {
+          "text": "Nombres idolátricos, trato íntimo con costumbres idólatras e influencia de ritos paganos; inducirlos a renunciar a su religión y participar en el culto babilónico",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "Resume fielmente los tres medios y las dos finalidades explícitas."
+        },
+        {
+          "text": "Cambio de ropa, servicio civil y lengua; impedir todo culto",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "Esos medios y esa finalidad no aparecen en la cita."
+        },
+        {
+          "text": "Educación militar, ayuno y estudio; convertirlos en sacerdotes de Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 6",
+          "exact_reason": "La fuente no describe educación militar ni conversión en sacerdotes."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "REWRITE",
+      "specific_reason": "La opción correcta conserva todos los componentes, pero su longitud y precisión la delatan frente a distractores abreviados; falta además el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué plan combinaba tres medios de asimilación con dos metas religiosas para los jóvenes hebreos?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "e82b2eaa83b9c35e13d220ab529b55cd463dae80c5644ecc8e5599a1bae605f2",
+      "output_sha256": "e082732cce3a136ed3b484cada9604332e4c4c7df2353e81819bdfe38a488eba"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-PR39-C14-003",
+      "selected_option_index": 1,
+      "selected_option_text": "Representar la religión verdadera entre religiones paganas falsas; intelecto claro y carácter cristiano perfeccionado",
+      "exact_supporting_phrase": "representantes de la religión verdadera en medio de las falsas religiones del paganismo, necesitaban tener un intelecto claro y perfeccionar un carácter cristiano.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Representar a Babilonia entre naciones aliadas; fuerza militar y riqueza",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Cambia misión, entorno y capacidades por conceptos ajenos a la cita."
+        },
+        {
+          "text": "Representar la religión verdadera entre religiones paganas falsas; intelecto claro y carácter cristiano perfeccionado",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Conserva la misión representativa, el entorno pagano y las dos capacidades."
+        },
+        {
+          "text": "Ocultar la religión verdadera entre profetas; memoria débil y carácter neutral",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Ocultar, debilidad y neutralidad contradicen la representación, claridad y carácter cristiano."
+        },
+        {
+          "text": "Representar la cultura caldea en Judá; ambición y dominio político",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 30, párrafo 2",
+          "exact_reason": "Ningún componente corresponde a la finalidad descrita."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es exacta y única, pero es claramente la opción más larga y específica; el enunciado PR también carece del prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué correspondencia conserva la misión de los jóvenes, su entorno y las dos capacidades que necesitaban?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "e1c3accccb5ef3d13860b414fa9477bb30b9f3f0f75580840f18beeea50fd3c6",
+      "output_sha256": "4cda6658fada4f7697c2b6ed8f4dbffc69c69102a5b977e59938e51e86c674a9"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-PR39-C14-004",
+      "selected_option_index": 1,
+      "selected_option_text": "Disciplina propia; sujeción de la naturaleza inferior a la superior; entrega del yo al servicio de Dios y de los hombres",
+      "exact_supporting_phrase": "Es resultado de la disciplina propia, de la sujeción de la naturaleza inferior a la superior, de la entrega del yo al servicio de Dios y de los hombres.",
+      "stem_fully_supported": false,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Favores providenciales; ausencia de disciplina; entrega al poder político",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "La fuente niega que favores especiales formen el carácter y afirma disciplina y servicio a Dios y los hombres."
+        },
+        {
+          "text": "Disciplina propia; sujeción de la naturaleza inferior a la superior; entrega del yo al servicio de Dios y de los hombres",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "Reproduce las tres construcciones que la fuente presenta como proceso formativo."
+        },
+        {
+          "text": "Talento natural; dominio de la naturaleza superior por la inferior; servicio exclusivo al yo",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "Invierte la sujeción y el servicio y atribuye el carácter al talento."
+        },
+        {
+          "text": "Cultura amplia; supresión de toda voluntad; servicio sólo a los hombres",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 31, párrafo 3",
+          "exact_reason": "No coincide con disciplina, orden de facultades ni servicio a Dios y hombres."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero la fuente enumera tres construcciones principales, no un proceso «cuádruple»; además, falta el prefijo obligatorio y la clave es la más extensa.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué proceso forma un carácter noble?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "909985e3f50fd87cfbb4df817dbb7d2d6e41d1a7c14abdc4342bde94d723f271",
+      "output_sha256": "21d94bc761d309dc7a3b3e9328b05a3fbfca3ba75510c5224f9c520dc383f86f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-PR39-C15-001",
+      "selected_option_index": 0,
+      "selected_option_text": "hombres → deberes de la corte; Dios → misterios de lo por venir y registro para generaciones futuras mediante figuras y símbolos → historia hasta el fin del tiempo",
+      "exact_supporting_phrase": "recibía instrucciones de los hombres acerca de los deberes que debía cumplir en la corte, Dios le enseñaba a leer los misterios de lo por venir, y a registrar para las generaciones futuras, mediante figuras y símbolos, acontecimientos que abarcaban la historia de este mundo hasta el fin del tiempo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "hombres → deberes de la corte; Dios → misterios de lo por venir y registro para generaciones futuras mediante figuras y símbolos → historia hasta el fin del tiempo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Conserva maestros, materias, destinatarios, medio simbólico y alcance temporal."
+        },
+        {
+          "text": "hombres → misterios proféticos; Dios → protocolo de la corte y registro para Nabucodonosor mediante decretos → historia de Babilonia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Intercambia maestros y materias y altera destinatario, medio y alcance."
+        },
+        {
+          "text": "magos → deberes sacerdotales; Melsar → secretos militares y registro para los caldeos mediante cartas → reinado de Ciro",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Ningún componente se deriva del pasaje."
+        },
+        {
+          "text": "Dios → lenguas de la corte; hombres → misterios eternos y registro sin símbolos → pasado de Israel",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Invierte los maestros y contradice el uso de figuras y símbolos y el horizonte futuro."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EXPERT",
+      "decision": "REWRITE",
+      "specific_reason": "La distribución correcta es completa y única, pero la opción clave es la más larga y reproduce casi toda la cita; el enunciado omite el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, complete la doble formación de Daniel conservando maestros, materias, destinatarios, medio y horizonte: ____.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "dff31002f0929312ed39d1768894e91a11bd8d2b0b6980e33acea0ea1dae042e",
+      "output_sha256": "a665f2282c20e56cdab277aaeec7a1d9152c0e4c18b698e5aa011302c781487b"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-PR39-C15-002",
+      "selected_option_index": 2,
+      "selected_option_text": "mismo espíritu → fuerza de la misma fuente → igual dominio propio → misma gracia visible → circunstancias igualmente desfavorables",
+      "exact_supporting_phrase": "pueden tener el espíritu que dominó a Daniel; pueden sacar fuerza de la misma fuente, poseer el mismo poder de dominio propio y revelar la misma gracia en su vida, aun en circunstancias tan desfavorables como las que predominaban entonces.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "misma educación → fuerza de la corte → dominio sobre otros → prestigio político → circunstancias favorables",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Sustituye espíritu, fuente, dominio propio, gracia y adversidad por elementos ausentes."
+        },
+        {
+          "text": "otro espíritu → fuerza propia → ausencia de dominio propio → gracia oculta → salida de Babilonia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Cada eslabón contradice la continuidad propuesta con Daniel."
+        },
+        {
+          "text": "mismo espíritu → fuerza de la misma fuente → igual dominio propio → misma gracia visible → circunstancias igualmente desfavorables",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Conserva los cinco componentes de la continuidad entre Daniel y los jóvenes actuales."
+        },
+        {
+          "text": "mismo cargo → fuerza militar → dominio del reino → riqueza visible → circunstancias sin prueba",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 32, párrafo 2",
+          "exact_reason": "Cargo, fuerza militar, dominio político, riqueza y ausencia de prueba no aparecen."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "REWRITE",
+      "specific_reason": "La clave conserva la continuidad completa, pero es la opción más larga y detallada y el enunciado PR carece del prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué continuidad puede existir entre Daniel y los jóvenes actuales en espíritu, fuente de fuerza, dominio propio, gracia y circunstancias?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "892a4d965bad7397b91a52370ba88c4d02d31cb966f314bca73ef0ec00fc2f63",
+      "output_sha256": "4b3bccca048d8006e7246d8658c462cc42d49782682bf8c2ad5bdb2f5108ceb1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2C5-PR39-P028-P002-S002-V11-F02",
+      "selected_option_index": 2,
+      "selected_option_text": "Pentateuco describe intemperancia y resultados → vino perjudicaría facultades físicas y mentales",
+      "exact_supporting_phrase": "describían los pergaminos del Pentateuco; y sabían que sus propias facultades físicas y mentales quedarían perjudicadas por el consumo de vino.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Tradición oral exalta el vino → facultades quedarían intactas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "La tradición oral y la integridad de las facultades no corresponden al precedente citado."
+        },
+        {
+          "text": "Crónicas babilónicas narran ayuno → vino fortalecería la mente",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "Cambia la fuente escrita, el episodio y el efecto del vino."
+        },
+        {
+          "text": "Pentateuco describe intemperancia y resultados → vino perjudicaría facultades físicas y mentales",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "Conserva la fuente del precedente y la aplicación a sus facultades."
+        },
+        {
+          "text": "Decreto real relata embriaguez → abstinencia dañaría el cuerpo",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 2",
+          "exact_reason": "El texto atribuye el daño al vino, no a la abstinencia, y cita el Pentateuco."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "REWRITE",
+      "specific_reason": "La inferencia está sustentada y solo una cadena es correcta, pero la clave es mucho más precisa y larga; falta asimismo el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué cadena aplicaron los jóvenes desde el precedente de Nadab y Abihú a su propia decisión?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "13574d9654bed9d1c5bfe30032239a86678b25efc30c477b713073ab3f555c63",
+      "output_sha256": "08ca34025cf197f4d8ae9a935c004a78e2c9f2cbd3f6417e308f1ddd94f1306e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2C5-PR39-P028-P006-S004-F02",
+      "selected_option_index": 2,
+      "selected_option_text": "Primer paso errado → nuevos pasos → relación con el Cielo cortada → arrastre por la tentación",
+      "exact_supporting_phrase": "El primer paso en la dirección errónea habría conducido a otros pasos tales, hasta que, cortada su relación con el Cielo, se vieran arrastrados por la tentación.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Concesión → aprobación divina → dominio propio → libertad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "La fuente describe deterioro y tentación, no aprobación, dominio y libertad."
+        },
+        {
+          "text": "Primer paso → regreso inmediato → relación restaurada → victoria",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "Después del primer paso se proyectan más errores y ruptura, no restauración inmediata."
+        },
+        {
+          "text": "Primer paso errado → nuevos pasos → relación con el Cielo cortada → arrastre por la tentación",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "Reproduce en orden la secuencia causal completa."
+        },
+        {
+          "text": "Error aislado → ninguna consecuencia → protección de la corte",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 28, párrafo 6",
+          "exact_reason": "Niega precisamente la cadena progresiva advertida."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La secuencia correcta es inequívoca, pero es la opción más larga y literal; el enunciado omite el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué secuencia completa habría iniciado una sola concesión en dirección errónea?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "d1cb4a2d9bf19ed0e2966be260b4d0897a9ca6959e1f5a5418f8cf8dd77f18e0",
+      "output_sha256": "abe9fb76ead6a364f274d409e29f5decc2cf38ca1008b6a5342c11ff37989e89"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2C5-PR39-P029-P001-S001-F02",
+      "selected_option_index": 3,
+      "selected_option_text": "Ración real rechazada → rostros más tristes que sus pares → observación del rey → cabeza del príncipe condenada",
+      "exact_supporting_phrase": "luego que él habrá visto vuestros rostros más tristes que los de los muchachos que son semejantes a vosotros, condenaréis para con el rey mi cabeza.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Manjares aceptados → enfermedad del rey → condena de Daniel",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 1",
+          "exact_reason": "La fuente no vincula aceptación, enfermedad del rey ni condena de Daniel."
+        },
+        {
+          "text": "Vino rechazado → huida a Judá → pérdida del palacio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 1",
+          "exact_reason": "Huida a Judá y pérdida del palacio no forman parte del temor del príncipe."
+        },
+        {
+          "text": "Dieta sencilla → rostros mejores → premio del rey → ascenso del príncipe",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 1",
+          "exact_reason": "Aunque el resultado posterior fue favorable, esta cadena contradice el temor expresado antes de la prueba."
+        },
+        {
+          "text": "Ración real rechazada → rostros más tristes que sus pares → observación del rey → cabeza del príncipe condenada",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 1",
+          "exact_reason": "Conserva la cadena de riesgo que explica el temor del príncipe."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "REWRITE",
+      "specific_reason": "La secuencia temida está apoyada y es única, pero la correcta es la opción más larga y minuciosa; falta también el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué cadena explica por qué el príncipe temía por su vida al alterar la dieta?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "bf48fcd7c19bb39575e41b9cf8a9434463de6801a427f89f3dfe0d11724432dc",
+      "output_sha256": "58efb7ed214f2d8d7f6b9ffdd61744415b603c79f020fe393528c1fd6457aef1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2C5-PR39-P029-P005-S002-F01",
+      "selected_option_index": 1,
+      "selected_option_text": "Cuatro: letras y ciencia; Daniel además: visiones y sueños",
+      "exact_supporting_phrase": "A estos cuatro muchachos dióles Dios conocimiento e inteligencia en todas las letras y ciencia: mas Daniel tuvo entendimiento en toda visión y sueños.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Tres: visiones; Daniel además: lengua caldea",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Cambia número y distribuye incorrectamente los dones."
+        },
+        {
+          "text": "Cuatro: letras y ciencia; Daniel además: visiones y sueños",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Distingue fielmente el don común de los cuatro y el adicional de Daniel."
+        },
+        {
+          "text": "Diez: ciencia; Daniel además: sacerdocio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Ni diez receptores ni sacerdocio aparecen en la distribución."
+        },
+        {
+          "text": "Cuatro: gobierno; Daniel además: fuerza militar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 29, párrafo 5",
+          "exact_reason": "Gobierno y fuerza militar no son los dones mencionados."
+        }
+      ],
+      "answer_length_giveaway": true,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La distribución es única, pero la opción correcta es la más larga y literal; el enunciado PR omite el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes, ¿qué distribución distingue el don común de los cuatro jóvenes de la capacidad adicional de Daniel?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "cff0dc145dcf76a8eb3d48d7c6a5ebee416f4fb85418257976396d818932f7a6",
+      "output_sha256": "1ec597484cbcd8148dbd7a46f842a1438cc8e9bf70d946f7c3efb8365bf6f9ba"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-C19-001",
+      "selected_option_index": 0,
+      "selected_option_text": "Eran tan fieles a los buenos principios como el acero, inmunes a la corrupción del egoísmo y resueltos a honrar a Dios aun perdiéndolo todo",
+      "exact_supporting_phrase": "hombres que eran tan fieles a los buenos principios como el acero, que no serían corrompidos por el egoísmo, sino que honrarían a Dios aun cuando lo perdiesen todo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Eran tan fieles a los buenos principios como el acero, inmunes a la corrupción del egoísmo y resueltos a honrar a Dios aun perdiéndolo todo",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Conserva los tres rasgos morales de la cita sin añadir una acción ajena."
+        },
+        {
+          "text": "Eran celosos defensores de los ritos judaicos, decididos a fundar sinagogas secretas y juntar riquezas para financiar el retorno hacia Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Sinagogas secretas, riquezas y financiación del retorno no aparecen."
+        },
+        {
+          "text": "Eran hábiles diplomáticos de la estirpe regia, preparados para asimilar la filosofía de Babel sin descuidar sus sagradas tradiciones patrias",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Diplomacia y asimilación filosófica no definen el temple moral citado."
+        },
+        {
+          "text": "Eran prudentes observadores de las leyes caldeas, dispuestos a transigir en ceremonias civiles para preservar sus vidas en la corte del rey",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La disposición a transigir para preservar la vida contradice su fidelidad aun perdiéndolo todo."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "El prefijo delimita expresamente Profetas y Reyes, la clave integra tres rasgos textuales y los distractores son paralelos, plausibles y discriminables por la fuente.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "3e9bfe553d0d4502df31fd1ce309123fba10c80397802fefa99a73d018800caa",
+      "output_sha256": "6f2be7036b751b2d01e5f862557623024d4368dd1fb8c915bfa409aff7dc1f86"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-C19-002",
+      "selected_option_index": 0,
+      "selected_option_text": "Dar a las naciones paganas las bendiciones provenientes del conocimiento de Jehová",
+      "exact_supporting_phrase": "dando a las naciones paganas las bendiciones provenientes del conocimiento de Jehová.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Dar a las naciones paganas las bendiciones provenientes del conocimiento de Jehová",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Es el propósito divino expresado literalmente."
+        },
+        {
+          "text": "Instruir a los sabios caldeos en las doctrinas y reformar el gobierno en Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La reforma gubernamental y esa audiencia específica no aparecen."
+        },
+        {
+          "text": "Fundar colonias mercantiles prósperas para financiar el retorno futuro a Jerusalén",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "No se menciona actividad mercantil ni financiación del retorno."
+        },
+        {
+          "text": "Ocultar la fe monoteísta entre los hebreos hasta cumplir los setenta años en Babel",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Ocultar la fe contradice dar sus bendiciones a las naciones paganas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La clave es única y bien sustentada, pero «De acuerdo con» no cumple el prefijo explícito obligatorio «Según Profetas y Reyes...». ",
+      "suggested_rewrite": "Según Profetas y Reyes (cap. 39), ¿cuál era el propósito providencial que los fieles cautivos debían cumplir en Babilonia?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "3fed152377c71ee6b886a2fe24aedc5564fb8fdf7436921408e7e0a1ef2fc56c",
+      "output_sha256": "abc2f571cc8f5ad2ec0da8c4da83ab82397bbb4ce31dc17b49d12d20d2baef2f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-C19-003",
+      "selected_option_index": 1,
+      "selected_option_text": "Habían de ser sus representantes.",
+      "exact_supporting_phrase": "Habían de ser sus representantes.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Habían de ser los jueces militares de Caldea.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La fuente no les asigna función judicial militar."
+        },
+        {
+          "text": "Habían de ser sus representantes.",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Reproduce literalmente la función testimonial indicada."
+        },
+        {
+          "text": "Habían de ser los arquitectos de los palacios de Nabucodonosor.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "No se menciona una función arquitectónica."
+        },
+        {
+          "text": "Habían de ser los recaudadores supremos del tributo de oro.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La recaudación de tributos no aparece en el pasaje."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es explícita y única, pero la pregunta PR no comienza con el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes (cap. 39), en el plan divino para el cautiverio en Babilonia, ¿qué función testimonial debían cumplir los cautivos fieles?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "85fa724f1531420c61a14bb17f3cc23460cceda741d222fdb545c3f70c87b291",
+      "output_sha256": "b94b72d999734881d2b0c5d42cb9ca634f431b385d621c307c7089a5f4a8c07e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-C19-004",
+      "selected_option_index": 0,
+      "selected_option_text": "No transigir en caso alguno con los idólatras, sino estimar como alto honor su fe y el nombre de adoradores del Dios viviente",
+      "exact_supporting_phrase": "No debían en caso alguno transigir con los idólatras, sino considerar como alto honor la fe que sostenían y el nombre de adoradores del Dios viviente.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "No transigir en caso alguno con los idólatras, sino estimar como alto honor su fe y el nombre de adoradores del Dios viviente",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Conserva la norma absoluta y los dos objetos de honra."
+        },
+        {
+          "text": "No participar de las asambleas públicas de Babilonia, sino considerar como alto honor el aislamiento total dentro de la corte",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Asambleas y aislamiento total no son la norma ni la honra descritas."
+        },
+        {
+          "text": "No contradecir las doctrinas religiosas de los caldeos, sino considerar como alto honor el servicio civil bajo el rey pagano",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "La acomodación doctrinal contradice no transigir con idólatras y sustituye el objeto de honra."
+        },
+        {
+          "text": "No rechazar abiertamente los dioses de corte, sino considerar como alto honor el guardar su devoción en secreto y en silencio",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Propone una transigencia y una devoción oculta que no corresponden a la fe honrada públicamente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "El prefijo delimita la fuente, la clave conserva dos relaciones textuales y los distractores mantienen paralelismo sintáctico con errores sustantivos verificables.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "bfa5469ed934e37f4efa911325bab38940ff25e2dd9a7a56850aa6bb09e052ec",
+      "output_sha256": "d0d9b0b7f0b3ad2d45f0427ddcc17ba96242673b4eccce7d21dfb712ca4bd528"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-C19-005",
+      "selected_option_index": 2,
+      "selected_option_text": "Honraron a Dios en la prosperidad y en la adversidad; y Dios los honró a ellos.",
+      "exact_supporting_phrase": "Honraron a Dios en la prosperidad y en la adversidad; y Dios los honró a ellos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Adoraron a Dios únicamente cuando tenían éxito; y Dios los libró de las guerras.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Limita la fidelidad a la prosperidad y añade una liberación bélica no mencionada."
+        },
+        {
+          "text": "Guardaron los mandamientos sólo en sábado; y Dios les concedió salud física temporal.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Sábado y salud temporal no aparecen en esta correspondencia."
+        },
+        {
+          "text": "Honraron a Dios en la prosperidad y en la adversidad; y Dios los honró a ellos.",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Reproduce literalmente la reciprocidad completa."
+        },
+        {
+          "text": "Honraron al rey en la corte y a los ídolos en privado; y el rey los enriqueció con oro.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "PR39, p. 27, párrafo 1",
+          "exact_reason": "Contradice su lealtad a Dios y añade una recompensa material ajena."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La correspondencia es literal e inequívoca, pero el enunciado PR omite el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes (cap. 39), ¿qué correspondencia recíproca de lealtad existió entre la conducta de los cautivos fieles y la respuesta de Dios?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "aa620e5547949c67474b9e23f74c889edf8e82d6ce6ec6c10dc4ffaf3bf68221",
+      "output_sha256": "83f018db00aec25bc444d49b28037152f7ef210edb8300f59a134dc3cd376e5a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-C19-006",
+      "selected_option_index": 1,
+      "selected_option_text": "El cautiverio de los adoradores de Jehová en Babilonia y el hallazgo de los vasos de Dios en los templos de los dioses paganos",
+      "exact_supporting_phrase": "esos adoradores de Jehová estuviesen cautivos en Babilonia y [...] los vasos de la casa de Dios se hallaran en el templo de los dioses babilónicos",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "La rendición total de los reyes de Judá ante el monarca caldeo y la erección de altares paganos sobre las ruinas de Jerusalén",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Ninguno de esos dos hechos se menciona como argumento jactancioso."
+        },
+        {
+          "text": "El cautiverio de los adoradores de Jehová en Babilonia y el hallazgo de los vasos de Dios en los templos de los dioses paganos",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Conserva los dos hechos, pese a pluralizar «templo» de forma no material."
+        },
+        {
+          "text": "La victoria militar de caldeos sobre Egipto y la custodia de los sagrados rollos de la ley en los archivos del palacio imperial",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Egipto, rollos y archivos palaciegos no aparecen."
+        },
+        {
+          "text": "La dispersión de las tribus de Israel en el imperio y el traslado del arca del pacto a la gran torre de los magos de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Dispersión, arca y torre de magos no se mencionan."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "REWRITE",
+      "specific_reason": "La clave conserva los dos hechos y es única, pero «Conforme a» no satisface el prefijo explícito obligatorio «Según Profetas y Reyes...». ",
+      "suggested_rewrite": "Según Profetas y Reyes (cap. 39), ¿qué dos hechos esgrimían con jactancia los babilonios como prueba de la superioridad de su religión?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "7bf6ab2fa5c5ad908454a5331b211861d03678c0cbdcb886079cb59178cab29f",
+      "output_sha256": "9447e2bca727bc74f47ed33d9128850e8910bb7e7064b0b9d7020b7be41b5352"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-C19-007",
+      "selected_option_index": 1,
+      "selected_option_text": "Evidencia de su supremacía, de la santidad de sus requerimientos y de los seguros resultados que produce la obediencia",
+      "exact_supporting_phrase": "evidencia de su supremacía, de la santidad de sus requerimientos y de los seguros resultados que produce la obediencia.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "Evidencia de su misericordia universal, de la tolerancia con los cultos paganos y del triunfo temporal de los caldeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La cita no enumera misericordia universal, tolerancia pagana ni triunfo caldeo."
+        },
+        {
+          "text": "Evidencia de su supremacía, de la santidad de sus requerimientos y de los seguros resultados que produce la obediencia",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Reproduce con exactitud los tres elementos de la evidencia."
+        },
+        {
+          "text": "Evidencia de su justicia punitiva, de la santidad del sacerdocio y del valor meritorio de los sacrificios en el templo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Sustituye los tres elementos por doctrinas no enumeradas."
+        },
+        {
+          "text": "Evidencia de su severidad implacable, de la caducidad del sacerdocio y de la pronta destrucción del reino de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Ninguna de esas tres afirmaciones constituye la evidencia citada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "El prefijo delimita expresamente la fuente; la clave exige conservar tres elementos y los distractores mantienen longitud y estructura paralelas sin segunda respuesta defendible.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "acbe71583f5b5cbcb7b9da9032481fb2e8e258d2166391875c5a23929a87bc91",
+      "output_sha256": "3217f5e5854757087f99f7fdeb9557914dec139551b3ba176ab1ccb5c98a96a9"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-PR39-C19-008",
+      "selected_option_index": 3,
+      "selected_option_text": "por medio de los que le eran leales",
+      "exact_supporting_phrase": "por medio de los que le eran leales.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "PR_ONLY",
+      "option_analysis": [
+        {
+          "text": "por medio de ejércitos mercenarios contratados en Egipto",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "No se mencionan ejércitos mercenarios ni Egipto como medio del testimonio."
+        },
+        {
+          "text": "por medio de decretos civiles firmados por los sacerdotes de Bel",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Decretos y sacerdotes de Bel no aparecen como medio."
+        },
+        {
+          "text": "por medio de portentos astronómicos en los cielos de Caldea",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "La fuente no atribuye el testimonio a portentos astronómicos."
+        },
+        {
+          "text": "por medio de los que le eran leales",
+          "verdict": "CORRECT",
+          "source_ref": "PR39, p. 27, párrafo 2",
+          "exact_reason": "Es la única manera declarada explícitamente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es literal y única, pero el enunciado PR no contiene el prefijo obligatorio.",
+      "suggested_rewrite": "Según Profetas y Reyes (cap. 39), ¿de qué única manera dio Dios este testimonio de su supremacía y verdad en Babilonia?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/sol_audit_003",
+      "conversation_id": "/root/sol_audit_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T09:33:00.9706120Z",
+      "input_content_sha256": "858e2dc188b7383392712577f1257fb37fd46d1a4fa84d55e0bf2b5658544345",
+      "output_sha256": "09abd2e0531bfb70e16b8f037144336f893e41040a05f6cada46315dc181ed45"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 0,
+    "ACCEPT_COMPETITIVE": 3,
+    "REWRITE": 17,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}
