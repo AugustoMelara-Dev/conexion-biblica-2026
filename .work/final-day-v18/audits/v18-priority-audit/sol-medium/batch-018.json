@@ -1,0 +1,1057 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-018",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-018.json",
+  "input_sha256": "c70b8b386c771314f014088ee58dcb346e99a8001453b5063712fa6894de473f",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/dossier_prep",
+    "conversation_id": "/root/dossier_prep",
+    "conversation_id_kind": "codex_canonical_agent_task_name",
+    "reviewed_at": "2026-09-04T11:38:01.950626Z"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0012",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "A causa de la prevaricación le fue entregado el ejército junto con el sacrificio continuo; echó por tierra la verdad e hizo cuanto quiso, y prosperó.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:12",
+          "exact_reason": "La cita atribuye la entrega a la prevaricación, no a la fidelidad."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:12",
+          "exact_reason": "La cita contradice la proposición al decir «a causa de la prevaricación»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "a3c09187cfe376a29dcb7ae70b9a0f90f024ba194fbdee1470051e015d0ccb01",
+      "output_sha256": "c6b91f5f29e6739b1ad9ce3151789816fee50e7bdb2b7a972e655922626a35d4"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0013",
+      "selected_option_index": 2,
+      "selected_option_text": "santuario",
+      "exact_supporting_phrase": "Entonces oí hablar a un santo; y otro de los santos preguntó a aquel que hablaba: “¿Hasta cuándo durará la visión del sacrificio continuo, la prevaricación asoladora y la entrega del santuario y el ejército para ser pisoteados?”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "ciudad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:13",
+          "exact_reason": "La cita nombra el santuario, no una ciudad, como elemento entregado para ser pisoteado."
+        },
+        {
+          "text": "palacio",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:13",
+          "exact_reason": "El pasaje no identifica un palacio como el lugar entregado."
+        },
+        {
+          "text": "santuario",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:13",
+          "exact_reason": "La cita identifica expresamente «el santuario» como el lugar entregado para ser pisoteado."
+        },
+        {
+          "text": "fortaleza",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:13",
+          "exact_reason": "El pasaje no identifica una fortaleza; señala el santuario."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "0b6911adf0c82ce7870f309a7025f57ef53b351b679f3f78e3206d1e4a830798",
+      "output_sha256": "414204155479067c9556c88336842d8ff9baf36c0371176f6eb146a2feea0560"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0014",
+      "selected_option_index": 1,
+      "selected_option_text": "dos mil trescientas tardes y mañanas",
+      "exact_supporting_phrase": "Y él dijo: “Hasta dos mil trescientas tardes y mañanas; luego el santuario será purificado.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "dos mil cuatrocientas tardes y mañanas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:14",
+          "exact_reason": "La cifra de la cita es dos mil trescientas, no dos mil cuatrocientas."
+        },
+        {
+          "text": "dos mil trescientas tardes y mañanas",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:14",
+          "exact_reason": "La cita fija el período en «dos mil trescientas tardes y mañanas»."
+        },
+        {
+          "text": "mil doscientas tardes y mañanas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:14",
+          "exact_reason": "La cita no da mil doscientas tardes y mañanas."
+        },
+        {
+          "text": "dos mil tardes y mañanas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:14",
+          "exact_reason": "La cita no da dos mil tardes y mañanas."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "ad14ce649274b2af2491747dcc1c8bb1bc23c8fce87df08e7b4c6cfa3be3a1d2",
+      "output_sha256": "ebb26671670da4898e59c890d6e89adc876338398c2a1e155513b66835147274"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0015",
+      "selected_option_index": 0,
+      "selected_option_text": "comprenderla",
+      "exact_supporting_phrase": "Aconteció que mientras yo, Daniel, consideraba la visión y procuraba comprenderla, se puso delante de mí uno con apariencia de hombre.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "comprenderla",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:15",
+          "exact_reason": "La cita dice que Daniel procuraba comprender la visión."
+        },
+        {
+          "text": "olvidarla",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:15",
+          "exact_reason": "La cita no dice que Daniel quisiera olvidarla; afirma lo contrario."
+        },
+        {
+          "text": "escribirla",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:15",
+          "exact_reason": "La cita no atribuye a Daniel el propósito de escribirla en ese momento."
+        },
+        {
+          "text": "ocultarla",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:15",
+          "exact_reason": "La cita no dice que Daniel procurara ocultar la visión."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "8cde80a5aaf21a057c57b129269bfd9cf98a11fefd4d971d04aa62bee7212b4d",
+      "output_sha256": "23dbeab56a70c4412893f2f471deac86a3225a80180123b1f85de0fcc0aff8d6"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0016",
+      "selected_option_index": 1,
+      "selected_option_text": "Gabriel",
+      "exact_supporting_phrase": "Y oí una voz de hombre entre las riberas del Ulai, que gritó y dijo: “Gabriel, enseña a éste la visión.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Ciro",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:16",
+          "exact_reason": "La voz no ordenó a Ciro; la cita nombra a Gabriel."
+        },
+        {
+          "text": "Gabriel",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:16",
+          "exact_reason": "La cita ordena literalmente: «Gabriel, enseña a éste la visión»."
+        },
+        {
+          "text": "Miguel",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:16",
+          "exact_reason": "La cita no nombra a Miguel como destinatario de esta orden."
+        },
+        {
+          "text": "Daniel",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:16",
+          "exact_reason": "Daniel recibe la visión, pero la orden nominal se dirige a Gabriel."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "668cb67df4d6d2a25f8fdc1e8aae5705148a5c59c20c353d0e29bc8cbd4a9276",
+      "output_sha256": "922730d93d6780b5cfc52b66fae154aab80f96312e2bbcb49a0b45885c5edf69"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0017",
+      "selected_option_index": 2,
+      "selected_option_text": "tiempo",
+      "exact_supporting_phrase": "Vino luego cerca de donde yo estaba. Y al venir, me asusté y me postré sobre mi rostro. Pero él me dijo: “Entiende, hijo de hombre, que la visión es para el tiempo del fin.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "reino",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:17",
+          "exact_reason": "La cita completa la expresión con «tiempo», no con «reino»."
+        },
+        {
+          "text": "lugar",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:17",
+          "exact_reason": "La cita dice «para el tiempo del fin», no «lugar del fin»."
+        },
+        {
+          "text": "tiempo",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:17",
+          "exact_reason": "La cita declara: «la visión es para el tiempo del fin»."
+        },
+        {
+          "text": "pueblo",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:17",
+          "exact_reason": "La cita no usa «pueblo» para completar esta expresión."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "3ea9ee367549225dc99df0dc5ea3d64577cd8cc588d4384205ac2e78ccddb845",
+      "output_sha256": "5bca0dadeb6dd4ad40f7daec4c4cc8462212c8a74e20aca48b798a037975a9df"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0018",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "Mientras él hablaba conmigo, caí dormido en tierra sobre mi rostro. Él me tocó y me hizo estar en pie.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:18",
+          "exact_reason": "La cita dice que Daniel cayó dormido, no desmayado; el término del enunciado no reproduce el pasaje."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:18",
+          "exact_reason": "La cita sostiene la falsedad del enunciado al registrar que Daniel cayó dormido sobre su rostro."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "02ddb5ff0c6c09e59b7bf026e12620e21da91d941e9982ad1bd3ac98dc4eea07",
+      "output_sha256": "a344c52edb5eacb09edcab18a93ea7ab569d7f95a014a4719368eaf739040e88"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0019",
+      "selected_option_index": 1,
+      "selected_option_text": "tiempo",
+      "exact_supporting_phrase": "Y dijo: “Yo te enseñaré lo que ha de venir al fin de la ira; porque eso es para el tiempo del fin.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "principio",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:19",
+          "exact_reason": "La cita completa la frase con «tiempo», no con «principio»."
+        },
+        {
+          "text": "tiempo",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:19",
+          "exact_reason": "La cita dice literalmente «porque eso es para el tiempo del fin»."
+        },
+        {
+          "text": "reinado",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:19",
+          "exact_reason": "La cita no completa la expresión con «reinado»."
+        },
+        {
+          "text": "día",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:19",
+          "exact_reason": "La cita no completa la expresión con «día»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "10dcc1c5e7c6a96421cac755dc50292078bed9e42632e881394bdfb55fef3438",
+      "output_sha256": "9fc20bd2e696620cf0b21e3289d2b7d5fbf11ff9ced12093d6cfd5df3156cd3b"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0020",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "En cuanto al carnero que viste, que tenía dos cuernos: éstos son los reyes de Media y de Persia.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:20",
+          "exact_reason": "La cita identifica los dos cuernos como los reyes de Media y de Persia, no como Falso."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:20",
+          "exact_reason": "La cita dice expresamente que los dos cuernos son los reyes de Media y de Persia."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "4dbfac51eff5af9558639ac50d829a218d8dcd2a3e5b528bfce1fbd24e284783",
+      "output_sha256": "d545604a113e4c47b248aaf265ab6ef9a4bd17904a46b8dc0825871ee26aca8f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0021",
+      "selected_option_index": 1,
+      "selected_option_text": "Grecia",
+      "exact_supporting_phrase": "El macho cabrío es el rey de Grecia, y el cuerno grande que tenía entre sus ojos es el rey primero.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Persia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:21",
+          "exact_reason": "La cita identifica el macho cabrío con Grecia, no Persia."
+        },
+        {
+          "text": "Grecia",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:21",
+          "exact_reason": "La cita declara: «El macho cabrío es el rey de Grecia»."
+        },
+        {
+          "text": "Babilonia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:21",
+          "exact_reason": "La cita no identifica el macho cabrío con Babilonia."
+        },
+        {
+          "text": "Media",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:21",
+          "exact_reason": "La cita no identifica el macho cabrío con Media."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "fff16f3c6a84057e3f66b16d36bb80752aa28bf0474e43d012f48fdb5e41b7e1",
+      "output_sha256": "b696a55219f88d1df6abedd11c4b929f1def0ca0ab296c9621b113e838e101d2"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0022",
+      "selected_option_index": 1,
+      "selected_option_text": "reinos",
+      "exact_supporting_phrase": "En cuanto al cuerno que fue quebrado y sucedieron cuatro en su lugar, significa que cuatro reinos se levantarán de esa nación, aunque no con la fuerza de él.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "profetas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:22",
+          "exact_reason": "La cita dice que surgirían cuatro reinos, no cuatro profetas."
+        },
+        {
+          "text": "reinos",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:22",
+          "exact_reason": "La cita interpreta los cuatro cuernos como «cuatro reinos»."
+        },
+        {
+          "text": "santuarios",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:22",
+          "exact_reason": "La cita no interpreta los cuernos sucesores como santuarios."
+        },
+        {
+          "text": "ejércitos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:22",
+          "exact_reason": "La cita no interpreta los cuernos sucesores como ejércitos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "92774fc846f392a57b6fc54ff74fd3700d753e571a2eb009e0b6a30752654d5a",
+      "output_sha256": "1978b736dca4e6d4f439b3817dffb116d59537268ed78b8ff86b269809093e99"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0023",
+      "selected_option_index": 1,
+      "selected_option_text": "enigmas",
+      "exact_supporting_phrase": "”Al fin del reinado de estos, cuando los transgresores lleguen al colmo, se levantará un rey altivo de rostro y entendido en enigmas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "batallas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:23",
+          "exact_reason": "La cita dice que el rey sería entendido en enigmas, no en batallas."
+        },
+        {
+          "text": "enigmas",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:23",
+          "exact_reason": "La cita califica al rey como «entendido en enigmas»."
+        },
+        {
+          "text": "cánticos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:23",
+          "exact_reason": "La cita no menciona cánticos como el objeto de su entendimiento."
+        },
+        {
+          "text": "leyes",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:23",
+          "exact_reason": "La cita no menciona leyes como el objeto de su entendimiento."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "9493414a7e8042f2634ca62f4919eb759cc6a83824e6ab17776292e4428d33ee",
+      "output_sha256": "795d392143fd32439cbec8ac3e96c4729286ce023a74d2ff791d3c983f4e7639"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0024",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Su poder se fortalecerá, mas no con fuerza propia; causará grandes ruinas, prosperará, actuará arbitrariamente y destruirá a los fuertes y al pueblo de los santos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:24",
+          "exact_reason": "La cita afirma que el rey destruiría a los fuertes y al pueblo de los santos; por tanto, la proposición negativa es falsa."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:24",
+          "exact_reason": "La cita declara que el rey «destruirá a los fuertes y al pueblo de los santos»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "a6d554fec23ca3ce22850df28a81e2f0688e5c1afd9066bd3b81570e073bfcc2",
+      "output_sha256": "7208054906fb5964deeca4398ae2852edffce8aa327648590ea862bdbc1d732f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0025",
+      "selected_option_index": 1,
+      "selected_option_text": "engaño",
+      "exact_supporting_phrase": "Con su sagacidad hará prosperar el engaño en su mano; en su corazón se engrandecerá y, sin aviso, destruirá a muchos. Se levantará contra el Príncipe de los príncipes, pero será quebrantado, aunque no por mano humana.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "justicia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:25",
+          "exact_reason": "La cita no dice que la sagacidad hiciera prosperar la justicia."
+        },
+        {
+          "text": "engaño",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:25",
+          "exact_reason": "La cita dice: «Con su sagacidad hará prosperar el engaño en su mano»."
+        },
+        {
+          "text": "paz",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:25",
+          "exact_reason": "La cita no atribuye a la sagacidad hacer prosperar la paz."
+        },
+        {
+          "text": "verdad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:25",
+          "exact_reason": "La cita no atribuye a la sagacidad hacer prosperar la verdad."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "0943103ca9d152a632d94ea232770f0461511d8838ff5fc22687848c65327ba1",
+      "output_sha256": "dc3da9a47b82b1cb4d1d62826035ea8362040e30b28576a7cccfaa3015df8c02"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0026",
+      "selected_option_index": 1,
+      "selected_option_text": "guarda",
+      "exact_supporting_phrase": "La visión de las tardes y mañanas que se ha referido es verdadera; y tú guarda la visión, porque es para muchos días.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "olvida",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:26",
+          "exact_reason": "La instrucción de la cita es guardar la visión, no olvidarla."
+        },
+        {
+          "text": "guarda",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:26",
+          "exact_reason": "La cita ordena literalmente: «tú guarda la visión»."
+        },
+        {
+          "text": "publica",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:26",
+          "exact_reason": "La cita no ordena publicar la visión."
+        },
+        {
+          "text": "cambia",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:26",
+          "exact_reason": "La cita no ordena cambiar la visión."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "eb756be5c9eed1c83eef879556ed841af08eafe83cae5ad09ea9c685a883595b",
+      "output_sha256": "a000016447d59ccc8297b69667539fe2fa15a0cbc33f38ff2330cb2dd33e03be"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN8-0027",
+      "selected_option_index": 3,
+      "selected_option_text": "enfermo",
+      "exact_supporting_phrase": "Yo, Daniel, quedé quebrantado, y estuve enfermo algunos días. Cuando me levanté, atendí los negocios del rey; pero estaba espantado a causa de la visión, y no la entendía.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "ciego",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:27",
+          "exact_reason": "La cita dice que Daniel estuvo enfermo, no ciego."
+        },
+        {
+          "text": "hambriento",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:27",
+          "exact_reason": "La cita no dice que Daniel estuviera hambriento."
+        },
+        {
+          "text": "insomne",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:27",
+          "exact_reason": "La cita no dice que Daniel estuviera insomne; registra que estuvo enfermo."
+        },
+        {
+          "text": "enfermo",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:27",
+          "exact_reason": "La cita declara: «estuve enfermo algunos días»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "68771322e0d2ac9a2d7ee8be92980e5eb7784f64df090dda74d63cdb3822f433",
+      "output_sha256": "a93a0de5406bdce9705fe3b76c79a4ab777316d772a17838fd8fee4e5e15d8dd"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-DAN8-C10-V004-F10",
+      "selected_option_index": 3,
+      "selected_option_text": "Poniente, norte y sur → ninguna bestia lo detiene → nadie escapa → hace su voluntad → se engrandece",
+      "exact_supporting_phrase": "Vi que el carnero hería con los cuernos al poniente, al norte y al sur, y que ninguna bestia podía parar delante de él, ni había quien escapara de su poder. Hacía conforme a su voluntad, y se engrandecía.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Oriente, norte y sur → el macho cabrío lo detiene → todos escapan → cumple la voluntad del río → se debilita",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "La cita da poniente, norte y sur; además, ninguna bestia detiene al carnero y no hay quien escape, por lo que esta secuencia cambia varios datos."
+        },
+        {
+          "text": "Poniente, oriente y cielo → las estrellas lo detienen → el rey escapa → obedece al santuario → se purifica",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "La cita no menciona oriente y cielo como direcciones, ni estrellas deteniendo al carnero o una purificación."
+        },
+        {
+          "text": "Sur, tierra gloriosa y Elam → cuatro cuernos lo detienen → los fuertes escapan → sigue la voz de Gabriel → se postra",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "La cita no menciona Elam, cuatro cuernos deteniendo al carnero ni una reacción de postración."
+        },
+        {
+          "text": "Poniente, norte y sur → ninguna bestia lo detiene → nadie escapa → hace su voluntad → se engrandece",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "La cita conserva las direcciones poniente, norte y sur, la ausencia de oposición, la imposibilidad de escapar, la autonomía y el engrandecimiento del carnero."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "ac1f00fe4516728364291d95294b1e89d9a9a931486bd4b4ac1f04cdd9f02424",
+      "output_sha256": "cd796ef4a43a2716ffaca6968fc4978aa93ab0974676c0c3795d941cd5af203c"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-DAN8-C10-V007-F05",
+      "selected_option_index": 0,
+      "selected_option_text": "Llega al carnero → lo hiere → quiebra sus dos cuernos → no puede resistir → lo derriba y pisotea → nadie lo libra",
+      "exact_supporting_phrase": "Lo vi llegar junto al carnero; se levantó contra él y lo hirió, y le quebró sus dos cuernos; y el carnero no tenía fuerzas para hacerle frente. Lo derribó, por tanto, a tierra, lo pisoteó y no hubo quien librara de su poder al carnero.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Llega al carnero → lo hiere → quiebra sus dos cuernos → no puede resistir → lo derriba y pisotea → nadie lo libra",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "La cita conserva toda la secuencia: llegada al carnero, herida, quiebre de los dos cuernos, incapacidad de resistir, derribo, pisoteo y ausencia de rescate."
+        },
+        {
+          "text": "Llega al río → protege al carnero → fortalece sus cuernos → puede resistir → lo levanta y honra → Gabriel lo libra",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "La cita no presenta protección ni fortalecimiento del carnero; describe su derrota."
+        },
+        {
+          "text": "Llega al santuario → hiere al príncipe → quiebra cuatro cuernos → el ejército resiste → lo purifica → los santos lo libran",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "La cita no habla de santuario, herir al príncipe ni de un ejército resistente."
+        },
+        {
+          "text": "Llega a Susa → observa al carnero → engrandece sus cuernos → ambos resisten → lo deja en pie → Daniel lo libra",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "La cita no sitúa la acción en Susa ni atribuye rescate a Daniel."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "2a56565a78dfc4f6964682f2bd11b8e2e41214e492ca804ec903288c50b377ee",
+      "output_sha256": "4f95769cd60792105d321d565f86b30bce894625ff294ef4c61f5699df1aba92"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-DAN8-C10-V010-F01",
+      "selected_option_index": 1,
+      "selected_option_text": "Hasta el ejército del cielo → parte del ejército y de las estrellas → echar por tierra y pisotear",
+      "exact_supporting_phrase": "Creció hasta llegar al ejército del cielo; y parte del ejército y de las estrellas echó por tierra, y las pisoteó.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Hasta la tierra gloriosa → parte del santuario y sacrificio → guardar y purificar",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:10",
+          "exact_reason": "La cita no fija el crecimiento hasta la tierra gloriosa ni acciones de guardar y purificar."
+        },
+        {
+          "text": "Hasta el ejército del cielo → parte del ejército y de las estrellas → echar por tierra y pisotear",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:10",
+          "exact_reason": "La cita dice que el crecimiento llegó al ejército del cielo y que parte del ejército y de las estrellas fue echada por tierra y pisoteada."
+        },
+        {
+          "text": "Hasta los cuatro vientos → parte de Media y Persia → dividir y coronar",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:10",
+          "exact_reason": "La cita no relaciona los cuatro vientos con Media y Persia ni con dividir y coronar."
+        },
+        {
+          "text": "Hasta el río Ulai → parte del carnero y sus cuernos → levantar y fortalecer",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:10",
+          "exact_reason": "La cita no relaciona el río Ulai con el carnero y sus cuernos ni con acciones de levantar y fortalecer."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "525c72b8bcc50fe2a1ab0408007e34100c3368346ecef04f7bc3e2f1cb6d3ed6",
+      "output_sha256": "00d73cc13ed976a15456688bccff5c9970a272e6a0dea71c66e9e7842e5a251f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-DAN8-C10-V011-F02",
+      "selected_option_index": 1,
+      "selected_option_text": "Se engrandece frente al príncipe de los ejércitos → quita el sacrificio continuo → echa por tierra el lugar del santuario",
+      "exact_supporting_phrase": "Aun se engrandeció frente al príncipe de los ejércitos; por él fue quitado el sacrificio continuo, y el lugar de su santuario fue echado por tierra.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Se humilla ante Gabriel → restaura la ofrenda diaria → levanta el palacio del rey",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:11",
+          "exact_reason": "La cita no habla de humillación ante Gabriel, restauración de la ofrenda ni un palacio."
+        },
+        {
+          "text": "Se engrandece frente al príncipe de los ejércitos → quita el sacrificio continuo → echa por tierra el lugar del santuario",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:11",
+          "exact_reason": "La cita conserva literalmente el engrandecimiento frente al príncipe de los ejércitos, la supresión del sacrificio continuo y la caída del lugar del santuario."
+        },
+        {
+          "text": "Se enfrenta al rey de Grecia → guarda las tardes y mañanas → purifica la ribera del Ulai",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:11",
+          "exact_reason": "La cita no describe que el rey de Grecia guarde las tardes y mañanas ni que se purifique el Ulai."
+        },
+        {
+          "text": "Se engrandece frente a Daniel → quita las legumbres → echa por tierra la capital de Elam",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:11",
+          "exact_reason": "La cita no menciona a Daniel, las legumbres ni una capital de Elam."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sustenta el enunciado y solo una opción conserva todos los datos; cobertura, no competitiva, por dependencia literal.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/dossier_prep",
+      "conversation_id": "/root/dossier_prep",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:38:01.950626Z",
+      "input_content_sha256": "247d1fd6ccd11ceebe4d4860adfb8bc0e00f945787e1f0f3293ad060a52d7651",
+      "output_sha256": "e6562443291a2085391f12c1f4d7436fe8069eea38cf7832462647b9b148ce0d"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 20,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 0,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

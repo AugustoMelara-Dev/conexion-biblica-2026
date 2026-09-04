@@ -183,3 +183,11 @@ dosier/ciego; una mutación posterior devuelve `False`.
 - Este entregable no demuestra corrección de respuestas ni estados de
   auditoría: esas decisiones requieren los dictámenes reales Luna/Sol de las
   siguientes etapas. No se promovió ningún ítem a producción.
+
+## Auditoría Sol Medium — priority batch-018
+
+- Se publicó únicamente `.work/final-day-v18/audits/v18-priority-audit/sol-medium/batch-018.json` mediante archivo temporal y `os.replace`; no quedaron temporales de `batch-018` y no se modificaron lotes vecinos.
+- Validación literal `final-day-v18-sol-audit-1.0` con `_validate_agent_output()` — **OK**; comprobación independiente de IDs, índice/texto, citas exactas, análisis por opción y hashes — **OK**.
+- Conteos: **20** ítems, **20 ACCEPT_COVERAGE**, 0 `ACCEPT_COMPETITIVE`, 0 `REWRITE`, 0 `REJECT`, 0 `INVALID_OUTPUT`; todos con evidencia exclusiva de Daniel 8 (`DANIEL_ONLY`).
+- `input_sha256`: `c70b8b386c771314f014088ee58dcb346e99a8001453b5063712fa6894de473f`; SHA del payload publicado: `ccf63e7baa1a598075d313377e96be8ce2b8e0ee1f7ce06b605b5c2d2e72c686`.
+- Verificación adicional: `python -m unittest scripts.test_compile_final_day_v18 -v` — **9 OK**; `python -m py_compile scripts/compile_final_day_v18.py` — **OK**; `verify_artifacts()` del carril priority — **True**.

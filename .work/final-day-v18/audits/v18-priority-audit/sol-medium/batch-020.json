@@ -1,0 +1,1104 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-020",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-020.json",
+  "input_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/ledger_v18",
+    "conversation_id": "/root/ledger_v18",
+    "conversation_id_kind": "codex_canonical_agent_task_name",
+    "reviewed_at": "2026-09-04T11:41:20.474Z"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN8-C17-009",
+      "selected_option_index": 1,
+      "selected_option_text": "«¿Hasta cuándo se extenderá el dominio del cuerno pequeño, la profanación del templo santo y la entrega del pueblo de Dios para ser destruido?»",
+      "exact_supporting_phrase": "Entonces oí hablar a un santo; y otro de los santos preguntó a aquel que hablaba: “¿Hasta cuándo durará la visión del sacrificio continuo, la prevaricación asoladora y la entrega del santuario y el ejército para ser pisoteados?”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "«¿Hasta cuándo durará la visión del sacrificio continuo, la prevaricación asoladora y la entrega del santuario y el ejército para ser pisoteados?»",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 8:13",
+          "exact_reason": "No aparece ese conjunto de dominio, templo y pueblo en la pregunta textual suministrada."
+        },
+        {
+          "text": "«¿Hasta cuándo se extenderá el dominio del cuerno pequeño, la profanación del templo santo y la entrega del pueblo de Dios para ser destruido?»",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:13",
+          "exact_reason": "Reproduce la pregunta sobre la visión, el sacrificio continuo, la prevaricación asoladora y la entrega del santuario y el ejército para ser pisoteados."
+        },
+        {
+          "text": "«¿Hasta cuándo permanecerá la desolación de Jerusalén, la suspensión del culto diario y la entrega de los sacerdotes para ser escarnecidos?»",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 8:13",
+          "exact_reason": "Añade Jerusalén, sacerdotes y suspensión del culto, elementos no expresados en la cita suministrada."
+        },
+        {
+          "text": "««¿Hasta cuándo prevalecerá el quebrantamiento del pacto, la alteración de la santa ley y la sujeción de los escogidos para ser atribulados?»",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 8:13",
+          "exact_reason": "Introduce pacto, ley y escogidos, elementos no expresados en la cita suministrada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La cita respalda inequívocamente la segunda opción, pero el ítem es una variante superficial del diálogo de Daniel 8:13 ya cubierto por DAN8-V11-WAVE-021, DAN8-V11-WAVE-029 y DAN8-V11-WAVE-039; requiere otro ángulo.",
+      "suggested_rewrite": "Según Daniel 8:13, ¿qué conjunto de realidades queda incluido en la pregunta sobre la duración de la visión?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "81c2e338a6451d0e2bb2538afc00c465c6e1fb9342471bad3d0e361553a900c2"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN8-C17-010",
+      "selected_option_index": 0,
+      "selected_option_text": "«Hasta dos mil trescientas tardes y mañanas; luego el santuario será purificado.»",
+      "exact_supporting_phrase": "Y él dijo: “Hasta dos mil trescientas tardes y mañanas; luego el santuario será purificado.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "«Hasta dos mil trescientas tardes y mañanas; luego el santuario será purificado.»",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:14",
+          "exact_reason": "Reproduce literalmente «Hasta dos mil trescientas tardes y mañanas; luego el santuario será purificado»."
+        },
+        {
+          "text": "«Hasta setenta semanas de años; luego vendrá el fin de todas las visiones.»",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 8:14",
+          "exact_reason": "Las setenta semanas no aparecen en Daniel 8:14 ni en el contexto inmediato suministrado."
+        },
+        {
+          "text": "«Hasta mil doscientos noventa días; luego se levantará Miguel por su pueblo.»",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 8:14",
+          "exact_reason": "Los mil doscientos noventa días no aparecen en Daniel 8:14 ni en el contexto inmediato suministrado."
+        },
+        {
+          "text": "«Hasta siete tiempos cumplidos; luego Nabucodonosor reconocerá al Dios Altísimo.»",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 8:14",
+          "exact_reason": "Los siete tiempos y el reconocimiento de Nabucodonosor no aparecen en Daniel 8:14 ni en el contexto inmediato suministrado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La respuesta combina exactamente el plazo y la purificación expresados en Daniel 8:14; las tres alternativas introducen plazos o desenlaces no presentes en la cita. Es cobertura verificable por enlace textual, no una afirmación competitiva.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "7a6b0738302688b537f9e111fcfd213f55873b5dbe9b4a4a5361594b916b9d4e"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-009",
+      "selected_option_index": 3,
+      "selected_option_text": "Indica que aconteció después de aquella que había tenido antes",
+      "exact_supporting_phrase": "«En el año tercero del reinado del rey Belsasar, yo, Daniel, tuve una visión, después de aquella que había tenido antes.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Declara que aconteció antes de toda visión que tuvo en su vida",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:1",
+          "exact_reason": "Contradice «después de aquella que había tenido antes»: no ocurrió antes de toda visión."
+        },
+        {
+          "text": "Aclara que reemplazó una revelación dada antes a Nabucodonosor",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 8:1",
+          "exact_reason": "La cita no afirma que esta visión reemplazara una revelación dada a Nabucodonosor."
+        },
+        {
+          "text": "Afirma que ocurrió a la par del sueño de la gran imagen dorada",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 8:1",
+          "exact_reason": "La cita no afirma que ocurriera a la par del sueño de la gran imagen dorada."
+        },
+        {
+          "text": "Indica que aconteció después de aquella que había tenido antes",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:1",
+          "exact_reason": "Reproduce «tuve una visión, después de aquella que había tenido antes»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única y está respaldada por la cita, pero repite de forma superficial la relación temporal de DAN8-V11-WAVE-001; debe conservarse el dato con otra operación cognitiva.",
+      "suggested_rewrite": "Según Daniel 8:1, ¿qué dato de secuencia registra Daniel al presentar esta visión?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "93910083a048d113e00b91766fe48c400dcdab04976ba6234ca6a83c4989e034"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-010",
+      "selected_option_index": 0,
+      "selected_option_text": "En el año tercero",
+      "exact_supporting_phrase": "«En el año tercero del reinado del rey Belsasar, yo, Daniel, tuve una visión, después de aquella que había tenido antes.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "En el año tercero",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:1",
+          "exact_reason": "La cita dice «En el año tercero del reinado del rey Belsasar»."
+        },
+        {
+          "text": "En el año segundo",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:1",
+          "exact_reason": "La cita especifica el año tercero, no el segundo."
+        },
+        {
+          "text": "En el año séptimo",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:1",
+          "exact_reason": "La cita especifica el año tercero, no el séptimo."
+        },
+        {
+          "text": "En el año primero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:1",
+          "exact_reason": "La cita especifica el año tercero, no el primero."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero pregunta de nuevo el año de DAN8-V11-WAVE-012 y de las presentaciones Q-DAN8-0001/PV-DAN8-0001; es una variante superficial.",
+      "suggested_rewrite": "Según Daniel 8:1, ¿qué reinado y año identifican conjuntamente esta visión de Daniel?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "a403a3f38f746b89dc526f74049cd9c837b9a6d97e30bfbf5a6f76b3cd855094"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-011",
+      "selected_option_index": 0,
+      "selected_option_text": "Era la insigne capital del reino",
+      "exact_supporting_phrase": "Miraba yo la visión, y en ella yo estaba en Susa, que es la capital del reino, en la provincia de Elam. En la visión, pues, me veía junto al río Ulai.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Era la insigne capital del reino",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 8:2",
+          "exact_reason": "La cita respalda que Susa es la capital, pero no la califica como «insigne»; el adjetivo añadido no está en la evidencia."
+        },
+        {
+          "text": "Era una colonia comercial de Elam",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 8:2",
+          "exact_reason": "La cita identifica Susa como capital del reino, no como templo sagrado."
+        },
+        {
+          "text": "Era una guarnición en la frontera",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 8:2",
+          "exact_reason": "La cita no la describe como guarnición fronteriza."
+        },
+        {
+          "text": "Era el templo sagrado del imperio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 8:2",
+          "exact_reason": "La cita no la describe como colonia comercial; solo indica que está en la provincia de Elam."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La fuente solo dice «Susa, que es la capital del reino»; «insigne» añade un calificativo no verificable. Además, la pregunta repite la función de Susa de DAN8-V11-WAVE-002.",
+      "suggested_rewrite": "Según Daniel 8:2, ¿qué doble identificación política y territorial recibe Susa en la visión?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "d41f2be62802236cbbcdb3254d60f60fc7a5f84a3a679868fc78b1ff07696446"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-012",
+      "selected_option_index": 1,
+      "selected_option_text": "En la provincia de Elam",
+      "exact_supporting_phrase": "Miraba yo la visión, y en ella yo estaba en Susa, que es la capital del reino, en la provincia de Elam. En la visión, pues, me veía junto al río Ulai.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "En la provincia de Judá",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:2",
+          "exact_reason": "La cita especifica la provincia de Elam, no Judá."
+        },
+        {
+          "text": "En la provincia de Elam",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:2",
+          "exact_reason": "Reproduce literalmente «en la provincia de Elam»."
+        },
+        {
+          "text": "En la provincia de Media",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:2",
+          "exact_reason": "La cita especifica la provincia de Elam, no Media."
+        },
+        {
+          "text": "En la provincia de Siria",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:2",
+          "exact_reason": "La cita especifica la provincia de Elam, no Siria."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta reproduce la provincia explícita, pero repite directamente el dato de DAN8-V11-WAVE-003; debe cambiarse la operación cognitiva.",
+      "suggested_rewrite": "Según Daniel 8:2, ¿cómo se relacionan Susa, la provincia de Elam y el río Ulai en la escena?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "18bab171b3cd66bf4d928a4dbcbb5ab94504429ba86a820981ee9e5098040614"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-013",
+      "selected_option_index": 2,
+      "selected_option_text": "El cuerno menor creció al final y derribó con furia al que era más alto de los dos",
+      "exact_supporting_phrase": "Alcé los ojos y miré, y había un carnero que estaba delante del río, y tenía dos cuernos; y aunque los cuernos eran altos, uno era más alto que el otro, y el más alto creció después.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Los dos eran altos, pero uno era más alto que el otro y el más alto creció después",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:3",
+          "exact_reason": "Contradice la cita: los cuernos eran altos, uno era más alto y el más alto creció después."
+        },
+        {
+          "text": "Uno de los cuernos era pequeño y se dividió luego en cuatro hacia los cuatro vientos",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:3",
+          "exact_reason": "Confunde los cuernos del carnero con elementos posteriores de la visión; la cita no presenta un cuerno menor que se dividiera en cuatro."
+        },
+        {
+          "text": "El cuerno menor creció al final y derribó con furia al que era más alto de los dos",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:3",
+          "exact_reason": "Reproduce los tres datos explícitos: ambos altos, uno más alto y ese más alto creció después."
+        },
+        {
+          "text": "Ambos cuernos eran iguales en tamaño y crecieron de manera simultánea en el animal",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:3",
+          "exact_reason": "La cita habla de dos cuernos del carnero, no de un cuerno pequeño que se dividiera en cuatro."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es inequívoca, pero repite la caracterización de DAN8-V11-WAVE-004 y de V14-R2-DAN8-C17-003; no añade una presentación cognitiva distinta.",
+      "suggested_rewrite": "Según Daniel 8:3, ¿qué contraste de altura y orden de crecimiento distingue los dos cuernos del carnero?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "b4fa5f9fe68057dfb6f650d85d9af6bc2d823f2c203dcd7c7f54ce3ab4020cf7"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-014",
+      "selected_option_index": 1,
+      "selected_option_text": "Delante del río",
+      "exact_supporting_phrase": "Alcé los ojos y miré, y había un carnero que estaba delante del río, y tenía dos cuernos; y aunque los cuernos eran altos, uno era más alto que el otro, y el más alto creció después.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Delante del muro",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:3",
+          "exact_reason": "La cita dice que el carnero estaba delante del río, no delante de un muro."
+        },
+        {
+          "text": "Delante del río",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:3",
+          "exact_reason": "Reproduce «había un carnero que estaba delante del río»."
+        },
+        {
+          "text": "Delante del mar",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:3",
+          "exact_reason": "La cita identifica un río, no el mar."
+        },
+        {
+          "text": "Delante del foso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:3",
+          "exact_reason": "La cita identifica un río, no un foso."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta coincide con la evidencia, pero es la misma identificación espacial directa de DAN8-V11-WAVE-013; queda como variante superficial.",
+      "suggested_rewrite": "Según Daniel 8:3, ¿qué relación espacial vincula al carnero con la corriente de agua?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "c9a6381ebbe29023a2ab718b8d3ddd5d80f78a4b34ba5616bb5babd70a42eaab"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-015",
+      "selected_option_index": 3,
+      "selected_option_text": "Hacia el poniente, norte y sur",
+      "exact_supporting_phrase": "Vi que el carnero hería con los cuernos al poniente, al norte y al sur, y que ninguna bestia podía parar delante de él, ni había quien escapara de su poder. Hacía conforme a su voluntad, y se engrandecía.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Hacia el oriente, norte y sur",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "Sustituye poniente por oriente; la cita dice «al poniente, al norte y al sur»."
+        },
+        {
+          "text": "Hacia el oriente, este y norte",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "Las direcciones no coinciden con la enumeración de la cita."
+        },
+        {
+          "text": "Hacia el poniente, este y sur",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "Sustituye norte por este; la cita dice «al poniente, al norte y al sur»."
+        },
+        {
+          "text": "Hacia el poniente, norte y sur",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "Reproduce literalmente «al poniente, al norte y al sur»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La enumeración es correcta, pero repite la pregunta de DAN8-V11-WAVE-005 sobre las mismas tres direcciones; se requiere una variante no superficial.",
+      "suggested_rewrite": "Según Daniel 8:4, ¿qué tres direcciones forman el patrón de expansión del carnero?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "499e8f41504464b5392582b76f3da6dd6660d0b80285b301aa629e46318d6e92"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-016",
+      "selected_option_index": 3,
+      "selected_option_text": "Actuaba conforme a su voluntad y se engrandecía",
+      "exact_supporting_phrase": "Vi que el carnero hería con los cuernos al poniente, al norte y al sur, y que ninguna bestia podía parar delante de él, ni había quien escapara de su poder. Hacía conforme a su voluntad, y se engrandecía.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Buscaba la paz con las bestias y se humillaba",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "Contradice la cita: el carnero hacía conforme a su voluntad y se engrandecía."
+        },
+        {
+          "text": "Perdía gradualmente toda su fuerza y menguaba",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "Contradice la cita: no perdió gradualmente su fuerza."
+        },
+        {
+          "text": "Dividía su extenso reino en dos partes iguales",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "La cita no habla de dividir el reino en dos partes."
+        },
+        {
+          "text": "Actuaba conforme a su voluntad y se engrandecía",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "Reproduce «Hacía conforme a su voluntad, y se engrandecía»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero repite el desenlace de DAN8-V11-WAVE-014 sobre voluntad y engrandecimiento; es una presentación superficial.",
+      "suggested_rewrite": "Según Daniel 8:4, ¿qué dos efectos describen la conducta del carnero al no encontrar oposición?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "65ebf0800a113354cfd0c585ef7dff94fee03ac722afb28bf4c9095287007bdb"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-017",
+      "selected_option_index": 2,
+      "selected_option_text": "Ninguna bestia podía parar delante de él, nadie escapaba de su poder y hacía su voluntad",
+      "exact_supporting_phrase": "Vi que el carnero hería con los cuernos al poniente, al norte y al sur, y que ninguna bestia podía parar delante de él, ni había quien escapara de su poder. Hacía conforme a su voluntad, y se engrandecía.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Hería únicamente hacia el sur, compartía su dominio con el león y menguaba toda su fuerza",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "La cita no limita el ataque al sur ni menciona compartir dominio con un león; además, declara que se engrandecía."
+        },
+        {
+          "text": "Varias bestias detuvieron su avance, muchos escaparon de su poder y fue vencido muy pronto",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "Reproduce la ausencia de resistencia, la imposibilidad de escape y la conducta conforme a su voluntad descritas en la cita."
+        },
+        {
+          "text": "Ninguna bestia podía parar delante de él, nadie escapaba de su poder y hacía su voluntad",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "Contradice la cita: ninguna bestia podía parar delante de él y no fue vencido muy pronto."
+        },
+        {
+          "text": "Solo atacaba hacia el oriente, perdonaba a los pueblos vencidos y se sometía a otros reyes",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:4",
+          "exact_reason": "La cita no limita el ataque al oriente ni describe sometimiento a otros reyes."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La cadena correcta está respaldada por Daniel 8:4, pero es una reformulación directa de DAN8-V11-WAVE-051; la cobertura queda enlazada, no debe contarse como dificultad competitiva.",
+      "suggested_rewrite": "Según Daniel 8:4, ¿cómo se relacionan las direcciones del ataque, la ausencia de resistencia y la conducta autónoma del carnero?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "8dd07928ff7172aea96b892e6670b3be5cca6f89640382d32200e859f355cd14"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-018",
+      "selected_option_index": 1,
+      "selected_option_text": "Del lado del poniente",
+      "exact_supporting_phrase": "Mientras yo consideraba esto, un macho cabrío venía del lado del poniente sobre la faz de toda la tierra, sin tocar tierra; y aquel macho cabrío tenía un cuerno notable entre sus ojos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Desde el lado norteño",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:5",
+          "exact_reason": "La cita dice «del lado del poniente», no del lado norteño."
+        },
+        {
+          "text": "Del lado del poniente",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:5",
+          "exact_reason": "Reproduce «venía del lado del poniente»."
+        },
+        {
+          "text": "Desde el lado del sur",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:5",
+          "exact_reason": "La cita dice poniente, no sur."
+        },
+        {
+          "text": "Desde el lado oriente",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:5",
+          "exact_reason": "La cita dice poniente, no oriente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La procedencia es inequívoca, pero repite literalmente el dato de DAN8-V11-WAVE-006; debe sustituirse por otra operación.",
+      "suggested_rewrite": "Según Daniel 8:5, ¿qué relación entre procedencia y alcance presenta el avance del macho cabrío?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "09fde94a3ad6a2a7d2c49017178c7a90ecb3aeb037848616537fb3634a9c8929"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-019",
+      "selected_option_index": 3,
+      "selected_option_text": "Venía sobre la faz de toda la tierra sin tocar tierra y tenía un cuerno notable",
+      "exact_supporting_phrase": "Mientras yo consideraba esto, un macho cabrío venía del lado del poniente sobre la faz de toda la tierra, sin tocar tierra; y aquel macho cabrío tenía un cuerno notable entre sus ojos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Avanzaba pesadamente por el suelo y poseía diez cuernos sobre su propia cabeza",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:5",
+          "exact_reason": "La cita dice que venía sobre la faz de toda la tierra sin tocar tierra y tenía un cuerno notable; no habla de diez cuernos ni avance pesado."
+        },
+        {
+          "text": "Caminaba despacio junto al río Ulai y carecía de cuernos notables en su frente",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:5",
+          "exact_reason": "La cita no describe avance lento junto al Ulai ni ausencia de cuernos notables."
+        },
+        {
+          "text": "Volaba únicamente sobre Elam y sus dos cuernos se elevaban hacia todo el cielo",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:5",
+          "exact_reason": "La cita no limita el vuelo a Elam ni le atribuye dos cuernos."
+        },
+        {
+          "text": "Venía sobre la faz de toda la tierra sin tocar tierra y tenía un cuerno notable",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:5",
+          "exact_reason": "Conserva los dos rasgos expresos de desplazamiento y anatomía; la ubicación «entre sus ojos» está en la cita completa."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "MEDIUM",
+      "decision": "REWRITE",
+      "specific_reason": "La cita respalda la combinación de alcance, modo de avance y cuerno notable, pero el ítem repite el compuesto de DAN8-V11-WAVE-052; requiere otro ángulo.",
+      "suggested_rewrite": "Según Daniel 8:5, ¿cómo se combinan el alcance del macho cabrío, su modo de desplazamiento y el cuerno notable entre sus ojos?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "30d8f4267a15f9af25c87bdef1b39cf33ec90b97fa99b6f5afaebd8cd90d3cfc"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-020",
+      "selected_option_index": 0,
+      "selected_option_text": "Con la furia de su fuerza",
+      "exact_supporting_phrase": "Vino hasta el carnero de dos cuernos que yo había visto en la ribera del río, y corrió contra él con la furia de su fuerza.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Con la furia de su fuerza",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:6",
+          "exact_reason": "Reproduce «corrió contra él con la furia de su fuerza»."
+        },
+        {
+          "text": "Con sumo temor y lentitud",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:6",
+          "exact_reason": "Contradice la intensidad explícita de la cita: no corrió con temor y lentitud."
+        },
+        {
+          "text": "Con gran cautela y recelo",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:6",
+          "exact_reason": "Contradice la intensidad explícita de la cita: no actuó con cautela y recelo."
+        },
+        {
+          "text": "Sin mostrar fuerza alguna",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:6",
+          "exact_reason": "Contradice la cita, que describe al macho cabrío corriendo con la furia de su fuerza."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta reproduce literalmente la intensidad de DAN8-V11-WAVE-008; es una variante superficial del mismo hecho.",
+      "suggested_rewrite": "Según Daniel 8:6, ¿qué relación entre carrera e intensidad caracteriza el ataque del macho cabrío?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "b36fbafb5be444cbd508ee8b8221c88fc9047a559b0e97f9a7c41d0d8f8d5a96"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-021",
+      "selected_option_index": 1,
+      "selected_option_text": "Estaba situado junto a la ribera del río.",
+      "exact_supporting_phrase": "Vino hasta el carnero de dos cuernos que yo había visto en la ribera del río, y corrió contra él con la furia de su fuerza.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Aparecía oculto entre los muros del templo.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:6",
+          "exact_reason": "La cita ubica al carnero en la ribera del río, no oculto entre muros del templo."
+        },
+        {
+          "text": "Estaba situado junto a la ribera del río.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:6",
+          "exact_reason": "Parafrasea la evidencia: el carnero había sido visto en la ribera del río."
+        },
+        {
+          "text": "Permanecía delante de la puerta del palacio.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:6",
+          "exact_reason": "La cita no lo ubica delante de una puerta de palacio."
+        },
+        {
+          "text": "Se hallaba apostado en medio de la llanura.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:6",
+          "exact_reason": "La cita no lo ubica en medio de una llanura."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La ubicación está respaldada por la cita, pero repite directamente DAN8-V11-WAVE-015; conviene cambiar el enfoque para no duplicar la recuperación.",
+      "suggested_rewrite": "Según Daniel 8:6, ¿qué escena previa del carnero sirve como referencia espacial para el ataque?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "6add074d6d0bee0d43a9a8166b66a3d7d581c3cb93da230440d8f1f2dd9ffc2f"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-022",
+      "selected_option_index": 2,
+      "selected_option_text": "Corrió contra él con la furia de su fuerza.",
+      "exact_supporting_phrase": "Vino hasta el carnero de dos cuernos que yo había visto en la ribera del río, y corrió contra él con la furia de su fuerza.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Voló velozmente lanzando fuego sobre su lomo.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:6",
+          "exact_reason": "La cita no describe cautela ni una trampa; afirma que corrió con la furia de su fuerza."
+        },
+        {
+          "text": "Marchó sin prisa buscando cercar su retirada.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:6",
+          "exact_reason": "La cita no describe una marcha lenta ni un cerco."
+        },
+        {
+          "text": "Corrió contra él con la furia de su fuerza.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:6",
+          "exact_reason": "Reproduce «corrió contra él con la furia de su fuerza»."
+        },
+        {
+          "text": "Avanzó con cautela para tenderle una trampa.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:6",
+          "exact_reason": "La cita no describe vuelo con fuego ni esa anatomía."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta coincide literalmente con Daniel 8:6, pero duplica la formulación de DAN8-V11-WAVE-008 sobre el mismo ímpetu; requiere otra presentación.",
+      "suggested_rewrite": "Según Daniel 8:6, ¿cómo se describe la embestida del macho cabrío contra el carnero?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "882f3e394ae3ae0b8e7a34a0987b4b0ef75355064535fee1f63f06969f06a198"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-023",
+      "selected_option_index": 1,
+      "selected_option_text": "Consiguió arrancar las cuatro alas del lomo.",
+      "exact_supporting_phrase": "Lo vi llegar junto al carnero; se levantó contra él y lo hirió, y le quebró sus dos cuernos; y el carnero no tenía fuerzas para hacerle frente. Lo derribó, por tanto, a tierra, lo pisoteó y no hubo quien librara de su poder al carnero.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Optó por quebrar las patas en la embestida.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "La cita no menciona cuatro alas; identifica los dos cuernos del carnero."
+        },
+        {
+          "text": "Consiguió arrancar las cuatro alas del lomo.",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "El daño central coincide, pero «grandes» no aparece en la cita suministrada; la forma verificable es «sus dos cuernos»."
+        },
+        {
+          "text": "Procedió a quebrar sus dos grandes cuernos.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "La cita no menciona tres costillas."
+        },
+        {
+          "text": "Logró quebrar las tres costillas de la boca.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "La cita no menciona patas; especifica que fueron quebrados los dos cuernos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La cita dice «le quebró sus dos cuernos», pero la opción añade «grandes», calificativo ausente en la evidencia; además, repite el daño de DAN8-V11-WAVE-009.",
+      "suggested_rewrite": "Según Daniel 8:7, ¿qué parte del carnero fue quebrada cuando el macho cabrío lo hirió?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "6a8baf8102b591a710845cf13009d1e5ff32e8194c3cd9979fc06ebaae1f7efe"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-024",
+      "selected_option_index": 3,
+      "selected_option_text": "Mantenía el vigor para emprender la huida.",
+      "exact_supporting_phrase": "Lo vi llegar junto al carnero; se levantó contra él y lo hirió, y le quebró sus dos cuernos; y el carnero no tenía fuerzas para hacerle frente. Lo derribó, por tanto, a tierra, lo pisoteó y no hubo quien librara de su poder al carnero.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Guardaba suficiente poder para defenderse.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "Contradice la cita: el carnero no tenía fuerzas para hacerle frente."
+        },
+        {
+          "text": "Carecía de las fuerzas para hacerle frente.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "Contradice la cita: no conservaba poder suficiente para defenderse."
+        },
+        {
+          "text": "Tenía tropas aliadas para presentar batalla.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "La cita no le atribuye tropas aliadas ni capacidad de batalla."
+        },
+        {
+          "text": "Mantenía el vigor para emprender la huida.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "Reproduce «el carnero no tenía fuerzas para hacerle frente»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La condición física está textual y unívocamente respaldada, pero repite la pregunta de DAN8-V11-WAVE-016 sobre la falta de fuerzas; es superficial.",
+      "suggested_rewrite": "Según Daniel 8:7, ¿qué incapacidad expresa el relato después de que el carnero perdió sus dos cuernos?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "215a85e4cd859389398b76713297422ed99fa455cd441ee92d801d17c1ff3147"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-025",
+      "selected_option_index": 3,
+      "selected_option_text": "Fue derribado a tierra y pisoteado sin que nadie lo librara de su poder.",
+      "exact_supporting_phrase": "Lo vi llegar junto al carnero; se levantó contra él y lo hirió, y le quebró sus dos cuernos; y el carnero no tenía fuerzas para hacerle frente. Lo derribó, por tanto, a tierra, lo pisoteó y no hubo quien librara de su poder al carnero.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Fue expulsado del territorio y despojado sin que otro reino interviniera.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "Reproduce el derribo a tierra, el pisoteo y la ausencia de quien lo librara."
+        },
+        {
+          "text": "Fue empujado hacia el río y arrastrado sin que sus tropas lo socorrieran.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "La cita no habla de expulsión territorial ni de otro reino interventor."
+        },
+        {
+          "text": "Fue encerrado en una fortaleza y humillado sin que lograra pedir auxilio.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "La cita no dice que fuera empujado al río ni menciona tropas socorriéndolo."
+        },
+        {
+          "text": "Fue derribado a tierra y pisoteado sin que nadie lo librara de su poder.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:7",
+          "exact_reason": "La cita no habla de una fortaleza; el carnero fue derribado y pisoteado sin que nadie lo librara."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "El desenlace y la ausencia de rescate son correctos, pero repiten el compuesto de DAN8-V11-WAVE-053; se necesita otra presentación del conocimiento.",
+      "suggested_rewrite": "Según Daniel 8:7, ¿qué acciones y ausencia de auxilio sellaron la derrota del carnero?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "f1dcbdd61b0df0a035f1136314157ff093851f3ca557ea08c921517de9e4e8dc"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R3-DAN8-W2-026",
+      "selected_option_index": 2,
+      "selected_option_text": "Aconteció justo cuando estaba en su mayor fuerza.",
+      "exact_supporting_phrase": "El macho cabrío creció en gran manera; pero cuando estaba en su mayor fuerza, aquel gran cuerno fue quebrado, y en su lugar salieron otros cuatro cuernos notables hacia los cuatro vientos del cielo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Ocurrió al momento de iniciar su primera campaña.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:8",
+          "exact_reason": "La cita no sitúa el quebramiento al iniciar una campaña; lo ubica cuando estaba en su mayor fuerza."
+        },
+        {
+          "text": "Sucedió tras haber agotado todo su poder militar.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:8",
+          "exact_reason": "La cita no dice que hubiera agotado su poder militar; afirma lo contrario."
+        },
+        {
+          "text": "Aconteció justo cuando estaba en su mayor fuerza.",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 8:8",
+          "exact_reason": "Reproduce «cuando estaba en su mayor fuerza»."
+        },
+        {
+          "text": "Sobrevino luego de ser herido por una gran fiera.",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 8:8",
+          "exact_reason": "La cita no menciona que fuera herido por una fiera antes del quebramiento."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La condición temporal es inequívoca, pero repite literalmente el momento de DAN8-V11-WAVE-010; debe cambiarse la operación cognitiva.",
+      "suggested_rewrite": "Según Daniel 8:8, ¿qué condición de vigor precedió al quebramiento del gran cuerno?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:41:20.474Z",
+      "input_content_sha256": "f839ab547bf781bbc953735dcdc6e5b7ba619d38a4ef5e0979e274ec9ea264a1",
+      "output_sha256": "6f529e1be54106d4f96d33a351598f89a5ac8372130b0621fb3688fb2189d5fc"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 1,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 19,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

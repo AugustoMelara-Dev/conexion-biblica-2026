@@ -1,0 +1,1012 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-023",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-023.json",
+  "input_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/safe_blind_004",
+    "conversation_id": "/root/safe_blind_004",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-017",
+      "selected_option_index": 2,
+      "selected_option_text": "amado",
+      "exact_supporting_phrase": "porque tú eres muy amado.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "poderoso",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "La evidencia no describe a Daniel como poderoso en este pasaje."
+        },
+        {
+          "text": "temido",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "La evidencia no describe a Daniel como temido."
+        },
+        {
+          "text": "amado",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "Reproduce literalmente “tú eres muy amado”."
+        },
+        {
+          "text": "anciano",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "La evidencia no describe aquí la edad de Daniel."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La evidencia dice literalmente que Daniel es muy amado; solo la opción C completa el enunciado.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "8cab09e148f8907bcf4c0e31fbdc2da5f2d9eb9545e716ad6f6fd59e952505b1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-018",
+      "selected_option_index": 2,
+      "selected_option_text": "perdurable",
+      "exact_supporting_phrase": "para traer la justicia perdurable",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "caldea",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "“Justicia caldea” no figura entre los propósitos citados."
+        },
+        {
+          "text": "secreta",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "“Justicia secreta” no figura en la evidencia."
+        },
+        {
+          "text": "perdurable",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "Es la expresión exacta de la cita."
+        },
+        {
+          "text": "temporal",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "La cita habla de justicia perdurable, no temporal."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita enumera entre los propósitos traer la justicia perdurable; las demás alternativas no aparecen.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "dcabdf9e8da70a4b6e9992633271a29ae88db8056f30776dac02f6d935e0832a"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-019",
+      "selected_option_index": 0,
+      "selected_option_text": "pecaron",
+      "exact_supporting_phrase": "porque contra ti pecamos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "pecaron",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:8",
+          "exact_reason": "Reproduce la causa expresada en la cita."
+        },
+        {
+          "text": "clamaron",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:8",
+          "exact_reason": "La evidencia no dice que clamaron contra Dios en este enunciado."
+        },
+        {
+          "text": "dudaron",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:8",
+          "exact_reason": "La evidencia usa “pecamos”, no “dudaron”."
+        },
+        {
+          "text": "viajaron",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:8",
+          "exact_reason": "Viajar no es la causa mencionada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita atribuye la confusión de rostro a que el pueblo pecó contra Dios; solo la opción A encaja.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "768c220222e0d16390f1ec064cf1b5e46f126c9f4877ee4b38dac7df9d347cf4"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-020",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Todo Israel traspasó tu Ley, apartándose para no obedecer a tu voz.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:11",
+          "exact_reason": "La cita sustenta directamente la afirmación."
+        },
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:11",
+          "exact_reason": "La evidencia la contradice de forma explícita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La afirmación coincide con la cita, que dice que todo Israel traspasó la Ley y no obedeció la voz de Dios.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "1049f6d15874e1d92928cde80a5fcb044fa8d3ac4ca76e7138e33c4f2e093bdd"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-021",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Jerusalén.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:12",
+          "exact_reason": "La evidencia niega que ya hubiera ocurrido algo semejante."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:12",
+          "exact_reason": "Es la valoración correcta ante la negación explícita de la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita afirma que nunca había ocurrido bajo el cielo un mal semejante al de Jerusalén, por lo que la proposición es falsa.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "6102ab37b22a91d412acc1c36052e752fef10fd5f64522efb1c5ce64feea6918"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-022",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "no nos hemos convertido de nuestras maldades ni entendido tu verdad.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:13",
+          "exact_reason": "La cita sustenta directamente la respuesta Falso."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:13",
+          "exact_reason": "La evidencia afirma lo contrario: no se habían convertido."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La evidencia dice que no se habían convertido de sus maldades; por eso la afirmación positiva es falsa.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "684fb47c34afb896b27a6b74e4bdf9e7fcbe49f234807be2dac6d676e2eec7fa"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-023",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "porque justo es Jehová, nuestro Dios, en todas sus obras que ha hecho",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:14",
+          "exact_reason": "La evidencia sustenta la respuesta Falso."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:14",
+          "exact_reason": "La cita declara explícitamente que Jehová es justo."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita llama justo a Jehová y atribuye el mal a la desobediencia del pueblo, no a una injusticia divina.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "59e8ec8a1a332219c17131e3e5e5e78a24f554cebd4f61b018350c5e422418d4"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-024",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "sacaste a tu pueblo de la tierra de Egipto con mano poderosa",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:15",
+          "exact_reason": "La evidencia afirma ese hecho, así que la opción Falso no corresponde."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:15",
+          "exact_reason": "Reproduce el hecho afirmado en la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita recuerda que Dios sacó a su pueblo de Egipto con mano poderosa; la afirmación es verdadera.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "a5252f240acc0413807ec403f025cf7e9b74cab01113e7586753c22ccd454e46"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-025",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "a causa de nuestros pecados y por la maldad de nuestros padres, Jerusalén y tu pueblo son el oprobio",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:16",
+          "exact_reason": "La cita sí atribuye el oprobio a esos pecados, por lo que Falso no es correcto."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:16",
+          "exact_reason": "Es la paráfrasis directa de la evidencia."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La evidencia vincula el oprobio de Jerusalén y del pueblo con sus pecados y la maldad de sus padres.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "2f692574d21a391ea19ccd612e1f6d21e8a3e568cb551e693fb63b4fe344fa3d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-026",
+      "selected_option_index": 1,
+      "selected_option_text": "Por amor del Señor",
+      "exact_supporting_phrase": "haz que tu rostro resplandezca sobre tu santuario asolado, por amor del Señor.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Por poder de Jerusalén",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:17",
+          "exact_reason": "La evidencia no apela al poder de Jerusalén."
+        },
+        {
+          "text": "Por amor del Señor",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:17",
+          "exact_reason": "Es la razón expresada literalmente."
+        },
+        {
+          "text": "Por mérito de Daniel",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:17",
+          "exact_reason": "La cita no funda la petición en el mérito de Daniel."
+        },
+        {
+          "text": "Por autoridad de Darío",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:17",
+          "exact_reason": "Darío no aparece como autoridad de esta petición."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La petición pide que el rostro resplandezca sobre el santuario por amor del Señor; solo la opción B conserva esa razón.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "b1d3851b61488a0b006ec7e287e35ef48c384deda5858c97b0d92e3288e843c4"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-027",
+      "selected_option_index": 3,
+      "selected_option_text": "Inclinar el oído y abrir los ojos",
+      "exact_supporting_phrase": "Inclina, Dios mío, tu oído, y oye; abre tus ojos y mira nuestras desolaciones",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Extender la mano y levantarse",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:18",
+          "exact_reason": "No se pide extender la mano ni levantarse."
+        },
+        {
+          "text": "Volver el rostro y alejarse",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:18",
+          "exact_reason": "La evidencia pide acercamiento atento, no volver el rostro y alejarse."
+        },
+        {
+          "text": "Cerrar los ojos y guardar silencio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:18",
+          "exact_reason": "La cita pide abrir los ojos, no cerrarlos ni guardar silencio."
+        },
+        {
+          "text": "Inclinar el oído y abrir los ojos",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:18",
+          "exact_reason": "Reúne las dos acciones corporales de la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita pide inclinar el oído y abrir los ojos para oír y mirar las desolaciones; solo la opción D reúne ambas acciones.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "d450bc79a027392187ec9a9b76f17e8a35d9ddd2f86765442b34eded38ac58f5"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-028",
+      "selected_option_index": 3,
+      "selected_option_text": "El nombre de Dios era invocado sobre su ciudad y su pueblo",
+      "exact_supporting_phrase": "porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "El pueblo había cumplido toda la Ley",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "La evidencia no dice que el pueblo hubiera cumplido toda la Ley."
+        },
+        {
+          "text": "Darío había autorizado la restauración",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "No atribuye la petición a una autorización de Darío."
+        },
+        {
+          "text": "Jerusalén ya no estaba desolada",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "La cita todavía habla de desolación."
+        },
+        {
+          "text": "El nombre de Dios era invocado sobre su ciudad y su pueblo",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "Reproduce la razón explícita de no tardar."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La razón repetida es que el nombre de Dios es invocado sobre su ciudad y su pueblo; la opción D lo expresa.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "b663d01eb712c97c18bacffaeb3af8b3d5848f1fdfce5abd8b2590da9f25be24"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-029",
+      "selected_option_index": 3,
+      "selected_option_text": "El suyo y el de su pueblo Israel",
+      "exact_supporting_phrase": "confesando mi pecado y el pecado de mi pueblo Israel",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Únicamente el de sus padres",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "La confesión no se limita al pecado de los padres."
+        },
+        {
+          "text": "Solo el de los reyes caldeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "No se refiere solo a los reyes caldeos."
+        },
+        {
+          "text": "El de Gabriel y el de Jeremías",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "Gabriel y Jeremías no son los dos pecados confesados."
+        },
+        {
+          "text": "El suyo y el de su pueblo Israel",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "Reproduce los dos sujetos de la confesión."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "Daniel confiesa su propio pecado y el pecado de su pueblo Israel; la opción D contiene ambos.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "c178e42649974ea0ecbd1fa345b37036b6b1988ffe9ab6ea1c0c6b914bcc9686"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-030",
+      "selected_option_index": 0,
+      "selected_option_text": "Ya lo había visto en una visión anterior",
+      "exact_supporting_phrase": "a quien había visto en la visión, al principio",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Ya lo había visto en una visión anterior",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "Reproduce el antecedente indicado en la cita."
+        },
+        {
+          "text": "Jeremías se lo había descrito",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "Jeremías no es la fuente de este reconocimiento."
+        },
+        {
+          "text": "Había servido con él en el palacio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "La evidencia no dice que Daniel hubiera servido con Gabriel."
+        },
+        {
+          "text": "Darío lo había enviado",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "Darío no envió a Gabriel en el pasaje citado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita identifica a Gabriel como alguien a quien Daniel ya había visto en la visión; la opción A es la única compatible.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "e3924e86e2d2a9b8c7b571b7991fcb741bbb679a51a7a95d8871d512e12c7fe6"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-031",
+      "selected_option_index": 0,
+      "selected_option_text": "Darle sabiduría y entendimiento",
+      "exact_supporting_phrase": "ahora he salido para darte sabiduría y entendimiento.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Darle sabiduría y entendimiento",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:22",
+          "exact_reason": "Es el propósito declarado por Gabriel."
+        },
+        {
+          "text": "Ordenarle abandonar la oración",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:22",
+          "exact_reason": "La evidencia no ordena abandonar la oración."
+        },
+        {
+          "text": "Pedirle que ocultara los libros",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:22",
+          "exact_reason": "No se menciona ocultar los libros."
+        },
+        {
+          "text": "Entregarle el reino de los caldeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:22",
+          "exact_reason": "La cita no habla de entregar un reino."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "Gabriel declara que había salido para dar a Daniel sabiduría y entendimiento; la opción A es literal.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "97abd4dc6baf6047dea4cbc5935d757f9fa0b5395a2afe8d128e9ce0b11e9a99"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-032",
+      "selected_option_index": 3,
+      "selected_option_text": "Entender la orden y la visión",
+      "exact_supporting_phrase": "Entiende, pues, la orden, y entiende la visión.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Convocar a los sabios de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "No se le ordena convocar a los sabios."
+        },
+        {
+          "text": "Cerrar los libros de Jeremías",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "No se le pide cerrar los libros de Jeremías."
+        },
+        {
+          "text": "Olvidar sus ruegos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "La cita no manda olvidar sus ruegos."
+        },
+        {
+          "text": "Entender la orden y la visión",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "Es la instrucción explícita de la evidencia."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "Después de recibir la orden, Daniel debía entender la orden y la visión, exactamente como dice la opción D.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "e172da5791f317a83d661e3d30750b36125e42f642796a0fd2d29319f276be87"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-033",
+      "selected_option_index": 3,
+      "selected_option_text": "Terminar la prevaricación, poner fin al pecado y expiar la iniquidad",
+      "exact_supporting_phrase": "para terminar la prevaricación, poner fin al pecado y expiar la iniquidad",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Fortalecer Babilonia, coronar a Darío y cerrar el santuario",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "No son propósitos enumerados en la cita."
+        },
+        {
+          "text": "Restaurar el carnero, levantar cuatro cuernos y purificar el río",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "La evidencia no reúne esos símbolos ni acciones."
+        },
+        {
+          "text": "Prolongar la desolación, ocultar la visión y dividir Israel",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "La cita no presenta prolongar la desolación ni dividir Israel como propósitos."
+        },
+        {
+          "text": "Terminar la prevaricación, poner fin al pecado y expiar la iniquidad",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "Reproduce tres propósitos consecutivos de la evidencia."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La evidencia enumera terminar la prevaricación, poner fin al pecado y expiar la iniquidad; la opción D reúne esos tres propósitos.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "abc946b7e66d92d5486e2bbaf4134db1d001c8be44ea3dbfbac5b8a6e5681e2b"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-034",
+      "selected_option_index": 2,
+      "selected_option_text": "La plaza y el muro",
+      "exact_supporting_phrase": "se volverán a edificar la plaza y el muro en tiempos angustiosos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "El río y sus riberas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "El río y sus riberas no son las estructuras indicadas."
+        },
+        {
+          "text": "El palacio y el trono",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La cita no menciona palacio ni trono."
+        },
+        {
+          "text": "La plaza y el muro",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "Es la pareja urbana expresada literalmente."
+        },
+        {
+          "text": "El altar de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "El altar de Babilonia no aparece como obra de reconstrucción."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La profecía dice que se volverían a edificar la plaza y el muro en tiempos angustiosos; la opción C es exacta.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "82e801a77a3eb55e4b6511a2c69172bb2fdaf57bff80731a7fe0c704bcecccb6"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-035",
+      "selected_option_index": 3,
+      "selected_option_text": "El pueblo de un príncipe destruiría la ciudad y el santuario",
+      "exact_supporting_phrase": "Después de las sesenta y dos semanas se quitará la vida al Mesías, y nada ya le quedará. El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Jerusalén sería declarada inexpugnable",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "La evidencia no declara inexpugnable a Jerusalén."
+        },
+        {
+          "text": "Los medos devolverían el reino a Belsasar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No menciona una devolución del reino a Belsasar."
+        },
+        {
+          "text": "El sacrificio comenzaría de nuevo para siempre",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No anuncia que el sacrificio comenzaría de nuevo para siempre."
+        },
+        {
+          "text": "El pueblo de un príncipe destruiría la ciudad y el santuario",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "Reproduce la consecuencia posterior a la muerte del Mesías."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "Después de quitar la vida al Mesías, la cita anuncia que el pueblo de un príncipe destruiría la ciudad y el santuario; la opción D coincide.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "44ae24ae2ed5aa86112beba54ba6f3c5267a918328690e9dae2415fbfe1542c9"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN9-V11-WAVE-036",
+      "selected_option_index": 2,
+      "selected_option_text": "Una semana",
+      "exact_supporting_phrase": "Por otra semana más confirmará el pacto con muchos",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Setenta semanas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "Setenta semanas es el marco más amplio, no la duración de esta confirmación."
+        },
+        {
+          "text": "Dos mil trescientas tardes",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "Las dos mil trescientas tardes no aparecen en esta cita."
+        },
+        {
+          "text": "Una semana",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "Es la duración expresada literalmente."
+        },
+        {
+          "text": "Media semana",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "La mitad de la semana marca el cese del sacrificio, no la duración total del pacto."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita declara que por otra semana confirmaría el pacto con muchos; la opción C es la única duración correcta.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:32:41.307Z",
+      "input_content_sha256": "7b5c8e27d8953d116ed4f76810013a4f544485688381944334524f99b31edb65",
+      "output_sha256": "feb60e78eaa26f4c4a72909f16b84a2ca771e3e315247612d88e6fd7ebb40de2"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 20,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 0,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}
