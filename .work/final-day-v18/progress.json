@@ -1,6 +1,6 @@
 {
   "schema_version": "final-day-v18-progress-1.0",
-  "current_phase": "first_verified_increment_pre_deploy",
+  "current_phase": "first_verified_increment_deployed_pending_remote_verification",
   "source": {
     "path": "C:\\Users\\melar\\OneDrive\\Desktop\\MaterialConexionBiblica (1).pdf",
     "sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
@@ -56,8 +56,16 @@
     "reserved_percent_minimum": 35,
     "measured_live": true
   },
-  "commits": [],
-  "deployments": [],
+  "commits": ["79f229d"],
+  "deployments": [
+    {
+      "id": "dpl_5W14o9G1vS6ZyfYHKnZi8tkoQWjB",
+      "url": "https://conexion-biblica-2026-okj59ub7j.vercel.app",
+      "alias": "https://conexion-biblica-2026.vercel.app",
+      "state": "READY",
+      "target": "production"
+    }
+  ],
   "baseline": {
     "npm_install": "pass: 358 packages, 0 vulnerabilities",
     "vitest": "pass: 66 files, 466 tests",
@@ -100,5 +108,5 @@
     "average_seconds": 3.72,
     "priority_errors": ["Daniel 9:26", "Daniel 12:1"]
   },
-  "next_exact_action": "Commit, push, deploy the independently approved 45-question package, and perform remote audit."
+  "next_exact_action": "Run production audit and deployed desktop/mobile verification against the V18 package."
 }
