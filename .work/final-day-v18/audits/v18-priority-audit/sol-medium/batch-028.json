@@ -1,0 +1,1092 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-028",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-028.json",
+  "input_sha256": "eec9e223fa4a8acafb29e8af3ac48bb800d316c34c6fbefaca854b9ed861e4f1",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/safe_blind_003",
+    "conversation_id": "/root/safe_blind_003",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "question_id": "R2-B5-DAN9-020",
+      "selected_option_index": 1,
+      "selected_option_text": "Hablaba y oraba → pecado propio y de Israel → derramaba ruego ante Jehová → por el monte santo",
+      "exact_supporting_phrase": "Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios;",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Dormía y veía → pecado de caldeos y medos → derramaba vino ante Ciro → por el río"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Hablaba y oraba → pecado propio y de Israel → derramaba ruego ante Jehová → por el monte santo"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Leía y enseñaba → culpa de profetas y sabios → ofrecía sacrificio a Darío → por el palacio"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Callaba y ayunaba → pecado de reyes y persas → dictaba sentencia a Gabriel → por Babilonia"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:20.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "8d00ae6bc17dfe9ae48d0c5bcefcea6e2a96cfc8bca9f6c5407c5cd7f8962550",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "9a85e1c6773d5a12e60a09728d13c9847bde8881855368aa82a3aeea88637100"
+    },
+    {
+      "question_id": "R2-B5-DAN9-021",
+      "selected_option_index": 3,
+      "selected_option_text": "Daniel ya lo había visto al principio → aún oraba → Gabriel vino con presteza → hora del sacrificio de la tarde",
+      "exact_supporting_phrase": "aún estaba hablando en oración, cuando el varón Gabriel, a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Daniel lo conoció en ese instante → ya había terminado de orar → Gabriel llegó lentamente → sacrificio de la mañana"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Jeremías lo anunció → Daniel leía → Gabriel llegó con los sabios → hora del banquete"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Darío lo había visto antes → Daniel dormía → Gabriel caminó desde el palacio → medianoche"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Daniel ya lo había visto al principio → aún oraba → Gabriel vino con presteza → hora del sacrificio de la tarde"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:21.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "c889c9ae18a375af05b8be5e4d66e0348e90281bb533577bcfe91a1b12cd4d71",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "421774c2c2f44a9852d934319f43577a92d0197fe141717bdfcb74180f9fe217"
+    },
+    {
+      "question_id": "R2-B8-DAN9-014",
+      "selected_option_index": 0,
+      "selected_option_text": "Jehová vigiló y trajo el mal → es justo en todas sus obras → nosotros no obedecimos su voz",
+      "exact_supporting_phrase": "Por tanto, Jehová veló sobre el mal y lo trajo sobre nosotros; porque justo es Jehová, nuestro Dios, en todas sus obras que ha hecho, y nosotros no obedecimos a su voz.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:14",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Jehová vigiló y trajo el mal → es justo en todas sus obras → nosotros no obedecimos su voz"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:14",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Israel vigiló y trajo el mal → el pueblo es justo → Jehová no habló"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:14",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Darío decretó y evitó el mal → los reyes son justos → Daniel desobedeció"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:14",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Jehová ignoró y retiró el mal → es injusto en sus obras → nosotros obedecimos plenamente"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:14.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "89c13a03f95cb8539b0d3b15bd80a071aa66880b1e192e653404b6d4270ba0a6",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "ec72ef78e2abe6a1f5a91b512b8380b58ea065cc41ca9b3d35b12746c3b82f43"
+    },
+    {
+      "question_id": "R2-F-DAN9-0028",
+      "selected_option_index": 0,
+      "selected_option_text": "Medo—reino caldeo",
+      "exact_supporting_phrase": "«En el primer año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:1",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Medo—reino caldeo"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:1",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Judío—reino persa"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:1",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Persa—reino judío"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:1",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Caldeo—reino medo"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:1.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "4b32c0ee8bff155be4c455f4c367b787964b06ac314fc1534366ca69e5d3379b",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "0e816311db35e37dd7fbb5d09ec5f179015c4bb9bfa2bfdf7494bd964063572f"
+    },
+    {
+      "question_id": "R2-F-DAN9-0035",
+      "selected_option_index": 0,
+      "selected_option_text": "Judá, Jerusalén y todo Israel, cerca y lejos, por su rebelión",
+      "exact_supporting_phrase": "Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:7",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Judá, Jerusalén y todo Israel, cerca y lejos, por su rebelión"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:7",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Únicamente los reyes exiliados, lejos, por falta de ejército"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:7",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Todo pueblo extranjero, cerca, por desconocer la ley"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:7",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Sólo Jerusalén, dentro de sus muros, por la derrota militar"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:7.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "d709085a2b2e92a03fcc57cfdac4f7a304c04d2d62fca1109ae1f68434b96cc3",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "d90bdda35ae5377f30dd7124e2144c838905a32e68e84719f7cbe2feece20d62"
+    },
+    {
+      "question_id": "R2-F-DAN9-0037",
+      "selected_option_index": 0,
+      "selected_option_text": "Dios—profetas—pueblo—andar en las leyes",
+      "exact_supporting_phrase": "y no obedecimos a la voz de Jehová, nuestro Dios, para andar en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:10",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Dios—profetas—pueblo—andar en las leyes"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:10",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Darío—sabios—Israel—guardar silencio"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:10",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Moisés—reyes—profetas—reemplazar las leyes"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:10",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Pueblo—príncipes—Dios—negociar las leyes"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:10.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "663387e40f6c3cd610b50b9fb7e391e8a3ae61c79c77df3f725daf12bc1114dc",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "6f1c626af78e890a651580c6866d015b747c5411d65d79aaa54f7866f1cc35cb"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C11-001",
+      "selected_option_index": 1,
+      "selected_option_text": "Daniel → libros → palabra de Jehová por Jeremías → desolaciones de Jerusalén → setenta años",
+      "exact_supporting_phrase": "en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén: setenta años.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Asuero → visiones → palabra de los magos por Darío → ruina de Egipto → doce meses"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Daniel → libros → palabra de Jehová por Jeremías → desolaciones de Jerusalén → setenta años"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Darío → sueños → palabra de Gabriel por Moisés → prosperidad de Babilonia → siete años"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Jeremías → decretos → palabra de Daniel por Ciro → cautiverio de Media → setenta semanas"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:2.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "01eacc41460db48699af50f43e3b8632f09e2803c9fd57404a3a0f7a10d74943",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "c41f6b66f36e58a40fa65966eebf5266a668c8eb3e1e653679417afc65d6d77c"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C11-002",
+      "selected_option_index": 2,
+      "selected_option_text": "Volvió el rostro a Dios, el Señor → lo buscó con oración y ruego → añadió ayuno, ropas ásperas y ceniza",
+      "exact_supporting_phrase": "Volví mi rostro a Dios, el Señor, buscándolo en oración y ruego, en ayuno, ropas ásperas y ceniza.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:3",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Volvió el rostro a Jeremías → lo buscó con sueños y enigmas → añadió aceite, corona y espada"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:3",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Volvió el rostro a Darío → lo buscó con decretos y tributos → añadió música, banquete y púrpura"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:3",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Volvió el rostro a Dios, el Señor → lo buscó con oración y ruego → añadió ayuno, ropas ásperas y ceniza"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:3",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Volvió el rostro a Jerusalén → la buscó con ejércitos y cartas → añadió oro, incienso y lino"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:3.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "dbe75da859497e11a28a0007af97c7311441ab04d65bf448c8cda673e2b5769a",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "86d922a88b17f22a2b845700857b51d4abed348cd43eb22554d4934d72a0f60d"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C11-003",
+      "selected_option_index": 2,
+      "selected_option_text": "Pecar y cometer iniquidad → actuar impíamente y ser rebeldes → apartarse de mandamientos y ordenanzas",
+      "exact_supporting_phrase": "hemos pecado, hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:5",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Ayunar y usar ceniza → interpretar sueños y ser profetas → apartarse de reyes y príncipes"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:5",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Edificar y gobernar → actuar poderosamente y ser jueces → apartarse de Babilonia y Media"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:5",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Pecar y cometer iniquidad → actuar impíamente y ser rebeldes → apartarse de mandamientos y ordenanzas"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:5",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Obedecer y hacer justicia → actuar sabiamente y ser fieles → acercarse a riquezas y palacios"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:5.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "484b086d24382fe2e2b7a0eb6a9a343b02f871cf36d2fd8625f41bf465cbdec8",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "a9b188494751d18adbb9222a40f3579914bdb29c572f34b9826e14e84f0788ae"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C11-004",
+      "selected_option_index": 1,
+      "selected_option_text": "siervos profetas → hablaron en nombre de Dios → a reyes, príncipes, padres y todo el pueblo de la tierra",
+      "exact_supporting_phrase": "No hemos obedecido a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:6",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "siervos vigilantes → hablaron en nombre del rey → a bestias, aves, árboles y todo el cielo"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:6",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "siervos profetas → hablaron en nombre de Dios → a reyes, príncipes, padres y todo el pueblo de la tierra"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:6",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "siervos magos → hablaron en nombre de Darío → a soldados, mercaderes, jueces y sólo Babilonia"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:6",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "siervos consejeros → hablaron en nombre de Jeremías → a sacerdotes, caldeos, medos y sólo Jerusalén"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:6.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "6c81d8ee3dc589b731ae31451b45d0b0fb776b647eff0d93177e27b7145236f2",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "5aaf832adb050cebdb5fecc0f4f7e821652c5984d49ebe306037a3b7bcfde1bd"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C11-005",
+      "selected_option_index": 0,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:7",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Verdadero"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:7",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Falso"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:7.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "4bea48ca4e371ac3fd6cad74f095ad04033055863df0c6dc7f2576f11e8a3edf",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "0ac52c098d4c36069e394c4221e2fb8aca83627856d36e680d2bbad28bab3177"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C11-006",
+      "selected_option_index": 1,
+      "selected_option_text": "Obedecer la voz de Jehová → andar en sus leyes → puestas por Dios delante del pueblo → por medio de sus siervos los profetas",
+      "exact_supporting_phrase": "y no obedecimos a la voz de Jehová, nuestro Dios, para andar en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:10",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Obedecer la voz de Jeremías → andar en caminos babilónicos → puestos por Daniel ante los caldeos → por medio de los príncipes"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:10",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Obedecer la voz de Jehová → andar en sus leyes → puestas por Dios delante del pueblo → por medio de sus siervos los profetas"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:10",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Obedecer la voz de Darío → andar en sus decretos → puestos por los magos delante del rey → por medio de los soldados"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:10",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Obedecer la voz del pueblo → andar en sus costumbres → puestas por los padres ante Dios → por medio de los vigilantes"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:10.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "c5bb82f4b55537549f669271ef42e00e5af8ede762e38f502ebaeaeb0da28248",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "42a0e0d3f21c14f2109f9a384d2b2355cd17f9f2f3a844909afd352d637bc9ff"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C13-001",
+      "selected_option_index": 3,
+      "selected_option_text": "Dios nuestro → oye oración y ruegos del siervo → haz resplandecer tu rostro → sobre el santuario asolado → por amor del Señor",
+      "exact_supporting_phrase": "Ahora pues, Dios nuestro, oye la oración y los ruegos de tu siervo, y haz que tu rostro resplandezca sobre tu santuario asolado, por amor del Señor.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:17",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Dios de Persia → oye alabanzas de los magos → levanta el ejército → sobre el río → por amor del rey"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:17",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "rey nuestro → oye decretos y quejas de príncipes → haz resplandecer el palacio → sobre Babilonia → por amor de Darío"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:17",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Gabriel → oye sueños y enigmas de Daniel → oculta tu rostro → sobre Jerusalén restaurada → por amor de Jeremías"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:17",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Dios nuestro → oye oración y ruegos del siervo → haz resplandecer tu rostro → sobre el santuario asolado → por amor del Señor"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:17.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "1cc776bf2f0a8a05b11b6bed7717c0bc1ba41e0cd5fddc00713d5b4994c93086",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "5b3f2092fc3c31045927b6c84ee72de7fba179b46d1658fcdd115c4c00eb83b1"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C13-002",
+      "selected_option_index": 3,
+      "selected_option_text": "Inclina el oído y oye; abre los ojos y mira → desolaciones y ciudad de su nombre → no nuestras justicias, sino tus muchas misericordias",
+      "exact_supporting_phrase": "Inclina, Dios mío, tu oído, y oye; abre tus ojos y mira nuestras desolaciones y la ciudad sobre la cual es invocado tu nombre; porque no elevamos nuestros ruegos ante ti confiados en nuestras justicias, sino en tus muchas misericordias.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:18",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Cierra el oído y calla; aparta los ojos → prosperidad de Babilonia → no misericordias, sino nuestra fuerza"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:18",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Inclina el rostro y duerme; abre la boca → ejércitos de Persia → no oración, sino decretos reales"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:18",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Levanta las manos y responde; cierra los ojos → santuario restaurado → no justicia divina, sino méritos de Daniel"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:18",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Inclina el oído y oye; abre los ojos y mira → desolaciones y ciudad de su nombre → no nuestras justicias, sino tus muchas misericordias"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:18.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "e4e5755774ba456b291ee8ae34d5d7fad630645694ff56d3c138de0bcefa87c1",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "ea24b5998555c1cbc2fa399d274403216eb3310ad63998cc7feddf73a5929ac8"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C13-003",
+      "selected_option_index": 0,
+      "selected_option_text": "Daniel aún hablaba en oración → Gabriel, visto al principio en la visión → vino volando con presteza → hora del sacrificio de la tarde",
+      "exact_supporting_phrase": "aún estaba hablando en oración, cuando el varón Gabriel, a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Daniel aún hablaba en oración → Gabriel, visto al principio en la visión → vino volando con presteza → hora del sacrificio de la tarde"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Daniel dormía → Ciro, visto en Babilonia → vino con ejército → al cabo de setenta años"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Darío hablaba con príncipes → Jeremías, leído en los libros → llegó en sueños → medianoche"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Daniel ya había terminado → Miguel, visto en el río → vino caminando lentamente → hora del sacrificio de la mañana"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:21.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "26afcb6772880db75c93762d2e6f813b85290d566a1bda135dd1cbac7306d07e",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "91e575b443128d5ba9e1d02bf4e3efb3c6ca7306b9473b75aab3a70b77e2af35"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C15-001",
+      "selected_option_index": 2,
+      "selected_option_text": "Primer año del reinado; miró atentamente en los libros; palabra de Jehová por Jeremías; desolaciones de Jerusalén; setenta años",
+      "exact_supporting_phrase": "en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén: setenta años.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Primer mes; preguntó a magos; decreto de Darío; cautiverio de Persia; setenta semanas"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Tercer año; consultó sueños; palabra de Ciro por Gabriel; reconstrucción de Babilonia; siete años"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Primer año del reinado; miró atentamente en los libros; palabra de Jehová por Jeremías; desolaciones de Jerusalén; setenta años"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Último año; observó el río; palabra de Miguel; destrucción de Grecia; tres tiempos"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:2.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "52a32073afc24b4d89169459b9de7866ab5a61c8f88d93a0d3b4d23ec10be9a3",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "45f017d90cc84a6fbad30f09eec2e02b92f162cf63f9a5ce22525c71fa995b5f"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C15-002",
+      "selected_option_index": 1,
+      "selected_option_text": "Justicia pertenece al Señor; confusión a Judá, Jerusalén e Israel, cercanos y lejanos en dispersión; causa: rebelión contra Dios",
+      "exact_supporting_phrase": "Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:7",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Confusión pertenece a Dios; justicia a los cautivos; causa: distancia geográfica"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:7",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Justicia pertenece al Señor; confusión a Judá, Jerusalén e Israel, cercanos y lejanos en dispersión; causa: rebelión contra Dios"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:7",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Misericordia pertenece a los reyes; gloria a los lejanos; causa: obediencia"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:7",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Justicia pertenece a Israel; confusión sólo a Babilonia; causa: derrota militar"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:7.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "6f0063659d6ef2c1872407144ce7e958dafe0f06f008460036b4cd2b2a702927",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "a58ba5c281ce62bac04b4825b7812cdc3dc1b2c2ddc12f4329712c4dfacc837a"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C15-003",
+      "selected_option_index": 1,
+      "selected_option_text": "Orden para restaurar y edificar Jerusalén; hasta el Mesías Príncipe; siete semanas y sesenta y dos; plaza y muro reedificados en tiempos angustiosos",
+      "exact_supporting_phrase": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas; se volverán a edificar la plaza y el muro en tiempos angustiosos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Decreto para edificar Persia; hasta Gabriel; una semana; palacio y foso sin oposición"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Orden para restaurar y edificar Jerusalén; hasta el Mesías Príncipe; siete semanas y sesenta y dos; plaza y muro reedificados en tiempos angustiosos"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Orden para destruir Babilonia; hasta Darío; setenta semanas; templo y río en paz"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Salida de Egipto; hasta Ciro; tres tiempos; plaza sin muro después de la angustia"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:25.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "24c4c7e2dad6e02877553c15dd43a2ca9ed717e358dd8e461b8424063b98516f",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "60b8c38d254115994ccf327e2fa5b2d1b3897808756efc1c7eb00678c4836280"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C15-004",
+      "selected_option_index": 3,
+      "selected_option_text": "Confirma pacto con muchos por otra semana; a la mitad cesan sacrificio y ofrenda; viene el desolador con abominaciones; la determinación cae sobre él hasta la consumación",
+      "exact_supporting_phrase": "Por otra semana más confirmará el pacto con muchos; a la mitad de la semana hará cesar el sacrificio y la ofrenda. Después, con la muchedumbre de las abominaciones, vendrá el desolador, hasta que venga la consumación y lo que está determinado se derrame sobre el desolador.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Confirma pacto siete años; al final reconstruye el altar; viene Gabriel; la decisión cae sobre Daniel"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Rompe el pacto al inicio; aumenta sacrificios; llega el restaurador; no hay consumación"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Oculta el pacto; a la mitad empieza la ofrenda; huye el desolador; se revoca lo determinado"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Confirma pacto con muchos por otra semana; a la mitad cesan sacrificio y ofrenda; viene el desolador con abominaciones; la determinación cae sobre él hasta la consumación"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:27.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "9fcf2286a950c63da3eccdce72f9808497aa0be6794f8692e968a3cf17645763",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "c35b57a8ab614c3c1c6c21e1645a92c69fec6897f1887107b8f4c0c6235188e5"
+    },
+    {
+      "question_id": "V13-R2-DAN9-C6-V002-V11-F02",
+      "selected_option_index": 2,
+      "selected_option_text": "Primer año de Darío → libros examinados → palabra de Jehová por Jeremías → setenta años para Jerusalén",
+      "exact_supporting_phrase": "en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén: setenta años.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "source_boundary": "DAN_ONLY",
+      "option_analysis": [
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Último año de Darío → ley consultada → palabra de Moisés → sesenta semanas para Egipto"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Primer año de Ciro → sueño examinado → palabra de Gabriel → siete años para Babilonia"
+        },
+        {
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita respalda explícitamente la secuencia seleccionada.",
+          "text": "Primer año de Darío → libros examinados → palabra de Jehová por Jeremías → setenta años para Jerusalén"
+        },
+        {
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita establece una secuencia distinta y no respalda esta alternativa.",
+          "text": "Primer año de Jeremías → edicto leído → palabra de Daniel → setenta semanas para Media"
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción seleccionada conserva todos los elementos pedidos y coincide con la evidencia de Daniel 9:2.",
+      "suggested_rewrite": null,
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_003",
+      "conversation_id": "/root/safe_blind_003",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:48:20.9246437Z",
+      "input_content_sha256": "028d3d07cafda75054de034c92df5cf71f337bfb28390e602f4f5b815b5af13c",
+      "audit_run_id": "v18-priority-audit",
+      "second_defensible_text": null,
+      "output_sha256": "0a1b6e01a3c1d4ead28b3064f71c3ce9b42a1340fef12f292972730d1a269925"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 0,
+    "ACCEPT_COMPETITIVE": 20,
+    "REWRITE": 0,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

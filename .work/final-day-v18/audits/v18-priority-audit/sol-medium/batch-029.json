@@ -1,0 +1,1084 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-029",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-029.json",
+  "input_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/safe_blind_004",
+    "conversation_id": "/root/safe_blind_004",
+    "conversation_id_kind": "codex_canonical_agent_task_name"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-DAN9-C6-V024-V11-F03",
+      "selected_option_index": 1,
+      "selected_option_text": "Terminar prevaricación, pecado e iniquidad → traer justicia perdurable → sellar visión y profecía y ungir al Santo",
+      "exact_supporting_phrase": "”Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Prolongar prevaricación y pecado → aplazar justicia → abrir visión y coronar a Darío",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "Invierte la remoción del mal y añade reyes, retraso y coronación de Darío, elementos ausentes."
+        },
+        {
+          "text": "Terminar prevaricación, pecado e iniquidad → traer justicia perdurable → sellar visión y profecía y ungir al Santo",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "Reúne literalmente terminar la prevaricación, el pecado y la iniquidad; traer justicia perdurable; y sellar y ungir."
+        },
+        {
+          "text": "Terminar el exilio persa → traer riqueza temporal → sellar la ley y ungir a Jeremías",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "La evidencia no habla de exilio persa, riqueza temporal, Jeremías ni de sellar la ley."
+        },
+        {
+          "text": "Quitar la justicia → preservar iniquidad → destruir la profecía y el santuario",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "La cita no propone quitar la justicia ni destruir la profecía y el santuario."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción B conserva en una sola cadena los tres propósitos de las setenta semanas y su consumación profética, todos respaldados por la cita.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "de73538271de884fc7b4a7d876d541b6629d7f8785e0b161703c606b7c2a1269"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-DAN9-C6-V027-V11-F04",
+      "selected_option_index": 1,
+      "selected_option_text": "Una semana con muchos → mitad: cesan sacrificio y ofrenda → abominaciones y desolador → consumación determinada",
+      "exact_supporting_phrase": "Por otra semana más confirmará el pacto con muchos; a la mitad de la semana hará cesar el sacrificio y la ofrenda. Después, con la muchedumbre de las abominaciones, vendrá el desolador, hasta que venga la consumación y lo que está determinado se derrame sobre el desolador.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Sesenta y dos semanas con reyes → inicio: cesa la oración → llega Gabriel → restauración inmediata",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "La cita no asigna sesenta y dos semanas a un pacto ni describe ese inicio y desenlace."
+        },
+        {
+          "text": "Una semana con muchos → mitad: cesan sacrificio y ofrenda → abominaciones y desolador → consumación determinada",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "Coincide con cada segmento de la cadena de Daniel 9:27."
+        },
+        {
+          "text": "Media semana con Jerusalén → mitad: vuelve la ofrenda → huye el desolador → se anula lo decretado",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "La evidencia dice una semana, cesan sacrificio y ofrenda a la mitad, y no se anula lo decretado."
+        },
+        {
+          "text": "Setenta años con pocos → final: aumenta el culto → desaparecen abominaciones → reino sin fin",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "No menciona setenta años, aumento del culto ni desaparición de las abominaciones."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción B preserva la duración, el punto medio del cese cultual y la secuencia de abominaciones, desolador y consumación.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "b63ee9cde7ac1b3269610768a25f4ee1e3949b83923acded656441bf96679716"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-DAN9-C7-V006-V11-F02",
+      "selected_option_index": 0,
+      "selected_option_text": "No obedecieron → siervos profetas → hablaron en el nombre de Dios → reyes, príncipes, padres y todo el pueblo",
+      "exact_supporting_phrase": "No hemos obedecido a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "No obedecieron → siervos profetas → hablaron en el nombre de Dios → reyes, príncipes, padres y todo el pueblo",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:6",
+          "exact_reason": "Parafrasea en el mismo orden “no hemos obedecido”, “tus siervos los profetas”, hablar en nombre de Dios y los destinatarios enumerados."
+        },
+        {
+          "text": "No confesaron → ángeles del cielo → hablaron por visión de Daniel → reinas, escribas, jóvenes y gobernadores",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:6",
+          "exact_reason": "La cita no habla de ángeles, reinas, escribas o gobernadores como destinatarios."
+        },
+        {
+          "text": "No ayunaron → príncipes medos → hablaron en nombre de Jeremías → profetas, cautivos, ancianos y soldados",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:6",
+          "exact_reason": "No menciona ayuno, príncipes medos, Jeremías ni soldados."
+        },
+        {
+          "text": "No entendieron → sabios caldeos → hablaron por mandato de Darío → sacerdotes, jueces, hijos y extranjeros",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:6",
+          "exact_reason": "No atribuye el mensaje a sabios caldeos o Darío ni enumera esos destinatarios."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción A conserva literalmente la desobediencia del pueblo, los siervos profetas, su autoridad en el nombre de Dios y los cuatro grupos destinatarios.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "d4fe5096444ccaaf0946a95066c7bea404db85542fdbe3d6b411b574b008fae3"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-DAN9-C7-V012-F08",
+      "selected_option_index": 2,
+      "selected_option_text": "Palabra contra pueblo y jefes → Dios la cumplió → trajo un gran mal → nada semejante bajo el cielo ocurrió a Jerusalén",
+      "exact_supporting_phrase": "Y él ha cumplido la palabra que habló contra nosotros y contra nuestros jefes que nos gobernaron, trayendo sobre nosotros tan gran mal; pues nunca fue hecho debajo del cielo nada semejante a lo que se ha hecho contra Jerusalén.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Visión contra medos y caldeos → Gabriel la retrasó → trajo una guerra → Jerusalén ya había sufrido algo mayor",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:12",
+          "exact_reason": "La evidencia no habla de una visión retrasada por Gabriel ni dice que Jerusalén ya hubiera sufrido algo mayor."
+        },
+        {
+          "text": "Ley a favor de pueblo y sacerdotes → Moisés la anuló → evitó un gran mal → Babilonia nunca vio algo semejante",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:12",
+          "exact_reason": "No menciona una ley anulada por Moisés ni que se evitara el mal."
+        },
+        {
+          "text": "Palabra contra pueblo y jefes → Dios la cumplió → trajo un gran mal → nada semejante bajo el cielo ocurrió a Jerusalén",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:12",
+          "exact_reason": "Reproduce los cuatro elementos consecutivos de la cita."
+        },
+        {
+          "text": "Orden a favor de reyes y padres → Daniel la cumplió → levantó el santuario → nada semejante ocurrió en Egipto",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:12",
+          "exact_reason": "La palabra fue contra el pueblo y sus jefes; no fue una orden a favor ni produjo esos resultados en Egipto."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción C mantiene la palabra anunciada, sus destinatarios, el cumplimiento divino, el gran mal y la comparación de que no hubo otro semejante contra Jerusalén.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "8c72622f95c2d7c19ef8b99544344bddc2fb7e182dba3386e8ea445ffcde238d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-DAN9-C7-V019-V11-F02",
+      "selected_option_index": 3,
+      "selected_option_text": "Oír → perdonar → prestar oído y actuar → no tardar por amor de sí mismo → nombre sobre ciudad y pueblo",
+      "exact_supporting_phrase": "¡Oye, Señor! ¡Señor, perdona! ¡Presta oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo.” Profecía de las setenta semanas",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Mirar → castigar → cerrar los ojos y esperar → tardar por amor del pueblo → nombre sobre templo y palacio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "La cita no pide mirar y castigar ni ubica el nombre sobre templo y palacio."
+        },
+        {
+          "text": "Hablar → recordar → enviar a Jeremías → no tardar por amor de Daniel → nombre sobre medos y caldeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "No menciona a Jeremías, a Darío ni el nombre sobre medos y caldeos."
+        },
+        {
+          "text": "Escuchar → absolver → retirar la orden → esperar por amor de Darío → nombre sobre Egipto y Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "No habla de retirar la orden, esperar por Darío ni los ámbitos propuestos."
+        },
+        {
+          "text": "Oír → perdonar → prestar oído y actuar → no tardar por amor de sí mismo → nombre sobre ciudad y pueblo",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "Reúne la progresión y los dos ámbitos expresados en la evidencia."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción D sigue la secuencia exacta de oír, perdonar, prestar oído y actuar, no tardar por amor de Dios y el nombre invocado sobre ciudad y pueblo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "2e360d7f0dda47fb5284ec1a003aab490249230d32d87339fb09bd09a01820b1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-DAN9-C7-V022-F08",
+      "selected_option_index": 0,
+      "selected_option_text": "Gabriel → hizo entender a Daniel y habló con él → había salido ahora → darle sabiduría y entendimiento",
+      "exact_supporting_phrase": "Me hizo entender, y habló conmigo diciendo: “Daniel, ahora he salido para darte sabiduría y entendimiento.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Gabriel → hizo entender a Daniel y habló con él → había salido ahora → darle sabiduría y entendimiento",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:22",
+          "exact_reason": "Parafrasea cada dato de Daniel 9:22: Gabriel hizo entender, habló con Daniel, había salido ahora para darle sabiduría y entendimiento."
+        },
+        {
+          "text": "Darío → hizo temer a Daniel y ordenó contra él → había reinado un año → darle plaza y muro",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:22",
+          "exact_reason": "Darío, temor, un año de reinado y plaza y muro no aparecen en la cita."
+        },
+        {
+          "text": "Moisés → hizo confesar a Daniel y leyó ante él → había salido de Egipto → darle justicia y misericordia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:22",
+          "exact_reason": "Moisés, confesión, Egipto y esos dos dones no son el contenido de la evidencia."
+        },
+        {
+          "text": "Jeremías → hizo ayunar a Daniel y escribió para él → había regresado entonces → darle autoridad y renombre",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:22",
+          "exact_reason": "Jeremías, ayuno, regreso y autoridad no están respaldados por la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción A identifica a Gabriel, su efecto inmediato en Daniel, el momento “ahora” y el doble propósito de sabiduría y entendimiento.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "0974cb3d5ac87dac7bab64cb098434f5f92459d512765abfa0b2d783909f1081"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-DAN9-C7-V023-V11-F03",
+      "selected_option_index": 3,
+      "selected_option_text": "La orden salió al comenzar los ruegos → Gabriel vino a enseñarla porque Daniel era muy amado → Daniel debía entender orden y visión",
+      "exact_supporting_phrase": "Al principio de tus ruegos fue dada la orden, y yo he venido para enseñártela, porque tú eres muy amado. Entiende, pues, la orden, y entiende la visión.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "La orden salió al terminar el ayuno → Jeremías vino a ocultarla porque Daniel era muy temido → Daniel debía olvidar ley y profecía",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "La cita no ubica la orden al terminar el ayuno, no menciona a Jeremías y contradice “muy amado”."
+        },
+        {
+          "text": "La visión salió a mitad de semana → Darío vino a cambiarla porque Daniel era muy poderoso → Daniel debía restaurar plaza y muro",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "No habla de mitad de semana, Darío ni de restaurar la plaza y el muro como respuesta de Daniel."
+        },
+        {
+          "text": "La ley salió durante el sacrificio → Moisés vino a confirmarla porque Daniel era muy justo → Daniel debía contar pecado y ofrenda",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "No atribuye la orden a la ley, a Moisés o al momento del sacrificio ni pide contar pecado y ofrenda."
+        },
+        {
+          "text": "La orden salió al comenzar los ruegos → Gabriel vino a enseñarla porque Daniel era muy amado → Daniel debía entender orden y visión",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "Reproduce la secuencia y el propósito expresos de Daniel 9:23."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción D enlaza todos los elementos de la evidencia: orden al principio de los ruegos, Gabriel, Daniel amado y comprensión de orden y visión.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "f4d5f566711d51e610643b9b65b6f752ad28917388316f1243a99d234c29bca4"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-DAN9-C7-V025-F03",
+      "selected_option_index": 1,
+      "selected_option_text": "Salida de la orden de restaurar Jerusalén → Mesías Príncipe → siete semanas y sesenta y dos → plaza y muro reedificados en tiempos angustiosos",
+      "exact_supporting_phrase": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas; se volverán a edificar la plaza y el muro en tiempos angustiosos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Fin de los ruegos de Daniel → Santo de los santos → una semana y setenta semanas → ciudad y río abandonados en prosperidad",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La evidencia no vincula el fin de los ruegos con el Santo de los santos ni una ciudad abandonada en prosperidad."
+        },
+        {
+          "text": "Salida de la orden de restaurar Jerusalén → Mesías Príncipe → siete semanas y sesenta y dos → plaza y muro reedificados en tiempos angustiosos",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "Coincide con cada correspondencia de Daniel 9:25."
+        },
+        {
+          "text": "Lectura de la ley en Babilonia → Darío el medo → sesenta semanas y dos años → templo y altar destruidos en guerra",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "No presenta esa lectura de la ley, a Darío ni los objetos y tiempos indicados."
+        },
+        {
+          "text": "Llegada de Gabriel a Jerusalén → príncipe venidero → setenta años y media semana → santuario y palacio reedificados en paz",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "Gabriel no es el punto de partida de la cronología y la cita no habla de reedificación en paz."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción B conserva las cuatro correspondencias proféticas: origen de la orden, Mesías Príncipe, partición temporal y reconstrucción en tiempos angustiosos.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "258b5016cefacf9e2dac1d5f62b8cb3565a6597d3c80a2bdf58fdd98356b96d8"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V13-R2-DAN9-C7-V026-V11-F02",
+      "selected_option_index": 3,
+      "selected_option_text": "Después de sesenta y dos semanas → vida del Mesías quitada → pueblo de un príncipe → ciudad y santuario → final como inundación → devastaciones hasta el fin de la guerra",
+      "exact_supporting_phrase": "Después de las sesenta y dos semanas se quitará la vida al Mesías, y nada ya le quedará. El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario, su final llegará como una inundación, y hasta el fin de la guerra durarán las devastaciones.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "A mitad de una semana → vida del príncipe restaurada → pueblo de Moisés → templo y palacio → final como terremoto → ofrendas hasta el fin de la visión",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "La cita dice después de sesenta y dos semanas, vida del Mesías quitada, ciudad y santuario, inundación y guerra; no lo contrario."
+        },
+        {
+          "text": "Antes de setenta semanas → vida de Gabriel quitada → ejército del Mesías → Babilonia y Egipto → final como incendio → misericordias hasta el fin del pacto",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No menciona a Gabriel, un ejército del Mesías, Babilonia y Egipto ni un incendio."
+        },
+        {
+          "text": "Después de siete años → vida de Darío preservada → pueblo de Jeremías → plaza y muro → final como sequía → sacrificios hasta el fin del exilio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "No habla de siete años, Darío, plaza y muro, sequía ni sacrificios hasta el fin del exilio."
+        },
+        {
+          "text": "Después de sesenta y dos semanas → vida del Mesías quitada → pueblo de un príncipe → ciudad y santuario → final como inundación → devastaciones hasta el fin de la guerra",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "Reproduce todos los elementos de Daniel 9:26 en el orden preguntado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COMPETITIVE",
+      "specific_reason": "La opción D conserva sin alterar el momento, la muerte del Mesías, el agente colectivo, los objetos destruidos, la inundación y la duración de las devastaciones.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "c2b70fb1bbf975f99b302498c154032ae34a9faf05737c46ba506204641fea75"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN9-C18-001",
+      "selected_option_index": 0,
+      "selected_option_text": "En el primer año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos",
+      "exact_supporting_phrase": "«En el primer año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "En el primer año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:1",
+          "exact_reason": "Es la formulación exacta del marco cronológico, la filiación y el ámbito de gobierno."
+        },
+        {
+          "text": "En el segundo año de Darío hijo de Histaspes, de origen de los medos, que asumió el reino de las provincias persas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:1",
+          "exact_reason": "Cambia el año, la filiación y el reino respecto de la evidencia."
+        },
+        {
+          "text": "En el primer año de Belsasar rey de caldeos, de la casa de Babilonia, que gobernó las tierras de la comarca de Susa",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:1",
+          "exact_reason": "Belsasar no encabeza este pasaje ni se menciona ese ámbito de gobierno."
+        },
+        {
+          "text": "En el tercer año de Ciro rey de los persas, de la estirpe de Media, que vino a ser monarca sobre la ciudad de Babel",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:1",
+          "exact_reason": "Cambia el rey, el año, la filiación y la ciudad mencionada."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita de Daniel 9:1 contiene literalmente el primer año de Darío hijo de Asuero, su nación meda y su gobierno sobre los caldeos.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "1ba87aaf7dbe345ac220e3c9fc88fb0c2bd340e3506d56fba0dfd45602728c14"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN9-C18-002",
+      "selected_option_index": 0,
+      "selected_option_text": "«Señor, Dios grande, digno de ser temido, que guardas el pacto y la misericordia con los que te aman y guardan tus mandamientos»",
+      "exact_supporting_phrase": "Oré a Jehová, mi Dios, e hice confesión diciendo: “Ahora, Señor, Dios grande, digno de ser temido, que guardas el pacto y la misericordia con los que te aman y guardan tus mandamientos,",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "«Señor, Dios grande, digno de ser temido, que guardas el pacto y la misericordia con los que te aman y guardan tus mandamientos»",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:4",
+          "exact_reason": "Coincide con la cita de Daniel 9:4 en todos sus elementos."
+        },
+        {
+          "text": "«Rey eterno de Sión, que prometiste acortar los setenta años a causa de los méritos de los patriarcas»",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:4",
+          "exact_reason": "No se habla de acortar los setenta años ni de méritos patriarcales."
+        },
+        {
+          "text": "«Dios altísimo de Israel, que destruyes a los imperios paganos y enriqueces a los que ofrecen holocaustos»",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:4",
+          "exact_reason": "La evidencia no atribuye a Dios esas acciones ni menciona enriquecer oferentes."
+        },
+        {
+          "text": "«Soberano de los cielos, que perdonas sin condiciones a todas las naciones aunque quebranten tus estatutos»",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:4",
+          "exact_reason": "La cita no enseña perdón sin condiciones ni omisión de los estatutos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La opción A reproduce la invocación completa de grandeza, temor reverente, pacto y misericordia dirigida a Jehová.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "5630a238931b81fc6c61decaee9a7e574acf299b9a4c89821d2fbdedeeee76c2"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN9-C18-003",
+      "selected_option_index": 2,
+      "selected_option_text": "A nosotros, a nuestros reyes, a nuestros príncipes y a nuestros padres, porque contra Jehová hemos pecado",
+      "exact_supporting_phrase": "Nuestra es, Jehová, la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "A los profetas, a los gobernadores, a los capitanes y al pueblo cautivo, porque olvidamos el pacto santo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:8",
+          "exact_reason": "No son los estamentos ni el motivo expresados en Daniel 9:8."
+        },
+        {
+          "text": "A los sabios, a los consejeros, a los nobles y a las familias de Israel, porque servimos a otros dioses",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:8",
+          "exact_reason": "La cita no menciona sabios, consejeros, nobles ni otros dioses."
+        },
+        {
+          "text": "A nosotros, a nuestros reyes, a nuestros príncipes y a nuestros padres, porque contra Jehová hemos pecado",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:8",
+          "exact_reason": "Reproduce “nosotros”, reyes, príncipes y padres, junto con el pecado contra Jehová."
+        },
+        {
+          "text": "A los sacerdotes, a los levitas, a los ancianos y a los escribas de Judá, porque dejamos el santo templo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:8",
+          "exact_reason": "Sacerdotes, levitas, ancianos y escribas no son la enumeración del versículo."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La opción C mantiene los estamentos enumerados por Daniel y el motivo explícito: “porque contra ti pecamos”.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "778188bfc97925e95a793aa27bf7b582c2b3eb913e48e5a392dc1908f5412074"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN9-C18-004",
+      "selected_option_index": 2,
+      "selected_option_text": "el tener misericordia y el perdonar",
+      "exact_supporting_phrase": "De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "la exigencia de sacrificios y la riqueza terrenal",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:9",
+          "exact_reason": "La cita no presenta exigencia de sacrificios ni riqueza como las virtudes solicitadas."
+        },
+        {
+          "text": "el juicio implacable y la venganza",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:9",
+          "exact_reason": "Juicio y venganza no son las dos virtudes nombradas."
+        },
+        {
+          "text": "el tener misericordia y el perdonar",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:9",
+          "exact_reason": "Es la expresión exacta de Daniel 9:9."
+        },
+        {
+          "text": "el olvido de la ley y el destierro perpetuo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:9",
+          "exact_reason": "La evidencia afirma misericordia y perdón, no olvido de la ley ni destierro perpetuo."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La evidencia identifica directamente la misericordia y el perdón como atributos del Señor aun frente a la rebelión.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "993d360df67ef1cf11b02b3f960d098b67763f01f3133a466776f81bb740a17d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN9-C18-005",
+      "selected_option_index": 3,
+      "selected_option_text": "La maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios pecaron",
+      "exact_supporting_phrase": "Todo Israel traspasó tu Ley, apartándose para no obedecer a tu voz. Por lo cual ha caído sobre nosotros la maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios pecamos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "La condenación y el castigo eterno prescrito en los libros de los profetas antiguos, por rebelarse en Judá",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:11",
+          "exact_reason": "La evidencia no atribuye la consecuencia a una condenación eterna de los profetas antiguos."
+        },
+        {
+          "text": "La ira ardiente y la plaga destructora anunciada en los decretos del santuario terrenal, por adorar ídolos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:11",
+          "exact_reason": "No menciona una plaga destructora de decretos del santuario ni limita la causa a idolatría."
+        },
+        {
+          "text": "La desolación y el juicio perpetuo contenido en el testimonio de jueces santos, por olvidar el pacto de Dios",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:11",
+          "exact_reason": "No habla de juicio perpetuo contenido en un testimonio de jueces."
+        },
+        {
+          "text": "La maldición y el juramento que está escrito en la ley de Moisés, siervo de Dios, porque contra Dios pecaron",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:11",
+          "exact_reason": "Parafrasea literalmente el resultado y su causa en Daniel 9:11."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La opción D conserva la maldición y el juramento escritos en la ley de Moisés y la causa confesada: pecado contra Dios.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "46ed15e20343b758267561817f8d299801ac065f41a4cd69e3d62f1cb8b49097"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN9-C18-006",
+      "selected_option_index": 2,
+      "selected_option_text": "No imploraron el favor de Jehová su Dios, no se convirtieron de sus maldades ni entendieron la verdad divina",
+      "exact_supporting_phrase": "Conforme está escrito en la ley de Moisés, todo este mal vino sobre nosotros; pero no hemos implorado el favor de Jehová, nuestro Dios, y no nos hemos convertido de nuestras maldades ni entendido tu verdad.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "No buscaron el consejo de santos profetas, no confesaron sus muchas iniquidades ni guardaron el pacto divino",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:13",
+          "exact_reason": "No es la triple confesión del pasaje: no se mencionan esos profetas ni guardar el pacto en esta cita."
+        },
+        {
+          "text": "No clamaron por perdón ante el rey persa, no abandonaron las costumbres paganas ni reedificaron el santuario",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:13",
+          "exact_reason": "No se menciona al rey persa, costumbres paganas ni reedificar el santuario."
+        },
+        {
+          "text": "No imploraron el favor de Jehová su Dios, no se convirtieron de sus maldades ni entendieron la verdad divina",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:13",
+          "exact_reason": "Coincide con los tres verbos y complementos explícitos de Daniel 9:13."
+        },
+        {
+          "text": "No guardaron los ayunos solemnes de Judá, no presentaron sacrificios en Babel ni escucharon la voz profética",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:13",
+          "exact_reason": "La evidencia no habla de esos ayunos, sacrificios en Babel o de esas acciones."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La opción C reproduce las tres faltas enumeradas: no implorar, no convertirse y no entender la verdad.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "de767d004aeaed61ab6ca0879bf9c2d2086edb0cc35b8e157114237361bfad10"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN9-C18-007",
+      "selected_option_index": 1,
+      "selected_option_text": "sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy",
+      "exact_supporting_phrase": "”Ahora pues, Señor, Dios nuestro, que sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy, hemos pecado, hemos actuado impíamente.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "detuviste el sol en Gabaón y diste la victoria a Josué sobre los reyes cananeos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:15",
+          "exact_reason": "La cita no menciona Gabaón ni la victoria de Josué."
+        },
+        {
+          "text": "sacaste a tu pueblo de la tierra de Egipto con mano poderosa y te hiciste renombre cual lo tienes hoy",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:15",
+          "exact_reason": "Es la formulación exacta del antecedente de Daniel 9:15."
+        },
+        {
+          "text": "hiciste descender maná del cielo en el desierto y salvaste a los tres jóvenes del horno",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:15",
+          "exact_reason": "El maná y el horno no son el precedente citado en este versículo."
+        },
+        {
+          "text": "abriste las puertas de Babilonia ante Ciro para librar a los cautivos de Judea",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:15",
+          "exact_reason": "No se atribuye a Dios abrir las puertas de Babilonia ante Ciro en esta evidencia."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La opción B reproduce el precedente invocado: sacar al pueblo de Egipto con mano poderosa y hacerse renombre.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "ee640210f4c5999daaea54fe06fb11a8d064b7899b8a7984aefae9f7d6b1fc08"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN9-C18-008",
+      "selected_option_index": 1,
+      "selected_option_text": "«¡Oye, Señor! ¡Señor, perdona! ¡Presta oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo»",
+      "exact_supporting_phrase": "¡Oye, Señor! ¡Señor, perdona! ¡Presta oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo.” Profecía de las setenta semanas",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "«¡Escucha, Señor! ¡Señor, redime! ¡Extiende tu brazo y salva! No tardes, por la promesa fiel de David, porque tu misericordia cubre a tu pueblo y a tu santa ciudad»",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "La cita no menciona la promesa de David ni las fórmulas de esta alternativa."
+        },
+        {
+          "text": "«¡Oye, Señor! ¡Señor, perdona! ¡Presta oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo»",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "Coincide palabra por palabra con el clímax de Daniel 9:19."
+        },
+        {
+          "text": "«¡Mira, Señor! ¡Señor, restaura! ¡Inclina tu oído y responde! No tardes, por amor de tus santos siervos, porque tu gloria resplandece sobre tu monte y sobre tu templo»",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "No aparecen “restaura”, los santos siervos ni el fundamento propuesto."
+        },
+        {
+          "text": "«¡Atiende, Señor! ¡Señor, libéranos! ¡Abre tus ojos y actúa! No tardes, por el pacto de nuestros padres, porque tu presencia protege a tu remanente y a tus escogidos»",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "No se habla del pacto de los padres ni de esos actos y ámbitos."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La opción B reproduce el clamor y su fundamento supremo casi literalmente: oír, perdonar, prestar oído, actuar y el nombre invocado sobre ciudad y pueblo.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "ecb5d30478b004b498d40825a92553f38cf910308877ba96a0b0e7932970087d"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN9-C18-009",
+      "selected_option_index": 0,
+      "selected_option_text": "por el monte santo de mi Dios",
+      "exact_supporting_phrase": "Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios;",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "por el monte santo de mi Dios",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "Reproduce literalmente el lugar sagrado de la oración."
+        },
+        {
+          "text": "por los altares antiguos de Bet-el",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "Bet-el no aparece en la cita."
+        },
+        {
+          "text": "por las puertas del palacio de Susa",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "Susa y su palacio no son el lugar indicado."
+        },
+        {
+          "text": "por las murallas caídas de Babilonia",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "La evidencia no sitúa el ruego en las murallas de Babilonia."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La evidencia dice que Daniel derramaba su ruego por el monte santo de su Dios; la opción A es exacta.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "66157ff83fa5bc3c27ba42a15f492c4672715cf96321b2f09a08e04e77b7c400"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "V14-R2-DAN9-C18-010",
+      "selected_option_index": 0,
+      "selected_option_text": "Al principio de sus ruegos fue dada la orden y Gabriel vino para enseñarla por ser Daniel muy amado, llamándole a entender la visión",
+      "exact_supporting_phrase": "Al principio de tus ruegos fue dada la orden, y yo he venido para enseñártela, porque tú eres muy amado. Entiende, pues, la orden, y entiende la visión.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Al principio de sus ruegos fue dada la orden y Gabriel vino para enseñarla por ser Daniel muy amado, llamándole a entender la visión",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "Es la única opción que coincide en momento, motivo y propósito con Daniel 9:23."
+        },
+        {
+          "text": "Al caer la tarde santa fue enviado el aviso y Gabriel vino para explicarlo por ser Daniel muy sabio, pidiéndole guardar el misterio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "La cita no ubica la orden al caer la tarde ni describe a Daniel como muy sabio o llamado a guardar un misterio."
+        },
+        {
+          "text": "Al expirar el ayuno diario fue dada la orden y Gabriel vino para declararla por ser Daniel muy fiel, mandándole escribir el mensaje",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "No se menciona el término del ayuno, la fidelidad como motivo ni escribir el mensaje."
+        },
+        {
+          "text": "Al término de su oración fue dictado el decreto y Gabriel vino para revelarlo por ser Daniel muy justo, mandándole sellar la profecía",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "No habla del término de la oración, justicia de Daniel ni sellar la profecía."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "HARD",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La opción A conserva el momento “al principio de tus ruegos”, el motivo de ser muy amado y la instrucción de entender orden y visión.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "444e81a5e18407715eee6f94d9a15544a7bb667e1c8d919d069a1dbb72c409ba"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "DAN10-V11-WAVE-001",
+      "selected_option_index": 2,
+      "selected_option_text": "Beltsasar",
+      "exact_supporting_phrase": "En el tercer año de Ciro, rey de Persia, fue revelada palabra a Daniel, llamado Beltsasar. La palabra era verdadera y el conflicto grande, pero él comprendió la palabra y tuvo inteligencia en la visión.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Belsasar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "Belsasar es un nombre distinto del que aparece en la cita."
+        },
+        {
+          "text": "Asuero",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "Asuero no es el otro nombre de Daniel en Daniel 10:1."
+        },
+        {
+          "text": "Beltsasar",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "Reproduce literalmente “Daniel, llamado Beltsasar”."
+        },
+        {
+          "text": "Miguel",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 10:1",
+          "exact_reason": "Miguel no es el nombre alternativo indicado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La evidencia identifica a Daniel al comienzo de la revelación como Beltsasar; solo la opción C coincide.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/safe_blind_004",
+      "conversation_id": "/root/safe_blind_004",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:50:48.514Z",
+      "input_content_sha256": "75feeadc4594da1869013d7225dcc19920ad34bb6a85bd7cd751c41ba5d839c0",
+      "output_sha256": "93e0f75981511e5944d0ebac784b36b2fc49855d702a2d2893838eafaf8af03b"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 11,
+    "ACCEPT_COMPETITIVE": 9,
+    "REWRITE": 0,
+    "REJECT": 0,
+    "INVALID_OUTPUT": 0
+  }
+}

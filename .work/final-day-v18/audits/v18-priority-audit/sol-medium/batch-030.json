@@ -1,0 +1,1061 @@
+ {
+   "schema_version": "final-day-v18-sol-audit-1.0",
+   "audit_run_id": "v18-priority-audit",
+   "batch_id": "batch-030",
+   "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-030.json",
+   "input_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+   "auditor": {
+     "model": "GPT-5.6 Sol",
+     "reasoning_effort": "medium",
+     "agent_id": "/root/contracts_rereview",
+     "conversation_id": "/root/contracts_rereview",
+     "conversation_id_kind": "codex_canonical_agent_task_name"
+   },
+   "items": [
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-002",
+       "selected_option_index": 1,
+       "selected_option_text": "La palabra era verdadera y el conflicto grande",
+       "exact_supporting_phrase": "La palabra era verdadera y el conflicto grande",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "La palabra era falsa y el conflicto pequeño",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:1",
+           "exact_reason": "La cita expresa «verdadera» y «grande», no la sustitución ofrecida."
+         },
+         {
+           "text": "La palabra era verdadera y el conflicto grande",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:1",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "La palabra era dudosa y el conflicto breve",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:1",
+           "exact_reason": "La cita expresa «verdadera» y «grande», no la sustitución ofrecida."
+         },
+         {
+           "text": "La palabra estaba sellada y el conflicto terminado",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:1",
+           "exact_reason": "La cita expresa «verdadera» y «grande», no la sustitución ofrecida."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:1 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "7779040ddc1b88d2d3614a1241ab6c2cfa46f8231f952af1ea1f8ea23b3cb04c"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-003",
+       "selected_option_index": 0,
+       "selected_option_text": "Manjar delicado, carne, vino y perfume",
+       "exact_supporting_phrase": "No comí manjar delicado, ni entró en mi boca carne ni vino, ni me ungí con perfume",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Manjar delicado, carne, vino y perfume",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:3",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "Pan, agua, sal y aceite",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:3",
+           "exact_reason": "La cita no enumera esos elementos como privaciones de Daniel."
+         },
+         {
+           "text": "Sueño, abrigo, fuego y compañía",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:3",
+           "exact_reason": "La cita no enumera esos elementos como privaciones de Daniel."
+         },
+         {
+           "text": "Libros, oración, ayuno y ceniza",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:3",
+           "exact_reason": "La cita no enumera esos elementos como privaciones de Daniel."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:3 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "8ba3c8d208e97f53d8056e9781e0b33c3c0e0f559c5dd7ed3871db166441ec85"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-004",
+       "selected_option_index": 3,
+       "selected_option_text": "Día veinticuatro del primer mes",
+       "exact_supporting_phrase": "El día veinticuatro del primer mes",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Día catorce del primer mes",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:4",
+           "exact_reason": "La cita fija la fecha en el día veinticuatro del primer mes."
+         },
+         {
+           "text": "Día veintiuno del séptimo mes",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:4",
+           "exact_reason": "La cita fija la fecha en el día veinticuatro del primer mes."
+         },
+         {
+           "text": "Día primero del tercer mes",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:4",
+           "exact_reason": "La cita fija la fecha en el día veinticuatro del primer mes."
+         },
+         {
+           "text": "Día veinticuatro del primer mes",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:4",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:4 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "0dae9f95a9e8cdad6a2149e6edc56344471aef90a0d86b89ed4cc5afcb643c8d"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-005",
+       "selected_option_index": 0,
+       "selected_option_text": "Lino",
+       "exact_supporting_phrase": "varón vestido de lino",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Lino",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:5",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "Púrpura",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:5",
+           "exact_reason": "La cita solo identifica lino como vestimenta; esta alternativa no aparece."
+         },
+         {
+           "text": "Lana",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:5",
+           "exact_reason": "La cita solo identifica lino como vestimenta; esta alternativa no aparece."
+         },
+         {
+           "text": "Armadura",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:5",
+           "exact_reason": "La cita solo identifica lino como vestimenta; esta alternativa no aparece."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:5 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "2f20d1da809e6c8e2f25a64443eecb862ab2a986308cec377a4e2ce731582edc"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-006",
+       "selected_option_index": 3,
+       "selected_option_text": "Un relámpago",
+       "exact_supporting_phrase": "su rostro parecía un relámpago",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Una antorcha",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "La cita reserva esa comparación para otra parte del varón; el rostro es comparado con un relámpago."
+         },
+         {
+           "text": "El berilo",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "La cita reserva esa comparación para otra parte del varón; el rostro es comparado con un relámpago."
+         },
+         {
+           "text": "Bronce bruñido",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "La cita reserva esa comparación para otra parte del varón; el rostro es comparado con un relámpago."
+         },
+         {
+           "text": "Un relámpago",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:6 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "f7d809c149af1321ca2ad7a2f73bf0fbfb4d58489500b5ee34255dcf5145f6df"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-007",
+       "selected_option_index": 1,
+       "selected_option_text": "Antorchas de fuego",
+       "exact_supporting_phrase": "sus ojos como antorchas de fuego",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Una multitud",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "La cita reserva esa descripción a otra parte o no la menciona; los ojos son comparados con antorchas de fuego."
+         },
+         {
+           "text": "Antorchas de fuego",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "Lana limpia",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "La cita reserva esa descripción a otra parte o no la menciona; los ojos son comparados con antorchas de fuego."
+         },
+         {
+           "text": "Oro de Ufaz",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "La cita reserva esa descripción a otra parte o no la menciona; los ojos son comparados con antorchas de fuego."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:6 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "dd86745782907dc699a3eea5ad795f2bbce4850d57896032025931f18bddc4ac"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-008",
+       "selected_option_index": 2,
+       "selected_option_text": "Brazos y pies",
+       "exact_supporting_phrase": "sus brazos y sus pies como de color de bronce bruñido",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Rostro y ojos",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "La cita asigna el bronce bruñido a brazos y pies, no a esta alternativa."
+         },
+         {
+           "text": "Cintura y manos",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "La cita asigna el bronce bruñido a brazos y pies, no a esta alternativa."
+         },
+         {
+           "text": "Brazos y pies",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "Cabello y boca",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "La cita asigna el bronce bruñido a brazos y pies, no a esta alternativa."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:6 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "1eefc6188a73d4a13cd69b4722b812a71f1386f7ca137a5d7ec89ec6260110ff"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-009",
+       "selected_option_index": 0,
+       "selected_option_text": "Como el estruendo de una multitud",
+       "exact_supporting_phrase": "el sonido de sus palabras como el estruendo de una multitud",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Como el estruendo de una multitud",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "Como agua de un río pequeño",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "La cita no compara el sonido de las palabras con esta alternativa."
+         },
+         {
+           "text": "Como una brisa silenciosa",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "La cita no compara el sonido de las palabras con esta alternativa."
+         },
+         {
+           "text": "Como una sola trompeta lejana",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:6",
+           "exact_reason": "La cita no compara el sonido de las palabras con esta alternativa."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:6 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "a3501639d846a7637a63baacc296cd5af26c763ccc0f41de33df403f8aa838f3"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-010",
+       "selected_option_index": 0,
+       "selected_option_text": "Sintieron gran temor, huyeron y se escondieron",
+       "exact_supporting_phrase": "se apoderó de ellos un gran temor y huyeron y se escondieron",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Sintieron gran temor, huyeron y se escondieron",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:7",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "Permanecieron tranquilos a su lado",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:7",
+           "exact_reason": "La cita describe temor, huida y escondite, no esta reacción."
+         },
+         {
+           "text": "Se postraron para adorar al varón",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:7",
+           "exact_reason": "La cita describe temor, huida y escondite, no esta reacción."
+         },
+         {
+           "text": "Pidieron que Daniel la explicara",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:7",
+           "exact_reason": "La cita describe temor, huida y escondite, no esta reacción."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:7 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "7cdc04df9a38493d52ec976b73e60b51174d7db0aa7cac53e1aaa8a9905a710b"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-011",
+       "selected_option_index": 3,
+       "selected_option_text": "Cayó sobre su rostro en un sueño profundo",
+       "exact_supporting_phrase": "caí sobre mi rostro en un profundo sueño, con mi rostro en tierra",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Se puso en pie sin temblar",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita describe que cayó sobre su rostro en sueño profundo, no esta acción."
+         },
+         {
+           "text": "Comenzó a escribir inmediatamente",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita describe que cayó sobre su rostro en sueño profundo, no esta acción."
+         },
+         {
+           "text": "Corrió detrás de sus compañeros",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita describe que cayó sobre su rostro en sueño profundo, no esta acción."
+         },
+         {
+           "text": "Cayó sobre su rostro en un sueño profundo",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:9 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "153250aa0d729af7cb657327bae845b3937c082c123da7fed453560848001040"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-012",
+       "selected_option_index": 1,
+       "selected_option_text": "afligido",
+       "exact_supporting_phrase": "estuve afligido por espacio de tres semanas",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "gozoso",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:2",
+           "exact_reason": "La cita identifica a Daniel como afligido; esta alternativa no aparece."
+         },
+         {
+           "text": "afligido",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:2",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "indiferente",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:2",
+           "exact_reason": "La cita identifica a Daniel como afligido; esta alternativa no aparece."
+         },
+         {
+           "text": "ocupado",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:2",
+           "exact_reason": "La cita identifica a Daniel como afligido; esta alternativa no aparece."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:2 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "9c44b226af8ed8a4401b55abb688a4322244450c1ee2c78a7e407b3963433146"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-013",
+       "selected_option_index": 1,
+       "selected_option_text": "solo",
+       "exact_supporting_phrase": "yo solo ante esta gran visión",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "acompañado",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:8",
+           "exact_reason": "La cita dice que quedó solo; esta alternativa no aparece."
+         },
+         {
+           "text": "solo",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:8",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "escondido",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:8",
+           "exact_reason": "La cita dice que quedó solo; esta alternativa no aparece."
+         },
+         {
+           "text": "dormido",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:8",
+           "exact_reason": "La cita dice que quedó solo; esta alternativa no aparece."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:8 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "364b1082d9e83d9c716960f86c8ad90ec403c0b25bc9d763ebf96fb9c55ff8b4"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-014",
+       "selected_option_index": 0,
+       "selected_option_text": "sueño",
+       "exact_supporting_phrase": "en un profundo sueño",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "sueño",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "dolor",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita completa el enunciado con «sueño»; esta alternativa no aparece."
+         },
+         {
+           "text": "temor",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita completa el enunciado con «sueño»; esta alternativa no aparece."
+         },
+         {
+           "text": "silencio",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:9",
+           "exact_reason": "La cita completa el enunciado con «sueño»; esta alternativa no aparece."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:9 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "9e75b4e4f289e6356c8ad29f74960244ebcdcd7a252ea964689465da05282fb1"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-015",
+       "selected_option_index": 1,
+       "selected_option_text": "rodillas",
+       "exact_supporting_phrase": "sobre mis rodillas y sobre las palmas de mis manos",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "codos",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:10",
+           "exact_reason": "La cita menciona rodillas y palmas de las manos; esta alternativa no aparece."
+         },
+         {
+           "text": "rodillas",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:10",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "hombros",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:10",
+           "exact_reason": "La cita menciona rodillas y palmas de las manos; esta alternativa no aparece."
+         },
+         {
+           "text": "pies",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:10",
+           "exact_reason": "La cita menciona rodillas y palmas de las manos; esta alternativa no aparece."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:10 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "4a3616b243d2748126796b24541367c3f84115ba3e45f1c15d89d6f62499c86b"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-016",
+       "selected_option_index": 0,
+       "selected_option_text": "temblando",
+       "exact_supporting_phrase": "me puse en pie temblando",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "temblando",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "corriendo",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita dice «temblando»; esta alternativa no aparece."
+         },
+         {
+           "text": "riendo",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita dice «temblando»; esta alternativa no aparece."
+         },
+         {
+           "text": "cantando",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita dice «temblando»; esta alternativa no aparece."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:11 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "797f6cbfd341d38222b38bec018b2c9521407d1279079ea22ce3ad1efeb0db80"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-017",
+       "selected_option_index": 1,
+       "selected_option_text": "humillarse",
+       "exact_supporting_phrase": "a humillarte en la presencia de tu Dios",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "engrandecerse",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita habla de humillarse ante Dios; esta alternativa no aparece."
+         },
+         {
+           "text": "humillarse",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "defenderse",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita habla de humillarse ante Dios; esta alternativa no aparece."
+         },
+         {
+           "text": "esconderse",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita habla de humillarse ante Dios; esta alternativa no aparece."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:12 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "ac5cdd2bb9f9a2c809b8bde069f7c5bd7391b8eb1f83032871c5d0d564128c21"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-018",
+       "selected_option_index": 2,
+       "selected_option_text": "Miguel",
+       "exact_supporting_phrase": "Miguel, uno de los principales príncipes, vino para ayudarme",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Gabriel",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita identifica a Miguel; esta alternativa no es quien vino a ayudar."
+         },
+         {
+           "text": "Darío",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita identifica a Miguel; esta alternativa no es quien vino a ayudar."
+         },
+         {
+           "text": "Miguel",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "Ciro",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:13",
+           "exact_reason": "La cita identifica a Miguel; esta alternativa no es quien vino a ayudar."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:13 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "487ffbbb1a732acedfe037d3440928d3efade58d980533364a16f06ab0e16eb7"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-019",
+       "selected_option_index": 1,
+       "selected_option_text": "últimos",
+       "exact_supporting_phrase": "en los últimos días",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "setenta",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:14",
+           "exact_reason": "La cita dice «últimos días»; esta alternativa no aparece."
+         },
+         {
+           "text": "últimos",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:14",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "primeros",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:14",
+           "exact_reason": "La cita dice «últimos días»; esta alternativa no aparece."
+         },
+         {
+           "text": "mejores",
+           "verdict": "UNSUPPORTED",
+           "source_ref": "Daniel 10:14",
+           "exact_reason": "La cita dice «últimos días»; esta alternativa no aparece."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:14 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "43263909ec65628497d49e949936f1c71c7a2c74b937ab2a9ed54b0cc5518b54"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-020",
+       "selected_option_index": 0,
+       "selected_option_text": "Verdadero",
+       "exact_supporting_phrase": "está atento a las palabras que he de decirte y ponte en pie",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Verdadero",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         },
+         {
+           "text": "Falso",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:11",
+           "exact_reason": "La cita contiene ambas órdenes, por lo que «Falso» contradice la evidencia."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:11 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "f2311945c30769735d07ade333eff214e94b1e109e677562bce1c3e30eac1be5"
+     },
+     {
+       "audit_run_id": "v18-priority-audit",
+       "question_id": "DAN10-V11-WAVE-021",
+       "selected_option_index": 1,
+       "selected_option_text": "Verdadero",
+       "exact_supporting_phrase": "a causa de tus palabras yo he venido",
+       "stem_fully_supported": true,
+       "one_unambiguous_answer": true,
+       "second_defensible_option": false,
+       "second_defensible_text": null,
+       "source_boundary": "DANIEL_ONLY",
+       "option_analysis": [
+         {
+           "text": "Falso",
+           "verdict": "FALSE_BY_SOURCE",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "La cita afirma que vino a causa de las palabras de Daniel, por lo que «Falso» contradice la evidencia."
+         },
+         {
+           "text": "Verdadero",
+           "verdict": "CORRECT",
+           "source_ref": "Daniel 10:12",
+           "exact_reason": "Coincide literalmente con la frase de apoyo de la fuente."
+         }
+       ],
+       "answer_length_giveaway": false,
+       "grammar_giveaway": false,
+       "precision_giveaway": false,
+       "duplicate_or_superficial_variant": false,
+       "real_difficulty": "EASY",
+       "decision": "ACCEPT_COVERAGE",
+       "specific_reason": "La cita de Daniel 10:12 sustenta directamente la respuesta y descarta las demás opciones; se admite para cobertura por su dificultad literal.",
+       "model": "GPT-5.6 Sol",
+       "reasoning_effort": "medium",
+       "agent_id": "/root/contracts_rereview",
+       "conversation_id": "/root/contracts_rereview",
+       "conversation_id_kind": "codex_canonical_agent_task_name",
+       "reviewed_at": "2026-09-04T11:57:45.568Z",
+       "input_content_sha256": "9a7a68f33a157d053d85010ed9e9e116e31fdf63ca108ec7914634ad7aea8975",
+       "output_sha256": "b18cb21c8122530501cd7745f13c7c6bb1640fbb6c15ebbe830369b8b85d64be"
+     }
+   ],
+   "summary": {
+     "total": 20,
+     "ACCEPT_COVERAGE": 20,
+     "ACCEPT_COMPETITIVE": 0,
+     "REWRITE": 0,
+     "REJECT": 0,
+     "INVALID_OUTPUT": 0
+   }
+ }
+ 

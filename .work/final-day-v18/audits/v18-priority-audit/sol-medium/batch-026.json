@@ -1,0 +1,1034 @@
+{
+  "schema_version": "final-day-v18-sol-audit-1.0",
+  "audit_run_id": "v18-priority-audit",
+  "batch_id": "batch-026",
+  "input_file": ".work/final-day-v18/dossiers/v18-priority-audit/batch-026.json",
+  "input_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+  "auditor": {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "agent_id": "/root/ledger_v18",
+    "conversation_id": "/root/ledger_v18",
+    "conversation_id_kind": "codex_canonical_agent_task_name",
+    "reviewed_at": "2026-09-04T11:52:53.534Z"
+  },
+  "items": [
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PV-DAN9-0018",
+      "selected_option_index": 2,
+      "selected_option_text": "en las muchas misericordias de Dios",
+      "exact_supporting_phrase": "Inclina, Dios mío, tu oído, y oye; abre tus ojos y mira nuestras desolaciones y la ciudad sobre la cual es invocado tu nombre; porque no elevamos nuestros ruegos ante ti confiados en nuestras justicias, sino en tus muchas misericordias.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "en la reconstrucción del santuario",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:18",
+          "exact_reason": "La reconstrucción del santuario no es el fundamento mencionado en la cita."
+        },
+        {
+          "text": "en la fidelidad de los reyes",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:18",
+          "exact_reason": "La fidelidad de los reyes no aparece en el contraste de la cita."
+        },
+        {
+          "text": "en las muchas misericordias de Dios",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:18",
+          "exact_reason": "Reproduce «no elevamos nuestros ruegos ante ti confiados en nuestras justicias, sino en tus muchas misericordias»."
+        },
+        {
+          "text": "en los sacrificios del pueblo",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:18",
+          "exact_reason": "Los sacrificios del pueblo no aparecen como fundamento de los ruegos en la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La tercera opción parafrasea el contraste explícito: no nuestras justicias, sino tus muchas misericordias; las otras no aparecen. Es cobertura verificable por enlace textual, no una afirmación competitiva.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "3e6a7296053a2da729252dbfdc4da4f02a307fa21941ace88e8fb468e3cf8f07"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PV-DAN9-0019",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "¡Oye, Señor! ¡Señor, perdona! ¡Presta oído, Señor, y hazlo! No tardes, por amor de ti mismo, Dios mío, porque tu nombre es invocado sobre tu ciudad y sobre tu pueblo.” Profecía de las setenta semanas",
+      "stem_fully_supported": false,
+      "one_unambiguous_answer": false,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "AMBIGUOUS",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "La cita canónica apunta a lo contrario, pero la fuente OCR no permite certificar la unidad completa; no se adjudica «Verdadero»."
+        },
+        {
+          "text": "Falso",
+          "verdict": "AMBIGUOUS",
+          "source_ref": "Daniel 9:19",
+          "exact_reason": "La cita canónica contiene «No tardes», pero la unidad está sin respaldo OCR verificable; tampoco se publica una adjudicación basada solo en el texto conservado."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REJECT",
+      "specific_reason": "La cita canónica sugiere «Falso» al ordenar «No tardes», pero la unidad DAN9-V019 está marcada AMBIGUOUS_SOURCE/OCR_SUPPORT_MISSING: el OCR verificado no respalda la cita completa. Se rechaza sin adjudicar una respuesta publicable.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "8f3147ff6e6c01bb02680545cbae65b410e3783a7cac1255f7754dd3d73413ec"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PV-DAN9-0020",
+      "selected_option_index": 3,
+      "selected_option_text": "ruego",
+      "exact_supporting_phrase": "Aún estaba hablando, orando y confesando mi pecado y el pecado de mi pueblo Israel, y derramaba mi ruego delante de Jehová, mi Dios, por el monte santo de mi Dios;",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "holocausto",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "La cita no dice que Daniel derramara un holocausto."
+        },
+        {
+          "text": "silencio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "La cita no dice que derramara silencio."
+        },
+        {
+          "text": "cántico",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "La cita no dice que derramara un cántico."
+        },
+        {
+          "text": "ruego",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:20",
+          "exact_reason": "Reproduce «derramaba mi ruego delante de Jehová»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cuarta opción coincide con el «ruego» derramado delante de Jehová; las demás palabras no aparecen en la cita. Es cobertura verificable por evidencia textual, no cobertura semántica inferida del simple enlace.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "222934681156821dfc38212afa8a85c3d820bd8886238f4b3223a97c5eaf8977"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PV-DAN9-0021",
+      "selected_option_index": 3,
+      "selected_option_text": "Gabriel",
+      "exact_supporting_phrase": "aún estaba hablando en oración, cuando el varón Gabriel, a quien había visto en la visión, al principio, volando con presteza vino a mí como a la hora del sacrificio de la tarde.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Jeremías",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "La cita llama al mensajero Gabriel, no Jeremías."
+        },
+        {
+          "text": "Isaías",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "La cita llama al mensajero Gabriel, no Isaías."
+        },
+        {
+          "text": "Ezequiel",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "La cita llama al mensajero Gabriel, no Ezequiel."
+        },
+        {
+          "text": "Gabriel",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:21",
+          "exact_reason": "Reproduce «el varón Gabriel ... vino a mí»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita identifica explícitamente al mensajero como Gabriel; los otros nombres no aparecen. Es cobertura textual verificable, no una afirmación de dificultad competitiva.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "6796067df5266a010a8aee2e449a5fd7d9ca3149790a01f4d1ed85a6318c2918"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PV-DAN9-0022",
+      "selected_option_index": 1,
+      "selected_option_text": "sabiduría y entendimiento",
+      "exact_supporting_phrase": "Me hizo entender, y habló conmigo diciendo: “Daniel, ahora he salido para darte sabiduría y entendimiento.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "poder y dominio",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:22",
+          "exact_reason": "Poder y dominio no aparecen como propósito de la salida de Gabriel."
+        },
+        {
+          "text": "sabiduría y entendimiento",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:22",
+          "exact_reason": "Reproduce «he salido para darte sabiduría y entendimiento»."
+        },
+        {
+          "text": "valor y fuerza",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:22",
+          "exact_reason": "Valor y fuerza no aparecen en la cita."
+        },
+        {
+          "text": "riqueza y honor",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:22",
+          "exact_reason": "Riqueza y honor no aparecen en la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La segunda opción reproduce las dos capacidades expresas, «sabiduría y entendimiento»; las demás no aparecen en el fragmento. Es cobertura verificable por cita directa.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "5a6ba7bda7eebecb8b18bb9a2b68653a26a1f53601ef0c92a410984301b3e4aa"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PV-DAN9-0023",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Al principio de tus ruegos fue dada la orden, y yo he venido para enseñártela, porque tú eres muy amado. Entiende, pues, la orden, y entiende la visión.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "Contradice «Al principio de tus ruegos fue dada la orden»: no fue al final."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:23",
+          "exact_reason": "Reproduce el momento inicial declarado en la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La afirmación verdadera conserva «Al principio de tus ruegos fue dada la orden»; la alternativa contradice el momento expresado. Es cobertura textual verificable.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "6eae54514a9970fb60849a7e5602c6478a26d74b5f9d0834d15c310a29e0a356"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PV-DAN9-0024",
+      "selected_option_index": 2,
+      "selected_option_text": "setenta",
+      "exact_supporting_phrase": "”Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad, para terminar la prevaricación, poner fin al pecado y expiar la iniquidad, para traer la justicia perdurable, sellar la visión y la profecía y ungir al Santo de los santos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "cincuenta",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "Cincuenta semanas no aparecen en la cita."
+        },
+        {
+          "text": "noventa",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "Noventa semanas no aparecen en la cita."
+        },
+        {
+          "text": "setenta",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "Reproduce «Setenta semanas están determinadas sobre tu pueblo y sobre tu santa ciudad»."
+        },
+        {
+          "text": "ochenta",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:24",
+          "exact_reason": "Ochenta semanas no aparecen en la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita declara literalmente que fueron determinadas setenta semanas sobre el pueblo y la ciudad santa; las otras cifras no aparecen. Cobertura verificable por el fragmento.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "b9243d270efbf1b4c8445a74085f0394b1d18b2a8ecf22869eb2ea929b850c30"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PV-DAN9-0025",
+      "selected_option_index": 1,
+      "selected_option_text": "siete semanas y sesenta y dos semanas",
+      "exact_supporting_phrase": "Sabe, pues, y entiende que desde la salida de la orden para restaurar y edificar a Jerusalén hasta el Mesías Príncipe, habrá siete semanas y sesenta y dos semanas; se volverán a edificar la plaza y el muro en tiempos angustiosos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "veintiún días y tres semanas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "La cita no combina veintiún días con tres semanas."
+        },
+        {
+          "text": "siete semanas y sesenta y dos semanas",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "Reproduce «habrá siete semanas y sesenta y dos semanas»."
+        },
+        {
+          "text": "setenta años y una semana",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "Setenta años y una semana no aparecen en la cita."
+        },
+        {
+          "text": "cuarenta años y siete semanas",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:25",
+          "exact_reason": "Cuarenta años y siete semanas no aparecen en la cita."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "MEDIUM",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La segunda opción conserva los dos tramos expresos entre la orden y el Mesías Príncipe: siete semanas y sesenta y dos semanas. Las demás combinaciones no están en la cita.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "8807b3650b97d4c75c3860beb82eea4b25d9ded0427631cfb4c9294c31168b5c"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PV-DAN9-0026",
+      "selected_option_index": 1,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "Después de las sesenta y dos semanas se quitará la vida al Mesías, y nada ya le quedará. El pueblo de un príncipe que ha de venir destruirá la ciudad y el santuario, su final llegará como una inundación, y hasta el fin de la guerra durarán las devastaciones.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "Contradice «Después de las sesenta y dos semanas»: no ocurrió antes de ellas."
+        },
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:26",
+          "exact_reason": "La cita dice «Después de las sesenta y dos semanas se quitará la vida al Mesías»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La cita sitúa la muerte del Mesías después de las sesenta y dos semanas, por lo que la segunda opción es la única compatible. Cobertura verificable por evidencia textual.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "68f3042d3145a742a981c0a5b97bde15f1b877fba6a2b8372cbcdf33fd4d2791"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "PV-DAN9-0027",
+      "selected_option_index": 0,
+      "selected_option_text": "cesan el sacrificio y la ofrenda",
+      "exact_supporting_phrase": "Por otra semana más confirmará el pacto con muchos; a la mitad de la semana hará cesar el sacrificio y la ofrenda. Después, con la muchedumbre de las abominaciones, vendrá el desolador, hasta que venga la consumación y lo que está determinado se derrame sobre el desolador.”",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "cesan el sacrificio y la ofrenda",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "Reproduce «a la mitad de la semana hará cesar el sacrificio y la ofrenda»."
+        },
+        {
+          "text": "se unge entonces al Santo de los santos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "La unción del Santo de los santos no se sitúa en esta cláusula."
+        },
+        {
+          "text": "se reconstruyen la plaza y el muro",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "La reconstrucción de plaza y muro pertenece al pasaje anterior, no al punto medio de la semana."
+        },
+        {
+          "text": "se inicia el cómputo de setenta años",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:27",
+          "exact_reason": "El cómputo de setenta años no aparece en la cita de Daniel 9:27."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La primera opción reproduce el acto de culto que cesaría a la mitad de la semana: el sacrificio y la ofrenda. Las otras alternativas pertenecen a otros momentos o no aparecen.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "31dc64420a64486b01a95ffdb22bb49f358a963c751bf28ca8b7c51ba1040675"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN9-CENTRAL-0001",
+      "selected_option_index": 3,
+      "selected_option_text": "Darío",
+      "exact_supporting_phrase": "«En el primer año de Darío hijo de Asuero, de la nación de los medos, que vino a ser rey sobre el reino de los caldeos,",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Ciro",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:1",
+          "exact_reason": "La cita identifica a Darío, no a Ciro, como rey sobre el reino de los caldeos."
+        },
+        {
+          "text": "Jeremías",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:1",
+          "exact_reason": "La cita identifica a Darío, no a Jeremías, como rey sobre el reino de los caldeos."
+        },
+        {
+          "text": "Gabriel",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:1",
+          "exact_reason": "La cita identifica a Darío, no a Gabriel, como rey sobre el reino de los caldeos."
+        },
+        {
+          "text": "Darío",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:1",
+          "exact_reason": "Reproduce «Darío hijo de Asuero ... que vino a ser rey sobre el reino de los caldeos»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es única, pero pregunta de nuevo la identidad del rey de DAN9-V11-WAVE-001/002 y de PV-DAN9-0001; queda como variante superficial.",
+      "suggested_rewrite": "Según Daniel 9:1, ¿qué marco cronológico, filiación y nación identifica a Darío antes de la oración de Daniel?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "42a146254a524d4bd15a9e700ed6ec08a3446e40a8cc5a9b129117d3e4eb1da1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN9-CENTRAL-0002",
+      "selected_option_index": 1,
+      "selected_option_text": "setenta",
+      "exact_supporting_phrase": "en el primer año de su reinado, yo, Daniel, miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, en los que habían de cumplirse las desolaciones de Jerusalén: setenta años.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "veintiuno",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita declara setenta años, no veintiuno."
+        },
+        {
+          "text": "setenta",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "Reproduce «las desolaciones de Jerusalén: setenta años»."
+        },
+        {
+          "text": "sesenta",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita declara setenta años, no sesenta."
+        },
+        {
+          "text": "cuarenta",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:2",
+          "exact_reason": "La cita declara setenta años, no cuarenta."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La cifra es correcta, pero repite directamente PV-DAN9-0002 y el mismo dato de DAN9-V11-WAVE-003/004; debe conservarse con otra operación.",
+      "suggested_rewrite": "Según Daniel 9:2, ¿qué profecía de Jeremías y qué duración relacionó Daniel con las desolaciones de Jerusalén?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "6c3d3bed092ec4d45b39afcd1aacb82d224fab64ed370eba21815a04d1e17a99"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN9-CENTRAL-0003",
+      "selected_option_index": 1,
+      "selected_option_text": "Dios, el Señor",
+      "exact_supporting_phrase": "Volví mi rostro a Dios, el Señor, buscándolo en oración y ruego, en ayuno, ropas ásperas y ceniza.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "El pueblo de Judá",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:3",
+          "exact_reason": "La cita dice que volvió su rostro a Dios, el Señor, no al pueblo de Judá."
+        },
+        {
+          "text": "Dios, el Señor",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:3",
+          "exact_reason": "Reproduce «Volví mi rostro a Dios, el Señor»."
+        },
+        {
+          "text": "El profeta Jeremías",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:3",
+          "exact_reason": "La cita menciona a Jeremías como profeta consultado antes, pero no como destinatario del rostro en esta escena."
+        },
+        {
+          "text": "El rey Darío",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:3",
+          "exact_reason": "La cita no presenta al rey Darío como destinatario de la búsqueda."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta está textual, pero repite la identificación directa de PV-DAN9-0003; la variante central no cambia la operación de recuerdo.",
+      "suggested_rewrite": "Según Daniel 9:3, ¿qué acciones acompañaron a Daniel cuando volvió su rostro hacia Dios, el Señor?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "bf91573ed6377504f664bf03b90ab2219357c5d20688c50a709bde6fdd353ef9"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN9-CENTRAL-0004",
+      "selected_option_index": 1,
+      "selected_option_text": "Verdadero",
+      "exact_supporting_phrase": "Oré a Jehová, mi Dios, e hice confesión diciendo: “Ahora, Señor, Dios grande, digno de ser temido, que guardas el pacto y la misericordia con los que te aman y guardan tus mandamientos,",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:4",
+          "exact_reason": "Contradice la cita, que afirma que Dios guarda el pacto y la misericordia con quienes lo aman y guardan sus mandamientos."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:4",
+          "exact_reason": "Reproduce el contenido explícito de la confesión."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La proposición es correcta, pero duplica el enunciado verdadero de PV-DAN9-0004 y el mismo principio de DAN9-V11-WAVE-006/015; requiere otra presentación.",
+      "suggested_rewrite": "Según Daniel 9:4, ¿qué relación establece la confesión entre amar a Dios, guardar sus mandamientos, el pacto y la misericordia?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "0a68a81592e53d9b5339e684439084f65a46dbc10d6ed89b33a99c501986b855"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN9-CENTRAL-0005",
+      "selected_option_index": 2,
+      "selected_option_text": "de tus mandamientos y de tus ordenanzas",
+      "exact_supporting_phrase": "hemos pecado, hemos cometido iniquidad, hemos actuado impíamente, hemos sido rebeldes y nos hemos apartado de tus mandamientos y de tus ordenanzas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "de la ciudad y del santuario",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:5",
+          "exact_reason": "La cita no dice que el pueblo se apartara de la ciudad y el santuario."
+        },
+        {
+          "text": "de los reyes y de los príncipes",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:5",
+          "exact_reason": "La cita no dice que se apartara de reyes y príncipes."
+        },
+        {
+          "text": "de tus mandamientos y de tus ordenanzas",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:5",
+          "exact_reason": "Reproduce «nos hemos apartado de tus mandamientos y de tus ordenanzas»."
+        },
+        {
+          "text": "de la oración y del ayuno",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:5",
+          "exact_reason": "La oración y el ayuno describen la búsqueda de Daniel, no aquello de lo que el pueblo se apartó."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta coincide con la cita, pero repite la pregunta de PV-DAN9-0005 sobre el mismo apartamiento; la variante central es superficial.",
+      "suggested_rewrite": "Según Daniel 9:5, ¿qué secuencia de faltas culminó en el apartamiento de los mandamientos y ordenanzas?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "a75c6ae8d8124d51e9b72455ff32d59868a3ef1747f012dcfaacbea711d43aa1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN9-CENTRAL-0006",
+      "selected_option_index": 3,
+      "selected_option_text": "profetas",
+      "exact_supporting_phrase": "No hemos obedecido a tus siervos los profetas, que en tu nombre hablaron a nuestros reyes, a nuestros príncipes, a nuestros padres y a todo el pueblo de la tierra.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "jueces",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:6",
+          "exact_reason": "La cita llama a esos siervos «los profetas», no jueces."
+        },
+        {
+          "text": "sacerdotes",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:6",
+          "exact_reason": "La cita llama a esos siervos «los profetas», no sacerdotes."
+        },
+        {
+          "text": "escribas",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:6",
+          "exact_reason": "La cita llama a esos siervos «los profetas», no escribas."
+        },
+        {
+          "text": "profetas",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:6",
+          "exact_reason": "Reproduce «tus siervos los profetas»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es inequívoca, pero repite PV-DAN9-0006 y la identificación de DAN9-V11-WAVE-008; debe cambiarse la operación.",
+      "suggested_rewrite": "Según Daniel 9:6, ¿a quiénes alcanzó el mensaje de los profetas que el pueblo no obedeció?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "223115b48a9899ce7f0aaafc898a86969b73e2f2b0687bc9417ce96e80499939"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN9-CENTRAL-0007",
+      "selected_option_index": 0,
+      "selected_option_text": "Falso",
+      "exact_supporting_phrase": "Tuya es, Señor, la justicia, y nuestra la confusión de rostro que en el día de hoy lleva todo hombre de Judá, los habitantes de Jerusalén y todo Israel, los de cerca y los de lejos, en todas las tierras adonde los has echado a causa de su rebelión con que se rebelaron contra ti.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Falso",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:7",
+          "exact_reason": "La afirmación es falsa frente a la cita: «Tuya es, Señor, la justicia, y nuestra la confusión de rostro»."
+        },
+        {
+          "text": "Verdadero",
+          "verdict": "FALSE_BY_SOURCE",
+          "source_ref": "Daniel 9:7",
+          "exact_reason": "La cita no permite declarar verdadera la inversión propuesta."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": false,
+      "duplicate_or_superficial_variant": false,
+      "real_difficulty": "EASY",
+      "decision": "ACCEPT_COVERAGE",
+      "specific_reason": "La proposición invierte explícitamente las atribuciones de la cita: la justicia es del Señor y la confusión de rostro es del pueblo. La respuesta «Falso» exige discriminación textual y no es una variante superficial.",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "f477e77e15565c38fd2cc3d14111d98b8367d6fd1d0005440c4eaa0652fa4c87"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN9-CENTRAL-0008",
+      "selected_option_index": 0,
+      "selected_option_text": "Contra ti pecamos",
+      "exact_supporting_phrase": "Nuestra es, Jehová, la confusión de rostro, y de nuestros reyes, de nuestros príncipes y de nuestros padres, porque contra ti pecamos.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Contra ti pecamos",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:8",
+          "exact_reason": "Reproduce «porque contra ti pecamos»."
+        },
+        {
+          "text": "Olvidamos el ayuno",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:8",
+          "exact_reason": "El ayuno no se presenta como causa en la cita."
+        },
+        {
+          "text": "Abandonamos la ciudad",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:8",
+          "exact_reason": "La cita no atribuye la confusión a abandonar la ciudad."
+        },
+        {
+          "text": "Perdimos una guerra",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:8",
+          "exact_reason": "La cita no atribuye la confusión a perder una guerra."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La causa está expresada, pero repite directamente PV-DAN9-0008 y DAN9-V11-WAVE-019; la pregunta central es una variante superficial.",
+      "suggested_rewrite": "Según Daniel 9:8, ¿qué confesión explica la confusión de rostro de reyes, príncipes y padres?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "0cf741a9f239df144871a87fc648ad177e64b12ff6bb832471d0ef27f68d29c1"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN9-CENTRAL-0009",
+      "selected_option_index": 3,
+      "selected_option_text": "perdonar",
+      "exact_supporting_phrase": "De Jehová, nuestro Dios, es el tener misericordia y el perdonar, aunque contra él nos hemos rebelado",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "juzgar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:9",
+          "exact_reason": "La cita no atribuye a Jehová el juzgar como pareja de misericordia."
+        },
+        {
+          "text": "castigar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:9",
+          "exact_reason": "La cita no atribuye a Jehová el castigar en esta cláusula."
+        },
+        {
+          "text": "desterrar",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:9",
+          "exact_reason": "La cita no atribuye a Jehová el desterrar en esta cláusula."
+        },
+        {
+          "text": "perdonar",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:9",
+          "exact_reason": "Reproduce «De Jehová, nuestro Dios, es el tener misericordia y el perdonar»."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La respuesta es textual, pero repite PV-DAN9-0009 y DAN9-V11-WAVE-010 sobre misericordia y perdón; queda como variante superficial.",
+      "suggested_rewrite": "Según Daniel 9:9, ¿qué dos acciones misericordiosas se atribuyen a Jehová aun después de la rebelión?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "435713128756b02e419a6478c0cd934a2e52167fed2fad6ec815490c3cbd6916"
+    },
+    {
+      "audit_run_id": "v18-priority-audit",
+      "question_id": "Q-DAN9-CENTRAL-0010",
+      "selected_option_index": 1,
+      "selected_option_text": "Andar en sus leyes",
+      "exact_supporting_phrase": "y no obedecimos a la voz de Jehová, nuestro Dios, para andar en sus leyes, que él puso delante de nosotros por medio de sus siervos los profetas.",
+      "stem_fully_supported": true,
+      "one_unambiguous_answer": true,
+      "second_defensible_option": false,
+      "second_defensible_text": null,
+      "source_boundary": "DANIEL_ONLY",
+      "option_analysis": [
+        {
+          "text": "Levantar un nuevo santuario",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:10",
+          "exact_reason": "La cita no prescribe levantar un nuevo santuario."
+        },
+        {
+          "text": "Andar en sus leyes",
+          "verdict": "CORRECT",
+          "source_ref": "Daniel 9:10",
+          "exact_reason": "Reproduce «para andar en sus leyes»."
+        },
+        {
+          "text": "Regresar al reino de los medos",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:10",
+          "exact_reason": "La cita no manda regresar al reino de los medos."
+        },
+        {
+          "text": "Esperar otra visión",
+          "verdict": "UNSUPPORTED",
+          "source_ref": "Daniel 9:10",
+          "exact_reason": "La cita no presenta esperar otra visión como conducta obediente."
+        }
+      ],
+      "answer_length_giveaway": false,
+      "grammar_giveaway": false,
+      "precision_giveaway": true,
+      "duplicate_or_superficial_variant": true,
+      "real_difficulty": "EASY",
+      "decision": "REWRITE",
+      "specific_reason": "La conducta correcta está respaldada, pero repite PV-DAN9-0010 y la misma respuesta de DAN9-V11-WAVE-011; es una variante superficial.",
+      "suggested_rewrite": "Según Daniel 9:10, ¿qué mediación puso las leyes de Dios delante del pueblo y qué conducta exigían?",
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "agent_id": "/root/ledger_v18",
+      "conversation_id": "/root/ledger_v18",
+      "conversation_id_kind": "codex_canonical_agent_task_name",
+      "reviewed_at": "2026-09-04T11:52:53.534Z",
+      "input_content_sha256": "1afb986f7e2a428ec012f326e00cfadaeaac2f1f689e28c2afc0a0a9fe219732",
+      "output_sha256": "2cc8a99f9a6df92a76fc33077703c7fafff24bf6861858712b3dfe6a3da15dac"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "ACCEPT_COVERAGE": 10,
+    "ACCEPT_COMPETITIVE": 0,
+    "REWRITE": 9,
+    "REJECT": 1,
+    "INVALID_OUTPUT": 0
+  }
+}
