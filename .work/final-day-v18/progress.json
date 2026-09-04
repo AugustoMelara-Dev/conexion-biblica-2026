@@ -1,6 +1,6 @@
 {
   "schema_version": "final-day-v18-progress-1.0",
-  "current_phase": "first_verified_increment_deployed_pending_remote_verification",
+  "current_phase": "continuous_audit_until_20h_freeze",
   "source": {
     "path": "C:\\Users\\melar\\OneDrive\\Desktop\\MaterialConexionBiblica (1).pdf",
     "sha256": "0eea35deeaaa951c52e1e21af6a313f305335e3288d21316690922020e744be3",
@@ -13,14 +13,14 @@
   "source_units_ambiguous": 27,
   "source_units_needing_question": 1,
   "existing_questions_total": 3873,
-  "sol_audited": 375,
-  "sol_audit_outputs": 380,
+  "sol_audited": 745,
+  "sol_audit_outputs": 760,
   "verified_coverage": 45,
   "verified_competitive": 0,
-  "rewrite_required": 307,
+  "rewrite_required": 421,
   "rewrites_completed": 75,
   "rewrites_withdrawn_duplicate": 5,
-  "rejected": 0,
+  "rejected": 1,
   "new_candidates": 0,
   "new_sol_audited": 0,
   "new_accepted": 0,
@@ -40,7 +40,16 @@
     "DAN9": { "package_a": 4, "package_c": 4 },
     "DAN12": { "package_a": 4, "package_c": 4 }
   },
-  "active_agents": [],
+  "active_agents": [
+    "/root/blind_014",
+    "/root/contracts_rereview",
+    "/root/dossier_prep",
+    "/root/integration_review",
+    "/root/ledger_v18",
+    "/root/safe_blind_002",
+    "/root/safe_blind_003",
+    "/root/safe_blind_004"
+  ],
   "actual_models": [
     { "role": "orchestrator", "model": "GPT-5.6 Sol", "reasoning_effort": "medium" },
     { "role": "textual auditors", "model": "GPT-5.6 Sol", "reasoning_effort": "medium", "audit_outputs": 380 },
@@ -51,16 +60,16 @@
     "limitation": "The backend conversation UUID is not exposed to agents; canonical task names are recorded without fabrication."
   },
   "remaining_sol_budget_estimate": {
-    "used_percent": 9,
-    "remaining_percent": 91,
+    "used_percent": 14,
+    "remaining_percent": 86,
     "reserved_percent_minimum": 35,
     "measured_live": true
   },
-  "commits": ["79f229d"],
+  "commits": ["79f229d", "d058e88", "ab8650d", "e986300", "29b98f2"],
   "deployments": [
     {
-      "id": "dpl_5W14o9G1vS6ZyfYHKnZi8tkoQWjB",
-      "url": "https://conexion-biblica-2026-okj59ub7j.vercel.app",
+      "id": "dpl_DtTAi5Jw6yXDZ6pKShhpxqBp2vkH",
+      "url": "https://conexion-biblica-2026-6ryj4r8xh.vercel.app",
       "alias": "https://conexion-biblica-2026.vercel.app",
       "state": "READY",
       "target": "production"
@@ -80,6 +89,8 @@
     "typecheck": "pass",
     "build": "pass with existing chunk-size warning",
     "playwright_emergency": "pass: 10/10 desktop Chromium and mobile Chromium",
+    "production_audit": "pass: 3873 questions, 2217 facts, 18 shards, 0 failures",
+    "remote_playwright_emergency": "pass: 10/10 desktop Chromium and mobile Chromium",
     "lint": "legacy fail: 22 errors and 1 warning; base had 26 errors and 1 warning",
     "diff_check": "pass",
     "independent_contract_review": "SPEC PASS"
@@ -108,5 +119,5 @@
     "average_seconds": 3.72,
     "priority_errors": ["Daniel 9:26", "Daniel 12:1"]
   },
-  "next_exact_action": "Run production audit and deployed desktop/mobile verification against the V18 package."
+  "next_exact_action": "Continue Sol batches and Luna blind batches in parallel; integrate and deploy only complete fail-closed increments before the 20:00 freeze."
 }
